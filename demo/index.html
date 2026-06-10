@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alex AI Quiz Database - Demo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <canvas id="confettiCanvas"></canvas>
+
+    <main class="page">
+
+        <section class="hero">
+            <div class="hero-badge">Demo Web Interattiva</div>
+
+            <h1>Alex AI Quiz Database</h1>
+
+            <p>
+                Prova il database quiz direttamente dal browser:
+                domande testuali, logica visiva, spiegazioni,
+                controlli automatici e qualità linguistica.
+            </p>
+        </section>
+
+        <section class="dashboard">
+
+            <div class="panel controls-panel">
+                <h2>Imposta il test</h2>
+
+                <label for="categorySelect">Categoria</label>
+                <select id="categorySelect">
+                    <option value="tutte">Tutte le categorie</option>
+                </select>
+
+                <label for="levelSelect">Livello</label>
+                <select id="levelSelect">
+                    <option value="tutti">Tutti i livelli</option>
+                </select>
+
+                <button id="newQuestionButton" class="primary-button">
+                    Carica nuova domanda
+                </button>
+
+                <div class="mini-stats">
+                    <div>
+                        <span id="totalQuestions">0</span>
+                        <small>domande disponibili</small>
+                    </div>
+
+                    <div>
+                        <span id="scoreValue">0/0</span>
+                        <small>risposte corrette</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel quiz-panel">
+
+                <div class="quiz-header">
+                    <div>
+                        <span id="categoryBadge" class="badge">Categoria</span>
+                        <span id="levelBadge" class="badge level">Livello</span>
+                    </div>
+
+                    <span id="questionId" class="question-id">ID domanda</span>
+                </div>
+
+                <h2 id="questionText">
+                    Premi “Carica nuova domanda” per iniziare.
+                </h2>
+
+                <div id="questionImageBox" class="question-image-box hidden">
+                    <img id="questionImage" src="" alt="Immagine della domanda">
+                </div>
+
+                <div id="optionsBox" class="options-box"></div>
+
+                <div id="feedbackBox" class="feedback-box hidden"></div>
+
+                <div id="explanationBox" class="explanation-box hidden">
+                    <h3>Spiegazione</h3>
+                    <p id="explanationText"></p>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="info-grid">
+
+            <article>
+                <h3>Database JSON</h3>
+                <p>
+                    Le domande vengono lette dal file finale generato
+                    automaticamente dagli script Python.
+                </p>
+            </article>
+
+            <article>
+                <h3>Logica visiva</h3>
+                <p>
+                    La demo supporta anche domande con immagini e opzioni visive.
+                </p>
+            </article>
+
+            <article>
+                <h3>Spiegazioni</h3>
+                <p>
+                    Dopo ogni risposta viene mostrata una spiegazione utile per imparare.
+                </p>
+            </article>
+
+            <article>
+                <h3>Controlli AI</h3>
+                <p>
+                    Il progetto include anche revisione linguistica opzionale con Gemma 4 12B locale.
+                </p>
+            </article>
+
+        </section>
+
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
