@@ -24,15 +24,20 @@
     "difficolta": 2
   },
   {
-    "id": "LOG-VER-AV-0003",
-    "categoria": "logica",
-    "sottocategoria": "logica_verbale",
-    "livello": "avanzato",
-    "domanda": "Quale parola completa meglio la relazione: causa sta a effetto come domanda sta a ?",
-    "opzioni": ["risposta", "problema", "dubbio", "argomento"],
-    "risposta_corretta": "risposta",
-    "spiegazione": "La relazione è tra un elemento iniziale e ciò che normalmente ne consegue. Una causa produce un effetto; una domanda richiede una risposta.",
-    "tags": ["analogie", "relazioni", "logica_verbale"],
-    "difficolta": 3
-  }
+  "id": "LOG-VER-AV-0003",
+  "categoria": "logica",
+  "sottocategoria": "logica_verbale",
+  "livello": "avanzato",
+  "domanda": "Quale coppia mantiene meglio la stessa relazione logica di: sintomo → diagnosi?",
+  "opzioni": [
+    "indizio → ipotesi",
+    "domanda → risposta",
+    "errore → correzione",
+    "causa → conseguenza"
+  ],
+  "risposta_corretta": "indizio → ipotesi",
+  "spiegazione": "Un sintomo non è la diagnosi, ma un segnale da interpretare per formulare una diagnosi. Allo stesso modo, un indizio non è ancora una conclusione certa, ma un elemento che permette di costruire un'ipotesi.",
+  "tags": ["analogie", "relazioni_logiche", "logica_verbale"],
+  "difficolta": 3
+}
 ]
