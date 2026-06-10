@@ -1,115 +1,242 @@
-const databaseUrl = "../dist/database_quiz_finale.json";
+const DATA_URL = "../dist/database_quiz_finale.json";
 
-let database = [];
-let currentQuestion = null;
-let correctAnswers = 0;
-let answeredQuestions = 0;
+let databaseQuiz = [];
+let domandeTest = [];
+let indiceDomandaCorrente = 0;
+let risposteCorrette = 0;
+let risposteSbagliate = 0;
+let rispostaGiaData = false;
 
-// Memorizza le domande già uscite,
-// così la demo non ripete subito sempre le stesse.
-let usedQuestionIds = new Set();
+/*
+    Memoria dei gruppi di domande già usate.
 
-// Serve per capire quando cambi categoria o livello.
-let lastFilterKey = "";
+    Esempio:
+    categoria = matematica
+    livello = avanzato
 
-const categorySelect = document.getElementById("categorySelect");
-const levelSelect = document.getElementById("levelSelect");
-const newQuestionButton = document.getElementById("newQuestionButton");
+    Il sistema crea una coda mescolata.
+    Le domande vengono estratte una alla volta.
+    Non tornano finché la coda non è finita.
+*/
+let codeDomandePerFiltro = {};
 
-const totalQuestions = document.getElementById("totalQuestions");
-const scoreValue = document.getElementById("scoreValue");
+const elementi = {};
 
-const categoryBadge = document.getElementById("categoryBadge");
-const levelBadge = document.getElementById("levelBadge");
-const questionId = document.getElementById("questionId");
-const questionText = document.getElementById("questionText");
+document.addEventListener("DOMContentLoaded", avviaApp);
 
-const questionImageBox = document.getElementById("questionImageBox");
-const questionImage = document.getElementById("questionImage");
+async function avviaApp() {
+    collegaElementiHtml();
+    collegaEventi();
 
-const optionsBox = document.getElementById("optionsBox");
-const feedbackBox = document.getElementById("feedbackBox");
-const explanationBox = document.getElementById("explanationBox");
-const explanationText = document.getElementById("explanationText");
-
-const confettiCanvas = document.getElementById("confettiCanvas");
-const confettiContext = confettiCanvas.getContext("2d");
-
-
-function normalizzaTesto(testo) {
-    if (!testo) {
-        return "";
-    }
-
-    return testo.toString().trim().toLowerCase();
+    await caricaDatabase();
 }
 
+function collegaElementiHtml() {
+    elementi.loadingBox = document.getElementById("loadingBox");
+    elementi.errorBox = document.getElementById("errorBox");
+    elementi.setupBox = document.getElementById("setupBox");
+    elementi.quizBox = document.getElementById("quizBox");
+    elementi.resultBox = document.getElementById("resultBox");
 
-function creaPercorsoAsset(percorso) {
-    if (!percorso) {
-        return "";
-    }
+    elementi.categorySelect = document.getElementById("categorySelect");
+    elementi.levelSelect = document.getElementById("levelSelect");
+    elementi.questionCountSelect = document.getElementById("questionCountSelect");
+    elementi.availableInfo = document.getElementById("availableInfo");
+    elementi.startButton = document.getElementById("startButton");
 
-    if (percorso.startsWith("http")) {
-        return percorso;
-    }
+    elementi.progressText = document.getElementById("progressText");
+    elementi.scoreText = document.getElementById("scoreText");
+    elementi.questionMeta = document.getElementById("questionMeta");
+    elementi.progressFill = document.getElementById("progressFill");
+    elementi.questionText = document.getElementById("questionText");
+    elementi.questionImageBox = document.getElementById("questionImageBox");
+    elementi.optionsBox = document.getElementById("optionsBox");
+    elementi.feedbackBox = document.getElementById("feedbackBox");
+    elementi.explanationBox = document.getElementById("explanationBox");
+    elementi.explanationText = document.getElementById("explanationText");
+    elementi.nextButton = document.getElementById("nextButton");
 
-    return `../${percorso}`;
+    elementi.resultVisual = document.getElementById("resultVisual");
+    elementi.resultEmoji = document.getElementById("resultEmoji");
+    elementi.resultTitle = document.getElementById("resultTitle");
+    elementi.resultPhrase = document.getElementById("resultPhrase");
+    elementi.totalQuestionsResult = document.getElementById("totalQuestionsResult");
+    elementi.correctResult = document.getElementById("correctResult");
+    elementi.wrongResult = document.getElementById("wrongResult");
+    elementi.percentageResult = document.getElementById("percentageResult");
+    elementi.gradeResult = document.getElementById("gradeResult");
+    elementi.judgementResult = document.getElementById("judgementResult");
+    elementi.retryButton = document.getElementById("retryButton");
+    elementi.settingsButton = document.getElementById("settingsButton");
+
+    elementi.confettiCanvas = document.getElementById("confettiCanvas");
 }
 
+function collegaEventi() {
+    elementi.categorySelect.addEventListener(
+        "change",
+        aggiornaInfoDomandeDisponibili
+    );
+
+    elementi.levelSelect.addEventListener(
+        "change",
+        aggiornaInfoDomandeDisponibili
+    );
+
+    elementi.questionCountSelect.addEventListener(
+        "change",
+        aggiornaInfoDomandeDisponibili
+    );
+
+    elementi.startButton.addEventListener("click", iniziaTest);
+    elementi.nextButton.addEventListener("click", vaiAllaProssimaDomanda);
+    elementi.retryButton.addEventListener("click", iniziaTest);
+    elementi.settingsButton.addEventListener("click", tornaAlleImpostazioni);
+}
 
 async function caricaDatabase() {
     try {
-        const risposta = await fetch(databaseUrl);
-        database = await risposta.json();
+        mostraSolo(elementi.loadingBox);
+
+        /*
+            Il parametro Date.now() evita che il browser tenga in memoria
+            una vecchia versione del JSON.
+        */
+        const risposta = await fetch(`${DATA_URL}?v=${Date.now()}`);
+
+        if (!risposta.ok) {
+            throw new Error("Impossibile caricare il database quiz.");
+        }
+
+        databaseQuiz = await risposta.json();
+
+        if (!Array.isArray(databaseQuiz)) {
+            throw new Error("Il database non è una lista di domande.");
+        }
 
         popolaFiltri();
-        aggiornaTotaleDomande();
-        aggiornaPunteggio();
-        caricaNuovaDomanda();
+        aggiornaInfoDomandeDisponibili();
+        mostraSolo(elementi.setupBox);
 
     } catch (errore) {
-        questionText.textContent = "Errore nel caricamento del database.";
-
-        feedbackBox.className = "feedback-box ko";
-        feedbackBox.textContent =
-            "Controlla che il file dist/database_quiz_finale.json esista.";
-
-        feedbackBox.classList.remove("hidden");
+        elementi.errorBox.textContent = errore.message;
+        mostraSolo(elementi.errorBox);
     }
 }
 
+function mostraSolo(sezioneVisibile) {
+    const sezioni = [
+        elementi.loadingBox,
+        elementi.errorBox,
+        elementi.setupBox,
+        elementi.quizBox,
+        elementi.resultBox
+    ];
 
-function popolaFiltri() {
-    const categorie = [
-        ...new Set(database.map(domanda => domanda.categoria))
-    ].sort();
-
-    const livelli = [
-        ...new Set(database.map(domanda => domanda.livello))
-    ].sort();
-
-    categorie.forEach(categoria => {
-        const option = document.createElement("option");
-        option.value = categoria;
-        option.textContent = categoria;
-        categorySelect.appendChild(option);
+    sezioni.forEach(sezione => {
+        sezione.classList.add("hidden");
     });
 
-    livelli.forEach(livello => {
-        const option = document.createElement("option");
-        option.value = livello;
-        option.textContent = livello;
-        levelSelect.appendChild(option);
+    sezioneVisibile.classList.remove("hidden");
+}
+
+function popolaFiltri() {
+    const categorieOrdinate = [
+        "ai",
+        "informatica",
+        "matematica",
+        "inglese",
+        "logica"
+    ];
+
+    const livelliOrdinati = [
+        "facile",
+        "intermedio",
+        "avanzato"
+    ];
+
+    elementi.categorySelect.innerHTML = "";
+    elementi.levelSelect.innerHTML = "";
+
+    aggiungiOpzione(
+        elementi.categorySelect,
+        "tutte",
+        "Tutte le categorie"
+    );
+
+    categorieOrdinate.forEach(categoria => {
+        const esisteCategoria = databaseQuiz.some(domanda => {
+            return domanda.categoria === categoria;
+        });
+
+        if (esisteCategoria) {
+            aggiungiOpzione(
+                elementi.categorySelect,
+                categoria,
+                formattaTesto(categoria)
+            );
+        }
+    });
+
+    aggiungiOpzione(
+        elementi.levelSelect,
+        "tutti",
+        "Tutti i livelli"
+    );
+
+    livelliOrdinati.forEach(livello => {
+        const esisteLivello = databaseQuiz.some(domanda => {
+            return domanda.livello === livello;
+        });
+
+        if (esisteLivello) {
+            aggiungiOpzione(
+                elementi.levelSelect,
+                livello,
+                formattaTesto(livello)
+            );
+        }
     });
 }
 
+function aggiungiOpzione(select, valore, testo) {
+    const option = document.createElement("option");
+    option.value = valore;
+    option.textContent = testo;
+    select.appendChild(option);
+}
 
-function filtraDomande() {
-    const categoriaScelta = categorySelect.value;
-    const livelloScelto = levelSelect.value;
+function aggiornaInfoDomandeDisponibili() {
+    const domandeFiltrate = ottieniDomandeFiltrate();
+    const richieste = ottieniNumeroDomandeRichiesto();
+    const numeroTest = Math.min(richieste, domandeFiltrate.length);
 
-    return database.filter(domanda => {
+    if (domandeFiltrate.length === 0) {
+        elementi.availableInfo.textContent =
+            "Nessuna domanda disponibile per questo filtro.";
+
+        elementi.startButton.disabled = true;
+        return;
+    }
+
+    elementi.startButton.disabled = false;
+
+    if (numeroTest < richieste) {
+        elementi.availableInfo.textContent =
+            `Domande disponibili: ${domandeFiltrate.length}. ` +
+            `Il test userà ${numeroTest} domande per evitare ripetizioni.`;
+    } else {
+        elementi.availableInfo.textContent =
+            `Domande disponibili: ${domandeFiltrate.length}. ` +
+            `Il test userà ${numeroTest} domande.`;
+    }
+}
+
+function ottieniDomandeFiltrate() {
+    const categoriaScelta = elementi.categorySelect.value;
+    const livelloScelto = elementi.levelSelect.value;
+
+    return databaseQuiz.filter(domanda => {
         const categoriaOk =
             categoriaScelta === "tutte" ||
             domanda.categoria === categoriaScelta;
@@ -122,302 +249,557 @@ function filtraDomande() {
     });
 }
 
+function ottieniNumeroDomandeRichiesto() {
+    const valore = elementi.questionCountSelect.value;
 
-function aggiornaTotaleDomande() {
-    const domandeFiltrate = filtraDomande();
-    totalQuestions.textContent = domandeFiltrate.length;
-}
-
-
-function aggiornaPunteggio() {
-    scoreValue.textContent = `${correctAnswers}/${answeredQuestions}`;
-}
-
-
-function creaChiaveFiltroAttuale() {
-    return `${categorySelect.value}-${levelSelect.value}`;
-}
-
-
-function resettaDomandeUsateSeFiltroCambia() {
-    const filtroAttuale = creaChiaveFiltroAttuale();
-
-    if (filtroAttuale !== lastFilterKey) {
-        usedQuestionIds.clear();
-        lastFilterKey = filtroAttuale;
+    if (valore === "all") {
+        return ottieniDomandeFiltrate().length;
     }
+
+    return Number(valore);
 }
 
+function creaChiaveFiltro() {
+    return `${elementi.categorySelect.value}__${elementi.levelSelect.value}`;
+}
 
-function caricaNuovaDomanda() {
-    const domandeFiltrate = filtraDomande();
-
-    aggiornaTotaleDomande();
-    resettaDomandeUsateSeFiltroCambia();
+function iniziaTest() {
+    const domandeFiltrate = ottieniDomandeFiltrate();
 
     if (domandeFiltrate.length === 0) {
-        currentQuestion = null;
-
-        questionText.textContent =
-            "Nessuna domanda trovata per questi filtri.";
-
-        categoryBadge.textContent = "Categoria";
-        levelBadge.textContent = "Livello";
-        questionId.textContent = "Nessuna domanda";
-
-        optionsBox.innerHTML = "";
-        questionImage.src = "";
-        questionImageBox.classList.add("hidden");
-        feedbackBox.classList.add("hidden");
-        explanationBox.classList.add("hidden");
-
         return;
     }
 
-    let domandeDisponibili = domandeFiltrate.filter(domanda => {
-        return !usedQuestionIds.has(domanda.id);
-    });
+    const richieste = ottieniNumeroDomandeRichiesto();
+    const numeroEffettivo = Math.min(richieste, domandeFiltrate.length);
 
-    // Se tutte le domande filtrate sono già uscite,
-    // ricominciamo un nuovo giro.
-    if (domandeDisponibili.length === 0) {
-        usedQuestionIds.clear();
-        domandeDisponibili = domandeFiltrate;
-    }
-
-    const indiceCasuale = Math.floor(
-        Math.random() * domandeDisponibili.length
+    domandeTest = prendiDomandeSenzaRipetere(
+        domandeFiltrate,
+        numeroEffettivo
     );
 
-    currentQuestion = domandeDisponibili[indiceCasuale];
+    indiceDomandaCorrente = 0;
+    risposteCorrette = 0;
+    risposteSbagliate = 0;
+    rispostaGiaData = false;
 
-    usedQuestionIds.add(currentQuestion.id);
-
-    mostraDomanda(currentQuestion);
+    mostraSolo(elementi.quizBox);
+    mostraDomandaCorrente();
 }
 
+function prendiDomandeSenzaRipetere(domandeFiltrate, numeroDaPrendere) {
+    const chiaveFiltro = creaChiaveFiltro();
 
-function mostraDomanda(domanda) {
-    categoryBadge.textContent = domanda.categoria || "Categoria";
-    levelBadge.textContent = domanda.livello || "Livello";
-    questionId.textContent = domanda.id || "ID domanda";
-    questionText.textContent = domanda.domanda || "Domanda non disponibile";
+    const idsDisponibili = domandeFiltrate.map(domanda => {
+        return domanda.id;
+    });
 
-    feedbackBox.classList.add("hidden");
-    explanationBox.classList.add("hidden");
-    optionsBox.innerHTML = "";
+    const setIdsDisponibili = new Set(idsDisponibili);
+
+    let coda = codeDomandePerFiltro[chiaveFiltro] || [];
+
+    /*
+        Se il filtro cambia o alcune domande non esistono più,
+        puliamo la coda.
+    */
+    coda = coda.filter(id => {
+        return setIdsDisponibili.has(id);
+    });
+
+    if (coda.length === 0) {
+        coda = mescolaArray(idsDisponibili);
+    }
+
+    const idsScelti = [];
+
+    while (idsScelti.length < numeroDaPrendere) {
+        if (coda.length === 0) {
+            /*
+                Qui significa che il giro è finito.
+                Solo ora il sistema rimischia il gruppo.
+                Nel nuovo giro evitiamo di ripescare dentro lo stesso test.
+            */
+            const idsNonUsatiInQuestoTest = idsDisponibili.filter(id => {
+                return !idsScelti.includes(id);
+            });
+
+            coda = mescolaArray(idsNonUsatiInQuestoTest);
+        }
+
+        const prossimoId = coda.shift();
+
+        if (!idsScelti.includes(prossimoId)) {
+            idsScelti.push(prossimoId);
+        }
+    }
+
+    codeDomandePerFiltro[chiaveFiltro] = coda;
+
+    return idsScelti.map(id => {
+        return domandeFiltrate.find(domanda => {
+            return domanda.id === id;
+        });
+    });
+}
+
+function mostraDomandaCorrente() {
+    rispostaGiaData = false;
+
+    const domanda = domandeTest[indiceDomandaCorrente];
+    const numeroDomanda = indiceDomandaCorrente + 1;
+    const totaleDomande = domandeTest.length;
+
+    elementi.progressText.textContent =
+        `Domanda ${numeroDomanda}/${totaleDomande}`;
+
+    elementi.scoreText.textContent =
+        `Corrette: ${risposteCorrette}`;
+
+    elementi.questionMeta.textContent =
+        `${formattaTesto(domanda.categoria)} · ` +
+        `${formattaTesto(domanda.livello)} · ` +
+        `${domanda.id}`;
+
+    const percentualeAvanzamento =
+        (indiceDomandaCorrente / totaleDomande) * 100;
+
+    elementi.progressFill.style.width = `${percentualeAvanzamento}%`;
+
+    elementi.questionText.textContent = domanda.domanda;
 
     mostraImmagineDomanda(domanda);
     mostraOpzioni(domanda);
-}
 
+    elementi.feedbackBox.className = "feedback hidden";
+    elementi.feedbackBox.textContent = "";
 
-function mostraImmagineDomanda(domanda) {
-    const domandaConImmagine =
-        domanda.tipo_domanda === "immagine" &&
-        domanda.immagine_domanda;
+    elementi.explanationBox.classList.add("hidden");
+    elementi.explanationText.textContent = "";
 
-    if (domandaConImmagine) {
-        questionImage.src = creaPercorsoAsset(domanda.immagine_domanda);
-        questionImageBox.classList.remove("hidden");
+    elementi.nextButton.classList.add("hidden");
+
+    if (indiceDomandaCorrente === domandeTest.length - 1) {
+        elementi.nextButton.textContent = "Vedi report finale";
     } else {
-        questionImage.src = "";
-        questionImageBox.classList.add("hidden");
+        elementi.nextButton.textContent = "Prossima domanda";
     }
 }
 
+function mostraImmagineDomanda(domanda) {
+    elementi.questionImageBox.innerHTML = "";
+    elementi.questionImageBox.classList.add("hidden");
+
+    if (!domanda.immagine_domanda) {
+        return;
+    }
+
+    const immagine = document.createElement("img");
+    immagine.src = risolviPercorsoAsset(domanda.immagine_domanda);
+    immagine.alt = "Immagine della domanda";
+
+    elementi.questionImageBox.appendChild(immagine);
+    elementi.questionImageBox.classList.remove("hidden");
+}
 
 function mostraOpzioni(domanda) {
-    const opzioni = domanda.opzioni || [];
-    const immaginiOpzioni = domanda.immagini_opzioni || [];
+    elementi.optionsBox.innerHTML = "";
 
-    opzioni.forEach((opzione, indice) => {
+    domanda.opzioni.forEach((opzione, indice) => {
         const bottone = document.createElement("button");
         bottone.className = "option-button";
+        bottone.type = "button";
 
-        const testoOpzione = document.createElement("span");
-        testoOpzione.textContent = opzione;
-        bottone.appendChild(testoOpzione);
+        const testo = document.createElement("span");
+        testo.textContent = opzione;
+        bottone.appendChild(testo);
 
-        if (immaginiOpzioni[indice]) {
-            const immagine = document.createElement("img");
-            immagine.src = creaPercorsoAsset(immaginiOpzioni[indice]);
-            immagine.alt = `Opzione ${indice + 1}`;
-            immagine.className = "option-image";
-            bottone.appendChild(immagine);
+        const immagineOpzione = ottieniImmagineOpzione(
+            domanda,
+            opzione,
+            indice
+        );
+
+        if (immagineOpzione) {
+            const img = document.createElement("img");
+            img.className = "option-image";
+            img.src = risolviPercorsoAsset(immagineOpzione);
+            img.alt = `Opzione ${opzione}`;
+            bottone.appendChild(img);
         }
 
         bottone.addEventListener("click", () => {
             controllaRisposta(opzione, bottone);
         });
 
-        optionsBox.appendChild(bottone);
+        elementi.optionsBox.appendChild(bottone);
     });
 }
 
+function ottieniImmagineOpzione(domanda, opzione, indice) {
+    if (!domanda.immagini_opzioni) {
+        return null;
+    }
 
-function controllaRisposta(rispostaScelta, bottoneScelto) {
-    if (!currentQuestion) {
+    if (Array.isArray(domanda.immagini_opzioni)) {
+        return domanda.immagini_opzioni[indice] || null;
+    }
+
+    if (typeof domanda.immagini_opzioni === "object") {
+        return (
+            domanda.immagini_opzioni[opzione] ||
+            domanda.immagini_opzioni[String(indice)] ||
+            domanda.immagini_opzioni[String(indice + 1)] ||
+            null
+        );
+    }
+
+    return null;
+}
+
+function controllaRisposta(opzioneScelta, bottoneScelto) {
+    if (rispostaGiaData) {
         return;
     }
 
-    const rispostaCorretta = currentQuestion.risposta_corretta;
+    rispostaGiaData = true;
 
-    const corretta =
-        normalizzaTesto(rispostaScelta) ===
-        normalizzaTesto(rispostaCorretta);
+    const domanda = domandeTest[indiceDomandaCorrente];
+    const rispostaCorretta = domanda.risposta_corretta;
+    const corretta = opzioneScelta === rispostaCorretta;
 
-    answeredQuestions++;
-
-    const bottoni = document.querySelectorAll(".option-button");
+    const bottoni = elementi.optionsBox.querySelectorAll(".option-button");
 
     bottoni.forEach(bottone => {
-        bottone.classList.add("disabled");
+        bottone.disabled = true;
 
         const testoBottone = bottone.querySelector("span").textContent;
 
-        const bottoneCorretto =
-            normalizzaTesto(testoBottone) ===
-            normalizzaTesto(rispostaCorretta);
-
-        if (bottoneCorretto) {
+        if (testoBottone === rispostaCorretta) {
             bottone.classList.add("correct");
         }
     });
 
     if (corretta) {
-        correctAnswers++;
-        bottoneScelto.classList.add("correct");
+        risposteCorrette += 1;
 
-        feedbackBox.className = "feedback-box ok";
-        feedbackBox.textContent = "Risposta corretta! Ottimo lavoro.";
+        elementi.feedbackBox.textContent = "Risposta corretta!";
+        elementi.feedbackBox.className = "feedback good";
 
-        avviaCoriandoli();
+        lanciaCoriandoliConDissolvenza();
+
     } else {
+        risposteSbagliate += 1;
+
         bottoneScelto.classList.add("wrong");
 
-        feedbackBox.className = "feedback-box ko";
-        feedbackBox.textContent =
-            `Risposta sbagliata. Risposta corretta: ${rispostaCorretta}`;
+        elementi.feedbackBox.textContent =
+            `Risposta sbagliata. La risposta corretta era: ${rispostaCorretta}`;
+
+        elementi.feedbackBox.className = "feedback bad";
     }
 
-    explanationText.textContent =
-        currentQuestion.spiegazione || "Spiegazione non disponibile.";
+    elementi.scoreText.textContent =
+        `Corrette: ${risposteCorrette}`;
 
-    feedbackBox.classList.remove("hidden");
-    explanationBox.classList.remove("hidden");
+    elementi.explanationText.textContent =
+        domanda.spiegazione || "Spiegazione non disponibile.";
 
-    aggiornaPunteggio();
+    elementi.explanationBox.classList.remove("hidden");
+    elementi.feedbackBox.classList.remove("hidden");
+    elementi.nextButton.classList.remove("hidden");
 }
 
+function vaiAllaProssimaDomanda() {
+    if (indiceDomandaCorrente < domandeTest.length - 1) {
+        indiceDomandaCorrente += 1;
+        mostraDomandaCorrente();
+        return;
+    }
 
-function ridimensionaCanvas() {
-    confettiCanvas.width = window.innerWidth;
-    confettiCanvas.height = window.innerHeight;
+    mostraReportFinale();
 }
 
+function mostraReportFinale() {
+    const totale = domandeTest.length;
+    const percentuale = Math.round((risposteCorrette / totale) * 100);
+    const voto = Number(((risposteCorrette / totale) * 10).toFixed(1));
+    const profilo = ottieniProfiloRisultato(voto);
 
-function avviaCoriandoli() {
-    ridimensionaCanvas();
+    elementi.progressFill.style.width = "100%";
 
-    const coriandoli = [];
+    elementi.resultVisual.className = `result-visual ${profilo.classe}`;
+    elementi.resultEmoji.textContent = profilo.emoji;
+    elementi.resultTitle.textContent = profilo.titolo;
+    elementi.resultPhrase.textContent = profilo.frase;
+
+    elementi.totalQuestionsResult.textContent = totale;
+    elementi.correctResult.textContent = risposteCorrette;
+    elementi.wrongResult.textContent = risposteSbagliate;
+    elementi.percentageResult.textContent = `${percentuale}%`;
+
+    elementi.gradeResult.textContent = `${formattaVoto(voto)}/10`;
+    elementi.judgementResult.textContent = profilo.giudizio;
+
+    mostraSolo(elementi.resultBox);
+
+    if (voto >= 8) {
+        lanciaCoriandoliConDissolvenza(true);
+    }
+}
+
+function ottieniProfiloRisultato(voto) {
+    if (voto === 10) {
+        return {
+            classe: "grade-10",
+            emoji: "🏆🚀",
+            titolo: "10 pieno! Prestazione eccellente",
+            giudizio: "Eccellente",
+            frase:
+                "Hai completato il test in modo perfetto. Risultato da campione: precisione, concentrazione e preparazione al massimo."
+        };
+    }
+
+    if (voto >= 9) {
+        return {
+            classe: "grade-9",
+            emoji: "🥇✨",
+            titolo: "Risultato ottimo",
+            giudizio: "Ottimo",
+            frase:
+                "Hai fatto un lavoro di altissimo livello. Pochissimi errori e grande controllo degli argomenti."
+        };
+    }
+
+    if (voto >= 8) {
+        return {
+            classe: "grade-8",
+            emoji: "🌟💪",
+            titolo: "Bel risultato",
+            giudizio: "Buono",
+            frase:
+                "Sei sulla strada giusta. La base è forte e con un po' di allenamento puoi arrivare facilmente ancora più in alto."
+        };
+    }
+
+    if (voto >= 7) {
+        return {
+            classe: "grade-7",
+            emoji: "👍📘",
+            titolo: "Buona prova",
+            giudizio: "Discreto",
+            frase:
+                "Hai superato bene il test. Ci sono alcuni punti da sistemare, ma il percorso è positivo."
+        };
+    }
+
+    if (voto >= 6) {
+        return {
+            classe: "grade-6",
+            emoji: "🌱📚",
+            titolo: "Base sufficiente",
+            giudizio: "Sufficiente",
+            frase:
+                "Hai raggiunto la sufficienza. Ora l'obiettivo è trasformare gli errori in allenamento mirato."
+        };
+    }
+
+    return {
+        classe: "grade-low",
+        emoji: "🔁🔥",
+        titolo: "Allenamento in corso",
+        giudizio: "Da migliorare",
+        frase:
+            "Non è un fallimento: è una mappa degli argomenti da rinforzare. Ripeti il test, leggi le spiegazioni e vedrai miglioramenti."
+    };
+}
+
+function tornaAlleImpostazioni() {
+    aggiornaInfoDomandeDisponibili();
+    mostraSolo(elementi.setupBox);
+}
+
+function mescolaArray(arrayOriginale) {
+    const array = [...arrayOriginale];
+
+    for (let i = array.length - 1; i > 0; i -= 1) {
+        const indiceCasuale = Math.floor(Math.random() * (i + 1));
+
+        [array[i], array[indiceCasuale]] = [
+            array[indiceCasuale],
+            array[i]
+        ];
+    }
+
+    return array;
+}
+
+function formattaTesto(testo) {
+    if (!testo) {
+        return "";
+    }
+
+    return testo
+        .replaceAll("_", " ")
+        .replace(/\b\w/g, lettera => {
+            return lettera.toUpperCase();
+        });
+}
+
+function formattaVoto(voto) {
+    if (Number.isInteger(voto)) {
+        return String(voto);
+    }
+
+    return String(voto).replace(".", ",");
+}
+
+function risolviPercorsoAsset(percorso) {
+    if (
+        percorso.startsWith("http://") ||
+        percorso.startsWith("https://") ||
+        percorso.startsWith("../") ||
+        percorso.startsWith("/")
+    ) {
+        return percorso;
+    }
+
+    return `../${percorso}`;
+}
+
+function lanciaCoriandoliConDissolvenza(versioneGrande = false) {
+    const canvas = elementi.confettiCanvas;
+    const ctx = canvas.getContext("2d");
+
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
 
     const colori = [
-        "#38bdf8",
-        "#a78bfa",
-        "#f472b6",
         "#facc15",
         "#22c55e",
-        "#fb7185"
+        "#38bdf8",
+        "#a78bfa",
+        "#fb7185",
+        "#f97316",
+        "#5eead4",
+        "#ffffff",
+        "#f0abfc"
     ];
 
-    for (let i = 0; i < 160; i++) {
-        coriandoli.push({
-            x: Math.random() * confettiCanvas.width,
-            y: -20 - Math.random() * confettiCanvas.height * 0.35,
-            size: 6 + Math.random() * 9,
-            speedY: 3 + Math.random() * 5,
-            speedX: -2 + Math.random() * 4,
-            rotation: Math.random() * 360,
-            rotationSpeed: -8 + Math.random() * 16,
-            color: colori[Math.floor(Math.random() * colori.length)],
-            life: 120 + Math.random() * 50
+    /*
+        Tanti coriandoli come nella prima versione.
+        Risposta corretta normale: tanti coriandoli.
+        Report finale buono/ottimo: ancora più coriandoli.
+    */
+    const quantita = versioneGrande ? 260 : 130;
+    const particelle = [];
+
+    for (let i = 0; i < quantita; i += 1) {
+        particelle.push({
+            x: Math.random() * canvas.width,
+            y: -40 - Math.random() * 220,
+
+            larghezza: 7 + Math.random() * 10,
+            altezza: 9 + Math.random() * 14,
+
+            velocitaY: 3.2 + Math.random() * 4.8,
+            velocitaX: -2.8 + Math.random() * 5.6,
+
+            rotazione: Math.random() * Math.PI,
+            velocitaRotazione: -0.16 + Math.random() * 0.32,
+
+            colore: colori[Math.floor(Math.random() * colori.length)],
+
+            opacita: 1,
+
+            /*
+                La dissolvenza non parte subito.
+                Parte solo sotto metà schermo, circa tra il 58% e il 72%.
+            */
+            puntoInizioDissolvenza:
+                canvas.height * (0.58 + Math.random() * 0.14),
+
+            dissolvenzaIniziata: false,
+
+            /*
+                Più basso è il numero, più lentamente spariscono.
+                Qui la dissolvenza è morbida.
+            */
+            velocitaDissolvenza: 0.010 + Math.random() * 0.006
         });
     }
 
     function anima() {
-        confettiContext.clearRect(
-            0,
-            0,
-            confettiCanvas.width,
-            confettiCanvas.height
-        );
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-        coriandoli.forEach(coriandolo => {
-            coriandolo.x += coriandolo.speedX;
-            coriandolo.y += coriandolo.speedY;
-            coriandolo.rotation += coriandolo.rotationSpeed;
-            coriandolo.life--;
+        let particelleVive = 0;
 
-            confettiContext.save();
+        particelle.forEach(particella => {
+            /*
+                I coriandoli si muovono sempre.
+                Non si fermano a metà schermo.
+            */
+            particella.x += particella.velocitaX;
+            particella.y += particella.velocitaY;
 
-            confettiContext.translate(
-                coriandolo.x,
-                coriandolo.y
-            );
+            /*
+                Piccola gravità: continuano a cadere in modo naturale.
+            */
+            particella.velocitaY += 0.025;
 
-            confettiContext.rotate(
-                coriandolo.rotation * Math.PI / 180
-            );
+            /*
+                Piccola oscillazione laterale.
+            */
+            particella.x += Math.sin(particella.y * 0.025) * 0.45;
 
-            confettiContext.fillStyle = coriandolo.color;
+            particella.rotazione += particella.velocitaRotazione;
 
-            confettiContext.fillRect(
-                -coriandolo.size / 2,
-                -coriandolo.size / 2,
-                coriandolo.size,
-                coriandolo.size * 1.8
-            );
+            /*
+                Solo quando il coriandolo supera il punto sotto metà schermo
+                inizia la dissolvenza.
+            */
+            if (particella.y >= particella.puntoInizioDissolvenza) {
+                particella.dissolvenzaIniziata = true;
+            }
 
-            confettiContext.restore();
+            /*
+                Prima resta completamente visibile.
+                Dopo continua a scendere e sfuma piano.
+            */
+            if (particella.dissolvenzaIniziata) {
+                particella.opacita -= particella.velocitaDissolvenza;
+            }
+
+            const ancoraVisibile =
+                particella.opacita > 0 &&
+                particella.y < canvas.height + 140;
+
+            if (ancoraVisibile) {
+                particelleVive += 1;
+
+                ctx.save();
+
+                ctx.globalAlpha = particella.opacita;
+                ctx.translate(particella.x, particella.y);
+                ctx.rotate(particella.rotazione);
+                ctx.fillStyle = particella.colore;
+
+                ctx.fillRect(
+                    -particella.larghezza / 2,
+                    -particella.altezza / 2,
+                    particella.larghezza,
+                    particella.altezza
+                );
+
+                ctx.restore();
+            }
         });
 
-        const ancoraVivi = coriandoli.some(coriandolo => {
-            return coriandolo.life > 0;
-        });
-
-        if (ancoraVivi) {
+        if (particelleVive > 0) {
             requestAnimationFrame(anima);
         } else {
-            confettiContext.clearRect(
-                0,
-                0,
-                confettiCanvas.width,
-                confettiCanvas.height
-            );
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
         }
     }
 
     anima();
 }
-
-
-categorySelect.addEventListener("change", () => {
-    aggiornaTotaleDomande();
-    caricaNuovaDomanda();
-});
-
-
-levelSelect.addEventListener("change", () => {
-    aggiornaTotaleDomande();
-    caricaNuovaDomanda();
-});
-
-
-newQuestionButton.addEventListener("click", caricaNuovaDomanda);
-
-window.addEventListener("resize", ridimensionaCanvas);
-
-ridimensionaCanvas();
-caricaDatabase();
-aggiornaPunteggio();
