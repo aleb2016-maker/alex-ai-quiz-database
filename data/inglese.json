@@ -2,52 +2,52 @@
   {
     "id": "ING-FAC-0001",
     "categoria": "inglese",
-    "sottocategoria": "vocabolario base",
+    "sottocategoria": "grammatica_base",
     "livello": "facile",
-    "domanda": "Qual è la traduzione corretta di 'computer' in italiano?",
+    "domanda": "Quale frase inglese è grammaticalmente corretta?",
     "opzioni": [
-      "Computer",
-      "Calcolatrice",
-      "Scrivania",
-      "Telefono"
+      "She has a blue backpack.",
+      "She have a blue backpack.",
+      "She is have a blue backpack.",
+      "She having a blue backpack."
     ],
-    "risposta_corretta": "Computer",
-    "spiegazione": "In italiano la parola 'computer' viene usata quasi uguale all'inglese. Non indica una semplice calcolatrice, ma un dispositivo elettronico programmabile.",
-    "tags": ["vocabolario", "tecnologia", "base"],
+    "risposta_corretta": "She has a blue backpack.",
+    "spiegazione": "La frase corretta è 'She has a blue backpack' perché con he, she, it si usa 'has' e non 'have'. Le altre opzioni usano forme verbali sbagliate.",
+    "tags": ["inglese", "grammatica", "verbo avere"],
     "difficolta": 1
   },
   {
     "id": "ING-INT-0002",
     "categoria": "inglese",
-    "sottocategoria": "grammatica",
+    "sottocategoria": "present_perfect",
     "livello": "intermedio",
-    "domanda": "Quale frase usa correttamente il present simple?",
+    "domanda": "Quale frase usa correttamente il present perfect?",
     "opzioni": [
-      "She works in a software company",
-      "She working in a software company",
-      "She work in a software company",
-      "She is work in a software company"
+      "I have just finished my homework.",
+      "I have finished my homework yesterday.",
+      "I am finished my homework.",
+      "I just have finish my homework."
     ],
-    "risposta_corretta": "She works in a software company",
-    "spiegazione": "Con he, she e it al present simple si aggiunge di solito la -s al verbo. Per questo la forma corretta è 'She works'.",
-    "tags": ["present simple", "grammatica", "verbi"],
+    "risposta_corretta": "I have just finished my homework.",
+    "spiegazione": "Il present perfect si forma con 'have/has' + participio passato. 'I have just finished my homework' è corretto. Con un tempo passato preciso come 'yesterday' di solito si usa il past simple.",
+    "tags": ["inglese", "present perfect", "grammatica"],
     "difficolta": 2
   },
   {
     "id": "ING-AV-0003",
     "categoria": "inglese",
-    "sottocategoria": "comprensione tecnica",
+    "sottocategoria": "connettivi",
     "livello": "avanzato",
-    "domanda": "In ambito informatico, cosa significa la frase 'The system stores data temporarily in memory'?",
+    "domanda": "Completa la frase scegliendo il connettivo più adatto: The app is simple to use, ___ it offers advanced features for experienced users.",
     "opzioni": [
-      "Il sistema conserva temporaneamente i dati in memoria",
-      "Il sistema cancella definitivamente i dati dalla memoria",
-      "Il sistema traduce i dati in un linguaggio naturale",
-      "Il sistema impedisce alla memoria di usare dati temporanei"
+      "yet",
+      "because",
+      "unless",
+      "therefore"
     ],
-    "risposta_corretta": "Il sistema conserva temporaneamente i dati in memoria",
-    "spiegazione": "La frase dice che il sistema salva i dati solo per un periodo temporaneo nella memoria. 'Temporarily' significa 'temporaneamente' e 'stores' significa 'conserva' o 'salva'.",
-    "tags": ["inglese tecnico", "comprensione", "memoria"],
+    "risposta_corretta": "yet",
+    "spiegazione": "'Yet' è corretto perché introduce un contrasto: l'app è semplice da usare, ma offre anche funzioni avanzate. 'Because' indica causa, 'unless' indica condizione negativa, 'therefore' indica conseguenza.",
+    "tags": ["inglese", "connettivi", "comprensione"],
     "difficolta": 3
   }
 ]
