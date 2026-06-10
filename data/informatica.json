@@ -38,7 +38,7 @@
     "categoria": "informatica",
     "sottocategoria": "api",
     "livello": "avanzato",
-    "domanda": "Qual è lo scopo principale di una API REST in un'applicazione web?",
+    "domanda": "Qual è lo scopo principale di un'API REST in un'applicazione web?",
     "opzioni": [
       "Permettere a frontend e backend di comunicare tramite richieste HTTP strutturate",
       "Disegnare automaticamente l'interfaccia grafica dell'applicazione",
@@ -46,7 +46,7 @@
       "Impedire al browser di inviare dati al server"
     ],
     "risposta_corretta": "Permettere a frontend e backend di comunicare tramite richieste HTTP strutturate",
-    "spiegazione": "Una API REST permette al frontend, per esempio una pagina React, di chiedere dati o inviare informazioni al backend usando metodi HTTP come GET, POST, PUT e DELETE.",
+    "spiegazione": "Un'API REST permette al frontend, per esempio una pagina React, di chiedere dati o inviare informazioni al backend usando metodi HTTP come GET, POST, PUT e DELETE.",
     "tags": ["api", "rest", "backend", "frontend"],
     "difficolta": 3
   }

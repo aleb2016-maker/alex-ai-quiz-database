@@ -1,5 +1,33 @@
 # Alex AI Quiz Database
 
+## Demo online
+
+La demo interattiva del progetto è disponibile qui:
+
+[Apri la demo web](https://aleb2016-maker.github.io/alex-ai-quiz-database/demo/)
+
+La demo permette di provare il database quiz direttamente dal browser, con domande casuali, categorie, livelli, spiegazioni, immagini di logica visiva ed effetto coriandoli quando la risposta è corretta.
+
+## Demo web interattiva
+
+La demo grafica permette di provare il progetto senza usare il terminale.
+
+Funzioni disponibili nella demo:
+
+* selezione della categoria;
+* selezione del livello;
+* caricamento casuale delle domande;
+* risposta tramite pulsanti;
+* visualizzazione immediata di risposta corretta o sbagliata;
+* spiegazione dopo ogni risposta;
+* supporto alle immagini per la logica visiva;
+* effetto coriandoli quando la risposta è corretta.
+
+
+---
+
+## Descrizione del progetto
+
 Sistema Python/JSON per creare, validare e costruire un database di quiz su:
 
 * AI
@@ -130,6 +158,7 @@ scripts/
   check_duplicates.py
   check_image_paths.py
   check_text_quality_ai.py
+  generate_logica_visiva_assets.py
   build_database.py
   report_database.py
   run_all_checks.py
@@ -137,7 +166,17 @@ scripts/
 
 assets/
   logica_visiva/
+    immagini PNG per le domande di logica visiva
 
 dist/
   database_quiz_finale.json
+
+demo/
+  index.html
+  style.css
+  app.js
+
+requirements.txt
+index.html
+README.md
 ```
