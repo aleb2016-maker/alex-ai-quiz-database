@@ -1,0 +1,53 @@
+[
+  {
+    "id": "LOG-AST-FAC-0001",
+    "categoria": "logica",
+    "sottocategoria": "ragionamento astratto",
+    "livello": "facile",
+    "domanda": "In una sequenza le forme seguono questo ordine: cerchio, quadrato, cerchio, quadrato. Quale forma viene dopo?",
+    "opzioni": [
+      "Cerchio",
+      "Triangolo",
+      "Quadrato",
+      "Rettangolo"
+    ],
+    "risposta_corretta": "Cerchio",
+    "spiegazione": "La sequenza alterna sempre cerchio e quadrato. Dopo il quadrato torna il cerchio.",
+    "tags": ["pattern", "alternanza", "ragionamento astratto"],
+    "difficolta": 1
+  },
+  {
+    "id": "LOG-AST-INT-0002",
+    "categoria": "logica",
+    "sottocategoria": "ragionamento astratto",
+    "livello": "intermedio",
+    "domanda": "Una regola trasforma A in C, B in D e C in E. Seguendo la stessa regola, in cosa si trasforma D?",
+    "opzioni": [
+      "F",
+      "E",
+      "G",
+      "H"
+    ],
+    "risposta_corretta": "F",
+    "spiegazione": "Ogni lettera viene spostata avanti di due posizioni nell'alfabeto. D diventa F.",
+    "tags": ["pattern astratto", "alfabeto", "trasformazioni"],
+    "difficolta": 2
+  },
+  {
+    "id": "LOG-AST-AV-0003",
+    "categoria": "logica",
+    "sottocategoria": "ragionamento astratto",
+    "livello": "avanzato",
+    "domanda": "Osserva la regola: AB diventa BA, CD diventa DC, EF diventa FE. Seguendo la stessa logica, GH diventa...",
+    "opzioni": [
+      "HG",
+      "GI",
+      "HH",
+      "FG"
+    ],
+    "risposta_corretta": "HG",
+    "spiegazione": "La regola inverte l'ordine delle due lettere. Quindi GH diventa HG.",
+    "tags": ["trasformazioni", "ordine", "ragionamento astratto"],
+    "difficolta": 3
+  }
+]

@@ -1,0 +1,53 @@
+[
+  {
+    "id": "LOG-NUM-FAC-0001",
+    "categoria": "logica",
+    "sottocategoria": "logica numerica",
+    "livello": "facile",
+    "domanda": "In una fila numerata ogni posto aumenta di 3 unità: 4, 7, 10, 13. Quale numero viene dopo?",
+    "opzioni": [
+      "16",
+      "15",
+      "17",
+      "18"
+    ],
+    "risposta_corretta": "16",
+    "spiegazione": "Ogni numero aumenta di 3. Quindi dopo 13 bisogna fare 13 + 3 = 16.",
+    "tags": ["sequenze", "addizione costante", "logica numerica"],
+    "difficolta": 1
+  },
+  {
+    "id": "LOG-NUM-INT-0002",
+    "categoria": "logica",
+    "sottocategoria": "logica numerica",
+    "livello": "intermedio",
+    "domanda": "Un codice segue questa regola: 2 diventa 6, 4 diventa 12, 6 diventa 18. Secondo la stessa regola, 8 diventa...",
+    "opzioni": [
+      "24",
+      "22",
+      "26",
+      "20"
+    ],
+    "risposta_corretta": "24",
+    "spiegazione": "Ogni numero viene moltiplicato per 3. Quindi 8 × 3 = 24.",
+    "tags": ["codici numerici", "moltiplicazione", "regole"],
+    "difficolta": 2
+  },
+  {
+    "id": "LOG-NUM-AV-0003",
+    "categoria": "logica",
+    "sottocategoria": "logica numerica",
+    "livello": "avanzato",
+    "domanda": "Osserva le coppie: 3 → 10, 5 → 16, 7 → 22. Quale valore corrisponde a 9 seguendo la stessa regola?",
+    "opzioni": [
+      "28",
+      "27",
+      "30",
+      "26"
+    ],
+    "risposta_corretta": "28",
+    "spiegazione": "La regola è: numero × 3 + 1. Infatti 3 × 3 + 1 = 10, 5 × 3 + 1 = 16, 7 × 3 + 1 = 22. Quindi 9 × 3 + 1 = 28.",
+    "tags": ["coppie numeriche", "regole", "ragionamento numerico"],
+    "difficolta": 3
+  }
+]

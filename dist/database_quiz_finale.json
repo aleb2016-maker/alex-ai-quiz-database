@@ -1,0 +1,595 @@
+[
+  {
+    "id": "MAT-FAC-0001",
+    "categoria": "matematica",
+    "sottocategoria": "percentuali",
+    "livello": "facile",
+    "domanda": "Quanto vale il 20% di 50?",
+    "opzioni": [
+      "10",
+      "12",
+      "8",
+      "15"
+    ],
+    "risposta_corretta": "10",
+    "spiegazione": "Il 20% significa 20 su 100. Quindi 50 × 20 / 100 = 10.",
+    "tags": [
+      "percentuali",
+      "calcolo base"
+    ],
+    "difficolta": 1
+  },
+  {
+    "id": "MAT-INT-0002",
+    "categoria": "matematica",
+    "sottocategoria": "equazioni",
+    "livello": "intermedio",
+    "domanda": "Qual è il valore di x nell'equazione 3x + 4 = 19?",
+    "opzioni": [
+      "5",
+      "4",
+      "6",
+      "7"
+    ],
+    "risposta_corretta": "5",
+    "spiegazione": "Prima togli 4 da entrambi i lati: 3x = 15. Poi dividi per 3: x = 5.",
+    "tags": [
+      "equazioni",
+      "algebra"
+    ],
+    "difficolta": 2
+  },
+  {
+    "id": "MAT-AV-0003",
+    "categoria": "matematica",
+    "sottocategoria": "proporzioni",
+    "livello": "avanzato",
+    "domanda": "Se 6 operai completano un lavoro in 12 giorni, quanti giorni servono a 9 operai con lo stesso ritmo?",
+    "opzioni": [
+      "8 giorni",
+      "9 giorni",
+      "10 giorni",
+      "7 giorni"
+    ],
+    "risposta_corretta": "8 giorni",
+    "spiegazione": "Il lavoro totale è 6 × 12 = 72 giornate-operaio. Con 9 operai servono 72 / 9 = 8 giorni.",
+    "tags": [
+      "proporzioni inverse",
+      "problemi"
+    ],
+    "difficolta": 3
+  },
+  {
+    "id": "AI-FAC-0001",
+    "categoria": "ai",
+    "sottocategoria": "llm",
+    "livello": "facile",
+    "domanda": "Qual è il ruolo principale di un modello linguistico di grandi dimensioni, chiamato LLM?",
+    "opzioni": [
+      "Prevedere e generare testo in base al contesto ricevuto",
+      "Salvare automaticamente tutti i file presenti nel computer",
+      "Aumentare fisicamente la memoria RAM del dispositivo",
+      "Sostituire il sistema operativo con un ambiente neurale"
+    ],
+    "risposta_corretta": "Prevedere e generare testo in base al contesto ricevuto",
+    "spiegazione": "Un LLM analizza il testo ricevuto e genera una risposta prevedendo quali parole sono più coerenti con il contesto.",
+    "tags": [
+      "llm",
+      "modelli linguistici",
+      "testo"
+    ],
+    "difficolta": 1
+  },
+  {
+    "id": "AI-INT-0002",
+    "categoria": "ai",
+    "sottocategoria": "prompt engineering",
+    "livello": "intermedio",
+    "domanda": "Perché un prompt dettagliato può migliorare la risposta di un modello AI?",
+    "opzioni": [
+      "Perché fornisce più contesto e riduce le ambiguità della richiesta",
+      "Perché aumenta automaticamente il numero di parametri del modello",
+      "Perché trasforma il modello locale in un modello cloud",
+      "Perché impedisce al modello di usare dati testuali"
+    ],
+    "risposta_corretta": "Perché fornisce più contesto e riduce le ambiguità della richiesta",
+    "spiegazione": "Un prompt più chiaro aiuta il modello a capire meglio obiettivo, vincoli e formato della risposta richiesta.",
+    "tags": [
+      "prompt",
+      "contesto",
+      "istruzioni"
+    ],
+    "difficolta": 2
+  },
+  {
+    "id": "AI-AV-0003",
+    "categoria": "ai",
+    "sottocategoria": "rag",
+    "livello": "avanzato",
+    "domanda": "A cosa serve principalmente un sistema RAG in un'applicazione AI?",
+    "opzioni": [
+      "A recuperare informazioni da fonti esterne e usarle per generare risposte più fondate",
+      "A comprimere il modello fino a eliminarne tutti i parametri non usati",
+      "A impedire al modello di leggere documenti o database esterni",
+      "A sostituire completamente il backend dell'applicazione"
+    ],
+    "risposta_corretta": "A recuperare informazioni da fonti esterne e usarle per generare risposte più fondate",
+    "spiegazione": "RAG significa Retrieval-Augmented Generation: prima recupera informazioni utili, poi le usa per generare una risposta più precisa.",
+    "tags": [
+      "rag",
+      "retrieval",
+      "database",
+      "documenti"
+    ],
+    "difficolta": 3
+  },
+  {
+    "id": "INF-FAC-0001",
+    "categoria": "informatica",
+    "sottocategoria": "basi computer",
+    "livello": "facile",
+    "domanda": "Qual è la funzione principale della memoria RAM in un computer?",
+    "opzioni": [
+      "Conservare temporaneamente i dati usati dai programmi in esecuzione",
+      "Archiviare in modo permanente tutti i file anche a computer spento",
+      "Convertire la corrente elettrica in segnale video",
+      "Gestire esclusivamente la connessione alla rete Wi-Fi"
+    ],
+    "risposta_corretta": "Conservare temporaneamente i dati usati dai programmi in esecuzione",
+    "spiegazione": "La RAM è una memoria temporanea e veloce. Serve al computer per lavorare sui dati dei programmi aperti. Quando il computer si spegne, il contenuto della RAM viene perso.",
+    "tags": [
+      "ram",
+      "memoria",
+      "hardware"
+    ],
+    "difficolta": 1
+  },
+  {
+    "id": "INF-INT-0002",
+    "categoria": "informatica",
+    "sottocategoria": "database",
+    "livello": "intermedio",
+    "domanda": "In un database relazionale, a cosa serve principalmente una chiave primaria?",
+    "opzioni": [
+      "A identificare in modo univoco ogni record di una tabella",
+      "A rendere automaticamente più veloce qualsiasi programma",
+      "A cancellare tutti i dati duplicati presenti nel database",
+      "A trasformare una tabella SQL in un file JSON"
+    ],
+    "risposta_corretta": "A identificare in modo univoco ogni record di una tabella",
+    "spiegazione": "La chiave primaria serve a riconoscere ogni riga della tabella senza confonderla con le altre. Per esempio, un ID cliente può distinguere un cliente da tutti gli altri.",
+    "tags": [
+      "database",
+      "sql",
+      "chiave primaria"
+    ],
+    "difficolta": 2
+  },
+  {
+    "id": "INF-AV-0003",
+    "categoria": "informatica",
+    "sottocategoria": "api",
+    "livello": "avanzato",
+    "domanda": "Qual è lo scopo principale di una API REST in un'applicazione web?",
+    "opzioni": [
+      "Permettere a frontend e backend di comunicare tramite richieste HTTP strutturate",
+      "Disegnare automaticamente l'interfaccia grafica dell'applicazione",
+      "Sostituire completamente il database locale del sistema",
+      "Impedire al browser di inviare dati al server"
+    ],
+    "risposta_corretta": "Permettere a frontend e backend di comunicare tramite richieste HTTP strutturate",
+    "spiegazione": "Una API REST permette al frontend, per esempio una pagina React, di chiedere dati o inviare informazioni al backend usando metodi HTTP come GET, POST, PUT e DELETE.",
+    "tags": [
+      "api",
+      "rest",
+      "backend",
+      "frontend"
+    ],
+    "difficolta": 3
+  },
+  {
+    "id": "ING-FAC-0001",
+    "categoria": "inglese",
+    "sottocategoria": "vocabolario base",
+    "livello": "facile",
+    "domanda": "Qual è la traduzione corretta di 'computer' in italiano?",
+    "opzioni": [
+      "Computer",
+      "Calcolatrice",
+      "Scrivania",
+      "Telefono"
+    ],
+    "risposta_corretta": "Computer",
+    "spiegazione": "In italiano la parola 'computer' viene usata quasi uguale all'inglese. Non indica una semplice calcolatrice, ma un dispositivo elettronico programmabile.",
+    "tags": [
+      "vocabolario",
+      "tecnologia",
+      "base"
+    ],
+    "difficolta": 1
+  },
+  {
+    "id": "ING-INT-0002",
+    "categoria": "inglese",
+    "sottocategoria": "grammatica",
+    "livello": "intermedio",
+    "domanda": "Quale frase usa correttamente il present simple?",
+    "opzioni": [
+      "She works in a software company",
+      "She working in a software company",
+      "She work in a software company",
+      "She is work in a software company"
+    ],
+    "risposta_corretta": "She works in a software company",
+    "spiegazione": "Con he, she e it al present simple si aggiunge di solito la -s al verbo. Per questo la forma corretta è 'She works'.",
+    "tags": [
+      "present simple",
+      "grammatica",
+      "verbi"
+    ],
+    "difficolta": 2
+  },
+  {
+    "id": "ING-AV-0003",
+    "categoria": "inglese",
+    "sottocategoria": "comprensione tecnica",
+    "livello": "avanzato",
+    "domanda": "In ambito informatico, cosa significa la frase 'The system stores data temporarily in memory'?",
+    "opzioni": [
+      "Il sistema conserva temporaneamente i dati in memoria",
+      "Il sistema cancella definitivamente i dati dalla memoria",
+      "Il sistema traduce i dati in un linguaggio naturale",
+      "Il sistema impedisce alla memoria di usare dati temporanei"
+    ],
+    "risposta_corretta": "Il sistema conserva temporaneamente i dati in memoria",
+    "spiegazione": "La frase dice che il sistema salva i dati solo per un periodo temporaneo nella memoria. 'Temporarily' significa 'temporaneamente' e 'stores' significa 'conserva' o 'salva'.",
+    "tags": [
+      "inglese tecnico",
+      "comprensione",
+      "memoria"
+    ],
+    "difficolta": 3
+  },
+  {
+    "id": "LOG-VIS-FAC-0001",
+    "categoria": "logica",
+    "sottocategoria": "logica visiva",
+    "tipo_domanda": "immagine",
+    "livello": "facile",
+    "domanda": "Osserva la sequenza di forme e scegli quale figura completa correttamente il pattern.",
+    "immagine_domanda": "assets/logica_visiva/log_vis_fac_0001_domanda.png",
+    "opzioni": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "immagini_opzioni": [
+      "assets/logica_visiva/log_vis_fac_0001_A.png",
+      "assets/logica_visiva/log_vis_fac_0001_B.png",
+      "assets/logica_visiva/log_vis_fac_0001_C.png",
+      "assets/logica_visiva/log_vis_fac_0001_D.png"
+    ],
+    "risposta_corretta": "C",
+    "spiegazione": "La risposta corretta è C perché la sequenza alterna cerchio e quadrato. Dopo il quadrato deve tornare il cerchio.",
+    "tags": [
+      "logica visiva",
+      "pattern",
+      "forme",
+      "sequenze"
+    ],
+    "difficolta": 1
+  },
+  {
+    "id": "LOG-VIS-INT-0002",
+    "categoria": "logica",
+    "sottocategoria": "logica visiva",
+    "tipo_domanda": "immagine",
+    "livello": "intermedio",
+    "domanda": "Osserva la rotazione della figura e scegli quale opzione continua correttamente la trasformazione.",
+    "immagine_domanda": "assets/logica_visiva/log_vis_int_0002_domanda.png",
+    "opzioni": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "immagini_opzioni": [
+      "assets/logica_visiva/log_vis_int_0002_A.png",
+      "assets/logica_visiva/log_vis_int_0002_B.png",
+      "assets/logica_visiva/log_vis_int_0002_C.png",
+      "assets/logica_visiva/log_vis_int_0002_D.png"
+    ],
+    "risposta_corretta": "B",
+    "spiegazione": "La risposta corretta è B perché la figura ruota sempre di 90 gradi in senso orario. L'opzione B mantiene la stessa regola.",
+    "tags": [
+      "logica visiva",
+      "rotazioni",
+      "trasformazioni",
+      "figure"
+    ],
+    "difficolta": 2
+  },
+  {
+    "id": "LOG-VIS-AV-0003",
+    "categoria": "logica",
+    "sottocategoria": "logica visiva",
+    "tipo_domanda": "immagine",
+    "livello": "avanzato",
+    "domanda": "Osserva la matrice di figure e scegli quale opzione completa correttamente la casella mancante.",
+    "immagine_domanda": "assets/logica_visiva/log_vis_av_0003_domanda.png",
+    "opzioni": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "immagini_opzioni": [
+      "assets/logica_visiva/log_vis_av_0003_A.png",
+      "assets/logica_visiva/log_vis_av_0003_B.png",
+      "assets/logica_visiva/log_vis_av_0003_C.png",
+      "assets/logica_visiva/log_vis_av_0003_D.png"
+    ],
+    "risposta_corretta": "D",
+    "spiegazione": "La risposta corretta è D perché nella matrice cambiano insieme due regole: la forma si alterna per riga e il riempimento aumenta per colonna.",
+    "tags": [
+      "logica visiva",
+      "matrici",
+      "pattern",
+      "ragionamento astratto"
+    ],
+    "difficolta": 3
+  },
+  {
+    "id": "LOG-VER-FAC-0001",
+    "categoria": "logica",
+    "sottocategoria": "logica verbale",
+    "livello": "facile",
+    "domanda": "Quale parola completa meglio la relazione: Cane sta a cucciolo come gatto sta a...",
+    "opzioni": [
+      "Gattino",
+      "Felino",
+      "Zampa",
+      "Miagolio"
+    ],
+    "risposta_corretta": "Gattino",
+    "spiegazione": "La relazione è tra animale adulto e piccolo. Il piccolo del cane è il cucciolo, mentre il piccolo del gatto è il gattino.",
+    "tags": [
+      "analogie",
+      "relazioni verbali",
+      "logica verbale"
+    ],
+    "difficolta": 1
+  },
+  {
+    "id": "LOG-VER-INT-0002",
+    "categoria": "logica",
+    "sottocategoria": "logica verbale",
+    "livello": "intermedio",
+    "domanda": "Individua la parola che non appartiene allo stesso gruppo logico: quercia, pino, faggio, rosa.",
+    "opzioni": [
+      "Rosa",
+      "Pino",
+      "Faggio",
+      "Quercia"
+    ],
+    "risposta_corretta": "Rosa",
+    "spiegazione": "Quercia, pino e faggio sono alberi. La rosa è una pianta ornamentale da fiore, quindi non appartiene allo stesso gruppo logico.",
+    "tags": [
+      "classificazione",
+      "parola estranea",
+      "logica verbale"
+    ],
+    "difficolta": 2
+  },
+  {
+    "id": "LOG-VER-AV-0003",
+    "categoria": "logica",
+    "sottocategoria": "logica verbale",
+    "livello": "avanzato",
+    "domanda": "Completa l'analogia: Scrittore sta a romanzo come compositore sta a...",
+    "opzioni": [
+      "Sinfonia",
+      "Strumento",
+      "Teatro",
+      "Melodia ascoltata"
+    ],
+    "risposta_corretta": "Sinfonia",
+    "spiegazione": "Lo scrittore crea un romanzo. Allo stesso modo, il compositore crea una sinfonia o un'opera musicale. Tra le opzioni, 'sinfonia' è la risposta più precisa.",
+    "tags": [
+      "analogie",
+      "professioni",
+      "prodotti"
+    ],
+    "difficolta": 3
+  },
+  {
+    "id": "LOG-AST-FAC-0001",
+    "categoria": "logica",
+    "sottocategoria": "ragionamento astratto",
+    "livello": "facile",
+    "domanda": "In una sequenza le forme seguono questo ordine: cerchio, quadrato, cerchio, quadrato. Quale forma viene dopo?",
+    "opzioni": [
+      "Cerchio",
+      "Triangolo",
+      "Quadrato",
+      "Rettangolo"
+    ],
+    "risposta_corretta": "Cerchio",
+    "spiegazione": "La sequenza alterna sempre cerchio e quadrato. Dopo il quadrato torna il cerchio.",
+    "tags": [
+      "pattern",
+      "alternanza",
+      "ragionamento astratto"
+    ],
+    "difficolta": 1
+  },
+  {
+    "id": "LOG-AST-INT-0002",
+    "categoria": "logica",
+    "sottocategoria": "ragionamento astratto",
+    "livello": "intermedio",
+    "domanda": "Una regola trasforma A in C, B in D e C in E. Seguendo la stessa regola, in cosa si trasforma D?",
+    "opzioni": [
+      "F",
+      "E",
+      "G",
+      "H"
+    ],
+    "risposta_corretta": "F",
+    "spiegazione": "Ogni lettera viene spostata avanti di due posizioni nell'alfabeto. D diventa F.",
+    "tags": [
+      "pattern astratto",
+      "alfabeto",
+      "trasformazioni"
+    ],
+    "difficolta": 2
+  },
+  {
+    "id": "LOG-AST-AV-0003",
+    "categoria": "logica",
+    "sottocategoria": "ragionamento astratto",
+    "livello": "avanzato",
+    "domanda": "Osserva la regola: AB diventa BA, CD diventa DC, EF diventa FE. Seguendo la stessa logica, GH diventa...",
+    "opzioni": [
+      "HG",
+      "GI",
+      "HH",
+      "FG"
+    ],
+    "risposta_corretta": "HG",
+    "spiegazione": "La regola inverte l'ordine delle due lettere. Quindi GH diventa HG.",
+    "tags": [
+      "trasformazioni",
+      "ordine",
+      "ragionamento astratto"
+    ],
+    "difficolta": 3
+  },
+  {
+    "id": "LOG-CRI-FAC-0001",
+    "categoria": "logica",
+    "sottocategoria": "ragionamento critico",
+    "livello": "facile",
+    "domanda": "Tutti i treni della linea A arrivano in stazione. Il treno 25 è della linea A. Cosa si può concludere?",
+    "opzioni": [
+      "Il treno 25 arriva in stazione",
+      "Il treno 25 non arriva mai in stazione",
+      "Solo alcuni treni della linea A arrivano in stazione",
+      "Il treno 25 appartiene alla linea B"
+    ],
+    "risposta_corretta": "Il treno 25 arriva in stazione",
+    "spiegazione": "Se tutti i treni della linea A arrivano in stazione e il treno 25 è della linea A, allora anche il treno 25 arriva in stazione.",
+    "tags": [
+      "deduzione",
+      "sillogismi",
+      "ragionamento critico"
+    ],
+    "difficolta": 1
+  },
+  {
+    "id": "LOG-CRI-INT-0002",
+    "categoria": "logica",
+    "sottocategoria": "ragionamento critico",
+    "livello": "intermedio",
+    "domanda": "Se l'affermazione 'Se piove, Marco prende l'ombrello' è vera e oggi Marco non prende l'ombrello, cosa si può dedurre con certezza?",
+    "opzioni": [
+      "Oggi non piove",
+      "Oggi piove sicuramente",
+      "Marco ha dimenticato l'ombrello",
+      "Marco prende sempre l'ombrello"
+    ],
+    "risposta_corretta": "Oggi non piove",
+    "spiegazione": "La frase dice che quando piove Marco prende l'ombrello. Se oggi non lo prende, allora non si è verificata la condizione iniziale, quindi non piove.",
+    "tags": [
+      "condizioni",
+      "deduzione",
+      "logica proposizionale"
+    ],
+    "difficolta": 2
+  },
+  {
+    "id": "LOG-CRI-AV-0003",
+    "categoria": "logica",
+    "sottocategoria": "ragionamento critico",
+    "livello": "avanzato",
+    "domanda": "Un negozio afferma: 'Tutti i prodotti scontati sono esposti nello scaffale rosso'. Un cliente trova un prodotto nello scaffale rosso. Quale conclusione è logicamente corretta?",
+    "opzioni": [
+      "Non è certo che il prodotto sia scontato",
+      "Il prodotto è sicuramente scontato",
+      "Il prodotto non può essere scontato",
+      "Tutti i prodotti nello scaffale rosso costano uguale"
+    ],
+    "risposta_corretta": "Non è certo che il prodotto sia scontato",
+    "spiegazione": "La frase dice che tutti i prodotti scontati sono nello scaffale rosso, ma non dice che tutti i prodotti dello scaffale rosso siano scontati.",
+    "tags": [
+      "deduzione",
+      "errore logico",
+      "condizione sufficiente"
+    ],
+    "difficolta": 3
+  },
+  {
+    "id": "LOG-NUM-FAC-0001",
+    "categoria": "logica",
+    "sottocategoria": "logica numerica",
+    "livello": "facile",
+    "domanda": "In una fila numerata ogni posto aumenta di 3 unità: 4, 7, 10, 13. Quale numero viene dopo?",
+    "opzioni": [
+      "16",
+      "15",
+      "17",
+      "18"
+    ],
+    "risposta_corretta": "16",
+    "spiegazione": "Ogni numero aumenta di 3. Quindi dopo 13 bisogna fare 13 + 3 = 16.",
+    "tags": [
+      "sequenze",
+      "addizione costante",
+      "logica numerica"
+    ],
+    "difficolta": 1
+  },
+  {
+    "id": "LOG-NUM-INT-0002",
+    "categoria": "logica",
+    "sottocategoria": "logica numerica",
+    "livello": "intermedio",
+    "domanda": "Un codice segue questa regola: 2 diventa 6, 4 diventa 12, 6 diventa 18. Secondo la stessa regola, 8 diventa...",
+    "opzioni": [
+      "24",
+      "22",
+      "26",
+      "20"
+    ],
+    "risposta_corretta": "24",
+    "spiegazione": "Ogni numero viene moltiplicato per 3. Quindi 8 × 3 = 24.",
+    "tags": [
+      "codici numerici",
+      "moltiplicazione",
+      "regole"
+    ],
+    "difficolta": 2
+  },
+  {
+    "id": "LOG-NUM-AV-0003",
+    "categoria": "logica",
+    "sottocategoria": "logica numerica",
+    "livello": "avanzato",
+    "domanda": "Osserva le coppie: 3 → 10, 5 → 16, 7 → 22. Quale valore corrisponde a 9 seguendo la stessa regola?",
+    "opzioni": [
+      "28",
+      "27",
+      "30",
+      "26"
+    ],
+    "risposta_corretta": "28",
+    "spiegazione": "La regola è: numero × 3 + 1. Infatti 3 × 3 + 1 = 10, 5 × 3 + 1 = 16, 7 × 3 + 1 = 22. Quindi 9 × 3 + 1 = 28.",
+    "tags": [
+      "coppie numeriche",
+      "regole",
+      "ragionamento numerico"
+    ],
+    "difficolta": 3
+  }
+]

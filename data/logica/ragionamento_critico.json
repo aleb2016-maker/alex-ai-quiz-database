@@ -1,0 +1,53 @@
+[
+  {
+    "id": "LOG-CRI-FAC-0001",
+    "categoria": "logica",
+    "sottocategoria": "ragionamento critico",
+    "livello": "facile",
+    "domanda": "Tutti i treni della linea A arrivano in stazione. Il treno 25 è della linea A. Cosa si può concludere?",
+    "opzioni": [
+      "Il treno 25 arriva in stazione",
+      "Il treno 25 non arriva mai in stazione",
+      "Solo alcuni treni della linea A arrivano in stazione",
+      "Il treno 25 appartiene alla linea B"
+    ],
+    "risposta_corretta": "Il treno 25 arriva in stazione",
+    "spiegazione": "Se tutti i treni della linea A arrivano in stazione e il treno 25 è della linea A, allora anche il treno 25 arriva in stazione.",
+    "tags": ["deduzione", "sillogismi", "ragionamento critico"],
+    "difficolta": 1
+  },
+  {
+    "id": "LOG-CRI-INT-0002",
+    "categoria": "logica",
+    "sottocategoria": "ragionamento critico",
+    "livello": "intermedio",
+    "domanda": "Se l'affermazione 'Se piove, Marco prende l'ombrello' è vera e oggi Marco non prende l'ombrello, cosa si può dedurre con certezza?",
+    "opzioni": [
+      "Oggi non piove",
+      "Oggi piove sicuramente",
+      "Marco ha dimenticato l'ombrello",
+      "Marco prende sempre l'ombrello"
+    ],
+    "risposta_corretta": "Oggi non piove",
+    "spiegazione": "La frase dice che quando piove Marco prende l'ombrello. Se oggi non lo prende, allora non si è verificata la condizione iniziale, quindi non piove.",
+    "tags": ["condizioni", "deduzione", "logica proposizionale"],
+    "difficolta": 2
+  },
+  {
+    "id": "LOG-CRI-AV-0003",
+    "categoria": "logica",
+    "sottocategoria": "ragionamento critico",
+    "livello": "avanzato",
+    "domanda": "Un negozio afferma: 'Tutti i prodotti scontati sono esposti nello scaffale rosso'. Un cliente trova un prodotto nello scaffale rosso. Quale conclusione è logicamente corretta?",
+    "opzioni": [
+      "Non è certo che il prodotto sia scontato",
+      "Il prodotto è sicuramente scontato",
+      "Il prodotto non può essere scontato",
+      "Tutti i prodotti nello scaffale rosso costano uguale"
+    ],
+    "risposta_corretta": "Non è certo che il prodotto sia scontato",
+    "spiegazione": "La frase dice che tutti i prodotti scontati sono nello scaffale rosso, ma non dice che tutti i prodotti dello scaffale rosso siano scontati.",
+    "tags": ["deduzione", "errore logico", "condizione sufficiente"],
+    "difficolta": 3
+  }
+]

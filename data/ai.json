@@ -1,0 +1,53 @@
+[
+  {
+    "id": "AI-FAC-0001",
+    "categoria": "ai",
+    "sottocategoria": "llm",
+    "livello": "facile",
+    "domanda": "Qual è il ruolo principale di un modello linguistico di grandi dimensioni, chiamato LLM?",
+    "opzioni": [
+      "Prevedere e generare testo in base al contesto ricevuto",
+      "Salvare automaticamente tutti i file presenti nel computer",
+      "Aumentare fisicamente la memoria RAM del dispositivo",
+      "Sostituire il sistema operativo con un ambiente neurale"
+    ],
+    "risposta_corretta": "Prevedere e generare testo in base al contesto ricevuto",
+    "spiegazione": "Un LLM analizza il testo ricevuto e genera una risposta prevedendo quali parole sono più coerenti con il contesto.",
+    "tags": ["llm", "modelli linguistici", "testo"],
+    "difficolta": 1
+  },
+  {
+    "id": "AI-INT-0002",
+    "categoria": "ai",
+    "sottocategoria": "prompt engineering",
+    "livello": "intermedio",
+    "domanda": "Perché un prompt dettagliato può migliorare la risposta di un modello AI?",
+    "opzioni": [
+      "Perché fornisce più contesto e riduce le ambiguità della richiesta",
+      "Perché aumenta automaticamente il numero di parametri del modello",
+      "Perché trasforma il modello locale in un modello cloud",
+      "Perché impedisce al modello di usare dati testuali"
+    ],
+    "risposta_corretta": "Perché fornisce più contesto e riduce le ambiguità della richiesta",
+    "spiegazione": "Un prompt più chiaro aiuta il modello a capire meglio obiettivo, vincoli e formato della risposta richiesta.",
+    "tags": ["prompt", "contesto", "istruzioni"],
+    "difficolta": 2
+  },
+  {
+    "id": "AI-AV-0003",
+    "categoria": "ai",
+    "sottocategoria": "rag",
+    "livello": "avanzato",
+    "domanda": "A cosa serve principalmente un sistema RAG in un'applicazione AI?",
+    "opzioni": [
+      "A recuperare informazioni da fonti esterne e usarle per generare risposte più fondate",
+      "A comprimere il modello fino a eliminarne tutti i parametri non usati",
+      "A impedire al modello di leggere documenti o database esterni",
+      "A sostituire completamente il backend dell'applicazione"
+    ],
+    "risposta_corretta": "A recuperare informazioni da fonti esterne e usarle per generare risposte più fondate",
+    "spiegazione": "RAG significa Retrieval-Augmented Generation: prima recupera informazioni utili, poi le usa per generare una risposta più precisa.",
+    "tags": ["rag", "retrieval", "database", "documenti"],
+    "difficolta": 3
+  }
+]

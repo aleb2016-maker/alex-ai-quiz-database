@@ -1,0 +1,53 @@
+[
+  {
+    "id": "INF-FAC-0001",
+    "categoria": "informatica",
+    "sottocategoria": "basi computer",
+    "livello": "facile",
+    "domanda": "Qual è la funzione principale della memoria RAM in un computer?",
+    "opzioni": [
+      "Conservare temporaneamente i dati usati dai programmi in esecuzione",
+      "Archiviare in modo permanente tutti i file anche a computer spento",
+      "Convertire la corrente elettrica in segnale video",
+      "Gestire esclusivamente la connessione alla rete Wi-Fi"
+    ],
+    "risposta_corretta": "Conservare temporaneamente i dati usati dai programmi in esecuzione",
+    "spiegazione": "La RAM è una memoria temporanea e veloce. Serve al computer per lavorare sui dati dei programmi aperti. Quando il computer si spegne, il contenuto della RAM viene perso.",
+    "tags": ["ram", "memoria", "hardware"],
+    "difficolta": 1
+  },
+  {
+    "id": "INF-INT-0002",
+    "categoria": "informatica",
+    "sottocategoria": "database",
+    "livello": "intermedio",
+    "domanda": "In un database relazionale, a cosa serve principalmente una chiave primaria?",
+    "opzioni": [
+      "A identificare in modo univoco ogni record di una tabella",
+      "A rendere automaticamente più veloce qualsiasi programma",
+      "A cancellare tutti i dati duplicati presenti nel database",
+      "A trasformare una tabella SQL in un file JSON"
+    ],
+    "risposta_corretta": "A identificare in modo univoco ogni record di una tabella",
+    "spiegazione": "La chiave primaria serve a riconoscere ogni riga della tabella senza confonderla con le altre. Per esempio, un ID cliente può distinguere un cliente da tutti gli altri.",
+    "tags": ["database", "sql", "chiave primaria"],
+    "difficolta": 2
+  },
+  {
+    "id": "INF-AV-0003",
+    "categoria": "informatica",
+    "sottocategoria": "api",
+    "livello": "avanzato",
+    "domanda": "Qual è lo scopo principale di una API REST in un'applicazione web?",
+    "opzioni": [
+      "Permettere a frontend e backend di comunicare tramite richieste HTTP strutturate",
+      "Disegnare automaticamente l'interfaccia grafica dell'applicazione",
+      "Sostituire completamente il database locale del sistema",
+      "Impedire al browser di inviare dati al server"
+    ],
+    "risposta_corretta": "Permettere a frontend e backend di comunicare tramite richieste HTTP strutturate",
+    "spiegazione": "Una API REST permette al frontend, per esempio una pagina React, di chiedere dati o inviare informazioni al backend usando metodi HTTP come GET, POST, PUT e DELETE.",
+    "tags": ["api", "rest", "backend", "frontend"],
+    "difficolta": 3
+  }
+]
