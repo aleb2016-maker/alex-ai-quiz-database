@@ -5,6 +5,13 @@ let currentQuestion = null;
 let correctAnswers = 0;
 let answeredQuestions = 0;
 
+// Memorizza le domande già uscite,
+// così la demo non ripete subito sempre le stesse.
+let usedQuestionIds = new Set();
+
+// Serve per capire quando cambi categoria o livello.
+let lastFilterKey = "";
+
 const categorySelect = document.getElementById("categorySelect");
 const levelSelect = document.getElementById("levelSelect");
 const newQuestionButton = document.getElementById("newQuestionButton");
@@ -28,6 +35,7 @@ const explanationText = document.getElementById("explanationText");
 const confettiCanvas = document.getElementById("confettiCanvas");
 const confettiContext = confettiCanvas.getContext("2d");
 
+
 function normalizzaTesto(testo) {
     if (!testo) {
         return "";
@@ -35,6 +43,7 @@ function normalizzaTesto(testo) {
 
     return testo.toString().trim().toLowerCase();
 }
+
 
 function creaPercorsoAsset(percorso) {
     if (!percorso) {
@@ -48,6 +57,7 @@ function creaPercorsoAsset(percorso) {
     return `../${percorso}`;
 }
 
+
 async function caricaDatabase() {
     try {
         const risposta = await fetch(databaseUrl);
@@ -55,19 +65,29 @@ async function caricaDatabase() {
 
         popolaFiltri();
         aggiornaTotaleDomande();
+        aggiornaPunteggio();
         caricaNuovaDomanda();
 
     } catch (errore) {
         questionText.textContent = "Errore nel caricamento del database.";
+
         feedbackBox.className = "feedback-box ko";
-        feedbackBox.textContent = "Controlla che il file dist/database_quiz_finale.json esista.";
+        feedbackBox.textContent =
+            "Controlla che il file dist/database_quiz_finale.json esista.";
+
         feedbackBox.classList.remove("hidden");
     }
 }
 
+
 function popolaFiltri() {
-    const categorie = [...new Set(database.map(domanda => domanda.categoria))].sort();
-    const livelli = [...new Set(database.map(domanda => domanda.livello))].sort();
+    const categorie = [
+        ...new Set(database.map(domanda => domanda.categoria))
+    ].sort();
+
+    const livelli = [
+        ...new Set(database.map(domanda => domanda.livello))
+    ].sort();
 
     categorie.forEach(categoria => {
         const option = document.createElement("option");
@@ -83,6 +103,7 @@ function popolaFiltri() {
         levelSelect.appendChild(option);
     });
 }
+
 
 function filtraDomande() {
     const categoriaScelta = categorySelect.value;
@@ -101,29 +122,51 @@ function filtraDomande() {
     });
 }
 
+
 function aggiornaTotaleDomande() {
     const domandeFiltrate = filtraDomande();
     totalQuestions.textContent = domandeFiltrate.length;
 }
 
+
 function aggiornaPunteggio() {
     scoreValue.textContent = `${correctAnswers}/${answeredQuestions}`;
 }
+
+
+function creaChiaveFiltroAttuale() {
+    return `${categorySelect.value}-${levelSelect.value}`;
+}
+
+
+function resettaDomandeUsateSeFiltroCambia() {
+    const filtroAttuale = creaChiaveFiltroAttuale();
+
+    if (filtroAttuale !== lastFilterKey) {
+        usedQuestionIds.clear();
+        lastFilterKey = filtroAttuale;
+    }
+}
+
 
 function caricaNuovaDomanda() {
     const domandeFiltrate = filtraDomande();
 
     aggiornaTotaleDomande();
+    resettaDomandeUsateSeFiltroCambia();
 
     if (domandeFiltrate.length === 0) {
         currentQuestion = null;
 
-        questionText.textContent = "Nessuna domanda trovata per questi filtri.";
+        questionText.textContent =
+            "Nessuna domanda trovata per questi filtri.";
+
         categoryBadge.textContent = "Categoria";
         levelBadge.textContent = "Livello";
         questionId.textContent = "Nessuna domanda";
 
         optionsBox.innerHTML = "";
+        questionImage.src = "";
         questionImageBox.classList.add("hidden");
         feedbackBox.classList.add("hidden");
         explanationBox.classList.add("hidden");
@@ -131,11 +174,28 @@ function caricaNuovaDomanda() {
         return;
     }
 
-    const indiceCasuale = Math.floor(Math.random() * domandeFiltrate.length);
-    currentQuestion = domandeFiltrate[indiceCasuale];
+    let domandeDisponibili = domandeFiltrate.filter(domanda => {
+        return !usedQuestionIds.has(domanda.id);
+    });
+
+    // Se tutte le domande filtrate sono già uscite,
+    // ricominciamo un nuovo giro.
+    if (domandeDisponibili.length === 0) {
+        usedQuestionIds.clear();
+        domandeDisponibili = domandeFiltrate;
+    }
+
+    const indiceCasuale = Math.floor(
+        Math.random() * domandeDisponibili.length
+    );
+
+    currentQuestion = domandeDisponibili[indiceCasuale];
+
+    usedQuestionIds.add(currentQuestion.id);
 
     mostraDomanda(currentQuestion);
 }
+
 
 function mostraDomanda(domanda) {
     categoryBadge.textContent = domanda.categoria || "Categoria";
@@ -151,8 +211,13 @@ function mostraDomanda(domanda) {
     mostraOpzioni(domanda);
 }
 
+
 function mostraImmagineDomanda(domanda) {
-    if (domanda.tipo_domanda === "immagine" && domanda.immagine_domanda) {
+    const domandaConImmagine =
+        domanda.tipo_domanda === "immagine" &&
+        domanda.immagine_domanda;
+
+    if (domandaConImmagine) {
         questionImage.src = creaPercorsoAsset(domanda.immagine_domanda);
         questionImageBox.classList.remove("hidden");
     } else {
@@ -160,6 +225,7 @@ function mostraImmagineDomanda(domanda) {
         questionImageBox.classList.add("hidden");
     }
 }
+
 
 function mostraOpzioni(domanda) {
     const opzioni = domanda.opzioni || [];
@@ -189,16 +255,17 @@ function mostraOpzioni(domanda) {
     });
 }
 
+
 function controllaRisposta(rispostaScelta, bottoneScelto) {
     if (!currentQuestion) {
         return;
     }
 
     const rispostaCorretta = currentQuestion.risposta_corretta;
-    const rispostaUtente = rispostaScelta;
 
     const corretta =
-        normalizzaTesto(rispostaUtente) === normalizzaTesto(rispostaCorretta);
+        normalizzaTesto(rispostaScelta) ===
+        normalizzaTesto(rispostaCorretta);
 
     answeredQuestions++;
 
@@ -209,7 +276,11 @@ function controllaRisposta(rispostaScelta, bottoneScelto) {
 
         const testoBottone = bottone.querySelector("span").textContent;
 
-        if (normalizzaTesto(testoBottone) === normalizzaTesto(rispostaCorretta)) {
+        const bottoneCorretto =
+            normalizzaTesto(testoBottone) ===
+            normalizzaTesto(rispostaCorretta);
+
+        if (bottoneCorretto) {
             bottone.classList.add("correct");
         }
     });
@@ -220,12 +291,14 @@ function controllaRisposta(rispostaScelta, bottoneScelto) {
 
         feedbackBox.className = "feedback-box ok";
         feedbackBox.textContent = "Risposta corretta! Ottimo lavoro.";
+
         avviaCoriandoli();
     } else {
         bottoneScelto.classList.add("wrong");
 
         feedbackBox.className = "feedback-box ko";
-        feedbackBox.textContent = `Risposta sbagliata. Risposta corretta: ${rispostaCorretta}`;
+        feedbackBox.textContent =
+            `Risposta sbagliata. Risposta corretta: ${rispostaCorretta}`;
     }
 
     explanationText.textContent =
@@ -237,15 +310,18 @@ function controllaRisposta(rispostaScelta, bottoneScelto) {
     aggiornaPunteggio();
 }
 
+
 function ridimensionaCanvas() {
     confettiCanvas.width = window.innerWidth;
     confettiCanvas.height = window.innerHeight;
 }
 
+
 function avviaCoriandoli() {
     ridimensionaCanvas();
 
     const coriandoli = [];
+
     const colori = [
         "#38bdf8",
         "#a78bfa",
@@ -284,19 +360,31 @@ function avviaCoriandoli() {
             coriandolo.life--;
 
             confettiContext.save();
-            confettiContext.translate(coriandolo.x, coriandolo.y);
-            confettiContext.rotate(coriandolo.rotation * Math.PI / 180);
+
+            confettiContext.translate(
+                coriandolo.x,
+                coriandolo.y
+            );
+
+            confettiContext.rotate(
+                coriandolo.rotation * Math.PI / 180
+            );
+
             confettiContext.fillStyle = coriandolo.color;
+
             confettiContext.fillRect(
                 -coriandolo.size / 2,
                 -coriandolo.size / 2,
                 coriandolo.size,
                 coriandolo.size * 1.8
             );
+
             confettiContext.restore();
         });
 
-        const ancoraVivi = coriandoli.some(coriandolo => coriandolo.life > 0);
+        const ancoraVivi = coriandoli.some(coriandolo => {
+            return coriandolo.life > 0;
+        });
 
         if (ancoraVivi) {
             requestAnimationFrame(anima);
@@ -313,15 +401,18 @@ function avviaCoriandoli() {
     anima();
 }
 
+
 categorySelect.addEventListener("change", () => {
     aggiornaTotaleDomande();
     caricaNuovaDomanda();
 });
 
+
 levelSelect.addEventListener("change", () => {
     aggiornaTotaleDomande();
     caricaNuovaDomanda();
 });
+
 
 newQuestionButton.addEventListener("click", caricaNuovaDomanda);
 

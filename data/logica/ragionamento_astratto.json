@@ -34,20 +34,15 @@
     "difficolta": 2
   },
   {
-    "id": "LOG-AST-AV-0003",
-    "categoria": "logica",
-    "sottocategoria": "ragionamento astratto",
-    "livello": "avanzato",
-    "domanda": "Osserva la regola: AB diventa BA, CD diventa DC, EF diventa FE. Seguendo la stessa logica, GH diventa...",
-    "opzioni": [
-      "HG",
-      "GI",
-      "HH",
-      "FG"
-    ],
-    "risposta_corretta": "HG",
-    "spiegazione": "La regola inverte l'ordine delle due lettere. Quindi GH diventa HG.",
-    "tags": ["trasformazioni", "ordine", "ragionamento astratto"],
-    "difficolta": 3
-  }
+  "id": "LOG-AST-AV-0003",
+  "categoria": "logica",
+  "sottocategoria": "ragionamento_astratto",
+  "livello": "avanzato",
+  "domanda": "Osserva le trasformazioni: A3C → B6D, D4F → E8G, H5J → ?",
+  "opzioni": ["I10K", "I8K", "J10K", "I10J"],
+  "risposta_corretta": "I10K",
+  "spiegazione": "Nelle trasformazioni la prima e l'ultima lettera avanzano di una posizione nell'alfabeto, mentre il numero viene raddoppiato. Quindi H diventa I, 5 diventa 10 e J diventa K: il risultato è I10K.",
+  "tags": ["trasformazioni", "lettere", "numeri", "ragionamento_astratto"],
+  "difficolta": 3
+}
 ]

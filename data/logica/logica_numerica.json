@@ -2,52 +2,37 @@
   {
     "id": "LOG-NUM-FAC-0001",
     "categoria": "logica",
-    "sottocategoria": "logica numerica",
+    "sottocategoria": "logica_numerica",
     "livello": "facile",
-    "domanda": "In una fila numerata ogni posto aumenta di 3 unità: 4, 7, 10, 13. Quale numero viene dopo?",
-    "opzioni": [
-      "16",
-      "15",
-      "17",
-      "18"
-    ],
+    "domanda": "Trova il numero mancante: 4, 7, 10, 13, ?",
+    "opzioni": ["15", "16", "17", "19"],
     "risposta_corretta": "16",
-    "spiegazione": "Ogni numero aumenta di 3. Quindi dopo 13 bisogna fare 13 + 3 = 16.",
-    "tags": ["sequenze", "addizione costante", "logica numerica"],
+    "spiegazione": "La sequenza aumenta sempre di 3: 4, 7, 10, 13, 16. Per questo il numero mancante è 16.",
+    "tags": ["sequenze", "numeri", "logica"],
     "difficolta": 1
   },
   {
     "id": "LOG-NUM-INT-0002",
     "categoria": "logica",
-    "sottocategoria": "logica numerica",
+    "sottocategoria": "logica_numerica",
     "livello": "intermedio",
-    "domanda": "Un codice segue questa regola: 2 diventa 6, 4 diventa 12, 6 diventa 18. Secondo la stessa regola, 8 diventa...",
-    "opzioni": [
-      "24",
-      "22",
-      "26",
-      "20"
-    ],
-    "risposta_corretta": "24",
-    "spiegazione": "Ogni numero viene moltiplicato per 3. Quindi 8 × 3 = 24.",
-    "tags": ["codici numerici", "moltiplicazione", "regole"],
+    "domanda": "Completa la serie: 2, 9, 4, 12, 6, 15, ?",
+    "opzioni": ["8", "9", "16", "18"],
+    "risposta_corretta": "8",
+    "spiegazione": "La serie alterna due sequenze. Nelle posizioni dispari ci sono 2, 4, 6, quindi il numero successivo è 8. Nelle posizioni pari ci sono 9, 12, 15, che aumentano di 3.",
+    "tags": ["sequenze alternate", "logica_numerica", "ragionamento"],
     "difficolta": 2
   },
   {
     "id": "LOG-NUM-AV-0003",
     "categoria": "logica",
-    "sottocategoria": "logica numerica",
+    "sottocategoria": "logica_numerica",
     "livello": "avanzato",
-    "domanda": "Osserva le coppie: 3 → 10, 5 → 16, 7 → 22. Quale valore corrisponde a 9 seguendo la stessa regola?",
-    "opzioni": [
-      "28",
-      "27",
-      "30",
-      "26"
-    ],
-    "risposta_corretta": "28",
-    "spiegazione": "La regola è: numero × 3 + 1. Infatti 3 × 3 + 1 = 10, 5 × 3 + 1 = 16, 7 × 3 + 1 = 22. Quindi 9 × 3 + 1 = 28.",
-    "tags": ["coppie numeriche", "regole", "ragionamento numerico"],
+    "domanda": "Completa la sequenza: 3, 7, 14, 18, 36, 40, ?",
+    "opzioni": ["44", "72", "76", "80"],
+    "risposta_corretta": "80",
+    "spiegazione": "La sequenza alterna due operazioni: prima si aggiunge 4, poi si moltiplica per 2. Infatti 3 + 4 = 7, 7 × 2 = 14, 14 + 4 = 18, 18 × 2 = 36, 36 + 4 = 40. Il passo successivo è 40 × 2 = 80.",
+    "tags": ["sequenze", "operazioni alternate", "logica_numerica"],
     "difficolta": 3
   }
 ]

@@ -2,52 +2,37 @@
   {
     "id": "LOG-VER-FAC-0001",
     "categoria": "logica",
-    "sottocategoria": "logica verbale",
+    "sottocategoria": "logica_verbale",
     "livello": "facile",
-    "domanda": "Quale parola completa meglio la relazione: Cane sta a cucciolo come gatto sta a...",
-    "opzioni": [
-      "Gattino",
-      "Felino",
-      "Zampa",
-      "Miagolio"
-    ],
-    "risposta_corretta": "Gattino",
-    "spiegazione": "La relazione è tra animale adulto e piccolo. Il piccolo del cane è il cucciolo, mentre il piccolo del gatto è il gattino.",
-    "tags": ["analogie", "relazioni verbali", "logica verbale"],
+    "domanda": "Osserva la sequenza: AB → BA, CD → DC, EF → ?",
+    "opzioni": ["FE", "EF", "FG", "GF"],
+    "risposta_corretta": "FE",
+    "spiegazione": "In ogni coppia le due lettere vengono invertite: AB diventa BA, CD diventa DC, quindi EF diventa FE.",
+    "tags": ["lettere", "sequenze", "logica_verbale"],
     "difficolta": 1
   },
   {
     "id": "LOG-VER-INT-0002",
     "categoria": "logica",
-    "sottocategoria": "logica verbale",
+    "sottocategoria": "logica_verbale",
     "livello": "intermedio",
-    "domanda": "Individua la parola che non appartiene allo stesso gruppo logico: quercia, pino, faggio, rosa.",
-    "opzioni": [
-      "Rosa",
-      "Pino",
-      "Faggio",
-      "Quercia"
-    ],
-    "risposta_corretta": "Rosa",
-    "spiegazione": "Quercia, pino e faggio sono alberi. La rosa è una pianta ornamentale da fiore, quindi non appartiene allo stesso gruppo logico.",
-    "tags": ["classificazione", "parola estranea", "logica verbale"],
+    "domanda": "Completa l'analogia: penna sta a scrivere come forbici stanno a ?",
+    "opzioni": ["tagliare", "incollare", "disegnare", "misurare"],
+    "risposta_corretta": "tagliare",
+    "spiegazione": "La relazione è tra uno strumento e la sua funzione principale. La penna serve per scrivere, mentre le forbici servono per tagliare.",
+    "tags": ["analogie", "strumenti", "logica_verbale"],
     "difficolta": 2
   },
   {
     "id": "LOG-VER-AV-0003",
     "categoria": "logica",
-    "sottocategoria": "logica verbale",
+    "sottocategoria": "logica_verbale",
     "livello": "avanzato",
-    "domanda": "Completa l'analogia: Scrittore sta a romanzo come compositore sta a...",
-    "opzioni": [
-      "Sinfonia",
-      "Strumento",
-      "Teatro",
-      "Melodia ascoltata"
-    ],
-    "risposta_corretta": "Sinfonia",
-    "spiegazione": "Lo scrittore crea un romanzo. Allo stesso modo, il compositore crea una sinfonia o un'opera musicale. Tra le opzioni, 'sinfonia' è la risposta più precisa.",
-    "tags": ["analogie", "professioni", "prodotti"],
+    "domanda": "Quale parola completa meglio la relazione: causa sta a effetto come domanda sta a ?",
+    "opzioni": ["risposta", "problema", "dubbio", "argomento"],
+    "risposta_corretta": "risposta",
+    "spiegazione": "La relazione è tra un elemento iniziale e ciò che normalmente ne consegue. Una causa produce un effetto; una domanda richiede una risposta.",
+    "tags": ["analogie", "relazioni", "logica_verbale"],
     "difficolta": 3
   }
 ]
