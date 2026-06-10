@@ -1,4 +1,4 @@
-# Ambiente virtuale Python
+# Ambienti virtuali Python
 .venv/
 venv/
 backend/.venv/
@@ -9,25 +9,29 @@ __pycache__/
 *.pyo
 *.pyd
 
-# File temporanei macOS
+# File di sistema Mac
 .DS_Store
 
-# File ambiente/segreti
+# File ambiente
 .env
 
-# Cache e dipendenze frontend
+# Node / frontend
 node_modules/
 frontend/node_modules/
 
-# File temporaneo della demo random picker
-dist/domande_usate_demo.json
-# Database locali SQLite
+# Database locali
 *.db
 backend/*.db
 
-# Backup temporanei backend
+# Backup locali backend
 backend/main_backup_*
+
+# File strani o temporanei
 backend/*.pyv
 
-# File generati dal backend
+# Cartelle generate dal backend
 backend/generated_files/
+
+# File generati dai test
+dist/domande_usate_demo.json
+dist/text_quality_ai_report.md
