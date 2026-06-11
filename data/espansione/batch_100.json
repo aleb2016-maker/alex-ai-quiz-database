@@ -7,12 +7,12 @@
     "domanda": "In un sistema di intelligenza artificiale, che cosa rappresentano i dati di addestramento?",
     "opzioni": [
       "Esempi usati dal modello per imparare schemi e relazioni",
-      "Comandi casuali usati solo per avviare il computer",
-      "File grafici usati per colorare l'interfaccia",
-      "Password necessarie per accedere al modello"
+      "Esempi usati solo per verificare il modello dopo l'addestramento",
+      "Regole scritte manualmente per ogni singola risposta possibile",
+      "Parametri finali già imparati dal modello dopo il training"
     ],
     "risposta_corretta": "Esempi usati dal modello per imparare schemi e relazioni",
-    "spiegazione": "I dati di addestramento sono esempi che il modello analizza per riconoscere schemi, relazioni e regolarità utili a fare previsioni o generare risposte.",
+    "spiegazione": "I dati di addestramento sono esempi usati dal modello per imparare schemi e relazioni. I dati di test servono invece a verificare il modello dopo l'addestramento. Le regole manuali appartengono più ai sistemi esperti tradizionali, mentre i parametri sono il risultato dell'apprendimento.",
     "tags": [
       "ai",
       "training",
@@ -28,12 +28,12 @@
     "domanda": "Quale prompt è più chiaro per chiedere a un modello AI di riassumere un testo?",
     "opzioni": [
       "Riassumi questo testo in 5 righe usando un linguaggio semplice.",
-      "Fai qualcosa con questo testo.",
-      "Sistema tutto e dimmi com'è.",
-      "Usa l'intelligenza artificiale sul contenuto."
+      "Analizza questo testo e produci un commento libero.",
+      "Riscrivi questo testo mantenendo tutti i dettagli.",
+      "Estrai tutte le parole chiave senza fare un riassunto."
     ],
     "risposta_corretta": "Riassumi questo testo in 5 righe usando un linguaggio semplice.",
-    "spiegazione": "Un prompt chiaro specifica il compito, il formato e il livello di linguaggio richiesto. In questo caso il modello sa che deve produrre un riassunto di 5 righe in modo semplice.",
+    "spiegazione": "Il prompt corretto specifica chiaramente il compito, la lunghezza e lo stile: un riassunto in 5 righe con linguaggio semplice. Le altre opzioni sono attività plausibili sul testo, ma non chiedono esattamente un riassunto breve.",
     "tags": [
       "ai",
       "prompt",
@@ -49,12 +49,12 @@
     "domanda": "Se un modello AI decide se una email è spam oppure no, quale tipo di attività sta svolgendo?",
     "opzioni": [
       "Classificazione",
-      "Compressione video",
-      "Disegno vettoriale",
-      "Crittografia manuale"
+      "Regressione",
+      "Clustering",
+      "Generazione"
     ],
     "risposta_corretta": "Classificazione",
-    "spiegazione": "La classificazione consiste nell'assegnare un elemento a una categoria. In questo caso l'email viene classificata come spam oppure non spam.",
+    "spiegazione": "La classificazione assegna un elemento a una categoria, per esempio spam o non spam. La regressione predice un valore numerico, il clustering raggruppa dati simili senza etichette, mentre la generazione produce nuovi contenuti.",
     "tags": [
       "ai",
       "classificazione",
@@ -70,12 +70,12 @@
     "domanda": "Che cosa fa principalmente un modello linguistico?",
     "opzioni": [
       "Lavora con il linguaggio per comprendere o generare testo",
-      "Aumenta fisicamente la memoria RAM del computer",
-      "Trasforma sempre le immagini in file audio",
-      "Sostituisce il sistema operativo del dispositivo"
+      "Classifica esclusivamente immagini senza usare testo",
+      "Memorizza pagine web senza elaborarne il significato",
+      "Esegue soltanto calcoli numerici senza usare parole"
     ],
     "risposta_corretta": "Lavora con il linguaggio per comprendere o generare testo",
-    "spiegazione": "Un modello linguistico elabora testo: può completare frasi, rispondere a domande, riassumere contenuti o generare nuove risposte in linguaggio naturale.",
+    "spiegazione": "Un modello linguistico lavora principalmente con testo e linguaggio naturale. Può comprendere, completare, riassumere o generare frasi. Le altre risposte descrivono attività possibili in informatica o AI, ma non rappresentano il ruolo principale di un modello linguistico.",
     "tags": [
       "ai",
       "llm",
@@ -91,12 +91,12 @@
     "domanda": "Quando un modello AI inventa una risposta falsa ma la presenta come sicura, come viene chiamato di solito questo problema?",
     "opzioni": [
       "Allucinazione",
-      "Rendering",
-      "Backup",
-      "Indicizzazione"
+      "Bias del dataset",
+      "Overfitting",
+      "Errore di classificazione"
     ],
     "risposta_corretta": "Allucinazione",
-    "spiegazione": "Nel contesto dell'AI, un'allucinazione è una risposta non affidabile o inventata che il modello presenta come se fosse vera.",
+    "spiegazione": "Un'allucinazione avviene quando un modello genera una risposta falsa o inventata presentandola come sicura. Il bias riguarda distorsioni nei dati o nei risultati, l'overfitting indica un modello troppo adattato ai dati di addestramento, mentre un errore di classificazione è una previsione di classe sbagliata.",
     "tags": [
       "ai",
       "allucinazioni",
@@ -112,12 +112,12 @@
     "domanda": "In un sistema RAG, perché si cercano documenti esterni prima di generare la risposta?",
     "opzioni": [
       "Per fornire al modello informazioni aggiornate o specifiche su cui basare la risposta",
-      "Per impedire al modello di leggere qualsiasi testo",
-      "Per sostituire completamente il database con immagini",
-      "Per rendere impossibile il controllo delle fonti"
+      "Per scegliere documenti semanticamente vicini ma non necessariamente utili",
+      "Per usare il database come archivio storico senza inserirlo nel prompt",
+      "Per confrontare la domanda con esempi simili senza generare una risposta"
     ],
     "risposta_corretta": "Per fornire al modello informazioni aggiornate o specifiche su cui basare la risposta",
-    "spiegazione": "Nel RAG il modello recupera documenti rilevanti e poi genera una risposta usando quel contesto. Questo riduce il rischio di risposte generiche o inventate.",
+    "spiegazione": "Nel RAG il sistema recupera documenti rilevanti e li passa al modello come contesto. Il punto non è solo trovare testi simili, ma fornire informazioni utili su cui costruire la risposta. Se i documenti vengono trovati ma non usati nel prompt, oppure sono solo simili in apparenza, la risposta può restare generica o poco affidabile.",
     "tags": [
       "ai",
       "rag",
@@ -133,12 +133,12 @@
     "domanda": "A cosa serve un embedding in molte applicazioni di intelligenza artificiale?",
     "opzioni": [
       "A rappresentare testi, immagini o dati come vettori confrontabili",
-      "A cancellare automaticamente tutti i file temporanei",
-      "A trasformare ogni domanda in una password",
-      "A impedire la ricerca per somiglianza semantica"
+      "A trasformare direttamente ogni testo in una risposta finale",
+      "A classificare i dati senza creare alcuna rappresentazione numerica",
+      "A salvare il testo originale senza permettere confronti semantici"
     ],
     "risposta_corretta": "A rappresentare testi, immagini o dati come vettori confrontabili",
-    "spiegazione": "Un embedding trasforma un contenuto in un vettore numerico. Questo permette di confrontare contenuti simili anche quando non usano le stesse parole.",
+    "spiegazione": "Un embedding rappresenta un contenuto come vettore numerico. Questo permette confronti di somiglianza semantica. Non è una risposta finale e non sostituisce da solo classificazione, retrieval o generazione.",
     "tags": [
       "ai",
       "embedding",
@@ -154,12 +154,12 @@
     "domanda": "Perché è utile testare un modello AI con esempi diversi da quelli usati in addestramento?",
     "opzioni": [
       "Per verificare se il modello generalizza anche su casi nuovi",
-      "Per obbligare il modello a dimenticare tutte le regole",
-      "Per misurare solo la velocità della ventola",
-      "Per evitare qualsiasi confronto con risultati reali"
+      "Per controllare se il modello ricorda perfettamente i dati di training",
+      "Per aumentare il numero di parametri durante il test",
+      "Per evitare qualunque confronto con risultati attesi"
     ],
     "risposta_corretta": "Per verificare se il modello generalizza anche su casi nuovi",
-    "spiegazione": "Un modello deve funzionare anche su dati nuovi, non solo sugli esempi già visti. Per questo si usano dati di test separati dall'addestramento.",
+    "spiegazione": "Il test su esempi non visti serve a capire se il modello generalizza. Ricordare perfettamente i dati di training può invece indicare overfitting. Durante il test non si aumentano i parametri e il confronto con risultati attesi è spesso fondamentale.",
     "tags": [
       "ai",
       "testing",
@@ -175,12 +175,12 @@
     "domanda": "Quale elemento rende più controllabile la risposta di un modello AI?",
     "opzioni": [
       "Specificare ruolo, obiettivo, vincoli e formato della risposta",
-      "Scrivere soltanto una parola senza contesto",
-      "Chiedere al modello di indovinare il formato",
-      "Mescolare più richieste incompatibili tra loro"
+      "Scrivere una richiesta breve senza contesto per lasciare libertà totale",
+      "Fornire molti obiettivi diversi senza indicare priorità",
+      "Chiedere una risposta generica senza definire il formato"
     ],
     "risposta_corretta": "Specificare ruolo, obiettivo, vincoli e formato della risposta",
-    "spiegazione": "Un prompt strutturato riduce l'ambiguità. Indicare ruolo, obiettivo, vincoli e formato aiuta il modello a produrre una risposta più utile e coerente.",
+    "spiegazione": "Un prompt controllabile chiarisce cosa deve fare il modello, con quali vincoli e in quale formato. Una richiesta vaga o con obiettivi confusi aumenta il rischio di risposte generiche o incoerenti.",
     "tags": [
       "ai",
       "prompt",
@@ -196,12 +196,12 @@
     "domanda": "Che cosa può succedere se un dataset contiene molti esempi sbilanciati verso una sola classe?",
     "opzioni": [
       "Il modello può imparare a favorire quella classe nelle previsioni",
-      "Il modello diventa automaticamente perfetto",
-      "Il dataset smette di occupare memoria",
-      "La rete internet viene disattivata"
+      "Il modello impara automaticamente a bilanciare tutte le classi",
+      "Il modello ignora sempre la classe più frequente",
+      "Il modello produce solo risultati casuali senza seguire i dati"
     ],
     "risposta_corretta": "Il modello può imparare a favorire quella classe nelle previsioni",
-    "spiegazione": "Se una classe è molto più presente delle altre, il modello può diventare sbilanciato e prevedere troppo spesso quella classe.",
+    "spiegazione": "Se una classe è molto più presente delle altre, il modello può prevederla troppo spesso. Il bilanciamento non avviene automaticamente: spesso servono tecniche specifiche, metriche adatte o dati più equilibrati.",
     "tags": [
       "ai",
       "dataset",
@@ -217,12 +217,12 @@
     "domanda": "In un agente AI, che cosa rappresenta normalmente un tool?",
     "opzioni": [
       "Uno strumento esterno che l'agente può usare per compiere un'azione",
-      "Un colore obbligatorio dell'interfaccia grafica",
-      "Un file che impedisce ogni risposta",
-      "Una password salvata dentro il prompt"
+      "Una memoria interna che conserva solo la conversazione precedente",
+      "Un prompt fisso che descrive il comportamento dell'agente",
+      "Un modello separato usato soltanto per generare testo"
     ],
     "risposta_corretta": "Uno strumento esterno che l'agente può usare per compiere un'azione",
-    "spiegazione": "Un tool è una funzione o risorsa che l'agente può usare, per esempio cercare dati, leggere un file, fare un calcolo o interrogare un'API.",
+    "spiegazione": "In un agente AI, un tool è una funzione o risorsa esterna che permette di fare qualcosa, per esempio cercare dati, leggere file, chiamare API o fare calcoli. Memoria, prompt e modello sono componenti diversi.",
     "tags": [
       "ai",
       "agenti",
@@ -238,12 +238,12 @@
     "domanda": "In un sistema RAG, quale problema può nascere se il recupero dei documenti seleziona testi pertinenti solo in apparenza?",
     "opzioni": [
       "Il modello può generare una risposta ben scritta ma basata su contesto non davvero rilevante",
-      "Il modello smette di produrre testo e genera solo immagini",
-      "Il database viene automaticamente eliminato dal disco",
-      "Il prompt diventa impossibile da inviare al modello"
+      "Il modello può rifiutare una risposta corretta perché il contesto è troppo breve",
+      "Il modello può usare solo la memoria interna ignorando i documenti recuperati",
+      "Il modello può confondere la domanda con una valutazione del retrieval"
     ],
     "risposta_corretta": "Il modello può generare una risposta ben scritta ma basata su contesto non davvero rilevante",
-    "spiegazione": "Se il retrieval recupera documenti poco adatti, il modello può usare un contesto sbagliato e produrre una risposta apparentemente convincente ma non corretta.",
+    "spiegazione": "Se il retrieval recupera documenti solo apparentemente pertinenti, il modello può costruire una risposta fluida ma fondata su contesto sbagliato. È un problema delicato perché la forma della risposta può sembrare convincente anche quando la base informativa è debole.",
     "tags": [
       "ai",
       "rag",
@@ -260,12 +260,12 @@
     "domanda": "Perché valutare un modello AI solo con risposte corrette o sbagliate può essere limitante?",
     "opzioni": [
       "Perché alcune risposte richiedono giudizi su completezza, coerenza, sicurezza e utilità",
-      "Perché nessun modello può mai essere valutato in alcun modo",
-      "Perché il punteggio binario aumenta automaticamente la qualità",
-      "Perché le risposte lunghe sono sempre corrette"
+      "Perché una risposta lunga deve essere sempre considerata migliore di una breve",
+      "Perché la valutazione automatica deve ignorare il contesto della richiesta",
+      "Perché nei compiti generativi esiste sempre una sola risposta identica da confrontare"
     ],
     "risposta_corretta": "Perché alcune risposte richiedono giudizi su completezza, coerenza, sicurezza e utilità",
-    "spiegazione": "Molti compiti AI non hanno una sola risposta esatta. Serve valutare anche chiarezza, sicurezza, coerenza, utilità e aderenza alla richiesta.",
+    "spiegazione": "Nei compiti generativi spesso non basta dire corretto o sbagliato. Una risposta può essere parzialmente corretta ma incompleta, poco sicura, fuori formato o poco utile. Per questo servono criteri di valutazione più ricchi.",
     "tags": [
       "ai",
       "valutazione",
@@ -281,12 +281,12 @@
     "domanda": "Qual è il rischio principale di un prompt injection in un'applicazione AI collegata a strumenti esterni?",
     "opzioni": [
       "Il modello può essere spinto a ignorare istruzioni originali e usare strumenti in modo non previsto",
-      "Il modello migliora automaticamente la sicurezza del sistema",
-      "Il codice CSS della pagina viene sempre cancellato",
-      "Il database JSON viene trasformato in un'immagine"
+      "Il modello può ricevere un contesto lungo ma rimanere comunque dentro le istruzioni di sistema",
+      "Il modello può rispondere con informazioni incomplete senza usare tool esterni",
+      "Il modello può ridurre la qualità della risposta senza violare alcuna istruzione"
     ],
     "risposta_corretta": "Il modello può essere spinto a ignorare istruzioni originali e usare strumenti in modo non previsto",
-    "spiegazione": "Una prompt injection prova a manipolare il comportamento del modello. Se il modello può usare tool esterni, il rischio aumenta perché potrebbe compiere azioni non desiderate.",
+    "spiegazione": "Una prompt injection tenta di manipolare il modello facendogli ignorare istruzioni prioritarie. Il rischio è maggiore se il modello può usare tool esterni, perché potrebbe compiere azioni non previste dall'applicazione.",
     "tags": [
       "ai",
       "sicurezza",
@@ -302,12 +302,12 @@
     "domanda": "Quando ha più senso valutare il fine-tuning rispetto al solo prompt engineering?",
     "opzioni": [
       "Quando servono comportamenti stabili e specifici su molti esempi simili",
-      "Quando basta fare una singola domanda generica",
-      "Quando non esistono dati di esempio affidabili",
-      "Quando si vuole evitare qualunque controllo sul risultato"
+      "Quando basta correggere una singola risposta con un prompt più preciso",
+      "Quando non sono disponibili esempi coerenti del comportamento desiderato",
+      "Quando il problema dipende solo dal recupero di documenti sbagliati"
     ],
     "risposta_corretta": "Quando servono comportamenti stabili e specifici su molti esempi simili",
-    "spiegazione": "Il fine-tuning può essere utile quando il modello deve seguire uno stile, un formato o un comportamento specifico in modo ripetibile su molti casi.",
+    "spiegazione": "Il fine-tuning ha senso quando si vuole rendere stabile uno stile, un formato o un comportamento su molti casi simili. Per problemi singoli o istruzioni semplici può bastare il prompt engineering; se il retrieval è sbagliato, invece, va corretta la pipeline di recupero.",
     "tags": [
       "ai",
       "fine tuning",
@@ -323,12 +323,12 @@
     "domanda": "In una pipeline AI, perché conviene separare recupero delle informazioni, generazione e controllo finale?",
     "opzioni": [
       "Per rendere più controllabile ogni fase e individuare meglio dove nasce un errore",
-      "Per impedire al sistema di produrre qualsiasi output",
-      "Per duplicare casualmente tutte le risposte",
-      "Per sostituire il modello con un file vuoto"
+      "Per aumentare la complessità senza poter capire quale modulo sbaglia",
+      "Per impedire al controllo finale di valutare la risposta generata",
+      "Per usare sempre un solo modello anche quando servono funzioni diverse"
     ],
     "risposta_corretta": "Per rendere più controllabile ogni fase e individuare meglio dove nasce un errore",
-    "spiegazione": "Separare le fasi aiuta a capire se un errore nasce dal retrieval, dal modello generativo o dal controllo finale. Questo rende il sistema più debuggabile.",
+    "spiegazione": "Separare recupero, generazione e controllo finale rende la pipeline più osservabile. Se qualcosa va male, si può capire se l'errore nasce dai documenti recuperati, dalla generazione o dalla verifica finale.",
     "tags": [
       "ai",
       "pipeline",
@@ -344,12 +344,12 @@
     "domanda": "Perché un modello AI può produrre risultati distorti anche se l'algoritmo è implementato correttamente?",
     "opzioni": [
       "Perché i dati, gli obiettivi di addestramento o le metriche possono introdurre distorsioni",
-      "Perché un algoritmo corretto produce sempre risultati neutrali",
-      "Perché i bias dipendono solo dal colore dello schermo",
-      "Perché la distorsione è impossibile nei sistemi automatici"
+      "Perché un modello corretto dal punto di vista tecnico elimina automaticamente ogni bias",
+      "Perché i bias compaiono solo se il codice contiene errori di sintassi",
+      "Perché le metriche di valutazione non possono mai influenzare il comportamento del modello"
     ],
     "risposta_corretta": "Perché i dati, gli obiettivi di addestramento o le metriche possono introdurre distorsioni",
-    "spiegazione": "Un sistema può essere tecnicamente corretto ma imparare schemi distorti se i dati o gli obiettivi contengono squilibri o rappresentazioni non neutrali.",
+    "spiegazione": "Un modello può essere implementato correttamente ma imparare distorsioni presenti nei dati o negli obiettivi di addestramento. Anche le metriche scelte possono favorire certi comportamenti rispetto ad altri.",
     "tags": [
       "ai",
       "bias",
@@ -365,12 +365,12 @@
     "domanda": "Quale linguaggio viene usato principalmente per definire la struttura di una pagina web?",
     "opzioni": [
       "HTML",
-      "SQL",
-      "Python",
-      "JSON"
+      "CSS",
+      "JavaScript",
+      "SQL"
     ],
     "risposta_corretta": "HTML",
-    "spiegazione": "HTML definisce la struttura della pagina, per esempio titoli, paragrafi, immagini, link e sezioni.",
+    "spiegazione": "HTML definisce la struttura della pagina web. CSS gestisce lo stile grafico, JavaScript aggiunge interattività, mentre SQL serve a interrogare database. Tutte sono tecnologie reali, ma hanno ruoli diversi.",
     "tags": [
       "web",
       "html",
@@ -386,12 +386,12 @@
     "domanda": "In un database, che cosa rappresenta normalmente una tabella?",
     "opzioni": [
       "Un insieme organizzato di righe e colonne",
-      "Un'immagine compressa",
-      "Un cavo di rete",
-      "Una password temporanea"
+      "Una relazione tra due tabelle tramite chiavi",
+      "Una singola riga che rappresenta un record",
+      "Una query usata per filtrare i dati"
     ],
     "risposta_corretta": "Un insieme organizzato di righe e colonne",
-    "spiegazione": "Una tabella organizza i dati in righe e colonne. Ogni riga rappresenta spesso un record, mentre le colonne rappresentano i campi.",
+    "spiegazione": "Una tabella contiene dati organizzati in righe e colonne. Una riga è un record, una query serve a leggere o modificare dati, e una relazione collega tabelle diverse.",
     "tags": [
       "database",
       "tabelle",
@@ -407,12 +407,12 @@
     "domanda": "A cosa serve una variabile in programmazione?",
     "opzioni": [
       "A conservare un valore che può essere usato o modificato",
-      "A spegnere automaticamente il monitor",
-      "A eliminare il sistema operativo",
-      "A impedire l'esecuzione del codice"
+      "A definire una funzione riutilizzabile",
+      "A ripetere un blocco di istruzioni",
+      "A controllare una condizione vera o falsa"
     ],
     "risposta_corretta": "A conservare un valore che può essere usato o modificato",
-    "spiegazione": "Una variabile è un contenitore con un nome. Serve a salvare un valore, leggerlo e usarlo durante l'esecuzione del programma.",
+    "spiegazione": "Una variabile conserva un valore. Una funzione raggruppa codice riutilizzabile, un ciclo ripete istruzioni, mentre una condizione controlla quale ramo di codice eseguire.",
     "tags": [
       "programmazione",
       "variabili",
@@ -428,12 +428,12 @@
     "domanda": "Che cosa indica normalmente un URL?",
     "opzioni": [
       "L'indirizzo di una risorsa sul web",
-      "La quantità di memoria RAM disponibile",
-      "Il formato interno della batteria",
-      "Il nome del processore grafico"
+      "Il protocollo usato per trasferire una pagina",
+      "Il nome del dominio senza percorso della risorsa",
+      "Il codice di stato restituito dal server"
     ],
     "risposta_corretta": "L'indirizzo di una risorsa sul web",
-    "spiegazione": "Un URL identifica dove si trova una risorsa online, per esempio una pagina web, un'immagine o un file.",
+    "spiegazione": "Un URL identifica l'indirizzo completo di una risorsa web. Può includere protocollo, dominio, percorso e parametri. Il protocollo e il dominio sono solo parti dell'URL, mentre il codice di stato è la risposta del server.",
     "tags": [
       "web",
       "url",
@@ -449,12 +449,12 @@
     "domanda": "Quale formato è adatto a rappresentare dati strutturati leggibili da molte applicazioni?",
     "opzioni": [
       "JSON",
-      "MP3",
-      "PNG",
-      "MOV"
+      "CSV",
+      "XML",
+      "YAML"
     ],
     "risposta_corretta": "JSON",
-    "spiegazione": "JSON è un formato testuale usato per rappresentare dati strutturati, come oggetti, liste, stringhe e numeri.",
+    "spiegazione": "JSON è molto usato per rappresentare dati strutturati in applicazioni web e API. Anche CSV, XML e YAML rappresentano dati, ma JSON è particolarmente comune per oggetti e liste scambiati tra sistemi.",
     "tags": [
       "json",
       "dati",
@@ -471,11 +471,11 @@
     "opzioni": [
       "GET",
       "POST",
-      "DELETE",
+      "PUT",
       "PATCH"
     ],
     "risposta_corretta": "GET",
-    "spiegazione": "GET viene usato normalmente per leggere o recuperare dati. POST, PATCH e DELETE sono più legati a creazione, modifica o eliminazione di risorse.",
+    "spiegazione": "GET viene usato normalmente per leggere dati senza modificarli. POST crea o invia dati, PUT sostituisce una risorsa, PATCH aggiorna parzialmente una risorsa.",
     "tags": [
       "http",
       "api",
@@ -491,12 +491,12 @@
     "domanda": "Perché si usa una chiave primaria in una tabella di database?",
     "opzioni": [
       "Per identificare in modo univoco ogni record",
-      "Per colorare automaticamente le righe",
-      "Per impedire qualunque ricerca",
-      "Per trasformare i dati in immagini"
+      "Per collegare una tabella a un'altra come chiave esterna",
+      "Per ordinare sempre i record in ordine alfabetico",
+      "Per rendere più leggibile il nome delle colonne"
     ],
     "risposta_corretta": "Per identificare in modo univoco ogni record",
-    "spiegazione": "La chiave primaria identifica ogni riga in modo univoco. Questo evita ambiguità quando si cercano, aggiornano o collegano record.",
+    "spiegazione": "La chiave primaria identifica una riga in modo univoco. La chiave esterna collega tabelle diverse. Ordinamento e leggibilità dei nomi non sono lo scopo principale della chiave primaria.",
     "tags": [
       "database",
       "chiave primaria",
@@ -512,12 +512,12 @@
     "domanda": "In una pagina web, qual è il ruolo principale del CSS?",
     "opzioni": [
       "Gestire l'aspetto visivo degli elementi",
-      "Salvare dati in tabelle relazionali",
-      "Eseguire query SQL sul server",
-      "Compilare il codice macchina del processore"
+      "Definire la struttura semantica della pagina",
+      "Gestire la logica interattiva nel browser",
+      "Recuperare dati da un database con query"
     ],
     "risposta_corretta": "Gestire l'aspetto visivo degli elementi",
-    "spiegazione": "CSS controlla lo stile della pagina: colori, dimensioni, layout, spaziature, bordi, animazioni e comportamento visivo responsive.",
+    "spiegazione": "CSS gestisce stile, layout, colori, spaziature e responsive design. HTML definisce la struttura, JavaScript gestisce l'interattività, mentre le query al database sono tipiche del backend.",
     "tags": [
       "css",
       "frontend",
@@ -533,12 +533,12 @@
     "domanda": "Che cosa significa fare debug di un programma?",
     "opzioni": [
       "Individuare e correggere errori nel comportamento del codice",
-      "Aumentare la luminosità dello schermo",
-      "Convertire sempre il codice in un'immagine",
-      "Cancellare tutti i file del progetto"
+      "Scrivere test automatici prima di creare una funzione",
+      "Ottimizzare il codice senza verificare errori funzionali",
+      "Pubblicare il progetto su un server remoto"
     ],
     "risposta_corretta": "Individuare e correggere errori nel comportamento del codice",
-    "spiegazione": "Il debug è il processo con cui si analizza un programma, si trovano errori o comportamenti inattesi e si correggono.",
+    "spiegazione": "Il debug serve a trovare e correggere errori. I test aiutano a verificarli, l'ottimizzazione migliora prestazioni o struttura, mentre il deploy pubblica il progetto.",
     "tags": [
       "debug",
       "programmazione",
@@ -554,12 +554,12 @@
     "domanda": "In Git, che cosa rappresenta un commit?",
     "opzioni": [
       "Una fotografia salvata dello stato del progetto",
-      "Un virus installato nel repository",
-      "Una cartella temporanea del browser",
-      "Una modifica che non può essere tracciata"
+      "Un ramo separato in cui sviluppare nuove modifiche",
+      "Un comando per scaricare modifiche dal repository remoto",
+      "Un file temporaneo ignorato dal controllo versione"
     ],
     "risposta_corretta": "Una fotografia salvata dello stato del progetto",
-    "spiegazione": "Un commit salva uno stato del progetto con un messaggio descrittivo. Permette di tenere traccia delle modifiche nel tempo.",
+    "spiegazione": "Un commit salva uno stato del progetto. Un branch è un ramo di sviluppo, pull scarica modifiche dal remoto, mentre un file ignorato non viene tracciato da Git.",
     "tags": [
       "git",
       "versionamento",
@@ -575,12 +575,12 @@
     "domanda": "Perché è rischioso salvare password direttamente nel codice sorgente?",
     "opzioni": [
       "Perché possono finire in repository, log o copie condivise del progetto",
-      "Perché il codice diventa sempre più veloce",
-      "Perché il computer smette di usare la tastiera",
-      "Perché le password diventano automaticamente pubblicità"
+      "Perché impediscono al codice di collegarsi a un database",
+      "Perché rendono impossibile usare variabili d'ambiente",
+      "Perché vengono sempre cifrate automaticamente da Git"
     ],
     "risposta_corretta": "Perché possono finire in repository, log o copie condivise del progetto",
-    "spiegazione": "Le password nel codice possono essere esposte facilmente, soprattutto se il progetto viene caricato online. È meglio usare variabili d'ambiente o sistemi di gestione dei segreti.",
+    "spiegazione": "Salvare password nel codice è rischioso perché possono essere condivise per errore nel repository o nei log. Le variabili d'ambiente servono proprio a separare questi dati dal codice.",
     "tags": [
       "sicurezza",
       "password",
@@ -596,12 +596,12 @@
     "domanda": "Perché separare frontend e backend rende spesso un'applicazione più gestibile?",
     "opzioni": [
       "Perché interfaccia, logica applicativa e dati possono evolvere con responsabilità più chiare",
-      "Perché impedisce al backend di ricevere qualsiasi richiesta",
-      "Perché elimina la necessità di testare il codice",
-      "Perché trasforma automaticamente il progetto in un videogioco"
+      "Perché il frontend può sostituire completamente database e API",
+      "Perché il backend deve contenere anche tutta la grafica dell'utente",
+      "Perché separare i livelli elimina automaticamente ogni bug"
     ],
     "risposta_corretta": "Perché interfaccia, logica applicativa e dati possono evolvere con responsabilità più chiare",
-    "spiegazione": "Separare frontend e backend aiuta a organizzare meglio il progetto. Il frontend gestisce l'interazione utente, mentre il backend gestisce logica, dati e API.",
+    "spiegazione": "Separare frontend e backend aiuta a distinguere responsabilità diverse. Non elimina automaticamente i bug e non significa che il frontend sostituisca database o API.",
     "tags": [
       "frontend",
       "backend",
@@ -617,12 +617,12 @@
     "domanda": "Che cosa può indicare una risposta HTTP 401 in una API protetta?",
     "opzioni": [
       "La richiesta non è autenticata correttamente",
-      "La richiesta è stata completata con successo",
-      "Il server ha inviato un'immagine troppo grande",
-      "Il client ha chiesto di cambiare colore alla pagina"
+      "La richiesta è valida ma l'utente non ha i permessi necessari",
+      "La risorsa richiesta non esiste sul server",
+      "Il server ha generato un errore interno"
     ],
     "risposta_corretta": "La richiesta non è autenticata correttamente",
-    "spiegazione": "Il codice 401 indica normalmente un problema di autenticazione: il client non ha fornito credenziali valide o non è autorizzato ad accedere senza login.",
+    "spiegazione": "HTTP 401 indica in genere un problema di autenticazione. 403 riguarda permessi insufficienti, 404 risorsa non trovata, 500 errore interno del server.",
     "tags": [
       "api",
       "http",
@@ -638,12 +638,12 @@
     "domanda": "Qual è il vantaggio principale di usare un indice su una colonna molto cercata di un database?",
     "opzioni": [
       "Rendere più veloci alcune ricerche su quella colonna",
-      "Rendere impossibile ogni ordinamento",
-      "Trasformare la tabella in un file audio",
-      "Cancellare automaticamente le righe duplicate"
+      "Ridurre sempre lo spazio occupato dalla tabella",
+      "Evitare automaticamente ogni duplicato nei dati",
+      "Sostituire la chiave primaria della tabella"
     ],
     "risposta_corretta": "Rendere più veloci alcune ricerche su quella colonna",
-    "spiegazione": "Un indice può accelerare le ricerche perché permette al database di trovare i record senza scorrere tutta la tabella. Ha però un costo in spazio e aggiornamenti.",
+    "spiegazione": "Un indice può velocizzare ricerche e ordinamenti su una colonna, ma occupa spazio e può rallentare alcune scritture. Non elimina automaticamente duplicati e non sostituisce necessariamente una chiave primaria.",
     "tags": [
       "database",
       "indice",
@@ -659,12 +659,12 @@
     "domanda": "Perché due operazioni simultanee sullo stesso dato possono creare problemi in un'applicazione?",
     "opzioni": [
       "Perché possono produrre risultati incoerenti se non vengono gestite correttamente",
-      "Perché impediscono sempre al server di accendersi",
-      "Perché cancellano automaticamente il codice sorgente",
-      "Perché trasformano ogni numero in testo casuale"
+      "Perché impediscono sempre l'accesso simultaneo al database",
+      "Perché trasformano ogni operazione in una transazione sicura",
+      "Perché eliminano automaticamente il rischio di aggiornamenti persi"
     ],
     "risposta_corretta": "Perché possono produrre risultati incoerenti se non vengono gestite correttamente",
-    "spiegazione": "Se più operazioni modificano lo stesso dato senza controllo, si possono creare conflitti, aggiornamenti persi o stati incoerenti. Per questo si usano transazioni o meccanismi di sincronizzazione.",
+    "spiegazione": "Operazioni simultanee sullo stesso dato possono causare conflitti, aggiornamenti persi o stati incoerenti. Transazioni e meccanismi di isolamento servono proprio a ridurre questi rischi.",
     "tags": [
       "concorrenza",
       "transazioni",
@@ -680,12 +680,12 @@
     "domanda": "Perché un test automatico utile deve avere un risultato atteso ben definito?",
     "opzioni": [
       "Perché il test deve poter stabilire se il comportamento ottenuto è corretto o no",
-      "Perché il test deve cambiare casualmente a ogni esecuzione",
-      "Perché il test serve solo a colorare il terminale",
-      "Perché un test non dovrebbe mai verificare il risultato"
+      "Perché un test utile deve cambiare risultato a ogni esecuzione",
+      "Perché il test deve controllare solo che il programma si avvii",
+      "Perché il risultato atteso serve solo nei test manuali"
     ],
     "risposta_corretta": "Perché il test deve poter stabilire se il comportamento ottenuto è corretto o no",
-    "spiegazione": "Un test automatico confronta il risultato prodotto dal codice con un risultato atteso. Senza un risultato atteso chiaro, il test non può dire se il comportamento è corretto.",
+    "spiegazione": "Un test automatico confronta risultato ottenuto e risultato atteso. Se il risultato atteso non è chiaro, il test non può stabilire se il codice funziona davvero.",
     "tags": [
       "testing",
       "qualità",
@@ -701,12 +701,12 @@
     "domanda": "Perché una variabile d'ambiente è utile quando si pubblica un'applicazione?",
     "opzioni": [
       "Permette di separare configurazioni sensibili o diverse dal codice sorgente",
-      "Serve solo a cambiare il font del browser",
-      "Obbliga l'applicazione a funzionare senza server",
-      "Trasforma ogni file JSON in una tabella SQL"
+      "Permette di centralizzare valori di configurazione usati in ambienti diversi",
+      "Permette di modificare alcuni parametri senza cambiare direttamente il codice",
+      "Permette di distinguere configurazioni di sviluppo, test e produzione"
     ],
     "risposta_corretta": "Permette di separare configurazioni sensibili o diverse dal codice sorgente",
-    "spiegazione": "Le variabili d'ambiente permettono di gestire dati come chiavi, URL o configurazioni senza scriverli direttamente nel codice.",
+    "spiegazione": "La risposta più completa è che una variabile d'ambiente separa configurazioni sensibili o diverse dal codice sorgente. Le altre opzioni descrivono vantaggi collegati, ma sono più parziali: centralizzare valori, cambiare parametri o distinguere ambienti sono effetti utili, mentre il principio principale è non scrivere certe configurazioni direttamente nel codice.",
     "tags": [
       "deploy",
       "ambiente",
@@ -1482,15 +1482,15 @@
     "categoria": "logica",
     "sottocategoria": "logica_verbale",
     "livello": "intermedio",
-    "domanda": "Quale coppia mantiene meglio la relazione: seme → pianta?",
+    "domanda": "Quale coppia mantiene meglio la relazione: bozza → documento finale?",
     "opzioni": [
-      "bozza → documento",
-      "libro → pagina",
-      "porta → chiave",
-      "strada → automobile"
+      "prototipo → prodotto definitivo",
+      "titolo → capitolo",
+      "indice → argomento",
+      "nota → parola chiave"
     ],
-    "risposta_corretta": "bozza → documento",
-    "spiegazione": "Un seme può svilupparsi in una pianta. Allo stesso modo una bozza può svilupparsi in un documento completo.",
+    "risposta_corretta": "prototipo → prodotto definitivo",
+    "spiegazione": "Una bozza è una versione iniziale che può essere sviluppata fino a diventare un documento finale. Allo stesso modo, un prototipo è una versione iniziale che può evolvere in un prodotto definitivo. Le altre coppie sono collegate al mondo dei testi o delle informazioni, ma non esprimono bene il passaggio da versione iniziale a versione finale.",
     "tags": [
       "analogie",
       "relazioni"
