@@ -355,10 +355,14 @@ function mostraDomandaCorrente() {
     elementi.scoreText.textContent =
         `Corrette: ${risposteCorrette}`;
 
+    /*
+        Qui mostriamo solo categoria e livello.
+        L'ID interno della domanda rimane nel database,
+        ma non viene mostrato all'utente finale.
+    */
     elementi.questionMeta.textContent =
         `${formattaTesto(domanda.categoria)} · ` +
-        `${formattaTesto(domanda.livello)} · ` +
-        `${domanda.id}`;
+        `${formattaTesto(domanda.livello)}`;
 
     const percentualeAvanzamento =
         (indiceDomandaCorrente / totaleDomande) * 100;
