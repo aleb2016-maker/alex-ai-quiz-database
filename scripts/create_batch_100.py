@@ -591,13 +591,13 @@ nuove_domande = [
     {
         "id": "MAT-FAC-0004",
         "categoria": "matematica",
-        "sottocategoria": "percentuali",
+        "sottocategoria": "frazioni",
         "livello": "facile",
-        "domanda": "Quanto vale il 20% di 150?",
-        "opzioni": ["25", "30", "35", "40"],
-        "risposta_corretta": "30",
-        "spiegazione": "Il 20% significa 20 su 100. Quindi 150 × 20 / 100 = 30.",
-        "tags": ["percentuali", "calcolo"],
+        "domanda": "Quanto vale tre quarti di 80?",
+        "opzioni": ["40", "50", "60", "70"],
+        "risposta_corretta": "60",
+        "spiegazione": "Tre quarti di 80 significa dividere 80 in 4 parti uguali e prenderne 3. Prima calcoliamo 80 / 4 = 20, poi facciamo 20 × 3 = 60.",
+        "tags": ["frazioni", "calcolo", "parte_di_un_totale"],
         "difficolta": 1
     },
     {
