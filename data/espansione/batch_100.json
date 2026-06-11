@@ -70,12 +70,12 @@
     "domanda": "Che cosa fa principalmente un modello linguistico?",
     "opzioni": [
       "Lavora con il linguaggio per comprendere o generare testo",
-      "Classifica esclusivamente immagini senza usare testo",
-      "Memorizza pagine web senza elaborarne il significato",
-      "Esegue soltanto calcoli numerici senza usare parole"
+      "Classifica contenuti testuali senza produrre nuove frasi",
+      "Recupera pagine web pertinenti senza formulare una risposta",
+      "Analizza solo dati numerici organizzati in tabelle"
     ],
     "risposta_corretta": "Lavora con il linguaggio per comprendere o generare testo",
-    "spiegazione": "Un modello linguistico lavora principalmente con testo e linguaggio naturale. Può comprendere, completare, riassumere o generare frasi. Le altre risposte descrivono attività possibili in informatica o AI, ma non rappresentano il ruolo principale di un modello linguistico.",
+    "spiegazione": "Un modello linguistico lavora con il linguaggio naturale: può comprendere, completare, riassumere o generare testo. Le altre opzioni descrivono attività possibili nell'AI o nell'informatica, ma sono più limitate e non rappresentano il ruolo principale di un modello linguistico.",
     "tags": [
       "ai",
       "llm",
@@ -133,12 +133,12 @@
     "domanda": "A cosa serve un embedding in molte applicazioni di intelligenza artificiale?",
     "opzioni": [
       "A rappresentare testi, immagini o dati come vettori confrontabili",
-      "A trasformare direttamente ogni testo in una risposta finale",
-      "A classificare i dati senza creare alcuna rappresentazione numerica",
-      "A salvare il testo originale senza permettere confronti semantici"
+      "A recuperare documenti usando solo parole identiche alla domanda",
+      "A generare direttamente una risposta senza confronto semantico",
+      "A salvare il contenuto originale senza trasformarlo in rappresentazione numerica"
     ],
     "risposta_corretta": "A rappresentare testi, immagini o dati come vettori confrontabili",
-    "spiegazione": "Un embedding rappresenta un contenuto come vettore numerico. Questo permette confronti di somiglianza semantica. Non è una risposta finale e non sostituisce da solo classificazione, retrieval o generazione.",
+    "spiegazione": "Un embedding trasforma un contenuto in un vettore numerico, così contenuti simili possono essere confrontati anche se usano parole diverse. Non è una risposta finale e non è una semplice ricerca per parole identiche.",
     "tags": [
       "ai",
       "embedding",
@@ -154,12 +154,12 @@
     "domanda": "Perché è utile testare un modello AI con esempi diversi da quelli usati in addestramento?",
     "opzioni": [
       "Per verificare se il modello generalizza anche su casi nuovi",
-      "Per controllare se il modello ricorda perfettamente i dati di training",
-      "Per aumentare il numero di parametri durante il test",
-      "Per evitare qualunque confronto con risultati attesi"
+      "Per misurare quanto il modello ripete i dati già visti in addestramento",
+      "Per scegliere nuovi esempi da aggiungere al training set",
+      "Per controllare solo la velocità di risposta senza valutare l'accuratezza"
     ],
     "risposta_corretta": "Per verificare se il modello generalizza anche su casi nuovi",
-    "spiegazione": "Il test su esempi non visti serve a capire se il modello generalizza. Ricordare perfettamente i dati di training può invece indicare overfitting. Durante il test non si aumentano i parametri e il confronto con risultati attesi è spesso fondamentale.",
+    "spiegazione": "Testare un modello su esempi diversi da quelli usati in addestramento serve a capire se generalizza su casi nuovi. Se funziona bene solo sui dati già visti, potrebbe aver memorizzato troppo il training set invece di imparare regole utili.",
     "tags": [
       "ai",
       "testing",
@@ -196,12 +196,12 @@
     "domanda": "Che cosa può succedere se un dataset contiene molti esempi sbilanciati verso una sola classe?",
     "opzioni": [
       "Il modello può imparare a favorire quella classe nelle previsioni",
-      "Il modello impara automaticamente a bilanciare tutte le classi",
-      "Il modello ignora sempre la classe più frequente",
-      "Il modello produce solo risultati casuali senza seguire i dati"
+      "Il modello può imparare automaticamente un peso identico per tutte le classi",
+      "Il modello può migliorare sulle classi rare senza esempi sufficienti",
+      "Il modello può rendere inutile ogni metrica diversa dall'accuratezza"
     ],
     "risposta_corretta": "Il modello può imparare a favorire quella classe nelle previsioni",
-    "spiegazione": "Se una classe è molto più presente delle altre, il modello può prevederla troppo spesso. Il bilanciamento non avviene automaticamente: spesso servono tecniche specifiche, metriche adatte o dati più equilibrati.",
+    "spiegazione": "Se una classe è molto più presente delle altre, il modello può imparare a prevederla troppo spesso. Questo può dare un risultato apparentemente buono, ma peggiorare il riconoscimento delle classi meno rappresentate.",
     "tags": [
       "ai",
       "dataset",
@@ -217,12 +217,12 @@
     "domanda": "In un agente AI, che cosa rappresenta normalmente un tool?",
     "opzioni": [
       "Uno strumento esterno che l'agente può usare per compiere un'azione",
-      "Una memoria interna che conserva solo la conversazione precedente",
-      "Un prompt fisso che descrive il comportamento dell'agente",
-      "Un modello separato usato soltanto per generare testo"
+      "Una memoria conversazionale che conserva informazioni tra più messaggi",
+      "Un'istruzione di sistema che definisce il comportamento dell'agente",
+      "Un modello linguistico usato per scegliere la risposta finale"
     ],
     "risposta_corretta": "Uno strumento esterno che l'agente può usare per compiere un'azione",
-    "spiegazione": "In un agente AI, un tool è una funzione o risorsa esterna che permette di fare qualcosa, per esempio cercare dati, leggere file, chiamare API o fare calcoli. Memoria, prompt e modello sono componenti diversi.",
+    "spiegazione": "In un agente AI, un tool è uno strumento esterno che permette di compiere azioni, per esempio cercare dati, leggere file, chiamare API o fare calcoli. Memoria, istruzioni di sistema e modello linguistico sono componenti importanti, ma non sono tool.",
     "tags": [
       "ai",
       "agenti",
@@ -260,12 +260,12 @@
     "domanda": "Perché valutare un modello AI solo con risposte corrette o sbagliate può essere limitante?",
     "opzioni": [
       "Perché alcune risposte richiedono giudizi su completezza, coerenza, sicurezza e utilità",
-      "Perché una risposta lunga deve essere sempre considerata migliore di una breve",
-      "Perché la valutazione automatica deve ignorare il contesto della richiesta",
-      "Perché nei compiti generativi esiste sempre una sola risposta identica da confrontare"
+      "Perché una risposta può essere corretta nei fatti ma incompleta rispetto alla richiesta",
+      "Perché una risposta può rispettare il formato ma non essere abbastanza utile",
+      "Perché una risposta può essere fluida ma contenere passaggi non verificati"
     ],
     "risposta_corretta": "Perché alcune risposte richiedono giudizi su completezza, coerenza, sicurezza e utilità",
-    "spiegazione": "Nei compiti generativi spesso non basta dire corretto o sbagliato. Una risposta può essere parzialmente corretta ma incompleta, poco sicura, fuori formato o poco utile. Per questo servono criteri di valutazione più ricchi.",
+    "spiegazione": "Nei compiti generativi non basta sempre distinguere tra corretto e sbagliato. Una risposta può essere parzialmente corretta, incompleta, poco sicura, fuori contesto o poco utile. Per questo servono criteri più ricchi, come completezza, coerenza, sicurezza e utilità.",
     "tags": [
       "ai",
       "valutazione",
@@ -281,12 +281,12 @@
     "domanda": "Qual è il rischio principale di un prompt injection in un'applicazione AI collegata a strumenti esterni?",
     "opzioni": [
       "Il modello può essere spinto a ignorare istruzioni originali e usare strumenti in modo non previsto",
-      "Il modello può ricevere un contesto lungo ma rimanere comunque dentro le istruzioni di sistema",
-      "Il modello può rispondere con informazioni incomplete senza usare tool esterni",
-      "Il modello può ridurre la qualità della risposta senza violare alcuna istruzione"
+      "Il modello può ricevere istruzioni esterne che entrano in conflitto con quelle dell'applicazione",
+      "Il modello può confondere contenuto dell'utente e istruzioni operative del sistema",
+      "Il modello può usare informazioni recuperate come se fossero comandi da seguire"
     ],
     "risposta_corretta": "Il modello può essere spinto a ignorare istruzioni originali e usare strumenti in modo non previsto",
-    "spiegazione": "Una prompt injection tenta di manipolare il modello facendogli ignorare istruzioni prioritarie. Il rischio è maggiore se il modello può usare tool esterni, perché potrebbe compiere azioni non previste dall'applicazione.",
+    "spiegazione": "Una prompt injection tenta di manipolare il comportamento del modello, facendogli trattare contenuti esterni come istruzioni. Il rischio principale, soprattutto con tool esterni, è che il modello ignori le istruzioni originali e compia azioni non previste.",
     "tags": [
       "ai",
       "sicurezza",
@@ -323,12 +323,12 @@
     "domanda": "In una pipeline AI, perché conviene separare recupero delle informazioni, generazione e controllo finale?",
     "opzioni": [
       "Per rendere più controllabile ogni fase e individuare meglio dove nasce un errore",
-      "Per aumentare la complessità senza poter capire quale modulo sbaglia",
-      "Per impedire al controllo finale di valutare la risposta generata",
-      "Per usare sempre un solo modello anche quando servono funzioni diverse"
+      "Per valutare separatamente se il problema nasce dal recupero dei documenti",
+      "Per controllare se la generazione usa correttamente il contesto recuperato",
+      "Per verificare se il controllo finale intercetta risposte deboli o rischiose"
     ],
     "risposta_corretta": "Per rendere più controllabile ogni fase e individuare meglio dove nasce un errore",
-    "spiegazione": "Separare recupero, generazione e controllo finale rende la pipeline più osservabile. Se qualcosa va male, si può capire se l'errore nasce dai documenti recuperati, dalla generazione o dalla verifica finale.",
+    "spiegazione": "Separare recupero, generazione e controllo finale rende la pipeline più osservabile e più facile da correggere. Le altre opzioni descrivono vantaggi specifici della separazione, ma la risposta corretta è quella più completa: controllare ogni fase e capire dove nasce l'errore.",
     "tags": [
       "ai",
       "pipeline",
@@ -344,12 +344,12 @@
     "domanda": "Perché un modello AI può produrre risultati distorti anche se l'algoritmo è implementato correttamente?",
     "opzioni": [
       "Perché i dati, gli obiettivi di addestramento o le metriche possono introdurre distorsioni",
-      "Perché un modello corretto dal punto di vista tecnico elimina automaticamente ogni bias",
-      "Perché i bias compaiono solo se il codice contiene errori di sintassi",
-      "Perché le metriche di valutazione non possono mai influenzare il comportamento del modello"
+      "Perché dati sbilanciati possono portare il modello a favorire certi gruppi o classi",
+      "Perché una metrica scelta male può premiare comportamenti non desiderati",
+      "Perché l'obiettivo di addestramento può non rappresentare bene l'uso reale"
     ],
     "risposta_corretta": "Perché i dati, gli obiettivi di addestramento o le metriche possono introdurre distorsioni",
-    "spiegazione": "Un modello può essere implementato correttamente ma imparare distorsioni presenti nei dati o negli obiettivi di addestramento. Anche le metriche scelte possono favorire certi comportamenti rispetto ad altri.",
+    "spiegazione": "Un modello può essere implementato correttamente ma produrre risultati distorti se dati, obiettivi o metriche sono sbilanciati. Le altre opzioni descrivono casi specifici, mentre la risposta corretta riassume il motivo generale.",
     "tags": [
       "ai",
       "bias",
@@ -446,7 +446,7 @@
     "categoria": "informatica",
     "sottocategoria": "file",
     "livello": "facile",
-    "domanda": "Quale formato è adatto a rappresentare dati strutturati leggibili da molte applicazioni?",
+    "domanda": "Quale formato è molto usato nelle API web per rappresentare oggetti e liste con coppie chiave-valore?",
     "opzioni": [
       "JSON",
       "CSV",
@@ -454,7 +454,7 @@
       "YAML"
     ],
     "risposta_corretta": "JSON",
-    "spiegazione": "JSON è molto usato per rappresentare dati strutturati in applicazioni web e API. Anche CSV, XML e YAML rappresentano dati, ma JSON è particolarmente comune per oggetti e liste scambiati tra sistemi.",
+    "spiegazione": "JSON è molto usato nelle API web perché rappresenta bene oggetti, liste e coppie chiave-valore. CSV, XML e YAML possono rappresentare dati, ma JSON è particolarmente comune nello scambio dati tra frontend, backend e API.",
     "tags": [
       "json",
       "dati",
@@ -488,15 +488,15 @@
     "categoria": "informatica",
     "sottocategoria": "database",
     "livello": "intermedio",
-    "domanda": "Perché si usa una chiave primaria in una tabella di database?",
+    "domanda": "A cosa serve principalmente una chiave esterna in un database relazionale?",
     "opzioni": [
-      "Per identificare in modo univoco ogni record",
-      "Per collegare una tabella a un'altra come chiave esterna",
-      "Per ordinare sempre i record in ordine alfabetico",
-      "Per rendere più leggibile il nome delle colonne"
+      "A collegare un record di una tabella a un record di un'altra tabella",
+      "A identificare in modo univoco ogni record della stessa tabella",
+      "A ordinare automaticamente tutti i record in base alla data",
+      "A trasformare una tabella relazionale in un file JSON"
     ],
-    "risposta_corretta": "Per identificare in modo univoco ogni record",
-    "spiegazione": "La chiave primaria identifica una riga in modo univoco. La chiave esterna collega tabelle diverse. Ordinamento e leggibilità dei nomi non sono lo scopo principale della chiave primaria.",
+    "risposta_corretta": "A collegare un record di una tabella a un record di un'altra tabella",
+    "spiegazione": "Una chiave esterna serve a collegare tabelle diverse. Per esempio, un ordine può contenere l'ID del cliente a cui appartiene. La chiave primaria identifica un record nella stessa tabella, mentre ordinamento e conversione in JSON sono concetti diversi.",
     "tags": [
       "database",
       "chiave primaria",
@@ -533,12 +533,12 @@
     "domanda": "Che cosa significa fare debug di un programma?",
     "opzioni": [
       "Individuare e correggere errori nel comportamento del codice",
-      "Scrivere test automatici prima di creare una funzione",
-      "Ottimizzare il codice senza verificare errori funzionali",
-      "Pubblicare il progetto su un server remoto"
+      "Osservare il programma durante l'esecuzione per capire dove nasce un errore",
+      "Controllare valori intermedi per verificare se la logica segue il flusso previsto",
+      "Riprodurre un problema in modo stabile per capire quale istruzione lo provoca"
     ],
     "risposta_corretta": "Individuare e correggere errori nel comportamento del codice",
-    "spiegazione": "Il debug serve a trovare e correggere errori. I test aiutano a verificarli, l'ottimizzazione migliora prestazioni o struttura, mentre il deploy pubblica il progetto.",
+    "spiegazione": "Fare debug significa individuare e correggere errori nel comportamento del codice. Osservare l'esecuzione, controllare valori intermedi e riprodurre il problema sono tecniche usate durante il debug.",
     "tags": [
       "debug",
       "programmazione",
@@ -575,12 +575,12 @@
     "domanda": "Perché è rischioso salvare password direttamente nel codice sorgente?",
     "opzioni": [
       "Perché possono finire in repository, log o copie condivise del progetto",
-      "Perché impediscono al codice di collegarsi a un database",
-      "Perché rendono impossibile usare variabili d'ambiente",
-      "Perché vengono sempre cifrate automaticamente da Git"
+      "Perché possono essere lette da altre persone se il codice viene pubblicato",
+      "Perché rendono più difficile cambiare credenziali tra ambienti diversi",
+      "Perché aumentano il rischio di esporre accessi a database o servizi esterni"
     ],
     "risposta_corretta": "Perché possono finire in repository, log o copie condivise del progetto",
-    "spiegazione": "Salvare password nel codice è rischioso perché possono essere condivise per errore nel repository o nei log. Le variabili d'ambiente servono proprio a separare questi dati dal codice.",
+    "spiegazione": "Salvare password nel codice è rischioso perché possono finire in repository, log, backup o copie condivise. Le altre opzioni sono conseguenze collegate, ma il rischio principale è l'esposizione involontaria delle credenziali.",
     "tags": [
       "sicurezza",
       "password",
@@ -596,12 +596,12 @@
     "domanda": "Perché separare frontend e backend rende spesso un'applicazione più gestibile?",
     "opzioni": [
       "Perché interfaccia, logica applicativa e dati possono evolvere con responsabilità più chiare",
-      "Perché il frontend può sostituire completamente database e API",
-      "Perché il backend deve contenere anche tutta la grafica dell'utente",
-      "Perché separare i livelli elimina automaticamente ogni bug"
+      "Perché il frontend può gestire solo la grafica mentre il backend espone dati e logica tramite API",
+      "Perché il backend può cambiare alcune regole senza riscrivere tutta l'interfaccia",
+      "Perché il frontend può consumare servizi diversi senza conoscere i dettagli interni del server"
     ],
     "risposta_corretta": "Perché interfaccia, logica applicativa e dati possono evolvere con responsabilità più chiare",
-    "spiegazione": "Separare frontend e backend aiuta a distinguere responsabilità diverse. Non elimina automaticamente i bug e non significa che il frontend sostituisca database o API.",
+    "spiegazione": "Separare frontend e backend rende il progetto più gestibile perché divide le responsabilità: interfaccia utente, logica applicativa e gestione dei dati possono evolvere in modo più ordinato. Le altre opzioni descrivono vantaggi specifici, ma la risposta corretta è quella più generale.",
     "tags": [
       "frontend",
       "backend",
@@ -638,12 +638,12 @@
     "domanda": "Qual è il vantaggio principale di usare un indice su una colonna molto cercata di un database?",
     "opzioni": [
       "Rendere più veloci alcune ricerche su quella colonna",
-      "Ridurre sempre lo spazio occupato dalla tabella",
-      "Evitare automaticamente ogni duplicato nei dati",
-      "Sostituire la chiave primaria della tabella"
+      "Ridurre il numero di righe da salvare nella tabella",
+      "Normalizzare automaticamente i dati duplicati",
+      "Sostituire la progettazione delle relazioni tra tabelle"
     ],
     "risposta_corretta": "Rendere più veloci alcune ricerche su quella colonna",
-    "spiegazione": "Un indice può velocizzare ricerche e ordinamenti su una colonna, ma occupa spazio e può rallentare alcune scritture. Non elimina automaticamente duplicati e non sostituisce necessariamente una chiave primaria.",
+    "spiegazione": "Un indice aiuta il database a trovare più velocemente i record su certe colonne. Non riduce automaticamente le righe, non normalizza i dati e non sostituisce la progettazione corretta delle tabelle.",
     "tags": [
       "database",
       "indice",
@@ -659,12 +659,12 @@
     "domanda": "Perché due operazioni simultanee sullo stesso dato possono creare problemi in un'applicazione?",
     "opzioni": [
       "Perché possono produrre risultati incoerenti se non vengono gestite correttamente",
-      "Perché impediscono sempre l'accesso simultaneo al database",
-      "Perché trasformano ogni operazione in una transazione sicura",
-      "Perché eliminano automaticamente il rischio di aggiornamenti persi"
+      "Perché possono leggere o modificare lo stesso dato nello stesso intervallo di tempo",
+      "Perché possono richiedere transazioni o meccanismi di isolamento adeguati",
+      "Perché possono causare aggiornamenti persi se due modifiche si sovrappongono"
     ],
     "risposta_corretta": "Perché possono produrre risultati incoerenti se non vengono gestite correttamente",
-    "spiegazione": "Operazioni simultanee sullo stesso dato possono causare conflitti, aggiornamenti persi o stati incoerenti. Transazioni e meccanismi di isolamento servono proprio a ridurre questi rischi.",
+    "spiegazione": "Due operazioni simultanee sullo stesso dato possono creare stati incoerenti, aggiornamenti persi o conflitti. Le altre opzioni descrivono casi specifici del problema, mentre la risposta corretta riassume il rischio principale.",
     "tags": [
       "concorrenza",
       "transazioni",
@@ -680,12 +680,12 @@
     "domanda": "Perché un test automatico utile deve avere un risultato atteso ben definito?",
     "opzioni": [
       "Perché il test deve poter stabilire se il comportamento ottenuto è corretto o no",
-      "Perché un test utile deve cambiare risultato a ogni esecuzione",
-      "Perché il test deve controllare solo che il programma si avvii",
-      "Perché il risultato atteso serve solo nei test manuali"
+      "Perché il test deve confrontare output reale e output previsto",
+      "Perché il test deve verificare una condizione precisa e ripetibile",
+      "Perché il test deve fallire quando il codice non rispetta il comportamento atteso"
     ],
     "risposta_corretta": "Perché il test deve poter stabilire se il comportamento ottenuto è corretto o no",
-    "spiegazione": "Un test automatico confronta risultato ottenuto e risultato atteso. Se il risultato atteso non è chiaro, il test non può stabilire se il codice funziona davvero.",
+    "spiegazione": "Un test automatico utile deve sapere cosa aspettarsi. Se il risultato atteso è chiaro, il test può confrontarlo con il risultato reale e dire se il comportamento è corretto. Le altre opzioni sono aspetti collegati, ma la risposta corretta è la formulazione più completa.",
     "tags": [
       "testing",
       "qualità",
@@ -701,12 +701,12 @@
     "domanda": "Perché una variabile d'ambiente è utile quando si pubblica un'applicazione?",
     "opzioni": [
       "Permette di separare configurazioni sensibili o diverse dal codice sorgente",
-      "Permette di centralizzare valori di configurazione usati in ambienti diversi",
-      "Permette di modificare alcuni parametri senza cambiare direttamente il codice",
-      "Permette di distinguere configurazioni di sviluppo, test e produzione"
+      "Permette di cambiare valori come URL o chiavi senza modificare i file del codice",
+      "Permette di usare configurazioni diverse tra sviluppo, test e produzione",
+      "Permette di evitare che credenziali e impostazioni vengano scritte direttamente nel repository"
     ],
     "risposta_corretta": "Permette di separare configurazioni sensibili o diverse dal codice sorgente",
-    "spiegazione": "La risposta più completa è che una variabile d'ambiente separa configurazioni sensibili o diverse dal codice sorgente. Le altre opzioni descrivono vantaggi collegati, ma sono più parziali: centralizzare valori, cambiare parametri o distinguere ambienti sono effetti utili, mentre il principio principale è non scrivere certe configurazioni direttamente nel codice.",
+    "spiegazione": "Le variabili d'ambiente servono soprattutto a separare configurazioni sensibili o variabili dal codice sorgente. Cambiare URL, distinguere ambienti ed evitare credenziali nel repository sono vantaggi collegati, ma la risposta corretta è quella più generale.",
     "tags": [
       "deploy",
       "ambiente",
@@ -768,7 +768,7 @@
       "36"
     ],
     "risposta_corretta": "32",
-    "spiegazione": "Prima si esegue la moltiplicazione: 7 × 2 = 14. Poi 18 + 14 = 32.",
+    "spiegazione": "Prima si esegue la moltiplicazione: 7 × 2 = 14. Poi si somma 18 + 14 = 32. Il risultato 50 nasce dall'errore di fare prima 18 + 7 e poi moltiplicare per 2.",
     "tags": [
       "operazioni",
       "precedenza"
@@ -784,11 +784,11 @@
     "opzioni": [
       "2/4",
       "2/3",
-      "3/5",
+      "3/4",
       "4/6"
     ],
     "risposta_corretta": "2/4",
-    "spiegazione": "Una frazione equivalente ha lo stesso valore. 2/4 si semplifica dividendo numeratore e denominatore per 2, ottenendo 1/2.",
+    "spiegazione": "Una frazione equivalente a 1/2 deve avere lo stesso valore. 2/4 si semplifica dividendo numeratore e denominatore per 2, ottenendo 1/2. 2/3, 3/4 e 4/6 sono frazioni vicine come forma, ma non valgono 1/2.",
     "tags": [
       "frazioni",
       "equivalenza"
@@ -802,13 +802,13 @@
     "livello": "facile",
     "domanda": "Qual è l'area di un rettangolo con base 8 cm e altezza 5 cm?",
     "opzioni": [
+      "40 cm²",
       "13 cm²",
       "26 cm²",
-      "40 cm²",
       "80 cm²"
     ],
     "risposta_corretta": "40 cm²",
-    "spiegazione": "L'area del rettangolo si calcola con base × altezza. Quindi 8 × 5 = 40 cm².",
+    "spiegazione": "L'area del rettangolo si calcola con base × altezza. Quindi 8 × 5 = 40 cm². 13 nasce da 8 + 5, 26 dal perimetro calcolato con 2 × (8 + 5), mentre 80 è il doppio dell'area.",
     "tags": [
       "geometria",
       "area",
@@ -821,15 +821,15 @@
     "categoria": "matematica",
     "sottocategoria": "equazioni",
     "livello": "intermedio",
-    "domanda": "Risolvi l'equazione: 3x + 5 = 20.",
+    "domanda": "Risolvi l'equazione: 2(x + 4) = 22.",
     "opzioni": [
-      "x = 4",
       "x = 5",
-      "x = 6",
-      "x = 7"
+      "x = 7",
+      "x = 9",
+      "x = 11"
     ],
-    "risposta_corretta": "x = 5",
-    "spiegazione": "Sottrai 5 da entrambi i membri: 3x = 15. Poi dividi per 3: x = 5.",
+    "risposta_corretta": "x = 7",
+    "spiegazione": "Prima dividiamo entrambi i membri per 2: x + 4 = 11. Poi sottraiamo 4 da entrambi i lati: x = 7. Questa domanda è diversa da una semplice equazione 3x + 5 = 20 perché richiede anche di gestire le parentesi.",
     "tags": [
       "equazioni",
       "algebra"
@@ -909,7 +909,7 @@
       "12 cm"
     ],
     "risposta_corretta": "9 cm",
-    "spiegazione": "Il perimetro del quadrato è 4 volte il lato. Quindi il lato misura 36 / 4 = 9 cm.",
+    "spiegazione": "Il perimetro del quadrato è formato da 4 lati uguali. Quindi il lato misura 36 / 4 = 9 cm. 12 nascerebbe dividendo per 3, 8 è vicino ma non corretto, mentre 6 sarebbe una divisione errata per 6.",
     "tags": [
       "geometria",
       "perimetro",
@@ -930,7 +930,7 @@
       "1/3"
     ],
     "risposta_corretta": "3/10",
-    "spiegazione": "Le palline totali sono 3 + 7 = 10. Le rosse sono 3, quindi la probabilità è 3/10.",
+    "spiegazione": "La probabilità si calcola facendo casi favorevoli diviso casi totali. Le palline rosse sono 3, mentre le palline totali sono 3 + 7 = 10. Quindi la probabilità è 3/10. 7/10 sarebbe la probabilità di estrarre una blu, 3/7 confronta rosse e blu ma non usa il totale, mentre 1/3 non rappresenta il rapporto corretto.",
     "tags": [
       "probabilità",
       "frazioni"
@@ -1011,7 +1011,7 @@
       "16"
     ],
     "risposta_corretta": "12",
-    "spiegazione": "Per la prima cifra ci sono 4 scelte. Per la seconda restano 3 scelte, perché non si può ripetere la cifra. Quindi 4 × 3 = 12 codici.",
+    "spiegazione": "Per la prima cifra ci sono 4 scelte. Per la seconda restano 3 scelte, perché non si può ripetere la cifra. Quindi 4 × 3 = 12. 16 sarebbe corretto solo se la ripetizione fosse permessa.",
     "tags": [
       "combinatoria",
       "conteggio"
@@ -1051,7 +1051,7 @@
       "35%"
     ],
     "risposta_corretta": "25%",
-    "spiegazione": "L'aumento è 150 - 120 = 30. La percentuale di aumento è 30 / 120 × 100 = 25%.",
+    "spiegazione": "L'aumento è 150 - 120 = 30. La percentuale di aumento si calcola rispetto al valore iniziale, quindi 30 / 120 × 100 = 25%. 30% nasce dall'errore di confondere l'aumento assoluto 30 con la percentuale.",
     "tags": [
       "percentuali",
       "variazione"
@@ -1063,15 +1063,15 @@
     "categoria": "inglese",
     "sottocategoria": "verbo_essere",
     "livello": "facile",
-    "domanda": "Quale frase inglese è corretta?",
+    "domanda": "Quale frase usa correttamente il presente con il soggetto 'they'?",
     "opzioni": [
       "They are students.",
       "They is students.",
-      "They am students.",
-      "They be students."
+      "They are student.",
+      "They am students."
     ],
     "risposta_corretta": "They are students.",
-    "spiegazione": "La frase corretta è 'They are students' perché 'they' significa 'loro' ed è un soggetto plurale. Con i soggetti plurali come 'we' e 'they' si usa 'are'. 'Is' si usa con soggetti singolari come 'he', 'she' e 'it', mentre 'am' si usa solo con 'I'.",
+    "spiegazione": "'They are students' è corretto perché 'they' richiede 'are' e il nome deve essere al plurale: 'students'. 'They is' usa il verbo sbagliato, 'They are student' sbaglia il plurale, mentre 'They am' usa una forma che si usa solo con 'I'.",
     "tags": [
       "inglese",
       "to be",
@@ -1193,11 +1193,11 @@
     "opzioni": [
       "more difficult",
       "most difficult",
-      "difficulty",
-      "difficultest"
+      "more difficulty",
+      "difficulter"
     ],
     "risposta_corretta": "more difficult",
-    "spiegazione": "Per formare il comparativo di un aggettivo lungo come 'difficult' si usa 'more difficult'.",
+    "spiegazione": "Dopo 'than' serve il comparativo. Con un aggettivo lungo come 'difficult' si usa 'more difficult'. 'Most difficult' è superlativo, 'more difficulty' usa un nome invece dell'aggettivo, mentre 'difficulter' non è la forma corretta.",
     "tags": [
       "inglese",
       "comparativi",
@@ -1234,12 +1234,12 @@
     "domanda": "Completa la frase: If it rains tomorrow, we ___ at home.",
     "opzioni": [
       "will stay",
-      "stayed",
-      "have stayed",
-      "stay yesterday"
+      "would stay",
+      "are staying",
+      "stayed"
     ],
     "risposta_corretta": "will stay",
-    "spiegazione": "Nel first conditional si usa if + present simple e will + verbo base. Quindi: If it rains tomorrow, we will stay at home.",
+    "spiegazione": "Nel first conditional si usa 'if' + present simple e poi 'will' + verbo base. Quindi: 'If it rains tomorrow, we will stay at home.' 'Would stay' appartiene più al second conditional, 'are staying' indica un piano già organizzato, mentre 'stayed' è passato.",
     "tags": [
       "inglese",
       "conditionals",
@@ -1256,11 +1256,11 @@
     "opzioni": [
       "spegnere",
       "accendere",
-      "spostare",
-      "rompere"
+      "abbassare",
+      "scollegare"
     ],
     "risposta_corretta": "spegnere",
-    "spiegazione": "'Turn off' significa spegnere. La frase chiede di spegnere la luce.",
+    "spiegazione": "'Turn off' significa spegnere. 'Turn on' significa accendere, 'turn down' può significare abbassare, mentre 'unplug' significa scollegare.",
     "tags": [
       "inglese",
       "phrasal verbs",
@@ -1276,12 +1276,12 @@
     "domanda": "Quale frase corrisponde meglio a: 'Non vedo l'ora di iniziare il corso'?",
     "opzioni": [
       "I am looking forward to starting the course.",
-      "I am looking after starting the course.",
+      "I am looking forward to start the course.",
       "I am looking for starting the course.",
-      "I am looking through starting the course."
+      "I am looking after starting the course."
     ],
     "risposta_corretta": "I am looking forward to starting the course.",
-    "spiegazione": "'Look forward to' significa non vedere l'ora di fare qualcosa. Dopo 'to' in questa espressione si usa il verbo in -ing.",
+    "spiegazione": "'Look forward to' significa non vedere l'ora di fare qualcosa. Dopo 'to' in questa espressione si usa il verbo in -ing: 'starting'. 'Looking for' significa cercare, mentre 'looking after' significa prendersi cura di.",
     "tags": [
       "inglese",
       "espressioni",
@@ -1298,11 +1298,11 @@
     "opzioni": [
       "however",
       "therefore",
-      "because",
-      "unless"
+      "moreover",
+      "otherwise"
     ],
     "risposta_corretta": "however",
-    "spiegazione": "'However' introduce un contrasto: il sistema è potente, ma richiede comunque test accurati prima della pubblicazione.",
+    "spiegazione": "'However' introduce un contrasto: il sistema è potente, ma richiede comunque test accurati. 'Therefore' indica conseguenza, 'moreover' aggiunge un'informazione, mentre 'otherwise' indica una conseguenza alternativa.",
     "tags": [
       "inglese",
       "connettivi",
@@ -1319,11 +1319,11 @@
     "opzioni": [
       "The developer who fixed the bug updated the repository.",
       "The developer which fixed the bug updated the repository.",
-      "The developer what fixed the bug updated the repository.",
-      "The developer where fixed the bug updated the repository."
+      "The developer that fixing the bug updated the repository.",
+      "The developer whose fixed the bug updated the repository."
     ],
     "risposta_corretta": "The developer who fixed the bug updated the repository.",
-    "spiegazione": "Per riferirsi a una persona in una frase relativa si usa 'who'. Per questo la forma corretta è 'The developer who fixed the bug...'.",
+    "spiegazione": "Per riferirsi a una persona in una frase relativa si usa normalmente 'who'. 'Which' si usa più spesso per cose o animali, 'that fixing' è una struttura errata, mentre 'whose' indica possesso e non può sostituire 'who' in questa frase.",
     "tags": [
       "inglese",
       "relative clauses",
@@ -1339,12 +1339,12 @@
     "domanda": "Quale frase usa correttamente la forma passiva?",
     "opzioni": [
       "The report was reviewed by the team.",
-      "The report reviewed by the team was.",
-      "The report has review by the team.",
-      "The report is reviewing by the team."
+      "The report has been review by the team.",
+      "The report is reviewed by the team yesterday.",
+      "The report was reviewing by the team."
     ],
     "risposta_corretta": "The report was reviewed by the team.",
-    "spiegazione": "La forma passiva corretta usa il verbo 'to be' più il participio passato: 'was reviewed'.",
+    "spiegazione": "La forma passiva corretta usa il verbo 'to be' più il participio passato: 'was reviewed'. 'Has been review' è sbagliato perché manca il participio 'reviewed'. 'Is reviewed yesterday' mescola presente e tempo passato preciso. 'Was reviewing' è una forma attiva/progressiva, non passiva corretta.",
     "tags": [
       "inglese",
       "passivo",
@@ -1360,12 +1360,12 @@
     "domanda": "Quale frase esprime meglio un consiglio formale?",
     "opzioni": [
       "You should consider updating the documentation.",
-      "You must maybe update the documentation.",
-      "You can to update the documentation.",
-      "You would updating the documentation."
+      "You should update the documentation immediately.",
+      "You could update the documentation if necessary.",
+      "You might want to update the documentation."
     ],
     "risposta_corretta": "You should consider updating the documentation.",
-    "spiegazione": "'Should consider' è una forma adatta per dare un consiglio in modo educato e relativamente formale.",
+    "spiegazione": "'You should consider updating...' è un consiglio formale e prudente. 'You should update immediately' è più diretto e meno formale. 'Could' indica possibilità, mentre 'might want to' è un suggerimento più informale.",
     "tags": [
       "inglese",
       "registro",
@@ -1378,15 +1378,15 @@
     "categoria": "inglese",
     "sottocategoria": "reported_speech",
     "livello": "avanzato",
-    "domanda": "Quale frase trasforma correttamente 'I am working on the project' nel discorso indiretto?",
+    "domanda": "Quale frase trasforma correttamente 'I am working on the project' nel discorso indiretto con backshift standard?",
     "opzioni": [
       "He said that he was working on the project.",
-      "He said that he is work on the project.",
-      "He said that he working on the project.",
-      "He said that he has work on the project."
+      "He said that he is working on the project.",
+      "He said that he had worked on the project.",
+      "He said that he worked on the project."
     ],
     "risposta_corretta": "He said that he was working on the project.",
-    "spiegazione": "Nel discorso indiretto, il present continuous 'am working' diventa spesso past continuous: 'was working'.",
+    "spiegazione": "Con il backshift standard del discorso indiretto, 'I am working' diventa 'he was working'. 'Is working' non applica il backshift, 'had worked' cambia il significato verso il past perfect, mentre 'worked' perde l'idea dell'azione in corso.",
     "tags": [
       "inglese",
       "reported speech",
@@ -1402,12 +1402,12 @@
     "domanda": "Nel contesto software, quale frase rende meglio 'The feature is backward compatible'?",
     "opzioni": [
       "La funzionalità è compatibile con versioni precedenti.",
-      "La funzionalità funziona solo andando all'indietro.",
-      "La funzionalità cancella le versioni precedenti.",
-      "La funzionalità è incompatibile con il passato."
+      "La funzionalità richiede solo versioni successive.",
+      "La funzionalità mantiene la stessa interfaccia ma non supporta versioni vecchie.",
+      "La funzionalità è stata riscritta senza garantire compatibilità."
     ],
     "risposta_corretta": "La funzionalità è compatibile con versioni precedenti.",
-    "spiegazione": "'Backward compatible' significa che una funzionalità mantiene compatibilità con versioni precedenti del sistema o del software.",
+    "spiegazione": "'Backward compatible' significa che una funzionalità rimane compatibile con versioni precedenti del sistema o del software. Le altre opzioni sono plausibili nel contesto software, ma indicano compatibilità futura, mancato supporto o assenza di garanzie.",
     "tags": [
       "inglese",
       "lessico_tecnico",
@@ -1423,12 +1423,12 @@
     "domanda": "Tutti i tecnici controllano i log. Alcuni tecnici documentano gli errori. Quale conclusione è sicuramente vera?",
     "opzioni": [
       "Alcune persone che documentano gli errori controllano i log",
-      "Tutti quelli che controllano i log documentano errori",
-      "Nessun tecnico documenta errori",
-      "Chi documenta errori non controlla mai i log"
+      "Tutte le persone che controllano i log documentano errori",
+      "Alcuni tecnici non controllano i log",
+      "Tutti quelli che documentano errori sono tecnici"
     ],
     "risposta_corretta": "Alcune persone che documentano gli errori controllano i log",
-    "spiegazione": "Se alcuni tecnici documentano gli errori e tutti i tecnici controllano i log, allora quelle persone documentano errori e controllano anche i log.",
+    "spiegazione": "Sappiamo che alcuni tecnici documentano gli errori e che tutti i tecnici controllano i log. Quindi quei tecnici che documentano errori controllano anche i log. Non possiamo invece dire che tutti quelli che controllano log documentino errori, né che esistano tecnici che non controllano i log.",
     "tags": [
       "sillogismi",
       "ragionamento_critico"
@@ -1443,12 +1443,12 @@
     "domanda": "Un'app è stata aggiornata e subito dopo alcuni utenti segnalano errori. Quale conclusione è più prudente?",
     "opzioni": [
       "L'aggiornamento potrebbe essere collegato agli errori, ma servono ulteriori verifiche",
-      "L'aggiornamento è certamente l'unica causa possibile",
-      "Gli errori non possono dipendere dall'aggiornamento",
-      "Gli utenti hanno sicuramente usato l'app in modo sbagliato"
+      "L'aggiornamento è certamente l'unica causa perché è avvenuto prima degli errori",
+      "Gli errori sono certamente indipendenti dall'aggiornamento perché li hanno segnalati solo alcuni utenti",
+      "Il numero di segnalazioni basta da solo per dimostrare la causa tecnica"
     ],
     "risposta_corretta": "L'aggiornamento potrebbe essere collegato agli errori, ma servono ulteriori verifiche",
-    "spiegazione": "La vicinanza temporale suggerisce una possibile relazione, ma non dimostra da sola una causa certa. Servono log, test e confronto con altri fattori.",
+    "spiegazione": "La vicinanza temporale tra aggiornamento ed errori suggerisce una possibile relazione, ma non dimostra da sola una causa certa. Per una conclusione prudente servono log, test, confronto tra versioni e verifica di altri fattori.",
     "tags": [
       "causalità",
       "ragionamento_critico",
@@ -1485,12 +1485,12 @@
     "domanda": "Quale coppia mantiene meglio la relazione: bozza → documento finale?",
     "opzioni": [
       "prototipo → prodotto definitivo",
-      "titolo → capitolo",
-      "indice → argomento",
-      "nota → parola chiave"
+      "bozza → correzione",
+      "indice → documento finale",
+      "idea → titolo"
     ],
     "risposta_corretta": "prototipo → prodotto definitivo",
-    "spiegazione": "Una bozza è una versione iniziale che può essere sviluppata fino a diventare un documento finale. Allo stesso modo, un prototipo è una versione iniziale che può evolvere in un prodotto definitivo. Le altre coppie sono collegate al mondo dei testi o delle informazioni, ma non esprimono bene il passaggio da versione iniziale a versione finale.",
+    "spiegazione": "Una bozza è una versione iniziale che può evolvere in un documento finale. Allo stesso modo, un prototipo è una versione iniziale che può evolvere in un prodotto definitivo. Bozza → correzione indica una fase di revisione, indice → documento finale indica una parte rispetto al tutto, mentre idea → titolo non rappresenta chiaramente il passaggio da versione iniziale a versione finale.",
     "tags": [
       "analogie",
       "relazioni"
@@ -1502,15 +1502,15 @@
     "categoria": "logica",
     "sottocategoria": "logica_numerica",
     "livello": "avanzato",
-    "domanda": "Completa la sequenza: 5, 11, 10, 22, 21, 42, ?",
+    "domanda": "Completa la sequenza: 5, 11, 10, 21, 20, 41, ?",
     "opzioni": [
+      "39",
       "40",
-      "41",
-      "43",
-      "44"
+      "42",
+      "82"
     ],
-    "risposta_corretta": "41",
-    "spiegazione": "La sequenza alterna due operazioni: ×2 + 1, poi -1. Infatti 5 × 2 + 1 = 11, 11 - 1 = 10, 10 × 2 + 2 = 22, 22 - 1 = 21, 21 × 2 = 42. Il passo successivo è 42 - 1 = 41.",
+    "risposta_corretta": "40",
+    "spiegazione": "La sequenza alterna due operazioni: moltiplicare per 2 e aggiungere 1, poi sottrarre 1. Infatti 5 × 2 + 1 = 11, poi 11 - 1 = 10. Poi 10 × 2 + 1 = 21, poi 21 - 1 = 20. Poi 20 × 2 + 1 = 41, quindi il passo successivo è 41 - 1 = 40.",
     "tags": [
       "sequenze",
       "operazioni_alternate",

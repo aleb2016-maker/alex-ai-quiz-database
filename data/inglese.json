@@ -4,16 +4,20 @@
     "categoria": "inglese",
     "sottocategoria": "grammatica_base",
     "livello": "facile",
-    "domanda": "Quale frase inglese è grammaticalmente corretta?",
+    "domanda": "Quale frase usa correttamente il presente semplice con 'she'?",
     "opzioni": [
       "She has a blue backpack.",
       "She have a blue backpack.",
       "She is have a blue backpack.",
-      "She having a blue backpack."
+      "She has got blue backpack."
     ],
     "risposta_corretta": "She has a blue backpack.",
-    "spiegazione": "La frase corretta è 'She has a blue backpack' perché con he, she, it si usa 'has' e non 'have'. Le altre opzioni usano forme verbali sbagliate.",
-    "tags": ["inglese", "grammatica", "verbo avere"],
+    "spiegazione": "Con 'she' al presente semplice si usa 'has'. 'She have' è sbagliato perché 'have' non concorda con 'she'. 'She is have' usa una struttura errata. 'She has got blue backpack' manca dell'articolo 'a' prima di 'blue backpack'.",
+    "tags": [
+      "inglese",
+      "grammatica",
+      "verbo avere"
+    ],
     "difficolta": 1
   },
   {
@@ -30,7 +34,11 @@
     ],
     "risposta_corretta": "I have just finished my homework.",
     "spiegazione": "Il present perfect si forma con 'have/has' + participio passato. 'I have just finished my homework' è corretto. Con un tempo passato preciso come 'yesterday' di solito si usa il past simple.",
-    "tags": ["inglese", "present perfect", "grammatica"],
+    "tags": [
+      "inglese",
+      "present perfect",
+      "grammatica"
+    ],
     "difficolta": 2
   },
   {
@@ -47,7 +55,11 @@
     ],
     "risposta_corretta": "yet",
     "spiegazione": "'Yet' è corretto perché introduce un contrasto: l'app è semplice da usare, ma offre anche funzioni avanzate. 'Because' indica causa, 'unless' indica condizione negativa, 'therefore' indica conseguenza.",
-    "tags": ["inglese", "connettivi", "comprensione"],
+    "tags": [
+      "inglese",
+      "connettivi",
+      "comprensione"
+    ],
     "difficolta": 3
   }
 ]

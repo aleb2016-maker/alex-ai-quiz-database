@@ -7,13 +7,17 @@
     "domanda": "Tutti i treni della linea A arrivano in stazione. Il treno 25 è della linea A. Cosa si può concludere?",
     "opzioni": [
       "Il treno 25 arriva in stazione",
-      "Il treno 25 non arriva mai in stazione",
-      "Solo alcuni treni della linea A arrivano in stazione",
-      "Il treno 25 appartiene alla linea B"
+      "Tutti i treni che arrivano in stazione sono della linea A",
+      "Solo il treno 25 della linea A arriva in stazione",
+      "Il treno 25 arriva in stazione solo se è in orario"
     ],
     "risposta_corretta": "Il treno 25 arriva in stazione",
-    "spiegazione": "Se tutti i treni della linea A arrivano in stazione e il treno 25 è della linea A, allora anche il treno 25 arriva in stazione.",
-    "tags": ["deduzione", "sillogismi", "ragionamento critico"],
+    "spiegazione": "Se tutti i treni della linea A arrivano in stazione e il treno 25 è della linea A, allora il treno 25 arriva in stazione. Non possiamo però concludere che tutti i treni che arrivano siano della linea A, né che solo il treno 25 arrivi, né aggiungere condizioni non presenti come l'orario.",
+    "tags": [
+      "deduzione",
+      "sillogismi",
+      "ragionamento critico"
+    ],
     "difficolta": 1
   },
   {
@@ -25,12 +29,16 @@
     "opzioni": [
       "Oggi non piove",
       "Oggi piove sicuramente",
-      "Marco ha dimenticato l'ombrello",
-      "Marco prende sempre l'ombrello"
+      "Marco potrebbe non prendere l'ombrello anche se piove",
+      "Non si può dedurre nulla sul tempo"
     ],
     "risposta_corretta": "Oggi non piove",
-    "spiegazione": "La frase dice che quando piove Marco prende l'ombrello. Se oggi non lo prende, allora non si è verificata la condizione iniziale, quindi non piove.",
-    "tags": ["condizioni", "deduzione", "logica proposizionale"],
+    "spiegazione": "La regola dice: se piove, Marco prende l'ombrello. Se oggi Marco non prende l'ombrello, allora la condizione 'piove' non si è verificata. Questa è una deduzione per contrapposizione: se P implica Q, allora non Q implica non P.",
+    "tags": [
+      "condizioni",
+      "deduzione",
+      "logica proposizionale"
+    ],
     "difficolta": 2
   },
   {
@@ -41,13 +49,17 @@
     "domanda": "Un negozio afferma: 'Tutti i prodotti scontati sono esposti nello scaffale rosso'. Un cliente trova un prodotto nello scaffale rosso. Quale conclusione è logicamente corretta?",
     "opzioni": [
       "Non è certo che il prodotto sia scontato",
-      "Il prodotto è sicuramente scontato",
-      "Il prodotto non può essere scontato",
-      "Tutti i prodotti nello scaffale rosso costano uguale"
+      "Il prodotto è sicuramente scontato perché si trova nello scaffale rosso",
+      "Tutti i prodotti nello scaffale rosso sono sicuramente scontati",
+      "Nessun prodotto non scontato può trovarsi nello scaffale rosso"
     ],
     "risposta_corretta": "Non è certo che il prodotto sia scontato",
-    "spiegazione": "La frase dice che tutti i prodotti scontati sono nello scaffale rosso, ma non dice che tutti i prodotti dello scaffale rosso siano scontati.",
-    "tags": ["deduzione", "errore logico", "condizione sufficiente"],
+    "spiegazione": "L'affermazione dice che tutti i prodotti scontati sono nello scaffale rosso. Questo non significa che tutti i prodotti nello scaffale rosso siano scontati. Trovare un prodotto nello scaffale rosso non basta quindi per concludere con certezza che sia scontato.",
+    "tags": [
+      "deduzione",
+      "errore logico",
+      "condizione sufficiente"
+    ],
     "difficolta": 3
   }
 ]

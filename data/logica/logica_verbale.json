@@ -5,10 +5,19 @@
     "sottocategoria": "logica_verbale",
     "livello": "facile",
     "domanda": "Osserva la sequenza: AB → BA, CD → DC, EF → ?",
-    "opzioni": ["FE", "EF", "FG", "GF"],
+    "opzioni": [
+      "FE",
+      "EF",
+      "FG",
+      "GF"
+    ],
     "risposta_corretta": "FE",
     "spiegazione": "In ogni coppia le due lettere vengono invertite: AB diventa BA, CD diventa DC, quindi EF diventa FE.",
-    "tags": ["lettere", "sequenze", "logica_verbale"],
+    "tags": [
+      "lettere",
+      "sequenze",
+      "logica_verbale"
+    ],
     "difficolta": 1
   },
   {
@@ -17,27 +26,40 @@
     "sottocategoria": "logica_verbale",
     "livello": "intermedio",
     "domanda": "Completa l'analogia: penna sta a scrivere come forbici stanno a ?",
-    "opzioni": ["tagliare", "incollare", "disegnare", "misurare"],
+    "opzioni": [
+      "tagliare",
+      "incollare",
+      "misurare",
+      "disegnare"
+    ],
     "risposta_corretta": "tagliare",
-    "spiegazione": "La relazione è tra uno strumento e la sua funzione principale. La penna serve per scrivere, mentre le forbici servono per tagliare.",
-    "tags": ["analogie", "strumenti", "logica_verbale"],
+    "spiegazione": "La relazione è tra uno strumento e la sua funzione principale. La penna serve principalmente per scrivere; le forbici servono principalmente per tagliare. Incollare, misurare e disegnare sono azioni possibili con altri strumenti, ma non indicano la funzione principale delle forbici.",
+    "tags": [
+      "analogie",
+      "strumenti",
+      "logica_verbale"
+    ],
     "difficolta": 2
   },
   {
-  "id": "LOG-VER-AV-0003",
-  "categoria": "logica",
-  "sottocategoria": "logica_verbale",
-  "livello": "avanzato",
-  "domanda": "Quale coppia mantiene meglio la stessa relazione logica di: sintomo → diagnosi?",
-  "opzioni": [
-    "indizio → ipotesi",
-    "domanda → risposta",
-    "errore → correzione",
-    "causa → conseguenza"
-  ],
-  "risposta_corretta": "indizio → ipotesi",
-  "spiegazione": "Un sintomo non è la diagnosi, ma un segnale da interpretare per formulare una diagnosi. Allo stesso modo, un indizio non è ancora una conclusione certa, ma un elemento che permette di costruire un'ipotesi.",
-  "tags": ["analogie", "relazioni_logiche", "logica_verbale"],
-  "difficolta": 3
-}
+    "id": "LOG-VER-AV-0003",
+    "categoria": "logica",
+    "sottocategoria": "logica_verbale",
+    "livello": "avanzato",
+    "domanda": "Quale coppia mantiene meglio la stessa relazione logica di: sintomo → diagnosi?",
+    "opzioni": [
+      "indizio → ipotesi",
+      "prova → verdetto",
+      "errore → correzione",
+      "causa → conseguenza"
+    ],
+    "risposta_corretta": "indizio → ipotesi",
+    "spiegazione": "Un sintomo è un segnale che aiuta a formulare una diagnosi, ma non coincide con la diagnosi. Allo stesso modo, un indizio è un elemento che aiuta a formulare un'ipotesi, ma non coincide con una conclusione certa. Le altre coppie sono relazioni logiche plausibili, ma non mantengono esattamente lo stesso rapporto di segnale interpretato.",
+    "tags": [
+      "analogie",
+      "relazioni_logiche",
+      "logica_verbale"
+    ],
+    "difficolta": 3
+  }
 ]
