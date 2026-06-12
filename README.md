@@ -4,12 +4,15 @@
 
 <p align="center">
   <a href="https://aleb2016-maker.github.io/alex-ai-quiz-database/demo/" target="_blank">
-    <img src="https://img.shields.io/badge/PROVA_LA_DEMO_ONLINE-2563EB?style=for-the-badge&logo=githubpages&logoColor=white" alt="Prova la demo online">
+    <img
+      src="https://img.shields.io/badge/%E2%96%B6%20AVVIA%20LA%20DEMO%20ONLINE-0F766E?style=for-the-badge&logo=githubpages&logoColor=white"
+      alt="Avvia la demo online"
+    >
   </a>
 </p>
 
 <p align="center">
-  <strong>Apri la demo nel browser e inizia subito il quiz.</strong>
+  <strong>Clicca sul pulsante e prova subito il quiz nel browser.</strong>
 </p>
 
 <!-- DEMO_BUTTON_END -->
