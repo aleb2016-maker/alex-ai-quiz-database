@@ -29,6 +29,7 @@ async function avviaApp() {
     collegaEventi();
 
     await caricaDatabase();
+    preparaMigliorieDemo();
 }
 
 function collegaElementiHtml() {
@@ -832,4 +833,279 @@ function lanciaCoriandoliConDissolvenza(versioneGrande = false) {
     }
 
     anima();
+}
+
+/* ===== MIGLIORIE DEMO PROFESSIONALE ===== */
+
+function preparaMigliorieDemo() {
+    creaIntroDemo();
+    valorizzaLogicaVisivaNelMenu();
+    creaNotaCategoriaDemo();
+    creaReportProfessionaleDemo();
+    osservaReportFinaleDemo();
+}
+
+function creaIntroDemo() {
+    if (!elementi.setupBox) {
+        return;
+    }
+
+    if (document.getElementById("demoIntro")) {
+        aggiornaBadgeQualitaDemo();
+        return;
+    }
+
+    const intro = document.createElement("section");
+    intro.id = "demoIntro";
+    intro.className = "demo-intro";
+
+    intro.innerHTML = `
+        <h2>Allenati con quiz controllati</h2>
+        <p>
+            Scegli categoria, livello e numero di domande per iniziare l'allenamento.
+        </p>
+        <div class="quality-badges" id="qualityBadgesDemo"></div>
+    `;
+
+    elementi.setupBox.insertBefore(intro, elementi.setupBox.firstChild);
+
+    aggiornaBadgeQualitaDemo();
+}
+
+function aggiornaBadgeQualitaDemo() {
+    const badgeBox = document.getElementById("qualityBadgesDemo");
+
+    if (!badgeBox) {
+        return;
+    }
+
+    const totaleDomande = Array.isArray(databaseQuiz)
+        ? databaseQuiz.length
+        : 215;
+
+    badgeBox.innerHTML = `
+        <span class="quality-badge">${totaleDomande} domande</span>
+        <span class="quality-badge">5 categorie</span>
+        <span class="quality-badge">controlli qualità automatici</span>
+    `;
+}
+
+function valorizzaLogicaVisivaNelMenu() {
+    if (!elementi.categorySelect) {
+        return;
+    }
+
+    const opzioneLogicaVisiva = elementi.categorySelect.querySelector(
+        'option[value="logica_visiva"]'
+    );
+
+    if (opzioneLogicaVisiva) {
+        opzioneLogicaVisiva.textContent =
+            "Logica Visiva · con immagini SVG";
+    }
+}
+
+function creaNotaCategoriaDemo() {
+    if (!elementi.categorySelect) {
+        return;
+    }
+
+    if (!document.getElementById("categoryNoteDemo")) {
+        const nota = document.createElement("p");
+        nota.id = "categoryNoteDemo";
+        nota.className = "category-note-demo";
+
+        const contenitore = elementi.categorySelect.parentElement
+            || elementi.setupBox;
+
+        contenitore.appendChild(nota);
+    }
+
+    elementi.categorySelect.addEventListener(
+        "change",
+        aggiornaNotaCategoriaDemo
+    );
+
+    aggiornaNotaCategoriaDemo();
+}
+
+function aggiornaNotaCategoriaDemo() {
+    const nota = document.getElementById("categoryNoteDemo");
+
+    if (!nota || !elementi.categorySelect) {
+        return;
+    }
+
+    if (elementi.categorySelect.value === "logica_visiva") {
+        nota.textContent =
+            "Questa sezione include esercizi visuali con immagini SVG e controllo qualità dedicato.";
+        return;
+    }
+
+    nota.textContent =
+        "Le domande includono risposta corretta, distrattori e spiegazione finale.";
+}
+
+function creaReportProfessionaleDemo() {
+    if (!elementi.resultBox) {
+        return;
+    }
+
+    if (document.getElementById("professionalReportDemo")) {
+        return;
+    }
+
+    const report = document.createElement("section");
+    report.id = "professionalReportDemo";
+    report.className = "professional-report hidden";
+
+    elementi.resultBox.appendChild(report);
+}
+
+function osservaReportFinaleDemo() {
+    if (!elementi.resultBox) {
+        return;
+    }
+
+    const osservatore = new MutationObserver(() => {
+        if (!elementi.resultBox.classList.contains("hidden")) {
+            aggiornaReportProfessionaleDemo();
+        }
+    });
+
+    osservatore.observe(
+        elementi.resultBox,
+        {
+            attributes: true,
+            attributeFilter: ["class"],
+        }
+    );
+}
+
+function aggiornaReportProfessionaleDemo() {
+    const report = document.getElementById("professionalReportDemo");
+
+    if (!report) {
+        return;
+    }
+
+    const totaleDomande = domandeTest.length
+        || risposteCorrette + risposteSbagliate;
+
+    if (totaleDomande === 0) {
+        return;
+    }
+
+    const percentuale = Math.round(
+        (risposteCorrette / totaleDomande) * 100
+    );
+
+    const puntiForti = creaPuntiFortiDemo(percentuale);
+    const areeDaMigliorare = creaAreeDaMigliorareDemo(percentuale);
+
+    const categorieAllenate = Array.from(
+        new Set(
+            domandeTest.map(domanda => {
+                return nomeCategoriaReportDemo(
+                    domanda.sottocategoria === "logica_visiva"
+                        ? "logica_visiva"
+                        : domanda.categoria
+                );
+            })
+        )
+    ).join(", ");
+
+    report.innerHTML = `
+        <h3>Report di allenamento</h3>
+        <div class="professional-report-grid">
+            <div class="professional-report-card">
+                <strong>Punti forti</strong>
+                <ul>
+                    ${puntiForti.map(voce => `<li>${voce}</li>`).join("")}
+                </ul>
+            </div>
+            <div class="professional-report-card">
+                <strong>Aree da migliorare</strong>
+                <ul>
+                    ${areeDaMigliorare.map(voce => `<li>${voce}</li>`).join("")}
+                </ul>
+            </div>
+            <div class="professional-report-card">
+                <strong>Sessione</strong>
+                <ul>
+                    <li>${totaleDomande} domande completate</li>
+                    <li>${risposteCorrette} corrette e ${risposteSbagliate} da rivedere</li>
+                    <li>Categorie: ${categorieAllenate}</li>
+                </ul>
+            </div>
+            <div class="professional-report-card">
+                <strong>Metodo consigliato</strong>
+                <ul>
+                    <li>Rileggi le spiegazioni delle risposte sbagliate.</li>
+                    <li>Ripeti un test sullo stesso livello.</li>
+                    <li>Passa al livello successivo solo quando superi l'80%.</li>
+                </ul>
+            </div>
+        </div>
+    `;
+
+    report.classList.remove("hidden");
+}
+
+function creaPuntiFortiDemo(percentuale) {
+    if (percentuale >= 90) {
+        return [
+            "Ottima precisione nelle risposte.",
+            "Buona tenuta su tutto il test.",
+            "Preparazione adatta a esercitazioni più avanzate.",
+        ];
+    }
+
+    if (percentuale >= 70) {
+        return [
+            "Buona base di comprensione.",
+            "Risultato positivo per continuare l'allenamento.",
+            "Hai individuato correttamente molte regole del test.",
+        ];
+    }
+
+    return [
+        "Hai completato la sessione fino alla fine.",
+        "Il test ha evidenziato gli argomenti su cui lavorare.",
+        "Le spiegazioni finali possono aiutarti a recuperare gli errori.",
+    ];
+}
+
+function creaAreeDaMigliorareDemo(percentuale) {
+    if (percentuale >= 90) {
+        return [
+            "Riduci gli errori residui con test più difficili.",
+            "Allenati su domande avanzate e logica visiva.",
+            "Prova sessioni più lunghe per aumentare la stabilità.",
+        ];
+    }
+
+    if (percentuale >= 70) {
+        return [
+            "Rivedi le domande sbagliate prima di cambiare livello.",
+            "Consolida gli argomenti dove hai esitato.",
+            "Ripeti la categoria per migliorare velocità e precisione.",
+        ];
+    }
+
+    return [
+        "Riparti dal livello facile o intermedio.",
+        "Studia bene la spiegazione dopo ogni risposta.",
+        "Fai sessioni brevi ma frequenti per consolidare le basi.",
+    ];
+}
+
+function nomeCategoriaReportDemo(categoria) {
+    if (categoria === "logica_visiva") {
+        return "Logica Visiva";
+    }
+
+    return String(categoria || "")
+        .replaceAll("_", " ")
+        .replace(/\b\w/g, lettera => lettera.toUpperCase());
 }
