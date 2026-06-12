@@ -18,7 +18,9 @@
       "memoria",
       "hardware"
     ],
-    "difficolta": 1
+    "difficolta": 1,
+    "distrattore_forte": "Archiviare stabilmente file e programmi anche a computer spento",
+    "motivo_distrattore_forte": "È vicino perché parla comunque di memoria e conservazione dei dati, ma è sbagliato perché la RAM è temporanea; l'archiviazione stabile è compito di SSD o hard disk."
   },
   {
     "id": "INF-INT-0002",
@@ -39,7 +41,9 @@
       "sql",
       "chiave primaria"
     ],
-    "difficolta": 2
+    "difficolta": 2,
+    "distrattore_forte": "A collegare una tabella a un'altra tramite una chiave esterna",
+    "motivo_distrattore_forte": "È vicino perché parla sempre di chiavi nei database relazionali, ma è sbagliato perché la chiave primaria identifica un record nella stessa tabella, mentre la chiave esterna collega tabelle diverse."
   },
   {
     "id": "INF-AV-0003",
@@ -61,6 +65,8 @@
       "backend",
       "frontend"
     ],
-    "difficolta": 3
+    "difficolta": 3,
+    "distrattore_forte": "Permettere al frontend di leggere direttamente le tabelle del database",
+    "motivo_distrattore_forte": "È vicino perché riguarda il rapporto tra frontend, backend e dati, ma è sbagliato perché il frontend non dovrebbe accedere direttamente al database: deve passare da endpoint controllati del backend."
   }
 ]

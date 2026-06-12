@@ -7,18 +7,20 @@
     "domanda": "Quale attività descrive meglio un modello di intelligenza artificiale?",
     "opzioni": [
       "Riconoscere schemi nei dati e usare questi schemi per produrre risposte o previsioni",
-      "Memorizzare ogni file del computer senza modificarlo",
-      "Sostituire automaticamente ogni programma installato sul dispositivo",
-      "Collegare fisicamente due computer tramite un cavo"
+      "Riconoscere schemi nei dati ma usarli solo per copiare risposte già presenti negli esempi",
+      "Memorizzare dati senza estrarre schemi utili per fare previsioni",
+      "Salvare file del computer senza usarli per produrre risposte o previsioni"
     ],
     "risposta_corretta": "Riconoscere schemi nei dati e usare questi schemi per produrre risposte o previsioni",
-    "spiegazione": "Un modello di intelligenza artificiale impara schemi dai dati e li usa per classificare, prevedere, generare testo o prendere decisioni. Non è semplicemente un archivio di file o un collegamento fisico tra dispositivi.",
+    "spiegazione": "Un modello di intelligenza artificiale impara schemi dai dati e li usa per classificare, prevedere, generare testo o prendere decisioni. Non si limita a copiare esempi già presenti e non è semplicemente un archivio di file.",
     "tags": [
       "ai",
       "modelli",
       "fondamenti"
     ],
-    "difficolta": 1
+    "difficolta": 1,
+    "distrattore_forte": "Riconoscere schemi nei dati ma usarli solo per copiare risposte già presenti negli esempi",
+    "motivo_distrattore_forte": "È vicino perché parla di schemi nei dati, ma è sbagliato perché un modello AI non serve solo a copiare risposte già presenti: usa gli schemi per generalizzare."
   },
   {
     "id": "AI-FAC-0102",
@@ -28,18 +30,20 @@
     "domanda": "Quale prompt è più chiaro per chiedere un riassunto?",
     "opzioni": [
       "Riassumi questo testo in 5 righe indicando le idee principali.",
-      "Fammi una cosa su questo testo.",
-      "Sistema tutto nel modo migliore possibile.",
-      "Usa l'intelligenza artificiale sul contenuto."
+      "Riassumi questo testo indicando le idee principali.",
+      "Spiega questo testo mantenendo tutti i dettagli importanti.",
+      "Riscrivi questo testo senza ridurlo e senza selezionare le idee principali."
     ],
     "risposta_corretta": "Riassumi questo testo in 5 righe indicando le idee principali.",
-    "spiegazione": "Un prompt chiaro specifica cosa fare e con quale formato. Dire 'in 5 righe' e 'idee principali' rende il compito più controllabile.",
+    "spiegazione": "Un prompt chiaro specifica cosa fare e con quale formato. Dire 'in 5 righe' e 'idee principali' rende il compito più controllabile. Le altre opzioni sono vicine al lavoro sul testo, ma non danno lo stesso vincolo preciso di riassunto breve.",
     "tags": [
       "prompt",
       "riassunto",
       "chiarezza"
     ],
-    "difficolta": 1
+    "difficolta": 1,
+    "distrattore_forte": "Riassumi questo testo indicando le idee principali.",
+    "motivo_distrattore_forte": "È molto vicino perché chiede comunque un riassunto delle idee principali, ma è meno preciso perché manca il vincolo delle 5 righe."
   },
   {
     "id": "AI-FAC-0103",
@@ -49,18 +53,20 @@
     "domanda": "Perché i dati di addestramento sono importanti per un modello AI?",
     "opzioni": [
       "Perché influenzano ciò che il modello impara e come risponde",
-      "Perché rendono inutile controllare le risposte generate",
-      "Perché impediscono al modello di commettere errori",
-      "Perché sostituiscono sempre il codice dell'applicazione"
+      "Perché influenzano il modello, ma rendono inutile controllare le risposte generate",
+      "Perché servono solo a verificare il modello dopo l'addestramento",
+      "Perché definiscono manualmente ogni risposta che il modello dovrà dare"
     ],
     "risposta_corretta": "Perché influenzano ciò che il modello impara e come risponde",
-    "spiegazione": "Il modello impara dai dati disponibili durante l'addestramento. Se i dati sono incompleti, distorti o poco adatti, anche le risposte possono risentirne.",
+    "spiegazione": "Il modello impara dai dati disponibili durante l'addestramento. Se i dati sono incompleti, distorti o poco adatti, anche le risposte possono risentirne. Questo però non elimina la necessità di controllare le risposte generate.",
     "tags": [
       "dataset",
       "addestramento",
       "qualita"
     ],
-    "difficolta": 1
+    "difficolta": 1,
+    "distrattore_forte": "Perché influenzano il modello, ma rendono inutile controllare le risposte generate",
+    "motivo_distrattore_forte": "È vicino perché riconosce che i dati influenzano il modello, ma è sbagliato perché le risposte vanno comunque controllate."
   },
   {
     "id": "AI-FAC-0104",
@@ -70,18 +76,20 @@
     "domanda": "Quale esempio rappresenta meglio un compito di classificazione?",
     "opzioni": [
       "Stabilire se un messaggio è spam o non spam",
-      "Scrivere una poesia partendo da un tema",
-      "Disegnare un'icona per una nuova app",
-      "Tradurre liberamente un romanzo completo"
+      "Raggruppare messaggi simili senza etichette già definite",
+      "Generare una risposta automatica a un messaggio",
+      "Scrivere un nuovo messaggio partendo da un tema"
     ],
     "risposta_corretta": "Stabilire se un messaggio è spam o non spam",
-    "spiegazione": "La classificazione assegna un'etichetta a un input. Spam/non spam è un esempio classico perché il modello sceglie una categoria tra alternative definite.",
+    "spiegazione": "La classificazione assegna un'etichetta a un input. Spam/non spam è un esempio classico perché il modello sceglie una categoria tra alternative definite. Il clustering raggruppa elementi simili, mentre la generazione produce nuovi contenuti.",
     "tags": [
       "classificazione",
       "spam",
       "categorie"
     ],
-    "difficolta": 1
+    "difficolta": 1,
+    "distrattore_forte": "Raggruppare messaggi simili senza etichette già definite",
+    "motivo_distrattore_forte": "È vicino perché anche il clustering lavora su gruppi di dati, ma è sbagliato perché nella classificazione le categorie sono già definite."
   },
   {
     "id": "AI-FAC-0105",
@@ -91,18 +99,20 @@
     "domanda": "Che cosa significa dire che un modello generativo produce testo?",
     "opzioni": [
       "Che crea una risposta nuova seguendo il contesto ricevuto",
-      "Che copia sempre una frase identica dal database",
-      "Che salva il testo solo in formato immagine",
-      "Che cancella automaticamente il contenuto originale"
+      "Che riformula il testo ricevuto senza produrre realmente contenuto nuovo",
+      "Che copia sempre una frase già presente nei dati",
+      "Che seleziona una frase già scritta senza adattarla al contesto"
     ],
     "risposta_corretta": "Che crea una risposta nuova seguendo il contesto ricevuto",
-    "spiegazione": "Un modello generativo produce una continuazione o una risposta in base al contesto. Non si limita necessariamente a copiare una frase identica.",
+    "spiegazione": "Un modello generativo produce una continuazione o una risposta in base al contesto. Non si limita necessariamente a copiare una frase identica o a selezionare testo già scritto.",
     "tags": [
       "generativa",
       "testo",
       "llm"
     ],
-    "difficolta": 1
+    "difficolta": 1,
+    "distrattore_forte": "Che riformula il testo ricevuto senza produrre realmente contenuto nuovo",
+    "motivo_distrattore_forte": "È vicino perché parla comunque di testo e contesto, ma è sbagliato perché un modello generativo può produrre contenuto nuovo, non solo riformulare."
   },
   {
     "id": "AI-FAC-0106",
@@ -112,9 +122,9 @@
     "domanda": "Quando si parla di allucinazione in AI, a cosa ci si riferisce?",
     "opzioni": [
       "A una risposta plausibile ma falsa o non verificata",
+      "A una risposta plausibile ma incompleta, senza informazioni false",
       "A una risposta corretta ma troppo breve per essere utile",
-      "A una risposta basata solo su fonti citate e controllabili",
-      "A una risposta incompleta ma dichiarata come incerta"
+      "A una risposta prudente che dichiara chiaramente incertezza"
     ],
     "risposta_corretta": "A una risposta plausibile ma falsa o non verificata",
     "spiegazione": "Un'allucinazione in AI è una risposta che può sembrare credibile, ma contiene informazioni false, inventate o non verificate. Una risposta breve, incompleta o prudente può essere migliorabile, ma non è necessariamente un'allucinazione.",
@@ -123,7 +133,9 @@
       "affidabilita",
       "verifica"
     ],
-    "difficolta": 1
+    "difficolta": 1,
+    "distrattore_forte": "A una risposta plausibile ma incompleta, senza informazioni false",
+    "motivo_distrattore_forte": "È vicino perché descrive una risposta plausibile ma problematica, ma è sbagliato perché l'allucinazione implica falsità, invenzione o mancanza di verifica."
   },
   {
     "id": "AI-INT-0101",
@@ -133,9 +145,9 @@
     "domanda": "In un sistema RAG, perché la scelta dei chunk del documento è importante?",
     "opzioni": [
       "Perché chunk troppo grandi o troppo piccoli possono rendere il recupero meno preciso",
-      "Perché i chunk servono solo a cambiare il colore del testo recuperato",
-      "Perché ogni chunk deve contenere sempre l'intero database",
-      "Perché i chunk eliminano automaticamente tutte le risposte sbagliate"
+      "Perché chunk più grandi garantiscono sempre un recupero più completo e più preciso",
+      "Perché i chunk servono ad addestrare nuovamente il modello prima di ogni risposta",
+      "Perché i chunk modificano in modo permanente i pesi del modello"
     ],
     "risposta_corretta": "Perché chunk troppo grandi o troppo piccoli possono rendere il recupero meno preciso",
     "spiegazione": "Nei sistemi RAG i documenti vengono spesso divisi in parti più piccole, chiamate chunk. Se i chunk sono troppo grandi, possono contenere troppe informazioni non pertinenti. Se sono troppo piccoli, possono perdere contesto utile. La dimensione dei chunk influenza quindi la qualità del recupero.",
@@ -144,7 +156,9 @@
       "chunking",
       "retrieval"
     ],
-    "difficolta": 2
+    "difficolta": 2,
+    "distrattore_forte": "Perché chunk più grandi garantiscono sempre un recupero più completo e più preciso",
+    "motivo_distrattore_forte": "È vicino perché parla davvero della dimensione dei chunk, ma è sbagliato perché chunk più grandi non garantiscono sempre maggiore precisione."
   },
   {
     "id": "AI-INT-0102",
@@ -154,9 +168,9 @@
     "domanda": "Quale differenza c'è tra ricerca per parole esatte e ricerca semantica?",
     "opzioni": [
       "La ricerca semantica può trovare contenuti simili nel significato anche con parole diverse",
-      "La ricerca semantica funziona solo se la frase contiene le stesse parole identiche",
+      "La ricerca semantica può usare parole diverse, ma funziona solo se restano presenti gli stessi termini principali",
       "La ricerca per parole esatte interpreta sempre il significato profondo della domanda",
-      "La ricerca semantica elimina la necessità di controllare i risultati trovati"
+      "La ricerca per parole esatte trova sinonimi anche quando non compaiono termini uguali"
     ],
     "risposta_corretta": "La ricerca semantica può trovare contenuti simili nel significato anche con parole diverse",
     "spiegazione": "La ricerca per parole esatte cerca corrispondenze letterali. La ricerca semantica invece prova a confrontare il significato dei contenuti, quindi può trovare testi pertinenti anche se usano parole diverse dalla domanda.",
@@ -165,7 +179,9 @@
       "similarita",
       "retrieval"
     ],
-    "difficolta": 2
+    "difficolta": 2,
+    "distrattore_forte": "La ricerca semantica può usare parole diverse, ma funziona solo se restano presenti gli stessi termini principali",
+    "motivo_distrattore_forte": "È vicino perché parla di parole diverse e ricerca semantica, ma è sbagliato perché la ricerca semantica può basarsi sul significato anche senza gli stessi termini principali."
   },
   {
     "id": "AI-INT-0103",
@@ -175,9 +191,9 @@
     "domanda": "Perché è utile testare un modello su esempi che non ha visto durante lo sviluppo?",
     "opzioni": [
       "Per misurare se generalizza oltre i casi usati per costruirlo",
-      "Per assicurarsi che memorizzi esattamente tutte le risposte",
-      "Per ridurre sempre a zero il costo di esecuzione",
-      "Per eliminare la necessità di dati di validazione"
+      "Per verificare se ricorda con precisione gli esempi usati durante lo sviluppo",
+      "Per misurare solo la velocità sui casi nuovi senza valutare l'accuratezza",
+      "Per ridurre il tempo di esecuzione eliminando i dati di validazione"
     ],
     "risposta_corretta": "Per misurare se generalizza oltre i casi usati per costruirlo",
     "spiegazione": "Un modello deve funzionare anche su casi nuovi. Testarlo solo su esempi già visti rischia di misurare la memoria, non la capacità di generalizzare.",
@@ -186,7 +202,9 @@
       "generalizzazione",
       "test"
     ],
-    "difficolta": 2
+    "difficolta": 2,
+    "distrattore_forte": "Per verificare se ricorda con precisione gli esempi usati durante lo sviluppo",
+    "motivo_distrattore_forte": "È vicino perché parla degli esempi usati nello sviluppo, ma è sbagliato perché il test deve misurare generalizzazione, non memoria."
   },
   {
     "id": "AI-INT-0104",
@@ -196,18 +214,20 @@
     "domanda": "Quale indicazione rende un prompt più controllabile?",
     "opzioni": [
       "Specificare ruolo, obiettivo, formato di risposta e vincoli",
-      "Chiedere al modello di fare semplicemente il meglio possibile",
-      "Evitare qualsiasi contesto per lasciare più libertà",
-      "Usare solo una parola senza spiegare il compito"
+      "Specificare solo il ruolo senza chiarire obiettivo, formato e vincoli",
+      "Chiedere al modello di fare il meglio possibile senza istruzioni precise",
+      "Lasciare la richiesta generica senza indicare criteri di risposta"
     ],
     "risposta_corretta": "Specificare ruolo, obiettivo, formato di risposta e vincoli",
-    "spiegazione": "Ruolo, obiettivo, formato e vincoli aiutano il modello a produrre una risposta più coerente con ciò che serve davvero.",
+    "spiegazione": "Ruolo, obiettivo, formato e vincoli aiutano il modello a produrre una risposta più coerente con ciò che serve davvero. Specificare solo il ruolo può aiutare, ma non basta se mancano obiettivo, formato e vincoli.",
     "tags": [
       "prompt",
       "controllo",
       "istruzioni"
     ],
-    "difficolta": 2
+    "difficolta": 2,
+    "distrattore_forte": "Specificare solo il ruolo senza chiarire obiettivo, formato e vincoli",
+    "motivo_distrattore_forte": "È vicino perché il ruolo è davvero utile nel prompt, ma è incompleto: per controllare meglio la risposta servono anche obiettivo, formato e vincoli."
   },
   {
     "id": "AI-INT-0105",
@@ -217,18 +237,20 @@
     "domanda": "Che cosa può succedere se un dataset è molto sbilanciato?",
     "opzioni": [
       "Il modello può funzionare bene su alcuni casi e male su altri meno rappresentati",
-      "Il modello diventa automaticamente più equo in ogni situazione",
-      "Il modello smette sempre di produrre risposte",
-      "Il modello cancella da solo gli esempi in eccesso"
+      "Il modello può favorire i casi più presenti e sbagliare più spesso quelli rari",
+      "Il modello diventa automaticamente più equo su tutte le classi",
+      "Il modello corregge da solo la mancanza di esempi nelle classi rare"
     ],
     "risposta_corretta": "Il modello può funzionare bene su alcuni casi e male su altri meno rappresentati",
-    "spiegazione": "Se alcune classi o situazioni sono poco rappresentate, il modello può imparare soprattutto i casi più frequenti e commettere più errori sui casi rari.",
+    "spiegazione": "Se alcune classi o situazioni sono poco rappresentate, il modello può imparare soprattutto i casi più frequenti e commettere più errori sui casi rari. Per questo bisogna controllare distribuzione dei dati e metriche.",
     "tags": [
       "bias",
       "dataset",
       "sbilanciamento"
     ],
-    "difficolta": 2
+    "difficolta": 2,
+    "distrattore_forte": "Il modello può favorire i casi più presenti e sbagliare più spesso quelli rari",
+    "motivo_distrattore_forte": "È molto vicino perché descrive un effetto reale dello sbilanciamento, ma la risposta corretta è più generale: il modello può andare bene su alcuni casi e male su altri meno rappresentati."
   },
   {
     "id": "AI-INT-0106",
@@ -238,7 +260,7 @@
     "domanda": "Perché un agente AI può usare una fase di pianificazione prima di agire?",
     "opzioni": [
       "Per scegliere i passaggi e gli strumenti più adatti prima di eseguire azioni",
-      "Per impedire sempre all'utente di modificare la richiesta",
+      "Per scegliere una sequenza di azioni, ma senza verificare se sono coerenti con l'obiettivo",
       "Per trasformare ogni risposta in una lista casuale di operazioni",
       "Per saltare completamente il controllo del risultato finale"
     ],
@@ -249,7 +271,9 @@
       "pianificazione",
       "tool_use"
     ],
-    "difficolta": 2
+    "difficolta": 2,
+    "distrattore_forte": "Per scegliere una sequenza di azioni, ma senza verificare se sono coerenti con l'obiettivo",
+    "motivo_distrattore_forte": "È vicino perché parla di sequenza di azioni, ma è sbagliato perché la pianificazione deve restare coerente con l'obiettivo e non essere solo una lista di passaggi."
   },
   {
     "id": "AI-INT-0107",
@@ -259,18 +283,20 @@
     "domanda": "Perché conviene limitare le azioni che un agente AI può eseguire automaticamente?",
     "opzioni": [
       "Per ridurre il rischio che un errore o un prompt malevolo produca azioni dannose",
+      "Per ridurre i rischi limitando alcune azioni automatiche, ma senza richiedere mai conferme",
       "Per impedire al modello di leggere qualsiasi istruzione dell'utente",
-      "Per rendere impossibile ogni controllo umano",
-      "Per aumentare sempre la lunghezza delle risposte"
+      "Per rendere impossibile ogni controllo umano sulle azioni dell'agente"
     ],
     "risposta_corretta": "Per ridurre il rischio che un errore o un prompt malevolo produca azioni dannose",
-    "spiegazione": "Un agente con troppi permessi può fare danni se interpreta male un comando o subisce prompt injection. Limitare permessi e richiedere conferme rende il sistema più sicuro.",
+    "spiegazione": "Un agente con troppi permessi può fare danni se interpreta male un comando o subisce prompt injection. Limitare permessi e richiedere conferme nei casi delicati rende il sistema più sicuro.",
     "tags": [
       "sicurezza",
       "agenti",
       "permessi"
     ],
-    "difficolta": 2
+    "difficolta": 2,
+    "distrattore_forte": "Per ridurre i rischi limitando alcune azioni automatiche, ma senza richiedere mai conferme",
+    "motivo_distrattore_forte": "È vicino perché parla di limitare azioni automatiche, ma è incompleto: nei casi delicati possono servire anche conferme o controlli umani."
   },
   {
     "id": "AI-AV-0101",
@@ -280,9 +306,9 @@
     "domanda": "Qual è un rischio importante se il retrieval di un sistema RAG recupera documenti solo apparentemente pertinenti?",
     "opzioni": [
       "Il modello può generare una risposta ben scritta ma basata su contesto fuorviante",
-      "Il modello smette automaticamente di generare testo",
-      "Il database vettoriale elimina tutti i documenti non usati",
-      "Il prompt dell'utente viene sempre ignorato completamente"
+      "Il modello può generare una risposta fluida usando documenti recuperati solo in apparenza pertinenti",
+      "Il modello rifiuta automaticamente ogni documento non perfettamente pertinente",
+      "Il database vettoriale elimina da solo tutti i documenti non usati"
     ],
     "risposta_corretta": "Il modello può generare una risposta ben scritta ma basata su contesto fuorviante",
     "spiegazione": "Se i documenti recuperati sembrano pertinenti ma non rispondono davvero alla domanda, il modello può appoggiarsi a informazioni sbagliate o parziali e produrre una risposta convincente ma non affidabile.",
@@ -291,7 +317,9 @@
       "retrieval",
       "qualita"
     ],
-    "difficolta": 3
+    "difficolta": 3,
+    "distrattore_forte": "Il modello può generare una risposta fluida usando documenti recuperati solo in apparenza pertinenti",
+    "motivo_distrattore_forte": "È molto vicino perché descrive lo stesso rischio di una risposta fluida basata su retrieval debole, ma è meno completo: il punto centrale è che il contesto può essere fuorviante."
   },
   {
     "id": "AI-AV-0102",
@@ -301,8 +329,8 @@
     "domanda": "Quando il fine-tuning è più adatto del solo prompt engineering?",
     "opzioni": [
       "Quando serve modificare stabilmente il comportamento del modello su molti esempi simili",
+      "Quando serve un comportamento stabile, ma si dispone solo di pochi esempi isolati e non coerenti",
       "Quando bisogna correggere una singola risposta occasionale",
-      "Quando si vuole evitare qualunque raccolta di esempi",
       "Quando basta cambiare il tono di una frase una sola volta"
     ],
     "risposta_corretta": "Quando serve modificare stabilmente il comportamento del modello su molti esempi simili",
@@ -312,7 +340,9 @@
       "prompting",
       "addestramento"
     ],
-    "difficolta": 3
+    "difficolta": 3,
+    "distrattore_forte": "Quando serve un comportamento stabile, ma si dispone solo di pochi esempi isolati e non coerenti",
+    "motivo_distrattore_forte": "È vicino perché parla di comportamento stabile, ma è sbagliato perché il fine-tuning richiede esempi coerenti e sufficienti, non casi isolati."
   },
   {
     "id": "AI-AV-0103",
@@ -322,8 +352,8 @@
     "domanda": "Perché valutare un sistema AI solo con risposta corretta o sbagliata può essere insufficiente?",
     "opzioni": [
       "Perché possono contare anche completezza, fonti, robustezza, sicurezza e chiarezza",
-      "Perché una metrica binaria misura sempre anche il costo computazionale",
-      "Perché ogni risposta generata è sempre corretta se è scritta bene",
+      "Perché basta aggiungere la completezza alla valutazione, senza considerare sicurezza e fonti",
+      "Perché ogni risposta generata è corretta se è scritta in modo fluido",
       "Perché la valutazione deve ignorare il contesto della domanda"
     ],
     "risposta_corretta": "Perché possono contare anche completezza, fonti, robustezza, sicurezza e chiarezza",
@@ -333,7 +363,9 @@
       "metriche",
       "qualita"
     ],
-    "difficolta": 3
+    "difficolta": 3,
+    "distrattore_forte": "Perché basta aggiungere la completezza alla valutazione, senza considerare sicurezza e fonti",
+    "motivo_distrattore_forte": "È vicino perché la completezza è davvero un criterio importante, ma è sbagliato perché da sola non basta: servono anche fonti, sicurezza, robustezza e chiarezza."
   },
   {
     "id": "AI-AV-0104",
@@ -343,8 +375,8 @@
     "domanda": "Qual è un esempio realistico di prompt injection in un'app che legge documenti esterni?",
     "opzioni": [
       "Un documento contiene istruzioni nascoste che provano a far ignorare le regole del sistema",
+      "Un documento contiene testo che il modello potrebbe scambiare per istruzioni operative",
       "Un utente scrive una domanda troppo breve per essere capita",
-      "Un file viene salvato in una cartella con un nome lungo",
       "Una risposta contiene una parola inglese invece di una italiana"
     ],
     "risposta_corretta": "Un documento contiene istruzioni nascoste che provano a far ignorare le regole del sistema",
@@ -354,7 +386,9 @@
       "sicurezza",
       "documenti"
     ],
-    "difficolta": 3
+    "difficolta": 3,
+    "distrattore_forte": "Un documento contiene testo che il modello potrebbe scambiare per istruzioni operative",
+    "motivo_distrattore_forte": "È vicino perché descrive il meccanismo della prompt injection da documenti esterni, ma è meno preciso: la risposta corretta indica istruzioni nascoste progettate per far ignorare le regole del sistema."
   },
   {
     "id": "AI-AV-0105",
@@ -364,9 +398,9 @@
     "domanda": "Perché in un'app AI conviene separare recupero dei dati, generazione e controllo finale?",
     "opzioni": [
       "Per rendere più chiaro dove nasce un errore e migliorare ogni fase separatamente",
+      "Per analizzare ogni fase separatamente, ma senza collegare gli errori al risultato finale",
       "Per fare in modo che il modello non riceva mai alcun contesto",
-      "Per impedire all'app di usare database o API",
-      "Per obbligare l'utente a scrivere tre domande diverse"
+      "Per impedire all'app di usare database o API"
     ],
     "risposta_corretta": "Per rendere più chiaro dove nasce un errore e migliorare ogni fase separatamente",
     "spiegazione": "Separare le fasi aiuta a capire se il problema nasce dal retrieval, dal prompt, dalla generazione o dal controllo finale. Questo rende debug e miglioramento molto più ordinati.",
@@ -375,7 +409,9 @@
       "debug",
       "pipeline"
     ],
-    "difficolta": 3
+    "difficolta": 3,
+    "distrattore_forte": "Per analizzare ogni fase separatamente, ma senza collegare gli errori al risultato finale",
+    "motivo_distrattore_forte": "È vicino perché parla di analisi separata delle fasi, ma è sbagliato perché separare le fasi serve proprio a collegare gli errori al risultato finale."
   },
   {
     "id": "AI-AV-0106",
@@ -385,8 +421,8 @@
     "domanda": "Quale rischio nasce se un agente salva memoria personale senza criteri chiari?",
     "opzioni": [
       "Può conservare informazioni inutili, sensibili o non più valide e usarle fuori contesto",
+      "Può conservare informazioni personali utili, ma senza distinguere tra dati pertinenti e dati sensibili",
       "Diventa automaticamente incapace di rispondere a domande generali",
-      "Non può più usare alcun prompt dell'utente",
       "Trasforma ogni informazione salvata in codice eseguibile"
     ],
     "risposta_corretta": "Può conservare informazioni inutili, sensibili o non più valide e usarle fuori contesto",
@@ -396,7 +432,9 @@
       "privacy",
       "agenti"
     ],
-    "difficolta": 3
+    "difficolta": 3,
+    "distrattore_forte": "Può conservare informazioni personali utili, ma senza distinguere tra dati pertinenti e dati sensibili",
+    "motivo_distrattore_forte": "È vicino perché parla di memoria personale e dati sensibili, ma è incompleto: il rischio riguarda anche informazioni inutili, non più valide o usate fuori contesto."
   },
   {
     "id": "AI-AV-0107",
@@ -406,7 +444,7 @@
     "domanda": "Perché un'app AI in produzione dovrebbe registrare errori e feedback degli utenti?",
     "opzioni": [
       "Per individuare casi problematici reali e migliorare sicurezza, qualità e affidabilità",
-      "Per dimostrare che il modello non sbaglia mai",
+      "Per individuare problemi reali, ma senza usarli per migliorare il sistema",
       "Per sostituire ogni test prima del rilascio",
       "Per evitare qualsiasi aggiornamento futuro del sistema"
     ],
@@ -417,7 +455,9 @@
       "feedback",
       "produzione"
     ],
-    "difficolta": 3
+    "difficolta": 3,
+    "distrattore_forte": "Per individuare problemi reali, ma senza usarli per migliorare il sistema",
+    "motivo_distrattore_forte": "È vicino perché parla di individuare problemi reali, ma è sbagliato perché log e feedback servono proprio a migliorare sicurezza, qualità e affidabilità."
   },
   {
     "id": "INF-FAC-0101",
@@ -438,7 +478,9 @@
       "hardware",
       "processore"
     ],
-    "difficolta": 1
+    "difficolta": 1,
+    "distrattore_forte": "Conservare temporaneamente i dati usati dai programmi",
+    "motivo_distrattore_forte": "È vicino perché riguarda un componente fondamentale usato durante l'esecuzione dei programmi, ma è sbagliato perché descrive la RAM, non la CPU."
   },
   {
     "id": "INF-FAC-0102",
@@ -448,18 +490,20 @@
     "domanda": "A cosa serve principalmente un SSD?",
     "opzioni": [
       "A salvare dati e programmi anche quando il computer è spento",
+      "A conservare temporaneamente i dati usati dai programmi durante l'esecuzione",
       "A eseguire direttamente tutte le istruzioni della CPU",
-      "A sostituire la memoria RAM durante ogni calcolo",
-      "A trasformare il codice sorgente in immagini"
+      "A gestire principalmente i calcoli grafici della scheda video"
     ],
     "risposta_corretta": "A salvare dati e programmi anche quando il computer è spento",
-    "spiegazione": "Un SSD è una memoria di archiviazione permanente. Mantiene file, programmi e sistema operativo anche a computer spento. La RAM invece è temporanea.",
+    "spiegazione": "Un SSD è una memoria di archiviazione permanente. Mantiene file, programmi e sistema operativo anche a computer spento. La RAM invece conserva temporaneamente dati usati dai programmi durante l'esecuzione.",
     "tags": [
       "ssd",
       "memoria",
       "archiviazione"
     ],
-    "difficolta": 1
+    "difficolta": 1,
+    "distrattore_forte": "A conservare temporaneamente i dati usati dai programmi durante l'esecuzione",
+    "motivo_distrattore_forte": "È vicino perché parla comunque di memoria usata dal computer, ma è sbagliato perché descrive la RAM, non l'SSD."
   },
   {
     "id": "INF-FAC-0103",
@@ -470,17 +514,19 @@
     "opzioni": [
       "Il software che gestisce risorse del computer e permette di usare programmi",
       "Un programma applicativo usato per svolgere un compito specifico",
-      "Un insieme di file personali salvati in una cartella",
-      "Un componente hardware che aumenta lo spazio di archiviazione"
+      "Un componente hardware che aumenta lo spazio di archiviazione",
+      "Una cartella che contiene file personali dell'utente"
     ],
     "risposta_corretta": "Il software che gestisce risorse del computer e permette di usare programmi",
-    "spiegazione": "Il sistema operativo gestisce risorse come memoria, file, periferiche e processi, e permette agli altri programmi di funzionare. Un'applicazione svolge un compito specifico, una cartella contiene file, mentre un componente hardware come un SSD aumenta lo spazio di archiviazione.",
+    "spiegazione": "Il sistema operativo gestisce risorse come memoria, file, periferiche e processi, e permette agli altri programmi di funzionare. Un'applicazione svolge un compito specifico, mentre un componente hardware come un SSD aumenta lo spazio di archiviazione.",
     "tags": [
       "sistema_operativo",
       "software",
       "computer"
     ],
-    "difficolta": 1
+    "difficolta": 1,
+    "distrattore_forte": "Un programma applicativo usato per svolgere un compito specifico",
+    "motivo_distrattore_forte": "È vicino perché anche un'applicazione è software, ma è sbagliato perché il sistema operativo gestisce il computer e permette alle applicazioni di funzionare."
   },
   {
     "id": "INF-FAC-0104",
@@ -490,18 +536,20 @@
     "domanda": "A cosa serve normalmente un ciclo in programmazione?",
     "opzioni": [
       "A ripetere un blocco di istruzioni più volte",
+      "A scegliere se eseguire un blocco una sola volta in base a una condizione",
       "A salvare un file in modo permanente",
-      "A cambiare automaticamente il linguaggio del computer",
       "A cancellare tutte le variabili del programma"
     ],
     "risposta_corretta": "A ripetere un blocco di istruzioni più volte",
-    "spiegazione": "Un ciclo permette di ripetere istruzioni finché una condizione è vera o per un numero definito di volte. È utile, per esempio, per scorrere una lista di elementi.",
+    "spiegazione": "Un ciclo permette di ripetere istruzioni finché una condizione è vera o per un numero definito di volte. Una condizione invece sceglie quale ramo di codice eseguire, ma non ripete automaticamente il blocco.",
     "tags": [
       "cicli",
       "programmazione",
       "ripetizione"
     ],
-    "difficolta": 1
+    "difficolta": 1,
+    "distrattore_forte": "A scegliere se eseguire un blocco una sola volta in base a una condizione",
+    "motivo_distrattore_forte": "È vicino perché anche le condizioni controllano il flusso del programma, ma è sbagliato perché un ciclo serve a ripetere istruzioni."
   },
   {
     "id": "INF-FAC-0105",
@@ -511,18 +559,20 @@
     "domanda": "Che cosa rappresenta normalmente un valore booleano?",
     "opzioni": [
       "Un valore che può essere vero o falso",
-      "Un numero intero usato per contare elementi",
+      "Un valore numerico usato per contare due alternative",
       "Una stringa di testo composta da caratteri",
       "Un valore assente o non definito"
     ],
     "risposta_corretta": "Un valore che può essere vero o falso",
-    "spiegazione": "Un booleano rappresenta due stati logici: vero o falso. Un intero rappresenta numeri senza decimali, una stringa rappresenta testo, mentre un valore nullo o assente indica mancanza di dato.",
+    "spiegazione": "Un booleano rappresenta due stati logici: vero o falso. Un numero intero serve a contare, una stringa rappresenta testo, mentre un valore nullo o assente indica mancanza di dato.",
     "tags": [
       "boolean",
       "logica",
       "programmazione"
     ],
-    "difficolta": 1
+    "difficolta": 1,
+    "distrattore_forte": "Un valore numerico usato per contare due alternative",
+    "motivo_distrattore_forte": "È vicino perché spesso i valori booleani vengono associati a due stati, ma è sbagliato perché il booleano rappresenta vero/falso, non un conteggio numerico."
   },
   {
     "id": "INF-FAC-0106",
@@ -532,18 +582,20 @@
     "domanda": "Che cosa indica normalmente il percorso di un file?",
     "opzioni": [
       "La posizione del file dentro cartelle e sottocartelle",
+      "Il nome del file senza indicare le cartelle in cui si trova",
       "La velocità con cui il file viene aperto",
-      "Il colore dell'icona mostrata dal sistema",
       "Il numero di volte in cui il file è stato copiato"
     ],
     "risposta_corretta": "La posizione del file dentro cartelle e sottocartelle",
-    "spiegazione": "Il percorso indica dove si trova un file nel sistema. Per esempio, una cartella può contenere altre cartelle e un file può trovarsi dentro una struttura precisa.",
+    "spiegazione": "Il percorso indica dove si trova un file nel sistema, dentro una struttura di cartelle e sottocartelle. Il solo nome del file non basta sempre a identificarne la posizione.",
     "tags": [
       "file",
       "percorso",
       "cartelle"
     ],
-    "difficolta": 1
+    "difficolta": 1,
+    "distrattore_forte": "Il nome del file senza indicare le cartelle in cui si trova",
+    "motivo_distrattore_forte": "È vicino perché il nome può far parte del percorso, ma è incompleto: il percorso indica anche cartelle e sottocartelle."
   },
   {
     "id": "INF-INT-0101",
@@ -553,8 +605,8 @@
     "domanda": "Perché una funzione è utile in un programma?",
     "opzioni": [
       "Permette di raggruppare istruzioni riutilizzabili con un compito chiaro",
+      "Permette di raggruppare istruzioni, ma senza poter ricevere dati o restituire risultati",
       "Serve solo a rendere il codice più lungo senza motivo",
-      "Trasforma automaticamente ogni errore in un risultato corretto",
       "Sostituisce sempre la necessità di usare variabili"
     ],
     "risposta_corretta": "Permette di raggruppare istruzioni riutilizzabili con un compito chiaro",
@@ -564,7 +616,9 @@
       "riuso",
       "programmazione"
     ],
-    "difficolta": 2
+    "difficolta": 2,
+    "distrattore_forte": "Permette di raggruppare istruzioni, ma senza poter ricevere dati o restituire risultati",
+    "motivo_distrattore_forte": "È vicino perché parla di raggruppare istruzioni, ma è sbagliato perché una funzione può anche ricevere input e restituire output."
   },
   {
     "id": "INF-INT-0102",
@@ -574,18 +628,20 @@
     "domanda": "A cosa serve una query SELECT in SQL?",
     "opzioni": [
       "A leggere dati da una o più tabelle",
+      "A leggere dati solo da una singola tabella, senza condizioni o collegamenti",
       "A cancellare sempre l'intero database",
-      "A modificare il colore delle colonne",
       "A trasformare automaticamente SQL in HTML"
     ],
     "risposta_corretta": "A leggere dati da una o più tabelle",
-    "spiegazione": "SELECT viene usato per interrogare il database e ottenere dati. Può essere combinato con condizioni, ordinamenti e join per recuperare informazioni specifiche.",
+    "spiegazione": "SELECT viene usato per interrogare il database e ottenere dati. Può leggere da una o più tabelle e può essere combinato con condizioni, ordinamenti e join.",
     "tags": [
       "sql",
       "select",
       "database"
     ],
-    "difficolta": 2
+    "difficolta": 2,
+    "distrattore_forte": "A leggere dati solo da una singola tabella, senza condizioni o collegamenti",
+    "motivo_distrattore_forte": "È vicino perché SELECT legge dati, ma è troppo limitato: può usare condizioni, join e più tabelle."
   },
   {
     "id": "INF-INT-0103",
@@ -595,9 +651,9 @@
     "domanda": "Perché si usa un JOIN in un database relazionale?",
     "opzioni": [
       "Per combinare dati collegati provenienti da tabelle diverse",
+      "Per combinare tabelle diverse creando automaticamente relazioni non definite",
       "Per rinominare automaticamente tutti i campi di una tabella",
-      "Per eliminare sempre le chiavi primarie dal database",
-      "Per convertire una query SQL in un file immagine"
+      "Per eliminare sempre le chiavi primarie dal database"
     ],
     "risposta_corretta": "Per combinare dati collegati provenienti da tabelle diverse",
     "spiegazione": "Un JOIN permette di unire informazioni distribuite in più tabelle tramite relazioni, per esempio collegando ordini e clienti attraverso un identificatore comune.",
@@ -606,7 +662,9 @@
       "database",
       "relazioni"
     ],
-    "difficolta": 2
+    "difficolta": 2,
+    "distrattore_forte": "Per combinare tabelle diverse creando automaticamente relazioni non definite",
+    "motivo_distrattore_forte": "È vicino perché parla di combinare tabelle, ma è sbagliato perché il JOIN usa relazioni o condizioni definite, non crea automaticamente relazioni corrette."
   },
   {
     "id": "INF-INT-0104",
@@ -627,7 +685,9 @@
       "404",
       "web"
     ],
-    "difficolta": 2
+    "difficolta": 2,
+    "distrattore_forte": "La richiesta non è autenticata correttamente",
+    "motivo_distrattore_forte": "È vicino perché anche 401 è un codice di errore HTTP molto comune, ma è sbagliato perché 401 riguarda l'autenticazione, mentre 404 riguarda una risorsa non trovata."
   },
   {
     "id": "INF-INT-0105",
@@ -637,18 +697,20 @@
     "domanda": "A cosa serve un branch in Git?",
     "opzioni": [
       "A lavorare su una linea separata di sviluppo senza modificare subito quella principale",
-      "A cancellare definitivamente tutta la cronologia del progetto",
+      "A salvare una fotografia dello stato del progetto nella cronologia Git",
       "A scaricare automaticamente ogni libreria mancante",
       "A trasformare il repository in un database SQL"
     ],
     "risposta_corretta": "A lavorare su una linea separata di sviluppo senza modificare subito quella principale",
-    "spiegazione": "Un branch permette di sviluppare modifiche in parallelo. È utile per nuove funzionalità, correzioni o esperimenti, senza toccare immediatamente il ramo principale.",
+    "spiegazione": "Un branch permette di sviluppare modifiche in parallelo. È utile per nuove funzionalità, correzioni o esperimenti, senza toccare immediatamente il ramo principale. Il commit invece salva uno stato del progetto.",
     "tags": [
       "git",
       "branch",
       "versionamento"
     ],
-    "difficolta": 2
+    "difficolta": 2,
+    "distrattore_forte": "A salvare una fotografia dello stato del progetto nella cronologia Git",
+    "motivo_distrattore_forte": "È vicino perché è un concetto reale di Git, ma è sbagliato perché descrive un commit, non un branch."
   },
   {
     "id": "INF-INT-0106",
@@ -658,18 +720,20 @@
     "domanda": "Perché HTTPS è importante per un sito web?",
     "opzioni": [
       "Per proteggere la comunicazione tra browser e server tramite cifratura",
-      "Per verificare che il sito usi un certificato digitale valido",
-      "Per ridurre il rischio che i dati vengano intercettati durante il trasferimento",
-      "Per rendere più sicuro lo scambio di informazioni sensibili"
+      "Per verificare che il sito usi un certificato digitale valido, senza cifrare la comunicazione",
+      "Per rendere il sito sempre più veloce indipendentemente dal server",
+      "Per impedire al server di ricevere richieste dal browser"
     ],
     "risposta_corretta": "Per proteggere la comunicazione tra browser e server tramite cifratura",
-    "spiegazione": "HTTPS protegge la comunicazione tra browser e server tramite cifratura. Certificati, riduzione del rischio di intercettazione e protezione dei dati sensibili sono aspetti collegati, ma la risposta corretta è quella più completa e generale.",
+    "spiegazione": "HTTPS protegge la comunicazione tra browser e server tramite cifratura. I certificati sono parte importante del meccanismo, ma il punto centrale è proteggere lo scambio di dati.",
     "tags": [
       "https",
       "sicurezza",
       "web"
     ],
-    "difficolta": 2
+    "difficolta": 2,
+    "distrattore_forte": "Per verificare che il sito usi un certificato digitale valido, senza cifrare la comunicazione",
+    "motivo_distrattore_forte": "È vicino perché HTTPS usa certificati digitali, ma è sbagliato perché HTTPS serve anche a cifrare la comunicazione."
   },
   {
     "id": "INF-INT-0107",
@@ -679,9 +743,9 @@
     "domanda": "Che cosa significa rendere una pagina web responsive?",
     "opzioni": [
       "Far adattare layout e contenuti a schermi di dimensioni diverse",
+      "Far adattare solo le immagini, lasciando invariato il layout della pagina",
       "Far rispondere il server sempre con lo stesso codice HTTP",
-      "Impedire agli utenti di aprire la pagina da smartphone",
-      "Trasformare automaticamente ogni testo in un'immagine"
+      "Impedire agli utenti di aprire la pagina da smartphone"
     ],
     "risposta_corretta": "Far adattare layout e contenuti a schermi di dimensioni diverse",
     "spiegazione": "Una pagina responsive si adatta a desktop, tablet e smartphone. Layout, dimensioni e spaziature cambiano per restare leggibili e usabili.",
@@ -690,7 +754,9 @@
       "frontend",
       "css"
     ],
-    "difficolta": 2
+    "difficolta": 2,
+    "distrattore_forte": "Far adattare solo le immagini, lasciando invariato il layout della pagina",
+    "motivo_distrattore_forte": "È vicino perché anche le immagini possono adattarsi negli schermi diversi, ma è incompleto: una pagina responsive adatta l'intero layout e i contenuti."
   },
   {
     "id": "INF-AV-0101",
@@ -700,18 +766,20 @@
     "domanda": "Perché la validazione dei dati dovrebbe avvenire anche lato backend?",
     "opzioni": [
       "Perché i dati inviati al server non devono essere considerati affidabili solo perché il frontend li controlla",
-      "Perché il backend deve sempre ignorare tutte le richieste del frontend",
+      "Perché i controlli del frontend migliorano l'esperienza utente, ma possono essere aggirati",
       "Perché la validazione lato backend sostituisce ogni test automatico",
       "Perché il frontend non può mai mostrare messaggi di errore"
     ],
     "risposta_corretta": "Perché i dati inviati al server non devono essere considerati affidabili solo perché il frontend li controlla",
-    "spiegazione": "Il controllo lato frontend migliora l'esperienza utente, ma può essere aggirato. Il backend deve validare i dati per proteggere applicazione, database e regole di business.",
+    "spiegazione": "Il controllo lato frontend migliora l'esperienza utente, ma può essere aggirato. Il backend deve validare i dati perché è il punto che protegge applicazione, database e regole di business.",
     "tags": [
       "backend",
       "validazione",
       "sicurezza"
     ],
-    "difficolta": 3
+    "difficolta": 3,
+    "distrattore_forte": "Perché i controlli del frontend migliorano l'esperienza utente, ma possono essere aggirati",
+    "motivo_distrattore_forte": "È molto vicino perché descrive un motivo reale per validare anche lato backend, ma è meno completo: la risposta corretta chiarisce che i dati arrivati al server non devono essere considerati affidabili."
   },
   {
     "id": "INF-AV-0102",
@@ -721,9 +789,9 @@
     "domanda": "Qual è una differenza importante tra hashing e cifratura?",
     "opzioni": [
       "L'hashing è pensato per non essere invertito facilmente, mentre la cifratura può essere decifrata con una chiave",
-      "L'hashing serve solo a comprimere immagini, mentre la cifratura serve solo a colorare file",
-      "La cifratura elimina sempre la necessità di autenticare gli utenti",
-      "Hashing e cifratura sono sempre la stessa operazione con nomi diversi"
+      "L'hashing può essere decifrato con una chiave corretta, mentre la cifratura no",
+      "La cifratura serve solo a confrontare se due dati sono uguali",
+      "La cifratura produce sempre una impronta fissa come un hash"
     ],
     "risposta_corretta": "L'hashing è pensato per non essere invertito facilmente, mentre la cifratura può essere decifrata con una chiave",
     "spiegazione": "Un hash è usato spesso per verificare integrità o password senza recuperare il valore originale. La cifratura invece protegge dati che devono poter essere decifrati da chi possiede la chiave.",
@@ -732,7 +800,9 @@
       "cifratura",
       "sicurezza"
     ],
-    "difficolta": 3
+    "difficolta": 3,
+    "distrattore_forte": "L'hashing può essere decifrato con una chiave corretta, mentre la cifratura no",
+    "motivo_distrattore_forte": "È vicino perché confronta hashing e cifratura, ma è sbagliato perché l'hashing non è pensato per essere decifrato."
   },
   {
     "id": "INF-AV-0103",
@@ -742,18 +812,20 @@
     "domanda": "Perché la cache può migliorare le prestazioni di un'applicazione?",
     "opzioni": [
       "Perché evita di ricalcolare o recuperare più volte dati usati spesso",
-      "Perché cancella automaticamente ogni bug dal codice",
-      "Perché sostituisce sempre il database principale",
-      "Perché obbliga il server a ignorare tutte le richieste nuove"
+      "Perché conserva temporaneamente dati frequenti, ma può restituire dati vecchi se non viene gestita bene",
+      "Perché sposta automaticamente ogni dato dal database alla memoria locale",
+      "Perché riduce il carico dell'applicazione anche quando i dati non vengono riutilizzati"
     ],
     "risposta_corretta": "Perché evita di ricalcolare o recuperare più volte dati usati spesso",
-    "spiegazione": "La cache conserva temporaneamente risultati o dati molto richiesti. Questo può ridurre tempi di risposta e carico su database o servizi esterni.",
+    "spiegazione": "La cache conserva temporaneamente risultati o dati molto richiesti. Questo può ridurre tempi di risposta e carico su database o servizi esterni. Va però gestita bene, perché una cache non aggiornata può restituire dati vecchi.",
     "tags": [
       "cache",
       "performance",
       "applicazioni"
     ],
-    "difficolta": 3
+    "difficolta": 3,
+    "distrattore_forte": "Perché conserva temporaneamente dati frequenti, ma può restituire dati vecchi se non viene gestita bene",
+    "motivo_distrattore_forte": "È vicino perché descrive un comportamento reale della cache, cioè conservare dati frequenti. È però sbagliato come risposta principale perché mette al centro il rischio di dati vecchi, mentre il vantaggio prestazionale nasce dal non ricalcolare o recuperare più volte gli stessi dati."
   },
   {
     "id": "INF-AV-0104",
@@ -763,9 +835,9 @@
     "domanda": "Perché la paginazione è utile quando un'API restituisce molti risultati?",
     "opzioni": [
       "Per dividere i risultati in blocchi più piccoli e gestibili",
+      "Per limitare la quantità di dati restituiti in ogni risposta senza perdere l'accesso agli altri risultati",
       "Per impedire all'API di restituire qualsiasi dato",
-      "Per trasformare ogni risposta in un errore 404",
-      "Per rendere obbligatorio l'uso di un solo utente alla volta"
+      "Per trasformare ogni risposta in un errore 404"
     ],
     "risposta_corretta": "Per dividere i risultati in blocchi più piccoli e gestibili",
     "spiegazione": "La paginazione evita di inviare troppi dati in una sola risposta. Aiuta prestazioni, consumo di rete e usabilità, soprattutto con grandi quantità di risultati.",
@@ -774,7 +846,9 @@
       "paginazione",
       "performance"
     ],
-    "difficolta": 3
+    "difficolta": 3,
+    "distrattore_forte": "Per limitare la quantità di dati restituiti in ogni risposta senza perdere l'accesso agli altri risultati",
+    "motivo_distrattore_forte": "È molto vicino perché descrive un effetto reale della paginazione, ma la risposta corretta è più generale: divide i risultati in blocchi piccoli e gestibili."
   },
   {
     "id": "INF-AV-0105",
@@ -784,18 +858,20 @@
     "domanda": "Che vantaggio offre una pipeline CI/CD in un progetto software?",
     "opzioni": [
       "Automatizza controlli, test e rilascio riducendo errori manuali ripetitivi",
+      "Automatizza test e build, ma richiede comunque controllo umano e codice scritto correttamente",
       "Sostituisce completamente la necessità di scrivere codice",
-      "Trasforma automaticamente ogni bug in una nuova funzionalità",
       "Impedisce a più sviluppatori di collaborare sullo stesso progetto"
     ],
     "risposta_corretta": "Automatizza controlli, test e rilascio riducendo errori manuali ripetitivi",
-    "spiegazione": "Una pipeline CI/CD può eseguire test, build e deploy in modo automatico. Questo rende più affidabile il processo di rilascio e riduce operazioni manuali ripetitive.",
+    "spiegazione": "Una pipeline CI/CD può eseguire test, build e deploy in modo automatico. Questo rende più affidabile il processo di rilascio e riduce operazioni manuali ripetitive, ma non sostituisce la scrittura del codice o la collaborazione tra sviluppatori.",
     "tags": [
       "cicd",
       "devops",
       "automazione"
     ],
-    "difficolta": 3
+    "difficolta": 3,
+    "distrattore_forte": "Automatizza test e build, ma richiede comunque controllo umano e codice scritto correttamente",
+    "motivo_distrattore_forte": "È vicino perché descrive una parte realistica della CI/CD, ma è meno completo: la risposta corretta include anche controlli, rilascio e riduzione degli errori manuali ripetitivi."
   },
   {
     "id": "INF-AV-0106",
@@ -805,9 +881,9 @@
     "domanda": "Perché un container può rendere più prevedibile l'esecuzione di un'applicazione?",
     "opzioni": [
       "Perché include applicazione e dipendenze in un ambiente isolato e riproducibile",
-      "Perché elimina sempre la necessità di configurare qualsiasi variabile",
-      "Perché trasforma il codice backend in codice frontend",
-      "Perché sostituisce automaticamente ogni sistema operativo"
+      "Perché include applicazione e dipendenze e quindi garantisce sempre lo stesso risultato in qualunque ambiente",
+      "Perché aggiorna automaticamente tutte le dipendenze alla versione più recente",
+      "Perché installa automaticamente ogni libreria mancante a ogni avvio"
     ],
     "risposta_corretta": "Perché include applicazione e dipendenze in un ambiente isolato e riproducibile",
     "spiegazione": "Un container confeziona applicazione, librerie e configurazioni essenziali in un ambiente isolato. Questo riduce differenze tra sviluppo, test e produzione.",
@@ -816,7 +892,9 @@
       "docker",
       "ambiente"
     ],
-    "difficolta": 3
+    "difficolta": 3,
+    "distrattore_forte": "Perché include applicazione e dipendenze e quindi garantisce sempre lo stesso risultato in qualunque ambiente",
+    "motivo_distrattore_forte": "È vicino perché parla di applicazione, dipendenze e ambiente, ma è troppo assoluto: un container aiuta la riproducibilità, non garantisce sempre ogni risultato."
   },
   {
     "id": "INF-AV-0107",
@@ -826,9 +904,9 @@
     "domanda": "Perché una transazione è utile quando più operazioni devono riuscire insieme?",
     "opzioni": [
       "Perché permette di confermare tutte le modifiche solo se l'intera operazione va a buon fine",
-      "Perché rende impossibile qualunque errore di programmazione",
-      "Perché cancella automaticamente tutte le tabelle non usate",
-      "Perché trasforma una query SQL in una chiamata HTTP"
+      "Perché conferma ogni singola modifica appena viene eseguita, anche se le operazioni successive falliscono",
+      "Perché controlla automaticamente che ogni query SQL sia scritta senza errori logici",
+      "Perché corregge automaticamente le query SQL quando una condizione è sbagliata"
     ],
     "risposta_corretta": "Perché permette di confermare tutte le modifiche solo se l'intera operazione va a buon fine",
     "spiegazione": "Una transazione consente di trattare più operazioni come un'unica unità. Se qualcosa fallisce, si può annullare tutto per evitare dati parziali o incoerenti.",
@@ -837,7 +915,9 @@
       "database",
       "coerenza"
     ],
-    "difficolta": 3
+    "difficolta": 3,
+    "distrattore_forte": "Perché conferma ogni singola modifica appena viene eseguita, anche se le operazioni successive falliscono",
+    "motivo_distrattore_forte": "È vicino perché parla di modifiche e conferma, ma descrive il comportamento opposto a una transazione atomica."
   },
   {
     "id": "MAT-FAC-0101",
@@ -1687,18 +1767,20 @@
     "domanda": "Quale parola completa meglio l'analogia: caldo sta a freddo come alto sta a ___?",
     "opzioni": [
       "basso",
-      "grande",
+      "piccolo",
       "lungo",
       "vicino"
     ],
     "risposta_corretta": "basso",
-    "spiegazione": "Caldo e freddo sono contrari. Seguendo la stessa logica, il contrario di alto è basso.",
+    "spiegazione": "Caldo e freddo sono contrari. Seguendo la stessa logica, il contrario di alto è basso. Piccolo è vicino come idea generale di dimensione, ma non è il contrario diretto di alto.",
     "tags": [
       "analogia",
       "contrari",
       "logica_verbale"
     ],
-    "difficolta": 1
+    "difficolta": 1,
+    "distrattore_forte": "piccolo",
+    "motivo_distrattore_forte": "È vicino perché riguarda una grandezza o dimensione, ma è sbagliato perché il contrario diretto di alto è basso, non piccolo."
   },
   {
     "id": "LOG-VER-FAC-0102",
@@ -1707,10 +1789,10 @@
     "livello": "facile",
     "domanda": "Quale parola non appartiene allo stesso gruppo?",
     "opzioni": [
-      "tavolo",
-      "sedia",
+      "martello",
       "armadio",
-      "martello"
+      "tavolo",
+      "sedia"
     ],
     "risposta_corretta": "martello",
     "spiegazione": "Tavolo, sedia e armadio sono mobili. Martello è un attrezzo, quindi non appartiene allo stesso gruppo.",
@@ -1719,7 +1801,9 @@
       "intruso",
       "logica_verbale"
     ],
-    "difficolta": 1
+    "difficolta": 1,
+    "distrattore_forte": "armadio",
+    "motivo_distrattore_forte": "È vicino perché è comunque un oggetto della casa, ma è sbagliato perché appartiene al gruppo dei mobili come tavolo e sedia."
   },
   {
     "id": "LOG-NUM-FAC-0101",
@@ -1729,18 +1813,20 @@
     "domanda": "Una macchina produce 4 pezzi al minuto. Quanti pezzi produce in 5 minuti?",
     "opzioni": [
       "20",
-      "18",
-      "22",
-      "24"
+      "16",
+      "24",
+      "25"
     ],
     "risposta_corretta": "20",
-    "spiegazione": "La macchina produce 4 pezzi ogni minuto. In 5 minuti produce 4 × 5 = 20 pezzi.",
+    "spiegazione": "La macchina produce 4 pezzi ogni minuto. In 5 minuti produce 4 × 5 = 20 pezzi. 16 sarebbe corretto solo per 4 minuti, mentre 24 sarebbe corretto per 6 minuti.",
     "tags": [
       "moltiplicazione",
       "problemi",
       "logica_numerica"
     ],
-    "difficolta": 1
+    "difficolta": 1,
+    "distrattore_forte": "16",
+    "motivo_distrattore_forte": "È vicino perché usa lo stesso ritmo di 4 pezzi al minuto, ma calcola 4 × 4 invece di 4 × 5."
   },
   {
     "id": "LOG-NUM-FAC-0102",
@@ -1750,18 +1836,20 @@
     "domanda": "Partendo da 3, un numero viene raddoppiato quattro volte. Quale valore si ottiene?",
     "opzioni": [
       "48",
+      "24",
       "36",
-      "42",
-      "50"
+      "64"
     ],
     "risposta_corretta": "48",
-    "spiegazione": "Partiamo da 3. Primo raddoppio: 6. Secondo: 12. Terzo: 24. Quarto: 48.",
+    "spiegazione": "Partiamo da 3. Primo raddoppio: 6. Secondo: 12. Terzo: 24. Quarto: 48. 24 è il valore dopo tre raddoppi, quindi è vicino ma incompleto.",
     "tags": [
       "raddoppio",
       "calcolo",
       "logica_numerica"
     ],
-    "difficolta": 1
+    "difficolta": 1,
+    "distrattore_forte": "24",
+    "motivo_distrattore_forte": "È vicino perché segue correttamente i raddoppi, ma si ferma al terzo raddoppio invece di arrivare al quarto."
   },
   {
     "id": "LOG-CRI-FAC-0101",
@@ -1771,18 +1859,20 @@
     "domanda": "Tutti i cani sono animali. Fido è un cane. Quale conclusione è corretta?",
     "opzioni": [
       "Fido è un animale",
+      "Fido potrebbe non essere un animale anche se è un cane",
       "Tutti gli animali sono cani",
-      "Fido non è un animale",
       "Alcuni cani non sono animali"
     ],
     "risposta_corretta": "Fido è un animale",
-    "spiegazione": "Se tutti i cani sono animali e Fido è un cane, allora Fido appartiene al gruppo degli animali.",
+    "spiegazione": "Se tutti i cani sono animali e Fido è un cane, allora Fido appartiene al gruppo degli animali. Non vale invece il contrario: non tutti gli animali sono cani.",
     "tags": [
       "deduzione",
       "sillogismi",
       "ragionamento_critico"
     ],
-    "difficolta": 1
+    "difficolta": 1,
+    "distrattore_forte": "Fido potrebbe non essere un animale anche se è un cane",
+    "motivo_distrattore_forte": "È vicino perché parla proprio di Fido e del fatto che sia un cane, ma contraddice la premessa: se tutti i cani sono animali, Fido deve essere un animale."
   },
   {
     "id": "LOG-CRI-FAC-0102",
@@ -1792,18 +1882,20 @@
     "domanda": "Se oggi piove, Marco prende l'ombrello. Oggi piove. Cosa si può concludere?",
     "opzioni": [
       "Marco prende l'ombrello",
-      "Marco non prende l'ombrello",
+      "Marco prende l'ombrello solo se piove molto forte",
       "Oggi non piove",
       "Marco prende sempre l'ombrello"
     ],
     "risposta_corretta": "Marco prende l'ombrello",
-    "spiegazione": "La regola dice che quando piove Marco prende l'ombrello. Poiché oggi piove, la conclusione corretta è che Marco prende l'ombrello.",
+    "spiegazione": "La regola dice che quando piove Marco prende l'ombrello. Poiché oggi piove, la conclusione corretta è che Marco prende l'ombrello. Non possiamo aggiungere condizioni non presenti, come 'solo se piove molto forte'.",
     "tags": [
       "condizione",
       "deduzione",
       "ragionamento_critico"
     ],
-    "difficolta": 1
+    "difficolta": 1,
+    "distrattore_forte": "Marco prende l'ombrello solo se piove molto forte",
+    "motivo_distrattore_forte": "È vicino perché collega ombrello e pioggia, ma è sbagliato perché aggiunge una condizione non presente nella premessa."
   },
   {
     "id": "LOG-VER-INT-0101",
@@ -1813,18 +1905,20 @@
     "domanda": "Completa l'analogia: medico sta a ospedale come insegnante sta a ___?",
     "opzioni": [
       "scuola",
-      "libro",
       "classe",
-      "lezione"
+      "lezione",
+      "libro"
     ],
     "risposta_corretta": "scuola",
-    "spiegazione": "Il medico lavora tipicamente in ospedale. Allo stesso modo, l'insegnante lavora tipicamente in una scuola. Classe e lezione sono collegate, ma non rappresentano il luogo generale equivalente.",
+    "spiegazione": "Il medico lavora tipicamente in ospedale. Allo stesso modo, l'insegnante lavora tipicamente in una scuola. Classe e lezione sono collegate all'insegnante, ma non rappresentano il luogo generale equivalente.",
     "tags": [
       "analogie",
       "relazioni",
       "logica_verbale"
     ],
-    "difficolta": 2
+    "difficolta": 2,
+    "distrattore_forte": "classe",
+    "motivo_distrattore_forte": "È vicino perché l'insegnante lavora spesso in classe, ma la relazione più generale equivalente a medico → ospedale è insegnante → scuola."
   },
   {
     "id": "LOG-VER-INT-0102",
@@ -1834,18 +1928,20 @@
     "domanda": "Quale coppia mantiene la stessa relazione di: seme : pianta?",
     "opzioni": [
       "uovo : uccello",
+      "germoglio : pianta",
       "foglia : ramo",
-      "radice : terra",
       "frutto : albero"
     ],
     "risposta_corretta": "uovo : uccello",
-    "spiegazione": "Dal seme può svilupparsi una pianta. In modo simile, dall'uovo può svilupparsi un uccello. Le altre coppie indicano parti o collegamenti, non una relazione di sviluppo.",
+    "spiegazione": "Dal seme può svilupparsi una pianta. In modo simile, dall'uovo può svilupparsi un uccello. Germoglio : pianta è vicino, ma rappresenta una fase già successiva allo sviluppo iniziale, mentre seme e uovo sono punti di origine.",
     "tags": [
       "analogie",
       "relazioni",
       "logica_verbale"
     ],
-    "difficolta": 2
+    "difficolta": 2,
+    "distrattore_forte": "germoglio : pianta",
+    "motivo_distrattore_forte": "È vicino perché anche il germoglio può diventare una pianta, ma è sbagliato rispetto all'analogia più precisa: seme e uovo sono elementi iniziali da cui nasce lo sviluppo."
   },
   {
     "id": "LOG-NUM-INT-0101",
@@ -1855,8 +1951,8 @@
     "domanda": "Un algoritmo parte da 2. A ogni passaggio raddoppia il valore e aggiunge 1. Dopo quattro passaggi quale valore ottiene?",
     "opzioni": [
       "47",
-      "45",
       "46",
+      "45",
       "49"
     ],
     "risposta_corretta": "47",
@@ -1866,7 +1962,9 @@
       "pattern",
       "logica_numerica"
     ],
-    "difficolta": 2
+    "difficolta": 2,
+    "distrattore_forte": "46",
+    "motivo_distrattore_forte": "È vicino perché sembra derivare dal raddoppio finale di 23, ma dimentica il +1 dell'ultimo passaggio: 23 × 2 + 1 = 47."
   },
   {
     "id": "LOG-NUM-INT-0102",
@@ -1876,8 +1974,8 @@
     "domanda": "Completa la successione: 30, 27, 23, 18, ?",
     "opzioni": [
       "12",
-      "14",
       "13",
+      "14",
       "15"
     ],
     "risposta_corretta": "12",
@@ -1887,7 +1985,9 @@
       "differenze",
       "logica_numerica"
     ],
-    "difficolta": 2
+    "difficolta": 2,
+    "distrattore_forte": "13",
+    "motivo_distrattore_forte": "È vicino perché continua a diminuire la sequenza, ma usa una sottrazione di 5 invece della sottrazione corretta di 6."
   },
   {
     "id": "LOG-CRI-INT-0101",
@@ -1897,18 +1997,20 @@
     "domanda": "Alcuni programmatori conoscono Python. Tutti quelli che conoscono Python sanno usare variabili. Quale conclusione è sicuramente vera?",
     "opzioni": [
       "Alcuni programmatori sanno usare variabili",
-      "Tutti i programmatori conoscono Python",
-      "Chi sa usare variabili è sempre programmatore",
+      "Tutti i programmatori sanno usare variabili",
+      "Tutti quelli che sanno usare variabili conoscono Python",
       "Nessun programmatore conosce Python"
     ],
     "risposta_corretta": "Alcuni programmatori sanno usare variabili",
-    "spiegazione": "Se alcuni programmatori conoscono Python e tutti quelli che conoscono Python sanno usare variabili, allora almeno quei programmatori sanno usare variabili.",
+    "spiegazione": "Alcuni programmatori conoscono Python e tutti quelli che conoscono Python sanno usare variabili. Quindi almeno alcuni programmatori sanno usare variabili. Non possiamo però concludere che tutti i programmatori sappiano usare variabili.",
     "tags": [
       "sillogismi",
       "deduzione",
       "ragionamento_critico"
     ],
-    "difficolta": 2
+    "difficolta": 2,
+    "distrattore_forte": "Tutti i programmatori sanno usare variabili",
+    "motivo_distrattore_forte": "È vicino perché la premessa collega Python e variabili, ma è sbagliato perché sappiamo solo che alcuni programmatori conoscono Python, non tutti."
   },
   {
     "id": "LOG-CRI-INT-0102",
@@ -1918,18 +2020,20 @@
     "domanda": "Se un'app supera tutti i test, viene pubblicata. L'app non viene pubblicata. Quale conclusione è logicamente corretta?",
     "opzioni": [
       "L'app non ha superato tutti i test",
-      "L'app ha superato tutti i test",
+      "L'app potrebbe aver superato tutti i test anche se non viene pubblicata",
       "I test non sono mai stati eseguiti",
       "Ogni app pubblicata supera i test"
     ],
     "risposta_corretta": "L'app non ha superato tutti i test",
-    "spiegazione": "La regola dice: se supera tutti i test, allora viene pubblicata. Se non viene pubblicata, possiamo concludere che non ha superato tutti i test. È un caso di ragionamento per contrapposizione.",
+    "spiegazione": "La regola dice: se un'app supera tutti i test, allora viene pubblicata. Se l'app non viene pubblicata, possiamo concludere che non ha superato tutti i test. È un ragionamento per contrapposizione.",
     "tags": [
       "condizioni",
       "contrapposizione",
       "ragionamento_critico"
     ],
-    "difficolta": 2
+    "difficolta": 2,
+    "distrattore_forte": "L'app potrebbe aver superato tutti i test anche se non viene pubblicata",
+    "motivo_distrattore_forte": "È vicino perché nella realtà potrebbero esistere altri motivi di blocco, ma nella logica della premessa data è sbagliato: se supera tutti i test, viene pubblicata."
   },
   {
     "id": "LOG-AST-INT-0101",
@@ -1939,9 +2043,9 @@
     "domanda": "Una sequenza alterna numero di lati così: triangolo, quadrato, pentagono, esagono, ?. Quale forma segue?",
     "opzioni": [
       "ettagono",
-      "pentagono",
+      "esagono",
       "ottagono",
-      "triangolo"
+      "pentagono"
     ],
     "risposta_corretta": "ettagono",
     "spiegazione": "Le forme aumentano di un lato alla volta: triangolo 3 lati, quadrato 4, pentagono 5, esagono 6. Dopo viene l'ettagono, che ha 7 lati.",
@@ -1950,7 +2054,9 @@
       "sequenze",
       "ragionamento_astratto"
     ],
-    "difficolta": 2
+    "difficolta": 2,
+    "distrattore_forte": "ottagono",
+    "motivo_distrattore_forte": "È vicino perché continua con un poligono successivo, ma salta un passaggio: dopo 6 lati viene 7, non 8."
   },
   {
     "id": "LOG-VER-AV-0101",
@@ -1965,13 +2071,15 @@
       "materia"
     ],
     "risposta_corretta": "apprendimento",
-    "spiegazione": "L'allenamento può portare a un miglioramento. Allo stesso modo, lo studio può portare ad apprendimento. Interrogazione, lezione e materia sono collegate allo studio, ma non rappresentano il risultato logico più diretto.",
+    "spiegazione": "L'allenamento può portare a un miglioramento. Allo stesso modo, lo studio può portare ad apprendimento. Interrogazione e lezione sono collegate allo studio, ma non rappresentano il risultato logico più diretto.",
     "tags": [
       "analogie",
       "causa_effetto",
       "logica_verbale"
     ],
-    "difficolta": 3
+    "difficolta": 3,
+    "distrattore_forte": "interrogazione",
+    "motivo_distrattore_forte": "È vicino perché è collegata allo studio, ma è sbagliato perché l'interrogazione è una verifica, mentre l'apprendimento è il risultato dello studio."
   },
   {
     "id": "LOG-NUM-AV-0101",
@@ -1981,9 +2089,9 @@
     "domanda": "Completa la successione: 1, 4, 9, 16, 25, ?",
     "opzioni": [
       "36",
-      "30",
       "35",
-      "49"
+      "49",
+      "30"
     ],
     "risposta_corretta": "36",
     "spiegazione": "La sequenza contiene quadrati perfetti: 1²=1, 2²=4, 3²=9, 4²=16, 5²=25. Il successivo è 6²=36.",
@@ -1992,7 +2100,9 @@
       "quadrati",
       "logica_numerica"
     ],
-    "difficolta": 3
+    "difficolta": 3,
+    "distrattore_forte": "35",
+    "motivo_distrattore_forte": "È vicino perché è molto prossimo a 36, ma è sbagliato perché non è un quadrato perfetto della sequenza."
   },
   {
     "id": "LOG-NUM-AV-0102",
@@ -2013,7 +2123,9 @@
       "pattern",
       "logica_numerica"
     ],
-    "difficolta": 3
+    "difficolta": 3,
+    "distrattore_forte": "40",
+    "motivo_distrattore_forte": "È vicino perché aggiunge ancora 10 all'ultimo valore noto, ma è sbagliato perché la differenza deve aumentare a 12."
   },
   {
     "id": "LOG-CRI-AV-0101",
@@ -2023,18 +2135,20 @@
     "domanda": "Tutti gli sviluppatori del team usano Git. Alcune persone che usano Git lavorano anche su database. Quale conclusione è sicuramente vera?",
     "opzioni": [
       "Alcune persone che usano Git lavorano su database",
+      "Alcune persone che lavorano su database sono sviluppatori del team",
       "Tutti gli sviluppatori lavorano su database",
-      "Tutti quelli che usano Git sono sviluppatori",
-      "Nessuno sviluppatore usa database"
+      "Tutti quelli che usano Git sono sviluppatori"
     ],
     "risposta_corretta": "Alcune persone che usano Git lavorano su database",
-    "spiegazione": "La seconda premessa afferma direttamente che alcune persone che usano Git lavorano anche su database. Non possiamo però concludere che siano sviluppatori o che tutti gli sviluppatori lavorino su database.",
+    "spiegazione": "La seconda premessa afferma direttamente che alcune persone che usano Git lavorano anche su database. Non possiamo però concludere che quelle persone siano sviluppatori del team, né che tutti gli sviluppatori lavorino su database.",
     "tags": [
       "deduzione",
       "quantificatori",
       "ragionamento_critico"
     ],
-    "difficolta": 3
+    "difficolta": 3,
+    "distrattore_forte": "Alcune persone che lavorano su database sono sviluppatori del team",
+    "motivo_distrattore_forte": "È vicino perché collega database, Git e sviluppatori, ma è sbagliato perché la premessa non dice che le persone che usano Git e lavorano su database siano sviluppatori del team."
   },
   {
     "id": "LOG-CRI-AV-0102",
@@ -2049,13 +2163,15 @@
       "Il server è sicuramente attivo"
     ],
     "risposta_corretta": "Il server potrebbe essere inattivo, ma non è certo",
-    "spiegazione": "La regola dice che server inattivo implica errore, ma l'errore potrebbe avere anche altre cause. Concludere che il server è sicuramente inattivo sarebbe un errore logico.",
+    "spiegazione": "La regola dice che se il server è inattivo, allora l'app mostra un errore. Ma se l'app mostra un errore, l'errore potrebbe avere anche altre cause. Concludere che il server è sicuramente inattivo sarebbe un errore logico.",
     "tags": [
       "implicazione",
       "errore_logico",
       "ragionamento_critico"
     ],
-    "difficolta": 3
+    "difficolta": 3,
+    "distrattore_forte": "Il server è sicuramente inattivo",
+    "motivo_distrattore_forte": "È vicino perché il server inattivo è una causa possibile dell'errore, ma è sbagliato perché l'errore potrebbe dipendere anche da altre cause."
   },
   {
     "id": "LOG-AST-AV-0101",
@@ -2067,7 +2183,7 @@
       "ettagono rosso",
       "ettagono blu",
       "ottagono rosso",
-      "pentagono blu"
+      "esagono rosso"
     ],
     "risposta_corretta": "ettagono rosso",
     "spiegazione": "Il numero di lati aumenta: 3, 4, 5, 6, quindi 7 lati, cioè ettagono. Il colore alterna rosso, blu, rosso, blu, quindi il prossimo è rosso.",
@@ -2076,7 +2192,9 @@
       "sequenze",
       "ragionamento_astratto"
     ],
-    "difficolta": 3
+    "difficolta": 3,
+    "distrattore_forte": "ettagono blu",
+    "motivo_distrattore_forte": "È vicino perché individua correttamente la forma con 7 lati, ma è sbagliato perché non rispetta l'alternanza dei colori: dopo blu deve tornare rosso."
   },
   {
     "id": "LOG-AST-AV-0102",
@@ -2091,12 +2209,14 @@
       "basso"
     ],
     "risposta_corretta": "sinistra",
-    "spiegazione": "La rotazione è sempre di 90° in senso orario: alto, destra, basso, sinistra.",
+    "spiegazione": "La rotazione è sempre di 90 gradi in senso orario: alto, destra, basso, sinistra. Dopo basso, continuando la rotazione oraria, la freccia punta a sinistra.",
     "tags": [
       "rotazioni",
       "sequenze",
       "ragionamento_astratto"
     ],
-    "difficolta": 3
+    "difficolta": 3,
+    "distrattore_forte": "alto",
+    "motivo_distrattore_forte": "È vicino perché appartiene allo stesso ciclo di direzioni, ma è sbagliato perché alto arriva dopo un ulteriore passaggio, non subito dopo basso."
   }
 ]

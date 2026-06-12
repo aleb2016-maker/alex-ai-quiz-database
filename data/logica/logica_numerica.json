@@ -5,11 +5,22 @@
     "sottocategoria": "logica_numerica",
     "livello": "facile",
     "domanda": "Trova il numero mancante: 4, 7, 10, 13, ?",
-    "opzioni": ["15", "16", "17", "19"],
+    "opzioni": [
+      "16",
+      "15",
+      "17",
+      "19"
+    ],
     "risposta_corretta": "16",
     "spiegazione": "La sequenza aumenta sempre di 3: 4, 7, 10, 13, 16. Per questo il numero mancante è 16.",
-    "tags": ["sequenze", "numeri", "logica"],
-    "difficolta": 1
+    "tags": [
+      "sequenze",
+      "numeri",
+      "logica"
+    ],
+    "difficolta": 1,
+    "distrattore_forte": "15",
+    "motivo_distrattore_forte": "È vicino perché è molto vicino al valore corretto, ma sbaglia la sequenza: si aggiunge sempre 3, quindi dopo 13 viene 16."
   },
   {
     "id": "LOG-NUM-INT-0002",
@@ -17,11 +28,22 @@
     "sottocategoria": "logica_numerica",
     "livello": "intermedio",
     "domanda": "Completa la serie: 2, 9, 4, 12, 6, 15, ?",
-    "opzioni": ["8", "9", "16", "18"],
+    "opzioni": [
+      "8",
+      "18",
+      "9",
+      "16"
+    ],
     "risposta_corretta": "8",
-    "spiegazione": "La serie alterna due sequenze. Nelle posizioni dispari ci sono 2, 4, 6, quindi il numero successivo è 8. Nelle posizioni pari ci sono 9, 12, 15, che aumentano di 3.",
-    "tags": ["sequenze alternate", "logica_numerica", "ragionamento"],
-    "difficolta": 2
+    "spiegazione": "La serie alterna due sequenze. Nelle posizioni dispari ci sono 2, 4, 6, quindi il numero successivo è 8. Nelle posizioni pari ci sono 9, 12, 15, che aumentano di 3: 18 sarebbe il prossimo valore della sequenza pari, ma non è il valore richiesto in questa posizione.",
+    "tags": [
+      "sequenze alternate",
+      "logica_numerica",
+      "ragionamento"
+    ],
+    "difficolta": 2,
+    "distrattore_forte": "18",
+    "motivo_distrattore_forte": "È vicino perché continua correttamente la sottosequenza 9, 12, 15 aggiungendo 3, ma è sbagliato perché il prossimo posto della serie appartiene alla sottosequenza dispari 2, 4, 6, quindi deve essere 8."
   },
   {
     "id": "LOG-NUM-AV-0003",
@@ -29,10 +51,21 @@
     "sottocategoria": "logica_numerica",
     "livello": "avanzato",
     "domanda": "Completa la sequenza: 3, 7, 14, 18, 36, 40, ?",
-    "opzioni": ["44", "72", "76", "80"],
+    "opzioni": [
+      "80",
+      "44",
+      "72",
+      "76"
+    ],
     "risposta_corretta": "80",
     "spiegazione": "La sequenza alterna due operazioni: prima si aggiunge 4, poi si moltiplica per 2. Infatti 3 + 4 = 7, 7 × 2 = 14, 14 + 4 = 18, 18 × 2 = 36, 36 + 4 = 40. Il passo successivo è 40 × 2 = 80.",
-    "tags": ["sequenze", "operazioni alternate", "logica_numerica"],
-    "difficolta": 3
+    "tags": [
+      "sequenze",
+      "operazioni alternate",
+      "logica_numerica"
+    ],
+    "difficolta": 3,
+    "distrattore_forte": "44",
+    "motivo_distrattore_forte": "È vicino perché continua con +4, una regola presente nella sequenza, ma sbaglia perché la sequenza alterna +4 e ×2: dopo 40 bisogna fare ×2."
   }
 ]

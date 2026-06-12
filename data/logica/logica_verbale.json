@@ -12,13 +12,15 @@
       "GF"
     ],
     "risposta_corretta": "FE",
-    "spiegazione": "In ogni coppia le due lettere vengono invertite: AB diventa BA, CD diventa DC, quindi EF diventa FE.",
+    "spiegazione": "In ogni coppia le due lettere vengono invertite: AB diventa BA, CD diventa DC. Seguendo la stessa regola, EF diventa FE.",
     "tags": [
       "lettere",
       "sequenze",
       "logica_verbale"
     ],
-    "difficolta": 1
+    "difficolta": 1,
+    "distrattore_forte": "EF",
+    "motivo_distrattore_forte": "È vicino perché contiene le stesse due lettere della coppia di partenza, ma è sbagliato perché non le inverte."
   },
   {
     "id": "LOG-VER-INT-0002",
@@ -33,13 +35,15 @@
       "disegnare"
     ],
     "risposta_corretta": "tagliare",
-    "spiegazione": "La relazione è tra uno strumento e la sua funzione principale. La penna serve principalmente per scrivere; le forbici servono principalmente per tagliare. Incollare, misurare e disegnare sono azioni possibili con altri strumenti, ma non indicano la funzione principale delle forbici.",
+    "spiegazione": "La relazione è tra uno strumento e la sua funzione principale. La penna serve principalmente per scrivere; le forbici servono principalmente per tagliare.",
     "tags": [
       "analogie",
       "strumenti",
       "logica_verbale"
     ],
-    "difficolta": 2
+    "difficolta": 2,
+    "distrattore_forte": "incollare",
+    "motivo_distrattore_forte": "È vicino perché è un'azione manuale spesso collegata a carta, forbici e lavori pratici, ma è sbagliato perché la funzione principale delle forbici è tagliare, non incollare."
   },
   {
     "id": "LOG-VER-AV-0003",
@@ -54,12 +58,14 @@
       "causa → conseguenza"
     ],
     "risposta_corretta": "indizio → ipotesi",
-    "spiegazione": "Un sintomo è un segnale che aiuta a formulare una diagnosi, ma non coincide con la diagnosi. Allo stesso modo, un indizio è un elemento che aiuta a formulare un'ipotesi, ma non coincide con una conclusione certa. Le altre coppie sono relazioni logiche plausibili, ma non mantengono esattamente lo stesso rapporto di segnale interpretato.",
+    "spiegazione": "Un sintomo è un segnale che aiuta a formulare una diagnosi, ma non coincide con la diagnosi. Allo stesso modo, un indizio aiuta a formulare un'ipotesi, ma non coincide con una conclusione certa.",
     "tags": [
       "analogie",
       "relazioni_logiche",
       "logica_verbale"
     ],
-    "difficolta": 3
+    "difficolta": 3,
+    "distrattore_forte": "prova → verdetto",
+    "motivo_distrattore_forte": "È vicino perché collega un elemento osservato a una conclusione, ma è sbagliato perché prova e verdetto indicano un rapporto più forte e conclusivo rispetto a sintomo e diagnosi."
   }
 ]

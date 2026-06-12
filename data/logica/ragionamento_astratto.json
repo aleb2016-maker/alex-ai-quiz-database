@@ -7,14 +7,20 @@
     "domanda": "In una sequenza le forme seguono questo ordine: cerchio, quadrato, cerchio, quadrato. Quale forma viene dopo?",
     "opzioni": [
       "Cerchio",
-      "Triangolo",
       "Quadrato",
+      "Triangolo",
       "Rettangolo"
     ],
     "risposta_corretta": "Cerchio",
-    "spiegazione": "La sequenza alterna sempre cerchio e quadrato. Dopo il quadrato torna il cerchio.",
-    "tags": ["pattern", "alternanza", "ragionamento astratto"],
-    "difficolta": 1
+    "spiegazione": "La sequenza alterna sempre cerchio e quadrato: cerchio, quadrato, cerchio, quadrato. Dopo il quadrato torna quindi il cerchio.",
+    "tags": [
+      "pattern",
+      "alternanza",
+      "ragionamento astratto"
+    ],
+    "difficolta": 1,
+    "distrattore_forte": "Quadrato",
+    "motivo_distrattore_forte": "È vicino perché è l'altra forma presente nella sequenza, ma è sbagliato perché ripeterebbe il quadrato invece di rispettare l'alternanza."
   },
   {
     "id": "LOG-AST-INT-0002",
@@ -29,20 +35,38 @@
       "H"
     ],
     "risposta_corretta": "F",
-    "spiegazione": "Ogni lettera viene spostata avanti di due posizioni nell'alfabeto. D diventa F.",
-    "tags": ["pattern astratto", "alfabeto", "trasformazioni"],
-    "difficolta": 2
+    "spiegazione": "Ogni lettera viene spostata avanti di due posizioni nell'alfabeto: A diventa C, B diventa D, C diventa E. Seguendo la stessa regola, D diventa F.",
+    "tags": [
+      "pattern astratto",
+      "alfabeto",
+      "trasformazioni"
+    ],
+    "difficolta": 2,
+    "distrattore_forte": "E",
+    "motivo_distrattore_forte": "È vicino perché è la lettera successiva a D, ma è sbagliato perché la regola non avanza di una posizione: avanza di due."
   },
   {
-  "id": "LOG-AST-AV-0003",
-  "categoria": "logica",
-  "sottocategoria": "ragionamento_astratto",
-  "livello": "avanzato",
-  "domanda": "Osserva le trasformazioni: A3C → B6D, D4F → E8G, H5J → ?",
-  "opzioni": ["I10K", "I8K", "J10K", "I10J"],
-  "risposta_corretta": "I10K",
-  "spiegazione": "Nelle trasformazioni la prima e l'ultima lettera avanzano di una posizione nell'alfabeto, mentre il numero viene raddoppiato. Quindi H diventa I, 5 diventa 10 e J diventa K: il risultato è I10K.",
-  "tags": ["trasformazioni", "lettere", "numeri", "ragionamento_astratto"],
-  "difficolta": 3
-}
+    "id": "LOG-AST-AV-0003",
+    "categoria": "logica",
+    "sottocategoria": "ragionamento_astratto",
+    "livello": "avanzato",
+    "domanda": "Osserva le trasformazioni: A3C → B6D, D4F → E8G, H5J → ?",
+    "opzioni": [
+      "I10K",
+      "I8K",
+      "J10K",
+      "I10J"
+    ],
+    "risposta_corretta": "I10K",
+    "spiegazione": "Nelle trasformazioni la prima e l'ultima lettera avanzano di una posizione nell'alfabeto, mentre il numero viene raddoppiato. Quindi H diventa I, 5 diventa 10 e J diventa K.",
+    "tags": [
+      "trasformazioni",
+      "lettere",
+      "numeri",
+      "ragionamento_astratto"
+    ],
+    "difficolta": 3,
+    "distrattore_forte": "I8K",
+    "motivo_distrattore_forte": "È vicino perché aggiorna correttamente le due lettere esterne, ma è sbagliato perché il numero deve essere raddoppiato: 5 diventa 10, non 8."
+  }
 ]

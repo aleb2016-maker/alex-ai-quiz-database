@@ -18,7 +18,9 @@
       "modelli linguistici",
       "testo"
     ],
-    "difficolta": 1
+    "difficolta": 1,
+    "distrattore_forte": "Classificare testi in categorie fisse senza produrre nuove frasi",
+    "motivo_distrattore_forte": "È vicino perché anche la classificazione può essere svolta da modelli AI sul testo, ma è troppo limitato: un LLM non si limita a classificare, genera anche linguaggio naturale."
   },
   {
     "id": "AI-INT-0002",
@@ -39,7 +41,9 @@
       "contesto",
       "istruzioni"
     ],
-    "difficolta": 2
+    "difficolta": 2,
+    "distrattore_forte": "Perché modifica i parametri interni del modello durante la risposta",
+    "motivo_distrattore_forte": "È vicino perché collega prompt e comportamento del modello, ma è sbagliato perché il prompt guida il contesto della risposta senza modificare i parametri interni."
   },
   {
     "id": "AI-AV-0003",
@@ -61,6 +65,8 @@
       "database",
       "documenti"
     ],
-    "difficolta": 3
+    "difficolta": 3,
+    "distrattore_forte": "A riaddestrare il modello sui documenti recuperati prima di ogni risposta",
+    "motivo_distrattore_forte": "È vicino perché parla di documenti recuperati e modello, ma è sbagliato perché un sistema RAG usa i documenti come contesto, non riaddestra il modello a ogni domanda."
   }
 ]

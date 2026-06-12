@@ -7,18 +7,20 @@
     "domanda": "Tutti i treni della linea A arrivano in stazione. Il treno 25 è della linea A. Cosa si può concludere?",
     "opzioni": [
       "Il treno 25 arriva in stazione",
+      "Il treno 25 arriva in stazione solo se è in orario",
       "Tutti i treni che arrivano in stazione sono della linea A",
-      "Solo il treno 25 della linea A arriva in stazione",
-      "Il treno 25 arriva in stazione solo se è in orario"
+      "Solo il treno 25 della linea A arriva in stazione"
     ],
     "risposta_corretta": "Il treno 25 arriva in stazione",
-    "spiegazione": "Se tutti i treni della linea A arrivano in stazione e il treno 25 è della linea A, allora il treno 25 arriva in stazione. Non possiamo però concludere che tutti i treni che arrivano siano della linea A, né che solo il treno 25 arrivi, né aggiungere condizioni non presenti come l'orario.",
+    "spiegazione": "Se tutti i treni della linea A arrivano in stazione e il treno 25 è della linea A, allora il treno 25 arriva in stazione. Non possiamo aggiungere condizioni non presenti, come l'orario.",
     "tags": [
       "deduzione",
       "sillogismi",
       "ragionamento critico"
     ],
-    "difficolta": 1
+    "difficolta": 1,
+    "distrattore_forte": "Il treno 25 arriva in stazione solo se è in orario",
+    "motivo_distrattore_forte": "È vicino perché parla dello stesso treno e dell'arrivo in stazione, ma è sbagliato perché aggiunge la condizione dell'orario, che non compare nelle premesse."
   },
   {
     "id": "LOG-CRI-INT-0002",
@@ -28,18 +30,20 @@
     "domanda": "Se l'affermazione 'Se piove, Marco prende l'ombrello' è vera e oggi Marco non prende l'ombrello, cosa si può dedurre con certezza?",
     "opzioni": [
       "Oggi non piove",
+      "Non si può dedurre nulla sul tempo",
       "Oggi piove sicuramente",
-      "Marco potrebbe non prendere l'ombrello anche se piove",
-      "Non si può dedurre nulla sul tempo"
+      "Marco potrebbe non prendere l'ombrello anche se piove"
     ],
     "risposta_corretta": "Oggi non piove",
-    "spiegazione": "La regola dice: se piove, Marco prende l'ombrello. Se oggi Marco non prende l'ombrello, allora la condizione 'piove' non si è verificata. Questa è una deduzione per contrapposizione: se P implica Q, allora non Q implica non P.",
+    "spiegazione": "La regola dice: se piove, Marco prende l'ombrello. Se oggi Marco non prende l'ombrello, allora la condizione 'piove' non si è verificata. È una deduzione per contrapposizione: se P implica Q, allora non Q implica non P.",
     "tags": [
       "condizioni",
       "deduzione",
       "logica proposizionale"
     ],
-    "difficolta": 2
+    "difficolta": 2,
+    "distrattore_forte": "Non si può dedurre nulla sul tempo",
+    "motivo_distrattore_forte": "È vicino perché sembra prudente non aggiungere informazioni, ma è sbagliato: con questa premessa logica possiamo dedurre per contrapposizione che oggi non piove."
   },
   {
     "id": "LOG-CRI-AV-0003",
@@ -60,6 +64,8 @@
       "errore logico",
       "condizione sufficiente"
     ],
-    "difficolta": 3
+    "difficolta": 3,
+    "distrattore_forte": "Il prodotto è sicuramente scontato perché si trova nello scaffale rosso",
+    "motivo_distrattore_forte": "È molto vicino perché usa proprio l'informazione dello scaffale rosso, ma è sbagliato perché confonde una condizione necessaria con una condizione sufficiente: sappiamo che gli scontati stanno nello scaffale rosso, non che tutto ciò che sta nello scaffale rosso sia scontato."
   }
 ]

@@ -21,8 +21,15 @@
     ],
     "risposta_corretta": "C",
     "spiegazione": "La risposta corretta è C perché la sequenza alterna cerchio e quadrato. Dopo il quadrato deve tornare il cerchio.",
-    "tags": ["logica visiva", "pattern", "forme", "sequenze"],
-    "difficolta": 1
+    "tags": [
+      "logica visiva",
+      "pattern",
+      "forme",
+      "sequenze"
+    ],
+    "difficolta": 1,
+    "distrattore_forte": "A",
+    "motivo_distrattore_forte": "È vicino perché è una delle opzioni visive proposte, ma non rispetta l'alternanza corretta cerchio-quadrato: dopo il quadrato deve tornare il cerchio indicato dall'opzione C."
   },
   {
     "id": "LOG-VIS-INT-0002",
@@ -46,8 +53,15 @@
     ],
     "risposta_corretta": "B",
     "spiegazione": "La risposta corretta è B perché la figura ruota sempre di 90 gradi in senso orario. L'opzione B mantiene la stessa regola.",
-    "tags": ["logica visiva", "rotazioni", "trasformazioni", "figure"],
-    "difficolta": 2
+    "tags": [
+      "logica visiva",
+      "rotazioni",
+      "trasformazioni",
+      "figure"
+    ],
+    "difficolta": 2,
+    "distrattore_forte": "A",
+    "motivo_distrattore_forte": "È vicino perché rappresenta una possibile rotazione della figura, ma non continua correttamente la rotazione costante di 90 gradi in senso orario indicata dalla sequenza."
   },
   {
     "id": "LOG-VIS-AV-0003",
@@ -71,7 +85,14 @@
     ],
     "risposta_corretta": "D",
     "spiegazione": "La risposta corretta è D perché nella matrice cambiano insieme due regole: la forma si alterna per riga e il riempimento aumenta per colonna.",
-    "tags": ["logica visiva", "matrici", "pattern", "ragionamento astratto"],
-    "difficolta": 3
+    "tags": [
+      "logica visiva",
+      "matrici",
+      "pattern",
+      "ragionamento astratto"
+    ],
+    "difficolta": 3,
+    "distrattore_forte": "C",
+    "motivo_distrattore_forte": "È vicino perché rispetta una parte della logica visiva della matrice, ma non combina correttamente entrambe le regole: alternanza della forma per riga e aumento del riempimento per colonna."
   }
 ]
