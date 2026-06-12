@@ -839,6 +839,7 @@ function lanciaCoriandoliConDissolvenza(versioneGrande = false) {
 
 function preparaMigliorieDemo() {
     creaIntroDemo();
+    creaCardsProgettoIts();
     valorizzaLogicaVisivaNelMenu();
     creaNotaCategoriaDemo();
     creaReportProfessionaleDemo();
@@ -1108,4 +1109,97 @@ function nomeCategoriaReportDemo(categoria) {
     return String(categoria || "")
         .replaceAll("_", " ")
         .replace(/\b\w/g, lettera => lettera.toUpperCase());
+}
+
+
+/* ===== CARD PROGETTO ITS ===== */
+
+function creaCardsProgettoIts() {
+    if (!elementi.setupBox) {
+        return;
+    }
+
+    if (document.getElementById("itsProjectCards")) {
+        return;
+    }
+
+    const intro = document.getElementById("demoIntro");
+
+    const sezione = document.createElement("section");
+    sezione.id = "itsProjectCards";
+    sezione.className = "its-project-cards";
+
+    sezione.innerHTML = `
+        <h3>Progetto in sintesi</h3>
+
+        <div class="its-card-grid">
+            <article class="its-card">
+                <div class="its-card-icon">🎯</div>
+                <h4>Demo e motore riutilizzabile</h4>
+                <p>
+                    Non è solo una demo online per studiare: è una base
+                    riutilizzabile per creare test interattivi in qualsiasi
+                    ambito, con domande strutturate, livelli di difficoltà
+                    e spiegazioni finali.
+                </p>
+            </article>
+
+            <article class="its-card">
+                <div class="its-card-icon">📚</div>
+                <h4>Preparazione personale</h4>
+                <p>
+                    Può essere usata come supporto per test di ingresso,
+                    esercitazioni didattiche, studio personale e allenamento
+                    per concorsi.
+                </p>
+            </article>
+
+            <article class="its-card">
+                <div class="its-card-icon">⚡</div>
+                <h4>Feedback immediato</h4>
+                <p>
+                    Il quiz mostra subito se la risposta è corretta e alla fine
+                    genera un report con percentuale, punti forti e aree da
+                    migliorare.
+                </p>
+            </article>
+
+            <article class="its-card">
+                <div class="its-card-icon">✅</div>
+                <h4>Grande controllo qualità</h4>
+                <p>
+                    Script Python verificano struttura JSON, duplicati,
+                    domande simili, immagini mancanti, distrattori forti,
+                    regole visuali e completezza delle spiegazioni.
+                </p>
+            </article>
+
+            <article class="its-card">
+                <div class="its-card-icon">🧩</div>
+                <h4>Logica visiva SVG</h4>
+                <p>
+                    Include esercizi visuali con immagini SVG e controlli
+                    specifici per evitare domande ambigue, regole anticipate
+                    o spiegazioni incomplete.
+                </p>
+            </article>
+
+            <article class="its-card">
+                <div class="its-card-icon">💻</div>
+                <h4>Base per nuovi quiz</h4>
+                <p>
+                    Lo stesso motore può essere esteso per creare quiz,
+                    simulazioni, test di ingresso, esercitazioni aziendali
+                    o percorsi formativi su materie e settori diversi.
+                </p>
+            </article>
+        </div>
+    `;
+
+    if (intro) {
+        intro.insertAdjacentElement("afterend", sezione);
+        return;
+    }
+
+    elementi.setupBox.insertBefore(sezione, elementi.setupBox.firstChild);
 }

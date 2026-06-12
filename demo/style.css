@@ -617,3 +617,61 @@ select {
         padding: 18px;
     }
 }
+
+
+/* ===== CARD PROGETTO ITS ===== */
+
+.its-project-cards {
+    margin-top: 22px;
+}
+
+.its-project-cards h3 {
+    margin: 0 0 14px;
+    font-size: 1.15rem;
+    color: #0f172a;
+}
+
+.its-card-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.its-card {
+    padding: 16px;
+    border-radius: 18px;
+    background: #ffffff;
+    border: 1px solid rgba(148, 163, 184, 0.35);
+    box-shadow: 0 14px 34px rgba(15, 23, 42, 0.07);
+}
+
+.its-card-icon {
+    width: 38px;
+    height: 38px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 14px;
+    background: #eef2ff;
+    margin-bottom: 10px;
+    font-size: 1.25rem;
+}
+
+.its-card h4 {
+    margin: 0 0 8px;
+    color: #0f172a;
+    font-size: 1rem;
+}
+
+.its-card p {
+    margin: 0;
+    color: #475569;
+    line-height: 1.55;
+    font-size: 0.92rem;
+}
+
+@media (max-width: 720px) {
+    .its-card-grid {
+        grid-template-columns: 1fr;
+    }
+}
