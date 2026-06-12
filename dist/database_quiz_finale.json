@@ -4100,7 +4100,7 @@
       "assets/logica_visiva/log_vis_fac_0001_D.png"
     ],
     "risposta_corretta": "C",
-    "spiegazione": "La risposta corretta è C perché la sequenza alterna cerchio e quadrato. Dopo il quadrato deve tornare il cerchio.",
+    "spiegazione": "La risposta corretta è C perché la sequenza alterna cerchio e quadrato mantenendo lo stesso ordine visivo. Dopo il quadrato deve tornare il cerchio, quindi l'opzione corretta è quella che riprende la forma attesa senza cambiare la logica della sequenza.",
     "tags": [
       "logica",
       "logica_visiva",
@@ -4229,7 +4229,7 @@
       "D"
     ],
     "risposta_corretta": "D",
-    "spiegazione": "La sequenza segue un cambiamento regolare della direzione. La risposta corretta è quella che continua il percorso visivo nello stesso modo.",
+    "spiegazione": "La sequenza segue un cambiamento regolare della direzione e mantiene la stessa struttura con i punti nella figura. La risposta corretta è quella che continua il percorso visivo nello stesso modo, senza cambiare posizione dei punti o verso della trasformazione.",
     "immagine": "assets/logica_visiva/LOG-VIS-FAC-0005_domanda.svg",
     "immagine_domanda": "assets/logica_visiva/LOG-VIS-FAC-0005_domanda.svg",
     "immagini_opzioni": [
@@ -4263,7 +4263,7 @@
       "D"
     ],
     "risposta_corretta": "C",
-    "spiegazione": "Il numero di punti aumenta di uno a ogni passaggio: 1, 2, 3, quindi 4.",
+    "spiegazione": "Il numero di punti aumenta di uno a ogni passaggio: 1, 2, 3, quindi 4. Anche il colore deve restare coerente con il modello mostrato. Per questo la risposta corretta è la figura con quattro punti e con il colore previsto dalla sequenza.",
     "immagine": "assets/logica_visiva/LOG-VIS-FAC-0006_domanda.svg",
     "immagine_domanda": "assets/logica_visiva/LOG-VIS-FAC-0006_domanda.svg",
     "immagini_opzioni": [
@@ -4297,7 +4297,7 @@
       "D"
     ],
     "risposta_corretta": "B",
-    "spiegazione": "La forma resta un esagono, mentre il colore alterna oro e viola. Dopo oro, viola, oro, deve venire viola.",
+    "spiegazione": "La forma resta sempre un esagono, mentre il colore alterna oro e viola. La presenza dei punti serve a mantenere coerente la figura con il modello visivo. Dopo oro, viola, oro, deve venire viola, quindi la risposta corretta è B.",
     "immagine": "assets/logica_visiva/LOG-VIS-FAC-0007_domanda.svg",
     "immagine_domanda": "assets/logica_visiva/LOG-VIS-FAC-0007_domanda.svg",
     "immagini_opzioni": [
@@ -4331,7 +4331,7 @@
       "D"
     ],
     "risposta_corretta": "A",
-    "spiegazione": "Ogni riga mantiene la stessa forma esterna. Nella terza riga ci sono triangoli. La terza colonna contiene tre punti, quindi serve un triangolo con tre punti.",
+    "spiegazione": "Ogni riga mantiene la stessa forma esterna. Nella terza riga ci sono triangoli. La terza colonna contiene tre punti e il colore deve restare coerente con la griglia. Quindi serve un triangolo con tre punti e con il colore previsto dalla posizione finale.",
     "immagine": "assets/logica_visiva/LOG-VIS-FAC-0008_domanda.svg",
     "immagine_domanda": "assets/logica_visiva/LOG-VIS-FAC-0008_domanda.svg",
     "immagini_opzioni": [
@@ -4433,7 +4433,7 @@
       "D"
     ],
     "risposta_corretta": "A",
-    "spiegazione": "Da sinistra a destra la diagonale cambia verso e i punti aumentano da uno a due. La stessa trasformazione va applicata anche al cerchio rosso.",
+    "spiegazione": "Da sinistra a destra la diagonale cambia verso e i punti aumentano da uno a due. La stessa trasformazione deve essere applicata anche al cerchio rosso: cambiare il verso della linea diagonale e mantenere coerente l'aumento dei punti. Quindi l'opzione corretta è A.",
     "immagine": "assets/logica_visiva/LOG-VIS-INT-0006_domanda.svg",
     "immagine_domanda": "assets/logica_visiva/LOG-VIS-INT-0006_domanda.svg",
     "immagini_opzioni": [
@@ -4501,7 +4501,7 @@
       "D"
     ],
     "risposta_corretta": "D",
-    "spiegazione": "La figura richiesta si ottiene con un ribaltamento speculare. La risposta corretta conserva la stessa struttura, ma nella posizione riflessa giusta.",
+    "spiegazione": "La figura richiesta si ottiene con un ribaltamento speculare. La risposta corretta conserva la stessa struttura, comprese linee e segmenti interni, ma li porta nella posizione riflessa giusta. Quindi l'opzione corretta è D.",
     "immagine": "assets/logica_visiva/LOG-VIS-INT-0008_domanda.svg",
     "immagine_domanda": "assets/logica_visiva/LOG-VIS-INT-0008_domanda.svg",
     "immagini_opzioni": [
@@ -4569,7 +4569,7 @@
       "D"
     ],
     "risposta_corretta": "C",
-    "spiegazione": "Scendendo nelle righe aumenta il numero di contorni esterni. Le colonne cambiano il riempimento interno: pieno, righe, puntini. Serve quindi un esagono con tre contorni e puntini.",
+    "spiegazione": "Scendendo nelle righe aumenta il numero di contorni esterni. Le colonne cambiano il riempimento interno: pieno, righe, puntini. I puntini e le linee non sono dettagli decorativi, ma indicano la regola della colonna. Quindi serve un esagono con tre contorni e riempimento a puntini.",
     "immagine": "assets/logica_visiva/LOG-VIS-AV-0005_domanda.svg",
     "immagine_domanda": "assets/logica_visiva/LOG-VIS-AV-0005_domanda.svg",
     "immagini_opzioni": [
@@ -4637,7 +4637,7 @@
       "D"
     ],
     "risposta_corretta": "A",
-    "spiegazione": "Nella terza colonna viene sommato il numero di elementi delle prime due colonne. Nell'ultima riga: 1 stella + 3 stelle = 4 stelle. La forma resta triangolo verde.",
+    "spiegazione": "La risposta corretta è A perché nella terza colonna viene sommato il numero di elementi delle prime due colonne. Nell'ultima riga: 1 stella + 3 stelle = 4 stelle. La forma esterna resta un triangolo verde e gli elementi interni devono rispettare la quantità ottenuta dalla somma.",
     "immagine": "assets/logica_visiva/LOG-VIS-AV-0007_domanda.svg",
     "immagine_domanda": "assets/logica_visiva/LOG-VIS-AV-0007_domanda.svg",
     "immagini_opzioni": [
@@ -4671,7 +4671,7 @@
       "D"
     ],
     "risposta_corretta": "D",
-    "spiegazione": "Le forme ruotano ciclicamente tra cerchio, quadrato e triangolo. I colori alternano blu e rosso, mentre i segmenti aumentano da sinistra a destra. La casella mancante è un quadrato blu con tre barre diagonali.",
+    "spiegazione": "Le forme ruotano ciclicamente tra cerchio, quadrato e triangolo. I colori alternano blu e rosso, mentre i segmenti aumentano da sinistra a destra. Quindi la casella mancante deve rispettare insieme forma, colore e numero di segmenti: un quadrato blu con tre barre diagonali.",
     "immagine": "assets/logica_visiva/LOG-VIS-AV-0008_domanda.svg",
     "immagine_domanda": "assets/logica_visiva/LOG-VIS-AV-0008_domanda.svg",
     "immagini_opzioni": [
