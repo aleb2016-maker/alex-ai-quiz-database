@@ -2,12 +2,16 @@
 
 ## Demo online
 
-La demo interattiva del progetto è disponibile qui:
+La demo permette di provare il database direttamente dal browser e può essere utilizzata come supporto per la preparazione personale, test di ingresso, esercitazioni didattiche e allenamento per concorsi.
 
-[Apri la demo web](https://aleb2016-maker.github.io/alex-ai-quiz-database/demo/)
+Funzioni principali:
 
-La demo permette di provare il database quiz direttamente dal browser, con domande casuali, categorie, livelli, spiegazioni, immagini di logica visiva ed effetto coriandoli quando la risposta è corretta.
-
+- scelta categoria
+- scelta livello
+- test da più domande
+- feedback immediato
+- spiegazione dopo la risposta
+- supporto a domande visuali di logica
 ## Demo web interattiva
 
 La demo grafica permette di provare il progetto senza usare il terminale.
