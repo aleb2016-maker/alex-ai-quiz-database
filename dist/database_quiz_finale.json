@@ -4527,7 +4527,7 @@
     "sottocategoria": "logica_visiva",
     "livello": "avanzato",
     "tipo": "visiva",
-    "domanda": "Nella griglia cambiano insieme forma esterna, colore e linee interne. Quale casella completa lo schema?",
+    "domanda": "Osserva la matrice visiva. Quale casella completa correttamente lo schema?",
     "opzioni": [
       "A",
       "B",
@@ -4535,7 +4535,7 @@
       "D"
     ],
     "risposta_corretta": "A",
-    "spiegazione": "Le righe determinano la forma: cerchio, quadrato, triangolo. Le colonne determinano il numero di linee: una, due, tre. Il colore alterna blu, rosso, blu. Serve quindi un triangolo blu con tre linee.",
+    "spiegazione": "Le righe determinano la forma: cerchio, quadrato, triangolo. Le colonne determinano il numero di linee interne: una, due, tre. Il colore alterna blu, rosso, blu. Serve quindi un triangolo blu con tre linee interne.",
     "immagine": "assets/logica_visiva/LOG-VIS-AV-0004_domanda.svg",
     "immagine_domanda": "assets/logica_visiva/LOG-VIS-AV-0004_domanda.svg",
     "immagini_opzioni": {
@@ -4552,8 +4552,8 @@
       "avanzato",
       "visiva"
     ],
-    "distrattore_forte": "C",
-    "motivo_distrattore_forte": "C mantiene forma e colore corretti, ma sbaglia il numero di linee interne."
+    "distrattore_forte": "B",
+    "motivo_distrattore_forte": "B mantiene forma e numero di linee interne corretti, ma sbaglia il colore."
   },
   {
     "id": "LOG-VIS-AV-0005",
