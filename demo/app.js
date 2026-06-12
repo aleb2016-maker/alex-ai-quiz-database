@@ -146,7 +146,8 @@ function popolaFiltri() {
         "informatica",
         "matematica",
         "inglese",
-        "logica"
+        "logica",
+        "logica_visiva",
     ];
 
     const livelliOrdinati = [
@@ -166,15 +167,11 @@ function popolaFiltri() {
 
     categorieOrdinate.forEach(categoria => {
         const esisteCategoria = databaseQuiz.some(domanda => {
-            return domanda.categoria === categoria;
+            return domandaCorrispondeCategoria(domanda, categoria);
         });
 
         if (esisteCategoria) {
-            aggiungiOpzione(
-                elementi.categorySelect,
-                categoria,
-                formattaTesto(categoria)
-            );
+            aggiungiOpzione( elementi.categorySelect, categoria, formattaCategoriaFiltro(categoria) );
         }
     });
 
@@ -237,9 +234,7 @@ function ottieniDomandeFiltrate() {
     const livelloScelto = elementi.levelSelect.value;
 
     return databaseQuiz.filter(domanda => {
-        const categoriaOk =
-            categoriaScelta === "tutte" ||
-            domanda.categoria === categoriaScelta;
+        const categoriaOk = domandaCorrispondeCategoria(domanda, categoriaScelta);
 
         const livelloOk =
             livelloScelto === "tutti" ||
@@ -247,6 +242,33 @@ function ottieniDomandeFiltrate() {
 
         return categoriaOk && livelloOk;
     });
+}
+
+function domandaCorrispondeCategoria(domanda, categoriaScelta) {
+    if (categoriaScelta === "tutte") {
+        return true;
+    }
+
+    if (categoriaScelta === "logica_visiva") {
+        return domanda.sottocategoria === "logica_visiva";
+    }
+
+    if (categoriaScelta === "logica") {
+        return (
+            domanda.categoria === "logica" &&
+            domanda.sottocategoria !== "logica_visiva"
+        );
+    }
+
+    return domanda.categoria === categoriaScelta;
+}
+
+function formattaCategoriaFiltro(categoria) {
+    if (categoria === "logica_visiva") {
+        return "Logica Visiva";
+    }
+
+    return formattaTesto(categoria);
 }
 
 function ottieniNumeroDomandeRichiesto() {
@@ -360,9 +382,13 @@ function mostraDomandaCorrente() {
         L'ID interno della domanda rimane nel database,
         ma non viene mostrato all'utente finale.
     */
+    const categoriaMeta =
+        domanda.sottocategoria === "logica_visiva"
+            ? "Logica Visiva"
+            : formattaTesto(domanda.categoria);
+
     elementi.questionMeta.textContent =
-        `${formattaTesto(domanda.categoria)} · ` +
-        `${formattaTesto(domanda.livello)}`;
+        `${categoriaMeta} · ${formattaTesto(domanda.livello)}`;
 
     const percentualeAvanzamento =
         (indiceDomandaCorrente / totaleDomande) * 100;
