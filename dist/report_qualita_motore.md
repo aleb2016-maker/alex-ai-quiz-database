@@ -16,10 +16,10 @@ Significato:
 
 ## Riepilogo
 
-Domande motore controllate: 120
+Domande motore controllate: 135
 ROSSO - da sistemare subito: 0
 GIALLO - da rafforzare: 0
-OK MOTORE: 120
+OK MOTORE: 135
 
 ---
 
@@ -141,6 +141,21 @@ Nessuna domanda gialla.
 - LOG-VIS-FAC-0001
 - LOG-VIS-INT-0002
 - LOG-VIS-AV-0003
+- LOG-VIS-FAC-0004
+- LOG-VIS-FAC-0005
+- LOG-VIS-FAC-0006
+- LOG-VIS-FAC-0007
+- LOG-VIS-FAC-0008
+- LOG-VIS-INT-0004
+- LOG-VIS-INT-0005
+- LOG-VIS-INT-0006
+- LOG-VIS-INT-0007
+- LOG-VIS-INT-0008
+- LOG-VIS-AV-0004
+- LOG-VIS-AV-0005
+- LOG-VIS-AV-0006
+- LOG-VIS-AV-0007
+- LOG-VIS-AV-0008
 - LOG-VER-FAC-0001
 - LOG-VER-INT-0002
 - LOG-VER-AV-0003

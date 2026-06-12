@@ -2,7 +2,7 @@
   {
     "id": "LOG-VIS-FAC-0001",
     "categoria": "logica",
-    "sottocategoria": "logica visiva",
+    "sottocategoria": "logica_visiva",
     "tipo_domanda": "immagine",
     "livello": "facile",
     "domanda": "Osserva la sequenza di forme e scegli quale figura completa correttamente il pattern.",
@@ -22,19 +22,21 @@
     "risposta_corretta": "C",
     "spiegazione": "La risposta corretta è C perché la sequenza alterna cerchio e quadrato. Dopo il quadrato deve tornare il cerchio.",
     "tags": [
-      "logica visiva",
-      "pattern",
-      "forme",
-      "sequenze"
+      "logica",
+      "logica_visiva",
+      "visuale",
+      "facile",
+      "visiva"
     ],
     "difficolta": 1,
     "distrattore_forte": "A",
-    "motivo_distrattore_forte": "È vicino perché è una delle opzioni visive proposte, ma non rispetta l'alternanza corretta cerchio-quadrato: dopo il quadrato deve tornare il cerchio indicato dall'opzione C."
+    "motivo_distrattore_forte": "È vicino perché è una delle opzioni visive proposte, ma non rispetta l'alternanza corretta cerchio-quadrato: dopo il quadrato deve tornare il cerchio indicato dall'opzione C.",
+    "tipo": "visiva"
   },
   {
     "id": "LOG-VIS-INT-0002",
     "categoria": "logica",
-    "sottocategoria": "logica visiva",
+    "sottocategoria": "logica_visiva",
     "tipo_domanda": "immagine",
     "livello": "intermedio",
     "domanda": "Osserva la rotazione della figura e scegli quale opzione continua correttamente la trasformazione.",
@@ -54,19 +56,21 @@
     "risposta_corretta": "B",
     "spiegazione": "La risposta corretta è B perché la figura ruota sempre di 90 gradi in senso orario. L'opzione B mantiene la stessa regola.",
     "tags": [
-      "logica visiva",
-      "rotazioni",
-      "trasformazioni",
-      "figure"
+      "logica",
+      "logica_visiva",
+      "visuale",
+      "intermedio",
+      "visiva"
     ],
     "difficolta": 2,
     "distrattore_forte": "A",
-    "motivo_distrattore_forte": "È vicino perché rappresenta una possibile rotazione della figura, ma non continua correttamente la rotazione costante di 90 gradi in senso orario indicata dalla sequenza."
+    "motivo_distrattore_forte": "È vicino perché rappresenta una possibile rotazione della figura, ma non continua correttamente la rotazione costante di 90 gradi in senso orario indicata dalla sequenza.",
+    "tipo": "visiva"
   },
   {
     "id": "LOG-VIS-AV-0003",
     "categoria": "logica",
-    "sottocategoria": "logica visiva",
+    "sottocategoria": "logica_visiva",
     "tipo_domanda": "immagine",
     "livello": "avanzato",
     "domanda": "Osserva la matrice di figure e scegli quale opzione completa correttamente la casella mancante.",
@@ -86,14 +90,16 @@
     "risposta_corretta": "D",
     "spiegazione": "La risposta corretta è D perché nella matrice cambiano insieme due regole: la forma si alterna per riga e il riempimento aumenta per colonna.",
     "tags": [
-      "logica visiva",
-      "matrici",
-      "pattern",
-      "ragionamento astratto"
+      "logica",
+      "logica_visiva",
+      "visuale",
+      "avanzato",
+      "visiva"
     ],
     "difficolta": 3,
     "distrattore_forte": "C",
-    "motivo_distrattore_forte": "È vicino perché rispetta una parte della logica visiva della matrice, ma non combina correttamente entrambe le regole: alternanza della forma per riga e aumento del riempimento per colonna."
+    "motivo_distrattore_forte": "È vicino perché rispetta una parte della logica visiva della matrice, ma non combina correttamente entrambe le regole: alternanza della forma per riga e aumento del riempimento per colonna.",
+    "tipo": "visiva"
   },
   {
     "id": "LOG-VIS-FAC-0004",
@@ -101,7 +107,7 @@
     "sottocategoria": "logica_visiva",
     "livello": "facile",
     "tipo": "visiva",
-    "domanda": "Osserva la sequenza visiva. Quale figura completa correttamente il pattern?",
+    "domanda": "Guarda la serie alternata di forme e colori. Quale simbolo deve apparire nella casella vuota?",
     "opzioni": [
       "A",
       "B",
@@ -117,7 +123,17 @@
       "B": "assets/logica_visiva/LOG-VIS-FAC-0004_opzione_B.svg",
       "C": "assets/logica_visiva/LOG-VIS-FAC-0004_opzione_C.svg",
       "D": "assets/logica_visiva/LOG-VIS-FAC-0004_opzione_D.svg"
-    }
+    },
+    "difficolta": 1,
+    "tags": [
+      "logica",
+      "logica_visiva",
+      "visuale",
+      "facile",
+      "visiva"
+    ],
+    "distrattore_forte": "C",
+    "motivo_distrattore_forte": "C mantiene la stessa forma e lo stesso numero di punti, ma sbaglia il colore."
   },
   {
     "id": "LOG-VIS-FAC-0005",
@@ -141,7 +157,17 @@
       "B": "assets/logica_visiva/LOG-VIS-FAC-0005_opzione_B.svg",
       "C": "assets/logica_visiva/LOG-VIS-FAC-0005_opzione_C.svg",
       "D": "assets/logica_visiva/LOG-VIS-FAC-0005_opzione_D.svg"
-    }
+    },
+    "difficolta": 1,
+    "tags": [
+      "logica",
+      "logica_visiva",
+      "visuale",
+      "facile",
+      "visiva"
+    ],
+    "distrattore_forte": "C",
+    "motivo_distrattore_forte": "C è una freccia della stessa sequenza di rotazione, ma rappresenta il passaggio precedente."
   },
   {
     "id": "LOG-VIS-FAC-0006",
@@ -165,7 +191,17 @@
       "B": "assets/logica_visiva/LOG-VIS-FAC-0006_opzione_B.svg",
       "C": "assets/logica_visiva/LOG-VIS-FAC-0006_opzione_C.svg",
       "D": "assets/logica_visiva/LOG-VIS-FAC-0006_opzione_D.svg"
-    }
+    },
+    "difficolta": 1,
+    "tags": [
+      "logica",
+      "logica_visiva",
+      "visuale",
+      "facile",
+      "visiva"
+    ],
+    "distrattore_forte": "B",
+    "motivo_distrattore_forte": "B mantiene forma e quantità corretta di punti, ma cambia il colore."
   },
   {
     "id": "LOG-VIS-FAC-0007",
@@ -189,7 +225,17 @@
       "B": "assets/logica_visiva/LOG-VIS-FAC-0007_opzione_B.svg",
       "C": "assets/logica_visiva/LOG-VIS-FAC-0007_opzione_C.svg",
       "D": "assets/logica_visiva/LOG-VIS-FAC-0007_opzione_D.svg"
-    }
+    },
+    "difficolta": 1,
+    "tags": [
+      "logica",
+      "logica_visiva",
+      "visuale",
+      "facile",
+      "visiva"
+    ],
+    "distrattore_forte": "A",
+    "motivo_distrattore_forte": "A mantiene la stessa forma, ma sbaglia l'alternanza del colore."
   },
   {
     "id": "LOG-VIS-FAC-0008",
@@ -213,7 +259,17 @@
       "B": "assets/logica_visiva/LOG-VIS-FAC-0008_opzione_B.svg",
       "C": "assets/logica_visiva/LOG-VIS-FAC-0008_opzione_C.svg",
       "D": "assets/logica_visiva/LOG-VIS-FAC-0008_opzione_D.svg"
-    }
+    },
+    "difficolta": 1,
+    "tags": [
+      "logica",
+      "logica_visiva",
+      "visuale",
+      "facile",
+      "visiva"
+    ],
+    "distrattore_forte": "B",
+    "motivo_distrattore_forte": "B mantiene forma e colore corretti, ma sbaglia il numero di punti."
   },
   {
     "id": "LOG-VIS-INT-0004",
@@ -221,7 +277,7 @@
     "sottocategoria": "logica_visiva",
     "livello": "intermedio",
     "tipo": "visiva",
-    "domanda": "Osserva la sequenza. Quale figura continua correttamente il pattern?",
+    "domanda": "La figura esterna cresce e gli elementi interni aumentano. Quale opzione continua correttamente la progressione?",
     "opzioni": [
       "A",
       "B",
@@ -237,7 +293,17 @@
       "B": "assets/logica_visiva/LOG-VIS-INT-0004_opzione_B.svg",
       "C": "assets/logica_visiva/LOG-VIS-INT-0004_opzione_C.svg",
       "D": "assets/logica_visiva/LOG-VIS-INT-0004_opzione_D.svg"
-    }
+    },
+    "difficolta": 2,
+    "tags": [
+      "logica",
+      "logica_visiva",
+      "visuale",
+      "intermedio",
+      "visiva"
+    ],
+    "distrattore_forte": "C",
+    "motivo_distrattore_forte": "C mantiene colore e quantità interna, ma sbaglia la crescita della figura esterna."
   },
   {
     "id": "LOG-VIS-INT-0005",
@@ -261,7 +327,17 @@
       "B": "assets/logica_visiva/LOG-VIS-INT-0005_opzione_B.svg",
       "C": "assets/logica_visiva/LOG-VIS-INT-0005_opzione_C.svg",
       "D": "assets/logica_visiva/LOG-VIS-INT-0005_opzione_D.svg"
-    }
+    },
+    "difficolta": 2,
+    "tags": [
+      "logica",
+      "logica_visiva",
+      "visuale",
+      "intermedio",
+      "visiva"
+    ],
+    "distrattore_forte": "A",
+    "motivo_distrattore_forte": "A mantiene forma e numero di punti, ma sbaglia il colore richiesto dalla matrice."
   },
   {
     "id": "LOG-VIS-INT-0006",
@@ -285,7 +361,17 @@
       "B": "assets/logica_visiva/LOG-VIS-INT-0006_opzione_B.svg",
       "C": "assets/logica_visiva/LOG-VIS-INT-0006_opzione_C.svg",
       "D": "assets/logica_visiva/LOG-VIS-INT-0006_opzione_D.svg"
-    }
+    },
+    "difficolta": 2,
+    "tags": [
+      "logica",
+      "logica_visiva",
+      "visuale",
+      "intermedio",
+      "visiva"
+    ],
+    "distrattore_forte": "C",
+    "motivo_distrattore_forte": "C mantiene forma, colore e numero di punti, ma sbaglia il verso della diagonale."
   },
   {
     "id": "LOG-VIS-INT-0007",
@@ -309,7 +395,17 @@
       "B": "assets/logica_visiva/LOG-VIS-INT-0007_opzione_B.svg",
       "C": "assets/logica_visiva/LOG-VIS-INT-0007_opzione_C.svg",
       "D": "assets/logica_visiva/LOG-VIS-INT-0007_opzione_D.svg"
-    }
+    },
+    "difficolta": 2,
+    "tags": [
+      "logica",
+      "logica_visiva",
+      "visuale",
+      "intermedio",
+      "visiva"
+    ],
+    "distrattore_forte": "D",
+    "motivo_distrattore_forte": "D mantiene direzione e colore corretti, ma sbaglia il numero di punti."
   },
   {
     "id": "LOG-VIS-INT-0008",
@@ -333,7 +429,17 @@
       "B": "assets/logica_visiva/LOG-VIS-INT-0008_opzione_B.svg",
       "C": "assets/logica_visiva/LOG-VIS-INT-0008_opzione_C.svg",
       "D": "assets/logica_visiva/LOG-VIS-INT-0008_opzione_D.svg"
-    }
+    },
+    "difficolta": 2,
+    "tags": [
+      "logica",
+      "logica_visiva",
+      "visuale",
+      "intermedio",
+      "visiva"
+    ],
+    "distrattore_forte": "A",
+    "motivo_distrattore_forte": "A è simile alla figura corretta, ma non rispetta pienamente il ribaltamento speculare."
   },
   {
     "id": "LOG-VIS-AV-0004",
@@ -341,7 +447,7 @@
     "sottocategoria": "logica_visiva",
     "livello": "avanzato",
     "tipo": "visiva",
-    "domanda": "La matrice combina forma, colore e numero di linee. Quale figura manca?",
+    "domanda": "Nella griglia cambiano insieme forma esterna, colore e linee interne. Quale casella completa lo schema?",
     "opzioni": [
       "A",
       "B",
@@ -357,7 +463,17 @@
       "B": "assets/logica_visiva/LOG-VIS-AV-0004_opzione_B.svg",
       "C": "assets/logica_visiva/LOG-VIS-AV-0004_opzione_C.svg",
       "D": "assets/logica_visiva/LOG-VIS-AV-0004_opzione_D.svg"
-    }
+    },
+    "difficolta": 3,
+    "tags": [
+      "logica",
+      "logica_visiva",
+      "visuale",
+      "avanzato",
+      "visiva"
+    ],
+    "distrattore_forte": "C",
+    "motivo_distrattore_forte": "C mantiene forma e colore corretti, ma sbaglia il numero di linee interne."
   },
   {
     "id": "LOG-VIS-AV-0005",
@@ -381,7 +497,17 @@
       "B": "assets/logica_visiva/LOG-VIS-AV-0005_opzione_B.svg",
       "C": "assets/logica_visiva/LOG-VIS-AV-0005_opzione_C.svg",
       "D": "assets/logica_visiva/LOG-VIS-AV-0005_opzione_D.svg"
-    }
+    },
+    "difficolta": 3,
+    "tags": [
+      "logica",
+      "logica_visiva",
+      "visuale",
+      "avanzato",
+      "visiva"
+    ],
+    "distrattore_forte": "A",
+    "motivo_distrattore_forte": "A mantiene il riempimento a puntini, ma sbaglia il numero di contorni esterni."
   },
   {
     "id": "LOG-VIS-AV-0006",
@@ -405,7 +531,17 @@
       "B": "assets/logica_visiva/LOG-VIS-AV-0006_opzione_B.svg",
       "C": "assets/logica_visiva/LOG-VIS-AV-0006_opzione_C.svg",
       "D": "assets/logica_visiva/LOG-VIS-AV-0006_opzione_D.svg"
-    }
+    },
+    "difficolta": 3,
+    "tags": [
+      "logica",
+      "logica_visiva",
+      "visuale",
+      "avanzato",
+      "visiva"
+    ],
+    "distrattore_forte": "A",
+    "motivo_distrattore_forte": "A mantiene forma, colore e posizione del punto, ma sbaglia il riempimento della figura."
   },
   {
     "id": "LOG-VIS-AV-0007",
@@ -429,7 +565,17 @@
       "B": "assets/logica_visiva/LOG-VIS-AV-0007_opzione_B.svg",
       "C": "assets/logica_visiva/LOG-VIS-AV-0007_opzione_C.svg",
       "D": "assets/logica_visiva/LOG-VIS-AV-0007_opzione_D.svg"
-    }
+    },
+    "difficolta": 3,
+    "tags": [
+      "logica",
+      "logica_visiva",
+      "visuale",
+      "avanzato",
+      "visiva"
+    ],
+    "distrattore_forte": "B",
+    "motivo_distrattore_forte": "B mantiene forma e colore corretti, ma sbaglia il numero di stelle."
   },
   {
     "id": "LOG-VIS-AV-0008",
@@ -437,7 +583,7 @@
     "sottocategoria": "logica_visiva",
     "livello": "avanzato",
     "tipo": "visiva",
-    "domanda": "Questa matrice combina forma, colore e numero di segmenti. Quale figura manca?",
+    "domanda": "Completa la griglia ciclica osservando forma, colore e barre diagonali.",
     "opzioni": [
       "A",
       "B",
@@ -453,6 +599,16 @@
       "B": "assets/logica_visiva/LOG-VIS-AV-0008_opzione_B.svg",
       "C": "assets/logica_visiva/LOG-VIS-AV-0008_opzione_C.svg",
       "D": "assets/logica_visiva/LOG-VIS-AV-0008_opzione_D.svg"
-    }
+    },
+    "difficolta": 3,
+    "tags": [
+      "logica",
+      "logica_visiva",
+      "visuale",
+      "avanzato",
+      "visiva"
+    ],
+    "distrattore_forte": "C",
+    "motivo_distrattore_forte": "C mantiene forma e colore corretti, ma sbaglia il numero di barre diagonali."
   }
 ]

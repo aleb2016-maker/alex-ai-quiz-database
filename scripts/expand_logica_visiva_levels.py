@@ -4,7 +4,7 @@ from pathlib import Path
 
 DATA_FILE = Path("data/logica/logica_visiva.json")
 ASSET_DIR = Path("assets/logica_visiva")
-BACKUP_FILE = Path("data/logica/logica_visiva.backup.json")
+BACKUP_FILE = Path("backups/logica_visiva.backup.json")
 
 
 COLORI = {
