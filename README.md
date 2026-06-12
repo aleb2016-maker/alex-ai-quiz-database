@@ -1,5 +1,20 @@
 # Alex AI Quiz Database
 
+<!-- DEMO_BUTTON_START -->
+
+<p align="center">
+  <a href="https://aleb2016-maker.github.io/alex-ai-quiz-database/demo/" target="_blank">
+    <img src="https://img.shields.io/badge/PROVA_LA_DEMO_ONLINE-2563EB?style=for-the-badge&logo=githubpages&logoColor=white" alt="Prova la demo online">
+  </a>
+</p>
+
+<p align="center">
+  <strong>Apri la demo nel browser e inizia subito il quiz.</strong>
+</p>
+
+<!-- DEMO_BUTTON_END -->
+
+
 ## Demo online
 
 La demo permette di provare il database direttamente dal browser e può essere utilizzata come supporto per la preparazione personale, test di ingresso, esercitazioni didattiche e allenamento per concorsi.
