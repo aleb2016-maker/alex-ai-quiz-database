@@ -4085,7 +4085,7 @@
     "sottocategoria": "logica_visiva",
     "tipo_domanda": "immagine",
     "livello": "facile",
-    "domanda": "Osserva la sequenza di forme e scegli quale figura completa correttamente il pattern.",
+    "domanda": "Quale scelta chiude il primo esercizio visivo?",
     "immagine_domanda": "assets/logica_visiva/log_vis_fac_0001_domanda.png",
     "opzioni": [
       "A",
@@ -4119,7 +4119,7 @@
     "sottocategoria": "logica_visiva",
     "tipo_domanda": "immagine",
     "livello": "intermedio",
-    "domanda": "Osserva la rotazione della figura e scegli quale opzione continua correttamente la trasformazione.",
+    "domanda": "Individua l'alternativa più coerente con il passaggio mostrato.",
     "immagine_domanda": "assets/logica_visiva/log_vis_int_0002_domanda.png",
     "opzioni": [
       "A",
@@ -4134,7 +4134,7 @@
       "assets/logica_visiva/log_vis_int_0002_D.png"
     ],
     "risposta_corretta": "B",
-    "spiegazione": "La risposta corretta è B perché la figura ruota sempre di 90 gradi in senso orario. L'opzione B mantiene la stessa regola.",
+    "spiegazione": "La sequenza mostra una trasformazione ordinata dell'elemento principale. Bisogna confrontare la posizione iniziale con quella successiva e scegliere l'opzione che mantiene lo stesso tipo di passaggio.",
     "tags": [
       "logica",
       "logica_visiva",
@@ -4153,7 +4153,7 @@
     "sottocategoria": "logica_visiva",
     "tipo_domanda": "immagine",
     "livello": "avanzato",
-    "domanda": "Osserva la matrice di figure e scegli quale opzione completa correttamente la casella mancante.",
+    "domanda": "Quale tassello va inserito nella casella vuota della griglia?",
     "immagine_domanda": "assets/logica_visiva/log_vis_av_0003_domanda.png",
     "opzioni": [
       "A",
@@ -4187,7 +4187,7 @@
     "sottocategoria": "logica_visiva",
     "livello": "facile",
     "tipo": "visiva",
-    "domanda": "Guarda la serie alternata di forme e colori. Quale simbolo deve apparire nella casella vuota?",
+    "domanda": "Seleziona il simbolo adatto allo spazio con il punto interrogativo.",
     "opzioni": [
       "A",
       "B",
@@ -4198,12 +4198,12 @@
     "spiegazione": "La sequenza alterna cerchio e quadrato, mentre il colore alterna blu e rosso. Dopo il quadrato rosso deve tornare il cerchio blu.",
     "immagine": "assets/logica_visiva/LOG-VIS-FAC-0004_domanda.svg",
     "immagine_domanda": "assets/logica_visiva/LOG-VIS-FAC-0004_domanda.svg",
-    "immagini_opzioni": {
-      "A": "assets/logica_visiva/LOG-VIS-FAC-0004_opzione_A.svg",
-      "B": "assets/logica_visiva/LOG-VIS-FAC-0004_opzione_B.svg",
-      "C": "assets/logica_visiva/LOG-VIS-FAC-0004_opzione_C.svg",
-      "D": "assets/logica_visiva/LOG-VIS-FAC-0004_opzione_D.svg"
-    },
+    "immagini_opzioni": [
+      "assets/logica_visiva/LOG-VIS-FAC-0004_opzione_A.svg",
+      "assets/logica_visiva/LOG-VIS-FAC-0004_opzione_B.svg",
+      "assets/logica_visiva/LOG-VIS-FAC-0004_opzione_C.svg",
+      "assets/logica_visiva/LOG-VIS-FAC-0004_opzione_D.svg"
+    ],
     "difficolta": 1,
     "tags": [
       "logica",
@@ -4221,7 +4221,7 @@
     "sottocategoria": "logica_visiva",
     "livello": "facile",
     "tipo": "visiva",
-    "domanda": "Osserva la rotazione delle frecce. Quale figura viene dopo?",
+    "domanda": "Tra le quattro risposte, quale viene dopo nel percorso illustrato?",
     "opzioni": [
       "A",
       "B",
@@ -4229,15 +4229,15 @@
       "D"
     ],
     "risposta_corretta": "D",
-    "spiegazione": "La freccia ruota ogni volta di 90 gradi in senso orario: alto, destra, basso, sinistra.",
+    "spiegazione": "La sequenza segue un cambiamento regolare della direzione. La risposta corretta è quella che continua il percorso visivo nello stesso modo.",
     "immagine": "assets/logica_visiva/LOG-VIS-FAC-0005_domanda.svg",
     "immagine_domanda": "assets/logica_visiva/LOG-VIS-FAC-0005_domanda.svg",
-    "immagini_opzioni": {
-      "A": "assets/logica_visiva/LOG-VIS-FAC-0005_opzione_A.svg",
-      "B": "assets/logica_visiva/LOG-VIS-FAC-0005_opzione_B.svg",
-      "C": "assets/logica_visiva/LOG-VIS-FAC-0005_opzione_C.svg",
-      "D": "assets/logica_visiva/LOG-VIS-FAC-0005_opzione_D.svg"
-    },
+    "immagini_opzioni": [
+      "assets/logica_visiva/LOG-VIS-FAC-0005_opzione_A.svg",
+      "assets/logica_visiva/LOG-VIS-FAC-0005_opzione_B.svg",
+      "assets/logica_visiva/LOG-VIS-FAC-0005_opzione_C.svg",
+      "assets/logica_visiva/LOG-VIS-FAC-0005_opzione_D.svg"
+    ],
     "difficolta": 1,
     "tags": [
       "logica",
@@ -4255,7 +4255,7 @@
     "sottocategoria": "logica_visiva",
     "livello": "facile",
     "tipo": "visiva",
-    "domanda": "Osserva il numero di punti interni. Quale figura completa la sequenza?",
+    "domanda": "Quale proposta conclude meglio il gruppo rappresentato?",
     "opzioni": [
       "A",
       "B",
@@ -4266,12 +4266,12 @@
     "spiegazione": "Il numero di punti aumenta di uno a ogni passaggio: 1, 2, 3, quindi 4.",
     "immagine": "assets/logica_visiva/LOG-VIS-FAC-0006_domanda.svg",
     "immagine_domanda": "assets/logica_visiva/LOG-VIS-FAC-0006_domanda.svg",
-    "immagini_opzioni": {
-      "A": "assets/logica_visiva/LOG-VIS-FAC-0006_opzione_A.svg",
-      "B": "assets/logica_visiva/LOG-VIS-FAC-0006_opzione_B.svg",
-      "C": "assets/logica_visiva/LOG-VIS-FAC-0006_opzione_C.svg",
-      "D": "assets/logica_visiva/LOG-VIS-FAC-0006_opzione_D.svg"
-    },
+    "immagini_opzioni": [
+      "assets/logica_visiva/LOG-VIS-FAC-0006_opzione_A.svg",
+      "assets/logica_visiva/LOG-VIS-FAC-0006_opzione_B.svg",
+      "assets/logica_visiva/LOG-VIS-FAC-0006_opzione_C.svg",
+      "assets/logica_visiva/LOG-VIS-FAC-0006_opzione_D.svg"
+    ],
     "difficolta": 1,
     "tags": [
       "logica",
@@ -4289,7 +4289,7 @@
     "sottocategoria": "logica_visiva",
     "livello": "facile",
     "tipo": "visiva",
-    "domanda": "Osserva colore e forma. Quale opzione completa correttamente la sequenza?",
+    "domanda": "Scegli l'elemento che mantiene ordinato il modello proposto.",
     "opzioni": [
       "A",
       "B",
@@ -4300,12 +4300,12 @@
     "spiegazione": "La forma resta un esagono, mentre il colore alterna oro e viola. Dopo oro, viola, oro, deve venire viola.",
     "immagine": "assets/logica_visiva/LOG-VIS-FAC-0007_domanda.svg",
     "immagine_domanda": "assets/logica_visiva/LOG-VIS-FAC-0007_domanda.svg",
-    "immagini_opzioni": {
-      "A": "assets/logica_visiva/LOG-VIS-FAC-0007_opzione_A.svg",
-      "B": "assets/logica_visiva/LOG-VIS-FAC-0007_opzione_B.svg",
-      "C": "assets/logica_visiva/LOG-VIS-FAC-0007_opzione_C.svg",
-      "D": "assets/logica_visiva/LOG-VIS-FAC-0007_opzione_D.svg"
-    },
+    "immagini_opzioni": [
+      "assets/logica_visiva/LOG-VIS-FAC-0007_opzione_A.svg",
+      "assets/logica_visiva/LOG-VIS-FAC-0007_opzione_B.svg",
+      "assets/logica_visiva/LOG-VIS-FAC-0007_opzione_C.svg",
+      "assets/logica_visiva/LOG-VIS-FAC-0007_opzione_D.svg"
+    ],
     "difficolta": 1,
     "tags": [
       "logica",
@@ -4323,7 +4323,7 @@
     "sottocategoria": "logica_visiva",
     "livello": "facile",
     "tipo": "visiva",
-    "domanda": "Osserva la matrice. Quale figura completa la casella mancante?",
+    "domanda": "Quale alternativa completa il riquadro finale?",
     "opzioni": [
       "A",
       "B",
@@ -4334,12 +4334,12 @@
     "spiegazione": "Ogni riga mantiene la stessa forma esterna. Nella terza riga ci sono triangoli. La terza colonna contiene tre punti, quindi serve un triangolo con tre punti.",
     "immagine": "assets/logica_visiva/LOG-VIS-FAC-0008_domanda.svg",
     "immagine_domanda": "assets/logica_visiva/LOG-VIS-FAC-0008_domanda.svg",
-    "immagini_opzioni": {
-      "A": "assets/logica_visiva/LOG-VIS-FAC-0008_opzione_A.svg",
-      "B": "assets/logica_visiva/LOG-VIS-FAC-0008_opzione_B.svg",
-      "C": "assets/logica_visiva/LOG-VIS-FAC-0008_opzione_C.svg",
-      "D": "assets/logica_visiva/LOG-VIS-FAC-0008_opzione_D.svg"
-    },
+    "immagini_opzioni": [
+      "assets/logica_visiva/LOG-VIS-FAC-0008_opzione_A.svg",
+      "assets/logica_visiva/LOG-VIS-FAC-0008_opzione_B.svg",
+      "assets/logica_visiva/LOG-VIS-FAC-0008_opzione_C.svg",
+      "assets/logica_visiva/LOG-VIS-FAC-0008_opzione_D.svg"
+    ],
     "difficolta": 1,
     "tags": [
       "logica",
@@ -4357,7 +4357,7 @@
     "sottocategoria": "logica_visiva",
     "livello": "intermedio",
     "tipo": "visiva",
-    "domanda": "La figura esterna cresce e gli elementi interni aumentano. Quale opzione continua correttamente la progressione?",
+    "domanda": "Quale risposta prosegue il modello senza contraddirlo?",
     "opzioni": [
       "A",
       "B",
@@ -4365,15 +4365,15 @@
       "D"
     ],
     "risposta_corretta": "A",
-    "spiegazione": "La figura esterna aumenta i lati: triangolo, quadrato, pentagono, quindi esagono. Gli elementi interni aumentano di uno: 1, 2, 3, quindi 4.",
+    "spiegazione": "La progressione combina più caratteristiche visive nello stesso momento. La risposta corretta rispetta la forma esterna, gli elementi interni e il colore.",
     "immagine": "assets/logica_visiva/LOG-VIS-INT-0004_domanda.svg",
     "immagine_domanda": "assets/logica_visiva/LOG-VIS-INT-0004_domanda.svg",
-    "immagini_opzioni": {
-      "A": "assets/logica_visiva/LOG-VIS-INT-0004_opzione_A.svg",
-      "B": "assets/logica_visiva/LOG-VIS-INT-0004_opzione_B.svg",
-      "C": "assets/logica_visiva/LOG-VIS-INT-0004_opzione_C.svg",
-      "D": "assets/logica_visiva/LOG-VIS-INT-0004_opzione_D.svg"
-    },
+    "immagini_opzioni": [
+      "assets/logica_visiva/LOG-VIS-INT-0004_opzione_A.svg",
+      "assets/logica_visiva/LOG-VIS-INT-0004_opzione_B.svg",
+      "assets/logica_visiva/LOG-VIS-INT-0004_opzione_C.svg",
+      "assets/logica_visiva/LOG-VIS-INT-0004_opzione_D.svg"
+    ],
     "difficolta": 2,
     "tags": [
       "logica",
@@ -4391,7 +4391,7 @@
     "sottocategoria": "logica_visiva",
     "livello": "intermedio",
     "tipo": "visiva",
-    "domanda": "Osserva forma, colore e numero di punti. Quale figura completa la matrice?",
+    "domanda": "Inserisci mentalmente il tassello mancante e scegli la soluzione.",
     "opzioni": [
       "A",
       "B",
@@ -4402,12 +4402,12 @@
     "spiegazione": "La terza riga deve mantenere la forma triangolo. La terza colonna richiede tre punti. Il colore segue l'alternanza verde, blu, verde.",
     "immagine": "assets/logica_visiva/LOG-VIS-INT-0005_domanda.svg",
     "immagine_domanda": "assets/logica_visiva/LOG-VIS-INT-0005_domanda.svg",
-    "immagini_opzioni": {
-      "A": "assets/logica_visiva/LOG-VIS-INT-0005_opzione_A.svg",
-      "B": "assets/logica_visiva/LOG-VIS-INT-0005_opzione_B.svg",
-      "C": "assets/logica_visiva/LOG-VIS-INT-0005_opzione_C.svg",
-      "D": "assets/logica_visiva/LOG-VIS-INT-0005_opzione_D.svg"
-    },
+    "immagini_opzioni": [
+      "assets/logica_visiva/LOG-VIS-INT-0005_opzione_A.svg",
+      "assets/logica_visiva/LOG-VIS-INT-0005_opzione_B.svg",
+      "assets/logica_visiva/LOG-VIS-INT-0005_opzione_C.svg",
+      "assets/logica_visiva/LOG-VIS-INT-0005_opzione_D.svg"
+    ],
     "difficolta": 2,
     "tags": [
       "logica",
@@ -4425,7 +4425,7 @@
     "sottocategoria": "logica_visiva",
     "livello": "intermedio",
     "tipo": "visiva",
-    "domanda": "Osserva la trasformazione. Quale figura completa correttamente la matrice?",
+    "domanda": "Quale scelta rende completo il quadro mostrato?",
     "opzioni": [
       "A",
       "B",
@@ -4436,12 +4436,12 @@
     "spiegazione": "Da sinistra a destra la diagonale cambia verso e i punti aumentano da uno a due. La stessa trasformazione va applicata anche al cerchio rosso.",
     "immagine": "assets/logica_visiva/LOG-VIS-INT-0006_domanda.svg",
     "immagine_domanda": "assets/logica_visiva/LOG-VIS-INT-0006_domanda.svg",
-    "immagini_opzioni": {
-      "A": "assets/logica_visiva/LOG-VIS-INT-0006_opzione_A.svg",
-      "B": "assets/logica_visiva/LOG-VIS-INT-0006_opzione_B.svg",
-      "C": "assets/logica_visiva/LOG-VIS-INT-0006_opzione_C.svg",
-      "D": "assets/logica_visiva/LOG-VIS-INT-0006_opzione_D.svg"
-    },
+    "immagini_opzioni": [
+      "assets/logica_visiva/LOG-VIS-INT-0006_opzione_A.svg",
+      "assets/logica_visiva/LOG-VIS-INT-0006_opzione_B.svg",
+      "assets/logica_visiva/LOG-VIS-INT-0006_opzione_C.svg",
+      "assets/logica_visiva/LOG-VIS-INT-0006_opzione_D.svg"
+    ],
     "difficolta": 2,
     "tags": [
       "logica",
@@ -4459,7 +4459,7 @@
     "sottocategoria": "logica_visiva",
     "livello": "intermedio",
     "tipo": "visiva",
-    "domanda": "Osserva direzione, colore e numero di punti. Quale freccia completa la sequenza?",
+    "domanda": "Quale elemento occupa la posizione vuota?",
     "opzioni": [
       "A",
       "B",
@@ -4470,12 +4470,12 @@
     "spiegazione": "La freccia ruota di 90 gradi in senso orario e il numero di punti aumenta. Dopo alto, destra, basso, deve venire sinistra con quattro punti.",
     "immagine": "assets/logica_visiva/LOG-VIS-INT-0007_domanda.svg",
     "immagine_domanda": "assets/logica_visiva/LOG-VIS-INT-0007_domanda.svg",
-    "immagini_opzioni": {
-      "A": "assets/logica_visiva/LOG-VIS-INT-0007_opzione_A.svg",
-      "B": "assets/logica_visiva/LOG-VIS-INT-0007_opzione_B.svg",
-      "C": "assets/logica_visiva/LOG-VIS-INT-0007_opzione_C.svg",
-      "D": "assets/logica_visiva/LOG-VIS-INT-0007_opzione_D.svg"
-    },
+    "immagini_opzioni": [
+      "assets/logica_visiva/LOG-VIS-INT-0007_opzione_A.svg",
+      "assets/logica_visiva/LOG-VIS-INT-0007_opzione_B.svg",
+      "assets/logica_visiva/LOG-VIS-INT-0007_opzione_C.svg",
+      "assets/logica_visiva/LOG-VIS-INT-0007_opzione_D.svg"
+    ],
     "difficolta": 2,
     "tags": [
       "logica",
@@ -4493,7 +4493,7 @@
     "sottocategoria": "logica_visiva",
     "livello": "intermedio",
     "tipo": "visiva",
-    "domanda": "Quale figura rappresenta l'immagine speculare rispetto alla figura data?",
+    "domanda": "Quale alternativa corrisponde alla figura richiesta?",
     "opzioni": [
       "A",
       "B",
@@ -4501,15 +4501,15 @@
       "D"
     ],
     "risposta_corretta": "D",
-    "spiegazione": "La figura va riflessa rispetto all'asse verticale: gli elementi a sinistra passano a destra e quelli a destra passano a sinistra.",
+    "spiegazione": "La figura richiesta si ottiene con un ribaltamento speculare. La risposta corretta conserva la stessa struttura, ma nella posizione riflessa giusta.",
     "immagine": "assets/logica_visiva/LOG-VIS-INT-0008_domanda.svg",
     "immagine_domanda": "assets/logica_visiva/LOG-VIS-INT-0008_domanda.svg",
-    "immagini_opzioni": {
-      "A": "assets/logica_visiva/LOG-VIS-INT-0008_opzione_A.svg",
-      "B": "assets/logica_visiva/LOG-VIS-INT-0008_opzione_B.svg",
-      "C": "assets/logica_visiva/LOG-VIS-INT-0008_opzione_C.svg",
-      "D": "assets/logica_visiva/LOG-VIS-INT-0008_opzione_D.svg"
-    },
+    "immagini_opzioni": [
+      "assets/logica_visiva/LOG-VIS-INT-0008_opzione_A.svg",
+      "assets/logica_visiva/LOG-VIS-INT-0008_opzione_B.svg",
+      "assets/logica_visiva/LOG-VIS-INT-0008_opzione_C.svg",
+      "assets/logica_visiva/LOG-VIS-INT-0008_opzione_D.svg"
+    ],
     "difficolta": 2,
     "tags": [
       "logica",
@@ -4527,7 +4527,7 @@
     "sottocategoria": "logica_visiva",
     "livello": "avanzato",
     "tipo": "visiva",
-    "domanda": "Osserva la matrice visiva. Quale casella completa correttamente lo schema?",
+    "domanda": "Quale casella completa la matrice visiva?",
     "opzioni": [
       "A",
       "B",
@@ -4538,12 +4538,12 @@
     "spiegazione": "Le righe determinano la forma: cerchio, quadrato, triangolo. Le colonne determinano il numero di linee interne: una, due, tre. Il colore alterna blu, rosso, blu. Serve quindi un triangolo blu con tre linee interne.",
     "immagine": "assets/logica_visiva/LOG-VIS-AV-0004_domanda.svg",
     "immagine_domanda": "assets/logica_visiva/LOG-VIS-AV-0004_domanda.svg",
-    "immagini_opzioni": {
-      "A": "assets/logica_visiva/LOG-VIS-AV-0004_opzione_A.svg",
-      "B": "assets/logica_visiva/LOG-VIS-AV-0004_opzione_B.svg",
-      "C": "assets/logica_visiva/LOG-VIS-AV-0004_opzione_C.svg",
-      "D": "assets/logica_visiva/LOG-VIS-AV-0004_opzione_D.svg"
-    },
+    "immagini_opzioni": [
+      "assets/logica_visiva/LOG-VIS-AV-0004_opzione_A.svg",
+      "assets/logica_visiva/LOG-VIS-AV-0004_opzione_B.svg",
+      "assets/logica_visiva/LOG-VIS-AV-0004_opzione_C.svg",
+      "assets/logica_visiva/LOG-VIS-AV-0004_opzione_D.svg"
+    ],
     "difficolta": 3,
     "tags": [
       "logica",
@@ -4561,7 +4561,7 @@
     "sottocategoria": "logica_visiva",
     "livello": "avanzato",
     "tipo": "visiva",
-    "domanda": "Osserva profondità dei contorni e riempimento interno. Quale figura completa la matrice?",
+    "domanda": "Scegli la soluzione più adatta per il riquadro mancante.",
     "opzioni": [
       "A",
       "B",
@@ -4572,12 +4572,12 @@
     "spiegazione": "Scendendo nelle righe aumenta il numero di contorni esterni. Le colonne cambiano il riempimento interno: pieno, righe, puntini. Serve quindi un esagono con tre contorni e puntini.",
     "immagine": "assets/logica_visiva/LOG-VIS-AV-0005_domanda.svg",
     "immagine_domanda": "assets/logica_visiva/LOG-VIS-AV-0005_domanda.svg",
-    "immagini_opzioni": {
-      "A": "assets/logica_visiva/LOG-VIS-AV-0005_opzione_A.svg",
-      "B": "assets/logica_visiva/LOG-VIS-AV-0005_opzione_B.svg",
-      "C": "assets/logica_visiva/LOG-VIS-AV-0005_opzione_C.svg",
-      "D": "assets/logica_visiva/LOG-VIS-AV-0005_opzione_D.svg"
-    },
+    "immagini_opzioni": [
+      "assets/logica_visiva/LOG-VIS-AV-0005_opzione_A.svg",
+      "assets/logica_visiva/LOG-VIS-AV-0005_opzione_B.svg",
+      "assets/logica_visiva/LOG-VIS-AV-0005_opzione_C.svg",
+      "assets/logica_visiva/LOG-VIS-AV-0005_opzione_D.svg"
+    ],
     "difficolta": 3,
     "tags": [
       "logica",
@@ -4595,7 +4595,7 @@
     "sottocategoria": "logica_visiva",
     "livello": "avanzato",
     "tipo": "visiva",
-    "domanda": "Osserva la trasformazione A→B e applica la stessa regola a C.",
+    "domanda": "Quale immagine chiude il modello avanzato?",
     "opzioni": [
       "A",
       "B",
@@ -4606,12 +4606,12 @@
     "spiegazione": "La trasformazione aumenta di un lato la figura esterna, elimina il riempimento e sposta il punto di una posizione in senso orario. Applicando la stessa regola a C si ottiene un quadrato rosso vuoto con punto in alto.",
     "immagine": "assets/logica_visiva/LOG-VIS-AV-0006_domanda.svg",
     "immagine_domanda": "assets/logica_visiva/LOG-VIS-AV-0006_domanda.svg",
-    "immagini_opzioni": {
-      "A": "assets/logica_visiva/LOG-VIS-AV-0006_opzione_A.svg",
-      "B": "assets/logica_visiva/LOG-VIS-AV-0006_opzione_B.svg",
-      "C": "assets/logica_visiva/LOG-VIS-AV-0006_opzione_C.svg",
-      "D": "assets/logica_visiva/LOG-VIS-AV-0006_opzione_D.svg"
-    },
+    "immagini_opzioni": [
+      "assets/logica_visiva/LOG-VIS-AV-0006_opzione_A.svg",
+      "assets/logica_visiva/LOG-VIS-AV-0006_opzione_B.svg",
+      "assets/logica_visiva/LOG-VIS-AV-0006_opzione_C.svg",
+      "assets/logica_visiva/LOG-VIS-AV-0006_opzione_D.svg"
+    ],
     "difficolta": 3,
     "tags": [
       "logica",
@@ -4629,7 +4629,7 @@
     "sottocategoria": "logica_visiva",
     "livello": "avanzato",
     "tipo": "visiva",
-    "domanda": "Ogni terza figura riassume gli elementi delle prime due. Quale figura completa l'ultima riga?",
+    "domanda": "Trova la scelta che rende coerente l'intera composizione.",
     "opzioni": [
       "A",
       "B",
@@ -4640,12 +4640,12 @@
     "spiegazione": "Nella terza colonna viene sommato il numero di elementi delle prime due colonne. Nell'ultima riga: 1 stella + 3 stelle = 4 stelle. La forma resta triangolo verde.",
     "immagine": "assets/logica_visiva/LOG-VIS-AV-0007_domanda.svg",
     "immagine_domanda": "assets/logica_visiva/LOG-VIS-AV-0007_domanda.svg",
-    "immagini_opzioni": {
-      "A": "assets/logica_visiva/LOG-VIS-AV-0007_opzione_A.svg",
-      "B": "assets/logica_visiva/LOG-VIS-AV-0007_opzione_B.svg",
-      "C": "assets/logica_visiva/LOG-VIS-AV-0007_opzione_C.svg",
-      "D": "assets/logica_visiva/LOG-VIS-AV-0007_opzione_D.svg"
-    },
+    "immagini_opzioni": [
+      "assets/logica_visiva/LOG-VIS-AV-0007_opzione_A.svg",
+      "assets/logica_visiva/LOG-VIS-AV-0007_opzione_B.svg",
+      "assets/logica_visiva/LOG-VIS-AV-0007_opzione_C.svg",
+      "assets/logica_visiva/LOG-VIS-AV-0007_opzione_D.svg"
+    ],
     "difficolta": 3,
     "tags": [
       "logica",
@@ -4663,7 +4663,7 @@
     "sottocategoria": "logica_visiva",
     "livello": "avanzato",
     "tipo": "visiva",
-    "domanda": "Completa la griglia ciclica osservando forma, colore e barre diagonali.",
+    "domanda": "Quale tassello conclude la griglia nel modo corretto?",
     "opzioni": [
       "A",
       "B",
@@ -4674,12 +4674,12 @@
     "spiegazione": "Le forme ruotano ciclicamente tra cerchio, quadrato e triangolo. I colori alternano blu e rosso, mentre i segmenti aumentano da sinistra a destra. La casella mancante è un quadrato blu con tre barre diagonali.",
     "immagine": "assets/logica_visiva/LOG-VIS-AV-0008_domanda.svg",
     "immagine_domanda": "assets/logica_visiva/LOG-VIS-AV-0008_domanda.svg",
-    "immagini_opzioni": {
-      "A": "assets/logica_visiva/LOG-VIS-AV-0008_opzione_A.svg",
-      "B": "assets/logica_visiva/LOG-VIS-AV-0008_opzione_B.svg",
-      "C": "assets/logica_visiva/LOG-VIS-AV-0008_opzione_C.svg",
-      "D": "assets/logica_visiva/LOG-VIS-AV-0008_opzione_D.svg"
-    },
+    "immagini_opzioni": [
+      "assets/logica_visiva/LOG-VIS-AV-0008_opzione_A.svg",
+      "assets/logica_visiva/LOG-VIS-AV-0008_opzione_B.svg",
+      "assets/logica_visiva/LOG-VIS-AV-0008_opzione_C.svg",
+      "assets/logica_visiva/LOG-VIS-AV-0008_opzione_D.svg"
+    ],
     "difficolta": 3,
     "tags": [
       "logica",
