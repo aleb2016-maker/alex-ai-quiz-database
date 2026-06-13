@@ -22,6 +22,14 @@ let codeDomandePerFiltro = {};
 
 const elementi = {};
 
+const VISUAL_SHAPE_SIDES = {
+    cerchio: 0,
+    triangolo: 3,
+    quadrato: 4,
+    pentagono: 5,
+    esagono: 6,
+};
+
 document.addEventListener("DOMContentLoaded", avviaApp);
 
 async function avviaApp() {
@@ -114,6 +122,8 @@ async function caricaDatabase() {
         if (!Array.isArray(databaseQuiz)) {
             throw new Error("Il database non è una lista di domande.");
         }
+
+        databaseQuiz = filtraDomandeVisualiNonValide(databaseQuiz);
 
         popolaFiltri();
         aggiornaInfoDomandeDisponibili();
@@ -533,7 +543,7 @@ function controllaRisposta(opzioneScelta, bottoneScelto) {
         `Corrette: ${risposteCorrette}`;
 
     elementi.explanationText.textContent =
-        domanda.spiegazione || "Spiegazione non disponibile.";
+        ottieniSpiegazioneRisposta(domanda, opzioneScelta);
 
     elementi.explanationBox.classList.remove("hidden");
     elementi.feedbackBox.classList.remove("hidden");
@@ -695,6 +705,388 @@ function risolviPercorsoAsset(percorso) {
     }
 
     return `../${percorso}`;
+}
+
+function filtraDomandeVisualiNonValide(domande) {
+    return domande.filter(domanda => {
+        const risultato = validateVisualLogicQuestion(domanda);
+
+        if (risultato.valid) {
+            return true;
+        }
+
+        console.error(
+            `Domanda logica visiva esclusa: ${domanda.id || "ID_MANCANTE"}`,
+            risultato.errors
+        );
+
+        return false;
+    });
+}
+
+function isVisualLogicQuestion(question) {
+    return (
+        question?.sottocategoria === "logica_visiva" ||
+        String(question?.id || "").startsWith("LOG-VIS")
+    );
+}
+
+function validateVisualLogicQuestion(question) {
+    const errors = [];
+
+    if (!isVisualLogicQuestion(question)) {
+        return { valid: true, errors };
+    }
+
+    const visualLogic = question.visual_logic;
+
+    if (!visualLogic || typeof visualLogic !== "object") {
+        return {
+            valid: false,
+            errors: ["Manca il contratto visual_logic della domanda visiva."],
+        };
+    }
+
+    const sequence = Array.isArray(visualLogic.sequence)
+        ? visualLogic.sequence
+        : [];
+
+    const expectedAnswer = visualLogic.expected_answer;
+    const usesPosition = Boolean(visualLogic.uses_position);
+
+    if (sequence.length === 0) {
+        errors.push("visual_logic.sequence deve contenere almeno una figura.");
+    }
+
+    if (!expectedAnswer || typeof expectedAnswer !== "object") {
+        errors.push("Manca visual_logic.expected_answer.");
+    }
+
+    sequence.forEach((figure, index) => {
+        errors.push(
+            ...validateVisualFigure(
+                figure,
+                `sequenza figura ${index + 1}`,
+                usesPosition
+            )
+        );
+    });
+
+    if (expectedAnswer) {
+        errors.push(
+            ...validateVisualFigure(
+                expectedAnswer,
+                "risposta corretta attesa",
+                usesPosition
+            )
+        );
+    }
+
+    const optionMap = visualLogic.options || {};
+    const correct = question.risposta_corretta;
+    const correctFigure = optionMap[correct];
+
+    if (!correctFigure) {
+        errors.push("La risposta corretta non è presente nelle opzioni visuali.");
+    } else if (!figuresMatch(correctFigure, expectedAnswer)) {
+        errors.push("La risposta corretta non rispetta la regola dichiarata.");
+    }
+
+    (question.opzioni || []).forEach(option => {
+        const figure = optionMap[option];
+
+        errors.push(
+            ...validateVisualFigure(
+                figure,
+                `opzione ${option}`,
+                usesPosition
+            )
+        );
+
+        if (option !== correct && figuresMatch(figure, correctFigure)) {
+            errors.push(`L'opzione ${option} è uguale alla risposta corretta.`);
+        }
+    });
+
+    const colorRule = visualLogic.rule?.color_alternation;
+
+    if (colorRule?.enabled) {
+        errors.push(
+            ...validateColorAlternation(
+                sequence,
+                expectedAnswer,
+                colorRule.colors || []
+            )
+        );
+    }
+
+    errors.push(...validateMirrorInstruction(question, visualLogic));
+    errors.push(...validateVisualExplanation(question, expectedAnswer));
+    errors.push(...validateWrongOptionExplanations(question));
+
+    return {
+        valid: errors.length === 0,
+        errors,
+    };
+}
+
+function validateVisualFigure(figure, label, usesPosition) {
+    const errors = [];
+
+    if (!figure || typeof figure !== "object") {
+        return [`${label}: la figura deve essere un oggetto strutturato.`];
+    }
+
+    const outerShape = normalizeVisualText(figure.outer_shape);
+    const outerColor = normalizeVisualText(figure.outer_color);
+    const expectedSides = VISUAL_SHAPE_SIDES[outerShape];
+
+    if (!outerShape) {
+        errors.push(`${label}: manca la forma esterna.`);
+    }
+
+    if (!outerColor) {
+        errors.push(`${label}: manca il colore esterno.`);
+    }
+
+    if (expectedSides === undefined) {
+        errors.push(`${label}: forma esterna non riconosciuta.`);
+    } else if (!Number.isInteger(figure.sides)) {
+        errors.push(`${label}: manca il numero di lati.`);
+    } else if (figure.sides !== expectedSides) {
+        errors.push(`${label}: numero di lati incoerente con la forma.`);
+    }
+
+    if (!Array.isArray(figure.inner_objects)) {
+        errors.push(`${label}: manca l'elenco completo degli oggetti interni.`);
+        return errors;
+    }
+
+    figure.inner_objects.forEach((item, index) => {
+        const itemLabel = `${label}, oggetto interno ${index + 1}`;
+
+        if (!item || typeof item !== "object") {
+            errors.push(`${itemLabel}: deve essere un oggetto strutturato.`);
+            return;
+        }
+
+        if (!normalizeVisualText(item.type)) {
+            errors.push(`${itemLabel}: manca il tipo.`);
+        }
+
+        if (!normalizeVisualText(item.color)) {
+            errors.push(`${itemLabel}: manca il colore.`);
+        }
+
+        if (!Number.isInteger(item.quantity) || item.quantity < 1) {
+            errors.push(`${itemLabel}: manca una quantità valida.`);
+        }
+
+        if (usesPosition && !normalizeVisualText(item.position)) {
+            errors.push(`${itemLabel}: manca la posizione.`);
+        }
+    });
+
+    return errors;
+}
+
+function validateColorAlternation(sequence, expectedAnswer, colors) {
+    const errors = [];
+
+    if (!Array.isArray(colors) || colors.length < 2) {
+        return ["La regola di alternanza colori deve dichiarare almeno due colori."];
+    }
+
+    [...sequence, expectedAnswer].forEach((figure, index) => {
+        const observed = normalizeVisualText(figure?.outer_color);
+        const expected = normalizeVisualText(colors[index % colors.length]);
+
+        if (observed !== expected) {
+            errors.push(
+                `Alternanza colori non rispettata in posizione ${index + 1}.`
+            );
+        }
+    });
+
+    return errors;
+}
+
+function validateMirrorInstruction(question, visualLogic) {
+    const errors = [];
+    const sequence = Array.isArray(visualLogic.sequence)
+        ? visualLogic.sequence
+        : [];
+
+    const mirrorAxis = normalizeVisualText(visualLogic.rule?.mirror_axis);
+    const isMirror = (
+        normalizeVisualText(visualLogic.type) === "mirror" ||
+        mirrorAxis !== ""
+    );
+
+    if (!isMirror || sequence.length !== 1) {
+        return errors;
+    }
+
+    const questionText = normalizeVisualText(question.domanda);
+
+    if (!/figura speculare rispetto all'asse (verticale|orizzontale)/.test(questionText)) {
+        errors.push(
+            "Domanda speculare ambigua: manca l'asse verticale/orizzontale nella consegna."
+        );
+    }
+
+    if (!["verticale", "orizzontale"].includes(mirrorAxis)) {
+        errors.push("La regola speculare deve dichiarare asse verticale o orizzontale.");
+    }
+
+    return errors;
+}
+
+function validateVisualExplanation(question, expectedAnswer) {
+    const errors = [];
+    const explanation = normalizeVisualText(question.spiegazione);
+    const requiredWords = ["forma", "colore", "lati", "intern", "regola"];
+
+    if (explanation.length < 120) {
+        errors.push("La spiegazione è troppo breve per una domanda visiva.");
+    }
+
+    requiredWords.forEach(word => {
+        if (!explanation.includes(word)) {
+            errors.push(`La spiegazione non cita '${word}'.`);
+        }
+    });
+
+    if (!expectedAnswer) {
+        return errors;
+    }
+
+    if (!explanation.includes(normalizeVisualText(expectedAnswer.outer_shape))) {
+        errors.push("La spiegazione non cita la forma esterna corretta.");
+    }
+
+    if (!explanation.includes(normalizeVisualText(expectedAnswer.outer_color))) {
+        errors.push("La spiegazione non cita il colore esterno corretto.");
+    }
+
+    if (
+        Number.isInteger(expectedAnswer.sides) &&
+        !explanation.includes(String(expectedAnswer.sides))
+    ) {
+        errors.push("La spiegazione non cita il numero di lati corretto.");
+    }
+
+    (expectedAnswer.inner_objects || []).forEach(item => {
+        if (!explanation.includes(String(item.quantity))) {
+            errors.push("La spiegazione non cita la quantità degli oggetti interni.");
+        }
+
+        if (!visualTextIncludesTerm(explanation, item.type)) {
+            errors.push("La spiegazione non cita il tipo degli oggetti interni.");
+        }
+
+        if (!explanation.includes(normalizeVisualText(item.color))) {
+            errors.push("La spiegazione non cita il colore degli oggetti interni.");
+        }
+    });
+
+    return errors;
+}
+
+function validateWrongOptionExplanations(question) {
+    const errors = [];
+    const optionExplanations = question.spiegazioni_opzioni;
+
+    if (!optionExplanations || typeof optionExplanations !== "object") {
+        return ["Manca il dizionario spiegazioni_opzioni per le risposte."];
+    }
+
+    (question.opzioni || []).forEach(option => {
+        if (option === question.risposta_corretta) {
+            return;
+        }
+
+        const explanation = normalizeVisualText(optionExplanations[option]);
+
+        if (explanation.length < 50) {
+            errors.push(`L'opzione ${option} non spiega chiaramente cosa non torna.`);
+            return;
+        }
+
+        if (!/(sbaglia|non|manca|incoerente)/.test(explanation)) {
+            errors.push(`L'opzione ${option} non dice chiaramente cosa non torna.`);
+        }
+    });
+
+    return errors;
+}
+
+function figuresMatch(left, right) {
+    return JSON.stringify(canonicalVisualFigure(left)) ===
+        JSON.stringify(canonicalVisualFigure(right));
+}
+
+function canonicalVisualFigure(figure) {
+    if (!figure || typeof figure !== "object") {
+        return null;
+    }
+
+    const innerObjects = Array.isArray(figure.inner_objects)
+        ? figure.inner_objects
+        : [];
+
+    return {
+        outer_shape: normalizeVisualText(figure.outer_shape),
+        outer_color: normalizeVisualText(figure.outer_color),
+        sides: figure.sides,
+        inner_objects: innerObjects
+            .map(item => ({
+                type: normalizeVisualText(item.type),
+                color: normalizeVisualText(item.color),
+                quantity: item.quantity,
+                position: normalizeVisualText(item.position),
+            }))
+            .sort((left, right) => {
+                return JSON.stringify(left).localeCompare(JSON.stringify(right));
+            }),
+    };
+}
+
+function normalizeVisualText(value) {
+    return String(value || "").toLowerCase().trim();
+}
+
+function visualTextIncludesTerm(text, term) {
+    const normalizedTerm = normalizeVisualText(term);
+
+    if (!normalizedTerm) {
+        return true;
+    }
+
+    return (
+        text.includes(normalizedTerm) ||
+        (
+            normalizedTerm.length > 4 &&
+            text.includes(normalizedTerm.slice(0, -1))
+        )
+    );
+}
+
+function ottieniSpiegazioneRisposta(domanda, opzioneScelta) {
+    const spiegazioneBase =
+        domanda.spiegazione || "Spiegazione non disponibile.";
+
+    const spiegazioneOpzione =
+        domanda.spiegazioni_opzioni?.[opzioneScelta];
+
+    if (
+        opzioneScelta !== domanda.risposta_corretta &&
+        spiegazioneOpzione
+    ) {
+        return `${spiegazioneOpzione} ${spiegazioneBase}`;
+    }
+
+    return spiegazioneBase;
 }
 
 function lanciaCoriandoliConDissolvenza(versioneGrande = false) {
@@ -1115,15 +1507,15 @@ function nomeCategoriaReportDemo(categoria) {
 /* ===== CARD PROGETTO ITS ===== */
 
 function creaCardsProgettoIts() {
-    if (!elementi.setupBox) {
+    const page = document.querySelector(".page");
+
+    if (!page) {
         return;
     }
 
     if (document.getElementById("itsProjectCards")) {
         return;
     }
-
-    const intro = document.getElementById("demoIntro");
 
     const sezione = document.createElement("section");
     sezione.id = "itsProjectCards";
@@ -1196,10 +1588,5 @@ function creaCardsProgettoIts() {
         </div>
     `;
 
-    if (intro) {
-        intro.insertAdjacentElement("afterend", sezione);
-        return;
-    }
-
-    elementi.setupBox.insertBefore(sezione, elementi.setupBox.firstChild);
+    page.appendChild(sezione);
 }

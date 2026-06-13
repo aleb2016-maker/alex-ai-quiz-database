@@ -1,6 +1,8 @@
 import json
 from pathlib import Path
 
+from visual_logic_validator import validate_visual_logic_question
+
 
 # Cartella dove si trovano i file JSON delle domande.
 CARTELLA_DOMANDE = Path("data")
@@ -184,6 +186,13 @@ def controlla_domanda(domanda):
     errori.extend(controlla_categoria(domanda))
     errori.extend(controlla_livello(domanda))
     errori.extend(controlla_difficolta(domanda))
+
+    if "visual_logic" in domanda:
+        risultato_visivo = validate_visual_logic_question(domanda)
+
+        if not risultato_visivo["valid"]:
+            for errore in risultato_visivo["errors"]:
+                errori.append(f"Logica visiva non valida: {errore}")
 
     return errori
 

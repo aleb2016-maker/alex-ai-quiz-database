@@ -1,6 +1,11 @@
 import json
 from pathlib import Path
 
+from visual_logic_validator import (
+    is_visual_logic_question,
+    validate_visual_logic_question,
+)
+
 
 # Cartella dove si trovano i file JSON divisi per categoria.
 CARTELLA_DOMANDE = Path("data")
@@ -43,12 +48,41 @@ def salva_database_finale(tutte_le_domande):
         )
 
 
+def filtra_domande_non_valide(domande, percorso_file):
+    domande_valide = []
+    domande_scartate = 0
+
+    for domanda in domande:
+        if not is_visual_logic_question(domanda):
+            domande_valide.append(domanda)
+            continue
+
+        risultato = validate_visual_logic_question(domanda)
+
+        if risultato["valid"]:
+            domande_valide.append(domanda)
+            continue
+
+        domande_scartate += 1
+        id_domanda = domanda.get("id", "ID_MANCANTE")
+
+        print()
+        print(f"SCARTO domanda visiva non valida: {id_domanda}")
+        print(f"File: {percorso_file}")
+
+        for errore in risultato["errors"]:
+            print(f"- {errore}")
+
+    return domande_valide, domande_scartate
+
+
 def main():
     # Cerca tutti i file JSON delle domande.
     file_json = trova_file_json()
 
     # Qui metteremo tutte le domande raccolte dai vari file.
     tutte_le_domande = []
+    totale_domande_scartate = 0
 
     print("----- CREAZIONE DATABASE FINALE -----")
 
@@ -56,13 +90,19 @@ def main():
         print(f"Leggo file: {percorso_file}")
 
         domande_del_file = carica_domande_da_file(percorso_file)
+        domande_valide, domande_scartate = filtra_domande_non_valide(
+            domande_del_file,
+            percorso_file,
+        )
 
-        tutte_le_domande.extend(domande_del_file)
+        tutte_le_domande.extend(domande_valide)
+        totale_domande_scartate += domande_scartate
 
     salva_database_finale(tutte_le_domande)
 
     print("\n----- RISULTATO FINALE -----")
     print(f"Domande totali raccolte: {len(tutte_le_domande)}")
+    print(f"Domande visive scartate: {totale_domande_scartate}")
     print(f"Database creato in: {FILE_DATABASE_FINALE}")
 
 

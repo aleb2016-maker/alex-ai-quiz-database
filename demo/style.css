@@ -622,13 +622,14 @@ select {
 /* ===== CARD PROGETTO ITS ===== */
 
 .its-project-cards {
-    margin-top: 22px;
+    margin-top: 28px;
+    padding-bottom: 10px;
 }
 
 .its-project-cards h3 {
     margin: 0 0 14px;
     font-size: 1.15rem;
-    color: #0f172a;
+    color: #ffffff;
 }
 
 .its-card-grid {

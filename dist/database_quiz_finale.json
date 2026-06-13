@@ -4080,113 +4080,12 @@
     "motivo_distrattore_forte": "È vicino perché appartiene allo stesso ciclo di direzioni, ma è sbagliato perché alto arriva dopo un ulteriore passaggio, non subito dopo basso."
   },
   {
-    "id": "LOG-VIS-FAC-0001",
-    "categoria": "logica",
-    "sottocategoria": "logica_visiva",
-    "tipo_domanda": "immagine",
-    "livello": "facile",
-    "domanda": "Quale scelta chiude il primo esercizio visivo?",
-    "immagine_domanda": "assets/logica_visiva/log_vis_fac_0001_domanda.png",
-    "opzioni": [
-      "A",
-      "B",
-      "C",
-      "D"
-    ],
-    "immagini_opzioni": [
-      "assets/logica_visiva/log_vis_fac_0001_A.png",
-      "assets/logica_visiva/log_vis_fac_0001_B.png",
-      "assets/logica_visiva/log_vis_fac_0001_C.png",
-      "assets/logica_visiva/log_vis_fac_0001_D.png"
-    ],
-    "risposta_corretta": "C",
-    "spiegazione": "La risposta corretta è C perché la sequenza alterna cerchio e quadrato mantenendo lo stesso ordine visivo. Dopo il quadrato deve tornare il cerchio, quindi l'opzione corretta è quella che riprende la forma attesa senza cambiare la logica della sequenza.",
-    "tags": [
-      "logica",
-      "logica_visiva",
-      "visuale",
-      "facile",
-      "visiva"
-    ],
-    "difficolta": 1,
-    "distrattore_forte": "A",
-    "motivo_distrattore_forte": "È vicino perché è una delle opzioni visive proposte, ma non rispetta l'alternanza corretta cerchio-quadrato: dopo il quadrato deve tornare il cerchio indicato dall'opzione C.",
-    "tipo": "visiva"
-  },
-  {
-    "id": "LOG-VIS-INT-0002",
-    "categoria": "logica",
-    "sottocategoria": "logica_visiva",
-    "tipo_domanda": "immagine",
-    "livello": "intermedio",
-    "domanda": "Individua l'alternativa più coerente con il passaggio mostrato.",
-    "immagine_domanda": "assets/logica_visiva/log_vis_int_0002_domanda.png",
-    "opzioni": [
-      "A",
-      "B",
-      "C",
-      "D"
-    ],
-    "immagini_opzioni": [
-      "assets/logica_visiva/log_vis_int_0002_A.png",
-      "assets/logica_visiva/log_vis_int_0002_B.png",
-      "assets/logica_visiva/log_vis_int_0002_C.png",
-      "assets/logica_visiva/log_vis_int_0002_D.png"
-    ],
-    "risposta_corretta": "B",
-    "spiegazione": "La sequenza mostra una trasformazione ordinata dell'elemento principale. Bisogna confrontare la posizione iniziale con quella successiva e scegliere l'opzione che mantiene lo stesso tipo di passaggio.",
-    "tags": [
-      "logica",
-      "logica_visiva",
-      "visuale",
-      "intermedio",
-      "visiva"
-    ],
-    "difficolta": 2,
-    "distrattore_forte": "A",
-    "motivo_distrattore_forte": "È vicino perché rappresenta una possibile rotazione della figura, ma non continua correttamente la rotazione costante di 90 gradi in senso orario indicata dalla sequenza.",
-    "tipo": "visiva"
-  },
-  {
-    "id": "LOG-VIS-AV-0003",
-    "categoria": "logica",
-    "sottocategoria": "logica_visiva",
-    "tipo_domanda": "immagine",
-    "livello": "avanzato",
-    "domanda": "Quale tassello va inserito nella casella vuota della griglia?",
-    "immagine_domanda": "assets/logica_visiva/log_vis_av_0003_domanda.png",
-    "opzioni": [
-      "A",
-      "B",
-      "C",
-      "D"
-    ],
-    "immagini_opzioni": [
-      "assets/logica_visiva/log_vis_av_0003_A.png",
-      "assets/logica_visiva/log_vis_av_0003_B.png",
-      "assets/logica_visiva/log_vis_av_0003_C.png",
-      "assets/logica_visiva/log_vis_av_0003_D.png"
-    ],
-    "risposta_corretta": "D",
-    "spiegazione": "La risposta corretta è D perché nella matrice cambiano insieme due regole: la forma si alterna per riga e il riempimento aumenta per colonna.",
-    "tags": [
-      "logica",
-      "logica_visiva",
-      "visuale",
-      "avanzato",
-      "visiva"
-    ],
-    "difficolta": 3,
-    "distrattore_forte": "C",
-    "motivo_distrattore_forte": "È vicino perché rispetta una parte della logica visiva della matrice, ma non combina correttamente entrambe le regole: alternanza della forma per riga e aumento del riempimento per colonna.",
-    "tipo": "visiva"
-  },
-  {
     "id": "LOG-VIS-FAC-0004",
     "categoria": "logica",
     "sottocategoria": "logica_visiva",
     "livello": "facile",
     "tipo": "visiva",
+    "tipo_domanda": "immagine",
     "domanda": "Seleziona il simbolo adatto allo spazio con il punto interrogativo.",
     "opzioni": [
       "A",
@@ -4195,7 +4094,7 @@
       "D"
     ],
     "risposta_corretta": "A",
-    "spiegazione": "La sequenza alterna cerchio e quadrato, mentre il colore alterna blu e rosso. Dopo il quadrato rosso deve tornare il cerchio blu.",
+    "spiegazione": "La risposta corretta è il cerchio blu con 0 lati, 3 pallini blu interni, perché la regola della sequenza alterna la forma esterna cerchio/quadrato, alterna il colore esterno blu/rosso e aumenta di 1 il numero dei pallini interni ogni due passaggi.",
     "immagine": "assets/logica_visiva/LOG-VIS-FAC-0004_domanda.svg",
     "immagine_domanda": "assets/logica_visiva/LOG-VIS-FAC-0004_domanda.svg",
     "immagini_opzioni": [
@@ -4213,41 +4112,139 @@
       "visiva"
     ],
     "distrattore_forte": "C",
-    "motivo_distrattore_forte": "C mantiene la stessa forma e lo stesso numero di punti, ma sbaglia il colore."
-  },
-  {
-    "id": "LOG-VIS-FAC-0005",
-    "categoria": "logica",
-    "sottocategoria": "logica_visiva",
-    "livello": "facile",
-    "tipo": "visiva",
-    "domanda": "Tra le quattro risposte, quale viene dopo nel percorso illustrato?",
-    "opzioni": [
-      "A",
-      "B",
-      "C",
-      "D"
-    ],
-    "risposta_corretta": "D",
-    "spiegazione": "La sequenza segue un cambiamento regolare della direzione e mantiene la stessa struttura con i punti nella figura. La risposta corretta è quella che continua il percorso visivo nello stesso modo, senza cambiare posizione dei punti o verso della trasformazione.",
-    "immagine": "assets/logica_visiva/LOG-VIS-FAC-0005_domanda.svg",
-    "immagine_domanda": "assets/logica_visiva/LOG-VIS-FAC-0005_domanda.svg",
-    "immagini_opzioni": [
-      "assets/logica_visiva/LOG-VIS-FAC-0005_opzione_A.svg",
-      "assets/logica_visiva/LOG-VIS-FAC-0005_opzione_B.svg",
-      "assets/logica_visiva/LOG-VIS-FAC-0005_opzione_C.svg",
-      "assets/logica_visiva/LOG-VIS-FAC-0005_opzione_D.svg"
-    ],
-    "difficolta": 1,
-    "tags": [
-      "logica",
-      "logica_visiva",
-      "visuale",
-      "facile",
-      "visiva"
-    ],
-    "distrattore_forte": "C",
-    "motivo_distrattore_forte": "C è una freccia della stessa sequenza di rotazione, ma rappresenta il passaggio precedente."
+    "motivo_distrattore_forte": "C mantiene la stessa forma e lo stesso numero di punti, ma sbaglia il colore.",
+    "spiegazioni_opzioni": {
+      "A": "A è corretta: mostra un cerchio blu con 0 lati e 3 pallini blu interni, coerente con la regola di alternanza forma/colore e crescita dei pallini.",
+      "B": "B non torna perché mostra un quadrato blu con 4 lati: il colore blu è coerente, ma la forma esterna dovrebbe tornare cerchio con 0 lati.",
+      "C": "C non torna perché mostra un cerchio rosso con 0 lati e 3 pallini rossi: la forma e la quantità sono vicine, ma sbaglia il colore esterno e interno.",
+      "D": "D non torna perché mostra un quadrato rosso con 4 lati e 2 pallini rossi: sbaglia forma, colore atteso e quantità degli oggetti interni."
+    },
+    "visual_logic": {
+      "type": "sequence",
+      "uses_position": false,
+      "rule": {
+        "description": "Alterna forma esterna cerchio/quadrato, alterna colore blu/rosso e aumenta i pallini interni ogni due passaggi.",
+        "color_alternation": {
+          "enabled": true,
+          "colors": [
+            "blu",
+            "rosso"
+          ]
+        }
+      },
+      "sequence": [
+        {
+          "outer_shape": "cerchio",
+          "outer_color": "blu",
+          "sides": 0,
+          "inner_objects": [
+            {
+              "type": "pallini",
+              "color": "blu",
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "outer_shape": "quadrato",
+          "outer_color": "rosso",
+          "sides": 4,
+          "inner_objects": [
+            {
+              "type": "pallini",
+              "color": "rosso",
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "outer_shape": "cerchio",
+          "outer_color": "blu",
+          "sides": 0,
+          "inner_objects": [
+            {
+              "type": "pallini",
+              "color": "blu",
+              "quantity": 2
+            }
+          ]
+        },
+        {
+          "outer_shape": "quadrato",
+          "outer_color": "rosso",
+          "sides": 4,
+          "inner_objects": [
+            {
+              "type": "pallini",
+              "color": "rosso",
+              "quantity": 2
+            }
+          ]
+        }
+      ],
+      "expected_answer": {
+        "outer_shape": "cerchio",
+        "outer_color": "blu",
+        "sides": 0,
+        "inner_objects": [
+          {
+            "type": "pallini",
+            "color": "blu",
+            "quantity": 3
+          }
+        ]
+      },
+      "options": {
+        "A": {
+          "outer_shape": "cerchio",
+          "outer_color": "blu",
+          "sides": 0,
+          "inner_objects": [
+            {
+              "type": "pallini",
+              "color": "blu",
+              "quantity": 3
+            }
+          ]
+        },
+        "B": {
+          "outer_shape": "quadrato",
+          "outer_color": "blu",
+          "sides": 4,
+          "inner_objects": [
+            {
+              "type": "pallini",
+              "color": "blu",
+              "quantity": 3
+            }
+          ]
+        },
+        "C": {
+          "outer_shape": "cerchio",
+          "outer_color": "rosso",
+          "sides": 0,
+          "inner_objects": [
+            {
+              "type": "pallini",
+              "color": "rosso",
+              "quantity": 3
+            }
+          ]
+        },
+        "D": {
+          "outer_shape": "quadrato",
+          "outer_color": "rosso",
+          "sides": 4,
+          "inner_objects": [
+            {
+              "type": "pallini",
+              "color": "rosso",
+              "quantity": 2
+            }
+          ]
+        }
+      }
+    }
   },
   {
     "id": "LOG-VIS-FAC-0006",
@@ -4255,6 +4252,7 @@
     "sottocategoria": "logica_visiva",
     "livello": "facile",
     "tipo": "visiva",
+    "tipo_domanda": "immagine",
     "domanda": "Quale proposta conclude meglio il gruppo rappresentato?",
     "opzioni": [
       "A",
@@ -4263,7 +4261,7 @@
       "D"
     ],
     "risposta_corretta": "C",
-    "spiegazione": "Il numero di punti aumenta di uno a ogni passaggio: 1, 2, 3, quindi 4. Anche il colore deve restare coerente con il modello mostrato. Per questo la risposta corretta è la figura con quattro punti e con il colore previsto dalla sequenza.",
+    "spiegazione": "La risposta corretta è il triangolo blu con 3 lati, 4 pallini blu interni, perché la regola mantiene la forma esterna triangolo e il colore esterno blu, mentre aumenta di 1 il numero dei pallini interni a ogni passaggio.",
     "immagine": "assets/logica_visiva/LOG-VIS-FAC-0006_domanda.svg",
     "immagine_domanda": "assets/logica_visiva/LOG-VIS-FAC-0006_domanda.svg",
     "immagini_opzioni": [
@@ -4281,7 +4279,124 @@
       "visiva"
     ],
     "distrattore_forte": "B",
-    "motivo_distrattore_forte": "B mantiene forma e quantità corretta di punti, ma cambia il colore."
+    "motivo_distrattore_forte": "B mantiene forma e quantità corretta di punti, ma cambia il colore.",
+    "spiegazioni_opzioni": {
+      "A": "A non torna perché mostra un triangolo blu con 3 lati ma solo 2 pallini blu interni: manca la crescita fino a 4 oggetti interni.",
+      "B": "B non torna perché mostra un triangolo rosso con 3 lati e 4 pallini rossi interni: la quantità è corretta, ma sbaglia colore esterno e interno.",
+      "C": "C è corretta: mostra un triangolo blu con 3 lati e 4 pallini blu interni, seguendo la regola di crescita 1, 2, 3, 4.",
+      "D": "D non torna perché mostra un quadrato blu con 4 lati: colore e 4 pallini sono vicini, ma la forma esterna dovrebbe restare triangolo con 3 lati."
+    },
+    "visual_logic": {
+      "type": "sequence",
+      "uses_position": false,
+      "rule": {
+        "description": "Mantiene triangolo blu e aumenta di 1 i pallini interni a ogni passaggio.",
+        "color_alternation": {
+          "enabled": false,
+          "colors": []
+        }
+      },
+      "sequence": [
+        {
+          "outer_shape": "triangolo",
+          "outer_color": "blu",
+          "sides": 3,
+          "inner_objects": [
+            {
+              "type": "pallini",
+              "color": "blu",
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "outer_shape": "triangolo",
+          "outer_color": "blu",
+          "sides": 3,
+          "inner_objects": [
+            {
+              "type": "pallini",
+              "color": "blu",
+              "quantity": 2
+            }
+          ]
+        },
+        {
+          "outer_shape": "triangolo",
+          "outer_color": "blu",
+          "sides": 3,
+          "inner_objects": [
+            {
+              "type": "pallini",
+              "color": "blu",
+              "quantity": 3
+            }
+          ]
+        }
+      ],
+      "expected_answer": {
+        "outer_shape": "triangolo",
+        "outer_color": "blu",
+        "sides": 3,
+        "inner_objects": [
+          {
+            "type": "pallini",
+            "color": "blu",
+            "quantity": 4
+          }
+        ]
+      },
+      "options": {
+        "A": {
+          "outer_shape": "triangolo",
+          "outer_color": "blu",
+          "sides": 3,
+          "inner_objects": [
+            {
+              "type": "pallini",
+              "color": "blu",
+              "quantity": 2
+            }
+          ]
+        },
+        "B": {
+          "outer_shape": "triangolo",
+          "outer_color": "rosso",
+          "sides": 3,
+          "inner_objects": [
+            {
+              "type": "pallini",
+              "color": "rosso",
+              "quantity": 4
+            }
+          ]
+        },
+        "C": {
+          "outer_shape": "triangolo",
+          "outer_color": "blu",
+          "sides": 3,
+          "inner_objects": [
+            {
+              "type": "pallini",
+              "color": "blu",
+              "quantity": 4
+            }
+          ]
+        },
+        "D": {
+          "outer_shape": "quadrato",
+          "outer_color": "blu",
+          "sides": 4,
+          "inner_objects": [
+            {
+              "type": "pallini",
+              "color": "blu",
+              "quantity": 4
+            }
+          ]
+        }
+      }
+    }
   },
   {
     "id": "LOG-VIS-FAC-0007",
@@ -4289,6 +4404,7 @@
     "sottocategoria": "logica_visiva",
     "livello": "facile",
     "tipo": "visiva",
+    "tipo_domanda": "immagine",
     "domanda": "Scegli l'elemento che mantiene ordinato il modello proposto.",
     "opzioni": [
       "A",
@@ -4297,7 +4413,7 @@
       "D"
     ],
     "risposta_corretta": "B",
-    "spiegazione": "La forma resta sempre un esagono, mentre il colore alterna oro e viola. La presenza dei punti serve a mantenere coerente la figura con il modello visivo. Dopo oro, viola, oro, deve venire viola, quindi la risposta corretta è B.",
+    "spiegazione": "La risposta corretta è l'esagono viola con 6 lati, 1 pallino viola interno, perché la regola mantiene la forma esterna esagono, mantiene 1 oggetto interno e alterna il colore esterno e interno oro/viola.",
     "immagine": "assets/logica_visiva/LOG-VIS-FAC-0007_domanda.svg",
     "immagine_domanda": "assets/logica_visiva/LOG-VIS-FAC-0007_domanda.svg",
     "immagini_opzioni": [
@@ -4315,7 +4431,127 @@
       "visiva"
     ],
     "distrattore_forte": "A",
-    "motivo_distrattore_forte": "A mantiene la stessa forma, ma sbaglia l'alternanza del colore."
+    "motivo_distrattore_forte": "A mantiene la stessa forma, ma sbaglia l'alternanza del colore.",
+    "spiegazioni_opzioni": {
+      "A": "A non torna perché mostra un esagono oro con 6 lati e 1 pallino oro interno: la forma è corretta, ma sbaglia l'alternanza del colore.",
+      "B": "B è corretta: mostra un esagono viola con 6 lati e 1 pallino viola interno, rispettando la regola oro/viola.",
+      "C": "C non torna perché mostra un cerchio viola con 0 lati: il colore è coerente, ma la forma esterna non resta esagono.",
+      "D": "D non torna perché mostra un quadrato oro con 4 lati: sbaglia sia la forma esterna sia il colore previsto dalla sequenza."
+    },
+    "visual_logic": {
+      "type": "sequence",
+      "uses_position": false,
+      "rule": {
+        "description": "Mantiene esagono e un pallino interno, alternando i colori oro e viola.",
+        "color_alternation": {
+          "enabled": true,
+          "colors": [
+            "oro",
+            "viola"
+          ]
+        }
+      },
+      "sequence": [
+        {
+          "outer_shape": "esagono",
+          "outer_color": "oro",
+          "sides": 6,
+          "inner_objects": [
+            {
+              "type": "pallini",
+              "color": "oro",
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "outer_shape": "esagono",
+          "outer_color": "viola",
+          "sides": 6,
+          "inner_objects": [
+            {
+              "type": "pallini",
+              "color": "viola",
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "outer_shape": "esagono",
+          "outer_color": "oro",
+          "sides": 6,
+          "inner_objects": [
+            {
+              "type": "pallini",
+              "color": "oro",
+              "quantity": 1
+            }
+          ]
+        }
+      ],
+      "expected_answer": {
+        "outer_shape": "esagono",
+        "outer_color": "viola",
+        "sides": 6,
+        "inner_objects": [
+          {
+            "type": "pallini",
+            "color": "viola",
+            "quantity": 1
+          }
+        ]
+      },
+      "options": {
+        "A": {
+          "outer_shape": "esagono",
+          "outer_color": "oro",
+          "sides": 6,
+          "inner_objects": [
+            {
+              "type": "pallini",
+              "color": "oro",
+              "quantity": 1
+            }
+          ]
+        },
+        "B": {
+          "outer_shape": "esagono",
+          "outer_color": "viola",
+          "sides": 6,
+          "inner_objects": [
+            {
+              "type": "pallini",
+              "color": "viola",
+              "quantity": 1
+            }
+          ]
+        },
+        "C": {
+          "outer_shape": "cerchio",
+          "outer_color": "viola",
+          "sides": 0,
+          "inner_objects": [
+            {
+              "type": "pallini",
+              "color": "viola",
+              "quantity": 1
+            }
+          ]
+        },
+        "D": {
+          "outer_shape": "quadrato",
+          "outer_color": "oro",
+          "sides": 4,
+          "inner_objects": [
+            {
+              "type": "pallini",
+              "color": "oro",
+              "quantity": 1
+            }
+          ]
+        }
+      }
+    }
   },
   {
     "id": "LOG-VIS-FAC-0008",
@@ -4323,6 +4559,7 @@
     "sottocategoria": "logica_visiva",
     "livello": "facile",
     "tipo": "visiva",
+    "tipo_domanda": "immagine",
     "domanda": "Quale alternativa completa il riquadro finale?",
     "opzioni": [
       "A",
@@ -4331,7 +4568,7 @@
       "D"
     ],
     "risposta_corretta": "A",
-    "spiegazione": "Ogni riga mantiene la stessa forma esterna. Nella terza riga ci sono triangoli. La terza colonna contiene tre punti e il colore deve restare coerente con la griglia. Quindi serve un triangolo con tre punti e con il colore previsto dalla posizione finale.",
+    "spiegazione": "La risposta corretta è il triangolo verde con 3 lati, 3 pallini verdi interni, perché la regola della matrice mantiene la forma esterna per riga, mantiene il colore esterno per riga e aumenta il numero degli oggetti interni da 1 a 3 per colonna.",
     "immagine": "assets/logica_visiva/LOG-VIS-FAC-0008_domanda.svg",
     "immagine_domanda": "assets/logica_visiva/LOG-VIS-FAC-0008_domanda.svg",
     "immagini_opzioni": [
@@ -4349,347 +4586,184 @@
       "visiva"
     ],
     "distrattore_forte": "B",
-    "motivo_distrattore_forte": "B mantiene forma e colore corretti, ma sbaglia il numero di punti."
-  },
-  {
-    "id": "LOG-VIS-INT-0004",
-    "categoria": "logica",
-    "sottocategoria": "logica_visiva",
-    "livello": "intermedio",
-    "tipo": "visiva",
-    "domanda": "Quale risposta prosegue il modello senza contraddirlo?",
-    "opzioni": [
-      "A",
-      "B",
-      "C",
-      "D"
-    ],
-    "risposta_corretta": "A",
-    "spiegazione": "La progressione combina più caratteristiche visive nello stesso momento. La risposta corretta rispetta la forma esterna, gli elementi interni e il colore.",
-    "immagine": "assets/logica_visiva/LOG-VIS-INT-0004_domanda.svg",
-    "immagine_domanda": "assets/logica_visiva/LOG-VIS-INT-0004_domanda.svg",
-    "immagini_opzioni": [
-      "assets/logica_visiva/LOG-VIS-INT-0004_opzione_A.svg",
-      "assets/logica_visiva/LOG-VIS-INT-0004_opzione_B.svg",
-      "assets/logica_visiva/LOG-VIS-INT-0004_opzione_C.svg",
-      "assets/logica_visiva/LOG-VIS-INT-0004_opzione_D.svg"
-    ],
-    "difficolta": 2,
-    "tags": [
-      "logica",
-      "logica_visiva",
-      "visuale",
-      "intermedio",
-      "visiva"
-    ],
-    "distrattore_forte": "C",
-    "motivo_distrattore_forte": "C mantiene colore e quantità interna, ma sbaglia la crescita della figura esterna."
-  },
-  {
-    "id": "LOG-VIS-INT-0005",
-    "categoria": "logica",
-    "sottocategoria": "logica_visiva",
-    "livello": "intermedio",
-    "tipo": "visiva",
-    "domanda": "Inserisci mentalmente il tassello mancante e scegli la soluzione.",
-    "opzioni": [
-      "A",
-      "B",
-      "C",
-      "D"
-    ],
-    "risposta_corretta": "B",
-    "spiegazione": "La terza riga deve mantenere la forma triangolo. La terza colonna richiede tre punti. Il colore segue l'alternanza verde, blu, verde.",
-    "immagine": "assets/logica_visiva/LOG-VIS-INT-0005_domanda.svg",
-    "immagine_domanda": "assets/logica_visiva/LOG-VIS-INT-0005_domanda.svg",
-    "immagini_opzioni": [
-      "assets/logica_visiva/LOG-VIS-INT-0005_opzione_A.svg",
-      "assets/logica_visiva/LOG-VIS-INT-0005_opzione_B.svg",
-      "assets/logica_visiva/LOG-VIS-INT-0005_opzione_C.svg",
-      "assets/logica_visiva/LOG-VIS-INT-0005_opzione_D.svg"
-    ],
-    "difficolta": 2,
-    "tags": [
-      "logica",
-      "logica_visiva",
-      "visuale",
-      "intermedio",
-      "visiva"
-    ],
-    "distrattore_forte": "A",
-    "motivo_distrattore_forte": "A mantiene forma e numero di punti, ma sbaglia il colore richiesto dalla matrice."
-  },
-  {
-    "id": "LOG-VIS-INT-0006",
-    "categoria": "logica",
-    "sottocategoria": "logica_visiva",
-    "livello": "intermedio",
-    "tipo": "visiva",
-    "domanda": "Quale scelta rende completo il quadro mostrato?",
-    "opzioni": [
-      "A",
-      "B",
-      "C",
-      "D"
-    ],
-    "risposta_corretta": "A",
-    "spiegazione": "Da sinistra a destra la diagonale cambia verso e i punti aumentano da uno a due. La stessa trasformazione deve essere applicata anche al cerchio rosso: cambiare il verso della linea diagonale e mantenere coerente l'aumento dei punti. Quindi l'opzione corretta è A.",
-    "immagine": "assets/logica_visiva/LOG-VIS-INT-0006_domanda.svg",
-    "immagine_domanda": "assets/logica_visiva/LOG-VIS-INT-0006_domanda.svg",
-    "immagini_opzioni": [
-      "assets/logica_visiva/LOG-VIS-INT-0006_opzione_A.svg",
-      "assets/logica_visiva/LOG-VIS-INT-0006_opzione_B.svg",
-      "assets/logica_visiva/LOG-VIS-INT-0006_opzione_C.svg",
-      "assets/logica_visiva/LOG-VIS-INT-0006_opzione_D.svg"
-    ],
-    "difficolta": 2,
-    "tags": [
-      "logica",
-      "logica_visiva",
-      "visuale",
-      "intermedio",
-      "visiva"
-    ],
-    "distrattore_forte": "C",
-    "motivo_distrattore_forte": "C mantiene forma, colore e numero di punti, ma sbaglia il verso della diagonale."
-  },
-  {
-    "id": "LOG-VIS-INT-0007",
-    "categoria": "logica",
-    "sottocategoria": "logica_visiva",
-    "livello": "intermedio",
-    "tipo": "visiva",
-    "domanda": "Quale elemento occupa la posizione vuota?",
-    "opzioni": [
-      "A",
-      "B",
-      "C",
-      "D"
-    ],
-    "risposta_corretta": "C",
-    "spiegazione": "La freccia ruota di 90 gradi in senso orario, il numero di punti aumenta e il colore si alterna tra blu e rosso. Dopo alto, destra, basso, deve venire sinistra con quattro punti e colore rosso.",
-    "immagine": "assets/logica_visiva/LOG-VIS-INT-0007_domanda.svg",
-    "immagine_domanda": "assets/logica_visiva/LOG-VIS-INT-0007_domanda.svg",
-    "immagini_opzioni": [
-      "assets/logica_visiva/LOG-VIS-INT-0007_opzione_A.svg",
-      "assets/logica_visiva/LOG-VIS-INT-0007_opzione_B.svg",
-      "assets/logica_visiva/LOG-VIS-INT-0007_opzione_C.svg",
-      "assets/logica_visiva/LOG-VIS-INT-0007_opzione_D.svg"
-    ],
-    "difficolta": 2,
-    "tags": [
-      "logica",
-      "logica_visiva",
-      "visuale",
-      "intermedio",
-      "visiva"
-    ],
-    "distrattore_forte": "D",
-    "motivo_distrattore_forte": "D mantiene direzione e colore corretti, ma sbaglia il numero di punti."
-  },
-  {
-    "id": "LOG-VIS-INT-0008",
-    "categoria": "logica",
-    "sottocategoria": "logica_visiva",
-    "livello": "intermedio",
-    "tipo": "visiva",
-    "domanda": "Quale alternativa corrisponde alla figura richiesta?",
-    "opzioni": [
-      "A",
-      "B",
-      "C",
-      "D"
-    ],
-    "risposta_corretta": "D",
-    "spiegazione": "La figura richiesta si ottiene con un ribaltamento speculare. La risposta corretta conserva la stessa struttura, comprese linee e segmenti interni, ma li porta nella posizione riflessa giusta. Quindi l'opzione corretta è D.",
-    "immagine": "assets/logica_visiva/LOG-VIS-INT-0008_domanda.svg",
-    "immagine_domanda": "assets/logica_visiva/LOG-VIS-INT-0008_domanda.svg",
-    "immagini_opzioni": [
-      "assets/logica_visiva/LOG-VIS-INT-0008_opzione_A.svg",
-      "assets/logica_visiva/LOG-VIS-INT-0008_opzione_B.svg",
-      "assets/logica_visiva/LOG-VIS-INT-0008_opzione_C.svg",
-      "assets/logica_visiva/LOG-VIS-INT-0008_opzione_D.svg"
-    ],
-    "difficolta": 2,
-    "tags": [
-      "logica",
-      "logica_visiva",
-      "visuale",
-      "intermedio",
-      "visiva"
-    ],
-    "distrattore_forte": "A",
-    "motivo_distrattore_forte": "A è simile alla figura corretta, ma non rispetta pienamente il ribaltamento speculare."
-  },
-  {
-    "id": "LOG-VIS-AV-0004",
-    "categoria": "logica",
-    "sottocategoria": "logica_visiva",
-    "livello": "avanzato",
-    "tipo": "visiva",
-    "domanda": "Quale casella completa la matrice visiva?",
-    "opzioni": [
-      "A",
-      "B",
-      "C",
-      "D"
-    ],
-    "risposta_corretta": "A",
-    "spiegazione": "Le righe determinano la forma: cerchio, quadrato, triangolo. Le colonne determinano il numero di linee interne: una, due, tre. Il colore alterna blu, rosso, blu. Serve quindi un triangolo blu con tre linee interne.",
-    "immagine": "assets/logica_visiva/LOG-VIS-AV-0004_domanda.svg",
-    "immagine_domanda": "assets/logica_visiva/LOG-VIS-AV-0004_domanda.svg",
-    "immagini_opzioni": [
-      "assets/logica_visiva/LOG-VIS-AV-0004_opzione_A.svg",
-      "assets/logica_visiva/LOG-VIS-AV-0004_opzione_B.svg",
-      "assets/logica_visiva/LOG-VIS-AV-0004_opzione_C.svg",
-      "assets/logica_visiva/LOG-VIS-AV-0004_opzione_D.svg"
-    ],
-    "difficolta": 3,
-    "tags": [
-      "logica",
-      "logica_visiva",
-      "visuale",
-      "avanzato",
-      "visiva"
-    ],
-    "distrattore_forte": "B",
-    "motivo_distrattore_forte": "B mantiene forma e numero di linee interne corretti, ma sbaglia il colore."
-  },
-  {
-    "id": "LOG-VIS-AV-0005",
-    "categoria": "logica",
-    "sottocategoria": "logica_visiva",
-    "livello": "avanzato",
-    "tipo": "visiva",
-    "domanda": "Scegli la soluzione più adatta per il riquadro mancante.",
-    "opzioni": [
-      "A",
-      "B",
-      "C",
-      "D"
-    ],
-    "risposta_corretta": "C",
-    "spiegazione": "Scendendo nelle righe aumenta il numero di contorni esterni. Le colonne cambiano il riempimento interno: pieno, righe, puntini. I puntini e le linee non sono dettagli decorativi, ma indicano la regola della colonna. Quindi serve un esagono con tre contorni e riempimento a puntini.",
-    "immagine": "assets/logica_visiva/LOG-VIS-AV-0005_domanda.svg",
-    "immagine_domanda": "assets/logica_visiva/LOG-VIS-AV-0005_domanda.svg",
-    "immagini_opzioni": [
-      "assets/logica_visiva/LOG-VIS-AV-0005_opzione_A.svg",
-      "assets/logica_visiva/LOG-VIS-AV-0005_opzione_B.svg",
-      "assets/logica_visiva/LOG-VIS-AV-0005_opzione_C.svg",
-      "assets/logica_visiva/LOG-VIS-AV-0005_opzione_D.svg"
-    ],
-    "difficolta": 3,
-    "tags": [
-      "logica",
-      "logica_visiva",
-      "visuale",
-      "avanzato",
-      "visiva"
-    ],
-    "distrattore_forte": "A",
-    "motivo_distrattore_forte": "A mantiene il riempimento a puntini, ma sbaglia il numero di contorni esterni."
-  },
-  {
-    "id": "LOG-VIS-AV-0006",
-    "categoria": "logica",
-    "sottocategoria": "logica_visiva",
-    "livello": "avanzato",
-    "tipo": "visiva",
-    "domanda": "Quale immagine chiude il modello avanzato?",
-    "opzioni": [
-      "A",
-      "B",
-      "C",
-      "D"
-    ],
-    "risposta_corretta": "B",
-    "spiegazione": "La trasformazione aumenta di un lato la figura esterna, elimina il riempimento e sposta il punto di una posizione in senso orario. Applicando la stessa regola a C si ottiene un quadrato rosso vuoto con punto in alto.",
-    "immagine": "assets/logica_visiva/LOG-VIS-AV-0006_domanda.svg",
-    "immagine_domanda": "assets/logica_visiva/LOG-VIS-AV-0006_domanda.svg",
-    "immagini_opzioni": [
-      "assets/logica_visiva/LOG-VIS-AV-0006_opzione_A.svg",
-      "assets/logica_visiva/LOG-VIS-AV-0006_opzione_B.svg",
-      "assets/logica_visiva/LOG-VIS-AV-0006_opzione_C.svg",
-      "assets/logica_visiva/LOG-VIS-AV-0006_opzione_D.svg"
-    ],
-    "difficolta": 3,
-    "tags": [
-      "logica",
-      "logica_visiva",
-      "visuale",
-      "avanzato",
-      "visiva"
-    ],
-    "distrattore_forte": "A",
-    "motivo_distrattore_forte": "A mantiene forma, colore e posizione del punto, ma sbaglia il riempimento della figura."
-  },
-  {
-    "id": "LOG-VIS-AV-0007",
-    "categoria": "logica",
-    "sottocategoria": "logica_visiva",
-    "livello": "avanzato",
-    "tipo": "visiva",
-    "domanda": "Trova la scelta che rende coerente l'intera composizione.",
-    "opzioni": [
-      "A",
-      "B",
-      "C",
-      "D"
-    ],
-    "risposta_corretta": "A",
-    "spiegazione": "La risposta corretta è A perché nella terza colonna viene sommato il numero di elementi delle prime due colonne. Nell'ultima riga: 1 stella + 3 stelle = 4 stelle. La forma esterna resta un triangolo verde e gli elementi interni devono rispettare la quantità ottenuta dalla somma.",
-    "immagine": "assets/logica_visiva/LOG-VIS-AV-0007_domanda.svg",
-    "immagine_domanda": "assets/logica_visiva/LOG-VIS-AV-0007_domanda.svg",
-    "immagini_opzioni": [
-      "assets/logica_visiva/LOG-VIS-AV-0007_opzione_A.svg",
-      "assets/logica_visiva/LOG-VIS-AV-0007_opzione_B.svg",
-      "assets/logica_visiva/LOG-VIS-AV-0007_opzione_C.svg",
-      "assets/logica_visiva/LOG-VIS-AV-0007_opzione_D.svg"
-    ],
-    "difficolta": 3,
-    "tags": [
-      "logica",
-      "logica_visiva",
-      "visuale",
-      "avanzato",
-      "visiva"
-    ],
-    "distrattore_forte": "B",
-    "motivo_distrattore_forte": "B mantiene forma e colore corretti, ma sbaglia il numero di stelle."
-  },
-  {
-    "id": "LOG-VIS-AV-0008",
-    "categoria": "logica",
-    "sottocategoria": "logica_visiva",
-    "livello": "avanzato",
-    "tipo": "visiva",
-    "domanda": "Quale tassello conclude la griglia nel modo corretto?",
-    "opzioni": [
-      "A",
-      "B",
-      "C",
-      "D"
-    ],
-    "risposta_corretta": "D",
-    "spiegazione": "Le forme ruotano ciclicamente tra cerchio, quadrato e triangolo. I colori alternano blu e rosso, mentre i segmenti aumentano da sinistra a destra. Quindi la casella mancante deve rispettare insieme forma, colore e numero di segmenti: un quadrato blu con tre barre diagonali.",
-    "immagine": "assets/logica_visiva/LOG-VIS-AV-0008_domanda.svg",
-    "immagine_domanda": "assets/logica_visiva/LOG-VIS-AV-0008_domanda.svg",
-    "immagini_opzioni": [
-      "assets/logica_visiva/LOG-VIS-AV-0008_opzione_A.svg",
-      "assets/logica_visiva/LOG-VIS-AV-0008_opzione_B.svg",
-      "assets/logica_visiva/LOG-VIS-AV-0008_opzione_C.svg",
-      "assets/logica_visiva/LOG-VIS-AV-0008_opzione_D.svg"
-    ],
-    "difficolta": 3,
-    "tags": [
-      "logica",
-      "logica_visiva",
-      "visuale",
-      "avanzato",
-      "visiva"
-    ],
-    "distrattore_forte": "C",
-    "motivo_distrattore_forte": "C mantiene forma e colore corretti, ma sbaglia il numero di barre diagonali."
+    "motivo_distrattore_forte": "B mantiene forma e colore corretti, ma sbaglia il numero di punti.",
+    "spiegazioni_opzioni": {
+      "A": "A è corretta: mostra un triangolo verde con 3 lati e 3 pallini verdi interni, rispettando forma di riga, colore di riga e numero della terza colonna.",
+      "B": "B non torna perché mostra un triangolo verde con 3 lati ma solo 2 pallini verdi interni: sbaglia il numero degli oggetti interni richiesto dalla colonna.",
+      "C": "C non torna perché mostra un cerchio verde con 0 lati e 3 pallini verdi interni: numero e colore sono coerenti, ma la forma esterna dovrebbe essere triangolo.",
+      "D": "D non torna perché mostra un quadrato verde con 4 lati e 3 pallini verdi interni: sbaglia la forma esterna e il numero di lati della riga finale."
+    },
+    "visual_logic": {
+      "type": "matrix",
+      "uses_position": false,
+      "rule": {
+        "description": "La forma e il colore sono fissi per riga; il numero dei pallini interni cresce da 1 a 3 per colonna.",
+        "color_alternation": {
+          "enabled": false,
+          "colors": []
+        }
+      },
+      "sequence": [
+        {
+          "outer_shape": "cerchio",
+          "outer_color": "blu",
+          "sides": 0,
+          "inner_objects": [
+            {
+              "type": "pallini",
+              "color": "blu",
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "outer_shape": "cerchio",
+          "outer_color": "blu",
+          "sides": 0,
+          "inner_objects": [
+            {
+              "type": "pallini",
+              "color": "blu",
+              "quantity": 2
+            }
+          ]
+        },
+        {
+          "outer_shape": "cerchio",
+          "outer_color": "blu",
+          "sides": 0,
+          "inner_objects": [
+            {
+              "type": "pallini",
+              "color": "blu",
+              "quantity": 3
+            }
+          ]
+        },
+        {
+          "outer_shape": "quadrato",
+          "outer_color": "rosso",
+          "sides": 4,
+          "inner_objects": [
+            {
+              "type": "pallini",
+              "color": "rosso",
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "outer_shape": "quadrato",
+          "outer_color": "rosso",
+          "sides": 4,
+          "inner_objects": [
+            {
+              "type": "pallini",
+              "color": "rosso",
+              "quantity": 2
+            }
+          ]
+        },
+        {
+          "outer_shape": "quadrato",
+          "outer_color": "rosso",
+          "sides": 4,
+          "inner_objects": [
+            {
+              "type": "pallini",
+              "color": "rosso",
+              "quantity": 3
+            }
+          ]
+        },
+        {
+          "outer_shape": "triangolo",
+          "outer_color": "verde",
+          "sides": 3,
+          "inner_objects": [
+            {
+              "type": "pallini",
+              "color": "verde",
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "outer_shape": "triangolo",
+          "outer_color": "verde",
+          "sides": 3,
+          "inner_objects": [
+            {
+              "type": "pallini",
+              "color": "verde",
+              "quantity": 2
+            }
+          ]
+        }
+      ],
+      "expected_answer": {
+        "outer_shape": "triangolo",
+        "outer_color": "verde",
+        "sides": 3,
+        "inner_objects": [
+          {
+            "type": "pallini",
+            "color": "verde",
+            "quantity": 3
+          }
+        ]
+      },
+      "options": {
+        "A": {
+          "outer_shape": "triangolo",
+          "outer_color": "verde",
+          "sides": 3,
+          "inner_objects": [
+            {
+              "type": "pallini",
+              "color": "verde",
+              "quantity": 3
+            }
+          ]
+        },
+        "B": {
+          "outer_shape": "triangolo",
+          "outer_color": "verde",
+          "sides": 3,
+          "inner_objects": [
+            {
+              "type": "pallini",
+              "color": "verde",
+              "quantity": 2
+            }
+          ]
+        },
+        "C": {
+          "outer_shape": "cerchio",
+          "outer_color": "verde",
+          "sides": 0,
+          "inner_objects": [
+            {
+              "type": "pallini",
+              "color": "verde",
+              "quantity": 3
+            }
+          ]
+        },
+        "D": {
+          "outer_shape": "quadrato",
+          "outer_color": "verde",
+          "sides": 4,
+          "inner_objects": [
+            {
+              "type": "pallini",
+              "color": "verde",
+              "quantity": 3
+            }
+          ]
+        }
+      }
+    }
   },
   {
     "id": "LOG-VER-FAC-0001",
