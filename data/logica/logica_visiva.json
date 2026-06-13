@@ -20,7 +20,7 @@
       "assets/logica_visiva/log_vis_fac_0001_D.png"
     ],
     "risposta_corretta": "C",
-    "spiegazione": "La risposta corretta è C perché la sequenza alterna cerchio e quadrato mantenendo lo stesso ordine visivo. Dopo il quadrato deve tornare il cerchio, quindi l'opzione corretta è quella che riprende la forma attesa senza cambiare la logica della sequenza.",
+    "spiegazione": "La risposta corretta è la figura con forma esterna cerchio, colore esterno nero, 0 lati e 0 oggetti interni dichiarati, perché la regola logica usata richiede di alternare la forma esterna cerchio/quadrato mantenendo colore esterno nero, 0 oggetti interni e scegliendo dopo il quadrato il cerchio successivo.",
     "tags": [
       "logica",
       "logica_visiva",
@@ -31,7 +31,82 @@
     "difficolta": 1,
     "distrattore_forte": "A",
     "motivo_distrattore_forte": "È vicino perché è una delle opzioni visive proposte, ma non rispetta l'alternanza corretta cerchio-quadrato: dopo il quadrato deve tornare il cerchio indicato dall'opzione C.",
-    "tipo": "visiva"
+    "tipo": "visiva",
+    "spiegazioni_opzioni": {
+      "A": "A non torna perché ha forma esterna triangolo invece di cerchio, 3 lati invece di 0; quindi non rispetta la regola logica usata: alternare la forma esterna cerchio/quadrato mantenendo colore esterno nero, 0 oggetti interni e scegliendo dopo il quadrato il cerchio successivo.",
+      "B": "B non torna perché ha forma esterna quadrato invece di cerchio, 4 lati invece di 0; quindi non rispetta la regola logica usata: alternare la forma esterna cerchio/quadrato mantenendo colore esterno nero, 0 oggetti interni e scegliendo dopo il quadrato il cerchio successivo.",
+      "C": "C è corretta: ha forma esterna cerchio, colore esterno nero, 0 lati e 0 oggetti interni dichiarati, quindi rispetta la regola logica usata.",
+      "D": "D non torna perché ha forma esterna rettangolo invece di cerchio, 4 lati invece di 0; quindi non rispetta la regola logica usata: alternare la forma esterna cerchio/rettangolo mantenendo colore esterno nero, 0 oggetti interni e scegliendo dopo il rettangolo il cerchio successivo."
+    },
+    "visual_logic": {
+      "type": "sequence",
+      "uses_position": false,
+      "rule": {
+        "description": "alternare la forma esterna cerchio/quadrato mantenendo colore esterno nero, 0 oggetti interni e scegliendo dopo il quadrato il cerchio successivo.",
+        "color_alternation": {
+          "enabled": false,
+          "colors": []
+        }
+      },
+      "sequence": [
+        {
+          "outer_shape": "cerchio",
+          "outer_color": "nero",
+          "sides": 0,
+          "inner_objects": []
+        },
+        {
+          "outer_shape": "quadrato",
+          "outer_color": "nero",
+          "sides": 4,
+          "inner_objects": []
+        },
+        {
+          "outer_shape": "cerchio",
+          "outer_color": "nero",
+          "sides": 0,
+          "inner_objects": []
+        },
+        {
+          "outer_shape": "quadrato",
+          "outer_color": "nero",
+          "sides": 4,
+          "inner_objects": []
+        }
+      ],
+      "expected_answer": {
+        "outer_shape": "cerchio",
+        "outer_color": "nero",
+        "sides": 0,
+        "inner_objects": []
+      },
+      "options": {
+        "A": {
+          "outer_shape": "triangolo",
+          "outer_color": "nero",
+          "sides": 3,
+          "inner_objects": []
+        },
+        "B": {
+          "outer_shape": "quadrato",
+          "outer_color": "nero",
+          "sides": 4,
+          "inner_objects": []
+        },
+        "C": {
+          "outer_shape": "cerchio",
+          "outer_color": "nero",
+          "sides": 0,
+          "inner_objects": []
+        },
+        "D": {
+          "outer_shape": "rettangolo",
+          "outer_color": "nero",
+          "sides": 4,
+          "inner_objects": []
+        }
+      }
+    }
   },
   {
     "id": "LOG-VIS-INT-0002",
@@ -54,7 +129,7 @@
       "assets/logica_visiva/log_vis_int_0002_D.png"
     ],
     "risposta_corretta": "B",
-    "spiegazione": "La sequenza mostra una trasformazione ordinata dell'elemento principale. Bisogna confrontare la posizione iniziale con quella successiva e scegliere l'opzione che mantiene lo stesso tipo di passaggio.",
+    "spiegazione": "La risposta corretta è la figura con forma esterna freccia, colore esterno nero, 0 lati e 1 direzione interni di colore nero in posizione sinistra, perché la regola logica usata richiede di ruotare la freccia nera di 90 gradi in senso orario, mantenendo 0 oggetti interni e passando da alto a destra, poi basso, poi sinistra.",
     "tags": [
       "logica",
       "logica_visiva",
@@ -65,7 +140,132 @@
     "difficolta": 2,
     "distrattore_forte": "A",
     "motivo_distrattore_forte": "È vicino perché rappresenta una possibile rotazione della figura, ma non continua correttamente la rotazione costante di 90 gradi in senso orario indicata dalla sequenza.",
-    "tipo": "visiva"
+    "tipo": "visiva",
+    "spiegazioni_opzioni": {
+      "A": "A non torna perché ha oggetti interni 1 direzione interni di colore nero in posizione alto invece di 1 direzione interni di colore nero in posizione sinistra; quindi non rispetta la regola logica usata: ruotare la freccia nera di 90 gradi in senso orario, mantenendo 0 oggetti interni e passando da alto a destra, poi basso, poi sinistra.",
+      "B": "B è corretta: ha forma esterna freccia, colore esterno nero, 0 lati e 1 direzione interni di colore nero in posizione sinistra, quindi rispetta la regola logica usata.",
+      "C": "C non torna perché ha oggetti interni 1 direzione interni di colore nero in posizione destra invece di 1 direzione interni di colore nero in posizione sinistra; quindi non rispetta la regola logica usata: ruotare la freccia nera di 90 gradi in senso orario, mantenendo 0 oggetti interni e passando da alto a destra, poi basso, poi sinistra.",
+      "D": "D non torna perché ha oggetti interni 1 direzione interni di colore nero in posizione basso invece di 1 direzione interni di colore nero in posizione sinistra; quindi non rispetta la regola logica usata: ruotare la freccia nera di 90 gradi in senso orario, mantenendo 0 oggetti interni e passando da alto a destra, poi basso, poi sinistra."
+    },
+    "visual_logic": {
+      "type": "sequence",
+      "uses_position": true,
+      "rule": {
+        "description": "ruotare la freccia nera di 90 gradi in senso orario, mantenendo 0 oggetti interni e passando da alto a destra, poi basso, poi sinistra.",
+        "color_alternation": {
+          "enabled": false,
+          "colors": []
+        }
+      },
+      "sequence": [
+        {
+          "outer_shape": "freccia",
+          "outer_color": "nero",
+          "sides": 0,
+          "inner_objects": [
+            {
+              "type": "direzione",
+              "color": "nero",
+              "quantity": 1,
+              "position": "alto"
+            }
+          ]
+        },
+        {
+          "outer_shape": "freccia",
+          "outer_color": "nero",
+          "sides": 0,
+          "inner_objects": [
+            {
+              "type": "direzione",
+              "color": "nero",
+              "quantity": 1,
+              "position": "destra"
+            }
+          ]
+        },
+        {
+          "outer_shape": "freccia",
+          "outer_color": "nero",
+          "sides": 0,
+          "inner_objects": [
+            {
+              "type": "direzione",
+              "color": "nero",
+              "quantity": 1,
+              "position": "basso"
+            }
+          ]
+        }
+      ],
+      "expected_answer": {
+        "outer_shape": "freccia",
+        "outer_color": "nero",
+        "sides": 0,
+        "inner_objects": [
+          {
+            "type": "direzione",
+            "color": "nero",
+            "quantity": 1,
+            "position": "sinistra"
+          }
+        ]
+      },
+      "options": {
+        "A": {
+          "outer_shape": "freccia",
+          "outer_color": "nero",
+          "sides": 0,
+          "inner_objects": [
+            {
+              "type": "direzione",
+              "color": "nero",
+              "quantity": 1,
+              "position": "alto"
+            }
+          ]
+        },
+        "B": {
+          "outer_shape": "freccia",
+          "outer_color": "nero",
+          "sides": 0,
+          "inner_objects": [
+            {
+              "type": "direzione",
+              "color": "nero",
+              "quantity": 1,
+              "position": "sinistra"
+            }
+          ]
+        },
+        "C": {
+          "outer_shape": "freccia",
+          "outer_color": "nero",
+          "sides": 0,
+          "inner_objects": [
+            {
+              "type": "direzione",
+              "color": "nero",
+              "quantity": 1,
+              "position": "destra"
+            }
+          ]
+        },
+        "D": {
+          "outer_shape": "freccia",
+          "outer_color": "nero",
+          "sides": 0,
+          "inner_objects": [
+            {
+              "type": "direzione",
+              "color": "nero",
+              "quantity": 1,
+              "position": "basso"
+            }
+          ]
+        }
+      }
+    }
   },
   {
     "id": "LOG-VIS-AV-0003",
@@ -88,7 +288,7 @@
       "assets/logica_visiva/log_vis_av_0003_D.png"
     ],
     "risposta_corretta": "D",
-    "spiegazione": "La risposta corretta è D perché nella matrice cambiano insieme due regole: la forma si alterna per riga e il riempimento aumenta per colonna.",
+    "spiegazione": "La risposta corretta è la figura con forma esterna triangolo, colore esterno nero, 3 lati e 1 riempimento interni di colore nero in posizione pieno, perché la regola logica usata richiede di mantenere la forma esterna per riga, aumentare il riempimento interno per colonna da vuoto a metà inferiore e poi pieno; nella terza riga serve il triangolo nero pieno.",
     "tags": [
       "logica",
       "logica_visiva",
@@ -99,7 +299,169 @@
     "difficolta": 3,
     "distrattore_forte": "C",
     "motivo_distrattore_forte": "È vicino perché rispetta una parte della logica visiva della matrice, ma non combina correttamente entrambe le regole: alternanza della forma per riga e aumento del riempimento per colonna.",
-    "tipo": "visiva"
+    "tipo": "visiva",
+    "spiegazioni_opzioni": {
+      "A": "A non torna perché ha oggetti interni 0 oggetti interni dichiarati invece di 1 riempimento interni di colore nero in posizione pieno; quindi non rispetta la regola logica usata: mantenere la forma esterna per riga, aumentare il riempimento interno per colonna da vuoto a metà inferiore e poi pieno; nella terza riga serve il triangolo nero pieno.",
+      "B": "B non torna perché ha forma esterna quadrato invece di triangolo, 4 lati invece di 3; quindi non rispetta la regola logica usata: mantenere la forma esterna per riga, aumentare il riempimento interno per colonna da vuoto a metà inferiore e poi pieno; nella terza riga serve il triangolo nero pieno.",
+      "C": "C non torna perché ha oggetti interni 1 riempimento interni di colore nero in posizione metà inferiore invece di 1 riempimento interni di colore nero in posizione pieno; quindi non rispetta la regola logica usata: mantenere la forma esterna per riga, aumentare il riempimento interno per colonna da vuoto a metà inferiore e poi pieno; nella terza riga serve il triangolo nero pieno.",
+      "D": "D è corretta: ha forma esterna triangolo, colore esterno nero, 3 lati e 1 riempimento interni di colore nero in posizione pieno, quindi rispetta la regola logica usata."
+    },
+    "visual_logic": {
+      "type": "matrix",
+      "uses_position": true,
+      "rule": {
+        "description": "mantenere la forma esterna per riga, aumentare il riempimento interno per colonna da vuoto a metà inferiore e poi pieno; nella terza riga serve il triangolo nero pieno.",
+        "color_alternation": {
+          "enabled": false,
+          "colors": []
+        }
+      },
+      "sequence": [
+        {
+          "outer_shape": "cerchio",
+          "outer_color": "nero",
+          "sides": 0,
+          "inner_objects": []
+        },
+        {
+          "outer_shape": "cerchio",
+          "outer_color": "nero",
+          "sides": 0,
+          "inner_objects": [
+            {
+              "type": "riempimento",
+              "color": "nero",
+              "quantity": 1,
+              "position": "metà inferiore"
+            }
+          ]
+        },
+        {
+          "outer_shape": "cerchio",
+          "outer_color": "nero",
+          "sides": 0,
+          "inner_objects": [
+            {
+              "type": "riempimento",
+              "color": "nero",
+              "quantity": 1,
+              "position": "pieno"
+            }
+          ]
+        },
+        {
+          "outer_shape": "quadrato",
+          "outer_color": "nero",
+          "sides": 4,
+          "inner_objects": []
+        },
+        {
+          "outer_shape": "quadrato",
+          "outer_color": "nero",
+          "sides": 4,
+          "inner_objects": [
+            {
+              "type": "riempimento",
+              "color": "nero",
+              "quantity": 1,
+              "position": "metà inferiore"
+            }
+          ]
+        },
+        {
+          "outer_shape": "quadrato",
+          "outer_color": "nero",
+          "sides": 4,
+          "inner_objects": [
+            {
+              "type": "riempimento",
+              "color": "nero",
+              "quantity": 1,
+              "position": "pieno"
+            }
+          ]
+        },
+        {
+          "outer_shape": "triangolo",
+          "outer_color": "nero",
+          "sides": 3,
+          "inner_objects": []
+        },
+        {
+          "outer_shape": "triangolo",
+          "outer_color": "nero",
+          "sides": 3,
+          "inner_objects": [
+            {
+              "type": "riempimento",
+              "color": "nero",
+              "quantity": 1,
+              "position": "metà inferiore"
+            }
+          ]
+        }
+      ],
+      "expected_answer": {
+        "outer_shape": "triangolo",
+        "outer_color": "nero",
+        "sides": 3,
+        "inner_objects": [
+          {
+            "type": "riempimento",
+            "color": "nero",
+            "quantity": 1,
+            "position": "pieno"
+          }
+        ]
+      },
+      "options": {
+        "A": {
+          "outer_shape": "triangolo",
+          "outer_color": "nero",
+          "sides": 3,
+          "inner_objects": []
+        },
+        "B": {
+          "outer_shape": "quadrato",
+          "outer_color": "nero",
+          "sides": 4,
+          "inner_objects": [
+            {
+              "type": "riempimento",
+              "color": "nero",
+              "quantity": 1,
+              "position": "pieno"
+            }
+          ]
+        },
+        "C": {
+          "outer_shape": "triangolo",
+          "outer_color": "nero",
+          "sides": 3,
+          "inner_objects": [
+            {
+              "type": "riempimento",
+              "color": "nero",
+              "quantity": 1,
+              "position": "metà inferiore"
+            }
+          ]
+        },
+        "D": {
+          "outer_shape": "triangolo",
+          "outer_color": "nero",
+          "sides": 3,
+          "inner_objects": [
+            {
+              "type": "riempimento",
+              "color": "nero",
+              "quantity": 1,
+              "position": "pieno"
+            }
+          ]
+        }
+      }
+    }
   },
   {
     "id": "LOG-VIS-FAC-0004",
@@ -116,7 +478,7 @@
       "D"
     ],
     "risposta_corretta": "A",
-    "spiegazione": "La risposta corretta è il cerchio blu con 0 lati, 3 pallini blu interni, perché la regola della sequenza alterna la forma esterna cerchio/quadrato, alterna il colore esterno blu/rosso e aumenta di 1 il numero dei pallini interni ogni due passaggi.",
+    "spiegazione": "La risposta corretta è la figura con forma esterna cerchio, colore esterno blu, 0 lati e 3 pallini interni di colore blu, perché la regola logica usata richiede di alternare forma esterna cerchio/quadrato, alternare colore blu/rosso e aumentare di 1 il numero dei pallini interni ogni due passaggi.",
     "immagine": "assets/logica_visiva/LOG-VIS-FAC-0004_domanda.svg",
     "immagine_domanda": "assets/logica_visiva/LOG-VIS-FAC-0004_domanda.svg",
     "immagini_opzioni": [
@@ -136,16 +498,16 @@
     "distrattore_forte": "C",
     "motivo_distrattore_forte": "C mantiene la stessa forma e lo stesso numero di punti, ma sbaglia il colore.",
     "spiegazioni_opzioni": {
-      "A": "A è corretta: mostra un cerchio blu con 0 lati e 3 pallini blu interni, coerente con la regola di alternanza forma/colore e crescita dei pallini.",
-      "B": "B non torna perché mostra un quadrato blu con 4 lati: il colore blu è coerente, ma la forma esterna dovrebbe tornare cerchio con 0 lati.",
-      "C": "C non torna perché mostra un cerchio rosso con 0 lati e 3 pallini rossi: la forma e la quantità sono vicine, ma sbaglia il colore esterno e interno.",
-      "D": "D non torna perché mostra un quadrato rosso con 4 lati e 2 pallini rossi: sbaglia forma, colore atteso e quantità degli oggetti interni."
+      "A": "A è corretta: ha forma esterna cerchio, colore esterno blu, 0 lati e 3 pallini interni di colore blu, quindi rispetta la regola logica usata.",
+      "B": "B non torna perché ha forma esterna quadrato invece di cerchio, 4 lati invece di 0; quindi non rispetta la regola logica usata: alternare forma esterna cerchio/quadrato, alternare colore blu/rosso e aumentare di 1 il numero dei pallini interni ogni due passaggi.",
+      "C": "C non torna perché ha colore esterno rosso invece di blu, oggetti interni 3 pallini interni di colore rosso invece di 3 pallini interni di colore blu; quindi non rispetta la regola logica usata: alternare forma esterna cerchio/quadrato, alternare colore blu/rosso e aumentare di 1 il numero dei pallini interni ogni due passaggi.",
+      "D": "D non torna perché ha forma esterna quadrato invece di cerchio, colore esterno rosso invece di blu, 4 lati invece di 0, oggetti interni 2 pallini interni di colore rosso invece di 3 pallini interni di colore blu; quindi non rispetta la regola logica usata: alternare forma esterna cerchio/quadrato, alternare colore blu/rosso e aumentare di 1 il numero dei pallini interni ogni due passaggi."
     },
     "visual_logic": {
       "type": "sequence",
       "uses_position": false,
       "rule": {
-        "description": "Alterna forma esterna cerchio/quadrato, alterna colore blu/rosso e aumenta i pallini interni ogni due passaggi.",
+        "description": "alternare forma esterna cerchio/quadrato, alternare colore blu/rosso e aumentare di 1 il numero dei pallini interni ogni due passaggi.",
         "color_alternation": {
           "enabled": true,
           "colors": [
@@ -282,7 +644,7 @@
       "D"
     ],
     "risposta_corretta": "D",
-    "spiegazione": "La sequenza segue un cambiamento regolare della direzione e mantiene la stessa struttura con i punti nella figura. La risposta corretta è quella che continua il percorso visivo nello stesso modo, senza cambiare posizione dei punti o verso della trasformazione.",
+    "spiegazione": "La risposta corretta è la figura con forma esterna freccia, colore esterno verde, 0 lati e 1 direzione interni di colore verde in posizione sinistra, perché la regola logica usata richiede di ruotare la freccia verde di 90 gradi in senso orario mantenendo il colore esterno verde e 1 indicatore di direzione interno.",
     "immagine": "assets/logica_visiva/LOG-VIS-FAC-0005_domanda.svg",
     "immagine_domanda": "assets/logica_visiva/LOG-VIS-FAC-0005_domanda.svg",
     "immagini_opzioni": [
@@ -300,7 +662,133 @@
       "visiva"
     ],
     "distrattore_forte": "C",
-    "motivo_distrattore_forte": "C è una freccia della stessa sequenza di rotazione, ma rappresenta il passaggio precedente."
+    "motivo_distrattore_forte": "C è una freccia della stessa sequenza di rotazione, ma rappresenta il passaggio precedente.",
+    "tipo_domanda": "immagine",
+    "spiegazioni_opzioni": {
+      "A": "A non torna perché ha oggetti interni 1 direzione interni di colore verde in posizione alto invece di 1 direzione interni di colore verde in posizione sinistra; quindi non rispetta la regola logica usata: ruotare la freccia verde di 90 gradi in senso orario mantenendo il colore esterno verde e 1 indicatore di direzione interno.",
+      "B": "B non torna perché ha oggetti interni 1 direzione interni di colore verde in posizione destra invece di 1 direzione interni di colore verde in posizione sinistra; quindi non rispetta la regola logica usata: ruotare la freccia verde di 90 gradi in senso orario mantenendo il colore esterno verde e 1 indicatore di direzione interno.",
+      "C": "C non torna perché ha oggetti interni 1 direzione interni di colore verde in posizione basso invece di 1 direzione interni di colore verde in posizione sinistra; quindi non rispetta la regola logica usata: ruotare la freccia verde di 90 gradi in senso orario mantenendo il colore esterno verde e 1 indicatore di direzione interno.",
+      "D": "D è corretta: ha forma esterna freccia, colore esterno verde, 0 lati e 1 direzione interni di colore verde in posizione sinistra, quindi rispetta la regola logica usata."
+    },
+    "visual_logic": {
+      "type": "sequence",
+      "uses_position": true,
+      "rule": {
+        "description": "ruotare la freccia verde di 90 gradi in senso orario mantenendo il colore esterno verde e 1 indicatore di direzione interno.",
+        "color_alternation": {
+          "enabled": false,
+          "colors": []
+        }
+      },
+      "sequence": [
+        {
+          "outer_shape": "freccia",
+          "outer_color": "verde",
+          "sides": 0,
+          "inner_objects": [
+            {
+              "type": "direzione",
+              "color": "verde",
+              "quantity": 1,
+              "position": "alto"
+            }
+          ]
+        },
+        {
+          "outer_shape": "freccia",
+          "outer_color": "verde",
+          "sides": 0,
+          "inner_objects": [
+            {
+              "type": "direzione",
+              "color": "verde",
+              "quantity": 1,
+              "position": "destra"
+            }
+          ]
+        },
+        {
+          "outer_shape": "freccia",
+          "outer_color": "verde",
+          "sides": 0,
+          "inner_objects": [
+            {
+              "type": "direzione",
+              "color": "verde",
+              "quantity": 1,
+              "position": "basso"
+            }
+          ]
+        }
+      ],
+      "expected_answer": {
+        "outer_shape": "freccia",
+        "outer_color": "verde",
+        "sides": 0,
+        "inner_objects": [
+          {
+            "type": "direzione",
+            "color": "verde",
+            "quantity": 1,
+            "position": "sinistra"
+          }
+        ]
+      },
+      "options": {
+        "A": {
+          "outer_shape": "freccia",
+          "outer_color": "verde",
+          "sides": 0,
+          "inner_objects": [
+            {
+              "type": "direzione",
+              "color": "verde",
+              "quantity": 1,
+              "position": "alto"
+            }
+          ]
+        },
+        "B": {
+          "outer_shape": "freccia",
+          "outer_color": "verde",
+          "sides": 0,
+          "inner_objects": [
+            {
+              "type": "direzione",
+              "color": "verde",
+              "quantity": 1,
+              "position": "destra"
+            }
+          ]
+        },
+        "C": {
+          "outer_shape": "freccia",
+          "outer_color": "verde",
+          "sides": 0,
+          "inner_objects": [
+            {
+              "type": "direzione",
+              "color": "verde",
+              "quantity": 1,
+              "position": "basso"
+            }
+          ]
+        },
+        "D": {
+          "outer_shape": "freccia",
+          "outer_color": "verde",
+          "sides": 0,
+          "inner_objects": [
+            {
+              "type": "direzione",
+              "color": "verde",
+              "quantity": 1,
+              "position": "sinistra"
+            }
+          ]
+        }
+      }
+    }
   },
   {
     "id": "LOG-VIS-FAC-0006",
@@ -317,7 +805,7 @@
       "D"
     ],
     "risposta_corretta": "C",
-    "spiegazione": "La risposta corretta è il triangolo blu con 3 lati, 4 pallini blu interni, perché la regola mantiene la forma esterna triangolo e il colore esterno blu, mentre aumenta di 1 il numero dei pallini interni a ogni passaggio.",
+    "spiegazione": "La risposta corretta è la figura con forma esterna triangolo, colore esterno blu, 3 lati e 4 pallini interni di colore blu, perché la regola logica usata richiede di mantenere la forma esterna triangolo e il colore esterno blu, aumentando di 1 il numero dei pallini interni a ogni passaggio.",
     "immagine": "assets/logica_visiva/LOG-VIS-FAC-0006_domanda.svg",
     "immagine_domanda": "assets/logica_visiva/LOG-VIS-FAC-0006_domanda.svg",
     "immagini_opzioni": [
@@ -337,16 +825,16 @@
     "distrattore_forte": "B",
     "motivo_distrattore_forte": "B mantiene forma e quantità corretta di punti, ma cambia il colore.",
     "spiegazioni_opzioni": {
-      "A": "A non torna perché mostra un triangolo blu con 3 lati ma solo 2 pallini blu interni: manca la crescita fino a 4 oggetti interni.",
-      "B": "B non torna perché mostra un triangolo rosso con 3 lati e 4 pallini rossi interni: la quantità è corretta, ma sbaglia colore esterno e interno.",
-      "C": "C è corretta: mostra un triangolo blu con 3 lati e 4 pallini blu interni, seguendo la regola di crescita 1, 2, 3, 4.",
-      "D": "D non torna perché mostra un quadrato blu con 4 lati: colore e 4 pallini sono vicini, ma la forma esterna dovrebbe restare triangolo con 3 lati."
+      "A": "A non torna perché ha oggetti interni 2 pallini interni di colore blu invece di 4 pallini interni di colore blu; quindi non rispetta la regola logica usata: mantenere la forma esterna triangolo e il colore esterno blu, aumentando di 1 il numero dei pallini interni a ogni passaggio.",
+      "B": "B non torna perché ha colore esterno rosso invece di blu, oggetti interni 4 pallini interni di colore rosso invece di 4 pallini interni di colore blu; quindi non rispetta la regola logica usata: mantenere la forma esterna triangolo e il colore esterno blu, aumentando di 1 il numero dei pallini interni a ogni passaggio.",
+      "C": "C è corretta: ha forma esterna triangolo, colore esterno blu, 3 lati e 4 pallini interni di colore blu, quindi rispetta la regola logica usata.",
+      "D": "D non torna perché ha forma esterna quadrato invece di triangolo, 4 lati invece di 3; quindi non rispetta la regola logica usata: mantenere la forma esterna triangolo e il colore esterno blu, aumentando di 1 il numero dei pallini interni a ogni passaggio."
     },
     "visual_logic": {
       "type": "sequence",
       "uses_position": false,
       "rule": {
-        "description": "Mantiene triangolo blu e aumenta di 1 i pallini interni a ogni passaggio.",
+        "description": "mantenere la forma esterna triangolo e il colore esterno blu, aumentando di 1 il numero dei pallini interni a ogni passaggio.",
         "color_alternation": {
           "enabled": false,
           "colors": []
@@ -469,7 +957,7 @@
       "D"
     ],
     "risposta_corretta": "B",
-    "spiegazione": "La risposta corretta è l'esagono viola con 6 lati, 1 pallino viola interno, perché la regola mantiene la forma esterna esagono, mantiene 1 oggetto interno e alterna il colore esterno e interno oro/viola.",
+    "spiegazione": "La risposta corretta è la figura con forma esterna esagono, colore esterno viola, 6 lati e 1 pallini interni di colore viola, perché la regola logica usata richiede di mantenere la forma esterna esagono e 1 pallino interno, alternando il colore esterno e interno oro/viola.",
     "immagine": "assets/logica_visiva/LOG-VIS-FAC-0007_domanda.svg",
     "immagine_domanda": "assets/logica_visiva/LOG-VIS-FAC-0007_domanda.svg",
     "immagini_opzioni": [
@@ -489,16 +977,16 @@
     "distrattore_forte": "A",
     "motivo_distrattore_forte": "A mantiene la stessa forma, ma sbaglia l'alternanza del colore.",
     "spiegazioni_opzioni": {
-      "A": "A non torna perché mostra un esagono oro con 6 lati e 1 pallino oro interno: la forma è corretta, ma sbaglia l'alternanza del colore.",
-      "B": "B è corretta: mostra un esagono viola con 6 lati e 1 pallino viola interno, rispettando la regola oro/viola.",
-      "C": "C non torna perché mostra un cerchio viola con 0 lati: il colore è coerente, ma la forma esterna non resta esagono.",
-      "D": "D non torna perché mostra un quadrato oro con 4 lati: sbaglia sia la forma esterna sia il colore previsto dalla sequenza."
+      "A": "A non torna perché ha colore esterno oro invece di viola, oggetti interni 1 pallini interni di colore oro invece di 1 pallini interni di colore viola; quindi non rispetta la regola logica usata: mantenere la forma esterna esagono e 1 pallino interno, alternando il colore esterno e interno oro/viola.",
+      "B": "B è corretta: ha forma esterna esagono, colore esterno viola, 6 lati e 1 pallini interni di colore viola, quindi rispetta la regola logica usata.",
+      "C": "C non torna perché ha forma esterna cerchio invece di esagono, 0 lati invece di 6; quindi non rispetta la regola logica usata: mantenere la forma esterna esagono e 1 pallino interno, alternando il colore esterno e interno oro/viola.",
+      "D": "D non torna perché ha forma esterna quadrato invece di esagono, colore esterno oro invece di viola, 4 lati invece di 6, oggetti interni 1 pallini interni di colore oro invece di 1 pallini interni di colore viola; quindi non rispetta la regola logica usata: mantenere la forma esterna esagono e 1 pallino interno, alternando il colore esterno e interno oro/viola."
     },
     "visual_logic": {
       "type": "sequence",
       "uses_position": false,
       "rule": {
-        "description": "Mantiene esagono e un pallino interno, alternando i colori oro e viola.",
+        "description": "mantenere la forma esterna esagono e 1 pallino interno, alternando il colore esterno e interno oro/viola.",
         "color_alternation": {
           "enabled": true,
           "colors": [
@@ -624,7 +1112,7 @@
       "D"
     ],
     "risposta_corretta": "A",
-    "spiegazione": "La risposta corretta è il triangolo verde con 3 lati, 3 pallini verdi interni, perché la regola della matrice mantiene la forma esterna per riga, mantiene il colore esterno per riga e aumenta il numero degli oggetti interni da 1 a 3 per colonna.",
+    "spiegazione": "La risposta corretta è la figura con forma esterna triangolo, colore esterno verde, 3 lati e 3 pallini interni di colore verde, perché la regola logica usata richiede di mantenere forma e colore esterno per riga e aumentare il numero dei pallini interni da 1 a 3 per colonna.",
     "immagine": "assets/logica_visiva/LOG-VIS-FAC-0008_domanda.svg",
     "immagine_domanda": "assets/logica_visiva/LOG-VIS-FAC-0008_domanda.svg",
     "immagini_opzioni": [
@@ -644,16 +1132,16 @@
     "distrattore_forte": "B",
     "motivo_distrattore_forte": "B mantiene forma e colore corretti, ma sbaglia il numero di punti.",
     "spiegazioni_opzioni": {
-      "A": "A è corretta: mostra un triangolo verde con 3 lati e 3 pallini verdi interni, rispettando forma di riga, colore di riga e numero della terza colonna.",
-      "B": "B non torna perché mostra un triangolo verde con 3 lati ma solo 2 pallini verdi interni: sbaglia il numero degli oggetti interni richiesto dalla colonna.",
-      "C": "C non torna perché mostra un cerchio verde con 0 lati e 3 pallini verdi interni: numero e colore sono coerenti, ma la forma esterna dovrebbe essere triangolo.",
-      "D": "D non torna perché mostra un quadrato verde con 4 lati e 3 pallini verdi interni: sbaglia la forma esterna e il numero di lati della riga finale."
+      "A": "A è corretta: ha forma esterna triangolo, colore esterno verde, 3 lati e 3 pallini interni di colore verde, quindi rispetta la regola logica usata.",
+      "B": "B non torna perché ha oggetti interni 2 pallini interni di colore verde invece di 3 pallini interni di colore verde; quindi non rispetta la regola logica usata: mantenere forma e colore esterno per riga e aumentare il numero dei pallini interni da 1 a 3 per colonna.",
+      "C": "C non torna perché ha forma esterna cerchio invece di triangolo, 0 lati invece di 3; quindi non rispetta la regola logica usata: mantenere forma e colore esterno per riga e aumentare il numero dei pallini interni da 1 a 3 per colonna.",
+      "D": "D non torna perché ha forma esterna quadrato invece di triangolo, 4 lati invece di 3; quindi non rispetta la regola logica usata: mantenere forma e colore esterno per riga e aumentare il numero dei pallini interni da 1 a 3 per colonna."
     },
     "visual_logic": {
       "type": "matrix",
       "uses_position": false,
       "rule": {
-        "description": "La forma e il colore sono fissi per riga; il numero dei pallini interni cresce da 1 a 3 per colonna.",
+        "description": "mantenere forma e colore esterno per riga e aumentare il numero dei pallini interni da 1 a 3 per colonna.",
         "color_alternation": {
           "enabled": false,
           "colors": []
@@ -835,7 +1323,7 @@
       "D"
     ],
     "risposta_corretta": "A",
-    "spiegazione": "La progressione combina più caratteristiche visive nello stesso momento. La risposta corretta rispetta la forma esterna, gli elementi interni e il colore.",
+    "spiegazione": "La risposta corretta è la figura con forma esterna esagono, colore esterno blu, 6 lati e 4 triangoli interni di colore blu, perché la regola logica usata richiede di aumentare i lati della forma esterna da triangolo a quadrato, pentagono ed esagono, alternando blu/rosso/blu/blu e aumentando i triangoli interni da 1 a 4.",
     "immagine": "assets/logica_visiva/LOG-VIS-INT-0004_domanda.svg",
     "immagine_domanda": "assets/logica_visiva/LOG-VIS-INT-0004_domanda.svg",
     "immagini_opzioni": [
@@ -853,7 +1341,125 @@
       "visiva"
     ],
     "distrattore_forte": "C",
-    "motivo_distrattore_forte": "C mantiene colore e quantità interna, ma sbaglia la crescita della figura esterna."
+    "motivo_distrattore_forte": "C mantiene colore e quantità interna, ma sbaglia la crescita della figura esterna.",
+    "tipo_domanda": "immagine",
+    "spiegazioni_opzioni": {
+      "A": "A è corretta: ha forma esterna esagono, colore esterno blu, 6 lati e 4 triangoli interni di colore blu, quindi rispetta la regola logica usata.",
+      "B": "B non torna perché ha colore esterno rosso invece di blu, oggetti interni 3 triangoli interni di colore rosso invece di 4 triangoli interni di colore blu; quindi non rispetta la regola logica usata: aumentare i lati della forma esterna da triangolo a quadrato, pentagono ed esagono, alternando blu/rosso/blu/blu e aumentando i triangoli interni da 1 a 4.",
+      "C": "C non torna perché ha forma esterna pentagono invece di esagono, 5 lati invece di 6; quindi non rispetta la regola logica usata: aumentare i lati della forma esterna da triangolo a quadrato, pentagono ed esagono, alternando blu/rosso/blu/blu e aumentando i triangoli interni da 1 a 4.",
+      "D": "D non torna perché ha forma esterna ettagono invece di esagono, 7 lati invece di 6; quindi non rispetta la regola logica usata: aumentare i lati della forma esterna da triangolo a quadrato, pentagono ed esagono, alternando blu/rosso/blu/blu e aumentando i triangoli interni da 1 a 4."
+    },
+    "visual_logic": {
+      "type": "sequence",
+      "uses_position": false,
+      "rule": {
+        "description": "aumentare i lati della forma esterna da triangolo a quadrato, pentagono ed esagono, alternando blu/rosso/blu/blu e aumentando i triangoli interni da 1 a 4.",
+        "color_alternation": {
+          "enabled": false,
+          "colors": []
+        }
+      },
+      "sequence": [
+        {
+          "outer_shape": "triangolo",
+          "outer_color": "blu",
+          "sides": 3,
+          "inner_objects": [
+            {
+              "type": "triangoli",
+              "color": "blu",
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "outer_shape": "quadrato",
+          "outer_color": "rosso",
+          "sides": 4,
+          "inner_objects": [
+            {
+              "type": "triangoli",
+              "color": "rosso",
+              "quantity": 2
+            }
+          ]
+        },
+        {
+          "outer_shape": "pentagono",
+          "outer_color": "blu",
+          "sides": 5,
+          "inner_objects": [
+            {
+              "type": "triangoli",
+              "color": "blu",
+              "quantity": 3
+            }
+          ]
+        }
+      ],
+      "expected_answer": {
+        "outer_shape": "esagono",
+        "outer_color": "blu",
+        "sides": 6,
+        "inner_objects": [
+          {
+            "type": "triangoli",
+            "color": "blu",
+            "quantity": 4
+          }
+        ]
+      },
+      "options": {
+        "A": {
+          "outer_shape": "esagono",
+          "outer_color": "blu",
+          "sides": 6,
+          "inner_objects": [
+            {
+              "type": "triangoli",
+              "color": "blu",
+              "quantity": 4
+            }
+          ]
+        },
+        "B": {
+          "outer_shape": "esagono",
+          "outer_color": "rosso",
+          "sides": 6,
+          "inner_objects": [
+            {
+              "type": "triangoli",
+              "color": "rosso",
+              "quantity": 3
+            }
+          ]
+        },
+        "C": {
+          "outer_shape": "pentagono",
+          "outer_color": "blu",
+          "sides": 5,
+          "inner_objects": [
+            {
+              "type": "triangoli",
+              "color": "blu",
+              "quantity": 4
+            }
+          ]
+        },
+        "D": {
+          "outer_shape": "ettagono",
+          "outer_color": "blu",
+          "sides": 7,
+          "inner_objects": [
+            {
+              "type": "triangoli",
+              "color": "blu",
+              "quantity": 4
+            }
+          ]
+        }
+      }
+    }
   },
   {
     "id": "LOG-VIS-INT-0005",
@@ -869,7 +1475,7 @@
       "D"
     ],
     "risposta_corretta": "B",
-    "spiegazione": "La terza riga deve mantenere la forma triangolo. La terza colonna richiede tre punti. Il colore segue l'alternanza verde, blu, verde.",
+    "spiegazione": "La risposta corretta è la figura con forma esterna triangolo, colore esterno verde, 3 lati e 3 pallini interni di colore verde, perché la regola logica usata richiede di mantenere la forma esterna per riga, impostare 3 pallini nella terza colonna e seguire l’alternanza di colore verde/blu/verde.",
     "immagine": "assets/logica_visiva/LOG-VIS-INT-0005_domanda.svg",
     "immagine_domanda": "assets/logica_visiva/LOG-VIS-INT-0005_domanda.svg",
     "immagini_opzioni": [
@@ -887,7 +1493,185 @@
       "visiva"
     ],
     "distrattore_forte": "A",
-    "motivo_distrattore_forte": "A mantiene forma e numero di punti, ma sbaglia il colore richiesto dalla matrice."
+    "motivo_distrattore_forte": "A mantiene forma e numero di punti, ma sbaglia il colore richiesto dalla matrice.",
+    "tipo_domanda": "immagine",
+    "spiegazioni_opzioni": {
+      "A": "A non torna perché ha colore esterno blu invece di verde, oggetti interni 3 pallini interni di colore blu invece di 3 pallini interni di colore verde; quindi non rispetta la regola logica usata: mantenere la forma esterna per riga, impostare 3 pallini nella terza colonna e seguire l’alternanza di colore verde/blu/verde.",
+      "B": "B è corretta: ha forma esterna triangolo, colore esterno verde, 3 lati e 3 pallini interni di colore verde, quindi rispetta la regola logica usata.",
+      "C": "C non torna perché ha forma esterna quadrato invece di triangolo, 4 lati invece di 3; quindi non rispetta la regola logica usata: mantenere la forma esterna per riga, impostare 3 pallini nella terza colonna e seguire l’alternanza di colore verde/blu/verde.",
+      "D": "D non torna perché ha oggetti interni 2 pallini interni di colore verde invece di 3 pallini interni di colore verde; quindi non rispetta la regola logica usata: mantenere la forma esterna per riga, impostare 3 pallini nella terza colonna e seguire l’alternanza di colore verde/blu/verde."
+    },
+    "visual_logic": {
+      "type": "matrix",
+      "uses_position": false,
+      "rule": {
+        "description": "mantenere la forma esterna per riga, impostare 3 pallini nella terza colonna e seguire l’alternanza di colore verde/blu/verde.",
+        "color_alternation": {
+          "enabled": false,
+          "colors": []
+        }
+      },
+      "sequence": [
+        {
+          "outer_shape": "cerchio",
+          "outer_color": "verde",
+          "sides": 0,
+          "inner_objects": [
+            {
+              "type": "pallini",
+              "color": "verde",
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "outer_shape": "cerchio",
+          "outer_color": "blu",
+          "sides": 0,
+          "inner_objects": [
+            {
+              "type": "pallini",
+              "color": "blu",
+              "quantity": 2
+            }
+          ]
+        },
+        {
+          "outer_shape": "cerchio",
+          "outer_color": "verde",
+          "sides": 0,
+          "inner_objects": [
+            {
+              "type": "pallini",
+              "color": "verde",
+              "quantity": 3
+            }
+          ]
+        },
+        {
+          "outer_shape": "quadrato",
+          "outer_color": "blu",
+          "sides": 4,
+          "inner_objects": [
+            {
+              "type": "pallini",
+              "color": "blu",
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "outer_shape": "quadrato",
+          "outer_color": "verde",
+          "sides": 4,
+          "inner_objects": [
+            {
+              "type": "pallini",
+              "color": "verde",
+              "quantity": 2
+            }
+          ]
+        },
+        {
+          "outer_shape": "quadrato",
+          "outer_color": "blu",
+          "sides": 4,
+          "inner_objects": [
+            {
+              "type": "pallini",
+              "color": "blu",
+              "quantity": 3
+            }
+          ]
+        },
+        {
+          "outer_shape": "triangolo",
+          "outer_color": "verde",
+          "sides": 3,
+          "inner_objects": [
+            {
+              "type": "pallini",
+              "color": "verde",
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "outer_shape": "triangolo",
+          "outer_color": "blu",
+          "sides": 3,
+          "inner_objects": [
+            {
+              "type": "pallini",
+              "color": "blu",
+              "quantity": 2
+            }
+          ]
+        }
+      ],
+      "expected_answer": {
+        "outer_shape": "triangolo",
+        "outer_color": "verde",
+        "sides": 3,
+        "inner_objects": [
+          {
+            "type": "pallini",
+            "color": "verde",
+            "quantity": 3
+          }
+        ]
+      },
+      "options": {
+        "A": {
+          "outer_shape": "triangolo",
+          "outer_color": "blu",
+          "sides": 3,
+          "inner_objects": [
+            {
+              "type": "pallini",
+              "color": "blu",
+              "quantity": 3
+            }
+          ]
+        },
+        "B": {
+          "outer_shape": "triangolo",
+          "outer_color": "verde",
+          "sides": 3,
+          "inner_objects": [
+            {
+              "type": "pallini",
+              "color": "verde",
+              "quantity": 3
+            }
+          ]
+        },
+        "C": {
+          "outer_shape": "quadrato",
+          "outer_color": "verde",
+          "sides": 4,
+          "inner_objects": [
+            {
+              "type": "pallini",
+              "color": "verde",
+              "quantity": 3
+            }
+          ]
+        },
+        "D": {
+          "outer_shape": "triangolo",
+          "outer_color": "verde",
+          "sides": 3,
+          "inner_objects": [
+            {
+              "type": "pallini",
+              "color": "verde",
+              "quantity": 2
+            }
+          ]
+        }
+      }
+    }
   },
   {
     "id": "LOG-VIS-INT-0006",
@@ -903,7 +1687,7 @@
       "D"
     ],
     "risposta_corretta": "A",
-    "spiegazione": "Da sinistra a destra la diagonale cambia verso e i punti aumentano da uno a due. La stessa trasformazione deve essere applicata anche al cerchio rosso: cambiare il verso della linea diagonale e mantenere coerente l'aumento dei punti. Quindi l'opzione corretta è A.",
+    "spiegazione": "La risposta corretta è la figura con forma esterna cerchio, colore esterno rosso, 0 lati e 1 linee interni di colore rosso in posizione \\ e 2 pallini interni di colore rosso in posizione interno, perché la regola logica usata richiede di cambiare il verso della linea diagonale da / a \\ e aumentare i pallini interni da 1 a 2 mantenendo forma e colore della riga.",
     "immagine": "assets/logica_visiva/LOG-VIS-INT-0006_domanda.svg",
     "immagine_domanda": "assets/logica_visiva/LOG-VIS-INT-0006_domanda.svg",
     "immagini_opzioni": [
@@ -921,7 +1705,181 @@
       "visiva"
     ],
     "distrattore_forte": "C",
-    "motivo_distrattore_forte": "C mantiene forma, colore e numero di punti, ma sbaglia il verso della diagonale."
+    "motivo_distrattore_forte": "C mantiene forma, colore e numero di punti, ma sbaglia il verso della diagonale.",
+    "tipo_domanda": "immagine",
+    "spiegazioni_opzioni": {
+      "A": "A è corretta: ha forma esterna cerchio, colore esterno rosso, 0 lati e 1 linee interni di colore rosso in posizione \\ e 2 pallini interni di colore rosso in posizione interno, quindi rispetta la regola logica usata.",
+      "B": "B non torna perché ha colore esterno blu invece di rosso, oggetti interni 1 linee interni di colore blu in posizione \\ e 2 pallini interni di colore blu in posizione interno invece di 1 linee interni di colore rosso in posizione \\ e 2 pallini interni di colore rosso in posizione interno; quindi non rispetta la regola logica usata: cambiare il verso della linea diagonale da / a \\ e aumentare i pallini interni da 1 a 2 mantenendo forma e colore della riga.",
+      "C": "C non torna perché ha oggetti interni 1 linee interni di colore rosso in posizione / e 2 pallini interni di colore rosso in posizione interno invece di 1 linee interni di colore rosso in posizione \\ e 2 pallini interni di colore rosso in posizione interno; quindi non rispetta la regola logica usata: cambiare il verso della linea diagonale da / a \\ e aumentare i pallini interni da 1 a 2 mantenendo forma e colore della riga.",
+      "D": "D non torna perché ha oggetti interni 1 linee interni di colore rosso in posizione \\ e 1 pallini interni di colore rosso in posizione interno invece di 1 linee interni di colore rosso in posizione \\ e 2 pallini interni di colore rosso in posizione interno; quindi non rispetta la regola logica usata: cambiare il verso della linea diagonale da / a \\ e aumentare i pallini interni da 1 a 2 mantenendo forma e colore della riga."
+    },
+    "visual_logic": {
+      "type": "matrix",
+      "uses_position": true,
+      "rule": {
+        "description": "cambiare il verso della linea diagonale da / a \\ e aumentare i pallini interni da 1 a 2 mantenendo forma e colore della riga.",
+        "color_alternation": {
+          "enabled": false,
+          "colors": []
+        }
+      },
+      "sequence": [
+        {
+          "outer_shape": "quadrato",
+          "outer_color": "blu",
+          "sides": 4,
+          "inner_objects": [
+            {
+              "type": "linee",
+              "color": "blu",
+              "quantity": 1,
+              "position": "/"
+            },
+            {
+              "type": "pallini",
+              "color": "blu",
+              "quantity": 1,
+              "position": "interno"
+            }
+          ]
+        },
+        {
+          "outer_shape": "quadrato",
+          "outer_color": "blu",
+          "sides": 4,
+          "inner_objects": [
+            {
+              "type": "linee",
+              "color": "blu",
+              "quantity": 1,
+              "position": "\\"
+            },
+            {
+              "type": "pallini",
+              "color": "blu",
+              "quantity": 2,
+              "position": "interno"
+            }
+          ]
+        },
+        {
+          "outer_shape": "cerchio",
+          "outer_color": "rosso",
+          "sides": 0,
+          "inner_objects": [
+            {
+              "type": "linee",
+              "color": "rosso",
+              "quantity": 1,
+              "position": "/"
+            },
+            {
+              "type": "pallini",
+              "color": "rosso",
+              "quantity": 1,
+              "position": "interno"
+            }
+          ]
+        }
+      ],
+      "expected_answer": {
+        "outer_shape": "cerchio",
+        "outer_color": "rosso",
+        "sides": 0,
+        "inner_objects": [
+          {
+            "type": "linee",
+            "color": "rosso",
+            "quantity": 1,
+            "position": "\\"
+          },
+          {
+            "type": "pallini",
+            "color": "rosso",
+            "quantity": 2,
+            "position": "interno"
+          }
+        ]
+      },
+      "options": {
+        "A": {
+          "outer_shape": "cerchio",
+          "outer_color": "rosso",
+          "sides": 0,
+          "inner_objects": [
+            {
+              "type": "linee",
+              "color": "rosso",
+              "quantity": 1,
+              "position": "\\"
+            },
+            {
+              "type": "pallini",
+              "color": "rosso",
+              "quantity": 2,
+              "position": "interno"
+            }
+          ]
+        },
+        "B": {
+          "outer_shape": "cerchio",
+          "outer_color": "blu",
+          "sides": 0,
+          "inner_objects": [
+            {
+              "type": "linee",
+              "color": "blu",
+              "quantity": 1,
+              "position": "\\"
+            },
+            {
+              "type": "pallini",
+              "color": "blu",
+              "quantity": 2,
+              "position": "interno"
+            }
+          ]
+        },
+        "C": {
+          "outer_shape": "cerchio",
+          "outer_color": "rosso",
+          "sides": 0,
+          "inner_objects": [
+            {
+              "type": "linee",
+              "color": "rosso",
+              "quantity": 1,
+              "position": "/"
+            },
+            {
+              "type": "pallini",
+              "color": "rosso",
+              "quantity": 2,
+              "position": "interno"
+            }
+          ]
+        },
+        "D": {
+          "outer_shape": "cerchio",
+          "outer_color": "rosso",
+          "sides": 0,
+          "inner_objects": [
+            {
+              "type": "linee",
+              "color": "rosso",
+              "quantity": 1,
+              "position": "\\"
+            },
+            {
+              "type": "pallini",
+              "color": "rosso",
+              "quantity": 1,
+              "position": "interno"
+            }
+          ]
+        }
+      }
+    }
   },
   {
     "id": "LOG-VIS-INT-0007",
@@ -937,7 +1895,7 @@
       "D"
     ],
     "risposta_corretta": "C",
-    "spiegazione": "La freccia ruota di 90 gradi in senso orario, il numero di punti aumenta e il colore si alterna tra blu e rosso. Dopo alto, destra, basso, deve venire sinistra con quattro punti e colore rosso.",
+    "spiegazione": "La risposta corretta è la figura con forma esterna freccia, colore esterno rosso, 0 lati e 1 direzione interni di colore rosso in posizione sinistra e 4 pallini interni di colore rosso in posizione interno, perché la regola logica usata richiede di ruotare la freccia di 90 gradi in senso orario, alternare colore blu/rosso e aumentare i pallini interni fino a 4.",
     "immagine": "assets/logica_visiva/LOG-VIS-INT-0007_domanda.svg",
     "immagine_domanda": "assets/logica_visiva/LOG-VIS-INT-0007_domanda.svg",
     "immagini_opzioni": [
@@ -955,7 +1913,184 @@
       "visiva"
     ],
     "distrattore_forte": "D",
-    "motivo_distrattore_forte": "D mantiene direzione e colore corretti, ma sbaglia il numero di punti."
+    "motivo_distrattore_forte": "D mantiene direzione e colore corretti, ma sbaglia il numero di punti.",
+    "tipo_domanda": "immagine",
+    "spiegazioni_opzioni": {
+      "A": "A non torna perché ha colore esterno blu invece di rosso, oggetti interni 1 direzione interni di colore blu in posizione sinistra e 4 pallini interni di colore blu in posizione interno invece di 1 direzione interni di colore rosso in posizione sinistra e 4 pallini interni di colore rosso in posizione interno; quindi non rispetta la regola logica usata: ruotare la freccia di 90 gradi in senso orario, alternare colore blu/rosso e aumentare i pallini interni fino a 4.",
+      "B": "B non torna perché ha oggetti interni 1 direzione interni di colore rosso in posizione basso e 4 pallini interni di colore rosso in posizione interno invece di 1 direzione interni di colore rosso in posizione sinistra e 4 pallini interni di colore rosso in posizione interno; quindi non rispetta la regola logica usata: ruotare la freccia di 90 gradi in senso orario, alternare colore blu/rosso e aumentare i pallini interni fino a 4.",
+      "C": "C è corretta: ha forma esterna freccia, colore esterno rosso, 0 lati e 1 direzione interni di colore rosso in posizione sinistra e 4 pallini interni di colore rosso in posizione interno, quindi rispetta la regola logica usata.",
+      "D": "D non torna perché ha oggetti interni 1 direzione interni di colore rosso in posizione sinistra e 3 pallini interni di colore rosso in posizione interno invece di 1 direzione interni di colore rosso in posizione sinistra e 4 pallini interni di colore rosso in posizione interno; quindi non rispetta la regola logica usata: ruotare la freccia di 90 gradi in senso orario, alternare colore blu/rosso e aumentare i pallini interni fino a 4."
+    },
+    "visual_logic": {
+      "type": "sequence",
+      "uses_position": true,
+      "rule": {
+        "description": "ruotare la freccia di 90 gradi in senso orario, alternare colore blu/rosso e aumentare i pallini interni fino a 4.",
+        "color_alternation": {
+          "enabled": true,
+          "colors": [
+            "blu",
+            "rosso"
+          ]
+        }
+      },
+      "sequence": [
+        {
+          "outer_shape": "freccia",
+          "outer_color": "blu",
+          "sides": 0,
+          "inner_objects": [
+            {
+              "type": "direzione",
+              "color": "blu",
+              "quantity": 1,
+              "position": "alto"
+            },
+            {
+              "type": "pallini",
+              "color": "blu",
+              "quantity": 1,
+              "position": "interno"
+            }
+          ]
+        },
+        {
+          "outer_shape": "freccia",
+          "outer_color": "rosso",
+          "sides": 0,
+          "inner_objects": [
+            {
+              "type": "direzione",
+              "color": "rosso",
+              "quantity": 1,
+              "position": "destra"
+            },
+            {
+              "type": "pallini",
+              "color": "rosso",
+              "quantity": 2,
+              "position": "interno"
+            }
+          ]
+        },
+        {
+          "outer_shape": "freccia",
+          "outer_color": "blu",
+          "sides": 0,
+          "inner_objects": [
+            {
+              "type": "direzione",
+              "color": "blu",
+              "quantity": 1,
+              "position": "basso"
+            },
+            {
+              "type": "pallini",
+              "color": "blu",
+              "quantity": 3,
+              "position": "interno"
+            }
+          ]
+        }
+      ],
+      "expected_answer": {
+        "outer_shape": "freccia",
+        "outer_color": "rosso",
+        "sides": 0,
+        "inner_objects": [
+          {
+            "type": "direzione",
+            "color": "rosso",
+            "quantity": 1,
+            "position": "sinistra"
+          },
+          {
+            "type": "pallini",
+            "color": "rosso",
+            "quantity": 4,
+            "position": "interno"
+          }
+        ]
+      },
+      "options": {
+        "A": {
+          "outer_shape": "freccia",
+          "outer_color": "blu",
+          "sides": 0,
+          "inner_objects": [
+            {
+              "type": "direzione",
+              "color": "blu",
+              "quantity": 1,
+              "position": "sinistra"
+            },
+            {
+              "type": "pallini",
+              "color": "blu",
+              "quantity": 4,
+              "position": "interno"
+            }
+          ]
+        },
+        "B": {
+          "outer_shape": "freccia",
+          "outer_color": "rosso",
+          "sides": 0,
+          "inner_objects": [
+            {
+              "type": "direzione",
+              "color": "rosso",
+              "quantity": 1,
+              "position": "basso"
+            },
+            {
+              "type": "pallini",
+              "color": "rosso",
+              "quantity": 4,
+              "position": "interno"
+            }
+          ]
+        },
+        "C": {
+          "outer_shape": "freccia",
+          "outer_color": "rosso",
+          "sides": 0,
+          "inner_objects": [
+            {
+              "type": "direzione",
+              "color": "rosso",
+              "quantity": 1,
+              "position": "sinistra"
+            },
+            {
+              "type": "pallini",
+              "color": "rosso",
+              "quantity": 4,
+              "position": "interno"
+            }
+          ]
+        },
+        "D": {
+          "outer_shape": "freccia",
+          "outer_color": "rosso",
+          "sides": 0,
+          "inner_objects": [
+            {
+              "type": "direzione",
+              "color": "rosso",
+              "quantity": 1,
+              "position": "sinistra"
+            },
+            {
+              "type": "pallini",
+              "color": "rosso",
+              "quantity": 3,
+              "position": "interno"
+            }
+          ]
+        }
+      }
+    }
   },
   {
     "id": "LOG-VIS-INT-0008",
@@ -963,7 +2098,7 @@
     "sottocategoria": "logica_visiva",
     "livello": "intermedio",
     "tipo": "visiva",
-    "domanda": "Quale alternativa corrisponde alla figura richiesta?",
+    "domanda": "Scegli la figura speculare rispetto all'asse verticale.",
     "opzioni": [
       "A",
       "B",
@@ -971,7 +2106,7 @@
       "D"
     ],
     "risposta_corretta": "D",
-    "spiegazione": "La figura richiesta si ottiene con un ribaltamento speculare. La risposta corretta conserva la stessa struttura, comprese linee e segmenti interni, ma li porta nella posizione riflessa giusta. Quindi l'opzione corretta è D.",
+    "spiegazione": "La risposta corretta è la figura con forma esterna quadrato, colore esterno viola, 4 lati e 1 cerchio interni di colore viola in posizione destra-alto e 1 triangolo interni di colore viola in posizione destra-alto e 2 linee interni di colore viola in posizione centro e 1 rombo interni di colore viola in posizione sinistra-basso e 1 pallini interni di colore viola in posizione sinistra-basso, perché la regola logica usata richiede di riflettere la figura viola rispetto all’asse verticale, portando il cerchio e il triangolo a destra e il rombo con pallino a sinistra.",
     "immagine": "assets/logica_visiva/LOG-VIS-INT-0008_domanda.svg",
     "immagine_domanda": "assets/logica_visiva/LOG-VIS-INT-0008_domanda.svg",
     "immagini_opzioni": [
@@ -989,7 +2124,252 @@
       "visiva"
     ],
     "distrattore_forte": "A",
-    "motivo_distrattore_forte": "A è simile alla figura corretta, ma non rispetta pienamente il ribaltamento speculare."
+    "motivo_distrattore_forte": "A è simile alla figura corretta, ma non rispetta pienamente il ribaltamento speculare.",
+    "tipo_domanda": "immagine",
+    "spiegazioni_opzioni": {
+      "A": "A non torna perché ha oggetti interni 1 cerchio interni di colore viola in posizione sinistra-alto e 1 triangolo interni di colore viola in posizione sinistra-alto e 2 linee interni di colore viola in posizione centro e 1 rombo interni di colore viola in posizione destra-basso e 1 pallini interni di colore viola in posizione destra-basso invece di 1 cerchio interni di colore viola in posizione destra-alto e 1 triangolo interni di colore viola in posizione destra-alto e 2 linee interni di colore viola in posizione centro e 1 rombo interni di colore viola in posizione sinistra-basso e 1 pallini interni di colore viola in posizione sinistra-basso; quindi non rispetta la regola logica usata: riflettere la figura viola rispetto all’asse verticale, portando il cerchio e il triangolo a destra e il rombo con pallino a sinistra.",
+      "B": "B non torna perché ha oggetti interni 1 cerchio interni di colore viola in posizione centro-alto e 1 triangolo interni di colore viola in posizione centro-alto e 2 linee interni di colore viola in posizione centro e 1 rombo interni di colore viola in posizione centro-basso e 1 pallini interni di colore viola in posizione centro-basso invece di 1 cerchio interni di colore viola in posizione destra-alto e 1 triangolo interni di colore viola in posizione destra-alto e 2 linee interni di colore viola in posizione centro e 1 rombo interni di colore viola in posizione sinistra-basso e 1 pallini interni di colore viola in posizione sinistra-basso; quindi non rispetta la regola logica usata: riflettere la figura viola rispetto all’asse verticale, portando il cerchio e il triangolo a destra e il rombo con pallino a sinistra.",
+      "C": "C non torna perché ha oggetti interni 1 cerchio interni di colore viola in posizione sinistra-alto e 1 triangolo interni di colore viola in posizione sinistra-alto e 2 linee interni di colore viola in posizione centro e 1 rombo interni di colore viola in posizione sinistra-basso e 1 pallini interni di colore viola in posizione sinistra-basso invece di 1 cerchio interni di colore viola in posizione destra-alto e 1 triangolo interni di colore viola in posizione destra-alto e 2 linee interni di colore viola in posizione centro e 1 rombo interni di colore viola in posizione sinistra-basso e 1 pallini interni di colore viola in posizione sinistra-basso; quindi non rispetta la regola logica usata: riflettere la figura viola rispetto all’asse verticale, portando il cerchio e il triangolo a destra e il rombo con pallino a sinistra.",
+      "D": "D è corretta: ha forma esterna quadrato, colore esterno viola, 4 lati e 1 cerchio interni di colore viola in posizione destra-alto e 1 triangolo interni di colore viola in posizione destra-alto e 2 linee interni di colore viola in posizione centro e 1 rombo interni di colore viola in posizione sinistra-basso e 1 pallini interni di colore viola in posizione sinistra-basso, quindi rispetta la regola logica usata."
+    },
+    "visual_logic": {
+      "type": "mirror",
+      "uses_position": true,
+      "rule": {
+        "description": "riflettere la figura viola rispetto all’asse verticale, portando il cerchio e il triangolo a destra e il rombo con pallino a sinistra.",
+        "color_alternation": {
+          "enabled": false,
+          "colors": []
+        },
+        "mirror_axis": "verticale"
+      },
+      "sequence": [
+        {
+          "outer_shape": "quadrato",
+          "outer_color": "viola",
+          "sides": 4,
+          "inner_objects": [
+            {
+              "type": "cerchio",
+              "color": "viola",
+              "quantity": 1,
+              "position": "sinistra-alto"
+            },
+            {
+              "type": "triangolo",
+              "color": "viola",
+              "quantity": 1,
+              "position": "sinistra-alto"
+            },
+            {
+              "type": "linee",
+              "color": "viola",
+              "quantity": 2,
+              "position": "centro"
+            },
+            {
+              "type": "rombo",
+              "color": "viola",
+              "quantity": 1,
+              "position": "destra-basso"
+            },
+            {
+              "type": "pallini",
+              "color": "viola",
+              "quantity": 1,
+              "position": "destra-basso"
+            }
+          ]
+        }
+      ],
+      "expected_answer": {
+        "outer_shape": "quadrato",
+        "outer_color": "viola",
+        "sides": 4,
+        "inner_objects": [
+          {
+            "type": "cerchio",
+            "color": "viola",
+            "quantity": 1,
+            "position": "destra-alto"
+          },
+          {
+            "type": "triangolo",
+            "color": "viola",
+            "quantity": 1,
+            "position": "destra-alto"
+          },
+          {
+            "type": "linee",
+            "color": "viola",
+            "quantity": 2,
+            "position": "centro"
+          },
+          {
+            "type": "rombo",
+            "color": "viola",
+            "quantity": 1,
+            "position": "sinistra-basso"
+          },
+          {
+            "type": "pallini",
+            "color": "viola",
+            "quantity": 1,
+            "position": "sinistra-basso"
+          }
+        ]
+      },
+      "options": {
+        "A": {
+          "outer_shape": "quadrato",
+          "outer_color": "viola",
+          "sides": 4,
+          "inner_objects": [
+            {
+              "type": "cerchio",
+              "color": "viola",
+              "quantity": 1,
+              "position": "sinistra-alto"
+            },
+            {
+              "type": "triangolo",
+              "color": "viola",
+              "quantity": 1,
+              "position": "sinistra-alto"
+            },
+            {
+              "type": "linee",
+              "color": "viola",
+              "quantity": 2,
+              "position": "centro"
+            },
+            {
+              "type": "rombo",
+              "color": "viola",
+              "quantity": 1,
+              "position": "destra-basso"
+            },
+            {
+              "type": "pallini",
+              "color": "viola",
+              "quantity": 1,
+              "position": "destra-basso"
+            }
+          ]
+        },
+        "B": {
+          "outer_shape": "quadrato",
+          "outer_color": "viola",
+          "sides": 4,
+          "inner_objects": [
+            {
+              "type": "cerchio",
+              "color": "viola",
+              "quantity": 1,
+              "position": "centro-alto"
+            },
+            {
+              "type": "triangolo",
+              "color": "viola",
+              "quantity": 1,
+              "position": "centro-alto"
+            },
+            {
+              "type": "linee",
+              "color": "viola",
+              "quantity": 2,
+              "position": "centro"
+            },
+            {
+              "type": "rombo",
+              "color": "viola",
+              "quantity": 1,
+              "position": "centro-basso"
+            },
+            {
+              "type": "pallini",
+              "color": "viola",
+              "quantity": 1,
+              "position": "centro-basso"
+            }
+          ]
+        },
+        "C": {
+          "outer_shape": "quadrato",
+          "outer_color": "viola",
+          "sides": 4,
+          "inner_objects": [
+            {
+              "type": "cerchio",
+              "color": "viola",
+              "quantity": 1,
+              "position": "sinistra-alto"
+            },
+            {
+              "type": "triangolo",
+              "color": "viola",
+              "quantity": 1,
+              "position": "sinistra-alto"
+            },
+            {
+              "type": "linee",
+              "color": "viola",
+              "quantity": 2,
+              "position": "centro"
+            },
+            {
+              "type": "rombo",
+              "color": "viola",
+              "quantity": 1,
+              "position": "sinistra-basso"
+            },
+            {
+              "type": "pallini",
+              "color": "viola",
+              "quantity": 1,
+              "position": "sinistra-basso"
+            }
+          ]
+        },
+        "D": {
+          "outer_shape": "quadrato",
+          "outer_color": "viola",
+          "sides": 4,
+          "inner_objects": [
+            {
+              "type": "cerchio",
+              "color": "viola",
+              "quantity": 1,
+              "position": "destra-alto"
+            },
+            {
+              "type": "triangolo",
+              "color": "viola",
+              "quantity": 1,
+              "position": "destra-alto"
+            },
+            {
+              "type": "linee",
+              "color": "viola",
+              "quantity": 2,
+              "position": "centro"
+            },
+            {
+              "type": "rombo",
+              "color": "viola",
+              "quantity": 1,
+              "position": "sinistra-basso"
+            },
+            {
+              "type": "pallini",
+              "color": "viola",
+              "quantity": 1,
+              "position": "sinistra-basso"
+            }
+          ]
+        }
+      }
+    }
   },
   {
     "id": "LOG-VIS-AV-0004",
@@ -1005,7 +2385,7 @@
       "D"
     ],
     "risposta_corretta": "A",
-    "spiegazione": "Le righe determinano la forma: cerchio, quadrato, triangolo. Le colonne determinano il numero di linee interne: una, due, tre. Il colore alterna blu, rosso, blu. Serve quindi un triangolo blu con tre linee interne.",
+    "spiegazione": "La risposta corretta è la figura con forma esterna triangolo, colore esterno blu, 3 lati e 3 linee interni di colore blu, perché la regola logica usata richiede di usare la forma esterna indicata dalla riga, il colore alternato blu/rosso/blu della colonna e 3 linee interne nella terza colonna.",
     "immagine": "assets/logica_visiva/LOG-VIS-AV-0004_domanda.svg",
     "immagine_domanda": "assets/logica_visiva/LOG-VIS-AV-0004_domanda.svg",
     "immagini_opzioni": [
@@ -1023,7 +2403,185 @@
       "visiva"
     ],
     "distrattore_forte": "B",
-    "motivo_distrattore_forte": "B mantiene forma e numero di linee interne corretti, ma sbaglia il colore."
+    "motivo_distrattore_forte": "B mantiene forma e numero di linee interne corretti, ma sbaglia il colore.",
+    "tipo_domanda": "immagine",
+    "spiegazioni_opzioni": {
+      "A": "A è corretta: ha forma esterna triangolo, colore esterno blu, 3 lati e 3 linee interni di colore blu, quindi rispetta la regola logica usata.",
+      "B": "B non torna perché ha colore esterno rosso invece di blu, oggetti interni 3 linee interni di colore rosso invece di 3 linee interni di colore blu; quindi non rispetta la regola logica usata: usare la forma esterna indicata dalla riga, il colore alternato blu/rosso/blu della colonna e 3 linee interne nella terza colonna.",
+      "C": "C non torna perché ha oggetti interni 2 linee interni di colore blu invece di 3 linee interni di colore blu; quindi non rispetta la regola logica usata: usare la forma esterna indicata dalla riga, il colore alternato blu/rosso/blu della colonna e 3 linee interne nella terza colonna.",
+      "D": "D non torna perché ha forma esterna quadrato invece di triangolo, 4 lati invece di 3; quindi non rispetta la regola logica usata: usare la forma esterna indicata dalla riga, il colore alternato blu/rosso/blu della colonna e 3 linee interne nella terza colonna."
+    },
+    "visual_logic": {
+      "type": "matrix",
+      "uses_position": false,
+      "rule": {
+        "description": "usare la forma esterna indicata dalla riga, il colore alternato blu/rosso/blu della colonna e 3 linee interne nella terza colonna.",
+        "color_alternation": {
+          "enabled": false,
+          "colors": []
+        }
+      },
+      "sequence": [
+        {
+          "outer_shape": "cerchio",
+          "outer_color": "blu",
+          "sides": 0,
+          "inner_objects": [
+            {
+              "type": "linee",
+              "color": "blu",
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "outer_shape": "cerchio",
+          "outer_color": "rosso",
+          "sides": 0,
+          "inner_objects": [
+            {
+              "type": "linee",
+              "color": "rosso",
+              "quantity": 2
+            }
+          ]
+        },
+        {
+          "outer_shape": "cerchio",
+          "outer_color": "blu",
+          "sides": 0,
+          "inner_objects": [
+            {
+              "type": "linee",
+              "color": "blu",
+              "quantity": 3
+            }
+          ]
+        },
+        {
+          "outer_shape": "quadrato",
+          "outer_color": "rosso",
+          "sides": 4,
+          "inner_objects": [
+            {
+              "type": "linee",
+              "color": "rosso",
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "outer_shape": "quadrato",
+          "outer_color": "blu",
+          "sides": 4,
+          "inner_objects": [
+            {
+              "type": "linee",
+              "color": "blu",
+              "quantity": 2
+            }
+          ]
+        },
+        {
+          "outer_shape": "quadrato",
+          "outer_color": "rosso",
+          "sides": 4,
+          "inner_objects": [
+            {
+              "type": "linee",
+              "color": "rosso",
+              "quantity": 3
+            }
+          ]
+        },
+        {
+          "outer_shape": "triangolo",
+          "outer_color": "blu",
+          "sides": 3,
+          "inner_objects": [
+            {
+              "type": "linee",
+              "color": "blu",
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "outer_shape": "triangolo",
+          "outer_color": "rosso",
+          "sides": 3,
+          "inner_objects": [
+            {
+              "type": "linee",
+              "color": "rosso",
+              "quantity": 2
+            }
+          ]
+        }
+      ],
+      "expected_answer": {
+        "outer_shape": "triangolo",
+        "outer_color": "blu",
+        "sides": 3,
+        "inner_objects": [
+          {
+            "type": "linee",
+            "color": "blu",
+            "quantity": 3
+          }
+        ]
+      },
+      "options": {
+        "A": {
+          "outer_shape": "triangolo",
+          "outer_color": "blu",
+          "sides": 3,
+          "inner_objects": [
+            {
+              "type": "linee",
+              "color": "blu",
+              "quantity": 3
+            }
+          ]
+        },
+        "B": {
+          "outer_shape": "triangolo",
+          "outer_color": "rosso",
+          "sides": 3,
+          "inner_objects": [
+            {
+              "type": "linee",
+              "color": "rosso",
+              "quantity": 3
+            }
+          ]
+        },
+        "C": {
+          "outer_shape": "triangolo",
+          "outer_color": "blu",
+          "sides": 3,
+          "inner_objects": [
+            {
+              "type": "linee",
+              "color": "blu",
+              "quantity": 2
+            }
+          ]
+        },
+        "D": {
+          "outer_shape": "quadrato",
+          "outer_color": "blu",
+          "sides": 4,
+          "inner_objects": [
+            {
+              "type": "linee",
+              "color": "blu",
+              "quantity": 3
+            }
+          ]
+        }
+      }
+    }
   },
   {
     "id": "LOG-VIS-AV-0005",
@@ -1039,7 +2597,7 @@
       "D"
     ],
     "risposta_corretta": "C",
-    "spiegazione": "Scendendo nelle righe aumenta il numero di contorni esterni. Le colonne cambiano il riempimento interno: pieno, righe, puntini. I puntini e le linee non sono dettagli decorativi, ma indicano la regola della colonna. Quindi serve un esagono con tre contorni e riempimento a puntini.",
+    "spiegazione": "La risposta corretta è la figura con forma esterna esagono, colore esterno nero, 6 lati e 3 contorni interni di colore nero in posizione esterni e 1 pallini interni di colore nero in posizione riempimento, perché la regola logica usata richiede di aumentare a 3 i contorni esterni dell’esagono e usare il riempimento interno a puntini nella terza colonna.",
     "immagine": "assets/logica_visiva/LOG-VIS-AV-0005_domanda.svg",
     "immagine_domanda": "assets/logica_visiva/LOG-VIS-AV-0005_domanda.svg",
     "immagini_opzioni": [
@@ -1057,7 +2615,276 @@
       "visiva"
     ],
     "distrattore_forte": "A",
-    "motivo_distrattore_forte": "A mantiene il riempimento a puntini, ma sbaglia il numero di contorni esterni."
+    "motivo_distrattore_forte": "A mantiene il riempimento a puntini, ma sbaglia il numero di contorni esterni.",
+    "tipo_domanda": "immagine",
+    "spiegazioni_opzioni": {
+      "A": "A non torna perché ha oggetti interni 2 contorni interni di colore nero in posizione esterni e 1 pallini interni di colore nero in posizione riempimento invece di 3 contorni interni di colore nero in posizione esterni e 1 pallini interni di colore nero in posizione riempimento; quindi non rispetta la regola logica usata: aumentare a 3 i contorni esterni dell’esagono e usare il riempimento interno a puntini nella terza colonna.",
+      "B": "B non torna perché ha oggetti interni 3 contorni interni di colore nero in posizione esterni e 1 croce interni di colore nero in posizione riempimento invece di 3 contorni interni di colore nero in posizione esterni e 1 pallini interni di colore nero in posizione riempimento; quindi non rispetta la regola logica usata: aumentare a 3 i contorni esterni dell’esagono e usare il riempimento interno a puntini nella terza colonna.",
+      "C": "C è corretta: ha forma esterna esagono, colore esterno nero, 6 lati e 3 contorni interni di colore nero in posizione esterni e 1 pallini interni di colore nero in posizione riempimento, quindi rispetta la regola logica usata.",
+      "D": "D non torna perché ha oggetti interni 3 contorni interni di colore nero in posizione esterni e 1 riempimento interni di colore nero in posizione pieno invece di 3 contorni interni di colore nero in posizione esterni e 1 pallini interni di colore nero in posizione riempimento; quindi non rispetta la regola logica usata: aumentare a 3 i contorni esterni dell’esagono e usare il riempimento interno a puntini nella terza colonna."
+    },
+    "visual_logic": {
+      "type": "matrix",
+      "uses_position": true,
+      "rule": {
+        "description": "aumentare a 3 i contorni esterni dell’esagono e usare il riempimento interno a puntini nella terza colonna.",
+        "color_alternation": {
+          "enabled": false,
+          "colors": []
+        }
+      },
+      "sequence": [
+        {
+          "outer_shape": "esagono",
+          "outer_color": "nero",
+          "sides": 6,
+          "inner_objects": [
+            {
+              "type": "contorni",
+              "color": "nero",
+              "quantity": 1,
+              "position": "esterni"
+            },
+            {
+              "type": "riempimento",
+              "color": "nero",
+              "quantity": 1,
+              "position": "pieno"
+            }
+          ]
+        },
+        {
+          "outer_shape": "esagono",
+          "outer_color": "nero",
+          "sides": 6,
+          "inner_objects": [
+            {
+              "type": "contorni",
+              "color": "nero",
+              "quantity": 1,
+              "position": "esterni"
+            },
+            {
+              "type": "linee",
+              "color": "nero",
+              "quantity": 1,
+              "position": "riempimento"
+            }
+          ]
+        },
+        {
+          "outer_shape": "esagono",
+          "outer_color": "nero",
+          "sides": 6,
+          "inner_objects": [
+            {
+              "type": "contorni",
+              "color": "nero",
+              "quantity": 1,
+              "position": "esterni"
+            },
+            {
+              "type": "pallini",
+              "color": "nero",
+              "quantity": 1,
+              "position": "riempimento"
+            }
+          ]
+        },
+        {
+          "outer_shape": "esagono",
+          "outer_color": "nero",
+          "sides": 6,
+          "inner_objects": [
+            {
+              "type": "contorni",
+              "color": "nero",
+              "quantity": 2,
+              "position": "esterni"
+            },
+            {
+              "type": "riempimento",
+              "color": "nero",
+              "quantity": 1,
+              "position": "pieno"
+            }
+          ]
+        },
+        {
+          "outer_shape": "esagono",
+          "outer_color": "nero",
+          "sides": 6,
+          "inner_objects": [
+            {
+              "type": "contorni",
+              "color": "nero",
+              "quantity": 2,
+              "position": "esterni"
+            },
+            {
+              "type": "linee",
+              "color": "nero",
+              "quantity": 1,
+              "position": "riempimento"
+            }
+          ]
+        },
+        {
+          "outer_shape": "esagono",
+          "outer_color": "nero",
+          "sides": 6,
+          "inner_objects": [
+            {
+              "type": "contorni",
+              "color": "nero",
+              "quantity": 2,
+              "position": "esterni"
+            },
+            {
+              "type": "pallini",
+              "color": "nero",
+              "quantity": 1,
+              "position": "riempimento"
+            }
+          ]
+        },
+        {
+          "outer_shape": "esagono",
+          "outer_color": "nero",
+          "sides": 6,
+          "inner_objects": [
+            {
+              "type": "contorni",
+              "color": "nero",
+              "quantity": 3,
+              "position": "esterni"
+            },
+            {
+              "type": "riempimento",
+              "color": "nero",
+              "quantity": 1,
+              "position": "pieno"
+            }
+          ]
+        },
+        {
+          "outer_shape": "esagono",
+          "outer_color": "nero",
+          "sides": 6,
+          "inner_objects": [
+            {
+              "type": "contorni",
+              "color": "nero",
+              "quantity": 3,
+              "position": "esterni"
+            },
+            {
+              "type": "linee",
+              "color": "nero",
+              "quantity": 1,
+              "position": "riempimento"
+            }
+          ]
+        }
+      ],
+      "expected_answer": {
+        "outer_shape": "esagono",
+        "outer_color": "nero",
+        "sides": 6,
+        "inner_objects": [
+          {
+            "type": "contorni",
+            "color": "nero",
+            "quantity": 3,
+            "position": "esterni"
+          },
+          {
+            "type": "pallini",
+            "color": "nero",
+            "quantity": 1,
+            "position": "riempimento"
+          }
+        ]
+      },
+      "options": {
+        "A": {
+          "outer_shape": "esagono",
+          "outer_color": "nero",
+          "sides": 6,
+          "inner_objects": [
+            {
+              "type": "contorni",
+              "color": "nero",
+              "quantity": 2,
+              "position": "esterni"
+            },
+            {
+              "type": "pallini",
+              "color": "nero",
+              "quantity": 1,
+              "position": "riempimento"
+            }
+          ]
+        },
+        "B": {
+          "outer_shape": "esagono",
+          "outer_color": "nero",
+          "sides": 6,
+          "inner_objects": [
+            {
+              "type": "contorni",
+              "color": "nero",
+              "quantity": 3,
+              "position": "esterni"
+            },
+            {
+              "type": "croce",
+              "color": "nero",
+              "quantity": 1,
+              "position": "riempimento"
+            }
+          ]
+        },
+        "C": {
+          "outer_shape": "esagono",
+          "outer_color": "nero",
+          "sides": 6,
+          "inner_objects": [
+            {
+              "type": "contorni",
+              "color": "nero",
+              "quantity": 3,
+              "position": "esterni"
+            },
+            {
+              "type": "pallini",
+              "color": "nero",
+              "quantity": 1,
+              "position": "riempimento"
+            }
+          ]
+        },
+        "D": {
+          "outer_shape": "esagono",
+          "outer_color": "nero",
+          "sides": 6,
+          "inner_objects": [
+            {
+              "type": "contorni",
+              "color": "nero",
+              "quantity": 3,
+              "position": "esterni"
+            },
+            {
+              "type": "riempimento",
+              "color": "nero",
+              "quantity": 1,
+              "position": "pieno"
+            }
+          ]
+        }
+      }
+    }
   },
   {
     "id": "LOG-VIS-AV-0006",
@@ -1073,7 +2900,7 @@
       "D"
     ],
     "risposta_corretta": "B",
-    "spiegazione": "La trasformazione aumenta di un lato la figura esterna, elimina il riempimento e sposta il punto di una posizione in senso orario. Applicando la stessa regola a C si ottiene un quadrato rosso vuoto con punto in alto.",
+    "spiegazione": "La risposta corretta è la figura con forma esterna quadrato, colore esterno rosso, 4 lati e 1 vuoto interni di colore rosso in posizione riempimento e 1 pallini interni di colore rosso in posizione alto, perché la regola logica usata richiede di aumentare di un lato la forma esterna, eliminare il riempimento interno e spostare il pallino interno di una posizione in senso orario.",
     "immagine": "assets/logica_visiva/LOG-VIS-AV-0006_domanda.svg",
     "immagine_domanda": "assets/logica_visiva/LOG-VIS-AV-0006_domanda.svg",
     "immagini_opzioni": [
@@ -1091,7 +2918,181 @@
       "visiva"
     ],
     "distrattore_forte": "A",
-    "motivo_distrattore_forte": "A mantiene forma, colore e posizione del punto, ma sbaglia il riempimento della figura."
+    "motivo_distrattore_forte": "A mantiene forma, colore e posizione del punto, ma sbaglia il riempimento della figura.",
+    "tipo_domanda": "immagine",
+    "spiegazioni_opzioni": {
+      "A": "A non torna perché ha oggetti interni 1 riempimento interni di colore rosso in posizione pieno e 1 pallini interni di colore rosso in posizione alto invece di 1 vuoto interni di colore rosso in posizione riempimento e 1 pallini interni di colore rosso in posizione alto; quindi non rispetta la regola logica usata: aumentare di un lato la forma esterna, eliminare il riempimento interno e spostare il pallino interno di una posizione in senso orario.",
+      "B": "B è corretta: ha forma esterna quadrato, colore esterno rosso, 4 lati e 1 vuoto interni di colore rosso in posizione riempimento e 1 pallini interni di colore rosso in posizione alto, quindi rispetta la regola logica usata.",
+      "C": "C non torna perché ha forma esterna triangolo invece di quadrato, 3 lati invece di 4; quindi non rispetta la regola logica usata: aumentare di un lato la forma esterna, eliminare il riempimento interno e spostare il pallino interno di una posizione in senso orario.",
+      "D": "D non torna perché ha oggetti interni 1 vuoto interni di colore rosso in posizione riempimento e 1 pallini interni di colore rosso in posizione destra invece di 1 vuoto interni di colore rosso in posizione riempimento e 1 pallini interni di colore rosso in posizione alto; quindi non rispetta la regola logica usata: aumentare di un lato la forma esterna, eliminare il riempimento interno e spostare il pallino interno di una posizione in senso orario."
+    },
+    "visual_logic": {
+      "type": "analogy",
+      "uses_position": true,
+      "rule": {
+        "description": "aumentare di un lato la forma esterna, eliminare il riempimento interno e spostare il pallino interno di una posizione in senso orario.",
+        "color_alternation": {
+          "enabled": false,
+          "colors": []
+        }
+      },
+      "sequence": [
+        {
+          "outer_shape": "pentagono",
+          "outer_color": "blu",
+          "sides": 5,
+          "inner_objects": [
+            {
+              "type": "riempimento",
+              "color": "blu",
+              "quantity": 1,
+              "position": "pieno"
+            },
+            {
+              "type": "pallini",
+              "color": "blu",
+              "quantity": 1,
+              "position": "alto"
+            }
+          ]
+        },
+        {
+          "outer_shape": "esagono",
+          "outer_color": "blu",
+          "sides": 6,
+          "inner_objects": [
+            {
+              "type": "vuoto",
+              "color": "blu",
+              "quantity": 1,
+              "position": "riempimento"
+            },
+            {
+              "type": "pallini",
+              "color": "blu",
+              "quantity": 1,
+              "position": "destra"
+            }
+          ]
+        },
+        {
+          "outer_shape": "cerchio",
+          "outer_color": "rosso",
+          "sides": 0,
+          "inner_objects": [
+            {
+              "type": "riempimento",
+              "color": "rosso",
+              "quantity": 1,
+              "position": "pieno"
+            },
+            {
+              "type": "pallini",
+              "color": "rosso",
+              "quantity": 1,
+              "position": "sinistra"
+            }
+          ]
+        }
+      ],
+      "expected_answer": {
+        "outer_shape": "quadrato",
+        "outer_color": "rosso",
+        "sides": 4,
+        "inner_objects": [
+          {
+            "type": "vuoto",
+            "color": "rosso",
+            "quantity": 1,
+            "position": "riempimento"
+          },
+          {
+            "type": "pallini",
+            "color": "rosso",
+            "quantity": 1,
+            "position": "alto"
+          }
+        ]
+      },
+      "options": {
+        "A": {
+          "outer_shape": "quadrato",
+          "outer_color": "rosso",
+          "sides": 4,
+          "inner_objects": [
+            {
+              "type": "riempimento",
+              "color": "rosso",
+              "quantity": 1,
+              "position": "pieno"
+            },
+            {
+              "type": "pallini",
+              "color": "rosso",
+              "quantity": 1,
+              "position": "alto"
+            }
+          ]
+        },
+        "B": {
+          "outer_shape": "quadrato",
+          "outer_color": "rosso",
+          "sides": 4,
+          "inner_objects": [
+            {
+              "type": "vuoto",
+              "color": "rosso",
+              "quantity": 1,
+              "position": "riempimento"
+            },
+            {
+              "type": "pallini",
+              "color": "rosso",
+              "quantity": 1,
+              "position": "alto"
+            }
+          ]
+        },
+        "C": {
+          "outer_shape": "triangolo",
+          "outer_color": "rosso",
+          "sides": 3,
+          "inner_objects": [
+            {
+              "type": "vuoto",
+              "color": "rosso",
+              "quantity": 1,
+              "position": "riempimento"
+            },
+            {
+              "type": "pallini",
+              "color": "rosso",
+              "quantity": 1,
+              "position": "alto"
+            }
+          ]
+        },
+        "D": {
+          "outer_shape": "quadrato",
+          "outer_color": "rosso",
+          "sides": 4,
+          "inner_objects": [
+            {
+              "type": "vuoto",
+              "color": "rosso",
+              "quantity": 1,
+              "position": "riempimento"
+            },
+            {
+              "type": "pallini",
+              "color": "rosso",
+              "quantity": 1,
+              "position": "destra"
+            }
+          ]
+        }
+      }
+    }
   },
   {
     "id": "LOG-VIS-AV-0007",
@@ -1107,7 +3108,7 @@
       "D"
     ],
     "risposta_corretta": "A",
-    "spiegazione": "La risposta corretta è A perché nella terza colonna viene sommato il numero di elementi delle prime due colonne. Nell'ultima riga: 1 stella + 3 stelle = 4 stelle. La forma esterna resta un triangolo verde e gli elementi interni devono rispettare la quantità ottenuta dalla somma.",
+    "spiegazione": "La risposta corretta è la figura con forma esterna triangolo, colore esterno verde, 3 lati e 4 stelle interni di colore verde, perché la regola logica usata richiede di sommare nella terza colonna il numero degli elementi interni delle prime due colonne, mantenendo forma esterna triangolo e colore verde nell’ultima riga.",
     "immagine": "assets/logica_visiva/LOG-VIS-AV-0007_domanda.svg",
     "immagine_domanda": "assets/logica_visiva/LOG-VIS-AV-0007_domanda.svg",
     "immagini_opzioni": [
@@ -1125,7 +3126,185 @@
       "visiva"
     ],
     "distrattore_forte": "B",
-    "motivo_distrattore_forte": "B mantiene forma e colore corretti, ma sbaglia il numero di stelle."
+    "motivo_distrattore_forte": "B mantiene forma e colore corretti, ma sbaglia il numero di stelle.",
+    "tipo_domanda": "immagine",
+    "spiegazioni_opzioni": {
+      "A": "A è corretta: ha forma esterna triangolo, colore esterno verde, 3 lati e 4 stelle interni di colore verde, quindi rispetta la regola logica usata.",
+      "B": "B non torna perché ha oggetti interni 3 stelle interni di colore verde invece di 4 stelle interni di colore verde; quindi non rispetta la regola logica usata: sommare nella terza colonna il numero degli elementi interni delle prime due colonne, mantenendo forma esterna triangolo e colore verde nell’ultima riga.",
+      "C": "C non torna perché ha colore esterno blu invece di verde, oggetti interni 4 stelle interni di colore blu invece di 4 stelle interni di colore verde; quindi non rispetta la regola logica usata: sommare nella terza colonna il numero degli elementi interni delle prime due colonne, mantenendo forma esterna triangolo e colore verde nell’ultima riga.",
+      "D": "D non torna perché ha forma esterna quadrato invece di triangolo, 4 lati invece di 3; quindi non rispetta la regola logica usata: sommare nella terza colonna il numero degli elementi interni delle prime due colonne, mantenendo forma esterna triangolo e colore verde nell’ultima riga."
+    },
+    "visual_logic": {
+      "type": "matrix",
+      "uses_position": false,
+      "rule": {
+        "description": "sommare nella terza colonna il numero degli elementi interni delle prime due colonne, mantenendo forma esterna triangolo e colore verde nell’ultima riga.",
+        "color_alternation": {
+          "enabled": false,
+          "colors": []
+        }
+      },
+      "sequence": [
+        {
+          "outer_shape": "cerchio",
+          "outer_color": "blu",
+          "sides": 0,
+          "inner_objects": [
+            {
+              "type": "pallini",
+              "color": "blu",
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "outer_shape": "cerchio",
+          "outer_color": "blu",
+          "sides": 0,
+          "inner_objects": [
+            {
+              "type": "pallini",
+              "color": "blu",
+              "quantity": 2
+            }
+          ]
+        },
+        {
+          "outer_shape": "cerchio",
+          "outer_color": "blu",
+          "sides": 0,
+          "inner_objects": [
+            {
+              "type": "pallini",
+              "color": "blu",
+              "quantity": 3
+            }
+          ]
+        },
+        {
+          "outer_shape": "quadrato",
+          "outer_color": "rosso",
+          "sides": 4,
+          "inner_objects": [
+            {
+              "type": "linee",
+              "color": "rosso",
+              "quantity": 2
+            }
+          ]
+        },
+        {
+          "outer_shape": "quadrato",
+          "outer_color": "rosso",
+          "sides": 4,
+          "inner_objects": [
+            {
+              "type": "linee",
+              "color": "rosso",
+              "quantity": 3
+            }
+          ]
+        },
+        {
+          "outer_shape": "quadrato",
+          "outer_color": "rosso",
+          "sides": 4,
+          "inner_objects": [
+            {
+              "type": "linee",
+              "color": "rosso",
+              "quantity": 5
+            }
+          ]
+        },
+        {
+          "outer_shape": "triangolo",
+          "outer_color": "verde",
+          "sides": 3,
+          "inner_objects": [
+            {
+              "type": "stelle",
+              "color": "verde",
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "outer_shape": "triangolo",
+          "outer_color": "verde",
+          "sides": 3,
+          "inner_objects": [
+            {
+              "type": "stelle",
+              "color": "verde",
+              "quantity": 3
+            }
+          ]
+        }
+      ],
+      "expected_answer": {
+        "outer_shape": "triangolo",
+        "outer_color": "verde",
+        "sides": 3,
+        "inner_objects": [
+          {
+            "type": "stelle",
+            "color": "verde",
+            "quantity": 4
+          }
+        ]
+      },
+      "options": {
+        "A": {
+          "outer_shape": "triangolo",
+          "outer_color": "verde",
+          "sides": 3,
+          "inner_objects": [
+            {
+              "type": "stelle",
+              "color": "verde",
+              "quantity": 4
+            }
+          ]
+        },
+        "B": {
+          "outer_shape": "triangolo",
+          "outer_color": "verde",
+          "sides": 3,
+          "inner_objects": [
+            {
+              "type": "stelle",
+              "color": "verde",
+              "quantity": 3
+            }
+          ]
+        },
+        "C": {
+          "outer_shape": "triangolo",
+          "outer_color": "blu",
+          "sides": 3,
+          "inner_objects": [
+            {
+              "type": "stelle",
+              "color": "blu",
+              "quantity": 4
+            }
+          ]
+        },
+        "D": {
+          "outer_shape": "quadrato",
+          "outer_color": "verde",
+          "sides": 4,
+          "inner_objects": [
+            {
+              "type": "stelle",
+              "color": "verde",
+              "quantity": 4
+            }
+          ]
+        }
+      }
+    }
   },
   {
     "id": "LOG-VIS-AV-0008",
@@ -1141,7 +3320,7 @@
       "D"
     ],
     "risposta_corretta": "D",
-    "spiegazione": "Le forme ruotano ciclicamente tra cerchio, quadrato e triangolo. I colori alternano blu e rosso, mentre i segmenti aumentano da sinistra a destra. Quindi la casella mancante deve rispettare insieme forma, colore e numero di segmenti: un quadrato blu con tre barre diagonali.",
+    "spiegazione": "La risposta corretta è la figura con forma esterna quadrato, colore esterno blu, 4 lati e 3 barre diagonali interni di colore blu, perché la regola logica usata richiede di ruotare ciclicamente le forme cerchio/quadrato/triangolo, alternare i colori blu e rosso e portare a 3 il numero delle barre diagonali interne nella terza colonna.",
     "immagine": "assets/logica_visiva/LOG-VIS-AV-0008_domanda.svg",
     "immagine_domanda": "assets/logica_visiva/LOG-VIS-AV-0008_domanda.svg",
     "immagini_opzioni": [
@@ -1159,6 +3338,184 @@
       "visiva"
     ],
     "distrattore_forte": "C",
-    "motivo_distrattore_forte": "C mantiene forma e colore corretti, ma sbaglia il numero di barre diagonali."
+    "motivo_distrattore_forte": "C mantiene forma e colore corretti, ma sbaglia il numero di barre diagonali.",
+    "tipo_domanda": "immagine",
+    "spiegazioni_opzioni": {
+      "A": "A non torna perché ha forma esterna cerchio invece di quadrato, 0 lati invece di 4; quindi non rispetta la regola logica usata: ruotare ciclicamente le forme cerchio/quadrato/triangolo, alternare i colori blu e rosso e portare a 3 il numero delle barre diagonali interne nella terza colonna.",
+      "B": "B non torna perché ha colore esterno rosso invece di blu, oggetti interni 3 barre diagonali interni di colore rosso invece di 3 barre diagonali interni di colore blu; quindi non rispetta la regola logica usata: ruotare ciclicamente le forme cerchio/quadrato/triangolo, alternare i colori blu e rosso e portare a 3 il numero delle barre diagonali interne nella terza colonna.",
+      "C": "C non torna perché ha oggetti interni 2 barre diagonali interni di colore blu invece di 3 barre diagonali interni di colore blu; quindi non rispetta la regola logica usata: ruotare ciclicamente le forme cerchio/quadrato/triangolo, alternare i colori blu e rosso e portare a 3 il numero delle barre diagonali interne nella terza colonna.",
+      "D": "D è corretta: ha forma esterna quadrato, colore esterno blu, 4 lati e 3 barre diagonali interni di colore blu, quindi rispetta la regola logica usata."
+    },
+    "visual_logic": {
+      "type": "matrix",
+      "uses_position": false,
+      "rule": {
+        "description": "ruotare ciclicamente le forme cerchio/quadrato/triangolo, alternare i colori blu e rosso e portare a 3 il numero delle barre diagonali interne nella terza colonna.",
+        "color_alternation": {
+          "enabled": false,
+          "colors": []
+        }
+      },
+      "sequence": [
+        {
+          "outer_shape": "cerchio",
+          "outer_color": "blu",
+          "sides": 0,
+          "inner_objects": [
+            {
+              "type": "barre diagonali",
+              "color": "blu",
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "outer_shape": "quadrato",
+          "outer_color": "rosso",
+          "sides": 4,
+          "inner_objects": [
+            {
+              "type": "barre diagonali",
+              "color": "rosso",
+              "quantity": 2
+            }
+          ]
+        },
+        {
+          "outer_shape": "triangolo",
+          "outer_color": "blu",
+          "sides": 3,
+          "inner_objects": [
+            {
+              "type": "barre diagonali",
+              "color": "blu",
+              "quantity": 3
+            }
+          ]
+        },
+        {
+          "outer_shape": "quadrato",
+          "outer_color": "rosso",
+          "sides": 4,
+          "inner_objects": [
+            {
+              "type": "barre diagonali",
+              "color": "rosso",
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "outer_shape": "triangolo",
+          "outer_color": "blu",
+          "sides": 3,
+          "inner_objects": [
+            {
+              "type": "barre diagonali",
+              "color": "blu",
+              "quantity": 2
+            }
+          ]
+        },
+        {
+          "outer_shape": "cerchio",
+          "outer_color": "rosso",
+          "sides": 0,
+          "inner_objects": [
+            {
+              "type": "barre diagonali",
+              "color": "rosso",
+              "quantity": 3
+            }
+          ]
+        },
+        {
+          "outer_shape": "triangolo",
+          "outer_color": "blu",
+          "sides": 3,
+          "inner_objects": [
+            {
+              "type": "barre diagonali",
+              "color": "blu",
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "outer_shape": "cerchio",
+          "outer_color": "rosso",
+          "sides": 0,
+          "inner_objects": [
+            {
+              "type": "barre diagonali",
+              "color": "rosso",
+              "quantity": 2
+            }
+          ]
+        }
+      ],
+      "expected_answer": {
+        "outer_shape": "quadrato",
+        "outer_color": "blu",
+        "sides": 4,
+        "inner_objects": [
+          {
+            "type": "barre diagonali",
+            "color": "blu",
+            "quantity": 3
+          }
+        ]
+      },
+      "options": {
+        "A": {
+          "outer_shape": "cerchio",
+          "outer_color": "blu",
+          "sides": 0,
+          "inner_objects": [
+            {
+              "type": "barre diagonali",
+              "color": "blu",
+              "quantity": 3
+            }
+          ]
+        },
+        "B": {
+          "outer_shape": "quadrato",
+          "outer_color": "rosso",
+          "sides": 4,
+          "inner_objects": [
+            {
+              "type": "barre diagonali",
+              "color": "rosso",
+              "quantity": 3
+            }
+          ]
+        },
+        "C": {
+          "outer_shape": "quadrato",
+          "outer_color": "blu",
+          "sides": 4,
+          "inner_objects": [
+            {
+              "type": "barre diagonali",
+              "color": "blu",
+              "quantity": 2
+            }
+          ]
+        },
+        "D": {
+          "outer_shape": "quadrato",
+          "outer_color": "blu",
+          "sides": 4,
+          "inner_objects": [
+            {
+              "type": "barre diagonali",
+              "color": "blu",
+              "quantity": 3
+            }
+          ]
+        }
+      }
+    }
   }
 ]

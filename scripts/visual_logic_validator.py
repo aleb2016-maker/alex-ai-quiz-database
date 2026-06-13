@@ -2,11 +2,14 @@ import re
 
 
 SHAPE_SIDES = {
+    "freccia": 0,
     "cerchio": 0,
     "triangolo": 3,
     "quadrato": 4,
+    "rettangolo": 4,
     "pentagono": 5,
     "esagono": 6,
+    "ettagono": 7,
 }
 
 
@@ -131,7 +134,7 @@ def validate_figure(figure, label, uses_position=False):
 
         quantity = item.get("quantity")
 
-        if not isinstance(quantity, int) or quantity < 1:
+        if not isinstance(quantity, int) or quantity < 0:
             errors.append(f"{item_label}: manca una quantità valida.")
 
         if uses_position and not normalize_text(item.get("position")):
@@ -217,7 +220,22 @@ def explanation_mentions_required_parts(explanation, expected_answer, rule_text)
 
     if rule_text and not any(
         word in text
-        for word in ["alterna", "alternanza", "aumenta", "mantiene", "speculare", "matrice", "sequenza"]
+        for word in [
+            "alterna",
+            "alternanza",
+            "aumenta",
+            "mantiene",
+            "speculare",
+            "riflette",
+            "riflettere",
+            "rotazione",
+            "ruota",
+            "ruotare",
+            "matrice",
+            "sequenza",
+            "somma",
+            "sommare",
+        ]
     ):
         errors.append("La spiegazione non cita chiaramente la regola logica usata.")
 

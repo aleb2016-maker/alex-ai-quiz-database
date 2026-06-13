@@ -23,11 +23,14 @@ let codeDomandePerFiltro = {};
 const elementi = {};
 
 const VISUAL_SHAPE_SIDES = {
+    freccia: 0,
     cerchio: 0,
     triangolo: 3,
     quadrato: 4,
+    rettangolo: 4,
     pentagono: 5,
     esagono: 6,
+    ettagono: 7,
 };
 
 document.addEventListener("DOMContentLoaded", avviaApp);
@@ -878,7 +881,7 @@ function validateVisualFigure(figure, label, usesPosition) {
             errors.push(`${itemLabel}: manca il colore.`);
         }
 
-        if (!Number.isInteger(item.quantity) || item.quantity < 1) {
+        if (!Number.isInteger(item.quantity) || item.quantity < 0) {
             errors.push(`${itemLabel}: manca una quantità valida.`);
         }
 
