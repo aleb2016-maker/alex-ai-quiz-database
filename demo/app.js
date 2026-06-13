@@ -84,15 +84,13 @@ function collegaElementiHtml() {
 
     elementi.quizCreatorForm = document.getElementById("quizCreatorForm");
     elementi.creatorTitle = document.getElementById("creatorTitle");
-    elementi.creatorCategory = document.getElementById("creatorCategory");
+    elementi.creatorSubject = document.getElementById("creatorSubject");
+    elementi.creatorCustomSubject = document.getElementById("creatorCustomSubject");
     elementi.creatorLevel = document.getElementById("creatorLevel");
-    elementi.creatorQuestion = document.getElementById("creatorQuestion");
-    elementi.creatorAnswerA = document.getElementById("creatorAnswerA");
-    elementi.creatorAnswerB = document.getElementById("creatorAnswerB");
-    elementi.creatorAnswerC = document.getElementById("creatorAnswerC");
-    elementi.creatorAnswerD = document.getElementById("creatorAnswerD");
-    elementi.creatorCorrectAnswer = document.getElementById("creatorCorrectAnswer");
-    elementi.creatorExplanation = document.getElementById("creatorExplanation");
+    elementi.creatorQuestionMode = document.getElementById("creatorQuestionMode");
+    elementi.creatorCustomCount = document.getElementById("creatorCustomCount");
+    elementi.creatorFile = document.getElementById("creatorFile");
+    elementi.creatorSourceText = document.getElementById("creatorSourceText");
     elementi.creatorStatus = document.getElementById("creatorStatus");
     elementi.creatorQuestionCount = document.getElementById("creatorQuestionCount");
     elementi.quizJsonOutput = document.getElementById("quizJsonOutput");
@@ -142,6 +140,13 @@ function collegaEventi() {
         elementi.downloadQuizJsonButton.addEventListener(
             "click",
             scaricaQuizPersonalizzatoJson
+        );
+    }
+
+    if (elementi.creatorFile) {
+        elementi.creatorFile.addEventListener(
+            "change",
+            aggiornaStatoFileQuizCreator
         );
     }
 }
@@ -750,127 +755,466 @@ function risolviPercorsoAsset(percorso) {
     return `../${percorso}`;
 }
 
-function generaQuizPersonalizzatoJson(evento) {
+async function generaQuizPersonalizzatoJson(evento) {
     evento.preventDefault();
 
-    const dati = leggiCampiQuizPersonalizzato();
-    const errori = validaQuizPersonalizzato(dati);
-
-    if (errori.length > 0) {
-        mostraStatoQuizCreator(errori[0], true);
+    try {
+        mostraStatoQuizCreator("Lettura materiale in corso...", false);
         disabilitaAzioniQuizJson();
-        return;
+
+        const dati = leggiCampiQuizPersonalizzato();
+        const validazione = validaImpostazioniQuizPersonalizzato(dati);
+
+        if (!validazione.valid) {
+            mostraStatoQuizCreator(validazione.message, true);
+            return;
+        }
+
+        const testoSorgente = await leggiTestoSorgenteQuiz(dati.file);
+        const domandeTrovate = estraiDomandeDaSorgente(testoSorgente, dati.file);
+
+        if (domandeTrovate.length === 0) {
+            mostraStatoQuizCreator(
+                "Non ho trovato domande valide. Usa JSON strutturato o testo con Domanda, A/B/C/D, Corretta e Spiegazione.",
+                true
+            );
+            return;
+        }
+
+        const domandeNormalizzate = normalizzaDomandeImportate(
+            domandeTrovate,
+            dati
+        );
+
+        if (domandeNormalizzate.length === 0) {
+            mostraStatoQuizCreator(
+                "Le domande trovate sono incomplete: servono domanda, 4 risposte e risposta corretta.",
+                true
+            );
+            return;
+        }
+
+        const quantita = ottieniNumeroDomandeDaGenerare(
+            dati,
+            domandeNormalizzate.length
+        );
+
+        const domandeScelte = mescolaArray(domandeNormalizzate).slice(
+            0,
+            quantita
+        );
+
+        const quiz = creaQuizPersonalizzato(dati, domandeScelte, {
+            trovate: domandeNormalizzate.length,
+            usate: domandeScelte.length,
+        });
+
+        ultimoQuizPersonalizzatoJson = JSON.stringify(quiz, null, 2);
+        elementi.quizJsonOutput.textContent = ultimoQuizPersonalizzatoJson;
+        elementi.copyQuizJsonButton.disabled = false;
+        elementi.downloadQuizJsonButton.disabled = false;
+        elementi.creatorQuestionCount.textContent =
+            `${domandeScelte.length} domande generate`;
+
+        mostraStatoQuizCreator(
+            `Test generato: ${domandeScelte.length} domande su ${domandeNormalizzate.length} disponibili.`,
+            false
+        );
+    } catch (errore) {
+        mostraStatoQuizCreator(
+            errore.message || "Errore durante la generazione del test.",
+            true
+        );
     }
-
-    const quiz = creaQuizPersonalizzato(dati);
-
-    ultimoQuizPersonalizzatoJson = JSON.stringify(quiz, null, 2);
-    elementi.quizJsonOutput.textContent = ultimoQuizPersonalizzatoJson;
-    elementi.copyQuizJsonButton.disabled = false;
-    elementi.downloadQuizJsonButton.disabled = false;
-    elementi.creatorQuestionCount.textContent = "1 domanda";
-
-    mostraStatoQuizCreator("JSON generato correttamente.", false);
 }
 
 function leggiCampiQuizPersonalizzato() {
     return {
         titolo: elementi.creatorTitle.value.trim(),
-        categoria: elementi.creatorCategory.value.trim(),
+        materia: ottieniMateriaQuizCreator(),
         livello: elementi.creatorLevel.value,
-        domanda: elementi.creatorQuestion.value.trim(),
-        risposte: {
-            A: elementi.creatorAnswerA.value.trim(),
-            B: elementi.creatorAnswerB.value.trim(),
-            C: elementi.creatorAnswerC.value.trim(),
-            D: elementi.creatorAnswerD.value.trim(),
-        },
-        rispostaCorretta: elementi.creatorCorrectAnswer.value,
-        spiegazione: elementi.creatorExplanation.value.trim(),
+        questionMode: elementi.creatorQuestionMode.value,
+        customCount: Number(elementi.creatorCustomCount.value),
+        file: elementi.creatorFile.files?.[0] || null,
+        sourceText: elementi.creatorSourceText.value.trim(),
     };
 }
 
-function validaQuizPersonalizzato(dati) {
-    const errori = [];
+function ottieniMateriaQuizCreator() {
+    const personalizzata = elementi.creatorCustomSubject.value.trim();
 
+    if (personalizzata) {
+        return personalizzata;
+    }
+
+    return elementi.creatorSubject.value;
+}
+
+function validaImpostazioniQuizPersonalizzato(dati) {
     if (!dati.titolo) {
-        errori.push("Inserisci il titolo del quiz.");
+        return { valid: false, message: "Inserisci il titolo del quiz." };
     }
 
-    if (!dati.categoria) {
-        errori.push("Inserisci la categoria.");
+    if (!dati.materia) {
+        return { valid: false, message: "Scegli o scrivi la materia." };
     }
 
-    if (!dati.domanda) {
-        errori.push("Inserisci la domanda.");
+    if (!dati.file && !dati.sourceText) {
+        return {
+            valid: false,
+            message: "Carica un file JSON/TXT/PDF oppure incolla testo strutturato.",
+        };
     }
 
-    Object.entries(dati.risposte).forEach(([lettera, risposta]) => {
-        if (!risposta) {
-            errori.push(`Inserisci la risposta ${lettera}.`);
+    if (
+        dati.questionMode === "custom" &&
+        (!Number.isInteger(dati.customCount) || dati.customCount < 1)
+    ) {
+        return {
+            valid: false,
+            message: "Inserisci un numero di domande valido.",
+        };
+    }
+
+    return { valid: true, message: "" };
+}
+
+async function leggiTestoSorgenteQuiz(file) {
+    if (file) {
+        if (isPdfFile(file)) {
+            return await estraiTestoDaPdf(file);
+        }
+
+        return await file.text();
+    }
+
+    return elementi.creatorSourceText.value.trim();
+}
+
+function isPdfFile(file) {
+    return (
+        file.type === "application/pdf" ||
+        file.name.toLowerCase().endsWith(".pdf")
+    );
+}
+
+async function estraiTestoDaPdf(file) {
+    try {
+        const pdfjsLib = await import(
+            "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.10.38/pdf.min.mjs"
+        );
+
+        pdfjsLib.GlobalWorkerOptions.workerSrc =
+            "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.10.38/pdf.worker.min.mjs";
+
+        const buffer = await file.arrayBuffer();
+        const pdf = await pdfjsLib.getDocument({ data: buffer }).promise;
+        const pagine = [];
+
+        for (let pageNumber = 1; pageNumber <= pdf.numPages; pageNumber += 1) {
+            const pagina = await pdf.getPage(pageNumber);
+            const contenuto = await pagina.getTextContent();
+            const testoPagina = contenuto.items
+                .map(item => item.str)
+                .join(" ");
+
+            pagine.push(testoPagina);
+        }
+
+        return pagine.join("\n\n");
+    } catch (errore) {
+        throw new Error(
+            "Non riesco a leggere questo PDF. Usa un PDF con testo selezionabile oppure carica JSON/TXT."
+        );
+    }
+}
+
+function estraiDomandeDaSorgente(testo, file) {
+    const testoPulito = String(testo || "").trim();
+
+    if (!testoPulito) {
+        return [];
+    }
+
+    if (sembraJsonQuiz(testoPulito, file)) {
+        try {
+            const json = JSON.parse(testoPulito);
+            return estraiDomandeDaJson(json);
+        } catch (errore) {
+            throw new Error("Il file JSON non è valido.");
+        }
+    }
+
+    return estraiDomandeDaTesto(testoPulito);
+}
+
+function sembraJsonQuiz(testo, file) {
+    return (
+        file?.name?.toLowerCase().endsWith(".json") ||
+        testo.startsWith("{") ||
+        testo.startsWith("[")
+    );
+}
+
+function estraiDomandeDaJson(json) {
+    if (Array.isArray(json)) {
+        return json;
+    }
+
+    if (!json || typeof json !== "object") {
+        return [];
+    }
+
+    const possibiliListe = [
+        json.domande,
+        json.questions,
+        json.quiz,
+        json.items,
+        json.data,
+    ];
+
+    const lista = possibiliListe.find(Array.isArray);
+
+    return lista || [];
+}
+
+function estraiDomandeDaTesto(testo) {
+    const blocchi = testo
+        .replace(/\r/g, "")
+        .split(/\n\s*\n(?=\s*(?:Domanda|Q|Question|\d+[\).]))/i)
+        .map(blocco => blocco.trim())
+        .filter(Boolean);
+
+    return blocchi
+        .map(parseBloccoDomandaTestuale)
+        .filter(Boolean);
+}
+
+function parseBloccoDomandaTestuale(blocco) {
+    const righe = blocco
+        .split("\n")
+        .map(riga => riga.trim())
+        .filter(Boolean);
+
+    let domanda = "";
+    const opzioni = {};
+    let corretta = "";
+    let spiegazione = "";
+
+    righe.forEach((riga, index) => {
+        const opzione = riga.match(/^([A-D])[\)\.:\-]\s*(.+)$/i);
+
+        if (opzione) {
+            opzioni[opzione[1].toUpperCase()] = opzione[2].trim();
+            return;
+        }
+
+        const risposta = riga.match(/^(corretta|risposta corretta|answer|correct)\s*[:\-]\s*(.+)$/i);
+
+        if (risposta) {
+            corretta = risposta[2].trim();
+            return;
+        }
+
+        const spiegazioneMatch = riga.match(/^(spiegazione|explanation)\s*[:\-]\s*(.+)$/i);
+
+        if (spiegazioneMatch) {
+            spiegazione = spiegazioneMatch[2].trim();
+            return;
+        }
+
+        const domandaMatch = riga.match(/^(domanda|question|q)\s*[:\-]\s*(.+)$/i);
+
+        if (domandaMatch) {
+            domanda = domandaMatch[2].trim();
+            return;
+        }
+
+        if (index === 0 && !domanda) {
+            domanda = riga.replace(/^\d+[\).]\s*/, "").trim();
         }
     });
 
-    if (!dati.risposte[dati.rispostaCorretta]) {
-        errori.push("La risposta corretta scelta non contiene testo.");
-    }
-
-    const risposteNormalizzate = Object.values(dati.risposte).map(risposta => {
-        return normalizzaTestoQuizCreator(risposta);
-    });
-
-    const risposteUniche = new Set(risposteNormalizzate);
-
-    if (risposteUniche.size !== risposteNormalizzate.length) {
-        errori.push("Le quattro risposte devono essere diverse tra loro.");
-    }
-
-    if (!dati.spiegazione) {
-        errori.push("Inserisci una spiegazione sintetica.");
-    }
-
-    if (dati.spiegazione && dati.spiegazione.length < 20) {
-        errori.push("La spiegazione è troppo corta: scrivi almeno una regola chiara.");
-    }
-
-    return errori;
-}
-
-function creaQuizPersonalizzato(dati) {
-    const categoria = creaSlugQuizCreator(dati.categoria);
-    const livello = dati.livello;
-    const id = creaIdQuizPersonalizzato(categoria, livello);
-    const opzioni = ["A", "B", "C", "D"].map(lettera => {
-        return dati.risposte[lettera];
-    });
-
     return {
-        titolo_quiz: dati.titolo,
-        formato: "alex-ai-quiz-database-v1",
-        creato_il: new Date().toISOString(),
-        domande: [
-            {
-                id,
-                categoria,
-                livello,
-                tipo: "testo",
-                tipo_domanda: "testo",
-                domanda: dati.domanda,
-                opzioni,
-                risposta_corretta: dati.risposte[dati.rispostaCorretta],
-                risposta_corretta_label: dati.rispostaCorretta,
-                spiegazione: dati.spiegazione,
-                tags: [
-                    categoria,
-                    "personalizzato",
-                ],
-                difficolta: ottieniDifficoltaDaLivello(livello),
-            },
-        ],
+        domanda,
+        opzioni,
+        risposta_corretta: corretta,
+        spiegazione,
     };
 }
 
-function creaIdQuizPersonalizzato(categoria, livello) {
+function normalizzaDomandeImportate(domande, dati) {
+    const categoria = creaSlugQuizCreator(dati.materia);
+    const livello = dati.livello;
+
+    return domande
+        .map((domanda, index) => {
+            return normalizzaDomandaImportata(
+                domanda,
+                categoria,
+                livello,
+                index + 1
+            );
+        })
+        .filter(Boolean);
+}
+
+function normalizzaDomandaImportata(domanda, categoria, livello, index) {
+    if (!domanda || typeof domanda !== "object") {
+        return null;
+    }
+
+    const testoDomanda = prendiPrimoValore(domanda, [
+        "domanda",
+        "question",
+        "testo",
+        "prompt",
+        "quesito",
+    ]);
+
+    const opzioni = normalizzaOpzioniImportate(
+        prendiPrimoValore(domanda, [
+            "opzioni",
+            "options",
+            "risposte",
+            "answers",
+            "choices",
+        ])
+    );
+
+    const rispostaOriginale = prendiPrimoValore(domanda, [
+        "risposta_corretta",
+        "rispostaCorretta",
+        "correct_answer",
+        "correctAnswer",
+        "correct",
+        "answer",
+        "soluzione",
+    ]);
+
+    const rispostaCorretta = normalizzaRispostaCorrettaImportata(
+        rispostaOriginale,
+        opzioni
+    );
+
+    const spiegazione = prendiPrimoValore(domanda, [
+        "spiegazione",
+        "explanation",
+        "feedback",
+        "motivo",
+    ]) || "Spiegazione da completare.";
+
+    if (
+        !testoDomanda ||
+        opzioni.length < 4 ||
+        !rispostaCorretta ||
+        !opzioni.includes(rispostaCorretta)
+    ) {
+        return null;
+    }
+
+    return {
+        id: creaIdQuizPersonalizzato(categoria, livello, index),
+        categoria,
+        livello,
+        tipo: "testo",
+        tipo_domanda: "testo",
+        domanda: String(testoDomanda).trim(),
+        opzioni: opzioni.slice(0, 4),
+        risposta_corretta: rispostaCorretta,
+        spiegazione: String(spiegazione).trim(),
+        tags: [
+            categoria,
+            "personalizzato",
+        ],
+        difficolta: ottieniDifficoltaDaLivello(livello),
+    };
+}
+
+function prendiPrimoValore(oggetto, chiavi) {
+    for (const chiave of chiavi) {
+        if (oggetto[chiave] !== undefined && oggetto[chiave] !== null) {
+            return oggetto[chiave];
+        }
+    }
+
+    return "";
+}
+
+function normalizzaOpzioniImportate(opzioniOriginali) {
+    if (Array.isArray(opzioniOriginali)) {
+        return opzioniOriginali
+            .map(opzione => {
+                if (typeof opzione === "object" && opzione !== null) {
+                    return String(
+                        opzione.testo ||
+                        opzione.text ||
+                        opzione.value ||
+                        opzione.risposta ||
+                        ""
+                    ).trim();
+                }
+
+                return String(opzione || "").trim();
+            })
+            .filter(Boolean);
+    }
+
+    if (opzioniOriginali && typeof opzioniOriginali === "object") {
+        return ["A", "B", "C", "D"]
+            .map(lettera => String(opzioniOriginali[lettera] || "").trim())
+            .filter(Boolean);
+    }
+
+    return [];
+}
+
+function normalizzaRispostaCorrettaImportata(rispostaOriginale, opzioni) {
+    const risposta = String(rispostaOriginale || "").trim();
+    const lettera = risposta.toUpperCase();
+    const indiceLettera = ["A", "B", "C", "D"].indexOf(lettera);
+
+    if (indiceLettera >= 0) {
+        return opzioni[indiceLettera] || "";
+    }
+
+    const rispostaNormalizzata = normalizzaTestoQuizCreator(risposta);
+
+    return opzioni.find(opzione => {
+        return normalizzaTestoQuizCreator(opzione) === rispostaNormalizzata;
+    }) || "";
+}
+
+function ottieniNumeroDomandeDaGenerare(dati, disponibili) {
+    if (dati.questionMode === "all") {
+        return disponibili;
+    }
+
+    if (dati.questionMode === "custom") {
+        return Math.min(dati.customCount, disponibili);
+    }
+
+    return Math.min(Number(dati.questionMode), disponibili);
+}
+
+function creaQuizPersonalizzato(dati, domande, statistiche) {
+    const categoria = creaSlugQuizCreator(dati.materia);
+
+    return {
+        titolo_quiz: dati.titolo,
+        materia: categoria,
+        formato: "alex-ai-quiz-database-v1",
+        creato_il: new Date().toISOString(),
+        origine: {
+            file: dati.file?.name || "testo incollato",
+            domande_trovate: statistiche.trovate,
+            domande_generate: statistiche.usate,
+        },
+        domande,
+    };
+}
+
+function creaIdQuizPersonalizzato(categoria, livello, index) {
     const categoriaBreve = categoria
         .split("_")
         .map(parte => parte.slice(0, 3))
@@ -884,7 +1228,7 @@ function creaIdQuizPersonalizzato(categoria, livello) {
         avanzato: "AV",
     }[livello] || "CUS";
 
-    return `CUSTOM-${categoriaBreve}-${livelloBreve}-${Date.now()}`;
+    return `CUSTOM-${categoriaBreve}-${livelloBreve}-${String(index).padStart(4, "0")}`;
 }
 
 function ottieniDifficoltaDaLivello(livello) {
@@ -910,6 +1254,16 @@ function creaSlugQuizCreator(testo) {
         .replace(/[^a-z0-9]+/g, "_")
         .replace(/^_+|_+$/g, "")
         || "quiz_personalizzato";
+}
+
+function aggiornaStatoFileQuizCreator() {
+    const file = elementi.creatorFile.files?.[0];
+
+    if (!file) {
+        return;
+    }
+
+    mostraStatoQuizCreator(`File selezionato: ${file.name}`, false);
 }
 
 function mostraStatoQuizCreator(messaggio, errore) {

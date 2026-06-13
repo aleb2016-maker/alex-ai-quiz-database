@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alex AI Quiz Database</title>
-    <link rel="stylesheet" href="style.css?v=demo-v1-7">
+    <link rel="stylesheet" href="style.css?v=demo-v1-8">
 </head>
 <body>
 
@@ -19,14 +19,6 @@
                 Scegli categoria, livello e numero di domande. Alla fine ricevi voto,
                 giudizio, corrette, sbagliate e una card finale colorata.
             </p>
-            <div class="hero-actions">
-                <a class="primary-button action-link" href="#creatorBox">
-                    Genera nuovo test
-                </a>
-                <a class="secondary-button action-link" href="#setupBox">
-                    Prova la demo quiz
-                </a>
-            </div>
         </section>
 
         <section id="loadingBox" class="card info-card">
@@ -61,15 +53,9 @@
 
             <p id="availableInfo" class="available-info"></p>
 
-            <div class="setup-actions">
-                <button id="startButton" class="primary-button">
-                    Inizia test
-                </button>
-
-                <a class="secondary-button action-link" href="#creatorBox">
-                    Genera nuovo test
-                </a>
-            </div>
+            <button id="startButton" class="primary-button">
+                Inizia test
+            </button>
         </section>
 
         <section id="quizBox" class="card quiz-card hidden">
@@ -154,14 +140,14 @@
         <section id="creatorBox" class="card creator-card">
             <div class="creator-heading">
                 <div>
-                    <span class="section-kicker">Nuovo quiz</span>
-                    <h2>Crea un quiz personalizzato</h2>
+                    <span class="section-kicker">Generatore</span>
+                    <h2>Genera un nuovo test</h2>
                     <p>
-                        Compila i campi, genera il JSON e riutilizzalo nel progetto
-                        o in una nuova demo.
+                        Carica un file con più domande, scegli materia e quantità,
+                        poi genera un JSON pronto da riutilizzare.
                     </p>
                 </div>
-                <span id="creatorQuestionCount" class="pill">1 domanda</span>
+                <span id="creatorQuestionCount" class="pill">0 domande caricate</span>
             </div>
 
             <form id="quizCreatorForm" class="creator-form">
@@ -172,16 +158,31 @@
                     </label>
 
                     <label>
-                        Categoria
-                        <input id="creatorCategory" type="text" list="creatorCategoryList" placeholder="Es. informatica">
-                        <datalist id="creatorCategoryList">
-                            <option value="ai"></option>
-                            <option value="informatica"></option>
-                            <option value="matematica"></option>
-                            <option value="inglese"></option>
-                            <option value="logica"></option>
-                            <option value="logica_visiva"></option>
-                        </datalist>
+                        Materia
+                        <select id="creatorSubject">
+                            <option value="informatica">Informatica</option>
+                            <option value="ai">AI</option>
+                            <option value="matematica">Matematica</option>
+                            <option value="inglese">Inglese</option>
+                            <option value="logica">Logica</option>
+                            <option value="logica_visiva">Logica visiva</option>
+                            <option value="scienze">Scienze</option>
+                            <option value="fisica">Fisica</option>
+                            <option value="meccanica_quantistica">Meccanica quantistica</option>
+                            <option value="biologia">Biologia</option>
+                            <option value="chimica">Chimica</option>
+                            <option value="medicina">Medicina</option>
+                            <option value="economia">Economia</option>
+                            <option value="diritto">Diritto</option>
+                            <option value="filosofia">Filosofia</option>
+                            <option value="psicologia">Psicologia</option>
+                            <option value="storia">Storia</option>
+                            <option value="italiano">Italiano</option>
+                            <option value="geografia">Geografia</option>
+                            <option value="arte">Arte</option>
+                            <option value="musica">Musica</option>
+                            <option value="altro">Altro</option>
+                        </select>
                     </label>
 
                     <label>
@@ -194,55 +195,43 @@
                     </label>
                 </div>
 
-                <label>
-                    Domanda
-                    <textarea id="creatorQuestion" rows="3" placeholder="Scrivi qui la domanda del quiz"></textarea>
-                </label>
-
-                <div class="answers-grid">
+                <div class="creator-grid">
                     <label>
-                        Risposta A
-                        <input id="creatorAnswerA" type="text" placeholder="Prima risposta">
+                        Materia personalizzata
+                        <input id="creatorCustomSubject" type="text" placeholder="Es. neuroscienze, robotica, marketing">
                     </label>
 
                     <label>
-                        Risposta B
-                        <input id="creatorAnswerB" type="text" placeholder="Seconda risposta">
-                    </label>
-
-                    <label>
-                        Risposta C
-                        <input id="creatorAnswerC" type="text" placeholder="Terza risposta">
-                    </label>
-
-                    <label>
-                        Risposta D
-                        <input id="creatorAnswerD" type="text" placeholder="Quarta risposta">
-                    </label>
-                </div>
-
-                <div class="creator-grid creator-grid-small">
-                    <label>
-                        Risposta corretta
-                        <select id="creatorCorrectAnswer">
-                            <option value="A">A</option>
-                            <option value="B">B</option>
-                            <option value="C">C</option>
-                            <option value="D">D</option>
+                        Numero domande
+                        <select id="creatorQuestionMode">
+                            <option value="10">10 domande</option>
+                            <option value="20">20 domande</option>
+                            <option value="all">Tutte le domande trovate</option>
+                            <option value="custom">Numero a scelta</option>
                         </select>
                     </label>
 
-                    <label class="creator-explanation-field">
-                        Spiegazione
-                        <textarea id="creatorExplanation" rows="3" placeholder="Spiega in modo sintetico perché la risposta è corretta"></textarea>
+                    <label>
+                        Numero personalizzato
+                        <input id="creatorCustomCount" type="number" min="1" max="200" value="10">
                     </label>
                 </div>
+
+                <label>
+                    File sorgente
+                    <input id="creatorFile" type="file" accept=".json,.txt,.pdf,application/json,text/plain,application/pdf">
+                </label>
+
+                <label>
+                    Oppure incolla testo strutturato
+                    <textarea id="creatorSourceText" rows="8" placeholder="Domanda: ...&#10;A) ...&#10;B) ...&#10;C) ...&#10;D) ...&#10;Corretta: A&#10;Spiegazione: ..."></textarea>
+                </label>
 
                 <div id="creatorStatus" class="creator-status" aria-live="polite"></div>
 
                 <div class="creator-actions">
                     <button id="generateQuizJsonButton" class="primary-button" type="submit">
-                        Genera JSON
+                        Genera nuovo test
                     </button>
 
                     <button id="copyQuizJsonButton" class="secondary-button" type="button" disabled>
@@ -253,6 +242,11 @@
                         Scarica JSON
                     </button>
                 </div>
+
+                <p class="creator-help">
+                    Genera il tuo test personalizzato: puoi scegliere il tuo campo
+                    di interesse e trasformare il materiale caricato in un JSON pronto.
+                </p>
             </form>
 
             <div class="json-preview">
@@ -260,13 +254,13 @@
                     <strong>Anteprima JSON</strong>
                     <span>Compatibile con Alex AI Quiz Database</span>
                 </div>
-                <pre id="quizJsonOutput">Compila il form e genera il JSON.</pre>
+                <pre id="quizJsonOutput">Carica un file o incolla un testo, poi genera il nuovo test.</pre>
             </div>
         </section>
 
     </main>
 
-    <script src="app.js?v=demo-v1-7"></script>
+    <script src="app.js?v=demo-v1-8"></script>
 
 <footer class="demo-footer" id="demoFooter">
     <p>
