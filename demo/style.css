@@ -58,6 +58,19 @@ body {
     line-height: 1.6;
 }
 
+.hero-actions,
+.setup-actions {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 22px;
+}
+
+.setup-actions {
+    justify-content: flex-start;
+}
+
 .card {
     border: 1px solid rgba(255, 255, 255, 0.16);
     border-radius: 28px;
@@ -103,7 +116,9 @@ label {
     font-weight: 700;
 }
 
-select {
+select,
+input,
+textarea {
     width: 100%;
     padding: 13px 14px;
     border: 1px solid rgba(255, 255, 255, 0.16);
@@ -114,6 +129,17 @@ select {
     outline: none;
 }
 
+textarea {
+    min-height: 96px;
+    resize: vertical;
+    line-height: 1.5;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: rgba(203, 213, 225, 0.62);
+}
+
 .available-info {
     margin: 0 0 22px;
     color: #a7f3d0;
@@ -122,6 +148,9 @@ select {
 
 .primary-button,
 .secondary-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     border: none;
     border-radius: 18px;
     padding: 14px 20px;
@@ -140,6 +169,10 @@ select {
     color: #ffffff;
     background: rgba(255, 255, 255, 0.12);
     border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.action-link {
+    text-decoration: none;
 }
 
 .primary-button:hover,
@@ -411,15 +444,144 @@ select {
     margin-top: 22px;
 }
 
+.creator-card {
+    margin-top: 28px;
+}
+
+.creator-heading {
+    display: flex;
+    justify-content: space-between;
+    gap: 18px;
+    align-items: flex-start;
+    margin-bottom: 22px;
+}
+
+.creator-heading h2 {
+    margin: 6px 0 8px;
+    font-size: clamp(1.6rem, 3vw, 2.4rem);
+    line-height: 1.1;
+}
+
+.creator-heading p {
+    max-width: 720px;
+    margin: 0;
+    color: #cbd5e1;
+    line-height: 1.55;
+}
+
+.section-kicker {
+    display: inline-flex;
+    align-items: center;
+    width: fit-content;
+    padding: 6px 10px;
+    border-radius: 999px;
+    color: #a7f3d0;
+    background: rgba(45, 212, 191, 0.14);
+    border: 1px solid rgba(94, 234, 212, 0.25);
+    font-size: 0.82rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.creator-form {
+    display: grid;
+    gap: 18px;
+}
+
+.creator-grid,
+.answers-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.creator-grid-small {
+    grid-template-columns: minmax(180px, 0.45fr) minmax(0, 1fr);
+}
+
+.answers-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.creator-explanation-field {
+    min-width: 0;
+}
+
+.creator-status {
+    min-height: 22px;
+    color: #a7f3d0;
+    font-weight: 800;
+}
+
+.creator-status.error {
+    color: #fecaca;
+}
+
+.creator-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.json-preview {
+    margin-top: 22px;
+    overflow: hidden;
+    border-radius: 20px;
+    border: 1px solid rgba(148, 163, 184, 0.35);
+    background: rgba(2, 6, 23, 0.72);
+}
+
+.json-preview-header {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 14px 16px;
+    color: #e2e8f0;
+    background: rgba(255, 255, 255, 0.07);
+    border-bottom: 1px solid rgba(148, 163, 184, 0.22);
+}
+
+.json-preview-header span {
+    color: #94a3b8;
+    font-size: 0.9rem;
+}
+
+.json-preview pre {
+    min-height: 220px;
+    max-height: 520px;
+    margin: 0;
+    padding: 18px;
+    overflow: auto;
+    color: #d9f99d;
+    font-size: 0.92rem;
+    line-height: 1.55;
+    white-space: pre-wrap;
+    word-break: break-word;
+}
+
 @media (max-width: 780px) {
     .controls-grid,
     .options-grid,
-    .result-grid {
+    .result-grid,
+    .creator-grid,
+    .creator-grid-small,
+    .answers-grid {
         grid-template-columns: 1fr;
     }
 
     .quiz-top {
         align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .creator-heading,
+    .json-preview-header {
+        flex-direction: column;
+    }
+
+    .setup-actions {
+        align-items: stretch;
         flex-direction: column;
     }
 

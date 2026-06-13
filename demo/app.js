@@ -6,6 +6,7 @@ let indiceDomandaCorrente = 0;
 let risposteCorrette = 0;
 let risposteSbagliate = 0;
 let rispostaGiaData = false;
+let ultimoQuizPersonalizzatoJson = "";
 
 /*
     Memoria dei gruppi di domande già usate.
@@ -81,6 +82,24 @@ function collegaElementiHtml() {
     elementi.retryButton = document.getElementById("retryButton");
     elementi.settingsButton = document.getElementById("settingsButton");
 
+    elementi.quizCreatorForm = document.getElementById("quizCreatorForm");
+    elementi.creatorTitle = document.getElementById("creatorTitle");
+    elementi.creatorCategory = document.getElementById("creatorCategory");
+    elementi.creatorLevel = document.getElementById("creatorLevel");
+    elementi.creatorQuestion = document.getElementById("creatorQuestion");
+    elementi.creatorAnswerA = document.getElementById("creatorAnswerA");
+    elementi.creatorAnswerB = document.getElementById("creatorAnswerB");
+    elementi.creatorAnswerC = document.getElementById("creatorAnswerC");
+    elementi.creatorAnswerD = document.getElementById("creatorAnswerD");
+    elementi.creatorCorrectAnswer = document.getElementById("creatorCorrectAnswer");
+    elementi.creatorExplanation = document.getElementById("creatorExplanation");
+    elementi.creatorStatus = document.getElementById("creatorStatus");
+    elementi.creatorQuestionCount = document.getElementById("creatorQuestionCount");
+    elementi.quizJsonOutput = document.getElementById("quizJsonOutput");
+    elementi.generateQuizJsonButton = document.getElementById("generateQuizJsonButton");
+    elementi.copyQuizJsonButton = document.getElementById("copyQuizJsonButton");
+    elementi.downloadQuizJsonButton = document.getElementById("downloadQuizJsonButton");
+
     elementi.confettiCanvas = document.getElementById("confettiCanvas");
 }
 
@@ -104,6 +123,27 @@ function collegaEventi() {
     elementi.nextButton.addEventListener("click", vaiAllaProssimaDomanda);
     elementi.retryButton.addEventListener("click", iniziaTest);
     elementi.settingsButton.addEventListener("click", tornaAlleImpostazioni);
+
+    if (elementi.quizCreatorForm) {
+        elementi.quizCreatorForm.addEventListener(
+            "submit",
+            generaQuizPersonalizzatoJson
+        );
+    }
+
+    if (elementi.copyQuizJsonButton) {
+        elementi.copyQuizJsonButton.addEventListener(
+            "click",
+            copiaQuizPersonalizzatoJson
+        );
+    }
+
+    if (elementi.downloadQuizJsonButton) {
+        elementi.downloadQuizJsonButton.addEventListener(
+            "click",
+            scaricaQuizPersonalizzatoJson
+        );
+    }
 }
 
 async function caricaDatabase() {
@@ -708,6 +748,221 @@ function risolviPercorsoAsset(percorso) {
     }
 
     return `../${percorso}`;
+}
+
+function generaQuizPersonalizzatoJson(evento) {
+    evento.preventDefault();
+
+    const dati = leggiCampiQuizPersonalizzato();
+    const errori = validaQuizPersonalizzato(dati);
+
+    if (errori.length > 0) {
+        mostraStatoQuizCreator(errori[0], true);
+        disabilitaAzioniQuizJson();
+        return;
+    }
+
+    const quiz = creaQuizPersonalizzato(dati);
+
+    ultimoQuizPersonalizzatoJson = JSON.stringify(quiz, null, 2);
+    elementi.quizJsonOutput.textContent = ultimoQuizPersonalizzatoJson;
+    elementi.copyQuizJsonButton.disabled = false;
+    elementi.downloadQuizJsonButton.disabled = false;
+    elementi.creatorQuestionCount.textContent = "1 domanda";
+
+    mostraStatoQuizCreator("JSON generato correttamente.", false);
+}
+
+function leggiCampiQuizPersonalizzato() {
+    return {
+        titolo: elementi.creatorTitle.value.trim(),
+        categoria: elementi.creatorCategory.value.trim(),
+        livello: elementi.creatorLevel.value,
+        domanda: elementi.creatorQuestion.value.trim(),
+        risposte: {
+            A: elementi.creatorAnswerA.value.trim(),
+            B: elementi.creatorAnswerB.value.trim(),
+            C: elementi.creatorAnswerC.value.trim(),
+            D: elementi.creatorAnswerD.value.trim(),
+        },
+        rispostaCorretta: elementi.creatorCorrectAnswer.value,
+        spiegazione: elementi.creatorExplanation.value.trim(),
+    };
+}
+
+function validaQuizPersonalizzato(dati) {
+    const errori = [];
+
+    if (!dati.titolo) {
+        errori.push("Inserisci il titolo del quiz.");
+    }
+
+    if (!dati.categoria) {
+        errori.push("Inserisci la categoria.");
+    }
+
+    if (!dati.domanda) {
+        errori.push("Inserisci la domanda.");
+    }
+
+    Object.entries(dati.risposte).forEach(([lettera, risposta]) => {
+        if (!risposta) {
+            errori.push(`Inserisci la risposta ${lettera}.`);
+        }
+    });
+
+    if (!dati.risposte[dati.rispostaCorretta]) {
+        errori.push("La risposta corretta scelta non contiene testo.");
+    }
+
+    const risposteNormalizzate = Object.values(dati.risposte).map(risposta => {
+        return normalizzaTestoQuizCreator(risposta);
+    });
+
+    const risposteUniche = new Set(risposteNormalizzate);
+
+    if (risposteUniche.size !== risposteNormalizzate.length) {
+        errori.push("Le quattro risposte devono essere diverse tra loro.");
+    }
+
+    if (!dati.spiegazione) {
+        errori.push("Inserisci una spiegazione sintetica.");
+    }
+
+    if (dati.spiegazione && dati.spiegazione.length < 20) {
+        errori.push("La spiegazione è troppo corta: scrivi almeno una regola chiara.");
+    }
+
+    return errori;
+}
+
+function creaQuizPersonalizzato(dati) {
+    const categoria = creaSlugQuizCreator(dati.categoria);
+    const livello = dati.livello;
+    const id = creaIdQuizPersonalizzato(categoria, livello);
+    const opzioni = ["A", "B", "C", "D"].map(lettera => {
+        return dati.risposte[lettera];
+    });
+
+    return {
+        titolo_quiz: dati.titolo,
+        formato: "alex-ai-quiz-database-v1",
+        creato_il: new Date().toISOString(),
+        domande: [
+            {
+                id,
+                categoria,
+                livello,
+                tipo: "testo",
+                tipo_domanda: "testo",
+                domanda: dati.domanda,
+                opzioni,
+                risposta_corretta: dati.risposte[dati.rispostaCorretta],
+                risposta_corretta_label: dati.rispostaCorretta,
+                spiegazione: dati.spiegazione,
+                tags: [
+                    categoria,
+                    "personalizzato",
+                ],
+                difficolta: ottieniDifficoltaDaLivello(livello),
+            },
+        ],
+    };
+}
+
+function creaIdQuizPersonalizzato(categoria, livello) {
+    const categoriaBreve = categoria
+        .split("_")
+        .map(parte => parte.slice(0, 3))
+        .join("")
+        .toUpperCase()
+        .slice(0, 9) || "QUIZ";
+
+    const livelloBreve = {
+        facile: "FAC",
+        intermedio: "INT",
+        avanzato: "AV",
+    }[livello] || "CUS";
+
+    return `CUSTOM-${categoriaBreve}-${livelloBreve}-${Date.now()}`;
+}
+
+function ottieniDifficoltaDaLivello(livello) {
+    return {
+        facile: 1,
+        intermedio: 2,
+        avanzato: 3,
+    }[livello] || 1;
+}
+
+function normalizzaTestoQuizCreator(testo) {
+    return String(testo || "")
+        .toLowerCase()
+        .replace(/\s+/g, " ")
+        .trim();
+}
+
+function creaSlugQuizCreator(testo) {
+    return String(testo || "")
+        .toLowerCase()
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .replace(/[^a-z0-9]+/g, "_")
+        .replace(/^_+|_+$/g, "")
+        || "quiz_personalizzato";
+}
+
+function mostraStatoQuizCreator(messaggio, errore) {
+    elementi.creatorStatus.textContent = messaggio;
+    elementi.creatorStatus.classList.toggle("error", Boolean(errore));
+}
+
+function disabilitaAzioniQuizJson() {
+    ultimoQuizPersonalizzatoJson = "";
+    elementi.copyQuizJsonButton.disabled = true;
+    elementi.downloadQuizJsonButton.disabled = true;
+}
+
+async function copiaQuizPersonalizzatoJson() {
+    if (!ultimoQuizPersonalizzatoJson) {
+        mostraStatoQuizCreator("Genera prima il JSON.", true);
+        return;
+    }
+
+    try {
+        await navigator.clipboard.writeText(ultimoQuizPersonalizzatoJson);
+        mostraStatoQuizCreator("JSON copiato negli appunti.", false);
+    } catch (errore) {
+        mostraStatoQuizCreator(
+            "Copia non riuscita: seleziona il testo dall'anteprima.",
+            true
+        );
+    }
+}
+
+function scaricaQuizPersonalizzatoJson() {
+    if (!ultimoQuizPersonalizzatoJson) {
+        mostraStatoQuizCreator("Genera prima il JSON.", true);
+        return;
+    }
+
+    const titolo = elementi.creatorTitle.value.trim() || "quiz-personalizzato";
+    const nomeFile = `${creaSlugQuizCreator(titolo)}.json`;
+    const blob = new Blob(
+        [ultimoQuizPersonalizzatoJson],
+        { type: "application/json;charset=utf-8" }
+    );
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+
+    link.href = url;
+    link.download = nomeFile;
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+    URL.revokeObjectURL(url);
+
+    mostraStatoQuizCreator(`File pronto: ${nomeFile}`, false);
 }
 
 function filtraDomandeVisualiNonValide(domande) {

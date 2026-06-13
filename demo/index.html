@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alex AI Quiz Database</title>
-    <link rel="stylesheet" href="style.css?v=demo-v1-5">
+    <link rel="stylesheet" href="style.css?v=demo-v1-7">
 </head>
 <body>
 
@@ -19,6 +19,14 @@
                 Scegli categoria, livello e numero di domande. Alla fine ricevi voto,
                 giudizio, corrette, sbagliate e una card finale colorata.
             </p>
+            <div class="hero-actions">
+                <a class="primary-button action-link" href="#creatorBox">
+                    Genera nuovo test
+                </a>
+                <a class="secondary-button action-link" href="#setupBox">
+                    Prova la demo quiz
+                </a>
+            </div>
         </section>
 
         <section id="loadingBox" class="card info-card">
@@ -53,9 +61,15 @@
 
             <p id="availableInfo" class="available-info"></p>
 
-            <button id="startButton" class="primary-button">
-                Inizia test
-            </button>
+            <div class="setup-actions">
+                <button id="startButton" class="primary-button">
+                    Inizia test
+                </button>
+
+                <a class="secondary-button action-link" href="#creatorBox">
+                    Genera nuovo test
+                </a>
+            </div>
         </section>
 
         <section id="quizBox" class="card quiz-card hidden">
@@ -137,9 +151,122 @@
             </div>
         </section>
 
+        <section id="creatorBox" class="card creator-card">
+            <div class="creator-heading">
+                <div>
+                    <span class="section-kicker">Nuovo quiz</span>
+                    <h2>Crea un quiz personalizzato</h2>
+                    <p>
+                        Compila i campi, genera il JSON e riutilizzalo nel progetto
+                        o in una nuova demo.
+                    </p>
+                </div>
+                <span id="creatorQuestionCount" class="pill">1 domanda</span>
+            </div>
+
+            <form id="quizCreatorForm" class="creator-form">
+                <div class="creator-grid">
+                    <label>
+                        Titolo quiz
+                        <input id="creatorTitle" type="text" placeholder="Es. Test ingresso informatica">
+                    </label>
+
+                    <label>
+                        Categoria
+                        <input id="creatorCategory" type="text" list="creatorCategoryList" placeholder="Es. informatica">
+                        <datalist id="creatorCategoryList">
+                            <option value="ai"></option>
+                            <option value="informatica"></option>
+                            <option value="matematica"></option>
+                            <option value="inglese"></option>
+                            <option value="logica"></option>
+                            <option value="logica_visiva"></option>
+                        </datalist>
+                    </label>
+
+                    <label>
+                        Livello
+                        <select id="creatorLevel">
+                            <option value="facile">Facile</option>
+                            <option value="intermedio">Intermedio</option>
+                            <option value="avanzato">Avanzato</option>
+                        </select>
+                    </label>
+                </div>
+
+                <label>
+                    Domanda
+                    <textarea id="creatorQuestion" rows="3" placeholder="Scrivi qui la domanda del quiz"></textarea>
+                </label>
+
+                <div class="answers-grid">
+                    <label>
+                        Risposta A
+                        <input id="creatorAnswerA" type="text" placeholder="Prima risposta">
+                    </label>
+
+                    <label>
+                        Risposta B
+                        <input id="creatorAnswerB" type="text" placeholder="Seconda risposta">
+                    </label>
+
+                    <label>
+                        Risposta C
+                        <input id="creatorAnswerC" type="text" placeholder="Terza risposta">
+                    </label>
+
+                    <label>
+                        Risposta D
+                        <input id="creatorAnswerD" type="text" placeholder="Quarta risposta">
+                    </label>
+                </div>
+
+                <div class="creator-grid creator-grid-small">
+                    <label>
+                        Risposta corretta
+                        <select id="creatorCorrectAnswer">
+                            <option value="A">A</option>
+                            <option value="B">B</option>
+                            <option value="C">C</option>
+                            <option value="D">D</option>
+                        </select>
+                    </label>
+
+                    <label class="creator-explanation-field">
+                        Spiegazione
+                        <textarea id="creatorExplanation" rows="3" placeholder="Spiega in modo sintetico perché la risposta è corretta"></textarea>
+                    </label>
+                </div>
+
+                <div id="creatorStatus" class="creator-status" aria-live="polite"></div>
+
+                <div class="creator-actions">
+                    <button id="generateQuizJsonButton" class="primary-button" type="submit">
+                        Genera JSON
+                    </button>
+
+                    <button id="copyQuizJsonButton" class="secondary-button" type="button" disabled>
+                        Copia JSON
+                    </button>
+
+                    <button id="downloadQuizJsonButton" class="secondary-button" type="button" disabled>
+                        Scarica JSON
+                    </button>
+                </div>
+            </form>
+
+            <div class="json-preview">
+                <div class="json-preview-header">
+                    <strong>Anteprima JSON</strong>
+                    <span>Compatibile con Alex AI Quiz Database</span>
+                </div>
+                <pre id="quizJsonOutput">Compila il form e genera il JSON.</pre>
+            </div>
+        </section>
+
     </main>
 
-    <script src="app.js?v=demo-v1-5"></script>
+    <script src="app.js?v=demo-v1-7"></script>
 
 <footer class="demo-footer" id="demoFooter">
     <p>
