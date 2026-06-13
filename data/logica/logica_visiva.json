@@ -20,7 +20,7 @@
       "assets/logica_visiva/log_vis_fac_0001_D.png"
     ],
     "risposta_corretta": "C",
-    "spiegazione": "La risposta corretta è la figura con forma esterna cerchio, colore esterno nero, 0 lati e 0 oggetti interni dichiarati, perché la regola logica usata richiede di alternare la forma esterna cerchio/quadrato mantenendo colore esterno nero, 0 oggetti interni e scegliendo dopo il quadrato il cerchio successivo.",
+    "spiegazione": "Corretta: forma esterna cerchio, colore esterno nero, 0 lati, interni: 0 oggetti interni. Regola: alterna cerchio/quadrato; dopo il quadrato torna il cerchio.",
     "tags": [
       "logica",
       "logica_visiva",
@@ -33,10 +33,10 @@
     "motivo_distrattore_forte": "È vicino perché è una delle opzioni visive proposte, ma non rispetta l'alternanza corretta cerchio-quadrato: dopo il quadrato deve tornare il cerchio indicato dall'opzione C.",
     "tipo": "visiva",
     "spiegazioni_opzioni": {
-      "A": "A non torna perché ha forma esterna triangolo invece di cerchio, 3 lati invece di 0; quindi non rispetta la regola logica usata: alternare la forma esterna cerchio/quadrato mantenendo colore esterno nero, 0 oggetti interni e scegliendo dopo il quadrato il cerchio successivo.",
-      "B": "B non torna perché ha forma esterna quadrato invece di cerchio, 4 lati invece di 0; quindi non rispetta la regola logica usata: alternare la forma esterna cerchio/quadrato mantenendo colore esterno nero, 0 oggetti interni e scegliendo dopo il quadrato il cerchio successivo.",
-      "C": "C è corretta: ha forma esterna cerchio, colore esterno nero, 0 lati e 0 oggetti interni dichiarati, quindi rispetta la regola logica usata.",
-      "D": "D non torna perché ha forma esterna rettangolo invece di cerchio, 4 lati invece di 0; quindi non rispetta la regola logica usata: alternare la forma esterna cerchio/rettangolo mantenendo colore esterno nero, 0 oggetti interni e scegliendo dopo il rettangolo il cerchio successivo."
+      "A": "A non torna: forma triangolo invece di cerchio.",
+      "B": "B non torna: forma quadrato invece di cerchio.",
+      "C": "C corretta: forma esterna cerchio, colore esterno nero, 0 lati, interni: 0 oggetti interni.",
+      "D": "D non torna: forma rettangolo invece di cerchio."
     },
     "visual_logic": {
       "type": "sequence",
@@ -129,7 +129,7 @@
       "assets/logica_visiva/log_vis_int_0002_D.png"
     ],
     "risposta_corretta": "B",
-    "spiegazione": "La risposta corretta è la figura con forma esterna freccia, colore esterno nero, 0 lati e 1 direzione interni di colore nero in posizione sinistra, perché la regola logica usata richiede di ruotare la freccia nera di 90 gradi in senso orario, mantenendo 0 oggetti interni e passando da alto a destra, poi basso, poi sinistra.",
+    "spiegazione": "Corretta: forma esterna freccia, colore esterno nero, 0 lati, interni: 1 direzione nero sinistra. Regola: la freccia ruota di 90 gradi: alto, destra, basso, sinistra.",
     "tags": [
       "logica",
       "logica_visiva",
@@ -142,10 +142,10 @@
     "motivo_distrattore_forte": "È vicino perché rappresenta una possibile rotazione della figura, ma non continua correttamente la rotazione costante di 90 gradi in senso orario indicata dalla sequenza.",
     "tipo": "visiva",
     "spiegazioni_opzioni": {
-      "A": "A non torna perché ha oggetti interni 1 direzione interni di colore nero in posizione alto invece di 1 direzione interni di colore nero in posizione sinistra; quindi non rispetta la regola logica usata: ruotare la freccia nera di 90 gradi in senso orario, mantenendo 0 oggetti interni e passando da alto a destra, poi basso, poi sinistra.",
-      "B": "B è corretta: ha forma esterna freccia, colore esterno nero, 0 lati e 1 direzione interni di colore nero in posizione sinistra, quindi rispetta la regola logica usata.",
-      "C": "C non torna perché ha oggetti interni 1 direzione interni di colore nero in posizione destra invece di 1 direzione interni di colore nero in posizione sinistra; quindi non rispetta la regola logica usata: ruotare la freccia nera di 90 gradi in senso orario, mantenendo 0 oggetti interni e passando da alto a destra, poi basso, poi sinistra.",
-      "D": "D non torna perché ha oggetti interni 1 direzione interni di colore nero in posizione basso invece di 1 direzione interni di colore nero in posizione sinistra; quindi non rispetta la regola logica usata: ruotare la freccia nera di 90 gradi in senso orario, mantenendo 0 oggetti interni e passando da alto a destra, poi basso, poi sinistra."
+      "A": "A non torna: interni 1 direzione nero alto invece di 1 direzione nero sinistra.",
+      "B": "B corretta: forma esterna freccia, colore esterno nero, 0 lati, interni: 1 direzione nero sinistra.",
+      "C": "C non torna: interni 1 direzione nero destra invece di 1 direzione nero sinistra.",
+      "D": "D non torna: interni 1 direzione nero basso invece di 1 direzione nero sinistra."
     },
     "visual_logic": {
       "type": "sequence",
@@ -288,7 +288,7 @@
       "assets/logica_visiva/log_vis_av_0003_D.png"
     ],
     "risposta_corretta": "D",
-    "spiegazione": "La risposta corretta è la figura con forma esterna triangolo, colore esterno nero, 3 lati e 1 riempimento interni di colore nero in posizione pieno, perché la regola logica usata richiede di mantenere la forma esterna per riga, aumentare il riempimento interno per colonna da vuoto a metà inferiore e poi pieno; nella terza riga serve il triangolo nero pieno.",
+    "spiegazione": "Corretta: forma esterna triangolo, colore esterno nero, 3 lati, interni: 1 riempimento nero pieno. Regola: la riga fissa la forma e la colonna aumenta il riempimento fino al pieno.",
     "tags": [
       "logica",
       "logica_visiva",
@@ -301,10 +301,10 @@
     "motivo_distrattore_forte": "È vicino perché rispetta una parte della logica visiva della matrice, ma non combina correttamente entrambe le regole: alternanza della forma per riga e aumento del riempimento per colonna.",
     "tipo": "visiva",
     "spiegazioni_opzioni": {
-      "A": "A non torna perché ha oggetti interni 0 oggetti interni dichiarati invece di 1 riempimento interni di colore nero in posizione pieno; quindi non rispetta la regola logica usata: mantenere la forma esterna per riga, aumentare il riempimento interno per colonna da vuoto a metà inferiore e poi pieno; nella terza riga serve il triangolo nero pieno.",
-      "B": "B non torna perché ha forma esterna quadrato invece di triangolo, 4 lati invece di 3; quindi non rispetta la regola logica usata: mantenere la forma esterna per riga, aumentare il riempimento interno per colonna da vuoto a metà inferiore e poi pieno; nella terza riga serve il triangolo nero pieno.",
-      "C": "C non torna perché ha oggetti interni 1 riempimento interni di colore nero in posizione metà inferiore invece di 1 riempimento interni di colore nero in posizione pieno; quindi non rispetta la regola logica usata: mantenere la forma esterna per riga, aumentare il riempimento interno per colonna da vuoto a metà inferiore e poi pieno; nella terza riga serve il triangolo nero pieno.",
-      "D": "D è corretta: ha forma esterna triangolo, colore esterno nero, 3 lati e 1 riempimento interni di colore nero in posizione pieno, quindi rispetta la regola logica usata."
+      "A": "A non torna: interni 0 oggetti interni invece di 1 riempimento nero pieno.",
+      "B": "B non torna: forma quadrato invece di triangolo.",
+      "C": "C non torna: interni 1 riempimento nero metà inferiore invece di 1 riempimento nero pieno.",
+      "D": "D corretta: forma esterna triangolo, colore esterno nero, 3 lati, interni: 1 riempimento nero pieno."
     },
     "visual_logic": {
       "type": "matrix",
@@ -478,7 +478,7 @@
       "D"
     ],
     "risposta_corretta": "A",
-    "spiegazione": "La risposta corretta è la figura con forma esterna cerchio, colore esterno blu, 0 lati e 3 pallini interni di colore blu, perché la regola logica usata richiede di alternare forma esterna cerchio/quadrato, alternare colore blu/rosso e aumentare di 1 il numero dei pallini interni ogni due passaggi.",
+    "spiegazione": "Corretta: forma esterna cerchio, colore esterno blu, 0 lati, interni: 3 pallini blu. Regola: alterna cerchio/quadrato e blu/rosso; i pallini crescono ogni due passaggi.",
     "immagine": "assets/logica_visiva/LOG-VIS-FAC-0004_domanda.svg",
     "immagine_domanda": "assets/logica_visiva/LOG-VIS-FAC-0004_domanda.svg",
     "immagini_opzioni": [
@@ -498,10 +498,10 @@
     "distrattore_forte": "C",
     "motivo_distrattore_forte": "C mantiene la stessa forma e lo stesso numero di punti, ma sbaglia il colore.",
     "spiegazioni_opzioni": {
-      "A": "A è corretta: ha forma esterna cerchio, colore esterno blu, 0 lati e 3 pallini interni di colore blu, quindi rispetta la regola logica usata.",
-      "B": "B non torna perché ha forma esterna quadrato invece di cerchio, 4 lati invece di 0; quindi non rispetta la regola logica usata: alternare forma esterna cerchio/quadrato, alternare colore blu/rosso e aumentare di 1 il numero dei pallini interni ogni due passaggi.",
-      "C": "C non torna perché ha colore esterno rosso invece di blu, oggetti interni 3 pallini interni di colore rosso invece di 3 pallini interni di colore blu; quindi non rispetta la regola logica usata: alternare forma esterna cerchio/quadrato, alternare colore blu/rosso e aumentare di 1 il numero dei pallini interni ogni due passaggi.",
-      "D": "D non torna perché ha forma esterna quadrato invece di cerchio, colore esterno rosso invece di blu, 4 lati invece di 0, oggetti interni 2 pallini interni di colore rosso invece di 3 pallini interni di colore blu; quindi non rispetta la regola logica usata: alternare forma esterna cerchio/quadrato, alternare colore blu/rosso e aumentare di 1 il numero dei pallini interni ogni due passaggi."
+      "A": "A corretta: forma esterna cerchio, colore esterno blu, 0 lati, interni: 3 pallini blu.",
+      "B": "B non torna: forma quadrato invece di cerchio.",
+      "C": "C non torna: colore rosso invece di blu.",
+      "D": "D non torna: forma quadrato invece di cerchio."
     },
     "visual_logic": {
       "type": "sequence",
@@ -644,7 +644,7 @@
       "D"
     ],
     "risposta_corretta": "D",
-    "spiegazione": "La risposta corretta è la figura con forma esterna freccia, colore esterno verde, 0 lati e 1 direzione interni di colore verde in posizione sinistra, perché la regola logica usata richiede di ruotare la freccia verde di 90 gradi in senso orario mantenendo il colore esterno verde e 1 indicatore di direzione interno.",
+    "spiegazione": "Corretta: forma esterna freccia, colore esterno verde, 0 lati, interni: 1 direzione verde sinistra. Regola: la freccia verde ruota di 90 gradi in senso orario.",
     "immagine": "assets/logica_visiva/LOG-VIS-FAC-0005_domanda.svg",
     "immagine_domanda": "assets/logica_visiva/LOG-VIS-FAC-0005_domanda.svg",
     "immagini_opzioni": [
@@ -665,10 +665,10 @@
     "motivo_distrattore_forte": "C è una freccia della stessa sequenza di rotazione, ma rappresenta il passaggio precedente.",
     "tipo_domanda": "immagine",
     "spiegazioni_opzioni": {
-      "A": "A non torna perché ha oggetti interni 1 direzione interni di colore verde in posizione alto invece di 1 direzione interni di colore verde in posizione sinistra; quindi non rispetta la regola logica usata: ruotare la freccia verde di 90 gradi in senso orario mantenendo il colore esterno verde e 1 indicatore di direzione interno.",
-      "B": "B non torna perché ha oggetti interni 1 direzione interni di colore verde in posizione destra invece di 1 direzione interni di colore verde in posizione sinistra; quindi non rispetta la regola logica usata: ruotare la freccia verde di 90 gradi in senso orario mantenendo il colore esterno verde e 1 indicatore di direzione interno.",
-      "C": "C non torna perché ha oggetti interni 1 direzione interni di colore verde in posizione basso invece di 1 direzione interni di colore verde in posizione sinistra; quindi non rispetta la regola logica usata: ruotare la freccia verde di 90 gradi in senso orario mantenendo il colore esterno verde e 1 indicatore di direzione interno.",
-      "D": "D è corretta: ha forma esterna freccia, colore esterno verde, 0 lati e 1 direzione interni di colore verde in posizione sinistra, quindi rispetta la regola logica usata."
+      "A": "A non torna: interni 1 direzione verde alto invece di 1 direzione verde sinistra.",
+      "B": "B non torna: interni 1 direzione verde destra invece di 1 direzione verde sinistra.",
+      "C": "C non torna: interni 1 direzione verde basso invece di 1 direzione verde sinistra.",
+      "D": "D corretta: forma esterna freccia, colore esterno verde, 0 lati, interni: 1 direzione verde sinistra."
     },
     "visual_logic": {
       "type": "sequence",
@@ -805,7 +805,7 @@
       "D"
     ],
     "risposta_corretta": "C",
-    "spiegazione": "La risposta corretta è la figura con forma esterna triangolo, colore esterno blu, 3 lati e 4 pallini interni di colore blu, perché la regola logica usata richiede di mantenere la forma esterna triangolo e il colore esterno blu, aumentando di 1 il numero dei pallini interni a ogni passaggio.",
+    "spiegazione": "Corretta: forma esterna triangolo, colore esterno blu, 3 lati, interni: 4 pallini blu. Regola: il triangolo blu resta fisso e i pallini aumentano 1, 2, 3, 4.",
     "immagine": "assets/logica_visiva/LOG-VIS-FAC-0006_domanda.svg",
     "immagine_domanda": "assets/logica_visiva/LOG-VIS-FAC-0006_domanda.svg",
     "immagini_opzioni": [
@@ -825,10 +825,10 @@
     "distrattore_forte": "B",
     "motivo_distrattore_forte": "B mantiene forma e quantità corretta di punti, ma cambia il colore.",
     "spiegazioni_opzioni": {
-      "A": "A non torna perché ha oggetti interni 2 pallini interni di colore blu invece di 4 pallini interni di colore blu; quindi non rispetta la regola logica usata: mantenere la forma esterna triangolo e il colore esterno blu, aumentando di 1 il numero dei pallini interni a ogni passaggio.",
-      "B": "B non torna perché ha colore esterno rosso invece di blu, oggetti interni 4 pallini interni di colore rosso invece di 4 pallini interni di colore blu; quindi non rispetta la regola logica usata: mantenere la forma esterna triangolo e il colore esterno blu, aumentando di 1 il numero dei pallini interni a ogni passaggio.",
-      "C": "C è corretta: ha forma esterna triangolo, colore esterno blu, 3 lati e 4 pallini interni di colore blu, quindi rispetta la regola logica usata.",
-      "D": "D non torna perché ha forma esterna quadrato invece di triangolo, 4 lati invece di 3; quindi non rispetta la regola logica usata: mantenere la forma esterna triangolo e il colore esterno blu, aumentando di 1 il numero dei pallini interni a ogni passaggio."
+      "A": "A non torna: interni 2 pallini blu invece di 4 pallini blu.",
+      "B": "B non torna: colore rosso invece di blu.",
+      "C": "C corretta: forma esterna triangolo, colore esterno blu, 3 lati, interni: 4 pallini blu.",
+      "D": "D non torna: forma quadrato invece di triangolo."
     },
     "visual_logic": {
       "type": "sequence",
@@ -957,7 +957,7 @@
       "D"
     ],
     "risposta_corretta": "B",
-    "spiegazione": "La risposta corretta è la figura con forma esterna esagono, colore esterno viola, 6 lati e 1 pallini interni di colore viola, perché la regola logica usata richiede di mantenere la forma esterna esagono e 1 pallino interno, alternando il colore esterno e interno oro/viola.",
+    "spiegazione": "Corretta: forma esterna esagono, colore esterno viola, 6 lati, interni: 1 pallini viola. Regola: l’esagono resta fisso e il colore alterna oro/viola.",
     "immagine": "assets/logica_visiva/LOG-VIS-FAC-0007_domanda.svg",
     "immagine_domanda": "assets/logica_visiva/LOG-VIS-FAC-0007_domanda.svg",
     "immagini_opzioni": [
@@ -977,10 +977,10 @@
     "distrattore_forte": "A",
     "motivo_distrattore_forte": "A mantiene la stessa forma, ma sbaglia l'alternanza del colore.",
     "spiegazioni_opzioni": {
-      "A": "A non torna perché ha colore esterno oro invece di viola, oggetti interni 1 pallini interni di colore oro invece di 1 pallini interni di colore viola; quindi non rispetta la regola logica usata: mantenere la forma esterna esagono e 1 pallino interno, alternando il colore esterno e interno oro/viola.",
-      "B": "B è corretta: ha forma esterna esagono, colore esterno viola, 6 lati e 1 pallini interni di colore viola, quindi rispetta la regola logica usata.",
-      "C": "C non torna perché ha forma esterna cerchio invece di esagono, 0 lati invece di 6; quindi non rispetta la regola logica usata: mantenere la forma esterna esagono e 1 pallino interno, alternando il colore esterno e interno oro/viola.",
-      "D": "D non torna perché ha forma esterna quadrato invece di esagono, colore esterno oro invece di viola, 4 lati invece di 6, oggetti interni 1 pallini interni di colore oro invece di 1 pallini interni di colore viola; quindi non rispetta la regola logica usata: mantenere la forma esterna esagono e 1 pallino interno, alternando il colore esterno e interno oro/viola."
+      "A": "A non torna: colore oro invece di viola.",
+      "B": "B corretta: forma esterna esagono, colore esterno viola, 6 lati, interni: 1 pallini viola.",
+      "C": "C non torna: forma cerchio invece di esagono.",
+      "D": "D non torna: forma quadrato invece di esagono."
     },
     "visual_logic": {
       "type": "sequence",
@@ -1112,7 +1112,7 @@
       "D"
     ],
     "risposta_corretta": "A",
-    "spiegazione": "La risposta corretta è la figura con forma esterna triangolo, colore esterno verde, 3 lati e 3 pallini interni di colore verde, perché la regola logica usata richiede di mantenere forma e colore esterno per riga e aumentare il numero dei pallini interni da 1 a 3 per colonna.",
+    "spiegazione": "Corretta: forma esterna triangolo, colore esterno verde, 3 lati, interni: 3 pallini verde. Regola: la riga fissa forma e colore; la colonna porta i pallini a 3.",
     "immagine": "assets/logica_visiva/LOG-VIS-FAC-0008_domanda.svg",
     "immagine_domanda": "assets/logica_visiva/LOG-VIS-FAC-0008_domanda.svg",
     "immagini_opzioni": [
@@ -1132,10 +1132,10 @@
     "distrattore_forte": "B",
     "motivo_distrattore_forte": "B mantiene forma e colore corretti, ma sbaglia il numero di punti.",
     "spiegazioni_opzioni": {
-      "A": "A è corretta: ha forma esterna triangolo, colore esterno verde, 3 lati e 3 pallini interni di colore verde, quindi rispetta la regola logica usata.",
-      "B": "B non torna perché ha oggetti interni 2 pallini interni di colore verde invece di 3 pallini interni di colore verde; quindi non rispetta la regola logica usata: mantenere forma e colore esterno per riga e aumentare il numero dei pallini interni da 1 a 3 per colonna.",
-      "C": "C non torna perché ha forma esterna cerchio invece di triangolo, 0 lati invece di 3; quindi non rispetta la regola logica usata: mantenere forma e colore esterno per riga e aumentare il numero dei pallini interni da 1 a 3 per colonna.",
-      "D": "D non torna perché ha forma esterna quadrato invece di triangolo, 4 lati invece di 3; quindi non rispetta la regola logica usata: mantenere forma e colore esterno per riga e aumentare il numero dei pallini interni da 1 a 3 per colonna."
+      "A": "A corretta: forma esterna triangolo, colore esterno verde, 3 lati, interni: 3 pallini verde.",
+      "B": "B non torna: interni 2 pallini verde invece di 3 pallini verde.",
+      "C": "C non torna: forma cerchio invece di triangolo.",
+      "D": "D non torna: forma quadrato invece di triangolo."
     },
     "visual_logic": {
       "type": "matrix",
@@ -1323,7 +1323,7 @@
       "D"
     ],
     "risposta_corretta": "A",
-    "spiegazione": "La risposta corretta è la figura con forma esterna esagono, colore esterno blu, 6 lati e 4 triangoli interni di colore blu, perché la regola logica usata richiede di aumentare i lati della forma esterna da triangolo a quadrato, pentagono ed esagono, alternando blu/rosso/blu/blu e aumentando i triangoli interni da 1 a 4.",
+    "spiegazione": "Corretta: forma esterna esagono, colore esterno blu, 6 lati, interni: 4 triangoli blu. Regola: i lati aumentano fino all’esagono e i triangoli interni arrivano a 4.",
     "immagine": "assets/logica_visiva/LOG-VIS-INT-0004_domanda.svg",
     "immagine_domanda": "assets/logica_visiva/LOG-VIS-INT-0004_domanda.svg",
     "immagini_opzioni": [
@@ -1344,10 +1344,10 @@
     "motivo_distrattore_forte": "C mantiene colore e quantità interna, ma sbaglia la crescita della figura esterna.",
     "tipo_domanda": "immagine",
     "spiegazioni_opzioni": {
-      "A": "A è corretta: ha forma esterna esagono, colore esterno blu, 6 lati e 4 triangoli interni di colore blu, quindi rispetta la regola logica usata.",
-      "B": "B non torna perché ha colore esterno rosso invece di blu, oggetti interni 3 triangoli interni di colore rosso invece di 4 triangoli interni di colore blu; quindi non rispetta la regola logica usata: aumentare i lati della forma esterna da triangolo a quadrato, pentagono ed esagono, alternando blu/rosso/blu/blu e aumentando i triangoli interni da 1 a 4.",
-      "C": "C non torna perché ha forma esterna pentagono invece di esagono, 5 lati invece di 6; quindi non rispetta la regola logica usata: aumentare i lati della forma esterna da triangolo a quadrato, pentagono ed esagono, alternando blu/rosso/blu/blu e aumentando i triangoli interni da 1 a 4.",
-      "D": "D non torna perché ha forma esterna ettagono invece di esagono, 7 lati invece di 6; quindi non rispetta la regola logica usata: aumentare i lati della forma esterna da triangolo a quadrato, pentagono ed esagono, alternando blu/rosso/blu/blu e aumentando i triangoli interni da 1 a 4."
+      "A": "A corretta: forma esterna esagono, colore esterno blu, 6 lati, interni: 4 triangoli blu.",
+      "B": "B non torna: colore rosso invece di blu.",
+      "C": "C non torna: forma pentagono invece di esagono.",
+      "D": "D non torna: forma ettagono invece di esagono."
     },
     "visual_logic": {
       "type": "sequence",
@@ -1475,7 +1475,7 @@
       "D"
     ],
     "risposta_corretta": "B",
-    "spiegazione": "La risposta corretta è la figura con forma esterna triangolo, colore esterno verde, 3 lati e 3 pallini interni di colore verde, perché la regola logica usata richiede di mantenere la forma esterna per riga, impostare 3 pallini nella terza colonna e seguire l’alternanza di colore verde/blu/verde.",
+    "spiegazione": "Corretta: forma esterna triangolo, colore esterno verde, 3 lati, interni: 3 pallini verde. Regola: la riga richiede triangolo e la terza colonna richiede 3 pallini verdi.",
     "immagine": "assets/logica_visiva/LOG-VIS-INT-0005_domanda.svg",
     "immagine_domanda": "assets/logica_visiva/LOG-VIS-INT-0005_domanda.svg",
     "immagini_opzioni": [
@@ -1496,10 +1496,10 @@
     "motivo_distrattore_forte": "A mantiene forma e numero di punti, ma sbaglia il colore richiesto dalla matrice.",
     "tipo_domanda": "immagine",
     "spiegazioni_opzioni": {
-      "A": "A non torna perché ha colore esterno blu invece di verde, oggetti interni 3 pallini interni di colore blu invece di 3 pallini interni di colore verde; quindi non rispetta la regola logica usata: mantenere la forma esterna per riga, impostare 3 pallini nella terza colonna e seguire l’alternanza di colore verde/blu/verde.",
-      "B": "B è corretta: ha forma esterna triangolo, colore esterno verde, 3 lati e 3 pallini interni di colore verde, quindi rispetta la regola logica usata.",
-      "C": "C non torna perché ha forma esterna quadrato invece di triangolo, 4 lati invece di 3; quindi non rispetta la regola logica usata: mantenere la forma esterna per riga, impostare 3 pallini nella terza colonna e seguire l’alternanza di colore verde/blu/verde.",
-      "D": "D non torna perché ha oggetti interni 2 pallini interni di colore verde invece di 3 pallini interni di colore verde; quindi non rispetta la regola logica usata: mantenere la forma esterna per riga, impostare 3 pallini nella terza colonna e seguire l’alternanza di colore verde/blu/verde."
+      "A": "A non torna: colore blu invece di verde.",
+      "B": "B corretta: forma esterna triangolo, colore esterno verde, 3 lati, interni: 3 pallini verde.",
+      "C": "C non torna: forma quadrato invece di triangolo.",
+      "D": "D non torna: interni 2 pallini verde invece di 3 pallini verde."
     },
     "visual_logic": {
       "type": "matrix",
@@ -1687,7 +1687,7 @@
       "D"
     ],
     "risposta_corretta": "A",
-    "spiegazione": "La risposta corretta è la figura con forma esterna cerchio, colore esterno rosso, 0 lati e 1 linee interni di colore rosso in posizione \\ e 2 pallini interni di colore rosso in posizione interno, perché la regola logica usata richiede di cambiare il verso della linea diagonale da / a \\ e aumentare i pallini interni da 1 a 2 mantenendo forma e colore della riga.",
+    "spiegazione": "Corretta: forma esterna cerchio, colore esterno rosso, 0 lati, interni: 1 linee rosso \\, 2 pallini rosso interno. Regola: la diagonale cambia verso e i pallini diventano 2.",
     "immagine": "assets/logica_visiva/LOG-VIS-INT-0006_domanda.svg",
     "immagine_domanda": "assets/logica_visiva/LOG-VIS-INT-0006_domanda.svg",
     "immagini_opzioni": [
@@ -1708,10 +1708,10 @@
     "motivo_distrattore_forte": "C mantiene forma, colore e numero di punti, ma sbaglia il verso della diagonale.",
     "tipo_domanda": "immagine",
     "spiegazioni_opzioni": {
-      "A": "A è corretta: ha forma esterna cerchio, colore esterno rosso, 0 lati e 1 linee interni di colore rosso in posizione \\ e 2 pallini interni di colore rosso in posizione interno, quindi rispetta la regola logica usata.",
-      "B": "B non torna perché ha colore esterno blu invece di rosso, oggetti interni 1 linee interni di colore blu in posizione \\ e 2 pallini interni di colore blu in posizione interno invece di 1 linee interni di colore rosso in posizione \\ e 2 pallini interni di colore rosso in posizione interno; quindi non rispetta la regola logica usata: cambiare il verso della linea diagonale da / a \\ e aumentare i pallini interni da 1 a 2 mantenendo forma e colore della riga.",
-      "C": "C non torna perché ha oggetti interni 1 linee interni di colore rosso in posizione / e 2 pallini interni di colore rosso in posizione interno invece di 1 linee interni di colore rosso in posizione \\ e 2 pallini interni di colore rosso in posizione interno; quindi non rispetta la regola logica usata: cambiare il verso della linea diagonale da / a \\ e aumentare i pallini interni da 1 a 2 mantenendo forma e colore della riga.",
-      "D": "D non torna perché ha oggetti interni 1 linee interni di colore rosso in posizione \\ e 1 pallini interni di colore rosso in posizione interno invece di 1 linee interni di colore rosso in posizione \\ e 2 pallini interni di colore rosso in posizione interno; quindi non rispetta la regola logica usata: cambiare il verso della linea diagonale da / a \\ e aumentare i pallini interni da 1 a 2 mantenendo forma e colore della riga."
+      "A": "A corretta: forma esterna cerchio, colore esterno rosso, 0 lati, interni: 1 linee rosso \\, 2 pallini rosso interno.",
+      "B": "B non torna: colore blu invece di rosso.",
+      "C": "C non torna: interni 1 linee rosso /, 2 pallini rosso interno invece di 1 linee rosso \\, 2 pallini rosso interno.",
+      "D": "D non torna: interni 1 linee rosso \\, 1 pallini rosso interno invece di 1 linee rosso \\, 2 pallini rosso interno."
     },
     "visual_logic": {
       "type": "matrix",
@@ -1895,7 +1895,7 @@
       "D"
     ],
     "risposta_corretta": "C",
-    "spiegazione": "La risposta corretta è la figura con forma esterna freccia, colore esterno rosso, 0 lati e 1 direzione interni di colore rosso in posizione sinistra e 4 pallini interni di colore rosso in posizione interno, perché la regola logica usata richiede di ruotare la freccia di 90 gradi in senso orario, alternare colore blu/rosso e aumentare i pallini interni fino a 4.",
+    "spiegazione": "Corretta: forma esterna freccia, colore esterno rosso, 0 lati, interni: 1 direzione rosso sinistra, 4 pallini rosso interno. Regola: la freccia ruota, il colore alterna blu/rosso e i pallini arrivano a 4.",
     "immagine": "assets/logica_visiva/LOG-VIS-INT-0007_domanda.svg",
     "immagine_domanda": "assets/logica_visiva/LOG-VIS-INT-0007_domanda.svg",
     "immagini_opzioni": [
@@ -1916,10 +1916,10 @@
     "motivo_distrattore_forte": "D mantiene direzione e colore corretti, ma sbaglia il numero di punti.",
     "tipo_domanda": "immagine",
     "spiegazioni_opzioni": {
-      "A": "A non torna perché ha colore esterno blu invece di rosso, oggetti interni 1 direzione interni di colore blu in posizione sinistra e 4 pallini interni di colore blu in posizione interno invece di 1 direzione interni di colore rosso in posizione sinistra e 4 pallini interni di colore rosso in posizione interno; quindi non rispetta la regola logica usata: ruotare la freccia di 90 gradi in senso orario, alternare colore blu/rosso e aumentare i pallini interni fino a 4.",
-      "B": "B non torna perché ha oggetti interni 1 direzione interni di colore rosso in posizione basso e 4 pallini interni di colore rosso in posizione interno invece di 1 direzione interni di colore rosso in posizione sinistra e 4 pallini interni di colore rosso in posizione interno; quindi non rispetta la regola logica usata: ruotare la freccia di 90 gradi in senso orario, alternare colore blu/rosso e aumentare i pallini interni fino a 4.",
-      "C": "C è corretta: ha forma esterna freccia, colore esterno rosso, 0 lati e 1 direzione interni di colore rosso in posizione sinistra e 4 pallini interni di colore rosso in posizione interno, quindi rispetta la regola logica usata.",
-      "D": "D non torna perché ha oggetti interni 1 direzione interni di colore rosso in posizione sinistra e 3 pallini interni di colore rosso in posizione interno invece di 1 direzione interni di colore rosso in posizione sinistra e 4 pallini interni di colore rosso in posizione interno; quindi non rispetta la regola logica usata: ruotare la freccia di 90 gradi in senso orario, alternare colore blu/rosso e aumentare i pallini interni fino a 4."
+      "A": "A non torna: colore blu invece di rosso.",
+      "B": "B non torna: interni 1 direzione rosso basso, 4 pallini rosso interno invece di 1 direzione rosso sinistra, 4 pallini rosso interno.",
+      "C": "C corretta: forma esterna freccia, colore esterno rosso, 0 lati, interni: 1 direzione rosso sinistra, 4 pallini rosso interno.",
+      "D": "D non torna: interni 1 direzione rosso sinistra, 3 pallini rosso interno invece di 1 direzione rosso sinistra, 4 pallini rosso interno."
     },
     "visual_logic": {
       "type": "sequence",
@@ -2106,7 +2106,7 @@
       "D"
     ],
     "risposta_corretta": "D",
-    "spiegazione": "La risposta corretta è la figura con forma esterna quadrato, colore esterno viola, 4 lati e 1 cerchio interni di colore viola in posizione destra-alto e 1 triangolo interni di colore viola in posizione destra-alto e 2 linee interni di colore viola in posizione centro e 1 rombo interni di colore viola in posizione sinistra-basso e 1 pallini interni di colore viola in posizione sinistra-basso, perché la regola logica usata richiede di riflettere la figura viola rispetto all’asse verticale, portando il cerchio e il triangolo a destra e il rombo con pallino a sinistra.",
+    "spiegazione": "Corretta: forma esterna quadrato, colore esterno viola, 4 lati, interni: 1 cerchio viola destra-alto, 1 triangolo viola destra-alto, 2 linee viola centro, 1 rombo viola sinistra-basso, 1 pallini viola sinistra-basso. Regola: riflettere la figura rispetto all’asse verticale.",
     "immagine": "assets/logica_visiva/LOG-VIS-INT-0008_domanda.svg",
     "immagine_domanda": "assets/logica_visiva/LOG-VIS-INT-0008_domanda.svg",
     "immagini_opzioni": [
@@ -2127,10 +2127,10 @@
     "motivo_distrattore_forte": "A è simile alla figura corretta, ma non rispetta pienamente il ribaltamento speculare.",
     "tipo_domanda": "immagine",
     "spiegazioni_opzioni": {
-      "A": "A non torna perché ha oggetti interni 1 cerchio interni di colore viola in posizione sinistra-alto e 1 triangolo interni di colore viola in posizione sinistra-alto e 2 linee interni di colore viola in posizione centro e 1 rombo interni di colore viola in posizione destra-basso e 1 pallini interni di colore viola in posizione destra-basso invece di 1 cerchio interni di colore viola in posizione destra-alto e 1 triangolo interni di colore viola in posizione destra-alto e 2 linee interni di colore viola in posizione centro e 1 rombo interni di colore viola in posizione sinistra-basso e 1 pallini interni di colore viola in posizione sinistra-basso; quindi non rispetta la regola logica usata: riflettere la figura viola rispetto all’asse verticale, portando il cerchio e il triangolo a destra e il rombo con pallino a sinistra.",
-      "B": "B non torna perché ha oggetti interni 1 cerchio interni di colore viola in posizione centro-alto e 1 triangolo interni di colore viola in posizione centro-alto e 2 linee interni di colore viola in posizione centro e 1 rombo interni di colore viola in posizione centro-basso e 1 pallini interni di colore viola in posizione centro-basso invece di 1 cerchio interni di colore viola in posizione destra-alto e 1 triangolo interni di colore viola in posizione destra-alto e 2 linee interni di colore viola in posizione centro e 1 rombo interni di colore viola in posizione sinistra-basso e 1 pallini interni di colore viola in posizione sinistra-basso; quindi non rispetta la regola logica usata: riflettere la figura viola rispetto all’asse verticale, portando il cerchio e il triangolo a destra e il rombo con pallino a sinistra.",
-      "C": "C non torna perché ha oggetti interni 1 cerchio interni di colore viola in posizione sinistra-alto e 1 triangolo interni di colore viola in posizione sinistra-alto e 2 linee interni di colore viola in posizione centro e 1 rombo interni di colore viola in posizione sinistra-basso e 1 pallini interni di colore viola in posizione sinistra-basso invece di 1 cerchio interni di colore viola in posizione destra-alto e 1 triangolo interni di colore viola in posizione destra-alto e 2 linee interni di colore viola in posizione centro e 1 rombo interni di colore viola in posizione sinistra-basso e 1 pallini interni di colore viola in posizione sinistra-basso; quindi non rispetta la regola logica usata: riflettere la figura viola rispetto all’asse verticale, portando il cerchio e il triangolo a destra e il rombo con pallino a sinistra.",
-      "D": "D è corretta: ha forma esterna quadrato, colore esterno viola, 4 lati e 1 cerchio interni di colore viola in posizione destra-alto e 1 triangolo interni di colore viola in posizione destra-alto e 2 linee interni di colore viola in posizione centro e 1 rombo interni di colore viola in posizione sinistra-basso e 1 pallini interni di colore viola in posizione sinistra-basso, quindi rispetta la regola logica usata."
+      "A": "A non torna: interni 1 cerchio viola sinistra-alto, 1 triangolo viola sinistra-alto, 2 linee viola centro, 1 rombo viola destra-basso, 1 pallini viola destra-basso invece di 1 cerchio viola destra-alto, 1 triangolo viola destra-alto, 2 linee viola centro, 1 rombo viola sinistra-basso, 1 pallini viola sinistra-basso.",
+      "B": "B non torna: interni 1 cerchio viola centro-alto, 1 triangolo viola centro-alto, 2 linee viola centro, 1 rombo viola centro-basso, 1 pallini viola centro-basso invece di 1 cerchio viola destra-alto, 1 triangolo viola destra-alto, 2 linee viola centro, 1 rombo viola sinistra-basso, 1 pallini viola sinistra-basso.",
+      "C": "C non torna: interni 1 cerchio viola sinistra-alto, 1 triangolo viola sinistra-alto, 2 linee viola centro, 1 rombo viola sinistra-basso, 1 pallini viola sinistra-basso invece di 1 cerchio viola destra-alto, 1 triangolo viola destra-alto, 2 linee viola centro, 1 rombo viola sinistra-basso, 1 pallini viola sinistra-basso.",
+      "D": "D corretta: forma esterna quadrato, colore esterno viola, 4 lati, interni: 1 cerchio viola destra-alto, 1 triangolo viola destra-alto, 2 linee viola centro, 1 rombo viola sinistra-basso, 1 pallini viola sinistra-basso."
     },
     "visual_logic": {
       "type": "mirror",
@@ -2385,7 +2385,7 @@
       "D"
     ],
     "risposta_corretta": "A",
-    "spiegazione": "La risposta corretta è la figura con forma esterna triangolo, colore esterno blu, 3 lati e 3 linee interni di colore blu, perché la regola logica usata richiede di usare la forma esterna indicata dalla riga, il colore alternato blu/rosso/blu della colonna e 3 linee interne nella terza colonna.",
+    "spiegazione": "Corretta: forma esterna triangolo, colore esterno blu, 3 lati, interni: 3 linee blu. Regola: riga = forma, colonna = 3 linee, colore finale blu.",
     "immagine": "assets/logica_visiva/LOG-VIS-AV-0004_domanda.svg",
     "immagine_domanda": "assets/logica_visiva/LOG-VIS-AV-0004_domanda.svg",
     "immagini_opzioni": [
@@ -2406,10 +2406,10 @@
     "motivo_distrattore_forte": "B mantiene forma e numero di linee interne corretti, ma sbaglia il colore.",
     "tipo_domanda": "immagine",
     "spiegazioni_opzioni": {
-      "A": "A è corretta: ha forma esterna triangolo, colore esterno blu, 3 lati e 3 linee interni di colore blu, quindi rispetta la regola logica usata.",
-      "B": "B non torna perché ha colore esterno rosso invece di blu, oggetti interni 3 linee interni di colore rosso invece di 3 linee interni di colore blu; quindi non rispetta la regola logica usata: usare la forma esterna indicata dalla riga, il colore alternato blu/rosso/blu della colonna e 3 linee interne nella terza colonna.",
-      "C": "C non torna perché ha oggetti interni 2 linee interni di colore blu invece di 3 linee interni di colore blu; quindi non rispetta la regola logica usata: usare la forma esterna indicata dalla riga, il colore alternato blu/rosso/blu della colonna e 3 linee interne nella terza colonna.",
-      "D": "D non torna perché ha forma esterna quadrato invece di triangolo, 4 lati invece di 3; quindi non rispetta la regola logica usata: usare la forma esterna indicata dalla riga, il colore alternato blu/rosso/blu della colonna e 3 linee interne nella terza colonna."
+      "A": "A corretta: forma esterna triangolo, colore esterno blu, 3 lati, interni: 3 linee blu.",
+      "B": "B non torna: colore rosso invece di blu.",
+      "C": "C non torna: interni 2 linee blu invece di 3 linee blu.",
+      "D": "D non torna: forma quadrato invece di triangolo."
     },
     "visual_logic": {
       "type": "matrix",
@@ -2597,7 +2597,7 @@
       "D"
     ],
     "risposta_corretta": "C",
-    "spiegazione": "La risposta corretta è la figura con forma esterna esagono, colore esterno nero, 6 lati e 3 contorni interni di colore nero in posizione esterni e 1 pallini interni di colore nero in posizione riempimento, perché la regola logica usata richiede di aumentare a 3 i contorni esterni dell’esagono e usare il riempimento interno a puntini nella terza colonna.",
+    "spiegazione": "Corretta: forma esterna esagono, colore esterno nero, 6 lati, interni: 3 contorni nero esterni, 1 pallini nero riempimento. Regola: servono 3 contorni esterni e riempimento a puntini.",
     "immagine": "assets/logica_visiva/LOG-VIS-AV-0005_domanda.svg",
     "immagine_domanda": "assets/logica_visiva/LOG-VIS-AV-0005_domanda.svg",
     "immagini_opzioni": [
@@ -2618,10 +2618,10 @@
     "motivo_distrattore_forte": "A mantiene il riempimento a puntini, ma sbaglia il numero di contorni esterni.",
     "tipo_domanda": "immagine",
     "spiegazioni_opzioni": {
-      "A": "A non torna perché ha oggetti interni 2 contorni interni di colore nero in posizione esterni e 1 pallini interni di colore nero in posizione riempimento invece di 3 contorni interni di colore nero in posizione esterni e 1 pallini interni di colore nero in posizione riempimento; quindi non rispetta la regola logica usata: aumentare a 3 i contorni esterni dell’esagono e usare il riempimento interno a puntini nella terza colonna.",
-      "B": "B non torna perché ha oggetti interni 3 contorni interni di colore nero in posizione esterni e 1 croce interni di colore nero in posizione riempimento invece di 3 contorni interni di colore nero in posizione esterni e 1 pallini interni di colore nero in posizione riempimento; quindi non rispetta la regola logica usata: aumentare a 3 i contorni esterni dell’esagono e usare il riempimento interno a puntini nella terza colonna.",
-      "C": "C è corretta: ha forma esterna esagono, colore esterno nero, 6 lati e 3 contorni interni di colore nero in posizione esterni e 1 pallini interni di colore nero in posizione riempimento, quindi rispetta la regola logica usata.",
-      "D": "D non torna perché ha oggetti interni 3 contorni interni di colore nero in posizione esterni e 1 riempimento interni di colore nero in posizione pieno invece di 3 contorni interni di colore nero in posizione esterni e 1 pallini interni di colore nero in posizione riempimento; quindi non rispetta la regola logica usata: aumentare a 3 i contorni esterni dell’esagono e usare il riempimento interno a puntini nella terza colonna."
+      "A": "A non torna: interni 2 contorni nero esterni, 1 pallini nero riempimento invece di 3 contorni nero esterni, 1 pallini nero riempimento.",
+      "B": "B non torna: interni 3 contorni nero esterni, 1 croce nero riempimento invece di 3 contorni nero esterni, 1 pallini nero riempimento.",
+      "C": "C corretta: forma esterna esagono, colore esterno nero, 6 lati, interni: 3 contorni nero esterni, 1 pallini nero riempimento.",
+      "D": "D non torna: interni 3 contorni nero esterni, 1 riempimento nero pieno invece di 3 contorni nero esterni, 1 pallini nero riempimento."
     },
     "visual_logic": {
       "type": "matrix",
@@ -2900,7 +2900,7 @@
       "D"
     ],
     "risposta_corretta": "B",
-    "spiegazione": "La risposta corretta è la figura con forma esterna quadrato, colore esterno rosso, 4 lati e 1 vuoto interni di colore rosso in posizione riempimento e 1 pallini interni di colore rosso in posizione alto, perché la regola logica usata richiede di aumentare di un lato la forma esterna, eliminare il riempimento interno e spostare il pallino interno di una posizione in senso orario.",
+    "spiegazione": "Corretta: forma esterna quadrato, colore esterno rosso, 4 lati, interni: 1 vuoto rosso riempimento, 1 pallini rosso alto. Regola: aumenta un lato, sparisce il riempimento e il pallino ruota in alto.",
     "immagine": "assets/logica_visiva/LOG-VIS-AV-0006_domanda.svg",
     "immagine_domanda": "assets/logica_visiva/LOG-VIS-AV-0006_domanda.svg",
     "immagini_opzioni": [
@@ -2921,10 +2921,10 @@
     "motivo_distrattore_forte": "A mantiene forma, colore e posizione del punto, ma sbaglia il riempimento della figura.",
     "tipo_domanda": "immagine",
     "spiegazioni_opzioni": {
-      "A": "A non torna perché ha oggetti interni 1 riempimento interni di colore rosso in posizione pieno e 1 pallini interni di colore rosso in posizione alto invece di 1 vuoto interni di colore rosso in posizione riempimento e 1 pallini interni di colore rosso in posizione alto; quindi non rispetta la regola logica usata: aumentare di un lato la forma esterna, eliminare il riempimento interno e spostare il pallino interno di una posizione in senso orario.",
-      "B": "B è corretta: ha forma esterna quadrato, colore esterno rosso, 4 lati e 1 vuoto interni di colore rosso in posizione riempimento e 1 pallini interni di colore rosso in posizione alto, quindi rispetta la regola logica usata.",
-      "C": "C non torna perché ha forma esterna triangolo invece di quadrato, 3 lati invece di 4; quindi non rispetta la regola logica usata: aumentare di un lato la forma esterna, eliminare il riempimento interno e spostare il pallino interno di una posizione in senso orario.",
-      "D": "D non torna perché ha oggetti interni 1 vuoto interni di colore rosso in posizione riempimento e 1 pallini interni di colore rosso in posizione destra invece di 1 vuoto interni di colore rosso in posizione riempimento e 1 pallini interni di colore rosso in posizione alto; quindi non rispetta la regola logica usata: aumentare di un lato la forma esterna, eliminare il riempimento interno e spostare il pallino interno di una posizione in senso orario."
+      "A": "A non torna: interni 1 riempimento rosso pieno, 1 pallini rosso alto invece di 1 vuoto rosso riempimento, 1 pallini rosso alto.",
+      "B": "B corretta: forma esterna quadrato, colore esterno rosso, 4 lati, interni: 1 vuoto rosso riempimento, 1 pallini rosso alto.",
+      "C": "C non torna: forma triangolo invece di quadrato.",
+      "D": "D non torna: interni 1 vuoto rosso riempimento, 1 pallini rosso destra invece di 1 vuoto rosso riempimento, 1 pallini rosso alto."
     },
     "visual_logic": {
       "type": "analogy",
@@ -3108,7 +3108,7 @@
       "D"
     ],
     "risposta_corretta": "A",
-    "spiegazione": "La risposta corretta è la figura con forma esterna triangolo, colore esterno verde, 3 lati e 4 stelle interni di colore verde, perché la regola logica usata richiede di sommare nella terza colonna il numero degli elementi interni delle prime due colonne, mantenendo forma esterna triangolo e colore verde nell’ultima riga.",
+    "spiegazione": "Corretta: forma esterna triangolo, colore esterno verde, 3 lati, interni: 4 stelle verde. Regola: la terza colonna somma gli elementi: 1 stella + 3 stelle = 4.",
     "immagine": "assets/logica_visiva/LOG-VIS-AV-0007_domanda.svg",
     "immagine_domanda": "assets/logica_visiva/LOG-VIS-AV-0007_domanda.svg",
     "immagini_opzioni": [
@@ -3129,10 +3129,10 @@
     "motivo_distrattore_forte": "B mantiene forma e colore corretti, ma sbaglia il numero di stelle.",
     "tipo_domanda": "immagine",
     "spiegazioni_opzioni": {
-      "A": "A è corretta: ha forma esterna triangolo, colore esterno verde, 3 lati e 4 stelle interni di colore verde, quindi rispetta la regola logica usata.",
-      "B": "B non torna perché ha oggetti interni 3 stelle interni di colore verde invece di 4 stelle interni di colore verde; quindi non rispetta la regola logica usata: sommare nella terza colonna il numero degli elementi interni delle prime due colonne, mantenendo forma esterna triangolo e colore verde nell’ultima riga.",
-      "C": "C non torna perché ha colore esterno blu invece di verde, oggetti interni 4 stelle interni di colore blu invece di 4 stelle interni di colore verde; quindi non rispetta la regola logica usata: sommare nella terza colonna il numero degli elementi interni delle prime due colonne, mantenendo forma esterna triangolo e colore verde nell’ultima riga.",
-      "D": "D non torna perché ha forma esterna quadrato invece di triangolo, 4 lati invece di 3; quindi non rispetta la regola logica usata: sommare nella terza colonna il numero degli elementi interni delle prime due colonne, mantenendo forma esterna triangolo e colore verde nell’ultima riga."
+      "A": "A corretta: forma esterna triangolo, colore esterno verde, 3 lati, interni: 4 stelle verde.",
+      "B": "B non torna: interni 3 stelle verde invece di 4 stelle verde.",
+      "C": "C non torna: colore blu invece di verde.",
+      "D": "D non torna: forma quadrato invece di triangolo."
     },
     "visual_logic": {
       "type": "matrix",
@@ -3320,7 +3320,7 @@
       "D"
     ],
     "risposta_corretta": "D",
-    "spiegazione": "La risposta corretta è la figura con forma esterna quadrato, colore esterno blu, 4 lati e 3 barre diagonali interni di colore blu, perché la regola logica usata richiede di ruotare ciclicamente le forme cerchio/quadrato/triangolo, alternare i colori blu e rosso e portare a 3 il numero delle barre diagonali interne nella terza colonna.",
+    "spiegazione": "Corretta: forma esterna quadrato, colore esterno blu, 4 lati, interni: 3 barre diagonali blu. Regola: le forme ruotano, i colori alternano e le barre diventano 3.",
     "immagine": "assets/logica_visiva/LOG-VIS-AV-0008_domanda.svg",
     "immagine_domanda": "assets/logica_visiva/LOG-VIS-AV-0008_domanda.svg",
     "immagini_opzioni": [
@@ -3341,10 +3341,10 @@
     "motivo_distrattore_forte": "C mantiene forma e colore corretti, ma sbaglia il numero di barre diagonali.",
     "tipo_domanda": "immagine",
     "spiegazioni_opzioni": {
-      "A": "A non torna perché ha forma esterna cerchio invece di quadrato, 0 lati invece di 4; quindi non rispetta la regola logica usata: ruotare ciclicamente le forme cerchio/quadrato/triangolo, alternare i colori blu e rosso e portare a 3 il numero delle barre diagonali interne nella terza colonna.",
-      "B": "B non torna perché ha colore esterno rosso invece di blu, oggetti interni 3 barre diagonali interni di colore rosso invece di 3 barre diagonali interni di colore blu; quindi non rispetta la regola logica usata: ruotare ciclicamente le forme cerchio/quadrato/triangolo, alternare i colori blu e rosso e portare a 3 il numero delle barre diagonali interne nella terza colonna.",
-      "C": "C non torna perché ha oggetti interni 2 barre diagonali interni di colore blu invece di 3 barre diagonali interni di colore blu; quindi non rispetta la regola logica usata: ruotare ciclicamente le forme cerchio/quadrato/triangolo, alternare i colori blu e rosso e portare a 3 il numero delle barre diagonali interne nella terza colonna.",
-      "D": "D è corretta: ha forma esterna quadrato, colore esterno blu, 4 lati e 3 barre diagonali interni di colore blu, quindi rispetta la regola logica usata."
+      "A": "A non torna: forma cerchio invece di quadrato.",
+      "B": "B non torna: colore rosso invece di blu.",
+      "C": "C non torna: interni 2 barre diagonali blu invece di 3 barre diagonali blu.",
+      "D": "D corretta: forma esterna quadrato, colore esterno blu, 4 lati, interni: 3 barre diagonali blu."
     },
     "visual_logic": {
       "type": "matrix",

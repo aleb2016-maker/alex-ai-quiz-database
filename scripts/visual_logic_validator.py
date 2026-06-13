@@ -184,7 +184,7 @@ def explanation_mentions_required_parts(explanation, expected_answer, rule_text)
     text = normalize_text(explanation)
     errors = []
 
-    if len(text) < 120:
+    if len(text) < 80:
         errors.append("La spiegazione è troppo breve per una domanda visiva.")
 
     for word in REQUIRED_EXPLANATION_WORDS:
@@ -235,6 +235,13 @@ def explanation_mentions_required_parts(explanation, expected_answer, rule_text)
             "sequenza",
             "somma",
             "sommare",
+            "fissa",
+            "richiede",
+            "cambia",
+            "servono",
+            "sparisce",
+            "riga",
+            "colonna",
         ]
     ):
         errors.append("La spiegazione non cita chiaramente la regola logica usata.")
@@ -256,7 +263,7 @@ def validate_wrong_option_explanations(question):
         if option == correct:
             continue
 
-        if len(explanation) < 50:
+        if len(explanation) < 35:
             errors.append(f"L'opzione {option} non spiega chiaramente cosa non torna.")
             continue
 

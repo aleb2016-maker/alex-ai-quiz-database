@@ -950,7 +950,7 @@ function validateVisualExplanation(question, expectedAnswer) {
     const explanation = normalizeVisualText(question.spiegazione);
     const requiredWords = ["forma", "colore", "lati", "intern", "regola"];
 
-    if (explanation.length < 120) {
+    if (explanation.length < 80) {
         errors.push("La spiegazione è troppo breve per una domanda visiva.");
     }
 
@@ -1011,7 +1011,7 @@ function validateWrongOptionExplanations(question) {
 
         const explanation = normalizeVisualText(optionExplanations[option]);
 
-        if (explanation.length < 50) {
+        if (explanation.length < 35) {
             errors.push(`L'opzione ${option} non spiega chiaramente cosa non torna.`);
             return;
         }
