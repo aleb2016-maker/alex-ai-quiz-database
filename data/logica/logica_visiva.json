@@ -20,7 +20,7 @@
       "assets/logica_visiva/log_vis_fac_0001_D.png"
     ],
     "risposta_corretta": "C",
-    "spiegazione": "Corretta: forma esterna cerchio, colore esterno nero, 0 lati, interni: 0 oggetti interni. Regola: alterna cerchio/quadrato; dopo il quadrato torna il cerchio.",
+    "spiegazione": "Corretta: cerchio. Regola: alternanza cerchio/quadrato; dopo il quadrato torna il cerchio.",
     "tags": [
       "logica",
       "logica_visiva",
@@ -33,16 +33,16 @@
     "motivo_distrattore_forte": "È vicino perché è una delle opzioni visive proposte, ma non rispetta l'alternanza corretta cerchio-quadrato: dopo il quadrato deve tornare il cerchio indicato dall'opzione C.",
     "tipo": "visiva",
     "spiegazioni_opzioni": {
-      "A": "A non torna: forma triangolo invece di cerchio.",
-      "B": "B non torna: forma quadrato invece di cerchio.",
-      "C": "C corretta: forma esterna cerchio, colore esterno nero, 0 lati, interni: 0 oggetti interni.",
-      "D": "D non torna: forma rettangolo invece di cerchio."
+      "A": "A non torna: è triangolo, ma serve cerchio.",
+      "B": "B non torna: è quadrato, ma serve cerchio.",
+      "C": "C corretta: cerchio.",
+      "D": "D non torna: è rettangolo, ma serve cerchio."
     },
     "visual_logic": {
       "type": "sequence",
       "uses_position": false,
       "rule": {
-        "description": "alternare la forma esterna cerchio/quadrato mantenendo colore esterno nero, 0 oggetti interni e scegliendo dopo il quadrato il cerchio successivo.",
+        "description": "alterna cerchio/quadrato; dopo il quadrato torna il cerchio.",
         "color_alternation": {
           "enabled": false,
           "colors": []
@@ -129,7 +129,7 @@
       "assets/logica_visiva/log_vis_int_0002_D.png"
     ],
     "risposta_corretta": "B",
-    "spiegazione": "Corretta: forma esterna freccia, colore esterno nero, 0 lati, interni: 1 direzione nero sinistra. Regola: la freccia ruota di 90 gradi: alto, destra, basso, sinistra.",
+    "spiegazione": "Corretta: freccia a sinistra. Regola: la freccia ruota di 90 gradi: alto, destra, basso, sinistra.",
     "tags": [
       "logica",
       "logica_visiva",
@@ -142,16 +142,16 @@
     "motivo_distrattore_forte": "È vicino perché rappresenta una possibile rotazione della figura, ma non continua correttamente la rotazione costante di 90 gradi in senso orario indicata dalla sequenza.",
     "tipo": "visiva",
     "spiegazioni_opzioni": {
-      "A": "A non torna: interni 1 direzione nero alto invece di 1 direzione nero sinistra.",
-      "B": "B corretta: forma esterna freccia, colore esterno nero, 0 lati, interni: 1 direzione nero sinistra.",
-      "C": "C non torna: interni 1 direzione nero destra invece di 1 direzione nero sinistra.",
-      "D": "D non torna: interni 1 direzione nero basso invece di 1 direzione nero sinistra."
+      "A": "A non torna: ha alto, ma serve sinistra.",
+      "B": "B corretta: freccia sinistra.",
+      "C": "C non torna: ha destra, ma serve sinistra.",
+      "D": "D non torna: ha basso, ma serve sinistra."
     },
     "visual_logic": {
       "type": "sequence",
       "uses_position": true,
       "rule": {
-        "description": "ruotare la freccia nera di 90 gradi in senso orario, mantenendo 0 oggetti interni e passando da alto a destra, poi basso, poi sinistra.",
+        "description": "la freccia ruota di 90 gradi: alto, destra, basso, sinistra.",
         "color_alternation": {
           "enabled": false,
           "colors": []
@@ -288,7 +288,7 @@
       "assets/logica_visiva/log_vis_av_0003_D.png"
     ],
     "risposta_corretta": "D",
-    "spiegazione": "Corretta: forma esterna triangolo, colore esterno nero, 3 lati, interni: 1 riempimento nero pieno. Regola: la riga fissa la forma e la colonna aumenta il riempimento fino al pieno.",
+    "spiegazione": "Corretta: triangolo pieno. Regola: ogni riga mantiene la forma e ogni colonna aumenta il riempimento.",
     "tags": [
       "logica",
       "logica_visiva",
@@ -301,16 +301,16 @@
     "motivo_distrattore_forte": "È vicino perché rispetta una parte della logica visiva della matrice, ma non combina correttamente entrambe le regole: alternanza della forma per riga e aumento del riempimento per colonna.",
     "tipo": "visiva",
     "spiegazioni_opzioni": {
-      "A": "A non torna: interni 0 oggetti interni invece di 1 riempimento nero pieno.",
-      "B": "B non torna: forma quadrato invece di triangolo.",
-      "C": "C non torna: interni 1 riempimento nero metà inferiore invece di 1 riempimento nero pieno.",
-      "D": "D corretta: forma esterna triangolo, colore esterno nero, 3 lati, interni: 1 riempimento nero pieno."
+      "A": "A non torna: ha interni diversi, ma serve 1 riempimento pieno.",
+      "B": "B non torna: è quadrato con 1 riempimento pieno, ma serve triangolo con 1 riempimento pieno.",
+      "C": "C non torna: ha 1 riempimento metà inferiore, ma serve 1 riempimento pieno.",
+      "D": "D corretta: triangolo con 1 riempimento pieno."
     },
     "visual_logic": {
       "type": "matrix",
       "uses_position": true,
       "rule": {
-        "description": "mantenere la forma esterna per riga, aumentare il riempimento interno per colonna da vuoto a metà inferiore e poi pieno; nella terza riga serve il triangolo nero pieno.",
+        "description": "ogni riga mantiene la forma e ogni colonna aumenta il riempimento.",
         "color_alternation": {
           "enabled": false,
           "colors": []
@@ -478,7 +478,7 @@
       "D"
     ],
     "risposta_corretta": "A",
-    "spiegazione": "Corretta: forma esterna cerchio, colore esterno blu, 0 lati, interni: 3 pallini blu. Regola: alterna cerchio/quadrato e blu/rosso; i pallini crescono ogni due passaggi.",
+    "spiegazione": "Corretta: cerchio blu con 3 pallini. Regola: alterna cerchio/quadrato e blu/rosso; i pallini aumentano.",
     "immagine": "assets/logica_visiva/LOG-VIS-FAC-0004_domanda.svg",
     "immagine_domanda": "assets/logica_visiva/LOG-VIS-FAC-0004_domanda.svg",
     "immagini_opzioni": [
@@ -498,16 +498,16 @@
     "distrattore_forte": "C",
     "motivo_distrattore_forte": "C mantiene la stessa forma e lo stesso numero di punti, ma sbaglia il colore.",
     "spiegazioni_opzioni": {
-      "A": "A corretta: forma esterna cerchio, colore esterno blu, 0 lati, interni: 3 pallini blu.",
-      "B": "B non torna: forma quadrato invece di cerchio.",
-      "C": "C non torna: colore rosso invece di blu.",
-      "D": "D non torna: forma quadrato invece di cerchio."
+      "A": "A corretta: cerchio blu con 3 pallini.",
+      "B": "B non torna: è quadrato blu con 3 pallini, ma serve cerchio blu con 3 pallini.",
+      "C": "C non torna: ha colore rosso, ma serve blu.",
+      "D": "D non torna: è quadrato rosso con 2 pallini, ma serve cerchio blu con 3 pallini."
     },
     "visual_logic": {
       "type": "sequence",
       "uses_position": false,
       "rule": {
-        "description": "alternare forma esterna cerchio/quadrato, alternare colore blu/rosso e aumentare di 1 il numero dei pallini interni ogni due passaggi.",
+        "description": "alterna cerchio/quadrato e blu/rosso; i pallini aumentano.",
         "color_alternation": {
           "enabled": true,
           "colors": [
@@ -644,7 +644,7 @@
       "D"
     ],
     "risposta_corretta": "D",
-    "spiegazione": "Corretta: forma esterna freccia, colore esterno verde, 0 lati, interni: 1 direzione verde sinistra. Regola: la freccia verde ruota di 90 gradi in senso orario.",
+    "spiegazione": "Corretta: freccia a sinistra. Regola: la freccia verde ruota di 90 gradi in senso orario.",
     "immagine": "assets/logica_visiva/LOG-VIS-FAC-0005_domanda.svg",
     "immagine_domanda": "assets/logica_visiva/LOG-VIS-FAC-0005_domanda.svg",
     "immagini_opzioni": [
@@ -665,16 +665,16 @@
     "motivo_distrattore_forte": "C è una freccia della stessa sequenza di rotazione, ma rappresenta il passaggio precedente.",
     "tipo_domanda": "immagine",
     "spiegazioni_opzioni": {
-      "A": "A non torna: interni 1 direzione verde alto invece di 1 direzione verde sinistra.",
-      "B": "B non torna: interni 1 direzione verde destra invece di 1 direzione verde sinistra.",
-      "C": "C non torna: interni 1 direzione verde basso invece di 1 direzione verde sinistra.",
-      "D": "D corretta: forma esterna freccia, colore esterno verde, 0 lati, interni: 1 direzione verde sinistra."
+      "A": "A non torna: ha alto, ma serve sinistra.",
+      "B": "B non torna: ha destra, ma serve sinistra.",
+      "C": "C non torna: ha basso, ma serve sinistra.",
+      "D": "D corretta: freccia sinistra verde."
     },
     "visual_logic": {
       "type": "sequence",
       "uses_position": true,
       "rule": {
-        "description": "ruotare la freccia verde di 90 gradi in senso orario mantenendo il colore esterno verde e 1 indicatore di direzione interno.",
+        "description": "la freccia verde ruota di 90 gradi in senso orario.",
         "color_alternation": {
           "enabled": false,
           "colors": []
@@ -805,7 +805,7 @@
       "D"
     ],
     "risposta_corretta": "C",
-    "spiegazione": "Corretta: forma esterna triangolo, colore esterno blu, 3 lati, interni: 4 pallini blu. Regola: il triangolo blu resta fisso e i pallini aumentano 1, 2, 3, 4.",
+    "spiegazione": "Corretta: triangolo blu con 4 pallini. Regola: il triangolo resta blu e i pallini aumentano 1, 2, 3, 4.",
     "immagine": "assets/logica_visiva/LOG-VIS-FAC-0006_domanda.svg",
     "immagine_domanda": "assets/logica_visiva/LOG-VIS-FAC-0006_domanda.svg",
     "immagini_opzioni": [
@@ -825,16 +825,16 @@
     "distrattore_forte": "B",
     "motivo_distrattore_forte": "B mantiene forma e quantità corretta di punti, ma cambia il colore.",
     "spiegazioni_opzioni": {
-      "A": "A non torna: interni 2 pallini blu invece di 4 pallini blu.",
-      "B": "B non torna: colore rosso invece di blu.",
-      "C": "C corretta: forma esterna triangolo, colore esterno blu, 3 lati, interni: 4 pallini blu.",
-      "D": "D non torna: forma quadrato invece di triangolo."
+      "A": "A non torna: ha 2 pallini, ma serve 4 pallini.",
+      "B": "B non torna: ha colore rosso, ma serve blu.",
+      "C": "C corretta: triangolo blu con 4 pallini.",
+      "D": "D non torna: è quadrato blu con 4 pallini, ma serve triangolo blu con 4 pallini."
     },
     "visual_logic": {
       "type": "sequence",
       "uses_position": false,
       "rule": {
-        "description": "mantenere la forma esterna triangolo e il colore esterno blu, aumentando di 1 il numero dei pallini interni a ogni passaggio.",
+        "description": "il triangolo resta blu e i pallini aumentano 1, 2, 3, 4.",
         "color_alternation": {
           "enabled": false,
           "colors": []
@@ -957,7 +957,7 @@
       "D"
     ],
     "risposta_corretta": "B",
-    "spiegazione": "Corretta: forma esterna esagono, colore esterno viola, 6 lati, interni: 1 pallini viola. Regola: l’esagono resta fisso e il colore alterna oro/viola.",
+    "spiegazione": "Corretta: esagono viola. Regola: l’esagono resta fisso e il colore alterna oro/viola.",
     "immagine": "assets/logica_visiva/LOG-VIS-FAC-0007_domanda.svg",
     "immagine_domanda": "assets/logica_visiva/LOG-VIS-FAC-0007_domanda.svg",
     "immagini_opzioni": [
@@ -977,16 +977,16 @@
     "distrattore_forte": "A",
     "motivo_distrattore_forte": "A mantiene la stessa forma, ma sbaglia l'alternanza del colore.",
     "spiegazioni_opzioni": {
-      "A": "A non torna: colore oro invece di viola.",
-      "B": "B corretta: forma esterna esagono, colore esterno viola, 6 lati, interni: 1 pallini viola.",
-      "C": "C non torna: forma cerchio invece di esagono.",
-      "D": "D non torna: forma quadrato invece di esagono."
+      "A": "A non torna: ha colore oro, ma serve viola.",
+      "B": "B corretta: esagono viola con 1 pallini.",
+      "C": "C non torna: è cerchio viola con 1 pallini, ma serve esagono viola con 1 pallini.",
+      "D": "D non torna: è quadrato oro con 1 pallini, ma serve esagono viola con 1 pallini."
     },
     "visual_logic": {
       "type": "sequence",
       "uses_position": false,
       "rule": {
-        "description": "mantenere la forma esterna esagono e 1 pallino interno, alternando il colore esterno e interno oro/viola.",
+        "description": "l’esagono resta fisso e il colore alterna oro/viola.",
         "color_alternation": {
           "enabled": true,
           "colors": [
@@ -1112,7 +1112,7 @@
       "D"
     ],
     "risposta_corretta": "A",
-    "spiegazione": "Corretta: forma esterna triangolo, colore esterno verde, 3 lati, interni: 3 pallini verde. Regola: la riga fissa forma e colore; la colonna porta i pallini a 3.",
+    "spiegazione": "Corretta: triangolo verde con 3 pallini. Regola: la riga fissa forma/colore e la colonna porta i pallini a 3.",
     "immagine": "assets/logica_visiva/LOG-VIS-FAC-0008_domanda.svg",
     "immagine_domanda": "assets/logica_visiva/LOG-VIS-FAC-0008_domanda.svg",
     "immagini_opzioni": [
@@ -1132,16 +1132,16 @@
     "distrattore_forte": "B",
     "motivo_distrattore_forte": "B mantiene forma e colore corretti, ma sbaglia il numero di punti.",
     "spiegazioni_opzioni": {
-      "A": "A corretta: forma esterna triangolo, colore esterno verde, 3 lati, interni: 3 pallini verde.",
-      "B": "B non torna: interni 2 pallini verde invece di 3 pallini verde.",
-      "C": "C non torna: forma cerchio invece di triangolo.",
-      "D": "D non torna: forma quadrato invece di triangolo."
+      "A": "A corretta: triangolo verde con 3 pallini.",
+      "B": "B non torna: ha 2 pallini, ma serve 3 pallini.",
+      "C": "C non torna: è cerchio verde con 3 pallini, ma serve triangolo verde con 3 pallini.",
+      "D": "D non torna: è quadrato verde con 3 pallini, ma serve triangolo verde con 3 pallini."
     },
     "visual_logic": {
       "type": "matrix",
       "uses_position": false,
       "rule": {
-        "description": "mantenere forma e colore esterno per riga e aumentare il numero dei pallini interni da 1 a 3 per colonna.",
+        "description": "la riga fissa forma/colore e la colonna porta i pallini a 3.",
         "color_alternation": {
           "enabled": false,
           "colors": []
@@ -1323,7 +1323,7 @@
       "D"
     ],
     "risposta_corretta": "A",
-    "spiegazione": "Corretta: forma esterna esagono, colore esterno blu, 6 lati, interni: 4 triangoli blu. Regola: i lati aumentano fino all’esagono e i triangoli interni arrivano a 4.",
+    "spiegazione": "Corretta: esagono blu con 4 triangoli. Regola: i lati aumentano fino a 6 e i triangoli interni arrivano a 4.",
     "immagine": "assets/logica_visiva/LOG-VIS-INT-0004_domanda.svg",
     "immagine_domanda": "assets/logica_visiva/LOG-VIS-INT-0004_domanda.svg",
     "immagini_opzioni": [
@@ -1344,16 +1344,16 @@
     "motivo_distrattore_forte": "C mantiene colore e quantità interna, ma sbaglia la crescita della figura esterna.",
     "tipo_domanda": "immagine",
     "spiegazioni_opzioni": {
-      "A": "A corretta: forma esterna esagono, colore esterno blu, 6 lati, interni: 4 triangoli blu.",
-      "B": "B non torna: colore rosso invece di blu.",
-      "C": "C non torna: forma pentagono invece di esagono.",
-      "D": "D non torna: forma ettagono invece di esagono."
+      "A": "A corretta: esagono blu con 4 triangoli.",
+      "B": "B non torna: ha colore rosso, ma serve blu.",
+      "C": "C non torna: è pentagono blu con 4 triangoli, ma serve esagono blu con 4 triangoli.",
+      "D": "D non torna: è ettagono blu con 4 triangoli, ma serve esagono blu con 4 triangoli."
     },
     "visual_logic": {
       "type": "sequence",
       "uses_position": false,
       "rule": {
-        "description": "aumentare i lati della forma esterna da triangolo a quadrato, pentagono ed esagono, alternando blu/rosso/blu/blu e aumentando i triangoli interni da 1 a 4.",
+        "description": "i lati aumentano fino a 6 e i triangoli interni arrivano a 4.",
         "color_alternation": {
           "enabled": false,
           "colors": []
@@ -1475,7 +1475,7 @@
       "D"
     ],
     "risposta_corretta": "B",
-    "spiegazione": "Corretta: forma esterna triangolo, colore esterno verde, 3 lati, interni: 3 pallini verde. Regola: la riga richiede triangolo e la terza colonna richiede 3 pallini verdi.",
+    "spiegazione": "Corretta: triangolo verde con 3 pallini. Regola: terza riga = triangolo, terza colonna = 3 pallini verdi.",
     "immagine": "assets/logica_visiva/LOG-VIS-INT-0005_domanda.svg",
     "immagine_domanda": "assets/logica_visiva/LOG-VIS-INT-0005_domanda.svg",
     "immagini_opzioni": [
@@ -1496,16 +1496,16 @@
     "motivo_distrattore_forte": "A mantiene forma e numero di punti, ma sbaglia il colore richiesto dalla matrice.",
     "tipo_domanda": "immagine",
     "spiegazioni_opzioni": {
-      "A": "A non torna: colore blu invece di verde.",
-      "B": "B corretta: forma esterna triangolo, colore esterno verde, 3 lati, interni: 3 pallini verde.",
-      "C": "C non torna: forma quadrato invece di triangolo.",
-      "D": "D non torna: interni 2 pallini verde invece di 3 pallini verde."
+      "A": "A non torna: ha colore blu, ma serve verde.",
+      "B": "B corretta: triangolo verde con 3 pallini.",
+      "C": "C non torna: è quadrato verde con 3 pallini, ma serve triangolo verde con 3 pallini.",
+      "D": "D non torna: ha 2 pallini, ma serve 3 pallini."
     },
     "visual_logic": {
       "type": "matrix",
       "uses_position": false,
       "rule": {
-        "description": "mantenere la forma esterna per riga, impostare 3 pallini nella terza colonna e seguire l’alternanza di colore verde/blu/verde.",
+        "description": "terza riga = triangolo, terza colonna = 3 pallini verdi.",
         "color_alternation": {
           "enabled": false,
           "colors": []
@@ -1687,7 +1687,7 @@
       "D"
     ],
     "risposta_corretta": "A",
-    "spiegazione": "Corretta: forma esterna cerchio, colore esterno rosso, 0 lati, interni: 1 linee rosso \\, 2 pallini rosso interno. Regola: la diagonale cambia verso e i pallini diventano 2.",
+    "spiegazione": "Corretta: cerchio rosso con diagonale opposta e 2 pallini. Regola: la linea diagonale cambia verso e i pallini aumentano.",
     "immagine": "assets/logica_visiva/LOG-VIS-INT-0006_domanda.svg",
     "immagine_domanda": "assets/logica_visiva/LOG-VIS-INT-0006_domanda.svg",
     "immagini_opzioni": [
@@ -1708,16 +1708,16 @@
     "motivo_distrattore_forte": "C mantiene forma, colore e numero di punti, ma sbaglia il verso della diagonale.",
     "tipo_domanda": "immagine",
     "spiegazioni_opzioni": {
-      "A": "A corretta: forma esterna cerchio, colore esterno rosso, 0 lati, interni: 1 linee rosso \\, 2 pallini rosso interno.",
-      "B": "B non torna: colore blu invece di rosso.",
-      "C": "C non torna: interni 1 linee rosso /, 2 pallini rosso interno invece di 1 linee rosso \\, 2 pallini rosso interno.",
-      "D": "D non torna: interni 1 linee rosso \\, 1 pallini rosso interno invece di 1 linee rosso \\, 2 pallini rosso interno."
+      "A": "A corretta: cerchio rosso con 1 linee \\, 2 pallini.",
+      "B": "B non torna: ha colore blu, ma serve rosso.",
+      "C": "C non torna: ha 1 linee /, 2 pallini, ma serve 1 linee \\, 2 pallini.",
+      "D": "D non torna: ha 1 linee \\, 1 pallini, ma serve 1 linee \\, 2 pallini."
     },
     "visual_logic": {
       "type": "matrix",
       "uses_position": true,
       "rule": {
-        "description": "cambiare il verso della linea diagonale da / a \\ e aumentare i pallini interni da 1 a 2 mantenendo forma e colore della riga.",
+        "description": "la linea diagonale cambia verso e i pallini aumentano.",
         "color_alternation": {
           "enabled": false,
           "colors": []
@@ -1895,7 +1895,7 @@
       "D"
     ],
     "risposta_corretta": "C",
-    "spiegazione": "Corretta: forma esterna freccia, colore esterno rosso, 0 lati, interni: 1 direzione rosso sinistra, 4 pallini rosso interno. Regola: la freccia ruota, il colore alterna blu/rosso e i pallini arrivano a 4.",
+    "spiegazione": "Corretta: freccia rossa a sinistra con 4 pallini. Regola: ruota la freccia, alterna colore e aumenta i pallini.",
     "immagine": "assets/logica_visiva/LOG-VIS-INT-0007_domanda.svg",
     "immagine_domanda": "assets/logica_visiva/LOG-VIS-INT-0007_domanda.svg",
     "immagini_opzioni": [
@@ -1916,16 +1916,16 @@
     "motivo_distrattore_forte": "D mantiene direzione e colore corretti, ma sbaglia il numero di punti.",
     "tipo_domanda": "immagine",
     "spiegazioni_opzioni": {
-      "A": "A non torna: colore blu invece di rosso.",
-      "B": "B non torna: interni 1 direzione rosso basso, 4 pallini rosso interno invece di 1 direzione rosso sinistra, 4 pallini rosso interno.",
-      "C": "C corretta: forma esterna freccia, colore esterno rosso, 0 lati, interni: 1 direzione rosso sinistra, 4 pallini rosso interno.",
-      "D": "D non torna: interni 1 direzione rosso sinistra, 3 pallini rosso interno invece di 1 direzione rosso sinistra, 4 pallini rosso interno."
+      "A": "A non torna: ha colore blu, ma serve rosso.",
+      "B": "B non torna: ha 4 pallini, ma serve 4 pallini.",
+      "C": "C corretta: freccia 4 pallini rosso.",
+      "D": "D non torna: ha 3 pallini, ma serve 4 pallini."
     },
     "visual_logic": {
       "type": "sequence",
       "uses_position": true,
       "rule": {
-        "description": "ruotare la freccia di 90 gradi in senso orario, alternare colore blu/rosso e aumentare i pallini interni fino a 4.",
+        "description": "ruota la freccia, alterna colore e aumenta i pallini.",
         "color_alternation": {
           "enabled": true,
           "colors": [
@@ -2106,7 +2106,7 @@
       "D"
     ],
     "risposta_corretta": "D",
-    "spiegazione": "Corretta: forma esterna quadrato, colore esterno viola, 4 lati, interni: 1 cerchio viola destra-alto, 1 triangolo viola destra-alto, 2 linee viola centro, 1 rombo viola sinistra-basso, 1 pallini viola sinistra-basso. Regola: riflettere la figura rispetto all’asse verticale.",
+    "spiegazione": "Corretta: figura speculare. Regola: gli elementi si ribaltano rispetto all’asse verticale.",
     "immagine": "assets/logica_visiva/LOG-VIS-INT-0008_domanda.svg",
     "immagine_domanda": "assets/logica_visiva/LOG-VIS-INT-0008_domanda.svg",
     "immagini_opzioni": [
@@ -2127,16 +2127,16 @@
     "motivo_distrattore_forte": "A è simile alla figura corretta, ma non rispetta pienamente il ribaltamento speculare.",
     "tipo_domanda": "immagine",
     "spiegazioni_opzioni": {
-      "A": "A non torna: interni 1 cerchio viola sinistra-alto, 1 triangolo viola sinistra-alto, 2 linee viola centro, 1 rombo viola destra-basso, 1 pallini viola destra-basso invece di 1 cerchio viola destra-alto, 1 triangolo viola destra-alto, 2 linee viola centro, 1 rombo viola sinistra-basso, 1 pallini viola sinistra-basso.",
-      "B": "B non torna: interni 1 cerchio viola centro-alto, 1 triangolo viola centro-alto, 2 linee viola centro, 1 rombo viola centro-basso, 1 pallini viola centro-basso invece di 1 cerchio viola destra-alto, 1 triangolo viola destra-alto, 2 linee viola centro, 1 rombo viola sinistra-basso, 1 pallini viola sinistra-basso.",
-      "C": "C non torna: interni 1 cerchio viola sinistra-alto, 1 triangolo viola sinistra-alto, 2 linee viola centro, 1 rombo viola sinistra-basso, 1 pallini viola sinistra-basso invece di 1 cerchio viola destra-alto, 1 triangolo viola destra-alto, 2 linee viola centro, 1 rombo viola sinistra-basso, 1 pallini viola sinistra-basso.",
-      "D": "D corretta: forma esterna quadrato, colore esterno viola, 4 lati, interni: 1 cerchio viola destra-alto, 1 triangolo viola destra-alto, 2 linee viola centro, 1 rombo viola sinistra-basso, 1 pallini viola sinistra-basso."
+      "A": "A non torna: ha 1 cerchio sinistra-alto, 1 triangolo sinistra-alto, 2 linee centro, 1 rombo destra-basso, 1 pallini destra-basso, ma serve 1 cerchio destra-alto, 1 triangolo destra-alto, 2 linee centro, 1 rombo sinistra-basso, 1 pallini sinistra-basso.",
+      "B": "B non torna: ha 1 cerchio centro-alto, 1 triangolo centro-alto, 2 linee centro, 1 rombo centro-basso, 1 pallini centro-basso, ma serve 1 cerchio destra-alto, 1 triangolo destra-alto, 2 linee centro, 1 rombo sinistra-basso, 1 pallini sinistra-basso.",
+      "C": "C non torna: ha 1 cerchio sinistra-alto, 1 triangolo sinistra-alto, 2 linee centro, 1 rombo sinistra-basso, 1 pallini sinistra-basso, ma serve 1 cerchio destra-alto, 1 triangolo destra-alto, 2 linee centro, 1 rombo sinistra-basso, 1 pallini sinistra-basso.",
+      "D": "D corretta: quadrato viola con 1 cerchio destra-alto, 1 triangolo destra-alto, 2 linee centro, 1 rombo sinistra-basso, 1 pallini sinistra-basso."
     },
     "visual_logic": {
       "type": "mirror",
       "uses_position": true,
       "rule": {
-        "description": "riflettere la figura viola rispetto all’asse verticale, portando il cerchio e il triangolo a destra e il rombo con pallino a sinistra.",
+        "description": "gli elementi si ribaltano rispetto all’asse verticale.",
         "color_alternation": {
           "enabled": false,
           "colors": []
@@ -2385,7 +2385,7 @@
       "D"
     ],
     "risposta_corretta": "A",
-    "spiegazione": "Corretta: forma esterna triangolo, colore esterno blu, 3 lati, interni: 3 linee blu. Regola: riga = forma, colonna = 3 linee, colore finale blu.",
+    "spiegazione": "Corretta: triangolo blu con 3 linee. Regola: riga = forma, colonna = linee, colore finale blu.",
     "immagine": "assets/logica_visiva/LOG-VIS-AV-0004_domanda.svg",
     "immagine_domanda": "assets/logica_visiva/LOG-VIS-AV-0004_domanda.svg",
     "immagini_opzioni": [
@@ -2406,16 +2406,16 @@
     "motivo_distrattore_forte": "B mantiene forma e numero di linee interne corretti, ma sbaglia il colore.",
     "tipo_domanda": "immagine",
     "spiegazioni_opzioni": {
-      "A": "A corretta: forma esterna triangolo, colore esterno blu, 3 lati, interni: 3 linee blu.",
-      "B": "B non torna: colore rosso invece di blu.",
-      "C": "C non torna: interni 2 linee blu invece di 3 linee blu.",
-      "D": "D non torna: forma quadrato invece di triangolo."
+      "A": "A corretta: triangolo blu con 3 linee.",
+      "B": "B non torna: ha colore rosso, ma serve blu.",
+      "C": "C non torna: ha 2 linee, ma serve 3 linee.",
+      "D": "D non torna: è quadrato blu con 3 linee, ma serve triangolo blu con 3 linee."
     },
     "visual_logic": {
       "type": "matrix",
       "uses_position": false,
       "rule": {
-        "description": "usare la forma esterna indicata dalla riga, il colore alternato blu/rosso/blu della colonna e 3 linee interne nella terza colonna.",
+        "description": "riga = forma, colonna = linee, colore finale blu.",
         "color_alternation": {
           "enabled": false,
           "colors": []
@@ -2597,7 +2597,7 @@
       "D"
     ],
     "risposta_corretta": "C",
-    "spiegazione": "Corretta: forma esterna esagono, colore esterno nero, 6 lati, interni: 3 contorni nero esterni, 1 pallini nero riempimento. Regola: servono 3 contorni esterni e riempimento a puntini.",
+    "spiegazione": "Corretta: esagono con 3 contorni e puntini. Regola: aumentano i contorni e la terza colonna ha puntini.",
     "immagine": "assets/logica_visiva/LOG-VIS-AV-0005_domanda.svg",
     "immagine_domanda": "assets/logica_visiva/LOG-VIS-AV-0005_domanda.svg",
     "immagini_opzioni": [
@@ -2618,16 +2618,16 @@
     "motivo_distrattore_forte": "A mantiene il riempimento a puntini, ma sbaglia il numero di contorni esterni.",
     "tipo_domanda": "immagine",
     "spiegazioni_opzioni": {
-      "A": "A non torna: interni 2 contorni nero esterni, 1 pallini nero riempimento invece di 3 contorni nero esterni, 1 pallini nero riempimento.",
-      "B": "B non torna: interni 3 contorni nero esterni, 1 croce nero riempimento invece di 3 contorni nero esterni, 1 pallini nero riempimento.",
-      "C": "C corretta: forma esterna esagono, colore esterno nero, 6 lati, interni: 3 contorni nero esterni, 1 pallini nero riempimento.",
-      "D": "D non torna: interni 3 contorni nero esterni, 1 riempimento nero pieno invece di 3 contorni nero esterni, 1 pallini nero riempimento."
+      "A": "A non torna: ha 2 contorni esterni, 1 pallini, ma serve 3 contorni esterni, 1 pallini.",
+      "B": "B non torna: ha 3 contorni esterni, 1 croce, ma serve 3 contorni esterni, 1 pallini.",
+      "C": "C corretta: esagono con 3 contorni esterni, 1 pallini.",
+      "D": "D non torna: ha 3 contorni esterni, 1 riempimento pieno, ma serve 3 contorni esterni, 1 pallini."
     },
     "visual_logic": {
       "type": "matrix",
       "uses_position": true,
       "rule": {
-        "description": "aumentare a 3 i contorni esterni dell’esagono e usare il riempimento interno a puntini nella terza colonna.",
+        "description": "aumentano i contorni e la terza colonna ha puntini.",
         "color_alternation": {
           "enabled": false,
           "colors": []
@@ -2900,7 +2900,7 @@
       "D"
     ],
     "risposta_corretta": "B",
-    "spiegazione": "Corretta: forma esterna quadrato, colore esterno rosso, 4 lati, interni: 1 vuoto rosso riempimento, 1 pallini rosso alto. Regola: aumenta un lato, sparisce il riempimento e il pallino ruota in alto.",
+    "spiegazione": "Corretta: quadrato rosso vuoto con pallino in alto. Regola: aumenta un lato, sparisce il riempimento e il pallino ruota.",
     "immagine": "assets/logica_visiva/LOG-VIS-AV-0006_domanda.svg",
     "immagine_domanda": "assets/logica_visiva/LOG-VIS-AV-0006_domanda.svg",
     "immagini_opzioni": [
@@ -2921,16 +2921,16 @@
     "motivo_distrattore_forte": "A mantiene forma, colore e posizione del punto, ma sbaglia il riempimento della figura.",
     "tipo_domanda": "immagine",
     "spiegazioni_opzioni": {
-      "A": "A non torna: interni 1 riempimento rosso pieno, 1 pallini rosso alto invece di 1 vuoto rosso riempimento, 1 pallini rosso alto.",
-      "B": "B corretta: forma esterna quadrato, colore esterno rosso, 4 lati, interni: 1 vuoto rosso riempimento, 1 pallini rosso alto.",
-      "C": "C non torna: forma triangolo invece di quadrato.",
-      "D": "D non torna: interni 1 vuoto rosso riempimento, 1 pallini rosso destra invece di 1 vuoto rosso riempimento, 1 pallini rosso alto."
+      "A": "A non torna: ha 1 riempimento pieno, 1 pallini alto, ma serve 1 vuoto, 1 pallini alto.",
+      "B": "B corretta: quadrato rosso con 1 vuoto, 1 pallini alto.",
+      "C": "C non torna: è triangolo rosso con 1 vuoto, 1 pallini alto, ma serve quadrato rosso con 1 vuoto, 1 pallini alto.",
+      "D": "D non torna: ha 1 vuoto, 1 pallini destra, ma serve 1 vuoto, 1 pallini alto."
     },
     "visual_logic": {
       "type": "analogy",
       "uses_position": true,
       "rule": {
-        "description": "aumentare di un lato la forma esterna, eliminare il riempimento interno e spostare il pallino interno di una posizione in senso orario.",
+        "description": "aumenta un lato, sparisce il riempimento e il pallino ruota.",
         "color_alternation": {
           "enabled": false,
           "colors": []
@@ -3108,7 +3108,7 @@
       "D"
     ],
     "risposta_corretta": "A",
-    "spiegazione": "Corretta: forma esterna triangolo, colore esterno verde, 3 lati, interni: 4 stelle verde. Regola: la terza colonna somma gli elementi: 1 stella + 3 stelle = 4.",
+    "spiegazione": "Corretta: triangolo verde con 4 stelle. Regola: la terza colonna somma gli elementi: 1 + 3 = 4.",
     "immagine": "assets/logica_visiva/LOG-VIS-AV-0007_domanda.svg",
     "immagine_domanda": "assets/logica_visiva/LOG-VIS-AV-0007_domanda.svg",
     "immagini_opzioni": [
@@ -3129,16 +3129,16 @@
     "motivo_distrattore_forte": "B mantiene forma e colore corretti, ma sbaglia il numero di stelle.",
     "tipo_domanda": "immagine",
     "spiegazioni_opzioni": {
-      "A": "A corretta: forma esterna triangolo, colore esterno verde, 3 lati, interni: 4 stelle verde.",
-      "B": "B non torna: interni 3 stelle verde invece di 4 stelle verde.",
-      "C": "C non torna: colore blu invece di verde.",
-      "D": "D non torna: forma quadrato invece di triangolo."
+      "A": "A corretta: triangolo verde con 4 stelle.",
+      "B": "B non torna: ha 3 stelle, ma serve 4 stelle.",
+      "C": "C non torna: ha colore blu, ma serve verde.",
+      "D": "D non torna: è quadrato verde con 4 stelle, ma serve triangolo verde con 4 stelle."
     },
     "visual_logic": {
       "type": "matrix",
       "uses_position": false,
       "rule": {
-        "description": "sommare nella terza colonna il numero degli elementi interni delle prime due colonne, mantenendo forma esterna triangolo e colore verde nell’ultima riga.",
+        "description": "la terza colonna somma gli elementi: 1 + 3 = 4.",
         "color_alternation": {
           "enabled": false,
           "colors": []
@@ -3320,7 +3320,7 @@
       "D"
     ],
     "risposta_corretta": "D",
-    "spiegazione": "Corretta: forma esterna quadrato, colore esterno blu, 4 lati, interni: 3 barre diagonali blu. Regola: le forme ruotano, i colori alternano e le barre diventano 3.",
+    "spiegazione": "Corretta: quadrato blu con 3 barre diagonali. Regola: ruotano le forme, alternano i colori e le barre diventano 3.",
     "immagine": "assets/logica_visiva/LOG-VIS-AV-0008_domanda.svg",
     "immagine_domanda": "assets/logica_visiva/LOG-VIS-AV-0008_domanda.svg",
     "immagini_opzioni": [
@@ -3341,16 +3341,16 @@
     "motivo_distrattore_forte": "C mantiene forma e colore corretti, ma sbaglia il numero di barre diagonali.",
     "tipo_domanda": "immagine",
     "spiegazioni_opzioni": {
-      "A": "A non torna: forma cerchio invece di quadrato.",
-      "B": "B non torna: colore rosso invece di blu.",
-      "C": "C non torna: interni 2 barre diagonali blu invece di 3 barre diagonali blu.",
-      "D": "D corretta: forma esterna quadrato, colore esterno blu, 4 lati, interni: 3 barre diagonali blu."
+      "A": "A non torna: è cerchio blu con 3 barre diagonali, ma serve quadrato blu con 3 barre diagonali.",
+      "B": "B non torna: ha colore rosso, ma serve blu.",
+      "C": "C non torna: ha 2 barre diagonali, ma serve 3 barre diagonali.",
+      "D": "D corretta: quadrato blu con 3 barre diagonali."
     },
     "visual_logic": {
       "type": "matrix",
       "uses_position": false,
       "rule": {
-        "description": "ruotare ciclicamente le forme cerchio/quadrato/triangolo, alternare i colori blu e rosso e portare a 3 il numero delle barre diagonali interne nella terza colonna.",
+        "description": "ruotano le forme, alternano i colori e le barre diventano 3.",
         "color_alternation": {
           "enabled": false,
           "colors": []

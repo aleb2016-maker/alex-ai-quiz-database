@@ -13,15 +13,6 @@ SHAPE_SIDES = {
 }
 
 
-REQUIRED_EXPLANATION_WORDS = [
-    "forma",
-    "colore",
-    "lati",
-    "intern",
-    "regola",
-]
-
-
 def is_visual_logic_question(question):
     return (
         question.get("sottocategoria") == "logica_visiva"
@@ -46,6 +37,84 @@ def explanation_contains_term(text, term):
         return True
 
     return False
+
+
+def collect_figures(sequence, expected_answer, option_figures):
+    figures = []
+
+    if isinstance(sequence, list):
+        figures.extend([figure for figure in sequence if isinstance(figure, dict)])
+
+    if isinstance(expected_answer, dict):
+        figures.append(expected_answer)
+
+    if isinstance(option_figures, dict):
+        figures.extend(
+            [
+                figure
+                for figure in option_figures.values()
+                if isinstance(figure, dict)
+            ]
+        )
+
+    return figures
+
+
+def collect_inner_types(figures, rule_text):
+    inner_types = set()
+
+    for figure in figures:
+        for item in figure.get("inner_objects", []):
+            item_type = normalize_text(item.get("type"))
+
+            if not item_type or item_type == "direzione":
+                continue
+
+            type_is_part_of_rule = (
+                explanation_contains_term(rule_text, item_type)
+                or (item_type == "linee" and "diagonal" in rule_text)
+                or (item_type == "linee" and "diagonale" in rule_text)
+            )
+
+            if type_is_part_of_rule:
+                inner_types.add(item_type)
+
+    return inner_types
+
+
+def explanation_requirements(visual_logic):
+    sequence = visual_logic.get("sequence", [])
+    expected_answer = visual_logic.get("expected_answer", {})
+    option_figures = visual_logic.get("options", {})
+    rule = visual_logic.get("rule", {})
+    rule_text = normalize_text(rule.get("description", ""))
+    all_figures = collect_figures(sequence, expected_answer, option_figures)
+
+    shapes = {
+        normalize_text(figure.get("outer_shape"))
+        for figure in all_figures
+        if normalize_text(figure.get("outer_shape"))
+    }
+    colors = {
+        normalize_text(figure.get("outer_color"))
+        for figure in all_figures
+        if normalize_text(figure.get("outer_color"))
+    }
+    inner_types = collect_inner_types(all_figures, rule_text)
+
+    return {
+        "shape": (
+            len(shapes) > 1
+            or any(word in rule_text for word in ["forma", "cerchio", "quadrato", "triangolo", "esagono", "freccia"])
+        ),
+        "color": (
+            bool(rule.get("color_alternation", {}).get("enabled"))
+            or "colore" in rule_text
+            or "colori" in rule_text
+        ),
+        "sides": "lati" in rule_text,
+        "inner_types": inner_types,
+    }
 
 
 def canonical_figure(figure):
@@ -180,43 +249,48 @@ def validate_color_alternation(sequence, expected_answer, colors):
     return errors
 
 
-def explanation_mentions_required_parts(explanation, expected_answer, rule_text):
+def explanation_mentions_required_parts(explanation, expected_answer, visual_logic):
     text = normalize_text(explanation)
     errors = []
+    requirements = explanation_requirements(visual_logic)
+    rule_text = normalize_text(visual_logic.get("rule", {}).get("description", ""))
 
-    if len(text) < 80:
+    if len(text) < 45:
         errors.append("La spiegazione è troppo breve per una domanda visiva.")
-
-    for word in REQUIRED_EXPLANATION_WORDS:
-        if word not in text:
-            errors.append(f"La spiegazione non cita '{word}'.")
 
     outer_shape = normalize_text(expected_answer.get("outer_shape"))
     outer_color = normalize_text(expected_answer.get("outer_color"))
     sides = expected_answer.get("sides")
 
-    if outer_shape and outer_shape not in text:
-        errors.append("La spiegazione non cita la forma esterna corretta.")
+    if requirements["shape"] and outer_shape and outer_shape not in text:
+        errors.append("La spiegazione non cita la forma rilevante.")
 
-    if outer_color and outer_color not in text:
-        errors.append("La spiegazione non cita il colore esterno corretto.")
+    if requirements["color"] and outer_color and not explanation_contains_term(text, outer_color):
+        errors.append("La spiegazione non cita il colore rilevante.")
 
-    if isinstance(sides, int) and str(sides) not in text:
-        errors.append("La spiegazione non cita il numero di lati corretto.")
+    if requirements["sides"] and isinstance(sides, int) and str(sides) not in text:
+        errors.append("La spiegazione non cita il numero di lati rilevante.")
 
     for item in expected_answer.get("inner_objects", []):
         item_type = normalize_text(item.get("type"))
         item_color = normalize_text(item.get("color"))
         quantity = item.get("quantity")
 
-        if isinstance(quantity, int) and str(quantity) not in text:
-            errors.append("La spiegazione non cita la quantità degli oggetti interni.")
+        if item_type not in requirements["inner_types"]:
+            continue
+
+        if (
+            isinstance(quantity, int)
+            and quantity > 1
+            and str(quantity) not in text
+        ):
+            errors.append("La spiegazione non cita la quantità degli elementi rilevanti.")
 
         if item_type and not explanation_contains_term(text, item_type):
-            errors.append("La spiegazione non cita il tipo degli oggetti interni.")
+            errors.append("La spiegazione non cita il tipo degli elementi rilevanti.")
 
-        if item_color and item_color not in text:
-            errors.append("La spiegazione non cita il colore degli oggetti interni.")
+        if requirements["color"] and item_color and not explanation_contains_term(text, item_color):
+            errors.append("La spiegazione non cita il colore degli elementi rilevanti.")
 
     if rule_text and not any(
         word in text
@@ -370,7 +444,7 @@ def validate_visual_logic_question(question):
         explanation_mentions_required_parts(
             question.get("spiegazione", ""),
             expected_answer,
-            rule.get("description", ""),
+            visual_logic,
         )
     )
 

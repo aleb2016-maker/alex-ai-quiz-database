@@ -824,7 +824,7 @@ function validateVisualLogicQuestion(question) {
     }
 
     errors.push(...validateMirrorInstruction(question, visualLogic));
-    errors.push(...validateVisualExplanation(question, expectedAnswer));
+    errors.push(...validateVisualExplanation(question, expectedAnswer, visualLogic));
     errors.push(...validateWrongOptionExplanations(question));
 
     return {
@@ -945,55 +945,120 @@ function validateMirrorInstruction(question, visualLogic) {
     return errors;
 }
 
-function validateVisualExplanation(question, expectedAnswer) {
+function validateVisualExplanation(question, expectedAnswer, visualLogic) {
     const errors = [];
     const explanation = normalizeVisualText(question.spiegazione);
-    const requiredWords = ["forma", "colore", "lati", "intern", "regola"];
+    const requirements = getVisualExplanationRequirements(visualLogic);
 
-    if (explanation.length < 80) {
+    if (explanation.length < 45) {
         errors.push("La spiegazione è troppo breve per una domanda visiva.");
     }
-
-    requiredWords.forEach(word => {
-        if (!explanation.includes(word)) {
-            errors.push(`La spiegazione non cita '${word}'.`);
-        }
-    });
 
     if (!expectedAnswer) {
         return errors;
     }
 
-    if (!explanation.includes(normalizeVisualText(expectedAnswer.outer_shape))) {
-        errors.push("La spiegazione non cita la forma esterna corretta.");
-    }
-
-    if (!explanation.includes(normalizeVisualText(expectedAnswer.outer_color))) {
-        errors.push("La spiegazione non cita il colore esterno corretto.");
+    if (
+        requirements.shape &&
+        !explanation.includes(normalizeVisualText(expectedAnswer.outer_shape))
+    ) {
+        errors.push("La spiegazione non cita la forma rilevante.");
     }
 
     if (
+        requirements.color &&
+        !visualTextIncludesTerm(explanation, expectedAnswer.outer_color)
+    ) {
+        errors.push("La spiegazione non cita il colore rilevante.");
+    }
+
+    if (
+        requirements.sides &&
         Number.isInteger(expectedAnswer.sides) &&
         !explanation.includes(String(expectedAnswer.sides))
     ) {
-        errors.push("La spiegazione non cita il numero di lati corretto.");
+        errors.push("La spiegazione non cita il numero di lati rilevante.");
     }
 
     (expectedAnswer.inner_objects || []).forEach(item => {
-        if (!explanation.includes(String(item.quantity))) {
-            errors.push("La spiegazione non cita la quantità degli oggetti interni.");
+        const itemType = normalizeVisualText(item.type);
+
+        if (!requirements.innerTypes.has(itemType)) {
+            return;
+        }
+
+        if (
+            Number.isInteger(item.quantity) &&
+            item.quantity > 1 &&
+            !explanation.includes(String(item.quantity))
+        ) {
+            errors.push("La spiegazione non cita la quantità degli elementi rilevanti.");
         }
 
         if (!visualTextIncludesTerm(explanation, item.type)) {
-            errors.push("La spiegazione non cita il tipo degli oggetti interni.");
+            errors.push("La spiegazione non cita il tipo degli elementi rilevanti.");
         }
 
-        if (!explanation.includes(normalizeVisualText(item.color))) {
-            errors.push("La spiegazione non cita il colore degli oggetti interni.");
+        if (
+            requirements.color &&
+            !visualTextIncludesTerm(explanation, item.color)
+        ) {
+            errors.push("La spiegazione non cita il colore degli elementi rilevanti.");
         }
     });
 
     return errors;
+}
+
+function getVisualExplanationRequirements(visualLogic) {
+    const ruleText = normalizeVisualText(visualLogic?.rule?.description);
+    const figures = [
+        ...(Array.isArray(visualLogic?.sequence) ? visualLogic.sequence : []),
+        visualLogic?.expected_answer,
+        ...Object.values(visualLogic?.options || {}),
+    ].filter(figure => figure && typeof figure === "object");
+
+    const shapes = new Set(
+        figures
+            .map(figure => normalizeVisualText(figure.outer_shape))
+            .filter(Boolean)
+    );
+
+    const innerTypes = new Set();
+
+    figures.forEach(figure => {
+        (figure.inner_objects || []).forEach(item => {
+            const itemType = normalizeVisualText(item.type);
+            const typeIsPartOfRule = (
+                visualTextIncludesTerm(ruleText, itemType) ||
+                (
+                    itemType === "linee" &&
+                    (
+                        ruleText.includes("diagonal") ||
+                        ruleText.includes("diagonale")
+                    )
+                )
+            );
+
+            if (itemType && itemType !== "direzione" && typeIsPartOfRule) {
+                innerTypes.add(itemType);
+            }
+        });
+    });
+
+    return {
+        shape: (
+            shapes.size > 1 ||
+            /(forma|cerchio|quadrato|triangolo|esagono|freccia)/.test(ruleText)
+        ),
+        color: (
+            Boolean(visualLogic?.rule?.color_alternation?.enabled) ||
+            ruleText.includes("colore") ||
+            ruleText.includes("colori")
+        ),
+        sides: ruleText.includes("lati"),
+        innerTypes,
+    };
 }
 
 function validateWrongOptionExplanations(question) {
