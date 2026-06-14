@@ -1,0 +1,290 @@
+[
+  {
+    "id": "SCI_001",
+    "categoria": "scienze",
+    "sottocategoria": "biologia",
+    "livello": "facile",
+    "domanda": "Quale organulo cellulare è principalmente responsabile della produzione di energia nella cellula?",
+    "opzioni": [
+      "Nucleo",
+      "Mitocondrio",
+      "Ribosoma",
+      "Membrana cellulare"
+    ],
+    "risposta_corretta": "Mitocondrio",
+    "spiegazione": "Il mitocondrio produce energia sotto forma di ATP attraverso la respirazione cellulare. Il nucleo contiene il DNA, i ribosomi producono proteine e la membrana cellulare delimita la cellula.",
+    "tags": [
+      "biologia",
+      "scienze"
+    ],
+    "difficolta": 1,
+    "distrattore_forte": "Ribosoma",
+    "punteggio_distrattore_forte": 0.92,
+    "motivo_distrattore_forte": "È un distrattore plausibile perché è collegato allo stesso argomento della risposta corretta, ma non identifica precisamente il concetto richiesto. La risposta corretta resta 'Mitocondrio', non 'Ribosoma'.",
+    "qualita": 100
+  },
+  {
+    "id": "SCI_002",
+    "categoria": "scienze",
+    "sottocategoria": "chimica_base",
+    "livello": "facile",
+    "domanda": "Che cosa indica il numero atomico di un elemento chimico?",
+    "opzioni": [
+      "Il numero di protoni nel nucleo",
+      "Il numero totale di protoni e neutroni",
+      "Il numero di neutroni nel nucleo",
+      "Il numero di elettroni nello strato più esterno"
+    ],
+    "risposta_corretta": "Il numero di protoni nel nucleo",
+    "spiegazione": "Il numero atomico indica il numero di protoni presenti nel nucleo. Il numero totale di protoni e neutroni è invece il numero di massa.",
+    "tags": [
+      "chimica_base",
+      "scienze"
+    ],
+    "difficolta": 1,
+    "distrattore_forte": "Il numero totale di protoni e neutroni",
+    "punteggio_distrattore_forte": 1.0,
+    "motivo_distrattore_forte": "È un distrattore plausibile perché è collegato allo stesso argomento della risposta corretta, ma non identifica precisamente il concetto richiesto. La risposta corretta resta 'Il numero di protoni nel nucleo', non 'Il numero totale di protoni e neutroni'.",
+    "qualita": 100
+  },
+  {
+    "id": "SCI_003",
+    "categoria": "scienze",
+    "sottocategoria": "fisica_base",
+    "livello": "facile",
+    "domanda": "Quale grandezza fisica si misura in Newton?",
+    "opzioni": [
+      "Energia",
+      "Potenza",
+      "Forza",
+      "Pressione"
+    ],
+    "risposta_corretta": "Forza",
+    "spiegazione": "Il Newton è l'unità di misura della forza. L'energia si misura in joule, la potenza in watt e la pressione in pascal.",
+    "tags": [
+      "fisica_base",
+      "scienze"
+    ],
+    "difficolta": 1,
+    "distrattore_forte": "Potenza",
+    "punteggio_distrattore_forte": 1.0,
+    "motivo_distrattore_forte": "È un distrattore plausibile perché è collegato allo stesso argomento della risposta corretta, ma non identifica precisamente il concetto richiesto. La risposta corretta resta 'Forza', non 'Potenza'.",
+    "qualita": 100
+  },
+  {
+    "id": "SCI_004",
+    "categoria": "scienze",
+    "sottocategoria": "scienze_della_terra",
+    "livello": "intermedio",
+    "domanda": "Quale strato della Terra si trova subito sotto la crosta terrestre?",
+    "opzioni": [
+      "Mantello",
+      "Nucleo esterno",
+      "Nucleo interno",
+      "Litosfera esterna"
+    ],
+    "risposta_corretta": "Mantello",
+    "spiegazione": "Sotto la crosta terrestre si trova il mantello. Il nucleo esterno e il nucleo interno sono più profondi.",
+    "tags": [
+      "scienze_della_terra",
+      "scienze"
+    ],
+    "difficolta": 2,
+    "distrattore_forte": "Litosfera esterna",
+    "punteggio_distrattore_forte": 0.59,
+    "motivo_distrattore_forte": "È un distrattore plausibile perché è collegato allo stesso argomento della risposta corretta, ma non identifica precisamente il concetto richiesto. La risposta corretta resta 'Mantello', non 'Litosfera esterna'.",
+    "qualita": 100
+  },
+  {
+    "id": "SCI_005",
+    "categoria": "scienze",
+    "sottocategoria": "biologia",
+    "livello": "intermedio",
+    "domanda": "Durante la fotosintesi, quale gas viene assorbito principalmente dalle piante?",
+    "opzioni": [
+      "Ossigeno",
+      "Azoto",
+      "Anidride carbonica",
+      "Idrogeno"
+    ],
+    "risposta_corretta": "Anidride carbonica",
+    "spiegazione": "Durante la fotosintesi le piante assorbono anidride carbonica e acqua per produrre glucosio e liberare ossigeno.",
+    "tags": [
+      "biologia",
+      "scienze"
+    ],
+    "difficolta": 2,
+    "distrattore_forte": "Idrogeno",
+    "punteggio_distrattore_forte": 0.38,
+    "motivo_distrattore_forte": "È un distrattore plausibile perché è collegato allo stesso argomento della risposta corretta, ma non identifica precisamente il concetto richiesto. La risposta corretta resta 'Anidride carbonica', non 'Idrogeno'.",
+    "qualita": 80
+  },
+  {
+    "id": "SCI_006",
+    "categoria": "scienze",
+    "sottocategoria": "chimica_base",
+    "livello": "intermedio",
+    "domanda": "Quale valore di pH indica una soluzione acida?",
+    "opzioni": [
+      "pH uguale a 7",
+      "pH maggiore di 7",
+      "pH minore di 7",
+      "pH sempre uguale a 14"
+    ],
+    "risposta_corretta": "pH minore di 7",
+    "spiegazione": "Una soluzione è acida quando ha pH minore di 7. Il pH 7 è neutro, mentre un pH maggiore di 7 indica una soluzione basica.",
+    "tags": [
+      "chimica_base",
+      "scienze"
+    ],
+    "difficolta": 2,
+    "distrattore_forte": "pH uguale a 7",
+    "punteggio_distrattore_forte": 0.7,
+    "motivo_distrattore_forte": "È un distrattore plausibile perché è collegato allo stesso argomento della risposta corretta, ma non identifica precisamente il concetto richiesto. La risposta corretta resta 'pH minore di 7', non 'pH uguale a 7'.",
+    "qualita": 100
+  },
+  {
+    "id": "SCI_007",
+    "categoria": "scienze",
+    "sottocategoria": "fisica_base",
+    "livello": "intermedio",
+    "domanda": "Se la massa di un oggetto resta costante e la forza applicata aumenta, che cosa succede alla sua accelerazione secondo la seconda legge di Newton?",
+    "opzioni": [
+      "Aumenta",
+      "Diminuisce",
+      "Resta sempre nulla",
+      "Diventa indipendente dalla forza"
+    ],
+    "risposta_corretta": "Aumenta",
+    "spiegazione": "Secondo la formula F = m · a, se la massa resta costante e la forza aumenta, aumenta anche l'accelerazione.",
+    "tags": [
+      "fisica_base",
+      "scienze"
+    ],
+    "difficolta": 2,
+    "distrattore_forte": "Diminuisce",
+    "punteggio_distrattore_forte": 0.34,
+    "motivo_distrattore_forte": "È un distrattore plausibile perché è collegato allo stesso argomento della risposta corretta, ma non identifica precisamente il concetto richiesto. La risposta corretta resta 'Aumenta', non 'Diminuisce'.",
+    "qualita": 70
+  },
+  {
+    "id": "SCI_008",
+    "categoria": "scienze",
+    "sottocategoria": "biologia",
+    "livello": "intermedio",
+    "domanda": "Quale molecola contiene le istruzioni genetiche ereditarie degli esseri viventi?",
+    "opzioni": [
+      "ATP",
+      "DNA",
+      "Glucosio",
+      "Emoglobina"
+    ],
+    "risposta_corretta": "DNA",
+    "spiegazione": "Il DNA contiene le informazioni genetiche ereditarie. L'ATP trasporta energia, il glucosio è uno zucchero e l'emoglobina trasporta ossigeno nel sangue.",
+    "tags": [
+      "biologia",
+      "scienze"
+    ],
+    "difficolta": 2,
+    "distrattore_forte": "ATP",
+    "punteggio_distrattore_forte": 0.43,
+    "motivo_distrattore_forte": "È un distrattore plausibile perché è collegato allo stesso argomento della risposta corretta, ma non identifica precisamente il concetto richiesto. La risposta corretta resta 'DNA', non 'ATP'.",
+    "qualita": 80
+  },
+  {
+    "id": "SCI_009",
+    "categoria": "scienze",
+    "sottocategoria": "astronomia",
+    "livello": "intermedio",
+    "domanda": "Perché si alternano il giorno e la notte sulla Terra?",
+    "opzioni": [
+      "Per la rotazione della Terra sul proprio asse",
+      "Per la rivoluzione della Terra intorno al Sole",
+      "Per la distanza variabile tra Terra e Luna",
+      "Per l'inclinazione dell'orbita lunare"
+    ],
+    "risposta_corretta": "Per la rotazione della Terra sul proprio asse",
+    "spiegazione": "Il giorno e la notte dipendono dalla rotazione della Terra sul proprio asse. La rivoluzione intorno al Sole è legata alla durata dell'anno.",
+    "tags": [
+      "astronomia",
+      "scienze"
+    ],
+    "difficolta": 2,
+    "distrattore_forte": "Per la rivoluzione della Terra intorno al Sole",
+    "punteggio_distrattore_forte": 1.0,
+    "motivo_distrattore_forte": "È un distrattore plausibile perché è collegato allo stesso argomento della risposta corretta, ma non identifica precisamente il concetto richiesto. La risposta corretta resta 'Per la rotazione della Terra sul proprio asse', non 'Per la rivoluzione della Terra intorno al Sole'.",
+    "qualita": 100
+  },
+  {
+    "id": "SCI_010",
+    "categoria": "scienze",
+    "sottocategoria": "chimica_base",
+    "livello": "avanzato",
+    "domanda": "In una reazione chimica bilanciata, che cosa deve rimanere uguale tra reagenti e prodotti?",
+    "opzioni": [
+      "Il numero di atomi di ogni elemento",
+      "Il numero di molecole totali",
+      "Lo stato fisico di tutte le sostanze",
+      "Il colore delle sostanze coinvolte"
+    ],
+    "risposta_corretta": "Il numero di atomi di ogni elemento",
+    "spiegazione": "In una reazione bilanciata si conserva il numero di atomi di ogni elemento. Le molecole totali, lo stato fisico e il colore possono cambiare.",
+    "tags": [
+      "chimica_base",
+      "scienze"
+    ],
+    "difficolta": 3,
+    "distrattore_forte": "Il numero di molecole totali",
+    "punteggio_distrattore_forte": 0.7,
+    "motivo_distrattore_forte": "È un distrattore plausibile perché è collegato allo stesso argomento della risposta corretta, ma non identifica precisamente il concetto richiesto. La risposta corretta resta 'Il numero di atomi di ogni elemento', non 'Il numero di molecole totali'.",
+    "qualita": 100
+  },
+  {
+    "id": "SCI_011",
+    "categoria": "scienze",
+    "sottocategoria": "fisica_base",
+    "livello": "avanzato",
+    "domanda": "Quale affermazione descrive meglio la differenza tra massa e peso?",
+    "opzioni": [
+      "La massa dipende dalla gravità, il peso no",
+      "La massa è la quantità di materia, il peso è la forza gravitazionale su quella massa",
+      "Massa e peso sono sempre la stessa grandezza",
+      "Il peso si misura in chilogrammi, la massa in Newton"
+    ],
+    "risposta_corretta": "La massa è la quantità di materia, il peso è la forza gravitazionale su quella massa",
+    "spiegazione": "La massa indica quanta materia contiene un corpo e si misura in chilogrammi. Il peso è una forza dovuta alla gravità e si misura in Newton.",
+    "tags": [
+      "fisica_base",
+      "scienze"
+    ],
+    "difficolta": 3,
+    "distrattore_forte": "La massa dipende dalla gravità, il peso no",
+    "punteggio_distrattore_forte": 0.94,
+    "motivo_distrattore_forte": "È un distrattore plausibile perché è collegato allo stesso argomento della risposta corretta, ma non identifica precisamente il concetto richiesto. La risposta corretta resta 'La massa è la quantità di materia, il peso è la forza gravitazionale su quella massa', non 'La massa dipende dalla gravità, il peso no'.",
+    "qualita": 100
+  },
+  {
+    "id": "SCI_012",
+    "categoria": "scienze",
+    "sottocategoria": "scienze_della_terra",
+    "livello": "avanzato",
+    "domanda": "Qual è la causa principale del movimento delle placche tettoniche?",
+    "opzioni": [
+      "Le correnti convettive nel mantello terrestre",
+      "La rotazione giornaliera della Terra",
+      "L'attrazione gravitazionale della Luna sulle rocce",
+      "La pressione atmosferica sulla crosta terrestre"
+    ],
+    "risposta_corretta": "Le correnti convettive nel mantello terrestre",
+    "spiegazione": "Il movimento delle placche è principalmente collegato alle correnti convettive nel mantello, generate dal calore interno della Terra.",
+    "tags": [
+      "scienze_della_terra",
+      "scienze"
+    ],
+    "difficolta": 3,
+    "distrattore_forte": "La pressione atmosferica sulla crosta terrestre",
+    "punteggio_distrattore_forte": 1.0,
+    "motivo_distrattore_forte": "È un distrattore plausibile perché è collegato allo stesso argomento della risposta corretta, ma non identifica precisamente il concetto richiesto. La risposta corretta resta 'Le correnti convettive nel mantello terrestre', non 'La pressione atmosferica sulla crosta terrestre'.",
+    "qualita": 100
+  }
+]

@@ -201,13 +201,17 @@ function mostraSolo(sezioneVisibile) {
 
 function popolaFiltri() {
     const categorieOrdinate = [
-        "ai",
-        "informatica",
-        "matematica",
-        "inglese",
-        "logica",
-        "logica_visiva",
-    ];
+    "ai",
+    "informatica",
+    "matematica",
+    "inglese",
+    "logica",
+    "logica_visiva",
+    "scienze",
+    "fisica",
+    "chimica",
+    "biologia",
+  ];
 
     const livelliOrdinati = [
         "facile",
@@ -820,12 +824,71 @@ async function generaQuizPersonalizzatoJson(evento) {
             `Test generato: ${domandeScelte.length} domande su ${domandeNormalizzate.length} disponibili.`,
             false
         );
+    avviaTestPersonalizzatoGenerato(domandeScelte);
     } catch (errore) {
         mostraStatoQuizCreator(
             errore.message || "Errore durante la generazione del test.",
             true
         );
     }
+}
+
+
+function ottieniDomandeDatabasePerQuizCreator(dati) {
+  const categoriaRichiesta = creaSlugQuizCreator(dati.materia);
+  const livelloRichiesto = dati.livello;
+
+  return databaseQuiz
+    .filter(domanda => {
+      const categoriaDomanda = creaSlugQuizCreator(domanda.categoria || "");
+      const sottocategoriaDomanda = creaSlugQuizCreator(domanda.sottocategoria || "");
+
+      const categoriaOk =
+        categoriaDomanda === categoriaRichiesta ||
+        sottocategoriaDomanda === categoriaRichiesta ||
+        domandaCorrispondeCategoria(domanda, categoriaRichiesta);
+
+      const livelloOk =
+        !livelloRichiesto ||
+        livelloRichiesto === "tutti" ||
+        domanda.livello === livelloRichiesto;
+
+      return categoriaOk && livelloOk;
+    })
+    .map((domanda, index) => {
+      const opzioni = Array.isArray(domanda.opzioni)
+        ? domanda.opzioni.slice(0, 4)
+        : normalizzaOpzioniImportate(domanda.opzioni);
+
+      return {
+        ...domanda,
+        id: domanda.id || creaIdQuizPersonalizzato(
+          categoriaRichiesta,
+          livelloRichiesto,
+          index + 1
+        ),
+        categoria: domanda.categoria || categoriaRichiesta,
+        livello: domanda.livello || livelloRichiesto,
+        tipo: domanda.tipo || "testo",
+        tipo_domanda: domanda.tipo_domanda || "testo",
+        opzioni,
+        tags: Array.isArray(domanda.tags)
+          ? domanda.tags
+          : [categoriaRichiesta, "database"],
+        difficolta:
+          domanda.difficolta ||
+          ottieniDifficoltaDaLivello(domanda.livello || livelloRichiesto),
+      };
+    })
+    .filter(domanda => {
+      return (
+        domanda.domanda &&
+        Array.isArray(domanda.opzioni) &&
+        domanda.opzioni.length === 4 &&
+        domanda.risposta_corretta &&
+        domanda.opzioni.includes(domanda.risposta_corretta)
+      );
+    });
 }
 
 function leggiCampiQuizPersonalizzato() {
@@ -858,13 +921,10 @@ function validaImpostazioniQuizPersonalizzato(dati) {
     if (!dati.materia) {
         return { valid: false, message: "Scegli o scrivi la materia." };
     }
-
-    if (!dati.file && !dati.sourceText) {
-        return {
-            valid: false,
-            message: "Carica un file JSON/TXT/PDF oppure incolla testo strutturato.",
-        };
-    }
+  /*
+    Se non carichi file e non incolli testo, il generatore usa
+    le domande già presenti nel database finale filtrando per materia e livello.
+  */
 
     if (
         dati.questionMode === "custom" &&
@@ -2267,3 +2327,643 @@ function creaCardsProgettoIts() {
 
     page.appendChild(sezione);
 }
+
+
+/* ===== AVVIO IMMEDIATO DEL TEST GENERATO ===== */
+
+function alexPreparaPulsanteProvaTestGenerato() {
+  const areaAzioni = document.querySelector(".creator-actions");
+
+  if (!areaAzioni) {
+    return;
+  }
+
+  if (document.getElementById("playGeneratedQuizButton")) {
+    return;
+  }
+
+  const pulsante = document.createElement("button");
+  pulsante.id = "playGeneratedQuizButton";
+  pulsante.type = "button";
+  pulsante.className = "secondary-button";
+  pulsante.textContent = "Prova test generato";
+  pulsante.disabled = true;
+
+  pulsante.addEventListener("click", alexAvviaTestGeneratoDalJson);
+
+  areaAzioni.appendChild(pulsante);
+
+  const outputJson = document.getElementById("quizJsonOutput");
+
+  if (outputJson) {
+    const osservatore = new MutationObserver(() => {
+      alexAggiornaPulsanteProvaTestGenerato();
+    });
+
+    osservatore.observe(outputJson, {
+      childList: true,
+      characterData: true,
+      subtree: true,
+    });
+  }
+
+  alexAggiornaPulsanteProvaTestGenerato();
+}
+
+function alexAggiornaPulsanteProvaTestGenerato() {
+  const pulsante = document.getElementById("playGeneratedQuizButton");
+
+  if (!pulsante) {
+    return;
+  }
+
+  try {
+    alexOttieniJsonGenerato();
+    pulsante.disabled = false;
+  } catch {
+    pulsante.disabled = true;
+  }
+}
+
+function alexOttieniJsonGenerato() {
+  let testoJson = "";
+
+  if (
+    typeof ultimoQuizPersonalizzatoJson !== "undefined" &&
+    ultimoQuizPersonalizzatoJson
+  ) {
+    testoJson = ultimoQuizPersonalizzatoJson;
+  } else {
+    testoJson = document.getElementById("quizJsonOutput")?.textContent || "";
+  }
+
+  testoJson = String(testoJson).trim();
+
+  if (!testoJson || !testoJson.startsWith("{") && !testoJson.startsWith("[")) {
+    throw new Error("Prima genera un JSON valido.");
+  }
+
+  return JSON.parse(testoJson);
+}
+
+function alexEstraiListaDomandeDaJson(json) {
+  if (Array.isArray(json)) {
+    return json;
+  }
+
+  if (!json || typeof json !== "object") {
+    return [];
+  }
+
+  const possibiliListe = [
+    json.domande,
+    json.questions,
+    json.quiz,
+    json.items,
+    json.data,
+    json.risultato,
+    json.risultato?.domande,
+    json.risultato?.quiz,
+    json.quiz?.domande,
+    json.quiz?.questions,
+  ];
+
+  const lista = possibiliListe.find(Array.isArray);
+
+  return lista || [];
+}
+
+function alexNormalizzaOpzioniPerRunner(opzioniGrezze) {
+  if (Array.isArray(opzioniGrezze)) {
+    return opzioniGrezze
+      .map((opzione) => {
+        if (typeof opzione === "string") {
+          return opzione.trim();
+        }
+
+        if (opzione && typeof opzione === "object") {
+          return String(
+            opzione.testo ||
+            opzione.risposta ||
+            opzione.label ||
+            opzione.value ||
+            ""
+          ).trim();
+        }
+
+        return "";
+      })
+      .filter(Boolean);
+  }
+
+  if (opzioniGrezze && typeof opzioniGrezze === "object") {
+    return ["A", "B", "C", "D"]
+      .map((lettera) => String(opzioniGrezze[lettera] || "").trim())
+      .filter(Boolean);
+  }
+
+  return [];
+}
+
+function alexPulisciTestoRisposta(testo) {
+  return String(testo || "")
+    .replace(/^[A-D][\)\.\-:]\s*/i, "")
+    .trim()
+    .toLowerCase();
+}
+
+function alexTrovaRispostaCorrettaPerRunner(valoreRisposta, opzioniTesto) {
+  let valore = valoreRisposta;
+
+  if (valore && typeof valore === "object") {
+    valore = valore.lettera || valore.testo || valore.risposta || "";
+  }
+
+  if (typeof valore === "number") {
+    if (valore >= 0 && valore <= 3) {
+      return opzioniTesto[valore] || "";
+    }
+
+    if (valore >= 1 && valore <= 4) {
+      return opzioniTesto[valore - 1] || "";
+    }
+  }
+
+  const testoRisposta = String(valore || "").trim();
+
+  if (/^[A-D]$/i.test(testoRisposta)) {
+    const indice = testoRisposta.toUpperCase().charCodeAt(0) - 65;
+    return opzioniTesto[indice] || "";
+  }
+
+  const letteraConPrefisso = testoRisposta.match(/^([A-D])[\)\.\-:]/i);
+
+  if (letteraConPrefisso) {
+    const indice = letteraConPrefisso[1].toUpperCase().charCodeAt(0) - 65;
+    return opzioniTesto[indice] || "";
+  }
+
+  const rispostaIdentica = opzioniTesto.find((opzione) => {
+    return opzione.trim().toLowerCase() === testoRisposta.toLowerCase();
+  });
+
+  if (rispostaIdentica) {
+    return rispostaIdentica;
+  }
+
+  const rispostaSimile = opzioniTesto.find((opzione) => {
+    return alexPulisciTestoRisposta(opzione) === alexPulisciTestoRisposta(testoRisposta);
+  });
+
+  return rispostaSimile || "";
+}
+
+function alexNormalizzaDomandaGenerataPerRunner(domandaGrezza, indice) {
+  const testoDomanda = String(
+    domandaGrezza.domanda ||
+    domandaGrezza.question ||
+    domandaGrezza.testo ||
+    ""
+  ).trim();
+
+  const opzioniTesto = alexNormalizzaOpzioniPerRunner(
+    domandaGrezza.opzioni ||
+    domandaGrezza.risposte ||
+    domandaGrezza.options ||
+    []
+  );
+
+  const rispostaCorretta = alexTrovaRispostaCorrettaPerRunner(
+    domandaGrezza.risposta_corretta ||
+    domandaGrezza.rispostaCorretta ||
+    domandaGrezza.correct_answer ||
+    domandaGrezza.corretta ||
+    domandaGrezza.correct,
+    opzioniTesto
+  );
+
+  if (!testoDomanda || opzioniTesto.length !== 4 || !rispostaCorretta) {
+    return null;
+  }
+
+  return {
+    id: domandaGrezza.id || `test_generato_${Date.now()}_${indice + 1}`,
+    categoria:
+      domandaGrezza.categoria ||
+      domandaGrezza.materia ||
+      domandaGrezza.subject ||
+      "test_generato",
+    sottocategoria:
+      domandaGrezza.sottocategoria ||
+      domandaGrezza.sotto_argomento ||
+      "",
+    livello:
+      domandaGrezza.livello ||
+      domandaGrezza.difficolta ||
+      domandaGrezza.difficoltà ||
+      "intermedio",
+    domanda: testoDomanda,
+    opzioni: opzioniTesto,
+    risposta_corretta: rispostaCorretta,
+    spiegazione:
+      domandaGrezza.spiegazione ||
+      domandaGrezza.explanation ||
+      "Spiegazione non disponibile.",
+    immagine_domanda: domandaGrezza.immagine_domanda || "",
+    immagini_opzioni: domandaGrezza.immagini_opzioni || null,
+  };
+}
+
+function alexAvviaTestGeneratoDalJson() {
+  try {
+    const json = alexOttieniJsonGenerato();
+    const listaDomande = alexEstraiListaDomandeDaJson(json);
+
+    const domandePulite = listaDomande
+      .map(alexNormalizzaDomandaGenerataPerRunner)
+      .filter(Boolean);
+
+    if (domandePulite.length === 0) {
+      throw new Error(
+        "Il JSON generato non contiene domande complete con 4 risposte e risposta corretta."
+      );
+    }
+
+    domandeTest = domandePulite;
+    indiceDomandaCorrente = 0;
+    risposteCorrette = 0;
+    risposteSbagliate = 0;
+    rispostaGiaData = false;
+
+    mostraSolo(elementi.quizBox);
+    mostraDomandaCorrente();
+
+    if (typeof mostraStatoQuizCreator === "function") {
+      mostraStatoQuizCreator(
+        `Test avviato: ${domandePulite.length} domande caricate nel motore.`,
+        false
+      );
+    }
+
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  } catch (errore) {
+    if (typeof mostraStatoQuizCreator === "function") {
+      mostraStatoQuizCreator(errore.message, true);
+      return;
+    }
+
+    alert(errore.message);
+  }
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  setTimeout(alexPreparaPulsanteProvaTestGenerato, 100);
+});
+
+
+/* ===== AVVIO AUTOMATICO DEL TEST PERSONALIZZATO ===== */
+
+function avviaTestPersonalizzatoGenerato(domandeGenerate) {
+  if (!Array.isArray(domandeGenerate) || domandeGenerate.length === 0) {
+    mostraStatoQuizCreator(
+      "Il test è stato generato, ma non contiene domande valide da avviare.",
+      true
+    );
+    return;
+  }
+
+  domandeTest = domandeGenerate;
+  indiceDomandaCorrente = 0;
+  risposteCorrette = 0;
+  risposteSbagliate = 0;
+  rispostaGiaData = false;
+
+  mostraSolo(elementi.quizBox);
+  mostraDomandaCorrente();
+
+  mostraStatoQuizCreator(
+    `Test avviato: ${domandeGenerate.length} domande caricate nel motore interattivo.`,
+    false
+  );
+
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+}
+
+
+
+/* ==========================================================
+   FIX GENERATORE NUOVI TEST
+   - niente titolo obbligatorio
+   - niente numero personalizzato separato
+   - se non carichi file, usa il database finale già caricato
+   - quando premi "Genera nuovo test", parte subito il quiz
+========================================================== */
+
+function alexFixGeneratoreNuoviTest() {
+  const form = document.getElementById("quizCreatorForm");
+  const creatorTitle = document.getElementById("creatorTitle");
+  const creatorCustomCount = document.getElementById("creatorCustomCount");
+  const creatorQuestionMode = document.getElementById("creatorQuestionMode");
+  const creatorQuestionCount = document.getElementById("creatorQuestionCount");
+
+  if (creatorTitle) {
+    creatorTitle.value = "Test generato";
+    const contenitoreTitolo = creatorTitle.closest(".form-field") || creatorTitle.parentElement;
+    if (contenitoreTitolo) {
+      contenitoreTitolo.style.display = "none";
+    }
+  }
+
+  if (creatorCustomCount) {
+    creatorCustomCount.value = "10";
+    const contenitoreNumero = creatorCustomCount.closest(".form-field") || creatorCustomCount.parentElement;
+    if (contenitoreNumero) {
+      contenitoreNumero.style.display = "none";
+    }
+  }
+
+  if (creatorQuestionMode) {
+    const opzioniDesiderate = [
+      { value: "5", text: "5 domande" },
+      { value: "10", text: "10 domande" },
+      { value: "12", text: "12 domande" },
+      { value: "20", text: "20 domande" },
+      { value: "all", text: "Tutte le domande trovate" },
+      { value: "custom", text: "Numero a scelta..." },
+    ];
+
+    creatorQuestionMode.innerHTML = "";
+
+    opzioniDesiderate.forEach(opzione => {
+      const option = document.createElement("option");
+      option.value = opzione.value;
+      option.textContent = opzione.text;
+      creatorQuestionMode.appendChild(option);
+    });
+
+    creatorQuestionMode.value = "10";
+
+    creatorQuestionMode.addEventListener("change", () => {
+      if (creatorQuestionMode.value !== "custom") {
+        return;
+      }
+
+      const valore = window.prompt("Quante domande vuoi generare?", "10");
+      const numero = Number(valore);
+
+      if (!Number.isInteger(numero) || numero < 1) {
+        creatorQuestionMode.value = "10";
+        if (creatorCustomCount) {
+          creatorCustomCount.value = "10";
+        }
+        return;
+      }
+
+      if (creatorCustomCount) {
+        creatorCustomCount.value = String(numero);
+      }
+
+      const optionCustom = creatorQuestionMode.querySelector('option[value="custom"]');
+      if (optionCustom) {
+        optionCustom.textContent = `${numero} domande`;
+      }
+    });
+  }
+
+  if (creatorQuestionCount) {
+    creatorQuestionCount.textContent = `${databaseQuiz.length} domande nel database`;
+  }
+
+  if (form && !form.dataset.alexFixAttivo) {
+    form.dataset.alexFixAttivo = "true";
+
+    form.addEventListener(
+      "submit",
+      alexGeneraNuovoTestCorretto,
+      true
+    );
+  }
+}
+
+async function alexGeneraNuovoTestCorretto(evento) {
+  evento.preventDefault();
+  evento.stopImmediatePropagation();
+
+  try {
+    mostraStatoQuizCreator("Preparazione nuovo test in corso...", false);
+    disabilitaAzioniQuizJson();
+
+    const dati = alexLeggiCampiGeneratorePulito();
+
+    if (!dati.materia) {
+      mostraStatoQuizCreator("Scegli una materia.", true);
+      return;
+    }
+
+    if (
+      dati.questionMode === "custom" &&
+      (!Number.isInteger(dati.customCount) || dati.customCount < 1)
+    ) {
+      mostraStatoQuizCreator("Inserisci un numero di domande valido.", true);
+      return;
+    }
+
+    let domandeNormalizzate = [];
+
+    if (dati.file || dati.sourceText) {
+      const testoSorgente = await leggiTestoSorgenteQuiz(dati.file);
+      const domandeTrovate = estraiDomandeDaSorgente(testoSorgente, dati.file);
+
+      domandeNormalizzate = normalizzaDomandeImportate(domandeTrovate, dati);
+    } else {
+      domandeNormalizzate = alexOttieniDomandeDalDatabasePerGeneratore(dati);
+    }
+
+    if (domandeNormalizzate.length === 0) {
+      mostraStatoQuizCreator(
+        `Non ho trovato domande valide per "${dati.materia}" con livello "${dati.livello}". Controlla di avere ricostruito dist/database_quiz_finale.json.`,
+        true
+      );
+      return;
+    }
+
+    const quantita = ottieniNumeroDomandeDaGenerare(
+      dati,
+      domandeNormalizzate.length
+    );
+
+    const domandeScelte = mescolaArray(domandeNormalizzate).slice(0, quantita);
+
+    const quiz = creaQuizPersonalizzato(dati, domandeScelte, {
+      trovate: domandeNormalizzate.length,
+      usate: domandeScelte.length,
+    });
+
+    ultimoQuizPersonalizzatoJson = JSON.stringify(quiz, null, 2);
+
+    elementi.quizJsonOutput.textContent = ultimoQuizPersonalizzatoJson;
+    elementi.copyQuizJsonButton.disabled = false;
+    elementi.downloadQuizJsonButton.disabled = false;
+    elementi.creatorQuestionCount.textContent =
+      `${domandeScelte.length} domande generate`;
+
+    mostraStatoQuizCreator(
+      `Test generato: ${domandeScelte.length} domande su ${domandeNormalizzate.length} disponibili.`,
+      false
+    );
+
+    alexAvviaTestGeneratoSubito(domandeScelte);
+  } catch (errore) {
+    mostraStatoQuizCreator(
+      errore.message || "Errore durante la generazione del test.",
+      true
+    );
+  }
+}
+
+function alexLeggiCampiGeneratorePulito() {
+  const creatorSubject = document.getElementById("creatorSubject");
+  const creatorCustomSubject = document.getElementById("creatorCustomSubject");
+  const creatorLevel = document.getElementById("creatorLevel");
+  const creatorQuestionMode = document.getElementById("creatorQuestionMode");
+  const creatorCustomCount = document.getElementById("creatorCustomCount");
+  const creatorFile = document.getElementById("creatorFile");
+  const creatorSourceText = document.getElementById("creatorSourceText");
+
+  const materiaPersonalizzata = creatorCustomSubject?.value?.trim() || "";
+  const materia = materiaPersonalizzata || creatorSubject?.value || "scienze";
+  const questionMode = creatorQuestionMode?.value || "10";
+  const customCount = Number(creatorCustomCount?.value || "10");
+
+  return {
+    titolo: `Test ${formattaTesto(materia)}`,
+    materia,
+    livello: creatorLevel?.value || "facile",
+    questionMode,
+    customCount,
+    file: creatorFile?.files?.[0] || null,
+    sourceText: creatorSourceText?.value?.trim() || "",
+  };
+}
+
+function alexOttieniDomandeDalDatabasePerGeneratore(dati) {
+  const categoriaRichiesta = creaSlugQuizCreator(dati.materia);
+  const livelloRichiesto = dati.livello;
+
+  if (!Array.isArray(databaseQuiz) || databaseQuiz.length === 0) {
+    return [];
+  }
+
+  return databaseQuiz
+    .filter(domanda => {
+      const categoriaDomanda = creaSlugQuizCreator(domanda.categoria || "");
+      const sottocategoriaDomanda = creaSlugQuizCreator(domanda.sottocategoria || "");
+
+      const tags = Array.isArray(domanda.tags)
+        ? domanda.tags.map(tag => creaSlugQuizCreator(tag))
+        : [];
+
+      const categoriaOk =
+        categoriaDomanda === categoriaRichiesta ||
+        sottocategoriaDomanda === categoriaRichiesta ||
+        tags.includes(categoriaRichiesta) ||
+        domandaCorrispondeCategoria(domanda, categoriaRichiesta);
+
+      const livelloOk =
+        !livelloRichiesto ||
+        livelloRichiesto === "tutti" ||
+        domanda.livello === livelloRichiesto;
+
+      return categoriaOk && livelloOk;
+    })
+    .map((domanda, index) => {
+      const opzioni = Array.isArray(domanda.opzioni)
+        ? domanda.opzioni.slice(0, 4)
+        : normalizzaOpzioniImportate(domanda.opzioni);
+
+      const rispostaCorretta = alexNormalizzaRispostaDatabase(
+        domanda.risposta_corretta,
+        opzioni
+      );
+
+      return {
+        ...domanda,
+        id: domanda.id || creaIdQuizPersonalizzato(
+          categoriaRichiesta,
+          livelloRichiesto,
+          index + 1
+        ),
+        categoria: domanda.categoria || categoriaRichiesta,
+        livello: domanda.livello || livelloRichiesto,
+        tipo: domanda.tipo || "testo",
+        tipo_domanda: domanda.tipo_domanda || "testo",
+        opzioni,
+        risposta_corretta: rispostaCorretta,
+        spiegazione: domanda.spiegazione || "Spiegazione non disponibile.",
+        tags: Array.isArray(domanda.tags)
+          ? domanda.tags
+          : [categoriaRichiesta, "database"],
+        difficolta:
+          domanda.difficolta ||
+          ottieniDifficoltaDaLivello(domanda.livello || livelloRichiesto),
+      };
+    })
+    .filter(domanda => {
+      return (
+        domanda.domanda &&
+        Array.isArray(domanda.opzioni) &&
+        domanda.opzioni.length === 4 &&
+        domanda.risposta_corretta &&
+        domanda.opzioni.includes(domanda.risposta_corretta)
+      );
+    });
+}
+
+function alexNormalizzaRispostaDatabase(risposta, opzioni) {
+  const valore = String(risposta || "").trim();
+
+  if (/^[A-D]$/i.test(valore)) {
+    const indice = valore.toUpperCase().charCodeAt(0) - 65;
+    return opzioni[indice] || "";
+  }
+
+  return opzioni.find(opzione => {
+    return normalizzaTestoQuizCreator(opzione) === normalizzaTestoQuizCreator(valore);
+  }) || valore;
+}
+
+function alexAvviaTestGeneratoSubito(domandeGenerate) {
+  if (!Array.isArray(domandeGenerate) || domandeGenerate.length === 0) {
+    mostraStatoQuizCreator(
+      "Il test è stato generato, ma non contiene domande valide da avviare.",
+      true
+    );
+    return;
+  }
+
+  domandeTest = domandeGenerate;
+  indiceDomandaCorrente = 0;
+  risposteCorrette = 0;
+  risposteSbagliate = 0;
+  rispostaGiaData = false;
+
+  mostraSolo(elementi.quizBox);
+  mostraDomandaCorrente();
+
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  setTimeout(alexFixGeneratoreNuoviTest, 300);
+  setTimeout(alexFixGeneratoreNuoviTest, 900);
+});
+

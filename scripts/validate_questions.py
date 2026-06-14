@@ -30,6 +30,10 @@ CATEGORIE_VALIDE = [
     "logica",
     "matematica",
     "inglese",
+    "scienze",
+    "fisica",
+    "chimica",
+    "biologia",
 ]
 
 
