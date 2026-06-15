@@ -10,13 +10,7 @@ Questo progetto è un **motore riutilizzabile** per creare quiz con:
 - controlli qualità
 - pacchetti riutilizzabili
 
-## Scegli cosa vuoi fare
-
-<p align="center">
-  <a href="https://aleb2016-maker.github.io/alex-ai-quiz-database/demo/">
-    <img src="https://img.shields.io/badge/APRI%20APP%20WEB%20ONLINE-ZERO%20DOWNLOAD-00c853?style=for-the-badge&labelColor=00c853" alt="Apri app web online">
-  </a>
-</p>
+## Scarica i pacchetti riutilizzabili
 
 <p align="center">
   <a href="https://github.com/aleb2016-maker/alex-ai-quiz-database/raw/main/downloads/pacchetto-web-scienze-demo.zip">
@@ -38,15 +32,11 @@ Questo progetto è un **motore riutilizzabile** per creare quiz con:
 
 ## Cosa fanno i pulsanti
 
-| Pulsante | Cosa succede davvero |
+| Pulsante | Sequenza delle azioni |
 |---|---|
-| **APRI APP WEB ONLINE** | clicca il pulsante → il quiz si apre subito nel browser → non devi scaricare niente |
-| **SCARICA CODICE WEB** | scarica ZIP per sviluppatori → contiene HTML, `database_quiz.json`, `quiz-engine.js` e istruzioni |
-| **SCARICA PACCHETTO ANDROID** | scarica ZIP Android → contiene `database_quiz.json` + motore Kotlin base |
-| **CREA PACCHETTO PERSONALIZZATO** | apre GitHub Actions → scegli web/android, materia, livello e numero domande → scarichi uno ZIP personalizzato |
-
-> Per provare subito il quiz usa **APRI APP WEB ONLINE**.  
-> Per riutilizzare il progetto in una nuova app usa i pacchetti Web o Android.
+| **SCARICA CODICE WEB** | scarica ZIP → apri file ZIP → apri cartella → trovi HTML, `database_quiz.json`, `quiz-engine.js` e istruzioni |
+| **SCARICA PACCHETTO ANDROID** | scarica ZIP → apri file ZIP → apri cartella → usa `database_quiz.json` + file Kotlin del motore in Android Studio |
+| **CREA PACCHETTO PERSONALIZZATO** | clicca il pulsante rosso → clicca **Run workflow** → scegli **platform** web/android → scegli **subject** materia → scegli **level** livello → scegli **number** numero domande → clicca il pulsante verde **Run workflow** → aspetta la spunta verde → apri l’ultima esecuzione creata → vai su **Summary** → scorri fino ad **Artifacts** → clicca lo ZIP generato |
 
 <!-- ALEX-QUIZ-DASHBOARD-END -->
 
