@@ -49,7 +49,7 @@ Questo progetto è un **motore riutilizzabile** per creare quiz per:
 | **SCARICA APP WEB PRONTA** | scarica ZIP → apri file ZIP → apri cartella → apri `1_APRI_QUIZ.html` |
 | **SCARICA PACCHETTO ANDROID** | scarica ZIP → apri file ZIP → apri cartella → copia `database_quiz.json` in Android Studio |
 | **CREA PACCHETTO PERSONALIZZATO** | clicca il pulsante → premi `Run workflow` → scegli web/android, materia, livello e numero domande → scarica ZIP |
-| **USE THIS TEMPLATE** | clicca il pulsante → crea una copia del progetto → usala come base per una nuova app quiz |
+| **USE THIS TEMPLATE** | clicca il pulsante → scegli il tuo account GitHub → scrivi il nome del nuovo repository → premi `Create repository from template` → entra nel nuovo repository creato → usa i pulsanti Demo / Web / Android / Personalizzato |
 
 <!-- ALEX-QUIZ-DASHBOARD-END -->
 
