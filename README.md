@@ -77,7 +77,10 @@ Questo progetto è un **motore riutilizzabile** per creare quiz con:
       </a>
       <br>
       <br>
-      <strong>☝️ Prova subito il quiz su AI, Informatica, Logica, Matematica e Inglese</strong>
+      <div align="center" style="font-size: 28px;">☝️</div>
+      <strong>Prova subito il quiz AI / ITS</strong>
+      <br>
+      <small>AI · Informatica · Logica · Logica visiva · Matematica · Inglese</small>
     </td>
     <td align="center" width="50%">
       <a href="https://aleb2016-maker.github.io/alex-ai-quiz-database/demo-scienze/" target="_blank">
@@ -88,7 +91,10 @@ Questo progetto è un **motore riutilizzabile** per creare quiz con:
       </a>
       <br>
       <br>
-      <strong>☝️ Prova subito il quiz sulle materie scientifiche con effetto stelle e pianeti</strong>
+      <div align="center" style="font-size: 28px;">☝️</div>
+      <strong>Prova subito il quiz sulle materie scientifiche</strong>
+      <br>
+      <small>Fisica · Chimica · Biologia · Fisica Quantistica · Scienze generali</small>
     </td>
   </tr>
 </table>
