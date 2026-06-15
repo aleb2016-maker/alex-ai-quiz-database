@@ -1,46 +1,55 @@
 <!-- ALEX-QUIZ-DASHBOARD-START -->
 
-# 🚀 Crea subito la tua app quiz Android, Web o Demo
+# 🚀 Alex AI Quiz Database
 
-Questo repository non è solo una demo online: è un **motore riutilizzabile** per creare quiz interattivi con database JSON, livelli, spiegazioni, risposte controllate e distrattori forti.
+Questo progetto è un **motore riutilizzabile** per creare quiz per:
 
-## Crea un pacchetto app in pochi click
+- demo online
+- app web
+- app Android
+- database JSON personalizzati
+
+## Scegli cosa vuoi fare
 
 <p align="center">
-  <a href="https://github.com/aleb2016-maker/alex-ai-quiz-database/generate">
-    <img src="https://img.shields.io/badge/1_USE_THIS_TEMPLATE-Crea%20il%20tuo%20progetto-2ea44f?style=for-the-badge" alt="Use this template">
+  <a href="https://aleb2016-maker.github.io/alex-ai-quiz-database/demo/">
+    <img src="https://img.shields.io/badge/▶_PROVA_LA_DEMO_ONLINE-APRI_SUBITO_IL_TEST-00c853?style=for-the-badge" alt="Prova la demo online">
+  </a>
+</p>
+
+<p align="center">
+  <a href="https://github.com/aleb2016-maker/alex-ai-quiz-database/raw/main/downloads/pacchetto-web-scienze-demo.zip">
+    <img src="https://img.shields.io/badge/⬇_SCARICA_APP_WEB_PRONTA-ZIP_CON_TEST_APRIBILE-ff9800?style=for-the-badge" alt="Scarica app web pronta">
+  </a>
+</p>
+
+<p align="center">
+  <a href="https://github.com/aleb2016-maker/alex-ai-quiz-database/raw/main/downloads/pacchetto-android-scienze-demo.zip">
+    <img src="https://img.shields.io/badge/⬇_SCARICA_PACCHETTO_ANDROID-DATABASE_JSON_PER_ANDROID-2962ff?style=for-the-badge" alt="Scarica pacchetto Android">
   </a>
 </p>
 
 <p align="center">
   <a href="https://github.com/aleb2016-maker/alex-ai-quiz-database/actions/workflows/create-quiz-package.yml">
-    <img src="https://img.shields.io/badge/2_CREA_PACCHETTO_APP-Android%20%7C%20Web%20%7C%20Demo-blue?style=for-the-badge" alt="Crea pacchetto app">
+    <img src="https://img.shields.io/badge/⚙_CREA_PACCHETTO_PERSONALIZZATO-SCEGLI_MATERIA_LIVELLO_NUMERO-e91e63?style=for-the-badge" alt="Crea pacchetto personalizzato">
   </a>
 </p>
 
 <p align="center">
-  <a href="./START_HERE.md">
-    <img src="https://img.shields.io/badge/3_GUIDA_RAPIDA-Cosa%20fare%20passo%20passo-orange?style=for-the-badge" alt="Guida rapida">
+  <a href="https://github.com/aleb2016-maker/alex-ai-quiz-database/generate">
+    <img src="https://img.shields.io/badge/⭐_USE_THIS_TEMPLATE-CREA_UN_TUO_PROGETTO-111827?style=for-the-badge" alt="Use this template">
   </a>
 </p>
 
-## Flusso semplice
+## Cosa fanno i pulsanti
 
-| Passaggio | Cosa fai |
+| Pulsante | Cosa fa |
 |---|---|
-| 1 | Premi **Use this template** per creare il tuo progetto quiz |
-| 2 | Vai su **Crea pacchetto app** |
-| 3 | Premi **Run workflow** |
-| 4 | Scegli Android, Web o Demo |
-| 5 | Quando finisce, nella pagina del risultato premi **SCARICA IL PACCHETTO QUIZ** |
-
-## Cosa puoi creare
-
-- App quiz Android
-- Web app quiz
-- Demo online
-- Database JSON riutilizzabile
-- Test personalizzati per AI, Informatica, Matematica, Inglese, Logica, Scienze, Fisica, Chimica, Biologia e altre materie future
+| **PROVA LA DEMO ONLINE** | apre subito la demo nel browser |
+| **SCARICA APP WEB PRONTA** | scarica uno ZIP con `1_APRI_QUIZ.html` |
+| **SCARICA PACCHETTO ANDROID** | scarica il JSON pronto per Android Studio |
+| **CREA PACCHETTO PERSONALIZZATO** | permette di scegliere materia, livello e numero domande |
+| **USE THIS TEMPLATE** | crea una copia del progetto per sviluppare una nuova app quiz |
 
 <!-- ALEX-QUIZ-DASHBOARD-END -->
 
