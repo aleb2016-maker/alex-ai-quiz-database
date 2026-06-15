@@ -2125,6 +2125,213 @@
     "qualita": "controllata"
   },
   {
+    "id": "FIS_025",
+    "categoria": "scienze",
+    "sottocategoria": "fisica",
+    "livello": "facile",
+    "domanda": "Perché riusciamo a vedere un oggetto che non produce luce propria?",
+    "opzioni": [
+      "Perché riflette luce che arriva ai nostri occhi",
+      "Perché trasforma sempre la propria massa in luce",
+      "Perché emette sempre onde sonore visibili",
+      "Perché assorbe tutta la luce senza rimandarne nessuna"
+    ],
+    "risposta_corretta": "Perché riflette luce che arriva ai nostri occhi",
+    "spiegazione": "Un oggetto non luminoso si vede perché riflette una parte della luce che riceve. Questa luce riflessa arriva ai nostri occhi.",
+    "tags": [
+      "fisica",
+      "luce",
+      "riflessione",
+      "ottica"
+    ],
+    "difficolta": 1,
+    "distrattore_forte": "Perché assorbe tutta la luce senza rimandarne nessuna",
+    "punteggio_distrattore_forte": 4,
+    "motivo_distrattore_forte": "È vicino perché riguarda l’interazione con la luce, ma se assorbisse tutta la luce non lo vedremmo come oggetto illuminato.",
+    "qualita": "controllata"
+  },
+  {
+    "id": "FIS_026",
+    "categoria": "scienze",
+    "sottocategoria": "fisica",
+    "livello": "facile",
+    "domanda": "Che cosa accade a una molla elastica quando viene deformata entro il suo limite elastico?",
+    "opzioni": [
+      "Tende a tornare alla forma iniziale quando la forza viene tolta",
+      "Perde sempre tutta la propria massa",
+      "Si trasforma definitivamente in un liquido",
+      "Smette di esercitare qualunque forza"
+    ],
+    "risposta_corretta": "Tende a tornare alla forma iniziale quando la forza viene tolta",
+    "spiegazione": "Una molla deformata entro il limite elastico esercita una forza di richiamo e tende a tornare alla forma iniziale.",
+    "tags": [
+      "fisica",
+      "elasticita",
+      "molla",
+      "forza"
+    ],
+    "difficolta": 1,
+    "distrattore_forte": "Smette di esercitare qualunque forza",
+    "punteggio_distrattore_forte": 4,
+    "motivo_distrattore_forte": "È vicino perché riguarda la forza elastica, ma una molla deformata esercita proprio una forza di richiamo.",
+    "qualita": "controllata"
+  },
+  {
+    "id": "FIS_027",
+    "categoria": "scienze",
+    "sottocategoria": "fisica",
+    "livello": "intermedio",
+    "domanda": "Che cosa indica la potenza in fisica?",
+    "opzioni": [
+      "La rapidità con cui viene trasferita o trasformata energia",
+      "La quantità totale di materia contenuta in un corpo",
+      "La distanza percorsa da un corpo senza attrito",
+      "La forza massima che un oggetto può sopportare prima di rompersi"
+    ],
+    "risposta_corretta": "La rapidità con cui viene trasferita o trasformata energia",
+    "spiegazione": "La potenza misura quanta energia viene trasferita o trasformata nell’unità di tempo. Si misura in watt.",
+    "tags": [
+      "fisica",
+      "potenza",
+      "energia",
+      "watt"
+    ],
+    "difficolta": 2,
+    "distrattore_forte": "La forza massima che un oggetto può sopportare prima di rompersi",
+    "punteggio_distrattore_forte": 4,
+    "motivo_distrattore_forte": "È vicino perché nel linguaggio comune potenza e forza vengono confuse, ma in fisica la potenza riguarda energia divisa tempo.",
+    "qualita": "controllata"
+  },
+  {
+    "id": "FIS_028",
+    "categoria": "scienze",
+    "sottocategoria": "fisica",
+    "livello": "intermedio",
+    "domanda": "Quando un corpo è in equilibrio statico?",
+    "opzioni": [
+      "Quando la forza risultante e il momento risultante sono nulli",
+      "Quando la velocità aumenta sempre in modo costante",
+      "Quando agisce una sola forza non bilanciata",
+      "Quando il corpo non possiede massa misurabile"
+    ],
+    "risposta_corretta": "Quando la forza risultante e il momento risultante sono nulli",
+    "spiegazione": "Un corpo in equilibrio statico non trasla e non ruota: le forze e i momenti che agiscono su di esso si bilanciano.",
+    "tags": [
+      "fisica",
+      "equilibrio",
+      "forze",
+      "momento"
+    ],
+    "difficolta": 2,
+    "distrattore_forte": "Quando agisce una sola forza non bilanciata",
+    "punteggio_distrattore_forte": 4,
+    "motivo_distrattore_forte": "È vicino perché parla di forze, ma una forza non bilanciata rompe l’equilibrio.",
+    "qualita": "controllata"
+  },
+  {
+    "id": "FIS_029",
+    "categoria": "scienze",
+    "sottocategoria": "fisica",
+    "livello": "intermedio",
+    "domanda": "Perché il suono non si propaga nel vuoto?",
+    "opzioni": [
+      "Perché ha bisogno di un mezzo materiale che trasmetta le vibrazioni",
+      "Perché nel vuoto la luce assorbe tutte le onde sonore",
+      "Perché nel vuoto la temperatura è sempre infinita",
+      "Perché il suono è formato da particelle con massa nulla"
+    ],
+    "risposta_corretta": "Perché ha bisogno di un mezzo materiale che trasmetta le vibrazioni",
+    "spiegazione": "Il suono è un’onda meccanica: per propagarsi ha bisogno di particelle che vibrino e trasmettano la perturbazione.",
+    "tags": [
+      "fisica",
+      "suono",
+      "onde",
+      "vuoto"
+    ],
+    "difficolta": 2,
+    "distrattore_forte": "Perché nel vuoto la luce assorbe tutte le onde sonore",
+    "punteggio_distrattore_forte": 4,
+    "motivo_distrattore_forte": "È vicino perché confronta suono e luce, ma il punto è che il suono richiede un mezzo materiale.",
+    "qualita": "controllata"
+  },
+  {
+    "id": "FIS_030",
+    "categoria": "scienze",
+    "sottocategoria": "fisica",
+    "livello": "avanzato",
+    "domanda": "Che cosa rappresenta il campo elettrico in un punto dello spazio?",
+    "opzioni": [
+      "La forza elettrica per unità di carica positiva di prova",
+      "La massa totale delle cariche presenti nel circuito",
+      "La temperatura prodotta da un filo attraversato da corrente",
+      "La velocità con cui una carica si trasforma in luce"
+    ],
+    "risposta_corretta": "La forza elettrica per unità di carica positiva di prova",
+    "spiegazione": "Il campo elettrico descrive quale forza agirebbe su una carica positiva di prova posta in un punto.",
+    "tags": [
+      "fisica",
+      "campo_elettrico",
+      "cariche"
+    ],
+    "difficolta": 3,
+    "distrattore_forte": "La massa totale delle cariche presenti nel circuito",
+    "punteggio_distrattore_forte": 4,
+    "motivo_distrattore_forte": "È vicino perché parla di cariche, ma il campo elettrico riguarda forza per unità di carica, non massa.",
+    "qualita": "controllata"
+  },
+  {
+    "id": "FIS_031",
+    "categoria": "scienze",
+    "sottocategoria": "fisica",
+    "livello": "avanzato",
+    "domanda": "Che cosa accade alla corrente in un circuito se la tensione resta costante e la resistenza aumenta?",
+    "opzioni": [
+      "La corrente diminuisce",
+      "La corrente aumenta sempre",
+      "La corrente resta identica in ogni caso",
+      "La corrente diventa indipendente dalla resistenza"
+    ],
+    "risposta_corretta": "La corrente diminuisce",
+    "spiegazione": "Dalla legge di Ohm I = V/R. Se la tensione resta costante e la resistenza aumenta, la corrente diminuisce.",
+    "tags": [
+      "fisica",
+      "legge_ohm",
+      "corrente",
+      "resistenza"
+    ],
+    "difficolta": 3,
+    "distrattore_forte": "La corrente aumenta sempre",
+    "punteggio_distrattore_forte": 4,
+    "motivo_distrattore_forte": "È vicino perché considera il cambiamento della corrente, ma inverte il rapporto con la resistenza.",
+    "qualita": "controllata"
+  },
+  {
+    "id": "FIS_032",
+    "categoria": "scienze",
+    "sottocategoria": "fisica",
+    "livello": "avanzato",
+    "domanda": "Perché un corpo in orbita intorno alla Terra non cade semplicemente verso il suolo?",
+    "opzioni": [
+      "Perché ha una velocità tangenziale tale da cadere continuamente intorno alla Terra",
+      "Perché su di esso non agisce alcuna forza gravitazionale",
+      "Perché la sua massa diventa nulla appena entra nello spazio",
+      "Perché l’aria nello spazio lo sostiene come un fluido"
+    ],
+    "risposta_corretta": "Perché ha una velocità tangenziale tale da cadere continuamente intorno alla Terra",
+    "spiegazione": "Un corpo in orbita è comunque attratto dalla gravità, ma la sua velocità laterale fa sì che cada continuamente attorno alla Terra senza raggiungere il suolo.",
+    "tags": [
+      "fisica",
+      "orbita",
+      "gravita",
+      "moto_orbitale"
+    ],
+    "difficolta": 3,
+    "distrattore_forte": "Perché su di esso non agisce alcuna forza gravitazionale",
+    "punteggio_distrattore_forte": 4,
+    "motivo_distrattore_forte": "È vicino perché nello spazio si parla spesso di assenza di peso, ma la gravità continua ad agire.",
+    "qualita": "controllata"
+  },
+  {
     "id": "ING-FAC-0001",
     "categoria": "inglese",
     "sottocategoria": "grammatica_base",
