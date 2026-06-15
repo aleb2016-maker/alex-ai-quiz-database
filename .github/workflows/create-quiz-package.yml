@@ -1,0 +1,80 @@
+name: Crea pacchetto quiz
+
+on:
+  workflow_dispatch:
+    inputs:
+      platform:
+        description: "Piattaforma"
+        required: true
+        default: "web"
+        type: choice
+        options:
+          - android
+          - web
+          - demo
+      subject:
+        description: "Materia"
+        required: true
+        default: "scienze"
+        type: choice
+        options:
+          - tutte
+          - scienze
+          - fisica
+          - chimica
+          - biologia
+          - astronomia
+          - scienze_della_terra
+          - fisica_quantistica_base
+          - ai
+          - informatica
+          - matematica
+          - inglese
+          - logica
+          - logica_visiva
+      level:
+        description: "Livello"
+        required: true
+        default: "tutti"
+        type: choice
+        options:
+          - tutti
+          - facile
+          - intermedio
+          - avanzato
+      number:
+        description: "Numero domande"
+        required: true
+        default: "10"
+        type: choice
+        options:
+          - "10"
+          - "20"
+          - "all"
+
+jobs:
+  create-package:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Scarica repository
+        uses: actions/checkout@v4
+
+      - name: Configura Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Genera pacchetto quiz
+        run: |
+          python scripts/create_quiz_package.py \
+            --platform "${{ github.event.inputs.platform }}" \
+            --subject "${{ github.event.inputs.subject }}" \
+            --level "${{ github.event.inputs.level }}" \
+            --number "${{ github.event.inputs.number }}"
+
+      - name: Carica pacchetto scaricabile
+        uses: actions/upload-artifact@v4
+        with:
+          name: pacchetto-quiz-${{ github.event.inputs.platform }}-${{ github.event.inputs.subject }}
+          path: dist/generated/*.zip
