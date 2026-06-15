@@ -50,43 +50,17 @@ Il progetto non è solo una demo online: può essere usato anche come base tecni
 
 ## Crea un pacchetto personalizzato
 
-Puoi generare un nuovo pacchetto scegliendo piattaforma, materia, livello e numero di domande:
+Puoi generare un nuovo pacchetto direttamente da GitHub Actions.
 
 [Apri il workflow GitHub Actions](https://github.com/aleb2016-maker/alex-ai-quiz-database/actions/workflows/create-quiz-package.yml)
 
-### Passaggi da seguire
+### Passaggi rapidi
 
 1. Clicca su **Apri il workflow GitHub Actions**.
-2. Premi il pulsante **Run workflow**.
-3. Scegli la piattaforma:
-   - `web` per creare un pacchetto da usare nel browser;
-   - `android` per creare un pacchetto da copiare dentro Android Studio;
-   - `demo` per creare una demo web.
-4. Scegli la materia o area del quiz, per esempio:
-   - `ai`
-   - `informatica`
-   - `matematica`
-   - `inglese`
-   - `logica`
-   - `scienze`
-   - `fisica`
-   - `chimica`
-   - `biologia`
-   - `fisica_quantistica`
-5. Scegli il livello:
-   - `tutti`
-   - `facile`
-   - `intermedio`
-   - `avanzato`
-6. Scegli il numero di domande.
-7. Clicca il pulsante verde **Run workflow**.
-8. Aspetta che compaia la spunta verde dell’esecuzione completata.
-9. Apri l’ultima esecuzione creata.
-10. Vai nella sezione **Summary**.
-11. Scorri fino ad **Artifacts**.
-12. Scarica lo ZIP generato.
-
-In questo modo puoi creare un pacchetto quiz personalizzato senza modificare manualmente il codice.
+2. Clicca **Run workflow**.
+3. Scegli **materia**, **livello**, piattaforma e numero di domande.
+4. Clicca il pulsante verde **Run workflow**.
+5. Quando compare la spunta verde, apri l’esecuzione e scarica lo ZIP da **Summary → Artifacts**.
 
 <!-- ALEX-QUIZ-DASHBOARD-END -->
 
