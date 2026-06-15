@@ -13,31 +13,31 @@ Questo progetto è un **motore riutilizzabile** per creare quiz per:
 
 <p align="center">
   <a href="https://aleb2016-maker.github.io/alex-ai-quiz-database/demo/">
-    <img src="https://img.shields.io/badge/▶_PROVA_LA_DEMO_ONLINE-APRI_SUBITO_IL_TEST-00c853?style=for-the-badge" alt="Prova la demo online">
+    <img src="https://img.shields.io/static/v1?label=&message=▶%20PROVA%20LA%20DEMO%20ONLINE&color=00c853&style=for-the-badge" alt="Prova la demo online">
   </a>
 </p>
 
 <p align="center">
   <a href="https://github.com/aleb2016-maker/alex-ai-quiz-database/raw/main/downloads/pacchetto-web-scienze-demo.zip">
-    <img src="https://img.shields.io/badge/⬇_SCARICA_APP_WEB_PRONTA-ZIP_CON_TEST_APRIBILE-ff9800?style=for-the-badge" alt="Scarica app web pronta">
+    <img src="https://img.shields.io/static/v1?label=&message=⬇%20SCARICA%20APP%20WEB%20PRONTA&color=ff9800&style=for-the-badge" alt="Scarica app web pronta">
   </a>
 </p>
 
 <p align="center">
   <a href="https://github.com/aleb2016-maker/alex-ai-quiz-database/raw/main/downloads/pacchetto-android-scienze-demo.zip">
-    <img src="https://img.shields.io/badge/⬇_SCARICA_PACCHETTO_ANDROID-DATABASE_JSON_PER_ANDROID-2962ff?style=for-the-badge" alt="Scarica pacchetto Android">
+    <img src="https://img.shields.io/static/v1?label=&message=⬇%20SCARICA%20PACCHETTO%20ANDROID&color=2962ff&style=for-the-badge" alt="Scarica pacchetto Android">
   </a>
 </p>
 
 <p align="center">
   <a href="https://github.com/aleb2016-maker/alex-ai-quiz-database/actions/workflows/create-quiz-package.yml">
-    <img src="https://img.shields.io/badge/⚙_CREA_PACCHETTO_PERSONALIZZATO-SCEGLI_MATERIA_LIVELLO_NUMERO-e91e63?style=for-the-badge" alt="Crea pacchetto personalizzato">
+    <img src="https://img.shields.io/static/v1?label=&message=⚙%20CREA%20PACCHETTO%20PERSONALIZZATO&color=e91e63&style=for-the-badge" alt="Crea pacchetto personalizzato">
   </a>
 </p>
 
 <p align="center">
   <a href="https://github.com/aleb2016-maker/alex-ai-quiz-database/generate">
-    <img src="https://img.shields.io/badge/⭐_USE_THIS_TEMPLATE-CREA_UN_TUO_PROGETTO-111827?style=for-the-badge" alt="Use this template">
+    <img src="https://img.shields.io/static/v1?label=&message=⭐%20USE%20THIS%20TEMPLATE&color=7c3aed&style=for-the-badge" alt="Use this template">
   </a>
 </p>
 
