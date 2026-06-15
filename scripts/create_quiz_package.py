@@ -171,7 +171,7 @@ def crea_istruzioni_android(output_dir):
 
     output_dir = Path(output_dir)
 
-    cartella_tecnica = output_dir / "03_NON_APRIRE_FILE_TECNICI_USATI_DAL_PULSANTE"
+    cartella_tecnica = output_dir / "3_FILE_TECNICI"
 
     if cartella_tecnica.exists():
         shutil.rmtree(cartella_tecnica)
@@ -227,7 +227,7 @@ def crea_istruzioni_android(output_dir):
     <h2>Modo più semplice</h2>
     <div class="ok">
       Clicca il file numero 2:<br>
-      <code>02_CLICCA_PER_IMPORTARE_NEL_TUO_PROGETTO_ANDROID.command</code>
+      <code>2_IMPORTA.command</code>
     </div>
 
     <p>Quando si apre il Terminale, trascina dentro la cartella principale del tuo progetto Android Studio e premi INVIO.</p>
@@ -241,7 +241,7 @@ def crea_istruzioni_android(output_dir):
 
     <h2>Dove prende i file</h2>
     <p>I file tecnici stanno nella cartella numero 3:</p>
-    <p><code>03_NON_APRIRE_FILE_TECNICI_USATI_DAL_PULSANTE</code></p>
+    <p><code>3_FILE_TECNICI</code></p>
 
     <p>Quella cartella serve al pulsante numero 2. Non devi aprirla a caso.</p>
 
@@ -249,13 +249,13 @@ def crea_istruzioni_android(output_dir):
 
     <h3>1. Database</h3>
     <p>Prendi:</p>
-    <p><code>03_NON_APRIRE_FILE_TECNICI_USATI_DAL_PULSANTE/app/src/main/assets/database_quiz.json</code></p>
+    <p><code>3_FILE_TECNICI/app/src/main/assets/database_quiz.json</code></p>
     <p>Mettilo nel tuo progetto Android qui:</p>
     <p><code>app/src/main/assets/database_quiz.json</code></p>
 
     <h3>2. Motore Kotlin</h3>
     <p>Prendi questa cartella:</p>
-    <p><code>03_NON_APRIRE_FILE_TECNICI_USATI_DAL_PULSANTE/app/src/main/java/com/alex/quizengine/</code></p>
+    <p><code>3_FILE_TECNICI/app/src/main/java/com/alex/quizengine/</code></p>
     <p>Mettila nel tuo progetto Android qui:</p>
     <p><code>app/src/main/java/com/alex/quizengine/</code></p>
 
@@ -292,7 +292,7 @@ if [ ! -d "$PROJECT_DIR/app/src/main" ]; then
 fi
 
 DIR="$(cd "$(dirname "$0")" && pwd)"
-SOURCE="$DIR/03_NON_APRIRE_FILE_TECNICI_USATI_DAL_PULSANTE"
+SOURCE="$DIR/3_FILE_TECNICI"
 
 mkdir -p "$PROJECT_DIR/app/src/main/assets"
 cp "$SOURCE/app/src/main/assets/database_quiz.json" "$PROJECT_DIR/app/src/main/assets/database_quiz.json"
@@ -316,9 +316,9 @@ if [ "$RISPOSTA" = "s" ] || [ "$RISPOSTA" = "S" ]; then
 fi
 """
 
-    (output_dir / "01_APRI_PRIMA_LE_ISTRUZIONI.html").write_text(html, encoding="utf-8")
-    (output_dir / "02_CLICCA_PER_IMPORTARE_NEL_TUO_PROGETTO_ANDROID.command").write_text(comando, encoding="utf-8")
-    os.chmod(output_dir / "02_CLICCA_PER_IMPORTARE_NEL_TUO_PROGETTO_ANDROID.command", 0o755)
+    (output_dir / "1_ISTRUZIONI.html").write_text(html, encoding="utf-8")
+    (output_dir / "2_IMPORTA.command").write_text(comando, encoding="utf-8")
+    os.chmod(output_dir / "2_IMPORTA.command", 0o755)
 
     for nome in [
         "README.md",
