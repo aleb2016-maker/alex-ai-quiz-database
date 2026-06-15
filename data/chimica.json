@@ -299,5 +299,309 @@
     "punteggio_distrattore_forte": 4,
     "motivo_distrattore_forte": "È vicino perché collega catalizzatore e resa, ma il catalizzatore modifica la velocità, non l’equilibrio finale.",
     "qualita": "controllata"
+  },
+  {
+    "id": "CHE_013",
+    "categoria": "scienze",
+    "sottocategoria": "chimica",
+    "livello": "facile",
+    "domanda": "Che cosa distingue una sostanza pura da una miscela?",
+    "opzioni": [
+      "Una sostanza pura ha composizione definita, una miscela può avere composizione variabile",
+      "Una sostanza pura contiene sempre più elementi, una miscela contiene sempre un solo elemento",
+      "Una sostanza pura si separa sempre con un filtro, una miscela non può mai essere separata",
+      "Una sostanza pura cambia massa durante l’uso, una miscela mantiene sempre la stessa massa"
+    ],
+    "risposta_corretta": "Una sostanza pura ha composizione definita, una miscela può avere composizione variabile",
+    "spiegazione": "Una sostanza pura ha composizione chimica definita. Una miscela invece può contenere componenti in proporzioni variabili.",
+    "tags": [
+      "chimica",
+      "sostanza_pura",
+      "miscela"
+    ],
+    "difficolta": 1,
+    "distrattore_forte": "Una sostanza pura si separa sempre con un filtro, una miscela non può mai essere separata",
+    "punteggio_distrattore_forte": 4,
+    "motivo_distrattore_forte": "È vicino perché parla di separazione delle sostanze, ma descrive in modo errato sostanze pure e miscele.",
+    "qualita": "controllata"
+  },
+  {
+    "id": "CHE_014",
+    "categoria": "scienze",
+    "sottocategoria": "chimica",
+    "livello": "facile",
+    "domanda": "Quale cambiamento è un esempio di trasformazione fisica?",
+    "opzioni": [
+      "Il ghiaccio che fonde diventando acqua liquida",
+      "Il ferro che arrugginisce a contatto con l’ossigeno",
+      "Il legno che brucia producendo cenere",
+      "Il latte che diventa acido dopo molti giorni"
+    ],
+    "risposta_corretta": "Il ghiaccio che fonde diventando acqua liquida",
+    "spiegazione": "La fusione del ghiaccio cambia lo stato fisico dell’acqua, ma non produce una nuova sostanza.",
+    "tags": [
+      "chimica",
+      "trasformazione_fisica",
+      "stati_materia"
+    ],
+    "difficolta": 1,
+    "distrattore_forte": "Il ferro che arrugginisce a contatto con l’ossigeno",
+    "punteggio_distrattore_forte": 4,
+    "motivo_distrattore_forte": "È vicino perché è una trasformazione comune della materia, ma è chimica perché forma nuove sostanze.",
+    "qualita": "controllata"
+  },
+  {
+    "id": "CHE_015",
+    "categoria": "scienze",
+    "sottocategoria": "chimica",
+    "livello": "facile",
+    "domanda": "Che cosa indica il simbolo chimico Na?",
+    "opzioni": [
+      "L’elemento sodio",
+      "L’elemento azoto",
+      "Una molecola di acqua salata",
+      "Un composto formato da sodio e argon"
+    ],
+    "risposta_corretta": "L’elemento sodio",
+    "spiegazione": "Na è il simbolo chimico del sodio, dal latino natrium. L’azoto invece ha simbolo N.",
+    "tags": [
+      "chimica",
+      "tavola_periodica",
+      "simboli"
+    ],
+    "difficolta": 1,
+    "distrattore_forte": "L’elemento azoto",
+    "punteggio_distrattore_forte": 4,
+    "motivo_distrattore_forte": "È vicino perché l’azoto ha simbolo N, ma Na indica il sodio.",
+    "qualita": "controllata"
+  },
+  {
+    "id": "CHE_016",
+    "categoria": "scienze",
+    "sottocategoria": "chimica",
+    "livello": "facile",
+    "domanda": "Che cosa succede alle particelle di un gas quando aumenta la temperatura?",
+    "opzioni": [
+      "Si muovono mediamente più velocemente",
+      "Si trasformano tutte in particelle solide",
+      "Perdono sempre tutti gli elettroni",
+      "Diventano immobili ma più pesanti"
+    ],
+    "risposta_corretta": "Si muovono mediamente più velocemente",
+    "spiegazione": "Aumentando la temperatura aumenta l’energia cinetica media delle particelle, quindi le particelle si muovono più velocemente.",
+    "tags": [
+      "chimica",
+      "gas",
+      "temperatura",
+      "particelle"
+    ],
+    "difficolta": 1,
+    "distrattore_forte": "Si trasformano tutte in particelle solide",
+    "punteggio_distrattore_forte": 4,
+    "motivo_distrattore_forte": "È vicino perché parla di stato della materia, ma aumentando la temperatura non avviene solidificazione.",
+    "qualita": "controllata"
+  },
+  {
+    "id": "CHE_017",
+    "categoria": "scienze",
+    "sottocategoria": "chimica",
+    "livello": "intermedio",
+    "domanda": "Perché il cloruro di sodio solido conduce poco la corrente, mentre sciolto in acqua può condurla?",
+    "opzioni": [
+      "Perché in soluzione gli ioni sono liberi di muoversi",
+      "Perché in acqua il sale si trasforma completamente in metallo",
+      "Perché il solido contiene elettroni liberi come un filo di rame",
+      "Perché l’acqua elimina tutte le cariche elettriche del sale"
+    ],
+    "risposta_corretta": "Perché in soluzione gli ioni sono liberi di muoversi",
+    "spiegazione": "Nel solido gli ioni sono bloccati nel reticolo cristallino. In acqua si separano e possono muoversi, permettendo il passaggio di corrente.",
+    "tags": [
+      "chimica",
+      "ioni",
+      "soluzioni",
+      "conducibilita"
+    ],
+    "difficolta": 2,
+    "distrattore_forte": "Perché il solido contiene elettroni liberi come un filo di rame",
+    "punteggio_distrattore_forte": 4,
+    "motivo_distrattore_forte": "È vicino perché collega conduzione e cariche mobili, ma nei sali ionici non sono elettroni metallici liberi.",
+    "qualita": "controllata"
+  },
+  {
+    "id": "CHE_018",
+    "categoria": "scienze",
+    "sottocategoria": "chimica",
+    "livello": "intermedio",
+    "domanda": "Che cosa significa dire che una soluzione è concentrata?",
+    "opzioni": [
+      "Contiene una quantità relativamente elevata di soluto rispetto al solvente",
+      "Contiene solo solvente e nessuna sostanza disciolta",
+      "Contiene sempre un soluto solido non sciolto sul fondo",
+      "Contiene solo molecole di acqua senza altre particelle"
+    ],
+    "risposta_corretta": "Contiene una quantità relativamente elevata di soluto rispetto al solvente",
+    "spiegazione": "Una soluzione concentrata contiene molto soluto rispetto alla quantità di solvente. Non significa necessariamente che ci sia solido non sciolto.",
+    "tags": [
+      "chimica",
+      "soluzione",
+      "concentrazione"
+    ],
+    "difficolta": 2,
+    "distrattore_forte": "Contiene sempre un soluto solido non sciolto sul fondo",
+    "punteggio_distrattore_forte": 4,
+    "motivo_distrattore_forte": "È vicino perché richiama una soluzione molto ricca di soluto, ma il soluto non sciolto indica saturazione o eccesso.",
+    "qualita": "controllata"
+  },
+  {
+    "id": "CHE_019",
+    "categoria": "scienze",
+    "sottocategoria": "chimica",
+    "livello": "intermedio",
+    "domanda": "In una reazione esotermica, che cosa avviene in generale?",
+    "opzioni": [
+      "Il sistema libera energia verso l’ambiente",
+      "Il sistema assorbe sempre energia dall’ambiente",
+      "La massa dei reagenti scompare durante la reazione",
+      "Gli atomi vengono distrutti e non riorganizzati"
+    ],
+    "risposta_corretta": "Il sistema libera energia verso l’ambiente",
+    "spiegazione": "Una reazione esotermica libera energia, spesso sotto forma di calore, verso l’ambiente esterno.",
+    "tags": [
+      "chimica",
+      "reazioni",
+      "esotermica",
+      "energia"
+    ],
+    "difficolta": 2,
+    "distrattore_forte": "Il sistema assorbe sempre energia dall’ambiente",
+    "punteggio_distrattore_forte": 4,
+    "motivo_distrattore_forte": "È vicino perché descrive lo scambio di energia, ma corrisponde a una reazione endotermica.",
+    "qualita": "controllata"
+  },
+  {
+    "id": "CHE_020",
+    "categoria": "scienze",
+    "sottocategoria": "chimica",
+    "livello": "intermedio",
+    "domanda": "Perché il carbonio può formare moltissimi composti diversi?",
+    "opzioni": [
+      "Perché può formare quattro legami covalenti e catene stabili",
+      "Perché ha sempre carica positiva in ogni composto",
+      "Perché non può legarsi con altri atomi di carbonio",
+      "Perché possiede un solo elettrone nel livello esterno"
+    ],
+    "risposta_corretta": "Perché può formare quattro legami covalenti e catene stabili",
+    "spiegazione": "Il carbonio è tetravalente e può legarsi ad altri atomi di carbonio formando catene, anelli e strutture molto varie.",
+    "tags": [
+      "chimica",
+      "carbonio",
+      "chimica_organica"
+    ],
+    "difficolta": 2,
+    "distrattore_forte": "Perché non può legarsi con altri atomi di carbonio",
+    "punteggio_distrattore_forte": 4,
+    "motivo_distrattore_forte": "È vicino perché parla dei legami del carbonio, ma è il contrario: il carbonio si lega facilmente con altri carboni.",
+    "qualita": "controllata"
+  },
+  {
+    "id": "CHE_021",
+    "categoria": "scienze",
+    "sottocategoria": "chimica",
+    "livello": "avanzato",
+    "domanda": "Che cosa indica il concetto di equilibrio chimico in una reazione reversibile?",
+    "opzioni": [
+      "Le velocità della reazione diretta e inversa diventano uguali",
+      "Tutte le molecole dei reagenti si trasformano definitivamente in prodotti",
+      "La reazione si ferma perché le particelle non si muovono più",
+      "La concentrazione dei reagenti diventa sempre identica a quella dei prodotti"
+    ],
+    "risposta_corretta": "Le velocità della reazione diretta e inversa diventano uguali",
+    "spiegazione": "All’equilibrio chimico la reazione diretta e quella inversa continuano, ma avvengono alla stessa velocità. Le concentrazioni restano costanti, non necessariamente uguali.",
+    "tags": [
+      "chimica",
+      "equilibrio_chimico",
+      "reazioni_reversibili"
+    ],
+    "difficolta": 3,
+    "distrattore_forte": "La concentrazione dei reagenti diventa sempre identica a quella dei prodotti",
+    "punteggio_distrattore_forte": 4,
+    "motivo_distrattore_forte": "È vicino perché parla di concentrazioni costanti, ma costante non significa uguale.",
+    "qualita": "controllata"
+  },
+  {
+    "id": "CHE_022",
+    "categoria": "scienze",
+    "sottocategoria": "chimica",
+    "livello": "avanzato",
+    "domanda": "Che cosa succede al pH di una soluzione quando aumenta la concentrazione di ioni H⁺?",
+    "opzioni": [
+      "Il pH diminuisce",
+      "Il pH aumenta sempre",
+      "Il pH resta sempre esattamente 7",
+      "Il pH diventa indipendente dall’acidità"
+    ],
+    "risposta_corretta": "Il pH diminuisce",
+    "spiegazione": "Il pH è legato in modo inverso alla concentrazione di ioni H⁺. Se aumentano gli ioni H⁺, la soluzione diventa più acida e il pH diminuisce.",
+    "tags": [
+      "chimica",
+      "ph",
+      "ioni_idrogeno",
+      "acidi"
+    ],
+    "difficolta": 3,
+    "distrattore_forte": "Il pH aumenta sempre",
+    "punteggio_distrattore_forte": 4,
+    "motivo_distrattore_forte": "È vicino perché collega pH e ioni H⁺, ma inverte la relazione.",
+    "qualita": "controllata"
+  },
+  {
+    "id": "CHE_023",
+    "categoria": "scienze",
+    "sottocategoria": "chimica",
+    "livello": "avanzato",
+    "domanda": "Perché una molecola può essere apolare anche se contiene legami polari?",
+    "opzioni": [
+      "Perché la geometria molecolare può far annullare i dipoli dei legami",
+      "Perché ogni legame polare rende sempre tutta la molecola carica positivamente",
+      "Perché i legami polari eliminano automaticamente tutti gli elettroni condivisi",
+      "Perché una molecola con legami polari non ha mai una forma definita"
+    ],
+    "risposta_corretta": "Perché la geometria molecolare può far annullare i dipoli dei legami",
+    "spiegazione": "La polarità della molecola dipende sia dalla polarità dei legami sia dalla geometria. Se i dipoli si annullano, la molecola può risultare apolare.",
+    "tags": [
+      "chimica",
+      "polarita",
+      "geometria_molecolare"
+    ],
+    "difficolta": 3,
+    "distrattore_forte": "Perché ogni legame polare rende sempre tutta la molecola carica positivamente",
+    "punteggio_distrattore_forte": 4,
+    "motivo_distrattore_forte": "È vicino perché collega legami polari e molecola, ma confonde polarità con carica elettrica totale.",
+    "qualita": "controllata"
+  },
+  {
+    "id": "CHE_024",
+    "categoria": "scienze",
+    "sottocategoria": "chimica",
+    "livello": "avanzato",
+    "domanda": "Che cosa descrive l’energia di attivazione di una reazione?",
+    "opzioni": [
+      "L’energia minima necessaria perché i reagenti inizino a trasformarsi in prodotti",
+      "L’energia totale che viene sempre conservata solo nei prodotti finali",
+      "La quantità di massa che sparisce quando la reazione comincia",
+      "La temperatura finale che ogni reazione deve raggiungere all’equilibrio"
+    ],
+    "risposta_corretta": "L’energia minima necessaria perché i reagenti inizino a trasformarsi in prodotti",
+    "spiegazione": "L’energia di attivazione è la barriera energetica che i reagenti devono superare per trasformarsi in prodotti.",
+    "tags": [
+      "chimica",
+      "energia_attivazione",
+      "cinetica_chimica"
+    ],
+    "difficolta": 3,
+    "distrattore_forte": "La temperatura finale che ogni reazione deve raggiungere all’equilibrio",
+    "punteggio_distrattore_forte": 4,
+    "motivo_distrattore_forte": "È vicino perché collega energia e reazioni, ma l’energia di attivazione non è una temperatura finale obbligatoria.",
+    "qualita": "controllata"
   }
 ]
