@@ -40,7 +40,7 @@ Questo progetto è un **motore riutilizzabile** per creare quiz per:
 | Pulsante | Passaggi pratici |
 |---|---|
 | **PROVA LA DEMO ONLINE** | clicca il pulsante → si apre subito la demo nel browser |
-| **SCARICA APP WEB PRONTA** | scarica ZIP → apri file ZIP → apri cartella → apri `1_APRI_QUIZ.html` |
+| **SCARICA APP WEB PRONTA** | scarica ZIP → apri file ZIP → apri cartella → doppio clic su `00_QUIZ_WEB_PRONTO.html` |
 | **SCARICA PACCHETTO ANDROID** | scarica ZIP → apri file ZIP → apri cartella → copia `database_quiz.json` in Android Studio |
 | **CREA PACCHETTO PERSONALIZZATO** | clicca il pulsante → premi `Run workflow` → scegli web/android, materia, livello e numero domande → scarica ZIP |
 

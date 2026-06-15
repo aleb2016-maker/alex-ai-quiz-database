@@ -88,6 +88,81 @@ def prepara_domande(materia, livello, numero):
     return domande
 
 
+
+def crea_file_web_pronto(output_dir):
+    file_principale = output_dir / "1_APRI_QUIZ.html"
+
+    if not file_principale.exists():
+        file_principale = output_dir / "index.html"
+
+    if not file_principale.exists():
+        raise FileNotFoundError("Non trovo il file HTML principale del quiz web.")
+
+    file_facile = output_dir / "00_QUIZ_WEB_PRONTO.html"
+    shutil.copy2(file_principale, file_facile)
+
+    istruzioni = """<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <title>Leggimi prima - Quiz Web</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 850px;
+      margin: 40px auto;
+      padding: 24px;
+      line-height: 1.6;
+      background: #f7f9fc;
+      color: #172033;
+    }
+    .box {
+      background: white;
+      border-radius: 18px;
+      padding: 28px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    }
+    code {
+      background: #eef2ff;
+      padding: 4px 8px;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+    .start {
+      display: inline-block;
+      margin-top: 18px;
+      padding: 14px 20px;
+      background: #00c853;
+      color: white;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h1>Quiz Web pronto</h1>
+
+    <p>Per provare subito il quiz, apri questo file:</p>
+
+    <p><code>00_QUIZ_WEB_PRONTO.html</code></p>
+
+    <p>Questo pacchetto contiene anche:</p>
+
+    <ul>
+      <li><code>database_quiz.json</code> - database delle domande</li>
+      <li><code>quiz-engine.js</code> - motore web riutilizzabile</li>
+      <li><code>README_WEB_ENGINE.md</code> - spiegazione tecnica per sviluppatori</li>
+    </ul>
+
+    <a class="start" href="00_QUIZ_WEB_PRONTO.html">Apri il quiz</a>
+  </div>
+</body>
+</html>
+"""
+    (output_dir / "README_LEGGIMI.html").write_text(istruzioni, encoding="utf-8")
+
 def copia_motore_android(output_dir):
     if not RUNTIME_ANDROID.exists():
         raise FileNotFoundError("Motore Android non trovato: runtime/android")
