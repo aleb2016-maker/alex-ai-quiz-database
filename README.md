@@ -19,7 +19,7 @@ Questo progetto è un **motore riutilizzabile** per creare quiz con:
 </p>
 
 <p align="center">
-  <a href="https://github.com/aleb2016-maker/alex-ai-quiz-database/raw/main/downloads/pacchetto-android-scienze-demo.zip">
+  <a href="https://github.com/aleb2016-maker/alex-ai-quiz-database/raw/main/downloads/pacchetto-android-scienze-pulito.zip">
     <img src="https://img.shields.io/badge/SCARICA%20PACCHETTO%20ANDROID-DATABASE%20MOTORE%20KOTLIN-2962ff?style=for-the-badge&labelColor=2962ff" alt="Scarica pacchetto Android">
   </a>
 </p>
