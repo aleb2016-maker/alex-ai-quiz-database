@@ -59,17 +59,21 @@ Ogni ZIP scaricato contiene una cartella con nomi chiari e un solo file di istru
 
 ## Crea un pacchetto personalizzato
 
-Puoi generare un nuovo pacchetto direttamente da GitHub Actions.
+<p align="center">
+  <a href="https://github.com/aleb2016-maker/alex-ai-quiz-database/actions/workflows/create-quiz-package.yml">
+    <img src="https://img.shields.io/badge/%F0%9F%A7%A9%20CREA%20PACCHETTO%20PERSONALIZZATO-CLICCA%20QUI-e91e63?style=for-the-badge&labelColor=e91e63" alt="Crea pacchetto personalizzato">
+  </a>
+</p>
 
-[Apri il workflow GitHub Actions](https://github.com/aleb2016-maker/alex-ai-quiz-database/actions/workflows/create-quiz-package.yml)
+Questo pulsante apre il workflow GitHub per generare un nuovo pacchetto quiz.
 
 ### Passaggi rapidi
 
-1. Clicca su **Apri il workflow GitHub Actions**.
-2. Clicca **Run workflow**.
+1. Clicca sul pulsante rosa **CREA PACCHETTO PERSONALIZZATO**.
+2. Nella pagina GitHub che si apre, premi **Run workflow** in alto a destra.
 3. Scegli **materia**, **livello**, piattaforma e numero di domande.
-4. Clicca il pulsante verde **Run workflow**.
-5. Quando compare la spunta verde, apri l’esecuzione e scarica lo ZIP da **Summary → Artifacts**.
+4. Premi il pulsante verde **Run workflow**.
+5. Quando compare la spunta verde, apri **Summary → Artifacts** e scarica lo ZIP.
 
 <!-- ALEX-QUIZ-DASHBOARD-END -->
 
