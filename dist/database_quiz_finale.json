@@ -1819,6 +1819,312 @@
     "qualita": "controllata"
   },
   {
+    "id": "FIS_013",
+    "categoria": "scienze",
+    "sottocategoria": "fisica",
+    "livello": "facile",
+    "domanda": "Se due oggetti hanno lo stesso volume ma masse diverse, quale ha densità maggiore?",
+    "opzioni": [
+      "Quello con massa maggiore",
+      "Quello con massa minore",
+      "Quello con temperatura maggiore",
+      "Quello con superficie più liscia"
+    ],
+    "risposta_corretta": "Quello con massa maggiore",
+    "spiegazione": "La densità è massa divisa volume. Se il volume è lo stesso, l’oggetto con massa maggiore ha densità maggiore.",
+    "tags": [
+      "fisica",
+      "densita",
+      "massa",
+      "volume"
+    ],
+    "difficolta": 1,
+    "distrattore_forte": "Quello con massa minore",
+    "punteggio_distrattore_forte": 4,
+    "motivo_distrattore_forte": "È vicino perché usa la stessa grandezza fisica, ma inverte il rapporto massa-volume.",
+    "qualita": "controllata"
+  },
+  {
+    "id": "FIS_014",
+    "categoria": "scienze",
+    "sottocategoria": "fisica",
+    "livello": "facile",
+    "domanda": "Che cosa descrive meglio l’inerzia di un corpo?",
+    "opzioni": [
+      "La tendenza a mantenere il proprio stato di quiete o di moto",
+      "La capacità di produrre calore senza energia",
+      "La forza che fa cadere tutti i corpi verso l’alto",
+      "La velocità massima raggiungibile nel vuoto"
+    ],
+    "risposta_corretta": "La tendenza a mantenere il proprio stato di quiete o di moto",
+    "spiegazione": "L’inerzia è la tendenza di un corpo a non cambiare spontaneamente il proprio stato di quiete o di moto rettilineo uniforme.",
+    "tags": [
+      "fisica",
+      "inerzia",
+      "moto",
+      "newton"
+    ],
+    "difficolta": 1,
+    "distrattore_forte": "La velocità massima raggiungibile nel vuoto",
+    "punteggio_distrattore_forte": 4,
+    "motivo_distrattore_forte": "È vicino perché riguarda il moto, ma l’inerzia non indica una velocità massima.",
+    "qualita": "controllata"
+  },
+  {
+    "id": "FIS_015",
+    "categoria": "scienze",
+    "sottocategoria": "fisica",
+    "livello": "facile",
+    "domanda": "Che cosa fa di solito la forza di attrito tra due superfici a contatto?",
+    "opzioni": [
+      "Si oppone al movimento relativo tra le superfici",
+      "Aumenta sempre la velocità senza consumo di energia",
+      "Elimina completamente la massa degli oggetti",
+      "Agisce solo quando gli oggetti sono nel vuoto"
+    ],
+    "risposta_corretta": "Si oppone al movimento relativo tra le superfici",
+    "spiegazione": "L’attrito tende a ostacolare lo scorrimento tra superfici a contatto e trasforma parte dell’energia meccanica in calore.",
+    "tags": [
+      "fisica",
+      "attrito",
+      "forza"
+    ],
+    "difficolta": 1,
+    "distrattore_forte": "Aumenta sempre la velocità senza consumo di energia",
+    "punteggio_distrattore_forte": 4,
+    "motivo_distrattore_forte": "È vicino perché parla di movimento, ma l’attrito normalmente si oppone allo scorrimento.",
+    "qualita": "controllata"
+  },
+  {
+    "id": "FIS_016",
+    "categoria": "scienze",
+    "sottocategoria": "fisica",
+    "livello": "facile",
+    "domanda": "Che cosa indica la frequenza di un fenomeno periodico?",
+    "opzioni": [
+      "Quante volte il fenomeno si ripete in un secondo",
+      "Quanto spazio occupa il fenomeno in metri cubi",
+      "Quanta massa perde il corpo durante l’oscillazione",
+      "Quanto calore serve per fermare completamente il moto"
+    ],
+    "risposta_corretta": "Quante volte il fenomeno si ripete in un secondo",
+    "spiegazione": "La frequenza indica quante oscillazioni o ripetizioni avvengono in un secondo. Si misura in hertz.",
+    "tags": [
+      "fisica",
+      "frequenza",
+      "onde",
+      "hertz"
+    ],
+    "difficolta": 1,
+    "distrattore_forte": "Quanto spazio occupa il fenomeno in metri cubi",
+    "punteggio_distrattore_forte": 4,
+    "motivo_distrattore_forte": "È vicino perché parla di una grandezza misurabile, ma confonde frequenza con volume.",
+    "qualita": "controllata"
+  },
+  {
+    "id": "FIS_017",
+    "categoria": "scienze",
+    "sottocategoria": "fisica",
+    "livello": "intermedio",
+    "domanda": "Perché un corpo immerso in un fluido può ricevere una spinta verso l’alto?",
+    "opzioni": [
+      "Perché il fluido esercita una spinta di Archimede legata al volume spostato",
+      "Perché il corpo perde completamente la propria massa dentro il fluido",
+      "Perché il fluido annulla sempre la forza di gravità",
+      "Perché il corpo diventa automaticamente meno denso dell’aria"
+    ],
+    "risposta_corretta": "Perché il fluido esercita una spinta di Archimede legata al volume spostato",
+    "spiegazione": "La spinta di Archimede dipende dal peso del fluido spostato. Può sostenere parzialmente o totalmente un corpo immerso.",
+    "tags": [
+      "fisica",
+      "archimede",
+      "fluidi",
+      "galleggiamento"
+    ],
+    "difficolta": 2,
+    "distrattore_forte": "Perché il fluido annulla sempre la forza di gravità",
+    "punteggio_distrattore_forte": 4,
+    "motivo_distrattore_forte": "È vicino perché parla della forza verso il basso, ma la gravità non viene annullata: viene contrastata dalla spinta del fluido.",
+    "qualita": "controllata"
+  },
+  {
+    "id": "FIS_018",
+    "categoria": "scienze",
+    "sottocategoria": "fisica",
+    "livello": "intermedio",
+    "domanda": "Che cosa avviene in genere a un solido quando viene riscaldato?",
+    "opzioni": [
+      "Le sue particelle vibrano di più e il corpo tende a dilatarsi",
+      "Le sue particelle si fermano completamente",
+      "La sua massa diventa sempre uguale a zero",
+      "Il suo volume diminuisce sempre in ogni materiale"
+    ],
+    "risposta_corretta": "Le sue particelle vibrano di più e il corpo tende a dilatarsi",
+    "spiegazione": "Riscaldando un solido aumenta l’agitazione delle particelle. Spesso questo produce dilatazione termica.",
+    "tags": [
+      "fisica",
+      "calore",
+      "dilatazione_termica"
+    ],
+    "difficolta": 2,
+    "distrattore_forte": "Il suo volume diminuisce sempre in ogni materiale",
+    "punteggio_distrattore_forte": 4,
+    "motivo_distrattore_forte": "È vicino perché riguarda il volume, ma nella maggior parte dei casi il riscaldamento produce dilatazione.",
+    "qualita": "controllata"
+  },
+  {
+    "id": "FIS_019",
+    "categoria": "scienze",
+    "sottocategoria": "fisica",
+    "livello": "intermedio",
+    "domanda": "In un circuito con resistenze in serie, che cosa accade alla resistenza equivalente?",
+    "opzioni": [
+      "È la somma delle resistenze dei singoli componenti",
+      "È sempre minore della resistenza più piccola",
+      "È sempre uguale a zero",
+      "È indipendente dal numero di resistenze"
+    ],
+    "risposta_corretta": "È la somma delle resistenze dei singoli componenti",
+    "spiegazione": "Nelle resistenze in serie la corrente attraversa ogni componente uno dopo l’altro, quindi le resistenze si sommano.",
+    "tags": [
+      "fisica",
+      "circuiti",
+      "resistenze",
+      "serie"
+    ],
+    "difficolta": 2,
+    "distrattore_forte": "È sempre minore della resistenza più piccola",
+    "punteggio_distrattore_forte": 4,
+    "motivo_distrattore_forte": "È vicino perché descrive il caso tipico delle resistenze in parallelo, non in serie.",
+    "qualita": "controllata"
+  },
+  {
+    "id": "FIS_020",
+    "categoria": "scienze",
+    "sottocategoria": "fisica",
+    "livello": "intermedio",
+    "domanda": "Che cosa distingue una grandezza vettoriale da una grandezza scalare?",
+    "opzioni": [
+      "La grandezza vettoriale ha modulo, direzione e verso",
+      "La grandezza vettoriale non può mai essere misurata",
+      "La grandezza scalare ha sempre direzione e verso",
+      "La grandezza scalare è sempre negativa"
+    ],
+    "risposta_corretta": "La grandezza vettoriale ha modulo, direzione e verso",
+    "spiegazione": "Una grandezza scalare è descritta da un valore numerico e unità di misura. Una vettoriale richiede anche direzione e verso.",
+    "tags": [
+      "fisica",
+      "vettori",
+      "scalari"
+    ],
+    "difficolta": 2,
+    "distrattore_forte": "La grandezza scalare ha sempre direzione e verso",
+    "punteggio_distrattore_forte": 4,
+    "motivo_distrattore_forte": "È vicino perché usa gli stessi concetti, ma li attribuisce alla grandezza sbagliata.",
+    "qualita": "controllata"
+  },
+  {
+    "id": "FIS_021",
+    "categoria": "scienze",
+    "sottocategoria": "fisica",
+    "livello": "avanzato",
+    "domanda": "Secondo la legge di Coulomb, che cosa succede alla forza elettrica se la distanza tra due cariche raddoppia?",
+    "opzioni": [
+      "Diventa un quarto del valore iniziale",
+      "Diventa il doppio del valore iniziale",
+      "Resta esattamente invariata",
+      "Diventa sempre nulla"
+    ],
+    "risposta_corretta": "Diventa un quarto del valore iniziale",
+    "spiegazione": "La forza elettrica è inversamente proporzionale al quadrato della distanza. Se la distanza raddoppia, la forza diventa 1/4.",
+    "tags": [
+      "fisica",
+      "coulomb",
+      "forza_elettrica"
+    ],
+    "difficolta": 3,
+    "distrattore_forte": "Diventa il doppio del valore iniziale",
+    "punteggio_distrattore_forte": 4,
+    "motivo_distrattore_forte": "È vicino perché considera il raddoppio della distanza, ma sbaglia la relazione inversa quadratica.",
+    "qualita": "controllata"
+  },
+  {
+    "id": "FIS_022",
+    "categoria": "scienze",
+    "sottocategoria": "fisica",
+    "livello": "avanzato",
+    "domanda": "In assenza di forze esterne, che cosa si conserva in un sistema durante un urto?",
+    "opzioni": [
+      "La quantità di moto totale",
+      "La velocità di ogni singolo corpo",
+      "La temperatura di ogni oggetto",
+      "La distanza tra i corpi in ogni istante"
+    ],
+    "risposta_corretta": "La quantità di moto totale",
+    "spiegazione": "Se il sistema è isolato, la quantità di moto totale si conserva anche durante un urto. L’energia cinetica si conserva solo in urti elastici.",
+    "tags": [
+      "fisica",
+      "quantita_di_moto",
+      "urti"
+    ],
+    "difficolta": 3,
+    "distrattore_forte": "La velocità di ogni singolo corpo",
+    "punteggio_distrattore_forte": 4,
+    "motivo_distrattore_forte": "È vicino perché riguarda il moto, ma negli urti le velocità dei singoli corpi possono cambiare.",
+    "qualita": "controllata"
+  },
+  {
+    "id": "FIS_023",
+    "categoria": "scienze",
+    "sottocategoria": "fisica",
+    "livello": "avanzato",
+    "domanda": "Che cosa accade in un fenomeno di risonanza?",
+    "opzioni": [
+      "Un sistema oscilla con ampiezza maggiore quando viene sollecitato vicino alla sua frequenza naturale",
+      "Un sistema smette sempre di oscillare quando riceve energia periodica",
+      "La frequenza naturale diventa sempre uguale a zero",
+      "L’energia fornita viene sempre trasformata interamente in massa"
+    ],
+    "risposta_corretta": "Un sistema oscilla con ampiezza maggiore quando viene sollecitato vicino alla sua frequenza naturale",
+    "spiegazione": "La risonanza si verifica quando una sollecitazione periodica ha frequenza vicina a quella naturale del sistema, aumentando l’ampiezza delle oscillazioni.",
+    "tags": [
+      "fisica",
+      "risonanza",
+      "oscillazioni"
+    ],
+    "difficolta": 3,
+    "distrattore_forte": "Un sistema smette sempre di oscillare quando riceve energia periodica",
+    "punteggio_distrattore_forte": 4,
+    "motivo_distrattore_forte": "È vicino perché riguarda oscillazioni ed energia periodica, ma descrive l’effetto opposto.",
+    "qualita": "controllata"
+  },
+  {
+    "id": "FIS_024",
+    "categoria": "scienze",
+    "sottocategoria": "fisica",
+    "livello": "avanzato",
+    "domanda": "Che cosa indica l’indice di rifrazione di un materiale?",
+    "opzioni": [
+      "Quanto la luce rallenta e cambia direzione entrando nel materiale",
+      "La quantità di massa che la luce trasporta nel vuoto",
+      "La temperatura minima necessaria per produrre luce",
+      "La forza gravitazionale esercitata dalla luce sul materiale"
+    ],
+    "risposta_corretta": "Quanto la luce rallenta e cambia direzione entrando nel materiale",
+    "spiegazione": "L’indice di rifrazione descrive il rapporto tra la velocità della luce nel vuoto e nel materiale. È collegato alla deviazione della luce quando passa tra mezzi diversi.",
+    "tags": [
+      "fisica",
+      "ottica",
+      "rifrazione",
+      "luce"
+    ],
+    "difficolta": 3,
+    "distrattore_forte": "La temperatura minima necessaria per produrre luce",
+    "punteggio_distrattore_forte": 4,
+    "motivo_distrattore_forte": "È vicino perché parla di luce, ma non descrive la propagazione della luce in un materiale.",
+    "qualita": "controllata"
+  },
+  {
     "id": "ING-FAC-0001",
     "categoria": "inglese",
     "sottocategoria": "grammatica_base",
