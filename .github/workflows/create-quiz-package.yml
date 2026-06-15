@@ -4,34 +4,32 @@ on:
   workflow_dispatch:
     inputs:
       platform:
-        description: "Che tipo di pacchetto vuoi creare?"
+        description: "Piattaforma del pacchetto"
         required: true
         default: "web"
         type: choice
         options:
-          - android
           - web
+          - android
           - demo
+
       subject:
-        description: "Materia del test"
+        description: "Materia del quiz"
         required: true
         default: "scienze"
         type: choice
         options:
-          - tutte
-          - scienze
-          - fisica
-          - chimica
-          - biologia
-          - astronomia
-          - scienze_della_terra
-          - fisica_quantistica_base
           - ai
           - informatica
           - matematica
           - inglese
           - logica
-          - logica_visiva
+          - scienze
+          - fisica
+          - chimica
+          - biologia
+          - fisica_quantistica
+
       level:
         description: "Livello delle domande"
         required: true
@@ -42,18 +40,15 @@ on:
           - facile
           - intermedio
           - avanzato
+
       number:
-        description: "Numero domande"
+        description: "Numero di domande"
         required: true
         default: "10"
-        type: choice
-        options:
-          - "10"
-          - "20"
-          - "all"
+        type: string
 
 jobs:
-  create-package:
+  build:
     name: Genera pacchetto scaricabile
     runs-on: ubuntu-latest
 
@@ -69,52 +64,24 @@ jobs:
       - name: Genera pacchetto quiz
         run: |
           python scripts/create_quiz_package.py \
-          python3 scripts/clean_package_outputs.py dist/generated
-            --platform "${{ github.event.inputs.platform }}" \
-            --subject "${{ github.event.inputs.subject }}" \
-            --level "${{ github.event.inputs.level }}" \
-            --number "${{ github.event.inputs.number }}"
+            --platform "${{ inputs.platform }}" \
+            --subject "${{ inputs.subject }}" \
+            --level "${{ inputs.level }}" \
+            --number "${{ inputs.number }}"
+
+      - name: Rende chiari i nomi dei file nel pacchetto
+        run: |
+          python scripts/clean_package_outputs.py dist/generated
+
+      - name: Mostra pacchetti generati
+        run: |
+          echo "Pacchetti ZIP generati:"
+          find dist/generated -name "*.zip" -print
 
       - name: Carica pacchetto scaricabile
-        id: upload_package
         uses: actions/upload-artifact@v4
         with:
-          name: pacchetto-quiz-${{ github.event.inputs.platform }}-${{ github.event.inputs.subject }}
+          name: pacchetto-quiz-${{ inputs.platform }}-${{ inputs.subject }}-${{ inputs.level }}-${{ inputs.number }}-domande
           path: dist/generated/*.zip
-
-      - name: Mostra pulsante download chiaro
-        run: |
-          cat >> "$GITHUB_STEP_SUMMARY" <<EOF
-          # ✅ Pacchetto quiz pronto
-
-          Il pacchetto è stato creato correttamente.
-
-          ## ⬇️ Download
-
-          [**SCARICA IL PACCHETTO QUIZ**](${{ steps.upload_package.outputs.artifact-url }})
-
-          ---
-
-          ## Cosa hai generato
-
-          - Piattaforma: **${{ github.event.inputs.platform }}**
-          - Materia: **${{ github.event.inputs.subject }}**
-          - Livello: **${{ github.event.inputs.level }}**
-          - Numero domande: **${{ github.event.inputs.number }}**
-
-          ## Come usarlo
-
-          ### Android
-          Apri lo ZIP e copia il file:
-
-          app/src/main/assets/database_quiz.json
-
-          dentro il tuo progetto Android Studio.
-
-          ### Web / Demo
-          Apri il pacchetto web e usa:
-
-          index.html  
-          database_quiz.json
-
-          EOF
+          if-no-files-found: error
+          retention-days: 7
