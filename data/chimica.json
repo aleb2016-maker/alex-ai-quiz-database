@@ -806,5 +806,209 @@
     "punteggio_distrattore_forte": 4,
     "motivo_distrattore_forte": "È vicino perché parla del rapporto tra pH e ioni, ma nega proprio il legame fondamentale.",
     "qualita": "controllata"
+  },
+  {
+    "id": "CHE_033",
+    "categoria": "scienze",
+    "sottocategoria": "chimica",
+    "livello": "facile",
+    "domanda": "Che cosa avviene durante l’evaporazione di un liquido?",
+    "opzioni": [
+      "Alcune particelle passano dallo stato liquido allo stato gassoso dalla superficie",
+      "Tutte le particelle diventano solide nello stesso istante",
+      "Il liquido si trasforma sempre in una nuova sostanza chimica",
+      "Gli atomi del liquido vengono distrutti e sostituiti"
+    ],
+    "risposta_corretta": "Alcune particelle passano dallo stato liquido allo stato gassoso dalla superficie",
+    "spiegazione": "L’evaporazione è un passaggio di stato: alcune particelle del liquido acquistano abbastanza energia per passare allo stato gassoso dalla superficie.",
+    "tags": [
+      "chimica",
+      "evaporazione",
+      "passaggi_stato"
+    ],
+    "difficolta": 1,
+    "distrattore_forte": "Il liquido si trasforma sempre in una nuova sostanza chimica",
+    "punteggio_distrattore_forte": 4,
+    "motivo_distrattore_forte": "È vicino perché descrive un cambiamento visibile, ma l’evaporazione è fisica, non chimica.",
+    "qualita": "controllata"
+  },
+  {
+    "id": "CHE_034",
+    "categoria": "scienze",
+    "sottocategoria": "chimica",
+    "livello": "facile",
+    "domanda": "Che cosa descrive meglio un composto chimico?",
+    "opzioni": [
+      "Una sostanza formata da elementi diversi uniti chimicamente in proporzioni definite",
+      "Una miscela casuale di sostanze che può avere qualunque composizione",
+      "Un elemento puro formato da un solo tipo di atomo isolato",
+      "Una soluzione che contiene sempre acqua come unico solvente"
+    ],
+    "risposta_corretta": "Una sostanza formata da elementi diversi uniti chimicamente in proporzioni definite",
+    "spiegazione": "Un composto è formato da elementi diversi legati chimicamente. La sua composizione è definita, come nel caso dell’acqua H₂O.",
+    "tags": [
+      "chimica",
+      "composto",
+      "elementi"
+    ],
+    "difficolta": 1,
+    "distrattore_forte": "Una miscela casuale di sostanze che può avere qualunque composizione",
+    "punteggio_distrattore_forte": 4,
+    "motivo_distrattore_forte": "È vicino perché parla di più sostanze, ma una miscela non è un composto chimico con proporzioni definite.",
+    "qualita": "controllata"
+  },
+  {
+    "id": "CHE_035",
+    "categoria": "scienze",
+    "sottocategoria": "chimica",
+    "livello": "intermedio",
+    "domanda": "Perché un indicatore acido-base può cambiare colore in soluzioni diverse?",
+    "opzioni": [
+      "Perché assume forme diverse a seconda del pH della soluzione",
+      "Perché trasforma sempre l’acido in una base forte",
+      "Perché elimina tutti gli ioni presenti nella soluzione",
+      "Perché misura direttamente la massa del soluto disciolto"
+    ],
+    "risposta_corretta": "Perché assume forme diverse a seconda del pH della soluzione",
+    "spiegazione": "Gli indicatori acido-base cambiano struttura o forma chimica in base al pH, e queste forme possono avere colori diversi.",
+    "tags": [
+      "chimica",
+      "indicatori",
+      "ph",
+      "acidi_basi"
+    ],
+    "difficolta": 2,
+    "distrattore_forte": "Perché trasforma sempre l’acido in una base forte",
+    "punteggio_distrattore_forte": 4,
+    "motivo_distrattore_forte": "È vicino perché riguarda acidi e basi, ma un indicatore segnala il pH: non neutralizza sempre la soluzione.",
+    "qualita": "controllata"
+  },
+  {
+    "id": "CHE_036",
+    "categoria": "scienze",
+    "sottocategoria": "chimica",
+    "livello": "intermedio",
+    "domanda": "Perché aumentare la concentrazione dei reagenti può rendere più veloce una reazione?",
+    "opzioni": [
+      "Perché aumenta la frequenza degli urti tra particelle reagenti",
+      "Perché diminuisce sempre la temperatura della soluzione",
+      "Perché annulla completamente l’energia di attivazione",
+      "Perché trasforma i prodotti in reagenti solidi"
+    ],
+    "risposta_corretta": "Perché aumenta la frequenza degli urti tra particelle reagenti",
+    "spiegazione": "Con più particelle reagenti nello stesso volume, gli urti tra particelle diventano più frequenti e aumenta la probabilità di urti efficaci.",
+    "tags": [
+      "chimica",
+      "concentrazione",
+      "velocita_reazione",
+      "urti"
+    ],
+    "difficolta": 2,
+    "distrattore_forte": "Perché annulla completamente l’energia di attivazione",
+    "punteggio_distrattore_forte": 4,
+    "motivo_distrattore_forte": "È vicino perché riguarda la velocità di reazione, ma la concentrazione non elimina l’energia di attivazione.",
+    "qualita": "controllata"
+  },
+  {
+    "id": "CHE_037",
+    "categoria": "scienze",
+    "sottocategoria": "chimica",
+    "livello": "intermedio",
+    "domanda": "Che cosa indica la percentuale in massa di una soluzione?",
+    "opzioni": [
+      "Il rapporto tra massa del soluto e massa della soluzione, moltiplicato per 100",
+      "Il rapporto tra volume del solvente e temperatura, moltiplicato per 100",
+      "Il numero di atomi presenti in una singola molecola del solvente",
+      "La massa del recipiente divisa per il numero di molecole del soluto"
+    ],
+    "risposta_corretta": "Il rapporto tra massa del soluto e massa della soluzione, moltiplicato per 100",
+    "spiegazione": "La percentuale in massa indica quanta massa di soluto è presente rispetto alla massa totale della soluzione.",
+    "tags": [
+      "chimica",
+      "concentrazione",
+      "percentuale_massa"
+    ],
+    "difficolta": 2,
+    "distrattore_forte": "Il rapporto tra volume del solvente e temperatura, moltiplicato per 100",
+    "punteggio_distrattore_forte": 4,
+    "motivo_distrattore_forte": "È vicino perché usa un rapporto numerico, ma mescola grandezze non corrette per la percentuale in massa.",
+    "qualita": "controllata"
+  },
+  {
+    "id": "CHE_038",
+    "categoria": "scienze",
+    "sottocategoria": "chimica",
+    "livello": "avanzato",
+    "domanda": "Secondo il principio di Le Châtelier, come reagisce un sistema all’equilibrio se viene perturbato?",
+    "opzioni": [
+      "Si sposta nel verso che tende a contrastare la perturbazione",
+      "Si ferma definitivamente e non può più reagire",
+      "Trasforma tutti i prodotti in catalizzatori permanenti",
+      "Rende sempre uguali le concentrazioni di tutte le specie"
+    ],
+    "risposta_corretta": "Si sposta nel verso che tende a contrastare la perturbazione",
+    "spiegazione": "Il principio di Le Châtelier afferma che un sistema all’equilibrio risponde a una perturbazione spostandosi nel verso che tende a ridurne l’effetto.",
+    "tags": [
+      "chimica",
+      "le_chatelier",
+      "equilibrio_chimico"
+    ],
+    "difficolta": 3,
+    "distrattore_forte": "Rende sempre uguali le concentrazioni di tutte le specie",
+    "punteggio_distrattore_forte": 4,
+    "motivo_distrattore_forte": "È vicino perché parla di equilibrio, ma all’equilibrio le concentrazioni non devono essere necessariamente uguali.",
+    "qualita": "controllata"
+  },
+  {
+    "id": "CHE_039",
+    "categoria": "scienze",
+    "sottocategoria": "chimica",
+    "livello": "avanzato",
+    "domanda": "Che cosa caratterizza una soluzione tampone?",
+    "opzioni": [
+      "Resiste a variazioni di pH quando si aggiungono piccole quantità di acido o base",
+      "Mantiene sempre il pH esattamente uguale a 14",
+      "Trasforma ogni acido debole in un acido forte",
+      "Elimina completamente tutti gli ioni dalla soluzione"
+    ],
+    "risposta_corretta": "Resiste a variazioni di pH quando si aggiungono piccole quantità di acido o base",
+    "spiegazione": "Una soluzione tampone contiene specie chimiche capaci di limitare le variazioni di pH quando vengono aggiunte piccole quantità di acido o base.",
+    "tags": [
+      "chimica",
+      "soluzione_tampone",
+      "ph",
+      "acidi_basi"
+    ],
+    "difficolta": 3,
+    "distrattore_forte": "Mantiene sempre il pH esattamente uguale a 14",
+    "punteggio_distrattore_forte": 4,
+    "motivo_distrattore_forte": "È vicino perché riguarda il pH, ma una soluzione tampone non deve avere pH 14 e non mantiene un valore assoluto fisso.",
+    "qualita": "controllata"
+  },
+  {
+    "id": "CHE_040",
+    "categoria": "scienze",
+    "sottocategoria": "chimica",
+    "livello": "avanzato",
+    "domanda": "Perché in una titolazione acido-base si usa spesso un indicatore?",
+    "opzioni": [
+      "Per individuare con un cambiamento di colore il punto vicino all’equivalenza",
+      "Per aumentare sempre la concentrazione dell’acido titolato",
+      "Per sostituire completamente la buretta durante la misura",
+      "Per impedire qualunque reazione tra acido e base"
+    ],
+    "risposta_corretta": "Per individuare con un cambiamento di colore il punto vicino all’equivalenza",
+    "spiegazione": "L’indicatore cambia colore in un intervallo di pH utile a riconoscere il punto finale della titolazione, vicino al punto di equivalenza.",
+    "tags": [
+      "chimica",
+      "titolazione",
+      "indicatore",
+      "acidi_basi"
+    ],
+    "difficolta": 3,
+    "distrattore_forte": "Per impedire qualunque reazione tra acido e base",
+    "punteggio_distrattore_forte": 4,
+    "motivo_distrattore_forte": "È vicino perché riguarda la titolazione, ma l’indicatore non blocca la reazione: segnala il cambiamento.",
+    "qualita": "controllata"
   }
 ]
