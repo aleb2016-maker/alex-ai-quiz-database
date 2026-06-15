@@ -66,18 +66,32 @@ Questo progetto è un **motore riutilizzabile** per creare quiz con:
 
 <!-- DEMO_BUTTON_START -->
 
-<p align="center">
-  <a href="https://aleb2016-maker.github.io/alex-ai-quiz-database/demo/" target="_blank">
-    <img
-      src="https://img.shields.io/badge/%E2%96%B6%20AVVIA%20LA%20DEMO%20ONLINE-0F766E?style=for-the-badge&logo=githubpages&logoColor=white"
-      alt="Avvia la demo online"
-    >
-  </a>
-</p>
-
-<p align="center">
-  <strong>Clicca sul pulsante e prova subito il quiz nel browser.</strong>
-</p>
+<table align="center">
+  <tr>
+    <td align="center" width="50%">
+      <a href="https://aleb2016-maker.github.io/alex-ai-quiz-database/demo/" target="_blank">
+        <img
+          src="https://img.shields.io/badge/%E2%96%B6%20AVVIA%20DEMO%20ONLINE%20AI%20ITS-0F766E?style=for-the-badge&logo=githubpages&logoColor=white"
+          alt="Avvia demo online AI ITS"
+        >
+      </a>
+      <br>
+      <br>
+      <strong>☝️ Prova subito il quiz su AI, Informatica, Logica, Matematica e Inglese</strong>
+    </td>
+    <td align="center" width="50%">
+      <a href="https://aleb2016-maker.github.io/alex-ai-quiz-database/demo-scienze/" target="_blank">
+        <img
+          src="https://img.shields.io/badge/%F0%9F%AA%90%20AVVIA%20DEMO%20ONLINE%20SCIENZE-4F46E5?style=for-the-badge&logo=githubpages&logoColor=white"
+          alt="Avvia demo online Scienze"
+        >
+      </a>
+      <br>
+      <br>
+      <strong>☝️ Prova subito il quiz sulle materie scientifiche con effetto stelle e pianeti</strong>
+    </td>
+  </tr>
+</table>
 
 <!-- DEMO_BUTTON_END -->
 
