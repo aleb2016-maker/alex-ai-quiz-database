@@ -35,7 +35,7 @@ Questo progetto è un **motore riutilizzabile** per creare quiz con:
 | Pulsante | Sequenza delle azioni |
 |---|---|
 | **SCARICA CODICE WEB** | scarica ZIP → apri file ZIP → apri cartella → trovi HTML, `database_quiz.json`, `quiz-engine.js` e istruzioni |
-| **SCARICA PACCHETTO ANDROID** | scarica ZIP → apri file ZIP → apri `1_LEGGIMI.html` → copia `database_quiz.json` e la cartella `quizengine` nel progetto Android Studio |
+| **SCARICA PACCHETTO ANDROID** | scarica ZIP → apri `1_LEGGIMI.html` → copia `database_quiz.json` in `app/src/main/assets/` e i 5 file Kotlin di `quizengine` in `app/src/main/java/com/alex/quizengine/` |
 | **CREA PACCHETTO PERSONALIZZATO** | clicca il pulsante rosso → clicca **Run workflow** → scegli **platform** web/android → scegli **subject** materia → scegli **level** livello → scegli **number** numero domande → clicca il pulsante verde **Run workflow** → aspetta la spunta verde → apri l’ultima esecuzione creata → vai su **Summary** → scorri fino ad **Artifacts** → clicca lo ZIP generato |
 
 <!-- ALEX-QUIZ-DASHBOARD-END -->
