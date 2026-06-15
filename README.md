@@ -2,68 +2,31 @@
 
 # 🚀 Alex AI Quiz Database
 
-Questo progetto è un **motore riutilizzabile** per creare quiz interattivi con database, motore web, motore Android Kotlin, controlli qualità e pacchetti scaricabili.
+**Alex AI Quiz Database** è un motore riutilizzabile per creare quiz interattivi con:
 
-Il progetto ora contiene due grandi aree di studio:
+- database domande in formato JSON
+- motore Web HTML / JavaScript
+- motore Android Kotlin
+- controlli qualità su domande, risposte e duplicati
+- pacchetti scaricabili pronti da usare
 
-- **Materie principali AI / ITS**: AI, Informatica, Logica, Logica visiva, Matematica e Inglese.
-- **Materie scientifiche**: Fisica, Chimica, Biologia, Fisica Quantistica e Scienze generali.
+Il progetto non è solo una demo online: può essere usato anche come base tecnica per creare nuove app quiz personalizzate su qualunque argomento.
 
-Può essere usato sia per provare subito i quiz online, sia come base tecnica per creare nuove app quiz personalizzate su qualunque argomento.
+## Aree disponibili
 
-## Scarica i pacchetti riutilizzabili
+| Area | Contenuti | Demo online | Pacchetti scaricabili |
+|---|---|---|---|
+| **AI / ITS** | AI, Informatica, Logica, Logica visiva, Matematica, Inglese | [Avvia demo AI / ITS](https://aleb2016-maker.github.io/alex-ai-quiz-database/demo/) | [Web ZIP](https://github.com/aleb2016-maker/alex-ai-quiz-database/raw/main/downloads/pacchetto-web-ai-its-demo.zip) · [Android ZIP](https://github.com/aleb2016-maker/alex-ai-quiz-database/raw/main/downloads/pacchetto-android-ai-its-finale-semplice.zip) |
+| **Scienze** | Fisica, Chimica, Biologia, Fisica Quantistica, Scienze generali | [Avvia demo Scienze](https://aleb2016-maker.github.io/alex-ai-quiz-database/demo-scienze/) | [Web ZIP](https://github.com/aleb2016-maker/alex-ai-quiz-database/raw/main/downloads/pacchetto-web-scienze-demo.zip) · [Android ZIP](https://github.com/aleb2016-maker/alex-ai-quiz-database/raw/main/downloads/pacchetto-android-finale-semplice.zip) |
 
-### Pacchetto Scienze / Materie scientifiche
+## Crea un pacchetto personalizzato
 
-<p align="center">
-  <a href="https://github.com/aleb2016-maker/alex-ai-quiz-database/raw/main/downloads/pacchetto-web-scienze-demo.zip">
-    <img src="https://img.shields.io/badge/SCARICA%20WEB%20SCIENZE-HTML%20DATABASE%20JS-ff9800?style=for-the-badge&labelColor=ff9800" alt="Scarica codice web Scienze">
-  </a>
-</p>
+Puoi generare un nuovo pacchetto scegliendo piattaforma, materia, livello e numero di domande:
 
-<p align="center">
-  <a href="https://github.com/aleb2016-maker/alex-ai-quiz-database/raw/main/downloads/pacchetto-android-finale-semplice.zip">
-    <img src="https://img.shields.io/badge/SCARICA%20ANDROID%20SCIENZE-DATABASE%20MOTORE%20KOTLIN-2962ff?style=for-the-badge&labelColor=2962ff" alt="Scarica pacchetto Android Scienze">
-  </a>
-</p>
-
-### Pacchetto AI / ITS generale
-
-<p align="center">
-  <a href="https://github.com/aleb2016-maker/alex-ai-quiz-database/raw/main/downloads/pacchetto-web-ai-its-demo.zip">
-    <img src="https://img.shields.io/badge/SCARICA%20WEB%20AI%20ITS-HTML%20DATABASE%20JS-00bcd4?style=for-the-badge&labelColor=00bcd4" alt="Scarica codice web AI ITS">
-  </a>
-</p>
-
-<p align="center">
-  <a href="https://github.com/aleb2016-maker/alex-ai-quiz-database/raw/main/downloads/pacchetto-android-ai-its-finale-semplice.zip">
-    <img src="https://img.shields.io/badge/SCARICA%20ANDROID%20AI%20ITS-DATABASE%20MOTORE%20KOTLIN-673ab7?style=for-the-badge&labelColor=673ab7" alt="Scarica pacchetto Android AI ITS">
-  </a>
-</p>
-
-### Crea un pacchetto personalizzato
-
-<p align="center">
-  <a href="https://github.com/aleb2016-maker/alex-ai-quiz-database/actions/workflows/create-quiz-package.yml">
-    <img src="https://img.shields.io/badge/CREA%20PACCHETTO%20PERSONALIZZATO-WEB%20O%20ANDROID-e91e63?style=for-the-badge&labelColor=e91e63" alt="Crea pacchetto personalizzato">
-  </a>
-</p>
-
-## Cosa fanno i pulsanti
-
-| Pulsante | Sequenza delle azioni |
-|---|---|
-| **SCARICA WEB SCIENZE** | scarica ZIP → apri `1_APRI_QUIZ.html` → il quiz parte nel browser con 200 domande scientifiche, incluse Fisica, Chimica, Biologia e Fisica Quantistica |
-| **SCARICA ANDROID SCIENZE** | scarica ZIP → apri `1_LEGGIMI.html` → copia `database_quiz.json` in `app/src/main/assets/` e i 5 file Kotlin di `quizengine` in `app/src/main/java/com/alex/quizengine/` |
-| **SCARICA WEB AI ITS** | scarica ZIP → apri `1_APRI_QUIZ.html` → il quiz parte nel browser con 215 domande su AI, Informatica, Matematica, Inglese, Logica e Logica visiva |
-| **SCARICA ANDROID AI ITS** | scarica ZIP → apri `1_LEGGIMI.html` → copia `database_quiz.json` in `app/src/main/assets/` e i 5 file Kotlin di `quizengine` in `app/src/main/java/com/alex/quizengine/` |
-| **CREA PACCHETTO PERSONALIZZATO** | clicca il pulsante rosso → clicca **Run workflow** → scegli **platform** web/android → scegli **subject** materia → scegli **level** livello → scegli **number** numero domande → clicca il pulsante verde **Run workflow** → aspetta la spunta verde → apri l’ultima esecuzione creata → vai su **Summary** → scorri fino ad **Artifacts** → clicca lo ZIP generato |
+[Apri il workflow GitHub Actions](https://github.com/aleb2016-maker/alex-ai-quiz-database/actions/workflows/create-quiz-package.yml)
 
 <!-- ALEX-QUIZ-DASHBOARD-END -->
 
----
-
-# Alex AI Quiz Database
 
 <!-- DEMO_BUTTON_START -->
 
@@ -105,146 +68,67 @@ Può essere usato sia per provare subito i quiz online, sia come base tecnica pe
 
 ## Demo online
 
-La demo permette di provare il database direttamente dal browser. Ora sono disponibili sia la demo generale per le materie principali AI / ITS, sia la demo dedicata alle materie scientifiche.
-Può essere utilizzata come supporto per la preparazione personale, test di ingresso, esercitazioni didattiche e allenamento per concorsi.
+La demo online permette di provare il progetto direttamente dal browser, senza installare nulla.
+
+Sono disponibili due percorsi:
+
+- **Demo AI / ITS**: quiz su AI, Informatica, Logica, Logica visiva, Matematica e Inglese.
+- **Demo Scienze**: quiz su Fisica, Chimica, Biologia, Fisica Quantistica e Scienze generali.
 
 Funzioni principali:
 
 - scelta categoria
 - scelta livello
-- test da più domande
+- domande casuali
 - feedback immediato
-- spiegazione dopo la risposta
-- supporto a domande visuali di logica
-## Demo web interattiva
+- spiegazione dopo ogni risposta
+- supporto alle domande visuali
 
-La demo grafica permette di provare il progetto senza usare il terminale.
-
-Funzioni disponibili nella demo:
-
-* selezione della categoria;
-* selezione del livello;
-* caricamento casuale delle domande;
-* risposta tramite pulsanti;
-* visualizzazione immediata di risposta corretta o sbagliata;
-* spiegazione dopo ogni risposta;
-* supporto alle immagini per la logica visiva;
-* effetto coriandoli quando la risposta è corretta.
-
-
----
 
 ## Descrizione del progetto
 
-Sistema Python/JSON per creare, validare e costruire un database di quiz su:
+Il progetto è un sistema Python/JSON per creare, validare e distribuire quiz interattivi.
 
-* AI
-* Informatica
-* Matematica
-* Inglese
-* Logica
+Contiene due aree principali:
 
-Il progetto è pensato come base per app di allenamento, sistemi di test personalizzati e strumenti di preparazione per prove tecniche, logiche e orientate all’AI.
+- **AI / ITS**: AI, Informatica, Logica, Logica visiva, Matematica e Inglese.
+- **Scienze**: Fisica, Chimica, Biologia, Fisica Quantistica e Scienze generali.
 
----
-
-## Obiettivo del progetto
-
-L’obiettivo del progetto è costruire un database di quiz:
-
-* ordinato
-* controllato
-* espandibile
-* riutilizzabile
-
-Il database può essere usato in:
-
-* app Android
-* app web
-* simulatori di test
-* sistemi di allenamento personalizzati
-
----
+Il database può essere usato per demo online, app Android, app web, simulatori di test, allenamento personale e nuovi quiz personalizzati.
 
 ## Funzioni principali
 
-Questo progetto permette di:
+- creazione di domande in file JSON separati per categoria;
+- validazione automatica della struttura delle domande;
+- controllo duplicati, domande troppo simili e opzioni duplicate;
+- generazione del database finale unico;
+- generazione di report per categoria e livello;
+- pesca casuale intelligente delle domande;
+- spiegazioni dopo ogni risposta;
+- supporto a domande visuali di logica;
+- pacchetti Web e Android pronti da scaricare;
+- workflow GitHub per creare pacchetti personalizzati.
 
-* creare domande in file JSON separati per categoria;
-* validare automaticamente la struttura delle domande;
-* controllare eventuali duplicati o domande troppo simili;
-* controllare i percorsi delle immagini nelle domande visive;
-* unire tutte le domande in un unico database finale;
-* generare un report con il numero di domande per categoria e livello;
-* testare una pesca casuale intelligente delle domande;
-* usare spiegazioni associate alle risposte per migliorare l’apprendimento;
-* controllare la qualità linguistica delle domande, delle opzioni e delle spiegazioni;
-* segnalare possibili problemi di grammatica, costruzione della frase, punteggiatura e accenti;
-* usare un controllo AI opzionale con Gemma 4 12B tramite Ollama per una revisione linguistica più profonda;
-* generare un report Markdown con le eventuali domande da rivedere.
+## Controlli qualità
 
----
+Il progetto include controlli automatici per mantenere alta la qualità del database:
 
-## Punti di forza
+- struttura JSON corretta;
+- risposte complete;
+- opzioni non duplicate;
+- domande non identiche;
+- domande non troppo simili;
+- controllo dei percorsi immagini;
+- revisione linguistica opzionale con AI locale tramite Ollama e Gemma 4 12B.
 
-* Revisione linguistica avanzata con AI locale, senza API a pagamento.
-* Controllo della qualità del testo prima della pubblicazione del database.
-* Possibilità di individuare errori sottili come accenti, apostrofi, frasi poco naturali o spiegazioni poco chiare.
-* Struttura modulare, facile da espandere con nuove domande e nuove categorie.
-* Database finale generabile automaticamente a partire dai file JSON separati.
+## Categorie e sottosezioni
 
----
+| Area | Categorie |
+|---|---|
+| **AI / ITS** | AI, Informatica, Matematica, Inglese, Logica |
+| **Logica** | Logica verbale, Logica numerica, Ragionamento critico, Ragionamento astratto, Logica visiva |
+| **Scienze** | Fisica, Chimica, Biologia, Fisica Quantistica, Scienze generali |
 
-## Controllo qualità testi con AI locale
-
-Il progetto include anche uno script opzionale per controllare la qualità linguistica dei testi usando Gemma 4 12B installato localmente tramite Ollama.
-
-Lo script controlla:
-
-* grammatica;
-* costruzione della frase;
-* punteggiatura;
-* accenti;
-* chiarezza delle spiegazioni;
-* naturalezza delle opzioni di risposta.
-
-Comando:
-
-```bash
-python scripts/check_text_quality_ai.py
-```
-
-Il controllo AI non modifica automaticamente i file JSON. Genera un report in:
-
-```text
-dist/text_quality_ai_report.md
-```
-
-Questo controllo è pensato come revisione profonda finale, non come controllo quotidiano, perché un modello locale da 12 miliardi di parametri può essere lento.
-
----
-
-## Categorie principali
-
-* AI
-* Informatica
-* Matematica
-* Inglese
-* Logica
-
----
-
-## Sottosezioni della logica
-
-La categoria Logica è suddivisa in:
-
-* Logica verbale
-* Ragionamento critico
-* Logica numerica
-* Ragionamento astratto
-* Logica visiva
-
----
 
 ## Struttura del progetto
 
