@@ -341,6 +341,90 @@ fi
             elemento.unlink()
 
 
+
+def pulisci_android_pubblico(output_dir):
+    from pathlib import Path
+    import shutil
+
+    output_dir = Path(output_dir)
+
+    vecchia = output_dir / "3_FILE_TECNICI"
+    nuova = output_dir / "2_FILE_DA_COPIARE"
+
+    if nuova.exists():
+        shutil.rmtree(nuova)
+
+    if vecchia.exists():
+        vecchia.rename(nuova)
+
+    for nome in [
+        "2_IMPORTA.command",
+        "02_CLICCA_PER_IMPORTARE_NEL_TUO_PROGETTO_ANDROID.command",
+        "IMPORTA TUTTO IN ANDROID STUDIO.command",
+        "IMPORTA IN ANDROID STUDIO.command",
+        "README.md",
+        "database_quiz.json",
+        "app",
+        "quiz_engine_android",
+    ]:
+        elemento = output_dir / nome
+        if elemento.is_dir():
+            shutil.rmtree(elemento)
+        elif elemento.exists():
+            elemento.unlink()
+
+    html = """<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <title>1 ISTRUZIONI</title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 850px; margin: 40px auto; padding: 24px; line-height: 1.6; background: #f8fafc; color: #111827; }
+    .box { background: white; border-radius: 18px; padding: 28px; box-shadow: 0 12px 30px rgba(0,0,0,0.10); }
+    .alert { background: #fff7ed; border: 1px solid #fb923c; color: #9a3412; padding: 14px; border-radius: 12px; font-weight: bold; }
+    code { background: #e5e7eb; padding: 3px 7px; border-radius: 6px; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h1>1 ISTRUZIONI</h1>
+
+    <div class="alert">
+      Questo pacchetto NON è un APK. Non si installa sul telefono.
+      Serve per copiare database e motore Kotlin dentro un progetto Android Studio.
+    </div>
+
+    <h2>Cosa devi aprire</h2>
+    <p>Apri solo la cartella:</p>
+    <p><code>2_FILE_DA_COPIARE</code></p>
+
+    <h2>1. Copia il database</h2>
+    <p>Prendi:</p>
+    <p><code>2_FILE_DA_COPIARE/app/src/main/assets/database_quiz.json</code></p>
+    <p>Mettilo nel tuo progetto Android qui:</p>
+    <p><code>app/src/main/assets/database_quiz.json</code></p>
+
+    <h2>2. Copia il motore Kotlin</h2>
+    <p>Prendi questa cartella:</p>
+    <p><code>2_FILE_DA_COPIARE/app/src/main/java/com/alex/quizengine/</code></p>
+    <p>Mettila nel tuo progetto Android qui:</p>
+    <p><code>app/src/main/java/com/alex/quizengine/</code></p>
+
+    <h2>File Kotlin inclusi</h2>
+    <p>
+      QuizQuestion.kt<br>
+      QuizRepository.kt<br>
+      QuizEngine.kt<br>
+      QuizQualityValidator.kt<br>
+      ScoreEngine.kt
+    </p>
+  </div>
+</body>
+</html>
+"""
+
+    (output_dir / "1_ISTRUZIONI.html").write_text(html, encoding="utf-8")
+
 def copia_motore_android(output_dir):
     if not RUNTIME_ANDROID.exists():
         raise FileNotFoundError("Motore Android non trovato: runtime/android")
@@ -352,6 +436,7 @@ def copia_motore_android(output_dir):
 
     shutil.copytree(RUNTIME_ANDROID, target)
     crea_istruzioni_android(output_dir)
+    pulisci_android_pubblico(output_dir)
 
 
 def copia_motore_web(output_dir):
