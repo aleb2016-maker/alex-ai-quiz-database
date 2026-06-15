@@ -8,6 +8,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 DATABASE_PATH = ROOT / "dist" / "database_quiz_finale.json"
 OUTPUT_ROOT = ROOT / "dist" / "generated"
+RUNTIME_ANDROID = ROOT / "runtime" / "android"
+RUNTIME_WEB = ROOT / "runtime" / "web"
 
 def slug(testo):
     return (
@@ -84,6 +86,26 @@ def prepara_domande(materia, livello, numero):
         domande = domande[:int(numero)]
 
     return domande
+
+
+def copia_motore_android(output_dir):
+    if not RUNTIME_ANDROID.exists():
+        raise FileNotFoundError("Motore Android non trovato: runtime/android")
+
+    target = output_dir / "quiz_engine_android"
+
+    if target.exists():
+        shutil.rmtree(target)
+
+    shutil.copytree(RUNTIME_ANDROID, target)
+
+
+def copia_motore_web(output_dir):
+    if not RUNTIME_WEB.exists():
+        raise FileNotFoundError("Motore Web non trovato: runtime/web")
+
+    shutil.copy2(RUNTIME_WEB / "quiz-engine.js", output_dir / "quiz-engine.js")
+    shutil.copy2(RUNTIME_WEB / "README_WEB_ENGINE.md", output_dir / "README_WEB_ENGINE.md")
 
 def crea_demo_web(percorso, domande):
     dati_json = json.dumps(domande, ensure_ascii=False)
@@ -377,10 +399,27 @@ def crea_pacchetto(piattaforma, materia, livello, numero):
     if piattaforma == "android":
         assets = output_dir / "app" / "src" / "main" / "assets"
         assets.mkdir(parents=True, exist_ok=True)
-        (assets / "database_quiz.json").write_text(json.dumps(domande, ensure_ascii=False, indent=2), encoding="utf-8")
+
+        (assets / "database_quiz.json").write_text(
+            json.dumps(domande, ensure_ascii=False, indent=2),
+            encoding="utf-8",
+        )
+
+        (output_dir / "database_quiz.json").write_text(
+            json.dumps(domande, ensure_ascii=False, indent=2),
+            encoding="utf-8",
+        )
+
+        copia_motore_android(output_dir)
+
     else:
-        (output_dir / "database_quiz.json").write_text(json.dumps(domande, ensure_ascii=False, indent=2), encoding="utf-8")
+        (output_dir / "database_quiz.json").write_text(
+            json.dumps(domande, ensure_ascii=False, indent=2),
+            encoding="utf-8",
+        )
+
         crea_demo_web(output_dir, domande)
+        copia_motore_web(output_dir)
 
     crea_readme_pacchetto(output_dir, piattaforma, materia, livello, len(domande))
 
