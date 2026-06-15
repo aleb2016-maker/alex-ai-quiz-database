@@ -813,5 +813,212 @@
     "punteggio_distrattore_forte": 4,
     "motivo_distrattore_forte": "È vicino perché nello spazio si parla spesso di assenza di peso, ma la gravità continua ad agire.",
     "qualita": "controllata"
+  },
+  {
+    "id": "FIS_033",
+    "categoria": "scienze",
+    "sottocategoria": "fisica",
+    "livello": "facile",
+    "domanda": "Perché l’ago di una bussola tende a orientarsi sempre in una direzione precisa?",
+    "opzioni": [
+      "Perché interagisce con il campo magnetico terrestre",
+      "Perché viene attratto direttamente dalla massa della Terra",
+      "Perché misura la temperatura dell’aria intorno alla bussola",
+      "Perché ruota sempre nella direzione del vento più forte"
+    ],
+    "risposta_corretta": "Perché interagisce con il campo magnetico terrestre",
+    "spiegazione": "L’ago della bussola è magnetizzato e si orienta seguendo il campo magnetico terrestre. Per questo indica una direzione stabile.",
+    "tags": [
+      "fisica",
+      "magnetismo",
+      "bussola",
+      "campo_magnetico"
+    ],
+    "difficolta": 1,
+    "distrattore_forte": "Perché viene attratto direttamente dalla massa della Terra",
+    "punteggio_distrattore_forte": 4,
+    "motivo_distrattore_forte": "È vicino perché richiama la Terra, ma la bussola non si orienta per attrazione gravitazionale: segue il campo magnetico.",
+    "qualita": "controllata"
+  },
+  {
+    "id": "FIS_034",
+    "categoria": "scienze",
+    "sottocategoria": "fisica",
+    "livello": "facile",
+    "domanda": "Che cosa succede a un corpo se riceve calore?",
+    "opzioni": [
+      "Può aumentare la temperatura o cambiare stato fisico",
+      "Perde sempre tutta la propria massa",
+      "Smette sempre di occupare spazio",
+      "Si trasforma sempre in carica elettrica"
+    ],
+    "risposta_corretta": "Può aumentare la temperatura o cambiare stato fisico",
+    "spiegazione": "Il calore trasferito a un corpo può aumentare la temperatura oppure produrre un cambiamento di stato, come fusione o evaporazione.",
+    "tags": [
+      "fisica",
+      "calore",
+      "temperatura",
+      "stati_materia"
+    ],
+    "difficolta": 1,
+    "distrattore_forte": "Perde sempre tutta la propria massa",
+    "punteggio_distrattore_forte": 4,
+    "motivo_distrattore_forte": "È vicino perché parla di un cambiamento del corpo, ma il calore non fa sparire la massa.",
+    "qualita": "controllata"
+  },
+  {
+    "id": "FIS_035",
+    "categoria": "scienze",
+    "sottocategoria": "fisica",
+    "livello": "intermedio",
+    "domanda": "Qual è la differenza tra calore e temperatura?",
+    "opzioni": [
+      "Il calore è energia trasferita, la temperatura indica lo stato termico del corpo",
+      "Il calore è una forza, la temperatura è sempre una massa",
+      "Il calore si misura solo in metri, la temperatura solo in newton",
+      "Il calore esiste solo nei solidi, la temperatura solo nei gas"
+    ],
+    "risposta_corretta": "Il calore è energia trasferita, la temperatura indica lo stato termico del corpo",
+    "spiegazione": "Il calore è energia che passa da un corpo a un altro per differenza di temperatura. La temperatura descrive lo stato termico di un corpo.",
+    "tags": [
+      "fisica",
+      "calore",
+      "temperatura",
+      "energia"
+    ],
+    "difficolta": 2,
+    "distrattore_forte": "Il calore è una forza, la temperatura è sempre una massa",
+    "punteggio_distrattore_forte": 4,
+    "motivo_distrattore_forte": "È vicino perché prova a distinguere le due grandezze, ma usa categorie fisiche sbagliate.",
+    "qualita": "controllata"
+  },
+  {
+    "id": "FIS_036",
+    "categoria": "scienze",
+    "sottocategoria": "fisica",
+    "livello": "intermedio",
+    "domanda": "Che cosa avviene quando due corpi a temperatura diversa vengono messi a contatto?",
+    "opzioni": [
+      "Il calore passa spontaneamente dal corpo più caldo a quello più freddo",
+      "Il calore passa sempre dal corpo più freddo a quello più caldo",
+      "Le masse dei due corpi diventano automaticamente uguali",
+      "La gravità tra i due corpi si annulla completamente"
+    ],
+    "risposta_corretta": "Il calore passa spontaneamente dal corpo più caldo a quello più freddo",
+    "spiegazione": "Il trasferimento spontaneo di calore avviene dal corpo a temperatura maggiore verso quello a temperatura minore, fino al raggiungimento dell’equilibrio termico.",
+    "tags": [
+      "fisica",
+      "calore",
+      "equilibrio_termico"
+    ],
+    "difficolta": 2,
+    "distrattore_forte": "Il calore passa sempre dal corpo più freddo a quello più caldo",
+    "punteggio_distrattore_forte": 4,
+    "motivo_distrattore_forte": "È vicino perché descrive lo stesso scambio termico, ma inverte il verso spontaneo del calore.",
+    "qualita": "controllata"
+  },
+  {
+    "id": "FIS_037",
+    "categoria": "scienze",
+    "sottocategoria": "fisica",
+    "livello": "intermedio",
+    "domanda": "Perché una leva può permettere di sollevare un carico con minore forza?",
+    "opzioni": [
+      "Perché aumenta il braccio della forza applicata rispetto al fulcro",
+      "Perché elimina completamente il peso del carico",
+      "Perché trasforma il carico in energia elettrica",
+      "Perché annulla sempre l’attrito dell’aria"
+    ],
+    "risposta_corretta": "Perché aumenta il braccio della forza applicata rispetto al fulcro",
+    "spiegazione": "Una leva sfrutta i momenti delle forze. Se il braccio della forza applicata è più lungo, serve una forza minore per equilibrare il carico.",
+    "tags": [
+      "fisica",
+      "leva",
+      "momento",
+      "macchine_semplici"
+    ],
+    "difficolta": 2,
+    "distrattore_forte": "Perché elimina completamente il peso del carico",
+    "punteggio_distrattore_forte": 4,
+    "motivo_distrattore_forte": "È vicino perché il carico sembra più facile da sollevare, ma il peso non viene eliminato: cambia il vantaggio meccanico.",
+    "qualita": "controllata"
+  },
+  {
+    "id": "FIS_038",
+    "categoria": "scienze",
+    "sottocategoria": "fisica",
+    "livello": "avanzato",
+    "domanda": "Che cosa rappresenta il lavoro di una forza quando forza e spostamento hanno la stessa direzione?",
+    "opzioni": [
+      "Il prodotto tra intensità della forza e spostamento",
+      "Il rapporto tra massa e temperatura",
+      "La somma tra velocità e accelerazione",
+      "Il numero di particelle presenti nel corpo"
+    ],
+    "risposta_corretta": "Il prodotto tra intensità della forza e spostamento",
+    "spiegazione": "Quando forza e spostamento hanno la stessa direzione, il lavoro si calcola come L = F · s.",
+    "tags": [
+      "fisica",
+      "lavoro",
+      "forza",
+      "spostamento"
+    ],
+    "difficolta": 3,
+    "distrattore_forte": "La somma tra velocità e accelerazione",
+    "punteggio_distrattore_forte": 4,
+    "motivo_distrattore_forte": "È vicino perché usa grandezze del moto, ma il lavoro dipende da forza e spostamento.",
+    "qualita": "controllata"
+  },
+  {
+    "id": "FIS_039",
+    "categoria": "scienze",
+    "sottocategoria": "fisica",
+    "livello": "avanzato",
+    "domanda": "In un trasformatore ideale, che cosa collega il rapporto tra le tensioni ai due avvolgimenti?",
+    "opzioni": [
+      "Il rapporto tra il numero di spire dei due avvolgimenti",
+      "La massa dei fili usati nei due avvolgimenti",
+      "La temperatura dell’aria intorno al trasformatore",
+      "La distanza tra il trasformatore e il suolo"
+    ],
+    "risposta_corretta": "Il rapporto tra il numero di spire dei due avvolgimenti",
+    "spiegazione": "In un trasformatore ideale il rapporto tra tensione primaria e secondaria dipende dal rapporto tra il numero di spire dei due avvolgimenti.",
+    "tags": [
+      "fisica",
+      "trasformatore",
+      "elettromagnetismo",
+      "tensione"
+    ],
+    "difficolta": 3,
+    "distrattore_forte": "La massa dei fili usati nei due avvolgimenti",
+    "punteggio_distrattore_forte": 4,
+    "motivo_distrattore_forte": "È vicino perché riguarda gli avvolgimenti fisici, ma il rapporto di tensione dipende dal numero di spire.",
+    "qualita": "controllata"
+  },
+  {
+    "id": "FIS_040",
+    "categoria": "scienze",
+    "sottocategoria": "fisica",
+    "livello": "avanzato",
+    "domanda": "Che cosa descrive l’effetto Doppler per le onde sonore?",
+    "opzioni": [
+      "La variazione della frequenza percepita quando sorgente e osservatore sono in moto relativo",
+      "La trasformazione completa del suono in luce visibile",
+      "La scomparsa del suono quando aumenta la massa della sorgente",
+      "La riduzione della velocità della luce in un mezzo trasparente"
+    ],
+    "risposta_corretta": "La variazione della frequenza percepita quando sorgente e osservatore sono in moto relativo",
+    "spiegazione": "L’effetto Doppler si osserva quando la frequenza percepita cambia a causa del moto relativo tra sorgente dell’onda e osservatore.",
+    "tags": [
+      "fisica",
+      "doppler",
+      "onde_sonore",
+      "frequenza"
+    ],
+    "difficolta": 3,
+    "distrattore_forte": "La riduzione della velocità della luce in un mezzo trasparente",
+    "punteggio_distrattore_forte": 4,
+    "motivo_distrattore_forte": "È vicino perché riguarda fenomeni ondulatori, ma descrive rifrazione ottica, non effetto Doppler sonoro.",
+    "qualita": "controllata"
   }
 ]
