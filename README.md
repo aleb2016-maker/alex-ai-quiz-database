@@ -41,12 +41,21 @@ Il progetto non è solo una demo online: può essere usato anche come base tecni
       </a>
     </td>
     <td align="center">
-      <a href="https://github.com/aleb2016-maker/alex-ai-quiz-database/raw/main/downloads/pacchetto-android-finale-semplice.zip">
+      <a href="https://github.com/aleb2016-maker/alex-ai-quiz-database/raw/main/downloads/pacchetto-android-scienze-finale-semplice.zip">
         <img src="https://img.shields.io/badge/SCARICA%20ANDROID%20SCIENZE-DATABASE%20KOTLIN-2962ff?style=for-the-badge&labelColor=2962ff" alt="Scarica Android Scienze">
       </a>
     </td>
   </tr>
 </table>
+
+### Cosa contiene ogni pacchetto
+
+Ogni ZIP scaricato contiene una cartella con nomi chiari e un solo file di istruzioni:
+
+- **LEGGIMI.html**: spiegazione semplice del pacchetto.
+- **APRI_QUIZ.html**: presente nei pacchetti Web, serve per provare subito il quiz.
+- **FILE_DA_COPIARE_NEL_TUO_PROGETTO_WEB/**: file da copiare in un nuovo progetto Web.
+- **FILE_DA_COPIARE_NEL_PROGETTO_ANDROID/**: database e motore Kotlin da copiare in Android Studio.
 
 ## Crea un pacchetto personalizzato
 

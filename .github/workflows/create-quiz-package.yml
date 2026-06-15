@@ -69,6 +69,7 @@ jobs:
       - name: Genera pacchetto quiz
         run: |
           python scripts/create_quiz_package.py \
+          python3 scripts/clean_package_outputs.py dist/generated
             --platform "${{ github.event.inputs.platform }}" \
             --subject "${{ github.event.inputs.subject }}" \
             --level "${{ github.event.inputs.level }}" \
