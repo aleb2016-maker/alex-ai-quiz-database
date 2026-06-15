@@ -551,6 +551,706 @@
     "qualita": 100
   },
   {
+    "id": "SCI_013",
+    "categoria": "scienze",
+    "sottocategoria": "biologia",
+    "livello": "facile",
+    "domanda": "Qual è la funzione principale della membrana cellulare?",
+    "opzioni": [
+      "Delimita la cellula e regola gli scambi con l'esterno",
+      "Produce direttamente tutta l'energia della cellula",
+      "Contiene sempre il DNA in tutte le cellule",
+      "Trasforma il sangue in ossigeno"
+    ],
+    "risposta_corretta": "Delimita la cellula e regola gli scambi con l'esterno",
+    "spiegazione": "La membrana cellulare separa l'interno della cellula dall'ambiente esterno e controlla il passaggio di molte sostanze.",
+    "tags": [
+      "cellula",
+      "membrana",
+      "biologia"
+    ],
+    "difficolta": 1,
+    "distrattore_forte": "Produce direttamente tutta l'energia della cellula",
+    "punteggio_distrattore_forte": 0.58,
+    "motivo_distrattore_forte": "È un distrattore plausibile perché è collegato allo stesso argomento della risposta corretta, ma non identifica precisamente il concetto richiesto. La risposta corretta resta 'Delimita la cellula e regola gli scambi con l'esterno', non 'Produce direttamente tutta l'energia della cellula'.",
+    "qualita": 100
+  },
+  {
+    "id": "SCI_014",
+    "categoria": "scienze",
+    "sottocategoria": "chimica_base",
+    "livello": "facile",
+    "domanda": "Che cosa indica la formula H2O?",
+    "opzioni": [
+      "Una molecola d'acqua formata da due atomi di idrogeno e uno di ossigeno",
+      "Una molecola d'acqua formata da due atomi di ossigeno e uno di idrogeno",
+      "Una molecola di ossigeno formata da due atomi di idrogeno",
+      "Una molecola di idrogeno formata da un atomo di ossigeno"
+    ],
+    "risposta_corretta": "Una molecola d'acqua formata da due atomi di idrogeno e uno di ossigeno",
+    "spiegazione": "H2O significa che ogni molecola d'acqua contiene 2 atomi di idrogeno e 1 atomo di ossigeno.",
+    "tags": [
+      "acqua",
+      "molecola",
+      "chimica"
+    ],
+    "difficolta": 1,
+    "distrattore_forte": "Una molecola d'acqua formata da due atomi di ossigeno e uno di idrogeno",
+    "punteggio_distrattore_forte": 0.7,
+    "motivo_distrattore_forte": "È un distrattore plausibile perché è collegato allo stesso argomento della risposta corretta, ma non identifica precisamente il concetto richiesto. La risposta corretta resta 'Una molecola d'acqua formata da due atomi di idrogeno e uno di ossigeno', non 'Una molecola d'acqua formata da due atomi di ossigeno e uno di idrogeno'.",
+    "qualita": 90
+  },
+  {
+    "id": "SCI_015",
+    "categoria": "scienze",
+    "sottocategoria": "fisica_base",
+    "livello": "facile",
+    "domanda": "Qual è l'unità di misura della forza nel Sistema Internazionale?",
+    "opzioni": [
+      "Newton",
+      "Joule",
+      "Watt",
+      "Pascal"
+    ],
+    "risposta_corretta": "Newton",
+    "spiegazione": "La forza si misura in newton. Il joule misura l'energia, il watt la potenza e il pascal la pressione.",
+    "tags": [
+      "forza",
+      "newton",
+      "fisica"
+    ],
+    "difficolta": 1,
+    "distrattore_forte": "Joule",
+    "punteggio_distrattore_forte": 0.78,
+    "motivo_distrattore_forte": "È un distrattore plausibile perché è collegato allo stesso argomento della risposta corretta, ma non identifica precisamente il concetto richiesto. La risposta corretta resta 'Newton', non 'Joule'.",
+    "qualita": 100
+  },
+  {
+    "id": "SCI_016",
+    "categoria": "scienze",
+    "sottocategoria": "scienze_della_terra",
+    "livello": "facile",
+    "domanda": "Qual è lo strato più esterno della Terra?",
+    "opzioni": [
+      "Crosta terrestre",
+      "Mantello",
+      "Nucleo esterno",
+      "Nucleo interno"
+    ],
+    "risposta_corretta": "Crosta terrestre",
+    "spiegazione": "La crosta terrestre è lo strato più esterno. Sotto si trova il mantello, poi il nucleo esterno e il nucleo interno.",
+    "tags": [
+      "terra",
+      "crosta",
+      "geologia"
+    ],
+    "difficolta": 1,
+    "distrattore_forte": "Mantello",
+    "punteggio_distrattore_forte": 0.75,
+    "motivo_distrattore_forte": "È un distrattore plausibile perché è collegato allo stesso argomento della risposta corretta, ma non identifica precisamente il concetto richiesto. La risposta corretta resta 'Crosta terrestre', non 'Mantello'.",
+    "qualita": 100
+  },
+  {
+    "id": "SCI_017",
+    "categoria": "scienze",
+    "sottocategoria": "astronomia",
+    "livello": "facile",
+    "domanda": "Quale pianeta è più vicino al Sole?",
+    "opzioni": [
+      "Mercurio",
+      "Venere",
+      "Marte",
+      "Giove"
+    ],
+    "risposta_corretta": "Mercurio",
+    "spiegazione": "Mercurio è il pianeta più vicino al Sole. Venere è il secondo pianeta in ordine di distanza.",
+    "tags": [
+      "pianeti",
+      "sistema solare",
+      "astronomia"
+    ],
+    "difficolta": 1,
+    "distrattore_forte": "Venere",
+    "punteggio_distrattore_forte": 0.39,
+    "motivo_distrattore_forte": "È un distrattore plausibile perché è collegato allo stesso argomento della risposta corretta, ma non identifica precisamente il concetto richiesto. La risposta corretta resta 'Mercurio', non 'Venere'.",
+    "qualita": 90
+  },
+  {
+    "id": "SCI_018",
+    "categoria": "scienze",
+    "sottocategoria": "ecologia",
+    "livello": "facile",
+    "domanda": "In una catena alimentare, che cosa sono i produttori?",
+    "opzioni": [
+      "Organismi che producono materia organica usando energia, come le piante",
+      "Animali che mangiano solo altri animali",
+      "Organismi che non partecipano al passaggio di energia",
+      "Batteri che vivono solo in ambienti senza ossigeno"
+    ],
+    "risposta_corretta": "Organismi che producono materia organica usando energia, come le piante",
+    "spiegazione": "I produttori, come molte piante e alghe, usano energia luminosa o chimica per produrre materia organica.",
+    "tags": [
+      "ecologia",
+      "catena alimentare",
+      "produttori"
+    ],
+    "difficolta": 1,
+    "distrattore_forte": "Animali che mangiano solo altri animali",
+    "punteggio_distrattore_forte": 0.42,
+    "motivo_distrattore_forte": "È un distrattore plausibile perché è collegato allo stesso argomento della risposta corretta, ma non identifica precisamente il concetto richiesto. La risposta corretta resta 'Organismi che producono materia organica usando energia, come le piante', non 'Animali che mangiano solo altri animali'.",
+    "qualita": 90
+  },
+  {
+    "id": "SCI_019",
+    "categoria": "scienze",
+    "sottocategoria": "corpo_umano",
+    "livello": "facile",
+    "domanda": "Qual è la funzione principale dei polmoni?",
+    "opzioni": [
+      "Permettere lo scambio di ossigeno e anidride carbonica",
+      "Pompare il sangue in tutto il corpo",
+      "Filtrare direttamente tutte le sostanze tossiche del sangue",
+      "Produrre globuli rossi in modo continuo"
+    ],
+    "risposta_corretta": "Permettere lo scambio di ossigeno e anidride carbonica",
+    "spiegazione": "I polmoni permettono lo scambio gassoso: l'ossigeno entra nel sangue e l'anidride carbonica viene eliminata.",
+    "tags": [
+      "polmoni",
+      "respirazione",
+      "corpo umano"
+    ],
+    "difficolta": 1,
+    "distrattore_forte": "Pompare il sangue in tutto il corpo",
+    "punteggio_distrattore_forte": 0.41,
+    "motivo_distrattore_forte": "È un distrattore plausibile perché è collegato allo stesso argomento della risposta corretta, ma non identifica precisamente il concetto richiesto. La risposta corretta resta 'Permettere lo scambio di ossigeno e anidride carbonica', non 'Pompare il sangue in tutto il corpo'.",
+    "qualita": 90
+  },
+  {
+    "id": "SCI_020",
+    "categoria": "scienze",
+    "sottocategoria": "metodo_scientifico",
+    "livello": "facile",
+    "domanda": "In un esperimento, che cos'è una variabile controllata?",
+    "opzioni": [
+      "Un fattore mantenuto costante per rendere più affidabile il confronto",
+      "Il risultato finale che viene misurato",
+      "Il fattore che viene cambiato volontariamente",
+      "Una conclusione già dimostrata prima dell'esperimento"
+    ],
+    "risposta_corretta": "Un fattore mantenuto costante per rendere più affidabile il confronto",
+    "spiegazione": "Una variabile controllata resta costante, così si può capire meglio l'effetto della variabile modificata.",
+    "tags": [
+      "metodo scientifico",
+      "esperimento",
+      "variabili"
+    ],
+    "difficolta": 1,
+    "distrattore_forte": "Il risultato finale che viene misurato",
+    "punteggio_distrattore_forte": 0.21,
+    "motivo_distrattore_forte": "È un distrattore plausibile perché è collegato allo stesso argomento della risposta corretta, ma non identifica precisamente il concetto richiesto. La risposta corretta resta 'Un fattore mantenuto costante per rendere più affidabile il confronto', non 'Il risultato finale che viene misurato'.",
+    "qualita": 80
+  },
+  {
+    "id": "SCI_021",
+    "categoria": "scienze",
+    "sottocategoria": "fisica_base",
+    "livello": "facile",
+    "domanda": "Che cosa misura la temperatura di un corpo?",
+    "opzioni": [
+      "Il livello di agitazione termica media delle sue particelle",
+      "La quantità totale di materia presente nel corpo",
+      "La forza con cui il corpo viene attratto dalla Terra",
+      "La velocità con cui il corpo cambia colore"
+    ],
+    "risposta_corretta": "Il livello di agitazione termica media delle sue particelle",
+    "spiegazione": "La temperatura è collegata all'agitazione termica media delle particelle, non alla quantità totale di materia.",
+    "tags": [
+      "temperatura",
+      "fisica",
+      "calore"
+    ],
+    "difficolta": 1,
+    "distrattore_forte": "La quantità totale di materia presente nel corpo",
+    "punteggio_distrattore_forte": 0.47,
+    "motivo_distrattore_forte": "È un distrattore plausibile perché è collegato allo stesso argomento della risposta corretta, ma non identifica precisamente il concetto richiesto. La risposta corretta resta 'Il livello di agitazione termica media delle sue particelle', non 'La quantità totale di materia presente nel corpo'.",
+    "qualita": 90
+  },
+  {
+    "id": "SCI_022",
+    "categoria": "scienze",
+    "sottocategoria": "biologia",
+    "livello": "intermedio",
+    "domanda": "Qual è il risultato principale della mitosi?",
+    "opzioni": [
+      "Due cellule figlie geneticamente uguali alla cellula di partenza",
+      "Quattro cellule figlie con metà del patrimonio genetico",
+      "Una sola cellula con DNA completamente diverso",
+      "Due cellule senza nucleo e senza cromosomi"
+    ],
+    "risposta_corretta": "Due cellule figlie geneticamente uguali alla cellula di partenza",
+    "spiegazione": "La mitosi produce due cellule geneticamente uguali. La produzione di quattro cellule con metà patrimonio genetico riguarda la meiosi.",
+    "tags": [
+      "mitosi",
+      "cellule",
+      "biologia"
+    ],
+    "difficolta": 2,
+    "distrattore_forte": "Quattro cellule figlie con metà del patrimonio genetico",
+    "punteggio_distrattore_forte": 0.65,
+    "motivo_distrattore_forte": "È un distrattore plausibile perché è collegato allo stesso argomento della risposta corretta, ma non identifica precisamente il concetto richiesto. La risposta corretta resta 'Due cellule figlie geneticamente uguali alla cellula di partenza', non 'Quattro cellule figlie con metà del patrimonio genetico'.",
+    "qualita": 100
+  },
+  {
+    "id": "SCI_023",
+    "categoria": "scienze",
+    "sottocategoria": "chimica_base",
+    "livello": "intermedio",
+    "domanda": "Una soluzione con pH minore di 7 è generalmente considerata:",
+    "opzioni": [
+      "Acida",
+      "Basica",
+      "Neutra",
+      "Sempre salina"
+    ],
+    "risposta_corretta": "Acida",
+    "spiegazione": "Un pH minore di 7 indica una soluzione acida; pH 7 è neutro, mentre pH maggiore di 7 è basico.",
+    "tags": [
+      "pH",
+      "acidi",
+      "chimica"
+    ],
+    "difficolta": 2,
+    "distrattore_forte": "Basica",
+    "punteggio_distrattore_forte": 0.55,
+    "motivo_distrattore_forte": "È un distrattore plausibile perché è collegato allo stesso argomento della risposta corretta, ma non identifica precisamente il concetto richiesto. La risposta corretta resta 'Acida', non 'Basica'.",
+    "qualita": 100
+  },
+  {
+    "id": "SCI_024",
+    "categoria": "scienze",
+    "sottocategoria": "fisica_base",
+    "livello": "intermedio",
+    "domanda": "Come si calcola la densità di un corpo?",
+    "opzioni": [
+      "Massa divisa per volume",
+      "Volume diviso per massa",
+      "Massa moltiplicata per volume",
+      "Peso diviso per temperatura"
+    ],
+    "risposta_corretta": "Massa divisa per volume",
+    "spiegazione": "La densità indica quanta massa è contenuta in un certo volume: densità = massa / volume.",
+    "tags": [
+      "densità",
+      "massa",
+      "volume"
+    ],
+    "difficolta": 2,
+    "distrattore_forte": "Volume diviso per massa",
+    "punteggio_distrattore_forte": 0.86,
+    "motivo_distrattore_forte": "È un distrattore plausibile perché è collegato allo stesso argomento della risposta corretta, ma non identifica precisamente il concetto richiesto. La risposta corretta resta 'Massa divisa per volume', non 'Volume diviso per massa'.",
+    "qualita": 100
+  },
+  {
+    "id": "SCI_025",
+    "categoria": "scienze",
+    "sottocategoria": "astronomia",
+    "livello": "intermedio",
+    "domanda": "Quando si verifica un'eclissi solare?",
+    "opzioni": [
+      "Quando la Luna si trova tra Sole e Terra e oscura il Sole",
+      "Quando la Terra si trova tra Sole e Luna e oscura la Luna",
+      "Quando Marte si trova tra Sole e Terra",
+      "Quando il Sole si trova tra Terra e Luna"
+    ],
+    "risposta_corretta": "Quando la Luna si trova tra Sole e Terra e oscura il Sole",
+    "spiegazione": "Nell'eclissi solare la Luna passa tra Sole e Terra. Nell'eclissi lunare è la Terra a trovarsi tra Sole e Luna.",
+    "tags": [
+      "eclissi",
+      "sole",
+      "luna"
+    ],
+    "difficolta": 2,
+    "distrattore_forte": "Quando la Terra si trova tra Sole e Luna e oscura la Luna",
+    "punteggio_distrattore_forte": 0.7,
+    "motivo_distrattore_forte": "È un distrattore plausibile perché è collegato allo stesso argomento della risposta corretta, ma non identifica precisamente il concetto richiesto. La risposta corretta resta 'Quando la Luna si trova tra Sole e Terra e oscura il Sole', non 'Quando la Terra si trova tra Sole e Luna e oscura la Luna'.",
+    "qualita": 100
+  },
+  {
+    "id": "SCI_026",
+    "categoria": "scienze",
+    "sottocategoria": "scienze_della_terra",
+    "livello": "intermedio",
+    "domanda": "Che cosa descrive la teoria della tettonica delle placche?",
+    "opzioni": [
+      "Il movimento delle grandi placche della litosfera terrestre",
+      "La rotazione dei pianeti intorno al Sole",
+      "La trasformazione diretta del magma in acqua",
+      "Il modo in cui le stelle producono luce"
+    ],
+    "risposta_corretta": "Il movimento delle grandi placche della litosfera terrestre",
+    "spiegazione": "La tettonica delle placche spiega il movimento delle placche litosferiche e fenomeni come terremoti, vulcani e formazione delle montagne.",
+    "tags": [
+      "tettonica",
+      "placche",
+      "geologia"
+    ],
+    "difficolta": 2,
+    "distrattore_forte": "La rotazione dei pianeti intorno al Sole",
+    "punteggio_distrattore_forte": 0.36,
+    "motivo_distrattore_forte": "È un distrattore plausibile perché è collegato allo stesso argomento della risposta corretta, ma non identifica precisamente il concetto richiesto. La risposta corretta resta 'Il movimento delle grandi placche della litosfera terrestre', non 'La rotazione dei pianeti intorno al Sole'.",
+    "qualita": 90
+  },
+  {
+    "id": "SCI_027",
+    "categoria": "scienze",
+    "sottocategoria": "ecologia",
+    "livello": "intermedio",
+    "domanda": "Che cosa indica la biomagnificazione?",
+    "opzioni": [
+      "L'aumento della concentrazione di una sostanza tossica lungo la catena alimentare",
+      "La crescita veloce di una popolazione in un ambiente senza limiti",
+      "La perdita totale di energia tra produttori e consumatori",
+      "La trasformazione di un erbivoro in carnivoro"
+    ],
+    "risposta_corretta": "L'aumento della concentrazione di una sostanza tossica lungo la catena alimentare",
+    "spiegazione": "La biomagnificazione avviene quando certe sostanze si concentrano sempre di più passando da un livello trofico al successivo.",
+    "tags": [
+      "ecologia",
+      "biomagnificazione",
+      "catena alimentare"
+    ],
+    "difficolta": 2,
+    "distrattore_forte": "La crescita veloce di una popolazione in un ambiente senza limiti",
+    "punteggio_distrattore_forte": 0.96,
+    "motivo_distrattore_forte": "È un distrattore plausibile perché è collegato allo stesso argomento della risposta corretta, ma non identifica precisamente il concetto richiesto. La risposta corretta resta 'L'aumento della concentrazione di una sostanza tossica lungo la catena alimentare', non 'La crescita veloce di una popolazione in un ambiente senza limiti'.",
+    "qualita": 100
+  },
+  {
+    "id": "SCI_028",
+    "categoria": "scienze",
+    "sottocategoria": "corpo_umano",
+    "livello": "intermedio",
+    "domanda": "Qual è la funzione principale dell'emoglobina?",
+    "opzioni": [
+      "Trasportare ossigeno nel sangue",
+      "Produrre bile nel fegato",
+      "Filtrare l'urina nei reni",
+      "Digerire gli zuccheri nello stomaco"
+    ],
+    "risposta_corretta": "Trasportare ossigeno nel sangue",
+    "spiegazione": "L'emoglobina è una proteina presente nei globuli rossi e serve soprattutto a trasportare ossigeno.",
+    "tags": [
+      "emoglobina",
+      "sangue",
+      "ossigeno"
+    ],
+    "difficolta": 2,
+    "distrattore_forte": "Filtrare l'urina nei reni",
+    "punteggio_distrattore_forte": 0.55,
+    "motivo_distrattore_forte": "È un distrattore plausibile perché è collegato allo stesso argomento della risposta corretta, ma non identifica precisamente il concetto richiesto. La risposta corretta resta 'Trasportare ossigeno nel sangue', non 'Filtrare l'urina nei reni'.",
+    "qualita": 100
+  },
+  {
+    "id": "SCI_029",
+    "categoria": "scienze",
+    "sottocategoria": "metodo_scientifico",
+    "livello": "intermedio",
+    "domanda": "Perché una correlazione tra due fenomeni non dimostra automaticamente una causa?",
+    "opzioni": [
+      "Perché due fenomeni possono variare insieme senza che uno provochi direttamente l'altro",
+      "Perché ogni correlazione è sempre falsa",
+      "Perché la causa può essere dimostrata solo con un'opinione personale",
+      "Perché i dati numerici non possono mai essere usati nella scienza"
+    ],
+    "risposta_corretta": "Perché due fenomeni possono variare insieme senza che uno provochi direttamente l'altro",
+    "spiegazione": "Una correlazione mostra un legame statistico, ma per dimostrare una causa servono controlli, esperimenti o prove aggiuntive.",
+    "tags": [
+      "metodo scientifico",
+      "correlazione",
+      "causalità"
+    ],
+    "difficolta": 2,
+    "distrattore_forte": "Perché ogni correlazione è sempre falsa",
+    "punteggio_distrattore_forte": 0.43,
+    "motivo_distrattore_forte": "È un distrattore plausibile perché è collegato allo stesso argomento della risposta corretta, ma non identifica precisamente il concetto richiesto. La risposta corretta resta 'Perché due fenomeni possono variare insieme senza che uno provochi direttamente l'altro', non 'Perché ogni correlazione è sempre falsa'.",
+    "qualita": 90
+  },
+  {
+    "id": "SCI_030",
+    "categoria": "scienze",
+    "sottocategoria": "chimica_base",
+    "livello": "avanzato",
+    "domanda": "Che cosa sono gli isotopi di uno stesso elemento?",
+    "opzioni": [
+      "Atomi con lo stesso numero di protoni ma diverso numero di neutroni",
+      "Atomi con lo stesso numero di neutroni ma diverso numero di protoni",
+      "Molecole con la stessa formula ma diversa temperatura",
+      "Ioni con carica opposta ma uguale massa"
+    ],
+    "risposta_corretta": "Atomi con lo stesso numero di protoni ma diverso numero di neutroni",
+    "spiegazione": "Gli isotopi appartengono allo stesso elemento perché hanno lo stesso numero di protoni, ma differiscono per il numero di neutroni.",
+    "tags": [
+      "isotopi",
+      "atomi",
+      "chimica"
+    ],
+    "difficolta": 3,
+    "distrattore_forte": "Atomi con lo stesso numero di neutroni ma diverso numero di protoni",
+    "punteggio_distrattore_forte": 1.0,
+    "motivo_distrattore_forte": "È un distrattore plausibile perché è collegato allo stesso argomento della risposta corretta, ma non identifica precisamente il concetto richiesto. La risposta corretta resta 'Atomi con lo stesso numero di protoni ma diverso numero di neutroni', non 'Atomi con lo stesso numero di neutroni ma diverso numero di protoni'.",
+    "qualita": 100
+  },
+  {
+    "id": "SCI_031",
+    "categoria": "scienze",
+    "sottocategoria": "fisica_base",
+    "livello": "avanzato",
+    "domanda": "In un moto circolare uniforme, verso dove è diretta l'accelerazione centripeta?",
+    "opzioni": [
+      "Verso il centro della traiettoria circolare",
+      "Sempre nella stessa direzione della velocità istantanea",
+      "Sempre verso l'esterno della traiettoria",
+      "In una direzione casuale che cambia senza regola"
+    ],
+    "risposta_corretta": "Verso il centro della traiettoria circolare",
+    "spiegazione": "Nel moto circolare uniforme la velocità cambia direzione. L'accelerazione centripeta è rivolta verso il centro della circonferenza.",
+    "tags": [
+      "moto circolare",
+      "accelerazione",
+      "fisica"
+    ],
+    "difficolta": 3,
+    "distrattore_forte": "Sempre nella stessa direzione della velocità istantanea",
+    "punteggio_distrattore_forte": 0.45,
+    "motivo_distrattore_forte": "È un distrattore plausibile perché è collegato allo stesso argomento della risposta corretta, ma non identifica precisamente il concetto richiesto. La risposta corretta resta 'Verso il centro della traiettoria circolare', non 'Sempre nella stessa direzione della velocità istantanea'.",
+    "qualita": 90
+  },
+  {
+    "id": "SCI_032",
+    "categoria": "scienze",
+    "sottocategoria": "biologia",
+    "livello": "avanzato",
+    "domanda": "Qual è la sequenza corretta nel passaggio dell'informazione genetica per produrre una proteina?",
+    "opzioni": [
+      "DNA trascritto in RNA messaggero, poi tradotto in proteina",
+      "Proteina trascritta in RNA messaggero, poi tradotta in DNA",
+      "RNA messaggero copiato direttamente in membrana cellulare",
+      "DNA trasformato direttamente in proteina senza passaggi intermedi"
+    ],
+    "risposta_corretta": "DNA trascritto in RNA messaggero, poi tradotto in proteina",
+    "spiegazione": "L'informazione del DNA viene trascritta in RNA messaggero; poi i ribosomi traducono l'RNA in una proteina.",
+    "tags": [
+      "DNA",
+      "RNA",
+      "proteine"
+    ],
+    "difficolta": 3,
+    "distrattore_forte": "DNA trasformato direttamente in proteina senza passaggi intermedi",
+    "punteggio_distrattore_forte": 1.0,
+    "motivo_distrattore_forte": "È un distrattore plausibile perché è collegato allo stesso argomento della risposta corretta, ma non identifica precisamente il concetto richiesto. La risposta corretta resta 'DNA trascritto in RNA messaggero, poi tradotto in proteina', non 'DNA trasformato direttamente in proteina senza passaggi intermedi'.",
+    "qualita": 100
+  },
+  {
+    "id": "SCI_033",
+    "categoria": "scienze",
+    "sottocategoria": "ecologia",
+    "livello": "avanzato",
+    "domanda": "Che cosa caratterizza la successione ecologica primaria?",
+    "opzioni": [
+      "Inizia in un ambiente privo di suolo sviluppato, come una roccia nuda",
+      "Inizia sempre in una foresta matura già ricca di organismi",
+      "Avviene solo quando una specie animale cambia dieta",
+      "È la sostituzione immediata di tutti i predatori con erbivori"
+    ],
+    "risposta_corretta": "Inizia in un ambiente privo di suolo sviluppato, come una roccia nuda",
+    "spiegazione": "La successione primaria parte da ambienti quasi privi di vita e senza suolo formato, come superfici rocciose esposte.",
+    "tags": [
+      "ecologia",
+      "successione primaria",
+      "ecosistemi"
+    ],
+    "difficolta": 3,
+    "distrattore_forte": "Inizia sempre in una foresta matura già ricca di organismi",
+    "punteggio_distrattore_forte": 0.48,
+    "motivo_distrattore_forte": "È un distrattore plausibile perché è collegato allo stesso argomento della risposta corretta, ma non identifica precisamente il concetto richiesto. La risposta corretta resta 'Inizia in un ambiente privo di suolo sviluppato, come una roccia nuda', non 'Inizia sempre in una foresta matura già ricca di organismi'.",
+    "qualita": 90
+  },
+  {
+    "id": "SCI_034",
+    "categoria": "scienze",
+    "sottocategoria": "astronomia",
+    "livello": "avanzato",
+    "domanda": "In astronomia, che cosa indica generalmente il redshift della luce proveniente da una galassia lontana?",
+    "opzioni": [
+      "Che la galassia si sta allontanando, con luce spostata verso lunghezze d'onda maggiori",
+      "Che la galassia si sta avvicinando, con luce spostata verso lunghezze d'onda minori",
+      "Che la galassia non emette alcuna radiazione misurabile",
+      "Che la galassia è composta solo da pianeti senza stelle"
+    ],
+    "risposta_corretta": "Che la galassia si sta allontanando, con luce spostata verso lunghezze d'onda maggiori",
+    "spiegazione": "Il redshift è uno spostamento verso il rosso, cioè verso lunghezze d'onda maggiori, spesso collegato all'allontanamento delle galassie.",
+    "tags": [
+      "redshift",
+      "galassie",
+      "astronomia"
+    ],
+    "difficolta": 3,
+    "distrattore_forte": "Che la galassia si sta avvicinando, con luce spostata verso lunghezze d'onda minori",
+    "punteggio_distrattore_forte": 1.0,
+    "motivo_distrattore_forte": "È un distrattore plausibile perché è collegato allo stesso argomento della risposta corretta, ma non identifica precisamente il concetto richiesto. La risposta corretta resta 'Che la galassia si sta allontanando, con luce spostata verso lunghezze d'onda maggiori', non 'Che la galassia si sta avvicinando, con luce spostata verso lunghezze d'onda minori'.",
+    "qualita": 100
+  },
+  {
+    "id": "SCI_035",
+    "categoria": "scienze",
+    "sottocategoria": "fisica_quantistica_base",
+    "livello": "avanzato",
+    "domanda": "Che cosa esprime in modo semplificato il principio di indeterminazione di Heisenberg?",
+    "opzioni": [
+      "Non si possono conoscere simultaneamente con precisione arbitraria posizione e quantità di moto di una particella",
+      "Ogni particella ha sempre posizione e velocità perfettamente misurabili",
+      "La massa di una particella diventa sempre zero quando viene osservata",
+      "La luce smette di propagarsi quando incontra un atomo"
+    ],
+    "risposta_corretta": "Non si possono conoscere simultaneamente con precisione arbitraria posizione e quantità di moto di una particella",
+    "spiegazione": "Il principio di indeterminazione stabilisce un limite fondamentale alla precisione con cui certe coppie di grandezze possono essere conosciute insieme.",
+    "tags": [
+      "fisica quantistica",
+      "Heisenberg",
+      "particelle"
+    ],
+    "difficolta": 3,
+    "distrattore_forte": "Ogni particella ha sempre posizione e velocità perfettamente misurabili",
+    "punteggio_distrattore_forte": 1.0,
+    "motivo_distrattore_forte": "È un distrattore plausibile perché è collegato allo stesso argomento della risposta corretta, ma non identifica precisamente il concetto richiesto. La risposta corretta resta 'Non si possono conoscere simultaneamente con precisione arbitraria posizione e quantità di moto di una particella', non 'Ogni particella ha sempre posizione e velocità perfettamente misurabili'.",
+    "qualita": 100
+  },
+  {
+    "id": "SCI_036",
+    "categoria": "scienze",
+    "sottocategoria": "chimica_base",
+    "livello": "avanzato",
+    "domanda": "Che cosa fa un catalizzatore in una reazione chimica?",
+    "opzioni": [
+      "Abbassa l'energia di attivazione e accelera la reazione senza consumarsi stabilmente",
+      "Aumenta sempre la quantità finale di prodotto oltre il massimo possibile",
+      "Trasforma ogni reazione chimica in una reazione nucleare",
+      "Elimina completamente la necessità di reagenti"
+    ],
+    "risposta_corretta": "Abbassa l'energia di attivazione e accelera la reazione senza consumarsi stabilmente",
+    "spiegazione": "Un catalizzatore offre un percorso di reazione con energia di attivazione più bassa, ma non cambia il massimo prodotto imposto dall'equilibrio.",
+    "tags": [
+      "catalizzatore",
+      "reazioni",
+      "chimica"
+    ],
+    "difficolta": 3,
+    "distrattore_forte": "Aumenta sempre la quantità finale di prodotto oltre il massimo possibile",
+    "punteggio_distrattore_forte": 0.19,
+    "motivo_distrattore_forte": "È un distrattore plausibile perché è collegato allo stesso argomento della risposta corretta, ma non identifica precisamente il concetto richiesto. La risposta corretta resta 'Abbassa l'energia di attivazione e accelera la reazione senza consumarsi stabilmente', non 'Aumenta sempre la quantità finale di prodotto oltre il massimo possibile'.",
+    "qualita": 80
+  },
+  {
+    "id": "SCI_037",
+    "categoria": "scienze",
+    "sottocategoria": "scienze_della_terra",
+    "livello": "avanzato",
+    "domanda": "Perché le onde sismiche S non attraversano il nucleo esterno terrestre?",
+    "opzioni": [
+      "Perché le onde S non si propagano nei liquidi e il nucleo esterno è liquido",
+      "Perché le onde S si propagano solo nel vuoto assoluto",
+      "Perché il nucleo esterno non contiene materia",
+      "Perché le onde S sono onde luminose e non onde meccaniche"
+    ],
+    "risposta_corretta": "Perché le onde S non si propagano nei liquidi e il nucleo esterno è liquido",
+    "spiegazione": "Le onde S sono onde di taglio e non possono propagarsi nei liquidi. Questo aiuta a dedurre che il nucleo esterno terrestre è liquido.",
+    "tags": [
+      "onde sismiche",
+      "nucleo terrestre",
+      "geologia"
+    ],
+    "difficolta": 3,
+    "distrattore_forte": "Perché le onde S si propagano solo nel vuoto assoluto",
+    "punteggio_distrattore_forte": 0.55,
+    "motivo_distrattore_forte": "È un distrattore plausibile perché è collegato allo stesso argomento della risposta corretta, ma non identifica precisamente il concetto richiesto. La risposta corretta resta 'Perché le onde S non si propagano nei liquidi e il nucleo esterno è liquido', non 'Perché le onde S si propagano solo nel vuoto assoluto'.",
+    "qualita": 100
+  },
+  {
+    "id": "SCI_038",
+    "categoria": "scienze",
+    "sottocategoria": "corpo_umano",
+    "livello": "avanzato",
+    "domanda": "Che cosa si intende per feedback negativo nell'omeostasi?",
+    "opzioni": [
+      "Un meccanismo che riduce una variazione per riportare il sistema verso l'equilibrio",
+      "Un meccanismo che amplifica sempre una variazione fino al collasso del sistema",
+      "Una risposta casuale senza rapporto con lo stato del corpo",
+      "Una reazione che blocca definitivamente tutte le funzioni vitali"
+    ],
+    "risposta_corretta": "Un meccanismo che riduce una variazione per riportare il sistema verso l'equilibrio",
+    "spiegazione": "Il feedback negativo contrasta le variazioni e aiuta a mantenere condizioni interne stabili, come temperatura o glicemia.",
+    "tags": [
+      "omeostasi",
+      "feedback negativo",
+      "corpo umano"
+    ],
+    "difficolta": 3,
+    "distrattore_forte": "Un meccanismo che amplifica sempre una variazione fino al collasso del sistema",
+    "punteggio_distrattore_forte": 1.0,
+    "motivo_distrattore_forte": "È un distrattore plausibile perché è collegato allo stesso argomento della risposta corretta, ma non identifica precisamente il concetto richiesto. La risposta corretta resta 'Un meccanismo che riduce una variazione per riportare il sistema verso l'equilibrio', non 'Un meccanismo che amplifica sempre una variazione fino al collasso del sistema'.",
+    "qualita": 100
+  },
+  {
+    "id": "SCI_039",
+    "categoria": "scienze",
+    "sottocategoria": "biologia",
+    "livello": "avanzato",
+    "domanda": "Che cosa avviene durante l'osmosi?",
+    "opzioni": [
+      "L'acqua attraversa una membrana semipermeabile verso la soluzione più concentrata di soluti",
+      "I soluti attraversano sempre la membrana verso la soluzione meno concentrata",
+      "L'acqua si trasforma direttamente in sale attraverso la membrana",
+      "La membrana cellulare scompare per permettere il passaggio di ogni sostanza"
+    ],
+    "risposta_corretta": "L'acqua attraversa una membrana semipermeabile verso la soluzione più concentrata di soluti",
+    "spiegazione": "Nell'osmosi è l'acqua a muoversi attraverso una membrana semipermeabile, tendendo verso la zona con maggiore concentrazione di soluti.",
+    "tags": [
+      "osmosi",
+      "membrana",
+      "biologia"
+    ],
+    "difficolta": 3,
+    "distrattore_forte": "I soluti attraversano sempre la membrana verso la soluzione meno concentrata",
+    "punteggio_distrattore_forte": 1.0,
+    "motivo_distrattore_forte": "È un distrattore plausibile perché è collegato allo stesso argomento della risposta corretta, ma non identifica precisamente il concetto richiesto. La risposta corretta resta 'L'acqua attraversa una membrana semipermeabile verso la soluzione più concentrata di soluti', non 'I soluti attraversano sempre la membrana verso la soluzione meno concentrata'.",
+    "qualita": 90
+  },
+  {
+    "id": "SCI_040",
+    "categoria": "scienze",
+    "sottocategoria": "fisica_base",
+    "livello": "avanzato",
+    "domanda": "Qual è la differenza corretta tra massa e peso?",
+    "opzioni": [
+      "La massa misura la quantità di materia, il peso è una forza dovuta alla gravità",
+      "La massa e il peso sono sempre la stessa grandezza fisica",
+      "Il peso misura la quantità di materia, la massa misura la temperatura",
+      "La massa cambia sempre più del peso quando un corpo si sposta sulla Luna"
+    ],
+    "risposta_corretta": "La massa misura la quantità di materia, il peso è una forza dovuta alla gravità",
+    "spiegazione": "La massa è legata alla quantità di materia. Il peso è una forza e dipende dal campo gravitazionale.",
+    "tags": [
+      "massa",
+      "peso",
+      "gravità"
+    ],
+    "difficolta": 3,
+    "distrattore_forte": "La massa e il peso sono sempre la stessa grandezza fisica",
+    "punteggio_distrattore_forte": 1.0,
+    "motivo_distrattore_forte": "È un distrattore plausibile perché è collegato allo stesso argomento della risposta corretta, ma non identifica precisamente il concetto richiesto. La risposta corretta resta 'La massa misura la quantità di materia, il peso è una forza dovuta alla gravità', non 'La massa e il peso sono sempre la stessa grandezza fisica'.",
+    "qualita": 100
+  },
+  {
     "id": "AI-FAC-0004",
     "categoria": "ai",
     "sottocategoria": "concetti_base",

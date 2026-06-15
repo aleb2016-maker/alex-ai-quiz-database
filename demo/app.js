@@ -2967,3 +2967,1100 @@ document.addEventListener("DOMContentLoaded", () => {
   setTimeout(alexFixGeneratoreNuoviTest, 900);
 });
 
+
+
+/* ==========================================================
+   GENERATORE PULITO FINALE
+   - Demo sopra: solo materie preparazione AI
+   - Generatore sotto: layout largo come la demo sopra
+   - Tre menu: Materia, Livello, Numero domande
+   - Due pulsanti sotto: Carica JSON/TXT/PDF, Genera test
+========================================================== */
+
+(function () {
+  const materieDemoAI = [
+    "ai",
+    "informatica",
+    "matematica",
+    "inglese",
+    "logica",
+    "logica_visiva",
+  ];
+
+  let alexQuizPulitoDomande = [];
+  let alexQuizPulitoIndice = 0;
+  let alexQuizPulitoPunteggio = 0;
+  let alexQuizPulitoBloccato = false;
+
+  function alexInitGeneratorePulito() {
+    alexPulisciDemoSopra();
+    alexCreaGeneratorePulitoSotto();
+  }
+
+  function alexPulisciDemoSopra() {
+    const selects = document.querySelectorAll("select");
+
+    selects.forEach((select) => {
+      if (select.id === "alexGenMateria") {
+        return;
+      }
+
+      const valori = [...select.options].map((option) => option.value);
+
+      const sembraMenuCategoria =
+        valori.includes("ai") &&
+        valori.includes("informatica");
+
+      if (!sembraMenuCategoria) {
+        return;
+      }
+
+      [...select.options].forEach((option) => {
+        if (!materieDemoAI.includes(option.value)) {
+          option.remove();
+        }
+      });
+    });
+  }
+
+  function alexCreaGeneratorePulitoSotto() {
+    const vecchioForm = document.getElementById("quizCreatorForm");
+
+    if (!vecchioForm || document.getElementById("alexGeneratorePulito")) {
+      return;
+    }
+
+    const contenitore =
+      vecchioForm.closest("section") ||
+      vecchioForm.closest(".card") ||
+      vecchioForm.parentElement;
+
+    vecchioForm.style.display = "none";
+
+    if (contenitore) {
+      contenitore.querySelectorAll("button").forEach((button) => {
+        if (!button.closest("#alexGeneratorePulito")) {
+          button.style.display = "none";
+        }
+      });
+
+      contenitore.querySelectorAll("textarea").forEach((textarea) => {
+        textarea.style.display = "none";
+      });
+    }
+
+    const pannello = document.createElement("div");
+    pannello.id = "alexGeneratorePulito";
+    pannello.innerHTML = `
+      <div class="alex-gen-menu-row">
+        <label class="alex-gen-field">
+          <span>Materia</span>
+          <select id="alexGenMateria">
+            <option value="scienze">Scienze</option>
+            <option value="fisica">Fisica</option>
+            <option value="chimica">Chimica</option>
+            <option value="biologia">Biologia</option>
+            <option value="astronomia">Astronomia</option>
+            <option value="scienze_della_terra">Scienze della Terra</option>
+            <option value="fisica_quantistica_base">Fisica quantistica base</option>
+            <option value="ai">Intelligenza artificiale</option>
+            <option value="informatica">Informatica</option>
+            <option value="matematica">Matematica</option>
+            <option value="inglese">Inglese</option>
+            <option value="logica">Logica</option>
+            <option value="logica_visiva">Logica visiva</option>
+          </select>
+        </label>
+
+        <label class="alex-gen-field">
+          <span>Livello</span>
+          <select id="alexGenLivello">
+            <option value="tutti">Tutti i livelli</option>
+            <option value="facile">Facile</option>
+            <option value="intermedio">Intermedio</option>
+            <option value="avanzato">Avanzato</option>
+          </select>
+        </label>
+
+        <label class="alex-gen-field">
+          <span>Numero domande</span>
+          <select id="alexGenNumero">
+            <option value="10">10 domande</option>
+            <option value="20">20 domande</option>
+            <option value="all">Tutte le domande trovate</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="alex-gen-actions">
+        <input
+          id="alexGenFile"
+          type="file"
+          accept=".json,.txt,.pdf"
+          hidden
+        >
+
+        <button type="button" id="alexGenCaricaFile">
+          Carica JSON / TXT / PDF
+        </button>
+
+        <button type="button" id="alexGenGeneraTest">
+          Genera test
+        </button>
+
+        <span id="alexGenNomeFile"></span>
+      </div>
+
+      <div id="alexQuizPulitoRunner" class="alex-quiz-pulito-runner">
+        <h2>Test generato</h2>
+        <p>Qui comparirà il quiz creato dal generatore.</p>
+      </div>
+    `;
+
+    vecchioForm.insertAdjacentElement("beforebegin", pannello);
+
+    document
+      .getElementById("alexGenCaricaFile")
+      .addEventListener("click", () => {
+        document.getElementById("alexGenFile").click();
+      });
+
+    document
+      .getElementById("alexGenFile")
+      .addEventListener("change", () => {
+        const file = document.getElementById("alexGenFile").files[0];
+        const nomeFile = document.getElementById("alexGenNomeFile");
+
+        if (file) {
+          nomeFile.textContent = `File caricato: ${file.name}`;
+        } else {
+          nomeFile.textContent = "";
+        }
+      });
+
+    document
+      .getElementById("alexGenGeneraTest")
+      .addEventListener("click", alexGeneraTestPulito);
+  }
+
+  async function alexGeneraTestPulito() {
+    const runner = document.getElementById("alexQuizPulitoRunner");
+
+    runner.innerHTML = `
+      <h2>Test generato</h2>
+      <p>Sto preparando il test...</p>
+    `;
+
+    try {
+      const materia = document.getElementById("alexGenMateria").value;
+      const livello = document.getElementById("alexGenLivello").value;
+      const numeroScelto = document.getElementById("alexGenNumero").value;
+      const file = document.getElementById("alexGenFile").files[0];
+
+      let domande = [];
+
+      if (file) {
+        domande = await alexLeggiDomandeDaFile(file, materia, livello);
+      } else {
+        domande = alexPescaDalDatabase(materia, livello);
+      }
+
+      if (!domande.length) {
+        runner.innerHTML = `
+          <h2>Test generato</h2>
+          <p class="alex-gen-error">
+            Nessuna domanda trovata per questa scelta.
+          </p>
+        `;
+        return;
+      }
+
+      const numeroFinale =
+        numeroScelto === "all"
+          ? domande.length
+          : Math.min(Number(numeroScelto), domande.length);
+
+      alexQuizPulitoDomande = alexMescola(domande).slice(0, numeroFinale);
+      alexQuizPulitoIndice = 0;
+      alexQuizPulitoPunteggio = 0;
+      alexQuizPulitoBloccato = false;
+
+      alexMostraDomandaPulita();
+
+      runner.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    } catch (errore) {
+      runner.innerHTML = `
+        <h2>Test generato</h2>
+        <p class="alex-gen-error">${alexEscape(errore.message)}</p>
+      `;
+    }
+  }
+
+  async function alexLeggiDomandeDaFile(file, materia, livello) {
+    if (file.name.toLowerCase().endsWith(".pdf")) {
+      throw new Error(
+        "PDF caricato. Il pulsante unico è pronto, ma il parser PDF lo colleghiamo nel passaggio successivo. Ora usa JSON o TXT strutturato."
+      );
+    }
+
+    const testo = await file.text();
+
+    let dati;
+
+    try {
+      dati = JSON.parse(testo);
+    } catch {
+      throw new Error("Il file deve contenere JSON valido.");
+    }
+
+    const lista =
+      Array.isArray(dati)
+        ? dati
+        : Array.isArray(dati.quiz)
+          ? dati.quiz
+          : Array.isArray(dati.domande)
+            ? dati.domande
+            : [];
+
+    return lista
+      .map((domanda, indice) => alexNormalizzaDomanda(domanda, materia, livello, indice))
+      .filter(Boolean);
+  }
+
+  function alexPescaDalDatabase(materia, livello) {
+    if (!Array.isArray(databaseQuiz)) {
+      return [];
+    }
+
+    return databaseQuiz
+      .filter((domanda) => alexMateriaOk(domanda, materia))
+      .filter((domanda) => {
+        return livello === "tutti" || domanda.livello === livello;
+      })
+      .map((domanda, indice) => alexNormalizzaDomanda(domanda, materia, livello, indice))
+      .filter(Boolean);
+  }
+
+  function alexMateriaOk(domanda, materia) {
+    const categoria = alexSlug(domanda.categoria);
+    const sottocategoria = alexSlug(domanda.sottocategoria);
+
+    const tags = Array.isArray(domanda.tags)
+      ? domanda.tags.map(alexSlug)
+      : [];
+
+    if (categoria === materia || sottocategoria === materia || tags.includes(materia)) {
+      return true;
+    }
+
+    if (materia === "fisica") {
+      return sottocategoria.includes("fisica") || tags.some((tag) => tag.includes("fisica"));
+    }
+
+    if (materia === "chimica") {
+      return sottocategoria.includes("chimica") || tags.some((tag) => tag.includes("chimica"));
+    }
+
+    if (materia === "biologia") {
+      return sottocategoria.includes("biologia") || tags.some((tag) => tag.includes("biologia"));
+    }
+
+    return false;
+  }
+
+  function alexNormalizzaDomanda(domanda, materia, livello, indice) {
+    const opzioni = alexNormalizzaOpzioni(domanda.opzioni);
+
+    let rispostaCorretta =
+      domanda.risposta_corretta ||
+      domanda.corretta ||
+      domanda.answer ||
+      "";
+
+    if (/^[A-D]$/i.test(String(rispostaCorretta))) {
+      const posizione = String(rispostaCorretta).toUpperCase().charCodeAt(0) - 65;
+      rispostaCorretta = opzioni[posizione] || rispostaCorretta;
+    }
+
+    const rispostaTrovata = opzioni.find((opzione) => {
+      return alexSlug(opzione) === alexSlug(rispostaCorretta);
+    });
+
+    rispostaCorretta = rispostaTrovata || rispostaCorretta;
+
+    if (!domanda.domanda || opzioni.length !== 4 || !opzioni.includes(rispostaCorretta)) {
+      return null;
+    }
+
+    return {
+      id: domanda.id || `GEN-${Date.now()}-${indice}`,
+      categoria: domanda.categoria || materia,
+      livello: domanda.livello || livello || "intermedio",
+      domanda: domanda.domanda,
+      opzioni,
+      risposta_corretta: rispostaCorretta,
+      spiegazione: domanda.spiegazione || "Spiegazione non disponibile.",
+    };
+  }
+
+  function alexNormalizzaOpzioni(opzioniOriginali) {
+    if (Array.isArray(opzioniOriginali)) {
+      return opzioniOriginali.map(String).map((x) => x.trim()).filter(Boolean).slice(0, 4);
+    }
+
+    if (opzioniOriginali && typeof opzioniOriginali === "object") {
+      return ["A", "B", "C", "D"]
+        .map((lettera) => opzioniOriginali[lettera] || opzioniOriginali[lettera.toLowerCase()])
+        .map(String)
+        .map((x) => x.trim())
+        .filter(Boolean)
+        .slice(0, 4);
+    }
+
+    return [];
+  }
+
+  function alexMostraDomandaPulita() {
+    const runner = document.getElementById("alexQuizPulitoRunner");
+    const domanda = alexQuizPulitoDomande[alexQuizPulitoIndice];
+
+    alexQuizPulitoBloccato = false;
+
+    runner.innerHTML = `
+      <div class="alex-quiz-head">
+        <div>
+          <h2>Test generato</h2>
+          <p>
+            Domanda ${alexQuizPulitoIndice + 1}/${alexQuizPulitoDomande.length}
+            · ${alexEscape(domanda.categoria)}
+            · ${alexEscape(domanda.livello)}
+          </p>
+        </div>
+        <div class="alex-quiz-score">
+          Punteggio: ${alexQuizPulitoPunteggio}
+        </div>
+      </div>
+
+      <div class="alex-quiz-question">
+        ${alexEscape(domanda.domanda)}
+      </div>
+
+      <div class="alex-quiz-options">
+        ${domanda.opzioni
+          .map((opzione, indice) => `
+            <button
+              type="button"
+              class="alex-quiz-option"
+              data-risposta="${alexEscape(opzione)}"
+            >
+              <strong>${String.fromCharCode(65 + indice)})</strong>
+              ${alexEscape(opzione)}
+            </button>
+          `)
+          .join("")}
+      </div>
+
+      <div id="alexQuizFeedback" class="alex-quiz-feedback"></div>
+    `;
+
+    runner.querySelectorAll(".alex-quiz-option").forEach((button) => {
+      button.addEventListener("click", () => {
+        alexControllaRispostaPulita(button.dataset.risposta);
+      });
+    });
+  }
+
+  function alexControllaRispostaPulita(risposta) {
+    if (alexQuizPulitoBloccato) {
+      return;
+    }
+
+    alexQuizPulitoBloccato = true;
+
+    const domanda = alexQuizPulitoDomande[alexQuizPulitoIndice];
+    const feedback = document.getElementById("alexQuizFeedback");
+    const corretta = risposta === domanda.risposta_corretta;
+
+    if (corretta) {
+      alexQuizPulitoPunteggio += 1;
+    }
+
+    document.querySelectorAll(".alex-quiz-option").forEach((button) => {
+      const valore = button.dataset.risposta;
+
+      if (valore === domanda.risposta_corretta) {
+        button.classList.add("correct");
+      } else if (valore === risposta) {
+        button.classList.add("wrong");
+      } else {
+        button.classList.add("disabled");
+      }
+    });
+
+    feedback.innerHTML = `
+      <p>
+        <strong>${corretta ? "Corretto." : "Sbagliato."}</strong>
+        Risposta corretta: ${alexEscape(domanda.risposta_corretta)}
+      </p>
+      <p>${alexEscape(domanda.spiegazione)}</p>
+      <button type="button" id="alexQuizAvanti">
+        ${
+          alexQuizPulitoIndice === alexQuizPulitoDomande.length - 1
+            ? "Vedi risultato finale"
+            : "Domanda successiva"
+        }
+      </button>
+    `;
+
+    document.getElementById("alexQuizAvanti").addEventListener("click", () => {
+      if (alexQuizPulitoIndice === alexQuizPulitoDomande.length - 1) {
+        alexMostraRisultatoPulito();
+      } else {
+        alexQuizPulitoIndice += 1;
+        alexMostraDomandaPulita();
+      }
+    });
+  }
+
+  function alexMostraRisultatoPulito() {
+    const runner = document.getElementById("alexQuizPulitoRunner");
+    const totale = alexQuizPulitoDomande.length;
+    const percentuale = Math.round((alexQuizPulitoPunteggio / totale) * 100);
+
+    runner.innerHTML = `
+      <h2>Risultato test generato</h2>
+      <p>
+        Hai risposto correttamente a
+        <strong>${alexQuizPulitoPunteggio}</strong>
+        domande su <strong>${totale}</strong>.
+      </p>
+      <p>Percentuale: <strong>${percentuale}%</strong></p>
+      <button type="button" id="alexQuizRicomincia">
+        Rifai questo test
+      </button>
+    `;
+
+    document.getElementById("alexQuizRicomincia").addEventListener("click", () => {
+      alexQuizPulitoIndice = 0;
+      alexQuizPulitoPunteggio = 0;
+      alexQuizPulitoBloccato = false;
+      alexMostraDomandaPulita();
+    });
+  }
+
+  function alexSlug(testo) {
+    return String(testo || "")
+      .trim()
+      .toLowerCase()
+      .replace(/[àá]/g, "a")
+      .replace(/[èé]/g, "e")
+      .replace(/[ìí]/g, "i")
+      .replace(/[òó]/g, "o")
+      .replace(/[ùú]/g, "u")
+      .replace(/\s+/g, "_")
+      .replace(/-/g, "_");
+  }
+
+  function alexMescola(lista) {
+    const copia = [...lista];
+
+    for (let i = copia.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [copia[i], copia[j]] = [copia[j], copia[i]];
+    }
+
+    return copia;
+  }
+
+  function alexEscape(testo) {
+    return String(testo || "")
+      .replaceAll("&", "&amp;")
+      .replaceAll("<", "&lt;")
+      .replaceAll(">", "&gt;")
+      .replaceAll('"', "&quot;")
+      .replaceAll("'", "&#039;");
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    setTimeout(alexInitGeneratorePulito, 150);
+    setTimeout(alexInitGeneratorePulito, 700);
+    setTimeout(alexInitGeneratorePulito, 1400);
+  });
+})();
+
+
+
+/* ==========================================================
+   PATCH FILE + TESTO FUNZIONANTI
+   - Carica JSON/TXT/PDF e poi Genera test
+   - Incolla testo/JSON/testo PDF e poi Genera test
+   - Se non c'è file e non c'è testo, usa il database
+========================================================== */
+
+(function () {
+  let domandeAttive = [];
+  let indiceAttivo = 0;
+  let punteggioAttivo = 0;
+  let rispostaBloccata = false;
+
+  function inizializzaPatchFileTesto() {
+    const pannello = document.getElementById("alexGeneratorePulito");
+    const bottoneGenera = document.getElementById("alexGenGeneraTest");
+    const azioni = document.querySelector("#alexGeneratorePulito .alex-gen-actions");
+
+    if (!pannello || !bottoneGenera || !azioni) {
+      return;
+    }
+
+    if (pannello.dataset.fileTestoOk === "true") {
+      return;
+    }
+
+    pannello.dataset.fileTestoOk = "true";
+
+    let boxTesto = document.getElementById("alexGenBoxTesto");
+
+    if (!boxTesto) {
+      boxTesto = document.createElement("div");
+      boxTesto.id = "alexGenBoxTesto";
+      boxTesto.innerHTML = `
+        <label for="alexGenTestoIncollato">
+          Incolla testo, JSON o testo copiato da PDF
+        </label>
+
+        <textarea
+          id="alexGenTestoIncollato"
+          rows="8"
+          placeholder="Puoi incollare un JSON con domande già strutturate, oppure testo copiato da un PDF con formato tipo: domanda, A), B), C), D), risposta corretta, spiegazione."
+        ></textarea>
+      `;
+
+      azioni.insertAdjacentElement("afterend", boxTesto);
+    }
+
+    const nuovoBottoneGenera = bottoneGenera.cloneNode(true);
+    bottoneGenera.replaceWith(nuovoBottoneGenera);
+
+    nuovoBottoneGenera.addEventListener("click", generaTestDaFileTestoODatabase);
+  }
+
+  async function generaTestDaFileTestoODatabase() {
+    const runner = document.getElementById("alexQuizPulitoRunner");
+
+    runner.innerHTML = `
+      <h2>Test generato</h2>
+      <p>Sto preparando il test...</p>
+    `;
+
+    try {
+      const materia = document.getElementById("alexGenMateria").value;
+      const livello = document.getElementById("alexGenLivello").value;
+      const numero = document.getElementById("alexGenNumero").value;
+      const file = document.getElementById("alexGenFile").files[0];
+      const testoIncollato = document.getElementById("alexGenTestoIncollato").value.trim();
+
+      let domande = [];
+
+      if (file) {
+        domande = await leggiDomandeDaFile(file, materia, livello);
+      } else if (testoIncollato) {
+        domande = leggiDomandeDaTesto(testoIncollato, materia, livello);
+      } else {
+        domande = pescaDalDatabase(materia, livello);
+      }
+
+      if (!domande.length) {
+        throw new Error(
+          "Non ho trovato domande valide. Usa JSON valido oppure testo strutturato con domanda, A), B), C), D), risposta corretta e spiegazione."
+        );
+      }
+
+      const numeroFinale =
+        numero === "all"
+          ? domande.length
+          : Math.min(Number(numero), domande.length);
+
+      domandeAttive = mescola(domande).slice(0, numeroFinale);
+      indiceAttivo = 0;
+      punteggioAttivo = 0;
+      rispostaBloccata = false;
+
+      mostraDomanda();
+
+      runner.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    } catch (errore) {
+      runner.innerHTML = `
+        <h2>Test generato</h2>
+        <p class="alex-gen-error">${escapeHtml(errore.message)}</p>
+      `;
+    }
+  }
+
+  async function leggiDomandeDaFile(file, materia, livello) {
+    const nome = file.name.toLowerCase();
+
+    if (nome.endsWith(".pdf")) {
+      const testoPdf = await estraiTestoDaPdf(file);
+      return leggiDomandeDaTesto(testoPdf, materia, livello);
+    }
+
+    const testo = await file.text();
+    return leggiDomandeDaTesto(testo, materia, livello);
+  }
+
+  async function estraiTestoDaPdf(file) {
+    await caricaPdfJs();
+
+    const buffer = await file.arrayBuffer();
+
+    const pdf = await window.pdfjsLib.getDocument({
+      data: buffer,
+    }).promise;
+
+    let testoCompleto = "";
+
+    for (let numeroPagina = 1; numeroPagina <= pdf.numPages; numeroPagina++) {
+      const pagina = await pdf.getPage(numeroPagina);
+      const contenuto = await pagina.getTextContent();
+
+      const testoPagina = contenuto.items
+        .map((item) => item.str)
+        .join(" ");
+
+      testoCompleto += "\n" + testoPagina;
+    }
+
+    if (!testoCompleto.trim()) {
+      throw new Error("Il PDF non contiene testo leggibile. Potrebbe essere una scansione immagine.");
+    }
+
+    return testoCompleto;
+  }
+
+  function caricaPdfJs() {
+    return new Promise((resolve, reject) => {
+      if (window.pdfjsLib) {
+        resolve();
+        return;
+      }
+
+      const script = document.createElement("script");
+      script.src = "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js";
+
+      script.onload = () => {
+        window.pdfjsLib.GlobalWorkerOptions.workerSrc =
+          "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js";
+
+        resolve();
+      };
+
+      script.onerror = () => {
+        reject(
+          new Error(
+            "Non riesco a caricare il lettore PDF. Controlla la connessione internet oppure usa JSON/TXT."
+          )
+        );
+      };
+
+      document.head.appendChild(script);
+    });
+  }
+
+  function leggiDomandeDaTesto(testo, materia, livello) {
+    const daJson = provaLeggereJson(testo, materia, livello);
+
+    if (daJson.length) {
+      return daJson;
+    }
+
+    return provaLeggereTestoStrutturato(testo, materia, livello);
+  }
+
+  function provaLeggereJson(testo, materia, livello) {
+    try {
+      const dati = JSON.parse(testo);
+
+      const lista =
+        Array.isArray(dati)
+          ? dati
+          : Array.isArray(dati.quiz)
+            ? dati.quiz
+            : Array.isArray(dati.domande)
+              ? dati.domande
+              : [];
+
+      return lista
+        .map((domanda, indice) => normalizzaDomanda(domanda, materia, livello, indice))
+        .filter(Boolean);
+    } catch {
+      return [];
+    }
+  }
+
+  function provaLeggereTestoStrutturato(testo, materia, livello) {
+    const testoPulito = testo
+      .replace(/\r/g, "")
+      .replace(/\n{3,}/g, "\n\n");
+
+    const blocchi = testoPulito
+      .split(/\n\s*(?=(?:\d+[\.\)]|domanda\s*\d*[:\-]|q\s*\d*[:\-]))/gi)
+      .map((blocco) => blocco.trim())
+      .filter(Boolean);
+
+    const blocchiFinali = blocchi.length > 1 ? blocchi : [testoPulito];
+
+    return blocchiFinali
+      .map((blocco, indice) => estraiDomandaDaBlocco(blocco, materia, livello, indice))
+      .filter(Boolean);
+  }
+
+  function estraiDomandaDaBlocco(blocco, materia, livello, indice) {
+    const opzioniTrovate = [];
+    const regexOpzioni = /^\s*([A-D])\s*[\)\.\:\-]\s*(.+)$/gim;
+
+    let match;
+
+    while ((match = regexOpzioni.exec(blocco)) !== null) {
+      opzioniTrovate.push({
+        lettera: match[1].toUpperCase(),
+        testo: match[2].trim(),
+        posizione: match.index,
+      });
+    }
+
+    if (opzioniTrovate.length < 4) {
+      return null;
+    }
+
+    const primeOpzioni = opzioniTrovate.slice(0, 4);
+    const inizioOpzioni = primeOpzioni[0].posizione;
+
+    let testoDomanda = blocco.slice(0, inizioOpzioni).trim();
+
+    testoDomanda = testoDomanda
+      .replace(/^\s*\d+[\.\)]\s*/i, "")
+      .replace(/^\s*domanda\s*\d*[:\-]\s*/i, "")
+      .replace(/^\s*q\s*\d*[:\-]\s*/i, "")
+      .trim();
+
+    const rispostaMatch = blocco.match(
+      /(?:risposta\s*(?:corretta)?|corretta|answer)\s*[:\-]\s*([A-D]|.+)/i
+    );
+
+    if (!testoDomanda || !rispostaMatch) {
+      return null;
+    }
+
+    const opzioni = primeOpzioni.map((opzione) => opzione.testo);
+
+    let rispostaCorretta = rispostaMatch[1].trim();
+
+    if (/^[A-D]$/i.test(rispostaCorretta)) {
+      const posizione = rispostaCorretta.toUpperCase().charCodeAt(0) - 65;
+      rispostaCorretta = opzioni[posizione];
+    } else {
+      const rispostaTrovata = opzioni.find((opzione) => {
+        return slug(opzione) === slug(rispostaCorretta);
+      });
+
+      rispostaCorretta = rispostaTrovata || rispostaCorretta;
+    }
+
+    if (!opzioni.includes(rispostaCorretta)) {
+      return null;
+    }
+
+    const spiegazioneMatch = blocco.match(
+      /(?:spiegazione|perché|perche)\s*[:\-]\s*([\s\S]+)/i
+    );
+
+    const spiegazione = spiegazioneMatch
+      ? spiegazioneMatch[1].trim()
+      : "Spiegazione non disponibile.";
+
+    return {
+      id: `TESTO-${Date.now()}-${indice + 1}`,
+      categoria: materia,
+      livello: livello === "tutti" ? "intermedio" : livello,
+      domanda: testoDomanda,
+      opzioni,
+      risposta_corretta: rispostaCorretta,
+      spiegazione,
+    };
+  }
+
+  function pescaDalDatabase(materia, livello) {
+    if (!Array.isArray(window.databaseQuiz) && !Array.isArray(databaseQuiz)) {
+      return [];
+    }
+
+    const archivio = Array.isArray(window.databaseQuiz)
+      ? window.databaseQuiz
+      : databaseQuiz;
+
+    return archivio
+      .filter((domanda) => materiaOk(domanda, materia))
+      .filter((domanda) => {
+        return livello === "tutti" || domanda.livello === livello;
+      })
+      .map((domanda, indice) => normalizzaDomanda(domanda, materia, livello, indice))
+      .filter(Boolean);
+  }
+
+  function materiaOk(domanda, materia) {
+    const categoria = slug(domanda.categoria);
+    const sottocategoria = slug(domanda.sottocategoria);
+
+    const tags = Array.isArray(domanda.tags)
+      ? domanda.tags.map(slug)
+      : [];
+
+    if (categoria === materia || sottocategoria === materia || tags.includes(materia)) {
+      return true;
+    }
+
+    if (materia === "fisica") {
+      return sottocategoria.includes("fisica") || tags.some((tag) => tag.includes("fisica"));
+    }
+
+    if (materia === "chimica") {
+      return sottocategoria.includes("chimica") || tags.some((tag) => tag.includes("chimica"));
+    }
+
+    if (materia === "biologia") {
+      return sottocategoria.includes("biologia") || tags.some((tag) => tag.includes("biologia"));
+    }
+
+    return false;
+  }
+
+  function normalizzaDomanda(domanda, materia, livello, indice) {
+    const opzioni = normalizzaOpzioni(domanda.opzioni);
+
+    let rispostaCorretta =
+      domanda.risposta_corretta ||
+      domanda.corretta ||
+      domanda.answer ||
+      "";
+
+    if (/^[A-D]$/i.test(String(rispostaCorretta))) {
+      const posizione = String(rispostaCorretta).toUpperCase().charCodeAt(0) - 65;
+      rispostaCorretta = opzioni[posizione] || rispostaCorretta;
+    }
+
+    const rispostaTrovata = opzioni.find((opzione) => {
+      return slug(opzione) === slug(rispostaCorretta);
+    });
+
+    rispostaCorretta = rispostaTrovata || rispostaCorretta;
+
+    if (!domanda.domanda || opzioni.length !== 4 || !opzioni.includes(rispostaCorretta)) {
+      return null;
+    }
+
+    return {
+      id: domanda.id || `GEN-${Date.now()}-${indice}`,
+      categoria: domanda.categoria || materia,
+      livello: domanda.livello || livello || "intermedio",
+      domanda: domanda.domanda,
+      opzioni,
+      risposta_corretta: rispostaCorretta,
+      spiegazione: domanda.spiegazione || "Spiegazione non disponibile.",
+    };
+  }
+
+  function normalizzaOpzioni(opzioniOriginali) {
+    if (Array.isArray(opzioniOriginali)) {
+      return opzioniOriginali
+        .map(String)
+        .map((opzione) => opzione.trim())
+        .filter(Boolean)
+        .slice(0, 4);
+    }
+
+    if (opzioniOriginali && typeof opzioniOriginali === "object") {
+      return ["A", "B", "C", "D"]
+        .map((lettera) => opzioniOriginali[lettera] || opzioniOriginali[lettera.toLowerCase()])
+        .map(String)
+        .map((opzione) => opzione.trim())
+        .filter(Boolean)
+        .slice(0, 4);
+    }
+
+    return [];
+  }
+
+  function mostraDomanda() {
+    const runner = document.getElementById("alexQuizPulitoRunner");
+    const domanda = domandeAttive[indiceAttivo];
+
+    rispostaBloccata = false;
+
+    runner.innerHTML = `
+      <div class="alex-quiz-head">
+        <div>
+          <h2>Test generato</h2>
+          <p>
+            Domanda ${indiceAttivo + 1}/${domandeAttive.length}
+            · ${escapeHtml(domanda.categoria)}
+            · ${escapeHtml(domanda.livello)}
+          </p>
+        </div>
+        <div class="alex-quiz-score">
+          Punteggio: ${punteggioAttivo}
+        </div>
+      </div>
+
+      <div class="alex-quiz-question">
+        ${escapeHtml(domanda.domanda)}
+      </div>
+
+      <div class="alex-quiz-options">
+        ${domanda.opzioni
+          .map((opzione, indice) => `
+            <button
+              type="button"
+              class="alex-quiz-option"
+              data-risposta="${escapeHtml(opzione)}"
+            >
+              <strong>${String.fromCharCode(65 + indice)})</strong>
+              ${escapeHtml(opzione)}
+            </button>
+          `)
+          .join("")}
+      </div>
+
+      <div id="alexQuizFeedback" class="alex-quiz-feedback"></div>
+    `;
+
+    runner.querySelectorAll(".alex-quiz-option").forEach((button) => {
+      button.addEventListener("click", () => {
+        controllaRisposta(button.dataset.risposta);
+      });
+    });
+  }
+
+  function controllaRisposta(risposta) {
+    if (rispostaBloccata) {
+      return;
+    }
+
+    rispostaBloccata = true;
+
+    const domanda = domandeAttive[indiceAttivo];
+    const feedback = document.getElementById("alexQuizFeedback");
+    const corretta = risposta === domanda.risposta_corretta;
+
+    if (corretta) {
+      punteggioAttivo += 1;
+    }
+
+    document.querySelectorAll(".alex-quiz-option").forEach((button) => {
+      const valore = button.dataset.risposta;
+
+      if (valore === domanda.risposta_corretta) {
+        button.classList.add("correct");
+      } else if (valore === risposta) {
+        button.classList.add("wrong");
+      } else {
+        button.classList.add("disabled");
+      }
+    });
+
+    feedback.innerHTML = `
+      <p>
+        <strong>${corretta ? "Corretto." : "Sbagliato."}</strong>
+        Risposta corretta: ${escapeHtml(domanda.risposta_corretta)}
+      </p>
+      <p>${escapeHtml(domanda.spiegazione)}</p>
+      <button type="button" id="alexQuizAvanti">
+        ${
+          indiceAttivo === domandeAttive.length - 1
+            ? "Vedi risultato finale"
+            : "Domanda successiva"
+        }
+      </button>
+    `;
+
+    document.getElementById("alexQuizAvanti").addEventListener("click", () => {
+      if (indiceAttivo === domandeAttive.length - 1) {
+        mostraRisultato();
+      } else {
+        indiceAttivo += 1;
+        mostraDomanda();
+      }
+    });
+  }
+
+  function mostraRisultato() {
+    const runner = document.getElementById("alexQuizPulitoRunner");
+    const totale = domandeAttive.length;
+    const percentuale = Math.round((punteggioAttivo / totale) * 100);
+
+    runner.innerHTML = `
+      <h2>Risultato test generato</h2>
+      <p>
+        Hai risposto correttamente a
+        <strong>${punteggioAttivo}</strong>
+        domande su <strong>${totale}</strong>.
+      </p>
+      <p>Percentuale: <strong>${percentuale}%</strong></p>
+      <button type="button" id="alexQuizRicomincia">
+        Rifai questo test
+      </button>
+    `;
+
+    document.getElementById("alexQuizRicomincia").addEventListener("click", () => {
+      indiceAttivo = 0;
+      punteggioAttivo = 0;
+      rispostaBloccata = false;
+      mostraDomanda();
+    });
+  }
+
+  function slug(testo) {
+    return String(testo || "")
+      .trim()
+      .toLowerCase()
+      .replace(/[àá]/g, "a")
+      .replace(/[èé]/g, "e")
+      .replace(/[ìí]/g, "i")
+      .replace(/[òó]/g, "o")
+      .replace(/[ùú]/g, "u")
+      .replace(/\s+/g, "_")
+      .replace(/-/g, "_");
+  }
+
+  function mescola(lista) {
+    const copia = [...lista];
+
+    for (let i = copia.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [copia[i], copia[j]] = [copia[j], copia[i]];
+    }
+
+    return copia;
+  }
+
+  function escapeHtml(testo) {
+    return String(testo || "")
+      .replaceAll("&", "&amp;")
+      .replaceAll("<", "&lt;")
+      .replaceAll(">", "&gt;")
+      .replaceAll('"', "&quot;")
+      .replaceAll("'", "&#039;");
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    setTimeout(inizializzaPatchFileTesto, 400);
+    setTimeout(inizializzaPatchFileTesto, 1000);
+    setTimeout(inizializzaPatchFileTesto, 1800);
+  });
+})();
+
