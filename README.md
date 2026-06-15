@@ -18,8 +18,8 @@ Questo progetto è un **motore riutilizzabile** per creare quiz per:
 </p>
 
 <p align="center">
-  <a href="https://github.com/aleb2016-maker/alex-ai-quiz-database/raw/main/downloads/pacchetto-web-scienze-demo.zip">
-    <img src="https://img.shields.io/badge/SCARICA%20APP%20WEB%20PRONTA-ZIP%20CON%20TEST%20APRIBILE-ff9800?style=for-the-badge&labelColor=ff9800" alt="Scarica app web pronta">
+  <a href="https://aleb2016-maker.github.io/alex-ai-quiz-database/downloads/web-scienze-demo/00_QUIZ_WEB_PRONTO.html">
+    <img src="https://img.shields.io/badge/APRI%20APP%20WEB%20PRONTA-QUIZ%20SUBITO%20NEL%20BROWSER-ff9800?style=for-the-badge&labelColor=ff9800" alt="Apri app web pronta">
   </a>
 </p>
 
@@ -40,7 +40,7 @@ Questo progetto è un **motore riutilizzabile** per creare quiz per:
 | Pulsante | Passaggi pratici |
 |---|---|
 | **PROVA LA DEMO ONLINE** | clicca il pulsante → si apre subito la demo nel browser |
-| **SCARICA APP WEB PRONTA** | scarica ZIP → apri file ZIP → apri cartella → doppio clic su `00_QUIZ_WEB_PRONTO.html` |
+| **APRI APP WEB PRONTA** | clicca il pulsante → si apre subito il quiz web pronto nel browser |
 | **SCARICA PACCHETTO ANDROID** | scarica ZIP → apri file ZIP → apri cartella → copia `database_quiz.json` in Android Studio |
 | **CREA PACCHETTO PERSONALIZZATO** | clicca il pulsante → premi `Run workflow` → scegli web/android, materia, livello e numero domande → scarica ZIP |
 
