@@ -2,47 +2,51 @@
 
 # 🚀 Alex AI Quiz Database
 
-Questo progetto è un **motore riutilizzabile** per creare quiz per:
+Questo progetto è un **motore riutilizzabile** per creare quiz con:
 
-- demo online
-- app web
-- app Android
-- database JSON personalizzati
+- database domande
+- motore web
+- motore Android Kotlin
+- controlli qualità
+- pacchetti riutilizzabili
 
 ## Scegli cosa vuoi fare
 
 <p align="center">
   <a href="https://aleb2016-maker.github.io/alex-ai-quiz-database/demo/">
-    <img src="https://img.shields.io/badge/PROVA%20LA%20DEMO%20ONLINE-APRI%20SUBITO%20IL%20TEST-00c853?style=for-the-badge&labelColor=00c853" alt="Prova la demo online">
+    <img src="https://img.shields.io/badge/APRI%20APP%20WEB%20ONLINE-ZERO%20DOWNLOAD-00c853?style=for-the-badge&labelColor=00c853" alt="Apri app web online">
   </a>
 </p>
 
 <p align="center">
   <a href="https://github.com/aleb2016-maker/alex-ai-quiz-database/raw/main/downloads/pacchetto-web-scienze-demo.zip">
-    <img src="https://img.shields.io/badge/SCARICA%20PACCHETTO%20WEB%20COMPLETO-DATABASE%20PIU%20MOTORE%20WEB-ff9800?style=for-the-badge&labelColor=ff9800" alt="Scarica pacchetto web completo">
+    <img src="https://img.shields.io/badge/SCARICA%20CODICE%20WEB-HTML%20DATABASE%20MOTORE%20JS-ff9800?style=for-the-badge&labelColor=ff9800" alt="Scarica codice web">
   </a>
 </p>
 
 <p align="center">
   <a href="https://github.com/aleb2016-maker/alex-ai-quiz-database/raw/main/downloads/pacchetto-android-scienze-demo.zip">
-    <img src="https://img.shields.io/badge/SCARICA%20PACCHETTO%20ANDROID-DATABASE%20JSON%20PER%20ANDROID-2962ff?style=for-the-badge&labelColor=2962ff" alt="Scarica pacchetto Android">
+    <img src="https://img.shields.io/badge/SCARICA%20PACCHETTO%20ANDROID-DATABASE%20MOTORE%20KOTLIN-2962ff?style=for-the-badge&labelColor=2962ff" alt="Scarica pacchetto Android">
   </a>
 </p>
 
 <p align="center">
   <a href="https://github.com/aleb2016-maker/alex-ai-quiz-database/actions/workflows/create-quiz-package.yml">
-    <img src="https://img.shields.io/badge/CREA%20PACCHETTO%20PERSONALIZZATO-SCEGLI%20MATERIA%20LIVELLO%20NUMERO-e91e63?style=for-the-badge&labelColor=e91e63" alt="Crea pacchetto personalizzato">
+    <img src="https://img.shields.io/badge/CREA%20PACCHETTO%20PERSONALIZZATO-WEB%20O%20ANDROID-e91e63?style=for-the-badge&labelColor=e91e63" alt="Crea pacchetto personalizzato">
   </a>
 </p>
 
 ## Cosa fanno i pulsanti
 
-| Pulsante | Passaggi pratici |
+| Pulsante | Cosa succede davvero |
 |---|---|
-| **PROVA LA DEMO ONLINE** | clicca il pulsante → si apre subito la demo nel browser |
-| **SCARICA PACCHETTO WEB COMPLETO** | clicca il pulsante → si apre subito il quiz web pronto nel browser |
-| **SCARICA PACCHETTO ANDROID** | scarica ZIP → apri file ZIP → apri cartella → copia `database_quiz.json` in Android Studio |
-| **CREA PACCHETTO PERSONALIZZATO** | clicca il pulsante → premi `Run workflow` → scegli web/android, materia, livello e numero domande → scarica ZIP |
+| **APRI APP WEB ONLINE** | clicca il pulsante → il quiz si apre subito nel browser → non devi scaricare niente |
+| **SCARICA CODICE WEB** | scarica ZIP per sviluppatori → contiene HTML, `database_quiz.json`, `quiz-engine.js` e istruzioni |
+| **SCARICA PACCHETTO ANDROID** | scarica ZIP Android → contiene `database_quiz.json` + motore Kotlin base |
+| **CREA PACCHETTO PERSONALIZZATO** | apre GitHub Actions → scegli web/android, materia, livello e numero domande → scarichi uno ZIP personalizzato |
+
+> Per provare subito il quiz usa **APRI APP WEB ONLINE**.  
+> Per riutilizzare il progetto in una nuova app usa i pacchetti Web o Android.
 
 <!-- ALEX-QUIZ-DASHBOARD-END -->
 
