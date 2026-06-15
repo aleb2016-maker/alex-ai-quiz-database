@@ -14,10 +14,10 @@ Il progetto non è solo una demo online: può essere usato anche come base tecni
 
 ## Aree disponibili
 
-| Area | Contenuti | Demo online | Pacchetti scaricabili |
-|---|---|---|---|
-| **AI / ITS** | AI, Informatica, Logica, Logica visiva, Matematica, Inglese | [Avvia demo AI / ITS](https://aleb2016-maker.github.io/alex-ai-quiz-database/demo/) | [Web ZIP](https://github.com/aleb2016-maker/alex-ai-quiz-database/raw/main/downloads/pacchetto-web-ai-its-demo.zip) · [Android ZIP](https://github.com/aleb2016-maker/alex-ai-quiz-database/raw/main/downloads/pacchetto-android-ai-its-finale-semplice.zip) |
-| **Scienze** | Fisica, Chimica, Biologia, Fisica Quantistica, Scienze generali | [Avvia demo Scienze](https://aleb2016-maker.github.io/alex-ai-quiz-database/demo-scienze/) | [Web ZIP](https://github.com/aleb2016-maker/alex-ai-quiz-database/raw/main/downloads/pacchetto-web-scienze-demo.zip) · [Android ZIP](https://github.com/aleb2016-maker/alex-ai-quiz-database/raw/main/downloads/pacchetto-android-finale-semplice.zip) |
+| Area | Contenuti | Pacchetti scaricabili |
+|---|---|---|
+| **AI / ITS** | AI, Informatica, Logica, Logica visiva, Matematica, Inglese | [Web ZIP](https://github.com/aleb2016-maker/alex-ai-quiz-database/raw/main/downloads/pacchetto-web-ai-its-demo.zip) · [Android ZIP](https://github.com/aleb2016-maker/alex-ai-quiz-database/raw/main/downloads/pacchetto-android-ai-its-finale-semplice.zip) |
+| **Scienze** | Fisica, Chimica, Biologia, Fisica Quantistica, Scienze generali | [Web ZIP](https://github.com/aleb2016-maker/alex-ai-quiz-database/raw/main/downloads/pacchetto-web-scienze-demo.zip) · [Android ZIP](https://github.com/aleb2016-maker/alex-ai-quiz-database/raw/main/downloads/pacchetto-android-finale-semplice.zip) |
 
 ## Crea un pacchetto personalizzato
 
@@ -135,40 +135,46 @@ Il progetto include controlli automatici per mantenere alta la qualità del data
 ```text
 data/
   ai.json
+  biologia.json
+  chimica.json
+  fisica.json
+  fisica_quantistica.json
   informatica.json
-  matematica.json
   inglese.json
+  matematica.json
+  scienze.json
   logica/
-    logica_verbale.json
-    ragionamento_critico.json
     logica_numerica.json
-    ragionamento_astratto.json
+    logica_verbale.json
     logica_visiva.json
+    ragionamento_astratto.json
+    ragionamento_critico.json
+
+demo/
+  index.html
+  quiz-engine.js
+  database_quiz.json
+
+demo-scienze/
+  index.html
+  quiz-engine.js
+  database_quiz.json
+  science-space-effect.css
+  science-space-effect.js
+
+downloads/
+  pacchetto-web-ai-its-demo.zip
+  pacchetto-android-ai-its-finale-semplice.zip
+  pacchetto-web-scienze-demo.zip
+  pacchetto-android-finale-semplice.zip
 
 scripts/
   validate_questions.py
   check_duplicates.py
-  check_image_paths.py
-  check_text_quality_ai.py
-  generate_logica_visiva_assets.py
   build_database.py
   report_database.py
-  run_all_checks.py
-  test_random_picker.py
-
-assets/
-  logica_visiva/
-    immagini PNG per le domande di logica visiva
+  create_quiz_package.py
 
 dist/
   database_quiz_finale.json
-
-demo/
-  index.html
-  style.css
-  app.js
-
-requirements.txt
-index.html
-README.md
 ```
