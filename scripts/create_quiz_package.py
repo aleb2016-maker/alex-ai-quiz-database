@@ -15,15 +15,11 @@ def slug(testo):
         .strip()
         .lower()
         .replace("à", "a")
-        .replace("á", "a")
         .replace("è", "e")
         .replace("é", "e")
         .replace("ì", "i")
-        .replace("í", "i")
         .replace("ò", "o")
-        .replace("ó", "o")
         .replace("ù", "u")
-        .replace("ú", "u")
         .replace(" ", "_")
         .replace("-", "_")
     )
@@ -70,134 +66,14 @@ def materia_ok(domanda, materia):
 
     return False
 
-def filtra_domande(database, materia, livello):
-    risultato = []
-
-    for domanda in database:
-        if not materia_ok(domanda, materia):
-            continue
-
-        if livello != "tutti" and domanda.get("livello") != livello:
-            continue
-
-        risultato.append(domanda)
-
-    return risultato
-
-def normalizza_domanda(domanda):
-    return {
-        "id": domanda.get("id", ""),
-        "categoria": domanda.get("categoria", ""),
-        "sottocategoria": domanda.get("sottocategoria", ""),
-        "livello": domanda.get("livello", ""),
-        "domanda": domanda.get("domanda", ""),
-        "opzioni": domanda.get("opzioni", []),
-        "risposta_corretta": domanda.get("risposta_corretta", ""),
-        "spiegazione": domanda.get("spiegazione", ""),
-        "distrattore_forte": domanda.get("distrattore_forte", ""),
-        "tags": domanda.get("tags", []),
-    }
-
-def crea_index_web(percorso):
-    html = """<!doctype html>
-<html lang="it">
-<head>
-  <meta charset="utf-8">
-  <title>Quiz generato</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>
-    body { font-family: system-ui, sans-serif; max-width: 900px; margin: 40px auto; padding: 20px; background: #0f172a; color: #f8fafc; }
-    button { display: block; width: 100%; margin: 10px 0; padding: 14px; border-radius: 14px; border: 1px solid #334155; background: #1e293b; color: #f8fafc; cursor: pointer; text-align: left; }
-    .card { background: #111827; padding: 24px; border-radius: 22px; }
-    .ok { background: #14532d; padding: 14px; border-radius: 14px; }
-    .ko { background: #7f1d1d; padding: 14px; border-radius: 14px; }
-  </style>
-</head>
-<body>
-  <div class="card">
-    <h1>Quiz generato</h1>
-    <div id="app">Caricamento...</div>
-  </div>
-
-  <script>
-    let quiz = [];
-    let indice = 0;
-    let punteggio = 0;
-    let bloccato = false;
-
-    async function start() {
-      const response = await fetch("./database_quiz.json");
-      quiz = await response.json();
-      quiz = Array.isArray(quiz) ? quiz : (quiz.quiz || quiz.domande || []);
-      mostra();
-    }
-
-    function mostra() {
-      bloccato = false;
-      const app = document.getElementById("app");
-      const d = quiz[indice];
-
-      if (!d) {
-        app.innerHTML = `<h2>Risultato finale</h2><p>${punteggio}/${quiz.length}</p>`;
-        return;
-      }
-
-      app.innerHTML = `
-        <p>Domanda ${indice + 1}/${quiz.length} · ${d.categoria} · ${d.livello}</p>
-        <h2>${d.domanda}</h2>
-        ${d.opzioni.map((o, i) => `<button onclick="rispondi('${String(o).replaceAll("'", "\\'")}')">${String.fromCharCode(65 + i)}) ${o}</button>`).join("")}
-        <div id="feedback"></div>
-      `;
-    }
-
-    function rispondi(risposta) {
-      if (bloccato) return;
-      bloccato = true;
-
-      const d = quiz[indice];
-      const ok = risposta === d.risposta_corretta;
-
-      if (ok) punteggio++;
-
-      document.getElementById("feedback").innerHTML = `
-        <p class="${ok ? "ok" : "ko"}">
-          <strong>${ok ? "Corretto" : "Sbagliato"}</strong><br>
-          Risposta corretta: ${d.risposta_corretta}<br>
-          ${d.spiegazione || ""}
-        </p>
-        <button onclick="indice++; mostra()">Domanda successiva</button>
-      `;
-    }
-
-    start();
-  </script>
-</body>
-</html>
-"""
-    (percorso / "index.html").write_text(html, encoding="utf-8")
-
-def crea_readme_pacchetto(percorso, piattaforma, materia, livello, numero):
-    testo = f"""# Pacchetto quiz generato
-
-Piattaforma: {piattaforma}
-Materia: {materia}
-Livello: {livello}
-Domande: {numero}
-
-File principale:
-database_quiz.json
-
-Android:
-copia database_quiz.json dentro app/src/main/assets/
-
-Web:
-apri index.html oppure usa database_quiz.json nella tua app.
-"""
-    (percorso / "README.md").write_text(testo, encoding="utf-8")
-
-def crea_pacchetto(piattaforma, materia, livello, numero):
+def prepara_domande(materia, livello, numero):
     database = carica_database()
-    domande = filtra_domande(database, materia, livello)
+
+    domande = [
+        domanda for domanda in database
+        if materia_ok(domanda, materia)
+        and (livello == "tutti" or domanda.get("livello") == livello)
+    ]
 
     if not domande:
         raise ValueError("Nessuna domanda trovata con questi filtri.")
@@ -207,7 +83,288 @@ def crea_pacchetto(piattaforma, materia, livello, numero):
     if numero != "all":
         domande = domande[:int(numero)]
 
-    domande = [normalizza_domanda(domanda) for domanda in domande]
+    return domande
+
+def crea_demo_web(percorso, domande):
+    dati_json = json.dumps(domande, ensure_ascii=False)
+
+    html = """<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <title>Apri quiz generato</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      margin: 0;
+      font-family: system-ui, sans-serif;
+      background: radial-gradient(circle at top left, #155e75, #020617 45%, #111827);
+      color: #f8fafc;
+    }
+    .page {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 36px 20px;
+    }
+    .hero, .quiz {
+      background: rgba(15, 23, 42, 0.94);
+      border: 1px solid rgba(148, 163, 184, 0.32);
+      border-radius: 28px;
+      padding: 30px;
+      box-shadow: 0 22px 60px rgba(0, 0, 0, 0.35);
+    }
+    h1 {
+      font-size: clamp(2rem, 5vw, 3.3rem);
+      margin: 0 0 12px;
+    }
+    p {
+      color: #cbd5e1;
+      line-height: 1.6;
+    }
+    .start {
+      margin-top: 20px;
+      padding: 18px 28px;
+      border: 0;
+      border-radius: 20px;
+      background: linear-gradient(135deg, #5eead4, #f0f9a8);
+      color: #020617;
+      font-size: 1.08rem;
+      font-weight: 1000;
+      cursor: pointer;
+    }
+    .quiz {
+      margin-top: 28px;
+      display: none;
+    }
+    .top {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      color: #cbd5e1;
+      font-weight: 800;
+      margin-bottom: 18px;
+    }
+    .score {
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: rgba(34, 197, 94, 0.16);
+      color: #bbf7d0;
+      white-space: nowrap;
+    }
+    .question {
+      font-size: 1.35rem;
+      font-weight: 950;
+      line-height: 1.45;
+      margin-bottom: 20px;
+    }
+    .option {
+      width: 100%;
+      margin: 8px 0;
+      padding: 16px 18px;
+      border-radius: 18px;
+      border: 1px solid rgba(148, 163, 184, 0.35);
+      background: rgba(30, 41, 59, 0.96);
+      color: #f8fafc;
+      text-align: left;
+      font-size: 1rem;
+      font-weight: 750;
+      cursor: pointer;
+    }
+    .correct { background: rgba(22, 163, 74, 0.9); }
+    .wrong { background: rgba(220, 38, 38, 0.9); }
+    .disabled { opacity: 0.5; }
+    .feedback {
+      margin-top: 20px;
+      padding: 18px;
+      border-radius: 18px;
+      background: rgba(2, 6, 23, 0.65);
+      display: none;
+    }
+    .next {
+      margin-top: 14px;
+      padding: 14px 20px;
+      border: 0;
+      border-radius: 16px;
+      background: linear-gradient(135deg, #5eead4, #f0f9a8);
+      color: #020617;
+      font-weight: 950;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <section class="hero">
+      <h1>Prova subito il tuo test</h1>
+      <p>
+        Questo è il pacchetto web già pronto. Premi il pulsante e il quiz parte direttamente nel browser.
+      </p>
+      <button class="start" onclick="startQuiz()">▶ PROVA IL TEST ADESSO</button>
+      <p>
+        File inclusi: <strong>1_APRI_QUIZ.html</strong>, <strong>README_LEGGIMI.html</strong>, <strong>database_quiz.json</strong>.
+      </p>
+    </section>
+
+    <section id="quizBox" class="quiz"></section>
+  </main>
+
+  <script>
+    const quizDatabase = __QUIZ_JSON__;
+    let quiz = [];
+    let indice = 0;
+    let punteggio = 0;
+    let bloccato = false;
+
+    function startQuiz() {
+      quiz = [...quizDatabase];
+      indice = 0;
+      punteggio = 0;
+      mescola(quiz);
+      document.getElementById("quizBox").style.display = "block";
+      mostraDomanda();
+      document.getElementById("quizBox").scrollIntoView({ behavior: "smooth" });
+    }
+
+    function mostraDomanda() {
+      bloccato = false;
+      const box = document.getElementById("quizBox");
+      const domanda = quiz[indice];
+
+      if (!domanda) {
+        const percentuale = Math.round((punteggio / quiz.length) * 100);
+        box.innerHTML = `
+          <h2>Risultato finale</h2>
+          <p>Hai risposto correttamente a <strong>${punteggio}</strong> domande su <strong>${quiz.length}</strong>.</p>
+          <p>Percentuale: <strong>${percentuale}%</strong></p>
+          <button class="next" onclick="startQuiz()">Rifai il test</button>
+        `;
+        return;
+      }
+
+      box.innerHTML = `
+        <div class="top">
+          <div>Domanda ${indice + 1}/${quiz.length} · ${escapeHtml(domanda.categoria)} · ${escapeHtml(domanda.livello)}</div>
+          <div class="score">Punteggio: ${punteggio}</div>
+        </div>
+        <div class="question">${escapeHtml(domanda.domanda)}</div>
+        <div>
+          ${(domanda.opzioni || []).map((opzione, i) => `
+            <button class="option" data-index="${i}">
+              <strong>${String.fromCharCode(65 + i)})</strong> ${escapeHtml(opzione)}
+            </button>
+          `).join("")}
+        </div>
+        <div id="feedback" class="feedback"></div>
+      `;
+
+      document.querySelectorAll(".option").forEach(button => {
+        button.addEventListener("click", () => {
+          rispondi(Number(button.dataset.index));
+        });
+      });
+    }
+
+    function rispondi(indiceRisposta) {
+      if (bloccato) return;
+      bloccato = true;
+
+      const domanda = quiz[indice];
+      const risposta = domanda.opzioni[indiceRisposta];
+      const corretta = risposta === domanda.risposta_corretta;
+
+      if (corretta) punteggio++;
+
+      document.querySelectorAll(".option").forEach((button, i) => {
+        const valore = domanda.opzioni[i];
+
+        if (valore === domanda.risposta_corretta) {
+          button.classList.add("correct");
+        } else if (i === indiceRisposta) {
+          button.classList.add("wrong");
+        } else {
+          button.classList.add("disabled");
+        }
+      });
+
+      const feedback = document.getElementById("feedback");
+      feedback.style.display = "block";
+      feedback.innerHTML = `
+        <p><strong>${corretta ? "Corretto." : "Sbagliato."}</strong></p>
+        <p>Risposta corretta: <strong>${escapeHtml(domanda.risposta_corretta)}</strong></p>
+        <p>${escapeHtml(domanda.spiegazione || "Spiegazione non disponibile.")}</p>
+        <button class="next" onclick="indice++; mostraDomanda()">
+          ${indice === quiz.length - 1 ? "Vedi risultato finale" : "Domanda successiva"}
+        </button>
+      `;
+    }
+
+    function mescola(array) {
+      for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+      }
+    }
+
+    function escapeHtml(text) {
+      return String(text || "")
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        .replaceAll('"', "&quot;")
+        .replaceAll("'", "&#039;");
+    }
+  </script>
+</body>
+</html>
+""".replace("__QUIZ_JSON__", dati_json)
+
+    leggimi = """<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <title>Leggimi pacchetto quiz</title>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 850px; margin: 40px auto; padding: 24px; line-height: 1.6; }
+    a { display: inline-block; padding: 18px 24px; border-radius: 14px; background: #16a34a; color: white; font-weight: 900; text-decoration: none; }
+  </style>
+</head>
+<body>
+  <h1>Pacchetto quiz web</h1>
+  <p>Per provare subito il test apri il file:</p>
+  <h2>1_APRI_QUIZ.html</h2>
+  <a href="./1_APRI_QUIZ.html">▶ APRI E PROVA IL TEST</a>
+</body>
+</html>
+"""
+
+    (percorso / "1_APRI_QUIZ.html").write_text(html, encoding="utf-8")
+    (percorso / "index.html").write_text(html, encoding="utf-8")
+    (percorso / "README_LEGGIMI.html").write_text(leggimi, encoding="utf-8")
+
+def crea_readme_pacchetto(percorso, piattaforma, materia, livello, numero):
+    testo = f"""# Pacchetto quiz generato
+
+Piattaforma: {piattaforma}
+Materia: {materia}
+Livello: {livello}
+Domande: {numero}
+
+## Web
+
+Apri:
+
+1_APRI_QUIZ.html
+
+## Android
+
+Copia:
+
+app/src/main/assets/database_quiz.json
+"""
+    (percorso / "README.md").write_text(testo, encoding="utf-8")
+
+def crea_pacchetto(piattaforma, materia, livello, numero):
+    domande = prepara_domande(materia, livello, numero)
 
     nome = f"{piattaforma}_{slug(materia)}_{slug(livello)}_{len(domande)}_domande"
     output_dir = OUTPUT_ROOT / nome
@@ -220,15 +377,10 @@ def crea_pacchetto(piattaforma, materia, livello, numero):
     if piattaforma == "android":
         assets = output_dir / "app" / "src" / "main" / "assets"
         assets.mkdir(parents=True, exist_ok=True)
-        destinazione_json = assets / "database_quiz.json"
+        (assets / "database_quiz.json").write_text(json.dumps(domande, ensure_ascii=False, indent=2), encoding="utf-8")
     else:
-        crea_index_web(output_dir)
-        destinazione_json = output_dir / "database_quiz.json"
-
-    destinazione_json.write_text(
-        json.dumps(domande, ensure_ascii=False, indent=2),
-        encoding="utf-8",
-    )
+        (output_dir / "database_quiz.json").write_text(json.dumps(domande, ensure_ascii=False, indent=2), encoding="utf-8")
+        crea_demo_web(output_dir, domande)
 
     crea_readme_pacchetto(output_dir, piattaforma, materia, livello, len(domande))
 
