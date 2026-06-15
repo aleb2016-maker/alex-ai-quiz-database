@@ -1,0 +1,303 @@
+[
+  {
+    "id": "CHE_001",
+    "categoria": "scienze",
+    "sottocategoria": "chimica",
+    "livello": "facile",
+    "domanda": "Che cosa rappresenta il numero atomico di un elemento?",
+    "opzioni": [
+      "Il numero di protoni presenti nel nucleo dell’atomo",
+      "Il numero totale di protoni e neutroni presenti nel nucleo",
+      "Il numero di elettroni presenti solo nello strato più esterno",
+      "La massa media degli isotopi naturali dell’elemento"
+    ],
+    "risposta_corretta": "Il numero di protoni presenti nel nucleo dell’atomo",
+    "spiegazione": "Il numero atomico identifica un elemento perché indica quanti protoni ci sono nel nucleo. Se cambia il numero di protoni, cambia l’elemento.",
+    "tags": [
+      "chimica",
+      "atomo",
+      "numero_atomico"
+    ],
+    "difficolta": 1,
+    "distrattore_forte": "Il numero totale di protoni e neutroni presenti nel nucleo",
+    "punteggio_distrattore_forte": 4,
+    "motivo_distrattore_forte": "È vicino perché descrive il numero di massa, non il numero atomico.",
+    "qualita": "controllata"
+  },
+  {
+    "id": "CHE_002",
+    "categoria": "scienze",
+    "sottocategoria": "chimica",
+    "livello": "facile",
+    "domanda": "Quale particella subatomica ha carica negativa?",
+    "opzioni": [
+      "Elettrone",
+      "Protone",
+      "Neutrone",
+      "Nucleo atomico"
+    ],
+    "risposta_corretta": "Elettrone",
+    "spiegazione": "L’elettrone ha carica negativa, il protone ha carica positiva e il neutrone è privo di carica elettrica.",
+    "tags": [
+      "chimica",
+      "particelle",
+      "elettrone"
+    ],
+    "difficolta": 1,
+    "distrattore_forte": "Protone",
+    "punteggio_distrattore_forte": 4,
+    "motivo_distrattore_forte": "È una particella subatomica carica, ma ha carica positiva.",
+    "qualita": "controllata"
+  },
+  {
+    "id": "CHE_003",
+    "categoria": "scienze",
+    "sottocategoria": "chimica",
+    "livello": "facile",
+    "domanda": "Che cosa indica la formula chimica H₂O?",
+    "opzioni": [
+      "Una molecola formata da due atomi di idrogeno e uno di ossigeno",
+      "Una molecola formata da un atomo di idrogeno e due di ossigeno",
+      "Una miscela tra idrogeno liquido e ossigeno gassoso",
+      "Un singolo atomo composto da idrogeno e ossigeno"
+    ],
+    "risposta_corretta": "Una molecola formata da due atomi di idrogeno e uno di ossigeno",
+    "spiegazione": "Il numero piccolo 2 indica due atomi di idrogeno. L’ossigeno non ha numero scritto, quindi è presente con un solo atomo.",
+    "tags": [
+      "chimica",
+      "formula_chimica",
+      "molecola"
+    ],
+    "difficolta": 1,
+    "distrattore_forte": "Una molecola formata da un atomo di idrogeno e due di ossigeno",
+    "punteggio_distrattore_forte": 4,
+    "motivo_distrattore_forte": "È vicino perché inverte il significato del pedice 2.",
+    "qualita": "controllata"
+  },
+  {
+    "id": "CHE_004",
+    "categoria": "scienze",
+    "sottocategoria": "chimica",
+    "livello": "facile",
+    "domanda": "Quando una sostanza ha pH minore di 7, come viene classificata?",
+    "opzioni": [
+      "Acida",
+      "Basica",
+      "Neutra",
+      "Satura"
+    ],
+    "risposta_corretta": "Acida",
+    "spiegazione": "Una soluzione con pH inferiore a 7 è acida. Il pH 7 è neutro, mentre un pH superiore a 7 è basico.",
+    "tags": [
+      "chimica",
+      "ph",
+      "acidi_basi"
+    ],
+    "difficolta": 1,
+    "distrattore_forte": "Basica",
+    "punteggio_distrattore_forte": 4,
+    "motivo_distrattore_forte": "È vicino perché riguarda sempre la scala del pH, ma vale per pH maggiore di 7.",
+    "qualita": "controllata"
+  },
+  {
+    "id": "CHE_005",
+    "categoria": "scienze",
+    "sottocategoria": "chimica",
+    "livello": "intermedio",
+    "domanda": "Qual è la differenza principale tra legame ionico e legame covalente?",
+    "opzioni": [
+      "Nel legame ionico c’è trasferimento di elettroni, nel covalente condivisione di elettroni",
+      "Nel legame ionico c’è condivisione di protoni, nel covalente trasferimento di neutroni",
+      "Nel legame ionico gli atomi restano neutri, nel covalente diventano sempre ioni",
+      "Nel legame ionico partecipano solo gas nobili, nel covalente solo metalli"
+    ],
+    "risposta_corretta": "Nel legame ionico c’è trasferimento di elettroni, nel covalente condivisione di elettroni",
+    "spiegazione": "Nel legame ionico un atomo cede elettroni e un altro li acquista. Nel legame covalente gli atomi condividono coppie di elettroni.",
+    "tags": [
+      "chimica",
+      "legami_chimici",
+      "ionico",
+      "covalente"
+    ],
+    "difficolta": 2,
+    "distrattore_forte": "Nel legame ionico gli atomi restano neutri, nel covalente diventano sempre ioni",
+    "punteggio_distrattore_forte": 4,
+    "motivo_distrattore_forte": "È vicino perché parla di ioni e neutralità, ma inverte la logica del legame ionico.",
+    "qualita": "controllata"
+  },
+  {
+    "id": "CHE_006",
+    "categoria": "scienze",
+    "sottocategoria": "chimica",
+    "livello": "intermedio",
+    "domanda": "Che cosa succede a un atomo quando perde uno o più elettroni?",
+    "opzioni": [
+      "Diventa uno ione positivo",
+      "Diventa uno ione negativo",
+      "Diventa un isotopo dello stesso elemento",
+      "Diventa automaticamente un gas nobile"
+    ],
+    "risposta_corretta": "Diventa uno ione positivo",
+    "spiegazione": "Se un atomo perde elettroni, perde cariche negative. Rimane quindi con carica netta positiva e diventa un catione.",
+    "tags": [
+      "chimica",
+      "ioni",
+      "elettroni"
+    ],
+    "difficolta": 2,
+    "distrattore_forte": "Diventa uno ione negativo",
+    "punteggio_distrattore_forte": 4,
+    "motivo_distrattore_forte": "È vicino perché parla di ione, ma lo ione negativo si forma acquistando elettroni.",
+    "qualita": "controllata"
+  },
+  {
+    "id": "CHE_007",
+    "categoria": "scienze",
+    "sottocategoria": "chimica",
+    "livello": "intermedio",
+    "domanda": "Quale affermazione descrive correttamente un isotopo?",
+    "opzioni": [
+      "Atomi dello stesso elemento con uguale numero di protoni ma diverso numero di neutroni",
+      "Atomi di elementi diversi con uguale numero di elettroni nello strato esterno",
+      "Atomi dello stesso elemento con diverso numero di protoni e stesso numero di neutroni",
+      "Molecole con la stessa formula ma diversa disposizione spaziale"
+    ],
+    "risposta_corretta": "Atomi dello stesso elemento con uguale numero di protoni ma diverso numero di neutroni",
+    "spiegazione": "Gli isotopi appartengono allo stesso elemento, quindi hanno lo stesso numero di protoni, ma differiscono per il numero di neutroni.",
+    "tags": [
+      "chimica",
+      "isotopi",
+      "atomo"
+    ],
+    "difficolta": 2,
+    "distrattore_forte": "Atomi dello stesso elemento con diverso numero di protoni e stesso numero di neutroni",
+    "punteggio_distrattore_forte": 4,
+    "motivo_distrattore_forte": "È vicino perché parla dello stesso elemento, ma se cambiano i protoni cambia l’elemento.",
+    "qualita": "controllata"
+  },
+  {
+    "id": "CHE_008",
+    "categoria": "scienze",
+    "sottocategoria": "chimica",
+    "livello": "intermedio",
+    "domanda": "In una reazione chimica bilanciata, che cosa deve conservarsi?",
+    "opzioni": [
+      "Il numero di atomi di ogni elemento nei reagenti e nei prodotti",
+      "Il numero di molecole totali prima e dopo la reazione",
+      "Il colore delle sostanze prima e dopo la reazione",
+      "La forma fisica di ogni sostanza coinvolta"
+    ],
+    "risposta_corretta": "Il numero di atomi di ogni elemento nei reagenti e nei prodotti",
+    "spiegazione": "Bilanciare una reazione significa rispettare la conservazione della massa: gli atomi non spariscono e non si creano, si riorganizzano.",
+    "tags": [
+      "chimica",
+      "reazioni",
+      "bilanciamento"
+    ],
+    "difficolta": 2,
+    "distrattore_forte": "Il numero di molecole totali prima e dopo la reazione",
+    "punteggio_distrattore_forte": 4,
+    "motivo_distrattore_forte": "È vicino perché parla di quantità, ma non è il numero di molecole totali a dover restare uguale.",
+    "qualita": "controllata"
+  },
+  {
+    "id": "CHE_009",
+    "categoria": "scienze",
+    "sottocategoria": "chimica",
+    "livello": "avanzato",
+    "domanda": "Perché l’acqua è una molecola polare?",
+    "opzioni": [
+      "Perché i legami O-H sono polari e la geometria molecolare è angolare",
+      "Perché contiene due atomi di idrogeno identici legati allo stesso ossigeno",
+      "Perché l’ossigeno e l’idrogeno condividono elettroni in modo perfettamente simmetrico",
+      "Perché ogni molecola d’acqua possiede carica elettrica totale positiva"
+    ],
+    "risposta_corretta": "Perché i legami O-H sono polari e la geometria molecolare è angolare",
+    "spiegazione": "L’ossigeno attira più fortemente gli elettroni e la forma angolare impedisce l’annullamento dei dipoli. Per questo la molecola è polare.",
+    "tags": [
+      "chimica",
+      "polarita",
+      "molecole"
+    ],
+    "difficolta": 3,
+    "distrattore_forte": "Perché l’ossigeno e l’idrogeno condividono elettroni in modo perfettamente simmetrico",
+    "punteggio_distrattore_forte": 4,
+    "motivo_distrattore_forte": "È vicino perché parla della condivisione elettronica, ma la simmetria perfetta renderebbe la molecola non polare.",
+    "qualita": "controllata"
+  },
+  {
+    "id": "CHE_010",
+    "categoria": "scienze",
+    "sottocategoria": "chimica",
+    "livello": "avanzato",
+    "domanda": "Che cosa indica l’elettronegatività di un elemento?",
+    "opzioni": [
+      "La tendenza di un atomo ad attirare elettroni in un legame chimico",
+      "La capacità di un atomo isolato di perdere protoni dal nucleo",
+      "Il numero totale di elettroni presenti in un atomo neutro",
+      "La massa dell’atomo rispetto al carbonio-12"
+    ],
+    "risposta_corretta": "La tendenza di un atomo ad attirare elettroni in un legame chimico",
+    "spiegazione": "L’elettronegatività misura quanto un atomo attira verso di sé gli elettroni condivisi in un legame.",
+    "tags": [
+      "chimica",
+      "elettronegativita",
+      "legami"
+    ],
+    "difficolta": 3,
+    "distrattore_forte": "Il numero totale di elettroni presenti in un atomo neutro",
+    "punteggio_distrattore_forte": 4,
+    "motivo_distrattore_forte": "È vicino perché parla di elettroni, ma non descrive la tendenza ad attrarli in un legame.",
+    "qualita": "controllata"
+  },
+  {
+    "id": "CHE_011",
+    "categoria": "scienze",
+    "sottocategoria": "chimica",
+    "livello": "avanzato",
+    "domanda": "In una reazione redox, che cosa accade alla specie che si ossida?",
+    "opzioni": [
+      "Perde elettroni e aumenta il proprio numero di ossidazione",
+      "Acquista elettroni e diminuisce il proprio numero di ossidazione",
+      "Perde protoni e mantiene invariato il numero di ossidazione",
+      "Acquista neutroni e diventa un isotopo più pesante"
+    ],
+    "risposta_corretta": "Perde elettroni e aumenta il proprio numero di ossidazione",
+    "spiegazione": "L’ossidazione corrisponde alla perdita di elettroni. Quando una specie perde elettroni, il suo numero di ossidazione aumenta.",
+    "tags": [
+      "chimica",
+      "redox",
+      "ossidazione"
+    ],
+    "difficolta": 3,
+    "distrattore_forte": "Acquista elettroni e diminuisce il proprio numero di ossidazione",
+    "punteggio_distrattore_forte": 4,
+    "motivo_distrattore_forte": "È vicino perché descrive una trasformazione redox, ma quella è la riduzione.",
+    "qualita": "controllata"
+  },
+  {
+    "id": "CHE_012",
+    "categoria": "scienze",
+    "sottocategoria": "chimica",
+    "livello": "avanzato",
+    "domanda": "Perché un catalizzatore aumenta la velocità di una reazione chimica?",
+    "opzioni": [
+      "Fornisce un percorso alternativo con energia di attivazione più bassa",
+      "Aumenta sempre la quantità finale di prodotto ottenibile all’equilibrio",
+      "Viene consumato completamente e trasformato nel prodotto principale",
+      "Rende impossibile la reazione inversa dopo la formazione dei prodotti"
+    ],
+    "risposta_corretta": "Fornisce un percorso alternativo con energia di attivazione più bassa",
+    "spiegazione": "Il catalizzatore accelera la reazione abbassando l’energia di attivazione, ma non viene consumato e non cambia la posizione dell’equilibrio.",
+    "tags": [
+      "chimica",
+      "catalizzatore",
+      "energia_attivazione"
+    ],
+    "difficolta": 3,
+    "distrattore_forte": "Aumenta sempre la quantità finale di prodotto ottenibile all’equilibrio",
+    "punteggio_distrattore_forte": 4,
+    "motivo_distrattore_forte": "È vicino perché collega catalizzatore e resa, ma il catalizzatore modifica la velocità, non l’equilibrio finale.",
+    "qualita": "controllata"
+  }
+]
