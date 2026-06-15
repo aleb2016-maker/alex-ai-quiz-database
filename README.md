@@ -12,17 +12,35 @@ Questo progetto è un **motore riutilizzabile** per creare quiz con:
 
 ## Scarica i pacchetti riutilizzabili
 
+### Pacchetto Scienze / Materie scientifiche
+
 <p align="center">
   <a href="https://github.com/aleb2016-maker/alex-ai-quiz-database/raw/main/downloads/pacchetto-web-scienze-demo.zip">
-    <img src="https://img.shields.io/badge/SCARICA%20CODICE%20WEB-HTML%20DATABASE%20MOTORE%20JS-ff9800?style=for-the-badge&labelColor=ff9800" alt="Scarica codice web">
+    <img src="https://img.shields.io/badge/SCARICA%20WEB%20SCIENZE-HTML%20DATABASE%20JS-ff9800?style=for-the-badge&labelColor=ff9800" alt="Scarica codice web Scienze">
   </a>
 </p>
 
 <p align="center">
   <a href="https://github.com/aleb2016-maker/alex-ai-quiz-database/raw/main/downloads/pacchetto-android-finale-semplice.zip">
-    <img src="https://img.shields.io/badge/SCARICA%20PACCHETTO%20ANDROID-DATABASE%20MOTORE%20KOTLIN-2962ff?style=for-the-badge&labelColor=2962ff" alt="Scarica pacchetto Android">
+    <img src="https://img.shields.io/badge/SCARICA%20ANDROID%20SCIENZE-DATABASE%20MOTORE%20KOTLIN-2962ff?style=for-the-badge&labelColor=2962ff" alt="Scarica pacchetto Android Scienze">
   </a>
 </p>
+
+### Pacchetto AI / ITS generale
+
+<p align="center">
+  <a href="https://github.com/aleb2016-maker/alex-ai-quiz-database/raw/main/downloads/pacchetto-web-ai-its-demo.zip">
+    <img src="https://img.shields.io/badge/SCARICA%20WEB%20AI%20ITS-HTML%20DATABASE%20JS-00bcd4?style=for-the-badge&labelColor=00bcd4" alt="Scarica codice web AI ITS">
+  </a>
+</p>
+
+<p align="center">
+  <a href="https://github.com/aleb2016-maker/alex-ai-quiz-database/raw/main/downloads/pacchetto-android-ai-its-finale-semplice.zip">
+    <img src="https://img.shields.io/badge/SCARICA%20ANDROID%20AI%20ITS-DATABASE%20MOTORE%20KOTLIN-673ab7?style=for-the-badge&labelColor=673ab7" alt="Scarica pacchetto Android AI ITS">
+  </a>
+</p>
+
+### Crea un pacchetto personalizzato
 
 <p align="center">
   <a href="https://github.com/aleb2016-maker/alex-ai-quiz-database/actions/workflows/create-quiz-package.yml">
@@ -34,8 +52,10 @@ Questo progetto è un **motore riutilizzabile** per creare quiz con:
 
 | Pulsante | Sequenza delle azioni |
 |---|---|
-| **SCARICA CODICE WEB** | scarica ZIP → apri `1_APRI_QUIZ.html` → il quiz parte nel browser con `database_quiz.json` e `quiz-engine.js` già inclusi |
-| **SCARICA PACCHETTO ANDROID** | scarica ZIP → apri `1_LEGGIMI.html` → copia `database_quiz.json` in `app/src/main/assets/` e i 5 file Kotlin di `quizengine` in `app/src/main/java/com/alex/quizengine/` |
+| **SCARICA WEB SCIENZE** | scarica ZIP → apri `1_APRI_QUIZ.html` → il quiz parte nel browser con 200 domande scientifiche, incluse Fisica, Chimica, Biologia e Fisica Quantistica |
+| **SCARICA ANDROID SCIENZE** | scarica ZIP → apri `1_LEGGIMI.html` → copia `database_quiz.json` in `app/src/main/assets/` e i 5 file Kotlin di `quizengine` in `app/src/main/java/com/alex/quizengine/` |
+| **SCARICA WEB AI ITS** | scarica ZIP → apri `1_APRI_QUIZ.html` → il quiz parte nel browser con 215 domande su AI, Informatica, Matematica, Inglese, Logica e Logica visiva |
+| **SCARICA ANDROID AI ITS** | scarica ZIP → apri `1_LEGGIMI.html` → copia `database_quiz.json` in `app/src/main/assets/` e i 5 file Kotlin di `quizengine` in `app/src/main/java/com/alex/quizengine/` |
 | **CREA PACCHETTO PERSONALIZZATO** | clicca il pulsante rosso → clicca **Run workflow** → scegli **platform** web/android → scegli **subject** materia → scegli **level** livello → scegli **number** numero domande → clicca il pulsante verde **Run workflow** → aspetta la spunta verde → apri l’ultima esecuzione creata → vai su **Summary** → scorri fino ad **Artifacts** → clicca lo ZIP generato |
 
 <!-- ALEX-QUIZ-DASHBOARD-END -->
