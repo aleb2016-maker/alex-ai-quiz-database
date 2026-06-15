@@ -612,5 +612,213 @@
     "punteggio_distrattore_forte": 4,
     "motivo_distrattore_forte": "È vicino perché riguarda le relazioni ecologiche, ma la biodiversità non elimina automaticamente la competizione.",
     "qualita": "controllata"
+  },
+  {
+    "id": "BIO_025",
+    "categoria": "scienze",
+    "sottocategoria": "biologia",
+    "livello": "facile",
+    "domanda": "Quale struttura cellulare partecipa direttamente alla costruzione delle proteine?",
+    "opzioni": [
+      "Ribosoma",
+      "Vacuolo centrale",
+      "Parete cellulare",
+      "Membrana nucleare"
+    ],
+    "risposta_corretta": "Ribosoma",
+    "spiegazione": "I ribosomi sono strutture cellulari coinvolte nella sintesi delle proteine, leggendo le informazioni portate dall’RNA messaggero.",
+    "tags": [
+      "biologia",
+      "cellula",
+      "ribosomi",
+      "proteine"
+    ],
+    "difficolta": 1,
+    "distrattore_forte": "Membrana nucleare",
+    "punteggio_distrattore_forte": 4,
+    "motivo_distrattore_forte": "È vicino perché appartiene alla cellula e riguarda il nucleo, ma non costruisce direttamente proteine.",
+    "qualita": "controllata"
+  },
+  {
+    "id": "BIO_026",
+    "categoria": "scienze",
+    "sottocategoria": "biologia",
+    "livello": "facile",
+    "domanda": "Quale organo ha il compito principale di pompare il sangue nei vasi sanguigni?",
+    "opzioni": [
+      "Cuore",
+      "Polmone",
+      "Fegato",
+      "Stomaco"
+    ],
+    "risposta_corretta": "Cuore",
+    "spiegazione": "Il cuore funziona come una pompa muscolare: spinge il sangue nei vasi sanguigni per raggiungere tessuti e organi.",
+    "tags": [
+      "biologia",
+      "corpo_umano",
+      "cuore",
+      "sangue"
+    ],
+    "difficolta": 1,
+    "distrattore_forte": "Polmone",
+    "punteggio_distrattore_forte": 4,
+    "motivo_distrattore_forte": "È vicino perché i polmoni collaborano con la circolazione ossigenando il sangue, ma non lo pompano nei vasi.",
+    "qualita": "controllata"
+  },
+  {
+    "id": "BIO_027",
+    "categoria": "scienze",
+    "sottocategoria": "biologia",
+    "livello": "intermedio",
+    "domanda": "Quale tessuto vegetale trasporta principalmente acqua e sali minerali dalle radici verso il resto della pianta?",
+    "opzioni": [
+      "Xilema",
+      "Floema",
+      "Epidermide",
+      "Tessuto nervoso"
+    ],
+    "risposta_corretta": "Xilema",
+    "spiegazione": "Lo xilema trasporta acqua e sali minerali assorbiti dalle radici verso fusto e foglie. Il floema trasporta soprattutto zuccheri prodotti dalla fotosintesi.",
+    "tags": [
+      "biologia",
+      "piante",
+      "xilema",
+      "trasporto"
+    ],
+    "difficolta": 2,
+    "distrattore_forte": "Floema",
+    "punteggio_distrattore_forte": 4,
+    "motivo_distrattore_forte": "È molto vicino perché anche il floema è un tessuto di trasporto, ma trasporta soprattutto sostanze organiche.",
+    "qualita": "controllata"
+  },
+  {
+    "id": "BIO_028",
+    "categoria": "scienze",
+    "sottocategoria": "biologia",
+    "livello": "intermedio",
+    "domanda": "Che cosa succede durante la traduzione dell’informazione genetica?",
+    "opzioni": [
+      "I ribosomi usano l’RNA messaggero per assemblare una catena di amminoacidi",
+      "Il DNA viene copiato in RNA dentro il nucleo",
+      "La membrana cellulare duplica tutti i cromosomi",
+      "I mitocondri trasformano direttamente il glucosio in DNA"
+    ],
+    "risposta_corretta": "I ribosomi usano l’RNA messaggero per assemblare una catena di amminoacidi",
+    "spiegazione": "La traduzione è la fase in cui l’informazione contenuta nell’RNA messaggero viene usata dai ribosomi per costruire una proteina.",
+    "tags": [
+      "biologia",
+      "traduzione",
+      "rna",
+      "proteine",
+      "ribosomi"
+    ],
+    "difficolta": 2,
+    "distrattore_forte": "Il DNA viene copiato in RNA dentro il nucleo",
+    "punteggio_distrattore_forte": 4,
+    "motivo_distrattore_forte": "È vicino perché descrive la trascrizione, una fase collegata ma diversa dalla traduzione.",
+    "qualita": "controllata"
+  },
+  {
+    "id": "BIO_029",
+    "categoria": "scienze",
+    "sottocategoria": "biologia",
+    "livello": "intermedio",
+    "domanda": "Perché i vaccini aiutano il sistema immunitario a rispondere più rapidamente a un agente infettivo?",
+    "opzioni": [
+      "Stimolano la formazione di memoria immunitaria contro specifici antigeni",
+      "Eliminano definitivamente tutti i microrganismi presenti nell’ambiente",
+      "Sostituiscono tutti i globuli bianchi con globuli rossi",
+      "Impediscono al corpo di produrre anticorpi"
+    ],
+    "risposta_corretta": "Stimolano la formazione di memoria immunitaria contro specifici antigeni",
+    "spiegazione": "I vaccini espongono il sistema immunitario a un antigene o a una sua parte, favorendo una risposta più rapida in caso di incontro futuro.",
+    "tags": [
+      "biologia",
+      "sistema_immunitario",
+      "vaccini",
+      "anticorpi"
+    ],
+    "difficolta": 2,
+    "distrattore_forte": "Impediscono al corpo di produrre anticorpi",
+    "punteggio_distrattore_forte": 4,
+    "motivo_distrattore_forte": "È vicino perché parla di anticorpi, ma dice l’opposto: i vaccini favoriscono una risposta immunitaria.",
+    "qualita": "controllata"
+  },
+  {
+    "id": "BIO_030",
+    "categoria": "scienze",
+    "sottocategoria": "biologia",
+    "livello": "avanzato",
+    "domanda": "Che cosa indica l’espressione selezione naturale?",
+    "opzioni": [
+      "Il diverso successo riproduttivo degli individui in base a caratteristiche ereditarie vantaggiose",
+      "La scelta volontaria degli organismi di modificare il proprio DNA quando serve",
+      "La trasformazione immediata di ogni individuo in una nuova specie",
+      "L’eliminazione casuale di tutte le variazioni genetiche"
+    ],
+    "risposta_corretta": "Il diverso successo riproduttivo degli individui in base a caratteristiche ereditarie vantaggiose",
+    "spiegazione": "La selezione naturale favorisce nel tempo le caratteristiche ereditarie che aumentano sopravvivenza o riproduzione in un certo ambiente.",
+    "tags": [
+      "biologia",
+      "evoluzione",
+      "selezione_naturale"
+    ],
+    "difficolta": 3,
+    "distrattore_forte": "La scelta volontaria degli organismi di modificare il proprio DNA quando serve",
+    "punteggio_distrattore_forte": 4,
+    "motivo_distrattore_forte": "È vicino perché parla di adattamento, ma l’evoluzione non avviene per scelta volontaria dell’organismo.",
+    "qualita": "controllata"
+  },
+  {
+    "id": "BIO_031",
+    "categoria": "scienze",
+    "sottocategoria": "biologia",
+    "livello": "avanzato",
+    "domanda": "Perché una piramide alimentare tende ad avere meno biomassa ai livelli trofici superiori?",
+    "opzioni": [
+      "Perché a ogni passaggio una parte dell’energia viene dispersa e non trasferita al livello successivo",
+      "Perché i predatori producono sempre più energia dei produttori",
+      "Perché le piante consumano tutti gli animali erbivori",
+      "Perché l’energia aumenta automaticamente salendo nella catena alimentare"
+    ],
+    "risposta_corretta": "Perché a ogni passaggio una parte dell’energia viene dispersa e non trasferita al livello successivo",
+    "spiegazione": "Nel passaggio da un livello trofico al successivo molta energia viene usata o dispersa come calore. Per questo la biomassa disponibile tende a diminuire.",
+    "tags": [
+      "biologia",
+      "ecologia",
+      "livelli_trofici",
+      "energia"
+    ],
+    "difficolta": 3,
+    "distrattore_forte": "Perché l’energia aumenta automaticamente salendo nella catena alimentare",
+    "punteggio_distrattore_forte": 4,
+    "motivo_distrattore_forte": "È vicino perché riguarda il flusso energetico, ma inverte il principio: l’energia disponibile diminuisce.",
+    "qualita": "controllata"
+  },
+  {
+    "id": "BIO_032",
+    "categoria": "scienze",
+    "sottocategoria": "biologia",
+    "livello": "avanzato",
+    "domanda": "Che cosa può causare una mutazione in una sequenza regolatrice del DNA?",
+    "opzioni": [
+      "Può modificare quando, dove o quanto viene espresso un gene",
+      "Trasforma sempre il gene in una proteina già completa",
+      "Elimina automaticamente tutti gli enzimi della cellula",
+      "Rende impossibile qualunque forma di ereditarietà"
+    ],
+    "risposta_corretta": "Può modificare quando, dove o quanto viene espresso un gene",
+    "spiegazione": "Le sequenze regolatrici controllano l’espressione dei geni. Una mutazione in queste regioni può cambiare il livello o il contesto di attivazione di un gene.",
+    "tags": [
+      "biologia",
+      "genetica",
+      "dna",
+      "regolazione_genica"
+    ],
+    "difficolta": 3,
+    "distrattore_forte": "Trasforma sempre il gene in una proteina già completa",
+    "punteggio_distrattore_forte": 4,
+    "motivo_distrattore_forte": "È vicino perché collega gene e proteina, ma una sequenza regolatrice controlla l’espressione, non costruisce proteine direttamente.",
+    "qualita": "controllata"
   }
 ]
