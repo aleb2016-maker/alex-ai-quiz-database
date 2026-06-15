@@ -1,0 +1,306 @@
+[
+  {
+    "id": "BIO_001",
+    "categoria": "scienze",
+    "sottocategoria": "biologia",
+    "livello": "facile",
+    "domanda": "Qual è la funzione principale del nucleo in una cellula eucariotica?",
+    "opzioni": [
+      "Contenere il DNA e controllare molte attività cellulari",
+      "Produrre direttamente tutta l’energia della cellula",
+      "Digerire le sostanze di scarto presenti nel citoplasma",
+      "Costruire la membrana cellulare a partire dai lipidi"
+    ],
+    "risposta_corretta": "Contenere il DNA e controllare molte attività cellulari",
+    "spiegazione": "Il nucleo contiene il DNA, cioè le informazioni genetiche, e coordina molte attività della cellula.",
+    "tags": [
+      "biologia",
+      "cellula",
+      "nucleo"
+    ],
+    "difficolta": 1,
+    "distrattore_forte": "Produrre direttamente tutta l’energia della cellula",
+    "punteggio_distrattore_forte": 4,
+    "motivo_distrattore_forte": "È vicino perché parla di una funzione cellulare fondamentale, ma l’energia viene prodotta soprattutto dai mitocondri.",
+    "qualita": "controllata"
+  },
+  {
+    "id": "BIO_002",
+    "categoria": "scienze",
+    "sottocategoria": "biologia",
+    "livello": "facile",
+    "domanda": "Che cosa contiene principalmente il DNA?",
+    "opzioni": [
+      "Le informazioni genetiche di un organismo",
+      "Solo le proteine già pronte per la cellula",
+      "L’energia immediata usata dai muscoli",
+      "L’acqua necessaria alla respirazione cellulare"
+    ],
+    "risposta_corretta": "Le informazioni genetiche di un organismo",
+    "spiegazione": "Il DNA contiene le istruzioni genetiche che permettono alle cellule di produrre proteine e trasmettere caratteristiche ereditarie.",
+    "tags": [
+      "biologia",
+      "dna",
+      "genetica"
+    ],
+    "difficolta": 1,
+    "distrattore_forte": "Solo le proteine già pronte per la cellula",
+    "punteggio_distrattore_forte": 4,
+    "motivo_distrattore_forte": "È vicino perché il DNA guida la produzione delle proteine, ma non contiene proteine già pronte.",
+    "qualita": "controllata"
+  },
+  {
+    "id": "BIO_003",
+    "categoria": "scienze",
+    "sottocategoria": "biologia",
+    "livello": "facile",
+    "domanda": "Quale processo permette alle piante di produrre zuccheri usando la luce?",
+    "opzioni": [
+      "Fotosintesi",
+      "Respirazione cellulare",
+      "Digestione enzimatica",
+      "Fermentazione lattica"
+    ],
+    "risposta_corretta": "Fotosintesi",
+    "spiegazione": "La fotosintesi permette alle piante di usare luce, acqua e anidride carbonica per produrre zuccheri e ossigeno.",
+    "tags": [
+      "biologia",
+      "piante",
+      "fotosintesi"
+    ],
+    "difficolta": 1,
+    "distrattore_forte": "Respirazione cellulare",
+    "punteggio_distrattore_forte": 4,
+    "motivo_distrattore_forte": "È vicino perché è un processo energetico cellulare, ma non produce zuccheri usando la luce.",
+    "qualita": "controllata"
+  },
+  {
+    "id": "BIO_004",
+    "categoria": "scienze",
+    "sottocategoria": "biologia",
+    "livello": "facile",
+    "domanda": "Qual è la funzione principale dei mitocondri?",
+    "opzioni": [
+      "Produrre energia utilizzabile dalla cellula",
+      "Conservare direttamente tutte le informazioni genetiche",
+      "Creare la parete cellulare nelle cellule animali",
+      "Catturare la luce durante la fotosintesi"
+    ],
+    "risposta_corretta": "Produrre energia utilizzabile dalla cellula",
+    "spiegazione": "I mitocondri producono ATP, una forma di energia utilizzabile dalla cellula, attraverso la respirazione cellulare.",
+    "tags": [
+      "biologia",
+      "mitocondri",
+      "energia",
+      "atp"
+    ],
+    "difficolta": 1,
+    "distrattore_forte": "Conservare direttamente tutte le informazioni genetiche",
+    "punteggio_distrattore_forte": 4,
+    "motivo_distrattore_forte": "È vicino perché i mitocondri possiedono anche un piccolo DNA, ma non sono il principale deposito dell’informazione genetica.",
+    "qualita": "controllata"
+  },
+  {
+    "id": "BIO_005",
+    "categoria": "scienze",
+    "sottocategoria": "biologia",
+    "livello": "intermedio",
+    "domanda": "Qual è la differenza principale tra mitosi e meiosi?",
+    "opzioni": [
+      "La mitosi produce cellule geneticamente identiche, la meiosi produce gameti con metà dei cromosomi",
+      "La mitosi produce sempre gameti, la meiosi produce solo cellule della pelle",
+      "La mitosi dimezza i cromosomi, la meiosi li raddoppia in ogni cellula figlia",
+      "La mitosi avviene solo nei batteri, la meiosi solo nei virus"
+    ],
+    "risposta_corretta": "La mitosi produce cellule geneticamente identiche, la meiosi produce gameti con metà dei cromosomi",
+    "spiegazione": "La mitosi serve alla crescita e alla riparazione dei tessuti. La meiosi serve alla produzione dei gameti e riduce il numero di cromosomi.",
+    "tags": [
+      "biologia",
+      "mitosi",
+      "meiosi",
+      "genetica"
+    ],
+    "difficolta": 2,
+    "distrattore_forte": "La mitosi dimezza i cromosomi, la meiosi li raddoppia in ogni cellula figlia",
+    "punteggio_distrattore_forte": 4,
+    "motivo_distrattore_forte": "È vicino perché parla del numero di cromosomi, ma attribuisce alla mitosi una riduzione che appartiene alla meiosi.",
+    "qualita": "controllata"
+  },
+  {
+    "id": "BIO_006",
+    "categoria": "scienze",
+    "sottocategoria": "biologia",
+    "livello": "intermedio",
+    "domanda": "Che cosa sono gli enzimi?",
+    "opzioni": [
+      "Proteine che accelerano specifiche reazioni biologiche",
+      "Zuccheri che immagazzinano energia nel sangue",
+      "Lipidi che formano direttamente il codice genetico",
+      "Sali minerali che sostituiscono il DNA nelle cellule"
+    ],
+    "risposta_corretta": "Proteine che accelerano specifiche reazioni biologiche",
+    "spiegazione": "Gli enzimi sono catalizzatori biologici: accelerano reazioni specifiche senza essere consumati dalla reazione.",
+    "tags": [
+      "biologia",
+      "enzimi",
+      "proteine"
+    ],
+    "difficolta": 2,
+    "distrattore_forte": "Zuccheri che immagazzinano energia nel sangue",
+    "punteggio_distrattore_forte": 4,
+    "motivo_distrattore_forte": "È vicino perché riguarda biomolecole e metabolismo, ma gli enzimi sono principalmente proteine, non zuccheri.",
+    "qualita": "controllata"
+  },
+  {
+    "id": "BIO_007",
+    "categoria": "scienze",
+    "sottocategoria": "biologia",
+    "livello": "intermedio",
+    "domanda": "Che cosa indica il termine omeostasi?",
+    "opzioni": [
+      "La capacità di mantenere condizioni interne relativamente stabili",
+      "La capacità di produrre gameti con metà dei cromosomi",
+      "La trasformazione della luce in energia chimica nelle piante",
+      "La duplicazione del DNA prima della divisione cellulare"
+    ],
+    "risposta_corretta": "La capacità di mantenere condizioni interne relativamente stabili",
+    "spiegazione": "L’omeostasi permette agli organismi di mantenere stabili parametri interni come temperatura, pH e concentrazione di acqua.",
+    "tags": [
+      "biologia",
+      "omeostasi",
+      "organismo"
+    ],
+    "difficolta": 2,
+    "distrattore_forte": "La duplicazione del DNA prima della divisione cellulare",
+    "punteggio_distrattore_forte": 4,
+    "motivo_distrattore_forte": "È vicino perché è un processo cellulare fondamentale, ma non riguarda la stabilità dell’ambiente interno.",
+    "qualita": "controllata"
+  },
+  {
+    "id": "BIO_008",
+    "categoria": "scienze",
+    "sottocategoria": "biologia",
+    "livello": "intermedio",
+    "domanda": "Che cosa avviene durante l’osmosi?",
+    "opzioni": [
+      "L’acqua attraversa una membrana semipermeabile verso la soluzione più concentrata",
+      "Le proteine attraversano sempre la membrana dal lato più concentrato a quello meno concentrato",
+      "Il DNA esce dal nucleo per produrre direttamente energia",
+      "I mitocondri trasformano la luce in zuccheri"
+    ],
+    "risposta_corretta": "L’acqua attraversa una membrana semipermeabile verso la soluzione più concentrata",
+    "spiegazione": "L’osmosi è il movimento dell’acqua attraverso una membrana semipermeabile, di solito verso la zona con maggiore concentrazione di soluti.",
+    "tags": [
+      "biologia",
+      "osmosi",
+      "membrana"
+    ],
+    "difficolta": 2,
+    "distrattore_forte": "Le proteine attraversano sempre la membrana dal lato più concentrato a quello meno concentrato",
+    "punteggio_distrattore_forte": 4,
+    "motivo_distrattore_forte": "È vicino perché parla di movimento attraverso la membrana, ma l’osmosi riguarda l’acqua.",
+    "qualita": "controllata"
+  },
+  {
+    "id": "BIO_009",
+    "categoria": "scienze",
+    "sottocategoria": "biologia",
+    "livello": "avanzato",
+    "domanda": "Qual è il rapporto corretto tra gene, RNA messaggero e proteina?",
+    "opzioni": [
+      "Un gene può essere trascritto in RNA messaggero, che poi guida la sintesi di una proteina",
+      "Una proteina viene trascritta in RNA messaggero, che poi costruisce direttamente un gene",
+      "L’RNA messaggero contiene sempre tutti i geni dell’organismo",
+      "Un gene viene prodotto solo dopo che la proteina è già stata sintetizzata"
+    ],
+    "risposta_corretta": "Un gene può essere trascritto in RNA messaggero, che poi guida la sintesi di una proteina",
+    "spiegazione": "Secondo il flusso classico dell’informazione genetica, il DNA viene trascritto in RNA messaggero e l’RNA messaggero viene tradotto in proteina.",
+    "tags": [
+      "biologia",
+      "gene",
+      "rna",
+      "proteine"
+    ],
+    "difficolta": 3,
+    "distrattore_forte": "Una proteina viene trascritta in RNA messaggero, che poi costruisce direttamente un gene",
+    "punteggio_distrattore_forte": 4,
+    "motivo_distrattore_forte": "È vicino perché usa gli stessi elementi, ma inverte il flusso dell’informazione genetica.",
+    "qualita": "controllata"
+  },
+  {
+    "id": "BIO_010",
+    "categoria": "scienze",
+    "sottocategoria": "biologia",
+    "livello": "avanzato",
+    "domanda": "Quale affermazione descrive meglio la selezione naturale?",
+    "opzioni": [
+      "Gli individui con caratteristiche vantaggiose tendono a lasciare più discendenti in un certo ambiente",
+      "Gli organismi scelgono volontariamente quali caratteristiche trasmettere ai figli",
+      "Tutti gli individui di una specie cambiano nello stesso modo durante la vita",
+      "Le mutazioni utili compaiono sempre perché l’ambiente ne ha bisogno"
+    ],
+    "risposta_corretta": "Gli individui con caratteristiche vantaggiose tendono a lasciare più discendenti in un certo ambiente",
+    "spiegazione": "La selezione naturale favorisce caratteristiche ereditarie che aumentano sopravvivenza o riproduzione in un determinato ambiente.",
+    "tags": [
+      "biologia",
+      "evoluzione",
+      "selezione_naturale"
+    ],
+    "difficolta": 3,
+    "distrattore_forte": "Le mutazioni utili compaiono sempre perché l’ambiente ne ha bisogno",
+    "punteggio_distrattore_forte": 4,
+    "motivo_distrattore_forte": "È vicino perché collega ambiente e adattamento, ma le mutazioni non compaiono perché servono: vengono selezionate dopo.",
+    "qualita": "controllata"
+  },
+  {
+    "id": "BIO_011",
+    "categoria": "scienze",
+    "sottocategoria": "biologia",
+    "livello": "avanzato",
+    "domanda": "Perché la respirazione cellulare è importante per le cellule?",
+    "opzioni": [
+      "Permette di ricavare ATP demolendo molecole organiche come il glucosio",
+      "Permette di creare DNA direttamente dalla luce solare",
+      "Permette di trasformare tutti i rifiuti cellulari in proteine",
+      "Permette di eliminare i cromosomi in eccesso durante la mitosi"
+    ],
+    "risposta_corretta": "Permette di ricavare ATP demolendo molecole organiche come il glucosio",
+    "spiegazione": "La respirazione cellulare libera energia dalle molecole organiche e la trasferisce in ATP, che la cellula usa per molte attività.",
+    "tags": [
+      "biologia",
+      "respirazione_cellulare",
+      "atp"
+    ],
+    "difficolta": 3,
+    "distrattore_forte": "Permette di creare DNA direttamente dalla luce solare",
+    "punteggio_distrattore_forte": 4,
+    "motivo_distrattore_forte": "È vicino perché richiama energia e luce, ma confonde respirazione cellulare e fotosintesi.",
+    "qualita": "controllata"
+  },
+  {
+    "id": "BIO_012",
+    "categoria": "scienze",
+    "sottocategoria": "biologia",
+    "livello": "avanzato",
+    "domanda": "Che cosa distingue una cellula procariotica da una cellula eucariotica?",
+    "opzioni": [
+      "La cellula procariotica non possiede un nucleo delimitato da membrana",
+      "La cellula procariotica possiede sempre più nuclei separati",
+      "La cellula eucariotica non contiene mai materiale genetico",
+      "La cellula eucariotica è sempre priva di organuli cellulari"
+    ],
+    "risposta_corretta": "La cellula procariotica non possiede un nucleo delimitato da membrana",
+    "spiegazione": "Le cellule procariotiche, come i batteri, non hanno un vero nucleo delimitato da membrana. Le eucariotiche invece possiedono un nucleo.",
+    "tags": [
+      "biologia",
+      "procarioti",
+      "eucarioti",
+      "cellula"
+    ],
+    "difficolta": 3,
+    "distrattore_forte": "La cellula procariotica possiede sempre più nuclei separati",
+    "punteggio_distrattore_forte": 4,
+    "motivo_distrattore_forte": "È vicino perché parla del nucleo, ma è falso: i procarioti non hanno un nucleo delimitato.",
+    "qualita": "controllata"
+  }
+]
