@@ -18,7 +18,7 @@ Questo progetto è un **motore riutilizzabile** per creare quiz per:
 </p>
 
 <p align="center">
-  <a href="https://aleb2016-maker.github.io/alex-ai-quiz-database/downloads/web-scienze-demo/00_QUIZ_WEB_PRONTO.html">
+  <a href="https://aleb2016-maker.github.io/alex-ai-quiz-database/demo/web-scienze-pronta/00_QUIZ_WEB_PRONTO.html">
     <img src="https://img.shields.io/badge/APRI%20APP%20WEB%20PRONTA-QUIZ%20SUBITO%20NEL%20BROWSER-ff9800?style=for-the-badge&labelColor=ff9800" alt="Apri app web pronta">
   </a>
 </p>
