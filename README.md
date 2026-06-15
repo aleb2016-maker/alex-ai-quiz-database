@@ -19,7 +19,7 @@ Questo progetto è un **motore riutilizzabile** per creare quiz con:
 </p>
 
 <p align="center">
-  <a href="https://github.com/aleb2016-maker/alex-ai-quiz-database/raw/main/downloads/pacchetto-android-scienze-pulito.zip">
+  <a href="https://github.com/aleb2016-maker/alex-ai-quiz-database/raw/main/downloads/pacchetto-android-finale-semplice.zip">
     <img src="https://img.shields.io/badge/SCARICA%20PACCHETTO%20ANDROID-DATABASE%20MOTORE%20KOTLIN-2962ff?style=for-the-badge&labelColor=2962ff" alt="Scarica pacchetto Android">
   </a>
 </p>
@@ -35,7 +35,7 @@ Questo progetto è un **motore riutilizzabile** per creare quiz con:
 | Pulsante | Sequenza delle azioni |
 |---|---|
 | **SCARICA CODICE WEB** | scarica ZIP → apri file ZIP → apri cartella → trovi HTML, `database_quiz.json`, `quiz-engine.js` e istruzioni |
-| **SCARICA PACCHETTO ANDROID** | scarica ZIP → apri file ZIP → apri cartella → usa `database_quiz.json` + file Kotlin del motore in Android Studio |
+| **SCARICA PACCHETTO ANDROID** | scarica ZIP → apri file ZIP → apri `1_LEGGIMI.html` → copia `database_quiz.json` e la cartella `quizengine` nel progetto Android Studio |
 | **CREA PACCHETTO PERSONALIZZATO** | clicca il pulsante rosso → clicca **Run workflow** → scegli **platform** web/android → scegli **subject** materia → scegli **level** livello → scegli **number** numero domande → clicca il pulsante verde **Run workflow** → aspetta la spunta verde → apri l’ultima esecuzione creata → vai su **Summary** → scorri fino ad **Artifacts** → clicca lo ZIP generato |
 
 <!-- ALEX-QUIZ-DASHBOARD-END -->
