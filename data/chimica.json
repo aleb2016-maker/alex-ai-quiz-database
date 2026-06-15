@@ -603,5 +603,208 @@
     "punteggio_distrattore_forte": 4,
     "motivo_distrattore_forte": "È vicino perché collega energia e reazioni, ma l’energia di attivazione non è una temperatura finale obbligatoria.",
     "qualita": "controllata"
+  },
+  {
+    "id": "CHE_025",
+    "categoria": "scienze",
+    "sottocategoria": "chimica",
+    "livello": "facile",
+    "domanda": "Quale tecnica è più adatta per separare sabbia e acqua?",
+    "opzioni": [
+      "Filtrazione",
+      "Distillazione frazionata",
+      "Elettrolisi",
+      "Cromatografia su carta"
+    ],
+    "risposta_corretta": "Filtrazione",
+    "spiegazione": "La filtrazione separa un solido insolubile da un liquido. La sabbia resta nel filtro, mentre l’acqua lo attraversa.",
+    "tags": [
+      "chimica",
+      "miscugli",
+      "filtrazione"
+    ],
+    "difficolta": 1,
+    "distrattore_forte": "Distillazione frazionata",
+    "punteggio_distrattore_forte": 4,
+    "motivo_distrattore_forte": "È vicino perché è una tecnica di separazione, ma serve soprattutto per separare liquidi con punti di ebollizione diversi.",
+    "qualita": "controllata"
+  },
+  {
+    "id": "CHE_026",
+    "categoria": "scienze",
+    "sottocategoria": "chimica",
+    "livello": "facile",
+    "domanda": "Che cosa indica il termine solvente in una soluzione?",
+    "opzioni": [
+      "La sostanza che scioglie il soluto",
+      "La sostanza presente sempre in quantità minore",
+      "Il residuo solido che rimane dopo la filtrazione",
+      "La sostanza che non può mai evaporare"
+    ],
+    "risposta_corretta": "La sostanza che scioglie il soluto",
+    "spiegazione": "Il solvente è la sostanza che scioglie il soluto. Nelle soluzioni acquose, per esempio, il solvente è l’acqua.",
+    "tags": [
+      "chimica",
+      "soluzioni",
+      "solvente",
+      "soluto"
+    ],
+    "difficolta": 1,
+    "distrattore_forte": "La sostanza presente sempre in quantità minore",
+    "punteggio_distrattore_forte": 4,
+    "motivo_distrattore_forte": "È vicino perché spesso il soluto è in quantità minore, ma il solvente è definito dalla funzione di sciogliere.",
+    "qualita": "controllata"
+  },
+  {
+    "id": "CHE_027",
+    "categoria": "scienze",
+    "sottocategoria": "chimica",
+    "livello": "intermedio",
+    "domanda": "Perché gli elementi dello stesso gruppo della tavola periodica hanno proprietà chimiche simili?",
+    "opzioni": [
+      "Perché hanno lo stesso numero di elettroni di valenza",
+      "Perché hanno sempre lo stesso numero di neutroni",
+      "Perché hanno identica massa atomica",
+      "Perché hanno sempre lo stesso numero atomico"
+    ],
+    "risposta_corretta": "Perché hanno lo stesso numero di elettroni di valenza",
+    "spiegazione": "Gli elettroni di valenza determinano molti comportamenti chimici. Per questo elementi nello stesso gruppo reagiscono spesso in modo simile.",
+    "tags": [
+      "chimica",
+      "tavola_periodica",
+      "elettroni_valenza"
+    ],
+    "difficolta": 2,
+    "distrattore_forte": "Perché hanno sempre lo stesso numero atomico",
+    "punteggio_distrattore_forte": 4,
+    "motivo_distrattore_forte": "È vicino perché il numero atomico identifica gli elementi, ma elementi diversi non possono avere lo stesso numero atomico.",
+    "qualita": "controllata"
+  },
+  {
+    "id": "CHE_028",
+    "categoria": "scienze",
+    "sottocategoria": "chimica",
+    "livello": "intermedio",
+    "domanda": "Che cosa avviene in una neutralizzazione tra un acido e una base?",
+    "opzioni": [
+      "Si formano in genere un sale e acqua",
+      "Si formano sempre solo gas nobili",
+      "Gli atomi vengono trasformati in protoni liberi",
+      "La massa dei reagenti viene annullata"
+    ],
+    "risposta_corretta": "Si formano in genere un sale e acqua",
+    "spiegazione": "In una reazione di neutralizzazione, gli ioni H⁺ dell’acido e gli ioni OH⁻ della base formano acqua, mentre gli altri ioni formano un sale.",
+    "tags": [
+      "chimica",
+      "neutralizzazione",
+      "acidi_basi"
+    ],
+    "difficolta": 2,
+    "distrattore_forte": "Gli atomi vengono trasformati in protoni liberi",
+    "punteggio_distrattore_forte": 4,
+    "motivo_distrattore_forte": "È vicino perché richiama gli ioni H⁺, ma una neutralizzazione non trasforma gli atomi in protoni liberi.",
+    "qualita": "controllata"
+  },
+  {
+    "id": "CHE_029",
+    "categoria": "scienze",
+    "sottocategoria": "chimica",
+    "livello": "intermedio",
+    "domanda": "Che cosa rappresenta una mole in chimica?",
+    "opzioni": [
+      "Una quantità di sostanza contenente un numero definito di particelle",
+      "La massa esatta di una singola molecola espressa in grammi",
+      "Il volume occupato da qualsiasi liquido a temperatura ambiente",
+      "La carica elettrica totale di un atomo neutro"
+    ],
+    "risposta_corretta": "Una quantità di sostanza contenente un numero definito di particelle",
+    "spiegazione": "La mole è un’unità di quantità di sostanza. Una mole contiene il numero di Avogadro di particelle.",
+    "tags": [
+      "chimica",
+      "mole",
+      "numero_avogadro"
+    ],
+    "difficolta": 2,
+    "distrattore_forte": "La massa esatta di una singola molecola espressa in grammi",
+    "punteggio_distrattore_forte": 4,
+    "motivo_distrattore_forte": "È vicino perché collega mole e massa, ma la mole indica una quantità di particelle, non una singola molecola.",
+    "qualita": "controllata"
+  },
+  {
+    "id": "CHE_030",
+    "categoria": "scienze",
+    "sottocategoria": "chimica",
+    "livello": "avanzato",
+    "domanda": "Perché l’aumento della temperatura può accelerare molte reazioni chimiche?",
+    "opzioni": [
+      "Perché aumenta l’energia cinetica media e il numero di urti efficaci",
+      "Perché elimina la necessità di superare l’energia di attivazione",
+      "Perché trasforma automaticamente tutti i reagenti in catalizzatori",
+      "Perché impedisce alle molecole di urtarsi tra loro"
+    ],
+    "risposta_corretta": "Perché aumenta l’energia cinetica media e il numero di urti efficaci",
+    "spiegazione": "A temperatura più alta le particelle si muovono più velocemente. Aumentano così gli urti efficaci capaci di superare la barriera energetica.",
+    "tags": [
+      "chimica",
+      "cinetica_chimica",
+      "temperatura"
+    ],
+    "difficolta": 3,
+    "distrattore_forte": "Perché elimina la necessità di superare l’energia di attivazione",
+    "punteggio_distrattore_forte": 4,
+    "motivo_distrattore_forte": "È vicino perché parla di energia di attivazione, ma la temperatura non elimina la barriera: aumenta la probabilità di superarla.",
+    "qualita": "controllata"
+  },
+  {
+    "id": "CHE_031",
+    "categoria": "scienze",
+    "sottocategoria": "chimica",
+    "livello": "avanzato",
+    "domanda": "Che cosa distingue un acido forte da un acido debole in soluzione acquosa?",
+    "opzioni": [
+      "L’acido forte si ionizza quasi completamente, quello debole solo parzialmente",
+      "L’acido forte ha sempre pH uguale a 7, quello debole pH minore di 7",
+      "L’acido forte non produce ioni H⁺, quello debole li produce sempre tutti",
+      "L’acido forte è sempre concentrato, quello debole è sempre diluito"
+    ],
+    "risposta_corretta": "L’acido forte si ionizza quasi completamente, quello debole solo parzialmente",
+    "spiegazione": "La forza di un acido dipende dal grado di ionizzazione in acqua, non semplicemente dalla sua concentrazione.",
+    "tags": [
+      "chimica",
+      "acidi",
+      "ionizzazione",
+      "acido_forte"
+    ],
+    "difficolta": 3,
+    "distrattore_forte": "L’acido forte è sempre concentrato, quello debole è sempre diluito",
+    "punteggio_distrattore_forte": 4,
+    "motivo_distrattore_forte": "È vicino perché confonde forza e concentrazione, due concetti collegati ma diversi.",
+    "qualita": "controllata"
+  },
+  {
+    "id": "CHE_032",
+    "categoria": "scienze",
+    "sottocategoria": "chimica",
+    "livello": "avanzato",
+    "domanda": "Che cosa indica il prodotto ionico dell’acqua in relazione a H⁺ e OH⁻?",
+    "opzioni": [
+      "Che in acqua le concentrazioni di H⁺ e OH⁻ sono collegate da una relazione di equilibrio",
+      "Che ogni soluzione acquosa contiene solo ioni H⁺ e nessun altro ione",
+      "Che gli ioni OH⁻ sono presenti solo nelle soluzioni completamente neutre",
+      "Che il pH non dipende mai dalla concentrazione degli ioni in soluzione"
+    ],
+    "risposta_corretta": "Che in acqua le concentrazioni di H⁺ e OH⁻ sono collegate da una relazione di equilibrio",
+    "spiegazione": "Il prodotto ionico dell’acqua collega le concentrazioni di H⁺ e OH⁻. Se aumenta una delle due, l’altra tende a diminuire secondo l’equilibrio.",
+    "tags": [
+      "chimica",
+      "acidi_basi",
+      "equilibrio",
+      "acqua"
+    ],
+    "difficolta": 3,
+    "distrattore_forte": "Che il pH non dipende mai dalla concentrazione degli ioni in soluzione",
+    "punteggio_distrattore_forte": 4,
+    "motivo_distrattore_forte": "È vicino perché parla del rapporto tra pH e ioni, ma nega proprio il legame fondamentale.",
+    "qualita": "controllata"
   }
 ]
