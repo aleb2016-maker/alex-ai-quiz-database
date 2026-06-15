@@ -165,101 +165,192 @@ def crea_file_web_pronto(output_dir):
 
 
 def crea_istruzioni_android(output_dir):
-    testo = """ATTENZIONE: QUESTO NON È UN APK
-
-Questo pacchetto Android NON si installa direttamente sul telefono.
-Non è una app già pronta.
-Se si apre con Antigravity, VS Code o un editor di codice, è normale.
-
-A COSA SERVE
-
-Serve per Android Studio.
-Contiene il database delle domande e il motore Kotlin per costruire una app quiz Android.
-
-COSA CONTIENE
-
-- database_quiz.json
-- app/src/main/assets/database_quiz.json
-- quiz_engine_android/kotlin/com/alex/quizengine/
-
-COME USARLO
-
-1. Apri Android Studio.
-2. Crea o apri una app Android.
-3. Copia app/src/main/assets/database_quiz.json dentro la tua app.
-4. Copia i file Kotlin dentro il codice della tua app.
-5. Crea la grafica Android con scelta materia, difficoltà, numero domande e risposte.
-
-IN SINTESI
-
-Questo pacchetto è database + motore.
-Non è l'app finale.
-Serve per costruire l'app quiz dentro Android Studio.
-"""
-
     html = """<!doctype html>
 <html lang="it">
 <head>
   <meta charset="utf-8">
-  <title>Leggimi pacchetto Android</title>
+  <title>APRI LE ISTRUZIONI</title>
   <style>
     body { font-family: Arial, sans-serif; max-width: 900px; margin: 40px auto; padding: 24px; line-height: 1.6; background: #f8fafc; color: #111827; }
-    .box { background: white; border-radius: 20px; padding: 30px; box-shadow: 0 14px 35px rgba(0,0,0,0.10); }
-    .alert { background: #fff7ed; border: 1px solid #fb923c; color: #9a3412; padding: 16px; border-radius: 14px; font-weight: bold; }
+    .box { background: white; border-radius: 18px; padding: 28px; box-shadow: 0 12px 30px rgba(0,0,0,0.10); }
+    .alert { background: #fff7ed; border: 1px solid #fb923c; color: #9a3412; padding: 14px; border-radius: 12px; font-weight: bold; }
     code { background: #e5e7eb; padding: 3px 7px; border-radius: 6px; font-weight: bold; }
+    li { margin-bottom: 12px; }
   </style>
 </head>
 <body>
   <div class="box">
-    <h1>Pacchetto Android Quiz Engine</h1>
-    <div class="alert">Questo pacchetto NON è un APK e NON si installa direttamente sul telefono.</div>
+    <h1>APRI LE ISTRUZIONI</h1>
 
-    <h2>A cosa serve</h2>
-    <p>Serve per Android Studio. Contiene il database delle domande e il motore Kotlin per costruire una app quiz Android.</p>
+    <div class="alert">
+      Questo pacchetto NON è un APK. Non si installa sul telefono. Si usa dentro Android Studio.
+    </div>
 
-    <h2>Perché si apre con Antigravity?</h2>
-    <p>Perché è un pacchetto tecnico con file di codice. È normale che venga aperto da un editor.</p>
+    <h2>1. File database da copiare</h2>
+    <p>Copia questo file del pacchetto:</p>
+    <p><code>app/src/main/assets/database_quiz.json</code></p>
 
-    <h2>Cosa contiene</h2>
+    <p>Dentro il tuo progetto Android deve stare qui:</p>
+    <p><code>app/src/main/assets/database_quiz.json</code></p>
+
+    <p>Se la cartella <code>assets</code> non esiste, creala dentro:</p>
+    <p><code>app/src/main/</code></p>
+
+    <h2>2. Cartella motore Kotlin da copiare</h2>
+    <p>Copia questa cartella del pacchetto:</p>
+    <p><code>quiz_engine_android/kotlin/com/alex/quizengine/</code></p>
+
+    <p>Dentro il tuo progetto Android mettila qui:</p>
+    <p><code>app/src/main/java/com/alex/quizengine/</code></p>
+
+    <p>Se il tuo progetto usa la cartella <code>kotlin</code>, puoi metterla qui:</p>
+    <p><code>app/src/main/kotlin/com/alex/quizengine/</code></p>
+
+    <h2>3. File Kotlin da copiare</h2>
     <ul>
-      <li><code>database_quiz.json</code></li>
-      <li><code>app/src/main/assets/database_quiz.json</code></li>
-      <li><code>quiz_engine_android/kotlin/com/alex/quizengine/</code></li>
+      <li><code>QuizQuestion.kt</code></li>
+      <li><code>QuizRepository.kt</code></li>
+      <li><code>QuizEngine.kt</code></li>
+      <li><code>QuizQualityValidator.kt</code></li>
+      <li><code>ScoreEngine.kt</code></li>
     </ul>
 
-    <h2>Come usarlo</h2>
-    <ol>
-      <li>Apri Android Studio.</li>
-      <li>Crea o apri una app Android.</li>
-      <li>Copia <code>app/src/main/assets/database_quiz.json</code> nella tua app.</li>
-      <li>Copia i file Kotlin del motore dentro il codice della tua app.</li>
-      <li>Crea la grafica Android e collegala al motore.</li>
-    </ol>
+    <h2>4. Cosa NON devi fare</h2>
+    <ul>
+      <li>Non aprire <code>database_quiz.json</code> per usarlo come app.</li>
+      <li>Non installare questo ZIP sul telefono.</li>
+      <li>Non copiare la cartella <code>quiz_engine_android</code> dentro <code>assets</code>.</li>
+    </ul>
 
-    <h2>In parole semplici</h2>
-    <p>Questo pacchetto è database + motore. Non è l'app finale.</p>
+    <h2>5. Cosa devi fare dopo</h2>
+    <p>
+      In Android Studio devi creare la grafica della tua app e collegarla al motore Kotlin.
+      Il motore gestisce database, domande, risposte, punteggio e controlli.
+    </p>
   </div>
 </body>
 </html>
 """
 
-    readme = """# Pacchetto Android Quiz Engine
+    txt = """APRI LE ISTRUZIONI
 
-ATTENZIONE: questo pacchetto NON è un APK.
+QUESTO PACCHETTO NON È UN APK.
+NON SI INSTALLA SUL TELEFONO.
+SI USA DENTRO ANDROID STUDIO.
 
-Non si installa direttamente sul telefono.
-Serve per Android Studio.
+1. COPIA IL DATABASE
 
-Apri prima:
-00_LEGGIMI_PRIMA.txt
+Dal pacchetto:
+app/src/main/assets/database_quiz.json
 
-oppure:
-README_LEGGIMI_ANDROID.html
+Al tuo progetto Android:
+app/src/main/assets/database_quiz.json
+
+Se assets non esiste, crea:
+app/src/main/assets/
+
+2. COPIA IL MOTORE KOTLIN
+
+Dal pacchetto:
+quiz_engine_android/kotlin/com/alex/quizengine/
+
+Al tuo progetto Android:
+app/src/main/java/com/alex/quizengine/
+
+Oppure, se usi cartella kotlin:
+app/src/main/kotlin/com/alex/quizengine/
+
+3. FILE KOTLIN DA COPIARE
+
+QuizQuestion.kt
+QuizRepository.kt
+QuizEngine.kt
+QuizQualityValidator.kt
+ScoreEngine.kt
+
+4. NON FARE QUESTI ERRORI
+
+Non installare questo ZIP sul telefono.
+Non aprire database_quiz.json come se fosse una app.
+Non mettere quiz_engine_android dentro assets.
+
+5. DOPO
+
+Crea la grafica Android in Android Studio e collegala al motore.
 """
 
-    (output_dir / "00_LEGGIMI_PRIMA.txt").write_text(testo, encoding="utf-8")
-    (output_dir / "README_LEGGIMI_ANDROID.html").write_text(html, encoding="utf-8")
+    readme = """# APRI LE ISTRUZIONI
+
+Apri il file:
+
+APRI LE ISTRUZIONI.html
+
+Questo pacchetto Android NON è un APK.
+Serve per Android Studio.
+"""
+
+    (output_dir / "APRI LE ISTRUZIONI.html").write_text(html, encoding="utf-8")
+    (output_dir / "APRI LE ISTRUZIONI.txt").write_text(txt, encoding="utf-8")
     (output_dir / "README.md").write_text(readme, encoding="utf-8")
+
+    apri_command = """#!/bin/bash
+DIR="$(cd "$(dirname "$0")" && pwd)"
+open "$DIR/APRI LE ISTRUZIONI.html"
+"""
+
+    importa_command = """#!/bin/bash
+clear
+echo "IMPORTA PACCHETTO QUIZ IN ANDROID STUDIO"
+echo ""
+echo "Questo comando copierà automaticamente:"
+echo "- database_quiz.json"
+echo "- file Kotlin del motore quiz"
+echo ""
+echo "Trascina qui la cartella principale del tuo progetto Android Studio e premi INVIO:"
+read PROJECT_DIR
+
+PROJECT_DIR="${PROJECT_DIR//\\ / }"
+PROJECT_DIR="${PROJECT_DIR%/}"
+
+if [ ! -d "$PROJECT_DIR/app/src/main" ]; then
+  echo ""
+  echo "ERRORE: questa non sembra una cartella valida di progetto Android."
+  echo "Deve contenere: app/src/main"
+  echo ""
+  read -p "Premi INVIO per chiudere."
+  exit 1
+fi
+
+DIR="$(cd "$(dirname "$0")" && pwd)"
+
+mkdir -p "$PROJECT_DIR/app/src/main/assets"
+cp "$DIR/app/src/main/assets/database_quiz.json" "$PROJECT_DIR/app/src/main/assets/database_quiz.json"
+
+mkdir -p "$PROJECT_DIR/app/src/main/java/com/alex/quizengine"
+cp "$DIR/quiz_engine_android/kotlin/com/alex/quizengine/"*.kt "$PROJECT_DIR/app/src/main/java/com/alex/quizengine/"
+
+echo ""
+echo "IMPORTAZIONE COMPLETATA."
+echo ""
+echo "File copiati:"
+echo "1. $PROJECT_DIR/app/src/main/assets/database_quiz.json"
+echo "2. $PROJECT_DIR/app/src/main/java/com/alex/quizengine/"
+echo ""
+echo "Ora apri il progetto in Android Studio e collega la tua interfaccia grafica al motore."
+echo ""
+read -p "Vuoi aprire ora il progetto in Android Studio? scrivi s e premi INVIO: " RISPOSTA
+
+if [ "$RISPOSTA" = "s" ] || [ "$RISPOSTA" = "S" ]; then
+  open -a "Android Studio" "$PROJECT_DIR"
+fi
+"""
+
+    (output_dir / "APRI LE ISTRUZIONI.command").write_text(apri_command, encoding="utf-8")
+    (output_dir / "IMPORTA IN ANDROID STUDIO.command").write_text(importa_command, encoding="utf-8")
+
+    import os
+    os.chmod(output_dir / "APRI LE ISTRUZIONI.command", 0o755)
+    os.chmod(output_dir / "IMPORTA IN ANDROID STUDIO.command", 0o755)
 
 
 def copia_motore_android(output_dir):
