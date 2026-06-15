@@ -1,0 +1,303 @@
+[
+  {
+    "id": "FIS_001",
+    "categoria": "scienze",
+    "sottocategoria": "fisica",
+    "livello": "facile",
+    "domanda": "Che cosa misura la velocità di un corpo?",
+    "opzioni": [
+      "Lo spazio percorso in un certo intervallo di tempo",
+      "La forza necessaria per spostare un corpo",
+      "La quantità di materia contenuta in un corpo",
+      "La temperatura raggiunta durante il movimento"
+    ],
+    "risposta_corretta": "Lo spazio percorso in un certo intervallo di tempo",
+    "spiegazione": "La velocità indica quanto spazio viene percorso in un certo tempo. Per esempio, se percorri 100 metri in 10 secondi, la velocità è 10 m/s.",
+    "tags": [
+      "fisica",
+      "velocita",
+      "moto"
+    ],
+    "difficolta": 1,
+    "distrattore_forte": "La forza necessaria per spostare un corpo",
+    "punteggio_distrattore_forte": 4,
+    "motivo_distrattore_forte": "È vicino perché forza e movimento sono collegati, ma la velocità misura spazio diviso tempo.",
+    "qualita": "controllata"
+  },
+  {
+    "id": "FIS_002",
+    "categoria": "scienze",
+    "sottocategoria": "fisica",
+    "livello": "facile",
+    "domanda": "Qual è l’unità di misura della forza nel Sistema Internazionale?",
+    "opzioni": [
+      "Newton",
+      "Joule",
+      "Watt",
+      "Pascal"
+    ],
+    "risposta_corretta": "Newton",
+    "spiegazione": "La forza si misura in newton. Il joule misura l’energia, il watt la potenza e il pascal la pressione.",
+    "tags": [
+      "fisica",
+      "forza",
+      "unita_misura"
+    ],
+    "difficolta": 1,
+    "distrattore_forte": "Joule",
+    "punteggio_distrattore_forte": 4,
+    "motivo_distrattore_forte": "È vicino perché forza ed energia sono collegate, ma il joule misura energia o lavoro.",
+    "qualita": "controllata"
+  },
+  {
+    "id": "FIS_003",
+    "categoria": "scienze",
+    "sottocategoria": "fisica",
+    "livello": "facile",
+    "domanda": "Che cosa indica la massa di un corpo?",
+    "opzioni": [
+      "La quantità di materia contenuta nel corpo",
+      "La forza con cui il corpo viene attratto dalla Terra",
+      "La velocità massima che il corpo può raggiungere",
+      "Lo spazio occupato dal corpo in movimento"
+    ],
+    "risposta_corretta": "La quantità di materia contenuta nel corpo",
+    "spiegazione": "La massa indica quanta materia contiene un corpo. Il peso invece è una forza e dipende dalla gravità.",
+    "tags": [
+      "fisica",
+      "massa",
+      "peso"
+    ],
+    "difficolta": 1,
+    "distrattore_forte": "La forza con cui il corpo viene attratto dalla Terra",
+    "punteggio_distrattore_forte": 4,
+    "motivo_distrattore_forte": "È vicino perché descrive il peso, spesso confuso con la massa.",
+    "qualita": "controllata"
+  },
+  {
+    "id": "FIS_004",
+    "categoria": "scienze",
+    "sottocategoria": "fisica",
+    "livello": "facile",
+    "domanda": "Quando un corpo è fermo rispetto a un osservatore?",
+    "opzioni": [
+      "Quando la sua posizione non cambia rispetto a quell’osservatore",
+      "Quando non è sottoposto a nessuna forza in assoluto",
+      "Quando la sua massa diventa uguale a zero",
+      "Quando la sua temperatura resta costante"
+    ],
+    "risposta_corretta": "Quando la sua posizione non cambia rispetto a quell’osservatore",
+    "spiegazione": "Un corpo è fermo rispetto a un osservatore se la sua posizione rimane costante rispetto a quell’osservatore.",
+    "tags": [
+      "fisica",
+      "moto",
+      "riferimento"
+    ],
+    "difficolta": 1,
+    "distrattore_forte": "Quando non è sottoposto a nessuna forza in assoluto",
+    "punteggio_distrattore_forte": 4,
+    "motivo_distrattore_forte": "È vicino perché richiama l’equilibrio, ma un corpo può essere fermo anche con forze che si bilanciano.",
+    "qualita": "controllata"
+  },
+  {
+    "id": "FIS_005",
+    "categoria": "scienze",
+    "sottocategoria": "fisica",
+    "livello": "intermedio",
+    "domanda": "Secondo la seconda legge di Newton, da che cosa dipende l’accelerazione di un corpo?",
+    "opzioni": [
+      "Dalla forza risultante applicata e dalla massa del corpo",
+      "Solo dalla velocità iniziale del corpo",
+      "Solo dalla distanza percorsa dal corpo",
+      "Dalla temperatura del corpo e dal suo volume"
+    ],
+    "risposta_corretta": "Dalla forza risultante applicata e dalla massa del corpo",
+    "spiegazione": "La seconda legge di Newton dice che F = m·a. A parità di massa, più forza produce più accelerazione; a parità di forza, più massa produce meno accelerazione.",
+    "tags": [
+      "fisica",
+      "newton",
+      "accelerazione"
+    ],
+    "difficolta": 2,
+    "distrattore_forte": "Solo dalla velocità iniziale del corpo",
+    "punteggio_distrattore_forte": 4,
+    "motivo_distrattore_forte": "È vicino perché riguarda il moto, ma l’accelerazione dipende dalla forza risultante e dalla massa.",
+    "qualita": "controllata"
+  },
+  {
+    "id": "FIS_006",
+    "categoria": "scienze",
+    "sottocategoria": "fisica",
+    "livello": "intermedio",
+    "domanda": "Che cosa rappresenta il lavoro in fisica?",
+    "opzioni": [
+      "Energia trasferita da una forza che provoca uno spostamento",
+      "La forza totale applicata a un corpo fermo",
+      "La massa di un corpo moltiplicata per la sua temperatura",
+      "La quantità di tempo necessaria per fermare un corpo"
+    ],
+    "risposta_corretta": "Energia trasferita da una forza che provoca uno spostamento",
+    "spiegazione": "In fisica il lavoro è collegato a una forza che causa uno spostamento. Se non c’è spostamento nella direzione della forza, il lavoro può essere nullo.",
+    "tags": [
+      "fisica",
+      "lavoro",
+      "energia"
+    ],
+    "difficolta": 2,
+    "distrattore_forte": "La forza totale applicata a un corpo fermo",
+    "punteggio_distrattore_forte": 4,
+    "motivo_distrattore_forte": "È vicino perché parla di forza, ma senza spostamento non descrive correttamente il lavoro.",
+    "qualita": "controllata"
+  },
+  {
+    "id": "FIS_007",
+    "categoria": "scienze",
+    "sottocategoria": "fisica",
+    "livello": "intermedio",
+    "domanda": "Qual è la differenza tra energia cinetica ed energia potenziale gravitazionale?",
+    "opzioni": [
+      "La cinetica dipende dal movimento, la potenziale gravitazionale dalla posizione in un campo gravitazionale",
+      "La cinetica dipende dalla temperatura, la potenziale gravitazionale dalla carica elettrica",
+      "La cinetica esiste solo nei corpi fermi, la potenziale solo nei corpi in movimento",
+      "La cinetica si misura in newton, la potenziale gravitazionale in watt"
+    ],
+    "risposta_corretta": "La cinetica dipende dal movimento, la potenziale gravitazionale dalla posizione in un campo gravitazionale",
+    "spiegazione": "L’energia cinetica è legata alla velocità di un corpo. L’energia potenziale gravitazionale dipende dalla posizione, per esempio dall’altezza.",
+    "tags": [
+      "fisica",
+      "energia",
+      "cinetica",
+      "potenziale"
+    ],
+    "difficolta": 2,
+    "distrattore_forte": "La cinetica esiste solo nei corpi fermi, la potenziale solo nei corpi in movimento",
+    "punteggio_distrattore_forte": 4,
+    "motivo_distrattore_forte": "È vicino perché distingue le due energie, ma inverte la logica del movimento.",
+    "qualita": "controllata"
+  },
+  {
+    "id": "FIS_008",
+    "categoria": "scienze",
+    "sottocategoria": "fisica",
+    "livello": "intermedio",
+    "domanda": "Che cosa accade alla pressione esercitata da una forza se la stessa forza agisce su una superficie più piccola?",
+    "opzioni": [
+      "La pressione aumenta",
+      "La pressione diminuisce sempre",
+      "La pressione resta sempre uguale",
+      "La pressione diventa automaticamente nulla"
+    ],
+    "risposta_corretta": "La pressione aumenta",
+    "spiegazione": "La pressione è forza divisa superficie. Se la forza resta uguale ma la superficie diminuisce, la pressione aumenta.",
+    "tags": [
+      "fisica",
+      "pressione",
+      "forza"
+    ],
+    "difficolta": 2,
+    "distrattore_forte": "La pressione resta sempre uguale",
+    "punteggio_distrattore_forte": 4,
+    "motivo_distrattore_forte": "È vicino perché la forza non cambia, ma la pressione dipende anche dalla superficie.",
+    "qualita": "controllata"
+  },
+  {
+    "id": "FIS_009",
+    "categoria": "scienze",
+    "sottocategoria": "fisica",
+    "livello": "avanzato",
+    "domanda": "In un moto rettilineo uniformemente accelerato, che cosa resta costante?",
+    "opzioni": [
+      "L’accelerazione",
+      "La velocità",
+      "La posizione",
+      "L’energia termica"
+    ],
+    "risposta_corretta": "L’accelerazione",
+    "spiegazione": "Nel moto rettilineo uniformemente accelerato l’accelerazione è costante. La velocità invece cambia nel tempo.",
+    "tags": [
+      "fisica",
+      "cinematica",
+      "accelerazione"
+    ],
+    "difficolta": 3,
+    "distrattore_forte": "La velocità",
+    "punteggio_distrattore_forte": 4,
+    "motivo_distrattore_forte": "È vicino perché nel moto rettilineo uniforme è la velocità a essere costante, ma qui il moto è accelerato.",
+    "qualita": "controllata"
+  },
+  {
+    "id": "FIS_010",
+    "categoria": "scienze",
+    "sottocategoria": "fisica",
+    "livello": "avanzato",
+    "domanda": "Che cosa afferma il principio di conservazione dell’energia meccanica in assenza di attriti?",
+    "opzioni": [
+      "La somma di energia cinetica e potenziale resta costante",
+      "L’energia cinetica resta sempre uguale in ogni punto",
+      "L’energia potenziale resta sempre uguale in ogni punto",
+      "La velocità del corpo resta sempre nulla"
+    ],
+    "risposta_corretta": "La somma di energia cinetica e potenziale resta costante",
+    "spiegazione": "Senza attriti, energia cinetica e potenziale possono trasformarsi l’una nell’altra, ma la loro somma resta costante.",
+    "tags": [
+      "fisica",
+      "energia_meccanica",
+      "conservazione"
+    ],
+    "difficolta": 3,
+    "distrattore_forte": "L’energia cinetica resta sempre uguale in ogni punto",
+    "punteggio_distrattore_forte": 4,
+    "motivo_distrattore_forte": "È vicino perché parla di energia, ma è la somma tra cinetica e potenziale a restare costante.",
+    "qualita": "controllata"
+  },
+  {
+    "id": "FIS_011",
+    "categoria": "scienze",
+    "sottocategoria": "fisica",
+    "livello": "avanzato",
+    "domanda": "In un circuito elettrico, che cosa esprime la legge di Ohm?",
+    "opzioni": [
+      "La relazione tra tensione, corrente e resistenza",
+      "La relazione tra massa, accelerazione e forza",
+      "La relazione tra pressione, volume e temperatura",
+      "La relazione tra frequenza, lunghezza d’onda e velocità"
+    ],
+    "risposta_corretta": "La relazione tra tensione, corrente e resistenza",
+    "spiegazione": "La legge di Ohm si esprime con V = R·I. Collega la tensione, la resistenza e la corrente elettrica.",
+    "tags": [
+      "fisica",
+      "elettricita",
+      "legge_ohm"
+    ],
+    "difficolta": 3,
+    "distrattore_forte": "La relazione tra frequenza, lunghezza d’onda e velocità",
+    "punteggio_distrattore_forte": 4,
+    "motivo_distrattore_forte": "È vicino perché è una relazione fisica importante, ma riguarda le onde, non i circuiti elettrici.",
+    "qualita": "controllata"
+  },
+  {
+    "id": "FIS_012",
+    "categoria": "scienze",
+    "sottocategoria": "fisica",
+    "livello": "avanzato",
+    "domanda": "Che cosa succede alla lunghezza d’onda di un’onda se la frequenza aumenta e la velocità di propagazione resta costante?",
+    "opzioni": [
+      "La lunghezza d’onda diminuisce",
+      "La lunghezza d’onda aumenta",
+      "La lunghezza d’onda resta sempre uguale",
+      "La lunghezza d’onda diventa infinita"
+    ],
+    "risposta_corretta": "La lunghezza d’onda diminuisce",
+    "spiegazione": "Per le onde vale v = λ·f. Se la velocità resta costante e la frequenza aumenta, la lunghezza d’onda deve diminuire.",
+    "tags": [
+      "fisica",
+      "onde",
+      "frequenza"
+    ],
+    "difficolta": 3,
+    "distrattore_forte": "La lunghezza d’onda aumenta",
+    "punteggio_distrattore_forte": 4,
+    "motivo_distrattore_forte": "È vicino perché collega frequenza e lunghezza d’onda, ma il rapporto è inverso se la velocità resta costante.",
+    "qualita": "controllata"
+  }
+]
