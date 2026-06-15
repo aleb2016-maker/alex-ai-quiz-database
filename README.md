@@ -14,10 +14,39 @@ Il progetto non è solo una demo online: può essere usato anche come base tecni
 
 ## Aree disponibili
 
-| Area | Contenuti | Pacchetti scaricabili |
-|---|---|---|
-| **AI / ITS** | AI, Informatica, Logica, Logica visiva, Matematica, Inglese | [Web ZIP](https://github.com/aleb2016-maker/alex-ai-quiz-database/raw/main/downloads/pacchetto-web-ai-its-demo.zip) · [Android ZIP](https://github.com/aleb2016-maker/alex-ai-quiz-database/raw/main/downloads/pacchetto-android-ai-its-finale-semplice.zip) |
-| **Scienze** | Fisica, Chimica, Biologia, Fisica Quantistica, Scienze generali | [Web ZIP](https://github.com/aleb2016-maker/alex-ai-quiz-database/raw/main/downloads/pacchetto-web-scienze-demo.zip) · [Android ZIP](https://github.com/aleb2016-maker/alex-ai-quiz-database/raw/main/downloads/pacchetto-android-finale-semplice.zip) |
+| Area | Contenuti |
+|---|---|
+| **AI / ITS** | AI, Informatica, Logica, Logica visiva, Matematica, Inglese |
+| **Scienze** | Fisica, Chimica, Biologia, Fisica Quantistica, Scienze generali |
+
+## Pacchetti scaricabili
+
+<table align="center">
+  <tr>
+    <td align="center">
+      <a href="https://github.com/aleb2016-maker/alex-ai-quiz-database/raw/main/downloads/pacchetto-web-ai-its-demo.zip">
+        <img src="https://img.shields.io/badge/SCARICA%20WEB%20AI%20ITS-HTML%20DATABASE%20JS-00bcd4?style=for-the-badge&labelColor=00bcd4" alt="Scarica Web AI ITS">
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/aleb2016-maker/alex-ai-quiz-database/raw/main/downloads/pacchetto-android-ai-its-finale-semplice.zip">
+        <img src="https://img.shields.io/badge/SCARICA%20ANDROID%20AI%20ITS-DATABASE%20KOTLIN-673ab7?style=for-the-badge&labelColor=673ab7" alt="Scarica Android AI ITS">
+      </a>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <a href="https://github.com/aleb2016-maker/alex-ai-quiz-database/raw/main/downloads/pacchetto-web-scienze-demo.zip">
+        <img src="https://img.shields.io/badge/SCARICA%20WEB%20SCIENZE-HTML%20DATABASE%20JS-ff9800?style=for-the-badge&labelColor=ff9800" alt="Scarica Web Scienze">
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/aleb2016-maker/alex-ai-quiz-database/raw/main/downloads/pacchetto-android-finale-semplice.zip">
+        <img src="https://img.shields.io/badge/SCARICA%20ANDROID%20SCIENZE-DATABASE%20KOTLIN-2962ff?style=for-the-badge&labelColor=2962ff" alt="Scarica Android Scienze">
+      </a>
+    </td>
+  </tr>
+</table>
 
 ## Crea un pacchetto personalizzato
 
