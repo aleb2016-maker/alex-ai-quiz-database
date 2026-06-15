@@ -2,13 +2,14 @@
 
 # 🚀 Alex AI Quiz Database
 
-Questo progetto è un **motore riutilizzabile** per creare quiz con:
+Questo progetto è un **motore riutilizzabile** per creare quiz interattivi con database, motore web, motore Android Kotlin, controlli qualità e pacchetti scaricabili.
 
-- database domande
-- motore web
-- motore Android Kotlin
-- controlli qualità
-- pacchetti riutilizzabili
+Il progetto ora contiene due grandi aree di studio:
+
+- **Materie principali AI / ITS**: AI, Informatica, Logica, Logica visiva, Matematica e Inglese.
+- **Materie scientifiche**: Fisica, Chimica, Biologia, Fisica Quantistica e Scienze generali.
+
+Può essere usato sia per provare subito i quiz online, sia come base tecnica per creare nuove app quiz personalizzate su qualunque argomento.
 
 ## Scarica i pacchetti riutilizzabili
 
@@ -104,7 +105,8 @@ Questo progetto è un **motore riutilizzabile** per creare quiz con:
 
 ## Demo online
 
-La demo permette di provare il database direttamente dal browser e può essere utilizzata come supporto per la preparazione personale, test di ingresso, esercitazioni didattiche e allenamento per concorsi.
+La demo permette di provare il database direttamente dal browser. Ora sono disponibili sia la demo generale per le materie principali AI / ITS, sia la demo dedicata alle materie scientifiche.
+Può essere utilizzata come supporto per la preparazione personale, test di ingresso, esercitazioni didattiche e allenamento per concorsi.
 
 Funzioni principali:
 
