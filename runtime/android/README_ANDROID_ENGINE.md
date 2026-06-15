@@ -1,50 +1,71 @@
-# Motore Android Quiz
+# Pacchetto Android Quiz Engine
 
-Questo pacchetto non contiene solo un file JSON.
+ATTENZIONE: questo pacchetto NON è un APK.
 
-Contiene:
+Non si installa direttamente sul telefono.
+Non è una app già pronta da aprire sullo smartphone.
+Se si apre con Antigravity, VS Code o un altro editor di codice è normale.
+
+Questo pacchetto serve per Android Studio.
+
+Contiene il database delle domande e un motore Kotlin riutilizzabile per costruire o ampliare una app quiz Android.
+
+CONTENUTO DEL PACCHETTO
 
 - database_quiz.json
-- QuizQuestion.kt
-- QuizRepository.kt
-- QuizEngine.kt
-- QuizQualityValidator.kt
-- ScoreEngine.kt
+- app/src/main/assets/database_quiz.json
+- quiz_engine_android/kotlin/com/alex/quizengine/QuizQuestion.kt
+- quiz_engine_android/kotlin/com/alex/quizengine/QuizRepository.kt
+- quiz_engine_android/kotlin/com/alex/quizengine/QuizEngine.kt
+- quiz_engine_android/kotlin/com/alex/quizengine/QuizQualityValidator.kt
+- quiz_engine_android/kotlin/com/alex/quizengine/ScoreEngine.kt
 
-## Dove mettere i file in Android Studio
+COME SI USA IN ANDROID STUDIO
 
-Copia:
+1. Apri Android Studio.
 
-app/src/main/assets/database_quiz.json
+2. Crea una nuova app Android oppure apri una app quiz già esistente.
 
-dentro:
+3. Copia questo file:
 
-app/src/main/assets/database_quiz.json
+   app/src/main/assets/database_quiz.json
 
-Copia i file Kotlin dentro il package della tua app, oppure mantieni:
+   dentro la tua app Android nello stesso percorso:
 
-com.alex.quizengine
+   app/src/main/assets/database_quiz.json
 
-## Cosa fa il motore
+   Se la cartella assets non esiste, creala dentro app/src/main.
 
-QuizRepository.kt
-- legge il database JSON dagli assets
-- trasforma il JSON in oggetti QuizQuestion
+4. Copia i file Kotlin del motore da:
 
-QuizEngine.kt
-- filtra per categoria
-- filtra per livello
-- mescola le domande
-- crea test da 10, 20 o tutte le domande
-- controlla la risposta
-- calcola il punteggio
+   quiz_engine_android/kotlin/com/alex/quizengine/
 
-QuizQualityValidator.kt
-- controlla se ogni domanda ha 4 opzioni
-- controlla se la risposta corretta è presente tra le opzioni
-- controlla se categoria, livello, domanda e spiegazione sono presenti
-- segnala problemi prima di avviare il quiz
+   dentro il codice della tua app Android.
 
-ScoreEngine.kt
-- calcola percentuale
-- assegna giudizio finale
+5. Collega il motore alla grafica della tua app.
+
+La grafica Android la devi creare tu, per esempio con Jetpack Compose.
+
+Il motore permette di gestire:
+
+- scelta materia
+- scelta difficoltà
+- scelta 10, 20 o tutte le domande
+- lettura del database JSON
+- controllo della risposta corretta
+- calcolo punteggio
+- giudizio finale
+- controllo qualità delle domande
+
+DIFFERENZA TRA PACCHETTO WEB E PACCHETTO ANDROID
+
+Il pacchetto Web si apre subito nel browser.
+
+Il pacchetto Android invece è materiale tecnico per sviluppatori.
+Serve per costruire una vera app Android dentro Android Studio.
+
+IN PAROLE SEMPLICI
+
+Questo pacchetto Android è il motore più il database.
+Non è la macchina completa.
+Va inserito dentro Android Studio per costruire l'app quiz.

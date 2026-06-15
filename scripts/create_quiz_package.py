@@ -163,6 +163,105 @@ def crea_file_web_pronto(output_dir):
 """
     (output_dir / "README_LEGGIMI.html").write_text(istruzioni, encoding="utf-8")
 
+
+def crea_istruzioni_android(output_dir):
+    testo = """ATTENZIONE: QUESTO NON È UN APK
+
+Questo pacchetto Android NON si installa direttamente sul telefono.
+Non è una app già pronta.
+Se si apre con Antigravity, VS Code o un editor di codice, è normale.
+
+A COSA SERVE
+
+Serve per Android Studio.
+Contiene il database delle domande e il motore Kotlin per costruire una app quiz Android.
+
+COSA CONTIENE
+
+- database_quiz.json
+- app/src/main/assets/database_quiz.json
+- quiz_engine_android/kotlin/com/alex/quizengine/
+
+COME USARLO
+
+1. Apri Android Studio.
+2. Crea o apri una app Android.
+3. Copia app/src/main/assets/database_quiz.json dentro la tua app.
+4. Copia i file Kotlin dentro il codice della tua app.
+5. Crea la grafica Android con scelta materia, difficoltà, numero domande e risposte.
+
+IN SINTESI
+
+Questo pacchetto è database + motore.
+Non è l'app finale.
+Serve per costruire l'app quiz dentro Android Studio.
+"""
+
+    html = """<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <title>Leggimi pacchetto Android</title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 900px; margin: 40px auto; padding: 24px; line-height: 1.6; background: #f8fafc; color: #111827; }
+    .box { background: white; border-radius: 20px; padding: 30px; box-shadow: 0 14px 35px rgba(0,0,0,0.10); }
+    .alert { background: #fff7ed; border: 1px solid #fb923c; color: #9a3412; padding: 16px; border-radius: 14px; font-weight: bold; }
+    code { background: #e5e7eb; padding: 3px 7px; border-radius: 6px; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h1>Pacchetto Android Quiz Engine</h1>
+    <div class="alert">Questo pacchetto NON è un APK e NON si installa direttamente sul telefono.</div>
+
+    <h2>A cosa serve</h2>
+    <p>Serve per Android Studio. Contiene il database delle domande e il motore Kotlin per costruire una app quiz Android.</p>
+
+    <h2>Perché si apre con Antigravity?</h2>
+    <p>Perché è un pacchetto tecnico con file di codice. È normale che venga aperto da un editor.</p>
+
+    <h2>Cosa contiene</h2>
+    <ul>
+      <li><code>database_quiz.json</code></li>
+      <li><code>app/src/main/assets/database_quiz.json</code></li>
+      <li><code>quiz_engine_android/kotlin/com/alex/quizengine/</code></li>
+    </ul>
+
+    <h2>Come usarlo</h2>
+    <ol>
+      <li>Apri Android Studio.</li>
+      <li>Crea o apri una app Android.</li>
+      <li>Copia <code>app/src/main/assets/database_quiz.json</code> nella tua app.</li>
+      <li>Copia i file Kotlin del motore dentro il codice della tua app.</li>
+      <li>Crea la grafica Android e collegala al motore.</li>
+    </ol>
+
+    <h2>In parole semplici</h2>
+    <p>Questo pacchetto è database + motore. Non è l'app finale.</p>
+  </div>
+</body>
+</html>
+"""
+
+    readme = """# Pacchetto Android Quiz Engine
+
+ATTENZIONE: questo pacchetto NON è un APK.
+
+Non si installa direttamente sul telefono.
+Serve per Android Studio.
+
+Apri prima:
+00_LEGGIMI_PRIMA.txt
+
+oppure:
+README_LEGGIMI_ANDROID.html
+"""
+
+    (output_dir / "00_LEGGIMI_PRIMA.txt").write_text(testo, encoding="utf-8")
+    (output_dir / "README_LEGGIMI_ANDROID.html").write_text(html, encoding="utf-8")
+    (output_dir / "README.md").write_text(readme, encoding="utf-8")
+
+
 def copia_motore_android(output_dir):
     if not RUNTIME_ANDROID.exists():
         raise FileNotFoundError("Motore Android non trovato: runtime/android")
@@ -173,6 +272,7 @@ def copia_motore_android(output_dir):
         shutil.rmtree(target)
 
     shutil.copytree(RUNTIME_ANDROID, target)
+    crea_istruzioni_android(output_dir)
 
 
 def copia_motore_web(output_dir):
