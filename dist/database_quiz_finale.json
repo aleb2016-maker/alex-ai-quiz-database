@@ -882,6 +882,213 @@
     "qualita": "controllata"
   },
   {
+    "id": "BIO_033",
+    "categoria": "scienze",
+    "sottocategoria": "biologia",
+    "livello": "facile",
+    "domanda": "Durante l’inspirazione, quale gas entra nei polmoni ed è poi trasportato ai tessuti?",
+    "opzioni": [
+      "Ossigeno",
+      "Anidride carbonica",
+      "Azoto liquido",
+      "Vapore acido"
+    ],
+    "risposta_corretta": "Ossigeno",
+    "spiegazione": "Durante l’inspirazione entra aria ricca di ossigeno. L’ossigeno passa nel sangue e viene trasportato ai tessuti.",
+    "tags": [
+      "biologia",
+      "respirazione",
+      "polmoni",
+      "ossigeno"
+    ],
+    "difficolta": 1,
+    "distrattore_forte": "Anidride carbonica",
+    "punteggio_distrattore_forte": 4,
+    "motivo_distrattore_forte": "È vicino perché è coinvolta nella respirazione, ma viene soprattutto eliminata con l’espirazione.",
+    "qualita": "controllata"
+  },
+  {
+    "id": "BIO_034",
+    "categoria": "scienze",
+    "sottocategoria": "biologia",
+    "livello": "facile",
+    "domanda": "Quale funzione svolge principalmente il cervello nel sistema nervoso?",
+    "opzioni": [
+      "Coordina informazioni, risposte e funzioni del corpo",
+      "Pompa il sangue nei vasi sanguigni",
+      "Filtra l’urina prodotta dai reni",
+      "Produce direttamente ossigeno per i muscoli"
+    ],
+    "risposta_corretta": "Coordina informazioni, risposte e funzioni del corpo",
+    "spiegazione": "Il cervello riceve ed elabora informazioni e coordina molte risposte volontarie e involontarie dell’organismo.",
+    "tags": [
+      "biologia",
+      "sistema_nervoso",
+      "cervello"
+    ],
+    "difficolta": 1,
+    "distrattore_forte": "Pompa il sangue nei vasi sanguigni",
+    "punteggio_distrattore_forte": 4,
+    "motivo_distrattore_forte": "È vicino perché è una funzione vitale del corpo, ma è svolta dal cuore, non dal cervello.",
+    "qualita": "controllata"
+  },
+  {
+    "id": "BIO_035",
+    "categoria": "scienze",
+    "sottocategoria": "biologia",
+    "livello": "intermedio",
+    "domanda": "Perché le cellule dell’intestino tenue possiedono microvilli?",
+    "opzioni": [
+      "Per aumentare la superficie disponibile all’assorbimento delle sostanze nutritive",
+      "Per impedire completamente il passaggio dei nutrienti nel sangue",
+      "Per trasformare il cibo direttamente in DNA",
+      "Per produrre aria durante la digestione"
+    ],
+    "risposta_corretta": "Per aumentare la superficie disponibile all’assorbimento delle sostanze nutritive",
+    "spiegazione": "I microvilli aumentano molto la superficie delle cellule intestinali, rendendo più efficiente l’assorbimento dei nutrienti.",
+    "tags": [
+      "biologia",
+      "intestino",
+      "microvilli",
+      "assorbimento"
+    ],
+    "difficolta": 2,
+    "distrattore_forte": "Per impedire completamente il passaggio dei nutrienti nel sangue",
+    "punteggio_distrattore_forte": 4,
+    "motivo_distrattore_forte": "È vicino perché riguarda il passaggio dei nutrienti, ma dice l’opposto della funzione reale.",
+    "qualita": "controllata"
+  },
+  {
+    "id": "BIO_036",
+    "categoria": "scienze",
+    "sottocategoria": "biologia",
+    "livello": "intermedio",
+    "domanda": "Che differenza c’è tra respirazione cellulare e semplice scambio di gas nei polmoni?",
+    "opzioni": [
+      "La respirazione cellulare produce energia nelle cellule, lo scambio polmonare trasferisce gas tra aria e sangue",
+      "La respirazione cellulare avviene solo fuori dal corpo, lo scambio polmonare solo nel DNA",
+      "La respirazione cellulare elimina i mitocondri, lo scambio polmonare produce cromosomi",
+      "La respirazione cellulare serve a pompare sangue, lo scambio polmonare a produrre neuroni"
+    ],
+    "risposta_corretta": "La respirazione cellulare produce energia nelle cellule, lo scambio polmonare trasferisce gas tra aria e sangue",
+    "spiegazione": "Lo scambio polmonare riguarda ossigeno e anidride carbonica tra alveoli e sangue. La respirazione cellulare usa ossigeno e nutrienti per produrre ATP.",
+    "tags": [
+      "biologia",
+      "respirazione_cellulare",
+      "polmoni",
+      "atp"
+    ],
+    "difficolta": 2,
+    "distrattore_forte": "La respirazione cellulare serve a pompare sangue, lo scambio polmonare a produrre neuroni",
+    "punteggio_distrattore_forte": 4,
+    "motivo_distrattore_forte": "È vicino perché collega funzioni vitali, ma attribuisce ruoli sbagliati ai due processi.",
+    "qualita": "controllata"
+  },
+  {
+    "id": "BIO_037",
+    "categoria": "scienze",
+    "sottocategoria": "biologia",
+    "livello": "intermedio",
+    "domanda": "Che cosa accade quando un ormone si lega al recettore corretto di una cellula bersaglio?",
+    "opzioni": [
+      "Può attivare una risposta specifica nella cellula",
+      "Distrugge sempre il nucleo della cellula",
+      "Trasforma ogni recettore in un cromosoma",
+      "Impedisce qualunque comunicazione tra cellule"
+    ],
+    "risposta_corretta": "Può attivare una risposta specifica nella cellula",
+    "spiegazione": "Gli ormoni agiscono come segnali chimici. Quando si legano a recettori specifici, possono avviare risposte cellulari mirate.",
+    "tags": [
+      "biologia",
+      "ormoni",
+      "recettori",
+      "cellula_bersaglio"
+    ],
+    "difficolta": 2,
+    "distrattore_forte": "Impedisce qualunque comunicazione tra cellule",
+    "punteggio_distrattore_forte": 4,
+    "motivo_distrattore_forte": "È vicino perché riguarda la comunicazione cellulare, ma ne descrive l’opposto.",
+    "qualita": "controllata"
+  },
+  {
+    "id": "BIO_038",
+    "categoria": "scienze",
+    "sottocategoria": "biologia",
+    "livello": "avanzato",
+    "domanda": "Perché una popolazione con bassa variabilità genetica può essere più vulnerabile ai cambiamenti ambientali?",
+    "opzioni": [
+      "Perché ha meno combinazioni ereditarie su cui può agire la selezione naturale",
+      "Perché tutti gli individui diventano automaticamente più forti",
+      "Perché la selezione naturale smette sempre di agire",
+      "Perché il DNA viene eliminato da tutte le cellule"
+    ],
+    "risposta_corretta": "Perché ha meno combinazioni ereditarie su cui può agire la selezione naturale",
+    "spiegazione": "La variabilità genetica offre più possibilità di adattamento. Se è bassa, una popolazione può reagire peggio a malattie o cambiamenti ambientali.",
+    "tags": [
+      "biologia",
+      "genetica",
+      "evoluzione",
+      "variabilita_genetica"
+    ],
+    "difficolta": 3,
+    "distrattore_forte": "Perché la selezione naturale smette sempre di agire",
+    "punteggio_distrattore_forte": 4,
+    "motivo_distrattore_forte": "È vicino perché parla di selezione naturale, ma la selezione continua ad agire anche con bassa variabilità.",
+    "qualita": "controllata"
+  },
+  {
+    "id": "BIO_039",
+    "categoria": "scienze",
+    "sottocategoria": "biologia",
+    "livello": "avanzato",
+    "domanda": "Che cosa descrive un meccanismo di feedback negativo nell’organismo?",
+    "opzioni": [
+      "Una risposta che riduce una variazione e aiuta a riportare un parametro verso valori normali",
+      "Una risposta che amplifica sempre senza limite qualunque cambiamento interno",
+      "Un processo che elimina definitivamente tutti gli ormoni dal sangue",
+      "Un sistema che impedisce alle cellule di ricevere segnali"
+    ],
+    "risposta_corretta": "Una risposta che riduce una variazione e aiuta a riportare un parametro verso valori normali",
+    "spiegazione": "Il feedback negativo stabilizza molti parametri biologici. Per esempio, se un valore si allontana troppo, il corpo attiva risposte che lo riportano verso l’equilibrio.",
+    "tags": [
+      "biologia",
+      "feedback_negativo",
+      "omeostasi",
+      "fisiologia"
+    ],
+    "difficolta": 3,
+    "distrattore_forte": "Una risposta che amplifica sempre senza limite qualunque cambiamento interno",
+    "punteggio_distrattore_forte": 4,
+    "motivo_distrattore_forte": "È vicino perché parla di risposta a un cambiamento, ma descrive più il feedback positivo estremo, non quello negativo.",
+    "qualita": "controllata"
+  },
+  {
+    "id": "BIO_040",
+    "categoria": "scienze",
+    "sottocategoria": "biologia",
+    "livello": "avanzato",
+    "domanda": "Perché l’uso scorretto degli antibiotici può favorire batteri resistenti?",
+    "opzioni": [
+      "Perché può selezionare i batteri capaci di sopravvivere al trattamento",
+      "Perché trasforma sempre tutti i batteri in virus",
+      "Perché rende gli antibiotici una fonte di zuccheri per le cellule umane",
+      "Perché impedisce ai batteri di riprodursi in qualunque situazione"
+    ],
+    "risposta_corretta": "Perché può selezionare i batteri capaci di sopravvivere al trattamento",
+    "spiegazione": "Se alcuni batteri resistenti sopravvivono, possono moltiplicarsi e diventare più frequenti nella popolazione batterica.",
+    "tags": [
+      "biologia",
+      "batteri",
+      "antibiotici",
+      "resistenza"
+    ],
+    "difficolta": 3,
+    "distrattore_forte": "Perché impedisce ai batteri di riprodursi in qualunque situazione",
+    "punteggio_distrattore_forte": 4,
+    "motivo_distrattore_forte": "È vicino perché riguarda l’effetto degli antibiotici, ma non considera la selezione dei batteri resistenti.",
+    "qualita": "controllata"
+  },
+  {
     "id": "AI-FAC-0001",
     "categoria": "ai",
     "sottocategoria": "llm",
