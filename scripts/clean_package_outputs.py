@@ -67,9 +67,9 @@ def scrivi_leggimi_web(percorso, area, totale):
   </ol>
 
   <h2>File da copiare per creare un nuovo progetto Web</h2>
-  <p>Apri la cartella:</p>
+  <p>Non copiare la cartella principale del pacchetto. Aprila e poi entra nella cartella:</p>
 
-  <pre>FILE_DA_COPIARE_NEL_TUO_PROGETTO_WEB/</pre>
+  <pre>SOLO_FILE_DA_COPIARE_WEB/</pre>
 
   <p>Dentro trovi i file principali:</p>
 
@@ -100,9 +100,9 @@ def scrivi_leggimi_android(percorso, area, totale):
 
   <h2>File da copiare in Android Studio</h2>
 
-  <p>Apri la cartella:</p>
+  <p>Non copiare la cartella principale del pacchetto. Aprila e poi entra nella cartella:</p>
 
-  <pre>FILE_DA_COPIARE_NEL_PROGETTO_ANDROID/</pre>
+  <pre>SOLO_FILE_DA_COPIARE_ANDROID/</pre>
 
   <h3>1. Database domande</h3>
 
@@ -136,14 +136,14 @@ def crea_apri_quiz(percorso):
 <html lang="it">
 <head>
   <meta charset="utf-8">
-  <meta http-equiv="refresh" content="0; url=FILE_DA_COPIARE_NEL_TUO_PROGETTO_WEB/index.html">
+  <meta http-equiv="refresh" content="0; url=SOLO_FILE_DA_COPIARE_WEB/index.html">
   <title>Apri Quiz</title>
 </head>
 <body style="font-family: Arial, sans-serif; text-align: center; margin-top: 80px;">
   <h1>Avvio del quiz...</h1>
   <p>
     Se il quiz non parte automaticamente,
-    <a href="FILE_DA_COPIARE_NEL_TUO_PROGETTO_WEB/index.html">clicca qui</a>.
+    <a href="SOLO_FILE_DA_COPIARE_WEB/index.html">clicca qui</a>.
   </p>
 </body>
 </html>
@@ -209,8 +209,8 @@ def pulisci_zip(zip_path):
         is_web = len(motori_web) > 0 and len(pagine_index) > 0
 
         if is_android:
-            root = pulita / f"PACCHETTO_ANDROID_{area}_{totale}_DOMANDE"
-            file_da_copiare = root / "FILE_DA_COPIARE_NEL_PROGETTO_ANDROID"
+            root = pulita / f"PACCHETTO_ANDROID_{area}_{totale}"
+            file_da_copiare = root / "SOLO_FILE_DA_COPIARE_ANDROID"
             quizengine_dest = file_da_copiare / "quizengine"
 
             file_da_copiare.mkdir(parents=True)
@@ -227,8 +227,8 @@ def pulisci_zip(zip_path):
             index = pagine_index[0]
             cartella_web = index.parent
 
-            root = pulita / f"PACCHETTO_WEB_{area}_{totale}_DOMANDE"
-            file_da_copiare = root / "FILE_DA_COPIARE_NEL_TUO_PROGETTO_WEB"
+            root = pulita / f"PACCHETTO_WEB_{area}_{totale}"
+            file_da_copiare = root / "SOLO_FILE_DA_COPIARE_WEB"
 
             root.mkdir(parents=True)
             copia_file_web(cartella_web, file_da_copiare)

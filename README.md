@@ -54,8 +54,8 @@ Ogni ZIP scaricato contiene una cartella con nomi chiari e un solo file di istru
 
 - **LEGGIMI.html**: spiegazione semplice del pacchetto.
 - **APRI_QUIZ.html**: presente nei pacchetti Web, serve per provare subito il quiz.
-- **FILE_DA_COPIARE_NEL_TUO_PROGETTO_WEB/**: file da copiare in un nuovo progetto Web.
-- **FILE_DA_COPIARE_NEL_PROGETTO_ANDROID/**: database e motore Kotlin da copiare in Android Studio.
+- **SOLO_FILE_DA_COPIARE_WEB/**: file da copiare in un nuovo progetto Web.
+- **SOLO_FILE_DA_COPIARE_ANDROID/**: database e motore Kotlin da copiare in Android Studio.
 
 ## Crea un pacchetto personalizzato
 
