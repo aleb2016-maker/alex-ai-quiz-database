@@ -165,48 +165,101 @@ def crea_file_web_pronto(output_dir):
 
 
 def crea_istruzioni_android(output_dir):
+    from pathlib import Path
+    import os
+    import shutil
+
+    output_dir = Path(output_dir)
+
+    cartella_tecnica = output_dir / "03_NON_APRIRE_FILE_TECNICI_USATI_DAL_PULSANTE"
+
+    if cartella_tecnica.exists():
+        shutil.rmtree(cartella_tecnica)
+
+    assets_dest = cartella_tecnica / "app/src/main/assets"
+    kotlin_dest = cartella_tecnica / "app/src/main/java/com/alex/quizengine"
+
+    assets_dest.mkdir(parents=True, exist_ok=True)
+    kotlin_dest.mkdir(parents=True, exist_ok=True)
+
+    database_sorgenti = [
+        output_dir / "app/src/main/assets/database_quiz.json",
+        output_dir / "database_quiz.json",
+    ]
+
+    for database_sorgente in database_sorgenti:
+        if database_sorgente.exists():
+            shutil.copy2(database_sorgente, assets_dest / "database_quiz.json")
+            break
+    else:
+        raise FileNotFoundError("database_quiz.json non trovato")
+
+    motore_sorgente = output_dir / "quiz_engine_android/kotlin/com/alex/quizengine"
+
+    if not motore_sorgente.exists():
+        raise FileNotFoundError("cartella Kotlin quizengine non trovata")
+
+    for file_kt in motore_sorgente.glob("*.kt"):
+        shutil.copy2(file_kt, kotlin_dest / file_kt.name)
+
     html = """<!doctype html>
 <html lang="it">
 <head>
   <meta charset="utf-8">
-  <title>APRI LE ISTRUZIONI</title>
+  <title>01 APRI PRIMA LE ISTRUZIONI</title>
   <style>
     body { font-family: Arial, sans-serif; max-width: 900px; margin: 40px auto; padding: 24px; line-height: 1.6; background: #f8fafc; color: #111827; }
     .box { background: white; border-radius: 18px; padding: 28px; box-shadow: 0 12px 30px rgba(0,0,0,0.10); }
     .alert { background: #fff7ed; border: 1px solid #fb923c; color: #9a3412; padding: 14px; border-radius: 12px; font-weight: bold; }
+    .ok { background: #ecfdf5; border: 1px solid #10b981; color: #065f46; padding: 14px; border-radius: 12px; font-weight: bold; }
     code { background: #e5e7eb; padding: 3px 7px; border-radius: 6px; font-weight: bold; }
     li { margin-bottom: 12px; }
   </style>
 </head>
 <body>
   <div class="box">
-    <h1>APRI LE ISTRUZIONI</h1>
+    <h1>01 APRI PRIMA LE ISTRUZIONI</h1>
 
     <div class="alert">
-      Questo pacchetto NON è un APK. Non si installa sul telefono. Si usa dentro Android Studio.
+      Questo pacchetto NON è un APK. Non si installa sul telefono. Serve per importare database e motore Kotlin dentro un progetto Android Studio.
     </div>
 
-    <h2>1. File database da copiare</h2>
-    <p>Copia questo file del pacchetto:</p>
+    <h2>Modo più semplice</h2>
+    <div class="ok">
+      Clicca il file numero 2:<br>
+      <code>02_CLICCA_PER_IMPORTARE_NEL_TUO_PROGETTO_ANDROID.command</code>
+    </div>
+
+    <p>Quando si apre il Terminale, trascina dentro la cartella principale del tuo progetto Android Studio e premi INVIO.</p>
+
+    <h2>Cosa fa il file numero 2</h2>
+    <ul>
+      <li>Copia il database quiz nel tuo progetto Android.</li>
+      <li>Copia i file Kotlin del motore quiz nel tuo progetto Android.</li>
+      <li>Non crea la grafica dell'app: la grafica va costruita in Android Studio.</li>
+    </ul>
+
+    <h2>Dove prende i file</h2>
+    <p>I file tecnici stanno nella cartella numero 3:</p>
+    <p><code>03_NON_APRIRE_FILE_TECNICI_USATI_DAL_PULSANTE</code></p>
+
+    <p>Quella cartella serve al pulsante numero 2. Non devi aprirla a caso.</p>
+
+    <h2>Metodo manuale</h2>
+
+    <h3>1. Database</h3>
+    <p>Prendi:</p>
+    <p><code>03_NON_APRIRE_FILE_TECNICI_USATI_DAL_PULSANTE/app/src/main/assets/database_quiz.json</code></p>
+    <p>Mettilo nel tuo progetto Android qui:</p>
     <p><code>app/src/main/assets/database_quiz.json</code></p>
 
-    <p>Dentro il tuo progetto Android deve stare qui:</p>
-    <p><code>app/src/main/assets/database_quiz.json</code></p>
-
-    <p>Se la cartella <code>assets</code> non esiste, creala dentro:</p>
-    <p><code>app/src/main/</code></p>
-
-    <h2>2. Cartella motore Kotlin da copiare</h2>
-    <p>Copia questa cartella del pacchetto:</p>
-    <p><code>quiz_engine_android/kotlin/com/alex/quizengine/</code></p>
-
-    <p>Dentro il tuo progetto Android mettila qui:</p>
+    <h3>2. Motore Kotlin</h3>
+    <p>Prendi questa cartella:</p>
+    <p><code>03_NON_APRIRE_FILE_TECNICI_USATI_DAL_PULSANTE/app/src/main/java/com/alex/quizengine/</code></p>
+    <p>Mettila nel tuo progetto Android qui:</p>
     <p><code>app/src/main/java/com/alex/quizengine/</code></p>
 
-    <p>Se il tuo progetto usa la cartella <code>kotlin</code>, puoi metterla qui:</p>
-    <p><code>app/src/main/kotlin/com/alex/quizengine/</code></p>
-
-    <h2>3. File Kotlin da copiare</h2>
+    <h2>File Kotlin inclusi</h2>
     <ul>
       <li><code>QuizQuestion.kt</code></li>
       <li><code>QuizRepository.kt</code></li>
@@ -214,97 +267,14 @@ def crea_istruzioni_android(output_dir):
       <li><code>QuizQualityValidator.kt</code></li>
       <li><code>ScoreEngine.kt</code></li>
     </ul>
-
-    <h2>4. Cosa NON devi fare</h2>
-    <ul>
-      <li>Non aprire <code>database_quiz.json</code> per usarlo come app.</li>
-      <li>Non installare questo ZIP sul telefono.</li>
-      <li>Non copiare la cartella <code>quiz_engine_android</code> dentro <code>assets</code>.</li>
-    </ul>
-
-    <h2>5. Cosa devi fare dopo</h2>
-    <p>
-      In Android Studio devi creare la grafica della tua app e collegarla al motore Kotlin.
-      Il motore gestisce database, domande, risposte, punteggio e controlli.
-    </p>
   </div>
 </body>
 </html>
 """
 
-    txt = """APRI LE ISTRUZIONI
-
-QUESTO PACCHETTO NON È UN APK.
-NON SI INSTALLA SUL TELEFONO.
-SI USA DENTRO ANDROID STUDIO.
-
-1. COPIA IL DATABASE
-
-Dal pacchetto:
-app/src/main/assets/database_quiz.json
-
-Al tuo progetto Android:
-app/src/main/assets/database_quiz.json
-
-Se assets non esiste, crea:
-app/src/main/assets/
-
-2. COPIA IL MOTORE KOTLIN
-
-Dal pacchetto:
-quiz_engine_android/kotlin/com/alex/quizengine/
-
-Al tuo progetto Android:
-app/src/main/java/com/alex/quizengine/
-
-Oppure, se usi cartella kotlin:
-app/src/main/kotlin/com/alex/quizengine/
-
-3. FILE KOTLIN DA COPIARE
-
-QuizQuestion.kt
-QuizRepository.kt
-QuizEngine.kt
-QuizQualityValidator.kt
-ScoreEngine.kt
-
-4. NON FARE QUESTI ERRORI
-
-Non installare questo ZIP sul telefono.
-Non aprire database_quiz.json come se fosse una app.
-Non mettere quiz_engine_android dentro assets.
-
-5. DOPO
-
-Crea la grafica Android in Android Studio e collegala al motore.
-"""
-
-    readme = """# APRI LE ISTRUZIONI
-
-Apri il file:
-
-APRI LE ISTRUZIONI.html
-
-Questo pacchetto Android NON è un APK.
-Serve per Android Studio.
-"""
-
-    (output_dir / "APRI LE ISTRUZIONI.html").write_text(html, encoding="utf-8")
-    (output_dir / "APRI LE ISTRUZIONI.txt").write_text(txt, encoding="utf-8")
-    (output_dir / "README.md").write_text(readme, encoding="utf-8")
-
-    apri_command = """#!/bin/bash
-DIR="$(cd "$(dirname "$0")" && pwd)"
-open "$DIR/APRI LE ISTRUZIONI.html"
-"""
-
-    importa_command = """#!/bin/bash
+    comando = """#!/bin/bash
 clear
-echo "IMPORTA PACCHETTO QUIZ IN ANDROID STUDIO"
-echo ""
-echo "Questo comando copierà automaticamente:"
-echo "- database_quiz.json"
-echo "- file Kotlin del motore quiz"
+echo "02 - IMPORTA TUTTO NEL TUO PROGETTO ANDROID"
 echo ""
 echo "Trascina qui la cartella principale del tuo progetto Android Studio e premi INVIO:"
 read PROJECT_DIR
@@ -315,28 +285,29 @@ PROJECT_DIR="${PROJECT_DIR%/}"
 if [ ! -d "$PROJECT_DIR/app/src/main" ]; then
   echo ""
   echo "ERRORE: questa non sembra una cartella valida di progetto Android."
-  echo "Deve contenere: app/src/main"
+  echo "La cartella deve contenere: app/src/main"
   echo ""
   read -p "Premi INVIO per chiudere."
   exit 1
 fi
 
 DIR="$(cd "$(dirname "$0")" && pwd)"
+SOURCE="$DIR/03_NON_APRIRE_FILE_TECNICI_USATI_DAL_PULSANTE"
 
 mkdir -p "$PROJECT_DIR/app/src/main/assets"
-cp "$DIR/app/src/main/assets/database_quiz.json" "$PROJECT_DIR/app/src/main/assets/database_quiz.json"
+cp "$SOURCE/app/src/main/assets/database_quiz.json" "$PROJECT_DIR/app/src/main/assets/database_quiz.json"
 
 mkdir -p "$PROJECT_DIR/app/src/main/java/com/alex/quizengine"
-cp "$DIR/quiz_engine_android/kotlin/com/alex/quizengine/"*.kt "$PROJECT_DIR/app/src/main/java/com/alex/quizengine/"
+cp "$SOURCE/app/src/main/java/com/alex/quizengine/"*.kt "$PROJECT_DIR/app/src/main/java/com/alex/quizengine/"
 
 echo ""
 echo "IMPORTAZIONE COMPLETATA."
 echo ""
-echo "File copiati:"
-echo "1. $PROJECT_DIR/app/src/main/assets/database_quiz.json"
-echo "2. $PROJECT_DIR/app/src/main/java/com/alex/quizengine/"
+echo "Database copiato in:"
+echo "$PROJECT_DIR/app/src/main/assets/database_quiz.json"
 echo ""
-echo "Ora apri il progetto in Android Studio e collega la tua interfaccia grafica al motore."
+echo "Motore Kotlin copiato in:"
+echo "$PROJECT_DIR/app/src/main/java/com/alex/quizengine/"
 echo ""
 read -p "Vuoi aprire ora il progetto in Android Studio? scrivi s e premi INVIO: " RISPOSTA
 
@@ -345,12 +316,29 @@ if [ "$RISPOSTA" = "s" ] || [ "$RISPOSTA" = "S" ]; then
 fi
 """
 
-    (output_dir / "APRI LE ISTRUZIONI.command").write_text(apri_command, encoding="utf-8")
-    (output_dir / "IMPORTA IN ANDROID STUDIO.command").write_text(importa_command, encoding="utf-8")
+    (output_dir / "01_APRI_PRIMA_LE_ISTRUZIONI.html").write_text(html, encoding="utf-8")
+    (output_dir / "02_CLICCA_PER_IMPORTARE_NEL_TUO_PROGETTO_ANDROID.command").write_text(comando, encoding="utf-8")
+    os.chmod(output_dir / "02_CLICCA_PER_IMPORTARE_NEL_TUO_PROGETTO_ANDROID.command", 0o755)
 
-    import os
-    os.chmod(output_dir / "APRI LE ISTRUZIONI.command", 0o755)
-    os.chmod(output_dir / "IMPORTA IN ANDROID STUDIO.command", 0o755)
+    for nome in [
+        "README.md",
+        "APRI LE ISTRUZIONI.html",
+        "APRI LE ISTRUZIONI.command",
+        "APRI LE ISTRUZIONI.txt",
+        "IMPORTA IN ANDROID STUDIO.command",
+        "IMPORTA TUTTO IN ANDROID STUDIO.command",
+        "README_LEGGIMI_ANDROID.html",
+        "00_LEGGIMI_PRIMA.txt",
+        "database_quiz.json",
+        "app",
+        "quiz_engine_android",
+        "FILE_DA_IMPORTARE",
+    ]:
+        elemento = output_dir / nome
+        if elemento.is_dir():
+            shutil.rmtree(elemento)
+        elif elemento.exists():
+            elemento.unlink()
 
 
 def copia_motore_android(output_dir):
