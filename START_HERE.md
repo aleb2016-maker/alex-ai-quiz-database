@@ -36,3 +36,17 @@ usa index.html e database_quiz.json
 ## 4. Scopo del progetto
 
 Il progetto serve per creare quiz su AI, Informatica, Matematica, Inglese, Logica, Scienze, Fisica, Chimica, Biologia e altre materie future.
+
+## Come scaricare il pacchetto senza confusione
+
+Dopo aver premuto **Run workflow**, GitHub genera il pacchetto.
+
+Quando il processo finisce, nella pagina del risultato comparirà un riquadro con scritto:
+
+**✅ Pacchetto quiz pronto**
+
+Sotto ci sarà il link:
+
+**SCARICA IL PACCHETTO QUIZ**
+
+Quello è il pulsante principale da usare. Non devi andare a cercare nei log tecnici.

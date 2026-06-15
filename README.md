@@ -1,40 +1,46 @@
 <!-- ALEX-QUIZ-DASHBOARD-START -->
 
-# 🚀 Crea la tua app quiz Android, Web o Demo
+# 🚀 Crea subito la tua app quiz Android, Web o Demo
 
-Questo repository non è solo una demo online: è un motore riutilizzabile per creare quiz interattivi con database JSON, livelli di difficoltà, spiegazioni e risposte controllate.
+Questo repository non è solo una demo online: è un **motore riutilizzabile** per creare quiz interattivi con database JSON, livelli, spiegazioni, risposte controllate e distrattori forti.
+
+## Crea un pacchetto app in pochi click
 
 <p align="center">
   <a href="https://github.com/aleb2016-maker/alex-ai-quiz-database/generate">
-    <img src="https://img.shields.io/badge/USE_THIS_TEMPLATE-Crea%20il%20tuo%20progetto-2ea44f?style=for-the-badge" alt="Use this template">
-  </a>
-  <a href="https://github.com/aleb2016-maker/alex-ai-quiz-database/actions/workflows/create-quiz-package.yml">
-    <img src="https://img.shields.io/badge/CREA_PACCHETTO_QUIZ-Android%20%7C%20Web%20%7C%20Demo-blue?style=for-the-badge" alt="Crea pacchetto quiz">
-  </a>
-  <a href="./START_HERE.md">
-    <img src="https://img.shields.io/badge/START_HERE-Guida%20rapida-orange?style=for-the-badge" alt="Start here">
+    <img src="https://img.shields.io/badge/1_USE_THIS_TEMPLATE-Crea%20il%20tuo%20progetto-2ea44f?style=for-the-badge" alt="Use this template">
   </a>
 </p>
 
-## Cosa puoi fare
+<p align="center">
+  <a href="https://github.com/aleb2016-maker/alex-ai-quiz-database/actions/workflows/create-quiz-package.yml">
+    <img src="https://img.shields.io/badge/2_CREA_PACCHETTO_APP-Android%20%7C%20Web%20%7C%20Demo-blue?style=for-the-badge" alt="Crea pacchetto app">
+  </a>
+</p>
 
-| Obiettivo | Azione |
+<p align="center">
+  <a href="./START_HERE.md">
+    <img src="https://img.shields.io/badge/3_GUIDA_RAPIDA-Cosa%20fare%20passo%20passo-orange?style=for-the-badge" alt="Guida rapida">
+  </a>
+</p>
+
+## Flusso semplice
+
+| Passaggio | Cosa fai |
 |---|---|
-| Creare un nuovo progetto quiz partendo da questo repository | Premi **Use this template** |
-| Generare un pacchetto Android/Web/Demo | Vai su **Actions → Crea pacchetto quiz → Run workflow** |
-| Capire i passaggi da zero | Apri [`START_HERE.md`](./START_HERE.md) |
-| Usare il JSON in Android Studio | Apri [`docs/CREATE_ANDROID_APP.md`](./docs/CREATE_ANDROID_APP.md) |
-| Usare il JSON in una web app | Apri [`docs/CREATE_WEB_APP.md`](./docs/CREATE_WEB_APP.md) |
+| 1 | Premi **Use this template** per creare il tuo progetto quiz |
+| 2 | Vai su **Crea pacchetto app** |
+| 3 | Premi **Run workflow** |
+| 4 | Scegli Android, Web o Demo |
+| 5 | Quando finisce, nella pagina del risultato premi **SCARICA IL PACCHETTO QUIZ** |
 
-## Percorso più semplice
+## Cosa puoi creare
 
-1. Premi **Use this template**.
-2. Crea il tuo nuovo repository.
-3. Vai su **Actions**.
-4. Apri **Crea pacchetto quiz**.
-5. Premi **Run workflow**.
-6. Scegli piattaforma, materia, livello e numero domande.
-7. Scarica il pacchetto generato dagli **Artifacts**.
+- App quiz Android
+- Web app quiz
+- Demo online
+- Database JSON riutilizzabile
+- Test personalizzati per AI, Informatica, Matematica, Inglese, Logica, Scienze, Fisica, Chimica, Biologia e altre materie future
 
 <!-- ALEX-QUIZ-DASHBOARD-END -->
 

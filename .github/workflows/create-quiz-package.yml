@@ -1,10 +1,10 @@
-name: Crea pacchetto quiz
+name: Crea e scarica pacchetto quiz
 
 on:
   workflow_dispatch:
     inputs:
       platform:
-        description: "Piattaforma"
+        description: "Che tipo di pacchetto vuoi creare?"
         required: true
         default: "web"
         type: choice
@@ -13,7 +13,7 @@ on:
           - web
           - demo
       subject:
-        description: "Materia"
+        description: "Materia del test"
         required: true
         default: "scienze"
         type: choice
@@ -33,7 +33,7 @@ on:
           - logica
           - logica_visiva
       level:
-        description: "Livello"
+        description: "Livello delle domande"
         required: true
         default: "tutti"
         type: choice
@@ -54,6 +54,7 @@ on:
 
 jobs:
   create-package:
+    name: Genera pacchetto scaricabile
     runs-on: ubuntu-latest
 
     steps:
@@ -74,7 +75,45 @@ jobs:
             --number "${{ github.event.inputs.number }}"
 
       - name: Carica pacchetto scaricabile
+        id: upload_package
         uses: actions/upload-artifact@v4
         with:
           name: pacchetto-quiz-${{ github.event.inputs.platform }}-${{ github.event.inputs.subject }}
           path: dist/generated/*.zip
+
+      - name: Mostra pulsante download chiaro
+        run: |
+          cat >> "$GITHUB_STEP_SUMMARY" <<EOF
+          # ✅ Pacchetto quiz pronto
+
+          Il pacchetto è stato creato correttamente.
+
+          ## ⬇️ Download
+
+          [**SCARICA IL PACCHETTO QUIZ**](${{ steps.upload_package.outputs.artifact-url }})
+
+          ---
+
+          ## Cosa hai generato
+
+          - Piattaforma: **${{ github.event.inputs.platform }}**
+          - Materia: **${{ github.event.inputs.subject }}**
+          - Livello: **${{ github.event.inputs.level }}**
+          - Numero domande: **${{ github.event.inputs.number }}**
+
+          ## Come usarlo
+
+          ### Android
+          Apri lo ZIP e copia il file:
+
+          app/src/main/assets/database_quiz.json
+
+          dentro il tuo progetto Android Studio.
+
+          ### Web / Demo
+          Apri il pacchetto web e usa:
+
+          index.html  
+          database_quiz.json
+
+          EOF
