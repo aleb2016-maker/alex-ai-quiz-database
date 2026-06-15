@@ -29,24 +29,25 @@
     "categoria": "scienze",
     "sottocategoria": "fisica",
     "livello": "facile",
-    "domanda": "Qual è l’unità di misura della forza nel Sistema Internazionale?",
+    "domanda": "Che cosa succede al moto di un corpo quando agisce su di esso una forza risultante non nulla?",
     "opzioni": [
-      "Newton",
-      "Joule",
-      "Watt",
-      "Pascal"
+      "Il corpo modifica il proprio stato di moto accelerando",
+      "Il corpo resta sempre fermo indipendentemente dalla forza",
+      "Il corpo perde automaticamente tutta la propria massa",
+      "Il corpo cambia temperatura ma non può cambiare velocità"
     ],
-    "risposta_corretta": "Newton",
-    "spiegazione": "La forza si misura in newton. Il joule misura l’energia, il watt la potenza e il pascal la pressione.",
+    "risposta_corretta": "Il corpo modifica il proprio stato di moto accelerando",
+    "spiegazione": "Una forza risultante non nulla modifica lo stato di moto di un corpo, producendo accelerazione. Non significa per forza che il corpo parta da fermo: può anche cambiare velocità o direzione.",
     "tags": [
       "fisica",
       "forza",
-      "unita_misura"
+      "accelerazione",
+      "newton"
     ],
     "difficolta": 1,
-    "distrattore_forte": "Joule",
+    "distrattore_forte": "Il corpo resta sempre fermo indipendentemente dalla forza",
     "punteggio_distrattore_forte": 4,
-    "motivo_distrattore_forte": "È vicino perché forza ed energia sono collegate, ma il joule misura energia o lavoro.",
+    "motivo_distrattore_forte": "È vicino perché richiama il caso di equilibrio, ma se la forza risultante non è nulla il moto cambia.",
     "qualita": "controllata"
   },
   {

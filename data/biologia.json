@@ -79,25 +79,25 @@
     "categoria": "scienze",
     "sottocategoria": "biologia",
     "livello": "facile",
-    "domanda": "Qual è la funzione principale dei mitocondri?",
+    "domanda": "Quale molecola energetica viene prodotta soprattutto dai mitocondri durante la respirazione cellulare?",
     "opzioni": [
-      "Produrre energia utilizzabile dalla cellula",
-      "Conservare direttamente tutte le informazioni genetiche",
-      "Creare la parete cellulare nelle cellule animali",
-      "Catturare la luce durante la fotosintesi"
+      "ATP",
+      "DNA",
+      "Clorofilla",
+      "Emoglobina"
     ],
-    "risposta_corretta": "Produrre energia utilizzabile dalla cellula",
-    "spiegazione": "I mitocondri producono ATP, una forma di energia utilizzabile dalla cellula, attraverso la respirazione cellulare.",
+    "risposta_corretta": "ATP",
+    "spiegazione": "I mitocondri producono ATP, cioè una molecola che la cellula usa come riserva immediata di energia per molte attività.",
     "tags": [
       "biologia",
       "mitocondri",
-      "energia",
-      "atp"
+      "atp",
+      "energia"
     ],
     "difficolta": 1,
-    "distrattore_forte": "Conservare direttamente tutte le informazioni genetiche",
+    "distrattore_forte": "DNA",
     "punteggio_distrattore_forte": 4,
-    "motivo_distrattore_forte": "È vicino perché i mitocondri possiedono anche un piccolo DNA, ma non sono il principale deposito dell’informazione genetica.",
+    "motivo_distrattore_forte": "È vicino perché anche i mitocondri possiedono un piccolo DNA, ma la molecola energetica prodotta è ATP.",
     "qualita": "controllata"
   },
   {
@@ -181,24 +181,25 @@
     "categoria": "scienze",
     "sottocategoria": "biologia",
     "livello": "intermedio",
-    "domanda": "Che cosa avviene durante l’osmosi?",
+    "domanda": "Che cosa distingue il trasporto attivo dalla diffusione semplice attraverso la membrana cellulare?",
     "opzioni": [
-      "L’acqua attraversa una membrana semipermeabile verso la soluzione più concentrata",
-      "Le proteine attraversano sempre la membrana dal lato più concentrato a quello meno concentrato",
-      "Il DNA esce dal nucleo per produrre direttamente energia",
-      "I mitocondri trasformano la luce in zuccheri"
+      "Il trasporto attivo richiede energia per spostare sostanze anche contro gradiente",
+      "Il trasporto attivo avviene sempre senza consumo di energia e solo con l’acqua",
+      "La diffusione semplice richiede ATP per spostare sostanze verso zone più concentrate",
+      "La diffusione semplice usa sempre pompe proteiche alimentate da energia chimica"
     ],
-    "risposta_corretta": "L’acqua attraversa una membrana semipermeabile verso la soluzione più concentrata",
-    "spiegazione": "L’osmosi è il movimento dell’acqua attraverso una membrana semipermeabile, di solito verso la zona con maggiore concentrazione di soluti.",
+    "risposta_corretta": "Il trasporto attivo richiede energia per spostare sostanze anche contro gradiente",
+    "spiegazione": "Il trasporto attivo consuma energia, spesso ATP, per spostare sostanze contro il loro gradiente di concentrazione. La diffusione semplice invece avviene spontaneamente secondo gradiente.",
     "tags": [
       "biologia",
-      "osmosi",
-      "membrana"
+      "membrana",
+      "trasporto_attivo",
+      "diffusione"
     ],
     "difficolta": 2,
-    "distrattore_forte": "Le proteine attraversano sempre la membrana dal lato più concentrato a quello meno concentrato",
+    "distrattore_forte": "La diffusione semplice richiede ATP per spostare sostanze verso zone più concentrate",
     "punteggio_distrattore_forte": 4,
-    "motivo_distrattore_forte": "È vicino perché parla di movimento attraverso la membrana, ma l’osmosi riguarda l’acqua.",
+    "motivo_distrattore_forte": "È vicino perché parla di movimento attraverso membrana e gradiente, ma attribuisce alla diffusione semplice caratteristiche del trasporto attivo.",
     "qualita": "controllata"
   },
   {
