@@ -7,26 +7,36 @@ class QuizEngine(
     private var currentIndex: Int = 0
     private var score: Int = 0
     private var answeredCount: Int = 0
+    private val selectedAnswers: MutableMap<String, String> = mutableMapOf()
+
+    fun startQuiz(config: QuizConfig = QuizConfig()): List<QuizQuestion> {
+        return startQuiz(
+            categoria = config.categoria,
+            livello = config.livello,
+            numeroDomande = config.numeroDomande
+        )
+    }
 
     fun startQuiz(
         categoria: String = "tutte",
         livello: String = "tutti",
         numeroDomande: Int = 10
     ): List<QuizQuestion> {
-        val filtered = allQuestions
+        val filteredQuestions = allQuestions
             .filter { categoryMatches(it, categoria) }
             .filter { levelMatches(it, livello) }
             .shuffled()
 
         activeQuestions = if (numeroDomande <= 0) {
-            filtered
+            filteredQuestions
         } else {
-            filtered.take(numeroDomande)
+            filteredQuestions.take(numeroDomande)
         }
 
         currentIndex = 0
         score = 0
         answeredCount = 0
+        selectedAnswers.clear()
 
         return activeQuestions
     }
@@ -39,6 +49,16 @@ class QuizEngine(
         val question = currentQuestion()
             ?: throw IllegalStateException("Nessuna domanda attiva.")
 
+        if (selectedAnswer !in question.opzioni) {
+            throw IllegalArgumentException("La risposta selezionata non è tra le opzioni della domanda.")
+        }
+
+        val answerKey = question.id.ifBlank { "QUESTION_$currentIndex" }
+
+        if (selectedAnswers.containsKey(answerKey)) {
+            throw IllegalStateException("Questa domanda ha già ricevuto una risposta.")
+        }
+
         val isCorrect = selectedAnswer == question.rispostaCorretta
 
         if (isCorrect) {
@@ -46,6 +66,7 @@ class QuizEngine(
         }
 
         answeredCount += 1
+        selectedAnswers[answerKey] = selectedAnswer
 
         return AnswerResult(
             isCorrect = isCorrect,
@@ -53,17 +74,25 @@ class QuizEngine(
             correctAnswer = question.rispostaCorretta,
             explanation = question.spiegazione,
             score = score,
-            totalAnswered = answeredCount
+            totalAnswered = answeredCount,
+            totalQuestions = activeQuestions.size
         )
     }
 
     fun moveNext(): QuizQuestion? {
-        currentIndex += 1
+        if (hasNext()) {
+            currentIndex += 1
+        }
+
         return currentQuestion()
     }
 
     fun hasNext(): Boolean {
         return currentIndex < activeQuestions.size - 1
+    }
+
+    fun isFinished(): Boolean {
+        return activeQuestions.isNotEmpty() && answeredCount >= activeQuestions.size
     }
 
     fun totalQuestions(): Int {
@@ -74,6 +103,10 @@ class QuizEngine(
         return score
     }
 
+    fun answeredQuestions(): Int {
+        return answeredCount
+    }
+
     fun progressText(): String {
         if (activeQuestions.isEmpty()) {
             return "0/0"
@@ -82,38 +115,77 @@ class QuizEngine(
         return "${currentIndex + 1}/${activeQuestions.size}"
     }
 
+    fun summary(): QuizSummary {
+        val total = activeQuestions.size
+        val percentage = ScoreEngine.percentage(score, total)
+        val label = ScoreEngine.label(score, total)
+
+        return QuizSummary(
+            score = score,
+            totalQuestions = total,
+            percentage = percentage,
+            label = label,
+            finalMessage = ScoreEngine.finalMessage(score, total)
+        )
+    }
+
+    fun availableCategories(): List<String> {
+        return allQuestions
+            .map { it.categoria }
+            .filter { it.isNotBlank() }
+            .distinct()
+            .sorted()
+    }
+
+    fun availableLevels(): List<String> {
+        return allQuestions
+            .map { it.livello }
+            .filter { it.isNotBlank() }
+            .distinct()
+            .sorted()
+    }
+
     private fun categoryMatches(question: QuizQuestion, categoria: String): Boolean {
-        val selected = slug(categoria)
+        val selectedCategory = slug(categoria)
 
-        if (selected == "tutte") {
+        if (selectedCategory == "tutte") {
             return true
         }
 
-        val category = slug(question.categoria)
-        val subcategory = slug(question.sottocategoria)
-        val tags = question.tags.map { slug(it) }
+        val questionCategory = slug(question.categoria)
+        val questionSubcategory = slug(question.sottocategoria)
+        val questionTags = question.tags.map { slug(it) }
 
-        if (selected == category || selected == subcategory || selected in tags) {
+        if (
+            selectedCategory == questionCategory ||
+            selectedCategory == questionSubcategory ||
+            selectedCategory in questionTags
+        ) {
             return true
         }
 
-        if (selected == "fisica") {
-            return subcategory.contains("fisica") || tags.any { it.contains("fisica") }
-        }
+        return when (selectedCategory) {
+            "fisica" -> questionSubcategory.contains("fisica") ||
+                questionTags.any { it.contains("fisica") }
 
-        if (selected == "chimica") {
-            return subcategory.contains("chimica") || tags.any { it.contains("chimica") }
-        }
+            "chimica" -> questionSubcategory.contains("chimica") ||
+                questionTags.any { it.contains("chimica") }
 
-        if (selected == "biologia") {
-            return subcategory.contains("biologia") || tags.any { it.contains("biologia") }
-        }
+            "biologia" -> questionSubcategory.contains("biologia") ||
+                questionTags.any { it.contains("biologia") }
 
-        return false
+            else -> false
+        }
     }
 
     private fun levelMatches(question: QuizQuestion, livello: String): Boolean {
-        return livello == "tutti" || question.livello == livello
+        val selectedLevel = slug(livello)
+
+        if (selectedLevel == "tutti") {
+            return true
+        }
+
+        return slug(question.livello) == selectedLevel
     }
 
     private fun slug(text: String): String {
