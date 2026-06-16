@@ -7,9 +7,9 @@
     "domanda": "Che cosa rappresenta il numero atomico di un elemento?",
     "opzioni": [
       "Il numero di protoni presenti nel nucleo dell’atomo",
+      "La massa media degli isotopi naturali dell’elemento",
       "Il numero totale di protoni e neutroni presenti nel nucleo",
-      "Il numero di elettroni presenti solo nello strato più esterno",
-      "La massa media degli isotopi naturali dell’elemento"
+      "Il numero di elettroni presenti solo nello strato più esterno"
     ],
     "risposta_corretta": "Il numero di protoni presenti nel nucleo dell’atomo",
     "spiegazione": "Il numero atomico identifica un elemento perché indica quanti protoni ci sono nel nucleo. Se cambia il numero di protoni, cambia l’elemento.",
@@ -31,10 +31,10 @@
     "livello": "facile",
     "domanda": "Quale particella subatomica ha carica negativa?",
     "opzioni": [
+      "Nucleo atomico",
       "Elettrone",
       "Protone",
-      "Neutrone",
-      "Nucleo atomico"
+      "Neutrone"
     ],
     "risposta_corretta": "Elettrone",
     "spiegazione": "L’elettrone ha carica negativa, il protone ha carica positiva e il neutrone è privo di carica elettrica.",
@@ -56,10 +56,10 @@
     "livello": "facile",
     "domanda": "Che cosa indica la formula chimica H₂O?",
     "opzioni": [
-      "Una molecola formata da due atomi di idrogeno e uno di ossigeno",
-      "Una molecola formata da un atomo di idrogeno e due di ossigeno",
+      "Un singolo atomo composto da idrogeno e ossigeno",
       "Una miscela tra idrogeno liquido e ossigeno gassoso",
-      "Un singolo atomo composto da idrogeno e ossigeno"
+      "Una molecola formata da due atomi di idrogeno e uno di ossigeno",
+      "Una molecola formata da un atomo di idrogeno e due di ossigeno"
     ],
     "risposta_corretta": "Una molecola formata da due atomi di idrogeno e uno di ossigeno",
     "spiegazione": "Il numero piccolo 2 indica due atomi di idrogeno. L’ossigeno non ha numero scritto, quindi è presente con un solo atomo.",
@@ -81,9 +81,9 @@
     "livello": "facile",
     "domanda": "Quando una sostanza ha pH minore di 7, come viene classificata?",
     "opzioni": [
+      "Neutra",
       "Acida",
       "Basica",
-      "Neutra",
       "Satura"
     ],
     "risposta_corretta": "Acida",
@@ -106,10 +106,10 @@
     "livello": "intermedio",
     "domanda": "Qual è la differenza principale tra legame ionico e legame covalente?",
     "opzioni": [
-      "Nel legame ionico c’è trasferimento di elettroni, nel covalente condivisione di elettroni",
-      "Nel legame ionico c’è condivisione di protoni, nel covalente trasferimento di neutroni",
       "Nel legame ionico gli atomi restano neutri, nel covalente diventano sempre ioni",
-      "Nel legame ionico partecipano solo gas nobili, nel covalente solo metalli"
+      "Nel legame ionico c’è trasferimento di elettroni, nel covalente condivisione di elettroni",
+      "Nel legame ionico partecipano solo gas nobili, nel covalente solo metalli",
+      "Nel legame ionico c’è condivisione di protoni, nel covalente trasferimento di neutroni"
     ],
     "risposta_corretta": "Nel legame ionico c’è trasferimento di elettroni, nel covalente condivisione di elettroni",
     "spiegazione": "Nel legame ionico un atomo cede elettroni e un altro li acquista. Nel legame covalente gli atomi condividono coppie di elettroni.",
@@ -132,10 +132,10 @@
     "livello": "intermedio",
     "domanda": "Che cosa succede a un atomo quando perde uno o più elettroni?",
     "opzioni": [
+      "Diventa automaticamente un gas nobile",
       "Diventa uno ione positivo",
-      "Diventa uno ione negativo",
       "Diventa un isotopo dello stesso elemento",
-      "Diventa automaticamente un gas nobile"
+      "Diventa uno ione negativo"
     ],
     "risposta_corretta": "Diventa uno ione positivo",
     "spiegazione": "Se un atomo perde elettroni, perde cariche negative. Rimane quindi con carica netta positiva e diventa un catione.",
@@ -157,10 +157,10 @@
     "livello": "intermedio",
     "domanda": "Quale affermazione descrive correttamente un isotopo?",
     "opzioni": [
-      "Atomi dello stesso elemento con uguale numero di protoni ma diverso numero di neutroni",
       "Atomi di elementi diversi con uguale numero di elettroni nello strato esterno",
-      "Atomi dello stesso elemento con diverso numero di protoni e stesso numero di neutroni",
-      "Molecole con la stessa formula ma diversa disposizione spaziale"
+      "Molecole con la stessa formula ma diversa disposizione spaziale",
+      "Atomi dello stesso elemento con uguale numero di protoni ma diverso numero di neutroni",
+      "Atomi dello stesso elemento con diverso numero di protoni e stesso numero di neutroni"
     ],
     "risposta_corretta": "Atomi dello stesso elemento con uguale numero di protoni ma diverso numero di neutroni",
     "spiegazione": "Gli isotopi appartengono allo stesso elemento, quindi hanno lo stesso numero di protoni, ma differiscono per il numero di neutroni.",
@@ -182,9 +182,9 @@
     "livello": "intermedio",
     "domanda": "In una reazione chimica bilanciata, che cosa deve conservarsi?",
     "opzioni": [
-      "Il numero di atomi di ogni elemento nei reagenti e nei prodotti",
       "Il numero di molecole totali prima e dopo la reazione",
       "Il colore delle sostanze prima e dopo la reazione",
+      "Il numero di atomi di ogni elemento nei reagenti e nei prodotti",
       "La forma fisica di ogni sostanza coinvolta"
     ],
     "risposta_corretta": "Il numero di atomi di ogni elemento nei reagenti e nei prodotti",
@@ -207,9 +207,9 @@
     "livello": "avanzato",
     "domanda": "Perché l’acqua è una molecola polare?",
     "opzioni": [
-      "Perché i legami O-H sono polari e la geometria molecolare è angolare",
-      "Perché contiene due atomi di idrogeno identici legati allo stesso ossigeno",
       "Perché l’ossigeno e l’idrogeno condividono elettroni in modo perfettamente simmetrico",
+      "Perché contiene due atomi di idrogeno identici legati allo stesso ossigeno",
+      "Perché i legami O-H sono polari e la geometria molecolare è angolare",
       "Perché ogni molecola d’acqua possiede carica elettrica totale positiva"
     ],
     "risposta_corretta": "Perché i legami O-H sono polari e la geometria molecolare è angolare",
@@ -232,10 +232,10 @@
     "livello": "avanzato",
     "domanda": "Che cosa indica l’elettronegatività di un elemento?",
     "opzioni": [
+      "La massa dell’atomo rispetto al carbonio-12",
       "La tendenza di un atomo ad attirare elettroni in un legame chimico",
-      "La capacità di un atomo isolato di perdere protoni dal nucleo",
       "Il numero totale di elettroni presenti in un atomo neutro",
-      "La massa dell’atomo rispetto al carbonio-12"
+      "La capacità di un atomo isolato di perdere protoni dal nucleo"
     ],
     "risposta_corretta": "La tendenza di un atomo ad attirare elettroni in un legame chimico",
     "spiegazione": "L’elettronegatività misura quanto un atomo attira verso di sé gli elettroni condivisi in un legame.",
@@ -257,10 +257,10 @@
     "livello": "avanzato",
     "domanda": "In una reazione redox, che cosa accade alla specie che si ossida?",
     "opzioni": [
-      "Perde elettroni e aumenta il proprio numero di ossidazione",
       "Acquista elettroni e diminuisce il proprio numero di ossidazione",
-      "Perde protoni e mantiene invariato il numero di ossidazione",
-      "Acquista neutroni e diventa un isotopo più pesante"
+      "Acquista neutroni e diventa un isotopo più pesante",
+      "Perde elettroni e aumenta il proprio numero di ossidazione",
+      "Perde protoni e mantiene invariato il numero di ossidazione"
     ],
     "risposta_corretta": "Perde elettroni e aumenta il proprio numero di ossidazione",
     "spiegazione": "L’ossidazione corrisponde alla perdita di elettroni. Quando una specie perde elettroni, il suo numero di ossidazione aumenta.",
@@ -282,10 +282,10 @@
     "livello": "avanzato",
     "domanda": "Perché un catalizzatore aumenta la velocità di una reazione chimica?",
     "opzioni": [
-      "Fornisce un percorso alternativo con energia di attivazione più bassa",
       "Aumenta sempre la quantità finale di prodotto ottenibile all’equilibrio",
+      "Rende impossibile la reazione inversa dopo la formazione dei prodotti",
       "Viene consumato completamente e trasformato nel prodotto principale",
-      "Rende impossibile la reazione inversa dopo la formazione dei prodotti"
+      "Fornisce un percorso alternativo con energia di attivazione più bassa"
     ],
     "risposta_corretta": "Fornisce un percorso alternativo con energia di attivazione più bassa",
     "spiegazione": "Il catalizzatore accelera la reazione abbassando l’energia di attivazione, ma non viene consumato e non cambia la posizione dell’equilibrio.",
@@ -307,10 +307,10 @@
     "livello": "facile",
     "domanda": "Che cosa distingue una sostanza pura da una miscela?",
     "opzioni": [
-      "Una sostanza pura ha composizione definita, una miscela può avere composizione variabile",
-      "Una sostanza pura contiene sempre più elementi, una miscela contiene sempre un solo elemento",
+      "Una sostanza pura cambia massa durante l’uso, una miscela mantiene sempre la stessa massa",
       "Una sostanza pura si separa sempre con un filtro, una miscela non può mai essere separata",
-      "Una sostanza pura cambia massa durante l’uso, una miscela mantiene sempre la stessa massa"
+      "Una sostanza pura ha composizione definita, una miscela può avere composizione variabile",
+      "Una sostanza pura contiene sempre più elementi, una miscela contiene sempre un solo elemento"
     ],
     "risposta_corretta": "Una sostanza pura ha composizione definita, una miscela può avere composizione variabile",
     "spiegazione": "Una sostanza pura ha composizione chimica definita. Una miscela invece può contenere componenti in proporzioni variabili.",
@@ -332,10 +332,10 @@
     "livello": "facile",
     "domanda": "Quale cambiamento è un esempio di trasformazione fisica?",
     "opzioni": [
-      "Il ghiaccio che fonde diventando acqua liquida",
+      "Il latte che diventa acido dopo molti giorni",
       "Il ferro che arrugginisce a contatto con l’ossigeno",
       "Il legno che brucia producendo cenere",
-      "Il latte che diventa acido dopo molti giorni"
+      "Il ghiaccio che fonde diventando acqua liquida"
     ],
     "risposta_corretta": "Il ghiaccio che fonde diventando acqua liquida",
     "spiegazione": "La fusione del ghiaccio cambia lo stato fisico dell’acqua, ma non produce una nuova sostanza.",
@@ -357,10 +357,10 @@
     "livello": "facile",
     "domanda": "Che cosa indica il simbolo chimico Na?",
     "opzioni": [
-      "L’elemento sodio",
-      "L’elemento azoto",
       "Una molecola di acqua salata",
-      "Un composto formato da sodio e argon"
+      "Un composto formato da sodio e argon",
+      "L’elemento azoto",
+      "L’elemento sodio"
     ],
     "risposta_corretta": "L’elemento sodio",
     "spiegazione": "Na è il simbolo chimico del sodio, dal latino natrium. L’azoto invece ha simbolo N.",
@@ -382,10 +382,10 @@
     "livello": "facile",
     "domanda": "Che cosa succede alle particelle di un gas quando aumenta la temperatura?",
     "opzioni": [
-      "Si muovono mediamente più velocemente",
       "Si trasformano tutte in particelle solide",
       "Perdono sempre tutti gli elettroni",
-      "Diventano immobili ma più pesanti"
+      "Diventano immobili ma più pesanti",
+      "Si muovono mediamente più velocemente"
     ],
     "risposta_corretta": "Si muovono mediamente più velocemente",
     "spiegazione": "Aumentando la temperatura aumenta l’energia cinetica media delle particelle, quindi le particelle si muovono più velocemente.",
@@ -408,10 +408,10 @@
     "livello": "intermedio",
     "domanda": "Perché il cloruro di sodio solido conduce poco la corrente, mentre sciolto in acqua può condurla?",
     "opzioni": [
+      "Perché l’acqua elimina tutte le cariche elettriche del sale",
       "Perché in soluzione gli ioni sono liberi di muoversi",
-      "Perché in acqua il sale si trasforma completamente in metallo",
       "Perché il solido contiene elettroni liberi come un filo di rame",
-      "Perché l’acqua elimina tutte le cariche elettriche del sale"
+      "Perché in acqua il sale si trasforma completamente in metallo"
     ],
     "risposta_corretta": "Perché in soluzione gli ioni sono liberi di muoversi",
     "spiegazione": "Nel solido gli ioni sono bloccati nel reticolo cristallino. In acqua si separano e possono muoversi, permettendo il passaggio di corrente.",
@@ -434,10 +434,10 @@
     "livello": "intermedio",
     "domanda": "Che cosa significa dire che una soluzione è concentrata?",
     "opzioni": [
-      "Contiene una quantità relativamente elevata di soluto rispetto al solvente",
-      "Contiene solo solvente e nessuna sostanza disciolta",
+      "Contiene solo molecole di acqua senza altre particelle",
       "Contiene sempre un soluto solido non sciolto sul fondo",
-      "Contiene solo molecole di acqua senza altre particelle"
+      "Contiene solo solvente e nessuna sostanza disciolta",
+      "Contiene una quantità relativamente elevata di soluto rispetto al solvente"
     ],
     "risposta_corretta": "Contiene una quantità relativamente elevata di soluto rispetto al solvente",
     "spiegazione": "Una soluzione concentrata contiene molto soluto rispetto alla quantità di solvente. Non significa necessariamente che ci sia solido non sciolto.",
@@ -459,10 +459,10 @@
     "livello": "intermedio",
     "domanda": "In una reazione esotermica, che cosa avviene in generale?",
     "opzioni": [
-      "Il sistema libera energia verso l’ambiente",
-      "Il sistema assorbe sempre energia dall’ambiente",
+      "Gli atomi vengono distrutti e non riorganizzati",
       "La massa dei reagenti scompare durante la reazione",
-      "Gli atomi vengono distrutti e non riorganizzati"
+      "Il sistema assorbe sempre energia dall’ambiente",
+      "Il sistema libera energia verso l’ambiente"
     ],
     "risposta_corretta": "Il sistema libera energia verso l’ambiente",
     "spiegazione": "Una reazione esotermica libera energia, spesso sotto forma di calore, verso l’ambiente esterno.",
@@ -510,10 +510,10 @@
     "livello": "avanzato",
     "domanda": "Che cosa indica il concetto di equilibrio chimico in una reazione reversibile?",
     "opzioni": [
-      "Le velocità della reazione diretta e inversa diventano uguali",
+      "La concentrazione dei reagenti diventa sempre identica a quella dei prodotti",
       "Tutte le molecole dei reagenti si trasformano definitivamente in prodotti",
       "La reazione si ferma perché le particelle non si muovono più",
-      "La concentrazione dei reagenti diventa sempre identica a quella dei prodotti"
+      "Le velocità della reazione diretta e inversa diventano uguali"
     ],
     "risposta_corretta": "Le velocità della reazione diretta e inversa diventano uguali",
     "spiegazione": "All’equilibrio chimico la reazione diretta e quella inversa continuano, ma avvengono alla stessa velocità. Le concentrazioni restano costanti, non necessariamente uguali.",
@@ -535,10 +535,10 @@
     "livello": "avanzato",
     "domanda": "Che cosa succede al pH di una soluzione quando aumenta la concentrazione di ioni H⁺?",
     "opzioni": [
-      "Il pH diminuisce",
-      "Il pH aumenta sempre",
+      "Il pH diventa indipendente dall’acidità",
       "Il pH resta sempre esattamente 7",
-      "Il pH diventa indipendente dall’acidità"
+      "Il pH diminuisce",
+      "Il pH aumenta sempre"
     ],
     "risposta_corretta": "Il pH diminuisce",
     "spiegazione": "Il pH è legato in modo inverso alla concentrazione di ioni H⁺. Se aumentano gli ioni H⁺, la soluzione diventa più acida e il pH diminuisce.",
@@ -562,9 +562,9 @@
     "domanda": "Perché una molecola può essere apolare anche se contiene legami polari?",
     "opzioni": [
       "Perché la geometria molecolare può far annullare i dipoli dei legami",
-      "Perché ogni legame polare rende sempre tutta la molecola carica positivamente",
+      "Perché una molecola con legami polari non ha mai una forma definita",
       "Perché i legami polari eliminano automaticamente tutti gli elettroni condivisi",
-      "Perché una molecola con legami polari non ha mai una forma definita"
+      "Perché ogni legame polare rende sempre tutta la molecola carica positivamente"
     ],
     "risposta_corretta": "Perché la geometria molecolare può far annullare i dipoli dei legami",
     "spiegazione": "La polarità della molecola dipende sia dalla polarità dei legami sia dalla geometria. Se i dipoli si annullano, la molecola può risultare apolare.",
@@ -586,8 +586,8 @@
     "livello": "avanzato",
     "domanda": "Che cosa descrive l’energia di attivazione di una reazione?",
     "opzioni": [
-      "L’energia minima necessaria perché i reagenti inizino a trasformarsi in prodotti",
       "L’energia totale che viene sempre conservata solo nei prodotti finali",
+      "L’energia minima necessaria perché i reagenti inizino a trasformarsi in prodotti",
       "La quantità di massa che sparisce quando la reazione comincia",
       "La temperatura finale che ogni reazione deve raggiungere all’equilibrio"
     ],
@@ -611,10 +611,10 @@
     "livello": "facile",
     "domanda": "Quale tecnica è più adatta per separare sabbia e acqua?",
     "opzioni": [
-      "Filtrazione",
-      "Distillazione frazionata",
       "Elettrolisi",
-      "Cromatografia su carta"
+      "Cromatografia su carta",
+      "Distillazione frazionata",
+      "Filtrazione"
     ],
     "risposta_corretta": "Filtrazione",
     "spiegazione": "La filtrazione separa un solido insolubile da un liquido. La sabbia resta nel filtro, mentre l’acqua lo attraversa.",
@@ -637,9 +637,9 @@
     "domanda": "Che cosa indica il termine solvente in una soluzione?",
     "opzioni": [
       "La sostanza che scioglie il soluto",
-      "La sostanza presente sempre in quantità minore",
+      "La sostanza che non può mai evaporare",
       "Il residuo solido che rimane dopo la filtrazione",
-      "La sostanza che non può mai evaporare"
+      "La sostanza presente sempre in quantità minore"
     ],
     "risposta_corretta": "La sostanza che scioglie il soluto",
     "spiegazione": "Il solvente è la sostanza che scioglie il soluto. Nelle soluzioni acquose, per esempio, il solvente è l’acqua.",
@@ -662,9 +662,9 @@
     "livello": "intermedio",
     "domanda": "Perché gli elementi dello stesso gruppo della tavola periodica hanno proprietà chimiche simili?",
     "opzioni": [
-      "Perché hanno lo stesso numero di elettroni di valenza",
       "Perché hanno sempre lo stesso numero di neutroni",
       "Perché hanno identica massa atomica",
+      "Perché hanno lo stesso numero di elettroni di valenza",
       "Perché hanno sempre lo stesso numero atomico"
     ],
     "risposta_corretta": "Perché hanno lo stesso numero di elettroni di valenza",
@@ -713,9 +713,9 @@
     "domanda": "Che cosa rappresenta una mole in chimica?",
     "opzioni": [
       "Una quantità di sostanza contenente un numero definito di particelle",
+      "La carica elettrica totale di un atomo neutro",
       "La massa esatta di una singola molecola espressa in grammi",
-      "Il volume occupato da qualsiasi liquido a temperatura ambiente",
-      "La carica elettrica totale di un atomo neutro"
+      "Il volume occupato da qualsiasi liquido a temperatura ambiente"
     ],
     "risposta_corretta": "Una quantità di sostanza contenente un numero definito di particelle",
     "spiegazione": "La mole è un’unità di quantità di sostanza. Una mole contiene il numero di Avogadro di particelle.",
@@ -738,9 +738,9 @@
     "domanda": "Perché l’aumento della temperatura può accelerare molte reazioni chimiche?",
     "opzioni": [
       "Perché aumenta l’energia cinetica media e il numero di urti efficaci",
+      "Perché impedisce alle molecole di urtarsi tra loro",
       "Perché elimina la necessità di superare l’energia di attivazione",
-      "Perché trasforma automaticamente tutti i reagenti in catalizzatori",
-      "Perché impedisce alle molecole di urtarsi tra loro"
+      "Perché trasforma automaticamente tutti i reagenti in catalizzatori"
     ],
     "risposta_corretta": "Perché aumenta l’energia cinetica media e il numero di urti efficaci",
     "spiegazione": "A temperatura più alta le particelle si muovono più velocemente. Aumentano così gli urti efficaci capaci di superare la barriera energetica.",
@@ -788,10 +788,10 @@
     "livello": "avanzato",
     "domanda": "Che cosa indica il prodotto ionico dell’acqua in relazione a H⁺ e OH⁻?",
     "opzioni": [
-      "Che in acqua le concentrazioni di H⁺ e OH⁻ sono collegate da una relazione di equilibrio",
       "Che ogni soluzione acquosa contiene solo ioni H⁺ e nessun altro ione",
       "Che gli ioni OH⁻ sono presenti solo nelle soluzioni completamente neutre",
-      "Che il pH non dipende mai dalla concentrazione degli ioni in soluzione"
+      "Che il pH non dipende mai dalla concentrazione degli ioni in soluzione",
+      "Che in acqua le concentrazioni di H⁺ e OH⁻ sono collegate da una relazione di equilibrio"
     ],
     "risposta_corretta": "Che in acqua le concentrazioni di H⁺ e OH⁻ sono collegate da una relazione di equilibrio",
     "spiegazione": "Il prodotto ionico dell’acqua collega le concentrazioni di H⁺ e OH⁻. Se aumenta una delle due, l’altra tende a diminuire secondo l’equilibrio.",
@@ -814,10 +814,10 @@
     "livello": "facile",
     "domanda": "Che cosa avviene durante l’evaporazione di un liquido?",
     "opzioni": [
-      "Alcune particelle passano dallo stato liquido allo stato gassoso dalla superficie",
       "Tutte le particelle diventano solide nello stesso istante",
-      "Il liquido si trasforma sempre in una nuova sostanza chimica",
-      "Gli atomi del liquido vengono distrutti e sostituiti"
+      "Gli atomi del liquido vengono distrutti e sostituiti",
+      "Alcune particelle passano dallo stato liquido allo stato gassoso dalla superficie",
+      "Il liquido si trasforma sempre in una nuova sostanza chimica"
     ],
     "risposta_corretta": "Alcune particelle passano dallo stato liquido allo stato gassoso dalla superficie",
     "spiegazione": "L’evaporazione è un passaggio di stato: alcune particelle del liquido acquistano abbastanza energia per passare allo stato gassoso dalla superficie.",
@@ -839,10 +839,10 @@
     "livello": "facile",
     "domanda": "Che cosa descrive meglio un composto chimico?",
     "opzioni": [
-      "Una sostanza formata da elementi diversi uniti chimicamente in proporzioni definite",
+      "Una soluzione che contiene sempre acqua come unico solvente",
       "Una miscela casuale di sostanze che può avere qualunque composizione",
       "Un elemento puro formato da un solo tipo di atomo isolato",
-      "Una soluzione che contiene sempre acqua come unico solvente"
+      "Una sostanza formata da elementi diversi uniti chimicamente in proporzioni definite"
     ],
     "risposta_corretta": "Una sostanza formata da elementi diversi uniti chimicamente in proporzioni definite",
     "spiegazione": "Un composto è formato da elementi diversi legati chimicamente. La sua composizione è definita, come nel caso dell’acqua H₂O.",
@@ -864,10 +864,10 @@
     "livello": "intermedio",
     "domanda": "Perché un indicatore acido-base può cambiare colore in soluzioni diverse?",
     "opzioni": [
-      "Perché assume forme diverse a seconda del pH della soluzione",
       "Perché trasforma sempre l’acido in una base forte",
-      "Perché elimina tutti gli ioni presenti nella soluzione",
-      "Perché misura direttamente la massa del soluto disciolto"
+      "Perché assume forme diverse a seconda del pH della soluzione",
+      "Perché misura direttamente la massa del soluto disciolto",
+      "Perché elimina tutti gli ioni presenti nella soluzione"
     ],
     "risposta_corretta": "Perché assume forme diverse a seconda del pH della soluzione",
     "spiegazione": "Gli indicatori acido-base cambiano struttura o forma chimica in base al pH, e queste forme possono avere colori diversi.",
@@ -891,9 +891,9 @@
     "domanda": "Perché aumentare la concentrazione dei reagenti può rendere più veloce una reazione?",
     "opzioni": [
       "Perché aumenta la frequenza degli urti tra particelle reagenti",
+      "Perché trasforma i prodotti in reagenti solidi",
       "Perché diminuisce sempre la temperatura della soluzione",
-      "Perché annulla completamente l’energia di attivazione",
-      "Perché trasforma i prodotti in reagenti solidi"
+      "Perché annulla completamente l’energia di attivazione"
     ],
     "risposta_corretta": "Perché aumenta la frequenza degli urti tra particelle reagenti",
     "spiegazione": "Con più particelle reagenti nello stesso volume, gli urti tra particelle diventano più frequenti e aumenta la probabilità di urti efficaci.",
@@ -916,10 +916,10 @@
     "livello": "intermedio",
     "domanda": "Che cosa indica la percentuale in massa di una soluzione?",
     "opzioni": [
-      "Il rapporto tra massa del soluto e massa della soluzione, moltiplicato per 100",
-      "Il rapporto tra volume del solvente e temperatura, moltiplicato per 100",
       "Il numero di atomi presenti in una singola molecola del solvente",
-      "La massa del recipiente divisa per il numero di molecole del soluto"
+      "La massa del recipiente divisa per il numero di molecole del soluto",
+      "Il rapporto tra massa del soluto e massa della soluzione, moltiplicato per 100",
+      "Il rapporto tra volume del solvente e temperatura, moltiplicato per 100"
     ],
     "risposta_corretta": "Il rapporto tra massa del soluto e massa della soluzione, moltiplicato per 100",
     "spiegazione": "La percentuale in massa indica quanta massa di soluto è presente rispetto alla massa totale della soluzione.",
@@ -941,10 +941,10 @@
     "livello": "avanzato",
     "domanda": "Secondo il principio di Le Châtelier, come reagisce un sistema all’equilibrio se viene perturbato?",
     "opzioni": [
-      "Si sposta nel verso che tende a contrastare la perturbazione",
-      "Si ferma definitivamente e non può più reagire",
       "Trasforma tutti i prodotti in catalizzatori permanenti",
-      "Rende sempre uguali le concentrazioni di tutte le specie"
+      "Si sposta nel verso che tende a contrastare la perturbazione",
+      "Rende sempre uguali le concentrazioni di tutte le specie",
+      "Si ferma definitivamente e non può più reagire"
     ],
     "risposta_corretta": "Si sposta nel verso che tende a contrastare la perturbazione",
     "spiegazione": "Il principio di Le Châtelier afferma che un sistema all’equilibrio risponde a una perturbazione spostandosi nel verso che tende a ridurne l’effetto.",
@@ -967,9 +967,9 @@
     "domanda": "Che cosa caratterizza una soluzione tampone?",
     "opzioni": [
       "Resiste a variazioni di pH quando si aggiungono piccole quantità di acido o base",
-      "Mantiene sempre il pH esattamente uguale a 14",
+      "Elimina completamente tutti gli ioni dalla soluzione",
       "Trasforma ogni acido debole in un acido forte",
-      "Elimina completamente tutti gli ioni dalla soluzione"
+      "Mantiene sempre il pH esattamente uguale a 14"
     ],
     "risposta_corretta": "Resiste a variazioni di pH quando si aggiungono piccole quantità di acido o base",
     "spiegazione": "Una soluzione tampone contiene specie chimiche capaci di limitare le variazioni di pH quando vengono aggiunte piccole quantità di acido o base.",
@@ -992,10 +992,10 @@
     "livello": "avanzato",
     "domanda": "Perché in una titolazione acido-base si usa spesso un indicatore?",
     "opzioni": [
-      "Per individuare con un cambiamento di colore il punto vicino all’equivalenza",
-      "Per aumentare sempre la concentrazione dell’acido titolato",
       "Per sostituire completamente la buretta durante la misura",
-      "Per impedire qualunque reazione tra acido e base"
+      "Per individuare con un cambiamento di colore il punto vicino all’equivalenza",
+      "Per impedire qualunque reazione tra acido e base",
+      "Per aumentare sempre la concentrazione dell’acido titolato"
     ],
     "risposta_corretta": "Per individuare con un cambiamento di colore il punto vicino all’equivalenza",
     "spiegazione": "L’indicatore cambia colore in un intervallo di pH utile a riconoscere il punto finale della titolazione, vicino al punto di equivalenza.",

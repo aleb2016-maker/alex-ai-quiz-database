@@ -32,8 +32,8 @@
     "domanda": "Che cosa succede al moto di un corpo quando agisce su di esso una forza risultante non nulla?",
     "opzioni": [
       "Il corpo modifica il proprio stato di moto accelerando",
-      "Il corpo resta sempre fermo indipendentemente dalla forza",
       "Il corpo perde automaticamente tutta la propria massa",
+      "Il corpo resta sempre fermo indipendentemente dalla forza",
       "Il corpo cambia temperatura ma non può cambiare velocità"
     ],
     "risposta_corretta": "Il corpo modifica il proprio stato di moto accelerando",
@@ -57,10 +57,10 @@
     "livello": "facile",
     "domanda": "Che cosa indica la massa di un corpo?",
     "opzioni": [
-      "La quantità di materia contenuta nel corpo",
       "La forza con cui il corpo viene attratto dalla Terra",
+      "Lo spazio occupato dal corpo in movimento",
       "La velocità massima che il corpo può raggiungere",
-      "Lo spazio occupato dal corpo in movimento"
+      "La quantità di materia contenuta nel corpo"
     ],
     "risposta_corretta": "La quantità di materia contenuta nel corpo",
     "spiegazione": "La massa indica quanta materia contiene un corpo. Il peso invece è una forza e dipende dalla gravità.",
@@ -84,8 +84,8 @@
     "opzioni": [
       "Quando la sua posizione non cambia rispetto a quell’osservatore",
       "Quando non è sottoposto a nessuna forza in assoluto",
-      "Quando la sua massa diventa uguale a zero",
-      "Quando la sua temperatura resta costante"
+      "Quando la sua temperatura resta costante",
+      "Quando la sua massa diventa uguale a zero"
     ],
     "risposta_corretta": "Quando la sua posizione non cambia rispetto a quell’osservatore",
     "spiegazione": "Un corpo è fermo rispetto a un osservatore se la sua posizione rimane costante rispetto a quell’osservatore.",
@@ -107,10 +107,10 @@
     "livello": "intermedio",
     "domanda": "Secondo la seconda legge di Newton, da che cosa dipende l’accelerazione di un corpo?",
     "opzioni": [
-      "Dalla forza risultante applicata e dalla massa del corpo",
-      "Solo dalla velocità iniziale del corpo",
+      "Dalla temperatura del corpo e dal suo volume",
       "Solo dalla distanza percorsa dal corpo",
-      "Dalla temperatura del corpo e dal suo volume"
+      "Dalla forza risultante applicata e dalla massa del corpo",
+      "Solo dalla velocità iniziale del corpo"
     ],
     "risposta_corretta": "Dalla forza risultante applicata e dalla massa del corpo",
     "spiegazione": "La seconda legge di Newton dice che F = m·a. A parità di massa, più forza produce più accelerazione; a parità di forza, più massa produce meno accelerazione.",
@@ -132,10 +132,10 @@
     "livello": "intermedio",
     "domanda": "Che cosa rappresenta il lavoro in fisica?",
     "opzioni": [
-      "Energia trasferita da una forza che provoca uno spostamento",
-      "La forza totale applicata a un corpo fermo",
       "La massa di un corpo moltiplicata per la sua temperatura",
-      "La quantità di tempo necessaria per fermare un corpo"
+      "La quantità di tempo necessaria per fermare un corpo",
+      "La forza totale applicata a un corpo fermo",
+      "Energia trasferita da una forza che provoca uno spostamento"
     ],
     "risposta_corretta": "Energia trasferita da una forza che provoca uno spostamento",
     "spiegazione": "In fisica il lavoro è collegato a una forza che causa uno spostamento. Se non c’è spostamento nella direzione della forza, il lavoro può essere nullo.",
@@ -158,8 +158,8 @@
     "domanda": "Qual è la differenza tra energia cinetica ed energia potenziale gravitazionale?",
     "opzioni": [
       "La cinetica dipende dal movimento, la potenziale gravitazionale dalla posizione in un campo gravitazionale",
-      "La cinetica dipende dalla temperatura, la potenziale gravitazionale dalla carica elettrica",
       "La cinetica esiste solo nei corpi fermi, la potenziale solo nei corpi in movimento",
+      "La cinetica dipende dalla temperatura, la potenziale gravitazionale dalla carica elettrica",
       "La cinetica si misura in newton, la potenziale gravitazionale in watt"
     ],
     "risposta_corretta": "La cinetica dipende dal movimento, la potenziale gravitazionale dalla posizione in un campo gravitazionale",
@@ -183,10 +183,10 @@
     "livello": "intermedio",
     "domanda": "Che cosa accade alla pressione esercitata da una forza se la stessa forza agisce su una superficie più piccola?",
     "opzioni": [
-      "La pressione aumenta",
       "La pressione diminuisce sempre",
-      "La pressione resta sempre uguale",
-      "La pressione diventa automaticamente nulla"
+      "La pressione diventa automaticamente nulla",
+      "La pressione aumenta",
+      "La pressione resta sempre uguale"
     ],
     "risposta_corretta": "La pressione aumenta",
     "spiegazione": "La pressione è forza divisa superficie. Se la forza resta uguale ma la superficie diminuisce, la pressione aumenta.",
@@ -208,10 +208,10 @@
     "livello": "avanzato",
     "domanda": "In un moto rettilineo uniformemente accelerato, che cosa resta costante?",
     "opzioni": [
-      "L’accelerazione",
-      "La velocità",
+      "L’energia termica",
       "La posizione",
-      "L’energia termica"
+      "La velocità",
+      "L’accelerazione"
     ],
     "risposta_corretta": "L’accelerazione",
     "spiegazione": "Nel moto rettilineo uniformemente accelerato l’accelerazione è costante. La velocità invece cambia nel tempo.",
@@ -233,10 +233,10 @@
     "livello": "avanzato",
     "domanda": "Che cosa afferma il principio di conservazione dell’energia meccanica in assenza di attriti?",
     "opzioni": [
-      "La somma di energia cinetica e potenziale resta costante",
-      "L’energia cinetica resta sempre uguale in ogni punto",
       "L’energia potenziale resta sempre uguale in ogni punto",
-      "La velocità del corpo resta sempre nulla"
+      "La velocità del corpo resta sempre nulla",
+      "L’energia cinetica resta sempre uguale in ogni punto",
+      "La somma di energia cinetica e potenziale resta costante"
     ],
     "risposta_corretta": "La somma di energia cinetica e potenziale resta costante",
     "spiegazione": "Senza attriti, energia cinetica e potenziale possono trasformarsi l’una nell’altra, ma la loro somma resta costante.",
@@ -258,10 +258,10 @@
     "livello": "avanzato",
     "domanda": "In un circuito elettrico, che cosa esprime la legge di Ohm?",
     "opzioni": [
+      "La relazione tra frequenza, lunghezza d’onda e velocità",
       "La relazione tra tensione, corrente e resistenza",
       "La relazione tra massa, accelerazione e forza",
-      "La relazione tra pressione, volume e temperatura",
-      "La relazione tra frequenza, lunghezza d’onda e velocità"
+      "La relazione tra pressione, volume e temperatura"
     ],
     "risposta_corretta": "La relazione tra tensione, corrente e resistenza",
     "spiegazione": "La legge di Ohm si esprime con V = R·I. Collega la tensione, la resistenza e la corrente elettrica.",
@@ -283,10 +283,10 @@
     "livello": "avanzato",
     "domanda": "Che cosa succede alla lunghezza d’onda di un’onda se la frequenza aumenta e la velocità di propagazione resta costante?",
     "opzioni": [
-      "La lunghezza d’onda diminuisce",
-      "La lunghezza d’onda aumenta",
       "La lunghezza d’onda resta sempre uguale",
-      "La lunghezza d’onda diventa infinita"
+      "La lunghezza d’onda aumenta",
+      "La lunghezza d’onda diventa infinita",
+      "La lunghezza d’onda diminuisce"
     ],
     "risposta_corretta": "La lunghezza d’onda diminuisce",
     "spiegazione": "Per le onde vale v = λ·f. Se la velocità resta costante e la frequenza aumenta, la lunghezza d’onda deve diminuire.",
@@ -308,10 +308,10 @@
     "livello": "facile",
     "domanda": "Se due oggetti hanno lo stesso volume ma masse diverse, quale ha densità maggiore?",
     "opzioni": [
-      "Quello con massa maggiore",
-      "Quello con massa minore",
       "Quello con temperatura maggiore",
-      "Quello con superficie più liscia"
+      "Quello con superficie più liscia",
+      "Quello con massa maggiore",
+      "Quello con massa minore"
     ],
     "risposta_corretta": "Quello con massa maggiore",
     "spiegazione": "La densità è massa divisa volume. Se il volume è lo stesso, l’oggetto con massa maggiore ha densità maggiore.",
@@ -334,10 +334,10 @@
     "livello": "facile",
     "domanda": "Che cosa descrive meglio l’inerzia di un corpo?",
     "opzioni": [
-      "La tendenza a mantenere il proprio stato di quiete o di moto",
-      "La capacità di produrre calore senza energia",
       "La forza che fa cadere tutti i corpi verso l’alto",
-      "La velocità massima raggiungibile nel vuoto"
+      "La tendenza a mantenere il proprio stato di quiete o di moto",
+      "La velocità massima raggiungibile nel vuoto",
+      "La capacità di produrre calore senza energia"
     ],
     "risposta_corretta": "La tendenza a mantenere il proprio stato di quiete o di moto",
     "spiegazione": "L’inerzia è la tendenza di un corpo a non cambiare spontaneamente il proprio stato di quiete o di moto rettilineo uniforme.",
@@ -360,10 +360,10 @@
     "livello": "facile",
     "domanda": "Che cosa fa di solito la forza di attrito tra due superfici a contatto?",
     "opzioni": [
-      "Si oppone al movimento relativo tra le superfici",
-      "Aumenta sempre la velocità senza consumo di energia",
+      "Agisce solo quando gli oggetti sono nel vuoto",
       "Elimina completamente la massa degli oggetti",
-      "Agisce solo quando gli oggetti sono nel vuoto"
+      "Aumenta sempre la velocità senza consumo di energia",
+      "Si oppone al movimento relativo tra le superfici"
     ],
     "risposta_corretta": "Si oppone al movimento relativo tra le superfici",
     "spiegazione": "L’attrito tende a ostacolare lo scorrimento tra superfici a contatto e trasforma parte dell’energia meccanica in calore.",
@@ -385,10 +385,10 @@
     "livello": "facile",
     "domanda": "Che cosa indica la frequenza di un fenomeno periodico?",
     "opzioni": [
-      "Quante volte il fenomeno si ripete in un secondo",
       "Quanto spazio occupa il fenomeno in metri cubi",
+      "Quanto calore serve per fermare completamente il moto",
       "Quanta massa perde il corpo durante l’oscillazione",
-      "Quanto calore serve per fermare completamente il moto"
+      "Quante volte il fenomeno si ripete in un secondo"
     ],
     "risposta_corretta": "Quante volte il fenomeno si ripete in un secondo",
     "spiegazione": "La frequenza indica quante oscillazioni o ripetizioni avvengono in un secondo. Si misura in hertz.",
@@ -412,8 +412,8 @@
     "domanda": "Perché un corpo immerso in un fluido può ricevere una spinta verso l’alto?",
     "opzioni": [
       "Perché il fluido esercita una spinta di Archimede legata al volume spostato",
-      "Perché il corpo perde completamente la propria massa dentro il fluido",
       "Perché il fluido annulla sempre la forza di gravità",
+      "Perché il corpo perde completamente la propria massa dentro il fluido",
       "Perché il corpo diventa automaticamente meno denso dell’aria"
     ],
     "risposta_corretta": "Perché il fluido esercita una spinta di Archimede legata al volume spostato",
@@ -437,10 +437,10 @@
     "livello": "intermedio",
     "domanda": "Che cosa avviene in genere a un solido quando viene riscaldato?",
     "opzioni": [
+      "Il suo volume diminuisce sempre in ogni materiale",
       "Le sue particelle vibrano di più e il corpo tende a dilatarsi",
-      "Le sue particelle si fermano completamente",
       "La sua massa diventa sempre uguale a zero",
-      "Il suo volume diminuisce sempre in ogni materiale"
+      "Le sue particelle si fermano completamente"
     ],
     "risposta_corretta": "Le sue particelle vibrano di più e il corpo tende a dilatarsi",
     "spiegazione": "Riscaldando un solido aumenta l’agitazione delle particelle. Spesso questo produce dilatazione termica.",
@@ -462,10 +462,10 @@
     "livello": "intermedio",
     "domanda": "In un circuito con resistenze in serie, che cosa accade alla resistenza equivalente?",
     "opzioni": [
-      "È la somma delle resistenze dei singoli componenti",
-      "È sempre minore della resistenza più piccola",
       "È sempre uguale a zero",
-      "È indipendente dal numero di resistenze"
+      "È la somma delle resistenze dei singoli componenti",
+      "È indipendente dal numero di resistenze",
+      "È sempre minore della resistenza più piccola"
     ],
     "risposta_corretta": "È la somma delle resistenze dei singoli componenti",
     "spiegazione": "Nelle resistenze in serie la corrente attraversa ogni componente uno dopo l’altro, quindi le resistenze si sommano.",
@@ -488,9 +488,9 @@
     "livello": "intermedio",
     "domanda": "Che cosa distingue una grandezza vettoriale da una grandezza scalare?",
     "opzioni": [
-      "La grandezza vettoriale ha modulo, direzione e verso",
       "La grandezza vettoriale non può mai essere misurata",
       "La grandezza scalare ha sempre direzione e verso",
+      "La grandezza vettoriale ha modulo, direzione e verso",
       "La grandezza scalare è sempre negativa"
     ],
     "risposta_corretta": "La grandezza vettoriale ha modulo, direzione e verso",
@@ -513,9 +513,9 @@
     "livello": "avanzato",
     "domanda": "Secondo la legge di Coulomb, che cosa succede alla forza elettrica se la distanza tra due cariche raddoppia?",
     "opzioni": [
+      "Resta esattamente invariata",
       "Diventa un quarto del valore iniziale",
       "Diventa il doppio del valore iniziale",
-      "Resta esattamente invariata",
       "Diventa sempre nulla"
     ],
     "risposta_corretta": "Diventa un quarto del valore iniziale",
@@ -539,9 +539,9 @@
     "domanda": "In assenza di forze esterne, che cosa si conserva in un sistema durante un urto?",
     "opzioni": [
       "La quantità di moto totale",
+      "La distanza tra i corpi in ogni istante",
       "La velocità di ogni singolo corpo",
-      "La temperatura di ogni oggetto",
-      "La distanza tra i corpi in ogni istante"
+      "La temperatura di ogni oggetto"
     ],
     "risposta_corretta": "La quantità di moto totale",
     "spiegazione": "Se il sistema è isolato, la quantità di moto totale si conserva anche durante un urto. L’energia cinetica si conserva solo in urti elastici.",
@@ -564,9 +564,9 @@
     "domanda": "Che cosa accade in un fenomeno di risonanza?",
     "opzioni": [
       "Un sistema oscilla con ampiezza maggiore quando viene sollecitato vicino alla sua frequenza naturale",
-      "Un sistema smette sempre di oscillare quando riceve energia periodica",
       "La frequenza naturale diventa sempre uguale a zero",
-      "L’energia fornita viene sempre trasformata interamente in massa"
+      "L’energia fornita viene sempre trasformata interamente in massa",
+      "Un sistema smette sempre di oscillare quando riceve energia periodica"
     ],
     "risposta_corretta": "Un sistema oscilla con ampiezza maggiore quando viene sollecitato vicino alla sua frequenza naturale",
     "spiegazione": "La risonanza si verifica quando una sollecitazione periodica ha frequenza vicina a quella naturale del sistema, aumentando l’ampiezza delle oscillazioni.",
@@ -588,10 +588,10 @@
     "livello": "avanzato",
     "domanda": "Che cosa indica l’indice di rifrazione di un materiale?",
     "opzioni": [
-      "Quanto la luce rallenta e cambia direzione entrando nel materiale",
       "La quantità di massa che la luce trasporta nel vuoto",
-      "La temperatura minima necessaria per produrre luce",
-      "La forza gravitazionale esercitata dalla luce sul materiale"
+      "Quanto la luce rallenta e cambia direzione entrando nel materiale",
+      "La forza gravitazionale esercitata dalla luce sul materiale",
+      "La temperatura minima necessaria per produrre luce"
     ],
     "risposta_corretta": "Quanto la luce rallenta e cambia direzione entrando nel materiale",
     "spiegazione": "L’indice di rifrazione descrive il rapporto tra la velocità della luce nel vuoto e nel materiale. È collegato alla deviazione della luce quando passa tra mezzi diversi.",
@@ -614,10 +614,10 @@
     "livello": "facile",
     "domanda": "Perché riusciamo a vedere un oggetto che non produce luce propria?",
     "opzioni": [
+      "Perché assorbe tutta la luce senza rimandarne nessuna",
       "Perché riflette luce che arriva ai nostri occhi",
       "Perché trasforma sempre la propria massa in luce",
-      "Perché emette sempre onde sonore visibili",
-      "Perché assorbe tutta la luce senza rimandarne nessuna"
+      "Perché emette sempre onde sonore visibili"
     ],
     "risposta_corretta": "Perché riflette luce che arriva ai nostri occhi",
     "spiegazione": "Un oggetto non luminoso si vede perché riflette una parte della luce che riceve. Questa luce riflessa arriva ai nostri occhi.",
@@ -640,10 +640,10 @@
     "livello": "facile",
     "domanda": "Che cosa accade a una molla elastica quando viene deformata entro il suo limite elastico?",
     "opzioni": [
-      "Tende a tornare alla forma iniziale quando la forza viene tolta",
+      "Smette di esercitare qualunque forza",
       "Perde sempre tutta la propria massa",
-      "Si trasforma definitivamente in un liquido",
-      "Smette di esercitare qualunque forza"
+      "Tende a tornare alla forma iniziale quando la forza viene tolta",
+      "Si trasforma definitivamente in un liquido"
     ],
     "risposta_corretta": "Tende a tornare alla forma iniziale quando la forza viene tolta",
     "spiegazione": "Una molla deformata entro il limite elastico esercita una forza di richiamo e tende a tornare alla forma iniziale.",
@@ -692,10 +692,10 @@
     "livello": "intermedio",
     "domanda": "Quando un corpo è in equilibrio statico?",
     "opzioni": [
+      "Quando il corpo non possiede massa misurabile",
       "Quando la forza risultante e il momento risultante sono nulli",
       "Quando la velocità aumenta sempre in modo costante",
-      "Quando agisce una sola forza non bilanciata",
-      "Quando il corpo non possiede massa misurabile"
+      "Quando agisce una sola forza non bilanciata"
     ],
     "risposta_corretta": "Quando la forza risultante e il momento risultante sono nulli",
     "spiegazione": "Un corpo in equilibrio statico non trasla e non ruota: le forze e i momenti che agiscono su di esso si bilanciano.",
@@ -718,10 +718,10 @@
     "livello": "intermedio",
     "domanda": "Perché il suono non si propaga nel vuoto?",
     "opzioni": [
-      "Perché ha bisogno di un mezzo materiale che trasmetta le vibrazioni",
-      "Perché nel vuoto la luce assorbe tutte le onde sonore",
       "Perché nel vuoto la temperatura è sempre infinita",
-      "Perché il suono è formato da particelle con massa nulla"
+      "Perché il suono è formato da particelle con massa nulla",
+      "Perché ha bisogno di un mezzo materiale che trasmetta le vibrazioni",
+      "Perché nel vuoto la luce assorbe tutte le onde sonore"
     ],
     "risposta_corretta": "Perché ha bisogno di un mezzo materiale che trasmetta le vibrazioni",
     "spiegazione": "Il suono è un’onda meccanica: per propagarsi ha bisogno di particelle che vibrino e trasmettano la perturbazione.",
@@ -744,9 +744,9 @@
     "livello": "avanzato",
     "domanda": "Che cosa rappresenta il campo elettrico in un punto dello spazio?",
     "opzioni": [
-      "La forza elettrica per unità di carica positiva di prova",
-      "La massa totale delle cariche presenti nel circuito",
       "La temperatura prodotta da un filo attraversato da corrente",
+      "La massa totale delle cariche presenti nel circuito",
+      "La forza elettrica per unità di carica positiva di prova",
       "La velocità con cui una carica si trasforma in luce"
     ],
     "risposta_corretta": "La forza elettrica per unità di carica positiva di prova",
@@ -769,10 +769,10 @@
     "livello": "avanzato",
     "domanda": "Che cosa accade alla corrente in un circuito se la tensione resta costante e la resistenza aumenta?",
     "opzioni": [
-      "La corrente diminuisce",
       "La corrente aumenta sempre",
-      "La corrente resta identica in ogni caso",
-      "La corrente diventa indipendente dalla resistenza"
+      "La corrente diminuisce",
+      "La corrente diventa indipendente dalla resistenza",
+      "La corrente resta identica in ogni caso"
     ],
     "risposta_corretta": "La corrente diminuisce",
     "spiegazione": "Dalla legge di Ohm I = V/R. Se la tensione resta costante e la resistenza aumenta, la corrente diminuisce.",
@@ -795,10 +795,10 @@
     "livello": "avanzato",
     "domanda": "Perché un corpo in orbita intorno alla Terra non cade semplicemente verso il suolo?",
     "opzioni": [
-      "Perché ha una velocità tangenziale tale da cadere continuamente intorno alla Terra",
-      "Perché su di esso non agisce alcuna forza gravitazionale",
       "Perché la sua massa diventa nulla appena entra nello spazio",
-      "Perché l’aria nello spazio lo sostiene come un fluido"
+      "Perché l’aria nello spazio lo sostiene come un fluido",
+      "Perché ha una velocità tangenziale tale da cadere continuamente intorno alla Terra",
+      "Perché su di esso non agisce alcuna forza gravitazionale"
     ],
     "risposta_corretta": "Perché ha una velocità tangenziale tale da cadere continuamente intorno alla Terra",
     "spiegazione": "Un corpo in orbita è comunque attratto dalla gravità, ma la sua velocità laterale fa sì che cada continuamente attorno alla Terra senza raggiungere il suolo.",
@@ -821,10 +821,10 @@
     "livello": "facile",
     "domanda": "Perché l’ago di una bussola tende a orientarsi sempre in una direzione precisa?",
     "opzioni": [
-      "Perché interagisce con il campo magnetico terrestre",
+      "Perché ruota sempre nella direzione del vento più forte",
       "Perché viene attratto direttamente dalla massa della Terra",
       "Perché misura la temperatura dell’aria intorno alla bussola",
-      "Perché ruota sempre nella direzione del vento più forte"
+      "Perché interagisce con il campo magnetico terrestre"
     ],
     "risposta_corretta": "Perché interagisce con il campo magnetico terrestre",
     "spiegazione": "L’ago della bussola è magnetizzato e si orienta seguendo il campo magnetico terrestre. Per questo indica una direzione stabile.",
@@ -848,9 +848,9 @@
     "domanda": "Che cosa succede a un corpo se riceve calore?",
     "opzioni": [
       "Può aumentare la temperatura o cambiare stato fisico",
+      "Si trasforma sempre in carica elettrica",
       "Perde sempre tutta la propria massa",
-      "Smette sempre di occupare spazio",
-      "Si trasforma sempre in carica elettrica"
+      "Smette sempre di occupare spazio"
     ],
     "risposta_corretta": "Può aumentare la temperatura o cambiare stato fisico",
     "spiegazione": "Il calore trasferito a un corpo può aumentare la temperatura oppure produrre un cambiamento di stato, come fusione o evaporazione.",
@@ -873,10 +873,10 @@
     "livello": "intermedio",
     "domanda": "Qual è la differenza tra calore e temperatura?",
     "opzioni": [
+      "Il calore esiste solo nei solidi, la temperatura solo nei gas",
       "Il calore è energia trasferita, la temperatura indica lo stato termico del corpo",
-      "Il calore è una forza, la temperatura è sempre una massa",
       "Il calore si misura solo in metri, la temperatura solo in newton",
-      "Il calore esiste solo nei solidi, la temperatura solo nei gas"
+      "Il calore è una forza, la temperatura è sempre una massa"
     ],
     "risposta_corretta": "Il calore è energia trasferita, la temperatura indica lo stato termico del corpo",
     "spiegazione": "Il calore è energia che passa da un corpo a un altro per differenza di temperatura. La temperatura descrive lo stato termico di un corpo.",
@@ -899,10 +899,10 @@
     "livello": "intermedio",
     "domanda": "Che cosa avviene quando due corpi a temperatura diversa vengono messi a contatto?",
     "opzioni": [
-      "Il calore passa spontaneamente dal corpo più caldo a quello più freddo",
+      "La gravità tra i due corpi si annulla completamente",
       "Il calore passa sempre dal corpo più freddo a quello più caldo",
-      "Le masse dei due corpi diventano automaticamente uguali",
-      "La gravità tra i due corpi si annulla completamente"
+      "Il calore passa spontaneamente dal corpo più caldo a quello più freddo",
+      "Le masse dei due corpi diventano automaticamente uguali"
     ],
     "risposta_corretta": "Il calore passa spontaneamente dal corpo più caldo a quello più freddo",
     "spiegazione": "Il trasferimento spontaneo di calore avviene dal corpo a temperatura maggiore verso quello a temperatura minore, fino al raggiungimento dell’equilibrio termico.",
@@ -924,10 +924,10 @@
     "livello": "intermedio",
     "domanda": "Perché una leva può permettere di sollevare un carico con minore forza?",
     "opzioni": [
-      "Perché aumenta il braccio della forza applicata rispetto al fulcro",
+      "Perché annulla sempre l’attrito dell’aria",
       "Perché elimina completamente il peso del carico",
       "Perché trasforma il carico in energia elettrica",
-      "Perché annulla sempre l’attrito dell’aria"
+      "Perché aumenta il braccio della forza applicata rispetto al fulcro"
     ],
     "risposta_corretta": "Perché aumenta il braccio della forza applicata rispetto al fulcro",
     "spiegazione": "Una leva sfrutta i momenti delle forze. Se il braccio della forza applicata è più lungo, serve una forza minore per equilibrare il carico.",
@@ -950,10 +950,10 @@
     "livello": "avanzato",
     "domanda": "Che cosa rappresenta il lavoro di una forza quando forza e spostamento hanno la stessa direzione?",
     "opzioni": [
-      "Il prodotto tra intensità della forza e spostamento",
       "Il rapporto tra massa e temperatura",
-      "La somma tra velocità e accelerazione",
-      "Il numero di particelle presenti nel corpo"
+      "Il numero di particelle presenti nel corpo",
+      "Il prodotto tra intensità della forza e spostamento",
+      "La somma tra velocità e accelerazione"
     ],
     "risposta_corretta": "Il prodotto tra intensità della forza e spostamento",
     "spiegazione": "Quando forza e spostamento hanno la stessa direzione, il lavoro si calcola come L = F · s.",
@@ -976,10 +976,10 @@
     "livello": "avanzato",
     "domanda": "In un trasformatore ideale, che cosa collega il rapporto tra le tensioni ai due avvolgimenti?",
     "opzioni": [
-      "Il rapporto tra il numero di spire dei due avvolgimenti",
       "La massa dei fili usati nei due avvolgimenti",
+      "La distanza tra il trasformatore e il suolo",
       "La temperatura dell’aria intorno al trasformatore",
-      "La distanza tra il trasformatore e il suolo"
+      "Il rapporto tra il numero di spire dei due avvolgimenti"
     ],
     "risposta_corretta": "Il rapporto tra il numero di spire dei due avvolgimenti",
     "spiegazione": "In un trasformatore ideale il rapporto tra tensione primaria e secondaria dipende dal rapporto tra il numero di spire dei due avvolgimenti.",
@@ -1003,9 +1003,9 @@
     "domanda": "Che cosa descrive l’effetto Doppler per le onde sonore?",
     "opzioni": [
       "La variazione della frequenza percepita quando sorgente e osservatore sono in moto relativo",
+      "La riduzione della velocità della luce in un mezzo trasparente",
       "La trasformazione completa del suono in luce visibile",
-      "La scomparsa del suono quando aumenta la massa della sorgente",
-      "La riduzione della velocità della luce in un mezzo trasparente"
+      "La scomparsa del suono quando aumenta la massa della sorgente"
     ],
     "risposta_corretta": "La variazione della frequenza percepita quando sorgente e osservatore sono in moto relativo",
     "spiegazione": "L’effetto Doppler si osserva quando la frequenza percepita cambia a causa del moto relativo tra sorgente dell’onda e osservatore.",

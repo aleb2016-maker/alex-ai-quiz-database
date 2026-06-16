@@ -6,10 +6,10 @@
     "livello": "facile",
     "domanda": "In una sequenza le forme seguono questo ordine: cerchio, quadrato, cerchio, quadrato. Quale forma viene dopo?",
     "opzioni": [
+      "Rettangolo",
       "Cerchio",
-      "Quadrato",
       "Triangolo",
-      "Rettangolo"
+      "Quadrato"
     ],
     "risposta_corretta": "Cerchio",
     "spiegazione": "La sequenza alterna sempre cerchio e quadrato: cerchio, quadrato, cerchio, quadrato. Dopo il quadrato torna quindi il cerchio.",
@@ -29,9 +29,9 @@
     "livello": "intermedio",
     "domanda": "Una regola trasforma A in C, B in D e C in E. Seguendo la stessa regola, in cosa si trasforma D?",
     "opzioni": [
-      "F",
-      "E",
       "G",
+      "E",
+      "F",
       "H"
     ],
     "risposta_corretta": "F",
