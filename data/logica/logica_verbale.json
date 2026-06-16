@@ -6,10 +6,10 @@
     "livello": "facile",
     "domanda": "Osserva la sequenza: AB → BA, CD → DC, EF → ?",
     "opzioni": [
-      "FE",
-      "EF",
+      "GF",
       "FG",
-      "GF"
+      "FE",
+      "EF"
     ],
     "risposta_corretta": "FE",
     "spiegazione": "In ogni coppia le due lettere vengono invertite: AB diventa BA, CD diventa DC. Seguendo la stessa regola, EF diventa FE.",
@@ -30,9 +30,9 @@
     "domanda": "Completa l'analogia: penna sta a scrivere come forbici stanno a ?",
     "opzioni": [
       "tagliare",
-      "incollare",
+      "disegnare",
       "misurare",
-      "disegnare"
+      "incollare"
     ],
     "risposta_corretta": "tagliare",
     "spiegazione": "La relazione è tra uno strumento e la sua funzione principale. La penna serve principalmente per scrivere; le forbici servono principalmente per tagliare.",
@@ -52,10 +52,10 @@
     "livello": "avanzato",
     "domanda": "Quale coppia mantiene meglio la stessa relazione logica di: sintomo → diagnosi?",
     "opzioni": [
+      "causa → conseguenza",
       "indizio → ipotesi",
       "prova → verdetto",
-      "errore → correzione",
-      "causa → conseguenza"
+      "errore → correzione"
     ],
     "risposta_corretta": "indizio → ipotesi",
     "spiegazione": "Un sintomo è un segnale che aiuta a formulare una diagnosi, ma non coincide con la diagnosi. Allo stesso modo, un indizio aiuta a formulare un'ipotesi, ma non coincide con una conclusione certa.",

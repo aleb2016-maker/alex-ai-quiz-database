@@ -6,9 +6,9 @@
     "livello": "facile",
     "domanda": "Quale attività descrive meglio un modello di intelligenza artificiale?",
     "opzioni": [
-      "Riconoscere schemi nei dati e usare questi schemi per produrre risposte o previsioni",
       "Riconoscere schemi nei dati ma usarli solo per copiare risposte già presenti negli esempi",
       "Memorizzare dati senza estrarre schemi utili per fare previsioni",
+      "Riconoscere schemi nei dati e usare questi schemi per produrre risposte o previsioni",
       "Salvare file del computer senza usarli per produrre risposte o previsioni"
     ],
     "risposta_corretta": "Riconoscere schemi nei dati e usare questi schemi per produrre risposte o previsioni",
@@ -31,8 +31,8 @@
     "opzioni": [
       "Riassumi questo testo in 5 righe indicando le idee principali.",
       "Riassumi questo testo indicando le idee principali.",
-      "Spiega questo testo mantenendo tutti i dettagli importanti.",
-      "Riscrivi questo testo senza ridurlo e senza selezionare le idee principali."
+      "Riscrivi questo testo senza ridurlo e senza selezionare le idee principali.",
+      "Spiega questo testo mantenendo tutti i dettagli importanti."
     ],
     "risposta_corretta": "Riassumi questo testo in 5 righe indicando le idee principali.",
     "spiegazione": "Un prompt chiaro specifica cosa fare e con quale formato. Dire 'in 5 righe' e 'idee principali' rende il compito più controllabile. Le altre opzioni sono vicine al lavoro sul testo, ma non danno lo stesso vincolo preciso di riassunto breve.",
@@ -52,10 +52,10 @@
     "livello": "facile",
     "domanda": "Perché i dati di addestramento sono importanti per un modello AI?",
     "opzioni": [
-      "Perché influenzano ciò che il modello impara e come risponde",
-      "Perché influenzano il modello, ma rendono inutile controllare le risposte generate",
       "Perché servono solo a verificare il modello dopo l'addestramento",
-      "Perché definiscono manualmente ogni risposta che il modello dovrà dare"
+      "Perché influenzano ciò che il modello impara e come risponde",
+      "Perché definiscono manualmente ogni risposta che il modello dovrà dare",
+      "Perché influenzano il modello, ma rendono inutile controllare le risposte generate"
     ],
     "risposta_corretta": "Perché influenzano ciò che il modello impara e come risponde",
     "spiegazione": "Il modello impara dai dati disponibili durante l'addestramento. Se i dati sono incompleti, distorti o poco adatti, anche le risposte possono risentirne. Questo però non elimina la necessità di controllare le risposte generate.",
@@ -76,9 +76,9 @@
     "domanda": "Quale esempio rappresenta meglio un compito di classificazione?",
     "opzioni": [
       "Stabilire se un messaggio è spam o non spam",
-      "Raggruppare messaggi simili senza etichette già definite",
+      "Scrivere un nuovo messaggio partendo da un tema",
       "Generare una risposta automatica a un messaggio",
-      "Scrivere un nuovo messaggio partendo da un tema"
+      "Raggruppare messaggi simili senza etichette già definite"
     ],
     "risposta_corretta": "Stabilire se un messaggio è spam o non spam",
     "spiegazione": "La classificazione assegna un'etichetta a un input. Spam/non spam è un esempio classico perché il modello sceglie una categoria tra alternative definite. Il clustering raggruppa elementi simili, mentre la generazione produce nuovi contenuti.",
@@ -98,10 +98,10 @@
     "livello": "facile",
     "domanda": "Che cosa significa dire che un modello generativo produce testo?",
     "opzioni": [
-      "Che crea una risposta nuova seguendo il contesto ricevuto",
       "Che riformula il testo ricevuto senza produrre realmente contenuto nuovo",
       "Che copia sempre una frase già presente nei dati",
-      "Che seleziona una frase già scritta senza adattarla al contesto"
+      "Che seleziona una frase già scritta senza adattarla al contesto",
+      "Che crea una risposta nuova seguendo il contesto ricevuto"
     ],
     "risposta_corretta": "Che crea una risposta nuova seguendo il contesto ricevuto",
     "spiegazione": "Un modello generativo produce una continuazione o una risposta in base al contesto. Non si limita necessariamente a copiare una frase identica o a selezionare testo già scritto.",
@@ -121,10 +121,10 @@
     "livello": "facile",
     "domanda": "Quando si parla di allucinazione in AI, a cosa ci si riferisce?",
     "opzioni": [
-      "A una risposta plausibile ma falsa o non verificata",
       "A una risposta plausibile ma incompleta, senza informazioni false",
       "A una risposta corretta ma troppo breve per essere utile",
-      "A una risposta prudente che dichiara chiaramente incertezza"
+      "A una risposta prudente che dichiara chiaramente incertezza",
+      "A una risposta plausibile ma falsa o non verificata"
     ],
     "risposta_corretta": "A una risposta plausibile ma falsa o non verificata",
     "spiegazione": "Un'allucinazione in AI è una risposta che può sembrare credibile, ma contiene informazioni false, inventate o non verificate. Una risposta breve, incompleta o prudente può essere migliorabile, ma non è necessariamente un'allucinazione.",
@@ -144,10 +144,10 @@
     "livello": "intermedio",
     "domanda": "In un sistema RAG, perché la scelta dei chunk del documento è importante?",
     "opzioni": [
+      "Perché i chunk modificano in modo permanente i pesi del modello",
       "Perché chunk troppo grandi o troppo piccoli possono rendere il recupero meno preciso",
-      "Perché chunk più grandi garantiscono sempre un recupero più completo e più preciso",
       "Perché i chunk servono ad addestrare nuovamente il modello prima di ogni risposta",
-      "Perché i chunk modificano in modo permanente i pesi del modello"
+      "Perché chunk più grandi garantiscono sempre un recupero più completo e più preciso"
     ],
     "risposta_corretta": "Perché chunk troppo grandi o troppo piccoli possono rendere il recupero meno preciso",
     "spiegazione": "Nei sistemi RAG i documenti vengono spesso divisi in parti più piccole, chiamate chunk. Se i chunk sono troppo grandi, possono contenere troppe informazioni non pertinenti. Se sono troppo piccoli, possono perdere contesto utile. La dimensione dei chunk influenza quindi la qualità del recupero.",
@@ -168,9 +168,9 @@
     "domanda": "Quale differenza c'è tra ricerca per parole esatte e ricerca semantica?",
     "opzioni": [
       "La ricerca semantica può trovare contenuti simili nel significato anche con parole diverse",
-      "La ricerca semantica può usare parole diverse, ma funziona solo se restano presenti gli stessi termini principali",
       "La ricerca per parole esatte interpreta sempre il significato profondo della domanda",
-      "La ricerca per parole esatte trova sinonimi anche quando non compaiono termini uguali"
+      "La ricerca per parole esatte trova sinonimi anche quando non compaiono termini uguali",
+      "La ricerca semantica può usare parole diverse, ma funziona solo se restano presenti gli stessi termini principali"
     ],
     "risposta_corretta": "La ricerca semantica può trovare contenuti simili nel significato anche con parole diverse",
     "spiegazione": "La ricerca per parole esatte cerca corrispondenze letterali. La ricerca semantica invece prova a confrontare il significato dei contenuti, quindi può trovare testi pertinenti anche se usano parole diverse dalla domanda.",
@@ -190,10 +190,10 @@
     "livello": "intermedio",
     "domanda": "Perché è utile testare un modello su esempi che non ha visto durante lo sviluppo?",
     "opzioni": [
-      "Per misurare se generalizza oltre i casi usati per costruirlo",
-      "Per verificare se ricorda con precisione gli esempi usati durante lo sviluppo",
       "Per misurare solo la velocità sui casi nuovi senza valutare l'accuratezza",
-      "Per ridurre il tempo di esecuzione eliminando i dati di validazione"
+      "Per verificare se ricorda con precisione gli esempi usati durante lo sviluppo",
+      "Per ridurre il tempo di esecuzione eliminando i dati di validazione",
+      "Per misurare se generalizza oltre i casi usati per costruirlo"
     ],
     "risposta_corretta": "Per misurare se generalizza oltre i casi usati per costruirlo",
     "spiegazione": "Un modello deve funzionare anche su casi nuovi. Testarlo solo su esempi già visti rischia di misurare la memoria, non la capacità di generalizzare.",
@@ -213,8 +213,8 @@
     "livello": "intermedio",
     "domanda": "Quale indicazione rende un prompt più controllabile?",
     "opzioni": [
-      "Specificare ruolo, obiettivo, formato di risposta e vincoli",
       "Specificare solo il ruolo senza chiarire obiettivo, formato e vincoli",
+      "Specificare ruolo, obiettivo, formato di risposta e vincoli",
       "Chiedere al modello di fare il meglio possibile senza istruzioni precise",
       "Lasciare la richiesta generica senza indicare criteri di risposta"
     ],
@@ -236,10 +236,10 @@
     "livello": "intermedio",
     "domanda": "Che cosa può succedere se un dataset è molto sbilanciato?",
     "opzioni": [
+      "Il modello corregge da solo la mancanza di esempi nelle classi rare",
       "Il modello può funzionare bene su alcuni casi e male su altri meno rappresentati",
-      "Il modello può favorire i casi più presenti e sbagliare più spesso quelli rari",
       "Il modello diventa automaticamente più equo su tutte le classi",
-      "Il modello corregge da solo la mancanza di esempi nelle classi rare"
+      "Il modello può favorire i casi più presenti e sbagliare più spesso quelli rari"
     ],
     "risposta_corretta": "Il modello può funzionare bene su alcuni casi e male su altri meno rappresentati",
     "spiegazione": "Se alcune classi o situazioni sono poco rappresentate, il modello può imparare soprattutto i casi più frequenti e commettere più errori sui casi rari. Per questo bisogna controllare distribuzione dei dati e metriche.",
@@ -260,9 +260,9 @@
     "domanda": "Perché un agente AI può usare una fase di pianificazione prima di agire?",
     "opzioni": [
       "Per scegliere i passaggi e gli strumenti più adatti prima di eseguire azioni",
+      "Per saltare completamente il controllo del risultato finale",
       "Per scegliere una sequenza di azioni, ma senza verificare se sono coerenti con l'obiettivo",
-      "Per trasformare ogni risposta in una lista casuale di operazioni",
-      "Per saltare completamente il controllo del risultato finale"
+      "Per trasformare ogni risposta in una lista casuale di operazioni"
     ],
     "risposta_corretta": "Per scegliere i passaggi e gli strumenti più adatti prima di eseguire azioni",
     "spiegazione": "Un agente AI può pianificare prima di agire per decidere quali passaggi seguire, quali strumenti usare e in quale ordine. Questo riduce il rischio di azioni impulsive o poco coerenti con l'obiettivo.",
@@ -305,10 +305,10 @@
     "livello": "avanzato",
     "domanda": "Qual è un rischio importante se il retrieval di un sistema RAG recupera documenti solo apparentemente pertinenti?",
     "opzioni": [
-      "Il modello può generare una risposta ben scritta ma basata su contesto fuorviante",
+      "Il database vettoriale elimina da solo tutti i documenti non usati",
       "Il modello può generare una risposta fluida usando documenti recuperati solo in apparenza pertinenti",
-      "Il modello rifiuta automaticamente ogni documento non perfettamente pertinente",
-      "Il database vettoriale elimina da solo tutti i documenti non usati"
+      "Il modello può generare una risposta ben scritta ma basata su contesto fuorviante",
+      "Il modello rifiuta automaticamente ogni documento non perfettamente pertinente"
     ],
     "risposta_corretta": "Il modello può generare una risposta ben scritta ma basata su contesto fuorviante",
     "spiegazione": "Se i documenti recuperati sembrano pertinenti ma non rispondono davvero alla domanda, il modello può appoggiarsi a informazioni sbagliate o parziali e produrre una risposta convincente ma non affidabile.",
@@ -328,10 +328,10 @@
     "livello": "avanzato",
     "domanda": "Quando il fine-tuning è più adatto del solo prompt engineering?",
     "opzioni": [
-      "Quando serve modificare stabilmente il comportamento del modello su molti esempi simili",
       "Quando serve un comportamento stabile, ma si dispone solo di pochi esempi isolati e non coerenti",
+      "Quando basta cambiare il tono di una frase una sola volta",
       "Quando bisogna correggere una singola risposta occasionale",
-      "Quando basta cambiare il tono di una frase una sola volta"
+      "Quando serve modificare stabilmente il comportamento del modello su molti esempi simili"
     ],
     "risposta_corretta": "Quando serve modificare stabilmente il comportamento del modello su molti esempi simili",
     "spiegazione": "Il fine-tuning è utile se si hanno esempi di qualità e si vuole rendere stabile un comportamento su una famiglia di compiti. Per modifiche leggere o occasionali spesso basta il prompt.",
@@ -352,9 +352,9 @@
     "domanda": "Perché valutare un sistema AI solo con risposta corretta o sbagliata può essere insufficiente?",
     "opzioni": [
       "Perché possono contare anche completezza, fonti, robustezza, sicurezza e chiarezza",
-      "Perché basta aggiungere la completezza alla valutazione, senza considerare sicurezza e fonti",
       "Perché ogni risposta generata è corretta se è scritta in modo fluido",
-      "Perché la valutazione deve ignorare il contesto della domanda"
+      "Perché la valutazione deve ignorare il contesto della domanda",
+      "Perché basta aggiungere la completezza alla valutazione, senza considerare sicurezza e fonti"
     ],
     "risposta_corretta": "Perché possono contare anche completezza, fonti, robustezza, sicurezza e chiarezza",
     "spiegazione": "Molti sistemi AI non producono solo una risposta secca. Serve valutare qualità, affidabilità, aderenza al contesto, sicurezza e capacità di gestire casi difficili.",
@@ -374,10 +374,10 @@
     "livello": "avanzato",
     "domanda": "Qual è un esempio realistico di prompt injection in un'app che legge documenti esterni?",
     "opzioni": [
+      "Una risposta contiene una parola inglese invece di una italiana",
       "Un documento contiene istruzioni nascoste che provano a far ignorare le regole del sistema",
-      "Un documento contiene testo che il modello potrebbe scambiare per istruzioni operative",
       "Un utente scrive una domanda troppo breve per essere capita",
-      "Una risposta contiene una parola inglese invece di una italiana"
+      "Un documento contiene testo che il modello potrebbe scambiare per istruzioni operative"
     ],
     "risposta_corretta": "Un documento contiene istruzioni nascoste che provano a far ignorare le regole del sistema",
     "spiegazione": "La prompt injection può arrivare anche da contenuti esterni. Un documento può contenere istruzioni malevole che cercano di far cambiare comportamento al modello o ai tool collegati.",
@@ -397,10 +397,10 @@
     "livello": "avanzato",
     "domanda": "Perché in un'app AI conviene separare recupero dei dati, generazione e controllo finale?",
     "opzioni": [
-      "Per rendere più chiaro dove nasce un errore e migliorare ogni fase separatamente",
-      "Per analizzare ogni fase separatamente, ma senza collegare gli errori al risultato finale",
       "Per fare in modo che il modello non riceva mai alcun contesto",
-      "Per impedire all'app di usare database o API"
+      "Per impedire all'app di usare database o API",
+      "Per analizzare ogni fase separatamente, ma senza collegare gli errori al risultato finale",
+      "Per rendere più chiaro dove nasce un errore e migliorare ogni fase separatamente"
     ],
     "risposta_corretta": "Per rendere più chiaro dove nasce un errore e migliorare ogni fase separatamente",
     "spiegazione": "Separare le fasi aiuta a capire se il problema nasce dal retrieval, dal prompt, dalla generazione o dal controllo finale. Questo rende debug e miglioramento molto più ordinati.",
@@ -420,9 +420,9 @@
     "livello": "avanzato",
     "domanda": "Quale rischio nasce se un agente salva memoria personale senza criteri chiari?",
     "opzioni": [
-      "Può conservare informazioni inutili, sensibili o non più valide e usarle fuori contesto",
       "Può conservare informazioni personali utili, ma senza distinguere tra dati pertinenti e dati sensibili",
       "Diventa automaticamente incapace di rispondere a domande generali",
+      "Può conservare informazioni inutili, sensibili o non più valide e usarle fuori contesto",
       "Trasforma ogni informazione salvata in codice eseguibile"
     ],
     "risposta_corretta": "Può conservare informazioni inutili, sensibili o non più valide e usarle fuori contesto",
@@ -443,10 +443,10 @@
     "livello": "avanzato",
     "domanda": "Perché un'app AI in produzione dovrebbe registrare errori e feedback degli utenti?",
     "opzioni": [
+      "Per evitare qualsiasi aggiornamento futuro del sistema",
       "Per individuare casi problematici reali e migliorare sicurezza, qualità e affidabilità",
-      "Per individuare problemi reali, ma senza usarli per migliorare il sistema",
       "Per sostituire ogni test prima del rilascio",
-      "Per evitare qualsiasi aggiornamento futuro del sistema"
+      "Per individuare problemi reali, ma senza usarli per migliorare il sistema"
     ],
     "risposta_corretta": "Per individuare casi problematici reali e migliorare sicurezza, qualità e affidabilità",
     "spiegazione": "I test iniziali non coprono tutti gli scenari. Log e feedback aiutano a scoprire errori ricorrenti, casi limite e problemi di sicurezza emersi nell'uso reale.",
@@ -466,10 +466,10 @@
     "livello": "facile",
     "domanda": "Qual è il ruolo principale della CPU in un computer?",
     "opzioni": [
-      "Eseguire istruzioni ed elaborare operazioni",
+      "Gestire principalmente l'elaborazione grafica delle immagini",
       "Conservare temporaneamente i dati usati dai programmi",
       "Archiviare file e programmi anche a computer spento",
-      "Gestire principalmente l'elaborazione grafica delle immagini"
+      "Eseguire istruzioni ed elaborare operazioni"
     ],
     "risposta_corretta": "Eseguire istruzioni ed elaborare operazioni",
     "spiegazione": "La CPU è il processore principale del computer: esegue istruzioni, calcoli e operazioni logiche. La RAM conserva temporaneamente i dati dei programmi, SSD o hard disk archiviano i file in modo permanente, mentre la GPU gestisce soprattutto l'elaborazione grafica.",
@@ -490,8 +490,8 @@
     "domanda": "A cosa serve principalmente un SSD?",
     "opzioni": [
       "A salvare dati e programmi anche quando il computer è spento",
-      "A conservare temporaneamente i dati usati dai programmi durante l'esecuzione",
       "A eseguire direttamente tutte le istruzioni della CPU",
+      "A conservare temporaneamente i dati usati dai programmi durante l'esecuzione",
       "A gestire principalmente i calcoli grafici della scheda video"
     ],
     "risposta_corretta": "A salvare dati e programmi anche quando il computer è spento",
@@ -512,9 +512,9 @@
     "livello": "facile",
     "domanda": "Che cos'è un sistema operativo?",
     "opzioni": [
-      "Il software che gestisce risorse del computer e permette di usare programmi",
-      "Un programma applicativo usato per svolgere un compito specifico",
       "Un componente hardware che aumenta lo spazio di archiviazione",
+      "Un programma applicativo usato per svolgere un compito specifico",
+      "Il software che gestisce risorse del computer e permette di usare programmi",
       "Una cartella che contiene file personali dell'utente"
     ],
     "risposta_corretta": "Il software che gestisce risorse del computer e permette di usare programmi",
@@ -535,10 +535,10 @@
     "livello": "facile",
     "domanda": "A cosa serve normalmente un ciclo in programmazione?",
     "opzioni": [
-      "A ripetere un blocco di istruzioni più volte",
-      "A scegliere se eseguire un blocco una sola volta in base a una condizione",
       "A salvare un file in modo permanente",
-      "A cancellare tutte le variabili del programma"
+      "A scegliere se eseguire un blocco una sola volta in base a una condizione",
+      "A cancellare tutte le variabili del programma",
+      "A ripetere un blocco di istruzioni più volte"
     ],
     "risposta_corretta": "A ripetere un blocco di istruzioni più volte",
     "spiegazione": "Un ciclo permette di ripetere istruzioni finché una condizione è vera o per un numero definito di volte. Una condizione invece sceglie quale ramo di codice eseguire, ma non ripete automaticamente il blocco.",
@@ -558,9 +558,9 @@
     "livello": "facile",
     "domanda": "Che cosa rappresenta normalmente un valore booleano?",
     "opzioni": [
+      "Una stringa di testo composta da caratteri",
       "Un valore che può essere vero o falso",
       "Un valore numerico usato per contare due alternative",
-      "Una stringa di testo composta da caratteri",
       "Un valore assente o non definito"
     ],
     "risposta_corretta": "Un valore che può essere vero o falso",
@@ -582,9 +582,9 @@
     "domanda": "Che cosa indica normalmente il percorso di un file?",
     "opzioni": [
       "La posizione del file dentro cartelle e sottocartelle",
-      "Il nome del file senza indicare le cartelle in cui si trova",
+      "Il numero di volte in cui il file è stato copiato",
       "La velocità con cui il file viene aperto",
-      "Il numero di volte in cui il file è stato copiato"
+      "Il nome del file senza indicare le cartelle in cui si trova"
     ],
     "risposta_corretta": "La posizione del file dentro cartelle e sottocartelle",
     "spiegazione": "Il percorso indica dove si trova un file nel sistema, dentro una struttura di cartelle e sottocartelle. Il solo nome del file non basta sempre a identificarne la posizione.",
@@ -604,10 +604,10 @@
     "livello": "intermedio",
     "domanda": "Perché una funzione è utile in un programma?",
     "opzioni": [
-      "Permette di raggruppare istruzioni riutilizzabili con un compito chiaro",
-      "Permette di raggruppare istruzioni, ma senza poter ricevere dati o restituire risultati",
       "Serve solo a rendere il codice più lungo senza motivo",
-      "Sostituisce sempre la necessità di usare variabili"
+      "Sostituisce sempre la necessità di usare variabili",
+      "Permette di raggruppare istruzioni riutilizzabili con un compito chiaro",
+      "Permette di raggruppare istruzioni, ma senza poter ricevere dati o restituire risultati"
     ],
     "risposta_corretta": "Permette di raggruppare istruzioni riutilizzabili con un compito chiaro",
     "spiegazione": "Una funzione raccoglie istruzioni collegate a un compito. Può ricevere dati in ingresso, elaborarli e restituire un risultato, evitando ripetizioni e rendendo il codice più ordinato.",
@@ -627,10 +627,10 @@
     "livello": "intermedio",
     "domanda": "A cosa serve una query SELECT in SQL?",
     "opzioni": [
+      "A trasformare automaticamente SQL in HTML",
       "A leggere dati da una o più tabelle",
-      "A leggere dati solo da una singola tabella, senza condizioni o collegamenti",
       "A cancellare sempre l'intero database",
-      "A trasformare automaticamente SQL in HTML"
+      "A leggere dati solo da una singola tabella, senza condizioni o collegamenti"
     ],
     "risposta_corretta": "A leggere dati da una o più tabelle",
     "spiegazione": "SELECT viene usato per interrogare il database e ottenere dati. Può leggere da una o più tabelle e può essere combinato con condizioni, ordinamenti e join.",
@@ -651,9 +651,9 @@
     "domanda": "Perché si usa un JOIN in un database relazionale?",
     "opzioni": [
       "Per combinare dati collegati provenienti da tabelle diverse",
-      "Per combinare tabelle diverse creando automaticamente relazioni non definite",
+      "Per eliminare sempre le chiavi primarie dal database",
       "Per rinominare automaticamente tutti i campi di una tabella",
-      "Per eliminare sempre le chiavi primarie dal database"
+      "Per combinare tabelle diverse creando automaticamente relazioni non definite"
     ],
     "risposta_corretta": "Per combinare dati collegati provenienti da tabelle diverse",
     "spiegazione": "Un JOIN permette di unire informazioni distribuite in più tabelle tramite relazioni, per esempio collegando ordini e clienti attraverso un identificatore comune.",
@@ -673,10 +673,10 @@
     "livello": "intermedio",
     "domanda": "Che cosa indica di solito una risposta HTTP 404?",
     "opzioni": [
+      "Il server ha generato un errore interno",
       "La risorsa richiesta non è stata trovata sul server",
       "La richiesta non è autenticata correttamente",
-      "L'utente è autenticato ma non autorizzato",
-      "Il server ha generato un errore interno"
+      "L'utente è autenticato ma non autorizzato"
     ],
     "risposta_corretta": "La risorsa richiesta non è stata trovata sul server",
     "spiegazione": "HTTP 404 indica che la risorsa richiesta non è stata trovata. 401 riguarda un problema di autenticazione, 403 indica permessi insufficienti, mentre 500 segnala un errore interno del server.",
@@ -696,10 +696,10 @@
     "livello": "intermedio",
     "domanda": "A cosa serve un branch in Git?",
     "opzioni": [
-      "A lavorare su una linea separata di sviluppo senza modificare subito quella principale",
-      "A salvare una fotografia dello stato del progetto nella cronologia Git",
       "A scaricare automaticamente ogni libreria mancante",
-      "A trasformare il repository in un database SQL"
+      "A salvare una fotografia dello stato del progetto nella cronologia Git",
+      "A trasformare il repository in un database SQL",
+      "A lavorare su una linea separata di sviluppo senza modificare subito quella principale"
     ],
     "risposta_corretta": "A lavorare su una linea separata di sviluppo senza modificare subito quella principale",
     "spiegazione": "Un branch permette di sviluppare modifiche in parallelo. È utile per nuove funzionalità, correzioni o esperimenti, senza toccare immediatamente il ramo principale. Il commit invece salva uno stato del progetto.",
@@ -719,10 +719,10 @@
     "livello": "intermedio",
     "domanda": "Perché HTTPS è importante per un sito web?",
     "opzioni": [
-      "Per proteggere la comunicazione tra browser e server tramite cifratura",
-      "Per verificare che il sito usi un certificato digitale valido, senza cifrare la comunicazione",
       "Per rendere il sito sempre più veloce indipendentemente dal server",
-      "Per impedire al server di ricevere richieste dal browser"
+      "Per verificare che il sito usi un certificato digitale valido, senza cifrare la comunicazione",
+      "Per impedire al server di ricevere richieste dal browser",
+      "Per proteggere la comunicazione tra browser e server tramite cifratura"
     ],
     "risposta_corretta": "Per proteggere la comunicazione tra browser e server tramite cifratura",
     "spiegazione": "HTTPS protegge la comunicazione tra browser e server tramite cifratura. I certificati sono parte importante del meccanismo, ma il punto centrale è proteggere lo scambio di dati.",
@@ -742,10 +742,10 @@
     "livello": "intermedio",
     "domanda": "Che cosa significa rendere una pagina web responsive?",
     "opzioni": [
-      "Far adattare layout e contenuti a schermi di dimensioni diverse",
       "Far adattare solo le immagini, lasciando invariato il layout della pagina",
-      "Far rispondere il server sempre con lo stesso codice HTTP",
-      "Impedire agli utenti di aprire la pagina da smartphone"
+      "Far adattare layout e contenuti a schermi di dimensioni diverse",
+      "Impedire agli utenti di aprire la pagina da smartphone",
+      "Far rispondere il server sempre con lo stesso codice HTTP"
     ],
     "risposta_corretta": "Far adattare layout e contenuti a schermi di dimensioni diverse",
     "spiegazione": "Una pagina responsive si adatta a desktop, tablet e smartphone. Layout, dimensioni e spaziature cambiano per restare leggibili e usabili.",
@@ -765,10 +765,10 @@
     "livello": "avanzato",
     "domanda": "Perché la validazione dei dati dovrebbe avvenire anche lato backend?",
     "opzioni": [
-      "Perché i dati inviati al server non devono essere considerati affidabili solo perché il frontend li controlla",
       "Perché i controlli del frontend migliorano l'esperienza utente, ma possono essere aggirati",
       "Perché la validazione lato backend sostituisce ogni test automatico",
-      "Perché il frontend non può mai mostrare messaggi di errore"
+      "Perché il frontend non può mai mostrare messaggi di errore",
+      "Perché i dati inviati al server non devono essere considerati affidabili solo perché il frontend li controlla"
     ],
     "risposta_corretta": "Perché i dati inviati al server non devono essere considerati affidabili solo perché il frontend li controlla",
     "spiegazione": "Il controllo lato frontend migliora l'esperienza utente, ma può essere aggirato. Il backend deve validare i dati perché è il punto che protegge applicazione, database e regole di business.",
@@ -788,10 +788,10 @@
     "livello": "avanzato",
     "domanda": "Qual è una differenza importante tra hashing e cifratura?",
     "opzioni": [
-      "L'hashing è pensato per non essere invertito facilmente, mentre la cifratura può essere decifrata con una chiave",
+      "La cifratura produce sempre una impronta fissa come un hash",
       "L'hashing può essere decifrato con una chiave corretta, mentre la cifratura no",
       "La cifratura serve solo a confrontare se due dati sono uguali",
-      "La cifratura produce sempre una impronta fissa come un hash"
+      "L'hashing è pensato per non essere invertito facilmente, mentre la cifratura può essere decifrata con una chiave"
     ],
     "risposta_corretta": "L'hashing è pensato per non essere invertito facilmente, mentre la cifratura può essere decifrata con una chiave",
     "spiegazione": "Un hash è usato spesso per verificare integrità o password senza recuperare il valore originale. La cifratura invece protegge dati che devono poter essere decifrati da chi possiede la chiave.",
@@ -811,10 +811,10 @@
     "livello": "avanzato",
     "domanda": "Perché la cache può migliorare le prestazioni di un'applicazione?",
     "opzioni": [
-      "Perché evita di ricalcolare o recuperare più volte dati usati spesso",
       "Perché conserva temporaneamente dati frequenti, ma può restituire dati vecchi se non viene gestita bene",
-      "Perché sposta automaticamente ogni dato dal database alla memoria locale",
-      "Perché riduce il carico dell'applicazione anche quando i dati non vengono riutilizzati"
+      "Perché evita di ricalcolare o recuperare più volte dati usati spesso",
+      "Perché riduce il carico dell'applicazione anche quando i dati non vengono riutilizzati",
+      "Perché sposta automaticamente ogni dato dal database alla memoria locale"
     ],
     "risposta_corretta": "Perché evita di ricalcolare o recuperare più volte dati usati spesso",
     "spiegazione": "La cache conserva temporaneamente risultati o dati molto richiesti. Questo può ridurre tempi di risposta e carico su database o servizi esterni. Va però gestita bene, perché una cache non aggiornata può restituire dati vecchi.",
@@ -834,9 +834,9 @@
     "livello": "avanzato",
     "domanda": "Perché la paginazione è utile quando un'API restituisce molti risultati?",
     "opzioni": [
-      "Per dividere i risultati in blocchi più piccoli e gestibili",
-      "Per limitare la quantità di dati restituiti in ogni risposta senza perdere l'accesso agli altri risultati",
       "Per impedire all'API di restituire qualsiasi dato",
+      "Per limitare la quantità di dati restituiti in ogni risposta senza perdere l'accesso agli altri risultati",
+      "Per dividere i risultati in blocchi più piccoli e gestibili",
       "Per trasformare ogni risposta in un errore 404"
     ],
     "risposta_corretta": "Per dividere i risultati in blocchi più piccoli e gestibili",
@@ -858,8 +858,8 @@
     "domanda": "Che vantaggio offre una pipeline CI/CD in un progetto software?",
     "opzioni": [
       "Automatizza controlli, test e rilascio riducendo errori manuali ripetitivi",
-      "Automatizza test e build, ma richiede comunque controllo umano e codice scritto correttamente",
       "Sostituisce completamente la necessità di scrivere codice",
+      "Automatizza test e build, ma richiede comunque controllo umano e codice scritto correttamente",
       "Impedisce a più sviluppatori di collaborare sullo stesso progetto"
     ],
     "risposta_corretta": "Automatizza controlli, test e rilascio riducendo errori manuali ripetitivi",
@@ -880,8 +880,8 @@
     "livello": "avanzato",
     "domanda": "Perché un container può rendere più prevedibile l'esecuzione di un'applicazione?",
     "opzioni": [
-      "Perché include applicazione e dipendenze in un ambiente isolato e riproducibile",
       "Perché include applicazione e dipendenze e quindi garantisce sempre lo stesso risultato in qualunque ambiente",
+      "Perché include applicazione e dipendenze in un ambiente isolato e riproducibile",
       "Perché aggiorna automaticamente tutte le dipendenze alla versione più recente",
       "Perché installa automaticamente ogni libreria mancante a ogni avvio"
     ],
@@ -947,10 +947,10 @@
     "livello": "facile",
     "domanda": "Quanto fa 72 - 28?",
     "opzioni": [
-      "44",
-      "46",
       "54",
-      "40"
+      "40",
+      "46",
+      "44"
     ],
     "risposta_corretta": "44",
     "spiegazione": "Per calcolare 72 - 28 possiamo fare 72 - 30 = 42 e poi aggiungere 2, perché abbiamo tolto 2 in più. Quindi 42 + 2 = 44.",
@@ -968,10 +968,10 @@
     "livello": "facile",
     "domanda": "Quanto fa 12 × 6?",
     "opzioni": [
+      "78",
       "72",
       "62",
-      "68",
-      "78"
+      "68"
     ],
     "risposta_corretta": "72",
     "spiegazione": "12 × 6 significa sommare 12 per 6 volte oppure fare 10 × 6 + 2 × 6. Quindi 60 + 12 = 72.",
@@ -989,9 +989,9 @@
     "livello": "facile",
     "domanda": "Se 56 caramelle vengono divise in 8 sacchetti uguali, quante caramelle ci sono in ogni sacchetto?",
     "opzioni": [
-      "7",
-      "6",
       "8",
+      "6",
+      "7",
       "9"
     ],
     "risposta_corretta": "7",
@@ -1010,9 +1010,9 @@
     "livello": "facile",
     "domanda": "Quanto vale 0,5 di 30?",
     "opzioni": [
-      "15",
-      "10",
       "20",
+      "10",
+      "15",
       "25"
     ],
     "risposta_corretta": "15",
@@ -1031,10 +1031,10 @@
     "livello": "facile",
     "domanda": "Un triangolo ha base 10 cm e altezza 6 cm. Qual è la sua area?",
     "opzioni": [
-      "30 cm²",
-      "60 cm²",
+      "40 cm²",
       "16 cm²",
-      "40 cm²"
+      "60 cm²",
+      "30 cm²"
     ],
     "risposta_corretta": "30 cm²",
     "spiegazione": "L'area del triangolo si calcola con base × altezza / 2. Quindi 10 × 6 = 60, poi 60 / 2 = 30 cm². 60 cm² sarebbe l'errore di dimenticare la divisione per 2.",
@@ -1052,10 +1052,10 @@
     "livello": "intermedio",
     "domanda": "Un prezzo passa da 200 euro a 180 euro. Qual è la percentuale di diminuzione?",
     "opzioni": [
-      "10%",
       "20%",
-      "15%",
-      "5%"
+      "10%",
+      "5%",
+      "15%"
     ],
     "risposta_corretta": "10%",
     "spiegazione": "La diminuzione è 200 - 180 = 20 euro. La percentuale si calcola rispetto al valore iniziale: 20 / 200 × 100 = 10%.",
@@ -1073,10 +1073,10 @@
     "livello": "intermedio",
     "domanda": "Se 4 litri di vernice coprono 28 m², quanti metri quadrati coprono 7 litri allo stesso rendimento?",
     "opzioni": [
-      "49 m²",
-      "42 m²",
       "56 m²",
-      "35 m²"
+      "42 m²",
+      "35 m²",
+      "49 m²"
     ],
     "risposta_corretta": "49 m²",
     "spiegazione": "Prima calcoliamo quanto copre 1 litro: 28 / 4 = 7 m². Con 7 litri si coprono 7 × 7 = 49 m².",
@@ -1116,8 +1116,8 @@
     "domanda": "La media di 12, 15, 18 e 19 è:",
     "opzioni": [
       "16",
-      "15",
       "17",
+      "15",
       "18"
     ],
     "risposta_corretta": "16",
@@ -1136,9 +1136,9 @@
     "livello": "intermedio",
     "domanda": "Quale frazione è maggiore tra 3/5 e 4/7?",
     "opzioni": [
-      "3/5",
       "4/7",
       "Sono uguali",
+      "3/5",
       "Non si possono confrontare"
     ],
     "risposta_corretta": "3/5",
@@ -1157,9 +1157,9 @@
     "livello": "intermedio",
     "domanda": "Un cerchio ha raggio 5 cm. Usando π ≈ 3,14, qual è circa la sua circonferenza?",
     "opzioni": [
-      "31,4 cm",
-      "15,7 cm",
       "78,5 cm",
+      "15,7 cm",
+      "31,4 cm",
       "25 cm"
     ],
     "risposta_corretta": "31,4 cm",
@@ -1178,9 +1178,9 @@
     "livello": "intermedio",
     "domanda": "In una scatola ci sono 5 penne nere, 3 blu e 2 rosse. Qual è la probabilità di estrarre una penna blu?",
     "opzioni": [
+      "5/10",
       "3/10",
       "3/8",
-      "5/10",
       "2/10"
     ],
     "risposta_corretta": "3/10",
@@ -1200,8 +1200,8 @@
     "domanda": "Un rettangolo ha perimetro 34 cm e base 10 cm. Qual è la sua altezza?",
     "opzioni": [
       "7 cm",
-      "6 cm",
       "8 cm",
+      "6 cm",
       "5 cm"
     ],
     "risposta_corretta": "7 cm",
@@ -1220,10 +1220,10 @@
     "livello": "avanzato",
     "domanda": "La somma di due numeri è 35 e la loro differenza è 9. Qual è il numero maggiore?",
     "opzioni": [
-      "22",
       "21",
+      "26",
       "23",
-      "26"
+      "22"
     ],
     "risposta_corretta": "22",
     "spiegazione": "Se il numero maggiore è A e il minore è B, allora A + B = 35 e A - B = 9. Sommando le due equazioni otteniamo 2A = 44, quindi A = 22.",
@@ -1242,9 +1242,9 @@
     "domanda": "Un'auto percorre 150 km a 75 km/h. Quanto tempo impiega?",
     "opzioni": [
       "2 ore",
-      "1,5 ore",
+      "3 ore",
       "2,5 ore",
-      "3 ore"
+      "1,5 ore"
     ],
     "risposta_corretta": "2 ore",
     "spiegazione": "Il tempo si calcola facendo distanza / velocità. Quindi 150 / 75 = 2 ore.",
@@ -1262,8 +1262,8 @@
     "livello": "avanzato",
     "domanda": "Da un gruppo di 5 persone bisogna scegliere presidente e vice. I ruoli sono diversi. Quante scelte possibili ci sono?",
     "opzioni": [
-      "20",
       "10",
+      "20",
       "25",
       "15"
     ],
@@ -1284,8 +1284,8 @@
     "domanda": "Un valore diminuisce del 20% e diventa 96. Qual era il valore iniziale?",
     "opzioni": [
       "120",
-      "116",
       "100",
+      "116",
       "128"
     ],
     "risposta_corretta": "120",
@@ -1304,10 +1304,10 @@
     "livello": "avanzato",
     "domanda": "In una miscela il rapporto tra succo e acqua è 2:3. Se la miscela totale è 25 litri, quanti litri sono di succo?",
     "opzioni": [
-      "10 litri",
-      "15 litri",
       "12 litri",
-      "8 litri"
+      "10 litri",
+      "8 litri",
+      "15 litri"
     ],
     "risposta_corretta": "10 litri",
     "spiegazione": "Il rapporto 2:3 ha 5 parti totali. Se 5 parti valgono 25 litri, una parte vale 25 / 5 = 5 litri. Il succo corrisponde a 2 parti, quindi 2 × 5 = 10 litri.",
@@ -1325,9 +1325,9 @@
     "livello": "avanzato",
     "domanda": "Qual è il valore di 2³ + 3²?",
     "opzioni": [
-      "17",
-      "13",
       "25",
+      "13",
+      "17",
       "18"
     ],
     "risposta_corretta": "17",
@@ -1346,10 +1346,10 @@
     "livello": "facile",
     "domanda": "Quale parola inglese significa 'finestra'?",
     "opzioni": [
+      "floor",
       "window",
       "wall",
-      "door",
-      "floor"
+      "door"
     ],
     "risposta_corretta": "window",
     "spiegazione": "'Window' significa finestra. 'Wall' significa muro, 'door' significa porta, mentre 'floor' significa pavimento.",
@@ -1388,10 +1388,10 @@
     "livello": "facile",
     "domanda": "Completa la frase: This is Marco. ___ phone is new.",
     "opzioni": [
-      "His",
-      "Her",
       "Their",
-      "Our"
+      "His",
+      "Our",
+      "Her"
     ],
     "risposta_corretta": "His",
     "spiegazione": "Marco è maschile singolare, quindi il possessivo corretto è 'his'. La frase significa: Questo è Marco. Il suo telefono è nuovo.",
@@ -1430,10 +1430,10 @@
     "livello": "facile",
     "domanda": "Completa la frase: I go to work ___ bus.",
     "opzioni": [
+      "with",
       "by",
-      "on",
       "at",
-      "with"
+      "on"
     ],
     "risposta_corretta": "by",
     "spiegazione": "Per indicare il mezzo di trasporto in generale si usa 'by': by bus, by train, by car. La frase corretta è: 'I go to work by bus'.",
@@ -1451,10 +1451,10 @@
     "livello": "facile",
     "domanda": "Completa la frase: I ___ swim, but I can't drive.",
     "opzioni": [
-      "can",
-      "must",
+      "will",
       "should",
-      "will"
+      "must",
+      "can"
     ],
     "risposta_corretta": "can",
     "spiegazione": "'Can' indica capacità: 'I can swim' significa 'so nuotare'. 'Must' indica obbligo, 'should' consiglio, 'will' futuro.",
@@ -1472,10 +1472,10 @@
     "livello": "intermedio",
     "domanda": "Completa la frase: I have lived in Rome ___ 2020.",
     "opzioni": [
-      "since",
-      "for",
+      "from",
       "during",
-      "from"
+      "since",
+      "for"
     ],
     "risposta_corretta": "since",
     "spiegazione": "Con il present perfect si usa 'since' quando indichiamo il punto di inizio, come un anno preciso: 'since 2020'. 'For' si usa con una durata, per esempio 'for three years'.",
@@ -1493,10 +1493,10 @@
     "livello": "intermedio",
     "domanda": "Completa la frase: There isn't ___ information on the website.",
     "opzioni": [
-      "much",
-      "many",
+      "several",
       "few",
-      "several"
+      "much",
+      "many"
     ],
     "risposta_corretta": "much",
     "spiegazione": "'Information' in inglese è normalmente non numerabile. Con i nomi non numerabili si usa 'much', non 'many'.",
@@ -1514,10 +1514,10 @@
     "livello": "intermedio",
     "domanda": "Completa la frase: I enjoy ___ new programming languages.",
     "opzioni": [
-      "learning",
-      "to learn",
       "learn",
-      "learned"
+      "learned",
+      "learning",
+      "to learn"
     ],
     "risposta_corretta": "learning",
     "spiegazione": "Dopo il verbo 'enjoy' si usa il verbo in -ing. La frase corretta è: 'I enjoy learning new programming languages'.",
@@ -1536,9 +1536,9 @@
     "domanda": "Completa la frase: The file is too large ___ upload.",
     "opzioni": [
       "to",
-      "for",
+      "that",
       "than",
-      "that"
+      "for"
     ],
     "risposta_corretta": "to",
     "spiegazione": "La struttura corretta è 'too + aggettivo + to + verbo'. Quindi: 'The file is too large to upload'.",
@@ -1556,9 +1556,9 @@
     "livello": "intermedio",
     "domanda": "Completa la frase: If I had more time, I ___ a second project.",
     "opzioni": [
-      "would start",
-      "will start",
       "start",
+      "will start",
+      "would start",
       "started"
     ],
     "risposta_corretta": "would start",
@@ -1577,9 +1577,9 @@
     "livello": "intermedio",
     "domanda": "Nella frase 'I need to set up the app', che cosa significa 'set up'?",
     "opzioni": [
-      "configurare",
-      "spegnere",
       "cercare",
+      "spegnere",
+      "configurare",
       "rimandare"
     ],
     "risposta_corretta": "configurare",
@@ -1598,10 +1598,10 @@
     "livello": "intermedio",
     "domanda": "Completa la frase: This laptop is ___ than my old one.",
     "opzioni": [
-      "faster",
-      "fastest",
+      "fastly",
       "more fast",
-      "fastly"
+      "faster",
+      "fastest"
     ],
     "risposta_corretta": "faster",
     "spiegazione": "Con un aggettivo breve come 'fast' il comparativo si forma aggiungendo -er: 'faster'. 'Fastest' è superlativo.",
@@ -1619,10 +1619,10 @@
     "livello": "avanzato",
     "domanda": "Completa la frase: The software is reliable; ___, it still needs regular maintenance.",
     "opzioni": [
-      "nevertheless",
       "therefore",
       "because",
-      "provided that"
+      "provided that",
+      "nevertheless"
     ],
     "risposta_corretta": "nevertheless",
     "spiegazione": "'Nevertheless' introduce un contrasto simile a 'however': il software è affidabile, tuttavia ha comunque bisogno di manutenzione.",
@@ -1661,10 +1661,10 @@
     "livello": "avanzato",
     "domanda": "In un report tecnico, quale frase indica che il problema è stato risolto senza specificare chi lo ha risolto?",
     "opzioni": [
-      "The issue has been fixed.",
       "The issue has fixed.",
+      "The issue has been fix.",
       "The issue was been fixed.",
-      "The issue has been fix."
+      "The issue has been fixed."
     ],
     "risposta_corretta": "The issue has been fixed.",
     "spiegazione": "La frase corretta usa il passivo: 'has been' + participio passato. Quindi la forma giusta è 'The issue has been fixed'. È utile quando interessa il risultato dell'azione, non chi l'ha compiuta.",
@@ -1682,10 +1682,10 @@
     "livello": "avanzato",
     "domanda": "Trasforma correttamente in discorso indiretto: 'We will release the update tomorrow.'",
     "opzioni": [
+      "They said they had released the update tomorrow.",
       "They said they would release the update the next day.",
-      "They said they will release the update tomorrow.",
       "They said they released the update the next day.",
-      "They said they had released the update tomorrow."
+      "They said they will release the update tomorrow."
     ],
     "risposta_corretta": "They said they would release the update the next day.",
     "spiegazione": "Nel discorso indiretto, 'will' diventa spesso 'would' e 'tomorrow' diventa 'the next day', se il riferimento temporale cambia.",
@@ -1703,10 +1703,10 @@
     "livello": "avanzato",
     "domanda": "Completa la frase: If I had known about the error, I ___ it earlier.",
     "opzioni": [
-      "would have fixed",
+      "had fixed",
       "will have fixed",
-      "would fix",
-      "had fixed"
+      "would have fixed",
+      "would fix"
     ],
     "risposta_corretta": "would have fixed",
     "spiegazione": "Questa frase usa il third conditional: If + past perfect, would have + participio passato. La forma corretta è quindi: 'If I had known about the error, I would have fixed it earlier'.",
@@ -1724,10 +1724,10 @@
     "livello": "avanzato",
     "domanda": "Nel contesto software, quale traduzione rende meglio 'The app crashed during startup'?",
     "opzioni": [
-      "L'app si è bloccata durante l'avvio.",
-      "L'app ha migliorato l'avvio.",
+      "L'app ha ignorato l'avvio.",
       "L'app è stata aggiornata durante l'avvio.",
-      "L'app ha ignorato l'avvio."
+      "L'app si è bloccata durante l'avvio.",
+      "L'app ha migliorato l'avvio."
     ],
     "risposta_corretta": "L'app si è bloccata durante l'avvio.",
     "spiegazione": "Nel contesto software, 'to crash' significa bloccarsi o andare in errore. 'During startup' significa durante l'avvio.",
@@ -1745,10 +1745,10 @@
     "livello": "avanzato",
     "domanda": "Quale frase è più adatta in una comunicazione professionale?",
     "opzioni": [
-      "Could you please send me the updated file?",
       "Send me the file now.",
-      "Give me that file quickly.",
-      "You send the file to me."
+      "Could you please send me the updated file?",
+      "You send the file to me.",
+      "Give me that file quickly."
     ],
     "risposta_corretta": "Could you please send me the updated file?",
     "spiegazione": "'Could you please...' è una forma educata e professionale per fare una richiesta. Le altre frasi sono troppo dirette o poco naturali in un contesto formale.",
@@ -1766,9 +1766,9 @@
     "livello": "facile",
     "domanda": "Quale parola completa meglio l'analogia: caldo sta a freddo come alto sta a ___?",
     "opzioni": [
-      "basso",
       "piccolo",
       "lungo",
+      "basso",
       "vicino"
     ],
     "risposta_corretta": "basso",
@@ -1789,10 +1789,10 @@
     "livello": "facile",
     "domanda": "Quale parola non appartiene allo stesso gruppo?",
     "opzioni": [
-      "martello",
-      "armadio",
       "tavolo",
-      "sedia"
+      "sedia",
+      "martello",
+      "armadio"
     ],
     "risposta_corretta": "martello",
     "spiegazione": "Tavolo, sedia e armadio sono mobili. Martello è un attrezzo, quindi non appartiene allo stesso gruppo.",
@@ -1812,9 +1812,9 @@
     "livello": "facile",
     "domanda": "Una macchina produce 4 pezzi al minuto. Quanti pezzi produce in 5 minuti?",
     "opzioni": [
-      "20",
       "16",
       "24",
+      "20",
       "25"
     ],
     "risposta_corretta": "20",
@@ -1836,9 +1836,9 @@
     "domanda": "Partendo da 3, un numero viene raddoppiato quattro volte. Quale valore si ottiene?",
     "opzioni": [
       "48",
-      "24",
       "36",
-      "64"
+      "64",
+      "24"
     ],
     "risposta_corretta": "48",
     "spiegazione": "Partiamo da 3. Primo raddoppio: 6. Secondo: 12. Terzo: 24. Quarto: 48. 24 è il valore dopo tre raddoppi, quindi è vicino ma incompleto.",
@@ -1858,10 +1858,10 @@
     "livello": "facile",
     "domanda": "Tutti i cani sono animali. Fido è un cane. Quale conclusione è corretta?",
     "opzioni": [
-      "Fido è un animale",
+      "Alcuni cani non sono animali",
       "Fido potrebbe non essere un animale anche se è un cane",
       "Tutti gli animali sono cani",
-      "Alcuni cani non sono animali"
+      "Fido è un animale"
     ],
     "risposta_corretta": "Fido è un animale",
     "spiegazione": "Se tutti i cani sono animali e Fido è un cane, allora Fido appartiene al gruppo degli animali. Non vale invece il contrario: non tutti gli animali sono cani.",
@@ -1881,9 +1881,9 @@
     "livello": "facile",
     "domanda": "Se oggi piove, Marco prende l'ombrello. Oggi piove. Cosa si può concludere?",
     "opzioni": [
+      "Oggi non piove",
       "Marco prende l'ombrello",
       "Marco prende l'ombrello solo se piove molto forte",
-      "Oggi non piove",
       "Marco prende sempre l'ombrello"
     ],
     "risposta_corretta": "Marco prende l'ombrello",
@@ -1904,10 +1904,10 @@
     "livello": "intermedio",
     "domanda": "Completa l'analogia: medico sta a ospedale come insegnante sta a ___?",
     "opzioni": [
-      "scuola",
-      "classe",
+      "libro",
       "lezione",
-      "libro"
+      "classe",
+      "scuola"
     ],
     "risposta_corretta": "scuola",
     "spiegazione": "Il medico lavora tipicamente in ospedale. Allo stesso modo, l'insegnante lavora tipicamente in una scuola. Classe e lezione sono collegate all'insegnante, ma non rappresentano il luogo generale equivalente.",
@@ -1927,9 +1927,9 @@
     "livello": "intermedio",
     "domanda": "Quale coppia mantiene la stessa relazione di: seme : pianta?",
     "opzioni": [
-      "uovo : uccello",
       "germoglio : pianta",
       "foglia : ramo",
+      "uovo : uccello",
       "frutto : albero"
     ],
     "risposta_corretta": "uovo : uccello",
@@ -1950,10 +1950,10 @@
     "livello": "intermedio",
     "domanda": "Un algoritmo parte da 2. A ogni passaggio raddoppia il valore e aggiunge 1. Dopo quattro passaggi quale valore ottiene?",
     "opzioni": [
-      "47",
-      "46",
       "45",
-      "49"
+      "49",
+      "46",
+      "47"
     ],
     "risposta_corretta": "47",
     "spiegazione": "Partiamo da 2. Passaggio 1: 2 × 2 + 1 = 5. Passaggio 2: 5 × 2 + 1 = 11. Passaggio 3: 11 × 2 + 1 = 23. Passaggio 4: 23 × 2 + 1 = 47.",
@@ -1973,10 +1973,10 @@
     "livello": "intermedio",
     "domanda": "Completa la successione: 30, 27, 23, 18, ?",
     "opzioni": [
-      "12",
+      "15",
       "13",
       "14",
-      "15"
+      "12"
     ],
     "risposta_corretta": "12",
     "spiegazione": "Le diminuzioni aumentano di 1 ogni volta: -3, -4, -5. Dopo 18 bisogna togliere 6, quindi 18 - 6 = 12.",
@@ -1996,10 +1996,10 @@
     "livello": "intermedio",
     "domanda": "Alcuni programmatori conoscono Python. Tutti quelli che conoscono Python sanno usare variabili. Quale conclusione è sicuramente vera?",
     "opzioni": [
+      "Nessun programmatore conosce Python",
       "Alcuni programmatori sanno usare variabili",
       "Tutti i programmatori sanno usare variabili",
-      "Tutti quelli che sanno usare variabili conoscono Python",
-      "Nessun programmatore conosce Python"
+      "Tutti quelli che sanno usare variabili conoscono Python"
     ],
     "risposta_corretta": "Alcuni programmatori sanno usare variabili",
     "spiegazione": "Alcuni programmatori conoscono Python e tutti quelli che conoscono Python sanno usare variabili. Quindi almeno alcuni programmatori sanno usare variabili. Non possiamo però concludere che tutti i programmatori sappiano usare variabili.",
@@ -2042,10 +2042,10 @@
     "livello": "intermedio",
     "domanda": "Una sequenza alterna numero di lati così: triangolo, quadrato, pentagono, esagono, ?. Quale forma segue?",
     "opzioni": [
-      "ettagono",
-      "esagono",
       "ottagono",
-      "pentagono"
+      "esagono",
+      "pentagono",
+      "ettagono"
     ],
     "risposta_corretta": "ettagono",
     "spiegazione": "Le forme aumentano di un lato alla volta: triangolo 3 lati, quadrato 4, pentagono 5, esagono 6. Dopo viene l'ettagono, che ha 7 lati.",
@@ -2065,10 +2065,10 @@
     "livello": "avanzato",
     "domanda": "Completa l'analogia: allenamento sta a miglioramento come studio sta a ___?",
     "opzioni": [
-      "apprendimento",
+      "materia",
       "interrogazione",
       "lezione",
-      "materia"
+      "apprendimento"
     ],
     "risposta_corretta": "apprendimento",
     "spiegazione": "L'allenamento può portare a un miglioramento. Allo stesso modo, lo studio può portare ad apprendimento. Interrogazione e lezione sono collegate allo studio, ma non rappresentano il risultato logico più diretto.",
@@ -2089,8 +2089,8 @@
     "domanda": "Completa la successione: 1, 4, 9, 16, 25, ?",
     "opzioni": [
       "36",
-      "35",
       "49",
+      "35",
       "30"
     ],
     "risposta_corretta": "36",
@@ -2113,8 +2113,8 @@
     "opzioni": [
       "42",
       "40",
-      "44",
-      "48"
+      "48",
+      "44"
     ],
     "risposta_corretta": "42",
     "spiegazione": "Le differenze aumentano di 2: 4, 6, 8, 10. La differenza successiva è 12. Quindi 30 + 12 = 42.",
@@ -2134,10 +2134,10 @@
     "livello": "avanzato",
     "domanda": "Tutti gli sviluppatori del team usano Git. Alcune persone che usano Git lavorano anche su database. Quale conclusione è sicuramente vera?",
     "opzioni": [
-      "Alcune persone che usano Git lavorano su database",
-      "Alcune persone che lavorano su database sono sviluppatori del team",
       "Tutti gli sviluppatori lavorano su database",
-      "Tutti quelli che usano Git sono sviluppatori"
+      "Tutti quelli che usano Git sono sviluppatori",
+      "Alcune persone che usano Git lavorano su database",
+      "Alcune persone che lavorano su database sono sviluppatori del team"
     ],
     "risposta_corretta": "Alcune persone che usano Git lavorano su database",
     "spiegazione": "La seconda premessa afferma direttamente che alcune persone che usano Git lavorano anche su database. Non possiamo però concludere che quelle persone siano sviluppatori del team, né che tutti gli sviluppatori lavorino su database.",
@@ -2157,10 +2157,10 @@
     "livello": "avanzato",
     "domanda": "Se il server è inattivo, l'app mostra un errore. L'app mostra un errore. Quale conclusione è corretta?",
     "opzioni": [
-      "Il server potrebbe essere inattivo, ma non è certo",
-      "Il server è sicuramente inattivo",
       "L'app non può mostrare errori per altri motivi",
-      "Il server è sicuramente attivo"
+      "Il server è sicuramente attivo",
+      "Il server è sicuramente inattivo",
+      "Il server potrebbe essere inattivo, ma non è certo"
     ],
     "risposta_corretta": "Il server potrebbe essere inattivo, ma non è certo",
     "spiegazione": "La regola dice che se il server è inattivo, allora l'app mostra un errore. Ma se l'app mostra un errore, l'errore potrebbe avere anche altre cause. Concludere che il server è sicuramente inattivo sarebbe un errore logico.",
@@ -2180,9 +2180,9 @@
     "livello": "avanzato",
     "domanda": "Una sequenza segue questa regola: una figura aumenta di un lato e cambia colore a ogni passaggio. Dopo triangolo rosso, quadrato blu, pentagono rosso, esagono blu, cosa viene?",
     "opzioni": [
+      "ottagono rosso",
       "ettagono rosso",
       "ettagono blu",
-      "ottagono rosso",
       "esagono rosso"
     ],
     "risposta_corretta": "ettagono rosso",
@@ -2203,10 +2203,10 @@
     "livello": "avanzato",
     "domanda": "In una sequenza, ogni figura ruota di 90° in senso orario a ogni passaggio. Se una freccia punta in alto, poi a destra, poi in basso, quale direzione segue?",
     "opzioni": [
-      "sinistra",
-      "alto",
+      "basso",
       "destra",
-      "basso"
+      "sinistra",
+      "alto"
     ],
     "risposta_corretta": "sinistra",
     "spiegazione": "La rotazione è sempre di 90 gradi in senso orario: alto, destra, basso, sinistra. Dopo basso, continuando la rotazione oraria, la freccia punta a sinistra.",

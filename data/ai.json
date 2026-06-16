@@ -6,10 +6,10 @@
     "livello": "facile",
     "domanda": "Qual è il ruolo principale di un modello linguistico di grandi dimensioni, chiamato LLM?",
     "opzioni": [
-      "Prevedere e generare testo in base al contesto ricevuto",
       "Classificare testi in categorie fisse senza produrre nuove frasi",
-      "Recuperare documenti esterni senza generare una risposta autonoma",
-      "Tradurre parole usando solo un dizionario statico"
+      "Tradurre parole usando solo un dizionario statico",
+      "Prevedere e generare testo in base al contesto ricevuto",
+      "Recuperare documenti esterni senza generare una risposta autonoma"
     ],
     "risposta_corretta": "Prevedere e generare testo in base al contesto ricevuto",
     "spiegazione": "Un LLM lavora principalmente prevedendo e generando testo coerente con il contesto ricevuto. Può anche aiutare in classificazione, traduzione o recupero informazioni, ma il suo ruolo centrale è generare linguaggio naturale, non limitarsi a una singola funzione rigida.",
@@ -29,10 +29,10 @@
     "livello": "intermedio",
     "domanda": "Perché un prompt dettagliato può migliorare la risposta di un modello AI?",
     "opzioni": [
-      "Perché fornisce più contesto e riduce le ambiguità della richiesta",
       "Perché modifica i parametri interni del modello durante la risposta",
-      "Perché sostituisce il controllo finale sulla qualità della risposta",
-      "Perché obbliga il modello a copiare solo frasi presenti nel prompt"
+      "Perché fornisce più contesto e riduce le ambiguità della richiesta",
+      "Perché obbliga il modello a copiare solo frasi presenti nel prompt",
+      "Perché sostituisce il controllo finale sulla qualità della risposta"
     ],
     "risposta_corretta": "Perché fornisce più contesto e riduce le ambiguità della richiesta",
     "spiegazione": "Un prompt dettagliato aiuta perché chiarisce obiettivo, contesto, vincoli e formato desiderato. Non cambia i parametri interni del modello e non sostituisce il controllo finale: semplicemente riduce l'ambiguità della richiesta.",

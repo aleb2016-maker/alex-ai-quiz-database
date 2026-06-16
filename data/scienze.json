@@ -6,10 +6,10 @@
     "livello": "facile",
     "domanda": "Quale organulo cellulare è principalmente responsabile della produzione di energia nella cellula?",
     "opzioni": [
-      "Nucleo",
       "Mitocondrio",
       "Ribosoma",
-      "Membrana cellulare"
+      "Membrana cellulare",
+      "Nucleo"
     ],
     "risposta_corretta": "Mitocondrio",
     "spiegazione": "Il mitocondrio produce energia sotto forma di ATP attraverso la respirazione cellulare. Il nucleo contiene il DNA, i ribosomi producono proteine e la membrana cellulare delimita la cellula.",
@@ -30,10 +30,10 @@
     "livello": "facile",
     "domanda": "Che cosa indica il numero atomico di un elemento chimico?",
     "opzioni": [
-      "Il numero di protoni nel nucleo",
-      "Il numero totale di protoni e neutroni",
+      "Il numero di elettroni nello strato più esterno",
       "Il numero di neutroni nel nucleo",
-      "Il numero di elettroni nello strato più esterno"
+      "Il numero di protoni nel nucleo",
+      "Il numero totale di protoni e neutroni"
     ],
     "risposta_corretta": "Il numero di protoni nel nucleo",
     "spiegazione": "Il numero atomico indica il numero di protoni presenti nel nucleo. Il numero totale di protoni e neutroni è invece il numero di massa.",
@@ -54,10 +54,10 @@
     "livello": "facile",
     "domanda": "Quale grandezza fisica si misura in Newton?",
     "opzioni": [
-      "Energia",
       "Potenza",
-      "Forza",
-      "Pressione"
+      "Pressione",
+      "Energia",
+      "Forza"
     ],
     "risposta_corretta": "Forza",
     "spiegazione": "Il Newton è l'unità di misura della forza. L'energia si misura in joule, la potenza in watt e la pressione in pascal.",
@@ -78,10 +78,10 @@
     "livello": "intermedio",
     "domanda": "Quale strato della Terra si trova subito sotto la crosta terrestre?",
     "opzioni": [
-      "Mantello",
+      "Litosfera esterna",
       "Nucleo esterno",
       "Nucleo interno",
-      "Litosfera esterna"
+      "Mantello"
     ],
     "risposta_corretta": "Mantello",
     "spiegazione": "Sotto la crosta terrestre si trova il mantello. Il nucleo esterno e il nucleo interno sono più profondi.",
@@ -102,9 +102,9 @@
     "livello": "intermedio",
     "domanda": "Durante la fotosintesi, quale gas viene assorbito principalmente dalle piante?",
     "opzioni": [
-      "Ossigeno",
-      "Azoto",
       "Anidride carbonica",
+      "Azoto",
+      "Ossigeno",
       "Idrogeno"
     ],
     "risposta_corretta": "Anidride carbonica",
@@ -126,10 +126,10 @@
     "livello": "intermedio",
     "domanda": "Quale valore di pH indica una soluzione acida?",
     "opzioni": [
-      "pH uguale a 7",
-      "pH maggiore di 7",
+      "pH sempre uguale a 14",
       "pH minore di 7",
-      "pH sempre uguale a 14"
+      "pH maggiore di 7",
+      "pH uguale a 7"
     ],
     "risposta_corretta": "pH minore di 7",
     "spiegazione": "Una soluzione è acida quando ha pH minore di 7. Il pH 7 è neutro, mentre un pH maggiore di 7 indica una soluzione basica.",
@@ -150,9 +150,9 @@
     "livello": "intermedio",
     "domanda": "Se la massa di un oggetto resta costante e la forza applicata aumenta, che cosa succede alla sua accelerazione secondo la seconda legge di Newton?",
     "opzioni": [
-      "Aumenta",
-      "Diminuisce",
       "Resta sempre nulla",
+      "Diminuisce",
+      "Aumenta",
       "Diventa indipendente dalla forza"
     ],
     "risposta_corretta": "Aumenta",
@@ -174,10 +174,10 @@
     "livello": "intermedio",
     "domanda": "Quale molecola contiene le istruzioni genetiche ereditarie degli esseri viventi?",
     "opzioni": [
-      "ATP",
       "DNA",
-      "Glucosio",
-      "Emoglobina"
+      "Emoglobina",
+      "ATP",
+      "Glucosio"
     ],
     "risposta_corretta": "DNA",
     "spiegazione": "Il DNA contiene le informazioni genetiche ereditarie. L'ATP trasporta energia, il glucosio è uno zucchero e l'emoglobina trasporta ossigeno nel sangue.",
@@ -222,10 +222,10 @@
     "livello": "avanzato",
     "domanda": "In una reazione chimica bilanciata, che cosa deve rimanere uguale tra reagenti e prodotti?",
     "opzioni": [
-      "Il numero di atomi di ogni elemento",
       "Il numero di molecole totali",
-      "Lo stato fisico di tutte le sostanze",
-      "Il colore delle sostanze coinvolte"
+      "Il colore delle sostanze coinvolte",
+      "Il numero di atomi di ogni elemento",
+      "Lo stato fisico di tutte le sostanze"
     ],
     "risposta_corretta": "Il numero di atomi di ogni elemento",
     "spiegazione": "In una reazione bilanciata si conserva il numero di atomi di ogni elemento. Le molecole totali, lo stato fisico e il colore possono cambiare.",
@@ -248,8 +248,8 @@
     "opzioni": [
       "La massa dipende dalla gravità, il peso no",
       "La massa è la quantità di materia, il peso è la forza gravitazionale su quella massa",
-      "Massa e peso sono sempre la stessa grandezza",
-      "Il peso si misura in chilogrammi, la massa in Newton"
+      "Il peso si misura in chilogrammi, la massa in Newton",
+      "Massa e peso sono sempre la stessa grandezza"
     ],
     "risposta_corretta": "La massa è la quantità di materia, il peso è la forza gravitazionale su quella massa",
     "spiegazione": "La massa indica quanta materia contiene un corpo e si misura in chilogrammi. Il peso è una forza dovuta alla gravità e si misura in Newton.",
@@ -270,10 +270,10 @@
     "livello": "avanzato",
     "domanda": "Qual è la causa principale del movimento delle placche tettoniche?",
     "opzioni": [
-      "Le correnti convettive nel mantello terrestre",
-      "La rotazione giornaliera della Terra",
+      "La pressione atmosferica sulla crosta terrestre",
       "L'attrazione gravitazionale della Luna sulle rocce",
-      "La pressione atmosferica sulla crosta terrestre"
+      "La rotazione giornaliera della Terra",
+      "Le correnti convettive nel mantello terrestre"
     ],
     "risposta_corretta": "Le correnti convettive nel mantello terrestre",
     "spiegazione": "Il movimento delle placche è principalmente collegato alle correnti convettive nel mantello, generate dal calore interno della Terra.",
@@ -294,10 +294,10 @@
     "livello": "facile",
     "domanda": "Qual è la funzione principale della membrana cellulare?",
     "opzioni": [
-      "Delimita la cellula e regola gli scambi con l'esterno",
-      "Produce direttamente tutta l'energia della cellula",
       "Contiene sempre il DNA in tutte le cellule",
-      "Trasforma il sangue in ossigeno"
+      "Delimita la cellula e regola gli scambi con l'esterno",
+      "Trasforma il sangue in ossigeno",
+      "Produce direttamente tutta l'energia della cellula"
     ],
     "risposta_corretta": "Delimita la cellula e regola gli scambi con l'esterno",
     "spiegazione": "La membrana cellulare separa l'interno della cellula dall'ambiente esterno e controlla il passaggio di molte sostanze.",
@@ -320,8 +320,8 @@
     "domanda": "Che cosa indica la formula H2O?",
     "opzioni": [
       "Una molecola d'acqua formata da due atomi di idrogeno e uno di ossigeno",
-      "Una molecola d'acqua formata da due atomi di ossigeno e uno di idrogeno",
       "Una molecola di ossigeno formata da due atomi di idrogeno",
+      "Una molecola d'acqua formata da due atomi di ossigeno e uno di idrogeno",
       "Una molecola di idrogeno formata da un atomo di ossigeno"
     ],
     "risposta_corretta": "Una molecola d'acqua formata da due atomi di idrogeno e uno di ossigeno",
@@ -345,8 +345,8 @@
     "domanda": "Qual è l'unità di misura della forza nel Sistema Internazionale?",
     "opzioni": [
       "Newton",
-      "Joule",
       "Watt",
+      "Joule",
       "Pascal"
     ],
     "risposta_corretta": "Newton",
@@ -369,10 +369,10 @@
     "livello": "facile",
     "domanda": "Qual è lo strato più esterno della Terra?",
     "opzioni": [
-      "Crosta terrestre",
-      "Mantello",
+      "Nucleo interno",
       "Nucleo esterno",
-      "Nucleo interno"
+      "Mantello",
+      "Crosta terrestre"
     ],
     "risposta_corretta": "Crosta terrestre",
     "spiegazione": "La crosta terrestre è lo strato più esterno. Sotto si trova il mantello, poi il nucleo esterno e il nucleo interno.",
@@ -394,9 +394,9 @@
     "livello": "facile",
     "domanda": "Quale pianeta è più vicino al Sole?",
     "opzioni": [
-      "Mercurio",
       "Venere",
       "Marte",
+      "Mercurio",
       "Giove"
     ],
     "risposta_corretta": "Mercurio",
@@ -419,9 +419,9 @@
     "livello": "facile",
     "domanda": "In una catena alimentare, che cosa sono i produttori?",
     "opzioni": [
-      "Organismi che producono materia organica usando energia, come le piante",
-      "Animali che mangiano solo altri animali",
       "Organismi che non partecipano al passaggio di energia",
+      "Animali che mangiano solo altri animali",
+      "Organismi che producono materia organica usando energia, come le piante",
       "Batteri che vivono solo in ambienti senza ossigeno"
     ],
     "risposta_corretta": "Organismi che producono materia organica usando energia, come le piante",
@@ -444,10 +444,10 @@
     "livello": "facile",
     "domanda": "Qual è la funzione principale dei polmoni?",
     "opzioni": [
-      "Permettere lo scambio di ossigeno e anidride carbonica",
       "Pompare il sangue in tutto il corpo",
+      "Produrre globuli rossi in modo continuo",
       "Filtrare direttamente tutte le sostanze tossiche del sangue",
-      "Produrre globuli rossi in modo continuo"
+      "Permettere lo scambio di ossigeno e anidride carbonica"
     ],
     "risposta_corretta": "Permettere lo scambio di ossigeno e anidride carbonica",
     "spiegazione": "I polmoni permettono lo scambio gassoso: l'ossigeno entra nel sangue e l'anidride carbonica viene eliminata.",
@@ -469,10 +469,10 @@
     "livello": "facile",
     "domanda": "In un esperimento, che cos'è una variabile controllata?",
     "opzioni": [
+      "Una conclusione già dimostrata prima dell'esperimento",
       "Un fattore mantenuto costante per rendere più affidabile il confronto",
       "Il risultato finale che viene misurato",
-      "Il fattore che viene cambiato volontariamente",
-      "Una conclusione già dimostrata prima dell'esperimento"
+      "Il fattore che viene cambiato volontariamente"
     ],
     "risposta_corretta": "Un fattore mantenuto costante per rendere più affidabile il confronto",
     "spiegazione": "Una variabile controllata resta costante, così si può capire meglio l'effetto della variabile modificata.",
@@ -494,10 +494,10 @@
     "livello": "facile",
     "domanda": "Che cosa misura la temperatura di un corpo?",
     "opzioni": [
-      "Il livello di agitazione termica media delle sue particelle",
-      "La quantità totale di materia presente nel corpo",
+      "La velocità con cui il corpo cambia colore",
       "La forza con cui il corpo viene attratto dalla Terra",
-      "La velocità con cui il corpo cambia colore"
+      "Il livello di agitazione termica media delle sue particelle",
+      "La quantità totale di materia presente nel corpo"
     ],
     "risposta_corretta": "Il livello di agitazione termica media delle sue particelle",
     "spiegazione": "La temperatura è collegata all'agitazione termica media delle particelle, non alla quantità totale di materia.",
@@ -519,9 +519,9 @@
     "livello": "intermedio",
     "domanda": "Qual è il risultato principale della mitosi?",
     "opzioni": [
+      "Una sola cellula con DNA completamente diverso",
       "Due cellule figlie geneticamente uguali alla cellula di partenza",
       "Quattro cellule figlie con metà del patrimonio genetico",
-      "Una sola cellula con DNA completamente diverso",
       "Due cellule senza nucleo e senza cromosomi"
     ],
     "risposta_corretta": "Due cellule figlie geneticamente uguali alla cellula di partenza",
@@ -545,9 +545,9 @@
     "domanda": "Una soluzione con pH minore di 7 è generalmente considerata:",
     "opzioni": [
       "Acida",
-      "Basica",
       "Neutra",
-      "Sempre salina"
+      "Sempre salina",
+      "Basica"
     ],
     "risposta_corretta": "Acida",
     "spiegazione": "Un pH minore di 7 indica una soluzione acida; pH 7 è neutro, mentre pH maggiore di 7 è basico.",
@@ -569,10 +569,10 @@
     "livello": "intermedio",
     "domanda": "Come si calcola la densità di un corpo?",
     "opzioni": [
-      "Massa divisa per volume",
+      "Peso diviso per temperatura",
       "Volume diviso per massa",
-      "Massa moltiplicata per volume",
-      "Peso diviso per temperatura"
+      "Massa divisa per volume",
+      "Massa moltiplicata per volume"
     ],
     "risposta_corretta": "Massa divisa per volume",
     "spiegazione": "La densità indica quanta massa è contenuta in un certo volume: densità = massa / volume.",
@@ -594,10 +594,10 @@
     "livello": "intermedio",
     "domanda": "Quando si verifica un'eclissi solare?",
     "opzioni": [
-      "Quando la Luna si trova tra Sole e Terra e oscura il Sole",
       "Quando la Terra si trova tra Sole e Luna e oscura la Luna",
       "Quando Marte si trova tra Sole e Terra",
-      "Quando il Sole si trova tra Terra e Luna"
+      "Quando il Sole si trova tra Terra e Luna",
+      "Quando la Luna si trova tra Sole e Terra e oscura il Sole"
     ],
     "risposta_corretta": "Quando la Luna si trova tra Sole e Terra e oscura il Sole",
     "spiegazione": "Nell'eclissi solare la Luna passa tra Sole e Terra. Nell'eclissi lunare è la Terra a trovarsi tra Sole e Luna.",
@@ -619,10 +619,10 @@
     "livello": "intermedio",
     "domanda": "Che cosa descrive la teoria della tettonica delle placche?",
     "opzioni": [
-      "Il movimento delle grandi placche della litosfera terrestre",
+      "Il modo in cui le stelle producono luce",
       "La rotazione dei pianeti intorno al Sole",
       "La trasformazione diretta del magma in acqua",
-      "Il modo in cui le stelle producono luce"
+      "Il movimento delle grandi placche della litosfera terrestre"
     ],
     "risposta_corretta": "Il movimento delle grandi placche della litosfera terrestre",
     "spiegazione": "La tettonica delle placche spiega il movimento delle placche litosferiche e fenomeni come terremoti, vulcani e formazione delle montagne.",
@@ -644,8 +644,8 @@
     "livello": "intermedio",
     "domanda": "Che cosa indica la biomagnificazione?",
     "opzioni": [
-      "L'aumento della concentrazione di una sostanza tossica lungo la catena alimentare",
       "La crescita veloce di una popolazione in un ambiente senza limiti",
+      "L'aumento della concentrazione di una sostanza tossica lungo la catena alimentare",
       "La perdita totale di energia tra produttori e consumatori",
       "La trasformazione di un erbivoro in carnivoro"
     ],
@@ -669,10 +669,10 @@
     "livello": "intermedio",
     "domanda": "Qual è la funzione principale dell'emoglobina?",
     "opzioni": [
-      "Trasportare ossigeno nel sangue",
-      "Produrre bile nel fegato",
       "Filtrare l'urina nei reni",
-      "Digerire gli zuccheri nello stomaco"
+      "Trasportare ossigeno nel sangue",
+      "Digerire gli zuccheri nello stomaco",
+      "Produrre bile nel fegato"
     ],
     "risposta_corretta": "Trasportare ossigeno nel sangue",
     "spiegazione": "L'emoglobina è una proteina presente nei globuli rossi e serve soprattutto a trasportare ossigeno.",
@@ -694,10 +694,10 @@
     "livello": "intermedio",
     "domanda": "Perché una correlazione tra due fenomeni non dimostra automaticamente una causa?",
     "opzioni": [
-      "Perché due fenomeni possono variare insieme senza che uno provochi direttamente l'altro",
+      "Perché i dati numerici non possono mai essere usati nella scienza",
       "Perché ogni correlazione è sempre falsa",
-      "Perché la causa può essere dimostrata solo con un'opinione personale",
-      "Perché i dati numerici non possono mai essere usati nella scienza"
+      "Perché due fenomeni possono variare insieme senza che uno provochi direttamente l'altro",
+      "Perché la causa può essere dimostrata solo con un'opinione personale"
     ],
     "risposta_corretta": "Perché due fenomeni possono variare insieme senza che uno provochi direttamente l'altro",
     "spiegazione": "Una correlazione mostra un legame statistico, ma per dimostrare una causa servono controlli, esperimenti o prove aggiuntive.",
@@ -719,10 +719,10 @@
     "livello": "avanzato",
     "domanda": "Che cosa sono gli isotopi di uno stesso elemento?",
     "opzioni": [
-      "Atomi con lo stesso numero di protoni ma diverso numero di neutroni",
-      "Atomi con lo stesso numero di neutroni ma diverso numero di protoni",
       "Molecole con la stessa formula ma diversa temperatura",
-      "Ioni con carica opposta ma uguale massa"
+      "Atomi con lo stesso numero di neutroni ma diverso numero di protoni",
+      "Ioni con carica opposta ma uguale massa",
+      "Atomi con lo stesso numero di protoni ma diverso numero di neutroni"
     ],
     "risposta_corretta": "Atomi con lo stesso numero di protoni ma diverso numero di neutroni",
     "spiegazione": "Gli isotopi appartengono allo stesso elemento perché hanno lo stesso numero di protoni, ma differiscono per il numero di neutroni.",
@@ -745,9 +745,9 @@
     "domanda": "In un moto circolare uniforme, verso dove è diretta l'accelerazione centripeta?",
     "opzioni": [
       "Verso il centro della traiettoria circolare",
-      "Sempre nella stessa direzione della velocità istantanea",
       "Sempre verso l'esterno della traiettoria",
-      "In una direzione casuale che cambia senza regola"
+      "In una direzione casuale che cambia senza regola",
+      "Sempre nella stessa direzione della velocità istantanea"
     ],
     "risposta_corretta": "Verso il centro della traiettoria circolare",
     "spiegazione": "Nel moto circolare uniforme la velocità cambia direzione. L'accelerazione centripeta è rivolta verso il centro della circonferenza.",
@@ -794,10 +794,10 @@
     "livello": "avanzato",
     "domanda": "Che cosa caratterizza la successione ecologica primaria?",
     "opzioni": [
-      "Inizia in un ambiente privo di suolo sviluppato, come una roccia nuda",
-      "Inizia sempre in una foresta matura già ricca di organismi",
       "Avviene solo quando una specie animale cambia dieta",
-      "È la sostituzione immediata di tutti i predatori con erbivori"
+      "È la sostituzione immediata di tutti i predatori con erbivori",
+      "Inizia in un ambiente privo di suolo sviluppato, come una roccia nuda",
+      "Inizia sempre in una foresta matura già ricca di organismi"
     ],
     "risposta_corretta": "Inizia in un ambiente privo di suolo sviluppato, come una roccia nuda",
     "spiegazione": "La successione primaria parte da ambienti quasi privi di vita e senza suolo formato, come superfici rocciose esposte.",
@@ -819,10 +819,10 @@
     "livello": "avanzato",
     "domanda": "In astronomia, che cosa indica generalmente il redshift della luce proveniente da una galassia lontana?",
     "opzioni": [
-      "Che la galassia si sta allontanando, con luce spostata verso lunghezze d'onda maggiori",
       "Che la galassia si sta avvicinando, con luce spostata verso lunghezze d'onda minori",
-      "Che la galassia non emette alcuna radiazione misurabile",
-      "Che la galassia è composta solo da pianeti senza stelle"
+      "Che la galassia si sta allontanando, con luce spostata verso lunghezze d'onda maggiori",
+      "Che la galassia è composta solo da pianeti senza stelle",
+      "Che la galassia non emette alcuna radiazione misurabile"
     ],
     "risposta_corretta": "Che la galassia si sta allontanando, con luce spostata verso lunghezze d'onda maggiori",
     "spiegazione": "Il redshift è uno spostamento verso il rosso, cioè verso lunghezze d'onda maggiori, spesso collegato all'allontanamento delle galassie.",
@@ -844,10 +844,10 @@
     "livello": "avanzato",
     "domanda": "Che cosa esprime in modo semplificato il principio di indeterminazione di Heisenberg?",
     "opzioni": [
+      "La luce smette di propagarsi quando incontra un atomo",
       "Non si possono conoscere simultaneamente con precisione arbitraria posizione e quantità di moto di una particella",
-      "Ogni particella ha sempre posizione e velocità perfettamente misurabili",
       "La massa di una particella diventa sempre zero quando viene osservata",
-      "La luce smette di propagarsi quando incontra un atomo"
+      "Ogni particella ha sempre posizione e velocità perfettamente misurabili"
     ],
     "risposta_corretta": "Non si possono conoscere simultaneamente con precisione arbitraria posizione e quantità di moto di una particella",
     "spiegazione": "Il principio di indeterminazione stabilisce un limite fondamentale alla precisione con cui certe coppie di grandezze possono essere conosciute insieme.",
@@ -869,10 +869,10 @@
     "livello": "avanzato",
     "domanda": "Che cosa fa un catalizzatore in una reazione chimica?",
     "opzioni": [
-      "Abbassa l'energia di attivazione e accelera la reazione senza consumarsi stabilmente",
-      "Aumenta sempre la quantità finale di prodotto oltre il massimo possibile",
       "Trasforma ogni reazione chimica in una reazione nucleare",
-      "Elimina completamente la necessità di reagenti"
+      "Abbassa l'energia di attivazione e accelera la reazione senza consumarsi stabilmente",
+      "Elimina completamente la necessità di reagenti",
+      "Aumenta sempre la quantità finale di prodotto oltre il massimo possibile"
     ],
     "risposta_corretta": "Abbassa l'energia di attivazione e accelera la reazione senza consumarsi stabilmente",
     "spiegazione": "Un catalizzatore offre un percorso di reazione con energia di attivazione più bassa, ma non cambia il massimo prodotto imposto dall'equilibrio.",
@@ -894,10 +894,10 @@
     "livello": "avanzato",
     "domanda": "Perché le onde sismiche S non attraversano il nucleo esterno terrestre?",
     "opzioni": [
-      "Perché le onde S non si propagano nei liquidi e il nucleo esterno è liquido",
-      "Perché le onde S si propagano solo nel vuoto assoluto",
       "Perché il nucleo esterno non contiene materia",
-      "Perché le onde S sono onde luminose e non onde meccaniche"
+      "Perché le onde S sono onde luminose e non onde meccaniche",
+      "Perché le onde S non si propagano nei liquidi e il nucleo esterno è liquido",
+      "Perché le onde S si propagano solo nel vuoto assoluto"
     ],
     "risposta_corretta": "Perché le onde S non si propagano nei liquidi e il nucleo esterno è liquido",
     "spiegazione": "Le onde S sono onde di taglio e non possono propagarsi nei liquidi. Questo aiuta a dedurre che il nucleo esterno terrestre è liquido.",
@@ -919,10 +919,10 @@
     "livello": "avanzato",
     "domanda": "Che cosa si intende per feedback negativo nell'omeostasi?",
     "opzioni": [
-      "Un meccanismo che riduce una variazione per riportare il sistema verso l'equilibrio",
       "Un meccanismo che amplifica sempre una variazione fino al collasso del sistema",
+      "Una reazione che blocca definitivamente tutte le funzioni vitali",
       "Una risposta casuale senza rapporto con lo stato del corpo",
-      "Una reazione che blocca definitivamente tutte le funzioni vitali"
+      "Un meccanismo che riduce una variazione per riportare il sistema verso l'equilibrio"
     ],
     "risposta_corretta": "Un meccanismo che riduce una variazione per riportare il sistema verso l'equilibrio",
     "spiegazione": "Il feedback negativo contrasta le variazioni e aiuta a mantenere condizioni interne stabili, come temperatura o glicemia.",
@@ -945,8 +945,8 @@
     "domanda": "Che cosa avviene durante l'osmosi?",
     "opzioni": [
       "L'acqua attraversa una membrana semipermeabile verso la soluzione più concentrata di soluti",
-      "I soluti attraversano sempre la membrana verso la soluzione meno concentrata",
       "L'acqua si trasforma direttamente in sale attraverso la membrana",
+      "I soluti attraversano sempre la membrana verso la soluzione meno concentrata",
       "La membrana cellulare scompare per permettere il passaggio di ogni sostanza"
     ],
     "risposta_corretta": "L'acqua attraversa una membrana semipermeabile verso la soluzione più concentrata di soluti",
@@ -969,10 +969,10 @@
     "livello": "avanzato",
     "domanda": "Qual è la differenza corretta tra massa e peso?",
     "opzioni": [
-      "La massa misura la quantità di materia, il peso è una forza dovuta alla gravità",
-      "La massa e il peso sono sempre la stessa grandezza fisica",
       "Il peso misura la quantità di materia, la massa misura la temperatura",
-      "La massa cambia sempre più del peso quando un corpo si sposta sulla Luna"
+      "La massa e il peso sono sempre la stessa grandezza fisica",
+      "La massa cambia sempre più del peso quando un corpo si sposta sulla Luna",
+      "La massa misura la quantità di materia, il peso è una forza dovuta alla gravità"
     ],
     "risposta_corretta": "La massa misura la quantità di materia, il peso è una forza dovuta alla gravità",
     "spiegazione": "La massa è legata alla quantità di materia. Il peso è una forza e dipende dal campo gravitazionale.",
