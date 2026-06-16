@@ -1,0 +1,364 @@
+[
+  {
+    "nome": "Logica visiva",
+    "percorso": "data/logica/logica_visiva.json",
+    "file_esiste": true,
+    "errore_file": "",
+    "totale_domande": 18,
+    "problemi_tecnici_totali": 0,
+    "avvisi_qualita_totali": 33,
+    "errori_linguistici_totali": 0,
+    "note_totali": 3,
+    "immagini_trovate_totali": 90,
+    "immagini_mancanti_totali": 0,
+    "domande_con_problemi_tecnici": [],
+    "domande_con_avvisi_qualita": [
+      {
+        "id": "LOG-VIS-FAC-0001",
+        "domanda": "Quale scelta chiude il primo esercizio visivo?",
+        "problemi_tecnici": [],
+        "avvisi_qualita": [
+          "Regola visiva non dichiarata in modo strutturato",
+          "Spiegazione visiva forse incompleta: dovrebbe citare forma, colore, lati, oggetti interni o trasformazione"
+        ],
+        "errori_linguistici": [],
+        "note": [],
+        "immagini_trovate": [
+          "assets/logica_visiva/log_vis_fac_0001_A.png",
+          "assets/logica_visiva/log_vis_fac_0001_B.png",
+          "assets/logica_visiva/log_vis_fac_0001_C.png",
+          "assets/logica_visiva/log_vis_fac_0001_D.png",
+          "assets/logica_visiva/log_vis_fac_0001_domanda.png"
+        ],
+        "immagini_mancanti": []
+      },
+      {
+        "id": "LOG-VIS-INT-0002",
+        "domanda": "Individua l'alternativa più coerente con il passaggio mostrato.",
+        "problemi_tecnici": [],
+        "avvisi_qualita": [
+          "Regola visiva non dichiarata in modo strutturato",
+          "Spiegazione visiva forse incompleta: dovrebbe citare forma, colore, lati, oggetti interni o trasformazione"
+        ],
+        "errori_linguistici": [],
+        "note": [],
+        "immagini_trovate": [
+          "assets/logica_visiva/log_vis_int_0002_A.png",
+          "assets/logica_visiva/log_vis_int_0002_B.png",
+          "assets/logica_visiva/log_vis_int_0002_C.png",
+          "assets/logica_visiva/log_vis_int_0002_D.png",
+          "assets/logica_visiva/log_vis_int_0002_domanda.png"
+        ],
+        "immagini_mancanti": []
+      },
+      {
+        "id": "LOG-VIS-AV-0003",
+        "domanda": "Quale tassello va inserito nella casella vuota della griglia?",
+        "problemi_tecnici": [],
+        "avvisi_qualita": [
+          "Regola visiva non dichiarata in modo strutturato",
+          "Spiegazione visiva forse incompleta: dovrebbe citare forma, colore, lati, oggetti interni o trasformazione"
+        ],
+        "errori_linguistici": [],
+        "note": [],
+        "immagini_trovate": [
+          "assets/logica_visiva/log_vis_av_0003_A.png",
+          "assets/logica_visiva/log_vis_av_0003_B.png",
+          "assets/logica_visiva/log_vis_av_0003_C.png",
+          "assets/logica_visiva/log_vis_av_0003_D.png",
+          "assets/logica_visiva/log_vis_av_0003_domanda.png"
+        ],
+        "immagini_mancanti": []
+      },
+      {
+        "id": "LOG-VIS-FAC-0004",
+        "domanda": "Seleziona il simbolo adatto allo spazio con il punto interrogativo.",
+        "problemi_tecnici": [],
+        "avvisi_qualita": [
+          "Regola visiva non dichiarata in modo strutturato",
+          "Spiegazione visiva forse incompleta: dovrebbe citare forma, colore, lati, oggetti interni o trasformazione"
+        ],
+        "errori_linguistici": [],
+        "note": [],
+        "immagini_trovate": [
+          "assets/logica_visiva/LOG-VIS-FAC-0004_domanda.svg",
+          "assets/logica_visiva/LOG-VIS-FAC-0004_opzione_A.svg",
+          "assets/logica_visiva/LOG-VIS-FAC-0004_opzione_B.svg",
+          "assets/logica_visiva/LOG-VIS-FAC-0004_opzione_C.svg",
+          "assets/logica_visiva/LOG-VIS-FAC-0004_opzione_D.svg"
+        ],
+        "immagini_mancanti": []
+      },
+      {
+        "id": "LOG-VIS-FAC-0005",
+        "domanda": "Tra le quattro risposte, quale viene dopo nel percorso illustrato?",
+        "problemi_tecnici": [],
+        "avvisi_qualita": [
+          "Regola visiva non dichiarata in modo strutturato",
+          "Spiegazione visiva forse incompleta: dovrebbe citare forma, colore, lati, oggetti interni o trasformazione"
+        ],
+        "errori_linguistici": [],
+        "note": [],
+        "immagini_trovate": [
+          "assets/logica_visiva/LOG-VIS-FAC-0005_domanda.svg",
+          "assets/logica_visiva/LOG-VIS-FAC-0005_opzione_A.svg",
+          "assets/logica_visiva/LOG-VIS-FAC-0005_opzione_B.svg",
+          "assets/logica_visiva/LOG-VIS-FAC-0005_opzione_C.svg",
+          "assets/logica_visiva/LOG-VIS-FAC-0005_opzione_D.svg"
+        ],
+        "immagini_mancanti": []
+      },
+      {
+        "id": "LOG-VIS-FAC-0006",
+        "domanda": "Quale proposta conclude meglio il gruppo rappresentato?",
+        "problemi_tecnici": [],
+        "avvisi_qualita": [
+          "Regola visiva non dichiarata in modo strutturato",
+          "Spiegazione visiva forse incompleta: dovrebbe citare forma, colore, lati, oggetti interni o trasformazione"
+        ],
+        "errori_linguistici": [],
+        "note": [
+          "spiegazione: possibile frase poco fluida, controllare gli incontri vocalici"
+        ],
+        "immagini_trovate": [
+          "assets/logica_visiva/LOG-VIS-FAC-0006_domanda.svg",
+          "assets/logica_visiva/LOG-VIS-FAC-0006_opzione_A.svg",
+          "assets/logica_visiva/LOG-VIS-FAC-0006_opzione_B.svg",
+          "assets/logica_visiva/LOG-VIS-FAC-0006_opzione_C.svg",
+          "assets/logica_visiva/LOG-VIS-FAC-0006_opzione_D.svg"
+        ],
+        "immagini_mancanti": []
+      },
+      {
+        "id": "LOG-VIS-FAC-0007",
+        "domanda": "Scegli l'elemento che mantiene ordinato il modello proposto.",
+        "problemi_tecnici": [],
+        "avvisi_qualita": [
+          "Regola visiva non dichiarata in modo strutturato",
+          "Spiegazione visiva forse incompleta: dovrebbe citare forma, colore, lati, oggetti interni o trasformazione"
+        ],
+        "errori_linguistici": [],
+        "note": [],
+        "immagini_trovate": [
+          "assets/logica_visiva/LOG-VIS-FAC-0007_domanda.svg",
+          "assets/logica_visiva/LOG-VIS-FAC-0007_opzione_A.svg",
+          "assets/logica_visiva/LOG-VIS-FAC-0007_opzione_B.svg",
+          "assets/logica_visiva/LOG-VIS-FAC-0007_opzione_C.svg",
+          "assets/logica_visiva/LOG-VIS-FAC-0007_opzione_D.svg"
+        ],
+        "immagini_mancanti": []
+      },
+      {
+        "id": "LOG-VIS-FAC-0008",
+        "domanda": "Quale alternativa completa il riquadro finale?",
+        "problemi_tecnici": [],
+        "avvisi_qualita": [
+          "Regola visiva non dichiarata in modo strutturato"
+        ],
+        "errori_linguistici": [],
+        "note": [],
+        "immagini_trovate": [
+          "assets/logica_visiva/LOG-VIS-FAC-0008_domanda.svg",
+          "assets/logica_visiva/LOG-VIS-FAC-0008_opzione_A.svg",
+          "assets/logica_visiva/LOG-VIS-FAC-0008_opzione_B.svg",
+          "assets/logica_visiva/LOG-VIS-FAC-0008_opzione_C.svg",
+          "assets/logica_visiva/LOG-VIS-FAC-0008_opzione_D.svg"
+        ],
+        "immagini_mancanti": []
+      },
+      {
+        "id": "LOG-VIS-INT-0004",
+        "domanda": "Quale risposta prosegue il modello senza contraddirlo?",
+        "problemi_tecnici": [],
+        "avvisi_qualita": [
+          "Regola visiva non dichiarata in modo strutturato"
+        ],
+        "errori_linguistici": [],
+        "note": [
+          "spiegazione: possibile frase poco fluida, controllare gli incontri vocalici"
+        ],
+        "immagini_trovate": [
+          "assets/logica_visiva/LOG-VIS-INT-0004_domanda.svg",
+          "assets/logica_visiva/LOG-VIS-INT-0004_opzione_A.svg",
+          "assets/logica_visiva/LOG-VIS-INT-0004_opzione_B.svg",
+          "assets/logica_visiva/LOG-VIS-INT-0004_opzione_C.svg",
+          "assets/logica_visiva/LOG-VIS-INT-0004_opzione_D.svg"
+        ],
+        "immagini_mancanti": []
+      },
+      {
+        "id": "LOG-VIS-INT-0005",
+        "domanda": "Inserisci mentalmente il tassello mancante e scegli la soluzione.",
+        "problemi_tecnici": [],
+        "avvisi_qualita": [
+          "Regola visiva non dichiarata in modo strutturato",
+          "Spiegazione visiva forse incompleta: dovrebbe citare forma, colore, lati, oggetti interni o trasformazione"
+        ],
+        "errori_linguistici": [],
+        "note": [],
+        "immagini_trovate": [
+          "assets/logica_visiva/LOG-VIS-INT-0005_domanda.svg",
+          "assets/logica_visiva/LOG-VIS-INT-0005_opzione_A.svg",
+          "assets/logica_visiva/LOG-VIS-INT-0005_opzione_B.svg",
+          "assets/logica_visiva/LOG-VIS-INT-0005_opzione_C.svg",
+          "assets/logica_visiva/LOG-VIS-INT-0005_opzione_D.svg"
+        ],
+        "immagini_mancanti": []
+      },
+      {
+        "id": "LOG-VIS-INT-0006",
+        "domanda": "Quale scelta rende completo il quadro mostrato?",
+        "problemi_tecnici": [],
+        "avvisi_qualita": [
+          "Regola visiva non dichiarata in modo strutturato",
+          "Spiegazione visiva forse incompleta: dovrebbe citare forma, colore, lati, oggetti interni o trasformazione"
+        ],
+        "errori_linguistici": [],
+        "note": [
+          "spiegazione: possibile frase poco fluida, controllare gli incontri vocalici"
+        ],
+        "immagini_trovate": [
+          "assets/logica_visiva/LOG-VIS-INT-0006_domanda.svg",
+          "assets/logica_visiva/LOG-VIS-INT-0006_opzione_A.svg",
+          "assets/logica_visiva/LOG-VIS-INT-0006_opzione_B.svg",
+          "assets/logica_visiva/LOG-VIS-INT-0006_opzione_C.svg",
+          "assets/logica_visiva/LOG-VIS-INT-0006_opzione_D.svg"
+        ],
+        "immagini_mancanti": []
+      },
+      {
+        "id": "LOG-VIS-INT-0007",
+        "domanda": "Quale elemento occupa la posizione vuota?",
+        "problemi_tecnici": [],
+        "avvisi_qualita": [
+          "Regola visiva non dichiarata in modo strutturato"
+        ],
+        "errori_linguistici": [],
+        "note": [],
+        "immagini_trovate": [
+          "assets/logica_visiva/LOG-VIS-INT-0007_domanda.svg",
+          "assets/logica_visiva/LOG-VIS-INT-0007_opzione_A.svg",
+          "assets/logica_visiva/LOG-VIS-INT-0007_opzione_B.svg",
+          "assets/logica_visiva/LOG-VIS-INT-0007_opzione_C.svg",
+          "assets/logica_visiva/LOG-VIS-INT-0007_opzione_D.svg"
+        ],
+        "immagini_mancanti": []
+      },
+      {
+        "id": "LOG-VIS-INT-0008",
+        "domanda": "Scegli la figura speculare rispetto all'asse verticale.",
+        "problemi_tecnici": [],
+        "avvisi_qualita": [
+          "Regola visiva non dichiarata in modo strutturato",
+          "Spiegazione visiva forse incompleta: dovrebbe citare forma, colore, lati, oggetti interni o trasformazione"
+        ],
+        "errori_linguistici": [],
+        "note": [],
+        "immagini_trovate": [
+          "assets/logica_visiva/LOG-VIS-INT-0008_domanda.svg",
+          "assets/logica_visiva/LOG-VIS-INT-0008_opzione_A.svg",
+          "assets/logica_visiva/LOG-VIS-INT-0008_opzione_B.svg",
+          "assets/logica_visiva/LOG-VIS-INT-0008_opzione_C.svg",
+          "assets/logica_visiva/LOG-VIS-INT-0008_opzione_D.svg"
+        ],
+        "immagini_mancanti": []
+      },
+      {
+        "id": "LOG-VIS-AV-0004",
+        "domanda": "Quale casella completa la matrice visiva?",
+        "problemi_tecnici": [],
+        "avvisi_qualita": [
+          "Regola visiva non dichiarata in modo strutturato",
+          "Spiegazione visiva forse incompleta: dovrebbe citare forma, colore, lati, oggetti interni o trasformazione"
+        ],
+        "errori_linguistici": [],
+        "note": [],
+        "immagini_trovate": [
+          "assets/logica_visiva/LOG-VIS-AV-0004_domanda.svg",
+          "assets/logica_visiva/LOG-VIS-AV-0004_opzione_A.svg",
+          "assets/logica_visiva/LOG-VIS-AV-0004_opzione_B.svg",
+          "assets/logica_visiva/LOG-VIS-AV-0004_opzione_C.svg",
+          "assets/logica_visiva/LOG-VIS-AV-0004_opzione_D.svg"
+        ],
+        "immagini_mancanti": []
+      },
+      {
+        "id": "LOG-VIS-AV-0005",
+        "domanda": "Scegli la soluzione più adatta per il riquadro mancante.",
+        "problemi_tecnici": [],
+        "avvisi_qualita": [
+          "Regola visiva non dichiarata in modo strutturato",
+          "Spiegazione visiva forse incompleta: dovrebbe citare forma, colore, lati, oggetti interni o trasformazione"
+        ],
+        "errori_linguistici": [],
+        "note": [],
+        "immagini_trovate": [
+          "assets/logica_visiva/LOG-VIS-AV-0005_domanda.svg",
+          "assets/logica_visiva/LOG-VIS-AV-0005_opzione_A.svg",
+          "assets/logica_visiva/LOG-VIS-AV-0005_opzione_B.svg",
+          "assets/logica_visiva/LOG-VIS-AV-0005_opzione_C.svg",
+          "assets/logica_visiva/LOG-VIS-AV-0005_opzione_D.svg"
+        ],
+        "immagini_mancanti": []
+      },
+      {
+        "id": "LOG-VIS-AV-0006",
+        "domanda": "Quale immagine chiude il modello avanzato?",
+        "problemi_tecnici": [],
+        "avvisi_qualita": [
+          "Regola visiva non dichiarata in modo strutturato",
+          "Spiegazione visiva forse incompleta: dovrebbe citare forma, colore, lati, oggetti interni o trasformazione"
+        ],
+        "errori_linguistici": [],
+        "note": [],
+        "immagini_trovate": [
+          "assets/logica_visiva/LOG-VIS-AV-0006_domanda.svg",
+          "assets/logica_visiva/LOG-VIS-AV-0006_opzione_A.svg",
+          "assets/logica_visiva/LOG-VIS-AV-0006_opzione_B.svg",
+          "assets/logica_visiva/LOG-VIS-AV-0006_opzione_C.svg",
+          "assets/logica_visiva/LOG-VIS-AV-0006_opzione_D.svg"
+        ],
+        "immagini_mancanti": []
+      },
+      {
+        "id": "LOG-VIS-AV-0007",
+        "domanda": "Trova la scelta che rende coerente l'intera composizione.",
+        "problemi_tecnici": [],
+        "avvisi_qualita": [
+          "Regola visiva non dichiarata in modo strutturato",
+          "Spiegazione visiva forse incompleta: dovrebbe citare forma, colore, lati, oggetti interni o trasformazione"
+        ],
+        "errori_linguistici": [],
+        "note": [],
+        "immagini_trovate": [
+          "assets/logica_visiva/LOG-VIS-AV-0007_domanda.svg",
+          "assets/logica_visiva/LOG-VIS-AV-0007_opzione_A.svg",
+          "assets/logica_visiva/LOG-VIS-AV-0007_opzione_B.svg",
+          "assets/logica_visiva/LOG-VIS-AV-0007_opzione_C.svg",
+          "assets/logica_visiva/LOG-VIS-AV-0007_opzione_D.svg"
+        ],
+        "immagini_mancanti": []
+      },
+      {
+        "id": "LOG-VIS-AV-0008",
+        "domanda": "Quale tassello conclude la griglia nel modo corretto?",
+        "problemi_tecnici": [],
+        "avvisi_qualita": [
+          "Regola visiva non dichiarata in modo strutturato",
+          "Spiegazione visiva forse incompleta: dovrebbe citare forma, colore, lati, oggetti interni o trasformazione"
+        ],
+        "errori_linguistici": [],
+        "note": [],
+        "immagini_trovate": [
+          "assets/logica_visiva/LOG-VIS-AV-0008_domanda.svg",
+          "assets/logica_visiva/LOG-VIS-AV-0008_opzione_A.svg",
+          "assets/logica_visiva/LOG-VIS-AV-0008_opzione_B.svg",
+          "assets/logica_visiva/LOG-VIS-AV-0008_opzione_C.svg",
+          "assets/logica_visiva/LOG-VIS-AV-0008_opzione_D.svg"
+        ],
+        "immagini_mancanti": []
+      }
+    ],
+    "domande_con_errori_linguistici": []
+  }
+]

@@ -20,9 +20,11 @@
     },
     "problemi_tecnici_totali": 0,
     "avvisi_qualita_reali_totali": 0,
+    "errori_linguistici_totali": 0,
     "note_informative_totali": 5,
     "domande_con_problemi_tecnici": [],
     "domande_con_avvisi_qualita_reali": [],
+    "domande_con_errori_linguistici": [],
     "domande_con_note_informative": [
       {
         "id": "SCI_010",
@@ -39,6 +41,7 @@
         "posizione_risposta": "A",
         "problemi_tecnici": [],
         "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
         "note_informative": [
           "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “tutte”"
         ]
@@ -58,6 +61,7 @@
         "posizione_risposta": "A",
         "problemi_tecnici": [],
         "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
         "note_informative": [
           "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “tutte”"
         ]
@@ -77,6 +81,7 @@
         "posizione_risposta": "A",
         "problemi_tecnici": [],
         "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
         "note_informative": [
           "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “completamente”"
         ]
@@ -96,6 +101,7 @@
         "posizione_risposta": "A",
         "problemi_tecnici": [],
         "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
         "note_informative": [
           "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “tutti”"
         ]
@@ -115,6 +121,7 @@
         "posizione_risposta": "A",
         "problemi_tecnici": [],
         "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
         "note_informative": [
           "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “tutte”"
         ]
@@ -142,9 +149,11 @@
     },
     "problemi_tecnici_totali": 0,
     "avvisi_qualita_reali_totali": 0,
-    "note_informative_totali": 12,
+    "errori_linguistici_totali": 0,
+    "note_informative_totali": 14,
     "domande_con_problemi_tecnici": [],
     "domande_con_avvisi_qualita_reali": [],
+    "domande_con_errori_linguistici": [],
     "domande_con_note_informative": [
       {
         "id": "BIO_010",
@@ -161,6 +170,7 @@
         "posizione_risposta": "A",
         "problemi_tecnici": [],
         "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
         "note_informative": [
           "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “tutti”"
         ]
@@ -180,6 +190,7 @@
         "posizione_risposta": "A",
         "problemi_tecnici": [],
         "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
         "note_informative": [
           "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “tutti”"
         ]
@@ -199,6 +210,7 @@
         "posizione_risposta": "A",
         "problemi_tecnici": [],
         "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
         "note_informative": [
           "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “tutti”"
         ]
@@ -218,8 +230,29 @@
         "posizione_risposta": "A",
         "problemi_tecnici": [],
         "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
         "note_informative": [
           "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “nessuno”"
+        ]
+      },
+      {
+        "id": "BIO_025",
+        "domanda": "Quale struttura cellulare partecipa direttamente alla costruzione delle proteine?",
+        "categoria": "scienze",
+        "livello": "facile",
+        "opzioni": [
+          "Ribosoma, dove l’RNA messaggero viene tradotto in catene di amminoacidi",
+          "Reticolo endoplasmatico rugoso, che ospita ribosomi ma non traduce direttamente l’mRNA",
+          "Nucleo, dove il DNA viene conservato e trascritto prima della traduzione",
+          "Apparato di Golgi, che modifica e smista proteine già sintetizzate"
+        ],
+        "risposta_corretta": "Ribosoma, dove l’RNA messaggero viene tradotto in catene di amminoacidi",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "spiegazione: testo molto lungo, controllare leggibilità"
         ]
       },
       {
@@ -237,6 +270,7 @@
         "posizione_risposta": "A",
         "problemi_tecnici": [],
         "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
         "note_informative": [
           "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “tutti”"
         ]
@@ -256,8 +290,10 @@
         "posizione_risposta": "A",
         "problemi_tecnici": [],
         "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
         "note_informative": [
-          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “tutti”"
+          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “tutti”",
+          "spiegazione: possibile frase poco fluida, controllare gli incontri vocalici"
         ]
       },
       {
@@ -275,6 +311,7 @@
         "posizione_risposta": "A",
         "problemi_tecnici": [],
         "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
         "note_informative": [
           "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “tutte”"
         ]
@@ -294,6 +331,7 @@
         "posizione_risposta": "A",
         "problemi_tecnici": [],
         "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
         "note_informative": [
           "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “completamente”"
         ]
@@ -313,6 +351,7 @@
         "posizione_risposta": "A",
         "problemi_tecnici": [],
         "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
         "note_informative": [
           "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “tutti”"
         ]
@@ -332,6 +371,7 @@
         "posizione_risposta": "A",
         "problemi_tecnici": [],
         "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
         "note_informative": [
           "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “qualsiasi”",
           "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “tutti”"
@@ -352,6 +392,7 @@
         "posizione_risposta": "A",
         "problemi_tecnici": [],
         "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
         "note_informative": [
           "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “tutti”"
         ]
@@ -379,9 +420,11 @@
     },
     "problemi_tecnici_totali": 0,
     "avvisi_qualita_reali_totali": 0,
-    "note_informative_totali": 8,
+    "errori_linguistici_totali": 0,
+    "note_informative_totali": 9,
     "domande_con_problemi_tecnici": [],
     "domande_con_avvisi_qualita_reali": [],
+    "domande_con_errori_linguistici": [],
     "domande_con_note_informative": [
       {
         "id": "CHE_017",
@@ -398,6 +441,7 @@
         "posizione_risposta": "A",
         "problemi_tecnici": [],
         "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
         "note_informative": [
           "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “completamente”",
           "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “tutte”"
@@ -418,8 +462,29 @@
         "posizione_risposta": "A",
         "problemi_tecnici": [],
         "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
         "note_informative": [
           "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “completamente”"
+        ]
+      },
+      {
+        "id": "CHE_023",
+        "domanda": "Perché una molecola può essere apolare anche se contiene legami polari?",
+        "categoria": "scienze",
+        "livello": "avanzato",
+        "opzioni": [
+          "La geometria simmetrica può annullare il momento dipolare complessivo",
+          "La presenza di legami polari rende la molecola polare indipendentemente dalla forma",
+          "La molecola diventa apolare perché i legami polari perdono gli elettroni condivisi",
+          "L’apolarità dipende solo dalla massa molecolare e non dalla distribuzione di carica"
+        ],
+        "risposta_corretta": "La geometria simmetrica può annullare il momento dipolare complessivo",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "spiegazione: possibile frase poco fluida, controllare gli incontri vocalici"
         ]
       },
       {
@@ -437,6 +502,7 @@
         "posizione_risposta": "A",
         "problemi_tecnici": [],
         "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
         "note_informative": [
           "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “tutti”"
         ]
@@ -456,6 +522,7 @@
         "posizione_risposta": "A",
         "problemi_tecnici": [],
         "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
         "note_informative": [
           "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “qualsiasi”"
         ]
@@ -475,6 +542,7 @@
         "posizione_risposta": "A",
         "problemi_tecnici": [],
         "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
         "note_informative": [
           "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “tutti”"
         ]
@@ -494,6 +562,7 @@
         "posizione_risposta": "A",
         "problemi_tecnici": [],
         "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
         "note_informative": [
           "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “completamente”"
         ]
@@ -513,6 +582,7 @@
         "posizione_risposta": "A",
         "problemi_tecnici": [],
         "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
         "note_informative": [
           "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “tutti”"
         ]
@@ -540,9 +610,11 @@
     },
     "problemi_tecnici_totali": 0,
     "avvisi_qualita_reali_totali": 0,
+    "errori_linguistici_totali": 0,
     "note_informative_totali": 3,
     "domande_con_problemi_tecnici": [],
     "domande_con_avvisi_qualita_reali": [],
+    "domande_con_errori_linguistici": [],
     "domande_con_note_informative": [
       {
         "id": "FIS_004",
@@ -559,6 +631,7 @@
         "posizione_risposta": "A",
         "problemi_tecnici": [],
         "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
         "note_informative": [
           "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “nessuna”"
         ]
@@ -578,6 +651,7 @@
         "posizione_risposta": "A",
         "problemi_tecnici": [],
         "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
         "note_informative": [
           "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “tutti”"
         ]
@@ -597,6 +671,7 @@
         "posizione_risposta": "A",
         "problemi_tecnici": [],
         "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
         "note_informative": [
           "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “completamente”"
         ]
@@ -624,9 +699,11 @@
     },
     "problemi_tecnici_totali": 0,
     "avvisi_qualita_reali_totali": 0,
+    "errori_linguistici_totali": 0,
     "note_informative_totali": 3,
     "domande_con_problemi_tecnici": [],
     "domande_con_avvisi_qualita_reali": [],
+    "domande_con_errori_linguistici": [],
     "domande_con_note_informative": [
       {
         "id": "FQ_018",
@@ -643,6 +720,7 @@
         "posizione_risposta": "A",
         "problemi_tecnici": [],
         "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
         "note_informative": [
           "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “qualsiasi”"
         ]
@@ -662,6 +740,7 @@
         "posizione_risposta": "A",
         "problemi_tecnici": [],
         "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
         "note_informative": [
           "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “completamente”"
         ]
@@ -681,11 +760,96 @@
         "posizione_risposta": "A",
         "problemi_tecnici": [],
         "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
         "note_informative": [
           "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “completamente”"
         ]
       }
     ],
+    "duplicati_identici": {},
+    "domande_simili": []
+  },
+  {
+    "nome": "Matematica",
+    "percorso": "data/matematica.json",
+    "file_esiste": true,
+    "errore_file": "",
+    "totale_domande": 3,
+    "livelli": {
+      "facile": 1,
+      "intermedio": 1,
+      "avanzato": 1
+    },
+    "categorie": {
+      "matematica": 3
+    },
+    "posizioni_risposta": {
+      "A": 3
+    },
+    "problemi_tecnici_totali": 0,
+    "avvisi_qualita_reali_totali": 0,
+    "errori_linguistici_totali": 0,
+    "note_informative_totali": 0,
+    "domande_con_problemi_tecnici": [],
+    "domande_con_avvisi_qualita_reali": [],
+    "domande_con_errori_linguistici": [],
+    "domande_con_note_informative": [],
+    "duplicati_identici": {},
+    "domande_simili": []
+  },
+  {
+    "nome": "Inglese",
+    "percorso": "data/inglese.json",
+    "file_esiste": true,
+    "errore_file": "",
+    "totale_domande": 3,
+    "livelli": {
+      "facile": 1,
+      "intermedio": 1,
+      "avanzato": 1
+    },
+    "categorie": {
+      "inglese": 3
+    },
+    "posizioni_risposta": {
+      "A": 3
+    },
+    "problemi_tecnici_totali": 0,
+    "avvisi_qualita_reali_totali": 0,
+    "errori_linguistici_totali": 0,
+    "note_informative_totali": 0,
+    "domande_con_problemi_tecnici": [],
+    "domande_con_avvisi_qualita_reali": [],
+    "domande_con_errori_linguistici": [],
+    "domande_con_note_informative": [],
+    "duplicati_identici": {},
+    "domande_simili": []
+  },
+  {
+    "nome": "Informatica",
+    "percorso": "data/informatica.json",
+    "file_esiste": true,
+    "errore_file": "",
+    "totale_domande": 3,
+    "livelli": {
+      "facile": 1,
+      "intermedio": 1,
+      "avanzato": 1
+    },
+    "categorie": {
+      "informatica": 3
+    },
+    "posizioni_risposta": {
+      "A": 3
+    },
+    "problemi_tecnici_totali": 0,
+    "avvisi_qualita_reali_totali": 0,
+    "errori_linguistici_totali": 0,
+    "note_informative_totali": 0,
+    "domande_con_problemi_tecnici": [],
+    "domande_con_avvisi_qualita_reali": [],
+    "domande_con_errori_linguistici": [],
+    "domande_con_note_informative": [],
     "duplicati_identici": {},
     "domande_simili": []
   },
@@ -708,10 +872,207 @@
     },
     "problemi_tecnici_totali": 0,
     "avvisi_qualita_reali_totali": 0,
+    "errori_linguistici_totali": 0,
+    "note_informative_totali": 1,
+    "domande_con_problemi_tecnici": [],
+    "domande_con_avvisi_qualita_reali": [],
+    "domande_con_errori_linguistici": [],
+    "domande_con_note_informative": [
+      {
+        "id": "AI-FAC-0001",
+        "domanda": "Qual è il ruolo principale di un modello linguistico di grandi dimensioni, chiamato LLM?",
+        "categoria": "ai",
+        "livello": "facile",
+        "opzioni": [
+          "Prevedere e generare testo in base al contesto ricevuto",
+          "Classificare testi in categorie fisse senza produrre nuove frasi",
+          "Recuperare documenti esterni senza generare una risposta autonoma",
+          "Tradurre parole usando solo un dizionario statico"
+        ],
+        "risposta_corretta": "Prevedere e generare testo in base al contesto ricevuto",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "spiegazione: testo molto lungo, controllare leggibilità"
+        ]
+      }
+    ],
+    "duplicati_identici": {},
+    "domande_simili": []
+  },
+  {
+    "nome": "Logica numerica",
+    "percorso": "data/logica/logica_numerica.json",
+    "file_esiste": true,
+    "errore_file": "",
+    "totale_domande": 3,
+    "livelli": {
+      "facile": 1,
+      "intermedio": 1,
+      "avanzato": 1
+    },
+    "categorie": {
+      "logica": 3
+    },
+    "posizioni_risposta": {
+      "A": 3
+    },
+    "problemi_tecnici_totali": 0,
+    "avvisi_qualita_reali_totali": 0,
+    "errori_linguistici_totali": 0,
+    "note_informative_totali": 1,
+    "domande_con_problemi_tecnici": [],
+    "domande_con_avvisi_qualita_reali": [],
+    "domande_con_errori_linguistici": [],
+    "domande_con_note_informative": [
+      {
+        "id": "LOG-NUM-INT-0002",
+        "domanda": "Completa la serie: 2, 9, 4, 12, 6, 15, ?",
+        "categoria": "logica",
+        "livello": "intermedio",
+        "opzioni": [
+          "8",
+          "18",
+          "9",
+          "16"
+        ],
+        "risposta_corretta": "8",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "spiegazione: testo molto lungo, controllare leggibilità"
+        ]
+      }
+    ],
+    "duplicati_identici": {},
+    "domande_simili": []
+  },
+  {
+    "nome": "Logica verbale",
+    "percorso": "data/logica/logica_verbale.json",
+    "file_esiste": true,
+    "errore_file": "",
+    "totale_domande": 3,
+    "livelli": {
+      "facile": 1,
+      "intermedio": 1,
+      "avanzato": 1
+    },
+    "categorie": {
+      "logica": 3
+    },
+    "posizioni_risposta": {
+      "A": 3
+    },
+    "problemi_tecnici_totali": 0,
+    "avvisi_qualita_reali_totali": 0,
+    "errori_linguistici_totali": 0,
     "note_informative_totali": 0,
     "domande_con_problemi_tecnici": [],
     "domande_con_avvisi_qualita_reali": [],
+    "domande_con_errori_linguistici": [],
     "domande_con_note_informative": [],
+    "duplicati_identici": {},
+    "domande_simili": []
+  },
+  {
+    "nome": "Ragionamento astratto",
+    "percorso": "data/logica/ragionamento_astratto.json",
+    "file_esiste": true,
+    "errore_file": "",
+    "totale_domande": 3,
+    "livelli": {
+      "facile": 1,
+      "intermedio": 1,
+      "avanzato": 1
+    },
+    "categorie": {
+      "logica": 3
+    },
+    "posizioni_risposta": {
+      "A": 3
+    },
+    "problemi_tecnici_totali": 0,
+    "avvisi_qualita_reali_totali": 0,
+    "errori_linguistici_totali": 0,
+    "note_informative_totali": 0,
+    "domande_con_problemi_tecnici": [],
+    "domande_con_avvisi_qualita_reali": [],
+    "domande_con_errori_linguistici": [],
+    "domande_con_note_informative": [],
+    "duplicati_identici": {},
+    "domande_simili": []
+  },
+  {
+    "nome": "Ragionamento critico",
+    "percorso": "data/logica/ragionamento_critico.json",
+    "file_esiste": true,
+    "errore_file": "",
+    "totale_domande": 3,
+    "livelli": {
+      "facile": 1,
+      "intermedio": 1,
+      "avanzato": 1
+    },
+    "categorie": {
+      "logica": 3
+    },
+    "posizioni_risposta": {
+      "A": 3
+    },
+    "problemi_tecnici_totali": 0,
+    "avvisi_qualita_reali_totali": 0,
+    "errori_linguistici_totali": 0,
+    "note_informative_totali": 2,
+    "domande_con_problemi_tecnici": [],
+    "domande_con_avvisi_qualita_reali": [],
+    "domande_con_errori_linguistici": [],
+    "domande_con_note_informative": [
+      {
+        "id": "LOG-CRI-FAC-0001",
+        "domanda": "Tutti i treni della linea A arrivano in stazione. Il treno 25 è della linea A. Cosa si può concludere?",
+        "categoria": "logica",
+        "livello": "facile",
+        "opzioni": [
+          "Il treno 25 arriva in stazione",
+          "Il treno 25 arriva in stazione solo se è in orario",
+          "Tutti i treni che arrivano in stazione sono della linea A",
+          "Solo il treno 25 della linea A arriva in stazione"
+        ],
+        "risposta_corretta": "Il treno 25 arriva in stazione",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “tutti”"
+        ]
+      },
+      {
+        "id": "LOG-CRI-AV-0003",
+        "domanda": "Un negozio afferma: 'Tutti i prodotti scontati sono esposti nello scaffale rosso'. Un cliente trova un prodotto nello scaffale rosso. Quale conclusione è logicamente corretta?",
+        "categoria": "logica",
+        "livello": "avanzato",
+        "opzioni": [
+          "Non è certo che il prodotto sia scontato",
+          "Il prodotto è sicuramente scontato perché si trova nello scaffale rosso",
+          "Tutti i prodotti nello scaffale rosso sono sicuramente scontati",
+          "Nessun prodotto non scontato può trovarsi nello scaffale rosso"
+        ],
+        "risposta_corretta": "Non è certo che il prodotto sia scontato",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “tutti”"
+        ]
+      }
+    ],
     "duplicati_identici": {},
     "domande_simili": []
   }

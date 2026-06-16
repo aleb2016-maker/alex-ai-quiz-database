@@ -2,13 +2,14 @@
 
 Area controllata: **tutto**
 
-Questo report distingue tra problemi tecnici veri, avvisi qualità reali e semplici note informative.
+Questo report distingue problemi tecnici, avvisi qualità reali, errori linguistici e note informative.
 
 ## Riepilogo generale
 
 - Problemi tecnici totali: **0**
 - Avvisi qualità reali totali: **0**
-- Note informative totali: **31**
+- Errori linguistici totali: **0**
+- Note informative totali: **38**
 - Gruppi di domande duplicate identiche: **0**
 - Coppie di domande molto simili: **0**
 
@@ -22,6 +23,7 @@ Categorie: `{'scienze': 40}`
 Posizione risposta corretta nel sorgente: `{'B': 3, 'A': 34, 'C': 3}`
 Problemi tecnici: **0**
 Avvisi qualità reali: **0**
+Errori linguistici: **0**
 Note informative: **5**
 Duplicati identici: **0**
 Domande molto simili: **0**
@@ -36,7 +38,8 @@ Categorie: `{'scienze': 40}`
 Posizione risposta corretta nel sorgente: `{'A': 40}`
 Problemi tecnici: **0**
 Avvisi qualità reali: **0**
-Note informative: **12**
+Errori linguistici: **0**
+Note informative: **14**
 Duplicati identici: **0**
 Domande molto simili: **0**
 
@@ -50,7 +53,8 @@ Categorie: `{'scienze': 40}`
 Posizione risposta corretta nel sorgente: `{'A': 40}`
 Problemi tecnici: **0**
 Avvisi qualità reali: **0**
-Note informative: **8**
+Errori linguistici: **0**
+Note informative: **9**
 Duplicati identici: **0**
 Domande molto simili: **0**
 
@@ -64,6 +68,7 @@ Categorie: `{'scienze': 40}`
 Posizione risposta corretta nel sorgente: `{'A': 40}`
 Problemi tecnici: **0**
 Avvisi qualità reali: **0**
+Errori linguistici: **0**
 Note informative: **3**
 Duplicati identici: **0**
 Domande molto simili: **0**
@@ -78,7 +83,53 @@ Categorie: `{'scienze': 40}`
 Posizione risposta corretta nel sorgente: `{'A': 40}`
 Problemi tecnici: **0**
 Avvisi qualità reali: **0**
+Errori linguistici: **0**
 Note informative: **3**
+Duplicati identici: **0**
+Domande molto simili: **0**
+
+## Matematica
+
+File: `data/matematica.json`
+File trovato: **True**
+Domande totali: **3**
+Livelli: `{'facile': 1, 'intermedio': 1, 'avanzato': 1}`
+Categorie: `{'matematica': 3}`
+Posizione risposta corretta nel sorgente: `{'A': 3}`
+Problemi tecnici: **0**
+Avvisi qualità reali: **0**
+Errori linguistici: **0**
+Note informative: **0**
+Duplicati identici: **0**
+Domande molto simili: **0**
+
+## Inglese
+
+File: `data/inglese.json`
+File trovato: **True**
+Domande totali: **3**
+Livelli: `{'facile': 1, 'intermedio': 1, 'avanzato': 1}`
+Categorie: `{'inglese': 3}`
+Posizione risposta corretta nel sorgente: `{'A': 3}`
+Problemi tecnici: **0**
+Avvisi qualità reali: **0**
+Errori linguistici: **0**
+Note informative: **0**
+Duplicati identici: **0**
+Domande molto simili: **0**
+
+## Informatica
+
+File: `data/informatica.json`
+File trovato: **True**
+Domande totali: **3**
+Livelli: `{'facile': 1, 'intermedio': 1, 'avanzato': 1}`
+Categorie: `{'informatica': 3}`
+Posizione risposta corretta nel sorgente: `{'A': 3}`
+Problemi tecnici: **0**
+Avvisi qualità reali: **0**
+Errori linguistici: **0**
+Note informative: **0**
 Duplicati identici: **0**
 Domande molto simili: **0**
 
@@ -92,7 +143,68 @@ Categorie: `{'ai': 3}`
 Posizione risposta corretta nel sorgente: `{'A': 3}`
 Problemi tecnici: **0**
 Avvisi qualità reali: **0**
+Errori linguistici: **0**
+Note informative: **1**
+Duplicati identici: **0**
+Domande molto simili: **0**
+
+## Logica numerica
+
+File: `data/logica/logica_numerica.json`
+File trovato: **True**
+Domande totali: **3**
+Livelli: `{'facile': 1, 'intermedio': 1, 'avanzato': 1}`
+Categorie: `{'logica': 3}`
+Posizione risposta corretta nel sorgente: `{'A': 3}`
+Problemi tecnici: **0**
+Avvisi qualità reali: **0**
+Errori linguistici: **0**
+Note informative: **1**
+Duplicati identici: **0**
+Domande molto simili: **0**
+
+## Logica verbale
+
+File: `data/logica/logica_verbale.json`
+File trovato: **True**
+Domande totali: **3**
+Livelli: `{'facile': 1, 'intermedio': 1, 'avanzato': 1}`
+Categorie: `{'logica': 3}`
+Posizione risposta corretta nel sorgente: `{'A': 3}`
+Problemi tecnici: **0**
+Avvisi qualità reali: **0**
+Errori linguistici: **0**
 Note informative: **0**
+Duplicati identici: **0**
+Domande molto simili: **0**
+
+## Ragionamento astratto
+
+File: `data/logica/ragionamento_astratto.json`
+File trovato: **True**
+Domande totali: **3**
+Livelli: `{'facile': 1, 'intermedio': 1, 'avanzato': 1}`
+Categorie: `{'logica': 3}`
+Posizione risposta corretta nel sorgente: `{'A': 3}`
+Problemi tecnici: **0**
+Avvisi qualità reali: **0**
+Errori linguistici: **0**
+Note informative: **0**
+Duplicati identici: **0**
+Domande molto simili: **0**
+
+## Ragionamento critico
+
+File: `data/logica/ragionamento_critico.json`
+File trovato: **True**
+Domande totali: **3**
+Livelli: `{'facile': 1, 'intermedio': 1, 'avanzato': 1}`
+Categorie: `{'logica': 3}`
+Posizione risposta corretta nel sorgente: `{'A': 3}`
+Problemi tecnici: **0**
+Avvisi qualità reali: **0**
+Errori linguistici: **0**
+Note informative: **2**
 Duplicati identici: **0**
 Domande molto simili: **0**
 

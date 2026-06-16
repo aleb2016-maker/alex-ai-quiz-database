@@ -6,6 +6,8 @@ import json
 import re
 import sys
 
+from qualita_linguistica import controlla_lingua_domanda
+
 
 ROOT = Path(__file__).resolve().parents[1]
 REPORTS_DIR = ROOT / "reports"
@@ -18,19 +20,11 @@ MOTORI_SCIENZE = [
     ("Fisica quantistica", ROOT / "data" / "fisica_quantistica.json"),
 ]
 
-MOTORI_AI = [
-    ("AI", ROOT / "data" / "ai.json"),
-]
-
-# Queste sono parole davvero pericolose nei distrattori,
-# perché spesso rendono l'opzione falsa troppo facile da eliminare.
 PAROLE_DEBOLI_REALI = [
     "sempre",
     "mai",
 ]
 
-# Queste parole possono essere sospette, ma non sono automaticamente errori.
-# Per esempio "tutte le cellule" può essere una frase scientificamente corretta.
 PAROLE_DA_NOTA_INFORMATIVA = [
     "tutti",
     "tutte",
@@ -74,6 +68,12 @@ CHIAVI_RISPOSTA = [
     "soluzione",
 ]
 
+CHIAVI_SPIEGAZIONE = [
+    "spiegazione",
+    "explanation",
+    "motivo",
+]
+
 CHIAVI_LIVELLO = [
     "livello",
     "level",
@@ -86,6 +86,71 @@ CHIAVI_CATEGORIA = [
     "materia",
     "subject",
 ]
+
+
+def nome_motore_da_file(percorso):
+    nomi = {
+        "ai": "AI",
+        "informatica": "Informatica",
+        "matematica": "Matematica",
+        "inglese": "Inglese",
+        "logica": "Logica",
+        "logica_verbale": "Logica verbale",
+        "logica_numerica": "Logica numerica",
+        "ragionamento_astratto": "Ragionamento astratto",
+        "ragionamento_critico": "Ragionamento critico",
+    }
+
+    return nomi.get(
+        percorso.stem,
+        percorso.stem.replace("_", " ").capitalize()
+    )
+
+
+def crea_motori_quiz_ai_testuali():
+    motori = [
+        ("Matematica", ROOT / "data" / "matematica.json"),
+        ("Inglese", ROOT / "data" / "inglese.json"),
+        ("Informatica", ROOT / "data" / "informatica.json"),
+        ("AI", ROOT / "data" / "ai.json"),
+    ]
+
+    percorsi_logica_testuale = []
+    cartella_logica = ROOT / "data" / "logica"
+
+    if cartella_logica.exists():
+        for percorso in sorted(cartella_logica.glob("*.json")):
+            nome_file = percorso.stem.lower()
+
+            if "visiva" in nome_file or "visual" in nome_file:
+                continue
+
+            percorsi_logica_testuale.append(percorso)
+
+    percorsi_logica_testuale.extend([
+        ROOT / "data" / "logica.json",
+        ROOT / "data" / "logica_verbale.json",
+        ROOT / "data" / "logica_numerica.json",
+        ROOT / "data" / "ragionamento_astratto.json",
+        ROOT / "data" / "ragionamento_critico.json",
+    ])
+
+    gia_inseriti = set()
+
+    for percorso in percorsi_logica_testuale:
+        percorso_risolto = percorso.resolve()
+
+        if percorso_risolto in gia_inseriti:
+            continue
+
+        if percorso.exists():
+            motori.append((nome_motore_da_file(percorso), percorso))
+            gia_inseriti.add(percorso_risolto)
+
+    return motori
+
+
+MOTORI_AI = crea_motori_quiz_ai_testuali()
 
 
 def leggi_json(percorso):
@@ -200,12 +265,9 @@ def opzioni_con_lunghezze_davvero_sbilanciate(opzioni):
     if lunghezza_minima == 0:
         return False
 
-    # Non segnaliamo le opzioni brevi quando sono tutte brevi.
-    # Esempio scientifico valido: Newton / Joule / Watt / Pascal.
     if lunghezza_massima <= 25:
         return False
 
-    # Segnaliamo solo squilibri forti, non differenze normali.
     rapporto = lunghezza_massima / lunghezza_minima
 
     return rapporto >= 4 and lunghezza_massima >= 70
@@ -214,6 +276,7 @@ def opzioni_con_lunghezze_davvero_sbilanciate(opzioni):
 def analizza_domanda(nome_motore, indice, domanda):
     problemi_tecnici = []
     avvisi_qualita_reali = []
+    errori_linguistici = []
     note_informative = []
 
     if not isinstance(domanda, dict):
@@ -227,6 +290,7 @@ def analizza_domanda(nome_motore, indice, domanda):
             "posizione_risposta": "NON_TROVATA",
             "problemi_tecnici": ["Elemento domanda non è un oggetto JSON"],
             "avvisi_qualita_reali": [],
+            "errori_linguistici": [],
             "note_informative": [],
         }
 
@@ -241,6 +305,7 @@ def analizza_domanda(nome_motore, indice, domanda):
     livello = normalizza_testo(primo_valore(domanda, CHIAVI_LIVELLO))
     opzioni = estrai_opzioni(domanda)
     risposta = normalizza_testo(primo_valore(domanda, CHIAVI_RISPOSTA))
+    spiegazione = normalizza_testo(primo_valore(domanda, CHIAVI_SPIEGAZIONE, default=""))
 
     if not id_domanda:
         problemi_tecnici.append("ID domanda mancante")
@@ -308,6 +373,15 @@ def analizza_domanda(nome_motore, indice, domanda):
     if opzioni_con_lunghezze_davvero_sbilanciate(opzioni):
         avvisi_qualita_reali.append("Opzioni con lunghezze davvero molto sbilanciate")
 
+    errori_lingua, note_lingua = controlla_lingua_domanda(
+        testo_domanda,
+        opzioni,
+        spiegazione,
+    )
+
+    errori_linguistici.extend(errori_lingua)
+    note_informative.extend(note_lingua)
+
     return {
         "id": id_domanda,
         "domanda": testo_domanda,
@@ -316,8 +390,9 @@ def analizza_domanda(nome_motore, indice, domanda):
         "opzioni": opzioni,
         "risposta_corretta": risposta,
         "posizione_risposta": posizione,
-        "problemi_tecnici": problemi_tecnici,
+        "problemi_tecnici": sorted(set(problemi_tecnici)),
         "avvisi_qualita_reali": sorted(set(avvisi_qualita_reali)),
+        "errori_linguistici": sorted(set(errori_linguistici)),
         "note_informative": sorted(set(note_informative)),
     }
 
@@ -375,9 +450,11 @@ def analizza_motore(nome_motore, percorso, soglia_similarita):
         "posizioni_risposta": {},
         "problemi_tecnici_totali": 0,
         "avvisi_qualita_reali_totali": 0,
+        "errori_linguistici_totali": 0,
         "note_informative_totali": 0,
         "domande_con_problemi_tecnici": [],
         "domande_con_avvisi_qualita_reali": [],
+        "domande_con_errori_linguistici": [],
         "domande_con_note_informative": [],
         "duplicati_identici": {},
         "domande_simili": [],
@@ -415,6 +492,10 @@ def analizza_motore(nome_motore, percorso, soglia_similarita):
             risultato["avvisi_qualita_reali_totali"] += len(domanda["avvisi_qualita_reali"])
             risultato["domande_con_avvisi_qualita_reali"].append(domanda)
 
+        if domanda["errori_linguistici"]:
+            risultato["errori_linguistici_totali"] += len(domanda["errori_linguistici"])
+            risultato["domande_con_errori_linguistici"].append(domanda)
+
         if domanda["note_informative"]:
             risultato["note_informative_totali"] += len(domanda["note_informative"])
             risultato["domande_con_note_informative"].append(domanda)
@@ -443,6 +524,21 @@ def motori_per_area(area):
     raise ValueError(f"Area non riconosciuta: {area}")
 
 
+def aggiungi_sezione_domande(righe, titolo, domande, chiave):
+    if not domande:
+        return
+
+    righe.append(f"### {titolo}")
+    righe.append("")
+
+    for domanda in domande[:50]:
+        righe.append(f"- **{domanda['id']}** — {domanda['domanda']}")
+        for voce in domanda[chiave]:
+            righe.append(f"  - {voce}")
+
+    righe.append("")
+
+
 def crea_report_markdown(risultati, area):
     righe = []
 
@@ -450,11 +546,14 @@ def crea_report_markdown(risultati, area):
     righe.append("")
     righe.append(f"Area controllata: **{area}**")
     righe.append("")
-    righe.append("Questo report distingue tra problemi tecnici veri, avvisi qualità reali e semplici note informative.")
+    righe.append(
+        "Questo report distingue problemi tecnici, avvisi qualità reali, errori linguistici e note informative."
+    )
     righe.append("")
 
     totale_tecnici = sum(r["problemi_tecnici_totali"] for r in risultati)
     totale_avvisi = sum(r["avvisi_qualita_reali_totali"] for r in risultati)
+    totale_lingua = sum(r["errori_linguistici_totali"] for r in risultati)
     totale_note = sum(r["note_informative_totali"] for r in risultati)
     totale_duplicati = sum(len(r["duplicati_identici"]) for r in risultati)
     totale_simili = sum(len(r["domande_simili"]) for r in risultati)
@@ -463,6 +562,7 @@ def crea_report_markdown(risultati, area):
     righe.append("")
     righe.append(f"- Problemi tecnici totali: **{totale_tecnici}**")
     righe.append(f"- Avvisi qualità reali totali: **{totale_avvisi}**")
+    righe.append(f"- Errori linguistici totali: **{totale_lingua}**")
     righe.append(f"- Note informative totali: **{totale_note}**")
     righe.append(f"- Gruppi di domande duplicate identiche: **{totale_duplicati}**")
     righe.append(f"- Coppie di domande molto simili: **{totale_simili}**")
@@ -485,32 +585,32 @@ def crea_report_markdown(risultati, area):
         righe.append(f"Posizione risposta corretta nel sorgente: `{risultato['posizioni_risposta']}`")
         righe.append(f"Problemi tecnici: **{risultato['problemi_tecnici_totali']}**")
         righe.append(f"Avvisi qualità reali: **{risultato['avvisi_qualita_reali_totali']}**")
+        righe.append(f"Errori linguistici: **{risultato['errori_linguistici_totali']}**")
         righe.append(f"Note informative: **{risultato['note_informative_totali']}**")
         righe.append(f"Duplicati identici: **{len(risultato['duplicati_identici'])}**")
         righe.append(f"Domande molto simili: **{len(risultato['domande_simili'])}**")
         righe.append("")
 
-        if risultato["domande_con_problemi_tecnici"]:
-            righe.append("### Problemi tecnici")
-            righe.append("")
+        aggiungi_sezione_domande(
+            righe,
+            "Problemi tecnici",
+            risultato["domande_con_problemi_tecnici"],
+            "problemi_tecnici",
+        )
 
-            for domanda in risultato["domande_con_problemi_tecnici"][:40]:
-                righe.append(f"- **{domanda['id']}** — {domanda['domanda']}")
-                for problema in domanda["problemi_tecnici"]:
-                    righe.append(f"  - {problema}")
+        aggiungi_sezione_domande(
+            righe,
+            "Avvisi qualità reali",
+            risultato["domande_con_avvisi_qualita_reali"],
+            "avvisi_qualita_reali",
+        )
 
-            righe.append("")
-
-        if risultato["domande_con_avvisi_qualita_reali"]:
-            righe.append("### Avvisi qualità reali")
-            righe.append("")
-
-            for domanda in risultato["domande_con_avvisi_qualita_reali"][:40]:
-                righe.append(f"- **{domanda['id']}** — {domanda['domanda']}")
-                for avviso in domanda["avvisi_qualita_reali"]:
-                    righe.append(f"  - {avviso}")
-
-            righe.append("")
+        aggiungi_sezione_domande(
+            righe,
+            "Errori linguistici",
+            risultato["domande_con_errori_linguistici"],
+            "errori_linguistici",
+        )
 
         if risultato["duplicati_identici"]:
             righe.append("### Domande duplicate identiche")
@@ -556,6 +656,7 @@ def stampa_riepilogo_console(risultati):
         print(f"Posizione risposta corretta: {risultato['posizioni_risposta']}")
         print(f"Problemi tecnici: {risultato['problemi_tecnici_totali']}")
         print(f"Avvisi qualità reali: {risultato['avvisi_qualita_reali_totali']}")
+        print(f"Errori linguistici: {risultato['errori_linguistici_totali']}")
         print(f"Note informative: {risultato['note_informative_totali']}")
         print(f"Duplicati identici: {len(risultato['duplicati_identici'])}")
         print(f"Domande molto simili: {len(risultato['domande_simili'])}")
@@ -573,7 +674,7 @@ def main():
         "--area",
         choices=["scienze", "ai", "tutto"],
         default="tutto",
-        help="Area da controllare: scienze, ai oppure tutto.",
+        help="Area da controllare. Nota: ai indica Quiz AI testuale, senza logica visiva.",
     )
 
     parser.add_argument(
@@ -583,17 +684,9 @@ def main():
         help="Soglia per segnalare domande molto simili.",
     )
 
-    parser.add_argument(
-        "--fail-on-technical",
-        action="store_true",
-        help="Chiude con errore se trova problemi tecnici veri.",
-    )
-
-    parser.add_argument(
-        "--fail-on-quality",
-        action="store_true",
-        help="Chiude con errore se trova avvisi qualità reali.",
-    )
+    parser.add_argument("--fail-on-technical", action="store_true")
+    parser.add_argument("--fail-on-quality", action="store_true")
+    parser.add_argument("--fail-on-language", action="store_true")
 
     args = parser.parse_args()
 
@@ -619,11 +712,15 @@ def main():
 
     problemi_tecnici = sum(r["problemi_tecnici_totali"] for r in risultati)
     avvisi_qualita = sum(r["avvisi_qualita_reali_totali"] for r in risultati)
+    errori_linguistici = sum(r["errori_linguistici_totali"] for r in risultati)
 
     if args.fail_on_technical and problemi_tecnici > 0:
         sys.exit(1)
 
     if args.fail_on_quality and avvisi_qualita > 0:
+        sys.exit(1)
+
+    if args.fail_on_language and errori_linguistici > 0:
         sys.exit(1)
 
 
