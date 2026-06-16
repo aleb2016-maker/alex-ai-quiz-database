@@ -68,5 +68,856 @@
     "difficolta": 3,
     "distrattore_forte": "Permettere al frontend di leggere direttamente le tabelle del database",
     "motivo_distrattore_forte": "È vicino perché riguarda il rapporto tra frontend, backend e dati, ma è sbagliato perché il frontend non dovrebbe accedere direttamente al database: deve passare da endpoint controllati del backend."
+  },
+  {
+    "id": "INF-FAC-0004",
+    "categoria": "informatica",
+    "sottocategoria": "web",
+    "livello": "facile",
+    "domanda": "Quale linguaggio viene usato principalmente per definire la struttura di una pagina web?",
+    "opzioni": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "SQL"
+    ],
+    "risposta_corretta": "HTML",
+    "spiegazione": "HTML definisce la struttura della pagina web. CSS gestisce lo stile grafico, JavaScript aggiunge interattività, mentre SQL serve a interrogare database. Tutte sono tecnologie reali, ma hanno ruoli diversi.",
+    "tags": [
+      "web",
+      "html",
+      "frontend"
+    ],
+    "difficolta": 1,
+    "distrattore_forte": "CSS",
+    "motivo_distrattore_forte": "È vicino perché CSS lavora sulle pagine web insieme a HTML, ma è sbagliato perché CSS gestisce lo stile grafico, mentre HTML definisce la struttura."
+  },
+  {
+    "id": "INF-INT-0004",
+    "categoria": "informatica",
+    "sottocategoria": "api",
+    "livello": "intermedio",
+    "domanda": "In una richiesta HTTP, quale metodo viene usato di solito per ottenere dati senza modificarli?",
+    "opzioni": [
+      "GET",
+      "POST",
+      "PUT",
+      "PATCH"
+    ],
+    "risposta_corretta": "GET",
+    "spiegazione": "GET viene usato normalmente per leggere dati senza modificarli. POST crea o invia dati, PUT sostituisce una risorsa, PATCH aggiorna parzialmente una risorsa.",
+    "tags": [
+      "http",
+      "api",
+      "backend"
+    ],
+    "difficolta": 2,
+    "distrattore_forte": "POST",
+    "motivo_distrattore_forte": "È vicino perché POST è un metodo HTTP molto usato nelle API, ma è sbagliato perché di solito serve a inviare o creare dati, non a leggerli senza modificarli."
+  },
+  {
+    "id": "INF-AV-0004",
+    "categoria": "informatica",
+    "sottocategoria": "architettura",
+    "livello": "avanzato",
+    "domanda": "Perché separare frontend e backend rende spesso un'applicazione più gestibile?",
+    "opzioni": [
+      "Perché interfaccia, logica applicativa e dati possono evolvere con responsabilità più chiare",
+      "Perché il frontend può gestire l'interfaccia mentre il backend espone dati e logica tramite API",
+      "Perché il backend può cambiare alcune regole senza riscrivere tutta l'interfaccia",
+      "Perché il frontend può consumare servizi diversi senza conoscere i dettagli interni del server"
+    ],
+    "risposta_corretta": "Perché interfaccia, logica applicativa e dati possono evolvere con responsabilità più chiare",
+    "spiegazione": "Separare frontend e backend rende il progetto più gestibile perché divide le responsabilità: interfaccia utente, logica applicativa e gestione dei dati possono evolvere in modo più ordinato. Le altre opzioni descrivono vantaggi specifici, ma la risposta corretta è quella più generale.",
+    "tags": [
+      "frontend",
+      "backend",
+      "architettura"
+    ],
+    "difficolta": 3,
+    "distrattore_forte": "Perché il frontend può gestire l'interfaccia mentre il backend espone dati e logica tramite API",
+    "motivo_distrattore_forte": "È vicino perché descrive correttamente una separazione tipica, ma è meno completo: la risposta corretta spiega il vantaggio generale sulle responsabilità del sistema."
+  },
+  {
+    "id": "INF-FAC-0005",
+    "categoria": "informatica",
+    "sottocategoria": "database",
+    "livello": "facile",
+    "domanda": "In un database, che cosa rappresenta normalmente una tabella?",
+    "opzioni": [
+      "Un insieme organizzato di righe e colonne",
+      "Una singola riga che rappresenta un record",
+      "Una relazione tra due tabelle tramite chiavi",
+      "Una query usata per filtrare i dati"
+    ],
+    "risposta_corretta": "Un insieme organizzato di righe e colonne",
+    "spiegazione": "Una tabella contiene dati organizzati in righe e colonne. Una singola riga è un record, una relazione collega tabelle diverse, mentre una query serve a leggere, filtrare o modificare dati.",
+    "tags": [
+      "database",
+      "tabelle",
+      "dati"
+    ],
+    "difficolta": 1,
+    "distrattore_forte": "Una singola riga che rappresenta un record",
+    "motivo_distrattore_forte": "È vicino perché una riga fa parte di una tabella, ma è sbagliato perché la tabella è l'insieme organizzato di molte righe e colonne."
+  },
+  {
+    "id": "INF-INT-0005",
+    "categoria": "informatica",
+    "sottocategoria": "database",
+    "livello": "intermedio",
+    "domanda": "A cosa serve principalmente una chiave esterna in un database relazionale?",
+    "opzioni": [
+      "A collegare un record di una tabella a un record di un'altra tabella",
+      "A identificare in modo univoco ogni record della stessa tabella",
+      "A ordinare automaticamente tutti i record in base alla data",
+      "A trasformare una tabella relazionale in un file JSON"
+    ],
+    "risposta_corretta": "A collegare un record di una tabella a un record di un'altra tabella",
+    "spiegazione": "Una chiave esterna serve a collegare tabelle diverse. Per esempio, un ordine può contenere l'ID del cliente a cui appartiene. La chiave primaria identifica un record nella stessa tabella, mentre ordinamento e conversione in JSON sono concetti diversi.",
+    "tags": [
+      "database",
+      "chiave primaria",
+      "sql"
+    ],
+    "difficolta": 2,
+    "distrattore_forte": "A identificare in modo univoco ogni record della stessa tabella",
+    "motivo_distrattore_forte": "È vicino perché parla di chiavi nei database relazionali, ma descrive la chiave primaria; la chiave esterna invece collega record tra tabelle diverse."
+  },
+  {
+    "id": "INF-AV-0005",
+    "categoria": "informatica",
+    "sottocategoria": "api",
+    "livello": "avanzato",
+    "domanda": "Che cosa può indicare una risposta HTTP 401 in una API protetta?",
+    "opzioni": [
+      "La richiesta non è autenticata correttamente",
+      "La richiesta è autenticata ma l'utente non ha i permessi necessari",
+      "La risorsa richiesta non esiste sul server",
+      "Il server ha generato un errore interno"
+    ],
+    "risposta_corretta": "La richiesta non è autenticata correttamente",
+    "spiegazione": "HTTP 401 indica in genere un problema di autenticazione: credenziali mancanti, non valide o token scaduto. 403 riguarda invece un utente autenticato ma senza permessi sufficienti; 404 indica risorsa non trovata; 500 errore interno del server.",
+    "tags": [
+      "api",
+      "http",
+      "sicurezza"
+    ],
+    "difficolta": 3,
+    "distrattore_forte": "La richiesta è autenticata ma l'utente non ha i permessi necessari",
+    "motivo_distrattore_forte": "È molto vicino perché riguarda comunque accesso e sicurezza, ma è sbagliato perché descrive più precisamente un errore 403, non un 401."
+  },
+  {
+    "id": "INF-FAC-0006",
+    "categoria": "informatica",
+    "sottocategoria": "programmazione",
+    "livello": "facile",
+    "domanda": "A cosa serve una variabile in programmazione?",
+    "opzioni": [
+      "A conservare un valore che può essere usato o modificato",
+      "A conservare un valore, ma senza poterlo mai cambiare durante il programma",
+      "A definire una funzione riutilizzabile",
+      "A ripetere un blocco di istruzioni"
+    ],
+    "risposta_corretta": "A conservare un valore che può essere usato o modificato",
+    "spiegazione": "Una variabile conserva un valore che può essere letto e, in molti casi, modificato durante l'esecuzione. Una funzione raggruppa codice riutilizzabile, mentre un ciclo ripete istruzioni.",
+    "tags": [
+      "programmazione",
+      "variabili",
+      "base"
+    ],
+    "difficolta": 1,
+    "distrattore_forte": "A conservare un valore, ma senza poterlo mai cambiare durante il programma",
+    "motivo_distrattore_forte": "È vicino perché parla di conservare un valore, ma è sbagliato perché una variabile normalmente può cambiare valore durante il programma."
+  },
+  {
+    "id": "INF-INT-0006",
+    "categoria": "informatica",
+    "sottocategoria": "frontend",
+    "livello": "intermedio",
+    "domanda": "In una pagina web, qual è il ruolo principale del CSS?",
+    "opzioni": [
+      "Gestire l'aspetto visivo degli elementi",
+      "Definire la struttura semantica della pagina",
+      "Gestire la logica interattiva nel browser",
+      "Recuperare dati da un database con query"
+    ],
+    "risposta_corretta": "Gestire l'aspetto visivo degli elementi",
+    "spiegazione": "CSS gestisce stile, layout, colori, spaziature e responsive design. HTML definisce la struttura, JavaScript gestisce l'interattività, mentre le query al database sono tipiche del backend.",
+    "tags": [
+      "css",
+      "frontend",
+      "web"
+    ],
+    "difficolta": 2,
+    "distrattore_forte": "Definire la struttura semantica della pagina",
+    "motivo_distrattore_forte": "È vicino perché HTML e CSS lavorano insieme nella pagina web, ma è sbagliato perché HTML definisce la struttura, mentre CSS gestisce aspetto visivo, layout e stile."
+  },
+  {
+    "id": "INF-AV-0006",
+    "categoria": "informatica",
+    "sottocategoria": "database",
+    "livello": "avanzato",
+    "domanda": "Qual è il vantaggio principale di usare un indice su una colonna molto cercata di un database?",
+    "opzioni": [
+      "Rendere più veloci alcune ricerche su quella colonna",
+      "Rendere più veloci alcune ricerche, ma senza costi su spazio o scritture",
+      "Ridurre automaticamente il numero di righe salvate nella tabella",
+      "Normalizzare automaticamente i dati duplicati"
+    ],
+    "risposta_corretta": "Rendere più veloci alcune ricerche su quella colonna",
+    "spiegazione": "Un indice aiuta il database a trovare più velocemente i record su certe colonne. Può però avere costi in spazio e nelle operazioni di scrittura. Non riduce automaticamente le righe e non normalizza i dati.",
+    "tags": [
+      "database",
+      "indice",
+      "prestazioni"
+    ],
+    "difficolta": 3,
+    "distrattore_forte": "Rendere più veloci alcune ricerche, ma senza costi su spazio o scritture",
+    "motivo_distrattore_forte": "È vicino perché riconosce il vantaggio sulle ricerche, ma è sbagliato perché gli indici possono avere costi di spazio e aggiornamento."
+  },
+  {
+    "id": "INF-FAC-0007",
+    "categoria": "informatica",
+    "sottocategoria": "internet",
+    "livello": "facile",
+    "domanda": "Che cosa indica normalmente un URL?",
+    "opzioni": [
+      "L'indirizzo di una risorsa sul web",
+      "Il protocollo usato per trasferire una pagina",
+      "Il nome del dominio senza percorso della risorsa",
+      "Il codice di stato restituito dal server"
+    ],
+    "risposta_corretta": "L'indirizzo di una risorsa sul web",
+    "spiegazione": "Un URL identifica l'indirizzo completo di una risorsa web. Può includere protocollo, dominio, percorso e parametri. Il protocollo e il dominio sono solo parti dell'URL, mentre il codice di stato è la risposta del server.",
+    "tags": [
+      "web",
+      "url",
+      "internet"
+    ],
+    "difficolta": 1,
+    "distrattore_forte": "Il protocollo usato per trasferire una pagina",
+    "motivo_distrattore_forte": "È vicino perché il protocollo può essere una parte dell'URL, per esempio http o https, ma è sbagliato perché l'URL indica l'indirizzo completo della risorsa."
+  },
+  {
+    "id": "INF-INT-0007",
+    "categoria": "informatica",
+    "sottocategoria": "debug",
+    "livello": "intermedio",
+    "domanda": "Che cosa significa fare debug di un programma?",
+    "opzioni": [
+      "Individuare e correggere errori nel comportamento del codice",
+      "Osservare il programma durante l'esecuzione per capire dove nasce un errore",
+      "Controllare valori intermedi per verificare se la logica segue il flusso previsto",
+      "Riprodurre un problema in modo stabile per capire quale istruzione lo provoca"
+    ],
+    "risposta_corretta": "Individuare e correggere errori nel comportamento del codice",
+    "spiegazione": "Fare debug significa individuare e correggere errori nel comportamento del codice. Osservare l'esecuzione, controllare valori intermedi e riprodurre il problema sono tecniche utili, ma non descrivono da sole l'intero processo di debug.",
+    "tags": [
+      "debug",
+      "programmazione",
+      "errori"
+    ],
+    "difficolta": 2,
+    "distrattore_forte": "Osservare il programma durante l'esecuzione per capire dove nasce un errore",
+    "motivo_distrattore_forte": "È molto vicino perché osservare l'esecuzione è una tecnica reale di debug, ma è incompleto: il debug include anche la correzione dell'errore."
+  },
+  {
+    "id": "INF-AV-0007",
+    "categoria": "informatica",
+    "sottocategoria": "concorrenza",
+    "livello": "avanzato",
+    "domanda": "Perché due operazioni simultanee sullo stesso dato possono creare problemi in un'applicazione?",
+    "opzioni": [
+      "Perché possono produrre risultati incoerenti se non vengono gestite correttamente",
+      "Perché possono leggere o modificare lo stesso dato nello stesso intervallo di tempo",
+      "Perché possono richiedere transazioni o meccanismi di isolamento adeguati",
+      "Perché possono causare aggiornamenti persi se due modifiche si sovrappongono"
+    ],
+    "risposta_corretta": "Perché possono produrre risultati incoerenti se non vengono gestite correttamente",
+    "spiegazione": "Due operazioni simultanee sullo stesso dato possono creare stati incoerenti, aggiornamenti persi o conflitti. Le altre opzioni descrivono casi o soluzioni specifiche, mentre la risposta corretta riassume il rischio principale.",
+    "tags": [
+      "concorrenza",
+      "transazioni",
+      "backend"
+    ],
+    "difficolta": 3,
+    "distrattore_forte": "Perché possono leggere o modificare lo stesso dato nello stesso intervallo di tempo",
+    "motivo_distrattore_forte": "È molto vicino perché descrive la situazione che può creare il problema, ma è incompleto: il rischio vero nasce se questa concorrenza non viene gestita correttamente."
+  },
+  {
+    "id": "INF-FAC-0008",
+    "categoria": "informatica",
+    "sottocategoria": "file",
+    "livello": "facile",
+    "domanda": "Quale formato è molto usato nelle API web per rappresentare oggetti e liste con coppie chiave-valore?",
+    "opzioni": [
+      "JSON",
+      "XML",
+      "YAML",
+      "CSV"
+    ],
+    "risposta_corretta": "JSON",
+    "spiegazione": "JSON è molto usato nelle API web perché rappresenta bene oggetti, liste e coppie chiave-valore. XML e YAML possono rappresentare dati strutturati, ma JSON è particolarmente comune nello scambio dati tra frontend, backend e API. CSV è più adatto a dati tabellari semplici.",
+    "tags": [
+      "json",
+      "dati",
+      "formati"
+    ],
+    "difficolta": 1,
+    "distrattore_forte": "XML",
+    "motivo_distrattore_forte": "È vicino perché anche XML può rappresentare dati strutturati, ma è meno usato di JSON nelle API web moderne per oggetti e liste."
+  },
+  {
+    "id": "INF-INT-0008",
+    "categoria": "informatica",
+    "sottocategoria": "git",
+    "livello": "intermedio",
+    "domanda": "In Git, che cosa rappresenta un commit?",
+    "opzioni": [
+      "Una fotografia salvata dello stato del progetto nella cronologia Git",
+      "Una fotografia temporanea dello stato del progetto che non entra nella cronologia Git",
+      "Un ramo separato in cui sviluppare nuove modifiche",
+      "Un comando per scaricare modifiche dal repository remoto"
+    ],
+    "risposta_corretta": "Una fotografia salvata dello stato del progetto nella cronologia Git",
+    "spiegazione": "Un commit salva uno stato del progetto nella cronologia Git. Non è una fotografia temporanea, non è un branch e non è il comando usato per scaricare modifiche dal remoto.",
+    "tags": [
+      "git",
+      "versionamento",
+      "commit"
+    ],
+    "difficolta": 2,
+    "distrattore_forte": "Una fotografia temporanea dello stato del progetto che non entra nella cronologia Git",
+    "motivo_distrattore_forte": "È vicino perché parla di fotografia dello stato del progetto, ma è sbagliato perché un commit entra nella cronologia Git: non è temporaneo."
+  },
+  {
+    "id": "INF-AV-0008",
+    "categoria": "informatica",
+    "sottocategoria": "testing",
+    "livello": "avanzato",
+    "domanda": "Perché un test automatico utile deve avere un risultato atteso ben definito?",
+    "opzioni": [
+      "Perché il test deve poter stabilire se il comportamento ottenuto è corretto o no",
+      "Perché il test deve confrontare output reale e output previsto",
+      "Perché il test deve verificare una condizione precisa e ripetibile",
+      "Perché il test deve fallire quando il codice non rispetta il comportamento atteso"
+    ],
+    "risposta_corretta": "Perché il test deve poter stabilire se il comportamento ottenuto è corretto o no",
+    "spiegazione": "Un test automatico utile deve sapere cosa aspettarsi. Se il risultato atteso è chiaro, il test può confrontarlo con il risultato reale e stabilire se il comportamento è corretto. Le altre opzioni sono aspetti collegati, ma meno generali.",
+    "tags": [
+      "testing",
+      "qualità",
+      "software"
+    ],
+    "difficolta": 3,
+    "distrattore_forte": "Perché il test deve confrontare output reale e output previsto",
+    "motivo_distrattore_forte": "È molto vicino perché descrive una tecnica tipica dei test, ma la risposta corretta è più generale: il test deve stabilire se il comportamento è corretto o no."
+  },
+  {
+    "id": "INF-INT-0009",
+    "categoria": "informatica",
+    "sottocategoria": "sicurezza",
+    "livello": "intermedio",
+    "domanda": "Perché è rischioso salvare password direttamente nel codice sorgente?",
+    "opzioni": [
+      "Perché possono finire in repository, log o copie condivise del progetto",
+      "Perché possono essere lette da altre persone se il codice viene pubblicato",
+      "Perché rendono più difficile cambiare credenziali tra ambienti diversi",
+      "Perché aumentano il rischio di esporre accessi a database o servizi esterni"
+    ],
+    "risposta_corretta": "Perché possono finire in repository, log o copie condivise del progetto",
+    "spiegazione": "Salvare password nel codice è rischioso perché possono finire in repository, log, backup o copie condivise. La pubblicazione del codice, la difficoltà di cambiare credenziali e l'esposizione di accessi sono conseguenze collegate.",
+    "tags": [
+      "sicurezza",
+      "password",
+      "git"
+    ],
+    "difficolta": 2,
+    "distrattore_forte": "Perché possono essere lette da altre persone se il codice viene pubblicato",
+    "motivo_distrattore_forte": "È molto vicino perché descrive una conseguenza reale, ma è più limitato: il rischio esiste anche tramite log, backup, repository privati o copie condivise."
+  },
+  {
+    "id": "INF-AV-0009",
+    "categoria": "informatica",
+    "sottocategoria": "deploy",
+    "livello": "avanzato",
+    "domanda": "Perché una variabile d'ambiente è utile quando si pubblica un'applicazione?",
+    "opzioni": [
+      "Permette di separare configurazioni sensibili o diverse dal codice sorgente",
+      "Permette di cambiare URL o chiavi senza modificare i file del codice",
+      "Permette di usare configurazioni diverse tra sviluppo, test e produzione",
+      "Permette di evitare che credenziali e impostazioni vengano scritte direttamente nel repository"
+    ],
+    "risposta_corretta": "Permette di separare configurazioni sensibili o diverse dal codice sorgente",
+    "spiegazione": "Le variabili d'ambiente servono soprattutto a separare configurazioni sensibili o variabili dal codice sorgente. Cambiare URL, distinguere ambienti ed evitare credenziali nel repository sono vantaggi collegati, ma la risposta corretta è quella più generale.",
+    "tags": [
+      "deploy",
+      "ambiente",
+      "configurazione"
+    ],
+    "difficolta": 3,
+    "distrattore_forte": "Permette di cambiare URL o chiavi senza modificare i file del codice",
+    "motivo_distrattore_forte": "È vicino perché descrive un vantaggio reale delle variabili d'ambiente, ma è meno completo: il punto centrale è separare configurazioni sensibili o diverse dal codice sorgente."
+  },
+  {
+    "id": "INF-FAC-0101",
+    "categoria": "informatica",
+    "sottocategoria": "hardware",
+    "livello": "facile",
+    "domanda": "Qual è il ruolo principale della CPU in un computer?",
+    "opzioni": [
+      "Eseguire istruzioni ed elaborare operazioni",
+      "Conservare temporaneamente i dati usati dai programmi",
+      "Archiviare file e programmi anche a computer spento",
+      "Gestire principalmente l'elaborazione grafica delle immagini"
+    ],
+    "risposta_corretta": "Eseguire istruzioni ed elaborare operazioni",
+    "spiegazione": "La CPU è il processore principale del computer: esegue istruzioni, calcoli e operazioni logiche. La RAM conserva temporaneamente i dati dei programmi, SSD o hard disk archiviano i file in modo permanente, mentre la GPU gestisce soprattutto l'elaborazione grafica.",
+    "tags": [
+      "cpu",
+      "hardware",
+      "processore"
+    ],
+    "difficolta": 1,
+    "distrattore_forte": "Conservare temporaneamente i dati usati dai programmi",
+    "motivo_distrattore_forte": "È vicino perché riguarda un componente fondamentale usato durante l'esecuzione dei programmi, ma è sbagliato perché descrive la RAM, non la CPU."
+  },
+  {
+    "id": "INF-INT-0101",
+    "categoria": "informatica",
+    "sottocategoria": "programmazione",
+    "livello": "intermedio",
+    "domanda": "Perché una funzione è utile in un programma?",
+    "opzioni": [
+      "Permette di raggruppare istruzioni riutilizzabili con un compito chiaro",
+      "Permette di raggruppare istruzioni, ma senza poter ricevere dati o restituire risultati",
+      "Serve solo a rendere il codice più lungo senza motivo",
+      "Sostituisce sempre la necessità di usare variabili"
+    ],
+    "risposta_corretta": "Permette di raggruppare istruzioni riutilizzabili con un compito chiaro",
+    "spiegazione": "Una funzione raccoglie istruzioni collegate a un compito. Può ricevere dati in ingresso, elaborarli e restituire un risultato, evitando ripetizioni e rendendo il codice più ordinato.",
+    "tags": [
+      "funzioni",
+      "riuso",
+      "programmazione"
+    ],
+    "difficolta": 2,
+    "distrattore_forte": "Permette di raggruppare istruzioni, ma senza poter ricevere dati o restituire risultati",
+    "motivo_distrattore_forte": "È vicino perché parla di raggruppare istruzioni, ma è sbagliato perché una funzione può anche ricevere input e restituire output."
+  },
+  {
+    "id": "INF-AV-0101",
+    "categoria": "informatica",
+    "sottocategoria": "architettura",
+    "livello": "avanzato",
+    "domanda": "Perché la validazione dei dati dovrebbe avvenire anche lato backend?",
+    "opzioni": [
+      "Perché i dati inviati al server non devono essere considerati affidabili solo perché il frontend li controlla",
+      "Perché i controlli del frontend migliorano l'esperienza utente, ma possono essere aggirati",
+      "Perché la validazione lato backend sostituisce ogni test automatico",
+      "Perché il frontend non può mai mostrare messaggi di errore"
+    ],
+    "risposta_corretta": "Perché i dati inviati al server non devono essere considerati affidabili solo perché il frontend li controlla",
+    "spiegazione": "Il controllo lato frontend migliora l'esperienza utente, ma può essere aggirato. Il backend deve validare i dati perché è il punto che protegge applicazione, database e regole di business.",
+    "tags": [
+      "backend",
+      "validazione",
+      "sicurezza"
+    ],
+    "difficolta": 3,
+    "distrattore_forte": "Perché i controlli del frontend migliorano l'esperienza utente, ma possono essere aggirati",
+    "motivo_distrattore_forte": "È molto vicino perché descrive un motivo reale per validare anche lato backend, ma è meno completo: la risposta corretta chiarisce che i dati arrivati al server non devono essere considerati affidabili."
+  },
+  {
+    "id": "INF-FAC-0102",
+    "categoria": "informatica",
+    "sottocategoria": "hardware",
+    "livello": "facile",
+    "domanda": "A cosa serve principalmente un SSD?",
+    "opzioni": [
+      "A salvare dati e programmi anche quando il computer è spento",
+      "A conservare temporaneamente i dati usati dai programmi durante l'esecuzione",
+      "A eseguire direttamente tutte le istruzioni della CPU",
+      "A gestire principalmente i calcoli grafici della scheda video"
+    ],
+    "risposta_corretta": "A salvare dati e programmi anche quando il computer è spento",
+    "spiegazione": "Un SSD è una memoria di archiviazione permanente. Mantiene file, programmi e sistema operativo anche a computer spento. La RAM invece conserva temporaneamente dati usati dai programmi durante l'esecuzione.",
+    "tags": [
+      "ssd",
+      "memoria",
+      "archiviazione"
+    ],
+    "difficolta": 1,
+    "distrattore_forte": "A conservare temporaneamente i dati usati dai programmi durante l'esecuzione",
+    "motivo_distrattore_forte": "È vicino perché parla comunque di memoria usata dal computer, ma è sbagliato perché descrive la RAM, non l'SSD."
+  },
+  {
+    "id": "INF-INT-0102",
+    "categoria": "informatica",
+    "sottocategoria": "database",
+    "livello": "intermedio",
+    "domanda": "A cosa serve una query SELECT in SQL?",
+    "opzioni": [
+      "A leggere dati da una o più tabelle",
+      "A leggere dati solo da una singola tabella, senza condizioni o collegamenti",
+      "A cancellare sempre l'intero database",
+      "A trasformare automaticamente SQL in HTML"
+    ],
+    "risposta_corretta": "A leggere dati da una o più tabelle",
+    "spiegazione": "SELECT viene usato per interrogare il database e ottenere dati. Può leggere da una o più tabelle e può essere combinato con condizioni, ordinamenti e join.",
+    "tags": [
+      "sql",
+      "select",
+      "database"
+    ],
+    "difficolta": 2,
+    "distrattore_forte": "A leggere dati solo da una singola tabella, senza condizioni o collegamenti",
+    "motivo_distrattore_forte": "È vicino perché SELECT legge dati, ma è troppo limitato: può usare condizioni, join e più tabelle."
+  },
+  {
+    "id": "INF-AV-0102",
+    "categoria": "informatica",
+    "sottocategoria": "sicurezza",
+    "livello": "avanzato",
+    "domanda": "Qual è una differenza importante tra hashing e cifratura?",
+    "opzioni": [
+      "L'hashing è pensato per non essere invertito facilmente, mentre la cifratura può essere decifrata con una chiave",
+      "L'hashing può essere decifrato con una chiave corretta, mentre la cifratura no",
+      "La cifratura serve solo a confrontare se due dati sono uguali",
+      "La cifratura produce sempre una impronta fissa come un hash"
+    ],
+    "risposta_corretta": "L'hashing è pensato per non essere invertito facilmente, mentre la cifratura può essere decifrata con una chiave",
+    "spiegazione": "Un hash è usato spesso per verificare integrità o password senza recuperare il valore originale. La cifratura invece protegge dati che devono poter essere decifrati da chi possiede la chiave.",
+    "tags": [
+      "hashing",
+      "cifratura",
+      "sicurezza"
+    ],
+    "difficolta": 3,
+    "distrattore_forte": "L'hashing può essere decifrato con una chiave corretta, mentre la cifratura no",
+    "motivo_distrattore_forte": "È vicino perché confronta hashing e cifratura, ma è sbagliato perché l'hashing non è pensato per essere decifrato."
+  },
+  {
+    "id": "INF-FAC-0103",
+    "categoria": "informatica",
+    "sottocategoria": "sistema_operativo",
+    "livello": "facile",
+    "domanda": "Che cos'è un sistema operativo?",
+    "opzioni": [
+      "Il software che gestisce risorse del computer e permette di usare programmi",
+      "Un programma applicativo usato per svolgere un compito specifico",
+      "Un componente hardware che aumenta lo spazio di archiviazione",
+      "Una cartella che contiene file personali dell'utente"
+    ],
+    "risposta_corretta": "Il software che gestisce risorse del computer e permette di usare programmi",
+    "spiegazione": "Il sistema operativo gestisce risorse come memoria, file, periferiche e processi, e permette agli altri programmi di funzionare. Un'applicazione svolge un compito specifico, mentre un componente hardware come un SSD aumenta lo spazio di archiviazione.",
+    "tags": [
+      "sistema_operativo",
+      "software",
+      "computer"
+    ],
+    "difficolta": 1,
+    "distrattore_forte": "Un programma applicativo usato per svolgere un compito specifico",
+    "motivo_distrattore_forte": "È vicino perché anche un'applicazione è software, ma è sbagliato perché il sistema operativo gestisce il computer e permette alle applicazioni di funzionare."
+  },
+  {
+    "id": "INF-INT-0103",
+    "categoria": "informatica",
+    "sottocategoria": "database",
+    "livello": "intermedio",
+    "domanda": "Perché si usa un JOIN in un database relazionale?",
+    "opzioni": [
+      "Per combinare dati collegati provenienti da tabelle diverse",
+      "Per combinare tabelle diverse creando automaticamente relazioni non definite",
+      "Per rinominare automaticamente tutti i campi di una tabella",
+      "Per eliminare sempre le chiavi primarie dal database"
+    ],
+    "risposta_corretta": "Per combinare dati collegati provenienti da tabelle diverse",
+    "spiegazione": "Un JOIN permette di unire informazioni distribuite in più tabelle tramite relazioni, per esempio collegando ordini e clienti attraverso un identificatore comune.",
+    "tags": [
+      "join",
+      "database",
+      "relazioni"
+    ],
+    "difficolta": 2,
+    "distrattore_forte": "Per combinare tabelle diverse creando automaticamente relazioni non definite",
+    "motivo_distrattore_forte": "È vicino perché parla di combinare tabelle, ma è sbagliato perché il JOIN usa relazioni o condizioni definite, non crea automaticamente relazioni corrette."
+  },
+  {
+    "id": "INF-AV-0103",
+    "categoria": "informatica",
+    "sottocategoria": "performance",
+    "livello": "avanzato",
+    "domanda": "Perché la cache può migliorare le prestazioni di un'applicazione?",
+    "opzioni": [
+      "Perché evita di ricalcolare o recuperare più volte dati usati spesso",
+      "Perché conserva temporaneamente dati frequenti, ma può restituire dati vecchi se non viene gestita bene",
+      "Perché sposta automaticamente ogni dato dal database alla memoria locale",
+      "Perché riduce il carico dell'applicazione anche quando i dati non vengono riutilizzati"
+    ],
+    "risposta_corretta": "Perché evita di ricalcolare o recuperare più volte dati usati spesso",
+    "spiegazione": "La cache conserva temporaneamente risultati o dati molto richiesti. Questo può ridurre tempi di risposta e carico su database o servizi esterni. Va però gestita bene, perché una cache non aggiornata può restituire dati vecchi.",
+    "tags": [
+      "cache",
+      "performance",
+      "applicazioni"
+    ],
+    "difficolta": 3,
+    "distrattore_forte": "Perché conserva temporaneamente dati frequenti, ma può restituire dati vecchi se non viene gestita bene",
+    "motivo_distrattore_forte": "È vicino perché descrive un comportamento reale della cache, cioè conservare dati frequenti. È però sbagliato come risposta principale perché mette al centro il rischio di dati vecchi, mentre il vantaggio prestazionale nasce dal non ricalcolare o recuperare più volte gli stessi dati."
+  },
+  {
+    "id": "INF-FAC-0104",
+    "categoria": "informatica",
+    "sottocategoria": "programmazione",
+    "livello": "facile",
+    "domanda": "A cosa serve normalmente un ciclo in programmazione?",
+    "opzioni": [
+      "A ripetere un blocco di istruzioni più volte",
+      "A scegliere se eseguire un blocco una sola volta in base a una condizione",
+      "A salvare un file in modo permanente",
+      "A cancellare tutte le variabili del programma"
+    ],
+    "risposta_corretta": "A ripetere un blocco di istruzioni più volte",
+    "spiegazione": "Un ciclo permette di ripetere istruzioni finché una condizione è vera o per un numero definito di volte. Una condizione invece sceglie quale ramo di codice eseguire, ma non ripete automaticamente il blocco.",
+    "tags": [
+      "cicli",
+      "programmazione",
+      "ripetizione"
+    ],
+    "difficolta": 1,
+    "distrattore_forte": "A scegliere se eseguire un blocco una sola volta in base a una condizione",
+    "motivo_distrattore_forte": "È vicino perché anche le condizioni controllano il flusso del programma, ma è sbagliato perché un ciclo serve a ripetere istruzioni."
+  },
+  {
+    "id": "INF-INT-0104",
+    "categoria": "informatica",
+    "sottocategoria": "web",
+    "livello": "intermedio",
+    "domanda": "Che cosa indica di solito una risposta HTTP 404?",
+    "opzioni": [
+      "La risorsa richiesta non è stata trovata sul server",
+      "La richiesta non è autenticata correttamente",
+      "L'utente è autenticato ma non autorizzato",
+      "Il server ha generato un errore interno"
+    ],
+    "risposta_corretta": "La risorsa richiesta non è stata trovata sul server",
+    "spiegazione": "HTTP 404 indica che la risorsa richiesta non è stata trovata. 401 riguarda un problema di autenticazione, 403 indica permessi insufficienti, mentre 500 segnala un errore interno del server.",
+    "tags": [
+      "http",
+      "404",
+      "web"
+    ],
+    "difficolta": 2,
+    "distrattore_forte": "La richiesta non è autenticata correttamente",
+    "motivo_distrattore_forte": "È vicino perché anche 401 è un codice di errore HTTP molto comune, ma è sbagliato perché 401 riguarda l'autenticazione, mentre 404 riguarda una risorsa non trovata."
+  },
+  {
+    "id": "INF-AV-0104",
+    "categoria": "informatica",
+    "sottocategoria": "api",
+    "livello": "avanzato",
+    "domanda": "Perché la paginazione è utile quando un'API restituisce molti risultati?",
+    "opzioni": [
+      "Per dividere i risultati in blocchi più piccoli e gestibili",
+      "Per limitare la quantità di dati restituiti in ogni risposta senza perdere l'accesso agli altri risultati",
+      "Per impedire all'API di restituire qualsiasi dato",
+      "Per trasformare ogni risposta in un errore 404"
+    ],
+    "risposta_corretta": "Per dividere i risultati in blocchi più piccoli e gestibili",
+    "spiegazione": "La paginazione evita di inviare troppi dati in una sola risposta. Aiuta prestazioni, consumo di rete e usabilità, soprattutto con grandi quantità di risultati.",
+    "tags": [
+      "api",
+      "paginazione",
+      "performance"
+    ],
+    "difficolta": 3,
+    "distrattore_forte": "Per limitare la quantità di dati restituiti in ogni risposta senza perdere l'accesso agli altri risultati",
+    "motivo_distrattore_forte": "È molto vicino perché descrive un effetto reale della paginazione, ma la risposta corretta è più generale: divide i risultati in blocchi piccoli e gestibili."
+  },
+  {
+    "id": "INF-FAC-0105",
+    "categoria": "informatica",
+    "sottocategoria": "programmazione",
+    "livello": "facile",
+    "domanda": "Che cosa rappresenta normalmente un valore booleano?",
+    "opzioni": [
+      "Un valore che può essere vero o falso",
+      "Un valore numerico usato per contare due alternative",
+      "Una stringa di testo composta da caratteri",
+      "Un valore assente o non definito"
+    ],
+    "risposta_corretta": "Un valore che può essere vero o falso",
+    "spiegazione": "Un booleano rappresenta due stati logici: vero o falso. Un numero intero serve a contare, una stringa rappresenta testo, mentre un valore nullo o assente indica mancanza di dato.",
+    "tags": [
+      "boolean",
+      "logica",
+      "programmazione"
+    ],
+    "difficolta": 1,
+    "distrattore_forte": "Un valore numerico usato per contare due alternative",
+    "motivo_distrattore_forte": "È vicino perché spesso i valori booleani vengono associati a due stati, ma è sbagliato perché il booleano rappresenta vero/falso, non un conteggio numerico."
+  },
+  {
+    "id": "INF-INT-0105",
+    "categoria": "informatica",
+    "sottocategoria": "git",
+    "livello": "intermedio",
+    "domanda": "A cosa serve un branch in Git?",
+    "opzioni": [
+      "A lavorare su una linea separata di sviluppo senza modificare subito quella principale",
+      "A salvare una fotografia dello stato del progetto nella cronologia Git",
+      "A scaricare automaticamente ogni libreria mancante",
+      "A trasformare il repository in un database SQL"
+    ],
+    "risposta_corretta": "A lavorare su una linea separata di sviluppo senza modificare subito quella principale",
+    "spiegazione": "Un branch permette di sviluppare modifiche in parallelo. È utile per nuove funzionalità, correzioni o esperimenti, senza toccare immediatamente il ramo principale. Il commit invece salva uno stato del progetto.",
+    "tags": [
+      "git",
+      "branch",
+      "versionamento"
+    ],
+    "difficolta": 2,
+    "distrattore_forte": "A salvare una fotografia dello stato del progetto nella cronologia Git",
+    "motivo_distrattore_forte": "È vicino perché è un concetto reale di Git, ma è sbagliato perché descrive un commit, non un branch."
+  },
+  {
+    "id": "INF-AV-0105",
+    "categoria": "informatica",
+    "sottocategoria": "devops",
+    "livello": "avanzato",
+    "domanda": "Che vantaggio offre una pipeline CI/CD in un progetto software?",
+    "opzioni": [
+      "Automatizza controlli, test e rilascio riducendo errori manuali ripetitivi",
+      "Automatizza test e build, ma richiede comunque controllo umano e codice scritto correttamente",
+      "Sostituisce completamente la necessità di scrivere codice",
+      "Impedisce a più sviluppatori di collaborare sullo stesso progetto"
+    ],
+    "risposta_corretta": "Automatizza controlli, test e rilascio riducendo errori manuali ripetitivi",
+    "spiegazione": "Una pipeline CI/CD può eseguire test, build e deploy in modo automatico. Questo rende più affidabile il processo di rilascio e riduce operazioni manuali ripetitive, ma non sostituisce la scrittura del codice o la collaborazione tra sviluppatori.",
+    "tags": [
+      "cicd",
+      "devops",
+      "automazione"
+    ],
+    "difficolta": 3,
+    "distrattore_forte": "Automatizza test e build, ma richiede comunque controllo umano e codice scritto correttamente",
+    "motivo_distrattore_forte": "È vicino perché descrive una parte realistica della CI/CD, ma è meno completo: la risposta corretta include anche controlli, rilascio e riduzione degli errori manuali ripetitivi."
+  },
+  {
+    "id": "INF-FAC-0106",
+    "categoria": "informatica",
+    "sottocategoria": "file",
+    "livello": "facile",
+    "domanda": "Che cosa indica normalmente il percorso di un file?",
+    "opzioni": [
+      "La posizione del file dentro cartelle e sottocartelle",
+      "Il nome del file senza indicare le cartelle in cui si trova",
+      "La velocità con cui il file viene aperto",
+      "Il numero di volte in cui il file è stato copiato"
+    ],
+    "risposta_corretta": "La posizione del file dentro cartelle e sottocartelle",
+    "spiegazione": "Il percorso indica dove si trova un file nel sistema, dentro una struttura di cartelle e sottocartelle. Il solo nome del file non basta sempre a identificarne la posizione.",
+    "tags": [
+      "file",
+      "percorso",
+      "cartelle"
+    ],
+    "difficolta": 1,
+    "distrattore_forte": "Il nome del file senza indicare le cartelle in cui si trova",
+    "motivo_distrattore_forte": "È vicino perché il nome può far parte del percorso, ma è incompleto: il percorso indica anche cartelle e sottocartelle."
+  },
+  {
+    "id": "INF-INT-0106",
+    "categoria": "informatica",
+    "sottocategoria": "sicurezza",
+    "livello": "intermedio",
+    "domanda": "Perché HTTPS è importante per un sito web?",
+    "opzioni": [
+      "Per proteggere la comunicazione tra browser e server tramite cifratura",
+      "Per verificare che il sito usi un certificato digitale valido, senza cifrare la comunicazione",
+      "Per rendere il sito sempre più veloce indipendentemente dal server",
+      "Per impedire al server di ricevere richieste dal browser"
+    ],
+    "risposta_corretta": "Per proteggere la comunicazione tra browser e server tramite cifratura",
+    "spiegazione": "HTTPS protegge la comunicazione tra browser e server tramite cifratura. I certificati sono parte importante del meccanismo, ma il punto centrale è proteggere lo scambio di dati.",
+    "tags": [
+      "https",
+      "sicurezza",
+      "web"
+    ],
+    "difficolta": 2,
+    "distrattore_forte": "Per verificare che il sito usi un certificato digitale valido, senza cifrare la comunicazione",
+    "motivo_distrattore_forte": "È vicino perché HTTPS usa certificati digitali, ma è sbagliato perché HTTPS serve anche a cifrare la comunicazione."
+  },
+  {
+    "id": "INF-AV-0106",
+    "categoria": "informatica",
+    "sottocategoria": "container",
+    "livello": "avanzato",
+    "domanda": "Perché un container può rendere più prevedibile l'esecuzione di un'applicazione?",
+    "opzioni": [
+      "Perché include applicazione e dipendenze in un ambiente isolato e riproducibile",
+      "Perché include applicazione e dipendenze e quindi garantisce sempre lo stesso risultato in qualunque ambiente",
+      "Perché aggiorna automaticamente tutte le dipendenze alla versione più recente",
+      "Perché installa automaticamente ogni libreria mancante a ogni avvio"
+    ],
+    "risposta_corretta": "Perché include applicazione e dipendenze in un ambiente isolato e riproducibile",
+    "spiegazione": "Un container confeziona applicazione, librerie e configurazioni essenziali in un ambiente isolato. Questo riduce differenze tra sviluppo, test e produzione.",
+    "tags": [
+      "container",
+      "docker",
+      "ambiente"
+    ],
+    "difficolta": 3,
+    "distrattore_forte": "Perché include applicazione e dipendenze e quindi garantisce sempre lo stesso risultato in qualunque ambiente",
+    "motivo_distrattore_forte": "È vicino perché parla di applicazione, dipendenze e ambiente, ma è troppo assoluto: un container aiuta la riproducibilità, non garantisce sempre ogni risultato."
+  },
+  {
+    "id": "INF-INT-0107",
+    "categoria": "informatica",
+    "sottocategoria": "frontend",
+    "livello": "intermedio",
+    "domanda": "Che cosa significa rendere una pagina web responsive?",
+    "opzioni": [
+      "Far adattare layout e contenuti a schermi di dimensioni diverse",
+      "Far adattare solo le immagini, lasciando invariato il layout della pagina",
+      "Far rispondere il server sempre con lo stesso codice HTTP",
+      "Impedire agli utenti di aprire la pagina da smartphone"
+    ],
+    "risposta_corretta": "Far adattare layout e contenuti a schermi di dimensioni diverse",
+    "spiegazione": "Una pagina responsive si adatta a desktop, tablet e smartphone. Layout, dimensioni e spaziature cambiano per restare leggibili e usabili.",
+    "tags": [
+      "responsive",
+      "frontend",
+      "css"
+    ],
+    "difficolta": 2,
+    "distrattore_forte": "Far adattare solo le immagini, lasciando invariato il layout della pagina",
+    "motivo_distrattore_forte": "È vicino perché anche le immagini possono adattarsi negli schermi diversi, ma è incompleto: una pagina responsive adatta l'intero layout e i contenuti."
+  },
+  {
+    "id": "INF-AV-0107",
+    "categoria": "informatica",
+    "sottocategoria": "database",
+    "livello": "avanzato",
+    "domanda": "Perché una transazione è utile quando più operazioni devono riuscire insieme?",
+    "opzioni": [
+      "Perché permette di confermare tutte le modifiche solo se l'intera operazione va a buon fine",
+      "Perché conferma ogni singola modifica appena viene eseguita, anche se le operazioni successive falliscono",
+      "Perché controlla automaticamente che ogni query SQL sia scritta senza errori logici",
+      "Perché corregge automaticamente le query SQL quando una condizione è sbagliata"
+    ],
+    "risposta_corretta": "Perché permette di confermare tutte le modifiche solo se l'intera operazione va a buon fine",
+    "spiegazione": "Una transazione consente di trattare più operazioni come un'unica unità. Se qualcosa fallisce, si può annullare tutto per evitare dati parziali o incoerenti.",
+    "tags": [
+      "transazioni",
+      "database",
+      "coerenza"
+    ],
+    "difficolta": 3,
+    "distrattore_forte": "Perché conferma ogni singola modifica appena viene eseguita, anche se le operazioni successive falliscono",
+    "motivo_distrattore_forte": "È vicino perché parla di modifiche e conferma, ma descrive il comportamento opposto a una transazione atomica."
   }
 ]

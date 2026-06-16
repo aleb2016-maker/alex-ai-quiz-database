@@ -7,9 +7,9 @@ Questo report distingue problemi tecnici, avvisi qualità reali, errori linguist
 ## Riepilogo generale
 
 - Problemi tecnici totali: **0**
-- Avvisi qualità reali totali: **0**
-- Errori linguistici totali: **0**
-- Note informative totali: **59**
+- Avvisi qualità reali totali: **9**
+- Errori linguistici totali: **2**
+- Note informative totali: **73**
 - Gruppi di domande duplicate identiche: **0**
 - Coppie di domande molto simili: **0**
 
@@ -92,14 +92,14 @@ Domande molto simili: **0**
 
 File: `data/matematica.json`
 File trovato: **True**
-Domande totali: **3**
-Livelli: `{'facile': 1, 'intermedio': 1, 'avanzato': 1}`
-Categorie: `{'matematica': 3}`
-Posizione risposta corretta nel sorgente: `{'A': 3}`
+Domande totali: **40**
+Livelli: `{'facile': 12, 'intermedio': 14, 'avanzato': 14}`
+Categorie: `{'matematica': 40}`
+Posizione risposta corretta nel sorgente: `{'A': 27, 'C': 6, 'B': 6, 'D': 1}`
 Problemi tecnici: **0**
 Avvisi qualità reali: **0**
 Errori linguistici: **0**
-Note informative: **0**
+Note informative: **2**
 Duplicati identici: **0**
 Domande molto simili: **0**
 
@@ -107,31 +107,59 @@ Domande molto simili: **0**
 
 File: `data/inglese.json`
 File trovato: **True**
-Domande totali: **3**
-Livelli: `{'facile': 1, 'intermedio': 1, 'avanzato': 1}`
-Categorie: `{'inglese': 3}`
-Posizione risposta corretta nel sorgente: `{'A': 3}`
+Domande totali: **40**
+Livelli: `{'facile': 12, 'intermedio': 14, 'avanzato': 14}`
+Categorie: `{'inglese': 40}`
+Posizione risposta corretta nel sorgente: `{'A': 40}`
 Problemi tecnici: **0**
 Avvisi qualità reali: **0**
-Errori linguistici: **0**
-Note informative: **0**
+Errori linguistici: **2**
+Note informative: **1**
 Duplicati identici: **0**
 Domande molto simili: **0**
+
+### Errori linguistici
+
+- **ING-AV-0007** — Quale frase esprime meglio un consiglio formale?
+  - spiegazione: manca spazio dopo la punteggiatura
+- **ING-AV-0107** — Quale frase è più adatta in una comunicazione professionale?
+  - spiegazione: manca spazio dopo la punteggiatura
 
 ## Informatica
 
 File: `data/informatica.json`
 File trovato: **True**
-Domande totali: **3**
-Livelli: `{'facile': 1, 'intermedio': 1, 'avanzato': 1}`
-Categorie: `{'informatica': 3}`
-Posizione risposta corretta nel sorgente: `{'A': 3}`
+Domande totali: **40**
+Livelli: `{'facile': 12, 'intermedio': 14, 'avanzato': 14}`
+Categorie: `{'informatica': 40}`
+Posizione risposta corretta nel sorgente: `{'A': 40}`
 Problemi tecnici: **0**
-Avvisi qualità reali: **0**
+Avvisi qualità reali: **9**
 Errori linguistici: **0**
-Note informative: **0**
+Note informative: **11**
 Duplicati identici: **0**
 Domande molto simili: **0**
+
+### Avvisi qualità reali
+
+- **INF-FAC-0006** — A cosa serve una variabile in programmazione?
+  - Possibile distrattore troppo assoluto: contiene “mai”
+- **INF-INT-0101** — Perché una funzione è utile in un programma?
+  - Possibile distrattore troppo assoluto: contiene “sempre”
+- **INF-AV-0101** — Perché la validazione dei dati dovrebbe avvenire anche lato backend?
+  - Possibile distrattore troppo assoluto: contiene “mai”
+- **INF-INT-0102** — A cosa serve una query SELECT in SQL?
+  - Possibile distrattore troppo assoluto: contiene “sempre”
+- **INF-AV-0102** — Qual è una differenza importante tra hashing e cifratura?
+  - Possibile distrattore troppo assoluto: contiene “sempre”
+- **INF-INT-0103** — Perché si usa un JOIN in un database relazionale?
+  - Possibile distrattore troppo assoluto: contiene “sempre”
+- **INF-INT-0106** — Perché HTTPS è importante per un sito web?
+  - Possibile distrattore troppo assoluto: contiene “sempre”
+- **INF-AV-0106** — Perché un container può rendere più prevedibile l'esecuzione di un'applicazione?
+  - Possibile distrattore troppo assoluto: contiene “sempre”
+- **INF-INT-0107** — Che cosa significa rendere una pagina web responsive?
+  - Possibile distrattore troppo assoluto: contiene “sempre”
 
 ## AI
 

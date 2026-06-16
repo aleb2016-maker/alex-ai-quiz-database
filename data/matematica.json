@@ -13,7 +13,10 @@
     ],
     "risposta_corretta": "10",
     "spiegazione": "Il 20% significa 20 su 100. Quindi 50 × 20 / 100 = 10.",
-    "tags": ["percentuali", "calcolo base"],
+    "tags": [
+      "percentuali",
+      "calcolo base"
+    ],
     "difficolta": 1
   },
   {
@@ -30,7 +33,10 @@
     ],
     "risposta_corretta": "5",
     "spiegazione": "Prima togli 4 da entrambi i lati: 3x = 15. Poi dividi per 3: x = 5.",
-    "tags": ["equazioni", "algebra"],
+    "tags": [
+      "equazioni",
+      "algebra"
+    ],
     "difficolta": 2
   },
   {
@@ -47,7 +53,774 @@
     ],
     "risposta_corretta": "8 giorni",
     "spiegazione": "Il lavoro totale è 6 × 12 = 72 giornate-operaio. Con 9 operai servono 72 / 9 = 8 giorni.",
-    "tags": ["proporzioni inverse", "problemi"],
+    "tags": [
+      "proporzioni inverse",
+      "problemi"
+    ],
+    "difficolta": 3
+  },
+  {
+    "id": "MAT-FAC-0004",
+    "categoria": "matematica",
+    "sottocategoria": "frazioni",
+    "livello": "facile",
+    "domanda": "Quanto vale tre quarti di 80?",
+    "opzioni": [
+      "40",
+      "50",
+      "60",
+      "70"
+    ],
+    "risposta_corretta": "60",
+    "spiegazione": "Tre quarti di 80 significa dividere 80 in 4 parti uguali e prenderne 3. Prima calcoliamo 80 / 4 = 20, poi facciamo 20 × 3 = 60.",
+    "tags": [
+      "frazioni",
+      "calcolo",
+      "parte_di_un_totale"
+    ],
+    "difficolta": 1
+  },
+  {
+    "id": "MAT-INT-0004",
+    "categoria": "matematica",
+    "sottocategoria": "equazioni",
+    "livello": "intermedio",
+    "domanda": "Risolvi l'equazione: 2(x + 4) = 22.",
+    "opzioni": [
+      "x = 5",
+      "x = 7",
+      "x = 9",
+      "x = 11"
+    ],
+    "risposta_corretta": "x = 7",
+    "spiegazione": "Prima dividiamo entrambi i membri per 2: x + 4 = 11. Poi sottraiamo 4 da entrambi i lati: x = 7. Questa domanda è diversa da una semplice equazione 3x + 5 = 20 perché richiede anche di gestire le parentesi.",
+    "tags": [
+      "equazioni",
+      "algebra"
+    ],
+    "difficolta": 2
+  },
+  {
+    "id": "MAT-AV-0004",
+    "categoria": "matematica",
+    "sottocategoria": "problemi",
+    "livello": "avanzato",
+    "domanda": "Un numero aumentato del suo 30% diventa 65. Qual era il numero iniziale?",
+    "opzioni": [
+      "45",
+      "50",
+      "55",
+      "60"
+    ],
+    "risposta_corretta": "50",
+    "spiegazione": "Se il numero iniziale è x, dopo l'aumento del 30% diventa 1,3x. Quindi 1,3x = 65 e x = 65 / 1,3 = 50.",
+    "tags": [
+      "percentuali_inverse",
+      "equazioni"
+    ],
+    "difficolta": 3
+  },
+  {
+    "id": "MAT-FAC-0005",
+    "categoria": "matematica",
+    "sottocategoria": "proporzioni",
+    "livello": "facile",
+    "domanda": "Se 3 quaderni costano 6 euro, quanto costano 5 quaderni allo stesso prezzo unitario?",
+    "opzioni": [
+      "8 euro",
+      "9 euro",
+      "10 euro",
+      "12 euro"
+    ],
+    "risposta_corretta": "10 euro",
+    "spiegazione": "Ogni quaderno costa 6 / 3 = 2 euro. Quindi 5 quaderni costano 5 × 2 = 10 euro.",
+    "tags": [
+      "proporzioni",
+      "prezzo_unitario"
+    ],
+    "difficolta": 1
+  },
+  {
+    "id": "MAT-INT-0005",
+    "categoria": "matematica",
+    "sottocategoria": "percentuali",
+    "livello": "intermedio",
+    "domanda": "Un prodotto costa 80 euro e viene scontato del 25%. Qual è il prezzo finale?",
+    "opzioni": [
+      "55 euro",
+      "60 euro",
+      "65 euro",
+      "70 euro"
+    ],
+    "risposta_corretta": "60 euro",
+    "spiegazione": "Il 25% di 80 è 20. Il prezzo finale è 80 - 20 = 60 euro.",
+    "tags": [
+      "percentuali",
+      "sconto"
+    ],
+    "difficolta": 2
+  },
+  {
+    "id": "MAT-AV-0005",
+    "categoria": "matematica",
+    "sottocategoria": "velocita",
+    "livello": "avanzato",
+    "domanda": "Un treno percorre 180 km in 2 ore e 15 minuti. Qual è la sua velocità media?",
+    "opzioni": [
+      "75 km/h",
+      "80 km/h",
+      "85 km/h",
+      "90 km/h"
+    ],
+    "risposta_corretta": "80 km/h",
+    "spiegazione": "2 ore e 15 minuti non sono 2,15 ore: i 15 minuti vanno trasformati in ore. Poiché 15 minuti sono 15/60 = 0,25 ore, il tempo totale è 2 + 0,25 = 2,25 ore. La velocità media si calcola facendo distanza / tempo, quindi 180 / 2,25 = 80 km/h.",
+    "tags": [
+      "velocità",
+      "tempo",
+      "problemi"
+    ],
+    "difficolta": 3
+  },
+  {
+    "id": "MAT-FAC-0006",
+    "categoria": "matematica",
+    "sottocategoria": "aritmetica",
+    "livello": "facile",
+    "domanda": "Qual è il risultato di 18 + 7 × 2?",
+    "opzioni": [
+      "32",
+      "50",
+      "25",
+      "36"
+    ],
+    "risposta_corretta": "32",
+    "spiegazione": "Prima si esegue la moltiplicazione: 7 × 2 = 14. Poi si somma 18 + 14 = 32. Il risultato 50 nasce dall'errore di fare prima 18 + 7 e poi moltiplicare per 2.",
+    "tags": [
+      "operazioni",
+      "precedenza"
+    ],
+    "difficolta": 1
+  },
+  {
+    "id": "MAT-INT-0006",
+    "categoria": "matematica",
+    "sottocategoria": "media",
+    "livello": "intermedio",
+    "domanda": "La media di 6, 8, 10 e 12 è:",
+    "opzioni": [
+      "8",
+      "9",
+      "10",
+      "11"
+    ],
+    "risposta_corretta": "9",
+    "spiegazione": "Sommiamo i valori: 6 + 8 + 10 + 12 = 36. Poi dividiamo per 4 valori: 36 / 4 = 9.",
+    "tags": [
+      "media",
+      "statistica_base"
+    ],
+    "difficolta": 2
+  },
+  {
+    "id": "MAT-AV-0006",
+    "categoria": "matematica",
+    "sottocategoria": "algebra",
+    "livello": "avanzato",
+    "domanda": "Se 2x - 3 = x + 9, quale valore ha x?",
+    "opzioni": [
+      "9",
+      "10",
+      "11",
+      "12"
+    ],
+    "risposta_corretta": "12",
+    "spiegazione": "Portiamo x a sinistra e -3 a destra: 2x - x = 9 + 3. Quindi x = 12.",
+    "tags": [
+      "algebra",
+      "equazioni"
+    ],
+    "difficolta": 3
+  },
+  {
+    "id": "MAT-FAC-0007",
+    "categoria": "matematica",
+    "sottocategoria": "frazioni",
+    "livello": "facile",
+    "domanda": "Quale frazione è equivalente a 1/2?",
+    "opzioni": [
+      "2/4",
+      "2/3",
+      "3/4",
+      "4/6"
+    ],
+    "risposta_corretta": "2/4",
+    "spiegazione": "Una frazione equivalente a 1/2 deve avere lo stesso valore. 2/4 si semplifica dividendo numeratore e denominatore per 2, ottenendo 1/2. 2/3, 3/4 e 4/6 sono frazioni vicine come forma, ma non valgono 1/2.",
+    "tags": [
+      "frazioni",
+      "equivalenza"
+    ],
+    "difficolta": 1
+  },
+  {
+    "id": "MAT-INT-0007",
+    "categoria": "matematica",
+    "sottocategoria": "rapporti",
+    "livello": "intermedio",
+    "domanda": "In una classe il rapporto tra studenti assenti e presenti è 1:5. Se gli assenti sono 4, quanti sono i presenti?",
+    "opzioni": [
+      "16",
+      "18",
+      "20",
+      "24"
+    ],
+    "risposta_corretta": "20",
+    "spiegazione": "Il rapporto 1:5 significa che per ogni assente ci sono 5 presenti. Se gli assenti sono 4, i presenti sono 4 × 5 = 20.",
+    "tags": [
+      "rapporti",
+      "proporzioni"
+    ],
+    "difficolta": 2
+  },
+  {
+    "id": "MAT-AV-0007",
+    "categoria": "matematica",
+    "sottocategoria": "combinazioni",
+    "livello": "avanzato",
+    "domanda": "Quanti codici diversi di 2 cifre si possono formare usando le cifre 1, 2, 3, 4 senza ripetizione?",
+    "opzioni": [
+      "8",
+      "10",
+      "12",
+      "16"
+    ],
+    "risposta_corretta": "12",
+    "spiegazione": "Per la prima cifra ci sono 4 scelte. Per la seconda restano 3 scelte, perché non si può ripetere la cifra. Quindi 4 × 3 = 12. 16 sarebbe corretto solo se la ripetizione fosse permessa.",
+    "tags": [
+      "combinatoria",
+      "conteggio"
+    ],
+    "difficolta": 3
+  },
+  {
+    "id": "MAT-FAC-0008",
+    "categoria": "matematica",
+    "sottocategoria": "geometria",
+    "livello": "facile",
+    "domanda": "Qual è l'area di un rettangolo con base 8 cm e altezza 5 cm?",
+    "opzioni": [
+      "40 cm²",
+      "13 cm²",
+      "26 cm²",
+      "80 cm²"
+    ],
+    "risposta_corretta": "40 cm²",
+    "spiegazione": "L'area del rettangolo si calcola con base × altezza. Quindi 8 × 5 = 40 cm². 13 nasce da 8 + 5, 26 dal perimetro calcolato con 2 × (8 + 5), mentre 80 è il doppio dell'area.",
+    "tags": [
+      "geometria",
+      "area",
+      "rettangolo"
+    ],
+    "difficolta": 1
+  },
+  {
+    "id": "MAT-INT-0008",
+    "categoria": "matematica",
+    "sottocategoria": "geometria",
+    "livello": "intermedio",
+    "domanda": "Un quadrato ha perimetro 36 cm. Quanto misura il suo lato?",
+    "opzioni": [
+      "6 cm",
+      "8 cm",
+      "9 cm",
+      "12 cm"
+    ],
+    "risposta_corretta": "9 cm",
+    "spiegazione": "Il perimetro del quadrato è formato da 4 lati uguali. Quindi il lato misura 36 / 4 = 9 cm. 12 nascerebbe dividendo per 3, 8 è vicino ma non corretto, mentre 6 sarebbe una divisione errata per 6.",
+    "tags": [
+      "geometria",
+      "perimetro",
+      "quadrato"
+    ],
+    "difficolta": 2
+  },
+  {
+    "id": "MAT-AV-0008",
+    "categoria": "matematica",
+    "sottocategoria": "problemi",
+    "livello": "avanzato",
+    "domanda": "La somma di due numeri è 48 e uno è il doppio dell'altro. Qual è il numero maggiore?",
+    "opzioni": [
+      "24",
+      "28",
+      "32",
+      "36"
+    ],
+    "risposta_corretta": "32",
+    "spiegazione": "Se il numero minore è x, il maggiore è 2x. Quindi x + 2x = 48, cioè 3x = 48. Il minore è 16 e il maggiore è 32.",
+    "tags": [
+      "problemi",
+      "equazioni"
+    ],
+    "difficolta": 3
+  },
+  {
+    "id": "MAT-INT-0009",
+    "categoria": "matematica",
+    "sottocategoria": "probabilita",
+    "livello": "intermedio",
+    "domanda": "In un sacchetto ci sono 3 palline rosse e 7 blu. Qual è la probabilità di estrarre una pallina rossa?",
+    "opzioni": [
+      "3/10",
+      "7/10",
+      "3/7",
+      "1/3"
+    ],
+    "risposta_corretta": "3/10",
+    "spiegazione": "La probabilità si calcola facendo casi favorevoli diviso casi totali. Le palline rosse sono 3, mentre le palline totali sono 3 + 7 = 10. Quindi la probabilità è 3/10. 7/10 sarebbe la probabilità di estrarre una blu, 3/7 confronta rosse e blu ma non usa il totale, mentre 1/3 non rappresenta il rapporto corretto.",
+    "tags": [
+      "probabilità",
+      "frazioni"
+    ],
+    "difficolta": 2
+  },
+  {
+    "id": "MAT-AV-0009",
+    "categoria": "matematica",
+    "sottocategoria": "percentuali",
+    "livello": "avanzato",
+    "domanda": "Un valore passa da 120 a 150. Qual è l'aumento percentuale?",
+    "opzioni": [
+      "20%",
+      "25%",
+      "30%",
+      "35%"
+    ],
+    "risposta_corretta": "25%",
+    "spiegazione": "L'aumento è 150 - 120 = 30. La percentuale di aumento si calcola rispetto al valore iniziale, quindi 30 / 120 × 100 = 25%. 30% nasce dall'errore di confondere l'aumento assoluto 30 con la percentuale.",
+    "tags": [
+      "percentuali",
+      "variazione"
+    ],
+    "difficolta": 3
+  },
+  {
+    "id": "MAT-FAC-0101",
+    "categoria": "matematica",
+    "sottocategoria": "calcolo",
+    "livello": "facile",
+    "domanda": "Quanto fa 45 + 18?",
+    "opzioni": [
+      "63",
+      "53",
+      "61",
+      "73"
+    ],
+    "risposta_corretta": "63",
+    "spiegazione": "Sommiamo prima le unità: 5 + 8 = 13, scriviamo 3 e riportiamo 1. Poi sommiamo le decine: 4 + 1 + 1 di riporto = 6. Il risultato è 63.",
+    "tags": [
+      "somma",
+      "calcolo",
+      "aritmetica"
+    ],
+    "difficolta": 1
+  },
+  {
+    "id": "MAT-INT-0101",
+    "categoria": "matematica",
+    "sottocategoria": "percentuali",
+    "livello": "intermedio",
+    "domanda": "Un prezzo passa da 200 euro a 180 euro. Qual è la percentuale di diminuzione?",
+    "opzioni": [
+      "10%",
+      "20%",
+      "15%",
+      "5%"
+    ],
+    "risposta_corretta": "10%",
+    "spiegazione": "La diminuzione è 200 - 180 = 20 euro. La percentuale si calcola rispetto al valore iniziale: 20 / 200 × 100 = 10%.",
+    "tags": [
+      "percentuali",
+      "diminuzione",
+      "problemi"
+    ],
+    "difficolta": 2
+  },
+  {
+    "id": "MAT-AV-0101",
+    "categoria": "matematica",
+    "sottocategoria": "equazioni",
+    "livello": "avanzato",
+    "domanda": "Un rettangolo ha perimetro 34 cm e base 10 cm. Qual è la sua altezza?",
+    "opzioni": [
+      "7 cm",
+      "6 cm",
+      "8 cm",
+      "5 cm"
+    ],
+    "risposta_corretta": "7 cm",
+    "spiegazione": "Il perimetro del rettangolo è 2 × (base + altezza). Quindi 34 = 2 × (10 + altezza). Dividendo per 2 otteniamo 17 = 10 + altezza, quindi altezza = 7 cm.",
+    "tags": [
+      "geometria",
+      "rettangolo",
+      "problemi"
+    ],
+    "difficolta": 3
+  },
+  {
+    "id": "MAT-FAC-0102",
+    "categoria": "matematica",
+    "sottocategoria": "calcolo",
+    "livello": "facile",
+    "domanda": "Quanto fa 72 - 28?",
+    "opzioni": [
+      "44",
+      "46",
+      "54",
+      "40"
+    ],
+    "risposta_corretta": "44",
+    "spiegazione": "Per calcolare 72 - 28 possiamo fare 72 - 30 = 42 e poi aggiungere 2, perché abbiamo tolto 2 in più. Quindi 42 + 2 = 44.",
+    "tags": [
+      "sottrazione",
+      "calcolo",
+      "aritmetica"
+    ],
+    "difficolta": 1
+  },
+  {
+    "id": "MAT-INT-0102",
+    "categoria": "matematica",
+    "sottocategoria": "proporzioni",
+    "livello": "intermedio",
+    "domanda": "Se 4 litri di vernice coprono 28 m², quanti metri quadrati coprono 7 litri allo stesso rendimento?",
+    "opzioni": [
+      "49 m²",
+      "42 m²",
+      "56 m²",
+      "35 m²"
+    ],
+    "risposta_corretta": "49 m²",
+    "spiegazione": "Prima calcoliamo quanto copre 1 litro: 28 / 4 = 7 m². Con 7 litri si coprono 7 × 7 = 49 m².",
+    "tags": [
+      "proporzioni",
+      "problemi",
+      "calcolo"
+    ],
+    "difficolta": 2
+  },
+  {
+    "id": "MAT-AV-0102",
+    "categoria": "matematica",
+    "sottocategoria": "sistemi",
+    "livello": "avanzato",
+    "domanda": "La somma di due numeri è 35 e la loro differenza è 9. Qual è il numero maggiore?",
+    "opzioni": [
+      "22",
+      "21",
+      "23",
+      "26"
+    ],
+    "risposta_corretta": "22",
+    "spiegazione": "Se il numero maggiore è A e il minore è B, allora A + B = 35 e A - B = 9. Sommando le due equazioni otteniamo 2A = 44, quindi A = 22.",
+    "tags": [
+      "sistemi",
+      "problemi",
+      "algebra"
+    ],
+    "difficolta": 3
+  },
+  {
+    "id": "MAT-FAC-0103",
+    "categoria": "matematica",
+    "sottocategoria": "moltiplicazioni",
+    "livello": "facile",
+    "domanda": "Quanto fa 12 × 6?",
+    "opzioni": [
+      "72",
+      "62",
+      "68",
+      "78"
+    ],
+    "risposta_corretta": "72",
+    "spiegazione": "12 × 6 significa sommare 12 per 6 volte oppure fare 10 × 6 + 2 × 6. Quindi 60 + 12 = 72.",
+    "tags": [
+      "moltiplicazione",
+      "calcolo",
+      "aritmetica"
+    ],
+    "difficolta": 1
+  },
+  {
+    "id": "MAT-INT-0103",
+    "categoria": "matematica",
+    "sottocategoria": "equazioni",
+    "livello": "intermedio",
+    "domanda": "Un servizio costa 6 euro di attivazione più 5 euro al mese. Se il totale è 31 euro, quanti mesi sono stati pagati?",
+    "opzioni": [
+      "5 mesi",
+      "4 mesi",
+      "6 mesi",
+      "7 mesi"
+    ],
+    "risposta_corretta": "5 mesi",
+    "spiegazione": "Prima togliamo il costo fisso di attivazione: 31 - 6 = 25 euro. Ogni mese costa 5 euro, quindi 25 / 5 = 5 mesi.",
+    "tags": [
+      "problemi",
+      "equazioni",
+      "calcolo"
+    ],
+    "difficolta": 2
+  },
+  {
+    "id": "MAT-AV-0103",
+    "categoria": "matematica",
+    "sottocategoria": "velocita",
+    "livello": "avanzato",
+    "domanda": "Un'auto percorre 150 km a 75 km/h. Quanto tempo impiega?",
+    "opzioni": [
+      "2 ore",
+      "1,5 ore",
+      "2,5 ore",
+      "3 ore"
+    ],
+    "risposta_corretta": "2 ore",
+    "spiegazione": "Il tempo si calcola facendo distanza / velocità. Quindi 150 / 75 = 2 ore.",
+    "tags": [
+      "velocita",
+      "tempo",
+      "problemi"
+    ],
+    "difficolta": 3
+  },
+  {
+    "id": "MAT-FAC-0104",
+    "categoria": "matematica",
+    "sottocategoria": "divisioni",
+    "livello": "facile",
+    "domanda": "Se 56 caramelle vengono divise in 8 sacchetti uguali, quante caramelle ci sono in ogni sacchetto?",
+    "opzioni": [
+      "7",
+      "6",
+      "8",
+      "9"
+    ],
+    "risposta_corretta": "7",
+    "spiegazione": "Dividere 56 caramelle in 8 sacchetti uguali significa calcolare 56 / 8. Poiché 8 × 7 = 56, ogni sacchetto contiene 7 caramelle.",
+    "tags": [
+      "divisione",
+      "problemi",
+      "calcolo"
+    ],
+    "difficolta": 1
+  },
+  {
+    "id": "MAT-INT-0104",
+    "categoria": "matematica",
+    "sottocategoria": "media",
+    "livello": "intermedio",
+    "domanda": "La media di 12, 15, 18 e 19 è:",
+    "opzioni": [
+      "16",
+      "15",
+      "17",
+      "18"
+    ],
+    "risposta_corretta": "16",
+    "spiegazione": "Sommiamo i valori: 12 + 15 + 18 + 19 = 64. Poi dividiamo per 4 numeri: 64 / 4 = 16.",
+    "tags": [
+      "media",
+      "statistica",
+      "calcolo"
+    ],
+    "difficolta": 2
+  },
+  {
+    "id": "MAT-AV-0104",
+    "categoria": "matematica",
+    "sottocategoria": "combinatoria",
+    "livello": "avanzato",
+    "domanda": "Da un gruppo di 5 persone bisogna scegliere presidente e vice. I ruoli sono diversi. Quante scelte possibili ci sono?",
+    "opzioni": [
+      "20",
+      "10",
+      "25",
+      "15"
+    ],
+    "risposta_corretta": "20",
+    "spiegazione": "Per scegliere il presidente ci sono 5 possibilità. Dopo aver scelto il presidente, restano 4 possibilità per il vice. Poiché i ruoli sono diversi, il totale è 5 × 4 = 20.",
+    "tags": [
+      "combinatoria",
+      "ruoli",
+      "calcolo"
+    ],
+    "difficolta": 3
+  },
+  {
+    "id": "MAT-FAC-0105",
+    "categoria": "matematica",
+    "sottocategoria": "decimali",
+    "livello": "facile",
+    "domanda": "Quanto vale 0,5 di 30?",
+    "opzioni": [
+      "15",
+      "10",
+      "20",
+      "25"
+    ],
+    "risposta_corretta": "15",
+    "spiegazione": "0,5 significa metà. Calcolare 0,5 di 30 significa trovare la metà di 30. Quindi 30 / 2 = 15.",
+    "tags": [
+      "decimali",
+      "meta",
+      "calcolo"
+    ],
+    "difficolta": 1
+  },
+  {
+    "id": "MAT-INT-0105",
+    "categoria": "matematica",
+    "sottocategoria": "frazioni",
+    "livello": "intermedio",
+    "domanda": "Quale frazione è maggiore tra 3/5 e 4/7?",
+    "opzioni": [
+      "3/5",
+      "4/7",
+      "Sono uguali",
+      "Non si possono confrontare"
+    ],
+    "risposta_corretta": "3/5",
+    "spiegazione": "Per confrontarle possiamo usare il prodotto incrociato: 3 × 7 = 21 e 4 × 5 = 20. Poiché 21 è maggiore di 20, 3/5 è maggiore di 4/7.",
+    "tags": [
+      "frazioni",
+      "confronto",
+      "calcolo"
+    ],
+    "difficolta": 2
+  },
+  {
+    "id": "MAT-AV-0105",
+    "categoria": "matematica",
+    "sottocategoria": "percentuali",
+    "livello": "avanzato",
+    "domanda": "Un valore diminuisce del 20% e diventa 96. Qual era il valore iniziale?",
+    "opzioni": [
+      "120",
+      "116",
+      "100",
+      "128"
+    ],
+    "risposta_corretta": "120",
+    "spiegazione": "Se un valore diminuisce del 20%, resta l'80% del valore iniziale. Quindi 0,8x = 96. Dividendo 96 per 0,8 otteniamo x = 120.",
+    "tags": [
+      "percentuali",
+      "valore_iniziale",
+      "problemi"
+    ],
+    "difficolta": 3
+  },
+  {
+    "id": "MAT-FAC-0106",
+    "categoria": "matematica",
+    "sottocategoria": "geometria",
+    "livello": "facile",
+    "domanda": "Un triangolo ha base 10 cm e altezza 6 cm. Qual è la sua area?",
+    "opzioni": [
+      "30 cm²",
+      "60 cm²",
+      "16 cm²",
+      "40 cm²"
+    ],
+    "risposta_corretta": "30 cm²",
+    "spiegazione": "L'area del triangolo si calcola con base × altezza / 2. Quindi 10 × 6 = 60, poi 60 / 2 = 30 cm². 60 cm² sarebbe l'errore di dimenticare la divisione per 2.",
+    "tags": [
+      "triangolo",
+      "area",
+      "geometria"
+    ],
+    "difficolta": 1
+  },
+  {
+    "id": "MAT-INT-0106",
+    "categoria": "matematica",
+    "sottocategoria": "geometria",
+    "livello": "intermedio",
+    "domanda": "Un cerchio ha raggio 5 cm. Usando π ≈ 3,14, qual è circa la sua circonferenza?",
+    "opzioni": [
+      "31,4 cm",
+      "15,7 cm",
+      "78,5 cm",
+      "25 cm"
+    ],
+    "risposta_corretta": "31,4 cm",
+    "spiegazione": "La circonferenza si calcola con 2 × π × r. Quindi 2 × 3,14 × 5 = 31,4 cm. 78,5 cm² sarebbe invece l'area approssimata.",
+    "tags": [
+      "cerchio",
+      "circonferenza",
+      "geometria"
+    ],
+    "difficolta": 2
+  },
+  {
+    "id": "MAT-AV-0106",
+    "categoria": "matematica",
+    "sottocategoria": "rapporti",
+    "livello": "avanzato",
+    "domanda": "In una miscela il rapporto tra succo e acqua è 2:3. Se la miscela totale è 25 litri, quanti litri sono di succo?",
+    "opzioni": [
+      "10 litri",
+      "15 litri",
+      "12 litri",
+      "8 litri"
+    ],
+    "risposta_corretta": "10 litri",
+    "spiegazione": "Il rapporto 2:3 ha 5 parti totali. Se 5 parti valgono 25 litri, una parte vale 25 / 5 = 5 litri. Il succo corrisponde a 2 parti, quindi 2 × 5 = 10 litri.",
+    "tags": [
+      "rapporti",
+      "proporzioni",
+      "problemi"
+    ],
+    "difficolta": 3
+  },
+  {
+    "id": "MAT-INT-0107",
+    "categoria": "matematica",
+    "sottocategoria": "probabilita",
+    "livello": "intermedio",
+    "domanda": "In una scatola ci sono 5 penne nere, 3 blu e 2 rosse. Qual è la probabilità di estrarre una penna blu?",
+    "opzioni": [
+      "3/10",
+      "3/8",
+      "5/10",
+      "2/10"
+    ],
+    "risposta_corretta": "3/10",
+    "spiegazione": "Le penne totali sono 5 + 3 + 2 = 10. Le penne blu sono 3. La probabilità è casi favorevoli / casi totali, quindi 3/10.",
+    "tags": [
+      "probabilita",
+      "frazioni",
+      "problemi"
+    ],
+    "difficolta": 2
+  },
+  {
+    "id": "MAT-AV-0107",
+    "categoria": "matematica",
+    "sottocategoria": "potenze",
+    "livello": "avanzato",
+    "domanda": "Qual è il valore di 2³ + 3²?",
+    "opzioni": [
+      "17",
+      "13",
+      "25",
+      "18"
+    ],
+    "risposta_corretta": "17",
+    "spiegazione": "2³ significa 2 × 2 × 2 = 8. 3² significa 3 × 3 = 9. Sommando 8 + 9 otteniamo 17.",
+    "tags": [
+      "potenze",
+      "calcolo",
+      "ordine_operazioni"
+    ],
     "difficolta": 3
   }
 ]

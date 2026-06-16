@@ -774,26 +774,70 @@
     "percorso": "data/matematica.json",
     "file_esiste": true,
     "errore_file": "",
-    "totale_domande": 3,
+    "totale_domande": 40,
     "livelli": {
-      "facile": 1,
-      "intermedio": 1,
-      "avanzato": 1
+      "facile": 12,
+      "intermedio": 14,
+      "avanzato": 14
     },
     "categorie": {
-      "matematica": 3
+      "matematica": 40
     },
     "posizioni_risposta": {
-      "A": 3
+      "A": 27,
+      "C": 6,
+      "B": 6,
+      "D": 1
     },
     "problemi_tecnici_totali": 0,
     "avvisi_qualita_reali_totali": 0,
     "errori_linguistici_totali": 0,
-    "note_informative_totali": 0,
+    "note_informative_totali": 2,
     "domande_con_problemi_tecnici": [],
     "domande_con_avvisi_qualita_reali": [],
     "domande_con_errori_linguistici": [],
-    "domande_con_note_informative": [],
+    "domande_con_note_informative": [
+      {
+        "id": "MAT-INT-0009",
+        "domanda": "In un sacchetto ci sono 3 palline rosse e 7 blu. Qual è la probabilità di estrarre una pallina rossa?",
+        "categoria": "matematica",
+        "livello": "intermedio",
+        "opzioni": [
+          "3/10",
+          "7/10",
+          "3/7",
+          "1/3"
+        ],
+        "risposta_corretta": "3/10",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "spiegazione: testo molto lungo, controllare leggibilità"
+        ]
+      },
+      {
+        "id": "MAT-AV-0102",
+        "domanda": "La somma di due numeri è 35 e la loro differenza è 9. Qual è il numero maggiore?",
+        "categoria": "matematica",
+        "livello": "avanzato",
+        "opzioni": [
+          "22",
+          "21",
+          "23",
+          "26"
+        ],
+        "risposta_corretta": "22",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "spiegazione: possibile frase poco fluida, controllare gli incontri vocalici"
+        ]
+      }
+    ],
     "duplicati_identici": {},
     "domande_simili": []
   },
@@ -802,26 +846,88 @@
     "percorso": "data/inglese.json",
     "file_esiste": true,
     "errore_file": "",
-    "totale_domande": 3,
+    "totale_domande": 40,
     "livelli": {
-      "facile": 1,
-      "intermedio": 1,
-      "avanzato": 1
+      "facile": 12,
+      "intermedio": 14,
+      "avanzato": 14
     },
     "categorie": {
-      "inglese": 3
+      "inglese": 40
     },
     "posizioni_risposta": {
-      "A": 3
+      "A": 40
     },
     "problemi_tecnici_totali": 0,
     "avvisi_qualita_reali_totali": 0,
-    "errori_linguistici_totali": 0,
-    "note_informative_totali": 0,
+    "errori_linguistici_totali": 2,
+    "note_informative_totali": 1,
     "domande_con_problemi_tecnici": [],
     "domande_con_avvisi_qualita_reali": [],
-    "domande_con_errori_linguistici": [],
-    "domande_con_note_informative": [],
+    "domande_con_errori_linguistici": [
+      {
+        "id": "ING-AV-0007",
+        "domanda": "Quale frase esprime meglio un consiglio formale?",
+        "categoria": "inglese",
+        "livello": "avanzato",
+        "opzioni": [
+          "You should consider updating the documentation.",
+          "You should update the documentation immediately.",
+          "You could update the documentation if necessary.",
+          "You might want to update the documentation."
+        ],
+        "risposta_corretta": "You should consider updating the documentation.",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [
+          "spiegazione: manca spazio dopo la punteggiatura"
+        ],
+        "note_informative": []
+      },
+      {
+        "id": "ING-AV-0107",
+        "domanda": "Quale frase è più adatta in una comunicazione professionale?",
+        "categoria": "inglese",
+        "livello": "avanzato",
+        "opzioni": [
+          "Could you please send me the updated file?",
+          "Send me the file now.",
+          "Give me that file quickly.",
+          "You send the file to me."
+        ],
+        "risposta_corretta": "Could you please send me the updated file?",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [
+          "spiegazione: manca spazio dopo la punteggiatura"
+        ],
+        "note_informative": []
+      }
+    ],
+    "domande_con_note_informative": [
+      {
+        "id": "ING-AV-0006",
+        "domanda": "Quale frase usa correttamente la forma passiva?",
+        "categoria": "inglese",
+        "livello": "avanzato",
+        "opzioni": [
+          "The report was reviewed by the team.",
+          "The report has been review by the team.",
+          "The report is reviewed by the team yesterday.",
+          "The report was reviewing by the team."
+        ],
+        "risposta_corretta": "The report was reviewed by the team.",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "spiegazione: testo molto lungo, controllare leggibilità"
+        ]
+      }
+    ],
     "duplicati_identici": {},
     "domande_simili": []
   },
@@ -830,26 +936,436 @@
     "percorso": "data/informatica.json",
     "file_esiste": true,
     "errore_file": "",
-    "totale_domande": 3,
+    "totale_domande": 40,
     "livelli": {
-      "facile": 1,
-      "intermedio": 1,
-      "avanzato": 1
+      "facile": 12,
+      "intermedio": 14,
+      "avanzato": 14
     },
     "categorie": {
-      "informatica": 3
+      "informatica": 40
     },
     "posizioni_risposta": {
-      "A": 3
+      "A": 40
     },
     "problemi_tecnici_totali": 0,
-    "avvisi_qualita_reali_totali": 0,
+    "avvisi_qualita_reali_totali": 9,
     "errori_linguistici_totali": 0,
-    "note_informative_totali": 0,
+    "note_informative_totali": 11,
     "domande_con_problemi_tecnici": [],
-    "domande_con_avvisi_qualita_reali": [],
+    "domande_con_avvisi_qualita_reali": [
+      {
+        "id": "INF-FAC-0006",
+        "domanda": "A cosa serve una variabile in programmazione?",
+        "categoria": "informatica",
+        "livello": "facile",
+        "opzioni": [
+          "A conservare un valore che può essere usato o modificato",
+          "A conservare un valore, ma senza poterlo mai cambiare durante il programma",
+          "A definire una funzione riutilizzabile",
+          "A ripetere un blocco di istruzioni"
+        ],
+        "risposta_corretta": "A conservare un valore che può essere usato o modificato",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [
+          "Possibile distrattore troppo assoluto: contiene “mai”"
+        ],
+        "errori_linguistici": [],
+        "note_informative": []
+      },
+      {
+        "id": "INF-INT-0101",
+        "domanda": "Perché una funzione è utile in un programma?",
+        "categoria": "informatica",
+        "livello": "intermedio",
+        "opzioni": [
+          "Permette di raggruppare istruzioni riutilizzabili con un compito chiaro",
+          "Permette di raggruppare istruzioni, ma senza poter ricevere dati o restituire risultati",
+          "Serve solo a rendere il codice più lungo senza motivo",
+          "Sostituisce sempre la necessità di usare variabili"
+        ],
+        "risposta_corretta": "Permette di raggruppare istruzioni riutilizzabili con un compito chiaro",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [
+          "Possibile distrattore troppo assoluto: contiene “sempre”"
+        ],
+        "errori_linguistici": [],
+        "note_informative": []
+      },
+      {
+        "id": "INF-AV-0101",
+        "domanda": "Perché la validazione dei dati dovrebbe avvenire anche lato backend?",
+        "categoria": "informatica",
+        "livello": "avanzato",
+        "opzioni": [
+          "Perché i dati inviati al server non devono essere considerati affidabili solo perché il frontend li controlla",
+          "Perché i controlli del frontend migliorano l'esperienza utente, ma possono essere aggirati",
+          "Perché la validazione lato backend sostituisce ogni test automatico",
+          "Perché il frontend non può mai mostrare messaggi di errore"
+        ],
+        "risposta_corretta": "Perché i dati inviati al server non devono essere considerati affidabili solo perché il frontend li controlla",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [
+          "Possibile distrattore troppo assoluto: contiene “mai”"
+        ],
+        "errori_linguistici": [],
+        "note_informative": []
+      },
+      {
+        "id": "INF-INT-0102",
+        "domanda": "A cosa serve una query SELECT in SQL?",
+        "categoria": "informatica",
+        "livello": "intermedio",
+        "opzioni": [
+          "A leggere dati da una o più tabelle",
+          "A leggere dati solo da una singola tabella, senza condizioni o collegamenti",
+          "A cancellare sempre l'intero database",
+          "A trasformare automaticamente SQL in HTML"
+        ],
+        "risposta_corretta": "A leggere dati da una o più tabelle",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [
+          "Possibile distrattore troppo assoluto: contiene “sempre”"
+        ],
+        "errori_linguistici": [],
+        "note_informative": []
+      },
+      {
+        "id": "INF-AV-0102",
+        "domanda": "Qual è una differenza importante tra hashing e cifratura?",
+        "categoria": "informatica",
+        "livello": "avanzato",
+        "opzioni": [
+          "L'hashing è pensato per non essere invertito facilmente, mentre la cifratura può essere decifrata con una chiave",
+          "L'hashing può essere decifrato con una chiave corretta, mentre la cifratura no",
+          "La cifratura serve solo a confrontare se due dati sono uguali",
+          "La cifratura produce sempre una impronta fissa come un hash"
+        ],
+        "risposta_corretta": "L'hashing è pensato per non essere invertito facilmente, mentre la cifratura può essere decifrata con una chiave",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [
+          "Possibile distrattore troppo assoluto: contiene “sempre”"
+        ],
+        "errori_linguistici": [],
+        "note_informative": []
+      },
+      {
+        "id": "INF-INT-0103",
+        "domanda": "Perché si usa un JOIN in un database relazionale?",
+        "categoria": "informatica",
+        "livello": "intermedio",
+        "opzioni": [
+          "Per combinare dati collegati provenienti da tabelle diverse",
+          "Per combinare tabelle diverse creando automaticamente relazioni non definite",
+          "Per rinominare automaticamente tutti i campi di una tabella",
+          "Per eliminare sempre le chiavi primarie dal database"
+        ],
+        "risposta_corretta": "Per combinare dati collegati provenienti da tabelle diverse",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [
+          "Possibile distrattore troppo assoluto: contiene “sempre”"
+        ],
+        "errori_linguistici": [],
+        "note_informative": [
+          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “tutti”"
+        ]
+      },
+      {
+        "id": "INF-INT-0106",
+        "domanda": "Perché HTTPS è importante per un sito web?",
+        "categoria": "informatica",
+        "livello": "intermedio",
+        "opzioni": [
+          "Per proteggere la comunicazione tra browser e server tramite cifratura",
+          "Per verificare che il sito usi un certificato digitale valido, senza cifrare la comunicazione",
+          "Per rendere il sito sempre più veloce indipendentemente dal server",
+          "Per impedire al server di ricevere richieste dal browser"
+        ],
+        "risposta_corretta": "Per proteggere la comunicazione tra browser e server tramite cifratura",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [
+          "Possibile distrattore troppo assoluto: contiene “sempre”"
+        ],
+        "errori_linguistici": [],
+        "note_informative": []
+      },
+      {
+        "id": "INF-AV-0106",
+        "domanda": "Perché un container può rendere più prevedibile l'esecuzione di un'applicazione?",
+        "categoria": "informatica",
+        "livello": "avanzato",
+        "opzioni": [
+          "Perché include applicazione e dipendenze in un ambiente isolato e riproducibile",
+          "Perché include applicazione e dipendenze e quindi garantisce sempre lo stesso risultato in qualunque ambiente",
+          "Perché aggiorna automaticamente tutte le dipendenze alla versione più recente",
+          "Perché installa automaticamente ogni libreria mancante a ogni avvio"
+        ],
+        "risposta_corretta": "Perché include applicazione e dipendenze in un ambiente isolato e riproducibile",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [
+          "Possibile distrattore troppo assoluto: contiene “sempre”"
+        ],
+        "errori_linguistici": [],
+        "note_informative": [
+          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “tutte”"
+        ]
+      },
+      {
+        "id": "INF-INT-0107",
+        "domanda": "Che cosa significa rendere una pagina web responsive?",
+        "categoria": "informatica",
+        "livello": "intermedio",
+        "opzioni": [
+          "Far adattare layout e contenuti a schermi di dimensioni diverse",
+          "Far adattare solo le immagini, lasciando invariato il layout della pagina",
+          "Far rispondere il server sempre con lo stesso codice HTTP",
+          "Impedire agli utenti di aprire la pagina da smartphone"
+        ],
+        "risposta_corretta": "Far adattare layout e contenuti a schermi di dimensioni diverse",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [
+          "Possibile distrattore troppo assoluto: contiene “sempre”"
+        ],
+        "errori_linguistici": [],
+        "note_informative": []
+      }
+    ],
     "domande_con_errori_linguistici": [],
-    "domande_con_note_informative": [],
+    "domande_con_note_informative": [
+      {
+        "id": "INF-AV-0004",
+        "domanda": "Perché separare frontend e backend rende spesso un'applicazione più gestibile?",
+        "categoria": "informatica",
+        "livello": "avanzato",
+        "opzioni": [
+          "Perché interfaccia, logica applicativa e dati possono evolvere con responsabilità più chiare",
+          "Perché il frontend può gestire l'interfaccia mentre il backend espone dati e logica tramite API",
+          "Perché il backend può cambiare alcune regole senza riscrivere tutta l'interfaccia",
+          "Perché il frontend può consumare servizi diversi senza conoscere i dettagli interni del server"
+        ],
+        "risposta_corretta": "Perché interfaccia, logica applicativa e dati possono evolvere con responsabilità più chiare",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "spiegazione: testo molto lungo, controllare leggibilità"
+        ]
+      },
+      {
+        "id": "INF-INT-0005",
+        "domanda": "A cosa serve principalmente una chiave esterna in un database relazionale?",
+        "categoria": "informatica",
+        "livello": "intermedio",
+        "opzioni": [
+          "A collegare un record di una tabella a un record di un'altra tabella",
+          "A identificare in modo univoco ogni record della stessa tabella",
+          "A ordinare automaticamente tutti i record in base alla data",
+          "A trasformare una tabella relazionale in un file JSON"
+        ],
+        "risposta_corretta": "A collegare un record di una tabella a un record di un'altra tabella",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “tutti”"
+        ]
+      },
+      {
+        "id": "INF-FAC-0008",
+        "domanda": "Quale formato è molto usato nelle API web per rappresentare oggetti e liste con coppie chiave-valore?",
+        "categoria": "informatica",
+        "livello": "facile",
+        "opzioni": [
+          "JSON",
+          "XML",
+          "YAML",
+          "CSV"
+        ],
+        "risposta_corretta": "JSON",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "spiegazione: testo molto lungo, controllare leggibilità"
+        ]
+      },
+      {
+        "id": "INF-FAC-0101",
+        "domanda": "Qual è il ruolo principale della CPU in un computer?",
+        "categoria": "informatica",
+        "livello": "facile",
+        "opzioni": [
+          "Eseguire istruzioni ed elaborare operazioni",
+          "Conservare temporaneamente i dati usati dai programmi",
+          "Archiviare file e programmi anche a computer spento",
+          "Gestire principalmente l'elaborazione grafica delle immagini"
+        ],
+        "risposta_corretta": "Eseguire istruzioni ed elaborare operazioni",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "spiegazione: testo molto lungo, controllare leggibilità"
+        ]
+      },
+      {
+        "id": "INF-FAC-0102",
+        "domanda": "A cosa serve principalmente un SSD?",
+        "categoria": "informatica",
+        "livello": "facile",
+        "opzioni": [
+          "A salvare dati e programmi anche quando il computer è spento",
+          "A conservare temporaneamente i dati usati dai programmi durante l'esecuzione",
+          "A eseguire direttamente tutte le istruzioni della CPU",
+          "A gestire principalmente i calcoli grafici della scheda video"
+        ],
+        "risposta_corretta": "A salvare dati e programmi anche quando il computer è spento",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “tutte”"
+        ]
+      },
+      {
+        "id": "INF-INT-0103",
+        "domanda": "Perché si usa un JOIN in un database relazionale?",
+        "categoria": "informatica",
+        "livello": "intermedio",
+        "opzioni": [
+          "Per combinare dati collegati provenienti da tabelle diverse",
+          "Per combinare tabelle diverse creando automaticamente relazioni non definite",
+          "Per rinominare automaticamente tutti i campi di una tabella",
+          "Per eliminare sempre le chiavi primarie dal database"
+        ],
+        "risposta_corretta": "Per combinare dati collegati provenienti da tabelle diverse",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [
+          "Possibile distrattore troppo assoluto: contiene “sempre”"
+        ],
+        "errori_linguistici": [],
+        "note_informative": [
+          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “tutti”"
+        ]
+      },
+      {
+        "id": "INF-FAC-0104",
+        "domanda": "A cosa serve normalmente un ciclo in programmazione?",
+        "categoria": "informatica",
+        "livello": "facile",
+        "opzioni": [
+          "A ripetere un blocco di istruzioni più volte",
+          "A scegliere se eseguire un blocco una sola volta in base a una condizione",
+          "A salvare un file in modo permanente",
+          "A cancellare tutte le variabili del programma"
+        ],
+        "risposta_corretta": "A ripetere un blocco di istruzioni più volte",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “tutte”"
+        ]
+      },
+      {
+        "id": "INF-AV-0104",
+        "domanda": "Perché la paginazione è utile quando un'API restituisce molti risultati?",
+        "categoria": "informatica",
+        "livello": "avanzato",
+        "opzioni": [
+          "Per dividere i risultati in blocchi più piccoli e gestibili",
+          "Per limitare la quantità di dati restituiti in ogni risposta senza perdere l'accesso agli altri risultati",
+          "Per impedire all'API di restituire qualsiasi dato",
+          "Per trasformare ogni risposta in un errore 404"
+        ],
+        "risposta_corretta": "Per dividere i risultati in blocchi più piccoli e gestibili",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “qualsiasi”"
+        ]
+      },
+      {
+        "id": "INF-AV-0105",
+        "domanda": "Che vantaggio offre una pipeline CI/CD in un progetto software?",
+        "categoria": "informatica",
+        "livello": "avanzato",
+        "opzioni": [
+          "Automatizza controlli, test e rilascio riducendo errori manuali ripetitivi",
+          "Automatizza test e build, ma richiede comunque controllo umano e codice scritto correttamente",
+          "Sostituisce completamente la necessità di scrivere codice",
+          "Impedisce a più sviluppatori di collaborare sullo stesso progetto"
+        ],
+        "risposta_corretta": "Automatizza controlli, test e rilascio riducendo errori manuali ripetitivi",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “completamente”"
+        ]
+      },
+      {
+        "id": "INF-AV-0106",
+        "domanda": "Perché un container può rendere più prevedibile l'esecuzione di un'applicazione?",
+        "categoria": "informatica",
+        "livello": "avanzato",
+        "opzioni": [
+          "Perché include applicazione e dipendenze in un ambiente isolato e riproducibile",
+          "Perché include applicazione e dipendenze e quindi garantisce sempre lo stesso risultato in qualunque ambiente",
+          "Perché aggiorna automaticamente tutte le dipendenze alla versione più recente",
+          "Perché installa automaticamente ogni libreria mancante a ogni avvio"
+        ],
+        "risposta_corretta": "Perché include applicazione e dipendenze in un ambiente isolato e riproducibile",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [
+          "Possibile distrattore troppo assoluto: contiene “sempre”"
+        ],
+        "errori_linguistici": [],
+        "note_informative": [
+          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “tutte”"
+        ]
+      },
+      {
+        "id": "INF-AV-0107",
+        "domanda": "Perché una transazione è utile quando più operazioni devono riuscire insieme?",
+        "categoria": "informatica",
+        "livello": "avanzato",
+        "opzioni": [
+          "Perché permette di confermare tutte le modifiche solo se l'intera operazione va a buon fine",
+          "Perché conferma ogni singola modifica appena viene eseguita, anche se le operazioni successive falliscono",
+          "Perché controlla automaticamente che ogni query SQL sia scritta senza errori logici",
+          "Perché corregge automaticamente le query SQL quando una condizione è sbagliata"
+        ],
+        "risposta_corretta": "Perché permette di confermare tutte le modifiche solo se l'intera operazione va a buon fine",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “tutte”"
+        ]
+      }
+    ],
     "duplicati_identici": {},
     "domande_simili": []
   },
