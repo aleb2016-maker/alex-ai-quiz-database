@@ -917,13 +917,13 @@
     "livello": "facile",
     "domanda": "Perché l’ago di una bussola tende a orientarsi sempre in una direzione precisa?",
     "opzioni": [
-      "Perché interagisce con il campo magnetico terrestre",
-      "Perché viene attratto direttamente dalla massa della Terra",
-      "Perché misura la temperatura dell’aria intorno alla bussola",
-      "Perché ruota sempre nella direzione del vento più forte"
+      "Perché interagisce con il campo magnetico terrestre e si orienta lungo le sue linee",
+      "Perché viene attirato dalla forza di gravità verso il punto più basso dell’orizzonte",
+      "Perché segue la rotazione apparente del Sole durante il movimento della Terra",
+      "Perché reagisce alla pressione atmosferica cambiando direzione in base al vento"
     ],
-    "risposta_corretta": "Perché interagisce con il campo magnetico terrestre",
-    "spiegazione": "L’ago della bussola è magnetizzato e si orienta seguendo il campo magnetico terrestre. Per questo indica una direzione stabile.",
+    "risposta_corretta": "Perché interagisce con il campo magnetico terrestre e si orienta lungo le sue linee",
+    "spiegazione": "L’ago della bussola è magnetizzato e interagisce con il campo magnetico terrestre. Per questo tende ad allinearsi lungo la direzione del campo magnetico locale.",
     "tags": [
       "fisica",
       "magnetismo",
@@ -934,7 +934,13 @@
     "distrattore_forte": "Perché viene attratto direttamente dalla massa della Terra",
     "punteggio_distrattore_forte": 4,
     "motivo_distrattore_forte": "È vicino perché richiama la Terra, ma la bussola non si orienta per attrazione gravitazionale: segue il campo magnetico.",
-    "qualita": "controllata"
+    "qualita": "controllata",
+    "spiegazioni_opzioni": {
+      "Perché interagisce con il campo magnetico terrestre e si orienta lungo le sue linee": "Corretta: descrive in modo preciso il concetto fisico richiesto.",
+      "Perché viene attirato dalla forza di gravità verso il punto più basso dell’orizzonte": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio fisico non corretto.",
+      "Perché segue la rotazione apparente del Sole durante il movimento della Terra": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio fisico non corretto.",
+      "Perché reagisce alla pressione atmosferica cambiando direzione in base al vento": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio fisico non corretto."
+    }
   },
   {
     "id": "FIS_034",
@@ -943,13 +949,13 @@
     "livello": "facile",
     "domanda": "Che cosa succede a un corpo se riceve calore?",
     "opzioni": [
-      "Può aumentare la temperatura o cambiare stato fisico",
-      "Perde sempre tutta la propria massa",
-      "Smette sempre di occupare spazio",
-      "Si trasforma sempre in carica elettrica"
+      "La sua energia interna può aumentare, causando aumento di temperatura o cambiamento di stato",
+      "La sua massa aumenta perché il calore si trasforma direttamente in materia stabile",
+      "La sua temperatura diminuisce perché il calore sottrae energia alle particelle",
+      "La sua energia interna resta invariata mentre cambia soltanto il colore esterno"
     ],
-    "risposta_corretta": "Può aumentare la temperatura o cambiare stato fisico",
-    "spiegazione": "Il calore trasferito a un corpo può aumentare la temperatura oppure produrre un cambiamento di stato, come fusione o evaporazione.",
+    "risposta_corretta": "La sua energia interna può aumentare, causando aumento di temperatura o cambiamento di stato",
+    "spiegazione": "Quando un corpo riceve calore, aumenta l’energia trasferita al sistema. Questo può far crescere la temperatura oppure produrre un cambiamento di stato.",
     "tags": [
       "fisica",
       "calore",
@@ -960,7 +966,13 @@
     "distrattore_forte": "Perde sempre tutta la propria massa",
     "punteggio_distrattore_forte": 4,
     "motivo_distrattore_forte": "È vicino perché parla di un cambiamento del corpo, ma il calore non fa sparire la massa.",
-    "qualita": "controllata"
+    "qualita": "controllata",
+    "spiegazioni_opzioni": {
+      "La sua energia interna può aumentare, causando aumento di temperatura o cambiamento di stato": "Corretta: descrive in modo preciso il concetto fisico richiesto.",
+      "La sua massa aumenta perché il calore si trasforma direttamente in materia stabile": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio fisico non corretto.",
+      "La sua temperatura diminuisce perché il calore sottrae energia alle particelle": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio fisico non corretto.",
+      "La sua energia interna resta invariata mentre cambia soltanto il colore esterno": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio fisico non corretto."
+    }
   },
   {
     "id": "FIS_035",
@@ -969,13 +981,13 @@
     "livello": "intermedio",
     "domanda": "Qual è la differenza tra calore e temperatura?",
     "opzioni": [
-      "Il calore è energia trasferita, la temperatura indica lo stato termico del corpo",
-      "Il calore è una forza, la temperatura è sempre una massa",
-      "Il calore si misura solo in metri, la temperatura solo in newton",
-      "Il calore esiste solo nei solidi, la temperatura solo nei gas"
+      "Il calore è energia trasferita, la temperatura misura lo stato termico di un corpo",
+      "Il calore misura solo la velocità del corpo, la temperatura misura solo la sua massa",
+      "Il calore è una proprietà fissa del materiale, la temperatura è una forza applicata",
+      "Il calore indica il volume del corpo, la temperatura indica il peso del corpo"
     ],
-    "risposta_corretta": "Il calore è energia trasferita, la temperatura indica lo stato termico del corpo",
-    "spiegazione": "Il calore è energia che passa da un corpo a un altro per differenza di temperatura. La temperatura descrive lo stato termico di un corpo.",
+    "risposta_corretta": "Il calore è energia trasferita, la temperatura misura lo stato termico di un corpo",
+    "spiegazione": "Il calore è energia che si trasferisce tra corpi a temperatura diversa. La temperatura, invece, descrive lo stato termico di un corpo ed è collegata all’agitazione delle sue particelle.",
     "tags": [
       "fisica",
       "calore",
@@ -986,7 +998,13 @@
     "distrattore_forte": "Il calore è una forza, la temperatura è sempre una massa",
     "punteggio_distrattore_forte": 4,
     "motivo_distrattore_forte": "È vicino perché prova a distinguere le due grandezze, ma usa categorie fisiche sbagliate.",
-    "qualita": "controllata"
+    "qualita": "controllata",
+    "spiegazioni_opzioni": {
+      "Il calore è energia trasferita, la temperatura misura lo stato termico di un corpo": "Corretta: descrive in modo preciso il concetto fisico richiesto.",
+      "Il calore misura solo la velocità del corpo, la temperatura misura solo la sua massa": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio fisico non corretto.",
+      "Il calore è una proprietà fissa del materiale, la temperatura è una forza applicata": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio fisico non corretto.",
+      "Il calore indica il volume del corpo, la temperatura indica il peso del corpo": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio fisico non corretto."
+    }
   },
   {
     "id": "FIS_036",
@@ -995,13 +1013,13 @@
     "livello": "intermedio",
     "domanda": "Che cosa avviene quando due corpi a temperatura diversa vengono messi a contatto?",
     "opzioni": [
-      "Il calore passa spontaneamente dal corpo più caldo a quello più freddo",
-      "Il calore passa sempre dal corpo più freddo a quello più caldo",
-      "Le masse dei due corpi diventano automaticamente uguali",
-      "La gravità tra i due corpi si annulla completamente"
+      "Il calore passa dal corpo più caldo a quello più freddo fino all’equilibrio termico",
+      "Il calore passa dal corpo più freddo a quello più caldo senza bisogno di lavoro esterno",
+      "I due corpi scambiano massa finché diventano composti dalla stessa sostanza",
+      "Le temperature si allontanano perché il contatto impedisce ogni scambio energetico"
     ],
-    "risposta_corretta": "Il calore passa spontaneamente dal corpo più caldo a quello più freddo",
-    "spiegazione": "Il trasferimento spontaneo di calore avviene dal corpo a temperatura maggiore verso quello a temperatura minore, fino al raggiungimento dell’equilibrio termico.",
+    "risposta_corretta": "Il calore passa dal corpo più caldo a quello più freddo fino all’equilibrio termico",
+    "spiegazione": "Quando due corpi a temperatura diversa vengono messi a contatto, il calore fluisce dal corpo più caldo a quello più freddo finché si raggiunge l’equilibrio termico.",
     "tags": [
       "fisica",
       "calore",
@@ -1011,7 +1029,13 @@
     "distrattore_forte": "Il calore passa sempre dal corpo più freddo a quello più caldo",
     "punteggio_distrattore_forte": 4,
     "motivo_distrattore_forte": "È vicino perché descrive lo stesso scambio termico, ma inverte il verso spontaneo del calore.",
-    "qualita": "controllata"
+    "qualita": "controllata",
+    "spiegazioni_opzioni": {
+      "Il calore passa dal corpo più caldo a quello più freddo fino all’equilibrio termico": "Corretta: descrive in modo preciso il concetto fisico richiesto.",
+      "Il calore passa dal corpo più freddo a quello più caldo senza bisogno di lavoro esterno": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio fisico non corretto.",
+      "I due corpi scambiano massa finché diventano composti dalla stessa sostanza": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio fisico non corretto.",
+      "Le temperature si allontanano perché il contatto impedisce ogni scambio energetico": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio fisico non corretto."
+    }
   },
   {
     "id": "FIS_037",
@@ -1020,13 +1044,13 @@
     "livello": "intermedio",
     "domanda": "Perché una leva può permettere di sollevare un carico con minore forza?",
     "opzioni": [
-      "Perché aumenta il braccio della forza applicata rispetto al fulcro",
-      "Perché elimina completamente il peso del carico",
-      "Perché trasforma il carico in energia elettrica",
-      "Perché annulla sempre l’attrito dell’aria"
+      "Perché aumenta il braccio della forza e permette di ottenere lo stesso momento con forza minore",
+      "Perché elimina il peso del carico trasformandolo in una forza orizzontale nulla",
+      "Perché riduce la massa del carico quando il punto di appoggio viene spostato",
+      "Perché annulla la gravità sul carico se la leva è abbastanza lunga"
     ],
-    "risposta_corretta": "Perché aumenta il braccio della forza applicata rispetto al fulcro",
-    "spiegazione": "Una leva sfrutta i momenti delle forze. Se il braccio della forza applicata è più lungo, serve una forza minore per equilibrare il carico.",
+    "risposta_corretta": "Perché aumenta il braccio della forza e permette di ottenere lo stesso momento con forza minore",
+    "spiegazione": "Una leva permette di ridurre la forza necessaria aumentando il braccio della forza applicata. Il vantaggio meccanico dipende dal rapporto tra i bracci della leva.",
     "tags": [
       "fisica",
       "leva",
@@ -1037,7 +1061,13 @@
     "distrattore_forte": "Perché elimina completamente il peso del carico",
     "punteggio_distrattore_forte": 4,
     "motivo_distrattore_forte": "È vicino perché il carico sembra più facile da sollevare, ma il peso non viene eliminato: cambia il vantaggio meccanico.",
-    "qualita": "controllata"
+    "qualita": "controllata",
+    "spiegazioni_opzioni": {
+      "Perché aumenta il braccio della forza e permette di ottenere lo stesso momento con forza minore": "Corretta: descrive in modo preciso il concetto fisico richiesto.",
+      "Perché elimina il peso del carico trasformandolo in una forza orizzontale nulla": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio fisico non corretto.",
+      "Perché riduce la massa del carico quando il punto di appoggio viene spostato": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio fisico non corretto.",
+      "Perché annulla la gravità sul carico se la leva è abbastanza lunga": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio fisico non corretto."
+    }
   },
   {
     "id": "FIS_038",

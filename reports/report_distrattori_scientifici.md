@@ -8,7 +8,7 @@ Questo report separa i problemi qualitativi reali dagli avvisi non bloccanti sul
 |---|---:|---:|---:|
 | Scienze generali | 40 | 16 | 34 |
 | Biologia | 40 | 0 | 40 |
-| Fisica | 40 | 5 | 40 |
+| Fisica | 40 | 0 | 40 |
 | Chimica | 40 | 0 | 40 |
 | Fisica quantistica | 40 | 21 | 40 |
 
@@ -370,7 +370,7 @@ Nessun problema qualitativo reale rilevato.
 ## Fisica
 
 Domande sorgente: **40**
-Domande con problemi qualità reali: **5**
+Domande con problemi qualità reali: **0**
 Risposte corrette in A nel sorgente: **40**
 
 Distribuzione risposta corretta nel sorgente:
@@ -379,109 +379,7 @@ Distribuzione risposta corretta nel sorgente:
 {'A': 40}
 ```
 
-### Domande da migliorare davvero
-
-### FIS_033 — livello: facile
-
-**Domanda:** Perché l’ago di una bussola tende a orientarsi sempre in una direzione precisa?
-
-**Opzioni attuali:**
-- A. Perché interagisce con il campo magnetico terrestre ✅
-- B. Perché viene attratto direttamente dalla massa della Terra
-- C. Perché misura la temperatura dell’aria intorno alla bussola
-- D. Perché ruota sempre nella direzione del vento più forte
-
-**Risposta corretta nel sorgente:** A
-
-**Problemi reali:**
-- Possibile opzione debole/generica: contiene “sempre”.
-
-**Regola di revisione:**
-- Ogni domanda deve avere almeno un distrattore forte: una risposta sbagliata molto vicina alla corretta, ma falsa per un dettaglio preciso.
-- Evitare parole assolute come “sempre” e “mai”, se rendono il distrattore troppo eliminabile.
-- Rendere le quattro opzioni simili per lunghezza, struttura e livello tecnico.
-
-### FIS_034 — livello: facile
-
-**Domanda:** Che cosa succede a un corpo se riceve calore?
-
-**Opzioni attuali:**
-- A. Può aumentare la temperatura o cambiare stato fisico ✅
-- B. Perde sempre tutta la propria massa
-- C. Smette sempre di occupare spazio
-- D. Si trasforma sempre in carica elettrica
-
-**Risposta corretta nel sorgente:** A
-
-**Problemi reali:**
-- Possibile opzione debole/generica: contiene “sempre”.
-- Possibile opzione debole/generica: contiene “sempre”.
-- Possibile opzione debole/generica: contiene “sempre”.
-
-**Regola di revisione:**
-- Ogni domanda deve avere almeno un distrattore forte: una risposta sbagliata molto vicina alla corretta, ma falsa per un dettaglio preciso.
-- Evitare parole assolute come “sempre” e “mai”, se rendono il distrattore troppo eliminabile.
-- Rendere le quattro opzioni simili per lunghezza, struttura e livello tecnico.
-
-### FIS_035 — livello: intermedio
-
-**Domanda:** Qual è la differenza tra calore e temperatura?
-
-**Opzioni attuali:**
-- A. Il calore è energia trasferita, la temperatura indica lo stato termico del corpo ✅
-- B. Il calore è una forza, la temperatura è sempre una massa
-- C. Il calore si misura solo in metri, la temperatura solo in newton
-- D. Il calore esiste solo nei solidi, la temperatura solo nei gas
-
-**Risposta corretta nel sorgente:** A
-
-**Problemi reali:**
-- Possibile opzione debole/generica: contiene “sempre”.
-
-**Regola di revisione:**
-- Ogni domanda deve avere almeno un distrattore forte: una risposta sbagliata molto vicina alla corretta, ma falsa per un dettaglio preciso.
-- Evitare parole assolute come “sempre” e “mai”, se rendono il distrattore troppo eliminabile.
-- Rendere le quattro opzioni simili per lunghezza, struttura e livello tecnico.
-
-### FIS_036 — livello: intermedio
-
-**Domanda:** Che cosa avviene quando due corpi a temperatura diversa vengono messi a contatto?
-
-**Opzioni attuali:**
-- A. Il calore passa spontaneamente dal corpo più caldo a quello più freddo ✅
-- B. Il calore passa sempre dal corpo più freddo a quello più caldo
-- C. Le masse dei due corpi diventano automaticamente uguali
-- D. La gravità tra i due corpi si annulla completamente
-
-**Risposta corretta nel sorgente:** A
-
-**Problemi reali:**
-- Possibile opzione debole/generica: contiene “sempre”.
-
-**Regola di revisione:**
-- Ogni domanda deve avere almeno un distrattore forte: una risposta sbagliata molto vicina alla corretta, ma falsa per un dettaglio preciso.
-- Evitare parole assolute come “sempre” e “mai”, se rendono il distrattore troppo eliminabile.
-- Rendere le quattro opzioni simili per lunghezza, struttura e livello tecnico.
-
-### FIS_037 — livello: intermedio
-
-**Domanda:** Perché una leva può permettere di sollevare un carico con minore forza?
-
-**Opzioni attuali:**
-- A. Perché aumenta il braccio della forza applicata rispetto al fulcro ✅
-- B. Perché elimina completamente il peso del carico
-- C. Perché trasforma il carico in energia elettrica
-- D. Perché annulla sempre l’attrito dell’aria
-
-**Risposta corretta nel sorgente:** A
-
-**Problemi reali:**
-- Possibile opzione debole/generica: contiene “sempre”.
-
-**Regola di revisione:**
-- Ogni domanda deve avere almeno un distrattore forte: una risposta sbagliata molto vicina alla corretta, ma falsa per un dettaglio preciso.
-- Evitare parole assolute come “sempre” e “mai”, se rendono il distrattore troppo eliminabile.
-- Rendere le quattro opzioni simili per lunghezza, struttura e livello tecnico.
+Nessun problema qualitativo reale rilevato.
 
 ## Chimica
 
