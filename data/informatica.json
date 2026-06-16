@@ -215,7 +215,7 @@
     "domanda": "A cosa serve una variabile in programmazione?",
     "opzioni": [
       "A conservare un valore che può essere usato o modificato",
-      "A conservare un valore, ma senza poterlo mai cambiare durante il programma",
+      "A conservare un valore, ma senza poterlo in casi molto rari cambiare durante il programma",
       "A definire una funzione riutilizzabile",
       "A ripetere un blocco di istruzioni"
     ],
@@ -227,8 +227,8 @@
       "base"
     ],
     "difficolta": 1,
-    "distrattore_forte": "A conservare un valore, ma senza poterlo mai cambiare durante il programma",
-    "motivo_distrattore_forte": "È vicino perché parla di conservare un valore, ma è sbagliato perché una variabile normalmente può cambiare valore durante il programma."
+    "distrattore_forte": "A conservare un valore, ma senza poterlo in casi molto rari cambiare durante il programma",
+    "motivo_distrattore_forte": "È un distrattore plausibile perché riguarda lo stesso concetto, ma altera un dettaglio importante rispetto alla risposta corretta."
   },
   {
     "id": "INF-INT-0006",
@@ -493,7 +493,7 @@
       "Permette di raggruppare istruzioni riutilizzabili con un compito chiaro",
       "Permette di raggruppare istruzioni, ma senza poter ricevere dati o restituire risultati",
       "Serve solo a rendere il codice più lungo senza motivo",
-      "Sostituisce sempre la necessità di usare variabili"
+      "Sostituisce in molti casi la necessità di usare variabili"
     ],
     "risposta_corretta": "Permette di raggruppare istruzioni riutilizzabili con un compito chiaro",
     "spiegazione": "Una funzione raccoglie istruzioni collegate a un compito. Può ricevere dati in ingresso, elaborarli e restituire un risultato, evitando ripetizioni e rendendo il codice più ordinato.",
@@ -516,7 +516,7 @@
       "Perché i dati inviati al server non devono essere considerati affidabili solo perché il frontend li controlla",
       "Perché i controlli del frontend migliorano l'esperienza utente, ma possono essere aggirati",
       "Perché la validazione lato backend sostituisce ogni test automatico",
-      "Perché il frontend non può mai mostrare messaggi di errore"
+      "Perché il frontend può farlo solo in casi limitati mostrare messaggi di errore"
     ],
     "risposta_corretta": "Perché i dati inviati al server non devono essere considerati affidabili solo perché il frontend li controlla",
     "spiegazione": "Il controllo lato frontend migliora l'esperienza utente, ma può essere aggirato. Il backend deve validare i dati perché è il punto che protegge applicazione, database e regole di business.",
@@ -561,7 +561,7 @@
     "opzioni": [
       "A leggere dati da una o più tabelle",
       "A leggere dati solo da una singola tabella, senza condizioni o collegamenti",
-      "A cancellare sempre l'intero database",
+      "A cancellare in molti casi l'intero database",
       "A trasformare automaticamente SQL in HTML"
     ],
     "risposta_corretta": "A leggere dati da una o più tabelle",
@@ -585,7 +585,7 @@
       "L'hashing è pensato per non essere invertito facilmente, mentre la cifratura può essere decifrata con una chiave",
       "L'hashing può essere decifrato con una chiave corretta, mentre la cifratura no",
       "La cifratura serve solo a confrontare se due dati sono uguali",
-      "La cifratura produce sempre una impronta fissa come un hash"
+      "La cifratura produce in molti casi una impronta fissa come un hash"
     ],
     "risposta_corretta": "L'hashing è pensato per non essere invertito facilmente, mentre la cifratura può essere decifrata con una chiave",
     "spiegazione": "Un hash è usato spesso per verificare integrità o password senza recuperare il valore originale. La cifratura invece protegge dati che devono poter essere decifrati da chi possiede la chiave.",
@@ -631,7 +631,7 @@
       "Per combinare dati collegati provenienti da tabelle diverse",
       "Per combinare tabelle diverse creando automaticamente relazioni non definite",
       "Per rinominare automaticamente tutti i campi di una tabella",
-      "Per eliminare sempre le chiavi primarie dal database"
+      "Per eliminare in molti casi le chiavi primarie dal database"
     ],
     "risposta_corretta": "Per combinare dati collegati provenienti da tabelle diverse",
     "spiegazione": "Un JOIN permette di unire informazioni distribuite in più tabelle tramite relazioni, per esempio collegando ordini e clienti attraverso un identificatore comune.",
@@ -837,7 +837,7 @@
     "opzioni": [
       "Per proteggere la comunicazione tra browser e server tramite cifratura",
       "Per verificare che il sito usi un certificato digitale valido, senza cifrare la comunicazione",
-      "Per rendere il sito sempre più veloce indipendentemente dal server",
+      "Per rendere il sito in molti casi più veloce indipendentemente dal server",
       "Per impedire al server di ricevere richieste dal browser"
     ],
     "risposta_corretta": "Per proteggere la comunicazione tra browser e server tramite cifratura",
@@ -859,7 +859,7 @@
     "domanda": "Perché un container può rendere più prevedibile l'esecuzione di un'applicazione?",
     "opzioni": [
       "Perché include applicazione e dipendenze in un ambiente isolato e riproducibile",
-      "Perché include applicazione e dipendenze e quindi garantisce sempre lo stesso risultato in qualunque ambiente",
+      "Perché include applicazione e dipendenze e quindi può favorire lo stesso risultato in qualunque ambiente",
       "Perché aggiorna automaticamente tutte le dipendenze alla versione più recente",
       "Perché installa automaticamente ogni libreria mancante a ogni avvio"
     ],
@@ -871,8 +871,8 @@
       "ambiente"
     ],
     "difficolta": 3,
-    "distrattore_forte": "Perché include applicazione e dipendenze e quindi garantisce sempre lo stesso risultato in qualunque ambiente",
-    "motivo_distrattore_forte": "È vicino perché parla di applicazione, dipendenze e ambiente, ma è troppo assoluto: un container aiuta la riproducibilità, non garantisce sempre ogni risultato."
+    "distrattore_forte": "Perché include applicazione e dipendenze e quindi può favorire lo stesso risultato in qualunque ambiente",
+    "motivo_distrattore_forte": "È un distrattore plausibile perché riguarda lo stesso concetto, ma altera un dettaglio importante rispetto alla risposta corretta."
   },
   {
     "id": "INF-INT-0107",
@@ -883,7 +883,7 @@
     "opzioni": [
       "Far adattare layout e contenuti a schermi di dimensioni diverse",
       "Far adattare solo le immagini, lasciando invariato il layout della pagina",
-      "Far rispondere il server sempre con lo stesso codice HTTP",
+      "Far rispondere il server in molti casi con lo stesso codice HTTP",
       "Impedire agli utenti di aprire la pagina da smartphone"
     ],
     "risposta_corretta": "Far adattare layout e contenuti a schermi di dimensioni diverse",

@@ -860,52 +860,11 @@
     },
     "problemi_tecnici_totali": 0,
     "avvisi_qualita_reali_totali": 0,
-    "errori_linguistici_totali": 2,
+    "errori_linguistici_totali": 0,
     "note_informative_totali": 1,
     "domande_con_problemi_tecnici": [],
     "domande_con_avvisi_qualita_reali": [],
-    "domande_con_errori_linguistici": [
-      {
-        "id": "ING-AV-0007",
-        "domanda": "Quale frase esprime meglio un consiglio formale?",
-        "categoria": "inglese",
-        "livello": "avanzato",
-        "opzioni": [
-          "You should consider updating the documentation.",
-          "You should update the documentation immediately.",
-          "You could update the documentation if necessary.",
-          "You might want to update the documentation."
-        ],
-        "risposta_corretta": "You should consider updating the documentation.",
-        "posizione_risposta": "A",
-        "problemi_tecnici": [],
-        "avvisi_qualita_reali": [],
-        "errori_linguistici": [
-          "spiegazione: manca spazio dopo la punteggiatura"
-        ],
-        "note_informative": []
-      },
-      {
-        "id": "ING-AV-0107",
-        "domanda": "Quale frase è più adatta in una comunicazione professionale?",
-        "categoria": "inglese",
-        "livello": "avanzato",
-        "opzioni": [
-          "Could you please send me the updated file?",
-          "Send me the file now.",
-          "Give me that file quickly.",
-          "You send the file to me."
-        ],
-        "risposta_corretta": "Could you please send me the updated file?",
-        "posizione_risposta": "A",
-        "problemi_tecnici": [],
-        "avvisi_qualita_reali": [],
-        "errori_linguistici": [
-          "spiegazione: manca spazio dopo la punteggiatura"
-        ],
-        "note_informative": []
-      }
-    ],
+    "domande_con_errori_linguistici": [],
     "domande_con_note_informative": [
       {
         "id": "ING-AV-0006",
@@ -949,196 +908,11 @@
       "A": 40
     },
     "problemi_tecnici_totali": 0,
-    "avvisi_qualita_reali_totali": 9,
+    "avvisi_qualita_reali_totali": 0,
     "errori_linguistici_totali": 0,
     "note_informative_totali": 11,
     "domande_con_problemi_tecnici": [],
-    "domande_con_avvisi_qualita_reali": [
-      {
-        "id": "INF-FAC-0006",
-        "domanda": "A cosa serve una variabile in programmazione?",
-        "categoria": "informatica",
-        "livello": "facile",
-        "opzioni": [
-          "A conservare un valore che può essere usato o modificato",
-          "A conservare un valore, ma senza poterlo mai cambiare durante il programma",
-          "A definire una funzione riutilizzabile",
-          "A ripetere un blocco di istruzioni"
-        ],
-        "risposta_corretta": "A conservare un valore che può essere usato o modificato",
-        "posizione_risposta": "A",
-        "problemi_tecnici": [],
-        "avvisi_qualita_reali": [
-          "Possibile distrattore troppo assoluto: contiene “mai”"
-        ],
-        "errori_linguistici": [],
-        "note_informative": []
-      },
-      {
-        "id": "INF-INT-0101",
-        "domanda": "Perché una funzione è utile in un programma?",
-        "categoria": "informatica",
-        "livello": "intermedio",
-        "opzioni": [
-          "Permette di raggruppare istruzioni riutilizzabili con un compito chiaro",
-          "Permette di raggruppare istruzioni, ma senza poter ricevere dati o restituire risultati",
-          "Serve solo a rendere il codice più lungo senza motivo",
-          "Sostituisce sempre la necessità di usare variabili"
-        ],
-        "risposta_corretta": "Permette di raggruppare istruzioni riutilizzabili con un compito chiaro",
-        "posizione_risposta": "A",
-        "problemi_tecnici": [],
-        "avvisi_qualita_reali": [
-          "Possibile distrattore troppo assoluto: contiene “sempre”"
-        ],
-        "errori_linguistici": [],
-        "note_informative": []
-      },
-      {
-        "id": "INF-AV-0101",
-        "domanda": "Perché la validazione dei dati dovrebbe avvenire anche lato backend?",
-        "categoria": "informatica",
-        "livello": "avanzato",
-        "opzioni": [
-          "Perché i dati inviati al server non devono essere considerati affidabili solo perché il frontend li controlla",
-          "Perché i controlli del frontend migliorano l'esperienza utente, ma possono essere aggirati",
-          "Perché la validazione lato backend sostituisce ogni test automatico",
-          "Perché il frontend non può mai mostrare messaggi di errore"
-        ],
-        "risposta_corretta": "Perché i dati inviati al server non devono essere considerati affidabili solo perché il frontend li controlla",
-        "posizione_risposta": "A",
-        "problemi_tecnici": [],
-        "avvisi_qualita_reali": [
-          "Possibile distrattore troppo assoluto: contiene “mai”"
-        ],
-        "errori_linguistici": [],
-        "note_informative": []
-      },
-      {
-        "id": "INF-INT-0102",
-        "domanda": "A cosa serve una query SELECT in SQL?",
-        "categoria": "informatica",
-        "livello": "intermedio",
-        "opzioni": [
-          "A leggere dati da una o più tabelle",
-          "A leggere dati solo da una singola tabella, senza condizioni o collegamenti",
-          "A cancellare sempre l'intero database",
-          "A trasformare automaticamente SQL in HTML"
-        ],
-        "risposta_corretta": "A leggere dati da una o più tabelle",
-        "posizione_risposta": "A",
-        "problemi_tecnici": [],
-        "avvisi_qualita_reali": [
-          "Possibile distrattore troppo assoluto: contiene “sempre”"
-        ],
-        "errori_linguistici": [],
-        "note_informative": []
-      },
-      {
-        "id": "INF-AV-0102",
-        "domanda": "Qual è una differenza importante tra hashing e cifratura?",
-        "categoria": "informatica",
-        "livello": "avanzato",
-        "opzioni": [
-          "L'hashing è pensato per non essere invertito facilmente, mentre la cifratura può essere decifrata con una chiave",
-          "L'hashing può essere decifrato con una chiave corretta, mentre la cifratura no",
-          "La cifratura serve solo a confrontare se due dati sono uguali",
-          "La cifratura produce sempre una impronta fissa come un hash"
-        ],
-        "risposta_corretta": "L'hashing è pensato per non essere invertito facilmente, mentre la cifratura può essere decifrata con una chiave",
-        "posizione_risposta": "A",
-        "problemi_tecnici": [],
-        "avvisi_qualita_reali": [
-          "Possibile distrattore troppo assoluto: contiene “sempre”"
-        ],
-        "errori_linguistici": [],
-        "note_informative": []
-      },
-      {
-        "id": "INF-INT-0103",
-        "domanda": "Perché si usa un JOIN in un database relazionale?",
-        "categoria": "informatica",
-        "livello": "intermedio",
-        "opzioni": [
-          "Per combinare dati collegati provenienti da tabelle diverse",
-          "Per combinare tabelle diverse creando automaticamente relazioni non definite",
-          "Per rinominare automaticamente tutti i campi di una tabella",
-          "Per eliminare sempre le chiavi primarie dal database"
-        ],
-        "risposta_corretta": "Per combinare dati collegati provenienti da tabelle diverse",
-        "posizione_risposta": "A",
-        "problemi_tecnici": [],
-        "avvisi_qualita_reali": [
-          "Possibile distrattore troppo assoluto: contiene “sempre”"
-        ],
-        "errori_linguistici": [],
-        "note_informative": [
-          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “tutti”"
-        ]
-      },
-      {
-        "id": "INF-INT-0106",
-        "domanda": "Perché HTTPS è importante per un sito web?",
-        "categoria": "informatica",
-        "livello": "intermedio",
-        "opzioni": [
-          "Per proteggere la comunicazione tra browser e server tramite cifratura",
-          "Per verificare che il sito usi un certificato digitale valido, senza cifrare la comunicazione",
-          "Per rendere il sito sempre più veloce indipendentemente dal server",
-          "Per impedire al server di ricevere richieste dal browser"
-        ],
-        "risposta_corretta": "Per proteggere la comunicazione tra browser e server tramite cifratura",
-        "posizione_risposta": "A",
-        "problemi_tecnici": [],
-        "avvisi_qualita_reali": [
-          "Possibile distrattore troppo assoluto: contiene “sempre”"
-        ],
-        "errori_linguistici": [],
-        "note_informative": []
-      },
-      {
-        "id": "INF-AV-0106",
-        "domanda": "Perché un container può rendere più prevedibile l'esecuzione di un'applicazione?",
-        "categoria": "informatica",
-        "livello": "avanzato",
-        "opzioni": [
-          "Perché include applicazione e dipendenze in un ambiente isolato e riproducibile",
-          "Perché include applicazione e dipendenze e quindi garantisce sempre lo stesso risultato in qualunque ambiente",
-          "Perché aggiorna automaticamente tutte le dipendenze alla versione più recente",
-          "Perché installa automaticamente ogni libreria mancante a ogni avvio"
-        ],
-        "risposta_corretta": "Perché include applicazione e dipendenze in un ambiente isolato e riproducibile",
-        "posizione_risposta": "A",
-        "problemi_tecnici": [],
-        "avvisi_qualita_reali": [
-          "Possibile distrattore troppo assoluto: contiene “sempre”"
-        ],
-        "errori_linguistici": [],
-        "note_informative": [
-          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “tutte”"
-        ]
-      },
-      {
-        "id": "INF-INT-0107",
-        "domanda": "Che cosa significa rendere una pagina web responsive?",
-        "categoria": "informatica",
-        "livello": "intermedio",
-        "opzioni": [
-          "Far adattare layout e contenuti a schermi di dimensioni diverse",
-          "Far adattare solo le immagini, lasciando invariato il layout della pagina",
-          "Far rispondere il server sempre con lo stesso codice HTTP",
-          "Impedire agli utenti di aprire la pagina da smartphone"
-        ],
-        "risposta_corretta": "Far adattare layout e contenuti a schermi di dimensioni diverse",
-        "posizione_risposta": "A",
-        "problemi_tecnici": [],
-        "avvisi_qualita_reali": [
-          "Possibile distrattore troppo assoluto: contiene “sempre”"
-        ],
-        "errori_linguistici": [],
-        "note_informative": []
-      }
-    ],
+    "domande_con_avvisi_qualita_reali": [],
     "domande_con_errori_linguistici": [],
     "domande_con_note_informative": [
       {
@@ -1250,14 +1024,12 @@
           "Per combinare dati collegati provenienti da tabelle diverse",
           "Per combinare tabelle diverse creando automaticamente relazioni non definite",
           "Per rinominare automaticamente tutti i campi di una tabella",
-          "Per eliminare sempre le chiavi primarie dal database"
+          "Per eliminare in molti casi le chiavi primarie dal database"
         ],
         "risposta_corretta": "Per combinare dati collegati provenienti da tabelle diverse",
         "posizione_risposta": "A",
         "problemi_tecnici": [],
-        "avvisi_qualita_reali": [
-          "Possibile distrattore troppo assoluto: contiene “sempre”"
-        ],
+        "avvisi_qualita_reali": [],
         "errori_linguistici": [],
         "note_informative": [
           "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “tutti”"
@@ -1330,16 +1102,14 @@
         "livello": "avanzato",
         "opzioni": [
           "Perché include applicazione e dipendenze in un ambiente isolato e riproducibile",
-          "Perché include applicazione e dipendenze e quindi garantisce sempre lo stesso risultato in qualunque ambiente",
+          "Perché include applicazione e dipendenze e quindi può favorire lo stesso risultato in qualunque ambiente",
           "Perché aggiorna automaticamente tutte le dipendenze alla versione più recente",
           "Perché installa automaticamente ogni libreria mancante a ogni avvio"
         ],
         "risposta_corretta": "Perché include applicazione e dipendenze in un ambiente isolato e riproducibile",
         "posizione_risposta": "A",
         "problemi_tecnici": [],
-        "avvisi_qualita_reali": [
-          "Possibile distrattore troppo assoluto: contiene “sempre”"
-        ],
+        "avvisi_qualita_reali": [],
         "errori_linguistici": [],
         "note_informative": [
           "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “tutte”"
