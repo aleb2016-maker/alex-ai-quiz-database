@@ -928,13 +928,13 @@
     "livello": "facile",
     "domanda": "Perché gli spettri atomici sono formati da righe discrete?",
     "opzioni": [
-      "Perché gli elettroni negli atomi possono cambiare solo tra livelli energetici permessi",
-      "Perché gli elettroni possono avere qualsiasi energia senza limiti",
-      "Perché i nuclei atomici emettono sempre suoni udibili",
-      "Perché la luce visibile non contiene energia"
+      "Perché gli elettroni possono passare solo tra livelli energetici permessi",
+      "Perché gli elettroni hanno energie continue ma la luce viene filtrata dal gas",
+      "Perché il nucleo vibra con frequenze classiche indipendenti dagli elettroni",
+      "Perché lo spettroscopio divide una sorgente continua in righe senza legame con l’atomo"
     ],
-    "risposta_corretta": "Perché gli elettroni negli atomi possono cambiare solo tra livelli energetici permessi",
-    "spiegazione": "Le righe spettrali derivano da transizioni tra livelli energetici quantizzati. Ogni transizione corrisponde a una specifica energia del fotone emesso o assorbito.",
+    "risposta_corretta": "Perché gli elettroni possono passare solo tra livelli energetici permessi",
+    "spiegazione": "Gli spettri atomici hanno righe discrete perché gli elettroni negli atomi possono passare solo tra livelli energetici permessi. Ogni salto corrisponde a un fotone con energia specifica.",
     "tags": [
       "fisica_quantistica",
       "spettri_atomici",
@@ -944,7 +944,13 @@
     "distrattore_forte": "Perché gli elettroni possono avere qualsiasi energia senza limiti",
     "punteggio_distrattore_forte": 4,
     "motivo_distrattore_forte": "È vicino perché parla dell'energia degli elettroni, ma nega proprio la quantizzazione.",
-    "qualita": "controllata"
+    "qualita": "controllata",
+    "spiegazioni_opzioni": {
+      "Perché gli elettroni possono passare solo tra livelli energetici permessi": "Corretta: descrive in modo preciso il concetto quantistico richiesto.",
+      "Perché gli elettroni hanno energie continue ma la luce viene filtrata dal gas": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio quantistico non corretto.",
+      "Perché il nucleo vibra con frequenze classiche indipendenti dagli elettroni": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio quantistico non corretto.",
+      "Perché lo spettroscopio divide una sorgente continua in righe senza legame con l’atomo": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio quantistico non corretto."
+    }
   },
   {
     "id": "FQ_035",
@@ -953,13 +959,13 @@
     "livello": "intermedio",
     "domanda": "Che cosa afferma l'ipotesi di de Broglie?",
     "opzioni": [
-      "Anche le particelle materiali possono avere proprietà ondulatorie",
-      "Solo le onde sonore possono comportarsi come particelle",
-      "Gli elettroni non possono mai mostrare interferenza",
-      "La luce è sempre soltanto un fenomeno meccanico classico"
+      "Che anche le particelle materiali possono essere associate a una lunghezza d’onda",
+      "Che solo le particelle cariche possiedono massa quando attraversano una fenditura",
+      "Che la luce perde il comportamento ondulatorio quando incontra un elettrone",
+      "Che la lunghezza d’onda di una particella non dipende dalla sua quantità di moto"
     ],
-    "risposta_corretta": "Anche le particelle materiali possono avere proprietà ondulatorie",
-    "spiegazione": "De Broglie propose che a ogni particella materiale fosse associata una lunghezza d'onda, idea confermata da fenomeni come la diffrazione degli elettroni.",
+    "risposta_corretta": "Che anche le particelle materiali possono essere associate a una lunghezza d’onda",
+    "spiegazione": "L’ipotesi di de Broglie afferma che anche le particelle materiali, come gli elettroni, possono avere proprietà ondulatorie. La loro lunghezza d’onda è collegata alla quantità di moto.",
     "tags": [
       "fisica_quantistica",
       "de_broglie",
@@ -969,7 +975,13 @@
     "distrattore_forte": "Gli elettroni non possono mai mostrare interferenza",
     "punteggio_distrattore_forte": 4,
     "motivo_distrattore_forte": "È vicino perché parla degli elettroni, ma è sbagliato: gli elettroni possono mostrare comportamento ondulatorio.",
-    "qualita": "controllata"
+    "qualita": "controllata",
+    "spiegazioni_opzioni": {
+      "Che anche le particelle materiali possono essere associate a una lunghezza d’onda": "Corretta: descrive in modo preciso il concetto quantistico richiesto.",
+      "Che solo le particelle cariche possiedono massa quando attraversano una fenditura": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio quantistico non corretto.",
+      "Che la luce perde il comportamento ondulatorio quando incontra un elettrone": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio quantistico non corretto.",
+      "Che la lunghezza d’onda di una particella non dipende dalla sua quantità di moto": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio quantistico non corretto."
+    }
   },
   {
     "id": "FQ_036",
@@ -978,13 +990,13 @@
     "livello": "intermedio",
     "domanda": "Perché l'esperimento della doppia fenditura è importante in fisica quantistica?",
     "opzioni": [
-      "Mostra che particelle come elettroni o fotoni possono produrre figure di interferenza",
-      "Dimostra che gli elettroni sono sempre oggetti macroscopici visibili",
-      "Dimostra che la luce non può attraversare aperture",
-      "Mostra che la gravità scompare vicino a due fenditure"
+      "Perché mostra interferenza quantistica anche con particelle inviate una alla volta",
+      "Perché dimostra che l’interferenza nasce solo da urti classici tra particelle",
+      "Perché mostra che due fenditure eliminano la natura ondulatoria della luce",
+      "Perché misura direttamente la massa degli elettroni osservando la gravità tra fenditure"
     ],
-    "risposta_corretta": "Mostra che particelle come elettroni o fotoni possono produrre figure di interferenza",
-    "spiegazione": "La doppia fenditura evidenzia il comportamento ondulatorio di sistemi quantistici: anche singole particelle possono contribuire a una figura di interferenza.",
+    "risposta_corretta": "Perché mostra interferenza quantistica anche con particelle inviate una alla volta",
+    "spiegazione": "L’esperimento della doppia fenditura è importante perché mostra che sistemi quantistici come fotoni o elettroni possono produrre figure di interferenza, anche quando vengono inviati singolarmente.",
     "tags": [
       "fisica_quantistica",
       "doppia_fenditura",
@@ -994,7 +1006,13 @@
     "distrattore_forte": "Dimostra che gli elettroni sono sempre oggetti macroscopici visibili",
     "punteggio_distrattore_forte": 3,
     "motivo_distrattore_forte": "È vicino perché parla degli elettroni, ma fraintende il risultato: non diventano oggetti macroscopici visibili.",
-    "qualita": "controllata"
+    "qualita": "controllata",
+    "spiegazioni_opzioni": {
+      "Perché mostra interferenza quantistica anche con particelle inviate una alla volta": "Corretta: descrive in modo preciso il concetto quantistico richiesto.",
+      "Perché dimostra che l’interferenza nasce solo da urti classici tra particelle": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio quantistico non corretto.",
+      "Perché mostra che due fenditure eliminano la natura ondulatoria della luce": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio quantistico non corretto.",
+      "Perché misura direttamente la massa degli elettroni osservando la gravità tra fenditure": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio quantistico non corretto."
+    }
   },
   {
     "id": "FQ_037",
@@ -1003,13 +1021,13 @@
     "livello": "intermedio",
     "domanda": "Che cosa significa dire che due stati quantistici interferiscono?",
     "opzioni": [
-      "Le loro ampiezze di probabilità si combinano, aumentando o riducendo la probabilità di certi risultati",
-      "Le loro masse si sommano sempre fino a diventare infinite",
-      "Le particelle smettono di avere qualsiasi proprietà fisica",
-      "La misura diventa impossibile in ogni situazione"
+      "Che le ampiezze di probabilità si combinano, rafforzando o riducendo certi risultati",
+      "Che le probabilità classiche si sommano direttamente senza effetti di fase",
+      "Che due particelle fondono le loro masse formando un singolo oggetto macroscopico",
+      "Che la misura cancella la possibilità di descrivere matematicamente lo stato"
     ],
-    "risposta_corretta": "Le loro ampiezze di probabilità si combinano, aumentando o riducendo la probabilità di certi risultati",
-    "spiegazione": "In quantistica l'interferenza riguarda le ampiezze di probabilità. A seconda della fase, esse possono rinforzarsi o cancellarsi parzialmente.",
+    "risposta_corretta": "Che le ampiezze di probabilità si combinano, rafforzando o riducendo certi risultati",
+    "spiegazione": "L’interferenza quantistica riguarda le ampiezze di probabilità, non semplicemente le probabilità classiche. Le ampiezze possono combinarsi in modo costruttivo o distruttivo.",
     "tags": [
       "fisica_quantistica",
       "interferenza",
@@ -1019,7 +1037,13 @@
     "distrattore_forte": "La misura diventa impossibile in ogni situazione",
     "punteggio_distrattore_forte": 3,
     "motivo_distrattore_forte": "È vicino perché riguarda il problema della misura, ma l'interferenza non rende impossibile ogni misura.",
-    "qualita": "controllata"
+    "qualita": "controllata",
+    "spiegazioni_opzioni": {
+      "Che le ampiezze di probabilità si combinano, rafforzando o riducendo certi risultati": "Corretta: descrive in modo preciso il concetto quantistico richiesto.",
+      "Che le probabilità classiche si sommano direttamente senza effetti di fase": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio quantistico non corretto.",
+      "Che due particelle fondono le loro masse formando un singolo oggetto macroscopico": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio quantistico non corretto.",
+      "Che la misura cancella la possibilità di descrivere matematicamente lo stato": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio quantistico non corretto."
+    }
   },
   {
     "id": "FQ_038",
@@ -1028,13 +1052,13 @@
     "livello": "avanzato",
     "domanda": "Che cosa distingue uno stato puro da uno stato misto in meccanica quantistica?",
     "opzioni": [
-      "Uno stato puro è descritto da una singola funzione d'onda, mentre uno stato misto rappresenta una distribuzione statistica di stati",
-      "Uno stato puro contiene solo protoni, mentre uno stato misto contiene solo neutroni",
-      "Uno stato puro è sempre macroscopico, mentre uno stato misto è sempre invisibile",
-      "Uno stato misto non può mai essere descritto matematicamente"
+      "Uno stato puro è descritto da un singolo stato quantistico, uno misto da una distribuzione statistica",
+      "Uno stato puro contiene una sola particella, uno misto contiene particelle di tipo diverso",
+      "Uno stato misto è una sovrapposizione coerente descritta da un’unica funzione d’onda",
+      "Uno stato puro è termico, mentre uno stato misto non richiede una descrizione matematica"
     ],
-    "risposta_corretta": "Uno stato puro è descritto da una singola funzione d'onda, mentre uno stato misto rappresenta una distribuzione statistica di stati",
-    "spiegazione": "Uno stato puro ha una descrizione quantistica completa tramite un vettore di stato. Uno stato misto rappresenta incertezza statistica su più stati possibili.",
+    "risposta_corretta": "Uno stato puro è descritto da un singolo stato quantistico, uno misto da una distribuzione statistica",
+    "spiegazione": "Uno stato puro è descritto da un singolo stato quantistico. Uno stato misto, invece, rappresenta una distribuzione statistica di possibili stati, spesso descritta tramite matrice densità.",
     "tags": [
       "fisica_quantistica",
       "stato_puro",
@@ -1044,7 +1068,13 @@
     "distrattore_forte": "Uno stato misto non può mai essere descritto matematicamente",
     "punteggio_distrattore_forte": 3,
     "motivo_distrattore_forte": "È vicino perché parla della descrizione degli stati, ma gli stati misti si descrivono matematicamente, ad esempio con matrici densità.",
-    "qualita": "controllata"
+    "qualita": "controllata",
+    "spiegazioni_opzioni": {
+      "Uno stato puro è descritto da un singolo stato quantistico, uno misto da una distribuzione statistica": "Corretta: descrive in modo preciso il concetto quantistico richiesto.",
+      "Uno stato puro contiene una sola particella, uno misto contiene particelle di tipo diverso": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio quantistico non corretto.",
+      "Uno stato misto è una sovrapposizione coerente descritta da un’unica funzione d’onda": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio quantistico non corretto.",
+      "Uno stato puro è termico, mentre uno stato misto non richiede una descrizione matematica": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio quantistico non corretto."
+    }
   },
   {
     "id": "FQ_039",
