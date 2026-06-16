@@ -8,7 +8,7 @@ Questo report separa i problemi qualitativi reali dagli avvisi non bloccanti sul
 |---|---:|---:|---:|
 | Scienze generali | 40 | 16 | 34 |
 | Biologia | 40 | 0 | 40 |
-| Fisica | 40 | 13 | 40 |
+| Fisica | 40 | 5 | 40 |
 | Chimica | 40 | 0 | 40 |
 | Fisica quantistica | 40 | 21 | 40 |
 
@@ -370,7 +370,7 @@ Nessun problema qualitativo reale rilevato.
 ## Fisica
 
 Domande sorgente: **40**
-Domande con problemi qualità reali: **13**
+Domande con problemi qualità reali: **5**
 Risposte corrette in A nel sorgente: **40**
 
 Distribuzione risposta corretta nel sorgente:
@@ -380,171 +380,6 @@ Distribuzione risposta corretta nel sorgente:
 ```
 
 ### Domande da migliorare davvero
-
-### FIS_020 — livello: intermedio
-
-**Domanda:** Che cosa distingue una grandezza vettoriale da una grandezza scalare?
-
-**Opzioni attuali:**
-- A. La grandezza vettoriale ha modulo, direzione e verso ✅
-- B. La grandezza vettoriale non può mai essere misurata
-- C. La grandezza scalare ha sempre direzione e verso
-- D. La grandezza scalare è sempre negativa
-
-**Risposta corretta nel sorgente:** A
-
-**Problemi reali:**
-- Possibile opzione debole/generica: contiene “mai”.
-- Possibile opzione debole/generica: contiene “sempre”.
-- Possibile opzione debole/generica: contiene “sempre”.
-
-**Regola di revisione:**
-- Ogni domanda deve avere almeno un distrattore forte: una risposta sbagliata molto vicina alla corretta, ma falsa per un dettaglio preciso.
-- Evitare parole assolute come “sempre” e “mai”, se rendono il distrattore troppo eliminabile.
-- Rendere le quattro opzioni simili per lunghezza, struttura e livello tecnico.
-
-### FIS_021 — livello: avanzato
-
-**Domanda:** Secondo la legge di Coulomb, che cosa succede alla forza elettrica se la distanza tra due cariche raddoppia?
-
-**Opzioni attuali:**
-- A. Diventa un quarto del valore iniziale ✅
-- B. Diventa il doppio del valore iniziale
-- C. Resta esattamente invariata
-- D. Diventa sempre nulla
-
-**Risposta corretta nel sorgente:** A
-
-**Problemi reali:**
-- Possibile opzione debole/generica: contiene “sempre”.
-
-**Regola di revisione:**
-- Ogni domanda deve avere almeno un distrattore forte: una risposta sbagliata molto vicina alla corretta, ma falsa per un dettaglio preciso.
-- Evitare parole assolute come “sempre” e “mai”, se rendono il distrattore troppo eliminabile.
-- Rendere le quattro opzioni simili per lunghezza, struttura e livello tecnico.
-
-### FIS_023 — livello: avanzato
-
-**Domanda:** Che cosa accade in un fenomeno di risonanza?
-
-**Opzioni attuali:**
-- A. Un sistema oscilla con ampiezza maggiore quando viene sollecitato vicino alla sua frequenza naturale ✅
-- B. Un sistema smette sempre di oscillare quando riceve energia periodica
-- C. La frequenza naturale diventa sempre uguale a zero
-- D. L’energia fornita viene sempre trasformata interamente in massa
-
-**Risposta corretta nel sorgente:** A
-
-**Problemi reali:**
-- Possibile opzione debole/generica: contiene “sempre”.
-- Possibile opzione debole/generica: contiene “sempre”.
-- Possibile opzione debole/generica: contiene “sempre”.
-
-**Regola di revisione:**
-- Ogni domanda deve avere almeno un distrattore forte: una risposta sbagliata molto vicina alla corretta, ma falsa per un dettaglio preciso.
-- Evitare parole assolute come “sempre” e “mai”, se rendono il distrattore troppo eliminabile.
-- Rendere le quattro opzioni simili per lunghezza, struttura e livello tecnico.
-
-### FIS_025 — livello: facile
-
-**Domanda:** Perché riusciamo a vedere un oggetto che non produce luce propria?
-
-**Opzioni attuali:**
-- A. Perché riflette luce che arriva ai nostri occhi ✅
-- B. Perché trasforma sempre la propria massa in luce
-- C. Perché emette sempre onde sonore visibili
-- D. Perché assorbe tutta la luce senza rimandarne nessuna
-
-**Risposta corretta nel sorgente:** A
-
-**Problemi reali:**
-- Possibile opzione debole/generica: contiene “sempre”.
-- Possibile opzione debole/generica: contiene “sempre”.
-
-**Regola di revisione:**
-- Ogni domanda deve avere almeno un distrattore forte: una risposta sbagliata molto vicina alla corretta, ma falsa per un dettaglio preciso.
-- Evitare parole assolute come “sempre” e “mai”, se rendono il distrattore troppo eliminabile.
-- Rendere le quattro opzioni simili per lunghezza, struttura e livello tecnico.
-
-### FIS_026 — livello: facile
-
-**Domanda:** Che cosa accade a una molla elastica quando viene deformata entro il suo limite elastico?
-
-**Opzioni attuali:**
-- A. Tende a tornare alla forma iniziale quando la forza viene tolta ✅
-- B. Perde sempre tutta la propria massa
-- C. Si trasforma definitivamente in un liquido
-- D. Smette di esercitare qualunque forza
-
-**Risposta corretta nel sorgente:** A
-
-**Problemi reali:**
-- Possibile opzione debole/generica: contiene “sempre”.
-
-**Regola di revisione:**
-- Ogni domanda deve avere almeno un distrattore forte: una risposta sbagliata molto vicina alla corretta, ma falsa per un dettaglio preciso.
-- Evitare parole assolute come “sempre” e “mai”, se rendono il distrattore troppo eliminabile.
-- Rendere le quattro opzioni simili per lunghezza, struttura e livello tecnico.
-
-### FIS_028 — livello: intermedio
-
-**Domanda:** Quando un corpo è in equilibrio statico?
-
-**Opzioni attuali:**
-- A. Quando la forza risultante e il momento risultante sono nulli ✅
-- B. Quando la velocità aumenta sempre in modo costante
-- C. Quando agisce una sola forza non bilanciata
-- D. Quando il corpo non possiede massa misurabile
-
-**Risposta corretta nel sorgente:** A
-
-**Problemi reali:**
-- Possibile opzione debole/generica: contiene “sempre”.
-
-**Regola di revisione:**
-- Ogni domanda deve avere almeno un distrattore forte: una risposta sbagliata molto vicina alla corretta, ma falsa per un dettaglio preciso.
-- Evitare parole assolute come “sempre” e “mai”, se rendono il distrattore troppo eliminabile.
-- Rendere le quattro opzioni simili per lunghezza, struttura e livello tecnico.
-
-### FIS_029 — livello: intermedio
-
-**Domanda:** Perché il suono non si propaga nel vuoto?
-
-**Opzioni attuali:**
-- A. Perché ha bisogno di un mezzo materiale che trasmetta le vibrazioni ✅
-- B. Perché nel vuoto la luce assorbe tutte le onde sonore
-- C. Perché nel vuoto la temperatura è sempre infinita
-- D. Perché il suono è formato da particelle con massa nulla
-
-**Risposta corretta nel sorgente:** A
-
-**Problemi reali:**
-- Possibile opzione debole/generica: contiene “sempre”.
-
-**Regola di revisione:**
-- Ogni domanda deve avere almeno un distrattore forte: una risposta sbagliata molto vicina alla corretta, ma falsa per un dettaglio preciso.
-- Evitare parole assolute come “sempre” e “mai”, se rendono il distrattore troppo eliminabile.
-- Rendere le quattro opzioni simili per lunghezza, struttura e livello tecnico.
-
-### FIS_031 — livello: avanzato
-
-**Domanda:** Che cosa accade alla corrente in un circuito se la tensione resta costante e la resistenza aumenta?
-
-**Opzioni attuali:**
-- A. La corrente diminuisce ✅
-- B. La corrente aumenta sempre
-- C. La corrente resta identica in ogni caso
-- D. La corrente diventa indipendente dalla resistenza
-
-**Risposta corretta nel sorgente:** A
-
-**Problemi reali:**
-- Possibile opzione debole/generica: contiene “sempre”.
-
-**Regola di revisione:**
-- Ogni domanda deve avere almeno un distrattore forte: una risposta sbagliata molto vicina alla corretta, ma falsa per un dettaglio preciso.
-- Evitare parole assolute come “sempre” e “mai”, se rendono il distrattore troppo eliminabile.
-- Rendere le quattro opzioni simili per lunghezza, struttura e livello tecnico.
 
 ### FIS_033 — livello: facile
 

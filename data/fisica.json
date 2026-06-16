@@ -536,13 +536,13 @@
     "livello": "intermedio",
     "domanda": "Che cosa distingue una grandezza vettoriale da una grandezza scalare?",
     "opzioni": [
-      "La grandezza vettoriale ha modulo, direzione e verso",
-      "La grandezza vettoriale non può mai essere misurata",
-      "La grandezza scalare ha sempre direzione e verso",
-      "La grandezza scalare è sempre negativa"
+      "Una grandezza vettoriale ha modulo, direzione e verso; una scalare ha solo valore numerico",
+      "Una grandezza vettoriale ha solo valore numerico; una scalare richiede direzione e verso",
+      "Una grandezza scalare cambia unità di misura quando viene rappresentata con una freccia",
+      "Una grandezza vettoriale descrive solo masse, mentre una scalare descrive solo forze"
     ],
-    "risposta_corretta": "La grandezza vettoriale ha modulo, direzione e verso",
-    "spiegazione": "Una grandezza scalare è descritta da un valore numerico e unità di misura. Una vettoriale richiede anche direzione e verso.",
+    "risposta_corretta": "Una grandezza vettoriale ha modulo, direzione e verso; una scalare ha solo valore numerico",
+    "spiegazione": "Una grandezza scalare è descritta da un valore numerico e da un’unità di misura. Una grandezza vettoriale richiede anche direzione e verso, oltre al modulo.",
     "tags": [
       "fisica",
       "vettori",
@@ -552,7 +552,13 @@
     "distrattore_forte": "La grandezza scalare ha sempre direzione e verso",
     "punteggio_distrattore_forte": 4,
     "motivo_distrattore_forte": "È vicino perché usa gli stessi concetti, ma li attribuisce alla grandezza sbagliata.",
-    "qualita": "controllata"
+    "qualita": "controllata",
+    "spiegazioni_opzioni": {
+      "Una grandezza vettoriale ha modulo, direzione e verso; una scalare ha solo valore numerico": "Corretta: descrive in modo preciso il concetto fisico richiesto.",
+      "Una grandezza vettoriale ha solo valore numerico; una scalare richiede direzione e verso": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio fisico non corretto.",
+      "Una grandezza scalare cambia unità di misura quando viene rappresentata con una freccia": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio fisico non corretto.",
+      "Una grandezza vettoriale descrive solo masse, mentre una scalare descrive solo forze": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio fisico non corretto."
+    }
   },
   {
     "id": "FIS_021",
@@ -561,13 +567,13 @@
     "livello": "avanzato",
     "domanda": "Secondo la legge di Coulomb, che cosa succede alla forza elettrica se la distanza tra due cariche raddoppia?",
     "opzioni": [
-      "Diventa un quarto del valore iniziale",
-      "Diventa il doppio del valore iniziale",
-      "Resta esattamente invariata",
-      "Diventa sempre nulla"
+      "La forza diventa un quarto perché dipende dall’inverso del quadrato della distanza",
+      "La forza diventa la metà perché dipende direttamente dalla distanza tra le cariche",
+      "La forza raddoppia perché la distanza maggiore aumenta l’interazione elettrica",
+      "La forza resta invariata perché dipende solo dal segno delle cariche elettriche"
     ],
-    "risposta_corretta": "Diventa un quarto del valore iniziale",
-    "spiegazione": "La forza elettrica è inversamente proporzionale al quadrato della distanza. Se la distanza raddoppia, la forza diventa 1/4.",
+    "risposta_corretta": "La forza diventa un quarto perché dipende dall’inverso del quadrato della distanza",
+    "spiegazione": "Secondo la legge di Coulomb, la forza elettrica è inversamente proporzionale al quadrato della distanza. Se la distanza raddoppia, la forza diventa un quarto.",
     "tags": [
       "fisica",
       "coulomb",
@@ -577,7 +583,13 @@
     "distrattore_forte": "Diventa il doppio del valore iniziale",
     "punteggio_distrattore_forte": 4,
     "motivo_distrattore_forte": "È vicino perché considera il raddoppio della distanza, ma sbaglia la relazione inversa quadratica.",
-    "qualita": "controllata"
+    "qualita": "controllata",
+    "spiegazioni_opzioni": {
+      "La forza diventa un quarto perché dipende dall’inverso del quadrato della distanza": "Corretta: descrive in modo preciso il concetto fisico richiesto.",
+      "La forza diventa la metà perché dipende direttamente dalla distanza tra le cariche": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio fisico non corretto.",
+      "La forza raddoppia perché la distanza maggiore aumenta l’interazione elettrica": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio fisico non corretto.",
+      "La forza resta invariata perché dipende solo dal segno delle cariche elettriche": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio fisico non corretto."
+    }
   },
   {
     "id": "FIS_022",
@@ -611,13 +623,13 @@
     "livello": "avanzato",
     "domanda": "Che cosa accade in un fenomeno di risonanza?",
     "opzioni": [
-      "Un sistema oscilla con ampiezza maggiore quando viene sollecitato vicino alla sua frequenza naturale",
-      "Un sistema smette sempre di oscillare quando riceve energia periodica",
-      "La frequenza naturale diventa sempre uguale a zero",
-      "L’energia fornita viene sempre trasformata interamente in massa"
+      "Un sistema oscilla con ampiezza elevata quando è sollecitato vicino alla sua frequenza naturale",
+      "Un sistema smette di oscillare quando riceve energia alla propria frequenza naturale",
+      "Un sistema perde massa quando viene sollecitato da una forza periodica esterna",
+      "Un sistema trasforma ogni oscillazione meccanica in corrente elettrica continua"
     ],
-    "risposta_corretta": "Un sistema oscilla con ampiezza maggiore quando viene sollecitato vicino alla sua frequenza naturale",
-    "spiegazione": "La risonanza si verifica quando una sollecitazione periodica ha frequenza vicina a quella naturale del sistema, aumentando l’ampiezza delle oscillazioni.",
+    "risposta_corretta": "Un sistema oscilla con ampiezza elevata quando è sollecitato vicino alla sua frequenza naturale",
+    "spiegazione": "La risonanza avviene quando un sistema riceve una sollecitazione periodica vicina alla sua frequenza naturale. In questa condizione l’ampiezza dell’oscillazione può aumentare molto.",
     "tags": [
       "fisica",
       "risonanza",
@@ -627,7 +639,13 @@
     "distrattore_forte": "Un sistema smette sempre di oscillare quando riceve energia periodica",
     "punteggio_distrattore_forte": 4,
     "motivo_distrattore_forte": "È vicino perché riguarda oscillazioni ed energia periodica, ma descrive l’effetto opposto.",
-    "qualita": "controllata"
+    "qualita": "controllata",
+    "spiegazioni_opzioni": {
+      "Un sistema oscilla con ampiezza elevata quando è sollecitato vicino alla sua frequenza naturale": "Corretta: descrive in modo preciso il concetto fisico richiesto.",
+      "Un sistema smette di oscillare quando riceve energia alla propria frequenza naturale": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio fisico non corretto.",
+      "Un sistema perde massa quando viene sollecitato da una forza periodica esterna": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio fisico non corretto.",
+      "Un sistema trasforma ogni oscillazione meccanica in corrente elettrica continua": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio fisico non corretto."
+    }
   },
   {
     "id": "FIS_024",
@@ -662,13 +680,13 @@
     "livello": "facile",
     "domanda": "Perché riusciamo a vedere un oggetto che non produce luce propria?",
     "opzioni": [
-      "Perché riflette luce che arriva ai nostri occhi",
-      "Perché trasforma sempre la propria massa in luce",
-      "Perché emette sempre onde sonore visibili",
-      "Perché assorbe tutta la luce senza rimandarne nessuna"
+      "Perché riflette parte della luce proveniente da una sorgente verso i nostri occhi",
+      "Perché produce luce propria quando viene osservato da un osservatore vicino",
+      "Perché assorbe tutta la luce incidente e la trasforma direttamente in massa",
+      "Perché emette onde sonore che il cervello interpreta come immagini luminose"
     ],
-    "risposta_corretta": "Perché riflette luce che arriva ai nostri occhi",
-    "spiegazione": "Un oggetto non luminoso si vede perché riflette una parte della luce che riceve. Questa luce riflessa arriva ai nostri occhi.",
+    "risposta_corretta": "Perché riflette parte della luce proveniente da una sorgente verso i nostri occhi",
+    "spiegazione": "Vediamo un oggetto che non produce luce propria perché riflette o diffonde luce proveniente da una sorgente, come il Sole o una lampada, verso i nostri occhi.",
     "tags": [
       "fisica",
       "luce",
@@ -679,7 +697,13 @@
     "distrattore_forte": "Perché assorbe tutta la luce senza rimandarne nessuna",
     "punteggio_distrattore_forte": 4,
     "motivo_distrattore_forte": "È vicino perché riguarda l’interazione con la luce, ma se assorbisse tutta la luce non lo vedremmo come oggetto illuminato.",
-    "qualita": "controllata"
+    "qualita": "controllata",
+    "spiegazioni_opzioni": {
+      "Perché riflette parte della luce proveniente da una sorgente verso i nostri occhi": "Corretta: descrive in modo preciso il concetto fisico richiesto.",
+      "Perché produce luce propria quando viene osservato da un osservatore vicino": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio fisico non corretto.",
+      "Perché assorbe tutta la luce incidente e la trasforma direttamente in massa": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio fisico non corretto.",
+      "Perché emette onde sonore che il cervello interpreta come immagini luminose": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio fisico non corretto."
+    }
   },
   {
     "id": "FIS_026",
@@ -688,13 +712,13 @@
     "livello": "facile",
     "domanda": "Che cosa accade a una molla elastica quando viene deformata entro il suo limite elastico?",
     "opzioni": [
-      "Tende a tornare alla forma iniziale quando la forza viene tolta",
-      "Perde sempre tutta la propria massa",
-      "Si trasforma definitivamente in un liquido",
-      "Smette di esercitare qualunque forza"
+      "Accumula energia potenziale elastica e tende a tornare alla forma iniziale",
+      "Perde la capacità di esercitare forza appena viene allungata o compressa",
+      "Trasforma la deformazione in massa aggiuntiva permanente del materiale",
+      "Aumenta la propria temperatura senza poter restituire energia meccanica"
     ],
-    "risposta_corretta": "Tende a tornare alla forma iniziale quando la forza viene tolta",
-    "spiegazione": "Una molla deformata entro il limite elastico esercita una forza di richiamo e tende a tornare alla forma iniziale.",
+    "risposta_corretta": "Accumula energia potenziale elastica e tende a tornare alla forma iniziale",
+    "spiegazione": "Entro il limite elastico, una molla deformata accumula energia potenziale elastica e tende a tornare alla forma iniziale quando la forza deformante viene rimossa.",
     "tags": [
       "fisica",
       "elasticita",
@@ -705,7 +729,13 @@
     "distrattore_forte": "Smette di esercitare qualunque forza",
     "punteggio_distrattore_forte": 4,
     "motivo_distrattore_forte": "È vicino perché riguarda la forza elastica, ma una molla deformata esercita proprio una forza di richiamo.",
-    "qualita": "controllata"
+    "qualita": "controllata",
+    "spiegazioni_opzioni": {
+      "Accumula energia potenziale elastica e tende a tornare alla forma iniziale": "Corretta: descrive in modo preciso il concetto fisico richiesto.",
+      "Perde la capacità di esercitare forza appena viene allungata o compressa": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio fisico non corretto.",
+      "Trasforma la deformazione in massa aggiuntiva permanente del materiale": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio fisico non corretto.",
+      "Aumenta la propria temperatura senza poter restituire energia meccanica": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio fisico non corretto."
+    }
   },
   {
     "id": "FIS_027",
@@ -740,13 +770,13 @@
     "livello": "intermedio",
     "domanda": "Quando un corpo è in equilibrio statico?",
     "opzioni": [
-      "Quando la forza risultante e il momento risultante sono nulli",
-      "Quando la velocità aumenta sempre in modo costante",
-      "Quando agisce una sola forza non bilanciata",
-      "Quando il corpo non possiede massa misurabile"
+      "Quando la risultante delle forze e la risultante dei momenti sono nulle",
+      "Quando la velocità è elevata ma le forze applicate hanno lo stesso verso",
+      "Quando agisce una sola forza non bilanciata sul centro di massa",
+      "Quando il corpo ruota rapidamente ma non cambia la propria posizione"
     ],
-    "risposta_corretta": "Quando la forza risultante e il momento risultante sono nulli",
-    "spiegazione": "Un corpo in equilibrio statico non trasla e non ruota: le forze e i momenti che agiscono su di esso si bilanciano.",
+    "risposta_corretta": "Quando la risultante delle forze e la risultante dei momenti sono nulle",
+    "spiegazione": "Un corpo è in equilibrio statico quando non trasla e non ruota. Per questo la risultante delle forze e la risultante dei momenti devono essere nulle.",
     "tags": [
       "fisica",
       "equilibrio",
@@ -757,7 +787,13 @@
     "distrattore_forte": "Quando agisce una sola forza non bilanciata",
     "punteggio_distrattore_forte": 4,
     "motivo_distrattore_forte": "È vicino perché parla di forze, ma una forza non bilanciata rompe l’equilibrio.",
-    "qualita": "controllata"
+    "qualita": "controllata",
+    "spiegazioni_opzioni": {
+      "Quando la risultante delle forze e la risultante dei momenti sono nulle": "Corretta: descrive in modo preciso il concetto fisico richiesto.",
+      "Quando la velocità è elevata ma le forze applicate hanno lo stesso verso": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio fisico non corretto.",
+      "Quando agisce una sola forza non bilanciata sul centro di massa": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio fisico non corretto.",
+      "Quando il corpo ruota rapidamente ma non cambia la propria posizione": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio fisico non corretto."
+    }
   },
   {
     "id": "FIS_029",
@@ -766,13 +802,13 @@
     "livello": "intermedio",
     "domanda": "Perché il suono non si propaga nel vuoto?",
     "opzioni": [
-      "Perché ha bisogno di un mezzo materiale che trasmetta le vibrazioni",
-      "Perché nel vuoto la luce assorbe tutte le onde sonore",
-      "Perché nel vuoto la temperatura è sempre infinita",
-      "Perché il suono è formato da particelle con massa nulla"
+      "Perché il suono ha bisogno di un mezzo materiale che trasmetta le vibrazioni",
+      "Perché nel vuoto il suono si trasforma in luce elettromagnetica visibile",
+      "Perché nel vuoto le onde sonore aumentano frequenza fino a diventare radioonde",
+      "Perché il vuoto assorbe le vibrazioni rendendole più veloci della luce"
     ],
-    "risposta_corretta": "Perché ha bisogno di un mezzo materiale che trasmetta le vibrazioni",
-    "spiegazione": "Il suono è un’onda meccanica: per propagarsi ha bisogno di particelle che vibrino e trasmettano la perturbazione.",
+    "risposta_corretta": "Perché il suono ha bisogno di un mezzo materiale che trasmetta le vibrazioni",
+    "spiegazione": "Il suono è un’onda meccanica: per propagarsi ha bisogno di particelle materiali che trasmettano la vibrazione. Nel vuoto non c’è un mezzo materiale sufficiente.",
     "tags": [
       "fisica",
       "suono",
@@ -783,7 +819,13 @@
     "distrattore_forte": "Perché nel vuoto la luce assorbe tutte le onde sonore",
     "punteggio_distrattore_forte": 4,
     "motivo_distrattore_forte": "È vicino perché confronta suono e luce, ma il punto è che il suono richiede un mezzo materiale.",
-    "qualita": "controllata"
+    "qualita": "controllata",
+    "spiegazioni_opzioni": {
+      "Perché il suono ha bisogno di un mezzo materiale che trasmetta le vibrazioni": "Corretta: descrive in modo preciso il concetto fisico richiesto.",
+      "Perché nel vuoto il suono si trasforma in luce elettromagnetica visibile": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio fisico non corretto.",
+      "Perché nel vuoto le onde sonore aumentano frequenza fino a diventare radioonde": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio fisico non corretto.",
+      "Perché il vuoto assorbe le vibrazioni rendendole più veloci della luce": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio fisico non corretto."
+    }
   },
   {
     "id": "FIS_030",
@@ -817,13 +859,13 @@
     "livello": "avanzato",
     "domanda": "Che cosa accade alla corrente in un circuito se la tensione resta costante e la resistenza aumenta?",
     "opzioni": [
-      "La corrente diminuisce",
-      "La corrente aumenta sempre",
-      "La corrente resta identica in ogni caso",
-      "La corrente diventa indipendente dalla resistenza"
+      "La corrente diminuisce perché, a tensione costante, è inversamente proporzionale alla resistenza",
+      "La corrente aumenta perché una resistenza maggiore spinge più cariche nel circuito",
+      "La corrente resta invariata perché dipende solo dalla lunghezza dei fili",
+      "La corrente si annulla solo se la tensione aumenta insieme alla resistenza"
     ],
-    "risposta_corretta": "La corrente diminuisce",
-    "spiegazione": "Dalla legge di Ohm I = V/R. Se la tensione resta costante e la resistenza aumenta, la corrente diminuisce.",
+    "risposta_corretta": "La corrente diminuisce perché, a tensione costante, è inversamente proporzionale alla resistenza",
+    "spiegazione": "Secondo la legge di Ohm, I = V / R. Se la tensione resta costante e la resistenza aumenta, la corrente diminuisce.",
     "tags": [
       "fisica",
       "legge_ohm",
@@ -834,7 +876,13 @@
     "distrattore_forte": "La corrente aumenta sempre",
     "punteggio_distrattore_forte": 4,
     "motivo_distrattore_forte": "È vicino perché considera il cambiamento della corrente, ma inverte il rapporto con la resistenza.",
-    "qualita": "controllata"
+    "qualita": "controllata",
+    "spiegazioni_opzioni": {
+      "La corrente diminuisce perché, a tensione costante, è inversamente proporzionale alla resistenza": "Corretta: descrive in modo preciso il concetto fisico richiesto.",
+      "La corrente aumenta perché una resistenza maggiore spinge più cariche nel circuito": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio fisico non corretto.",
+      "La corrente resta invariata perché dipende solo dalla lunghezza dei fili": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio fisico non corretto.",
+      "La corrente si annulla solo se la tensione aumenta insieme alla resistenza": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio fisico non corretto."
+    }
   },
   {
     "id": "FIS_032",
