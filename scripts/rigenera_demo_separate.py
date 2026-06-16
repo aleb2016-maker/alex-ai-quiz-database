@@ -1,5 +1,4 @@
 import json
-import shutil
 from pathlib import Path
 from collections import Counter
 
@@ -16,10 +15,10 @@ QUIZ_AI_FILES = {
     "informatica": "Informatica",
     "matematica": "Matematica",
     "inglese": "Inglese",
-    "logica_numerica": "Logica numerica",
-    "logica_verbale": "Logica verbale",
-    "ragionamento_astratto": "Ragionamento astratto",
-    "ragionamento_critico": "Ragionamento critico",
+    "logica_numerica": "Logica",
+    "logica_verbale": "Logica",
+    "ragionamento_astratto": "Logica",
+    "ragionamento_critico": "Logica",
     "logica_visiva": "Logica visiva",
 }
 
@@ -87,14 +86,20 @@ def prepara_domande_da_file(path, nome_materia):
     for domanda_originale in domande_originali:
         domanda = dict(domanda_originale)
 
-        domanda.setdefault("_materia_demo", nome_materia)
-        domanda.setdefault("_file_origine", str(path.relative_to(ROOT)))
+        domanda["_materia_demo"] = nome_materia
+        domanda["_file_origine"] = str(path.relative_to(ROOT))
 
-        if not domanda.get("materia"):
-            domanda["materia"] = nome_materia
-
-        if not domanda.get("categoria"):
-            domanda["categoria"] = nome_materia
+        if nome_materia == "Logica":
+            domanda["materia"] = "Logica"
+            domanda["categoria"] = "logica"
+        elif nome_materia == "Logica visiva":
+            domanda["materia"] = "Logica visiva"
+            domanda["categoria"] = "logica_visiva"
+        else:
+            if not domanda.get("materia"):
+                domanda["materia"] = nome_materia
+            if not domanda.get("categoria"):
+                domanda["categoria"] = nome_materia
 
         domande_preparate.append(domanda)
 
@@ -160,7 +165,110 @@ function materiaDomanda(domanda) {
 }
 
 function immagineDomanda(domanda) {
-  return domanda.immagine_domanda || domanda.immagine || domanda.image || domanda.image_path || "";
+  return (
+    domanda.immagine_domanda ||
+    domanda.question_image ||
+    domanda.image_question ||
+    domanda.figura_domanda ||
+    domanda.percorso_immagine_domanda ||
+    domanda.immagine ||
+    domanda.image ||
+    domanda.image_path ||
+    ""
+  );
+}
+
+function estraiPercorsoDaValore(valore) {
+  if (!valore) {
+    return "";
+  }
+
+  if (typeof valore === "string") {
+    return valore;
+  }
+
+  if (typeof valore === "object") {
+    return (
+      valore.immagine ||
+      valore.image ||
+      valore.image_path ||
+      valore.path ||
+      valore.src ||
+      valore.file ||
+      valore.percorso ||
+      valore.percorso_immagine ||
+      ""
+    );
+  }
+
+  return "";
+}
+
+function immagineOpzioneDaArchivio(domanda, indice, lettera) {
+  const archiviPossibili = [
+    domanda.immagini_opzioni,
+    domanda.opzioni_immagini,
+    domanda.immagini_risposte,
+    domanda.risposte_immagini,
+    domanda.answer_images,
+    domanda.option_images,
+    domanda.figure_opzioni,
+    domanda.figures_options
+  ];
+
+  for (const archivio of archiviPossibili) {
+    if (!archivio) {
+      continue;
+    }
+
+    if (Array.isArray(archivio)) {
+      const percorso = estraiPercorsoDaValore(archivio[indice]);
+      if (percorso) {
+        return percorso;
+      }
+    }
+
+    if (typeof archivio === "object") {
+      const chiavi = [
+        lettera,
+        lettera.toLowerCase(),
+        String(indice),
+        String(indice + 1)
+      ];
+
+      for (const chiave of chiavi) {
+        const percorso = estraiPercorsoDaValore(archivio[chiave]);
+        if (percorso) {
+          return percorso;
+        }
+      }
+    }
+  }
+
+  const letteraMinuscola = lettera.toLowerCase();
+  const chiaviDirette = [
+    `immagine_${letteraMinuscola}`,
+    `immagine_${lettera}`,
+    `immagine_opzione_${letteraMinuscola}`,
+    `immagine_opzione_${lettera}`,
+    `immagine_risposta_${letteraMinuscola}`,
+    `immagine_risposta_${lettera}`,
+    `opzione_${letteraMinuscola}_immagine`,
+    `opzione_${lettera}_immagine`,
+    `risposta_${letteraMinuscola}_immagine`,
+    `risposta_${lettera}_immagine`,
+    `image_${letteraMinuscola}`,
+    `image_${lettera}`
+  ];
+
+  for (const chiave of chiaviDirette) {
+    const percorso = estraiPercorsoDaValore(domanda[chiave]);
+    if (percorso) {
+      return percorso;
+    }
+  }
+
+  return "";
 }
 
 function correggiPercorsoImmagine(percorso) {
@@ -206,22 +314,35 @@ function normalizzaOpzioni(domanda) {
 
   if (Array.isArray(opzioniGrezze)) {
     opzioni = opzioniGrezze.map((opzione, indice) => {
+      const letteraOriginale = String.fromCharCode(65 + indice);
+
       if (typeof opzione === "object" && opzione !== null) {
+        const testo =
+          opzione.testo ||
+          opzione.text ||
+          opzione.risposta ||
+          opzione.value ||
+          opzione.label ||
+          "";
+
+        const immagine =
+          opzione.immagine ||
+          opzione.image ||
+          opzione.image_path ||
+          opzione.path ||
+          opzione.src ||
+          opzione.file ||
+          opzione.percorso ||
+          opzione.percorso_immagine ||
+          opzione.immagine_opzione ||
+          opzione.immagine_risposta ||
+          immagineOpzioneDaArchivio(domanda, indice, letteraOriginale);
+
         return {
           indiceOriginale: indice,
-          letteraOriginale: String.fromCharCode(65 + indice),
-          testo:
-            opzione.testo ||
-            opzione.text ||
-            opzione.risposta ||
-            opzione.value ||
-            opzione.label ||
-            "",
-          immagine:
-            opzione.immagine ||
-            opzione.image ||
-            opzione.image_path ||
-            "",
+          letteraOriginale,
+          testo,
+          immagine,
           correttaEsplicita:
             opzione.corretta === true ||
             opzione.correct === true ||
@@ -231,9 +352,9 @@ function normalizzaOpzioni(domanda) {
 
       return {
         indiceOriginale: indice,
-        letteraOriginale: String.fromCharCode(65 + indice),
+        letteraOriginale,
         testo: String(opzione),
-        immagine: "",
+        immagine: immagineOpzioneDaArchivio(domanda, indice, letteraOriginale),
         correttaEsplicita: false
       };
     });
@@ -241,10 +362,12 @@ function normalizzaOpzioni(domanda) {
 
   if (!Array.isArray(opzioniGrezze) && typeof opzioniGrezze === "object" && opzioniGrezze !== null) {
     opzioni = Object.entries(opzioniGrezze).map(([lettera, valore], indice) => {
+      const letteraOriginale = lettera.toUpperCase();
+
       if (typeof valore === "object" && valore !== null) {
         return {
           indiceOriginale: indice,
-          letteraOriginale: lettera.toUpperCase(),
+          letteraOriginale,
           testo:
             valore.testo ||
             valore.text ||
@@ -256,7 +379,14 @@ function normalizzaOpzioni(domanda) {
             valore.immagine ||
             valore.image ||
             valore.image_path ||
-            "",
+            valore.path ||
+            valore.src ||
+            valore.file ||
+            valore.percorso ||
+            valore.percorso_immagine ||
+            valore.immagine_opzione ||
+            valore.immagine_risposta ||
+            immagineOpzioneDaArchivio(domanda, indice, letteraOriginale),
           correttaEsplicita:
             valore.corretta === true ||
             valore.correct === true ||
@@ -266,9 +396,9 @@ function normalizzaOpzioni(domanda) {
 
       return {
         indiceOriginale: indice,
-        letteraOriginale: lettera.toUpperCase(),
+        letteraOriginale,
         testo: String(valore),
-        immagine: "",
+        immagine: immagineOpzioneDaArchivio(domanda, indice, letteraOriginale),
         correttaEsplicita: false
       };
     });
@@ -302,6 +432,64 @@ function normalizzaOpzioni(domanda) {
   return mescolaArray(opzioni);
 }
 
+function calcolaDomandeFiltrateCorrenti() {
+  const materiaScelta = document.getElementById("materiaSelect").value;
+  const livelloScelto = document.getElementById("livelloSelect").value;
+
+  return STATO.domande.filter((domanda) => {
+    const materiaOk =
+      materiaScelta === "tutte" ||
+      materiaDomanda(domanda) === materiaScelta;
+
+    const livelloOk =
+      livelloScelto === "tutti" ||
+      livelloDomanda(domanda) === livelloScelto;
+
+    return materiaOk && livelloOk;
+  });
+}
+
+function aggiornaNumeroDomandeDisponibili() {
+  const selectNumero = document.getElementById("numeroDomandeSelect");
+  const domandeFiltrate = calcolaDomandeFiltrateCorrenti();
+  const massimo = domandeFiltrate.length;
+
+  selectNumero.innerHTML = "";
+
+  if (massimo === 0) {
+    const option = document.createElement("option");
+    option.value = "0";
+    option.textContent = "0 domande";
+    selectNumero.appendChild(option);
+    return;
+  }
+
+  const scelteBase = [10, 20, 30, 40, 50, 80, 100];
+  const scelte = scelteBase.filter((numero) => numero <= massimo);
+
+  if (!scelte.includes(massimo)) {
+    scelte.push(massimo);
+  }
+
+  scelte.sort((a, b) => a - b);
+
+  for (const numero of scelte) {
+    const option = document.createElement("option");
+    option.value = String(numero);
+
+    if (numero === massimo) {
+      option.textContent = `Tutte disponibili (${numero})`;
+    } else {
+      option.textContent = `${numero} domande`;
+    }
+
+    selectNumero.appendChild(option);
+  }
+
+  const preferita = scelte.includes(10) ? 10 : scelte[0];
+  selectNumero.value = String(preferita);
+}
+
 function aggiornaContatori() {
   const totale = STATO.domande.length;
   document.getElementById("totaleDomande").textContent = totale;
@@ -323,7 +511,7 @@ function aggiornaContatori() {
       card.className = "counter-card";
       card.innerHTML = `
         <strong>${materia}</strong>
-        <span>${conteggio} domande</span>
+        <span>${conteggio}</span>
       `;
       contenitore.appendChild(card);
     });
@@ -355,25 +543,17 @@ function popolaFiltri() {
     option.textContent = livello;
     selectLivello.appendChild(option);
   }
+
+  selectMateria.addEventListener("change", aggiornaNumeroDomandeDisponibili);
+  selectLivello.addEventListener("change", aggiornaNumeroDomandeDisponibili);
+
+  aggiornaNumeroDomandeDisponibili();
 }
 
 function avviaQuiz() {
-  const materiaScelta = document.getElementById("materiaSelect").value;
-  const livelloScelto = document.getElementById("livelloSelect").value;
   const numeroDomande = Number(document.getElementById("numeroDomandeSelect").value);
 
-  STATO.domandeFiltrate = STATO.domande.filter((domanda) => {
-    const materiaOk =
-      materiaScelta === "tutte" ||
-      materiaDomanda(domanda) === materiaScelta;
-
-    const livelloOk =
-      livelloScelto === "tutti" ||
-      livelloDomanda(domanda) === livelloScelto;
-
-    return materiaOk && livelloOk;
-  });
-
+  STATO.domandeFiltrate = calcolaDomandeFiltrateCorrenti();
   STATO.domandeQuiz = mescolaArray(STATO.domandeFiltrate).slice(0, numeroDomande);
   STATO.indiceDomanda = 0;
   STATO.punteggio = 0;
@@ -408,13 +588,15 @@ function mostraDomanda() {
 
   areaQuiz.innerHTML = `
     <div class="quiz-card">
-      <div class="progress">
-        Domanda ${STATO.indiceDomanda + 1}/${STATO.domandeQuiz.length}
-      </div>
+      <div class="quiz-top-row">
+        <div class="progress">
+          ${STATO.indiceDomanda + 1}/${STATO.domandeQuiz.length}
+        </div>
 
-      <div class="meta">
-        <span>${materiaDomanda(domanda)}</span>
-        <span>${livelloDomanda(domanda)}</span>
+        <div class="meta">
+          <span>${materiaDomanda(domanda)}</span>
+          <span>${livelloDomanda(domanda)}</span>
+        </div>
       </div>
 
       <h2>${testoDomanda(domanda)}</h2>
@@ -435,23 +617,46 @@ function mostraDomanda() {
 
   opzioni.forEach((opzione) => {
     const button = document.createElement("button");
-    button.className = "option-button";
-
     const immagineOpzione = correggiPercorsoImmagine(opzione.immagine);
 
+    button.className = immagineOpzione
+      ? "option-button visual-option"
+      : "option-button";
+
+    const testoOpzione = opzione.testo ? `<span class="option-text">${opzione.testo}</span>` : "";
+
     button.innerHTML = `
-      <span>${opzione.testo}</span>
       ${
         immagineOpzione
           ? `<img class="option-image" src="${immagineOpzione}" alt="Figura opzione">`
           : ""
       }
+      ${testoOpzione}
     `;
 
     button.addEventListener("click", () => controllaRisposta(button, opzione, opzioni));
 
     opzioniBox.appendChild(button);
   });
+}
+
+function effettoRispostaCorretta() {
+  const effetto = document.createElement("div");
+  effetto.className = "success-effect";
+
+  for (let i = 0; i < 22; i++) {
+    const particella = document.createElement("span");
+    particella.style.setProperty("--x", `${Math.random() * 220 - 110}px`);
+    particella.style.setProperty("--y", `${Math.random() * -180 - 40}px`);
+    particella.style.setProperty("--delay", `${Math.random() * 0.18}s`);
+    effetto.appendChild(particella);
+  }
+
+  document.body.appendChild(effetto);
+
+  setTimeout(() => {
+    effetto.remove();
+  }, 900);
 }
 
 function controllaRisposta(buttonCliccato, opzioneScelta, opzioni) {
@@ -477,6 +682,10 @@ function controllaRisposta(buttonCliccato, opzioneScelta, opzioni) {
 
   if (opzioneScelta.corretta) {
     STATO.punteggio += 1;
+    document.querySelector(".quiz-card")?.classList.add("correct-glow");
+    effettoRispostaCorretta();
+  } else {
+    buttonCliccato.classList.add("shake");
   }
 
   const domanda = STATO.domandeQuiz[STATO.indiceDomanda];
@@ -556,201 +765,313 @@ STYLE_CSS = r'''
   box-sizing: border-box;
 }
 
+:root {
+  --bg-main: #07111f;
+  --bg-panel: rgba(12, 23, 40, 0.88);
+  --bg-panel-2: rgba(17, 31, 52, 0.92);
+  --line: rgba(90, 170, 255, 0.22);
+  --text-main: #e8f1ff;
+  --text-soft: #9fb4d6;
+  --blue: #4aa3ff;
+  --cyan: #1fe0ff;
+  --green: #17d98f;
+  --red: #ff5d73;
+  --yellow: #ffda66;
+  --shadow: 0 18px 50px rgba(0, 0, 0, 0.35);
+}
+
 body {
   margin: 0;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  background: #f3f5f8;
-  color: #172033;
+  color: var(--text-main);
+  background:
+    radial-gradient(circle at top left, rgba(38, 92, 170, 0.25), transparent 30%),
+    radial-gradient(circle at top right, rgba(0, 224, 255, 0.14), transparent 28%),
+    linear-gradient(180deg, #040b15 0%, #07111f 45%, #09182a 100%);
+  min-height: 100vh;
 }
 
 .header {
-  padding: 32px 18px;
+  position: relative;
+  overflow: hidden;
+  padding: 20px 14px 18px;
   text-align: center;
-  background: linear-gradient(135deg, #12213f, #254a8b);
-  color: white;
+  border-bottom: 1px solid var(--line);
+  background:
+    linear-gradient(135deg, rgba(10, 25, 48, 0.96), rgba(8, 18, 34, 0.96));
+}
+
+.header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, transparent 0%, rgba(31, 224, 255, 0.08) 50%, transparent 100%);
+  pointer-events: none;
 }
 
 .header h1 {
-  margin: 0 0 8px;
-  font-size: 2rem;
+  margin: 0 0 6px;
+  font-size: 1.65rem;
+  letter-spacing: 0.4px;
+  color: #ffffff;
+  text-shadow: 0 0 18px rgba(74, 163, 255, 0.24);
 }
 
 .header p {
   margin: 0;
-  opacity: 0.9;
+  color: var(--text-soft);
+  font-size: 0.95rem;
 }
 
 .container {
-  max-width: 1080px;
+  max-width: 1120px;
   margin: 0 auto;
-  padding: 22px 16px 50px;
+  padding: 14px 14px 50px;
+}
+
+.total-counter,
+.controls,
+.quiz-card,
+.result-box,
+.empty-box,
+.counter-card {
+  background: var(--bg-panel);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(8px);
 }
 
 .total-counter {
-  background: white;
   border-radius: 18px;
-  padding: 22px;
-  margin-bottom: 18px;
-  box-shadow: 0 8px 26px rgba(20, 30, 55, 0.08);
-  text-align: center;
+  padding: 12px 16px;
+  margin-bottom: 10px;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.total-counter span {
+  color: var(--text-soft);
+  font-size: 0.92rem;
 }
 
 .total-counter strong {
-  font-size: 2.4rem;
+  font-size: 1.9rem;
   display: block;
+  color: #ffffff;
+  text-shadow: 0 0 20px rgba(31, 224, 255, 0.24);
 }
 
 .counter-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
-  gap: 12px;
-  margin-bottom: 22px;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 8px;
+  margin-bottom: 12px;
 }
 
 .counter-card {
-  background: white;
-  border-radius: 16px;
-  padding: 16px;
-  box-shadow: 0 8px 22px rgba(20, 30, 55, 0.07);
+  border-radius: 14px;
+  padding: 10px 12px;
+  background: var(--bg-panel-2);
 }
 
 .counter-card strong {
   display: block;
-  margin-bottom: 6px;
+  margin-bottom: 3px;
+  color: #ffffff;
+  font-size: 0.92rem;
 }
 
 .counter-card span {
-  color: #566177;
+  color: var(--cyan);
+  font-weight: 800;
 }
 
 .controls {
-  background: white;
   border-radius: 18px;
-  padding: 18px;
-  margin-bottom: 22px;
-  box-shadow: 0 8px 26px rgba(20, 30, 55, 0.08);
+  padding: 12px;
+  margin-bottom: 14px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
-  gap: 14px;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 10px;
   align-items: end;
 }
 
 label {
   display: grid;
-  gap: 6px;
+  gap: 5px;
   font-weight: 700;
+  color: var(--text-main);
+  font-size: 0.92rem;
 }
 
 select,
 button {
-  border: none;
-  border-radius: 12px;
-  padding: 13px 14px;
-  font-size: 1rem;
+  border: 1px solid rgba(90, 170, 255, 0.18);
+  border-radius: 13px;
+  padding: 11px 12px;
+  font-size: 0.98rem;
 }
 
 select {
-  background: #eef2f7;
+  background: #0d1b2d;
+  color: var(--text-main);
 }
 
 button {
-  background: #1b66d2;
+  background: linear-gradient(135deg, var(--blue), #2568ff);
   color: white;
   font-weight: 800;
   cursor: pointer;
+  box-shadow: 0 10px 25px rgba(37, 104, 255, 0.25);
 }
 
 button:hover {
-  filter: brightness(0.95);
+  filter: brightness(1.07);
 }
 
 button.secondary {
-  margin-top: 18px;
-  background: #172033;
+  margin-top: 16px;
+  background: linear-gradient(135deg, #12213f, #0d1629);
 }
 
 .quiz-card,
 .result-box,
 .empty-box {
-  background: white;
   border-radius: 22px;
-  padding: 24px;
-  box-shadow: 0 10px 30px rgba(20, 30, 55, 0.1);
+  padding: 18px;
+}
+
+.quiz-card.correct-glow {
+  animation: cardSuccess 0.8s ease;
+}
+
+.quiz-top-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
 }
 
 .progress {
-  font-weight: 800;
-  color: #1b66d2;
-  margin-bottom: 10px;
+  font-weight: 900;
+  color: var(--cyan);
+  background: rgba(31, 224, 255, 0.1);
+  border: 1px solid rgba(31, 224, 255, 0.25);
+  border-radius: 999px;
+  padding: 6px 11px;
+  white-space: nowrap;
 }
 
 .meta {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
-  margin-bottom: 14px;
+  justify-content: flex-end;
+  gap: 6px;
 }
 
 .meta span {
-  background: #eef2f7;
-  color: #34405a;
+  background: rgba(74, 163, 255, 0.12);
+  color: #d9ecff;
+  border: 1px solid rgba(74, 163, 255, 0.2);
   border-radius: 999px;
-  padding: 6px 10px;
-  font-size: 0.9rem;
+  padding: 5px 9px;
+  font-size: 0.85rem;
   font-weight: 700;
 }
 
 .quiz-card h2 {
-  margin: 0 0 18px;
-  line-height: 1.35;
+  margin: 0 0 14px;
+  line-height: 1.38;
+  color: #ffffff;
+  font-size: 1.18rem;
 }
 
 .question-image {
   display: block;
-  max-width: min(520px, 100%);
-  margin: 12px auto 20px;
+  max-width: min(460px, 100%);
+  margin: 10px auto 16px;
   border-radius: 14px;
-  background: #f8fafc;
-  border: 1px solid #dce3ee;
+  background: white;
+  border: 1px solid rgba(90, 170, 255, 0.25);
 }
 
 .options {
   display: grid;
-  gap: 12px;
+  gap: 10px;
 }
 
 .option-button {
-  background: #eef2f7;
-  color: #172033;
+  background: #0d1b2d;
+  color: var(--text-main);
   text-align: left;
   display: grid;
-  gap: 10px;
-  border: 2px solid transparent;
+  gap: 8px;
+  border: 1px solid rgba(90, 170, 255, 0.18);
+  transition:
+    transform 0.15s ease,
+    border-color 0.15s ease,
+    box-shadow 0.15s ease,
+    background 0.15s ease;
+}
+
+.option-button:hover {
+  transform: translateY(-1px);
+  border-color: rgba(31, 224, 255, 0.5);
+  box-shadow: 0 10px 28px rgba(31, 224, 255, 0.08);
 }
 
 .option-button.correct {
-  background: #d8f7df;
-  border-color: #20a447;
+  background: rgba(23, 217, 143, 0.16);
+  border-color: rgba(23, 217, 143, 0.85);
+  box-shadow:
+    0 0 0 2px rgba(23, 217, 143, 0.16),
+    0 0 28px rgba(23, 217, 143, 0.22);
+  animation: correctPulse 0.65s ease;
 }
 
 .option-button.wrong {
-  background: #ffe0e0;
-  border-color: #d83232;
+  background: rgba(255, 93, 115, 0.16);
+  border-color: rgba(255, 93, 115, 0.75);
+}
+
+.option-button.shake {
+  animation: shake 0.35s ease;
+}
+
+.visual-option {
+  min-height: 120px;
+  align-items: center;
+  justify-items: center;
+  text-align: center;
 }
 
 .option-image {
-  max-width: 210px;
+  max-width: min(260px, 100%);
+  max-height: 180px;
+  object-fit: contain;
   border-radius: 12px;
-  border: 1px solid #d8dfe9;
+  border: 1px solid rgba(90, 170, 255, 0.22);
   background: white;
+  padding: 4px;
+}
+
+.option-text {
+  color: var(--text-main);
+  font-size: 0.95rem;
 }
 
 .explanation {
-  margin-top: 18px;
-  padding: 16px;
+  margin-top: 16px;
+  padding: 14px;
   border-radius: 14px;
-  background: #fff7da;
-  color: #3e3210;
+  background: rgba(255, 218, 102, 0.1);
+  border: 1px solid rgba(255, 218, 102, 0.24);
+  color: #fff3c5;
   line-height: 1.5;
 }
 
@@ -764,15 +1085,122 @@ button.secondary {
 
 .back-link {
   display: inline-block;
-  margin-bottom: 18px;
-  color: #1b66d2;
+  margin-bottom: 12px;
+  color: var(--cyan);
   text-decoration: none;
   font-weight: 800;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+.success-effect {
+  position: fixed;
+  left: 50%;
+  top: 52%;
+  width: 1px;
+  height: 1px;
+  z-index: 9999;
+  pointer-events: none;
+}
+
+.success-effect span {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: var(--green);
+  box-shadow: 0 0 14px rgba(23, 217, 143, 0.9);
+  animation: particle 0.85s ease-out forwards;
+  animation-delay: var(--delay);
+}
+
+@keyframes particle {
+  from {
+    transform: translate(0, 0) scale(1);
+    opacity: 1;
+  }
+
+  to {
+    transform: translate(var(--x), var(--y)) scale(0.3);
+    opacity: 0;
+  }
+}
+
+@keyframes correctPulse {
+  0% {
+    transform: scale(1);
+  }
+
+  45% {
+    transform: scale(1.025);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes cardSuccess {
+  0% {
+    box-shadow: var(--shadow);
+  }
+
+  45% {
+    box-shadow:
+      var(--shadow),
+      0 0 42px rgba(23, 217, 143, 0.32);
+  }
+
+  100% {
+    box-shadow: var(--shadow);
+  }
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+
+  25% {
+    transform: translateX(-6px);
+  }
+
+  50% {
+    transform: translateX(6px);
+  }
+
+  75% {
+    transform: translateX(-4px);
+  }
+}
+
+@media (min-width: 720px) {
+  .options:has(.visual-option) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .quiz-top-row {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .meta {
+    justify-content: flex-start;
+  }
+
+  .total-counter {
+    align-items: flex-start;
+    flex-direction: column;
+  }
 }
 '''
 
 
-def crea_demo(nome_demo, titolo, sottotitolo, cartella, domande):
+def crea_demo(titolo, sottotitolo, cartella, domande):
     cartella.mkdir(parents=True, exist_ok=True)
 
     scrivi_json(cartella / "database_quiz.json", domande)
@@ -852,23 +1280,44 @@ def crea_menu_demo():
       box-sizing: border-box;
     }
 
+    :root {
+      --bg-main: #07111f;
+      --panel: rgba(12, 23, 40, 0.88);
+      --line: rgba(90, 170, 255, 0.22);
+      --text-main: #e8f1ff;
+      --text-soft: #9fb4d6;
+      --blue: #4aa3ff;
+      --cyan: #1fe0ff;
+      --shadow: 0 18px 50px rgba(0, 0, 0, 0.35);
+    }
+
     body {
       margin: 0;
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: #f3f5f8;
-      color: #172033;
+      color: var(--text-main);
+      background:
+        radial-gradient(circle at top left, rgba(38, 92, 170, 0.25), transparent 30%),
+        radial-gradient(circle at top right, rgba(0, 224, 255, 0.14), transparent 28%),
+        linear-gradient(180deg, #040b15 0%, #07111f 45%, #09182a 100%);
+      min-height: 100vh;
     }
 
     header {
-      padding: 36px 18px;
+      padding: 42px 18px 34px;
       text-align: center;
-      background: linear-gradient(135deg, #12213f, #254a8b);
-      color: white;
+      border-bottom: 1px solid var(--line);
+      background: linear-gradient(135deg, rgba(10, 25, 48, 0.96), rgba(8, 18, 34, 0.96));
     }
 
     header h1 {
-      margin: 0 0 8px;
-      font-size: 2rem;
+      margin: 0 0 10px;
+      font-size: 2.2rem;
+      color: #ffffff;
+    }
+
+    header p {
+      margin: 0;
+      color: var(--text-soft);
     }
 
     main {
@@ -879,7 +1328,7 @@ def crea_menu_demo():
 
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 18px;
     }
 
@@ -887,50 +1336,53 @@ def crea_menu_demo():
       display: block;
       text-decoration: none;
       color: inherit;
-      background: white;
+      background: var(--panel);
+      border: 1px solid var(--line);
       border-radius: 24px;
       padding: 26px;
-      box-shadow: 0 10px 30px rgba(20, 30, 55, 0.1);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(8px);
       transition: transform 0.15s ease, box-shadow 0.15s ease;
     }
 
     .card:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 14px 36px rgba(20, 30, 55, 0.14);
+      transform: translateY(-4px);
+      box-shadow: 0 20px 42px rgba(0, 0, 0, 0.45);
     }
 
     .card h2 {
       margin: 0 0 10px;
-      color: #1b66d2;
+      color: #ffffff;
     }
 
     .card p {
       margin: 0 0 18px;
-      color: #566177;
+      color: var(--text-soft);
       line-height: 1.5;
     }
 
     .button {
       display: inline-block;
-      background: #1b66d2;
+      background: linear-gradient(135deg, var(--blue), #2568ff);
       color: white;
       font-weight: 800;
       border-radius: 999px;
       padding: 11px 16px;
+      box-shadow: 0 10px 25px rgba(37, 104, 255, 0.25);
     }
   </style>
 </head>
 <body>
   <header>
     <h1>Demo Quiz</h1>
-    <p>Le sezioni sono ora separate: Quiz AI e Scienze hanno pagine e contatori indipendenti.</p>
+    <p>Ambiente demo separato: Quiz AI e Scienze hanno pagine indipendenti e contatori separati.</p>
   </header>
 
   <main>
     <div class="grid">
       <a class="card" href="../demo-ai/index.html">
         <h2>Demo Quiz AI</h2>
-        <p>AI, Informatica, Matematica, Inglese, Logica testuale e Logica visiva.</p>
+        <p>AI, Informatica, Matematica, Inglese, Logica e Logica visiva.</p>
         <span class="button">Apri Quiz AI</span>
       </a>
 
@@ -966,19 +1418,16 @@ def main():
     domande_totali = domande_quiz_ai + domande_scienze
 
     DIST_DIR.mkdir(parents=True, exist_ok=True)
-
     scrivi_json(DIST_DIR / "database_quiz_finale.json", domande_totali)
 
     crea_demo(
-        nome_demo="Quiz AI",
         titolo="Demo Quiz AI",
-        sottotitolo="AI, Informatica, Matematica, Inglese, Logica testuale e Logica visiva.",
+        sottotitolo="AI, Informatica, Matematica, Inglese, Logica e Logica visiva.",
         cartella=DEMO_AI_DIR,
         domande=domande_quiz_ai,
     )
 
     crea_demo(
-        nome_demo="Scienze",
         titolo="Demo Scienze",
         sottotitolo="Scienze generali, Biologia, Chimica, Fisica e Fisica quantistica.",
         cartella=DEMO_SCIENZE_DIR,

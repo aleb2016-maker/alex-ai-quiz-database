@@ -9,23 +9,44 @@
       box-sizing: border-box;
     }
 
+    :root {
+      --bg-main: #07111f;
+      --panel: rgba(12, 23, 40, 0.88);
+      --line: rgba(90, 170, 255, 0.22);
+      --text-main: #e8f1ff;
+      --text-soft: #9fb4d6;
+      --blue: #4aa3ff;
+      --cyan: #1fe0ff;
+      --shadow: 0 18px 50px rgba(0, 0, 0, 0.35);
+    }
+
     body {
       margin: 0;
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: #f3f5f8;
-      color: #172033;
+      color: var(--text-main);
+      background:
+        radial-gradient(circle at top left, rgba(38, 92, 170, 0.25), transparent 30%),
+        radial-gradient(circle at top right, rgba(0, 224, 255, 0.14), transparent 28%),
+        linear-gradient(180deg, #040b15 0%, #07111f 45%, #09182a 100%);
+      min-height: 100vh;
     }
 
     header {
-      padding: 36px 18px;
+      padding: 42px 18px 34px;
       text-align: center;
-      background: linear-gradient(135deg, #12213f, #254a8b);
-      color: white;
+      border-bottom: 1px solid var(--line);
+      background: linear-gradient(135deg, rgba(10, 25, 48, 0.96), rgba(8, 18, 34, 0.96));
     }
 
     header h1 {
-      margin: 0 0 8px;
-      font-size: 2rem;
+      margin: 0 0 10px;
+      font-size: 2.2rem;
+      color: #ffffff;
+    }
+
+    header p {
+      margin: 0;
+      color: var(--text-soft);
     }
 
     main {
@@ -36,7 +57,7 @@
 
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 18px;
     }
 
@@ -44,50 +65,53 @@
       display: block;
       text-decoration: none;
       color: inherit;
-      background: white;
+      background: var(--panel);
+      border: 1px solid var(--line);
       border-radius: 24px;
       padding: 26px;
-      box-shadow: 0 10px 30px rgba(20, 30, 55, 0.1);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(8px);
       transition: transform 0.15s ease, box-shadow 0.15s ease;
     }
 
     .card:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 14px 36px rgba(20, 30, 55, 0.14);
+      transform: translateY(-4px);
+      box-shadow: 0 20px 42px rgba(0, 0, 0, 0.45);
     }
 
     .card h2 {
       margin: 0 0 10px;
-      color: #1b66d2;
+      color: #ffffff;
     }
 
     .card p {
       margin: 0 0 18px;
-      color: #566177;
+      color: var(--text-soft);
       line-height: 1.5;
     }
 
     .button {
       display: inline-block;
-      background: #1b66d2;
+      background: linear-gradient(135deg, var(--blue), #2568ff);
       color: white;
       font-weight: 800;
       border-radius: 999px;
       padding: 11px 16px;
+      box-shadow: 0 10px 25px rgba(37, 104, 255, 0.25);
     }
   </style>
 </head>
 <body>
   <header>
     <h1>Demo Quiz</h1>
-    <p>Le sezioni sono ora separate: Quiz AI e Scienze hanno pagine e contatori indipendenti.</p>
+    <p>Ambiente demo separato: Quiz AI e Scienze hanno pagine indipendenti e contatori separati.</p>
   </header>
 
   <main>
     <div class="grid">
       <a class="card" href="../demo-ai/index.html">
         <h2>Demo Quiz AI</h2>
-        <p>AI, Informatica, Matematica, Inglese, Logica testuale e Logica visiva.</p>
+        <p>AI, Informatica, Matematica, Inglese, Logica e Logica visiva.</p>
         <span class="button">Apri Quiz AI</span>
       </a>
 

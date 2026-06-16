@@ -25,7 +25,110 @@ function materiaDomanda(domanda) {
 }
 
 function immagineDomanda(domanda) {
-  return domanda.immagine_domanda || domanda.immagine || domanda.image || domanda.image_path || "";
+  return (
+    domanda.immagine_domanda ||
+    domanda.question_image ||
+    domanda.image_question ||
+    domanda.figura_domanda ||
+    domanda.percorso_immagine_domanda ||
+    domanda.immagine ||
+    domanda.image ||
+    domanda.image_path ||
+    ""
+  );
+}
+
+function estraiPercorsoDaValore(valore) {
+  if (!valore) {
+    return "";
+  }
+
+  if (typeof valore === "string") {
+    return valore;
+  }
+
+  if (typeof valore === "object") {
+    return (
+      valore.immagine ||
+      valore.image ||
+      valore.image_path ||
+      valore.path ||
+      valore.src ||
+      valore.file ||
+      valore.percorso ||
+      valore.percorso_immagine ||
+      ""
+    );
+  }
+
+  return "";
+}
+
+function immagineOpzioneDaArchivio(domanda, indice, lettera) {
+  const archiviPossibili = [
+    domanda.immagini_opzioni,
+    domanda.opzioni_immagini,
+    domanda.immagini_risposte,
+    domanda.risposte_immagini,
+    domanda.answer_images,
+    domanda.option_images,
+    domanda.figure_opzioni,
+    domanda.figures_options
+  ];
+
+  for (const archivio of archiviPossibili) {
+    if (!archivio) {
+      continue;
+    }
+
+    if (Array.isArray(archivio)) {
+      const percorso = estraiPercorsoDaValore(archivio[indice]);
+      if (percorso) {
+        return percorso;
+      }
+    }
+
+    if (typeof archivio === "object") {
+      const chiavi = [
+        lettera,
+        lettera.toLowerCase(),
+        String(indice),
+        String(indice + 1)
+      ];
+
+      for (const chiave of chiavi) {
+        const percorso = estraiPercorsoDaValore(archivio[chiave]);
+        if (percorso) {
+          return percorso;
+        }
+      }
+    }
+  }
+
+  const letteraMinuscola = lettera.toLowerCase();
+  const chiaviDirette = [
+    `immagine_${letteraMinuscola}`,
+    `immagine_${lettera}`,
+    `immagine_opzione_${letteraMinuscola}`,
+    `immagine_opzione_${lettera}`,
+    `immagine_risposta_${letteraMinuscola}`,
+    `immagine_risposta_${lettera}`,
+    `opzione_${letteraMinuscola}_immagine`,
+    `opzione_${lettera}_immagine`,
+    `risposta_${letteraMinuscola}_immagine`,
+    `risposta_${lettera}_immagine`,
+    `image_${letteraMinuscola}`,
+    `image_${lettera}`
+  ];
+
+  for (const chiave of chiaviDirette) {
+    const percorso = estraiPercorsoDaValore(domanda[chiave]);
+    if (percorso) {
+      return percorso;
+    }
+  }
+
+  return "";
 }
 
 function correggiPercorsoImmagine(percorso) {
@@ -71,22 +174,35 @@ function normalizzaOpzioni(domanda) {
 
   if (Array.isArray(opzioniGrezze)) {
     opzioni = opzioniGrezze.map((opzione, indice) => {
+      const letteraOriginale = String.fromCharCode(65 + indice);
+
       if (typeof opzione === "object" && opzione !== null) {
+        const testo =
+          opzione.testo ||
+          opzione.text ||
+          opzione.risposta ||
+          opzione.value ||
+          opzione.label ||
+          "";
+
+        const immagine =
+          opzione.immagine ||
+          opzione.image ||
+          opzione.image_path ||
+          opzione.path ||
+          opzione.src ||
+          opzione.file ||
+          opzione.percorso ||
+          opzione.percorso_immagine ||
+          opzione.immagine_opzione ||
+          opzione.immagine_risposta ||
+          immagineOpzioneDaArchivio(domanda, indice, letteraOriginale);
+
         return {
           indiceOriginale: indice,
-          letteraOriginale: String.fromCharCode(65 + indice),
-          testo:
-            opzione.testo ||
-            opzione.text ||
-            opzione.risposta ||
-            opzione.value ||
-            opzione.label ||
-            "",
-          immagine:
-            opzione.immagine ||
-            opzione.image ||
-            opzione.image_path ||
-            "",
+          letteraOriginale,
+          testo,
+          immagine,
           correttaEsplicita:
             opzione.corretta === true ||
             opzione.correct === true ||
@@ -96,9 +212,9 @@ function normalizzaOpzioni(domanda) {
 
       return {
         indiceOriginale: indice,
-        letteraOriginale: String.fromCharCode(65 + indice),
+        letteraOriginale,
         testo: String(opzione),
-        immagine: "",
+        immagine: immagineOpzioneDaArchivio(domanda, indice, letteraOriginale),
         correttaEsplicita: false
       };
     });
@@ -106,10 +222,12 @@ function normalizzaOpzioni(domanda) {
 
   if (!Array.isArray(opzioniGrezze) && typeof opzioniGrezze === "object" && opzioniGrezze !== null) {
     opzioni = Object.entries(opzioniGrezze).map(([lettera, valore], indice) => {
+      const letteraOriginale = lettera.toUpperCase();
+
       if (typeof valore === "object" && valore !== null) {
         return {
           indiceOriginale: indice,
-          letteraOriginale: lettera.toUpperCase(),
+          letteraOriginale,
           testo:
             valore.testo ||
             valore.text ||
@@ -121,7 +239,14 @@ function normalizzaOpzioni(domanda) {
             valore.immagine ||
             valore.image ||
             valore.image_path ||
-            "",
+            valore.path ||
+            valore.src ||
+            valore.file ||
+            valore.percorso ||
+            valore.percorso_immagine ||
+            valore.immagine_opzione ||
+            valore.immagine_risposta ||
+            immagineOpzioneDaArchivio(domanda, indice, letteraOriginale),
           correttaEsplicita:
             valore.corretta === true ||
             valore.correct === true ||
@@ -131,9 +256,9 @@ function normalizzaOpzioni(domanda) {
 
       return {
         indiceOriginale: indice,
-        letteraOriginale: lettera.toUpperCase(),
+        letteraOriginale,
         testo: String(valore),
-        immagine: "",
+        immagine: immagineOpzioneDaArchivio(domanda, indice, letteraOriginale),
         correttaEsplicita: false
       };
     });
@@ -167,6 +292,64 @@ function normalizzaOpzioni(domanda) {
   return mescolaArray(opzioni);
 }
 
+function calcolaDomandeFiltrateCorrenti() {
+  const materiaScelta = document.getElementById("materiaSelect").value;
+  const livelloScelto = document.getElementById("livelloSelect").value;
+
+  return STATO.domande.filter((domanda) => {
+    const materiaOk =
+      materiaScelta === "tutte" ||
+      materiaDomanda(domanda) === materiaScelta;
+
+    const livelloOk =
+      livelloScelto === "tutti" ||
+      livelloDomanda(domanda) === livelloScelto;
+
+    return materiaOk && livelloOk;
+  });
+}
+
+function aggiornaNumeroDomandeDisponibili() {
+  const selectNumero = document.getElementById("numeroDomandeSelect");
+  const domandeFiltrate = calcolaDomandeFiltrateCorrenti();
+  const massimo = domandeFiltrate.length;
+
+  selectNumero.innerHTML = "";
+
+  if (massimo === 0) {
+    const option = document.createElement("option");
+    option.value = "0";
+    option.textContent = "0 domande";
+    selectNumero.appendChild(option);
+    return;
+  }
+
+  const scelteBase = [10, 20, 30, 40, 50, 80, 100];
+  const scelte = scelteBase.filter((numero) => numero <= massimo);
+
+  if (!scelte.includes(massimo)) {
+    scelte.push(massimo);
+  }
+
+  scelte.sort((a, b) => a - b);
+
+  for (const numero of scelte) {
+    const option = document.createElement("option");
+    option.value = String(numero);
+
+    if (numero === massimo) {
+      option.textContent = `Tutte disponibili (${numero})`;
+    } else {
+      option.textContent = `${numero} domande`;
+    }
+
+    selectNumero.appendChild(option);
+  }
+
+  const preferita = scelte.includes(10) ? 10 : scelte[0];
+  selectNumero.value = String(preferita);
+}
+
 function aggiornaContatori() {
   const totale = STATO.domande.length;
   document.getElementById("totaleDomande").textContent = totale;
@@ -188,7 +371,7 @@ function aggiornaContatori() {
       card.className = "counter-card";
       card.innerHTML = `
         <strong>${materia}</strong>
-        <span>${conteggio} domande</span>
+        <span>${conteggio}</span>
       `;
       contenitore.appendChild(card);
     });
@@ -220,25 +403,17 @@ function popolaFiltri() {
     option.textContent = livello;
     selectLivello.appendChild(option);
   }
+
+  selectMateria.addEventListener("change", aggiornaNumeroDomandeDisponibili);
+  selectLivello.addEventListener("change", aggiornaNumeroDomandeDisponibili);
+
+  aggiornaNumeroDomandeDisponibili();
 }
 
 function avviaQuiz() {
-  const materiaScelta = document.getElementById("materiaSelect").value;
-  const livelloScelto = document.getElementById("livelloSelect").value;
   const numeroDomande = Number(document.getElementById("numeroDomandeSelect").value);
 
-  STATO.domandeFiltrate = STATO.domande.filter((domanda) => {
-    const materiaOk =
-      materiaScelta === "tutte" ||
-      materiaDomanda(domanda) === materiaScelta;
-
-    const livelloOk =
-      livelloScelto === "tutti" ||
-      livelloDomanda(domanda) === livelloScelto;
-
-    return materiaOk && livelloOk;
-  });
-
+  STATO.domandeFiltrate = calcolaDomandeFiltrateCorrenti();
   STATO.domandeQuiz = mescolaArray(STATO.domandeFiltrate).slice(0, numeroDomande);
   STATO.indiceDomanda = 0;
   STATO.punteggio = 0;
@@ -273,13 +448,15 @@ function mostraDomanda() {
 
   areaQuiz.innerHTML = `
     <div class="quiz-card">
-      <div class="progress">
-        Domanda ${STATO.indiceDomanda + 1}/${STATO.domandeQuiz.length}
-      </div>
+      <div class="quiz-top-row">
+        <div class="progress">
+          ${STATO.indiceDomanda + 1}/${STATO.domandeQuiz.length}
+        </div>
 
-      <div class="meta">
-        <span>${materiaDomanda(domanda)}</span>
-        <span>${livelloDomanda(domanda)}</span>
+        <div class="meta">
+          <span>${materiaDomanda(domanda)}</span>
+          <span>${livelloDomanda(domanda)}</span>
+        </div>
       </div>
 
       <h2>${testoDomanda(domanda)}</h2>
@@ -300,23 +477,46 @@ function mostraDomanda() {
 
   opzioni.forEach((opzione) => {
     const button = document.createElement("button");
-    button.className = "option-button";
-
     const immagineOpzione = correggiPercorsoImmagine(opzione.immagine);
 
+    button.className = immagineOpzione
+      ? "option-button visual-option"
+      : "option-button";
+
+    const testoOpzione = opzione.testo ? `<span class="option-text">${opzione.testo}</span>` : "";
+
     button.innerHTML = `
-      <span>${opzione.testo}</span>
       ${
         immagineOpzione
           ? `<img class="option-image" src="${immagineOpzione}" alt="Figura opzione">`
           : ""
       }
+      ${testoOpzione}
     `;
 
     button.addEventListener("click", () => controllaRisposta(button, opzione, opzioni));
 
     opzioniBox.appendChild(button);
   });
+}
+
+function effettoRispostaCorretta() {
+  const effetto = document.createElement("div");
+  effetto.className = "success-effect";
+
+  for (let i = 0; i < 22; i++) {
+    const particella = document.createElement("span");
+    particella.style.setProperty("--x", `${Math.random() * 220 - 110}px`);
+    particella.style.setProperty("--y", `${Math.random() * -180 - 40}px`);
+    particella.style.setProperty("--delay", `${Math.random() * 0.18}s`);
+    effetto.appendChild(particella);
+  }
+
+  document.body.appendChild(effetto);
+
+  setTimeout(() => {
+    effetto.remove();
+  }, 900);
 }
 
 function controllaRisposta(buttonCliccato, opzioneScelta, opzioni) {
@@ -342,6 +542,10 @@ function controllaRisposta(buttonCliccato, opzioneScelta, opzioni) {
 
   if (opzioneScelta.corretta) {
     STATO.punteggio += 1;
+    document.querySelector(".quiz-card")?.classList.add("correct-glow");
+    effettoRispostaCorretta();
+  } else {
+    buttonCliccato.classList.add("shake");
   }
 
   const domanda = STATO.domandeQuiz[STATO.indiceDomanda];
