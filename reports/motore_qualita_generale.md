@@ -7,9 +7,9 @@ Questo report distingue problemi tecnici, avvisi qualità reali, errori linguist
 ## Riepilogo generale
 
 - Problemi tecnici totali: **0**
-- Avvisi qualità reali totali: **0**
+- Avvisi qualità reali totali: **11**
 - Errori linguistici totali: **0**
-- Note informative totali: **102**
+- Note informative totali: **118**
 - Gruppi di domande duplicate identiche: **0**
 - Coppie di domande molto simili: **0**
 
@@ -137,16 +137,40 @@ Domande molto simili: **0**
 
 File: `data/ai.json`
 File trovato: **True**
-Domande totali: **40**
-Livelli: `{'facile': 12, 'intermedio': 14, 'avanzato': 14}`
-Categorie: `{'ai': 40}`
-Posizione risposta corretta nel sorgente: `{'A': 40}`
+Domande totali: **80**
+Livelli: `{'facile': 24, 'intermedio': 28, 'avanzato': 28}`
+Categorie: `{'ai': 80}`
+Posizione risposta corretta nel sorgente: `{'A': 80}`
 Problemi tecnici: **0**
-Avvisi qualità reali: **0**
+Avvisi qualità reali: **11**
 Errori linguistici: **0**
-Note informative: **22**
+Note informative: **38**
 Duplicati identici: **0**
 Domande molto simili: **0**
+
+### Avvisi qualità reali
+
+- **AI-FAC-0203** — Perché un dataset di addestramento è importante in un sistema di machine learning?
+  - Possibile distrattore troppo assoluto: contiene “sempre”
+- **AI-FAC-0208** — Che cosa si intende per allucinazione di un modello linguistico?
+  - Possibile distrattore troppo assoluto: contiene “sempre”
+- **AI-FAC-0212** — Che cosa distingue un modello supervisionato da uno non supervisionato?
+  - Possibile distrattore troppo assoluto: contiene “sempre”
+- **AI-INT-0208** — Perché è utile separare il ragionamento del sistema dalle azioni eseguite da un agente AI?
+  - Possibile distrattore troppo assoluto: contiene “sempre”
+- **AI-INT-0210** — Che cosa indica il concetto di bias in un sistema AI?
+  - Possibile distrattore troppo assoluto: contiene “sempre”
+- **AI-INT-0213** — Che cosa può indicare una bassa precisione in un classificatore?
+  - Possibile distrattore troppo assoluto: contiene “mai”
+- **AI-AV-0204** — Qual è una differenza importante tra RLHF e DPO nell'allineamento dei modelli linguistici?
+  - Possibile distrattore troppo assoluto: contiene “sempre”
+- **AI-AV-0209** — Quale compromesso è spesso necessario quando si sceglie un modello AI per un'app reale?
+  - Possibile distrattore troppo assoluto: contiene “sempre”
+- **AI-AV-0210** — Che cosa indica un modello Mixture of Experts?
+  - Possibile distrattore troppo assoluto: contiene “sempre”
+- **AI-AV-0212** — Perché valutare le allucinazioni richiede spesso più di una metrica automatica semplice?
+  - Possibile distrattore troppo assoluto: contiene “mai”
+  - Possibile distrattore troppo assoluto: contiene “sempre”
 
 ## Logica numerica
 

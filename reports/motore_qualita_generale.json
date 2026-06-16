@@ -1584,24 +1584,232 @@
     "percorso": "data/ai.json",
     "file_esiste": true,
     "errore_file": "",
-    "totale_domande": 40,
+    "totale_domande": 80,
     "livelli": {
-      "facile": 12,
-      "intermedio": 14,
-      "avanzato": 14
+      "facile": 24,
+      "intermedio": 28,
+      "avanzato": 28
     },
     "categorie": {
-      "ai": 40
+      "ai": 80
     },
     "posizioni_risposta": {
-      "A": 40
+      "A": 80
     },
     "problemi_tecnici_totali": 0,
-    "avvisi_qualita_reali_totali": 0,
+    "avvisi_qualita_reali_totali": 11,
     "errori_linguistici_totali": 0,
-    "note_informative_totali": 22,
+    "note_informative_totali": 38,
     "domande_con_problemi_tecnici": [],
-    "domande_con_avvisi_qualita_reali": [],
+    "domande_con_avvisi_qualita_reali": [
+      {
+        "id": "AI-FAC-0203",
+        "domanda": "Perché un dataset di addestramento è importante in un sistema di machine learning?",
+        "categoria": "ai",
+        "livello": "facile",
+        "opzioni": [
+          "Perché fornisce esempi da cui il modello può imparare relazioni e schemi.",
+          "Perché sostituisce completamente la fase di valutazione del modello.",
+          "Perché rende inutile scegliere un algoritmo adatto al problema.",
+          "Perché contiene solo le risposte finali che il modello copierà sempre."
+        ],
+        "risposta_corretta": "Perché fornisce esempi da cui il modello può imparare relazioni e schemi.",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [
+          "Possibile distrattore troppo assoluto: contiene “sempre”"
+        ],
+        "errori_linguistici": [],
+        "note_informative": [
+          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “completamente”"
+        ]
+      },
+      {
+        "id": "AI-FAC-0208",
+        "domanda": "Che cosa si intende per allucinazione di un modello linguistico?",
+        "categoria": "ai",
+        "livello": "facile",
+        "opzioni": [
+          "Una risposta plausibile nella forma ma non corretta o non supportata dai dati.",
+          "Una risposta sempre verificata da fonti esterne affidabili.",
+          "Una traduzione letterale prodotta senza cambiare il significato.",
+          "Una compressione tecnica dei parametri del modello."
+        ],
+        "risposta_corretta": "Una risposta plausibile nella forma ma non corretta o non supportata dai dati.",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [
+          "Possibile distrattore troppo assoluto: contiene “sempre”"
+        ],
+        "errori_linguistici": [],
+        "note_informative": []
+      },
+      {
+        "id": "AI-FAC-0212",
+        "domanda": "Che cosa distingue un modello supervisionato da uno non supervisionato?",
+        "categoria": "ai",
+        "livello": "facile",
+        "opzioni": [
+          "Nel supervisionato gli esempi di addestramento hanno etichette o risposte corrette associate.",
+          "Nel supervisionato il modello può funzionare solo senza dati di esempio.",
+          "Nel non supervisionato ogni esempio contiene sempre una risposta corretta già nota.",
+          "Nel non supervisionato il modello non può trovare strutture nei dati."
+        ],
+        "risposta_corretta": "Nel supervisionato gli esempi di addestramento hanno etichette o risposte corrette associate.",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [
+          "Possibile distrattore troppo assoluto: contiene “sempre”"
+        ],
+        "errori_linguistici": [],
+        "note_informative": []
+      },
+      {
+        "id": "AI-INT-0208",
+        "domanda": "Perché è utile separare il ragionamento del sistema dalle azioni eseguite da un agente AI?",
+        "categoria": "ai",
+        "livello": "intermedio",
+        "opzioni": [
+          "Per controllare meglio quando l'agente deve pensare, chiamare strumenti, verificare risultati o fermarsi.",
+          "Per fare in modo che l'agente esegua sempre qualsiasi comando senza controlli.",
+          "Per eliminare la necessità di log, test e gestione degli errori.",
+          "Per trasformare ogni agente in un semplice chatbot senza strumenti."
+        ],
+        "risposta_corretta": "Per controllare meglio quando l'agente deve pensare, chiamare strumenti, verificare risultati o fermarsi.",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [
+          "Possibile distrattore troppo assoluto: contiene “sempre”"
+        ],
+        "errori_linguistici": [],
+        "note_informative": [
+          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “qualsiasi”"
+        ]
+      },
+      {
+        "id": "AI-INT-0210",
+        "domanda": "Che cosa indica il concetto di bias in un sistema AI?",
+        "categoria": "ai",
+        "livello": "intermedio",
+        "opzioni": [
+          "Una tendenza sistematica del modello a favorire o penalizzare certi risultati o gruppi.",
+          "La capacità del modello di rispondere sempre in modo perfettamente neutro.",
+          "La dimensione fisica del server su cui il modello viene eseguito.",
+          "Il tempo necessario per scaricare un dataset da internet."
+        ],
+        "risposta_corretta": "Una tendenza sistematica del modello a favorire o penalizzare certi risultati o gruppi.",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [
+          "Possibile distrattore troppo assoluto: contiene “sempre”"
+        ],
+        "errori_linguistici": [],
+        "note_informative": []
+      },
+      {
+        "id": "AI-INT-0213",
+        "domanda": "Che cosa può indicare una bassa precisione in un classificatore?",
+        "categoria": "ai",
+        "livello": "intermedio",
+        "opzioni": [
+          "Molti elementi previsti come positivi dal modello sono in realtà negativi.",
+          "Il modello non produce mai risultati positivi.",
+          "Il dataset contiene solo esempi senza etichetta.",
+          "Il modello è stato addestrato esclusivamente su immagini ad alta risoluzione."
+        ],
+        "risposta_corretta": "Molti elementi previsti come positivi dal modello sono in realtà negativi.",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [
+          "Possibile distrattore troppo assoluto: contiene “mai”"
+        ],
+        "errori_linguistici": [],
+        "note_informative": []
+      },
+      {
+        "id": "AI-AV-0204",
+        "domanda": "Qual è una differenza importante tra RLHF e DPO nell'allineamento dei modelli linguistici?",
+        "categoria": "ai",
+        "livello": "avanzato",
+        "opzioni": [
+          "RLHF usa un processo con modello di ricompensa e ottimizzazione tramite rinforzo, mentre DPO ottimizza direttamente su preferenze confrontate.",
+          "DPO richiede sempre immagini etichettate, mentre RLHF usa solo audio.",
+          "RLHF funziona solo con modelli piccoli, mentre DPO funziona solo con database SQL.",
+          "DPO elimina la necessità di dati di preferenza umana o sintetica."
+        ],
+        "risposta_corretta": "RLHF usa un processo con modello di ricompensa e ottimizzazione tramite rinforzo, mentre DPO ottimizza direttamente su preferenze confrontate.",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [
+          "Possibile distrattore troppo assoluto: contiene “sempre”"
+        ],
+        "errori_linguistici": [],
+        "note_informative": []
+      },
+      {
+        "id": "AI-AV-0209",
+        "domanda": "Quale compromesso è spesso necessario quando si sceglie un modello AI per un'app reale?",
+        "categoria": "ai",
+        "livello": "avanzato",
+        "opzioni": [
+          "Bilanciare qualità delle risposte, latenza, costo computazionale e risorse disponibili.",
+          "Scegliere sempre il modello più grande senza considerare tempi e costi.",
+          "Usare solo modelli non addestrati per evitare ogni errore.",
+          "Eliminare i test perché le metriche rallentano l'applicazione."
+        ],
+        "risposta_corretta": "Bilanciare qualità delle risposte, latenza, costo computazionale e risorse disponibili.",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [
+          "Possibile distrattore troppo assoluto: contiene “sempre”"
+        ],
+        "errori_linguistici": [],
+        "note_informative": []
+      },
+      {
+        "id": "AI-AV-0210",
+        "domanda": "Che cosa indica un modello Mixture of Experts?",
+        "categoria": "ai",
+        "livello": "avanzato",
+        "opzioni": [
+          "Un'architettura che può attivare solo una parte di esperti specializzati per elaborare un input.",
+          "Un modello composto da molte copie identiche sempre tutte attive per ogni token.",
+          "Un sistema che sceglie casualmente un database esterno senza usare il contenuto dell'input.",
+          "Un metodo per trasformare immagini in codice eseguibile senza controlli."
+        ],
+        "risposta_corretta": "Un'architettura che può attivare solo una parte di esperti specializzati per elaborare un input.",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [
+          "Possibile distrattore troppo assoluto: contiene “sempre”"
+        ],
+        "errori_linguistici": [],
+        "note_informative": [
+          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “tutte”"
+        ]
+      },
+      {
+        "id": "AI-AV-0212",
+        "domanda": "Perché valutare le allucinazioni richiede spesso più di una metrica automatica semplice?",
+        "categoria": "ai",
+        "livello": "avanzato",
+        "opzioni": [
+          "Perché serve confrontare la risposta con fonti, contesto e correttezza fattuale, non solo con la forma del testo.",
+          "Perché le allucinazioni compaiono solo nelle immagini e mai nel testo.",
+          "Perché una metrica automatica trasforma sempre una risposta falsa in una vera.",
+          "Perché la lunghezza della risposta è sufficiente a dimostrare la sua accuratezza."
+        ],
+        "risposta_corretta": "Perché serve confrontare la risposta con fonti, contesto e correttezza fattuale, non solo con la forma del testo.",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [
+          "Possibile distrattore troppo assoluto: contiene “mai”",
+          "Possibile distrattore troppo assoluto: contiene “sempre”"
+        ],
+        "errori_linguistici": [],
+        "note_informative": []
+      }
+    ],
     "domande_con_errori_linguistici": [],
     "domande_con_note_informative": [
       {
@@ -1985,6 +2193,275 @@
         "note_informative": [
           "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “impossibile”",
           "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “qualsiasi”"
+        ]
+      },
+      {
+        "id": "AI-FAC-0202",
+        "domanda": "Che cosa rappresenta un prompt quando si usa un modello linguistico?",
+        "categoria": "ai",
+        "livello": "facile",
+        "opzioni": [
+          "L'istruzione o il testo iniziale dato al modello per guidare la risposta.",
+          "Il file interno che contiene tutti i pesi matematici del modello.",
+          "Il risultato finale generato dal modello dopo l'elaborazione.",
+          "Il database esterno usato per salvare le conversazioni dell'utente."
+        ],
+        "risposta_corretta": "L'istruzione o il testo iniziale dato al modello per guidare la risposta.",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “tutti”"
+        ]
+      },
+      {
+        "id": "AI-FAC-0203",
+        "domanda": "Perché un dataset di addestramento è importante in un sistema di machine learning?",
+        "categoria": "ai",
+        "livello": "facile",
+        "opzioni": [
+          "Perché fornisce esempi da cui il modello può imparare relazioni e schemi.",
+          "Perché sostituisce completamente la fase di valutazione del modello.",
+          "Perché rende inutile scegliere un algoritmo adatto al problema.",
+          "Perché contiene solo le risposte finali che il modello copierà sempre."
+        ],
+        "risposta_corretta": "Perché fornisce esempi da cui il modello può imparare relazioni e schemi.",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [
+          "Possibile distrattore troppo assoluto: contiene “sempre”"
+        ],
+        "errori_linguistici": [],
+        "note_informative": [
+          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “completamente”"
+        ]
+      },
+      {
+        "id": "AI-FAC-0207",
+        "domanda": "Che cosa significa inferenza in un modello AI già addestrato?",
+        "categoria": "ai",
+        "livello": "facile",
+        "opzioni": [
+          "Usare il modello per produrre una previsione o una risposta su un nuovo input.",
+          "Aggiungere manualmente tutte le regole che il modello dovrà seguire.",
+          "Cancellare i pesi del modello prima dell'utilizzo.",
+          "Preparare il dataset prima della fase di addestramento."
+        ],
+        "risposta_corretta": "Usare il modello per produrre una previsione o una risposta su un nuovo input.",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “tutte”"
+        ]
+      },
+      {
+        "id": "AI-FAC-0209",
+        "domanda": "A cosa servono gli embedding in molte applicazioni AI?",
+        "categoria": "ai",
+        "livello": "facile",
+        "opzioni": [
+          "A rappresentare testi, immagini o altri dati come vettori numerici confrontabili.",
+          "A sostituire ogni controllo qualità sui dati prodotti dal modello.",
+          "A trasformare automaticamente qualsiasi modello piccolo in un modello più grande.",
+          "A eliminare la necessità di salvare informazioni in memoria."
+        ],
+        "risposta_corretta": "A rappresentare testi, immagini o altri dati come vettori numerici confrontabili.",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “qualsiasi”"
+        ]
+      },
+      {
+        "id": "AI-FAC-0211",
+        "domanda": "Perché la privacy è importante quando si usa un'app AI?",
+        "categoria": "ai",
+        "livello": "facile",
+        "opzioni": [
+          "Perché i dati inseriti dall'utente possono contenere informazioni personali o sensibili.",
+          "Perché un modello AI non può elaborare nessun testo se non conosce il nome dell'utente.",
+          "Perché la privacy serve solo a rendere più colorata l'interfaccia.",
+          "Perché tutti i dati personali devono essere pubblicati per migliorare il modello."
+        ],
+        "risposta_corretta": "Perché i dati inseriti dall'utente possono contenere informazioni personali o sensibili.",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “tutti”"
+        ]
+      },
+      {
+        "id": "AI-INT-0208",
+        "domanda": "Perché è utile separare il ragionamento del sistema dalle azioni eseguite da un agente AI?",
+        "categoria": "ai",
+        "livello": "intermedio",
+        "opzioni": [
+          "Per controllare meglio quando l'agente deve pensare, chiamare strumenti, verificare risultati o fermarsi.",
+          "Per fare in modo che l'agente esegua sempre qualsiasi comando senza controlli.",
+          "Per eliminare la necessità di log, test e gestione degli errori.",
+          "Per trasformare ogni agente in un semplice chatbot senza strumenti."
+        ],
+        "risposta_corretta": "Per controllare meglio quando l'agente deve pensare, chiamare strumenti, verificare risultati o fermarsi.",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [
+          "Possibile distrattore troppo assoluto: contiene “sempre”"
+        ],
+        "errori_linguistici": [],
+        "note_informative": [
+          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “qualsiasi”"
+        ]
+      },
+      {
+        "id": "AI-INT-0211",
+        "domanda": "Che cosa significa grounding in una risposta generata da un modello linguistico?",
+        "categoria": "ai",
+        "livello": "intermedio",
+        "opzioni": [
+          "Collegare la risposta a informazioni verificabili o a fonti fornite al sistema.",
+          "Aumentare casualmente la creatività della risposta.",
+          "Ridurre il testo generato a una sola parola.",
+          "Cancellare tutti i riferimenti ai dati usati dal sistema."
+        ],
+        "risposta_corretta": "Collegare la risposta a informazioni verificabili o a fonti fornite al sistema.",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “tutti”",
+          "opzione A: possibile frase poco fluida, controllare gli incontri vocalici"
+        ]
+      },
+      {
+        "id": "AI-AV-0201",
+        "domanda": "Qual è il ruolo principale del meccanismo di attention nei Transformer?",
+        "categoria": "ai",
+        "livello": "avanzato",
+        "opzioni": [
+          "Pesare l'importanza relativa di diverse parti della sequenza durante l'elaborazione.",
+          "Ridurre ogni input a una sola parola prima della generazione.",
+          "Sostituire completamente la fase di tokenizzazione.",
+          "Archiviare in modo permanente tutte le conversazioni degli utenti."
+        ],
+        "risposta_corretta": "Pesare l'importanza relativa di diverse parti della sequenza durante l'elaborazione.",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “completamente”",
+          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “tutte”"
+        ]
+      },
+      {
+        "id": "AI-AV-0203",
+        "domanda": "Perché LoRA è utile nel fine-tuning di modelli di grandi dimensioni?",
+        "categoria": "ai",
+        "livello": "avanzato",
+        "opzioni": [
+          "Permette di addestrare piccoli adattatori a basso rango invece di aggiornare tutti i pesi del modello.",
+          "Richiede di ricostruire da zero l'intera architettura del Transformer.",
+          "Elimina la necessità di dati di addestramento specifici per il dominio.",
+          "Trasforma ogni modello testuale in un modello esclusivamente visuale."
+        ],
+        "risposta_corretta": "Permette di addestrare piccoli adattatori a basso rango invece di aggiornare tutti i pesi del modello.",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “tutti”"
+        ]
+      },
+      {
+        "id": "AI-AV-0205",
+        "domanda": "Che cosa indica il catastrophic forgetting nel machine learning?",
+        "categoria": "ai",
+        "livello": "avanzato",
+        "opzioni": [
+          "La perdita di prestazioni su conoscenze o compiti precedenti dopo un nuovo addestramento.",
+          "La capacità del modello di ricordare perfettamente tutti i dati passati.",
+          "La cancellazione automatica dei file temporanei dopo l'inferenza.",
+          "La riduzione della latenza causata da una cache più efficiente."
+        ],
+        "risposta_corretta": "La perdita di prestazioni su conoscenze o compiti precedenti dopo un nuovo addestramento.",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “tutti”"
+        ]
+      },
+      {
+        "id": "AI-AV-0210",
+        "domanda": "Che cosa indica un modello Mixture of Experts?",
+        "categoria": "ai",
+        "livello": "avanzato",
+        "opzioni": [
+          "Un'architettura che può attivare solo una parte di esperti specializzati per elaborare un input.",
+          "Un modello composto da molte copie identiche sempre tutte attive per ogni token.",
+          "Un sistema che sceglie casualmente un database esterno senza usare il contenuto dell'input.",
+          "Un metodo per trasformare immagini in codice eseguibile senza controlli."
+        ],
+        "risposta_corretta": "Un'architettura che può attivare solo una parte di esperti specializzati per elaborare un input.",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [
+          "Possibile distrattore troppo assoluto: contiene “sempre”"
+        ],
+        "errori_linguistici": [],
+        "note_informative": [
+          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “tutte”"
+        ]
+      },
+      {
+        "id": "AI-AV-0211",
+        "domanda": "Perché le guardrail sono importanti in un sistema AI usato da utenti finali?",
+        "categoria": "ai",
+        "livello": "avanzato",
+        "opzioni": [
+          "Per limitare comportamenti rischiosi, applicare regole e gestire richieste non adatte.",
+          "Per aumentare il numero di parametri del modello durante l'inferenza.",
+          "Per sostituire completamente la progettazione del prodotto.",
+          "Per impedire qualsiasi risposta anche quando la richiesta è lecita."
+        ],
+        "risposta_corretta": "Per limitare comportamenti rischiosi, applicare regole e gestire richieste non adatte.",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “completamente”",
+          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “qualsiasi”"
+        ]
+      },
+      {
+        "id": "AI-AV-0213",
+        "domanda": "Che cosa rende delicata la memoria a lungo termine in un assistente AI personale?",
+        "categoria": "ai",
+        "livello": "avanzato",
+        "opzioni": [
+          "Deve conservare informazioni utili senza salvare dati inutili, sensibili o fuori contesto.",
+          "Deve salvare ogni frase dell'utente senza distinzione.",
+          "Deve impedire all'utente di correggere preferenze già memorizzate.",
+          "Deve sostituire tutte le funzioni dell'applicazione principale."
+        ],
+        "risposta_corretta": "Deve conservare informazioni utili senza salvare dati inutili, sensibili o fuori contesto.",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “tutte”"
         ]
       }
     ],

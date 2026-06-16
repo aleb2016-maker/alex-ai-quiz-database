@@ -920,5 +920,565 @@
     "difficolta": 2,
     "distrattore_forte": "Per velocizzare il flusso riducendo controlli e conferme dell'utente",
     "motivo_distrattore_forte": "È vicino perché parla di automazione, ma ridurre i controlli può aumentare i rischi invece di limitarli."
+  },
+  {
+    "id": "AI-FAC-0201",
+    "categoria": "ai",
+    "livello": "facile",
+    "domanda": "Che cosa indica, in generale, un modello di intelligenza artificiale generativa?",
+    "opzioni": [
+      "Un sistema capace di produrre nuovi contenuti, come testo, immagini o codice, partendo da dati e istruzioni.",
+      "Un sistema che riconosce soltanto se un'immagine appartiene a una categoria già definita.",
+      "Un database che conserva esempi senza costruire risposte nuove.",
+      "Un programma che esegue solo calcoli numerici impostati manualmente."
+    ],
+    "risposta_corretta": "Un sistema capace di produrre nuovi contenuti, come testo, immagini o codice, partendo da dati e istruzioni.",
+    "spiegazione": "La risposta corretta è A perché l'AI generativa produce contenuti nuovi. B descrive più da vicino un classificatore, C un archivio di dati, D un normale programma deterministico."
+  },
+  {
+    "id": "AI-FAC-0202",
+    "categoria": "ai",
+    "livello": "facile",
+    "domanda": "Che cosa rappresenta un prompt quando si usa un modello linguistico?",
+    "opzioni": [
+      "L'istruzione o il testo iniziale dato al modello per guidare la risposta.",
+      "Il file interno che contiene tutti i pesi matematici del modello.",
+      "Il risultato finale generato dal modello dopo l'elaborazione.",
+      "Il database esterno usato per salvare le conversazioni dell'utente."
+    ],
+    "risposta_corretta": "L'istruzione o il testo iniziale dato al modello per guidare la risposta.",
+    "spiegazione": "La risposta corretta è A perché il prompt è l'input che orienta il comportamento del modello. B riguarda i pesi, C l'output, D una possibile memoria esterna."
+  },
+  {
+    "id": "AI-FAC-0203",
+    "categoria": "ai",
+    "livello": "facile",
+    "domanda": "Perché un dataset di addestramento è importante in un sistema di machine learning?",
+    "opzioni": [
+      "Perché fornisce esempi da cui il modello può imparare relazioni e schemi.",
+      "Perché sostituisce completamente la fase di valutazione del modello.",
+      "Perché rende inutile scegliere un algoritmo adatto al problema.",
+      "Perché contiene solo le risposte finali che il modello copierà sempre."
+    ],
+    "risposta_corretta": "Perché fornisce esempi da cui il modello può imparare relazioni e schemi.",
+    "spiegazione": "La risposta corretta è A. Il dataset offre esempi utili all'apprendimento. B è falso perché la valutazione resta necessaria, C è errato perché l'algoritmo conta, D confonde apprendimento e copia meccanica."
+  },
+  {
+    "id": "AI-FAC-0204",
+    "categoria": "ai",
+    "livello": "facile",
+    "domanda": "Che cosa significa classificare un dato con l'intelligenza artificiale?",
+    "opzioni": [
+      "Assegnare il dato a una categoria tra quelle previste.",
+      "Generare una nuova immagine partendo da una descrizione.",
+      "Salvare il dato in una cartella senza analizzarlo.",
+      "Cancellare i dati meno importanti da un archivio."
+    ],
+    "risposta_corretta": "Assegnare il dato a una categoria tra quelle previste.",
+    "spiegazione": "La risposta corretta è A perché la classificazione assegna un'etichetta. B riguarda la generazione, C è archiviazione, D è eliminazione o pulizia dei dati."
+  },
+  {
+    "id": "AI-FAC-0205",
+    "categoria": "ai",
+    "livello": "facile",
+    "domanda": "Che cosa indica il termine overfitting?",
+    "opzioni": [
+      "Una situazione in cui il modello impara troppo bene gli esempi di addestramento e generalizza male su dati nuovi.",
+      "Una situazione in cui il modello non usa nessun dato durante l'addestramento.",
+      "Una tecnica per rendere un modello più piccolo senza perdere alcuna informazione.",
+      "Un metodo per aumentare casualmente la velocità di risposta del modello."
+    ],
+    "risposta_corretta": "Una situazione in cui il modello impara troppo bene gli esempi di addestramento e generalizza male su dati nuovi.",
+    "spiegazione": "La risposta corretta è A. L'overfitting avviene quando il modello si adatta troppo ai dati di training. B è assenza di apprendimento, C richiama compressione o distillazione, D riguarda prestazioni."
+  },
+  {
+    "id": "AI-FAC-0206",
+    "categoria": "ai",
+    "livello": "facile",
+    "domanda": "Che cosa sono i token in un modello linguistico?",
+    "opzioni": [
+      "Unità di testo, come parole o parti di parole, che il modello usa per elaborare il linguaggio.",
+      "File immagine usati per addestrare soltanto modelli visivi.",
+      "Etichette numeriche che indicano esclusivamente la qualità di una risposta.",
+      "Password temporanee usate per accedere a un'applicazione."
+    ],
+    "risposta_corretta": "Unità di testo, come parole o parti di parole, che il modello usa per elaborare il linguaggio.",
+    "spiegazione": "La risposta corretta è A. I token sono pezzi di testo gestibili dal modello. B riguarda immagini, C confonde token e punteggi, D usa il termine token in un altro contesto informatico."
+  },
+  {
+    "id": "AI-FAC-0207",
+    "categoria": "ai",
+    "livello": "facile",
+    "domanda": "Che cosa significa inferenza in un modello AI già addestrato?",
+    "opzioni": [
+      "Usare il modello per produrre una previsione o una risposta su un nuovo input.",
+      "Aggiungere manualmente tutte le regole che il modello dovrà seguire.",
+      "Cancellare i pesi del modello prima dell'utilizzo.",
+      "Preparare il dataset prima della fase di addestramento."
+    ],
+    "risposta_corretta": "Usare il modello per produrre una previsione o una risposta su un nuovo input.",
+    "spiegazione": "La risposta corretta è A. L'inferenza è l'uso del modello dopo l'addestramento. B è programmazione manuale, C distrugge il modello, D riguarda la preparazione dei dati."
+  },
+  {
+    "id": "AI-FAC-0208",
+    "categoria": "ai",
+    "livello": "facile",
+    "domanda": "Che cosa si intende per allucinazione di un modello linguistico?",
+    "opzioni": [
+      "Una risposta plausibile nella forma ma non corretta o non supportata dai dati.",
+      "Una risposta sempre verificata da fonti esterne affidabili.",
+      "Una traduzione letterale prodotta senza cambiare il significato.",
+      "Una compressione tecnica dei parametri del modello."
+    ],
+    "risposta_corretta": "Una risposta plausibile nella forma ma non corretta o non supportata dai dati.",
+    "spiegazione": "La risposta corretta è A. L'allucinazione sembra credibile ma può essere falsa. B è l'opposto, C riguarda traduzione, D riguarda ottimizzazione del modello."
+  },
+  {
+    "id": "AI-FAC-0209",
+    "categoria": "ai",
+    "livello": "facile",
+    "domanda": "A cosa servono gli embedding in molte applicazioni AI?",
+    "opzioni": [
+      "A rappresentare testi, immagini o altri dati come vettori numerici confrontabili.",
+      "A sostituire ogni controllo qualità sui dati prodotti dal modello.",
+      "A trasformare automaticamente qualsiasi modello piccolo in un modello più grande.",
+      "A eliminare la necessità di salvare informazioni in memoria."
+    ],
+    "risposta_corretta": "A rappresentare testi, immagini o altri dati come vettori numerici confrontabili.",
+    "spiegazione": "La risposta corretta è A. Gli embedding trasformano dati in rappresentazioni numeriche utili per confronti semantici. B, C e D attribuiscono agli embedding funzioni che non hanno."
+  },
+  {
+    "id": "AI-FAC-0210",
+    "categoria": "ai",
+    "livello": "facile",
+    "domanda": "Che cosa significa fine-tuning di un modello AI?",
+    "opzioni": [
+      "Adattare un modello già addestrato a un compito o dominio più specifico.",
+      "Creare un modello da zero senza usare dati precedenti.",
+      "Usare il modello solo per cercare file in una cartella locale.",
+      "Ridurre la dimensione del monitor usato durante l'addestramento."
+    ],
+    "risposta_corretta": "Adattare un modello già addestrato a un compito o dominio più specifico.",
+    "spiegazione": "La risposta corretta è A. Il fine-tuning specializza un modello preaddestrato. B descrive addestramento da zero, C è ricerca locale, D non riguarda l'AI."
+  },
+  {
+    "id": "AI-FAC-0211",
+    "categoria": "ai",
+    "livello": "facile",
+    "domanda": "Perché la privacy è importante quando si usa un'app AI?",
+    "opzioni": [
+      "Perché i dati inseriti dall'utente possono contenere informazioni personali o sensibili.",
+      "Perché un modello AI non può elaborare nessun testo se non conosce il nome dell'utente.",
+      "Perché la privacy serve solo a rendere più colorata l'interfaccia.",
+      "Perché tutti i dati personali devono essere pubblicati per migliorare il modello."
+    ],
+    "risposta_corretta": "Perché i dati inseriti dall'utente possono contenere informazioni personali o sensibili.",
+    "spiegazione": "La risposta corretta è A. Le app AI possono ricevere dati personali, quindi vanno gestiti con attenzione. B, C e D sono concettualmente errate."
+  },
+  {
+    "id": "AI-FAC-0212",
+    "categoria": "ai",
+    "livello": "facile",
+    "domanda": "Che cosa distingue un modello supervisionato da uno non supervisionato?",
+    "opzioni": [
+      "Nel supervisionato gli esempi di addestramento hanno etichette o risposte corrette associate.",
+      "Nel supervisionato il modello può funzionare solo senza dati di esempio.",
+      "Nel non supervisionato ogni esempio contiene sempre una risposta corretta già nota.",
+      "Nel non supervisionato il modello non può trovare strutture nei dati."
+    ],
+    "risposta_corretta": "Nel supervisionato gli esempi di addestramento hanno etichette o risposte corrette associate.",
+    "spiegazione": "La risposta corretta è A. L'apprendimento supervisionato usa esempi etichettati. B e C invertirebbero il significato, D è falso perché l'apprendimento non supervisionato cerca strutture nei dati."
+  },
+  {
+    "id": "AI-INT-0201",
+    "categoria": "ai",
+    "livello": "intermedio",
+    "domanda": "Qual è il vantaggio principale di una pipeline RAG rispetto a un semplice prompt senza recupero documentale?",
+    "opzioni": [
+      "Può recuperare informazioni da fonti esterne e usarle per rendere la risposta più ancorata ai dati disponibili.",
+      "Trasforma automaticamente il modello in un sistema addestrato da zero sul dominio aziendale.",
+      "Elimina ogni rischio di risposta errata anche quando le fonti sono incomplete.",
+      "Sostituisce il modello linguistico con un normale motore di ricerca."
+    ],
+    "risposta_corretta": "Può recuperare informazioni da fonti esterne e usarle per rendere la risposta più ancorata ai dati disponibili.",
+    "spiegazione": "La risposta corretta è A. La RAG combina recupero e generazione. B confonde RAG e addestramento, C è troppo assoluta, D ignora il ruolo del modello generativo."
+  },
+  {
+    "id": "AI-INT-0202",
+    "categoria": "ai",
+    "livello": "intermedio",
+    "domanda": "Perché un database vettoriale è utile in un sistema basato su embedding?",
+    "opzioni": [
+      "Per cercare elementi semanticamente simili usando vettori numerici.",
+      "Per salvare esclusivamente immagini in formato compresso.",
+      "Per convertire un modello linguistico in un foglio di calcolo.",
+      "Per sostituire la fase di progettazione dei prompt."
+    ],
+    "risposta_corretta": "Per cercare elementi semanticamente simili usando vettori numerici.",
+    "spiegazione": "La risposta corretta è A. Un database vettoriale permette ricerche per similarità tra embedding. B, C e D non descrivono il suo uso principale."
+  },
+  {
+    "id": "AI-INT-0203",
+    "categoria": "ai",
+    "livello": "intermedio",
+    "domanda": "Che effetto ha, in genere, aumentare la temperatura nella generazione di un modello linguistico?",
+    "opzioni": [
+      "Rende le risposte più variabili e meno deterministiche.",
+      "Rende il modello più piccolo a livello di parametri.",
+      "Aumenta automaticamente la quantità di dati nel contesto.",
+      "Impedisce al modello di generare testo creativo."
+    ],
+    "risposta_corretta": "Rende le risposte più variabili e meno deterministiche.",
+    "spiegazione": "La risposta corretta è A. Una temperatura più alta tende ad aumentare varietà e casualità. B riguarda dimensione del modello, C la finestra di contesto, D va nella direzione opposta."
+  },
+  {
+    "id": "AI-INT-0204",
+    "categoria": "ai",
+    "livello": "intermedio",
+    "domanda": "In una ricerca semantica, perché il semplice confronto di parole chiave può essere meno efficace degli embedding?",
+    "opzioni": [
+      "Perché gli embedding possono catturare somiglianze di significato anche quando le parole usate sono diverse.",
+      "Perché le parole chiave leggono direttamente i pensieri dell'utente.",
+      "Perché gli embedding eliminano la necessità di controllare i risultati recuperati.",
+      "Perché la ricerca per parole chiave funziona solo con immagini e non con testo."
+    ],
+    "risposta_corretta": "Perché gli embedding possono catturare somiglianze di significato anche quando le parole usate sono diverse.",
+    "spiegazione": "La risposta corretta è A. Gli embedding rappresentano il significato in modo più flessibile. B è assurdo, C è troppo forte, D è falso."
+  },
+  {
+    "id": "AI-INT-0205",
+    "categoria": "ai",
+    "livello": "intermedio",
+    "domanda": "Che cosa può fare un reranker in una pipeline RAG?",
+    "opzioni": [
+      "Riordinare i documenti recuperati in base alla loro rilevanza rispetto alla domanda.",
+      "Generare immagini partendo direttamente dai documenti recuperati.",
+      "Cancellare i documenti meno recenti dal database originale.",
+      "Addestrare da zero il modello linguistico durante ogni richiesta."
+    ],
+    "risposta_corretta": "Riordinare i documenti recuperati in base alla loro rilevanza rispetto alla domanda.",
+    "spiegazione": "La risposta corretta è A. Il reranker migliora l'ordine dei risultati recuperati. B, C e D descrivono funzioni diverse e non tipiche del reranking."
+  },
+  {
+    "id": "AI-INT-0206",
+    "categoria": "ai",
+    "livello": "intermedio",
+    "domanda": "Che cosa si intende per prompt injection?",
+    "opzioni": [
+      "Un tentativo di inserire istruzioni malevole o fuorvianti nel testo dato al modello.",
+      "Una tecnica di compressione che riduce il numero di parametri del modello.",
+      "Un metodo per caricare immagini dentro un database relazionale.",
+      "Un sistema per rendere più veloce la connessione internet dell'app."
+    ],
+    "risposta_corretta": "Un tentativo di inserire istruzioni malevole o fuorvianti nel testo dato al modello.",
+    "spiegazione": "La risposta corretta è A. La prompt injection cerca di manipolare il comportamento del modello tramite istruzioni nel testo. B, C e D sono concetti diversi."
+  },
+  {
+    "id": "AI-INT-0207",
+    "categoria": "ai",
+    "livello": "intermedio",
+    "domanda": "A cosa serve il tool calling in un'applicazione basata su LLM?",
+    "opzioni": [
+      "A permettere al modello di richiedere l'uso di strumenti esterni, come API, calcoli o ricerche.",
+      "A impedire al modello di interagire con qualunque sistema esterno.",
+      "A sostituire la necessità di definire permessi e controlli sugli strumenti.",
+      "A trasformare ogni risposta testuale in un'immagine."
+    ],
+    "risposta_corretta": "A permettere al modello di richiedere l'uso di strumenti esterni, come API, calcoli o ricerche.",
+    "spiegazione": "La risposta corretta è A. Il tool calling collega il modello a funzioni esterne. B è l'opposto, C è pericoloso perché i controlli restano necessari, D non è il suo scopo."
+  },
+  {
+    "id": "AI-INT-0208",
+    "categoria": "ai",
+    "livello": "intermedio",
+    "domanda": "Perché è utile separare il ragionamento del sistema dalle azioni eseguite da un agente AI?",
+    "opzioni": [
+      "Per controllare meglio quando l'agente deve pensare, chiamare strumenti, verificare risultati o fermarsi.",
+      "Per fare in modo che l'agente esegua sempre qualsiasi comando senza controlli.",
+      "Per eliminare la necessità di log, test e gestione degli errori.",
+      "Per trasformare ogni agente in un semplice chatbot senza strumenti."
+    ],
+    "risposta_corretta": "Per controllare meglio quando l'agente deve pensare, chiamare strumenti, verificare risultati o fermarsi.",
+    "spiegazione": "La risposta corretta è A. Separare fasi e azioni rende l'agente più controllabile. B è rischioso, C elimina controlli importanti, D riduce l'agente a un sistema meno capace."
+  },
+  {
+    "id": "AI-INT-0209",
+    "categoria": "ai",
+    "livello": "intermedio",
+    "domanda": "Perché un set di valutazione separato è importante nello sviluppo di un modello AI?",
+    "opzioni": [
+      "Per misurare il comportamento del modello su esempi non usati direttamente per addestrarlo.",
+      "Per aggiungere automaticamente nuove etichette al dataset di training.",
+      "Per sostituire del tutto il controllo umano quando il dominio è delicato.",
+      "Per rendere inutili metriche e analisi degli errori."
+    ],
+    "risposta_corretta": "Per misurare il comportamento del modello su esempi non usati direttamente per addestrarlo.",
+    "spiegazione": "La risposta corretta è A. Un set separato aiuta a stimare la generalizzazione. B riguarda annotazione, C è troppo forte, D è falso perché metriche e analisi restano utili."
+  },
+  {
+    "id": "AI-INT-0210",
+    "categoria": "ai",
+    "livello": "intermedio",
+    "domanda": "Che cosa indica il concetto di bias in un sistema AI?",
+    "opzioni": [
+      "Una tendenza sistematica del modello a favorire o penalizzare certi risultati o gruppi.",
+      "La capacità del modello di rispondere sempre in modo perfettamente neutro.",
+      "La dimensione fisica del server su cui il modello viene eseguito.",
+      "Il tempo necessario per scaricare un dataset da internet."
+    ],
+    "risposta_corretta": "Una tendenza sistematica del modello a favorire o penalizzare certi risultati o gruppi.",
+    "spiegazione": "La risposta corretta è A. Il bias è una distorsione sistematica. B nega il problema, C e D riguardano aspetti tecnici non collegati al bias."
+  },
+  {
+    "id": "AI-INT-0211",
+    "categoria": "ai",
+    "livello": "intermedio",
+    "domanda": "Che cosa significa grounding in una risposta generata da un modello linguistico?",
+    "opzioni": [
+      "Collegare la risposta a informazioni verificabili o a fonti fornite al sistema.",
+      "Aumentare casualmente la creatività della risposta.",
+      "Ridurre il testo generato a una sola parola.",
+      "Cancellare tutti i riferimenti ai dati usati dal sistema."
+    ],
+    "risposta_corretta": "Collegare la risposta a informazioni verificabili o a fonti fornite al sistema.",
+    "spiegazione": "La risposta corretta è A. Il grounding aiuta ad ancorare la risposta a dati disponibili. B riguarda creatività, C brevità, D va contro l'idea di ancoraggio."
+  },
+  {
+    "id": "AI-INT-0212",
+    "categoria": "ai",
+    "livello": "intermedio",
+    "domanda": "Perché la quantizzazione può essere utile per eseguire modelli AI su dispositivi con risorse limitate?",
+    "opzioni": [
+      "Per ridurre la precisione numerica dei pesi e diminuire memoria o costo computazionale.",
+      "Per aumentare il numero di neuroni senza cambiare la memoria richiesta.",
+      "Per trasformare un modello linguistico in un database vettoriale.",
+      "Per garantire automaticamente risposte più corrette in ogni dominio."
+    ],
+    "risposta_corretta": "Per ridurre la precisione numerica dei pesi e diminuire memoria o costo computazionale.",
+    "spiegazione": "La risposta corretta è A. La quantizzazione riduce il peso computazionale usando rappresentazioni numeriche più leggere. B, C e D descrivono effetti non corretti."
+  },
+  {
+    "id": "AI-INT-0213",
+    "categoria": "ai",
+    "livello": "intermedio",
+    "domanda": "Che cosa può indicare una bassa precisione in un classificatore?",
+    "opzioni": [
+      "Molti elementi previsti come positivi dal modello sono in realtà negativi.",
+      "Il modello non produce mai risultati positivi.",
+      "Il dataset contiene solo esempi senza etichetta.",
+      "Il modello è stato addestrato esclusivamente su immagini ad alta risoluzione."
+    ],
+    "risposta_corretta": "Molti elementi previsti come positivi dal modello sono in realtà negativi.",
+    "spiegazione": "La risposta corretta è A. La precisione misura quanto sono affidabili le predizioni positive. B riguarda assenza di positivi, C il tipo di dati, D non definisce la precisione."
+  },
+  {
+    "id": "AI-INT-0214",
+    "categoria": "ai",
+    "livello": "intermedio",
+    "domanda": "Perché conviene registrare log e risultati durante i test di un'app AI?",
+    "opzioni": [
+      "Per capire quali input causano errori, risposte deboli o comportamenti inattesi.",
+      "Per impedire al modello di generare risposte diverse tra loro.",
+      "Per sostituire la progettazione dell'interfaccia utente.",
+      "Per rendere inutili i controlli di sicurezza."
+    ],
+    "risposta_corretta": "Per capire quali input causano errori, risposte deboli o comportamenti inattesi.",
+    "spiegazione": "La risposta corretta è A. I log aiutano debug, valutazione e miglioramento. B è troppo rigido, C e D non sono scopi dei log."
+  },
+  {
+    "id": "AI-AV-0201",
+    "categoria": "ai",
+    "livello": "avanzato",
+    "domanda": "Qual è il ruolo principale del meccanismo di attention nei Transformer?",
+    "opzioni": [
+      "Pesare l'importanza relativa di diverse parti della sequenza durante l'elaborazione.",
+      "Ridurre ogni input a una sola parola prima della generazione.",
+      "Sostituire completamente la fase di tokenizzazione.",
+      "Archiviare in modo permanente tutte le conversazioni degli utenti."
+    ],
+    "risposta_corretta": "Pesare l'importanza relativa di diverse parti della sequenza durante l'elaborazione.",
+    "spiegazione": "La risposta corretta è A. L'attention permette al modello di considerare relazioni tra parti della sequenza. B, C e D descrivono funzioni diverse."
+  },
+  {
+    "id": "AI-AV-0202",
+    "categoria": "ai",
+    "livello": "avanzato",
+    "domanda": "Che cosa indica la finestra di contesto di un modello linguistico?",
+    "opzioni": [
+      "La quantità massima di token che il modello può considerare in una singola interazione.",
+      "Il numero totale di utenti che possono usare il modello nello stesso momento.",
+      "La cartella locale in cui vengono salvati i prompt più recenti.",
+      "La dimensione fisica dello schermo su cui viene mostrata la risposta."
+    ],
+    "risposta_corretta": "La quantità massima di token che il modello può considerare in una singola interazione.",
+    "spiegazione": "La risposta corretta è A. La finestra di contesto riguarda i token disponibili per input e output. B, C e D non definiscono questo limite."
+  },
+  {
+    "id": "AI-AV-0203",
+    "categoria": "ai",
+    "livello": "avanzato",
+    "domanda": "Perché LoRA è utile nel fine-tuning di modelli di grandi dimensioni?",
+    "opzioni": [
+      "Permette di addestrare piccoli adattatori a basso rango invece di aggiornare tutti i pesi del modello.",
+      "Richiede di ricostruire da zero l'intera architettura del Transformer.",
+      "Elimina la necessità di dati di addestramento specifici per il dominio.",
+      "Trasforma ogni modello testuale in un modello esclusivamente visuale."
+    ],
+    "risposta_corretta": "Permette di addestrare piccoli adattatori a basso rango invece di aggiornare tutti i pesi del modello.",
+    "spiegazione": "La risposta corretta è A. LoRA rende il fine-tuning più leggero aggiornando componenti aggiuntive. B, C e D sono interpretazioni errate."
+  },
+  {
+    "id": "AI-AV-0204",
+    "categoria": "ai",
+    "livello": "avanzato",
+    "domanda": "Qual è una differenza importante tra RLHF e DPO nell'allineamento dei modelli linguistici?",
+    "opzioni": [
+      "RLHF usa un processo con modello di ricompensa e ottimizzazione tramite rinforzo, mentre DPO ottimizza direttamente su preferenze confrontate.",
+      "DPO richiede sempre immagini etichettate, mentre RLHF usa solo audio.",
+      "RLHF funziona solo con modelli piccoli, mentre DPO funziona solo con database SQL.",
+      "DPO elimina la necessità di dati di preferenza umana o sintetica."
+    ],
+    "risposta_corretta": "RLHF usa un processo con modello di ricompensa e ottimizzazione tramite rinforzo, mentre DPO ottimizza direttamente su preferenze confrontate.",
+    "spiegazione": "La risposta corretta è A. RLHF e DPO usano strategie diverse per sfruttare preferenze. B, C e D sono tecnicamente scorrette."
+  },
+  {
+    "id": "AI-AV-0205",
+    "categoria": "ai",
+    "livello": "avanzato",
+    "domanda": "Che cosa indica il catastrophic forgetting nel machine learning?",
+    "opzioni": [
+      "La perdita di prestazioni su conoscenze o compiti precedenti dopo un nuovo addestramento.",
+      "La capacità del modello di ricordare perfettamente tutti i dati passati.",
+      "La cancellazione automatica dei file temporanei dopo l'inferenza.",
+      "La riduzione della latenza causata da una cache più efficiente."
+    ],
+    "risposta_corretta": "La perdita di prestazioni su conoscenze o compiti precedenti dopo un nuovo addestramento.",
+    "spiegazione": "La risposta corretta è A. Il catastrophic forgetting riguarda il peggioramento su competenze precedenti. B è l'opposto, C e D appartengono ad altri ambiti."
+  },
+  {
+    "id": "AI-AV-0206",
+    "categoria": "ai",
+    "livello": "avanzato",
+    "domanda": "Perché il chunking semantico può migliorare una pipeline RAG rispetto a tagli fissi di testo?",
+    "opzioni": [
+      "Perché cerca di dividere i documenti in parti coerenti dal punto di vista del significato.",
+      "Perché elimina la necessità di creare embedding dei documenti.",
+      "Perché impedisce al modello di usare il contenuto recuperato.",
+      "Perché trasforma ogni documento in una singola parola chiave."
+    ],
+    "risposta_corretta": "Perché cerca di dividere i documenti in parti coerenti dal punto di vista del significato.",
+    "spiegazione": "La risposta corretta è A. Il chunking semantico conserva meglio il contesto logico. B, C e D riducono o distorcono il funzionamento della RAG."
+  },
+  {
+    "id": "AI-AV-0207",
+    "categoria": "ai",
+    "livello": "avanzato",
+    "domanda": "Che cosa può causare il context poisoning in un'applicazione basata su LLM?",
+    "opzioni": [
+      "L'inserimento nel contesto di informazioni fuorvianti che influenzano negativamente le risposte successive.",
+      "La riduzione della temperatura a un valore più basso durante la generazione.",
+      "La conversione degli input testuali in token numerici.",
+      "L'uso di un monitor con risoluzione non adatta all'interfaccia."
+    ],
+    "risposta_corretta": "L'inserimento nel contesto di informazioni fuorvianti che influenzano negativamente le risposte successive.",
+    "spiegazione": "La risposta corretta è A. Il context poisoning contamina il contesto con contenuti ingannevoli. B, C e D non descrivono questo rischio."
+  },
+  {
+    "id": "AI-AV-0208",
+    "categoria": "ai",
+    "livello": "avanzato",
+    "domanda": "Perché un sistema multimodale deve allineare informazioni provenienti da testo e immagini?",
+    "opzioni": [
+      "Per collegare correttamente elementi visivi e descrizioni linguistiche durante il ragionamento o la generazione.",
+      "Per impedire al modello di usare dati testuali quando riceve un'immagine.",
+      "Per trasformare ogni immagine in un file audio prima dell'analisi.",
+      "Per cancellare automaticamente le parti meno colorate dell'immagine."
+    ],
+    "risposta_corretta": "Per collegare correttamente elementi visivi e descrizioni linguistiche durante il ragionamento o la generazione.",
+    "spiegazione": "La risposta corretta è A. L'allineamento multimodale mette in relazione contenuto visivo e linguaggio. B, C e D non descrivono questo processo."
+  },
+  {
+    "id": "AI-AV-0209",
+    "categoria": "ai",
+    "livello": "avanzato",
+    "domanda": "Quale compromesso è spesso necessario quando si sceglie un modello AI per un'app reale?",
+    "opzioni": [
+      "Bilanciare qualità delle risposte, latenza, costo computazionale e risorse disponibili.",
+      "Scegliere sempre il modello più grande senza considerare tempi e costi.",
+      "Usare solo modelli non addestrati per evitare ogni errore.",
+      "Eliminare i test perché le metriche rallentano l'applicazione."
+    ],
+    "risposta_corretta": "Bilanciare qualità delle risposte, latenza, costo computazionale e risorse disponibili.",
+    "spiegazione": "La risposta corretta è A. In produzione bisogna bilanciare qualità e vincoli pratici. B è inefficiente, C non ha senso operativo, D rimuove controlli fondamentali."
+  },
+  {
+    "id": "AI-AV-0210",
+    "categoria": "ai",
+    "livello": "avanzato",
+    "domanda": "Che cosa indica un modello Mixture of Experts?",
+    "opzioni": [
+      "Un'architettura che può attivare solo una parte di esperti specializzati per elaborare un input.",
+      "Un modello composto da molte copie identiche sempre tutte attive per ogni token.",
+      "Un sistema che sceglie casualmente un database esterno senza usare il contenuto dell'input.",
+      "Un metodo per trasformare immagini in codice eseguibile senza controlli."
+    ],
+    "risposta_corretta": "Un'architettura che può attivare solo una parte di esperti specializzati per elaborare un input.",
+    "spiegazione": "La risposta corretta è A. Nei Mixture of Experts una rete di routing seleziona esperti rilevanti. B, C e D non descrivono correttamente questa architettura."
+  },
+  {
+    "id": "AI-AV-0211",
+    "categoria": "ai",
+    "livello": "avanzato",
+    "domanda": "Perché le guardrail sono importanti in un sistema AI usato da utenti finali?",
+    "opzioni": [
+      "Per limitare comportamenti rischiosi, applicare regole e gestire richieste non adatte.",
+      "Per aumentare il numero di parametri del modello durante l'inferenza.",
+      "Per sostituire completamente la progettazione del prodotto.",
+      "Per impedire qualsiasi risposta anche quando la richiesta è lecita."
+    ],
+    "risposta_corretta": "Per limitare comportamenti rischiosi, applicare regole e gestire richieste non adatte.",
+    "spiegazione": "La risposta corretta è A. Le guardrail aiutano a controllare sicurezza e comportamento. B riguarda architettura, C è troppo ampio, D sarebbe un blocco eccessivo."
+  },
+  {
+    "id": "AI-AV-0212",
+    "categoria": "ai",
+    "livello": "avanzato",
+    "domanda": "Perché valutare le allucinazioni richiede spesso più di una metrica automatica semplice?",
+    "opzioni": [
+      "Perché serve confrontare la risposta con fonti, contesto e correttezza fattuale, non solo con la forma del testo.",
+      "Perché le allucinazioni compaiono solo nelle immagini e mai nel testo.",
+      "Perché una metrica automatica trasforma sempre una risposta falsa in una vera.",
+      "Perché la lunghezza della risposta è sufficiente a dimostrare la sua accuratezza."
+    ],
+    "risposta_corretta": "Perché serve confrontare la risposta con fonti, contesto e correttezza fattuale, non solo con la forma del testo.",
+    "spiegazione": "La risposta corretta è A. Le allucinazioni riguardano accuratezza e supporto informativo. B, C e D sono interpretazioni errate."
+  },
+  {
+    "id": "AI-AV-0213",
+    "categoria": "ai",
+    "livello": "avanzato",
+    "domanda": "Che cosa rende delicata la memoria a lungo termine in un assistente AI personale?",
+    "opzioni": [
+      "Deve conservare informazioni utili senza salvare dati inutili, sensibili o fuori contesto.",
+      "Deve salvare ogni frase dell'utente senza distinzione.",
+      "Deve impedire all'utente di correggere preferenze già memorizzate.",
+      "Deve sostituire tutte le funzioni dell'applicazione principale."
+    ],
+    "risposta_corretta": "Deve conservare informazioni utili senza salvare dati inutili, sensibili o fuori contesto.",
+    "spiegazione": "La risposta corretta è A. La memoria richiede utilità, controllo e attenzione alla privacy. B è eccessivo, C nega il controllo dell'utente, D confonde memoria e funzionalità dell'app."
+  },
+  {
+    "id": "AI-AV-0214",
+    "categoria": "ai",
+    "livello": "avanzato",
+    "domanda": "Perché un agente AI dovrebbe verificare l'esito di uno strumento prima di procedere con il passo successivo?",
+    "opzioni": [
+      "Per evitare che errori, risultati vuoti o dati inattesi vengano usati come se fossero corretti.",
+      "Per rallentare volontariamente ogni operazione anche quando il risultato è chiaro.",
+      "Per impedire al sistema di registrare log utili al debug.",
+      "Per sostituire il controllo qualità con una risposta più lunga."
+    ],
+    "risposta_corretta": "Per evitare che errori, risultati vuoti o dati inattesi vengano usati come se fossero corretti.",
+    "spiegazione": "La risposta corretta è A. Verificare l'esito degli strumenti riduce propagazione degli errori. B, C e D non descrivono una buona progettazione di agenti."
   }
 ]
