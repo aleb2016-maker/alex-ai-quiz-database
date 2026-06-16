@@ -462,13 +462,13 @@
     "livello": "intermedio",
     "domanda": "Perché gli enzimi sono importanti nelle reazioni biologiche?",
     "opzioni": [
-      "Accelerano le reazioni abbassando l’energia di attivazione",
-      "Sostituiscono sempre il DNA dentro il nucleo",
-      "Consumano tutti i prodotti della reazione",
-      "Impediscono qualunque trasformazione chimica"
+      "Abbassano l’energia di attivazione e rendono più rapide le reazioni biologiche",
+      "Aumentano l’energia di attivazione per bloccare reazioni non necessarie",
+      "Forniscono direttamente tutta l’energia consumata durante ogni reazione cellulare",
+      "Trasformano i prodotti finali in nuovi geni da usare nella sintesi proteica"
     ],
-    "risposta_corretta": "Accelerano le reazioni abbassando l’energia di attivazione",
-    "spiegazione": "Gli enzimi sono catalizzatori biologici: rendono più rapide molte reazioni cellulari senza essere consumati definitivamente.",
+    "risposta_corretta": "Abbassano l’energia di attivazione e rendono più rapide le reazioni biologiche",
+    "spiegazione": "Gli enzimi sono catalizzatori biologici: abbassano l’energia di attivazione e rendono più rapide molte reazioni cellulari senza essere consumati nel processo.",
     "tags": [
       "biologia",
       "enzimi",
@@ -478,7 +478,13 @@
     "distrattore_forte": "Consumano tutti i prodotti della reazione",
     "punteggio_distrattore_forte": 4,
     "motivo_distrattore_forte": "È vicino perché riguarda il ruolo nelle reazioni, ma gli enzimi non consumano tutti i prodotti.",
-    "qualita": "controllata"
+    "qualita": "controllata",
+    "spiegazioni_opzioni": {
+      "Abbassano l’energia di attivazione e rendono più rapide le reazioni biologiche": "Corretta: risponde in modo preciso al concetto biologico richiesto.",
+      "Aumentano l’energia di attivazione per bloccare reazioni non necessarie": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio biologico non corretto.",
+      "Forniscono direttamente tutta l’energia consumata durante ogni reazione cellulare": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio biologico non corretto.",
+      "Trasformano i prodotti finali in nuovi geni da usare nella sintesi proteica": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio biologico non corretto."
+    }
   },
   {
     "id": "BIO_018",
@@ -487,13 +493,13 @@
     "livello": "intermedio",
     "domanda": "Che cosa distingue la mitosi dalla meiosi?",
     "opzioni": [
-      "La mitosi produce cellule geneticamente simili, la meiosi produce gameti con metà cromosomi",
-      "La mitosi avviene solo nei virus, la meiosi solo nei batteri",
-      "La mitosi elimina il DNA, la meiosi crea sempre organi completi",
-      "La mitosi produce sempre quattro cellule sessuali diverse"
+      "La mitosi produce cellule somatiche simili, la meiosi produce gameti geneticamente variabili",
+      "La mitosi produce gameti aploidi, la meiosi produce cellule somatiche diploidi identiche",
+      "La mitosi separa cromosomi omologhi, la meiosi copia solo il DNA senza divisione cellulare",
+      "La mitosi riduce il numero cromosomico, la meiosi lo conserva nelle cellule dei tessuti"
     ],
-    "risposta_corretta": "La mitosi produce cellule geneticamente simili, la meiosi produce gameti con metà cromosomi",
-    "spiegazione": "La mitosi serve alla crescita e al rinnovamento cellulare. La meiosi produce gameti con numero cromosomico dimezzato.",
+    "risposta_corretta": "La mitosi produce cellule somatiche simili, la meiosi produce gameti geneticamente variabili",
+    "spiegazione": "La mitosi serve alla crescita e al rinnovamento dei tessuti e produce cellule molto simili. La meiosi produce gameti, dimezza il numero cromosomico e aumenta la variabilità genetica.",
     "tags": [
       "biologia",
       "mitosi",
@@ -504,7 +510,13 @@
     "distrattore_forte": "La mitosi produce sempre quattro cellule sessuali diverse",
     "punteggio_distrattore_forte": 4,
     "motivo_distrattore_forte": "È vicino perché descrive un risultato legato alla meiosi, ma lo attribuisce alla mitosi.",
-    "qualita": "controllata"
+    "qualita": "controllata",
+    "spiegazioni_opzioni": {
+      "La mitosi produce cellule somatiche simili, la meiosi produce gameti geneticamente variabili": "Corretta: risponde in modo preciso al concetto biologico richiesto.",
+      "La mitosi produce gameti aploidi, la meiosi produce cellule somatiche diploidi identiche": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio biologico non corretto.",
+      "La mitosi separa cromosomi omologhi, la meiosi copia solo il DNA senza divisione cellulare": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio biologico non corretto.",
+      "La mitosi riduce il numero cromosomico, la meiosi lo conserva nelle cellule dei tessuti": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio biologico non corretto."
+    }
   },
   {
     "id": "BIO_019",
@@ -513,13 +525,13 @@
     "livello": "intermedio",
     "domanda": "Che cosa avviene durante la trascrizione del DNA?",
     "opzioni": [
-      "Viene prodotta una molecola di RNA usando il DNA come stampo",
-      "Viene costruita direttamente una proteina completa nel nucleo",
-      "Il DNA viene trasformato sempre in una molecola di glucosio",
-      "I cromosomi vengono eliminati dalla cellula"
+      "Una sequenza di DNA viene copiata in una molecola di RNA complementare",
+      "Una molecola di RNA viene tradotta direttamente in una nuova sequenza di DNA",
+      "Una proteina viene copiata in RNA usando ribosomi come stampo principale",
+      "Il DNA viene duplicato integralmente per preparare la divisione cellulare"
     ],
-    "risposta_corretta": "Viene prodotta una molecola di RNA usando il DNA come stampo",
-    "spiegazione": "Durante la trascrizione, un tratto di DNA viene copiato in RNA. Questo RNA può poi essere usato per produrre proteine.",
+    "risposta_corretta": "Una sequenza di DNA viene copiata in una molecola di RNA complementare",
+    "spiegazione": "Durante la trascrizione, l’informazione contenuta in un tratto di DNA viene copiata in una molecola di RNA. La traduzione, invece, usa l’RNA per sintetizzare proteine.",
     "tags": [
       "biologia",
       "dna",
@@ -530,7 +542,13 @@
     "distrattore_forte": "Viene costruita direttamente una proteina completa nel nucleo",
     "punteggio_distrattore_forte": 4,
     "motivo_distrattore_forte": "È vicino perché fa parte del flusso dell’informazione genetica, ma la produzione della proteina avviene nella traduzione.",
-    "qualita": "controllata"
+    "qualita": "controllata",
+    "spiegazioni_opzioni": {
+      "Una sequenza di DNA viene copiata in una molecola di RNA complementare": "Corretta: risponde in modo preciso al concetto biologico richiesto.",
+      "Una molecola di RNA viene tradotta direttamente in una nuova sequenza di DNA": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio biologico non corretto.",
+      "Una proteina viene copiata in RNA usando ribosomi come stampo principale": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio biologico non corretto.",
+      "Il DNA viene duplicato integralmente per preparare la divisione cellulare": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio biologico non corretto."
+    }
   },
   {
     "id": "BIO_020",
@@ -539,13 +557,13 @@
     "livello": "intermedio",
     "domanda": "Perché i globuli rossi sono fondamentali per il corpo umano?",
     "opzioni": [
-      "Trasportano ossigeno grazie all’emoglobina",
-      "Producono direttamente tutti gli ormoni del corpo",
-      "Distruggono sempre ogni tipo di tessuto",
-      "Generano impulsi nervosi nel cervello"
+      "Trasportano ossigeno grazie all’emoglobina presente al loro interno",
+      "Producono anticorpi specifici contro virus e batteri nel plasma sanguigno",
+      "Coagulano il sangue formando reti di fibrina nelle ferite aperte",
+      "Distruggono cellule infette riconoscendo antigeni sulla loro membrana"
     ],
-    "risposta_corretta": "Trasportano ossigeno grazie all’emoglobina",
-    "spiegazione": "I globuli rossi contengono emoglobina, una proteina capace di legare l’ossigeno e trasportarlo ai tessuti.",
+    "risposta_corretta": "Trasportano ossigeno grazie all’emoglobina presente al loro interno",
+    "spiegazione": "I globuli rossi sono fondamentali perché contengono emoglobina, una proteina capace di legare e trasportare ossigeno dai polmoni ai tessuti.",
     "tags": [
       "biologia",
       "sangue",
@@ -556,7 +574,13 @@
     "distrattore_forte": "Producono direttamente tutti gli ormoni del corpo",
     "punteggio_distrattore_forte": 4,
     "motivo_distrattore_forte": "È vicino perché riguarda una funzione del corpo, ma la produzione ormonale non è il compito principale dei globuli rossi.",
-    "qualita": "controllata"
+    "qualita": "controllata",
+    "spiegazioni_opzioni": {
+      "Trasportano ossigeno grazie all’emoglobina presente al loro interno": "Corretta: risponde in modo preciso al concetto biologico richiesto.",
+      "Producono anticorpi specifici contro virus e batteri nel plasma sanguigno": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio biologico non corretto.",
+      "Coagulano il sangue formando reti di fibrina nelle ferite aperte": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio biologico non corretto.",
+      "Distruggono cellule infette riconoscendo antigeni sulla loro membrana": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio biologico non corretto."
+    }
   },
   {
     "id": "BIO_021",
@@ -590,13 +614,13 @@
     "livello": "avanzato",
     "domanda": "Perché una mutazione genetica non produce sempre un effetto visibile sull’organismo?",
     "opzioni": [
-      "Perché può cadere in una regione non codificante o non modificare la proteina prodotta",
-      "Perché ogni mutazione viene cancellata immediatamente da tutti i cromosomi",
-      "Perché il DNA non influenza mai le caratteristiche biologiche",
-      "Perché tutte le mutazioni producono sempre lo stesso fenotipo"
+      "Può cadere in una regione non codificante o non cambiare la funzione della proteina",
+      "Produce necessariamente una nuova proteina visibile in ogni cellula dell’organismo",
+      "Elimina l’intero cromosoma interessato rendendo ogni effetto subito osservabile",
+      "Impedisce in ogni caso la trascrizione di tutti i geni collegati a quel carattere"
     ],
-    "risposta_corretta": "Perché può cadere in una regione non codificante o non modificare la proteina prodotta",
-    "spiegazione": "Alcune mutazioni non alterano una proteina o avvengono in regioni che non codificano direttamente. Per questo possono non produrre effetti visibili.",
+    "risposta_corretta": "Può cadere in una regione non codificante o non cambiare la funzione della proteina",
+    "spiegazione": "Una mutazione non produce necessariamente un effetto visibile: può trovarsi in regioni non codificanti oppure non modificare in modo rilevante la proteina prodotta.",
     "tags": [
       "biologia",
       "genetica",
@@ -607,7 +631,13 @@
     "distrattore_forte": "Perché ogni mutazione viene cancellata immediatamente da tutti i cromosomi",
     "punteggio_distrattore_forte": 4,
     "motivo_distrattore_forte": "È vicino perché richiama i meccanismi di riparazione, ma non tutte le mutazioni vengono cancellate immediatamente.",
-    "qualita": "controllata"
+    "qualita": "controllata",
+    "spiegazioni_opzioni": {
+      "Può cadere in una regione non codificante o non cambiare la funzione della proteina": "Corretta: risponde in modo preciso al concetto biologico richiesto.",
+      "Produce necessariamente una nuova proteina visibile in ogni cellula dell’organismo": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio biologico non corretto.",
+      "Elimina l’intero cromosoma interessato rendendo ogni effetto subito osservabile": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio biologico non corretto.",
+      "Impedisce in ogni caso la trascrizione di tutti i geni collegati a quel carattere": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio biologico non corretto."
+    }
   },
   {
     "id": "BIO_023",
@@ -616,13 +646,13 @@
     "livello": "avanzato",
     "domanda": "Che cosa rappresenta una relazione di predazione in un ecosistema?",
     "opzioni": [
-      "Un organismo si nutre di un altro organismo",
-      "Due organismi producono sempre lo stesso DNA",
-      "Una specie elimina sempre il bisogno di energia",
-      "Un organismo trasforma il suolo in ossigeno puro"
+      "Un organismo consuma un altro organismo come fonte di energia e materia",
+      "Due organismi ricavano beneficio reciproco senza perdita per nessuno dei due",
+      "Un organismo vive su un altro ottenendo risorse e danneggiandolo gradualmente",
+      "Due organismi competono per la stessa risorsa limitata nello stesso ambiente"
     ],
-    "risposta_corretta": "Un organismo si nutre di un altro organismo",
-    "spiegazione": "Nella predazione un predatore cattura e consuma una preda. È una relazione ecologica importante per il flusso di energia negli ecosistemi.",
+    "risposta_corretta": "Un organismo consuma un altro organismo come fonte di energia e materia",
+    "spiegazione": "La predazione è una relazione ecologica in cui un organismo, il predatore, si nutre di un altro organismo, la preda.",
     "tags": [
       "biologia",
       "ecologia",
@@ -633,7 +663,13 @@
     "distrattore_forte": "Due organismi producono sempre lo stesso DNA",
     "punteggio_distrattore_forte": 4,
     "motivo_distrattore_forte": "È vicino perché parla di relazione tra organismi, ma non descrive il rapporto alimentare della predazione.",
-    "qualita": "controllata"
+    "qualita": "controllata",
+    "spiegazioni_opzioni": {
+      "Un organismo consuma un altro organismo come fonte di energia e materia": "Corretta: risponde in modo preciso al concetto biologico richiesto.",
+      "Due organismi ricavano beneficio reciproco senza perdita per nessuno dei due": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio biologico non corretto.",
+      "Un organismo vive su un altro ottenendo risorse e danneggiandolo gradualmente": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio biologico non corretto.",
+      "Due organismi competono per la stessa risorsa limitata nello stesso ambiente": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio biologico non corretto."
+    }
   },
   {
     "id": "BIO_024",
@@ -642,13 +678,13 @@
     "livello": "avanzato",
     "domanda": "Perché la biodiversità può rendere un ecosistema più stabile?",
     "opzioni": [
-      "Perché aumenta la varietà di specie e funzioni ecologiche disponibili",
-      "Perché elimina completamente ogni competizione tra organismi",
-      "Perché rende tutte le specie identiche tra loro",
-      "Perché impedisce sempre qualunque cambiamento ambientale"
+      "Aumenta la varietà di specie e funzioni, rendendo l’ecosistema più resistente ai cambiamenti",
+      "Riduce il numero di relazioni ecologiche e rende più semplice ogni catena alimentare",
+      "Concentra tutta l’energia in una sola specie dominante più adatta alle perturbazioni",
+      "Elimina la competizione tra organismi usando una sola risorsa principale condivisa"
     ],
-    "risposta_corretta": "Perché aumenta la varietà di specie e funzioni ecologiche disponibili",
-    "spiegazione": "Un ecosistema con maggiore biodiversità può avere più ruoli ecologici e maggiori possibilità di compensare la perdita o la riduzione di alcune specie.",
+    "risposta_corretta": "Aumenta la varietà di specie e funzioni, rendendo l’ecosistema più resistente ai cambiamenti",
+    "spiegazione": "Un ecosistema con maggiore biodiversità contiene più specie e ruoli ecologici. Questa varietà può renderlo più stabile e più capace di reagire a cambiamenti o disturbi.",
     "tags": [
       "biologia",
       "biodiversita",
@@ -659,7 +695,13 @@
     "distrattore_forte": "Perché elimina completamente ogni competizione tra organismi",
     "punteggio_distrattore_forte": 4,
     "motivo_distrattore_forte": "È vicino perché riguarda le relazioni ecologiche, ma la biodiversità non elimina automaticamente la competizione.",
-    "qualita": "controllata"
+    "qualita": "controllata",
+    "spiegazioni_opzioni": {
+      "Aumenta la varietà di specie e funzioni, rendendo l’ecosistema più resistente ai cambiamenti": "Corretta: risponde in modo preciso al concetto biologico richiesto.",
+      "Riduce il numero di relazioni ecologiche e rende più semplice ogni catena alimentare": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio biologico non corretto.",
+      "Concentra tutta l’energia in una sola specie dominante più adatta alle perturbazioni": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio biologico non corretto.",
+      "Elimina la competizione tra organismi usando una sola risorsa principale condivisa": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio biologico non corretto."
+    }
   },
   {
     "id": "BIO_025",
@@ -824,13 +866,13 @@
     "livello": "avanzato",
     "domanda": "Perché una piramide alimentare tende ad avere meno biomassa ai livelli trofici superiori?",
     "opzioni": [
-      "Perché a ogni passaggio una parte dell’energia viene dispersa e non trasferita al livello successivo",
-      "Perché i predatori producono sempre più energia dei produttori",
-      "Perché le piante consumano tutti gli animali erbivori",
-      "Perché l’energia aumenta automaticamente salendo nella catena alimentare"
+      "A ogni passaggio trofico molta energia viene dispersa come calore o usata nel metabolismo",
+      "A ogni passaggio trofico tutta la biomassa viene trasferita integralmente al livello superiore",
+      "I produttori consumano più energia dei predatori e lasciano poca materia ai consumatori",
+      "I livelli superiori accumulano solo acqua, mentre la biomassa resta nei decompositori"
     ],
-    "risposta_corretta": "Perché a ogni passaggio una parte dell’energia viene dispersa e non trasferita al livello successivo",
-    "spiegazione": "Nel passaggio da un livello trofico al successivo molta energia viene usata o dispersa come calore. Per questo la biomassa disponibile tende a diminuire.",
+    "risposta_corretta": "A ogni passaggio trofico molta energia viene dispersa come calore o usata nel metabolismo",
+    "spiegazione": "Nelle piramidi alimentari solo una parte dell’energia passa al livello trofico successivo. Molto viene usato nel metabolismo o disperso come calore, quindi ai livelli superiori resta meno biomassa.",
     "tags": [
       "biologia",
       "ecologia",
@@ -841,7 +883,13 @@
     "distrattore_forte": "Perché l’energia aumenta automaticamente salendo nella catena alimentare",
     "punteggio_distrattore_forte": 4,
     "motivo_distrattore_forte": "È vicino perché riguarda il flusso energetico, ma inverte il principio: l’energia disponibile diminuisce.",
-    "qualita": "controllata"
+    "qualita": "controllata",
+    "spiegazioni_opzioni": {
+      "A ogni passaggio trofico molta energia viene dispersa come calore o usata nel metabolismo": "Corretta: risponde in modo preciso al concetto biologico richiesto.",
+      "A ogni passaggio trofico tutta la biomassa viene trasferita integralmente al livello superiore": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio biologico non corretto.",
+      "I produttori consumano più energia dei predatori e lasciano poca materia ai consumatori": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio biologico non corretto.",
+      "I livelli superiori accumulano solo acqua, mentre la biomassa resta nei decompositori": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio biologico non corretto."
+    }
   },
   {
     "id": "BIO_032",

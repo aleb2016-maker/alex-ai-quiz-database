@@ -7,7 +7,7 @@ Questo report separa i problemi qualitativi reali dagli avvisi non bloccanti sul
 | Motore | Domande | Problemi qualità reali | Risposta in A nel sorgente |
 |---|---:|---:|---:|
 | Scienze generali | 40 | 16 | 34 |
-| Biologia | 40 | 14 | 40 |
+| Biologia | 40 | 6 | 40 |
 | Fisica | 40 | 21 | 40 |
 | Chimica | 40 | 23 | 40 |
 | Fisica quantistica | 40 | 21 | 40 |
@@ -356,7 +356,7 @@ Distribuzione risposta corretta nel sorgente:
 ## Biologia
 
 Domande sorgente: **40**
-Domande con problemi qualità reali: **14**
+Domande con problemi qualità reali: **6**
 Risposte corrette in A nel sorgente: **40**
 
 Distribuzione risposta corretta nel sorgente:
@@ -366,149 +366,6 @@ Distribuzione risposta corretta nel sorgente:
 ```
 
 ### Domande da migliorare davvero
-
-### BIO_017 — livello: intermedio
-
-**Domanda:** Perché gli enzimi sono importanti nelle reazioni biologiche?
-
-**Opzioni attuali:**
-- A. Accelerano le reazioni abbassando l’energia di attivazione ✅
-- B. Sostituiscono sempre il DNA dentro il nucleo
-- C. Consumano tutti i prodotti della reazione
-- D. Impediscono qualunque trasformazione chimica
-
-**Risposta corretta nel sorgente:** A
-
-**Problemi reali:**
-- Possibile opzione debole/generica: contiene “sempre”.
-
-**Regola di revisione:**
-- Ogni domanda deve avere almeno un distrattore forte: una risposta sbagliata molto vicina alla corretta, ma falsa per un dettaglio preciso.
-- Evitare parole assolute come “sempre” e “mai”, se rendono il distrattore troppo eliminabile.
-- Rendere le quattro opzioni simili per lunghezza, struttura e livello tecnico.
-
-### BIO_018 — livello: intermedio
-
-**Domanda:** Che cosa distingue la mitosi dalla meiosi?
-
-**Opzioni attuali:**
-- A. La mitosi produce cellule geneticamente simili, la meiosi produce gameti con metà cromosomi ✅
-- B. La mitosi avviene solo nei virus, la meiosi solo nei batteri
-- C. La mitosi elimina il DNA, la meiosi crea sempre organi completi
-- D. La mitosi produce sempre quattro cellule sessuali diverse
-
-**Risposta corretta nel sorgente:** A
-
-**Problemi reali:**
-- Possibile opzione debole/generica: contiene “sempre”.
-- Possibile opzione debole/generica: contiene “sempre”.
-
-**Regola di revisione:**
-- Ogni domanda deve avere almeno un distrattore forte: una risposta sbagliata molto vicina alla corretta, ma falsa per un dettaglio preciso.
-- Evitare parole assolute come “sempre” e “mai”, se rendono il distrattore troppo eliminabile.
-- Rendere le quattro opzioni simili per lunghezza, struttura e livello tecnico.
-
-### BIO_019 — livello: intermedio
-
-**Domanda:** Che cosa avviene durante la trascrizione del DNA?
-
-**Opzioni attuali:**
-- A. Viene prodotta una molecola di RNA usando il DNA come stampo ✅
-- B. Viene costruita direttamente una proteina completa nel nucleo
-- C. Il DNA viene trasformato sempre in una molecola di glucosio
-- D. I cromosomi vengono eliminati dalla cellula
-
-**Risposta corretta nel sorgente:** A
-
-**Problemi reali:**
-- Possibile opzione debole/generica: contiene “sempre”.
-
-**Regola di revisione:**
-- Ogni domanda deve avere almeno un distrattore forte: una risposta sbagliata molto vicina alla corretta, ma falsa per un dettaglio preciso.
-- Evitare parole assolute come “sempre” e “mai”, se rendono il distrattore troppo eliminabile.
-- Rendere le quattro opzioni simili per lunghezza, struttura e livello tecnico.
-
-### BIO_020 — livello: intermedio
-
-**Domanda:** Perché i globuli rossi sono fondamentali per il corpo umano?
-
-**Opzioni attuali:**
-- A. Trasportano ossigeno grazie all’emoglobina ✅
-- B. Producono direttamente tutti gli ormoni del corpo
-- C. Distruggono sempre ogni tipo di tessuto
-- D. Generano impulsi nervosi nel cervello
-
-**Risposta corretta nel sorgente:** A
-
-**Problemi reali:**
-- Possibile opzione debole/generica: contiene “sempre”.
-
-**Regola di revisione:**
-- Ogni domanda deve avere almeno un distrattore forte: una risposta sbagliata molto vicina alla corretta, ma falsa per un dettaglio preciso.
-- Evitare parole assolute come “sempre” e “mai”, se rendono il distrattore troppo eliminabile.
-- Rendere le quattro opzioni simili per lunghezza, struttura e livello tecnico.
-
-### BIO_022 — livello: avanzato
-
-**Domanda:** Perché una mutazione genetica non produce sempre un effetto visibile sull’organismo?
-
-**Opzioni attuali:**
-- A. Perché può cadere in una regione non codificante o non modificare la proteina prodotta ✅
-- B. Perché ogni mutazione viene cancellata immediatamente da tutti i cromosomi
-- C. Perché il DNA non influenza mai le caratteristiche biologiche
-- D. Perché tutte le mutazioni producono sempre lo stesso fenotipo
-
-**Risposta corretta nel sorgente:** A
-
-**Problemi reali:**
-- Possibile opzione debole/generica: contiene “mai”.
-- Possibile opzione debole/generica: contiene “sempre”.
-
-**Regola di revisione:**
-- Ogni domanda deve avere almeno un distrattore forte: una risposta sbagliata molto vicina alla corretta, ma falsa per un dettaglio preciso.
-- Evitare parole assolute come “sempre” e “mai”, se rendono il distrattore troppo eliminabile.
-- Rendere le quattro opzioni simili per lunghezza, struttura e livello tecnico.
-
-### BIO_023 — livello: avanzato
-
-**Domanda:** Che cosa rappresenta una relazione di predazione in un ecosistema?
-
-**Opzioni attuali:**
-- A. Un organismo si nutre di un altro organismo ✅
-- B. Due organismi producono sempre lo stesso DNA
-- C. Una specie elimina sempre il bisogno di energia
-- D. Un organismo trasforma il suolo in ossigeno puro
-
-**Risposta corretta nel sorgente:** A
-
-**Problemi reali:**
-- Possibile opzione debole/generica: contiene “sempre”.
-- Possibile opzione debole/generica: contiene “sempre”.
-
-**Regola di revisione:**
-- Ogni domanda deve avere almeno un distrattore forte: una risposta sbagliata molto vicina alla corretta, ma falsa per un dettaglio preciso.
-- Evitare parole assolute come “sempre” e “mai”, se rendono il distrattore troppo eliminabile.
-- Rendere le quattro opzioni simili per lunghezza, struttura e livello tecnico.
-
-### BIO_024 — livello: avanzato
-
-**Domanda:** Perché la biodiversità può rendere un ecosistema più stabile?
-
-**Opzioni attuali:**
-- A. Perché aumenta la varietà di specie e funzioni ecologiche disponibili ✅
-- B. Perché elimina completamente ogni competizione tra organismi
-- C. Perché rende tutte le specie identiche tra loro
-- D. Perché impedisce sempre qualunque cambiamento ambientale
-
-**Risposta corretta nel sorgente:** A
-
-**Problemi reali:**
-- Possibile opzione debole/generica: contiene “sempre”.
-
-**Regola di revisione:**
-- Ogni domanda deve avere almeno un distrattore forte: una risposta sbagliata molto vicina alla corretta, ma falsa per un dettaglio preciso.
-- Evitare parole assolute come “sempre” e “mai”, se rendono il distrattore troppo eliminabile.
-- Rendere le quattro opzioni simili per lunghezza, struttura e livello tecnico.
 
 ### BIO_025 — livello: facile
 
@@ -524,26 +381,6 @@ Distribuzione risposta corretta nel sorgente:
 
 **Problemi reali:**
 - Manca un distrattore forte: nessuna risposta sbagliata sembra abbastanza vicina alla risposta corretta.
-
-**Regola di revisione:**
-- Ogni domanda deve avere almeno un distrattore forte: una risposta sbagliata molto vicina alla corretta, ma falsa per un dettaglio preciso.
-- Evitare parole assolute come “sempre” e “mai”, se rendono il distrattore troppo eliminabile.
-- Rendere le quattro opzioni simili per lunghezza, struttura e livello tecnico.
-
-### BIO_031 — livello: avanzato
-
-**Domanda:** Perché una piramide alimentare tende ad avere meno biomassa ai livelli trofici superiori?
-
-**Opzioni attuali:**
-- A. Perché a ogni passaggio una parte dell’energia viene dispersa e non trasferita al livello successivo ✅
-- B. Perché i predatori producono sempre più energia dei produttori
-- C. Perché le piante consumano tutti gli animali erbivori
-- D. Perché l’energia aumenta automaticamente salendo nella catena alimentare
-
-**Risposta corretta nel sorgente:** A
-
-**Problemi reali:**
-- Possibile opzione debole/generica: contiene “sempre”.
 
 **Regola di revisione:**
 - Ogni domanda deve avere almeno un distrattore forte: una risposta sbagliata molto vicina alla corretta, ma falsa per un dettaglio preciso.
