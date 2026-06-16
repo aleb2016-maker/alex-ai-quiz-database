@@ -858,22 +858,22 @@
     "percorso": "data/ai.json",
     "file_esiste": true,
     "errore_file": "",
-    "totale_domande": 3,
+    "totale_domande": 40,
     "livelli": {
-      "facile": 1,
-      "intermedio": 1,
-      "avanzato": 1
+      "facile": 12,
+      "intermedio": 14,
+      "avanzato": 14
     },
     "categorie": {
-      "ai": 3
+      "ai": 40
     },
     "posizioni_risposta": {
-      "A": 3
+      "A": 40
     },
     "problemi_tecnici_totali": 0,
     "avvisi_qualita_reali_totali": 0,
     "errori_linguistici_totali": 0,
-    "note_informative_totali": 1,
+    "note_informative_totali": 22,
     "domande_con_problemi_tecnici": [],
     "domande_con_avvisi_qualita_reali": [],
     "domande_con_errori_linguistici": [],
@@ -896,6 +896,369 @@
         "errori_linguistici": [],
         "note_informative": [
           "spiegazione: testo molto lungo, controllare leggibilità"
+        ]
+      },
+      {
+        "id": "AI-AV-0004",
+        "domanda": "In un sistema RAG, quale problema può nascere se il recupero dei documenti seleziona testi pertinenti solo in apparenza?",
+        "categoria": "ai",
+        "livello": "avanzato",
+        "opzioni": [
+          "Il modello può generare una risposta ben scritta ma basata su contesto non davvero rilevante",
+          "Il modello può produrre una risposta formalmente coerente, ma basata su dettagli non davvero utili alla domanda",
+          "Il modello può rifiutare automaticamente tutti i documenti recuperati",
+          "Il modello può bloccare la generazione ogni volta che il retrieval non è perfetto"
+        ],
+        "risposta_corretta": "Il modello può generare una risposta ben scritta ma basata su contesto non davvero rilevante",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “tutti”",
+          "spiegazione: testo molto lungo, controllare leggibilità"
+        ]
+      },
+      {
+        "id": "AI-FAC-0004",
+        "domanda": "In un sistema di intelligenza artificiale, che cosa rappresentano i dati di addestramento?",
+        "categoria": "ai",
+        "livello": "facile",
+        "opzioni": [
+          "Esempi usati dal modello per imparare schemi e relazioni",
+          "Esempi usati solo per verificare il modello dopo l'addestramento",
+          "Regole scritte manualmente per ogni singola risposta possibile",
+          "Parametri finali già imparati dal modello dopo il training"
+        ],
+        "risposta_corretta": "Esempi usati dal modello per imparare schemi e relazioni",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "spiegazione: testo molto lungo, controllare leggibilità"
+        ]
+      },
+      {
+        "id": "AI-INT-0004",
+        "domanda": "In un sistema RAG, perché si cercano documenti esterni prima di generare la risposta?",
+        "categoria": "ai",
+        "livello": "intermedio",
+        "opzioni": [
+          "Per fornire al modello informazioni aggiornate o specifiche su cui basare la risposta",
+          "Per trovare testi semanticamente simili alla domanda, anche se poi non vengono usati come contesto",
+          "Per archiviare i documenti recuperati senza inserirli nel prompt",
+          "Per confrontare la domanda con esempi simili senza generare una risposta"
+        ],
+        "risposta_corretta": "Per fornire al modello informazioni aggiornate o specifiche su cui basare la risposta",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "spiegazione: testo molto lungo, controllare leggibilità"
+        ]
+      },
+      {
+        "id": "AI-AV-0005",
+        "domanda": "Perché valutare un modello AI solo con risposte corrette o sbagliate può essere limitante?",
+        "categoria": "ai",
+        "livello": "avanzato",
+        "opzioni": [
+          "Perché alcune risposte richiedono giudizi su completezza, coerenza, sicurezza e utilità",
+          "Perché basta valutare la completezza, senza considerare coerenza, sicurezza e utilità",
+          "Perché una risposta va valutata solo in base al formato richiesto",
+          "Perché una risposta va valutata solo in base alla fluidità del testo"
+        ],
+        "risposta_corretta": "Perché alcune risposte richiedono giudizi su completezza, coerenza, sicurezza e utilità",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "spiegazione: testo molto lungo, controllare leggibilità"
+        ]
+      },
+      {
+        "id": "AI-FAC-0005",
+        "domanda": "Quale prompt è più chiaro per chiedere a un modello AI di riassumere un testo?",
+        "categoria": "ai",
+        "livello": "facile",
+        "opzioni": [
+          "Riassumi questo testo in 5 righe usando un linguaggio semplice.",
+          "Riassumi questo testo usando un linguaggio semplice.",
+          "Riscrivi questo testo mantenendo tutti i dettagli principali.",
+          "Riformula il testo senza ridurlo e senza cambiarne il significato."
+        ],
+        "risposta_corretta": "Riassumi questo testo in 5 righe usando un linguaggio semplice.",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “tutti”",
+          "spiegazione: testo molto lungo, controllare leggibilità"
+        ]
+      },
+      {
+        "id": "AI-AV-0007",
+        "domanda": "Quando ha più senso valutare il fine-tuning rispetto al solo prompt engineering?",
+        "categoria": "ai",
+        "livello": "avanzato",
+        "opzioni": [
+          "Quando servono comportamenti stabili e specifici su molti esempi simili",
+          "Quando serve un comportamento stabile, ma si dispone di un solo esempio isolato",
+          "Quando il problema dipende soprattutto da documenti recuperati male",
+          "Quando basta cambiare il prompt per correggere una risposta singola"
+        ],
+        "risposta_corretta": "Quando servono comportamenti stabili e specifici su molti esempi simili",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "spiegazione: testo molto lungo, controllare leggibilità"
+        ]
+      },
+      {
+        "id": "AI-FAC-0007",
+        "domanda": "Che cosa fa principalmente un modello linguistico?",
+        "categoria": "ai",
+        "livello": "facile",
+        "opzioni": [
+          "Lavora con il linguaggio per comprendere o generare testo",
+          "Classifica contenuti testuali senza produrre nuove frasi",
+          "Recupera pagine web pertinenti senza formulare una risposta",
+          "Analizza solo dati numerici organizzati in tabelle"
+        ],
+        "risposta_corretta": "Lavora con il linguaggio per comprendere o generare testo",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "spiegazione: testo molto lungo, controllare leggibilità"
+        ]
+      },
+      {
+        "id": "AI-INT-0007",
+        "domanda": "Quale elemento rende più controllabile la risposta di un modello AI?",
+        "categoria": "ai",
+        "livello": "intermedio",
+        "opzioni": [
+          "Specificare ruolo, obiettivo, vincoli e formato della risposta",
+          "Specificare solo il ruolo del modello, senza indicare vincoli, obiettivo e formato",
+          "Fornire molti obiettivi diversi senza indicare priorità",
+          "Chiedere una risposta generica lasciando formato e criteri aperti"
+        ],
+        "risposta_corretta": "Specificare ruolo, obiettivo, vincoli e formato della risposta",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "spiegazione: testo molto lungo, controllare leggibilità"
+        ]
+      },
+      {
+        "id": "AI-FAC-0008",
+        "domanda": "Quando un modello AI inventa una risposta falsa ma la presenta come sicura, come viene chiamato di solito questo problema?",
+        "categoria": "ai",
+        "livello": "facile",
+        "opzioni": [
+          "Allucinazione",
+          "Bias del dataset",
+          "Overfitting",
+          "Errore di classificazione"
+        ],
+        "risposta_corretta": "Allucinazione",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "spiegazione: testo molto lungo, controllare leggibilità"
+        ]
+      },
+      {
+        "id": "AI-INT-0008",
+        "domanda": "Che cosa può succedere se un dataset contiene molti esempi sbilanciati verso una sola classe?",
+        "categoria": "ai",
+        "livello": "intermedio",
+        "opzioni": [
+          "Il modello può imparare a favorire quella classe nelle previsioni",
+          "Il modello può imparare a favorire la classe meno presente per compensare automaticamente lo sbilanciamento",
+          "Il modello può migliorare sulle classi rare anche senza esempi sufficienti",
+          "Il modello può rendere inutile ogni metrica diversa dall'accuratezza"
+        ],
+        "risposta_corretta": "Il modello può imparare a favorire quella classe nelle previsioni",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "spiegazione: testo molto lungo, controllare leggibilità"
+        ]
+      },
+      {
+        "id": "AI-AV-0101",
+        "domanda": "Qual è un rischio importante se il retrieval di un sistema RAG recupera documenti solo apparentemente pertinenti?",
+        "categoria": "ai",
+        "livello": "avanzato",
+        "opzioni": [
+          "Il modello può generare una risposta ben scritta ma basata su contesto fuorviante",
+          "Il modello può generare una risposta fluida usando documenti recuperati solo in apparenza pertinenti",
+          "Il modello rifiuta automaticamente ogni documento non perfettamente pertinente",
+          "Il database vettoriale elimina da solo tutti i documenti non usati"
+        ],
+        "risposta_corretta": "Il modello può generare una risposta ben scritta ma basata su contesto fuorviante",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “tutti”"
+        ]
+      },
+      {
+        "id": "AI-INT-0101",
+        "domanda": "In un sistema RAG, perché la scelta dei chunk del documento è importante?",
+        "categoria": "ai",
+        "livello": "intermedio",
+        "opzioni": [
+          "Perché chunk troppo grandi o troppo piccoli possono rendere il recupero meno preciso",
+          "Perché chunk più grandi possono contenere più contesto, ma anche mescolare dettagli non pertinenti",
+          "Perché i chunk servono ad addestrare nuovamente il modello prima di ogni risposta",
+          "Perché i chunk modificano in modo permanente i pesi del modello"
+        ],
+        "risposta_corretta": "Perché chunk troppo grandi o troppo piccoli possono rendere il recupero meno preciso",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "spiegazione: testo molto lungo, controllare leggibilità"
+        ]
+      },
+      {
+        "id": "AI-FAC-0102",
+        "domanda": "Quale prompt è più chiaro per chiedere un riassunto?",
+        "categoria": "ai",
+        "livello": "facile",
+        "opzioni": [
+          "Riassumi questo testo in 5 righe indicando le idee principali.",
+          "Riassumi questo testo indicando le idee principali.",
+          "Spiega questo testo mantenendo tutti i dettagli importanti.",
+          "Riscrivi questo testo senza ridurlo e senza selezionare le idee principali."
+        ],
+        "risposta_corretta": "Riassumi questo testo in 5 righe indicando le idee principali.",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “tutti”"
+        ]
+      },
+      {
+        "id": "AI-FAC-0105",
+        "domanda": "Che cosa significa dire che un modello generativo produce testo?",
+        "categoria": "ai",
+        "livello": "facile",
+        "opzioni": [
+          "Che crea una risposta nuova seguendo il contesto ricevuto",
+          "Che riformula il testo ricevuto senza produrre realmente contenuto nuovo",
+          "Che rielabora frasi molto simili a quelle viste nei dati senza costruire nuovo contesto",
+          "Che seleziona una frase già scritta senza adattarla al contesto"
+        ],
+        "risposta_corretta": "Che crea una risposta nuova seguendo il contesto ricevuto",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "spiegazione: possibile frase poco fluida, controllare gli incontri vocalici"
+        ]
+      },
+      {
+        "id": "AI-INT-0105",
+        "domanda": "Che cosa può succedere se un dataset è molto sbilanciato?",
+        "categoria": "ai",
+        "livello": "intermedio",
+        "opzioni": [
+          "Il modello può funzionare bene su alcuni casi e male su altri meno rappresentati",
+          "Il modello può favorire i casi più presenti e sbagliare più spesso quelli rari",
+          "Il modello diventa automaticamente più equo su tutte le classi",
+          "Il modello corregge da solo la mancanza di esempi nelle classi rare"
+        ],
+        "risposta_corretta": "Il modello può funzionare bene su alcuni casi e male su altri meno rappresentati",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “tutte”"
+        ]
+      },
+      {
+        "id": "AI-INT-0106",
+        "domanda": "Perché un agente AI può usare una fase di pianificazione prima di agire?",
+        "categoria": "ai",
+        "livello": "intermedio",
+        "opzioni": [
+          "Per scegliere i passaggi e gli strumenti più adatti prima di eseguire azioni",
+          "Per scegliere una sequenza di azioni, ma senza verificare se sono coerenti con l'obiettivo",
+          "Per trasformare ogni risposta in una lista casuale di operazioni",
+          "Per saltare completamente il controllo del risultato finale"
+        ],
+        "risposta_corretta": "Per scegliere i passaggi e gli strumenti più adatti prima di eseguire azioni",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “completamente”"
+        ]
+      },
+      {
+        "id": "AI-AV-0107",
+        "domanda": "Perché un'app AI in produzione dovrebbe registrare errori e feedback degli utenti?",
+        "categoria": "ai",
+        "livello": "avanzato",
+        "opzioni": [
+          "Per individuare casi problematici reali e migliorare sicurezza, qualità e affidabilità",
+          "Per individuare problemi reali, ma senza usarli per migliorare il sistema",
+          "Per sostituire ogni test prima del rilascio",
+          "Per evitare qualsiasi aggiornamento futuro del sistema"
+        ],
+        "risposta_corretta": "Per individuare casi problematici reali e migliorare sicurezza, qualità e affidabilità",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “qualsiasi”"
+        ]
+      },
+      {
+        "id": "AI-INT-0107",
+        "domanda": "Perché conviene limitare le azioni che un agente AI può eseguire automaticamente?",
+        "categoria": "ai",
+        "livello": "intermedio",
+        "opzioni": [
+          "Per ridurre il rischio che un errore o un prompt malevolo produca azioni dannose",
+          "Per velocizzare il flusso riducendo controlli e conferme dell'utente",
+          "Per impedire al modello di leggere qualsiasi istruzione dell'utente",
+          "Per rendere impossibile ogni controllo umano sulle azioni dell'agente"
+        ],
+        "risposta_corretta": "Per ridurre il rischio che un errore o un prompt malevolo produca azioni dannose",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “impossibile”",
+          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “qualsiasi”"
         ]
       }
     ],

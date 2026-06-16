@@ -68,5 +68,857 @@
     "difficolta": 3,
     "distrattore_forte": "A riaddestrare il modello sui documenti recuperati prima di ogni risposta",
     "motivo_distrattore_forte": "È vicino perché parla di documenti recuperati e modello, ma è sbagliato perché un sistema RAG usa i documenti come contesto, non riaddestra il modello a ogni domanda."
+  },
+  {
+    "id": "AI-AV-0004",
+    "categoria": "ai",
+    "sottocategoria": "rag",
+    "livello": "avanzato",
+    "domanda": "In un sistema RAG, quale problema può nascere se il recupero dei documenti seleziona testi pertinenti solo in apparenza?",
+    "opzioni": [
+      "Il modello può generare una risposta ben scritta ma basata su contesto non davvero rilevante",
+      "Il modello può produrre una risposta formalmente coerente, ma basata su dettagli non davvero utili alla domanda",
+      "Il modello può rifiutare automaticamente tutti i documenti recuperati",
+      "Il modello può bloccare la generazione ogni volta che il retrieval non è perfetto"
+    ],
+    "risposta_corretta": "Il modello può generare una risposta ben scritta ma basata su contesto non davvero rilevante",
+    "spiegazione": "Se il retrieval recupera documenti solo apparentemente pertinenti, il modello può costruire una risposta fluida ma fondata su contesto sbagliato. È un problema delicato perché la forma della risposta può sembrare convincente anche quando la base informativa è debole.",
+    "tags": [
+      "ai",
+      "rag",
+      "retrieval",
+      "qualità"
+    ],
+    "difficolta": 3,
+    "distrattore_forte": "Il modello può produrre una risposta formalmente coerente, ma basata su dettagli non davvero utili alla domanda",
+    "motivo_distrattore_forte": "È vicino perché parla di una risposta coerente, ma non identifica con precisione il rischio principale: contesto apparentemente pertinente ma informativamente insufficiente."
+  },
+  {
+    "id": "AI-FAC-0004",
+    "categoria": "ai",
+    "sottocategoria": "concetti_base",
+    "livello": "facile",
+    "domanda": "In un sistema di intelligenza artificiale, che cosa rappresentano i dati di addestramento?",
+    "opzioni": [
+      "Esempi usati dal modello per imparare schemi e relazioni",
+      "Esempi usati solo per verificare il modello dopo l'addestramento",
+      "Regole scritte manualmente per ogni singola risposta possibile",
+      "Parametri finali già imparati dal modello dopo il training"
+    ],
+    "risposta_corretta": "Esempi usati dal modello per imparare schemi e relazioni",
+    "spiegazione": "I dati di addestramento sono esempi usati dal modello per imparare schemi e relazioni. I dati di test servono invece a verificare il modello dopo l'addestramento. Le regole manuali appartengono più ai sistemi esperti tradizionali, mentre i parametri sono il risultato dell'apprendimento.",
+    "tags": [
+      "ai",
+      "training",
+      "dati"
+    ],
+    "difficolta": 1,
+    "distrattore_forte": "Esempi usati solo per verificare il modello dopo l'addestramento",
+    "motivo_distrattore_forte": "È vicino perché parla comunque di esempi e modello, ma confonde i dati di addestramento con i dati di test o validazione."
+  },
+  {
+    "id": "AI-INT-0004",
+    "categoria": "ai",
+    "sottocategoria": "rag",
+    "livello": "intermedio",
+    "domanda": "In un sistema RAG, perché si cercano documenti esterni prima di generare la risposta?",
+    "opzioni": [
+      "Per fornire al modello informazioni aggiornate o specifiche su cui basare la risposta",
+      "Per trovare testi semanticamente simili alla domanda, anche se poi non vengono usati come contesto",
+      "Per archiviare i documenti recuperati senza inserirli nel prompt",
+      "Per confrontare la domanda con esempi simili senza generare una risposta"
+    ],
+    "risposta_corretta": "Per fornire al modello informazioni aggiornate o specifiche su cui basare la risposta",
+    "spiegazione": "Nel RAG il sistema recupera documenti rilevanti e li passa al modello come contesto. Il punto non è solo trovare testi simili, ma fornire informazioni utili su cui costruire la risposta. Se i documenti vengono trovati ma non usati nel prompt, oppure sono solo simili in apparenza, la risposta può restare generica o poco affidabile.",
+    "tags": [
+      "ai",
+      "rag",
+      "retrieval"
+    ],
+    "difficolta": 2,
+    "distrattore_forte": "Per trovare testi semanticamente simili alla domanda, anche se poi non vengono usati come contesto",
+    "motivo_distrattore_forte": "È vicino perché parla di ricerca semantica e documenti simili, ma è sbagliato perché nel RAG i documenti devono essere usati come contesto della generazione."
+  },
+  {
+    "id": "AI-AV-0005",
+    "categoria": "ai",
+    "sottocategoria": "valutazione",
+    "livello": "avanzato",
+    "domanda": "Perché valutare un modello AI solo con risposte corrette o sbagliate può essere limitante?",
+    "opzioni": [
+      "Perché alcune risposte richiedono giudizi su completezza, coerenza, sicurezza e utilità",
+      "Perché basta valutare la completezza, senza considerare coerenza, sicurezza e utilità",
+      "Perché una risposta va valutata solo in base al formato richiesto",
+      "Perché una risposta va valutata solo in base alla fluidità del testo"
+    ],
+    "risposta_corretta": "Perché alcune risposte richiedono giudizi su completezza, coerenza, sicurezza e utilità",
+    "spiegazione": "Nei compiti generativi non basta sempre distinguere tra corretto e sbagliato. Una risposta può essere parzialmente corretta, incompleta, poco sicura, fuori contesto o poco utile. Per questo servono criteri più ricchi, come completezza, coerenza, sicurezza e utilità.",
+    "tags": [
+      "ai",
+      "valutazione",
+      "qualità"
+    ],
+    "difficolta": 3,
+    "distrattore_forte": "Perché basta valutare la completezza, senza considerare coerenza, sicurezza e utilità",
+    "motivo_distrattore_forte": "È vicino perché la completezza è davvero un criterio utile, ma è sbagliato perché da sola non basta: servono anche coerenza, sicurezza e utilità."
+  },
+  {
+    "id": "AI-FAC-0005",
+    "categoria": "ai",
+    "sottocategoria": "prompt",
+    "livello": "facile",
+    "domanda": "Quale prompt è più chiaro per chiedere a un modello AI di riassumere un testo?",
+    "opzioni": [
+      "Riassumi questo testo in 5 righe usando un linguaggio semplice.",
+      "Riassumi questo testo usando un linguaggio semplice.",
+      "Riscrivi questo testo mantenendo tutti i dettagli principali.",
+      "Riformula il testo senza ridurlo e senza cambiarne il significato."
+    ],
+    "risposta_corretta": "Riassumi questo testo in 5 righe usando un linguaggio semplice.",
+    "spiegazione": "Il prompt corretto specifica chiaramente il compito, la lunghezza e lo stile: un riassunto in 5 righe con linguaggio semplice. Il distrattore B è quasi corretto, ma è meno preciso perché non indica la lunghezza. C e D chiedono una riscrittura o riformulazione, non un vero riassunto breve.",
+    "tags": [
+      "ai",
+      "prompt",
+      "chiarezza"
+    ],
+    "difficolta": 1,
+    "distrattore_forte": "Riassumi questo testo usando un linguaggio semplice.",
+    "motivo_distrattore_forte": "È molto vicino perché chiede comunque un riassunto semplice, ma è meno preciso perché manca il vincolo delle 5 righe."
+  },
+  {
+    "id": "AI-INT-0005",
+    "categoria": "ai",
+    "sottocategoria": "embedding",
+    "livello": "intermedio",
+    "domanda": "A cosa serve un embedding in molte applicazioni di intelligenza artificiale?",
+    "opzioni": [
+      "A rappresentare testi, immagini o dati come vettori confrontabili",
+      "A trasformare contenuti in vettori numerici solo per conservarli come testo compresso",
+      "A confrontare contenuti solo quando usano le stesse parole identiche",
+      "A cercare parole uguali senza rappresentare il significato dei contenuti"
+    ],
+    "risposta_corretta": "A rappresentare testi, immagini o dati come vettori confrontabili",
+    "spiegazione": "Un embedding trasforma un contenuto in un vettore numerico, così contenuti simili possono essere confrontati anche se usano parole diverse. Non è una compressione del testo originale e non è una semplice ricerca per parole identiche.",
+    "tags": [
+      "ai",
+      "embedding",
+      "vettori"
+    ],
+    "difficolta": 2,
+    "distrattore_forte": "A trasformare contenuti in vettori numerici solo per conservarli come testo compresso",
+    "motivo_distrattore_forte": "È vicino perché parla di trasformazione in vettori numerici, ma è sbagliato perché un embedding non serve principalmente a comprimere il testo originale."
+  },
+  {
+    "id": "AI-AV-0006",
+    "categoria": "ai",
+    "sottocategoria": "sicurezza",
+    "livello": "avanzato",
+    "domanda": "Qual è il rischio principale di un prompt injection in un'applicazione AI collegata a strumenti esterni?",
+    "opzioni": [
+      "Il modello può essere spinto a ignorare istruzioni originali e usare strumenti in modo non previsto",
+      "Il modello può ricevere istruzioni esterne, ma queste possono influenzare solo lo stile della risposta",
+      "Il modello può confondere contenuto dell'utente e istruzioni operative solo senza tool collegati",
+      "Il modello può trattare informazioni recuperate come testo da copiare, ma non come comandi"
+    ],
+    "risposta_corretta": "Il modello può essere spinto a ignorare istruzioni originali e usare strumenti in modo non previsto",
+    "spiegazione": "Una prompt injection tenta di manipolare il comportamento del modello, facendogli trattare contenuti esterni come istruzioni. Il rischio principale, soprattutto con tool esterni, è che il modello ignori le istruzioni originali e compia azioni non previste.",
+    "tags": [
+      "ai",
+      "sicurezza",
+      "prompt injection"
+    ],
+    "difficolta": 3,
+    "distrattore_forte": "Il modello può ricevere istruzioni esterne, ma queste possono influenzare solo lo stile della risposta",
+    "motivo_distrattore_forte": "È vicino perché parla di istruzioni esterne, ma è sbagliato perché una prompt injection può influenzare anche comportamento e uso dei tool, non solo lo stile."
+  },
+  {
+    "id": "AI-FAC-0006",
+    "categoria": "ai",
+    "sottocategoria": "classificazione",
+    "livello": "facile",
+    "domanda": "Se un modello AI decide se una email è spam oppure no, quale tipo di attività sta svolgendo?",
+    "opzioni": [
+      "Classificazione",
+      "Clustering",
+      "Regressione",
+      "Stima di un valore numerico"
+    ],
+    "risposta_corretta": "Classificazione",
+    "spiegazione": "La classificazione assegna un elemento a una categoria, per esempio spam o non spam. Il clustering è vicino perché raggruppa elementi simili, ma non usa etichette già definite. La regressione e la stima numerica servono invece a prevedere valori numerici.",
+    "tags": [
+      "ai",
+      "classificazione",
+      "email"
+    ],
+    "difficolta": 1,
+    "distrattore_forte": "Clustering",
+    "motivo_distrattore_forte": "È vicino perché anche il clustering separa elementi in gruppi, ma è sbagliato perché nello spam/non spam le categorie sono già definite."
+  },
+  {
+    "id": "AI-INT-0006",
+    "categoria": "ai",
+    "sottocategoria": "valutazione",
+    "livello": "intermedio",
+    "domanda": "Perché è utile testare un modello AI con esempi diversi da quelli usati in addestramento?",
+    "opzioni": [
+      "Per verificare se il modello generalizza anche su casi nuovi",
+      "Per confermare che il modello ricorda con precisione gli esempi usati in addestramento",
+      "Per scegliere automaticamente nuovi esempi da aggiungere al training set",
+      "Per aumentare il numero di esempi nel dataset senza controllare le prestazioni"
+    ],
+    "risposta_corretta": "Per verificare se il modello generalizza anche su casi nuovi",
+    "spiegazione": "Testare un modello su esempi diversi da quelli usati in addestramento serve a capire se generalizza su casi nuovi. Se funziona bene solo sui dati già visti, potrebbe aver memorizzato troppo il training set invece di imparare regole utili.",
+    "tags": [
+      "ai",
+      "testing",
+      "generalizzazione"
+    ],
+    "difficolta": 2,
+    "distrattore_forte": "Per confermare che il modello ricorda con precisione gli esempi usati in addestramento",
+    "motivo_distrattore_forte": "È vicino perché parla del rapporto tra test e dati di addestramento, ma è sbagliato perché il test deve misurare la generalizzazione, non la memoria degli esempi già visti."
+  },
+  {
+    "id": "AI-AV-0007",
+    "categoria": "ai",
+    "sottocategoria": "fine_tuning",
+    "livello": "avanzato",
+    "domanda": "Quando ha più senso valutare il fine-tuning rispetto al solo prompt engineering?",
+    "opzioni": [
+      "Quando servono comportamenti stabili e specifici su molti esempi simili",
+      "Quando serve un comportamento stabile, ma si dispone di un solo esempio isolato",
+      "Quando il problema dipende soprattutto da documenti recuperati male",
+      "Quando basta cambiare il prompt per correggere una risposta singola"
+    ],
+    "risposta_corretta": "Quando servono comportamenti stabili e specifici su molti esempi simili",
+    "spiegazione": "Il fine-tuning ha senso quando si vuole rendere stabile uno stile, un formato o un comportamento su molti casi simili. Per problemi singoli o istruzioni semplici può bastare il prompt engineering; se il retrieval è sbagliato, invece, va corretta la pipeline di recupero.",
+    "tags": [
+      "ai",
+      "fine tuning",
+      "prompt engineering"
+    ],
+    "difficolta": 3,
+    "distrattore_forte": "Quando serve un comportamento stabile, ma si dispone di un solo esempio isolato",
+    "motivo_distrattore_forte": "È vicino perché parla di comportamento stabile, ma è sbagliato perché il fine-tuning richiede esempi coerenti e numerosi, non un solo caso isolato."
+  },
+  {
+    "id": "AI-FAC-0007",
+    "categoria": "ai",
+    "sottocategoria": "modelli_linguistici",
+    "livello": "facile",
+    "domanda": "Che cosa fa principalmente un modello linguistico?",
+    "opzioni": [
+      "Lavora con il linguaggio per comprendere o generare testo",
+      "Classifica contenuti testuali senza produrre nuove frasi",
+      "Recupera pagine web pertinenti senza formulare una risposta",
+      "Analizza solo dati numerici organizzati in tabelle"
+    ],
+    "risposta_corretta": "Lavora con il linguaggio per comprendere o generare testo",
+    "spiegazione": "Un modello linguistico lavora con il linguaggio naturale: può comprendere, completare, riassumere o generare testo. Le altre opzioni descrivono attività possibili nell'AI o nell'informatica, ma sono più limitate e non rappresentano il ruolo principale di un modello linguistico.",
+    "tags": [
+      "ai",
+      "llm",
+      "linguaggio"
+    ],
+    "difficolta": 1,
+    "distrattore_forte": "Classifica contenuti testuali senza produrre nuove frasi",
+    "motivo_distrattore_forte": "È vicino perché un modello linguistico può anche classificare testi, ma è sbagliato come ruolo principale perché il modello linguistico può comprendere e generare testo."
+  },
+  {
+    "id": "AI-INT-0007",
+    "categoria": "ai",
+    "sottocategoria": "prompt_engineering",
+    "livello": "intermedio",
+    "domanda": "Quale elemento rende più controllabile la risposta di un modello AI?",
+    "opzioni": [
+      "Specificare ruolo, obiettivo, vincoli e formato della risposta",
+      "Specificare solo il ruolo del modello, senza indicare vincoli, obiettivo e formato",
+      "Fornire molti obiettivi diversi senza indicare priorità",
+      "Chiedere una risposta generica lasciando formato e criteri aperti"
+    ],
+    "risposta_corretta": "Specificare ruolo, obiettivo, vincoli e formato della risposta",
+    "spiegazione": "Un prompt controllabile chiarisce cosa deve fare il modello, con quali vincoli e in quale formato. Specificare solo il ruolo può aiutare, ma non basta se mancano obiettivo, vincoli e formato. Richieste vaghe o con obiettivi confusi aumentano il rischio di risposte generiche.",
+    "tags": [
+      "ai",
+      "prompt",
+      "controllo"
+    ],
+    "difficolta": 2,
+    "distrattore_forte": "Specificare solo il ruolo del modello, senza indicare vincoli, obiettivo e formato",
+    "motivo_distrattore_forte": "È vicino perché il ruolo è un elemento utile del prompt, ma è incompleto: per controllare davvero la risposta servono anche obiettivo, vincoli e formato."
+  },
+  {
+    "id": "AI-AV-0008",
+    "categoria": "ai",
+    "sottocategoria": "architetture",
+    "livello": "avanzato",
+    "domanda": "In una pipeline AI, perché conviene separare recupero delle informazioni, generazione e controllo finale?",
+    "opzioni": [
+      "Per rendere più controllabile ogni fase e individuare meglio dove nasce un errore",
+      "Per valutare separatamente le fasi, ma senza collegare gli errori alla risposta finale",
+      "Per controllare solo il recupero dei documenti ignorando la generazione",
+      "Per controllare solo la generazione ignorando retrieval e verifica finale"
+    ],
+    "risposta_corretta": "Per rendere più controllabile ogni fase e individuare meglio dove nasce un errore",
+    "spiegazione": "Separare recupero, generazione e controllo finale rende la pipeline più osservabile e più facile da correggere. Non basta guardare una fase isolata: bisogna capire come ogni fase contribuisce alla qualità della risposta finale.",
+    "tags": [
+      "ai",
+      "pipeline",
+      "architettura"
+    ],
+    "difficolta": 3,
+    "distrattore_forte": "Per valutare separatamente le fasi, ma senza collegare gli errori alla risposta finale",
+    "motivo_distrattore_forte": "È vicino perché parla davvero di valutare le fasi separatamente, ma è sbagliato perché separare le fasi serve proprio a collegare gli errori al punto della pipeline in cui nascono."
+  },
+  {
+    "id": "AI-FAC-0008",
+    "categoria": "ai",
+    "sottocategoria": "allucinazioni",
+    "livello": "facile",
+    "domanda": "Quando un modello AI inventa una risposta falsa ma la presenta come sicura, come viene chiamato di solito questo problema?",
+    "opzioni": [
+      "Allucinazione",
+      "Bias del dataset",
+      "Overfitting",
+      "Errore di classificazione"
+    ],
+    "risposta_corretta": "Allucinazione",
+    "spiegazione": "Un'allucinazione avviene quando un modello genera una risposta falsa o inventata presentandola come sicura. Il bias riguarda distorsioni nei dati o nei risultati, l'overfitting indica un modello troppo adattato ai dati di addestramento, mentre un errore di classificazione è una previsione di classe sbagliata.",
+    "tags": [
+      "ai",
+      "allucinazioni",
+      "affidabilità"
+    ],
+    "difficolta": 1,
+    "distrattore_forte": "Bias del dataset",
+    "motivo_distrattore_forte": "È vicino perché anche il bias può portare a risposte distorte o scorrette, ma l'allucinazione indica specificamente una risposta falsa inventata e presentata come sicura."
+  },
+  {
+    "id": "AI-INT-0008",
+    "categoria": "ai",
+    "sottocategoria": "dataset",
+    "livello": "intermedio",
+    "domanda": "Che cosa può succedere se un dataset contiene molti esempi sbilanciati verso una sola classe?",
+    "opzioni": [
+      "Il modello può imparare a favorire quella classe nelle previsioni",
+      "Il modello può imparare a favorire la classe meno presente per compensare automaticamente lo sbilanciamento",
+      "Il modello può migliorare sulle classi rare anche senza esempi sufficienti",
+      "Il modello può rendere inutile ogni metrica diversa dall'accuratezza"
+    ],
+    "risposta_corretta": "Il modello può imparare a favorire quella classe nelle previsioni",
+    "spiegazione": "Se una classe è molto più presente delle altre, il modello può imparare a prevederla troppo spesso. Questo può dare un risultato apparentemente buono, ma peggiorare il riconoscimento delle classi meno rappresentate. Per questo l'accuratezza da sola può non bastare.",
+    "tags": [
+      "ai",
+      "dataset",
+      "bias"
+    ],
+    "difficolta": 2,
+    "distrattore_forte": "Il modello può imparare a favorire la classe meno presente per compensare automaticamente lo sbilanciamento",
+    "motivo_distrattore_forte": "È vicino perché parla dello sbilanciamento tra classi, ma è sbagliato perché normalmente il modello tende a favorire la classe più presente, non quella rara."
+  },
+  {
+    "id": "AI-AV-0009",
+    "categoria": "ai",
+    "sottocategoria": "bias",
+    "livello": "avanzato",
+    "domanda": "Perché un modello AI può produrre risultati distorti anche se l'algoritmo è implementato correttamente?",
+    "opzioni": [
+      "Perché i dati, gli obiettivi di addestramento o le metriche possono introdurre distorsioni",
+      "Perché i dati sbilanciati possono introdurre distorsioni, ma obiettivi e metriche non incidono",
+      "Perché una metrica scelta male può influenzare il risultato, mentre i dati di partenza hanno un ruolo secondario",
+      "Perché solo l'obiettivo di addestramento può creare distorsioni, mentre dati e metriche non contano"
+    ],
+    "risposta_corretta": "Perché i dati, gli obiettivi di addestramento o le metriche possono introdurre distorsioni",
+    "spiegazione": "Un modello può essere implementato correttamente ma produrre risultati distorti se dati, obiettivi o metriche sono sbilanciati. Le altre opzioni indicano cause reali, ma le restringono troppo e quindi non spiegano il problema generale.",
+    "tags": [
+      "ai",
+      "bias",
+      "etica"
+    ],
+    "difficolta": 3,
+    "distrattore_forte": "Perché i dati sbilanciati possono introdurre distorsioni, ma obiettivi e metriche non incidono",
+    "motivo_distrattore_forte": "È vicino perché riconosce il ruolo dei dati sbilanciati, ma è sbagliato perché anche obiettivi e metriche possono introdurre distorsioni."
+  },
+  {
+    "id": "AI-INT-0009",
+    "categoria": "ai",
+    "sottocategoria": "agenti",
+    "livello": "intermedio",
+    "domanda": "In un agente AI, che cosa rappresenta normalmente un tool?",
+    "opzioni": [
+      "Uno strumento esterno che l'agente può usare per compiere un'azione",
+      "Uno strumento esterno usato solo come fonte informativa, senza vera integrazione operativa",
+      "Una memoria conversazionale che conserva informazioni tra più messaggi",
+      "Un'istruzione di sistema che definisce il comportamento dell'agente"
+    ],
+    "risposta_corretta": "Uno strumento esterno che l'agente può usare per compiere un'azione",
+    "spiegazione": "In un agente AI, un tool è uno strumento esterno che permette di compiere azioni, per esempio cercare dati, leggere file, chiamare API o fare calcoli. Memoria e istruzioni di sistema sono componenti importanti, ma non sono tool.",
+    "tags": [
+      "ai",
+      "agenti",
+      "tool"
+    ],
+    "difficolta": 2,
+    "distrattore_forte": "Uno strumento esterno usato solo come fonte informativa, senza vera integrazione operativa",
+    "motivo_distrattore_forte": "È vicino perché un tool può fornire informazioni, ma molti tool possono anche eseguire azioni o modificare dati."
+  },
+  {
+    "id": "AI-AV-0101",
+    "categoria": "ai",
+    "sottocategoria": "rag",
+    "livello": "avanzato",
+    "domanda": "Qual è un rischio importante se il retrieval di un sistema RAG recupera documenti solo apparentemente pertinenti?",
+    "opzioni": [
+      "Il modello può generare una risposta ben scritta ma basata su contesto fuorviante",
+      "Il modello può generare una risposta fluida usando documenti recuperati solo in apparenza pertinenti",
+      "Il modello rifiuta automaticamente ogni documento non perfettamente pertinente",
+      "Il database vettoriale elimina da solo tutti i documenti non usati"
+    ],
+    "risposta_corretta": "Il modello può generare una risposta ben scritta ma basata su contesto fuorviante",
+    "spiegazione": "Se i documenti recuperati sembrano pertinenti ma non rispondono davvero alla domanda, il modello può appoggiarsi a informazioni sbagliate o parziali e produrre una risposta convincente ma non affidabile.",
+    "tags": [
+      "rag",
+      "retrieval",
+      "qualita"
+    ],
+    "difficolta": 3,
+    "distrattore_forte": "Il modello può generare una risposta fluida usando documenti recuperati solo in apparenza pertinenti",
+    "motivo_distrattore_forte": "È molto vicino perché descrive lo stesso rischio di una risposta fluida basata su retrieval debole, ma è meno completo: il punto centrale è che il contesto può essere fuorviante."
+  },
+  {
+    "id": "AI-FAC-0101",
+    "categoria": "ai",
+    "sottocategoria": "fondamenti",
+    "livello": "facile",
+    "domanda": "Quale attività descrive meglio un modello di intelligenza artificiale?",
+    "opzioni": [
+      "Riconoscere schemi nei dati e usare questi schemi per produrre risposte o previsioni",
+      "Riconoscere schemi nei dati ma usarli solo per copiare risposte già presenti negli esempi",
+      "Memorizzare dati senza estrarre schemi utili per fare previsioni",
+      "Salvare file del computer senza usarli per produrre risposte o previsioni"
+    ],
+    "risposta_corretta": "Riconoscere schemi nei dati e usare questi schemi per produrre risposte o previsioni",
+    "spiegazione": "Un modello di intelligenza artificiale impara schemi dai dati e li usa per classificare, prevedere, generare testo o prendere decisioni. Non si limita a copiare esempi già presenti e non è semplicemente un archivio di file.",
+    "tags": [
+      "ai",
+      "modelli",
+      "fondamenti"
+    ],
+    "difficolta": 1,
+    "distrattore_forte": "Riconoscere schemi nei dati ma usarli solo per copiare risposte già presenti negli esempi",
+    "motivo_distrattore_forte": "È vicino perché parla di schemi nei dati, ma è sbagliato perché un modello AI non serve solo a copiare risposte già presenti: usa gli schemi per generalizzare."
+  },
+  {
+    "id": "AI-INT-0101",
+    "categoria": "ai",
+    "sottocategoria": "rag",
+    "livello": "intermedio",
+    "domanda": "In un sistema RAG, perché la scelta dei chunk del documento è importante?",
+    "opzioni": [
+      "Perché chunk troppo grandi o troppo piccoli possono rendere il recupero meno preciso",
+      "Perché chunk più grandi possono contenere più contesto, ma anche mescolare dettagli non pertinenti",
+      "Perché i chunk servono ad addestrare nuovamente il modello prima di ogni risposta",
+      "Perché i chunk modificano in modo permanente i pesi del modello"
+    ],
+    "risposta_corretta": "Perché chunk troppo grandi o troppo piccoli possono rendere il recupero meno preciso",
+    "spiegazione": "Nei sistemi RAG i documenti vengono spesso divisi in parti più piccole, chiamate chunk. Se i chunk sono troppo grandi, possono contenere troppe informazioni non pertinenti. Se sono troppo piccoli, possono perdere contesto utile. La dimensione dei chunk influenza quindi la qualità del recupero.",
+    "tags": [
+      "rag",
+      "chunking",
+      "retrieval"
+    ],
+    "difficolta": 2,
+    "distrattore_forte": "Perché chunk più grandi possono contenere più contesto, ma anche mescolare dettagli non pertinenti",
+    "motivo_distrattore_forte": "È vicino perché la dimensione del chunk conta davvero, ma non basta dire che chunk più grandi siano automaticamente migliori."
+  },
+  {
+    "id": "AI-AV-0102",
+    "categoria": "ai",
+    "sottocategoria": "fine_tuning",
+    "livello": "avanzato",
+    "domanda": "Quando il fine-tuning è più adatto del solo prompt engineering?",
+    "opzioni": [
+      "Quando serve modificare stabilmente il comportamento del modello su molti esempi simili",
+      "Quando serve un comportamento stabile, ma si dispone solo di pochi esempi isolati e non coerenti",
+      "Quando bisogna correggere una singola risposta occasionale",
+      "Quando basta cambiare il tono di una frase una sola volta"
+    ],
+    "risposta_corretta": "Quando serve modificare stabilmente il comportamento del modello su molti esempi simili",
+    "spiegazione": "Il fine-tuning è utile se si hanno esempi di qualità e si vuole rendere stabile un comportamento su una famiglia di compiti. Per modifiche leggere o occasionali spesso basta il prompt.",
+    "tags": [
+      "fine_tuning",
+      "prompting",
+      "addestramento"
+    ],
+    "difficolta": 3,
+    "distrattore_forte": "Quando serve un comportamento stabile, ma si dispone solo di pochi esempi isolati e non coerenti",
+    "motivo_distrattore_forte": "È vicino perché parla di comportamento stabile, ma è sbagliato perché il fine-tuning richiede esempi coerenti e sufficienti, non casi isolati."
+  },
+  {
+    "id": "AI-FAC-0102",
+    "categoria": "ai",
+    "sottocategoria": "prompting",
+    "livello": "facile",
+    "domanda": "Quale prompt è più chiaro per chiedere un riassunto?",
+    "opzioni": [
+      "Riassumi questo testo in 5 righe indicando le idee principali.",
+      "Riassumi questo testo indicando le idee principali.",
+      "Spiega questo testo mantenendo tutti i dettagli importanti.",
+      "Riscrivi questo testo senza ridurlo e senza selezionare le idee principali."
+    ],
+    "risposta_corretta": "Riassumi questo testo in 5 righe indicando le idee principali.",
+    "spiegazione": "Un prompt chiaro specifica cosa fare e con quale formato. Dire 'in 5 righe' e 'idee principali' rende il compito più controllabile. Le altre opzioni sono vicine al lavoro sul testo, ma non danno lo stesso vincolo preciso di riassunto breve.",
+    "tags": [
+      "prompt",
+      "riassunto",
+      "chiarezza"
+    ],
+    "difficolta": 1,
+    "distrattore_forte": "Riassumi questo testo indicando le idee principali.",
+    "motivo_distrattore_forte": "È molto vicino perché chiede comunque un riassunto delle idee principali, ma è meno preciso perché manca il vincolo delle 5 righe."
+  },
+  {
+    "id": "AI-INT-0102",
+    "categoria": "ai",
+    "sottocategoria": "embedding",
+    "livello": "intermedio",
+    "domanda": "Quale differenza c'è tra ricerca per parole esatte e ricerca semantica?",
+    "opzioni": [
+      "La ricerca semantica può trovare contenuti simili nel significato anche con parole diverse",
+      "La ricerca semantica può usare parole diverse, ma funziona solo se restano presenti gli stessi termini principali",
+      "La ricerca per parole esatte riconosce meglio sinonimi e intenzione rispetto alla ricerca semantica",
+      "La ricerca per parole esatte trova sinonimi anche quando non compaiono termini uguali"
+    ],
+    "risposta_corretta": "La ricerca semantica può trovare contenuti simili nel significato anche con parole diverse",
+    "spiegazione": "La ricerca per parole esatte cerca corrispondenze letterali. La ricerca semantica invece prova a confrontare il significato dei contenuti, quindi può trovare testi pertinenti anche se usano parole diverse dalla domanda.",
+    "tags": [
+      "ricerca_semantica",
+      "similarita",
+      "retrieval"
+    ],
+    "difficolta": 2,
+    "distrattore_forte": "La ricerca semantica può usare parole diverse, ma funziona solo se restano presenti gli stessi termini principali",
+    "motivo_distrattore_forte": "È vicino perché parla di parole diverse e ricerca semantica, ma è sbagliato perché la ricerca semantica può basarsi sul significato anche senza gli stessi termini principali."
+  },
+  {
+    "id": "AI-AV-0103",
+    "categoria": "ai",
+    "sottocategoria": "valutazione",
+    "livello": "avanzato",
+    "domanda": "Perché valutare un sistema AI solo con risposta corretta o sbagliata può essere insufficiente?",
+    "opzioni": [
+      "Perché possono contare anche completezza, fonti, robustezza, sicurezza e chiarezza",
+      "Perché basta aggiungere la completezza alla valutazione, senza considerare sicurezza e fonti",
+      "Perché ogni risposta generata è corretta se è scritta in modo fluido",
+      "Perché la valutazione deve ignorare il contesto della domanda"
+    ],
+    "risposta_corretta": "Perché possono contare anche completezza, fonti, robustezza, sicurezza e chiarezza",
+    "spiegazione": "Molti sistemi AI non producono solo una risposta secca. Serve valutare qualità, affidabilità, aderenza al contesto, sicurezza e capacità di gestire casi difficili.",
+    "tags": [
+      "valutazione",
+      "metriche",
+      "qualita"
+    ],
+    "difficolta": 3,
+    "distrattore_forte": "Perché basta aggiungere la completezza alla valutazione, senza considerare sicurezza e fonti",
+    "motivo_distrattore_forte": "È vicino perché la completezza è davvero un criterio importante, ma è sbagliato perché da sola non basta: servono anche fonti, sicurezza, robustezza e chiarezza."
+  },
+  {
+    "id": "AI-FAC-0103",
+    "categoria": "ai",
+    "sottocategoria": "dati",
+    "livello": "facile",
+    "domanda": "Perché i dati di addestramento sono importanti per un modello AI?",
+    "opzioni": [
+      "Perché influenzano ciò che il modello impara e come risponde",
+      "Perché influenzano il modello, ma rendono inutile controllare le risposte generate",
+      "Perché servono solo a verificare il modello dopo l'addestramento",
+      "Perché definiscono manualmente ogni risposta che il modello dovrà dare"
+    ],
+    "risposta_corretta": "Perché influenzano ciò che il modello impara e come risponde",
+    "spiegazione": "Il modello impara dai dati disponibili durante l'addestramento. Se i dati sono incompleti, distorti o poco adatti, anche le risposte possono risentirne. Questo però non elimina la necessità di controllare le risposte generate.",
+    "tags": [
+      "dataset",
+      "addestramento",
+      "qualita"
+    ],
+    "difficolta": 1,
+    "distrattore_forte": "Perché influenzano il modello, ma rendono inutile controllare le risposte generate",
+    "motivo_distrattore_forte": "È vicino perché riconosce che i dati influenzano il modello, ma è sbagliato perché le risposte vanno comunque controllate."
+  },
+  {
+    "id": "AI-INT-0103",
+    "categoria": "ai",
+    "sottocategoria": "valutazione",
+    "livello": "intermedio",
+    "domanda": "Perché è utile testare un modello su esempi che non ha visto durante lo sviluppo?",
+    "opzioni": [
+      "Per misurare se generalizza oltre i casi usati per costruirlo",
+      "Per verificare se ricorda con precisione gli esempi usati durante lo sviluppo",
+      "Per misurare solo la velocità sui casi nuovi senza valutare l'accuratezza",
+      "Per ridurre il tempo di esecuzione eliminando i dati di validazione"
+    ],
+    "risposta_corretta": "Per misurare se generalizza oltre i casi usati per costruirlo",
+    "spiegazione": "Un modello deve funzionare anche su casi nuovi. Testarlo solo su esempi già visti rischia di misurare la memoria, non la capacità di generalizzare.",
+    "tags": [
+      "valutazione",
+      "generalizzazione",
+      "test"
+    ],
+    "difficolta": 2,
+    "distrattore_forte": "Per verificare se ricorda con precisione gli esempi usati durante lo sviluppo",
+    "motivo_distrattore_forte": "È vicino perché parla degli esempi usati nello sviluppo, ma è sbagliato perché il test deve misurare generalizzazione, non memoria."
+  },
+  {
+    "id": "AI-AV-0104",
+    "categoria": "ai",
+    "sottocategoria": "prompt_injection",
+    "livello": "avanzato",
+    "domanda": "Qual è un esempio realistico di prompt injection in un'app che legge documenti esterni?",
+    "opzioni": [
+      "Un documento contiene istruzioni nascoste che provano a far ignorare le regole del sistema",
+      "Un documento contiene testo che il modello potrebbe scambiare per istruzioni operative",
+      "Un utente scrive una domanda troppo breve per essere capita",
+      "Una risposta contiene una parola inglese invece di una italiana"
+    ],
+    "risposta_corretta": "Un documento contiene istruzioni nascoste che provano a far ignorare le regole del sistema",
+    "spiegazione": "La prompt injection può arrivare anche da contenuti esterni. Un documento può contenere istruzioni malevole che cercano di far cambiare comportamento al modello o ai tool collegati.",
+    "tags": [
+      "prompt_injection",
+      "sicurezza",
+      "documenti"
+    ],
+    "difficolta": 3,
+    "distrattore_forte": "Un documento contiene testo che il modello potrebbe scambiare per istruzioni operative",
+    "motivo_distrattore_forte": "È vicino perché descrive il meccanismo della prompt injection da documenti esterni, ma è meno preciso: la risposta corretta indica istruzioni nascoste progettate per far ignorare le regole del sistema."
+  },
+  {
+    "id": "AI-FAC-0104",
+    "categoria": "ai",
+    "sottocategoria": "classificazione",
+    "livello": "facile",
+    "domanda": "Quale esempio rappresenta meglio un compito di classificazione?",
+    "opzioni": [
+      "Stabilire se un messaggio è spam o non spam",
+      "Raggruppare messaggi simili senza etichette già definite",
+      "Generare una risposta automatica a un messaggio",
+      "Scrivere un nuovo messaggio partendo da un tema"
+    ],
+    "risposta_corretta": "Stabilire se un messaggio è spam o non spam",
+    "spiegazione": "La classificazione assegna un'etichetta a un input. Spam/non spam è un esempio classico perché il modello sceglie una categoria tra alternative definite. Il clustering raggruppa elementi simili, mentre la generazione produce nuovi contenuti.",
+    "tags": [
+      "classificazione",
+      "spam",
+      "categorie"
+    ],
+    "difficolta": 1,
+    "distrattore_forte": "Raggruppare messaggi simili senza etichette già definite",
+    "motivo_distrattore_forte": "È vicino perché anche il clustering lavora su gruppi di dati, ma è sbagliato perché nella classificazione le categorie sono già definite."
+  },
+  {
+    "id": "AI-INT-0104",
+    "categoria": "ai",
+    "sottocategoria": "prompting",
+    "livello": "intermedio",
+    "domanda": "Quale indicazione rende un prompt più controllabile?",
+    "opzioni": [
+      "Specificare ruolo, obiettivo, formato di risposta e vincoli",
+      "Specificare solo il ruolo senza chiarire obiettivo, formato e vincoli",
+      "Chiedere al modello di fare il meglio possibile senza istruzioni precise",
+      "Lasciare la richiesta generica senza indicare criteri di risposta"
+    ],
+    "risposta_corretta": "Specificare ruolo, obiettivo, formato di risposta e vincoli",
+    "spiegazione": "Ruolo, obiettivo, formato e vincoli aiutano il modello a produrre una risposta più coerente con ciò che serve davvero. Specificare solo il ruolo può aiutare, ma non basta se mancano obiettivo, formato e vincoli.",
+    "tags": [
+      "prompt",
+      "controllo",
+      "istruzioni"
+    ],
+    "difficolta": 2,
+    "distrattore_forte": "Specificare solo il ruolo senza chiarire obiettivo, formato e vincoli",
+    "motivo_distrattore_forte": "È vicino perché il ruolo è davvero utile nel prompt, ma è incompleto: per controllare meglio la risposta servono anche obiettivo, formato e vincoli."
+  },
+  {
+    "id": "AI-AV-0105",
+    "categoria": "ai",
+    "sottocategoria": "architettura",
+    "livello": "avanzato",
+    "domanda": "Perché in un'app AI conviene separare recupero dei dati, generazione e controllo finale?",
+    "opzioni": [
+      "Per rendere più chiaro dove nasce un errore e migliorare ogni fase separatamente",
+      "Per analizzare ogni fase separatamente, ma senza collegare gli errori al risultato finale",
+      "Per evitare che il modello usi fonti esterne durante la generazione, anche quando sarebbero utili",
+      "Per impedire all'app di usare database o API"
+    ],
+    "risposta_corretta": "Per rendere più chiaro dove nasce un errore e migliorare ogni fase separatamente",
+    "spiegazione": "Separare le fasi aiuta a capire se il problema nasce dal retrieval, dal prompt, dalla generazione o dal controllo finale. Questo rende debug e miglioramento molto più ordinati.",
+    "tags": [
+      "architettura",
+      "debug",
+      "pipeline"
+    ],
+    "difficolta": 3,
+    "distrattore_forte": "Per analizzare ogni fase separatamente, ma senza collegare gli errori al risultato finale",
+    "motivo_distrattore_forte": "È vicino perché parla di analisi separata delle fasi, ma è sbagliato perché separare le fasi serve proprio a collegare gli errori al risultato finale."
+  },
+  {
+    "id": "AI-FAC-0105",
+    "categoria": "ai",
+    "sottocategoria": "generazione",
+    "livello": "facile",
+    "domanda": "Che cosa significa dire che un modello generativo produce testo?",
+    "opzioni": [
+      "Che crea una risposta nuova seguendo il contesto ricevuto",
+      "Che riformula il testo ricevuto senza produrre realmente contenuto nuovo",
+      "Che rielabora frasi molto simili a quelle viste nei dati senza costruire nuovo contesto",
+      "Che seleziona una frase già scritta senza adattarla al contesto"
+    ],
+    "risposta_corretta": "Che crea una risposta nuova seguendo il contesto ricevuto",
+    "spiegazione": "Un modello generativo produce una continuazione o una risposta in base al contesto. Non si limita necessariamente a copiare una frase identica o a selezionare testo già scritto.",
+    "tags": [
+      "generativa",
+      "testo",
+      "llm"
+    ],
+    "difficolta": 1,
+    "distrattore_forte": "Che riformula il testo ricevuto senza produrre realmente contenuto nuovo",
+    "motivo_distrattore_forte": "È vicino perché parla comunque di testo e contesto, ma è sbagliato perché un modello generativo può produrre contenuto nuovo, non solo riformulare."
+  },
+  {
+    "id": "AI-INT-0105",
+    "categoria": "ai",
+    "sottocategoria": "bias",
+    "livello": "intermedio",
+    "domanda": "Che cosa può succedere se un dataset è molto sbilanciato?",
+    "opzioni": [
+      "Il modello può funzionare bene su alcuni casi e male su altri meno rappresentati",
+      "Il modello può favorire i casi più presenti e sbagliare più spesso quelli rari",
+      "Il modello diventa automaticamente più equo su tutte le classi",
+      "Il modello corregge da solo la mancanza di esempi nelle classi rare"
+    ],
+    "risposta_corretta": "Il modello può funzionare bene su alcuni casi e male su altri meno rappresentati",
+    "spiegazione": "Se alcune classi o situazioni sono poco rappresentate, il modello può imparare soprattutto i casi più frequenti e commettere più errori sui casi rari. Per questo bisogna controllare distribuzione dei dati e metriche.",
+    "tags": [
+      "bias",
+      "dataset",
+      "sbilanciamento"
+    ],
+    "difficolta": 2,
+    "distrattore_forte": "Il modello può favorire i casi più presenti e sbagliare più spesso quelli rari",
+    "motivo_distrattore_forte": "È molto vicino perché descrive un effetto reale dello sbilanciamento, ma la risposta corretta è più generale: il modello può andare bene su alcuni casi e male su altri meno rappresentati."
+  },
+  {
+    "id": "AI-AV-0106",
+    "categoria": "ai",
+    "sottocategoria": "memoria",
+    "livello": "avanzato",
+    "domanda": "Quale rischio nasce se un agente salva memoria personale senza criteri chiari?",
+    "opzioni": [
+      "Può conservare informazioni inutili, sensibili o non più valide e usarle fuori contesto",
+      "Può conservare informazioni personali utili, ma senza distinguere tra dati pertinenti e dati sensibili",
+      "Diventa automaticamente incapace di rispondere a domande generali",
+      "Trasforma ogni informazione salvata in codice eseguibile"
+    ],
+    "risposta_corretta": "Può conservare informazioni inutili, sensibili o non più valide e usarle fuori contesto",
+    "spiegazione": "La memoria può migliorare la personalizzazione, ma va gestita con criteri: cosa salvare, cosa evitare, quando aggiornare e come rispettare privacy e pertinenza.",
+    "tags": [
+      "memoria",
+      "privacy",
+      "agenti"
+    ],
+    "difficolta": 3,
+    "distrattore_forte": "Può conservare informazioni personali utili, ma senza distinguere tra dati pertinenti e dati sensibili",
+    "motivo_distrattore_forte": "È vicino perché parla di memoria personale e dati sensibili, ma è incompleto: il rischio riguarda anche informazioni inutili, non più valide o usate fuori contesto."
+  },
+  {
+    "id": "AI-FAC-0106",
+    "categoria": "ai",
+    "sottocategoria": "allucinazioni",
+    "livello": "facile",
+    "domanda": "Quando si parla di allucinazione in AI, a cosa ci si riferisce?",
+    "opzioni": [
+      "A una risposta plausibile ma falsa o non verificata",
+      "A una risposta plausibile ma incompleta, senza informazioni false",
+      "A una risposta corretta ma troppo breve per essere utile",
+      "A una risposta prudente che dichiara chiaramente incertezza"
+    ],
+    "risposta_corretta": "A una risposta plausibile ma falsa o non verificata",
+    "spiegazione": "Un'allucinazione in AI è una risposta che può sembrare credibile, ma contiene informazioni false, inventate o non verificate. Una risposta breve, incompleta o prudente può essere migliorabile, ma non è necessariamente un'allucinazione.",
+    "tags": [
+      "allucinazioni",
+      "affidabilita",
+      "verifica"
+    ],
+    "difficolta": 1,
+    "distrattore_forte": "A una risposta plausibile ma incompleta, senza informazioni false",
+    "motivo_distrattore_forte": "È vicino perché descrive una risposta plausibile ma problematica, ma è sbagliato perché l'allucinazione implica falsità, invenzione o mancanza di verifica."
+  },
+  {
+    "id": "AI-INT-0106",
+    "categoria": "ai",
+    "sottocategoria": "agenti",
+    "livello": "intermedio",
+    "domanda": "Perché un agente AI può usare una fase di pianificazione prima di agire?",
+    "opzioni": [
+      "Per scegliere i passaggi e gli strumenti più adatti prima di eseguire azioni",
+      "Per scegliere una sequenza di azioni, ma senza verificare se sono coerenti con l'obiettivo",
+      "Per trasformare ogni risposta in una lista casuale di operazioni",
+      "Per saltare completamente il controllo del risultato finale"
+    ],
+    "risposta_corretta": "Per scegliere i passaggi e gli strumenti più adatti prima di eseguire azioni",
+    "spiegazione": "Un agente AI può pianificare prima di agire per decidere quali passaggi seguire, quali strumenti usare e in quale ordine. Questo riduce il rischio di azioni impulsive o poco coerenti con l'obiettivo.",
+    "tags": [
+      "agenti",
+      "pianificazione",
+      "tool_use"
+    ],
+    "difficolta": 2,
+    "distrattore_forte": "Per scegliere una sequenza di azioni, ma senza verificare se sono coerenti con l'obiettivo",
+    "motivo_distrattore_forte": "È vicino perché parla di sequenza di azioni, ma è sbagliato perché la pianificazione deve restare coerente con l'obiettivo e non essere solo una lista di passaggi."
+  },
+  {
+    "id": "AI-AV-0107",
+    "categoria": "ai",
+    "sottocategoria": "monitoraggio",
+    "livello": "avanzato",
+    "domanda": "Perché un'app AI in produzione dovrebbe registrare errori e feedback degli utenti?",
+    "opzioni": [
+      "Per individuare casi problematici reali e migliorare sicurezza, qualità e affidabilità",
+      "Per individuare problemi reali, ma senza usarli per migliorare il sistema",
+      "Per sostituire ogni test prima del rilascio",
+      "Per evitare qualsiasi aggiornamento futuro del sistema"
+    ],
+    "risposta_corretta": "Per individuare casi problematici reali e migliorare sicurezza, qualità e affidabilità",
+    "spiegazione": "I test iniziali non coprono tutti gli scenari. Log e feedback aiutano a scoprire errori ricorrenti, casi limite e problemi di sicurezza emersi nell'uso reale.",
+    "tags": [
+      "monitoraggio",
+      "feedback",
+      "produzione"
+    ],
+    "difficolta": 3,
+    "distrattore_forte": "Per individuare problemi reali, ma senza usarli per migliorare il sistema",
+    "motivo_distrattore_forte": "È vicino perché parla di individuare problemi reali, ma è sbagliato perché log e feedback servono proprio a migliorare sicurezza, qualità e affidabilità."
+  },
+  {
+    "id": "AI-INT-0107",
+    "categoria": "ai",
+    "sottocategoria": "sicurezza",
+    "livello": "intermedio",
+    "domanda": "Perché conviene limitare le azioni che un agente AI può eseguire automaticamente?",
+    "opzioni": [
+      "Per ridurre il rischio che un errore o un prompt malevolo produca azioni dannose",
+      "Per velocizzare il flusso riducendo controlli e conferme dell'utente",
+      "Per impedire al modello di leggere qualsiasi istruzione dell'utente",
+      "Per rendere impossibile ogni controllo umano sulle azioni dell'agente"
+    ],
+    "risposta_corretta": "Per ridurre il rischio che un errore o un prompt malevolo produca azioni dannose",
+    "spiegazione": "Un agente con troppi permessi può fare danni se interpreta male un comando o subisce prompt injection. Limitare permessi e richiedere conferme nei casi delicati rende il sistema più sicuro.",
+    "tags": [
+      "sicurezza",
+      "agenti",
+      "permessi"
+    ],
+    "difficolta": 2,
+    "distrattore_forte": "Per velocizzare il flusso riducendo controlli e conferme dell'utente",
+    "motivo_distrattore_forte": "È vicino perché parla di automazione, ma ridurre i controlli può aumentare i rischi invece di limitarli."
   }
 ]
