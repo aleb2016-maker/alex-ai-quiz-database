@@ -861,11 +861,151 @@
     "problemi_tecnici_totali": 0,
     "avvisi_qualita_reali_totali": 0,
     "errori_linguistici_totali": 0,
-    "note_informative_totali": 1,
+    "note_informative_totali": 23,
     "domande_con_problemi_tecnici": [],
     "domande_con_avvisi_qualita_reali": [],
     "domande_con_errori_linguistici": [],
     "domande_con_note_informative": [
+      {
+        "id": "ING-FAC-0001",
+        "domanda": "Quale frase usa correttamente il presente semplice con 'she'?",
+        "categoria": "inglese",
+        "livello": "facile",
+        "opzioni": [
+          "She has a blue backpack.",
+          "She have a blue backpack.",
+          "She is have a blue backpack.",
+          "She has got blue backpack."
+        ],
+        "risposta_corretta": "She has a blue backpack.",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "spiegazione: testo molto lungo, controllare leggibilità"
+        ]
+      },
+      {
+        "id": "ING-INT-0002",
+        "domanda": "Quale frase usa correttamente il present perfect?",
+        "categoria": "inglese",
+        "livello": "intermedio",
+        "opzioni": [
+          "I have just finished my homework.",
+          "I have finished my homework yesterday.",
+          "I am finished my homework.",
+          "I just have finish my homework."
+        ],
+        "risposta_corretta": "I have just finished my homework.",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "spiegazione: testo molto lungo, controllare leggibilità"
+        ]
+      },
+      {
+        "id": "ING-AV-0003",
+        "domanda": "Completa la frase scegliendo il connettivo più adatto: The app is simple to use, ___ it offers advanced features for experienced users.",
+        "categoria": "inglese",
+        "livello": "avanzato",
+        "opzioni": [
+          "yet",
+          "because",
+          "unless",
+          "therefore"
+        ],
+        "risposta_corretta": "yet",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "spiegazione: testo molto lungo, controllare leggibilità"
+        ]
+      },
+      {
+        "id": "ING-FAC-0004",
+        "domanda": "Quale frase usa correttamente il presente con il soggetto 'they'?",
+        "categoria": "inglese",
+        "livello": "facile",
+        "opzioni": [
+          "They are students.",
+          "They is students.",
+          "They are student.",
+          "They am students."
+        ],
+        "risposta_corretta": "They are students.",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "spiegazione: testo molto lungo, controllare leggibilità"
+        ]
+      },
+      {
+        "id": "ING-AV-0004",
+        "domanda": "Completa la frase: The system is powerful; ___, it requires careful testing before deployment.",
+        "categoria": "inglese",
+        "livello": "avanzato",
+        "opzioni": [
+          "however",
+          "therefore",
+          "moreover",
+          "otherwise"
+        ],
+        "risposta_corretta": "however",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "spiegazione: testo molto lungo, controllare leggibilità"
+        ]
+      },
+      {
+        "id": "ING-INT-0005",
+        "domanda": "Completa la frase: This exercise is ___ than the previous one.",
+        "categoria": "inglese",
+        "livello": "intermedio",
+        "opzioni": [
+          "more difficult",
+          "most difficult",
+          "more difficulty",
+          "difficulter"
+        ],
+        "risposta_corretta": "more difficult",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "spiegazione: testo molto lungo, controllare leggibilità"
+        ]
+      },
+      {
+        "id": "ING-AV-0005",
+        "domanda": "Scegli la frase corretta:",
+        "categoria": "inglese",
+        "livello": "avanzato",
+        "opzioni": [
+          "The developer who fixed the bug updated the repository.",
+          "The developer which fixed the bug updated the repository.",
+          "The developer that fixing the bug updated the repository.",
+          "The developer whose fixed the bug updated the repository."
+        ],
+        "risposta_corretta": "The developer who fixed the bug updated the repository.",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "spiegazione: testo molto lungo, controllare leggibilità"
+        ]
+      },
       {
         "id": "ING-AV-0006",
         "domanda": "Quale frase usa correttamente la forma passiva?",
@@ -878,6 +1018,306 @@
           "The report was reviewing by the team."
         ],
         "risposta_corretta": "The report was reviewed by the team.",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "spiegazione: testo molto lungo, controllare leggibilità"
+        ]
+      },
+      {
+        "id": "ING-INT-0007",
+        "domanda": "Completa la frase: If it rains tomorrow, we ___ at home.",
+        "categoria": "inglese",
+        "livello": "intermedio",
+        "opzioni": [
+          "will stay",
+          "would stay",
+          "are staying",
+          "stayed"
+        ],
+        "risposta_corretta": "will stay",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "spiegazione: testo molto lungo, controllare leggibilità"
+        ]
+      },
+      {
+        "id": "ING-AV-0007",
+        "domanda": "Quale frase esprime meglio un consiglio formale?",
+        "categoria": "inglese",
+        "livello": "avanzato",
+        "opzioni": [
+          "You should consider updating the documentation.",
+          "You should update the documentation immediately.",
+          "You could update the documentation if necessary.",
+          "You might want to update the documentation."
+        ],
+        "risposta_corretta": "You should consider updating the documentation.",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "spiegazione: testo molto lungo, controllare leggibilità"
+        ]
+      },
+      {
+        "id": "ING-INT-0008",
+        "domanda": "Nella frase 'Please turn off the light', che cosa significa 'turn off'?",
+        "categoria": "inglese",
+        "livello": "intermedio",
+        "opzioni": [
+          "spegnere",
+          "accendere",
+          "abbassare",
+          "scollegare"
+        ],
+        "risposta_corretta": "spegnere",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "spiegazione: testo molto lungo, controllare leggibilità"
+        ]
+      },
+      {
+        "id": "ING-AV-0008",
+        "domanda": "Quale frase trasforma correttamente 'I am working on the project' nel discorso indiretto con backshift standard?",
+        "categoria": "inglese",
+        "livello": "avanzato",
+        "opzioni": [
+          "He said that he was working on the project.",
+          "He said that he is working on the project.",
+          "He said that he had worked on the project.",
+          "He said that he worked on the project."
+        ],
+        "risposta_corretta": "He said that he was working on the project.",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "spiegazione: testo molto lungo, controllare leggibilità"
+        ]
+      },
+      {
+        "id": "ING-INT-0009",
+        "domanda": "Quale frase corrisponde meglio a: 'Non vedo l'ora di iniziare il corso'?",
+        "categoria": "inglese",
+        "livello": "intermedio",
+        "opzioni": [
+          "I am looking forward to starting the course.",
+          "I am looking forward to start the course.",
+          "I am looking for starting the course.",
+          "I am looking after starting the course."
+        ],
+        "risposta_corretta": "I am looking forward to starting the course.",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "spiegazione: testo molto lungo, controllare leggibilità"
+        ]
+      },
+      {
+        "id": "ING-AV-0009",
+        "domanda": "Nel contesto software, quale frase rende meglio 'The feature is backward compatible'?",
+        "categoria": "inglese",
+        "livello": "avanzato",
+        "opzioni": [
+          "La funzionalità è compatibile con versioni precedenti.",
+          "La funzionalità richiede solo versioni successive.",
+          "La funzionalità mantiene la stessa interfaccia ma non supporta versioni vecchie.",
+          "La funzionalità è stata riscritta senza garantire compatibilità."
+        ],
+        "risposta_corretta": "La funzionalità è compatibile con versioni precedenti.",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "spiegazione: testo molto lungo, controllare leggibilità"
+        ]
+      },
+      {
+        "id": "ING-INT-0101",
+        "domanda": "Completa la frase: I have lived in Rome ___ 2020.",
+        "categoria": "inglese",
+        "livello": "intermedio",
+        "opzioni": [
+          "since",
+          "for",
+          "during",
+          "from"
+        ],
+        "risposta_corretta": "since",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "spiegazione: testo molto lungo, controllare leggibilità"
+        ]
+      },
+      {
+        "id": "ING-AV-0101",
+        "domanda": "Completa la frase: The software is reliable; ___, it still needs regular maintenance.",
+        "categoria": "inglese",
+        "livello": "avanzato",
+        "opzioni": [
+          "nevertheless",
+          "therefore",
+          "because",
+          "provided that"
+        ],
+        "risposta_corretta": "nevertheless",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "spiegazione: testo molto lungo, controllare leggibilità"
+        ]
+      },
+      {
+        "id": "ING-AV-0102",
+        "domanda": "Quale frase usa correttamente una relative clause riferita a un server?",
+        "categoria": "inglese",
+        "livello": "avanzato",
+        "opzioni": [
+          "The server that hosts the database is offline.",
+          "The server who hosts the database is offline.",
+          "The server where hosts the database is offline.",
+          "The server whose hosts the database is offline."
+        ],
+        "risposta_corretta": "The server that hosts the database is offline.",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "spiegazione: testo molto lungo, controllare leggibilità"
+        ]
+      },
+      {
+        "id": "ING-AV-0103",
+        "domanda": "In un report tecnico, quale frase indica che il problema è stato risolto senza specificare chi lo ha risolto?",
+        "categoria": "inglese",
+        "livello": "avanzato",
+        "opzioni": [
+          "The issue has been fixed.",
+          "The issue has fixed.",
+          "The issue was been fixed.",
+          "The issue has been fix."
+        ],
+        "risposta_corretta": "The issue has been fixed.",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "spiegazione: testo molto lungo, controllare leggibilità"
+        ]
+      },
+      {
+        "id": "ING-AV-0104",
+        "domanda": "Trasforma correttamente in discorso indiretto: 'We will release the update tomorrow.'",
+        "categoria": "inglese",
+        "livello": "avanzato",
+        "opzioni": [
+          "They said they would release the update the next day.",
+          "They said they will release the update tomorrow.",
+          "They said they released the update the next day.",
+          "They said they had released the update tomorrow."
+        ],
+        "risposta_corretta": "They said they would release the update the next day.",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "spiegazione: testo molto lungo, controllare leggibilità"
+        ]
+      },
+      {
+        "id": "ING-INT-0105",
+        "domanda": "Completa la frase: If I had more time, I ___ a second project.",
+        "categoria": "inglese",
+        "livello": "intermedio",
+        "opzioni": [
+          "would start",
+          "will start",
+          "start",
+          "started"
+        ],
+        "risposta_corretta": "would start",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "spiegazione: testo molto lungo, controllare leggibilità"
+        ]
+      },
+      {
+        "id": "ING-AV-0105",
+        "domanda": "Completa la frase: If I had known about the error, I ___ it earlier.",
+        "categoria": "inglese",
+        "livello": "avanzato",
+        "opzioni": [
+          "would have fixed",
+          "will have fixed",
+          "would fix",
+          "had fixed"
+        ],
+        "risposta_corretta": "would have fixed",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "spiegazione: testo molto lungo, controllare leggibilità"
+        ]
+      },
+      {
+        "id": "ING-AV-0106",
+        "domanda": "Nel contesto software, quale traduzione rende meglio 'The app crashed during startup'?",
+        "categoria": "inglese",
+        "livello": "avanzato",
+        "opzioni": [
+          "L'app si è bloccata durante l'avvio.",
+          "L'app ha migliorato l'avvio.",
+          "L'app è stata aggiornata durante l'avvio.",
+          "L'app ha ignorato l'avvio."
+        ],
+        "risposta_corretta": "L'app si è bloccata durante l'avvio.",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "spiegazione: testo molto lungo, controllare leggibilità"
+        ]
+      },
+      {
+        "id": "ING-AV-0107",
+        "domanda": "Quale frase è più adatta in una comunicazione professionale?",
+        "categoria": "inglese",
+        "livello": "avanzato",
+        "opzioni": [
+          "Could you please send me the updated file?",
+          "Send me the file now.",
+          "Give me that file quickly.",
+          "You send the file to me."
+        ],
+        "risposta_corretta": "Could you please send me the updated file?",
         "posizione_risposta": "A",
         "problemi_tecnici": [],
         "avvisi_qualita_reali": [],
