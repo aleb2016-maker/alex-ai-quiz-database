@@ -9,7 +9,7 @@ Questo report separa i problemi qualitativi reali dagli avvisi non bloccanti sul
 | Scienze generali | 40 | 16 | 34 |
 | Biologia | 40 | 0 | 40 |
 | Fisica | 40 | 21 | 40 |
-| Chimica | 40 | 16 | 40 |
+| Chimica | 40 | 8 | 40 |
 | Fisica quantistica | 40 | 21 | 40 |
 
 **Nota:** la risposta in A nel sorgente non è più bloccante, perché il runtime ora usa il mescolatore generale.
@@ -816,7 +816,7 @@ Distribuzione risposta corretta nel sorgente:
 ## Chimica
 
 Domande sorgente: **40**
-Domande con problemi qualità reali: **16**
+Domande con problemi qualità reali: **8**
 Risposte corrette in A nel sorgente: **40**
 
 Distribuzione risposta corretta nel sorgente:
@@ -826,172 +826,6 @@ Distribuzione risposta corretta nel sorgente:
 ```
 
 ### Domande da migliorare davvero
-
-### CHE_021 — livello: avanzato
-
-**Domanda:** Che cosa indica il concetto di equilibrio chimico in una reazione reversibile?
-
-**Opzioni attuali:**
-- A. Le velocità della reazione diretta e inversa diventano uguali ✅
-- B. Tutte le molecole dei reagenti si trasformano definitivamente in prodotti
-- C. La reazione si ferma perché le particelle non si muovono più
-- D. La concentrazione dei reagenti diventa sempre identica a quella dei prodotti
-
-**Risposta corretta nel sorgente:** A
-
-**Problemi reali:**
-- Possibile opzione debole/generica: contiene “sempre”.
-
-**Regola di revisione:**
-- Ogni domanda deve avere almeno un distrattore forte: una risposta sbagliata molto vicina alla corretta, ma falsa per un dettaglio preciso.
-- Evitare parole assolute come “sempre” e “mai”, se rendono il distrattore troppo eliminabile.
-- Rendere le quattro opzioni simili per lunghezza, struttura e livello tecnico.
-
-### CHE_022 — livello: avanzato
-
-**Domanda:** Che cosa succede al pH di una soluzione quando aumenta la concentrazione di ioni H⁺?
-
-**Opzioni attuali:**
-- A. Il pH diminuisce ✅
-- B. Il pH aumenta sempre
-- C. Il pH resta sempre esattamente 7
-- D. Il pH diventa indipendente dall’acidità
-
-**Risposta corretta nel sorgente:** A
-
-**Problemi reali:**
-- Possibile opzione debole/generica: contiene “sempre”.
-- Possibile opzione debole/generica: contiene “sempre”.
-
-**Regola di revisione:**
-- Ogni domanda deve avere almeno un distrattore forte: una risposta sbagliata molto vicina alla corretta, ma falsa per un dettaglio preciso.
-- Evitare parole assolute come “sempre” e “mai”, se rendono il distrattore troppo eliminabile.
-- Rendere le quattro opzioni simili per lunghezza, struttura e livello tecnico.
-
-### CHE_023 — livello: avanzato
-
-**Domanda:** Perché una molecola può essere apolare anche se contiene legami polari?
-
-**Opzioni attuali:**
-- A. Perché la geometria molecolare può far annullare i dipoli dei legami ✅
-- B. Perché ogni legame polare rende sempre tutta la molecola carica positivamente
-- C. Perché i legami polari eliminano automaticamente tutti gli elettroni condivisi
-- D. Perché una molecola con legami polari non ha mai una forma definita
-
-**Risposta corretta nel sorgente:** A
-
-**Problemi reali:**
-- Possibile opzione debole/generica: contiene “sempre”.
-- Possibile opzione debole/generica: contiene “mai”.
-
-**Regola di revisione:**
-- Ogni domanda deve avere almeno un distrattore forte: una risposta sbagliata molto vicina alla corretta, ma falsa per un dettaglio preciso.
-- Evitare parole assolute come “sempre” e “mai”, se rendono il distrattore troppo eliminabile.
-- Rendere le quattro opzioni simili per lunghezza, struttura e livello tecnico.
-
-### CHE_024 — livello: avanzato
-
-**Domanda:** Che cosa descrive l’energia di attivazione di una reazione?
-
-**Opzioni attuali:**
-- A. L’energia minima necessaria perché i reagenti inizino a trasformarsi in prodotti ✅
-- B. L’energia totale che viene sempre conservata solo nei prodotti finali
-- C. La quantità di massa che sparisce quando la reazione comincia
-- D. La temperatura finale che ogni reazione deve raggiungere all’equilibrio
-
-**Risposta corretta nel sorgente:** A
-
-**Problemi reali:**
-- Possibile opzione debole/generica: contiene “sempre”.
-
-**Regola di revisione:**
-- Ogni domanda deve avere almeno un distrattore forte: una risposta sbagliata molto vicina alla corretta, ma falsa per un dettaglio preciso.
-- Evitare parole assolute come “sempre” e “mai”, se rendono il distrattore troppo eliminabile.
-- Rendere le quattro opzioni simili per lunghezza, struttura e livello tecnico.
-
-### CHE_026 — livello: facile
-
-**Domanda:** Che cosa indica il termine solvente in una soluzione?
-
-**Opzioni attuali:**
-- A. La sostanza che scioglie il soluto ✅
-- B. La sostanza presente sempre in quantità minore
-- C. Il residuo solido che rimane dopo la filtrazione
-- D. La sostanza che non può mai evaporare
-
-**Risposta corretta nel sorgente:** A
-
-**Problemi reali:**
-- Possibile opzione debole/generica: contiene “sempre”.
-- Possibile opzione debole/generica: contiene “mai”.
-
-**Regola di revisione:**
-- Ogni domanda deve avere almeno un distrattore forte: una risposta sbagliata molto vicina alla corretta, ma falsa per un dettaglio preciso.
-- Evitare parole assolute come “sempre” e “mai”, se rendono il distrattore troppo eliminabile.
-- Rendere le quattro opzioni simili per lunghezza, struttura e livello tecnico.
-
-### CHE_027 — livello: intermedio
-
-**Domanda:** Perché gli elementi dello stesso gruppo della tavola periodica hanno proprietà chimiche simili?
-
-**Opzioni attuali:**
-- A. Perché hanno lo stesso numero di elettroni di valenza ✅
-- B. Perché hanno sempre lo stesso numero di neutroni
-- C. Perché hanno identica massa atomica
-- D. Perché hanno sempre lo stesso numero atomico
-
-**Risposta corretta nel sorgente:** A
-
-**Problemi reali:**
-- Possibile opzione debole/generica: contiene “sempre”.
-- Possibile opzione debole/generica: contiene “sempre”.
-
-**Regola di revisione:**
-- Ogni domanda deve avere almeno un distrattore forte: una risposta sbagliata molto vicina alla corretta, ma falsa per un dettaglio preciso.
-- Evitare parole assolute come “sempre” e “mai”, se rendono il distrattore troppo eliminabile.
-- Rendere le quattro opzioni simili per lunghezza, struttura e livello tecnico.
-
-### CHE_028 — livello: intermedio
-
-**Domanda:** Che cosa avviene in una neutralizzazione tra un acido e una base?
-
-**Opzioni attuali:**
-- A. Si formano in genere un sale e acqua ✅
-- B. Si formano sempre solo gas nobili
-- C. Gli atomi vengono trasformati in protoni liberi
-- D. La massa dei reagenti viene annullata
-
-**Risposta corretta nel sorgente:** A
-
-**Problemi reali:**
-- Possibile opzione debole/generica: contiene “sempre”.
-
-**Regola di revisione:**
-- Ogni domanda deve avere almeno un distrattore forte: una risposta sbagliata molto vicina alla corretta, ma falsa per un dettaglio preciso.
-- Evitare parole assolute come “sempre” e “mai”, se rendono il distrattore troppo eliminabile.
-- Rendere le quattro opzioni simili per lunghezza, struttura e livello tecnico.
-
-### CHE_031 — livello: avanzato
-
-**Domanda:** Che cosa distingue un acido forte da un acido debole in soluzione acquosa?
-
-**Opzioni attuali:**
-- A. L’acido forte si ionizza quasi completamente, quello debole solo parzialmente ✅
-- B. L’acido forte ha sempre pH uguale a 7, quello debole pH minore di 7
-- C. L’acido forte non produce ioni H⁺, quello debole li produce sempre tutti
-- D. L’acido forte è sempre concentrato, quello debole è sempre diluito
-
-**Risposta corretta nel sorgente:** A
-
-**Problemi reali:**
-- Possibile opzione debole/generica: contiene “sempre”.
-- Possibile opzione debole/generica: contiene “sempre”.
-- Possibile opzione debole/generica: contiene “sempre”.
-
-**Regola di revisione:**
-- Ogni domanda deve avere almeno un distrattore forte: una risposta sbagliata molto vicina alla corretta, ma falsa per un dettaglio preciso.
-- Evitare parole assolute come “sempre” e “mai”, se rendono il distrattore troppo eliminabile.
-- Rendere le quattro opzioni simili per lunghezza, struttura e livello tecnico.
 
 ### CHE_032 — livello: avanzato
 

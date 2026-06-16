@@ -553,12 +553,12 @@
     "domanda": "Che cosa indica il concetto di equilibrio chimico in una reazione reversibile?",
     "opzioni": [
       "Le velocità della reazione diretta e inversa diventano uguali",
-      "Tutte le molecole dei reagenti si trasformano definitivamente in prodotti",
-      "La reazione si ferma perché le particelle non si muovono più",
-      "La concentrazione dei reagenti diventa sempre identica a quella dei prodotti"
+      "La reazione diretta si ferma mentre quella inversa continua da sola",
+      "La concentrazione dei prodotti aumenta senza limite nel tempo",
+      "I reagenti vengono consumati del tutto e non possono riformarsi"
     ],
     "risposta_corretta": "Le velocità della reazione diretta e inversa diventano uguali",
-    "spiegazione": "All’equilibrio chimico la reazione diretta e quella inversa continuano, ma avvengono alla stessa velocità. Le concentrazioni restano costanti, non necessariamente uguali.",
+    "spiegazione": "In un equilibrio chimico dinamico, la reazione diretta e quella inversa continuano ad avvenire, ma con la stessa velocità. Per questo le concentrazioni macroscopiche restano costanti.",
     "tags": [
       "chimica",
       "equilibrio_chimico",
@@ -568,7 +568,13 @@
     "distrattore_forte": "La concentrazione dei reagenti diventa sempre identica a quella dei prodotti",
     "punteggio_distrattore_forte": 4,
     "motivo_distrattore_forte": "È vicino perché parla di concentrazioni costanti, ma costante non significa uguale.",
-    "qualita": "controllata"
+    "qualita": "controllata",
+    "spiegazioni_opzioni": {
+      "Le velocità della reazione diretta e inversa diventano uguali": "Corretta: descrive in modo preciso il concetto chimico richiesto.",
+      "La reazione diretta si ferma mentre quella inversa continua da sola": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio chimico non corretto.",
+      "La concentrazione dei prodotti aumenta senza limite nel tempo": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio chimico non corretto.",
+      "I reagenti vengono consumati del tutto e non possono riformarsi": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio chimico non corretto."
+    }
   },
   {
     "id": "CHE_022",
@@ -577,13 +583,13 @@
     "livello": "avanzato",
     "domanda": "Che cosa succede al pH di una soluzione quando aumenta la concentrazione di ioni H⁺?",
     "opzioni": [
-      "Il pH diminuisce",
-      "Il pH aumenta sempre",
-      "Il pH resta sempre esattamente 7",
-      "Il pH diventa indipendente dall’acidità"
+      "Il pH diminuisce perché la soluzione diventa più acida",
+      "Il pH aumenta perché gli ioni H⁺ rendono la soluzione più basica",
+      "Il pH resta invariato perché dipende solo dalla quantità di solvente",
+      "Il pH misura soltanto gli ioni OH⁻ e non dipende dagli ioni H⁺"
     ],
-    "risposta_corretta": "Il pH diminuisce",
-    "spiegazione": "Il pH è legato in modo inverso alla concentrazione di ioni H⁺. Se aumentano gli ioni H⁺, la soluzione diventa più acida e il pH diminuisce.",
+    "risposta_corretta": "Il pH diminuisce perché la soluzione diventa più acida",
+    "spiegazione": "Il pH è collegato alla concentrazione di ioni H⁺: quando la concentrazione di H⁺ aumenta, il pH diminuisce e la soluzione diventa più acida.",
     "tags": [
       "chimica",
       "ph",
@@ -594,7 +600,13 @@
     "distrattore_forte": "Il pH aumenta sempre",
     "punteggio_distrattore_forte": 4,
     "motivo_distrattore_forte": "È vicino perché collega pH e ioni H⁺, ma inverte la relazione.",
-    "qualita": "controllata"
+    "qualita": "controllata",
+    "spiegazioni_opzioni": {
+      "Il pH diminuisce perché la soluzione diventa più acida": "Corretta: descrive in modo preciso il concetto chimico richiesto.",
+      "Il pH aumenta perché gli ioni H⁺ rendono la soluzione più basica": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio chimico non corretto.",
+      "Il pH resta invariato perché dipende solo dalla quantità di solvente": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio chimico non corretto.",
+      "Il pH misura soltanto gli ioni OH⁻ e non dipende dagli ioni H⁺": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio chimico non corretto."
+    }
   },
   {
     "id": "CHE_023",
@@ -603,13 +615,13 @@
     "livello": "avanzato",
     "domanda": "Perché una molecola può essere apolare anche se contiene legami polari?",
     "opzioni": [
-      "Perché la geometria molecolare può far annullare i dipoli dei legami",
-      "Perché ogni legame polare rende sempre tutta la molecola carica positivamente",
-      "Perché i legami polari eliminano automaticamente tutti gli elettroni condivisi",
-      "Perché una molecola con legami polari non ha mai una forma definita"
+      "La geometria simmetrica può annullare il momento dipolare complessivo",
+      "La presenza di legami polari rende la molecola polare indipendentemente dalla forma",
+      "La molecola diventa apolare perché i legami polari perdono gli elettroni condivisi",
+      "L’apolarità dipende solo dalla massa molecolare e non dalla distribuzione di carica"
     ],
-    "risposta_corretta": "Perché la geometria molecolare può far annullare i dipoli dei legami",
-    "spiegazione": "La polarità della molecola dipende sia dalla polarità dei legami sia dalla geometria. Se i dipoli si annullano, la molecola può risultare apolare.",
+    "risposta_corretta": "La geometria simmetrica può annullare il momento dipolare complessivo",
+    "spiegazione": "Una molecola può contenere legami polari ma risultare apolare se la sua geometria è simmetrica e i dipoli dei legami si compensano tra loro.",
     "tags": [
       "chimica",
       "polarita",
@@ -619,7 +631,13 @@
     "distrattore_forte": "Perché ogni legame polare rende sempre tutta la molecola carica positivamente",
     "punteggio_distrattore_forte": 4,
     "motivo_distrattore_forte": "È vicino perché collega legami polari e molecola, ma confonde polarità con carica elettrica totale.",
-    "qualita": "controllata"
+    "qualita": "controllata",
+    "spiegazioni_opzioni": {
+      "La geometria simmetrica può annullare il momento dipolare complessivo": "Corretta: descrive in modo preciso il concetto chimico richiesto.",
+      "La presenza di legami polari rende la molecola polare indipendentemente dalla forma": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio chimico non corretto.",
+      "La molecola diventa apolare perché i legami polari perdono gli elettroni condivisi": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio chimico non corretto.",
+      "L’apolarità dipende solo dalla massa molecolare e non dalla distribuzione di carica": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio chimico non corretto."
+    }
   },
   {
     "id": "CHE_024",
@@ -628,13 +646,13 @@
     "livello": "avanzato",
     "domanda": "Che cosa descrive l’energia di attivazione di una reazione?",
     "opzioni": [
-      "L’energia minima necessaria perché i reagenti inizino a trasformarsi in prodotti",
-      "L’energia totale che viene sempre conservata solo nei prodotti finali",
-      "La quantità di massa che sparisce quando la reazione comincia",
-      "La temperatura finale che ogni reazione deve raggiungere all’equilibrio"
+      "L’energia minima necessaria perché i reagenti possano trasformarsi in prodotti",
+      "L’energia totale liberata quando tutti i prodotti sono già formati",
+      "L’energia conservata nei prodotti dopo il completamento della reazione",
+      "L’energia che misura solo la massa dei reagenti prima dell’urto efficace"
     ],
-    "risposta_corretta": "L’energia minima necessaria perché i reagenti inizino a trasformarsi in prodotti",
-    "spiegazione": "L’energia di attivazione è la barriera energetica che i reagenti devono superare per trasformarsi in prodotti.",
+    "risposta_corretta": "L’energia minima necessaria perché i reagenti possano trasformarsi in prodotti",
+    "spiegazione": "L’energia di attivazione è la barriera energetica minima che i reagenti devono superare per raggiungere lo stato di transizione e trasformarsi in prodotti.",
     "tags": [
       "chimica",
       "energia_attivazione",
@@ -644,7 +662,13 @@
     "distrattore_forte": "La temperatura finale che ogni reazione deve raggiungere all’equilibrio",
     "punteggio_distrattore_forte": 4,
     "motivo_distrattore_forte": "È vicino perché collega energia e reazioni, ma l’energia di attivazione non è una temperatura finale obbligatoria.",
-    "qualita": "controllata"
+    "qualita": "controllata",
+    "spiegazioni_opzioni": {
+      "L’energia minima necessaria perché i reagenti possano trasformarsi in prodotti": "Corretta: descrive in modo preciso il concetto chimico richiesto.",
+      "L’energia totale liberata quando tutti i prodotti sono già formati": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio chimico non corretto.",
+      "L’energia conservata nei prodotti dopo il completamento della reazione": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio chimico non corretto.",
+      "L’energia che misura solo la massa dei reagenti prima dell’urto efficace": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio chimico non corretto."
+    }
   },
   {
     "id": "CHE_025",
@@ -678,13 +702,13 @@
     "livello": "facile",
     "domanda": "Che cosa indica il termine solvente in una soluzione?",
     "opzioni": [
-      "La sostanza che scioglie il soluto",
-      "La sostanza presente sempre in quantità minore",
-      "Il residuo solido che rimane dopo la filtrazione",
-      "La sostanza che non può mai evaporare"
+      "Il componente che scioglie il soluto ed è spesso presente in quantità maggiore",
+      "Il componente disciolto nel liquido e presente in quantità minore rispetto al solvente",
+      "La sostanza che precipita dal fondo quando la soluzione diventa omogenea",
+      "Il composto che reagisce con ogni soluto trasformandolo in gas"
     ],
-    "risposta_corretta": "La sostanza che scioglie il soluto",
-    "spiegazione": "Il solvente è la sostanza che scioglie il soluto. Nelle soluzioni acquose, per esempio, il solvente è l’acqua.",
+    "risposta_corretta": "Il componente che scioglie il soluto ed è spesso presente in quantità maggiore",
+    "spiegazione": "Il solvente è il componente della soluzione che scioglie il soluto. Di solito è presente in quantità maggiore, anche se la definizione dipende dal ruolo nella soluzione.",
     "tags": [
       "chimica",
       "soluzioni",
@@ -695,7 +719,13 @@
     "distrattore_forte": "La sostanza presente sempre in quantità minore",
     "punteggio_distrattore_forte": 4,
     "motivo_distrattore_forte": "È vicino perché spesso il soluto è in quantità minore, ma il solvente è definito dalla funzione di sciogliere.",
-    "qualita": "controllata"
+    "qualita": "controllata",
+    "spiegazioni_opzioni": {
+      "Il componente che scioglie il soluto ed è spesso presente in quantità maggiore": "Corretta: descrive in modo preciso il concetto chimico richiesto.",
+      "Il componente disciolto nel liquido e presente in quantità minore rispetto al solvente": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio chimico non corretto.",
+      "La sostanza che precipita dal fondo quando la soluzione diventa omogenea": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio chimico non corretto.",
+      "Il composto che reagisce con ogni soluto trasformandolo in gas": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio chimico non corretto."
+    }
   },
   {
     "id": "CHE_027",
@@ -704,13 +734,13 @@
     "livello": "intermedio",
     "domanda": "Perché gli elementi dello stesso gruppo della tavola periodica hanno proprietà chimiche simili?",
     "opzioni": [
-      "Perché hanno lo stesso numero di elettroni di valenza",
-      "Perché hanno sempre lo stesso numero di neutroni",
-      "Perché hanno identica massa atomica",
-      "Perché hanno sempre lo stesso numero atomico"
+      "Hanno lo stesso numero di elettroni di valenza e reagiscono in modo simile",
+      "Hanno lo stesso numero totale di protoni e quindi identica massa atomica",
+      "Hanno lo stesso numero di neutroni e formano gli stessi isotopi stabili",
+      "Hanno configurazioni interne identiche ma diverso strato elettronico esterno"
     ],
-    "risposta_corretta": "Perché hanno lo stesso numero di elettroni di valenza",
-    "spiegazione": "Gli elettroni di valenza determinano molti comportamenti chimici. Per questo elementi nello stesso gruppo reagiscono spesso in modo simile.",
+    "risposta_corretta": "Hanno lo stesso numero di elettroni di valenza e reagiscono in modo simile",
+    "spiegazione": "Gli elementi dello stesso gruppo della tavola periodica hanno lo stesso numero di elettroni di valenza. Questo spiega perché presentano proprietà chimiche simili.",
     "tags": [
       "chimica",
       "tavola_periodica",
@@ -720,7 +750,13 @@
     "distrattore_forte": "Perché hanno sempre lo stesso numero atomico",
     "punteggio_distrattore_forte": 4,
     "motivo_distrattore_forte": "È vicino perché il numero atomico identifica gli elementi, ma elementi diversi non possono avere lo stesso numero atomico.",
-    "qualita": "controllata"
+    "qualita": "controllata",
+    "spiegazioni_opzioni": {
+      "Hanno lo stesso numero di elettroni di valenza e reagiscono in modo simile": "Corretta: descrive in modo preciso il concetto chimico richiesto.",
+      "Hanno lo stesso numero totale di protoni e quindi identica massa atomica": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio chimico non corretto.",
+      "Hanno lo stesso numero di neutroni e formano gli stessi isotopi stabili": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio chimico non corretto.",
+      "Hanno configurazioni interne identiche ma diverso strato elettronico esterno": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio chimico non corretto."
+    }
   },
   {
     "id": "CHE_028",
@@ -729,13 +765,13 @@
     "livello": "intermedio",
     "domanda": "Che cosa avviene in una neutralizzazione tra un acido e una base?",
     "opzioni": [
-      "Si formano in genere un sale e acqua",
-      "Si formano sempre solo gas nobili",
-      "Gli atomi vengono trasformati in protoni liberi",
-      "La massa dei reagenti viene annullata"
+      "Gli ioni H⁺ dell’acido reagiscono con gli ioni OH⁻ della base formando acqua",
+      "Gli ioni H⁺ dell’acido si trasformano direttamente in elettroni liberi",
+      "La base aumenta l’acidità della soluzione producendo nuovi ioni H⁺",
+      "L’acido e la base scompaiono senza formare nuove specie chimiche"
     ],
-    "risposta_corretta": "Si formano in genere un sale e acqua",
-    "spiegazione": "In una reazione di neutralizzazione, gli ioni H⁺ dell’acido e gli ioni OH⁻ della base formano acqua, mentre gli altri ioni formano un sale.",
+    "risposta_corretta": "Gli ioni H⁺ dell’acido reagiscono con gli ioni OH⁻ della base formando acqua",
+    "spiegazione": "In una neutralizzazione, un acido e una base reagiscono: gli ioni H⁺ e OH⁻ formano acqua, mentre gli altri ioni possono formare un sale.",
     "tags": [
       "chimica",
       "neutralizzazione",
@@ -745,7 +781,13 @@
     "distrattore_forte": "Gli atomi vengono trasformati in protoni liberi",
     "punteggio_distrattore_forte": 4,
     "motivo_distrattore_forte": "È vicino perché richiama gli ioni H⁺, ma una neutralizzazione non trasforma gli atomi in protoni liberi.",
-    "qualita": "controllata"
+    "qualita": "controllata",
+    "spiegazioni_opzioni": {
+      "Gli ioni H⁺ dell’acido reagiscono con gli ioni OH⁻ della base formando acqua": "Corretta: descrive in modo preciso il concetto chimico richiesto.",
+      "Gli ioni H⁺ dell’acido si trasformano direttamente in elettroni liberi": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio chimico non corretto.",
+      "La base aumenta l’acidità della soluzione producendo nuovi ioni H⁺": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio chimico non corretto.",
+      "L’acido e la base scompaiono senza formare nuove specie chimiche": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio chimico non corretto."
+    }
   },
   {
     "id": "CHE_029",
@@ -804,13 +846,13 @@
     "livello": "avanzato",
     "domanda": "Che cosa distingue un acido forte da un acido debole in soluzione acquosa?",
     "opzioni": [
-      "L’acido forte si ionizza quasi completamente, quello debole solo parzialmente",
-      "L’acido forte ha sempre pH uguale a 7, quello debole pH minore di 7",
-      "L’acido forte non produce ioni H⁺, quello debole li produce sempre tutti",
-      "L’acido forte è sempre concentrato, quello debole è sempre diluito"
+      "Un acido forte si ionizza quasi completamente, un acido debole solo parzialmente",
+      "Un acido forte ha pH alto, un acido debole ha pH basso alla stessa concentrazione",
+      "Un acido forte contiene più atomi, un acido debole contiene meno legami chimici",
+      "Un acido forte non produce ioni H⁺, un acido debole li produce in grande quantità"
     ],
-    "risposta_corretta": "L’acido forte si ionizza quasi completamente, quello debole solo parzialmente",
-    "spiegazione": "La forza di un acido dipende dal grado di ionizzazione in acqua, non semplicemente dalla sua concentrazione.",
+    "risposta_corretta": "Un acido forte si ionizza quasi completamente, un acido debole solo parzialmente",
+    "spiegazione": "Un acido forte in acqua si ionizza quasi completamente, liberando molti ioni H⁺. Un acido debole invece si ionizza solo in parte e mantiene un equilibrio tra forma ionizzata e non ionizzata.",
     "tags": [
       "chimica",
       "acidi",
@@ -821,7 +863,13 @@
     "distrattore_forte": "L’acido forte è sempre concentrato, quello debole è sempre diluito",
     "punteggio_distrattore_forte": 4,
     "motivo_distrattore_forte": "È vicino perché confonde forza e concentrazione, due concetti collegati ma diversi.",
-    "qualita": "controllata"
+    "qualita": "controllata",
+    "spiegazioni_opzioni": {
+      "Un acido forte si ionizza quasi completamente, un acido debole solo parzialmente": "Corretta: descrive in modo preciso il concetto chimico richiesto.",
+      "Un acido forte ha pH alto, un acido debole ha pH basso alla stessa concentrazione": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio chimico non corretto.",
+      "Un acido forte contiene più atomi, un acido debole contiene meno legami chimici": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio chimico non corretto.",
+      "Un acido forte non produce ioni H⁺, un acido debole li produce in grande quantità": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio chimico non corretto."
+    }
   },
   {
     "id": "CHE_032",
