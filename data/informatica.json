@@ -29,8 +29,8 @@
     "livello": "intermedio",
     "domanda": "In un database relazionale, a cosa serve principalmente una chiave primaria?",
     "opzioni": [
-      "A collegare una tabella a un'altra tramite una chiave esterna",
       "A identificare in modo univoco ogni record di una tabella",
+      "A collegare una tabella a un'altra tramite una chiave esterna",
       "A definire una colonna usata spesso per ordinare i risultati",
       "A indicare un campo facoltativo che può essere lasciato vuoto"
     ],
@@ -52,10 +52,10 @@
     "livello": "avanzato",
     "domanda": "Qual è lo scopo principale di un'API REST in un'applicazione web?",
     "opzioni": [
-      "Sostituire la logica del backend con chiamate dirette dal browser",
-      "Usare una singola pagina HTML come unico punto di elaborazione dei dati",
       "Permettere a frontend e backend di comunicare tramite richieste HTTP strutturate",
-      "Permettere al frontend di leggere direttamente le tabelle del database"
+      "Permettere al frontend di leggere direttamente le tabelle del database",
+      "Usare una singola pagina HTML come unico punto di elaborazione dei dati",
+      "Sostituire la logica del backend con chiamate dirette dal browser"
     ],
     "risposta_corretta": "Permettere a frontend e backend di comunicare tramite richieste HTTP strutturate",
     "spiegazione": "Un'API REST permette a frontend e backend di comunicare tramite richieste HTTP organizzate. Il frontend non dovrebbe leggere direttamente il database: passa dal backend, che espone endpoint controllati.",

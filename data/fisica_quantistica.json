@@ -6,10 +6,10 @@
     "livello": "facile",
     "domanda": "Che cosa indica, in modo generale, la parola 'quanto' in fisica quantistica?",
     "opzioni": [
-      "Una particella sempre visibile a occhio nudo",
       "Una quantità minima e discreta di una grandezza fisica",
+      "Una quantità continua che può assumere qualunque valore",
       "Una forza che agisce solo sui corpi macroscopici",
-      "Una quantità continua che può assumere qualunque valore"
+      "Una particella sempre visibile a occhio nudo"
     ],
     "risposta_corretta": "Una quantità minima e discreta di una grandezza fisica",
     "spiegazione": "In fisica quantistica molte grandezze non variano in modo continuo, ma in pacchetti discreti chiamati quanti.",
@@ -31,10 +31,10 @@
     "livello": "facile",
     "domanda": "Quale fenomeno mostra che la luce può comportarsi come un insieme di particelle chiamate fotoni?",
     "opzioni": [
-      "La pressione atmosferica",
-      "La caduta libera",
+      "L'effetto fotoelettrico",
       "La dilatazione termica",
-      "L'effetto fotoelettrico"
+      "La caduta libera",
+      "La pressione atmosferica"
     ],
     "risposta_corretta": "L'effetto fotoelettrico",
     "spiegazione": "Nell'effetto fotoelettrico la luce riesce a estrarre elettroni da un metallo solo se i fotoni hanno energia sufficiente.",
@@ -56,10 +56,10 @@
     "livello": "facile",
     "domanda": "Che cosa sono i fotoni?",
     "opzioni": [
-      "Atomi privi di elettroni",
       "Quanti di energia della radiazione elettromagnetica",
-      "Onde sonore ad alta frequenza",
-      "Molecole formate solo da protoni"
+      "Atomi privi di elettroni",
+      "Molecole formate solo da protoni",
+      "Onde sonore ad alta frequenza"
     ],
     "risposta_corretta": "Quanti di energia della radiazione elettromagnetica",
     "spiegazione": "I fotoni sono i quanti della luce e, più in generale, della radiazione elettromagnetica.",
@@ -81,8 +81,8 @@
     "livello": "facile",
     "domanda": "Che cosa afferma il dualismo onda-particella?",
     "opzioni": [
-      "Che ogni particella è sempre solo un'onda classica",
       "Che oggetti microscopici possono mostrare sia proprietà ondulatorie sia proprietà corpuscolari",
+      "Che ogni particella è sempre solo un'onda classica",
       "Che ogni onda è sempre visibile come una particella macroscopica",
       "Che onde e particelle non hanno mai alcuna relazione"
     ],
@@ -106,10 +106,10 @@
     "livello": "facile",
     "domanda": "Quale particella dell'atomo ha carica elettrica negativa?",
     "opzioni": [
-      "Neutrone",
       "Elettrone",
-      "Fotone",
-      "Protone"
+      "Protone",
+      "Neutrone",
+      "Fotone"
     ],
     "risposta_corretta": "Elettrone",
     "spiegazione": "L'elettrone ha carica negativa. Il protone ha carica positiva, il neutrone è neutro e il fotone non è una particella costituente del nucleo atomico.",
@@ -131,10 +131,10 @@
     "livello": "facile",
     "domanda": "Che cosa descrive la funzione d'onda in fisica quantistica?",
     "opzioni": [
+      "Le probabilità associate agli stati di una particella",
       "La traiettoria esatta e visibile di una particella",
       "La massa totale di un pianeta",
-      "La temperatura di un gas ideale",
-      "Le probabilità associate agli stati di una particella"
+      "La temperatura di un gas ideale"
     ],
     "risposta_corretta": "Le probabilità associate agli stati di una particella",
     "spiegazione": "La funzione d'onda contiene informazioni probabilistiche sullo stato di un sistema quantistico.",
@@ -157,9 +157,9 @@
     "domanda": "Che cosa significa dire che l'energia di un elettrone in un atomo è quantizzata?",
     "opzioni": [
       "Che può assumere solo certi valori permessi",
-      "Che dipende solo dalla temperatura dell'aria",
+      "Che può assumere qualsiasi valore senza limiti",
       "Che è sempre uguale a zero",
-      "Che può assumere qualsiasi valore senza limiti"
+      "Che dipende solo dalla temperatura dell'aria"
     ],
     "risposta_corretta": "Che può assumere solo certi valori permessi",
     "spiegazione": "Negli atomi gli elettroni possono trovarsi solo in livelli energetici specifici, non in qualunque valore intermedio.",
@@ -181,10 +181,10 @@
     "livello": "facile",
     "domanda": "Che cosa accade quando un elettrone passa da un livello energetico alto a uno più basso?",
     "opzioni": [
+      "Può emettere un fotone",
       "Scompare dal nucleo",
-      "Perde sempre tutta la sua massa",
       "Diventa un protone",
-      "Può emettere un fotone"
+      "Perde sempre tutta la sua massa"
     ],
     "risposta_corretta": "Può emettere un fotone",
     "spiegazione": "Quando un elettrone scende a un livello energetico più basso, la differenza di energia può essere emessa sotto forma di fotone.",
@@ -206,10 +206,10 @@
     "livello": "facile",
     "domanda": "Quale idea è centrale nella fisica quantistica rispetto alla misura?",
     "opzioni": [
+      "Il risultato di una misura può essere probabilistico",
       "Ogni misura dà sempre un valore prevedibile con certezza assoluta",
-      "La misura elimina sempre la massa della particella",
       "Le misure sono possibili solo su oggetti grandi",
-      "Il risultato di una misura può essere probabilistico"
+      "La misura elimina sempre la massa della particella"
     ],
     "risposta_corretta": "Il risultato di una misura può essere probabilistico",
     "spiegazione": "In fisica quantistica molte previsioni danno probabilità dei risultati, non sempre valori certi prima della misura.",
@@ -232,9 +232,9 @@
     "domanda": "In quale scala di fenomeni la fisica quantistica diventa particolarmente importante?",
     "opzioni": [
       "Nella scala atomica e subatomica",
+      "Solo nella scala dei pianeti",
       "Solo nella scala delle galassie",
-      "Solo nella scala degli oggetti visibili a occhio nudo",
-      "Solo nella scala dei pianeti"
+      "Solo nella scala degli oggetti visibili a occhio nudo"
     ],
     "risposta_corretta": "Nella scala atomica e subatomica",
     "spiegazione": "Gli effetti quantistici sono fondamentali per descrivere atomi, elettroni, fotoni e altre particelle microscopiche.",
@@ -256,10 +256,10 @@
     "livello": "intermedio",
     "domanda": "Che cosa afferma il principio di indeterminazione di Heisenberg?",
     "opzioni": [
-      "La velocità della luce cambia in base alla massa dell'osservatore",
-      "Ogni particella si muove sempre lungo una traiettoria perfettamente visibile",
+      "Non è possibile conoscere contemporaneamente con precisione arbitraria posizione e quantità di moto di una particella",
       "Non è possibile misurare mai la massa di una particella",
-      "Non è possibile conoscere contemporaneamente con precisione arbitraria posizione e quantità di moto di una particella"
+      "Ogni particella si muove sempre lungo una traiettoria perfettamente visibile",
+      "La velocità della luce cambia in base alla massa dell'osservatore"
     ],
     "risposta_corretta": "Non è possibile conoscere contemporaneamente con precisione arbitraria posizione e quantità di moto di una particella",
     "spiegazione": "Il principio di indeterminazione dice che alcune coppie di grandezze, come posizione e quantità di moto, non possono essere entrambe determinate con precisione arbitraria nello stesso momento.",
@@ -306,10 +306,10 @@
     "livello": "intermedio",
     "domanda": "Che cosa significa sovrapposizione quantistica?",
     "opzioni": [
-      "Un sistema può occupare solo uno stato classico già determinato e visibile",
-      "Una particella perde automaticamente tutta la sua energia",
       "Un sistema può trovarsi in una combinazione di più stati possibili prima della misura",
-      "Due oggetti macroscopici devono sempre stare nello stesso luogo"
+      "Un sistema può occupare solo uno stato classico già determinato e visibile",
+      "Due oggetti macroscopici devono sempre stare nello stesso luogo",
+      "Una particella perde automaticamente tutta la sua energia"
     ],
     "risposta_corretta": "Un sistema può trovarsi in una combinazione di più stati possibili prima della misura",
     "spiegazione": "La sovrapposizione quantistica indica che, prima della misura, un sistema può essere descritto come combinazione di stati possibili.",
@@ -331,8 +331,8 @@
     "livello": "intermedio",
     "domanda": "Che cosa indica il termine entanglement quantistico?",
     "opzioni": [
-      "Una collisione meccanica tra due pianeti",
       "Una correlazione tra sistemi quantistici tale che lo stato di uno è legato allo stato dell'altro",
+      "Una collisione meccanica tra due pianeti",
       "Una forza che trasforma sempre un elettrone in un neutrone",
       "Una vibrazione sonora prodotta da due onde acustiche"
     ],
@@ -356,9 +356,9 @@
     "livello": "intermedio",
     "domanda": "Che cosa descrive il tunneling quantistico?",
     "opzioni": [
+      "La possibilità che una particella attraversi una barriera che classicamente non avrebbe energia sufficiente per superare",
       "Il passaggio di un pianeta attraverso una stella",
       "La trasformazione automatica della luce in suono",
-      "La possibilità che una particella attraversi una barriera che classicamente non avrebbe energia sufficiente per superare",
       "La perdita totale della carica elettrica di un elettrone"
     ],
     "risposta_corretta": "La possibilità che una particella attraversi una barriera che classicamente non avrebbe energia sufficiente per superare",
@@ -381,10 +381,10 @@
     "livello": "intermedio",
     "domanda": "Che cosa rappresenta lo spin di una particella?",
     "opzioni": [
-      "La distanza tra due elettroni in un metallo",
-      "La rotazione visibile della particella come una pallina macroscopica",
       "Una proprietà quantistica intrinseca simile a un momento angolare, ma non identica a una rotazione classica",
-      "La velocità con cui una particella cade nel vuoto"
+      "La rotazione visibile della particella come una pallina macroscopica",
+      "La velocità con cui una particella cade nel vuoto",
+      "La distanza tra due elettroni in un metallo"
     ],
     "risposta_corretta": "Una proprietà quantistica intrinseca simile a un momento angolare, ma non identica a una rotazione classica",
     "spiegazione": "Lo spin è una proprietà intrinseca delle particelle. Il nome richiama la rotazione, ma non va interpretato come una semplice pallina che gira su se stessa.",
@@ -407,9 +407,9 @@
     "domanda": "Che cosa afferma il principio di esclusione di Pauli?",
     "opzioni": [
       "Due fermioni identici non possono occupare lo stesso stato quantico completo",
-      "Ogni particella deve decadere immediatamente",
       "Due fotoni non possono mai trovarsi nello stesso luogo",
-      "Ogni elettrone deve avere sempre energia infinita"
+      "Ogni elettrone deve avere sempre energia infinita",
+      "Ogni particella deve decadere immediatamente"
     ],
     "risposta_corretta": "Due fermioni identici non possono occupare lo stesso stato quantico completo",
     "spiegazione": "Il principio di esclusione di Pauli è fondamentale per spiegare la struttura elettronica degli atomi: due elettroni nello stesso atomo non possono avere tutti i numeri quantici uguali.",
@@ -431,10 +431,10 @@
     "livello": "intermedio",
     "domanda": "Perché gli elettroni negli atomi occupano livelli energetici specifici?",
     "opzioni": [
+      "Perché sono descritti da stati quantizzati compatibili con le condizioni dell'atomo",
       "Perché si muovono come pianeti su orbite classiche qualsiasi",
       "Perché non hanno alcuna relazione con il nucleo",
-      "Perché la loro energia dipende solo dal colore dell'atomo",
-      "Perché sono descritti da stati quantizzati compatibili con le condizioni dell'atomo"
+      "Perché la loro energia dipende solo dal colore dell'atomo"
     ],
     "risposta_corretta": "Perché sono descritti da stati quantizzati compatibili con le condizioni dell'atomo",
     "spiegazione": "Gli elettroni atomici sono descritti da stati quantistici permessi. Per questo l'energia non può assumere qualunque valore continuo.",
@@ -456,9 +456,9 @@
     "livello": "intermedio",
     "domanda": "Che cosa succede alla funzione d'onda secondo l'idea del collasso durante una misura?",
     "opzioni": [
-      "Il sistema diventa automaticamente invisibile",
-      "La particella perde sempre tutta la massa",
       "Lo stato viene associato a uno dei risultati possibili della misura",
+      "La particella perde sempre tutta la massa",
+      "Il sistema diventa automaticamente invisibile",
       "La funzione d'onda si trasforma sempre in calore"
     ],
     "risposta_corretta": "Lo stato viene associato a uno dei risultati possibili della misura",
@@ -482,9 +482,9 @@
     "domanda": "Qual è una differenza importante tra fisica classica e fisica quantistica?",
     "opzioni": [
       "La fisica quantistica usa spesso descrizioni probabilistiche per i sistemi microscopici",
-      "La fisica quantistica descrive solo oggetti grandi come pianeti",
       "La fisica quantistica elimina completamente il concetto di energia",
-      "La fisica classica vale solo per gli elettroni negli atomi"
+      "La fisica classica vale solo per gli elettroni negli atomi",
+      "La fisica quantistica descrive solo oggetti grandi come pianeti"
     ],
     "risposta_corretta": "La fisica quantistica usa spesso descrizioni probabilistiche per i sistemi microscopici",
     "spiegazione": "La fisica classica descrive spesso traiettorie e grandezze definite, mentre la fisica quantistica usa stati e probabilità, soprattutto alla scala microscopica.",
@@ -506,9 +506,9 @@
     "livello": "avanzato",
     "domanda": "Qual è il ruolo dell'equazione di Schrödinger nella fisica quantistica?",
     "opzioni": [
+      "Descrive l'evoluzione temporale della funzione d'onda di un sistema quantistico",
       "Calcola solo la temperatura di un gas in equilibrio",
       "Descrive esclusivamente il moto dei pianeti intorno al Sole",
-      "Descrive l'evoluzione temporale della funzione d'onda di un sistema quantistico",
       "Elimina la probabilità dalla descrizione delle particelle"
     ],
     "risposta_corretta": "Descrive l'evoluzione temporale della funzione d'onda di un sistema quantistico",
@@ -531,10 +531,10 @@
     "livello": "avanzato",
     "domanda": "In meccanica quantistica, che cosa rappresenta un operatore?",
     "opzioni": [
-      "Una forza macroscopica che agisce solo sui liquidi",
       "Un oggetto matematico associato a una grandezza fisica misurabile",
-      "Un dispositivo meccanico usato solo nei motori termici",
-      "Una particella che trasporta sempre carica elettrica positiva"
+      "Una particella che trasporta sempre carica elettrica positiva",
+      "Una forza macroscopica che agisce solo sui liquidi",
+      "Un dispositivo meccanico usato solo nei motori termici"
     ],
     "risposta_corretta": "Un oggetto matematico associato a una grandezza fisica misurabile",
     "spiegazione": "In meccanica quantistica grandezze come energia, posizione e quantità di moto sono rappresentate da operatori che agiscono sugli stati del sistema.",
@@ -557,8 +557,8 @@
     "domanda": "Che cosa indica un autovalore associato a un operatore quantistico?",
     "opzioni": [
       "Un possibile risultato della misura della grandezza fisica rappresentata da quell'operatore",
-      "La traiettoria classica completa di una particella",
       "La massa nascosta di un fotone fermo",
+      "La traiettoria classica completa di una particella",
       "La temperatura minima raggiungibile da un corpo macroscopico"
     ],
     "risposta_corretta": "Un possibile risultato della misura della grandezza fisica rappresentata da quell'operatore",
@@ -581,9 +581,9 @@
     "livello": "avanzato",
     "domanda": "Perché il commutatore tra due operatori è importante in meccanica quantistica?",
     "opzioni": [
+      "Perché indica se due grandezze possono avere valori ben definiti simultaneamente",
       "Perché misura sempre la velocità della luce nel vuoto",
       "Perché trasforma automaticamente un bosone in un fermione",
-      "Perché indica se due grandezze possono avere valori ben definiti simultaneamente",
       "Perché stabilisce la massa totale dell'universo"
     ],
     "risposta_corretta": "Perché indica se due grandezze possono avere valori ben definiti simultaneamente",
@@ -606,10 +606,10 @@
     "livello": "avanzato",
     "domanda": "Che cosa suggeriscono le disuguaglianze di Bell quando vengono violate sperimentalmente?",
     "opzioni": [
-      "Che la luce non può mai comportarsi come particella",
-      "Che la fisica quantistica è sempre identica alla meccanica newtoniana",
       "Che certe correlazioni quantistiche non sono spiegabili con semplici variabili nascoste locali",
-      "Che gli elettroni non possiedono mai carica elettrica"
+      "Che la fisica quantistica è sempre identica alla meccanica newtoniana",
+      "Che gli elettroni non possiedono mai carica elettrica",
+      "Che la luce non può mai comportarsi come particella"
     ],
     "risposta_corretta": "Che certe correlazioni quantistiche non sono spiegabili con semplici variabili nascoste locali",
     "spiegazione": "La violazione delle disuguaglianze di Bell mostra che le correlazioni quantistiche dell'entanglement non possono essere spiegate da modelli locali semplici a variabili nascoste.",
@@ -631,8 +631,8 @@
     "livello": "avanzato",
     "domanda": "Che cosa si intende per decoerenza quantistica?",
     "opzioni": [
-      "La trasformazione di ogni particella in luce visibile",
       "Il processo per cui l'interazione con l'ambiente riduce gli effetti osservabili della sovrapposizione",
+      "La trasformazione di ogni particella in luce visibile",
       "La scomparsa totale dell'energia da un sistema isolato",
       "La rotazione classica di un pianeta intorno al proprio asse"
     ],
@@ -656,10 +656,10 @@
     "livello": "avanzato",
     "domanda": "Qual è una differenza tra fermioni e bosoni?",
     "opzioni": [
+      "I fermioni obbediscono al principio di esclusione di Pauli, mentre i bosoni possono condividere lo stesso stato quantico",
       "I bosoni hanno sempre carica negativa, mentre i fermioni sono sempre neutri",
-      "I bosoni non esistono nella fisica quantistica",
       "I fermioni sono solo onde sonore, mentre i bosoni sono solo pianeti",
-      "I fermioni obbediscono al principio di esclusione di Pauli, mentre i bosoni possono condividere lo stesso stato quantico"
+      "I bosoni non esistono nella fisica quantistica"
     ],
     "risposta_corretta": "I fermioni obbediscono al principio di esclusione di Pauli, mentre i bosoni possono condividere lo stesso stato quantico",
     "spiegazione": "Elettroni, protoni e neutroni sono fermioni e rispettano il principio di esclusione. I bosoni, come i fotoni, possono occupare lo stesso stato quantico.",
@@ -681,10 +681,10 @@
     "livello": "avanzato",
     "domanda": "Che cosa descrive l'hamiltoniano di un sistema quantistico?",
     "opzioni": [
-      "La forma geometrica del contenitore esterno",
-      "La distanza tra due galassie lontane",
+      "L'energia totale del sistema e la sua evoluzione dinamica",
       "Il colore visibile della particella osservata",
-      "L'energia totale del sistema e la sua evoluzione dinamica"
+      "La forma geometrica del contenitore esterno",
+      "La distanza tra due galassie lontane"
     ],
     "risposta_corretta": "L'energia totale del sistema e la sua evoluzione dinamica",
     "spiegazione": "L'hamiltoniano è l'operatore associato all'energia totale e compare nell'equazione di Schrödinger per determinare l'evoluzione del sistema.",
@@ -706,10 +706,10 @@
     "livello": "avanzato",
     "domanda": "Nel modello quantistico dell'atomo, che cosa indicano gli orbitali?",
     "opzioni": [
-      "Canali vuoti dove non può mai trovarsi un elettrone",
-      "Zone del nucleo occupate solo da fotoni",
       "Regioni associate alla probabilità di trovare un elettrone",
-      "Percorsi circolari rigidi identici alle orbite dei pianeti"
+      "Percorsi circolari rigidi identici alle orbite dei pianeti",
+      "Canali vuoti dove non può mai trovarsi un elettrone",
+      "Zone del nucleo occupate solo da fotoni"
     ],
     "risposta_corretta": "Regioni associate alla probabilità di trovare un elettrone",
     "spiegazione": "Gli orbitali non sono orbite classiche: rappresentano distribuzioni di probabilità legate alla funzione d'onda dell'elettrone.",
@@ -732,9 +732,9 @@
     "domanda": "Che cosa indica il numero quantico principale in un atomo?",
     "opzioni": [
       "Il livello energetico principale e la dimensione media dell'orbitale",
-      "La velocità esatta dell'elettrone lungo un'orbita classica",
       "Il numero totale di protoni liberi nell'aria",
-      "La temperatura del nucleo atomico in gradi Celsius"
+      "La temperatura del nucleo atomico in gradi Celsius",
+      "La velocità esatta dell'elettrone lungo un'orbita classica"
     ],
     "risposta_corretta": "Il livello energetico principale e la dimensione media dell'orbitale",
     "spiegazione": "Il numero quantico principale, indicato spesso con n, è legato al livello energetico e alla dimensione media dell'orbitale in cui si trova l'elettrone.",
@@ -756,10 +756,10 @@
     "livello": "facile",
     "domanda": "Quale scienziato introdusse l'idea che l'energia della radiazione potesse essere emessa in quanti?",
     "opzioni": [
-      "Isaac Newton",
-      "Charles Darwin",
       "Max Planck",
-      "Galileo Galilei"
+      "Isaac Newton",
+      "Galileo Galilei",
+      "Charles Darwin"
     ],
     "risposta_corretta": "Max Planck",
     "spiegazione": "Max Planck introdusse l'idea dei quanti di energia per spiegare la radiazione del corpo nero, aprendo la strada alla fisica quantistica.",
@@ -781,9 +781,9 @@
     "livello": "facile",
     "domanda": "Che cosa indica la costante di Planck?",
     "opzioni": [
-      "La massa totale di un atomo di idrogeno",
       "Una costante fondamentale che collega energia e frequenza di un quanto",
       "La velocità massima di un corpo in caduta libera",
+      "La massa totale di un atomo di idrogeno",
       "La temperatura necessaria per fondere un metallo"
     ],
     "risposta_corretta": "Una costante fondamentale che collega energia e frequenza di un quanto",
@@ -806,10 +806,10 @@
     "livello": "facile",
     "domanda": "Che cosa succede se un fotone ha frequenza maggiore?",
     "opzioni": [
-      "Diventa automaticamente un protone",
-      "Perde sempre la sua natura elettromagnetica",
+      "Ha energia maggiore",
       "Ha massa a riposo maggiore",
-      "Ha energia maggiore"
+      "Diventa automaticamente un protone",
+      "Perde sempre la sua natura elettromagnetica"
     ],
     "risposta_corretta": "Ha energia maggiore",
     "spiegazione": "L'energia di un fotone è proporzionale alla frequenza: maggiore è la frequenza, maggiore è l'energia.",
@@ -832,8 +832,8 @@
     "livello": "facile",
     "domanda": "Perché gli spettri atomici sono formati da righe discrete?",
     "opzioni": [
-      "Perché gli elettroni possono avere qualsiasi energia senza limiti",
       "Perché gli elettroni negli atomi possono cambiare solo tra livelli energetici permessi",
+      "Perché gli elettroni possono avere qualsiasi energia senza limiti",
       "Perché i nuclei atomici emettono sempre suoni udibili",
       "Perché la luce visibile non contiene energia"
     ],
@@ -858,8 +858,8 @@
     "domanda": "Che cosa afferma l'ipotesi di de Broglie?",
     "opzioni": [
       "Anche le particelle materiali possono avere proprietà ondulatorie",
-      "Gli elettroni non possono mai mostrare interferenza",
       "Solo le onde sonore possono comportarsi come particelle",
+      "Gli elettroni non possono mai mostrare interferenza",
       "La luce è sempre soltanto un fenomeno meccanico classico"
     ],
     "risposta_corretta": "Anche le particelle materiali possono avere proprietà ondulatorie",
@@ -882,8 +882,8 @@
     "livello": "intermedio",
     "domanda": "Perché l'esperimento della doppia fenditura è importante in fisica quantistica?",
     "opzioni": [
-      "Dimostra che gli elettroni sono sempre oggetti macroscopici visibili",
       "Mostra che particelle come elettroni o fotoni possono produrre figure di interferenza",
+      "Dimostra che gli elettroni sono sempre oggetti macroscopici visibili",
       "Dimostra che la luce non può attraversare aperture",
       "Mostra che la gravità scompare vicino a due fenditure"
     ],
@@ -907,10 +907,10 @@
     "livello": "intermedio",
     "domanda": "Che cosa significa dire che due stati quantistici interferiscono?",
     "opzioni": [
-      "Le particelle smettono di avere qualsiasi proprietà fisica",
-      "La misura diventa impossibile in ogni situazione",
+      "Le loro ampiezze di probabilità si combinano, aumentando o riducendo la probabilità di certi risultati",
       "Le loro masse si sommano sempre fino a diventare infinite",
-      "Le loro ampiezze di probabilità si combinano, aumentando o riducendo la probabilità di certi risultati"
+      "Le particelle smettono di avere qualsiasi proprietà fisica",
+      "La misura diventa impossibile in ogni situazione"
     ],
     "risposta_corretta": "Le loro ampiezze di probabilità si combinano, aumentando o riducendo la probabilità di certi risultati",
     "spiegazione": "In quantistica l'interferenza riguarda le ampiezze di probabilità. A seconda della fase, esse possono rinforzarsi o cancellarsi parzialmente.",
@@ -932,10 +932,10 @@
     "livello": "avanzato",
     "domanda": "Che cosa distingue uno stato puro da uno stato misto in meccanica quantistica?",
     "opzioni": [
-      "Uno stato misto non può mai essere descritto matematicamente",
-      "Uno stato puro è sempre macroscopico, mentre uno stato misto è sempre invisibile",
       "Uno stato puro è descritto da una singola funzione d'onda, mentre uno stato misto rappresenta una distribuzione statistica di stati",
-      "Uno stato puro contiene solo protoni, mentre uno stato misto contiene solo neutroni"
+      "Uno stato puro contiene solo protoni, mentre uno stato misto contiene solo neutroni",
+      "Uno stato puro è sempre macroscopico, mentre uno stato misto è sempre invisibile",
+      "Uno stato misto non può mai essere descritto matematicamente"
     ],
     "risposta_corretta": "Uno stato puro è descritto da una singola funzione d'onda, mentre uno stato misto rappresenta una distribuzione statistica di stati",
     "spiegazione": "Uno stato puro ha una descrizione quantistica completa tramite un vettore di stato. Uno stato misto rappresenta incertezza statistica su più stati possibili.",
@@ -959,8 +959,8 @@
     "opzioni": [
       "A descrivere stati puri e stati misti, soprattutto quando c'è incertezza statistica o interazione con l'ambiente",
       "A calcolare solo la densità di un liquido classico",
-      "A misurare direttamente la temperatura di una stella",
-      "A trasformare ogni fotone in un elettrone"
+      "A trasformare ogni fotone in un elettrone",
+      "A misurare direttamente la temperatura di una stella"
     ],
     "risposta_corretta": "A descrivere stati puri e stati misti, soprattutto quando c'è incertezza statistica o interazione con l'ambiente",
     "spiegazione": "La matrice densità è uno strumento utile per descrivere sistemi quantistici non necessariamente in uno stato puro, specialmente in sistemi aperti o con informazione incompleta.",
@@ -983,9 +983,9 @@
     "domanda": "Perché la fisica quantistica è importante per le tecnologie moderne?",
     "opzioni": [
       "Perché sta alla base di tecnologie come semiconduttori, laser, risonanza magnetica e computer quantistici",
-      "Perché descrive solo fenomeni senza applicazioni pratiche",
+      "Perché sostituisce completamente ogni legge della fisica classica in ogni situazione quotidiana",
       "Perché permette di ignorare energia, carica e massa nei dispositivi elettronici",
-      "Perché sostituisce completamente ogni legge della fisica classica in ogni situazione quotidiana"
+      "Perché descrive solo fenomeni senza applicazioni pratiche"
     ],
     "risposta_corretta": "Perché sta alla base di tecnologie come semiconduttori, laser, risonanza magnetica e computer quantistici",
     "spiegazione": "Molte tecnologie moderne dipendono da fenomeni quantistici: bande energetiche nei semiconduttori, emissione stimolata nei laser, spin nella risonanza magnetica e qubit nei computer quantistici.",

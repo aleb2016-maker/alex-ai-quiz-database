@@ -6,10 +6,10 @@
     "livello": "facile",
     "domanda": "In un sistema di intelligenza artificiale, che cosa rappresentano i dati di addestramento?",
     "opzioni": [
-      "Esempi usati solo per verificare il modello dopo l'addestramento",
-      "Parametri finali già imparati dal modello dopo il training",
       "Esempi usati dal modello per imparare schemi e relazioni",
-      "Regole scritte manualmente per ogni singola risposta possibile"
+      "Esempi usati solo per verificare il modello dopo l'addestramento",
+      "Regole scritte manualmente per ogni singola risposta possibile",
+      "Parametri finali già imparati dal modello dopo il training"
     ],
     "risposta_corretta": "Esempi usati dal modello per imparare schemi e relazioni",
     "spiegazione": "I dati di addestramento sono esempi usati dal modello per imparare schemi e relazioni. I dati di test servono invece a verificare il modello dopo l'addestramento. Le regole manuali appartengono più ai sistemi esperti tradizionali, mentre i parametri sono il risultato dell'apprendimento.",
@@ -29,10 +29,10 @@
     "livello": "facile",
     "domanda": "Quale prompt è più chiaro per chiedere a un modello AI di riassumere un testo?",
     "opzioni": [
-      "Riformula il testo senza ridurlo e senza cambiarne il significato.",
-      "Riscrivi questo testo mantenendo tutti i dettagli principali.",
       "Riassumi questo testo in 5 righe usando un linguaggio semplice.",
-      "Riassumi questo testo usando un linguaggio semplice."
+      "Riassumi questo testo usando un linguaggio semplice.",
+      "Riscrivi questo testo mantenendo tutti i dettagli principali.",
+      "Riformula il testo senza ridurlo e senza cambiarne il significato."
     ],
     "risposta_corretta": "Riassumi questo testo in 5 righe usando un linguaggio semplice.",
     "spiegazione": "Il prompt corretto specifica chiaramente il compito, la lunghezza e lo stile: un riassunto in 5 righe con linguaggio semplice. Il distrattore B è quasi corretto, ma è meno preciso perché non indica la lunghezza. C e D chiedono una riscrittura o riformulazione, non un vero riassunto breve.",
@@ -52,9 +52,9 @@
     "livello": "facile",
     "domanda": "Se un modello AI decide se una email è spam oppure no, quale tipo di attività sta svolgendo?",
     "opzioni": [
-      "Regressione",
-      "Clustering",
       "Classificazione",
+      "Clustering",
+      "Regressione",
       "Stima di un valore numerico"
     ],
     "risposta_corretta": "Classificazione",
@@ -76,9 +76,9 @@
     "domanda": "Che cosa fa principalmente un modello linguistico?",
     "opzioni": [
       "Lavora con il linguaggio per comprendere o generare testo",
-      "Analizza solo dati numerici organizzati in tabelle",
+      "Classifica contenuti testuali senza produrre nuove frasi",
       "Recupera pagine web pertinenti senza formulare una risposta",
-      "Classifica contenuti testuali senza produrre nuove frasi"
+      "Analizza solo dati numerici organizzati in tabelle"
     ],
     "risposta_corretta": "Lavora con il linguaggio per comprendere o generare testo",
     "spiegazione": "Un modello linguistico lavora con il linguaggio naturale: può comprendere, completare, riassumere o generare testo. Le altre opzioni descrivono attività possibili nell'AI o nell'informatica, ma sono più limitate e non rappresentano il ruolo principale di un modello linguistico.",
@@ -98,10 +98,10 @@
     "livello": "facile",
     "domanda": "Quando un modello AI inventa una risposta falsa ma la presenta come sicura, come viene chiamato di solito questo problema?",
     "opzioni": [
-      "Errore di classificazione",
       "Allucinazione",
       "Bias del dataset",
-      "Overfitting"
+      "Overfitting",
+      "Errore di classificazione"
     ],
     "risposta_corretta": "Allucinazione",
     "spiegazione": "Un'allucinazione avviene quando un modello genera una risposta falsa o inventata presentandola come sicura. Il bias riguarda distorsioni nei dati o nei risultati, l'overfitting indica un modello troppo adattato ai dati di addestramento, mentre un errore di classificazione è una previsione di classe sbagliata.",
@@ -121,10 +121,10 @@
     "livello": "intermedio",
     "domanda": "In un sistema RAG, perché si cercano documenti esterni prima di generare la risposta?",
     "opzioni": [
-      "Per archiviare i documenti recuperati senza inserirli nel prompt",
+      "Per fornire al modello informazioni aggiornate o specifiche su cui basare la risposta",
       "Per trovare testi semanticamente simili alla domanda, anche se poi non vengono usati come contesto",
-      "Per confrontare la domanda con esempi simili senza generare una risposta",
-      "Per fornire al modello informazioni aggiornate o specifiche su cui basare la risposta"
+      "Per archiviare i documenti recuperati senza inserirli nel prompt",
+      "Per confrontare la domanda con esempi simili senza generare una risposta"
     ],
     "risposta_corretta": "Per fornire al modello informazioni aggiornate o specifiche su cui basare la risposta",
     "spiegazione": "Nel RAG il sistema recupera documenti rilevanti e li passa al modello come contesto. Il punto non è solo trovare testi simili, ma fornire informazioni utili su cui costruire la risposta. Se i documenti vengono trovati ma non usati nel prompt, oppure sono solo simili in apparenza, la risposta può restare generica o poco affidabile.",
@@ -144,10 +144,10 @@
     "livello": "intermedio",
     "domanda": "A cosa serve un embedding in molte applicazioni di intelligenza artificiale?",
     "opzioni": [
-      "A cercare parole uguali senza rappresentare il significato dei contenuti",
       "A rappresentare testi, immagini o dati come vettori confrontabili",
       "A trasformare contenuti in vettori numerici solo per conservarli come testo compresso",
-      "A confrontare contenuti solo quando usano le stesse parole identiche"
+      "A confrontare contenuti solo quando usano le stesse parole identiche",
+      "A cercare parole uguali senza rappresentare il significato dei contenuti"
     ],
     "risposta_corretta": "A rappresentare testi, immagini o dati come vettori confrontabili",
     "spiegazione": "Un embedding trasforma un contenuto in un vettore numerico, così contenuti simili possono essere confrontati anche se usano parole diverse. Non è una compressione del testo originale e non è una semplice ricerca per parole identiche.",
@@ -167,10 +167,10 @@
     "livello": "intermedio",
     "domanda": "Perché è utile testare un modello AI con esempi diversi da quelli usati in addestramento?",
     "opzioni": [
+      "Per verificare se il modello generalizza anche su casi nuovi",
       "Per confermare che il modello ricorda con precisione gli esempi usati in addestramento",
-      "Per aumentare il numero di esempi nel dataset senza controllare le prestazioni",
       "Per scegliere automaticamente nuovi esempi da aggiungere al training set",
-      "Per verificare se il modello generalizza anche su casi nuovi"
+      "Per aumentare il numero di esempi nel dataset senza controllare le prestazioni"
     ],
     "risposta_corretta": "Per verificare se il modello generalizza anche su casi nuovi",
     "spiegazione": "Testare un modello su esempi diversi da quelli usati in addestramento serve a capire se generalizza su casi nuovi. Se funziona bene solo sui dati già visti, potrebbe aver memorizzato troppo il training set invece di imparare regole utili.",
@@ -192,8 +192,8 @@
     "opzioni": [
       "Specificare ruolo, obiettivo, vincoli e formato della risposta",
       "Specificare solo il ruolo del modello, senza indicare vincoli, obiettivo e formato",
-      "Chiedere una risposta generica lasciando formato e criteri aperti",
-      "Fornire molti obiettivi diversi senza indicare priorità"
+      "Fornire molti obiettivi diversi senza indicare priorità",
+      "Chiedere una risposta generica lasciando formato e criteri aperti"
     ],
     "risposta_corretta": "Specificare ruolo, obiettivo, vincoli e formato della risposta",
     "spiegazione": "Un prompt controllabile chiarisce cosa deve fare il modello, con quali vincoli e in quale formato. Specificare solo il ruolo può aiutare, ma non basta se mancano obiettivo, vincoli e formato. Richieste vaghe o con obiettivi confusi aumentano il rischio di risposte generiche.",
@@ -214,9 +214,9 @@
     "domanda": "Che cosa può succedere se un dataset contiene molti esempi sbilanciati verso una sola classe?",
     "opzioni": [
       "Il modello può imparare a favorire quella classe nelle previsioni",
+      "Il modello può imparare a favorire la classe meno presente per compensare automaticamente lo sbilanciamento",
       "Il modello può migliorare sulle classi rare anche senza esempi sufficienti",
-      "Il modello può rendere inutile ogni metrica diversa dall'accuratezza",
-      "Il modello può imparare a favorire la classe meno presente per compensare automaticamente lo sbilanciamento"
+      "Il modello può rendere inutile ogni metrica diversa dall'accuratezza"
     ],
     "risposta_corretta": "Il modello può imparare a favorire quella classe nelle previsioni",
     "spiegazione": "Se una classe è molto più presente delle altre, il modello può imparare a prevederla troppo spesso. Questo può dare un risultato apparentemente buono, ma peggiorare il riconoscimento delle classi meno rappresentate. Per questo l'accuratezza da sola può non bastare.",
@@ -236,10 +236,10 @@
     "livello": "intermedio",
     "domanda": "In un agente AI, che cosa rappresenta normalmente un tool?",
     "opzioni": [
-      "Un'istruzione di sistema che definisce il comportamento dell'agente",
+      "Uno strumento esterno che l'agente può usare per compiere un'azione",
       "Uno strumento esterno che l'agente può consultare, ma che non può mai eseguire azioni",
       "Una memoria conversazionale che conserva informazioni tra più messaggi",
-      "Uno strumento esterno che l'agente può usare per compiere un'azione"
+      "Un'istruzione di sistema che definisce il comportamento dell'agente"
     ],
     "risposta_corretta": "Uno strumento esterno che l'agente può usare per compiere un'azione",
     "spiegazione": "In un agente AI, un tool è uno strumento esterno che permette di compiere azioni, per esempio cercare dati, leggere file, chiamare API o fare calcoli. Memoria e istruzioni di sistema sono componenti importanti, ma non sono tool.",
@@ -260,9 +260,9 @@
     "domanda": "In un sistema RAG, quale problema può nascere se il recupero dei documenti seleziona testi pertinenti solo in apparenza?",
     "opzioni": [
       "Il modello può generare una risposta ben scritta ma basata su contesto non davvero rilevante",
-      "Il modello può bloccare la generazione ogni volta che il retrieval non è perfetto",
       "Il modello può generare una risposta sempre corretta, anche se il contesto recuperato è solo apparentemente pertinente",
-      "Il modello può rifiutare automaticamente tutti i documenti recuperati"
+      "Il modello può rifiutare automaticamente tutti i documenti recuperati",
+      "Il modello può bloccare la generazione ogni volta che il retrieval non è perfetto"
     ],
     "risposta_corretta": "Il modello può generare una risposta ben scritta ma basata su contesto non davvero rilevante",
     "spiegazione": "Se il retrieval recupera documenti solo apparentemente pertinenti, il modello può costruire una risposta fluida ma fondata su contesto sbagliato. È un problema delicato perché la forma della risposta può sembrare convincente anche quando la base informativa è debole.",
@@ -283,10 +283,10 @@
     "livello": "avanzato",
     "domanda": "Perché valutare un modello AI solo con risposte corrette o sbagliate può essere limitante?",
     "opzioni": [
-      "Perché una risposta va valutata solo in base al formato richiesto",
-      "Perché una risposta va valutata solo in base alla fluidità del testo",
+      "Perché alcune risposte richiedono giudizi su completezza, coerenza, sicurezza e utilità",
       "Perché basta valutare la completezza, senza considerare coerenza, sicurezza e utilità",
-      "Perché alcune risposte richiedono giudizi su completezza, coerenza, sicurezza e utilità"
+      "Perché una risposta va valutata solo in base al formato richiesto",
+      "Perché una risposta va valutata solo in base alla fluidità del testo"
     ],
     "risposta_corretta": "Perché alcune risposte richiedono giudizi su completezza, coerenza, sicurezza e utilità",
     "spiegazione": "Nei compiti generativi non basta sempre distinguere tra corretto e sbagliato. Una risposta può essere parzialmente corretta, incompleta, poco sicura, fuori contesto o poco utile. Per questo servono criteri più ricchi, come completezza, coerenza, sicurezza e utilità.",
@@ -307,9 +307,9 @@
     "domanda": "Qual è il rischio principale di un prompt injection in un'applicazione AI collegata a strumenti esterni?",
     "opzioni": [
       "Il modello può essere spinto a ignorare istruzioni originali e usare strumenti in modo non previsto",
-      "Il modello può trattare informazioni recuperate come testo da copiare, ma non come comandi",
+      "Il modello può ricevere istruzioni esterne, ma queste possono influenzare solo lo stile della risposta",
       "Il modello può confondere contenuto dell'utente e istruzioni operative solo senza tool collegati",
-      "Il modello può ricevere istruzioni esterne, ma queste possono influenzare solo lo stile della risposta"
+      "Il modello può trattare informazioni recuperate come testo da copiare, ma non come comandi"
     ],
     "risposta_corretta": "Il modello può essere spinto a ignorare istruzioni originali e usare strumenti in modo non previsto",
     "spiegazione": "Una prompt injection tenta di manipolare il comportamento del modello, facendogli trattare contenuti esterni come istruzioni. Il rischio principale, soprattutto con tool esterni, è che il modello ignori le istruzioni originali e compia azioni non previste.",
@@ -330,9 +330,9 @@
     "domanda": "Quando ha più senso valutare il fine-tuning rispetto al solo prompt engineering?",
     "opzioni": [
       "Quando servono comportamenti stabili e specifici su molti esempi simili",
-      "Quando basta cambiare il prompt per correggere una risposta singola",
+      "Quando serve un comportamento stabile, ma si dispone di un solo esempio isolato",
       "Quando il problema dipende soprattutto da documenti recuperati male",
-      "Quando serve un comportamento stabile, ma si dispone di un solo esempio isolato"
+      "Quando basta cambiare il prompt per correggere una risposta singola"
     ],
     "risposta_corretta": "Quando servono comportamenti stabili e specifici su molti esempi simili",
     "spiegazione": "Il fine-tuning ha senso quando si vuole rendere stabile uno stile, un formato o un comportamento su molti casi simili. Per problemi singoli o istruzioni semplici può bastare il prompt engineering; se il retrieval è sbagliato, invece, va corretta la pipeline di recupero.",
@@ -353,8 +353,8 @@
     "domanda": "In una pipeline AI, perché conviene separare recupero delle informazioni, generazione e controllo finale?",
     "opzioni": [
       "Per rendere più controllabile ogni fase e individuare meglio dove nasce un errore",
-      "Per controllare solo il recupero dei documenti ignorando la generazione",
       "Per valutare separatamente le fasi, ma senza collegare gli errori alla risposta finale",
+      "Per controllare solo il recupero dei documenti ignorando la generazione",
       "Per controllare solo la generazione ignorando retrieval e verifica finale"
     ],
     "risposta_corretta": "Per rendere più controllabile ogni fase e individuare meglio dove nasce un errore",
@@ -375,10 +375,10 @@
     "livello": "avanzato",
     "domanda": "Perché un modello AI può produrre risultati distorti anche se l'algoritmo è implementato correttamente?",
     "opzioni": [
-      "Perché i dati sbilanciati possono introdurre distorsioni, ma obiettivi e metriche non incidono",
       "Perché i dati, gli obiettivi di addestramento o le metriche possono introdurre distorsioni",
-      "Perché solo l'obiettivo di addestramento può creare distorsioni, mentre dati e metriche non contano",
-      "Perché solo una metrica scelta male può creare distorsioni, mentre i dati restano sempre neutrali"
+      "Perché i dati sbilanciati possono introdurre distorsioni, ma obiettivi e metriche non incidono",
+      "Perché solo una metrica scelta male può creare distorsioni, mentre i dati restano sempre neutrali",
+      "Perché solo l'obiettivo di addestramento può creare distorsioni, mentre dati e metriche non contano"
     ],
     "risposta_corretta": "Perché i dati, gli obiettivi di addestramento o le metriche possono introdurre distorsioni",
     "spiegazione": "Un modello può essere implementato correttamente ma produrre risultati distorti se dati, obiettivi o metriche sono sbilanciati. Le altre opzioni indicano cause reali, ma le restringono troppo e quindi non spiegano il problema generale.",
@@ -398,10 +398,10 @@
     "livello": "facile",
     "domanda": "Quale linguaggio viene usato principalmente per definire la struttura di una pagina web?",
     "opzioni": [
+      "HTML",
       "CSS",
       "JavaScript",
-      "SQL",
-      "HTML"
+      "SQL"
     ],
     "risposta_corretta": "HTML",
     "spiegazione": "HTML definisce la struttura della pagina web. CSS gestisce lo stile grafico, JavaScript aggiunge interattività, mentre SQL serve a interrogare database. Tutte sono tecnologie reali, ma hanno ruoli diversi.",
@@ -421,10 +421,10 @@
     "livello": "facile",
     "domanda": "In un database, che cosa rappresenta normalmente una tabella?",
     "opzioni": [
-      "Una singola riga che rappresenta un record",
-      "Una query usata per filtrare i dati",
       "Un insieme organizzato di righe e colonne",
-      "Una relazione tra due tabelle tramite chiavi"
+      "Una singola riga che rappresenta un record",
+      "Una relazione tra due tabelle tramite chiavi",
+      "Una query usata per filtrare i dati"
     ],
     "risposta_corretta": "Un insieme organizzato di righe e colonne",
     "spiegazione": "Una tabella contiene dati organizzati in righe e colonne. Una singola riga è un record, una relazione collega tabelle diverse, mentre una query serve a leggere, filtrare o modificare dati.",
@@ -444,10 +444,10 @@
     "livello": "facile",
     "domanda": "A cosa serve una variabile in programmazione?",
     "opzioni": [
+      "A conservare un valore che può essere usato o modificato",
       "A conservare un valore, ma senza poterlo mai cambiare durante il programma",
       "A definire una funzione riutilizzabile",
-      "A ripetere un blocco di istruzioni",
-      "A conservare un valore che può essere usato o modificato"
+      "A ripetere un blocco di istruzioni"
     ],
     "risposta_corretta": "A conservare un valore che può essere usato o modificato",
     "spiegazione": "Una variabile conserva un valore che può essere letto e, in molti casi, modificato durante l'esecuzione. Una funzione raggruppa codice riutilizzabile, mentre un ciclo ripete istruzioni.",
@@ -467,10 +467,10 @@
     "livello": "facile",
     "domanda": "Che cosa indica normalmente un URL?",
     "opzioni": [
-      "Il codice di stato restituito dal server",
-      "Il nome del dominio senza percorso della risorsa",
       "L'indirizzo di una risorsa sul web",
-      "Il protocollo usato per trasferire una pagina"
+      "Il protocollo usato per trasferire una pagina",
+      "Il nome del dominio senza percorso della risorsa",
+      "Il codice di stato restituito dal server"
     ],
     "risposta_corretta": "L'indirizzo di una risorsa sul web",
     "spiegazione": "Un URL identifica l'indirizzo completo di una risorsa web. Può includere protocollo, dominio, percorso e parametri. Il protocollo e il dominio sono solo parti dell'URL, mentre il codice di stato è la risposta del server.",
@@ -490,10 +490,10 @@
     "livello": "facile",
     "domanda": "Quale formato è molto usato nelle API web per rappresentare oggetti e liste con coppie chiave-valore?",
     "opzioni": [
+      "JSON",
       "XML",
       "YAML",
-      "CSV",
-      "JSON"
+      "CSV"
     ],
     "risposta_corretta": "JSON",
     "spiegazione": "JSON è molto usato nelle API web perché rappresenta bene oggetti, liste e coppie chiave-valore. XML e YAML possono rappresentare dati strutturati, ma JSON è particolarmente comune nello scambio dati tra frontend, backend e API. CSV è più adatto a dati tabellari semplici.",
@@ -514,9 +514,9 @@
     "domanda": "In una richiesta HTTP, quale metodo viene usato di solito per ottenere dati senza modificarli?",
     "opzioni": [
       "GET",
-      "PATCH",
+      "POST",
       "PUT",
-      "POST"
+      "PATCH"
     ],
     "risposta_corretta": "GET",
     "spiegazione": "GET viene usato normalmente per leggere dati senza modificarli. POST crea o invia dati, PUT sostituisce una risorsa, PATCH aggiorna parzialmente una risorsa.",
@@ -536,10 +536,10 @@
     "livello": "intermedio",
     "domanda": "A cosa serve principalmente una chiave esterna in un database relazionale?",
     "opzioni": [
-      "A identificare in modo univoco ogni record della stessa tabella",
-      "A trasformare una tabella relazionale in un file JSON",
       "A collegare un record di una tabella a un record di un'altra tabella",
-      "A ordinare automaticamente tutti i record in base alla data"
+      "A identificare in modo univoco ogni record della stessa tabella",
+      "A ordinare automaticamente tutti i record in base alla data",
+      "A trasformare una tabella relazionale in un file JSON"
     ],
     "risposta_corretta": "A collegare un record di una tabella a un record di un'altra tabella",
     "spiegazione": "Una chiave esterna serve a collegare tabelle diverse. Per esempio, un ordine può contenere l'ID del cliente a cui appartiene. La chiave primaria identifica un record nella stessa tabella, mentre ordinamento e conversione in JSON sono concetti diversi.",
@@ -559,10 +559,10 @@
     "livello": "intermedio",
     "domanda": "In una pagina web, qual è il ruolo principale del CSS?",
     "opzioni": [
-      "Recuperare dati da un database con query",
       "Gestire l'aspetto visivo degli elementi",
+      "Definire la struttura semantica della pagina",
       "Gestire la logica interattiva nel browser",
-      "Definire la struttura semantica della pagina"
+      "Recuperare dati da un database con query"
     ],
     "risposta_corretta": "Gestire l'aspetto visivo degli elementi",
     "spiegazione": "CSS gestisce stile, layout, colori, spaziature e responsive design. HTML definisce la struttura, JavaScript gestisce l'interattività, mentre le query al database sono tipiche del backend.",
@@ -582,10 +582,10 @@
     "livello": "intermedio",
     "domanda": "Che cosa significa fare debug di un programma?",
     "opzioni": [
-      "Riprodurre un problema in modo stabile per capire quale istruzione lo provoca",
-      "Controllare valori intermedi per verificare se la logica segue il flusso previsto",
       "Individuare e correggere errori nel comportamento del codice",
-      "Osservare il programma durante l'esecuzione per capire dove nasce un errore"
+      "Osservare il programma durante l'esecuzione per capire dove nasce un errore",
+      "Controllare valori intermedi per verificare se la logica segue il flusso previsto",
+      "Riprodurre un problema in modo stabile per capire quale istruzione lo provoca"
     ],
     "risposta_corretta": "Individuare e correggere errori nel comportamento del codice",
     "spiegazione": "Fare debug significa individuare e correggere errori nel comportamento del codice. Osservare l'esecuzione, controllare valori intermedi e riprodurre il problema sono tecniche utili, ma non descrivono da sole l'intero processo di debug.",
@@ -605,10 +605,10 @@
     "livello": "intermedio",
     "domanda": "In Git, che cosa rappresenta un commit?",
     "opzioni": [
-      "Un ramo separato in cui sviluppare nuove modifiche",
       "Una fotografia salvata dello stato del progetto nella cronologia Git",
-      "Un comando per scaricare modifiche dal repository remoto",
-      "Una fotografia temporanea dello stato del progetto che non entra nella cronologia Git"
+      "Una fotografia temporanea dello stato del progetto che non entra nella cronologia Git",
+      "Un ramo separato in cui sviluppare nuove modifiche",
+      "Un comando per scaricare modifiche dal repository remoto"
     ],
     "risposta_corretta": "Una fotografia salvata dello stato del progetto nella cronologia Git",
     "spiegazione": "Un commit salva uno stato del progetto nella cronologia Git. Non è una fotografia temporanea, non è un branch e non è il comando usato per scaricare modifiche dal remoto.",
@@ -628,10 +628,10 @@
     "livello": "intermedio",
     "domanda": "Perché è rischioso salvare password direttamente nel codice sorgente?",
     "opzioni": [
-      "Perché rendono più difficile cambiare credenziali tra ambienti diversi",
       "Perché possono finire in repository, log o copie condivise del progetto",
-      "Perché aumentano il rischio di esporre accessi a database o servizi esterni",
-      "Perché possono essere lette da altre persone se il codice viene pubblicato"
+      "Perché possono essere lette da altre persone se il codice viene pubblicato",
+      "Perché rendono più difficile cambiare credenziali tra ambienti diversi",
+      "Perché aumentano il rischio di esporre accessi a database o servizi esterni"
     ],
     "risposta_corretta": "Perché possono finire in repository, log o copie condivise del progetto",
     "spiegazione": "Salvare password nel codice è rischioso perché possono finire in repository, log, backup o copie condivise. La pubblicazione del codice, la difficoltà di cambiare credenziali e l'esposizione di accessi sono conseguenze collegate.",
@@ -652,9 +652,9 @@
     "domanda": "Perché separare frontend e backend rende spesso un'applicazione più gestibile?",
     "opzioni": [
       "Perché interfaccia, logica applicativa e dati possono evolvere con responsabilità più chiare",
-      "Perché il frontend può consumare servizi diversi senza conoscere i dettagli interni del server",
+      "Perché il frontend può gestire l'interfaccia mentre il backend espone dati e logica tramite API",
       "Perché il backend può cambiare alcune regole senza riscrivere tutta l'interfaccia",
-      "Perché il frontend può gestire l'interfaccia mentre il backend espone dati e logica tramite API"
+      "Perché il frontend può consumare servizi diversi senza conoscere i dettagli interni del server"
     ],
     "risposta_corretta": "Perché interfaccia, logica applicativa e dati possono evolvere con responsabilità più chiare",
     "spiegazione": "Separare frontend e backend rende il progetto più gestibile perché divide le responsabilità: interfaccia utente, logica applicativa e gestione dei dati possono evolvere in modo più ordinato. Le altre opzioni descrivono vantaggi specifici, ma la risposta corretta è quella più generale.",
@@ -674,10 +674,10 @@
     "livello": "avanzato",
     "domanda": "Che cosa può indicare una risposta HTTP 401 in una API protetta?",
     "opzioni": [
-      "La richiesta è autenticata ma l'utente non ha i permessi necessari",
-      "Il server ha generato un errore interno",
       "La richiesta non è autenticata correttamente",
-      "La risorsa richiesta non esiste sul server"
+      "La richiesta è autenticata ma l'utente non ha i permessi necessari",
+      "La risorsa richiesta non esiste sul server",
+      "Il server ha generato un errore interno"
     ],
     "risposta_corretta": "La richiesta non è autenticata correttamente",
     "spiegazione": "HTTP 401 indica in genere un problema di autenticazione: credenziali mancanti, non valide o token scaduto. 403 riguarda invece un utente autenticato ma senza permessi sufficienti; 404 indica risorsa non trovata; 500 errore interno del server.",
@@ -698,9 +698,9 @@
     "domanda": "Qual è il vantaggio principale di usare un indice su una colonna molto cercata di un database?",
     "opzioni": [
       "Rendere più veloci alcune ricerche su quella colonna",
-      "Normalizzare automaticamente i dati duplicati",
       "Rendere più veloci alcune ricerche, ma senza costi su spazio o scritture",
-      "Ridurre automaticamente il numero di righe salvate nella tabella"
+      "Ridurre automaticamente il numero di righe salvate nella tabella",
+      "Normalizzare automaticamente i dati duplicati"
     ],
     "risposta_corretta": "Rendere più veloci alcune ricerche su quella colonna",
     "spiegazione": "Un indice aiuta il database a trovare più velocemente i record su certe colonne. Può però avere costi in spazio e nelle operazioni di scrittura. Non riduce automaticamente le righe e non normalizza i dati.",
@@ -720,10 +720,10 @@
     "livello": "avanzato",
     "domanda": "Perché due operazioni simultanee sullo stesso dato possono creare problemi in un'applicazione?",
     "opzioni": [
-      "Perché possono causare aggiornamenti persi se due modifiche si sovrappongono",
       "Perché possono produrre risultati incoerenti se non vengono gestite correttamente",
       "Perché possono leggere o modificare lo stesso dato nello stesso intervallo di tempo",
-      "Perché possono richiedere transazioni o meccanismi di isolamento adeguati"
+      "Perché possono richiedere transazioni o meccanismi di isolamento adeguati",
+      "Perché possono causare aggiornamenti persi se due modifiche si sovrappongono"
     ],
     "risposta_corretta": "Perché possono produrre risultati incoerenti se non vengono gestite correttamente",
     "spiegazione": "Due operazioni simultanee sullo stesso dato possono creare stati incoerenti, aggiornamenti persi o conflitti. Le altre opzioni descrivono casi o soluzioni specifiche, mentre la risposta corretta riassume il rischio principale.",
@@ -743,10 +743,10 @@
     "livello": "avanzato",
     "domanda": "Perché un test automatico utile deve avere un risultato atteso ben definito?",
     "opzioni": [
+      "Perché il test deve poter stabilire se il comportamento ottenuto è corretto o no",
       "Perché il test deve confrontare output reale e output previsto",
-      "Perché il test deve fallire quando il codice non rispetta il comportamento atteso",
       "Perché il test deve verificare una condizione precisa e ripetibile",
-      "Perché il test deve poter stabilire se il comportamento ottenuto è corretto o no"
+      "Perché il test deve fallire quando il codice non rispetta il comportamento atteso"
     ],
     "risposta_corretta": "Perché il test deve poter stabilire se il comportamento ottenuto è corretto o no",
     "spiegazione": "Un test automatico utile deve sapere cosa aspettarsi. Se il risultato atteso è chiaro, il test può confrontarlo con il risultato reale e stabilire se il comportamento è corretto. Le altre opzioni sono aspetti collegati, ma meno generali.",
@@ -766,10 +766,10 @@
     "livello": "avanzato",
     "domanda": "Perché una variabile d'ambiente è utile quando si pubblica un'applicazione?",
     "opzioni": [
-      "Permette di evitare che credenziali e impostazioni vengano scritte direttamente nel repository",
       "Permette di separare configurazioni sensibili o diverse dal codice sorgente",
+      "Permette di cambiare URL o chiavi senza modificare i file del codice",
       "Permette di usare configurazioni diverse tra sviluppo, test e produzione",
-      "Permette di cambiare URL o chiavi senza modificare i file del codice"
+      "Permette di evitare che credenziali e impostazioni vengano scritte direttamente nel repository"
     ],
     "risposta_corretta": "Permette di separare configurazioni sensibili o diverse dal codice sorgente",
     "spiegazione": "Le variabili d'ambiente servono soprattutto a separare configurazioni sensibili o variabili dal codice sorgente. Cambiare URL, distinguere ambienti ed evitare credenziali nel repository sono vantaggi collegati, ma la risposta corretta è quella più generale.",
@@ -789,10 +789,10 @@
     "livello": "facile",
     "domanda": "Quanto vale tre quarti di 80?",
     "opzioni": [
-      "70",
       "40",
+      "50",
       "60",
-      "50"
+      "70"
     ],
     "risposta_corretta": "60",
     "spiegazione": "Tre quarti di 80 significa dividere 80 in 4 parti uguali e prenderne 3. Prima calcoliamo 80 / 4 = 20, poi facciamo 20 × 3 = 60.",
@@ -810,10 +810,10 @@
     "livello": "facile",
     "domanda": "Se 3 quaderni costano 6 euro, quanto costano 5 quaderni allo stesso prezzo unitario?",
     "opzioni": [
-      "9 euro",
       "8 euro",
-      "12 euro",
-      "10 euro"
+      "9 euro",
+      "10 euro",
+      "12 euro"
     ],
     "risposta_corretta": "10 euro",
     "spiegazione": "Ogni quaderno costa 6 / 3 = 2 euro. Quindi 5 quaderni costano 5 × 2 = 10 euro.",
@@ -830,10 +830,10 @@
     "livello": "facile",
     "domanda": "Qual è il risultato di 18 + 7 × 2?",
     "opzioni": [
-      "36",
       "32",
       "50",
-      "25"
+      "25",
+      "36"
     ],
     "risposta_corretta": "32",
     "spiegazione": "Prima si esegue la moltiplicazione: 7 × 2 = 14. Poi si somma 18 + 14 = 32. Il risultato 50 nasce dall'errore di fare prima 18 + 7 e poi moltiplicare per 2.",
@@ -850,9 +850,9 @@
     "livello": "facile",
     "domanda": "Quale frazione è equivalente a 1/2?",
     "opzioni": [
+      "2/4",
       "2/3",
       "3/4",
-      "2/4",
       "4/6"
     ],
     "risposta_corretta": "2/4",
@@ -870,9 +870,9 @@
     "livello": "facile",
     "domanda": "Qual è l'area di un rettangolo con base 8 cm e altezza 5 cm?",
     "opzioni": [
-      "26 cm²",
       "40 cm²",
       "13 cm²",
+      "26 cm²",
       "80 cm²"
     ],
     "risposta_corretta": "40 cm²",
@@ -891,10 +891,10 @@
     "livello": "intermedio",
     "domanda": "Risolvi l'equazione: 2(x + 4) = 22.",
     "opzioni": [
-      "x = 11",
-      "x = 9",
       "x = 5",
-      "x = 7"
+      "x = 7",
+      "x = 9",
+      "x = 11"
     ],
     "risposta_corretta": "x = 7",
     "spiegazione": "Prima dividiamo entrambi i membri per 2: x + 4 = 11. Poi sottraiamo 4 da entrambi i lati: x = 7. Questa domanda è diversa da una semplice equazione 3x + 5 = 20 perché richiede anche di gestire le parentesi.",
@@ -911,10 +911,10 @@
     "livello": "intermedio",
     "domanda": "Un prodotto costa 80 euro e viene scontato del 25%. Qual è il prezzo finale?",
     "opzioni": [
-      "70 euro",
       "55 euro",
+      "60 euro",
       "65 euro",
-      "60 euro"
+      "70 euro"
     ],
     "risposta_corretta": "60 euro",
     "spiegazione": "Il 25% di 80 è 20. Il prezzo finale è 80 - 20 = 60 euro.",
@@ -932,8 +932,8 @@
     "domanda": "La media di 6, 8, 10 e 12 è:",
     "opzioni": [
       "8",
-      "10",
       "9",
+      "10",
       "11"
     ],
     "risposta_corretta": "9",
@@ -953,8 +953,8 @@
     "opzioni": [
       "16",
       "18",
-      "24",
-      "20"
+      "20",
+      "24"
     ],
     "risposta_corretta": "20",
     "spiegazione": "Il rapporto 1:5 significa che per ogni assente ci sono 5 presenti. Se gli assenti sono 4, i presenti sono 4 × 5 = 20.",
@@ -971,9 +971,9 @@
     "livello": "intermedio",
     "domanda": "Un quadrato ha perimetro 36 cm. Quanto misura il suo lato?",
     "opzioni": [
+      "6 cm",
       "8 cm",
       "9 cm",
-      "6 cm",
       "12 cm"
     ],
     "risposta_corretta": "9 cm",
@@ -993,9 +993,9 @@
     "domanda": "In un sacchetto ci sono 3 palline rosse e 7 blu. Qual è la probabilità di estrarre una pallina rossa?",
     "opzioni": [
       "3/10",
+      "7/10",
       "3/7",
-      "1/3",
-      "7/10"
+      "1/3"
     ],
     "risposta_corretta": "3/10",
     "spiegazione": "La probabilità si calcola facendo casi favorevoli diviso casi totali. Le palline rosse sono 3, mentre le palline totali sono 3 + 7 = 10. Quindi la probabilità è 3/10. 7/10 sarebbe la probabilità di estrarre una blu, 3/7 confronta rosse e blu ma non usa il totale, mentre 1/3 non rappresenta il rapporto corretto.",
@@ -1012,9 +1012,9 @@
     "livello": "avanzato",
     "domanda": "Un numero aumentato del suo 30% diventa 65. Qual era il numero iniziale?",
     "opzioni": [
-      "55",
-      "50",
       "45",
+      "50",
+      "55",
       "60"
     ],
     "risposta_corretta": "50",
@@ -1032,10 +1032,10 @@
     "livello": "avanzato",
     "domanda": "Un treno percorre 180 km in 2 ore e 15 minuti. Qual è la sua velocità media?",
     "opzioni": [
-      "90 km/h",
       "75 km/h",
+      "80 km/h",
       "85 km/h",
-      "80 km/h"
+      "90 km/h"
     ],
     "risposta_corretta": "80 km/h",
     "spiegazione": "2 ore e 15 minuti non sono 2,15 ore: i 15 minuti vanno trasformati in ore. Poiché 15 minuti sono 15/60 = 0,25 ore, il tempo totale è 2 + 0,25 = 2,25 ore. La velocità media si calcola facendo distanza / tempo, quindi 180 / 2,25 = 80 km/h.",
@@ -1053,10 +1053,10 @@
     "livello": "avanzato",
     "domanda": "Se 2x - 3 = x + 9, quale valore ha x?",
     "opzioni": [
-      "11",
       "9",
-      "12",
-      "10"
+      "10",
+      "11",
+      "12"
     ],
     "risposta_corretta": "12",
     "spiegazione": "Portiamo x a sinistra e -3 a destra: 2x - x = 9 + 3. Quindi x = 12.",
@@ -1073,8 +1073,8 @@
     "livello": "avanzato",
     "domanda": "Quanti codici diversi di 2 cifre si possono formare usando le cifre 1, 2, 3, 4 senza ripetizione?",
     "opzioni": [
-      "10",
       "8",
+      "10",
       "12",
       "16"
     ],
@@ -1113,10 +1113,10 @@
     "livello": "avanzato",
     "domanda": "Un valore passa da 120 a 150. Qual è l'aumento percentuale?",
     "opzioni": [
-      "25%",
-      "35%",
       "20%",
-      "30%"
+      "25%",
+      "30%",
+      "35%"
     ],
     "risposta_corretta": "25%",
     "spiegazione": "L'aumento è 150 - 120 = 30. La percentuale di aumento si calcola rispetto al valore iniziale, quindi 30 / 120 × 100 = 25%. 30% nasce dall'errore di confondere l'aumento assoluto 30 con la percentuale.",
@@ -1133,10 +1133,10 @@
     "livello": "facile",
     "domanda": "Quale frase usa correttamente il presente con il soggetto 'they'?",
     "opzioni": [
-      "They am students.",
-      "They are student.",
       "They are students.",
-      "They is students."
+      "They is students.",
+      "They are student.",
+      "They am students."
     ],
     "risposta_corretta": "They are students.",
     "spiegazione": "'They are students' è corretto perché 'they' richiede 'are' e il nome deve essere al plurale: 'students'. 'They is' usa il verbo sbagliato, 'They are student' sbaglia il plurale, mentre 'They am' usa una forma che si usa solo con 'I'.",
@@ -1154,10 +1154,10 @@
     "livello": "facile",
     "domanda": "Completa la frase: I have ___ apple in my bag.",
     "opzioni": [
-      "a",
       "an",
-      "some",
-      "the"
+      "a",
+      "the",
+      "some"
     ],
     "risposta_corretta": "an",
     "spiegazione": "Si usa 'an' davanti a parole che iniziano con suono vocalico, come 'apple'.",
@@ -1175,8 +1175,8 @@
     "livello": "facile",
     "domanda": "Quale parola inglese indica il contrario di 'hot'?",
     "opzioni": [
-      "warm",
       "cold",
+      "warm",
       "dry",
       "soft"
     ],
@@ -1196,10 +1196,10 @@
     "livello": "facile",
     "domanda": "Completa la frase: The book is ___ the table.",
     "opzioni": [
+      "on",
       "at",
-      "from",
       "to",
-      "on"
+      "from"
     ],
     "risposta_corretta": "on",
     "spiegazione": "Si usa 'on' quando qualcosa si trova sopra una superficie. La frase significa: il libro è sul tavolo.",
@@ -1217,10 +1217,10 @@
     "livello": "facile",
     "domanda": "Qual è il plurale corretto di 'child'?",
     "opzioni": [
-      "childes",
+      "children",
       "childs",
-      "childrens",
-      "children"
+      "childes",
+      "childrens"
     ],
     "risposta_corretta": "children",
     "spiegazione": "'Child' ha un plurale irregolare: 'children'. Le altre forme non sono corrette.",
@@ -1239,8 +1239,8 @@
     "domanda": "Quale frase usa correttamente il past simple?",
     "opzioni": [
       "She visited London last year.",
-      "She visit London last year.",
       "She has visited London last year.",
+      "She visit London last year.",
       "She was visit London last year."
     ],
     "risposta_corretta": "She visited London last year.",
@@ -1259,10 +1259,10 @@
     "livello": "intermedio",
     "domanda": "Completa la frase: This exercise is ___ than the previous one.",
     "opzioni": [
-      "difficulter",
       "more difficult",
       "most difficult",
-      "more difficulty"
+      "more difficulty",
+      "difficulter"
     ],
     "risposta_corretta": "more difficult",
     "spiegazione": "Dopo 'than' serve il comparativo. Con un aggettivo lungo come 'difficult' si usa 'more difficult'. 'Most difficult' è superlativo, 'more difficulty' usa un nome invece dell'aggettivo, mentre 'difficulter' non è la forma corretta.",
@@ -1280,9 +1280,9 @@
     "livello": "intermedio",
     "domanda": "Quale frase esprime meglio un obbligo?",
     "opzioni": [
-      "You could wear a helmet.",
       "You must wear a helmet.",
       "You might wear a helmet.",
+      "You could wear a helmet.",
       "You would wear a helmet."
     ],
     "risposta_corretta": "You must wear a helmet.",
@@ -1303,8 +1303,8 @@
     "opzioni": [
       "will stay",
       "would stay",
-      "stayed",
-      "are staying"
+      "are staying",
+      "stayed"
     ],
     "risposta_corretta": "will stay",
     "spiegazione": "Nel first conditional si usa 'if' + present simple e poi 'will' + verbo base. Quindi: 'If it rains tomorrow, we will stay at home.' 'Would stay' appartiene più al second conditional, 'are staying' indica un piano già organizzato, mentre 'stayed' è passato.",
@@ -1323,9 +1323,9 @@
     "domanda": "Nella frase 'Please turn off the light', che cosa significa 'turn off'?",
     "opzioni": [
       "spegnere",
-      "scollegare",
       "accendere",
-      "abbassare"
+      "abbassare",
+      "scollegare"
     ],
     "risposta_corretta": "spegnere",
     "spiegazione": "'Turn off' significa spegnere. 'Turn on' significa accendere, 'turn down' può significare abbassare, mentre 'unplug' significa scollegare.",
@@ -1343,9 +1343,9 @@
     "livello": "intermedio",
     "domanda": "Quale frase corrisponde meglio a: 'Non vedo l'ora di iniziare il corso'?",
     "opzioni": [
-      "I am looking for starting the course.",
       "I am looking forward to starting the course.",
       "I am looking forward to start the course.",
+      "I am looking for starting the course.",
       "I am looking after starting the course."
     ],
     "risposta_corretta": "I am looking forward to starting the course.",
@@ -1364,10 +1364,10 @@
     "livello": "avanzato",
     "domanda": "Completa la frase: The system is powerful; ___, it requires careful testing before deployment.",
     "opzioni": [
-      "therefore",
-      "otherwise",
       "however",
-      "moreover"
+      "therefore",
+      "moreover",
+      "otherwise"
     ],
     "risposta_corretta": "however",
     "spiegazione": "'However' introduce un contrasto: il sistema è potente, ma richiede comunque test accurati. 'Therefore' indica conseguenza, 'moreover' aggiunge un'informazione, mentre 'otherwise' indica una conseguenza alternativa.",
@@ -1385,10 +1385,10 @@
     "livello": "avanzato",
     "domanda": "Scegli la frase corretta:",
     "opzioni": [
-      "The developer whose fixed the bug updated the repository.",
+      "The developer who fixed the bug updated the repository.",
       "The developer which fixed the bug updated the repository.",
       "The developer that fixing the bug updated the repository.",
-      "The developer who fixed the bug updated the repository."
+      "The developer whose fixed the bug updated the repository."
     ],
     "risposta_corretta": "The developer who fixed the bug updated the repository.",
     "spiegazione": "Per riferirsi a una persona in una frase relativa si usa normalmente 'who'. 'Which' si usa più spesso per cose o animali, 'that fixing' è una struttura errata, mentre 'whose' indica possesso e non può sostituire 'who' in questa frase.",
@@ -1406,10 +1406,10 @@
     "livello": "avanzato",
     "domanda": "Quale frase usa correttamente la forma passiva?",
     "opzioni": [
-      "The report is reviewed by the team yesterday.",
+      "The report was reviewed by the team.",
       "The report has been review by the team.",
-      "The report was reviewing by the team.",
-      "The report was reviewed by the team."
+      "The report is reviewed by the team yesterday.",
+      "The report was reviewing by the team."
     ],
     "risposta_corretta": "The report was reviewed by the team.",
     "spiegazione": "La forma passiva corretta usa il verbo 'to be' più il participio passato: 'was reviewed'. 'Has been review' è sbagliato perché manca il participio 'reviewed'. 'Is reviewed yesterday' mescola presente e tempo passato preciso. 'Was reviewing' è una forma attiva/progressiva, non passiva corretta.",
@@ -1428,9 +1428,9 @@
     "domanda": "Quale frase esprime meglio un consiglio formale?",
     "opzioni": [
       "You should consider updating the documentation.",
-      "You might want to update the documentation.",
       "You should update the documentation immediately.",
-      "You could update the documentation if necessary."
+      "You could update the documentation if necessary.",
+      "You might want to update the documentation."
     ],
     "risposta_corretta": "You should consider updating the documentation.",
     "spiegazione": "'You should consider updating...' è un consiglio formale e prudente. 'You should update immediately' è più diretto e meno formale. 'Could' indica possibilità, mentre 'might want to' è un suggerimento più informale.",
@@ -1449,8 +1449,8 @@
     "domanda": "Quale frase trasforma correttamente 'I am working on the project' nel discorso indiretto con backshift standard?",
     "opzioni": [
       "He said that he was working on the project.",
-      "He said that he had worked on the project.",
       "He said that he is working on the project.",
+      "He said that he had worked on the project.",
       "He said that he worked on the project."
     ],
     "risposta_corretta": "He said that he was working on the project.",
@@ -1469,9 +1469,9 @@
     "livello": "avanzato",
     "domanda": "Nel contesto software, quale frase rende meglio 'The feature is backward compatible'?",
     "opzioni": [
-      "La funzionalità mantiene la stessa interfaccia ma non supporta versioni vecchie.",
-      "La funzionalità richiede solo versioni successive.",
       "La funzionalità è compatibile con versioni precedenti.",
+      "La funzionalità richiede solo versioni successive.",
+      "La funzionalità mantiene la stessa interfaccia ma non supporta versioni vecchie.",
       "La funzionalità è stata riscritta senza garantire compatibilità."
     ],
     "risposta_corretta": "La funzionalità è compatibile con versioni precedenti.",
@@ -1490,10 +1490,10 @@
     "livello": "intermedio",
     "domanda": "Tutti i tecnici controllano i log. Alcuni tecnici documentano gli errori. Quale conclusione è sicuramente vera?",
     "opzioni": [
+      "Alcune persone che documentano gli errori controllano i log",
       "Tutte le persone che documentano gli errori controllano i log",
-      "Alcuni tecnici non controllano i log",
       "Tutte le persone che controllano i log documentano errori",
-      "Alcune persone che documentano gli errori controllano i log"
+      "Alcuni tecnici non controllano i log"
     ],
     "risposta_corretta": "Alcune persone che documentano gli errori controllano i log",
     "spiegazione": "Sappiamo che alcuni tecnici documentano gli errori e che tutti i tecnici controllano i log. Quindi almeno alcune persone che documentano errori controllano anche i log. Non possiamo però dire che tutte le persone che documentano errori controllino i log.",
@@ -1513,9 +1513,9 @@
     "domanda": "Un'app è stata aggiornata e subito dopo alcuni utenti segnalano errori. Quale conclusione è più prudente?",
     "opzioni": [
       "L'aggiornamento potrebbe essere collegato agli errori, ma servono ulteriori verifiche",
-      "Il numero di segnalazioni basta da solo per dimostrare la causa tecnica",
+      "L'aggiornamento è la causa più probabile solo perché è avvenuto prima degli errori",
       "Gli errori sono certamente indipendenti dall'aggiornamento perché li hanno segnalati solo alcuni utenti",
-      "L'aggiornamento è la causa più probabile solo perché è avvenuto prima degli errori"
+      "Il numero di segnalazioni basta da solo per dimostrare la causa tecnica"
     ],
     "risposta_corretta": "L'aggiornamento potrebbe essere collegato agli errori, ma servono ulteriori verifiche",
     "spiegazione": "La vicinanza temporale tra aggiornamento ed errori suggerisce una possibile relazione, ma non dimostra da sola una causa certa. Servono log, test, confronto tra versioni e verifica di altri fattori.",
@@ -1535,8 +1535,8 @@
     "livello": "intermedio",
     "domanda": "Osserva le trasformazioni: A1 → B2, C3 → D4, E5 → ?",
     "opzioni": [
-      "F5",
       "F6",
+      "F5",
       "E6",
       "G6"
     ],
@@ -1559,9 +1559,9 @@
     "domanda": "Quale coppia mantiene meglio la relazione: bozza → documento finale?",
     "opzioni": [
       "prototipo → prodotto definitivo",
-      "idea → titolo",
       "bozza → revisione",
-      "indice → documento finale"
+      "indice → documento finale",
+      "idea → titolo"
     ],
     "risposta_corretta": "prototipo → prodotto definitivo",
     "spiegazione": "Una bozza è una versione iniziale che può evolvere in un documento finale. Allo stesso modo, un prototipo è una versione iniziale che può evolvere in un prodotto definitivo. Bozza → revisione indica una fase intermedia, non il passaggio completo alla versione finale.",
@@ -1580,9 +1580,9 @@
     "livello": "avanzato",
     "domanda": "Completa la sequenza: 5, 11, 10, 21, 20, 41, ?",
     "opzioni": [
+      "40",
       "42",
       "39",
-      "40",
       "43"
     ],
     "risposta_corretta": "40",

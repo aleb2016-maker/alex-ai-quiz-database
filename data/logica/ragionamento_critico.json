@@ -6,10 +6,10 @@
     "livello": "facile",
     "domanda": "Tutti i treni della linea A arrivano in stazione. Il treno 25 è della linea A. Cosa si può concludere?",
     "opzioni": [
-      "Solo il treno 25 della linea A arriva in stazione",
       "Il treno 25 arriva in stazione",
       "Il treno 25 arriva in stazione solo se è in orario",
-      "Tutti i treni che arrivano in stazione sono della linea A"
+      "Tutti i treni che arrivano in stazione sono della linea A",
+      "Solo il treno 25 della linea A arriva in stazione"
     ],
     "risposta_corretta": "Il treno 25 arriva in stazione",
     "spiegazione": "Se tutti i treni della linea A arrivano in stazione e il treno 25 è della linea A, allora il treno 25 arriva in stazione. Non possiamo aggiungere condizioni non presenti, come l'orario.",
@@ -30,9 +30,9 @@
     "domanda": "Se l'affermazione 'Se piove, Marco prende l'ombrello' è vera e oggi Marco non prende l'ombrello, cosa si può dedurre con certezza?",
     "opzioni": [
       "Oggi non piove",
+      "Non si può dedurre nulla sul tempo",
       "Oggi piove sicuramente",
-      "Marco potrebbe non prendere l'ombrello anche se piove",
-      "Non si può dedurre nulla sul tempo"
+      "Marco potrebbe non prendere l'ombrello anche se piove"
     ],
     "risposta_corretta": "Oggi non piove",
     "spiegazione": "La regola dice: se piove, Marco prende l'ombrello. Se oggi Marco non prende l'ombrello, allora la condizione 'piove' non si è verificata. È una deduzione per contrapposizione: se P implica Q, allora non Q implica non P.",
@@ -52,10 +52,10 @@
     "livello": "avanzato",
     "domanda": "Un negozio afferma: 'Tutti i prodotti scontati sono esposti nello scaffale rosso'. Un cliente trova un prodotto nello scaffale rosso. Quale conclusione è logicamente corretta?",
     "opzioni": [
-      "Il prodotto è sicuramente scontato perché si trova nello scaffale rosso",
-      "Nessun prodotto non scontato può trovarsi nello scaffale rosso",
       "Non è certo che il prodotto sia scontato",
-      "Tutti i prodotti nello scaffale rosso sono sicuramente scontati"
+      "Il prodotto è sicuramente scontato perché si trova nello scaffale rosso",
+      "Tutti i prodotti nello scaffale rosso sono sicuramente scontati",
+      "Nessun prodotto non scontato può trovarsi nello scaffale rosso"
     ],
     "risposta_corretta": "Non è certo che il prodotto sia scontato",
     "spiegazione": "L'affermazione dice che tutti i prodotti scontati sono nello scaffale rosso. Questo non significa che tutti i prodotti nello scaffale rosso siano scontati. Trovare un prodotto nello scaffale rosso non basta quindi per concludere con certezza che sia scontato.",

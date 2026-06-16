@@ -8,10 +8,10 @@
     "domanda": "Quale scelta chiude il primo esercizio visivo?",
     "immagine_domanda": "assets/logica_visiva/log_vis_fac_0001_domanda.png",
     "opzioni": [
+      "A",
       "B",
-      "D",
       "C",
-      "A"
+      "D"
     ],
     "immagini_opzioni": [
       "assets/logica_visiva/log_vis_fac_0001_A.png",
@@ -117,10 +117,10 @@
     "domanda": "Individua l'alternativa più coerente con il passaggio mostrato.",
     "immagine_domanda": "assets/logica_visiva/log_vis_int_0002_domanda.png",
     "opzioni": [
-      "D",
+      "A",
       "B",
       "C",
-      "A"
+      "D"
     ],
     "immagini_opzioni": [
       "assets/logica_visiva/log_vis_int_0002_A.png",
@@ -276,9 +276,9 @@
     "domanda": "Quale tassello va inserito nella casella vuota della griglia?",
     "immagine_domanda": "assets/logica_visiva/log_vis_av_0003_domanda.png",
     "opzioni": [
-      "C",
-      "B",
       "A",
+      "B",
+      "C",
       "D"
     ],
     "immagini_opzioni": [
@@ -473,9 +473,9 @@
     "domanda": "Seleziona il simbolo adatto allo spazio con il punto interrogativo.",
     "opzioni": [
       "A",
-      "D",
+      "B",
       "C",
-      "B"
+      "D"
     ],
     "risposta_corretta": "A",
     "spiegazione": "Corretta: cerchio blu con 3 pallini. Regola: alterna cerchio/quadrato e blu/rosso; i pallini aumentano.",
@@ -638,9 +638,9 @@
     "tipo": "visiva",
     "domanda": "Tra le quattro risposte, quale viene dopo nel percorso illustrato?",
     "opzioni": [
+      "A",
       "B",
       "C",
-      "A",
       "D"
     ],
     "risposta_corretta": "D",
@@ -801,8 +801,8 @@
     "opzioni": [
       "A",
       "B",
-      "D",
-      "C"
+      "C",
+      "D"
     ],
     "risposta_corretta": "C",
     "spiegazione": "Corretta: triangolo blu con 4 pallini. Regola: il triangolo resta blu e i pallini aumentano 1, 2, 3, 4.",
@@ -951,10 +951,10 @@
     "tipo_domanda": "immagine",
     "domanda": "Scegli l'elemento che mantiene ordinato il modello proposto.",
     "opzioni": [
-      "D",
-      "B",
       "A",
-      "C"
+      "B",
+      "C",
+      "D"
     ],
     "risposta_corretta": "B",
     "spiegazione": "Corretta: esagono viola. Regola: l’esagono resta fisso e il colore alterna oro/viola.",
@@ -1106,10 +1106,10 @@
     "tipo_domanda": "immagine",
     "domanda": "Quale alternativa completa il riquadro finale?",
     "opzioni": [
-      "D",
-      "B",
       "A",
-      "C"
+      "B",
+      "C",
+      "D"
     ],
     "risposta_corretta": "A",
     "spiegazione": "Corretta: triangolo verde con 3 pallini. Regola: la riga fissa forma/colore e la colonna porta i pallini a 3.",
@@ -1317,8 +1317,8 @@
     "tipo": "visiva",
     "domanda": "Quale risposta prosegue il modello senza contraddirlo?",
     "opzioni": [
-      "B",
       "A",
+      "B",
       "C",
       "D"
     ],
@@ -1470,9 +1470,9 @@
     "domanda": "Inserisci mentalmente il tassello mancante e scegli la soluzione.",
     "opzioni": [
       "A",
-      "D",
       "B",
-      "C"
+      "C",
+      "D"
     ],
     "risposta_corretta": "B",
     "spiegazione": "Corretta: triangolo verde con 3 pallini. Regola: terza riga = triangolo, terza colonna = 3 pallini verdi.",
@@ -1889,10 +1889,10 @@
     "tipo": "visiva",
     "domanda": "Quale elemento occupa la posizione vuota?",
     "opzioni": [
-      "D",
+      "A",
       "B",
       "C",
-      "A"
+      "D"
     ],
     "risposta_corretta": "C",
     "spiegazione": "Corretta: freccia rossa a sinistra con 4 pallini. Regola: ruota la freccia, alterna colore e aumenta i pallini.",
@@ -2100,10 +2100,10 @@
     "tipo": "visiva",
     "domanda": "Scegli la figura speculare rispetto all'asse verticale.",
     "opzioni": [
-      "D",
+      "A",
       "B",
       "C",
-      "A"
+      "D"
     ],
     "risposta_corretta": "D",
     "spiegazione": "Corretta: figura speculare. Regola: gli elementi si ribaltano rispetto all’asse verticale.",
@@ -2379,10 +2379,10 @@
     "tipo": "visiva",
     "domanda": "Quale casella completa la matrice visiva?",
     "opzioni": [
-      "B",
       "A",
-      "D",
-      "C"
+      "B",
+      "C",
+      "D"
     ],
     "risposta_corretta": "A",
     "spiegazione": "Corretta: triangolo blu con 3 linee. Regola: ogni riga mantiene la forma, i colori alternano blu/rosso/blu e le linee aumentano di 1.",
@@ -2591,10 +2591,10 @@
     "tipo": "visiva",
     "domanda": "Scegli la soluzione più adatta per il riquadro mancante.",
     "opzioni": [
-      "C",
-      "D",
       "A",
-      "B"
+      "B",
+      "C",
+      "D"
     ],
     "risposta_corretta": "C",
     "spiegazione": "Corretta: esagono con 3 contorni e puntini. Regola: aumentano i contorni e la terza colonna ha puntini.",
@@ -2895,9 +2895,9 @@
     "domanda": "Quale immagine chiude il modello avanzato?",
     "opzioni": [
       "A",
-      "D",
+      "B",
       "C",
-      "B"
+      "D"
     ],
     "risposta_corretta": "B",
     "spiegazione": "Corretta: quadrato rosso vuoto con pallino in alto. Regola: aumenta un lato, sparisce il riempimento e il pallino ruota.",
@@ -3314,10 +3314,10 @@
     "tipo": "visiva",
     "domanda": "Quale tassello conclude la griglia nel modo corretto?",
     "opzioni": [
+      "A",
       "B",
-      "D",
       "C",
-      "A"
+      "D"
     ],
     "risposta_corretta": "D",
     "spiegazione": "Corretta: quadrato blu con 3 barre diagonali. Regola: ruotano le forme, alternano i colori e le barre diventano 3.",
