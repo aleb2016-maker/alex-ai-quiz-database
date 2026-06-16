@@ -7,7 +7,7 @@ Questo report separa i problemi qualitativi reali dagli avvisi non bloccanti sul
 | Motore | Domande | Problemi qualità reali | Risposta in A nel sorgente |
 |---|---:|---:|---:|
 | Scienze generali | 40 | 16 | 34 |
-| Biologia | 40 | 6 | 40 |
+| Biologia | 40 | 0 | 40 |
 | Fisica | 40 | 21 | 40 |
 | Chimica | 40 | 23 | 40 |
 | Fisica quantistica | 40 | 21 | 40 |
@@ -356,7 +356,7 @@ Distribuzione risposta corretta nel sorgente:
 ## Biologia
 
 Domande sorgente: **40**
-Domande con problemi qualità reali: **6**
+Domande con problemi qualità reali: **0**
 Risposte corrette in A nel sorgente: **40**
 
 Distribuzione risposta corretta nel sorgente:
@@ -365,127 +365,7 @@ Distribuzione risposta corretta nel sorgente:
 {'A': 40}
 ```
 
-### Domande da migliorare davvero
-
-### BIO_025 — livello: facile
-
-**Domanda:** Quale struttura cellulare partecipa direttamente alla costruzione delle proteine?
-
-**Opzioni attuali:**
-- A. Ribosoma ✅
-- B. Vacuolo centrale
-- C. Parete cellulare
-- D. Membrana nucleare
-
-**Risposta corretta nel sorgente:** A
-
-**Problemi reali:**
-- Manca un distrattore forte: nessuna risposta sbagliata sembra abbastanza vicina alla risposta corretta.
-
-**Regola di revisione:**
-- Ogni domanda deve avere almeno un distrattore forte: una risposta sbagliata molto vicina alla corretta, ma falsa per un dettaglio preciso.
-- Evitare parole assolute come “sempre” e “mai”, se rendono il distrattore troppo eliminabile.
-- Rendere le quattro opzioni simili per lunghezza, struttura e livello tecnico.
-
-### BIO_032 — livello: avanzato
-
-**Domanda:** Che cosa può causare una mutazione in una sequenza regolatrice del DNA?
-
-**Opzioni attuali:**
-- A. Può modificare quando, dove o quanto viene espresso un gene ✅
-- B. Trasforma sempre il gene in una proteina già completa
-- C. Elimina automaticamente tutti gli enzimi della cellula
-- D. Rende impossibile qualunque forma di ereditarietà
-
-**Risposta corretta nel sorgente:** A
-
-**Problemi reali:**
-- Possibile opzione debole/generica: contiene “sempre”.
-
-**Regola di revisione:**
-- Ogni domanda deve avere almeno un distrattore forte: una risposta sbagliata molto vicina alla corretta, ma falsa per un dettaglio preciso.
-- Evitare parole assolute come “sempre” e “mai”, se rendono il distrattore troppo eliminabile.
-- Rendere le quattro opzioni simili per lunghezza, struttura e livello tecnico.
-
-### BIO_037 — livello: intermedio
-
-**Domanda:** Che cosa accade quando un ormone si lega al recettore corretto di una cellula bersaglio?
-
-**Opzioni attuali:**
-- A. Può attivare una risposta specifica nella cellula ✅
-- B. Distrugge sempre il nucleo della cellula
-- C. Trasforma ogni recettore in un cromosoma
-- D. Impedisce qualunque comunicazione tra cellule
-
-**Risposta corretta nel sorgente:** A
-
-**Problemi reali:**
-- Possibile opzione debole/generica: contiene “sempre”.
-
-**Regola di revisione:**
-- Ogni domanda deve avere almeno un distrattore forte: una risposta sbagliata molto vicina alla corretta, ma falsa per un dettaglio preciso.
-- Evitare parole assolute come “sempre” e “mai”, se rendono il distrattore troppo eliminabile.
-- Rendere le quattro opzioni simili per lunghezza, struttura e livello tecnico.
-
-### BIO_038 — livello: avanzato
-
-**Domanda:** Perché una popolazione con bassa variabilità genetica può essere più vulnerabile ai cambiamenti ambientali?
-
-**Opzioni attuali:**
-- A. Perché ha meno combinazioni ereditarie su cui può agire la selezione naturale ✅
-- B. Perché tutti gli individui diventano automaticamente più forti
-- C. Perché la selezione naturale smette sempre di agire
-- D. Perché il DNA viene eliminato da tutte le cellule
-
-**Risposta corretta nel sorgente:** A
-
-**Problemi reali:**
-- Possibile opzione debole/generica: contiene “sempre”.
-
-**Regola di revisione:**
-- Ogni domanda deve avere almeno un distrattore forte: una risposta sbagliata molto vicina alla corretta, ma falsa per un dettaglio preciso.
-- Evitare parole assolute come “sempre” e “mai”, se rendono il distrattore troppo eliminabile.
-- Rendere le quattro opzioni simili per lunghezza, struttura e livello tecnico.
-
-### BIO_039 — livello: avanzato
-
-**Domanda:** Che cosa descrive un meccanismo di feedback negativo nell’organismo?
-
-**Opzioni attuali:**
-- A. Una risposta che riduce una variazione e aiuta a riportare un parametro verso valori normali ✅
-- B. Una risposta che amplifica sempre senza limite qualunque cambiamento interno
-- C. Un processo che elimina definitivamente tutti gli ormoni dal sangue
-- D. Un sistema che impedisce alle cellule di ricevere segnali
-
-**Risposta corretta nel sorgente:** A
-
-**Problemi reali:**
-- Possibile opzione debole/generica: contiene “sempre”.
-
-**Regola di revisione:**
-- Ogni domanda deve avere almeno un distrattore forte: una risposta sbagliata molto vicina alla corretta, ma falsa per un dettaglio preciso.
-- Evitare parole assolute come “sempre” e “mai”, se rendono il distrattore troppo eliminabile.
-- Rendere le quattro opzioni simili per lunghezza, struttura e livello tecnico.
-
-### BIO_040 — livello: avanzato
-
-**Domanda:** Perché l’uso scorretto degli antibiotici può favorire batteri resistenti?
-
-**Opzioni attuali:**
-- A. Perché può selezionare i batteri capaci di sopravvivere al trattamento ✅
-- B. Perché trasforma sempre tutti i batteri in virus
-- C. Perché rende gli antibiotici una fonte di zuccheri per le cellule umane
-- D. Perché impedisce ai batteri di riprodursi in qualunque situazione
-
-**Risposta corretta nel sorgente:** A
-
-**Problemi reali:**
-- Possibile opzione debole/generica: contiene “sempre”.
-
-**Regola di revisione:**
-- Ogni domanda deve avere almeno un distrattore forte: una risposta sbagliata molto vicina alla corretta, ma falsa per un dettaglio preciso.
-- Evitare parole assolute come “sempre” e “mai”, se rendono il distrattore troppo eliminabile.
-- Rendere le quattro opzioni simili per lunghezza, struttura e livello tecnico.
+Nessun problema qualitativo reale rilevato.
 
 ## Fisica
 

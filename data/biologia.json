@@ -710,13 +710,13 @@
     "livello": "facile",
     "domanda": "Quale struttura cellulare partecipa direttamente alla costruzione delle proteine?",
     "opzioni": [
-      "Ribosoma",
-      "Vacuolo centrale",
-      "Parete cellulare",
-      "Membrana nucleare"
+      "Ribosoma, dove l’RNA messaggero viene tradotto in catene di amminoacidi",
+      "Reticolo endoplasmatico rugoso, che ospita ribosomi ma non traduce direttamente l’mRNA",
+      "Nucleo, dove il DNA viene conservato e trascritto prima della traduzione",
+      "Apparato di Golgi, che modifica e smista proteine già sintetizzate"
     ],
-    "risposta_corretta": "Ribosoma",
-    "spiegazione": "I ribosomi sono strutture cellulari coinvolte nella sintesi delle proteine, leggendo le informazioni portate dall’RNA messaggero.",
+    "risposta_corretta": "Ribosoma, dove l’RNA messaggero viene tradotto in catene di amminoacidi",
+    "spiegazione": "I ribosomi partecipano direttamente alla sintesi proteica perché traducono l’RNA messaggero in catene di amminoacidi. Il reticolo endoplasmatico rugoso è un distrattore vicino: ospita ribosomi e partecipa alla gestione delle proteine, ma la traduzione avviene sui ribosomi.",
     "tags": [
       "biologia",
       "cellula",
@@ -727,7 +727,13 @@
     "distrattore_forte": "Membrana nucleare",
     "punteggio_distrattore_forte": 4,
     "motivo_distrattore_forte": "È vicino perché appartiene alla cellula e riguarda il nucleo, ma non costruisce direttamente proteine.",
-    "qualita": "controllata"
+    "qualita": "controllata",
+    "spiegazioni_opzioni": {
+      "Ribosoma, dove l’RNA messaggero viene tradotto in catene di amminoacidi": "Corretta: il ribosoma è la struttura che traduce l’RNA messaggero in una catena di amminoacidi.",
+      "Reticolo endoplasmatico rugoso, che ospita ribosomi ma non traduce direttamente l’mRNA": "Errata ma vicina: il reticolo endoplasmatico rugoso ospita ribosomi e partecipa alla gestione delle proteine, ma non traduce direttamente l’mRNA.",
+      "Nucleo, dove il DNA viene conservato e trascritto prima della traduzione": "Errata: il nucleo conserva il DNA e permette la trascrizione, ma la costruzione della proteina avviene sui ribosomi.",
+      "Apparato di Golgi, che modifica e smista proteine già sintetizzate": "Errata: l’apparato di Golgi modifica e smista proteine già prodotte, ma non costruisce direttamente la catena proteica."
+    }
   },
   {
     "id": "BIO_026",
@@ -898,13 +904,13 @@
     "livello": "avanzato",
     "domanda": "Che cosa può causare una mutazione in una sequenza regolatrice del DNA?",
     "opzioni": [
-      "Può modificare quando, dove o quanto viene espresso un gene",
-      "Trasforma sempre il gene in una proteina già completa",
-      "Elimina automaticamente tutti gli enzimi della cellula",
-      "Rende impossibile qualunque forma di ereditarietà"
+      "Può modificare il livello o il momento di espressione di un gene",
+      "Può cambiare direttamente la sequenza di amminoacidi di ogni proteina prodotta",
+      "Può eliminare il ribosoma che traduce l’RNA messaggero nel citoplasma",
+      "Può trasformare una sequenza regolatrice in un cromosoma indipendente"
     ],
-    "risposta_corretta": "Può modificare quando, dove o quanto viene espresso un gene",
-    "spiegazione": "Le sequenze regolatrici controllano l’espressione dei geni. Una mutazione in queste regioni può cambiare il livello o il contesto di attivazione di un gene.",
+    "risposta_corretta": "Può modificare il livello o il momento di espressione di un gene",
+    "spiegazione": "Una mutazione in una sequenza regolatrice non cambia necessariamente la proteina, ma può modificare quando, dove o quanto un gene viene espresso.",
     "tags": [
       "biologia",
       "genetica",
@@ -915,7 +921,13 @@
     "distrattore_forte": "Trasforma sempre il gene in una proteina già completa",
     "punteggio_distrattore_forte": 4,
     "motivo_distrattore_forte": "È vicino perché collega gene e proteina, ma una sequenza regolatrice controlla l’espressione, non costruisce proteine direttamente.",
-    "qualita": "controllata"
+    "qualita": "controllata",
+    "spiegazioni_opzioni": {
+      "Può modificare il livello o il momento di espressione di un gene": "Corretta: descrive in modo preciso il concetto biologico richiesto.",
+      "Può cambiare direttamente la sequenza di amminoacidi di ogni proteina prodotta": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio biologico non corretto.",
+      "Può eliminare il ribosoma che traduce l’RNA messaggero nel citoplasma": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio biologico non corretto.",
+      "Può trasformare una sequenza regolatrice in un cromosoma indipendente": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio biologico non corretto."
+    }
   },
   {
     "id": "BIO_033",
@@ -1027,13 +1039,13 @@
     "livello": "intermedio",
     "domanda": "Che cosa accade quando un ormone si lega al recettore corretto di una cellula bersaglio?",
     "opzioni": [
-      "Può attivare una risposta specifica nella cellula",
-      "Distrugge sempre il nucleo della cellula",
-      "Trasforma ogni recettore in un cromosoma",
-      "Impedisce qualunque comunicazione tra cellule"
+      "Si attiva una risposta cellulare specifica tramite vie di segnalazione interne",
+      "Il recettore trasforma direttamente l’ormone in una nuova proteina strutturale",
+      "La cellula bersaglio perde il proprio DNA e viene sostituita dall’ormone",
+      "L’ormone entra nel nucleo e replica tutti i geni della cellula bersaglio"
     ],
-    "risposta_corretta": "Può attivare una risposta specifica nella cellula",
-    "spiegazione": "Gli ormoni agiscono come segnali chimici. Quando si legano a recettori specifici, possono avviare risposte cellulari mirate.",
+    "risposta_corretta": "Si attiva una risposta cellulare specifica tramite vie di segnalazione interne",
+    "spiegazione": "Quando un ormone si lega al recettore corretto, la cellula bersaglio attiva una risposta specifica. Il legame ormone-recettore avvia segnali intracellulari o modifica l’attività di alcuni geni.",
     "tags": [
       "biologia",
       "ormoni",
@@ -1044,7 +1056,13 @@
     "distrattore_forte": "Impedisce qualunque comunicazione tra cellule",
     "punteggio_distrattore_forte": 4,
     "motivo_distrattore_forte": "È vicino perché riguarda la comunicazione cellulare, ma ne descrive l’opposto.",
-    "qualita": "controllata"
+    "qualita": "controllata",
+    "spiegazioni_opzioni": {
+      "Si attiva una risposta cellulare specifica tramite vie di segnalazione interne": "Corretta: descrive in modo preciso il concetto biologico richiesto.",
+      "Il recettore trasforma direttamente l’ormone in una nuova proteina strutturale": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio biologico non corretto.",
+      "La cellula bersaglio perde il proprio DNA e viene sostituita dall’ormone": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio biologico non corretto.",
+      "L’ormone entra nel nucleo e replica tutti i geni della cellula bersaglio": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio biologico non corretto."
+    }
   },
   {
     "id": "BIO_038",
@@ -1053,13 +1071,13 @@
     "livello": "avanzato",
     "domanda": "Perché una popolazione con bassa variabilità genetica può essere più vulnerabile ai cambiamenti ambientali?",
     "opzioni": [
-      "Perché ha meno combinazioni ereditarie su cui può agire la selezione naturale",
-      "Perché tutti gli individui diventano automaticamente più forti",
-      "Perché la selezione naturale smette sempre di agire",
-      "Perché il DNA viene eliminato da tutte le cellule"
+      "Ha meno varianti ereditarie utili su cui la selezione naturale può agire",
+      "Produce più mutazioni vantaggiose quando l’ambiente cambia rapidamente",
+      "Elimina la competizione interna perché tutti gli individui sono geneticamente simili",
+      "Rende ogni individuo capace di adattarsi allo stesso modo a qualsiasi pressione ambientale"
     ],
-    "risposta_corretta": "Perché ha meno combinazioni ereditarie su cui può agire la selezione naturale",
-    "spiegazione": "La variabilità genetica offre più possibilità di adattamento. Se è bassa, una popolazione può reagire peggio a malattie o cambiamenti ambientali.",
+    "risposta_corretta": "Ha meno varianti ereditarie utili su cui la selezione naturale può agire",
+    "spiegazione": "Una popolazione con bassa variabilità genetica possiede meno alternative ereditarie. Se l’ambiente cambia, è più probabile che manchino individui con caratteristiche adatte alla nuova condizione.",
     "tags": [
       "biologia",
       "genetica",
@@ -1070,7 +1088,13 @@
     "distrattore_forte": "Perché la selezione naturale smette sempre di agire",
     "punteggio_distrattore_forte": 4,
     "motivo_distrattore_forte": "È vicino perché parla di selezione naturale, ma la selezione continua ad agire anche con bassa variabilità.",
-    "qualita": "controllata"
+    "qualita": "controllata",
+    "spiegazioni_opzioni": {
+      "Ha meno varianti ereditarie utili su cui la selezione naturale può agire": "Corretta: descrive in modo preciso il concetto biologico richiesto.",
+      "Produce più mutazioni vantaggiose quando l’ambiente cambia rapidamente": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio biologico non corretto.",
+      "Elimina la competizione interna perché tutti gli individui sono geneticamente simili": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio biologico non corretto.",
+      "Rende ogni individuo capace di adattarsi allo stesso modo a qualsiasi pressione ambientale": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio biologico non corretto."
+    }
   },
   {
     "id": "BIO_039",
@@ -1079,13 +1103,13 @@
     "livello": "avanzato",
     "domanda": "Che cosa descrive un meccanismo di feedback negativo nell’organismo?",
     "opzioni": [
-      "Una risposta che riduce una variazione e aiuta a riportare un parametro verso valori normali",
-      "Una risposta che amplifica sempre senza limite qualunque cambiamento interno",
-      "Un processo che elimina definitivamente tutti gli ormoni dal sangue",
-      "Un sistema che impedisce alle cellule di ricevere segnali"
+      "Una risposta che contrasta una variazione e riporta una variabile verso l’equilibrio",
+      "Una risposta che amplifica una variazione finché il sistema perde ogni controllo",
+      "Un segnale che elimina il recettore e impedisce alla cellula di comunicare",
+      "Un processo che sostituisce tutti gli ormoni con enzimi digestivi nel sangue"
     ],
-    "risposta_corretta": "Una risposta che riduce una variazione e aiuta a riportare un parametro verso valori normali",
-    "spiegazione": "Il feedback negativo stabilizza molti parametri biologici. Per esempio, se un valore si allontana troppo, il corpo attiva risposte che lo riportano verso l’equilibrio.",
+    "risposta_corretta": "Una risposta che contrasta una variazione e riporta una variabile verso l’equilibrio",
+    "spiegazione": "Il feedback negativo è un meccanismo di regolazione: quando una variabile si allontana dal valore corretto, il sistema attiva risposte che tendono a riportarla verso l’equilibrio.",
     "tags": [
       "biologia",
       "feedback_negativo",
@@ -1096,7 +1120,13 @@
     "distrattore_forte": "Una risposta che amplifica sempre senza limite qualunque cambiamento interno",
     "punteggio_distrattore_forte": 4,
     "motivo_distrattore_forte": "È vicino perché parla di risposta a un cambiamento, ma descrive più il feedback positivo estremo, non quello negativo.",
-    "qualita": "controllata"
+    "qualita": "controllata",
+    "spiegazioni_opzioni": {
+      "Una risposta che contrasta una variazione e riporta una variabile verso l’equilibrio": "Corretta: descrive in modo preciso il concetto biologico richiesto.",
+      "Una risposta che amplifica una variazione finché il sistema perde ogni controllo": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio biologico non corretto.",
+      "Un segnale che elimina il recettore e impedisce alla cellula di comunicare": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio biologico non corretto.",
+      "Un processo che sostituisce tutti gli ormoni con enzimi digestivi nel sangue": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio biologico non corretto."
+    }
   },
   {
     "id": "BIO_040",
@@ -1105,13 +1135,13 @@
     "livello": "avanzato",
     "domanda": "Perché l’uso scorretto degli antibiotici può favorire batteri resistenti?",
     "opzioni": [
-      "Perché può selezionare i batteri capaci di sopravvivere al trattamento",
-      "Perché trasforma sempre tutti i batteri in virus",
-      "Perché rende gli antibiotici una fonte di zuccheri per le cellule umane",
-      "Perché impedisce ai batteri di riprodursi in qualunque situazione"
+      "Elimina molti batteri sensibili e favorisce la sopravvivenza di quelli resistenti",
+      "Rende ogni batterio sensibile più debole senza modificare la pressione selettiva",
+      "Trasforma direttamente gli antibiotici in nutrienti usati dai batteri comuni",
+      "Blocca la riproduzione dei batteri resistenti e lascia crescere solo quelli sensibili"
     ],
-    "risposta_corretta": "Perché può selezionare i batteri capaci di sopravvivere al trattamento",
-    "spiegazione": "Se alcuni batteri resistenti sopravvivono, possono moltiplicarsi e diventare più frequenti nella popolazione batterica.",
+    "risposta_corretta": "Elimina molti batteri sensibili e favorisce la sopravvivenza di quelli resistenti",
+    "spiegazione": "L’uso scorretto degli antibiotici può selezionare batteri resistenti: i batteri sensibili vengono eliminati, mentre quelli resistenti sopravvivono e possono moltiplicarsi.",
     "tags": [
       "biologia",
       "batteri",
@@ -1122,6 +1152,12 @@
     "distrattore_forte": "Perché impedisce ai batteri di riprodursi in qualunque situazione",
     "punteggio_distrattore_forte": 4,
     "motivo_distrattore_forte": "È vicino perché riguarda l’effetto degli antibiotici, ma non considera la selezione dei batteri resistenti.",
-    "qualita": "controllata"
+    "qualita": "controllata",
+    "spiegazioni_opzioni": {
+      "Elimina molti batteri sensibili e favorisce la sopravvivenza di quelli resistenti": "Corretta: descrive in modo preciso il concetto biologico richiesto.",
+      "Rende ogni batterio sensibile più debole senza modificare la pressione selettiva": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio biologico non corretto.",
+      "Trasforma direttamente gli antibiotici in nutrienti usati dai batteri comuni": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio biologico non corretto.",
+      "Blocca la riproduzione dei batteri resistenti e lascia crescere solo quelli sensibili": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio biologico non corretto."
+    }
   }
 ]
