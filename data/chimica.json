@@ -878,13 +878,13 @@
     "livello": "avanzato",
     "domanda": "Che cosa indica il prodotto ionico dell’acqua in relazione a H⁺ e OH⁻?",
     "opzioni": [
-      "Che in acqua le concentrazioni di H⁺ e OH⁻ sono collegate da una relazione di equilibrio",
-      "Che ogni soluzione acquosa contiene solo ioni H⁺ e nessun altro ione",
-      "Che gli ioni OH⁻ sono presenti solo nelle soluzioni completamente neutre",
-      "Che il pH non dipende mai dalla concentrazione degli ioni in soluzione"
+      "Il prodotto tra le concentrazioni di H⁺ e OH⁻ a una data temperatura",
+      "La somma tra le concentrazioni di H⁺ e OH⁻ presenti nella soluzione",
+      "Il rapporto tra la concentrazione di H⁺ e quella di OH⁻ in acqua",
+      "La quantità totale di molecole d’acqua dissociate in un litro di soluzione"
     ],
-    "risposta_corretta": "Che in acqua le concentrazioni di H⁺ e OH⁻ sono collegate da una relazione di equilibrio",
-    "spiegazione": "Il prodotto ionico dell’acqua collega le concentrazioni di H⁺ e OH⁻. Se aumenta una delle due, l’altra tende a diminuire secondo l’equilibrio.",
+    "risposta_corretta": "Il prodotto tra le concentrazioni di H⁺ e OH⁻ a una data temperatura",
+    "spiegazione": "Il prodotto ionico dell’acqua indica il prodotto tra le concentrazioni di ioni H⁺ e OH⁻. A temperatura costante questo valore resta caratteristico dell’acqua.",
     "tags": [
       "chimica",
       "acidi_basi",
@@ -895,7 +895,13 @@
     "distrattore_forte": "Che il pH non dipende mai dalla concentrazione degli ioni in soluzione",
     "punteggio_distrattore_forte": 4,
     "motivo_distrattore_forte": "È vicino perché parla del rapporto tra pH e ioni, ma nega proprio il legame fondamentale.",
-    "qualita": "controllata"
+    "qualita": "controllata",
+    "spiegazioni_opzioni": {
+      "Il prodotto tra le concentrazioni di H⁺ e OH⁻ a una data temperatura": "Corretta: descrive in modo preciso il concetto chimico richiesto.",
+      "La somma tra le concentrazioni di H⁺ e OH⁻ presenti nella soluzione": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio chimico non corretto.",
+      "Il rapporto tra la concentrazione di H⁺ e quella di OH⁻ in acqua": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio chimico non corretto.",
+      "La quantità totale di molecole d’acqua dissociate in un litro di soluzione": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio chimico non corretto."
+    }
   },
   {
     "id": "CHE_033",
@@ -904,13 +910,13 @@
     "livello": "facile",
     "domanda": "Che cosa avviene durante l’evaporazione di un liquido?",
     "opzioni": [
-      "Alcune particelle passano dallo stato liquido allo stato gassoso dalla superficie",
-      "Tutte le particelle diventano solide nello stesso istante",
-      "Il liquido si trasforma sempre in una nuova sostanza chimica",
-      "Gli atomi del liquido vengono distrutti e sostituiti"
+      "Molecole con energia sufficiente passano dalla superficie del liquido al vapore",
+      "Molecole con energia minore si legano più stabilmente formando un solido",
+      "Le particelle del liquido perdono carica elettrica e diventano atomi isolati",
+      "Le molecole del liquido si trasformano chimicamente in nuovi composti gassosi"
     ],
-    "risposta_corretta": "Alcune particelle passano dallo stato liquido allo stato gassoso dalla superficie",
-    "spiegazione": "L’evaporazione è un passaggio di stato: alcune particelle del liquido acquistano abbastanza energia per passare allo stato gassoso dalla superficie.",
+    "risposta_corretta": "Molecole con energia sufficiente passano dalla superficie del liquido al vapore",
+    "spiegazione": "Durante l’evaporazione, alcune molecole alla superficie del liquido hanno energia sufficiente per vincere le attrazioni intermolecolari e passare allo stato di vapore.",
     "tags": [
       "chimica",
       "evaporazione",
@@ -920,7 +926,13 @@
     "distrattore_forte": "Il liquido si trasforma sempre in una nuova sostanza chimica",
     "punteggio_distrattore_forte": 4,
     "motivo_distrattore_forte": "È vicino perché descrive un cambiamento visibile, ma l’evaporazione è fisica, non chimica.",
-    "qualita": "controllata"
+    "qualita": "controllata",
+    "spiegazioni_opzioni": {
+      "Molecole con energia sufficiente passano dalla superficie del liquido al vapore": "Corretta: descrive in modo preciso il concetto chimico richiesto.",
+      "Molecole con energia minore si legano più stabilmente formando un solido": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio chimico non corretto.",
+      "Le particelle del liquido perdono carica elettrica e diventano atomi isolati": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio chimico non corretto.",
+      "Le molecole del liquido si trasformano chimicamente in nuovi composti gassosi": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio chimico non corretto."
+    }
   },
   {
     "id": "CHE_034",
@@ -930,12 +942,12 @@
     "domanda": "Che cosa descrive meglio un composto chimico?",
     "opzioni": [
       "Una sostanza formata da elementi diversi uniti chimicamente in proporzioni definite",
-      "Una miscela casuale di sostanze che può avere qualunque composizione",
-      "Un elemento puro formato da un solo tipo di atomo isolato",
-      "Una soluzione che contiene sempre acqua come unico solvente"
+      "Una sostanza ottenuta mescolando elementi diversi senza legami chimici stabili",
+      "Un materiale composto da particelle separate con composizione variabile",
+      "Un insieme di atomi dello stesso elemento non uniti da legami chimici"
     ],
     "risposta_corretta": "Una sostanza formata da elementi diversi uniti chimicamente in proporzioni definite",
-    "spiegazione": "Un composto è formato da elementi diversi legati chimicamente. La sua composizione è definita, come nel caso dell’acqua H₂O.",
+    "spiegazione": "Un composto chimico è formato da atomi di elementi diversi legati chimicamente in proporzioni definite. Una miscela, invece, può avere composizione variabile.",
     "tags": [
       "chimica",
       "composto",
@@ -945,7 +957,13 @@
     "distrattore_forte": "Una miscela casuale di sostanze che può avere qualunque composizione",
     "punteggio_distrattore_forte": 4,
     "motivo_distrattore_forte": "È vicino perché parla di più sostanze, ma una miscela non è un composto chimico con proporzioni definite.",
-    "qualita": "controllata"
+    "qualita": "controllata",
+    "spiegazioni_opzioni": {
+      "Una sostanza formata da elementi diversi uniti chimicamente in proporzioni definite": "Corretta: descrive in modo preciso il concetto chimico richiesto.",
+      "Una sostanza ottenuta mescolando elementi diversi senza legami chimici stabili": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio chimico non corretto.",
+      "Un materiale composto da particelle separate con composizione variabile": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio chimico non corretto.",
+      "Un insieme di atomi dello stesso elemento non uniti da legami chimici": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio chimico non corretto."
+    }
   },
   {
     "id": "CHE_035",
@@ -954,13 +972,13 @@
     "livello": "intermedio",
     "domanda": "Perché un indicatore acido-base può cambiare colore in soluzioni diverse?",
     "opzioni": [
-      "Perché assume forme diverse a seconda del pH della soluzione",
-      "Perché trasforma sempre l’acido in una base forte",
-      "Perché elimina tutti gli ioni presenti nella soluzione",
-      "Perché misura direttamente la massa del soluto disciolto"
+      "Perché assume forme chimiche diverse in ambiente acido o basico, con colori diversi",
+      "Perché misura direttamente la massa degli ioni presenti nella soluzione",
+      "Perché trasforma l’acido in base e la base in acido durante la reazione",
+      "Perché precipita in modo diverso quando aumenta la quantità di solvente"
     ],
-    "risposta_corretta": "Perché assume forme diverse a seconda del pH della soluzione",
-    "spiegazione": "Gli indicatori acido-base cambiano struttura o forma chimica in base al pH, e queste forme possono avere colori diversi.",
+    "risposta_corretta": "Perché assume forme chimiche diverse in ambiente acido o basico, con colori diversi",
+    "spiegazione": "Un indicatore acido-base cambia colore perché può trovarsi in forme chimiche diverse a seconda del pH. Queste forme assorbono la luce in modo diverso e quindi mostrano colori diversi.",
     "tags": [
       "chimica",
       "indicatori",
@@ -971,7 +989,13 @@
     "distrattore_forte": "Perché trasforma sempre l’acido in una base forte",
     "punteggio_distrattore_forte": 4,
     "motivo_distrattore_forte": "È vicino perché riguarda acidi e basi, ma un indicatore segnala il pH: non neutralizza sempre la soluzione.",
-    "qualita": "controllata"
+    "qualita": "controllata",
+    "spiegazioni_opzioni": {
+      "Perché assume forme chimiche diverse in ambiente acido o basico, con colori diversi": "Corretta: descrive in modo preciso il concetto chimico richiesto.",
+      "Perché misura direttamente la massa degli ioni presenti nella soluzione": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio chimico non corretto.",
+      "Perché trasforma l’acido in base e la base in acido durante la reazione": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio chimico non corretto.",
+      "Perché precipita in modo diverso quando aumenta la quantità di solvente": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio chimico non corretto."
+    }
   },
   {
     "id": "CHE_036",
@@ -980,13 +1004,13 @@
     "livello": "intermedio",
     "domanda": "Perché aumentare la concentrazione dei reagenti può rendere più veloce una reazione?",
     "opzioni": [
-      "Perché aumenta la frequenza degli urti tra particelle reagenti",
-      "Perché diminuisce sempre la temperatura della soluzione",
-      "Perché annulla completamente l’energia di attivazione",
-      "Perché trasforma i prodotti in reagenti solidi"
+      "Aumenta la frequenza degli urti efficaci tra le particelle reagenti",
+      "Riduce il numero di particelle disponibili per reagire nello stesso volume",
+      "Aumenta la massa degli atomi senza modificare gli urti tra particelle",
+      "Blocca il movimento delle particelle rendendo più stabile ogni reagente"
     ],
-    "risposta_corretta": "Perché aumenta la frequenza degli urti tra particelle reagenti",
-    "spiegazione": "Con più particelle reagenti nello stesso volume, gli urti tra particelle diventano più frequenti e aumenta la probabilità di urti efficaci.",
+    "risposta_corretta": "Aumenta la frequenza degli urti efficaci tra le particelle reagenti",
+    "spiegazione": "Se aumenta la concentrazione dei reagenti, ci sono più particelle nello stesso volume. Questo rende più frequenti gli urti efficaci e può aumentare la velocità della reazione.",
     "tags": [
       "chimica",
       "concentrazione",
@@ -997,7 +1021,13 @@
     "distrattore_forte": "Perché annulla completamente l’energia di attivazione",
     "punteggio_distrattore_forte": 4,
     "motivo_distrattore_forte": "È vicino perché riguarda la velocità di reazione, ma la concentrazione non elimina l’energia di attivazione.",
-    "qualita": "controllata"
+    "qualita": "controllata",
+    "spiegazioni_opzioni": {
+      "Aumenta la frequenza degli urti efficaci tra le particelle reagenti": "Corretta: descrive in modo preciso il concetto chimico richiesto.",
+      "Riduce il numero di particelle disponibili per reagire nello stesso volume": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio chimico non corretto.",
+      "Aumenta la massa degli atomi senza modificare gli urti tra particelle": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio chimico non corretto.",
+      "Blocca il movimento delle particelle rendendo più stabile ogni reagente": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio chimico non corretto."
+    }
   },
   {
     "id": "CHE_037",
@@ -1031,13 +1061,13 @@
     "livello": "avanzato",
     "domanda": "Secondo il principio di Le Châtelier, come reagisce un sistema all’equilibrio se viene perturbato?",
     "opzioni": [
-      "Si sposta nel verso che tende a contrastare la perturbazione",
-      "Si ferma definitivamente e non può più reagire",
-      "Trasforma tutti i prodotti in catalizzatori permanenti",
-      "Rende sempre uguali le concentrazioni di tutte le specie"
+      "Si sposta nella direzione che tende a contrastare la perturbazione subita",
+      "Si sposta nella direzione che amplifica la perturbazione fino a consumare i reagenti",
+      "Interrompe la reazione diretta e lascia procedere solo quella inversa",
+      "Mantiene invariate le concentrazioni ignorando variazioni di pressione o temperatura"
     ],
-    "risposta_corretta": "Si sposta nel verso che tende a contrastare la perturbazione",
-    "spiegazione": "Il principio di Le Châtelier afferma che un sistema all’equilibrio risponde a una perturbazione spostandosi nel verso che tende a ridurne l’effetto.",
+    "risposta_corretta": "Si sposta nella direzione che tende a contrastare la perturbazione subita",
+    "spiegazione": "Secondo il principio di Le Châtelier, un sistema all’equilibrio reagisce a una perturbazione spostandosi nella direzione che tende a ridurne l’effetto.",
     "tags": [
       "chimica",
       "le_chatelier",
@@ -1047,7 +1077,13 @@
     "distrattore_forte": "Rende sempre uguali le concentrazioni di tutte le specie",
     "punteggio_distrattore_forte": 4,
     "motivo_distrattore_forte": "È vicino perché parla di equilibrio, ma all’equilibrio le concentrazioni non devono essere necessariamente uguali.",
-    "qualita": "controllata"
+    "qualita": "controllata",
+    "spiegazioni_opzioni": {
+      "Si sposta nella direzione che tende a contrastare la perturbazione subita": "Corretta: descrive in modo preciso il concetto chimico richiesto.",
+      "Si sposta nella direzione che amplifica la perturbazione fino a consumare i reagenti": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio chimico non corretto.",
+      "Interrompe la reazione diretta e lascia procedere solo quella inversa": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio chimico non corretto.",
+      "Mantiene invariate le concentrazioni ignorando variazioni di pressione o temperatura": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio chimico non corretto."
+    }
   },
   {
     "id": "CHE_039",
@@ -1056,13 +1092,13 @@
     "livello": "avanzato",
     "domanda": "Che cosa caratterizza una soluzione tampone?",
     "opzioni": [
-      "Resiste a variazioni di pH quando si aggiungono piccole quantità di acido o base",
-      "Mantiene sempre il pH esattamente uguale a 14",
-      "Trasforma ogni acido debole in un acido forte",
-      "Elimina completamente tutti gli ioni dalla soluzione"
+      "Resiste a variazioni moderate di pH grazie a una coppia acido debole/base coniugata",
+      "Trasforma ogni acido forte in acqua pura eliminando tutti gli ioni presenti",
+      "Mantiene il pH usando soltanto un sale neutro privo di componenti acide o basiche",
+      "Aumenta rapidamente il pH quando viene aggiunta una piccola quantità di acido"
     ],
-    "risposta_corretta": "Resiste a variazioni di pH quando si aggiungono piccole quantità di acido o base",
-    "spiegazione": "Una soluzione tampone contiene specie chimiche capaci di limitare le variazioni di pH quando vengono aggiunte piccole quantità di acido o base.",
+    "risposta_corretta": "Resiste a variazioni moderate di pH grazie a una coppia acido debole/base coniugata",
+    "spiegazione": "Una soluzione tampone resiste a variazioni moderate di pH perché contiene una coppia acido debole/base coniugata, capace di assorbire piccole aggiunte di acido o base.",
     "tags": [
       "chimica",
       "soluzione_tampone",
@@ -1073,7 +1109,13 @@
     "distrattore_forte": "Mantiene sempre il pH esattamente uguale a 14",
     "punteggio_distrattore_forte": 4,
     "motivo_distrattore_forte": "È vicino perché riguarda il pH, ma una soluzione tampone non deve avere pH 14 e non mantiene un valore assoluto fisso.",
-    "qualita": "controllata"
+    "qualita": "controllata",
+    "spiegazioni_opzioni": {
+      "Resiste a variazioni moderate di pH grazie a una coppia acido debole/base coniugata": "Corretta: descrive in modo preciso il concetto chimico richiesto.",
+      "Trasforma ogni acido forte in acqua pura eliminando tutti gli ioni presenti": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio chimico non corretto.",
+      "Mantiene il pH usando soltanto un sale neutro privo di componenti acide o basiche": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio chimico non corretto.",
+      "Aumenta rapidamente il pH quando viene aggiunta una piccola quantità di acido": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio chimico non corretto."
+    }
   },
   {
     "id": "CHE_040",
@@ -1082,13 +1124,13 @@
     "livello": "avanzato",
     "domanda": "Perché in una titolazione acido-base si usa spesso un indicatore?",
     "opzioni": [
-      "Per individuare con un cambiamento di colore il punto vicino all’equivalenza",
-      "Per aumentare sempre la concentrazione dell’acido titolato",
-      "Per sostituire completamente la buretta durante la misura",
-      "Per impedire qualunque reazione tra acido e base"
+      "Per individuare il punto finale tramite un cambiamento di colore vicino all’equivalenza",
+      "Per aumentare la concentrazione dell’acido fino a rendere la reazione più rapida",
+      "Per trasformare direttamente la base in sale prima dell’aggiunta del titolante",
+      "Per misurare la massa del solvente senza seguire il cambiamento di pH"
     ],
-    "risposta_corretta": "Per individuare con un cambiamento di colore il punto vicino all’equivalenza",
-    "spiegazione": "L’indicatore cambia colore in un intervallo di pH utile a riconoscere il punto finale della titolazione, vicino al punto di equivalenza.",
+    "risposta_corretta": "Per individuare il punto finale tramite un cambiamento di colore vicino all’equivalenza",
+    "spiegazione": "In una titolazione acido-base si usa spesso un indicatore perché cambia colore vicino al punto finale, aiutando a capire quando la neutralizzazione è praticamente completata.",
     "tags": [
       "chimica",
       "titolazione",
@@ -1099,6 +1141,12 @@
     "distrattore_forte": "Per impedire qualunque reazione tra acido e base",
     "punteggio_distrattore_forte": 4,
     "motivo_distrattore_forte": "È vicino perché riguarda la titolazione, ma l’indicatore non blocca la reazione: segnala il cambiamento.",
-    "qualita": "controllata"
+    "qualita": "controllata",
+    "spiegazioni_opzioni": {
+      "Per individuare il punto finale tramite un cambiamento di colore vicino all’equivalenza": "Corretta: descrive in modo preciso il concetto chimico richiesto.",
+      "Per aumentare la concentrazione dell’acido fino a rendere la reazione più rapida": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio chimico non corretto.",
+      "Per trasformare direttamente la base in sale prima dell’aggiunta del titolante": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio chimico non corretto.",
+      "Per misurare la massa del solvente senza seguire il cambiamento di pH": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio chimico non corretto."
+    }
   }
 ]
