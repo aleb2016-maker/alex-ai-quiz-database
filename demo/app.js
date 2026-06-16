@@ -1,4 +1,4 @@
-const DATA_URL = "../dist/database_quiz_finale.json";
+const DATA_URL = "../dist/database_quiz_finale.json?v=logica-visiva-40-fix-finale";
 
 let databaseQuiz = [];
 let domandeTest = [];
@@ -6,6 +6,72 @@ let indiceDomandaCorrente = 0;
 let risposteCorrette = 0;
 let risposteSbagliate = 0;
 let rispostaGiaData = false;
+
+function alexNormalizzaRispostaQuiz(valore) {
+    return String(valore || "")
+        .trim()
+        .toLowerCase()
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .replace(/\s+/g, " ");
+}
+
+function alexStessaRispostaQuiz(valoreA, valoreB) {
+    return alexNormalizzaRispostaQuiz(valoreA) === alexNormalizzaRispostaQuiz(valoreB);
+}
+
+function alexRispostaCorrettaEffettiva(domanda) {
+    const opzioni = Array.isArray(domanda?.opzioni)
+        ? domanda.opzioni.map(opzione => String(opzione || "").trim())
+        : [];
+
+    const candidati = [
+        domanda?.risposta_corretta_testo,
+        domanda?.risposta_corretta,
+        domanda?.rispostaCorretta,
+        domanda?.correct_answer,
+        domanda?.correctAnswer,
+        domanda?.correct,
+        domanda?.answer
+    ];
+
+    for (const candidato of candidati) {
+        if (!candidato) {
+            continue;
+        }
+
+        let valore = candidato;
+
+        if (typeof valore === "object") {
+            valore =
+                valore.testo ||
+                valore.risposta ||
+                valore.value ||
+                valore.lettera ||
+                "";
+        }
+
+        valore = String(valore || "").trim();
+
+        const lettera = valore.toUpperCase();
+
+        if (/^[ABCD]$/.test(lettera)) {
+            const indice = "ABCD".indexOf(lettera);
+            return opzioni[indice] || valore;
+        }
+
+        const opzioneTrovata = opzioni.find(opzione => {
+            return alexStessaRispostaQuiz(opzione, valore);
+        });
+
+        if (opzioneTrovata) {
+            return opzioneTrovata;
+        }
+    }
+
+    return String(domanda?.risposta_corretta || "").trim();
+}
+
 
 /*
  * Motore generale premi finali quiz
@@ -948,8 +1014,8 @@ function controllaRisposta(opzioneScelta, bottoneScelto) {
     rispostaGiaData = true;
 
     const domanda = domandeTest[indiceDomandaCorrente];
-    const rispostaCorretta = domanda.risposta_corretta;
-    const corretta = opzioneScelta === rispostaCorretta;
+    const rispostaCorretta = alexRispostaCorrettaEffettiva(domanda);
+    const corretta = alexStessaRispostaQuiz(opzioneScelta, rispostaCorretta);
 
     const bottoni = elementi.optionsBox.querySelectorAll(".option-button");
 
@@ -958,7 +1024,7 @@ function controllaRisposta(opzioneScelta, bottoneScelto) {
 
         const testoBottone = bottone.querySelector("span").textContent;
 
-        if (testoBottone === rispostaCorretta) {
+        if (alexStessaRispostaQuiz(testoBottone, rispostaCorretta)) {
             bottone.classList.add("correct");
         }
     });
@@ -1278,7 +1344,7 @@ function ottieniDomandeDatabasePerQuizCreator(dati) {
         Array.isArray(domanda.opzioni) &&
         domanda.opzioni.length === 4 &&
         domanda.risposta_corretta &&
-        domanda.opzioni.includes(domanda.risposta_corretta)
+        domanda.opzioni.some(opzione => alexStessaRispostaQuiz(opzione, alexRispostaCorrettaEffettiva(domanda)))
       );
     });
 }
@@ -2209,7 +2275,7 @@ function ottieniSpiegazioneRisposta(domanda, opzioneScelta) {
         domanda.spiegazioni_opzioni?.[opzioneScelta];
 
     if (
-        opzioneScelta !== domanda.risposta_corretta &&
+        !alexStessaRispostaQuiz(opzioneScelta, alexRispostaCorrettaEffettiva(domanda)) &&
         spiegazioneOpzione
     ) {
         return `${spiegazioneOpzione} ${spiegazioneBase}`;
@@ -3312,7 +3378,7 @@ function alexOttieniDomandeDalDatabasePerGeneratore(dati) {
         Array.isArray(domanda.opzioni) &&
         domanda.opzioni.length === 4 &&
         domanda.risposta_corretta &&
-        domanda.opzioni.includes(domanda.risposta_corretta)
+        domanda.opzioni.some(opzione => alexStessaRispostaQuiz(opzione, alexRispostaCorrettaEffettiva(domanda)))
       );
     });
 }
