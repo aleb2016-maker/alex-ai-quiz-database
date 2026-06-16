@@ -31,13 +31,13 @@
     "livello": "facile",
     "domanda": "Che cosa succede al moto di un corpo quando agisce su di esso una forza risultante non nulla?",
     "opzioni": [
-      "Il corpo modifica il proprio stato di moto accelerando",
-      "Il corpo resta sempre fermo indipendentemente dalla forza",
-      "Il corpo perde automaticamente tutta la propria massa",
-      "Il corpo cambia temperatura ma non può cambiare velocità"
+      "Il corpo subisce un’accelerazione, cambiando velocità o direzione del moto",
+      "Il corpo mantiene lo stesso moto perché la forza risultante non modifica la velocità",
+      "Il corpo perde massa e per questo rallenta anche senza cambiare accelerazione",
+      "Il corpo annulla la forza applicata e resta nello stato precedente di moto"
     ],
-    "risposta_corretta": "Il corpo modifica il proprio stato di moto accelerando",
-    "spiegazione": "Una forza risultante non nulla modifica lo stato di moto di un corpo, producendo accelerazione. Non significa per forza che il corpo parta da fermo: può anche cambiare velocità o direzione.",
+    "risposta_corretta": "Il corpo subisce un’accelerazione, cambiando velocità o direzione del moto",
+    "spiegazione": "Secondo la seconda legge di Newton, una forza risultante non nulla produce un’accelerazione. Questo significa che il corpo può cambiare velocità, direzione o entrambe.",
     "tags": [
       "fisica",
       "forza",
@@ -48,7 +48,13 @@
     "distrattore_forte": "Il corpo resta sempre fermo indipendentemente dalla forza",
     "punteggio_distrattore_forte": 4,
     "motivo_distrattore_forte": "È vicino perché richiama il caso di equilibrio, ma se la forza risultante non è nulla il moto cambia.",
-    "qualita": "controllata"
+    "qualita": "controllata",
+    "spiegazioni_opzioni": {
+      "Il corpo subisce un’accelerazione, cambiando velocità o direzione del moto": "Corretta: descrive in modo preciso il concetto fisico richiesto.",
+      "Il corpo mantiene lo stesso moto perché la forza risultante non modifica la velocità": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio fisico non corretto.",
+      "Il corpo perde massa e per questo rallenta anche senza cambiare accelerazione": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio fisico non corretto.",
+      "Il corpo annulla la forza applicata e resta nello stato precedente di moto": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio fisico non corretto."
+    }
   },
   {
     "id": "FIS_003",
@@ -183,13 +189,13 @@
     "livello": "intermedio",
     "domanda": "Che cosa accade alla pressione esercitata da una forza se la stessa forza agisce su una superficie più piccola?",
     "opzioni": [
-      "La pressione aumenta",
-      "La pressione diminuisce sempre",
-      "La pressione resta sempre uguale",
-      "La pressione diventa automaticamente nulla"
+      "La pressione aumenta perché la stessa forza è distribuita su un’area minore",
+      "La pressione diminuisce perché la forza si concentra su una superficie più piccola",
+      "La pressione resta invariata perché dipende solo dalla massa dell’oggetto",
+      "La pressione cambia solo se cambia il materiale della superficie di appoggio"
     ],
-    "risposta_corretta": "La pressione aumenta",
-    "spiegazione": "La pressione è forza divisa superficie. Se la forza resta uguale ma la superficie diminuisce, la pressione aumenta.",
+    "risposta_corretta": "La pressione aumenta perché la stessa forza è distribuita su un’area minore",
+    "spiegazione": "La pressione è il rapporto tra forza e superficie. Se la forza resta la stessa ma l’area diminuisce, la pressione aumenta.",
     "tags": [
       "fisica",
       "pressione",
@@ -199,7 +205,13 @@
     "distrattore_forte": "La pressione resta sempre uguale",
     "punteggio_distrattore_forte": 4,
     "motivo_distrattore_forte": "È vicino perché la forza non cambia, ma la pressione dipende anche dalla superficie.",
-    "qualita": "controllata"
+    "qualita": "controllata",
+    "spiegazioni_opzioni": {
+      "La pressione aumenta perché la stessa forza è distribuita su un’area minore": "Corretta: descrive in modo preciso il concetto fisico richiesto.",
+      "La pressione diminuisce perché la forza si concentra su una superficie più piccola": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio fisico non corretto.",
+      "La pressione resta invariata perché dipende solo dalla massa dell’oggetto": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio fisico non corretto.",
+      "La pressione cambia solo se cambia il materiale della superficie di appoggio": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio fisico non corretto."
+    }
   },
   {
     "id": "FIS_009",
@@ -233,13 +245,13 @@
     "livello": "avanzato",
     "domanda": "Che cosa afferma il principio di conservazione dell’energia meccanica in assenza di attriti?",
     "opzioni": [
-      "La somma di energia cinetica e potenziale resta costante",
-      "L’energia cinetica resta sempre uguale in ogni punto",
-      "L’energia potenziale resta sempre uguale in ogni punto",
-      "La velocità del corpo resta sempre nulla"
+      "L’energia meccanica totale resta costante se non agiscono forze dissipative",
+      "L’energia cinetica resta costante anche quando cambia l’energia potenziale",
+      "L’energia potenziale aumenta mentre quella cinetica scompare dal sistema",
+      "L’energia meccanica cresce a ogni trasformazione anche senza lavoro esterno"
     ],
-    "risposta_corretta": "La somma di energia cinetica e potenziale resta costante",
-    "spiegazione": "Senza attriti, energia cinetica e potenziale possono trasformarsi l’una nell’altra, ma la loro somma resta costante.",
+    "risposta_corretta": "L’energia meccanica totale resta costante se non agiscono forze dissipative",
+    "spiegazione": "In assenza di attriti o altre forze dissipative, la somma tra energia cinetica ed energia potenziale resta costante. Le due forme possono trasformarsi l’una nell’altra.",
     "tags": [
       "fisica",
       "energia_meccanica",
@@ -249,7 +261,13 @@
     "distrattore_forte": "L’energia cinetica resta sempre uguale in ogni punto",
     "punteggio_distrattore_forte": 4,
     "motivo_distrattore_forte": "È vicino perché parla di energia, ma è la somma tra cinetica e potenziale a restare costante.",
-    "qualita": "controllata"
+    "qualita": "controllata",
+    "spiegazioni_opzioni": {
+      "L’energia meccanica totale resta costante se non agiscono forze dissipative": "Corretta: descrive in modo preciso il concetto fisico richiesto.",
+      "L’energia cinetica resta costante anche quando cambia l’energia potenziale": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio fisico non corretto.",
+      "L’energia potenziale aumenta mentre quella cinetica scompare dal sistema": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio fisico non corretto.",
+      "L’energia meccanica cresce a ogni trasformazione anche senza lavoro esterno": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio fisico non corretto."
+    }
   },
   {
     "id": "FIS_011",
@@ -283,13 +301,13 @@
     "livello": "avanzato",
     "domanda": "Che cosa succede alla lunghezza d’onda di un’onda se la frequenza aumenta e la velocità di propagazione resta costante?",
     "opzioni": [
-      "La lunghezza d’onda diminuisce",
-      "La lunghezza d’onda aumenta",
-      "La lunghezza d’onda resta sempre uguale",
-      "La lunghezza d’onda diventa infinita"
+      "La lunghezza d’onda diminuisce se la velocità di propagazione resta costante",
+      "La lunghezza d’onda aumenta perché frequenza e lunghezza d’onda crescono insieme",
+      "La lunghezza d’onda resta invariata perché dipende solo dall’ampiezza dell’onda",
+      "La lunghezza d’onda diventa indipendente dalla frequenza nel mezzo di propagazione"
     ],
-    "risposta_corretta": "La lunghezza d’onda diminuisce",
-    "spiegazione": "Per le onde vale v = λ·f. Se la velocità resta costante e la frequenza aumenta, la lunghezza d’onda deve diminuire.",
+    "risposta_corretta": "La lunghezza d’onda diminuisce se la velocità di propagazione resta costante",
+    "spiegazione": "Per un’onda vale la relazione velocità = frequenza × lunghezza d’onda. Se la velocità resta costante e la frequenza aumenta, la lunghezza d’onda diminuisce.",
     "tags": [
       "fisica",
       "onde",
@@ -299,7 +317,13 @@
     "distrattore_forte": "La lunghezza d’onda aumenta",
     "punteggio_distrattore_forte": 4,
     "motivo_distrattore_forte": "È vicino perché collega frequenza e lunghezza d’onda, ma il rapporto è inverso se la velocità resta costante.",
-    "qualita": "controllata"
+    "qualita": "controllata",
+    "spiegazioni_opzioni": {
+      "La lunghezza d’onda diminuisce se la velocità di propagazione resta costante": "Corretta: descrive in modo preciso il concetto fisico richiesto.",
+      "La lunghezza d’onda aumenta perché frequenza e lunghezza d’onda crescono insieme": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio fisico non corretto.",
+      "La lunghezza d’onda resta invariata perché dipende solo dall’ampiezza dell’onda": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio fisico non corretto.",
+      "La lunghezza d’onda diventa indipendente dalla frequenza nel mezzo di propagazione": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio fisico non corretto."
+    }
   },
   {
     "id": "FIS_013",
@@ -360,13 +384,13 @@
     "livello": "facile",
     "domanda": "Che cosa fa di solito la forza di attrito tra due superfici a contatto?",
     "opzioni": [
-      "Si oppone al movimento relativo tra le superfici",
-      "Aumenta sempre la velocità senza consumo di energia",
-      "Elimina completamente la massa degli oggetti",
-      "Agisce solo quando gli oggetti sono nel vuoto"
+      "Si oppone al moto relativo o alla tendenza al moto tra le superfici",
+      "Aumenta il moto relativo perché agisce nella stessa direzione dello spostamento",
+      "Elimina il peso del corpo quando le superfici sono a contatto",
+      "Trasforma la superficie di contatto in una sorgente di forza gravitazionale"
     ],
-    "risposta_corretta": "Si oppone al movimento relativo tra le superfici",
-    "spiegazione": "L’attrito tende a ostacolare lo scorrimento tra superfici a contatto e trasforma parte dell’energia meccanica in calore.",
+    "risposta_corretta": "Si oppone al moto relativo o alla tendenza al moto tra le superfici",
+    "spiegazione": "La forza di attrito agisce tra superfici a contatto e si oppone al moto relativo o alla tendenza al moto tra esse.",
     "tags": [
       "fisica",
       "attrito",
@@ -376,7 +400,13 @@
     "distrattore_forte": "Aumenta sempre la velocità senza consumo di energia",
     "punteggio_distrattore_forte": 4,
     "motivo_distrattore_forte": "È vicino perché parla di movimento, ma l’attrito normalmente si oppone allo scorrimento.",
-    "qualita": "controllata"
+    "qualita": "controllata",
+    "spiegazioni_opzioni": {
+      "Si oppone al moto relativo o alla tendenza al moto tra le superfici": "Corretta: descrive in modo preciso il concetto fisico richiesto.",
+      "Aumenta il moto relativo perché agisce nella stessa direzione dello spostamento": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio fisico non corretto.",
+      "Elimina il peso del corpo quando le superfici sono a contatto": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio fisico non corretto.",
+      "Trasforma la superficie di contatto in una sorgente di forza gravitazionale": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio fisico non corretto."
+    }
   },
   {
     "id": "FIS_016",
@@ -411,13 +441,13 @@
     "livello": "intermedio",
     "domanda": "Perché un corpo immerso in un fluido può ricevere una spinta verso l’alto?",
     "opzioni": [
-      "Perché il fluido esercita una spinta di Archimede legata al volume spostato",
-      "Perché il corpo perde completamente la propria massa dentro il fluido",
-      "Perché il fluido annulla sempre la forza di gravità",
-      "Perché il corpo diventa automaticamente meno denso dell’aria"
+      "Perché la pressione del fluido è maggiore in basso che in alto",
+      "Perché il fluido annulla la massa del corpo quando questo viene immerso",
+      "Perché il corpo immerso crea una forza di gravità opposta a quella terrestre",
+      "Perché la densità del fluido diventa uguale a quella del corpo immerso"
     ],
-    "risposta_corretta": "Perché il fluido esercita una spinta di Archimede legata al volume spostato",
-    "spiegazione": "La spinta di Archimede dipende dal peso del fluido spostato. Può sostenere parzialmente o totalmente un corpo immerso.",
+    "risposta_corretta": "Perché la pressione del fluido è maggiore in basso che in alto",
+    "spiegazione": "Un corpo immerso riceve una spinta verso l’alto perché la pressione del fluido aumenta con la profondità. La pressione sulla parte inferiore è maggiore di quella sulla parte superiore.",
     "tags": [
       "fisica",
       "archimede",
@@ -428,7 +458,13 @@
     "distrattore_forte": "Perché il fluido annulla sempre la forza di gravità",
     "punteggio_distrattore_forte": 4,
     "motivo_distrattore_forte": "È vicino perché parla della forza verso il basso, ma la gravità non viene annullata: viene contrastata dalla spinta del fluido.",
-    "qualita": "controllata"
+    "qualita": "controllata",
+    "spiegazioni_opzioni": {
+      "Perché la pressione del fluido è maggiore in basso che in alto": "Corretta: descrive in modo preciso il concetto fisico richiesto.",
+      "Perché il fluido annulla la massa del corpo quando questo viene immerso": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio fisico non corretto.",
+      "Perché il corpo immerso crea una forza di gravità opposta a quella terrestre": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio fisico non corretto.",
+      "Perché la densità del fluido diventa uguale a quella del corpo immerso": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio fisico non corretto."
+    }
   },
   {
     "id": "FIS_018",
@@ -437,13 +473,13 @@
     "livello": "intermedio",
     "domanda": "Che cosa avviene in genere a un solido quando viene riscaldato?",
     "opzioni": [
-      "Le sue particelle vibrano di più e il corpo tende a dilatarsi",
-      "Le sue particelle si fermano completamente",
-      "La sua massa diventa sempre uguale a zero",
-      "Il suo volume diminuisce sempre in ogni materiale"
+      "Le particelle vibrano di più e il solido tende a dilatarsi",
+      "Le particelle rallentano e il solido tende a contrarsi per il calore assorbito",
+      "Le particelle perdono massa e il solido cambia elemento chimico",
+      "Le particelle si fermano e il solido diventa più rigido per l’aumento di temperatura"
     ],
-    "risposta_corretta": "Le sue particelle vibrano di più e il corpo tende a dilatarsi",
-    "spiegazione": "Riscaldando un solido aumenta l’agitazione delle particelle. Spesso questo produce dilatazione termica.",
+    "risposta_corretta": "Le particelle vibrano di più e il solido tende a dilatarsi",
+    "spiegazione": "Quando un solido viene riscaldato, le sue particelle aumentano l’agitazione termica. In genere questo porta a una dilatazione del materiale.",
     "tags": [
       "fisica",
       "calore",
@@ -453,7 +489,13 @@
     "distrattore_forte": "Il suo volume diminuisce sempre in ogni materiale",
     "punteggio_distrattore_forte": 4,
     "motivo_distrattore_forte": "È vicino perché riguarda il volume, ma nella maggior parte dei casi il riscaldamento produce dilatazione.",
-    "qualita": "controllata"
+    "qualita": "controllata",
+    "spiegazioni_opzioni": {
+      "Le particelle vibrano di più e il solido tende a dilatarsi": "Corretta: descrive in modo preciso il concetto fisico richiesto.",
+      "Le particelle rallentano e il solido tende a contrarsi per il calore assorbito": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio fisico non corretto.",
+      "Le particelle perdono massa e il solido cambia elemento chimico": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio fisico non corretto.",
+      "Le particelle si fermano e il solido diventa più rigido per l’aumento di temperatura": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio fisico non corretto."
+    }
   },
   {
     "id": "FIS_019",
@@ -462,13 +504,13 @@
     "livello": "intermedio",
     "domanda": "In un circuito con resistenze in serie, che cosa accade alla resistenza equivalente?",
     "opzioni": [
-      "È la somma delle resistenze dei singoli componenti",
-      "È sempre minore della resistenza più piccola",
-      "È sempre uguale a zero",
-      "È indipendente dal numero di resistenze"
+      "La resistenza equivalente è la somma delle singole resistenze",
+      "La resistenza equivalente è minore della più piccola resistenza del circuito",
+      "La resistenza equivalente coincide con la media delle resistenze presenti",
+      "La resistenza equivalente dipende solo dalla tensione del generatore"
     ],
-    "risposta_corretta": "È la somma delle resistenze dei singoli componenti",
-    "spiegazione": "Nelle resistenze in serie la corrente attraversa ogni componente uno dopo l’altro, quindi le resistenze si sommano.",
+    "risposta_corretta": "La resistenza equivalente è la somma delle singole resistenze",
+    "spiegazione": "In un circuito con resistenze in serie, la corrente attraversa una resistenza dopo l’altra. La resistenza equivalente è quindi uguale alla somma delle resistenze.",
     "tags": [
       "fisica",
       "circuiti",
@@ -479,7 +521,13 @@
     "distrattore_forte": "È sempre minore della resistenza più piccola",
     "punteggio_distrattore_forte": 4,
     "motivo_distrattore_forte": "È vicino perché descrive il caso tipico delle resistenze in parallelo, non in serie.",
-    "qualita": "controllata"
+    "qualita": "controllata",
+    "spiegazioni_opzioni": {
+      "La resistenza equivalente è la somma delle singole resistenze": "Corretta: descrive in modo preciso il concetto fisico richiesto.",
+      "La resistenza equivalente è minore della più piccola resistenza del circuito": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio fisico non corretto.",
+      "La resistenza equivalente coincide con la media delle resistenze presenti": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio fisico non corretto.",
+      "La resistenza equivalente dipende solo dalla tensione del generatore": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio fisico non corretto."
+    }
   },
   {
     "id": "FIS_020",

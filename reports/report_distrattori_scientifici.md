@@ -8,7 +8,7 @@ Questo report separa i problemi qualitativi reali dagli avvisi non bloccanti sul
 |---|---:|---:|---:|
 | Scienze generali | 40 | 16 | 34 |
 | Biologia | 40 | 0 | 40 |
-| Fisica | 40 | 21 | 40 |
+| Fisica | 40 | 13 | 40 |
 | Chimica | 40 | 0 | 40 |
 | Fisica quantistica | 40 | 21 | 40 |
 
@@ -370,7 +370,7 @@ Nessun problema qualitativo reale rilevato.
 ## Fisica
 
 Domande sorgente: **40**
-Domande con problemi qualità reali: **21**
+Domande con problemi qualità reali: **13**
 Risposte corrette in A nel sorgente: **40**
 
 Distribuzione risposta corretta nel sorgente:
@@ -380,171 +380,6 @@ Distribuzione risposta corretta nel sorgente:
 ```
 
 ### Domande da migliorare davvero
-
-### FIS_002 — livello: facile
-
-**Domanda:** Che cosa succede al moto di un corpo quando agisce su di esso una forza risultante non nulla?
-
-**Opzioni attuali:**
-- A. Il corpo modifica il proprio stato di moto accelerando ✅
-- B. Il corpo resta sempre fermo indipendentemente dalla forza
-- C. Il corpo perde automaticamente tutta la propria massa
-- D. Il corpo cambia temperatura ma non può cambiare velocità
-
-**Risposta corretta nel sorgente:** A
-
-**Problemi reali:**
-- Possibile opzione debole/generica: contiene “sempre”.
-
-**Regola di revisione:**
-- Ogni domanda deve avere almeno un distrattore forte: una risposta sbagliata molto vicina alla corretta, ma falsa per un dettaglio preciso.
-- Evitare parole assolute come “sempre” e “mai”, se rendono il distrattore troppo eliminabile.
-- Rendere le quattro opzioni simili per lunghezza, struttura e livello tecnico.
-
-### FIS_008 — livello: intermedio
-
-**Domanda:** Che cosa accade alla pressione esercitata da una forza se la stessa forza agisce su una superficie più piccola?
-
-**Opzioni attuali:**
-- A. La pressione aumenta ✅
-- B. La pressione diminuisce sempre
-- C. La pressione resta sempre uguale
-- D. La pressione diventa automaticamente nulla
-
-**Risposta corretta nel sorgente:** A
-
-**Problemi reali:**
-- Possibile opzione debole/generica: contiene “sempre”.
-- Possibile opzione debole/generica: contiene “sempre”.
-
-**Regola di revisione:**
-- Ogni domanda deve avere almeno un distrattore forte: una risposta sbagliata molto vicina alla corretta, ma falsa per un dettaglio preciso.
-- Evitare parole assolute come “sempre” e “mai”, se rendono il distrattore troppo eliminabile.
-- Rendere le quattro opzioni simili per lunghezza, struttura e livello tecnico.
-
-### FIS_010 — livello: avanzato
-
-**Domanda:** Che cosa afferma il principio di conservazione dell’energia meccanica in assenza di attriti?
-
-**Opzioni attuali:**
-- A. La somma di energia cinetica e potenziale resta costante ✅
-- B. L’energia cinetica resta sempre uguale in ogni punto
-- C. L’energia potenziale resta sempre uguale in ogni punto
-- D. La velocità del corpo resta sempre nulla
-
-**Risposta corretta nel sorgente:** A
-
-**Problemi reali:**
-- Possibile opzione debole/generica: contiene “sempre”.
-- Possibile opzione debole/generica: contiene “sempre”.
-- Possibile opzione debole/generica: contiene “sempre”.
-
-**Regola di revisione:**
-- Ogni domanda deve avere almeno un distrattore forte: una risposta sbagliata molto vicina alla corretta, ma falsa per un dettaglio preciso.
-- Evitare parole assolute come “sempre” e “mai”, se rendono il distrattore troppo eliminabile.
-- Rendere le quattro opzioni simili per lunghezza, struttura e livello tecnico.
-
-### FIS_012 — livello: avanzato
-
-**Domanda:** Che cosa succede alla lunghezza d’onda di un’onda se la frequenza aumenta e la velocità di propagazione resta costante?
-
-**Opzioni attuali:**
-- A. La lunghezza d’onda diminuisce ✅
-- B. La lunghezza d’onda aumenta
-- C. La lunghezza d’onda resta sempre uguale
-- D. La lunghezza d’onda diventa infinita
-
-**Risposta corretta nel sorgente:** A
-
-**Problemi reali:**
-- Possibile opzione debole/generica: contiene “sempre”.
-
-**Regola di revisione:**
-- Ogni domanda deve avere almeno un distrattore forte: una risposta sbagliata molto vicina alla corretta, ma falsa per un dettaglio preciso.
-- Evitare parole assolute come “sempre” e “mai”, se rendono il distrattore troppo eliminabile.
-- Rendere le quattro opzioni simili per lunghezza, struttura e livello tecnico.
-
-### FIS_015 — livello: facile
-
-**Domanda:** Che cosa fa di solito la forza di attrito tra due superfici a contatto?
-
-**Opzioni attuali:**
-- A. Si oppone al movimento relativo tra le superfici ✅
-- B. Aumenta sempre la velocità senza consumo di energia
-- C. Elimina completamente la massa degli oggetti
-- D. Agisce solo quando gli oggetti sono nel vuoto
-
-**Risposta corretta nel sorgente:** A
-
-**Problemi reali:**
-- Possibile opzione debole/generica: contiene “sempre”.
-
-**Regola di revisione:**
-- Ogni domanda deve avere almeno un distrattore forte: una risposta sbagliata molto vicina alla corretta, ma falsa per un dettaglio preciso.
-- Evitare parole assolute come “sempre” e “mai”, se rendono il distrattore troppo eliminabile.
-- Rendere le quattro opzioni simili per lunghezza, struttura e livello tecnico.
-
-### FIS_017 — livello: intermedio
-
-**Domanda:** Perché un corpo immerso in un fluido può ricevere una spinta verso l’alto?
-
-**Opzioni attuali:**
-- A. Perché il fluido esercita una spinta di Archimede legata al volume spostato ✅
-- B. Perché il corpo perde completamente la propria massa dentro il fluido
-- C. Perché il fluido annulla sempre la forza di gravità
-- D. Perché il corpo diventa automaticamente meno denso dell’aria
-
-**Risposta corretta nel sorgente:** A
-
-**Problemi reali:**
-- Possibile opzione debole/generica: contiene “sempre”.
-
-**Regola di revisione:**
-- Ogni domanda deve avere almeno un distrattore forte: una risposta sbagliata molto vicina alla corretta, ma falsa per un dettaglio preciso.
-- Evitare parole assolute come “sempre” e “mai”, se rendono il distrattore troppo eliminabile.
-- Rendere le quattro opzioni simili per lunghezza, struttura e livello tecnico.
-
-### FIS_018 — livello: intermedio
-
-**Domanda:** Che cosa avviene in genere a un solido quando viene riscaldato?
-
-**Opzioni attuali:**
-- A. Le sue particelle vibrano di più e il corpo tende a dilatarsi ✅
-- B. Le sue particelle si fermano completamente
-- C. La sua massa diventa sempre uguale a zero
-- D. Il suo volume diminuisce sempre in ogni materiale
-
-**Risposta corretta nel sorgente:** A
-
-**Problemi reali:**
-- Possibile opzione debole/generica: contiene “sempre”.
-- Possibile opzione debole/generica: contiene “sempre”.
-
-**Regola di revisione:**
-- Ogni domanda deve avere almeno un distrattore forte: una risposta sbagliata molto vicina alla corretta, ma falsa per un dettaglio preciso.
-- Evitare parole assolute come “sempre” e “mai”, se rendono il distrattore troppo eliminabile.
-- Rendere le quattro opzioni simili per lunghezza, struttura e livello tecnico.
-
-### FIS_019 — livello: intermedio
-
-**Domanda:** In un circuito con resistenze in serie, che cosa accade alla resistenza equivalente?
-
-**Opzioni attuali:**
-- A. È la somma delle resistenze dei singoli componenti ✅
-- B. È sempre minore della resistenza più piccola
-- C. È sempre uguale a zero
-- D. È indipendente dal numero di resistenze
-
-**Risposta corretta nel sorgente:** A
-
-**Problemi reali:**
-- Possibile opzione debole/generica: contiene “sempre”.
-- Possibile opzione debole/generica: contiene “sempre”.
-
-**Regola di revisione:**
-- Ogni domanda deve avere almeno un distrattore forte: una risposta sbagliata molto vicina alla corretta, ma falsa per un dettaglio preciso.
-- Evitare parole assolute come “sempre” e “mai”, se rendono il distrattore troppo eliminabile.
-- Rendere le quattro opzioni simili per lunghezza, struttura e livello tecnico.
 
 ### FIS_020 — livello: intermedio
 
