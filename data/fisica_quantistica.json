@@ -6,13 +6,13 @@
     "livello": "facile",
     "domanda": "Che cosa indica, in modo generale, la parola 'quanto' in fisica quantistica?",
     "opzioni": [
-      "Una quantità minima e discreta di una grandezza fisica",
-      "Una quantità continua che può assumere qualunque valore",
-      "Una forza che agisce solo sui corpi macroscopici",
-      "Una particella sempre visibile a occhio nudo"
+      "Una quantità minima e discreta con cui può presentarsi una grandezza fisica",
+      "Un intervallo continuo di valori che una grandezza fisica può assumere liberamente",
+      "Una forza macroscopica che agisce soltanto su oggetti visibili",
+      "Una traiettoria classica descritta con precisione da una particella materiale"
     ],
-    "risposta_corretta": "Una quantità minima e discreta di una grandezza fisica",
-    "spiegazione": "In fisica quantistica molte grandezze non variano in modo continuo, ma in pacchetti discreti chiamati quanti.",
+    "risposta_corretta": "Una quantità minima e discreta con cui può presentarsi una grandezza fisica",
+    "spiegazione": "In fisica quantistica, un quanto indica una quantità discreta, cioè non divisibile in valori arbitrariamente piccoli all’interno del modello considerato.",
     "tags": [
       "fisica_quantistica",
       "quanto",
@@ -22,7 +22,13 @@
     "distrattore_forte": "Una quantità continua che può assumere qualunque valore",
     "punteggio_distrattore_forte": 4,
     "motivo_distrattore_forte": "È vicino perché anche in fisica classica si studiano grandezze fisiche, ma nella quantistica il punto centrale è la discrezione.",
-    "qualita": "controllata"
+    "qualita": "controllata",
+    "spiegazioni_opzioni": {
+      "Una quantità minima e discreta con cui può presentarsi una grandezza fisica": "Corretta: descrive in modo preciso il concetto quantistico richiesto.",
+      "Un intervallo continuo di valori che una grandezza fisica può assumere liberamente": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio quantistico non corretto.",
+      "Una forza macroscopica che agisce soltanto su oggetti visibili": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio quantistico non corretto.",
+      "Una traiettoria classica descritta con precisione da una particella materiale": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio quantistico non corretto."
+    }
   },
   {
     "id": "FQ_002",
@@ -81,13 +87,13 @@
     "livello": "facile",
     "domanda": "Che cosa afferma il dualismo onda-particella?",
     "opzioni": [
-      "Che oggetti microscopici possono mostrare sia proprietà ondulatorie sia proprietà corpuscolari",
-      "Che ogni particella è sempre solo un'onda classica",
-      "Che ogni onda è sempre visibile come una particella macroscopica",
-      "Che onde e particelle non hanno mai alcuna relazione"
+      "Gli oggetti microscopici possono mostrare proprietà ondulatorie e corpuscolari",
+      "Gli oggetti microscopici passano da onda classica a particella solo per attrito",
+      "Le onde quantistiche sono semplici vibrazioni meccaniche di un mezzo materiale",
+      "Le particelle quantistiche seguono traiettorie classiche indipendenti dalla misura"
     ],
-    "risposta_corretta": "Che oggetti microscopici possono mostrare sia proprietà ondulatorie sia proprietà corpuscolari",
-    "spiegazione": "Elettroni e fotoni possono comportarsi in alcuni esperimenti come particelle e in altri come onde.",
+    "risposta_corretta": "Gli oggetti microscopici possono mostrare proprietà ondulatorie e corpuscolari",
+    "spiegazione": "Il dualismo onda-particella indica che sistemi come elettroni e fotoni possono mostrare aspetti ondulatori o corpuscolari a seconda dell’esperimento eseguito.",
     "tags": [
       "fisica_quantistica",
       "dualismo",
@@ -97,7 +103,13 @@
     "distrattore_forte": "Che ogni particella è sempre solo un'onda classica",
     "punteggio_distrattore_forte": 4,
     "motivo_distrattore_forte": "È vicino perché richiama l'aspetto ondulatorio, ma dimentica l'aspetto corpuscolare.",
-    "qualita": "controllata"
+    "qualita": "controllata",
+    "spiegazioni_opzioni": {
+      "Gli oggetti microscopici possono mostrare proprietà ondulatorie e corpuscolari": "Corretta: descrive in modo preciso il concetto quantistico richiesto.",
+      "Gli oggetti microscopici passano da onda classica a particella solo per attrito": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio quantistico non corretto.",
+      "Le onde quantistiche sono semplici vibrazioni meccaniche di un mezzo materiale": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio quantistico non corretto.",
+      "Le particelle quantistiche seguono traiettorie classiche indipendenti dalla misura": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio quantistico non corretto."
+    }
   },
   {
     "id": "FQ_005",
@@ -156,13 +168,13 @@
     "livello": "facile",
     "domanda": "Che cosa significa dire che l'energia di un elettrone in un atomo è quantizzata?",
     "opzioni": [
-      "Che può assumere solo certi valori permessi",
-      "Che può assumere qualsiasi valore senza limiti",
-      "Che è sempre uguale a zero",
-      "Che dipende solo dalla temperatura dell'aria"
+      "L’elettrone può assumere soltanto alcuni valori energetici permessi",
+      "L’elettrone può assumere qualunque energia in modo continuo dentro l’atomo",
+      "L’energia dell’elettrone dipende soltanto dalla temperatura dell’ambiente",
+      "L’elettrone perde energia trasformandosi in una particella del nucleo"
     ],
-    "risposta_corretta": "Che può assumere solo certi valori permessi",
-    "spiegazione": "Negli atomi gli elettroni possono trovarsi solo in livelli energetici specifici, non in qualunque valore intermedio.",
+    "risposta_corretta": "L’elettrone può assumere soltanto alcuni valori energetici permessi",
+    "spiegazione": "Dire che l’energia è quantizzata significa che l’elettrone in un atomo può trovarsi solo in certi livelli energetici permessi, non in qualunque valore intermedio.",
     "tags": [
       "fisica_quantistica",
       "livelli_energetici",
@@ -172,7 +184,13 @@
     "distrattore_forte": "Che può assumere qualsiasi valore senza limiti",
     "punteggio_distrattore_forte": 4,
     "motivo_distrattore_forte": "È vicino perché parla di valori energetici, ma è l'opposto della quantizzazione.",
-    "qualita": "controllata"
+    "qualita": "controllata",
+    "spiegazioni_opzioni": {
+      "L’elettrone può assumere soltanto alcuni valori energetici permessi": "Corretta: descrive in modo preciso il concetto quantistico richiesto.",
+      "L’elettrone può assumere qualunque energia in modo continuo dentro l’atomo": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio quantistico non corretto.",
+      "L’energia dell’elettrone dipende soltanto dalla temperatura dell’ambiente": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio quantistico non corretto.",
+      "L’elettrone perde energia trasformandosi in una particella del nucleo": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio quantistico non corretto."
+    }
   },
   {
     "id": "FQ_008",
@@ -181,13 +199,13 @@
     "livello": "facile",
     "domanda": "Che cosa accade quando un elettrone passa da un livello energetico alto a uno più basso?",
     "opzioni": [
-      "Può emettere un fotone",
-      "Scompare dal nucleo",
-      "Diventa un protone",
-      "Perde sempre tutta la sua massa"
+      "Può emettere un fotone con energia pari alla differenza tra i due livelli",
+      "Può assorbire un fotone per compensare la perdita di energia del passaggio",
+      "Può trasformarsi in un protone perché cambia il livello energetico atomico",
+      "Può uscire dal nucleo perché il livello più basso riduce la carica elettrica"
     ],
-    "risposta_corretta": "Può emettere un fotone",
-    "spiegazione": "Quando un elettrone scende a un livello energetico più basso, la differenza di energia può essere emessa sotto forma di fotone.",
+    "risposta_corretta": "Può emettere un fotone con energia pari alla differenza tra i due livelli",
+    "spiegazione": "Quando un elettrone passa da un livello energetico più alto a uno più basso, la differenza di energia può essere emessa sotto forma di fotone.",
     "tags": [
       "fisica_quantistica",
       "fotone",
@@ -197,7 +215,13 @@
     "distrattore_forte": "Diventa un protone",
     "punteggio_distrattore_forte": 3,
     "motivo_distrattore_forte": "È vicino perché riguarda particelle dell'atomo, ma un elettrone non diventa un protone in un normale salto energetico.",
-    "qualita": "controllata"
+    "qualita": "controllata",
+    "spiegazioni_opzioni": {
+      "Può emettere un fotone con energia pari alla differenza tra i due livelli": "Corretta: descrive in modo preciso il concetto quantistico richiesto.",
+      "Può assorbire un fotone per compensare la perdita di energia del passaggio": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio quantistico non corretto.",
+      "Può trasformarsi in un protone perché cambia il livello energetico atomico": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio quantistico non corretto.",
+      "Può uscire dal nucleo perché il livello più basso riduce la carica elettrica": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio quantistico non corretto."
+    }
   },
   {
     "id": "FQ_009",
@@ -206,13 +230,13 @@
     "livello": "facile",
     "domanda": "Quale idea è centrale nella fisica quantistica rispetto alla misura?",
     "opzioni": [
-      "Il risultato di una misura può essere probabilistico",
-      "Ogni misura dà sempre un valore prevedibile con certezza assoluta",
-      "Le misure sono possibili solo su oggetti grandi",
-      "La misura elimina sempre la massa della particella"
+      "Il risultato di una misura può essere descritto tramite probabilità",
+      "La misura rivela un valore classico già fissato senza ruolo della probabilità",
+      "La misura è possibile soltanto se l’oggetto osservato è macroscopico",
+      "La misura modifica la massa della particella senza influire sullo stato"
     ],
-    "risposta_corretta": "Il risultato di una misura può essere probabilistico",
-    "spiegazione": "In fisica quantistica molte previsioni danno probabilità dei risultati, non sempre valori certi prima della misura.",
+    "risposta_corretta": "Il risultato di una misura può essere descritto tramite probabilità",
+    "spiegazione": "Nella fisica quantistica, prima della misura il risultato non è in generale determinato come in un modello classico semplice: viene descritto tramite probabilità.",
     "tags": [
       "fisica_quantistica",
       "misura",
@@ -222,7 +246,13 @@
     "distrattore_forte": "Ogni misura dà sempre un valore prevedibile con certezza assoluta",
     "punteggio_distrattore_forte": 4,
     "motivo_distrattore_forte": "È vicino perché descrive l'idea classica di misura, ma non quella quantistica.",
-    "qualita": "controllata"
+    "qualita": "controllata",
+    "spiegazioni_opzioni": {
+      "Il risultato di una misura può essere descritto tramite probabilità": "Corretta: descrive in modo preciso il concetto quantistico richiesto.",
+      "La misura rivela un valore classico già fissato senza ruolo della probabilità": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio quantistico non corretto.",
+      "La misura è possibile soltanto se l’oggetto osservato è macroscopico": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio quantistico non corretto.",
+      "La misura modifica la massa della particella senza influire sullo stato": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio quantistico non corretto."
+    }
   },
   {
     "id": "FQ_010",
@@ -256,13 +286,13 @@
     "livello": "intermedio",
     "domanda": "Che cosa afferma il principio di indeterminazione di Heisenberg?",
     "opzioni": [
-      "Non è possibile conoscere contemporaneamente con precisione arbitraria posizione e quantità di moto di una particella",
-      "Non è possibile misurare mai la massa di una particella",
-      "Ogni particella si muove sempre lungo una traiettoria perfettamente visibile",
-      "La velocità della luce cambia in base alla massa dell'osservatore"
+      "Non si possono conoscere insieme con precisione arbitraria posizione e quantità di moto",
+      "Non si può misurare la posizione perché gli strumenti hanno risoluzione insufficiente",
+      "Non si può misurare la massa quando la particella attraversa un campo elettrico",
+      "Non si può conoscere la velocità perché la luce cambia valore durante la misura"
     ],
-    "risposta_corretta": "Non è possibile conoscere contemporaneamente con precisione arbitraria posizione e quantità di moto di una particella",
-    "spiegazione": "Il principio di indeterminazione dice che alcune coppie di grandezze, come posizione e quantità di moto, non possono essere entrambe determinate con precisione arbitraria nello stesso momento.",
+    "risposta_corretta": "Non si possono conoscere insieme con precisione arbitraria posizione e quantità di moto",
+    "spiegazione": "Il principio di indeterminazione di Heisenberg non dipende solo da limiti tecnici degli strumenti: esprime un limite fondamentale sulla precisione simultanea di posizione e quantità di moto.",
     "tags": [
       "fisica_quantistica",
       "heisenberg",
@@ -272,7 +302,13 @@
     "distrattore_forte": "Ogni particella si muove sempre lungo una traiettoria perfettamente visibile",
     "punteggio_distrattore_forte": 4,
     "motivo_distrattore_forte": "È vicino perché richiama l'idea classica di traiettoria, ma in fisica quantistica questa descrizione non è sempre valida.",
-    "qualita": "controllata"
+    "qualita": "controllata",
+    "spiegazioni_opzioni": {
+      "Non si possono conoscere insieme con precisione arbitraria posizione e quantità di moto": "Corretta: descrive in modo preciso il concetto quantistico richiesto.",
+      "Non si può misurare la posizione perché gli strumenti hanno risoluzione insufficiente": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio quantistico non corretto.",
+      "Non si può misurare la massa quando la particella attraversa un campo elettrico": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio quantistico non corretto.",
+      "Non si può conoscere la velocità perché la luce cambia valore durante la misura": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio quantistico non corretto."
+    }
   },
   {
     "id": "FQ_012",
@@ -306,13 +342,13 @@
     "livello": "intermedio",
     "domanda": "Che cosa significa sovrapposizione quantistica?",
     "opzioni": [
-      "Un sistema può trovarsi in una combinazione di più stati possibili prima della misura",
-      "Un sistema può occupare solo uno stato classico già determinato e visibile",
-      "Due oggetti macroscopici devono sempre stare nello stesso luogo",
-      "Una particella perde automaticamente tutta la sua energia"
+      "Un sistema può essere descritto come combinazione di più stati possibili prima della misura",
+      "Un sistema oscilla rapidamente tra stati classici già definiti e osservabili direttamente",
+      "Un sistema occupa due luoghi macroscopici perché ha energia termica elevata",
+      "Un sistema perde energia fino a rimanere in un unico stato meccanico visibile"
     ],
-    "risposta_corretta": "Un sistema può trovarsi in una combinazione di più stati possibili prima della misura",
-    "spiegazione": "La sovrapposizione quantistica indica che, prima della misura, un sistema può essere descritto come combinazione di stati possibili.",
+    "risposta_corretta": "Un sistema può essere descritto come combinazione di più stati possibili prima della misura",
+    "spiegazione": "La sovrapposizione quantistica indica che un sistema può essere descritto come combinazione di stati possibili. La misura porta poi a uno dei risultati osservabili.",
     "tags": [
       "fisica_quantistica",
       "sovrapposizione",
@@ -322,7 +358,13 @@
     "distrattore_forte": "Un sistema può occupare solo uno stato classico già determinato e visibile",
     "punteggio_distrattore_forte": 4,
     "motivo_distrattore_forte": "È vicino perché descrive l'intuizione classica, ma la sovrapposizione quantistica va oltre questa idea.",
-    "qualita": "controllata"
+    "qualita": "controllata",
+    "spiegazioni_opzioni": {
+      "Un sistema può essere descritto come combinazione di più stati possibili prima della misura": "Corretta: descrive in modo preciso il concetto quantistico richiesto.",
+      "Un sistema oscilla rapidamente tra stati classici già definiti e osservabili direttamente": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio quantistico non corretto.",
+      "Un sistema occupa due luoghi macroscopici perché ha energia termica elevata": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio quantistico non corretto.",
+      "Un sistema perde energia fino a rimanere in un unico stato meccanico visibile": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio quantistico non corretto."
+    }
   },
   {
     "id": "FQ_014",
@@ -331,13 +373,13 @@
     "livello": "intermedio",
     "domanda": "Che cosa indica il termine entanglement quantistico?",
     "opzioni": [
-      "Una correlazione tra sistemi quantistici tale che lo stato di uno è legato allo stato dell'altro",
-      "Una collisione meccanica tra due pianeti",
-      "Una forza che trasforma sempre un elettrone in un neutrone",
-      "Una vibrazione sonora prodotta da due onde acustiche"
+      "Una correlazione quantistica tra sistemi, tale che lo stato di uno è legato all’altro",
+      "Un urto meccanico tra corpi macroscopici che trasferisce quantità di moto",
+      "Una forza di attrazione che trasforma due particelle in un unico oggetto classico",
+      "Un segnale luminoso che collega due particelle dopo ogni misurazione"
     ],
-    "risposta_corretta": "Una correlazione tra sistemi quantistici tale che lo stato di uno è legato allo stato dell'altro",
-    "spiegazione": "L'entanglement è una correlazione quantistica forte: due sistemi possono essere descritti da uno stato comune anche se vengono separati.",
+    "risposta_corretta": "Una correlazione quantistica tra sistemi, tale che lo stato di uno è legato all’altro",
+    "spiegazione": "L’entanglement è una correlazione quantistica tra sistemi. In certi casi non è possibile descrivere completamente lo stato di una parte senza considerare anche l’altra.",
     "tags": [
       "fisica_quantistica",
       "entanglement",
@@ -347,7 +389,13 @@
     "distrattore_forte": "Una collisione meccanica tra due pianeti",
     "punteggio_distrattore_forte": 2,
     "motivo_distrattore_forte": "È un'interazione fisica tra corpi, ma non descrive una correlazione quantistica tra stati.",
-    "qualita": "controllata"
+    "qualita": "controllata",
+    "spiegazioni_opzioni": {
+      "Una correlazione quantistica tra sistemi, tale che lo stato di uno è legato all’altro": "Corretta: descrive in modo preciso il concetto quantistico richiesto.",
+      "Un urto meccanico tra corpi macroscopici che trasferisce quantità di moto": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio quantistico non corretto.",
+      "Una forza di attrazione che trasforma due particelle in un unico oggetto classico": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio quantistico non corretto.",
+      "Un segnale luminoso che collega due particelle dopo ogni misurazione": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio quantistico non corretto."
+    }
   },
   {
     "id": "FQ_015",

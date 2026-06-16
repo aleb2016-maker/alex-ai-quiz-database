@@ -10,7 +10,7 @@ Questo report separa i problemi qualitativi reali dagli avvisi non bloccanti sul
 | Biologia | 40 | 0 | 40 |
 | Fisica | 40 | 0 | 40 |
 | Chimica | 40 | 0 | 40 |
-| Fisica quantistica | 40 | 21 | 40 |
+| Fisica quantistica | 40 | 13 | 40 |
 
 **Nota:** la risposta in A nel sorgente non è più bloccante, perché il runtime ora usa il mescolatore generale.
 
@@ -398,7 +398,7 @@ Nessun problema qualitativo reale rilevato.
 ## Fisica quantistica
 
 Domande sorgente: **40**
-Domande con problemi qualità reali: **21**
+Domande con problemi qualità reali: **13**
 Risposte corrette in A nel sorgente: **40**
 
 Distribuzione risposta corretta nel sorgente:
@@ -408,170 +408,6 @@ Distribuzione risposta corretta nel sorgente:
 ```
 
 ### Domande da migliorare davvero
-
-### FQ_001 — livello: facile
-
-**Domanda:** Che cosa indica, in modo generale, la parola 'quanto' in fisica quantistica?
-
-**Opzioni attuali:**
-- A. Una quantità minima e discreta di una grandezza fisica ✅
-- B. Una quantità continua che può assumere qualunque valore
-- C. Una forza che agisce solo sui corpi macroscopici
-- D. Una particella sempre visibile a occhio nudo
-
-**Risposta corretta nel sorgente:** A
-
-**Problemi reali:**
-- Possibile opzione debole/generica: contiene “sempre”.
-
-**Regola di revisione:**
-- Ogni domanda deve avere almeno un distrattore forte: una risposta sbagliata molto vicina alla corretta, ma falsa per un dettaglio preciso.
-- Evitare parole assolute come “sempre” e “mai”, se rendono il distrattore troppo eliminabile.
-- Rendere le quattro opzioni simili per lunghezza, struttura e livello tecnico.
-
-### FQ_004 — livello: facile
-
-**Domanda:** Che cosa afferma il dualismo onda-particella?
-
-**Opzioni attuali:**
-- A. Che oggetti microscopici possono mostrare sia proprietà ondulatorie sia proprietà corpuscolari ✅
-- B. Che ogni particella è sempre solo un'onda classica
-- C. Che ogni onda è sempre visibile come una particella macroscopica
-- D. Che onde e particelle non hanno mai alcuna relazione
-
-**Risposta corretta nel sorgente:** A
-
-**Problemi reali:**
-- Possibile opzione debole/generica: contiene “sempre”.
-- Possibile opzione debole/generica: contiene “sempre”.
-- Possibile opzione debole/generica: contiene “mai”.
-
-**Regola di revisione:**
-- Ogni domanda deve avere almeno un distrattore forte: una risposta sbagliata molto vicina alla corretta, ma falsa per un dettaglio preciso.
-- Evitare parole assolute come “sempre” e “mai”, se rendono il distrattore troppo eliminabile.
-- Rendere le quattro opzioni simili per lunghezza, struttura e livello tecnico.
-
-### FQ_007 — livello: facile
-
-**Domanda:** Che cosa significa dire che l'energia di un elettrone in un atomo è quantizzata?
-
-**Opzioni attuali:**
-- A. Che può assumere solo certi valori permessi ✅
-- B. Che può assumere qualsiasi valore senza limiti
-- C. Che è sempre uguale a zero
-- D. Che dipende solo dalla temperatura dell'aria
-
-**Risposta corretta nel sorgente:** A
-
-**Problemi reali:**
-- Possibile opzione debole/generica: contiene “sempre”.
-
-**Regola di revisione:**
-- Ogni domanda deve avere almeno un distrattore forte: una risposta sbagliata molto vicina alla corretta, ma falsa per un dettaglio preciso.
-- Evitare parole assolute come “sempre” e “mai”, se rendono il distrattore troppo eliminabile.
-- Rendere le quattro opzioni simili per lunghezza, struttura e livello tecnico.
-
-### FQ_008 — livello: facile
-
-**Domanda:** Che cosa accade quando un elettrone passa da un livello energetico alto a uno più basso?
-
-**Opzioni attuali:**
-- A. Può emettere un fotone ✅
-- B. Scompare dal nucleo
-- C. Diventa un protone
-- D. Perde sempre tutta la sua massa
-
-**Risposta corretta nel sorgente:** A
-
-**Problemi reali:**
-- Possibile opzione debole/generica: contiene “sempre”.
-
-**Regola di revisione:**
-- Ogni domanda deve avere almeno un distrattore forte: una risposta sbagliata molto vicina alla corretta, ma falsa per un dettaglio preciso.
-- Evitare parole assolute come “sempre” e “mai”, se rendono il distrattore troppo eliminabile.
-- Rendere le quattro opzioni simili per lunghezza, struttura e livello tecnico.
-
-### FQ_009 — livello: facile
-
-**Domanda:** Quale idea è centrale nella fisica quantistica rispetto alla misura?
-
-**Opzioni attuali:**
-- A. Il risultato di una misura può essere probabilistico ✅
-- B. Ogni misura dà sempre un valore prevedibile con certezza assoluta
-- C. Le misure sono possibili solo su oggetti grandi
-- D. La misura elimina sempre la massa della particella
-
-**Risposta corretta nel sorgente:** A
-
-**Problemi reali:**
-- Possibile opzione debole/generica: contiene “sempre”.
-- Possibile opzione debole/generica: contiene “sempre”.
-
-**Regola di revisione:**
-- Ogni domanda deve avere almeno un distrattore forte: una risposta sbagliata molto vicina alla corretta, ma falsa per un dettaglio preciso.
-- Evitare parole assolute come “sempre” e “mai”, se rendono il distrattore troppo eliminabile.
-- Rendere le quattro opzioni simili per lunghezza, struttura e livello tecnico.
-
-### FQ_011 — livello: intermedio
-
-**Domanda:** Che cosa afferma il principio di indeterminazione di Heisenberg?
-
-**Opzioni attuali:**
-- A. Non è possibile conoscere contemporaneamente con precisione arbitraria posizione e quantità di moto di una particella ✅
-- B. Non è possibile misurare mai la massa di una particella
-- C. Ogni particella si muove sempre lungo una traiettoria perfettamente visibile
-- D. La velocità della luce cambia in base alla massa dell'osservatore
-
-**Risposta corretta nel sorgente:** A
-
-**Problemi reali:**
-- Possibile opzione debole/generica: contiene “mai”.
-- Possibile opzione debole/generica: contiene “sempre”.
-
-**Regola di revisione:**
-- Ogni domanda deve avere almeno un distrattore forte: una risposta sbagliata molto vicina alla corretta, ma falsa per un dettaglio preciso.
-- Evitare parole assolute come “sempre” e “mai”, se rendono il distrattore troppo eliminabile.
-- Rendere le quattro opzioni simili per lunghezza, struttura e livello tecnico.
-
-### FQ_013 — livello: intermedio
-
-**Domanda:** Che cosa significa sovrapposizione quantistica?
-
-**Opzioni attuali:**
-- A. Un sistema può trovarsi in una combinazione di più stati possibili prima della misura ✅
-- B. Un sistema può occupare solo uno stato classico già determinato e visibile
-- C. Due oggetti macroscopici devono sempre stare nello stesso luogo
-- D. Una particella perde automaticamente tutta la sua energia
-
-**Risposta corretta nel sorgente:** A
-
-**Problemi reali:**
-- Possibile opzione debole/generica: contiene “sempre”.
-
-**Regola di revisione:**
-- Ogni domanda deve avere almeno un distrattore forte: una risposta sbagliata molto vicina alla corretta, ma falsa per un dettaglio preciso.
-- Evitare parole assolute come “sempre” e “mai”, se rendono il distrattore troppo eliminabile.
-- Rendere le quattro opzioni simili per lunghezza, struttura e livello tecnico.
-
-### FQ_014 — livello: intermedio
-
-**Domanda:** Che cosa indica il termine entanglement quantistico?
-
-**Opzioni attuali:**
-- A. Una correlazione tra sistemi quantistici tale che lo stato di uno è legato allo stato dell'altro ✅
-- B. Una collisione meccanica tra due pianeti
-- C. Una forza che trasforma sempre un elettrone in un neutrone
-- D. Una vibrazione sonora prodotta da due onde acustiche
-
-**Risposta corretta nel sorgente:** A
-
-**Problemi reali:**
-- Possibile opzione debole/generica: contiene “sempre”.
-
-**Regola di revisione:**
-- Ogni domanda deve avere almeno un distrattore forte: una risposta sbagliata molto vicina alla corretta, ma falsa per un dettaglio preciso.
-- Evitare parole assolute come “sempre” e “mai”, se rendono il distrattore troppo eliminabile.
-- Rendere le quattro opzioni simili per lunghezza, struttura e livello tecnico.
 
 ### FQ_017 — livello: intermedio
 
