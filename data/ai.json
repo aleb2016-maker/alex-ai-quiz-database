@@ -958,7 +958,7 @@
       "Perché fornisce esempi da cui il modello può imparare relazioni e schemi.",
       "Perché sostituisce completamente la fase di valutazione del modello.",
       "Perché rende inutile scegliere un algoritmo adatto al problema.",
-      "Perché contiene solo le risposte finali che il modello copierà sempre."
+      "Perché contiene risposte finali che il modello dovrebbe ricopiare senza imparare schemi generali."
     ],
     "risposta_corretta": "Perché fornisce esempi da cui il modello può imparare relazioni e schemi.",
     "spiegazione": "La risposta corretta è A. Il dataset offre esempi utili all'apprendimento. B è falso perché la valutazione resta necessaria, C è errato perché l'algoritmo conta, D confonde apprendimento e copia meccanica."
@@ -1026,7 +1026,7 @@
     "domanda": "Che cosa si intende per allucinazione di un modello linguistico?",
     "opzioni": [
       "Una risposta plausibile nella forma ma non corretta o non supportata dai dati.",
-      "Una risposta sempre verificata da fonti esterne affidabili.",
+      "Una risposta presentata come verificata da fonti esterne affidabili.",
       "Una traduzione letterale prodotta senza cambiare il significato.",
       "Una compressione tecnica dei parametri del modello."
     ],
@@ -1083,7 +1083,7 @@
     "opzioni": [
       "Nel supervisionato gli esempi di addestramento hanno etichette o risposte corrette associate.",
       "Nel supervisionato il modello può funzionare solo senza dati di esempio.",
-      "Nel non supervisionato ogni esempio contiene sempre una risposta corretta già nota.",
+      "Nel non supervisionato ogni esempio contiene etichette esplicite simili a quelle del supervisionato.",
       "Nel non supervisionato il modello non può trovare strutture nei dati."
     ],
     "risposta_corretta": "Nel supervisionato gli esempi di addestramento hanno etichette o risposte corrette associate.",
@@ -1194,7 +1194,7 @@
     "domanda": "Perché è utile separare il ragionamento del sistema dalle azioni eseguite da un agente AI?",
     "opzioni": [
       "Per controllare meglio quando l'agente deve pensare, chiamare strumenti, verificare risultati o fermarsi.",
-      "Per fare in modo che l'agente esegua sempre qualsiasi comando senza controlli.",
+      "Per fare in modo che l'agente esegua comandi anche quando i controlli non sono sufficienti.",
       "Per eliminare la necessità di log, test e gestione degli errori.",
       "Per trasformare ogni agente in un semplice chatbot senza strumenti."
     ],
@@ -1222,7 +1222,7 @@
     "domanda": "Che cosa indica il concetto di bias in un sistema AI?",
     "opzioni": [
       "Una tendenza sistematica del modello a favorire o penalizzare certi risultati o gruppi.",
-      "La capacità del modello di rispondere sempre in modo perfettamente neutro.",
+      "La capacità del modello di mantenere una neutralità perfetta nelle risposte.",
       "La dimensione fisica del server su cui il modello viene eseguito.",
       "Il tempo necessario per scaricare un dataset da internet."
     ],
@@ -1264,7 +1264,7 @@
     "domanda": "Che cosa può indicare una bassa precisione in un classificatore?",
     "opzioni": [
       "Molti elementi previsti come positivi dal modello sono in realtà negativi.",
-      "Il modello non produce mai risultati positivi.",
+      "Il modello produce pochissimi risultati positivi.",
       "Il dataset contiene solo esempi senza etichetta.",
       "Il modello è stato addestrato esclusivamente su immagini ad alta risoluzione."
     ],
@@ -1334,7 +1334,7 @@
     "domanda": "Qual è una differenza importante tra RLHF e DPO nell'allineamento dei modelli linguistici?",
     "opzioni": [
       "RLHF usa un processo con modello di ricompensa e ottimizzazione tramite rinforzo, mentre DPO ottimizza direttamente su preferenze confrontate.",
-      "DPO richiede sempre immagini etichettate, mentre RLHF usa solo audio.",
+      "DPO richiede un modello di ricompensa separato più complesso, mentre RLHF ottimizza direttamente le preferenze.",
       "RLHF funziona solo con modelli piccoli, mentre DPO funziona solo con database SQL.",
       "DPO elimina la necessità di dati di preferenza umana o sintetica."
     ],
@@ -1404,7 +1404,7 @@
     "domanda": "Quale compromesso è spesso necessario quando si sceglie un modello AI per un'app reale?",
     "opzioni": [
       "Bilanciare qualità delle risposte, latenza, costo computazionale e risorse disponibili.",
-      "Scegliere sempre il modello più grande senza considerare tempi e costi.",
+      "Scegliere il modello più grande come criterio principale, senza valutare bene tempi e costi.",
       "Usare solo modelli non addestrati per evitare ogni errore.",
       "Eliminare i test perché le metriche rallentano l'applicazione."
     ],
@@ -1418,7 +1418,7 @@
     "domanda": "Che cosa indica un modello Mixture of Experts?",
     "opzioni": [
       "Un'architettura che può attivare solo una parte di esperti specializzati per elaborare un input.",
-      "Un modello composto da molte copie identiche sempre tutte attive per ogni token.",
+      "Un modello composto da molte copie identiche attivate tutte insieme per ogni token.",
       "Un sistema che sceglie casualmente un database esterno senza usare il contenuto dell'input.",
       "Un metodo per trasformare immagini in codice eseguibile senza controlli."
     ],
@@ -1446,8 +1446,8 @@
     "domanda": "Perché valutare le allucinazioni richiede spesso più di una metrica automatica semplice?",
     "opzioni": [
       "Perché serve confrontare la risposta con fonti, contesto e correttezza fattuale, non solo con la forma del testo.",
-      "Perché le allucinazioni compaiono solo nelle immagini e mai nel testo.",
-      "Perché una metrica automatica trasforma sempre una risposta falsa in una vera.",
+      "Perché le allucinazioni compaiono nei contenuti visivi più che nelle risposte testuali.",
+      "Perché una metrica automatica può valutare positivamente anche una risposta non realmente corretta.",
       "Perché la lunghezza della risposta è sufficiente a dimostrare la sua accuratezza."
     ],
     "risposta_corretta": "Perché serve confrontare la risposta con fonti, contesto e correttezza fattuale, non solo con la forma del testo.",
