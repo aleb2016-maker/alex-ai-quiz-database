@@ -81,13 +81,13 @@
     "livello": "facile",
     "domanda": "Quale molecola energetica viene prodotta soprattutto dai mitocondri durante la respirazione cellulare?",
     "opzioni": [
-      "ATP",
-      "DNA",
-      "Clorofilla",
-      "Emoglobina"
+      "ATP prodotto nella respirazione cellulare",
+      "NADPH prodotto soprattutto nella fotosintesi",
+      "GTP usato in alcune reazioni cellulari",
+      "AMP derivato dalla degradazione dell’ATP"
     ],
-    "risposta_corretta": "ATP",
-    "spiegazione": "I mitocondri producono ATP, cioè una molecola che la cellula usa come riserva immediata di energia per molte attività.",
+    "risposta_corretta": "ATP prodotto nella respirazione cellulare",
+    "spiegazione": "I mitocondri producono soprattutto ATP durante la respirazione cellulare. NADPH è legato soprattutto alla fotosintesi, mentre GTP e AMP hanno altri ruoli energetici.",
     "tags": [
       "biologia",
       "mitocondri",
@@ -98,7 +98,13 @@
     "distrattore_forte": "DNA",
     "punteggio_distrattore_forte": 4,
     "motivo_distrattore_forte": "È vicino perché anche i mitocondri possiedono un piccolo DNA, ma la molecola energetica prodotta è ATP.",
-    "qualita": "controllata"
+    "qualita": "controllata",
+    "spiegazioni_opzioni": {
+      "ATP prodotto nella respirazione cellulare": "Corretta: descrive il concetto biologico richiesto dalla domanda.",
+      "NADPH prodotto soprattutto nella fotosintesi": "Errata: è un distrattore vicino al tema, ma contiene un dettaglio biologico non corretto.",
+      "GTP usato in alcune reazioni cellulari": "Errata: è un distrattore vicino al tema, ma contiene un dettaglio biologico non corretto.",
+      "AMP derivato dalla degradazione dell’ATP": "Errata: è un distrattore vicino al tema, ma contiene un dettaglio biologico non corretto."
+    }
   },
   {
     "id": "BIO_005",
@@ -107,13 +113,13 @@
     "livello": "intermedio",
     "domanda": "Qual è la differenza principale tra mitosi e meiosi?",
     "opzioni": [
-      "La mitosi produce cellule geneticamente identiche, la meiosi produce gameti con metà dei cromosomi",
-      "La mitosi produce sempre gameti, la meiosi produce solo cellule della pelle",
-      "La mitosi dimezza i cromosomi, la meiosi li raddoppia in ogni cellula figlia",
-      "La mitosi avviene solo nei batteri, la meiosi solo nei virus"
+      "La mitosi mantiene il numero cromosomico, la meiosi lo dimezza formando gameti",
+      "La mitosi dimezza i cromosomi nei tessuti, la meiosi li mantiene nelle cellule somatiche",
+      "La mitosi produce gameti ricombinati, la meiosi produce cellule somatiche identiche",
+      "La mitosi separa cromosomi omologhi, la meiosi separa solo cromatidi identici"
     ],
-    "risposta_corretta": "La mitosi produce cellule geneticamente identiche, la meiosi produce gameti con metà dei cromosomi",
-    "spiegazione": "La mitosi serve alla crescita e alla riparazione dei tessuti. La meiosi serve alla produzione dei gameti e riduce il numero di cromosomi.",
+    "risposta_corretta": "La mitosi mantiene il numero cromosomico, la meiosi lo dimezza formando gameti",
+    "spiegazione": "La mitosi produce cellule geneticamente molto simili mantenendo il numero cromosomico. La meiosi invece riduce il numero di cromosomi e produce gameti.",
     "tags": [
       "biologia",
       "mitosi",
@@ -124,7 +130,13 @@
     "distrattore_forte": "La mitosi dimezza i cromosomi, la meiosi li raddoppia in ogni cellula figlia",
     "punteggio_distrattore_forte": 4,
     "motivo_distrattore_forte": "È vicino perché parla del numero di cromosomi, ma attribuisce alla mitosi una riduzione che appartiene alla meiosi.",
-    "qualita": "controllata"
+    "qualita": "controllata",
+    "spiegazioni_opzioni": {
+      "La mitosi mantiene il numero cromosomico, la meiosi lo dimezza formando gameti": "Corretta: descrive il concetto biologico richiesto dalla domanda.",
+      "La mitosi dimezza i cromosomi nei tessuti, la meiosi li mantiene nelle cellule somatiche": "Errata: è un distrattore vicino al tema, ma contiene un dettaglio biologico non corretto.",
+      "La mitosi produce gameti ricombinati, la meiosi produce cellule somatiche identiche": "Errata: è un distrattore vicino al tema, ma contiene un dettaglio biologico non corretto.",
+      "La mitosi separa cromosomi omologhi, la meiosi separa solo cromatidi identici": "Errata: è un distrattore vicino al tema, ma contiene un dettaglio biologico non corretto."
+    }
   },
   {
     "id": "BIO_006",
@@ -183,13 +195,13 @@
     "livello": "intermedio",
     "domanda": "Che cosa distingue il trasporto attivo dalla diffusione semplice attraverso la membrana cellulare?",
     "opzioni": [
-      "Il trasporto attivo richiede energia per spostare sostanze anche contro gradiente",
-      "Il trasporto attivo avviene sempre senza consumo di energia e solo con l’acqua",
-      "La diffusione semplice richiede ATP per spostare sostanze verso zone più concentrate",
-      "La diffusione semplice usa sempre pompe proteiche alimentate da energia chimica"
+      "Il trasporto attivo usa energia per spostare sostanze anche contro gradiente",
+      "Il trasporto attivo usa proteine ma segue soltanto il gradiente di concentrazione",
+      "La diffusione semplice usa ATP quando attraversa direttamente il doppio strato lipidico",
+      "La diffusione semplice usa pompe di membrana per spingere soluti contro gradiente"
     ],
-    "risposta_corretta": "Il trasporto attivo richiede energia per spostare sostanze anche contro gradiente",
-    "spiegazione": "Il trasporto attivo consuma energia, spesso ATP, per spostare sostanze contro il loro gradiente di concentrazione. La diffusione semplice invece avviene spontaneamente secondo gradiente.",
+    "risposta_corretta": "Il trasporto attivo usa energia per spostare sostanze anche contro gradiente",
+    "spiegazione": "Il trasporto attivo richiede energia, spesso ATP, perché può spostare sostanze contro gradiente. La diffusione semplice avviene invece secondo gradiente e non usa pompe alimentate da energia.",
     "tags": [
       "biologia",
       "membrana",
@@ -200,7 +212,13 @@
     "distrattore_forte": "La diffusione semplice richiede ATP per spostare sostanze verso zone più concentrate",
     "punteggio_distrattore_forte": 4,
     "motivo_distrattore_forte": "È vicino perché parla di movimento attraverso membrana e gradiente, ma attribuisce alla diffusione semplice caratteristiche del trasporto attivo.",
-    "qualita": "controllata"
+    "qualita": "controllata",
+    "spiegazioni_opzioni": {
+      "Il trasporto attivo usa energia per spostare sostanze anche contro gradiente": "Corretta: descrive il concetto biologico richiesto dalla domanda.",
+      "Il trasporto attivo usa proteine ma segue soltanto il gradiente di concentrazione": "Errata: è un distrattore vicino al tema, ma contiene un dettaglio biologico non corretto.",
+      "La diffusione semplice usa ATP quando attraversa direttamente il doppio strato lipidico": "Errata: è un distrattore vicino al tema, ma contiene un dettaglio biologico non corretto.",
+      "La diffusione semplice usa pompe di membrana per spingere soluti contro gradiente": "Errata: è un distrattore vicino al tema, ma contiene un dettaglio biologico non corretto."
+    }
   },
   {
     "id": "BIO_009",
@@ -209,13 +227,13 @@
     "livello": "avanzato",
     "domanda": "Qual è il rapporto corretto tra gene, RNA messaggero e proteina?",
     "opzioni": [
-      "Un gene può essere trascritto in RNA messaggero, che poi guida la sintesi di una proteina",
-      "Una proteina viene trascritta in RNA messaggero, che poi costruisce direttamente un gene",
-      "L’RNA messaggero contiene sempre tutti i geni dell’organismo",
-      "Un gene viene prodotto solo dopo che la proteina è già stata sintetizzata"
+      "Un gene può essere trascritto in RNA messaggero, che guida la sintesi di una proteina",
+      "Un gene viene tradotto direttamente in proteina senza passare da RNA messaggero",
+      "L’RNA messaggero conserva il gene originale e lo replica stabilmente nel nucleo",
+      "Una proteina viene trascritta in RNA messaggero e poi convertita in DNA"
     ],
-    "risposta_corretta": "Un gene può essere trascritto in RNA messaggero, che poi guida la sintesi di una proteina",
-    "spiegazione": "Secondo il flusso classico dell’informazione genetica, il DNA viene trascritto in RNA messaggero e l’RNA messaggero viene tradotto in proteina.",
+    "risposta_corretta": "Un gene può essere trascritto in RNA messaggero, che guida la sintesi di una proteina",
+    "spiegazione": "Nel flusso classico dell’informazione genetica, un gene può essere trascritto in RNA messaggero. L’RNA messaggero viene poi tradotto dai ribosomi per sintetizzare una proteina.",
     "tags": [
       "biologia",
       "gene",
@@ -226,7 +244,13 @@
     "distrattore_forte": "Una proteina viene trascritta in RNA messaggero, che poi costruisce direttamente un gene",
     "punteggio_distrattore_forte": 4,
     "motivo_distrattore_forte": "È vicino perché usa gli stessi elementi, ma inverte il flusso dell’informazione genetica.",
-    "qualita": "controllata"
+    "qualita": "controllata",
+    "spiegazioni_opzioni": {
+      "Un gene può essere trascritto in RNA messaggero, che guida la sintesi di una proteina": "Corretta: descrive il concetto biologico richiesto dalla domanda.",
+      "Un gene viene tradotto direttamente in proteina senza passare da RNA messaggero": "Errata: è un distrattore vicino al tema, ma contiene un dettaglio biologico non corretto.",
+      "L’RNA messaggero conserva il gene originale e lo replica stabilmente nel nucleo": "Errata: è un distrattore vicino al tema, ma contiene un dettaglio biologico non corretto.",
+      "Una proteina viene trascritta in RNA messaggero e poi convertita in DNA": "Errata: è un distrattore vicino al tema, ma contiene un dettaglio biologico non corretto."
+    }
   },
   {
     "id": "BIO_010",
@@ -235,13 +259,13 @@
     "livello": "avanzato",
     "domanda": "Quale affermazione descrive meglio la selezione naturale?",
     "opzioni": [
-      "Gli individui con caratteristiche vantaggiose tendono a lasciare più discendenti in un certo ambiente",
-      "Gli organismi scelgono volontariamente quali caratteristiche trasmettere ai figli",
-      "Tutti gli individui di una specie cambiano nello stesso modo durante la vita",
-      "Le mutazioni utili compaiono sempre perché l’ambiente ne ha bisogno"
+      "Gli individui con tratti vantaggiosi tendono a lasciare più discendenti in un certo ambiente",
+      "Gli individui sviluppano tratti utili durante la vita e li trasmettono ai figli",
+      "Tutti gli individui cambiano nello stesso modo quando l’ambiente esercita pressione",
+      "Le mutazioni compaiono perché l’ambiente richiede direttamente un certo adattamento"
     ],
-    "risposta_corretta": "Gli individui con caratteristiche vantaggiose tendono a lasciare più discendenti in un certo ambiente",
-    "spiegazione": "La selezione naturale favorisce caratteristiche ereditarie che aumentano sopravvivenza o riproduzione in un determinato ambiente.",
+    "risposta_corretta": "Gli individui con tratti vantaggiosi tendono a lasciare più discendenti in un certo ambiente",
+    "spiegazione": "La selezione naturale favorisce gli individui con caratteristiche ereditarie vantaggiose in un determinato ambiente, perché tendono a sopravvivere e riprodursi di più.",
     "tags": [
       "biologia",
       "evoluzione",
@@ -251,7 +275,13 @@
     "distrattore_forte": "Le mutazioni utili compaiono sempre perché l’ambiente ne ha bisogno",
     "punteggio_distrattore_forte": 4,
     "motivo_distrattore_forte": "È vicino perché collega ambiente e adattamento, ma le mutazioni non compaiono perché servono: vengono selezionate dopo.",
-    "qualita": "controllata"
+    "qualita": "controllata",
+    "spiegazioni_opzioni": {
+      "Gli individui con tratti vantaggiosi tendono a lasciare più discendenti in un certo ambiente": "Corretta: descrive il concetto biologico richiesto dalla domanda.",
+      "Gli individui sviluppano tratti utili durante la vita e li trasmettono ai figli": "Errata: è un distrattore vicino al tema, ma contiene un dettaglio biologico non corretto.",
+      "Tutti gli individui cambiano nello stesso modo quando l’ambiente esercita pressione": "Errata: è un distrattore vicino al tema, ma contiene un dettaglio biologico non corretto.",
+      "Le mutazioni compaiono perché l’ambiente richiede direttamente un certo adattamento": "Errata: è un distrattore vicino al tema, ma contiene un dettaglio biologico non corretto."
+    }
   },
   {
     "id": "BIO_011",
@@ -286,12 +316,12 @@
     "domanda": "Che cosa distingue una cellula procariotica da una cellula eucariotica?",
     "opzioni": [
       "La cellula procariotica non possiede un nucleo delimitato da membrana",
-      "La cellula procariotica possiede sempre più nuclei separati",
-      "La cellula eucariotica non contiene mai materiale genetico",
-      "La cellula eucariotica è sempre priva di organuli cellulari"
+      "La cellula procariotica possiede organelli membranosi ma non ribosomi funzionali",
+      "La cellula eucariotica non contiene DNA organizzato in compartimenti cellulari",
+      "La cellula eucariotica è priva di membrana plasmatica ma contiene nucleo"
     ],
     "risposta_corretta": "La cellula procariotica non possiede un nucleo delimitato da membrana",
-    "spiegazione": "Le cellule procariotiche, come i batteri, non hanno un vero nucleo delimitato da membrana. Le eucariotiche invece possiedono un nucleo.",
+    "spiegazione": "Le cellule procariotiche non hanno un nucleo delimitato da membrana. Le cellule eucariotiche invece possiedono un nucleo e vari organelli membranosi.",
     "tags": [
       "biologia",
       "procarioti",
@@ -302,7 +332,13 @@
     "distrattore_forte": "La cellula procariotica possiede sempre più nuclei separati",
     "punteggio_distrattore_forte": 4,
     "motivo_distrattore_forte": "È vicino perché parla del nucleo, ma è falso: i procarioti non hanno un nucleo delimitato.",
-    "qualita": "controllata"
+    "qualita": "controllata",
+    "spiegazioni_opzioni": {
+      "La cellula procariotica non possiede un nucleo delimitato da membrana": "Corretta: descrive il concetto biologico richiesto dalla domanda.",
+      "La cellula procariotica possiede organelli membranosi ma non ribosomi funzionali": "Errata: è un distrattore vicino al tema, ma contiene un dettaglio biologico non corretto.",
+      "La cellula eucariotica non contiene DNA organizzato in compartimenti cellulari": "Errata: è un distrattore vicino al tema, ma contiene un dettaglio biologico non corretto.",
+      "La cellula eucariotica è priva di membrana plasmatica ma contiene nucleo": "Errata: è un distrattore vicino al tema, ma contiene un dettaglio biologico non corretto."
+    }
   },
   {
     "id": "BIO_013",
@@ -311,13 +347,13 @@
     "livello": "facile",
     "domanda": "Quale funzione svolge principalmente la membrana cellulare?",
     "opzioni": [
-      "Controlla gli scambi tra interno ed esterno della cellula",
-      "Produce direttamente tutti i cromosomi della cellula",
-      "Trasforma ogni cellula in un organismo completo",
-      "Elimina sempre il bisogno di energia cellulare"
+      "Regola in modo selettivo il passaggio di sostanze tra cellula e ambiente",
+      "Produce direttamente ATP tramite le reazioni principali della respirazione cellulare",
+      "Conserva l’intero DNA cellulare separandolo dal citoplasma con doppia membrana",
+      "Sintetizza proteine libere trasformando RNA messaggero in catene di amminoacidi"
     ],
-    "risposta_corretta": "Controlla gli scambi tra interno ed esterno della cellula",
-    "spiegazione": "La membrana cellulare delimita la cellula e regola il passaggio di sostanze tra ambiente interno ed esterno.",
+    "risposta_corretta": "Regola in modo selettivo il passaggio di sostanze tra cellula e ambiente",
+    "spiegazione": "La membrana cellulare delimita la cellula e controlla in modo selettivo gli scambi con l’ambiente esterno. Non produce ATP, non conserva il DNA e non sintetizza direttamente proteine.",
     "tags": [
       "biologia",
       "cellula",
@@ -327,7 +363,13 @@
     "distrattore_forte": "Produce direttamente tutti i cromosomi della cellula",
     "punteggio_distrattore_forte": 4,
     "motivo_distrattore_forte": "È vicino perché riguarda strutture cellulari, ma i cromosomi sono nel nucleo, non prodotti dalla membrana.",
-    "qualita": "controllata"
+    "qualita": "controllata",
+    "spiegazioni_opzioni": {
+      "Regola in modo selettivo il passaggio di sostanze tra cellula e ambiente": "Corretta: descrive il concetto biologico richiesto dalla domanda.",
+      "Produce direttamente ATP tramite le reazioni principali della respirazione cellulare": "Errata: è un distrattore vicino al tema, ma contiene un dettaglio biologico non corretto.",
+      "Conserva l’intero DNA cellulare separandolo dal citoplasma con doppia membrana": "Errata: è un distrattore vicino al tema, ma contiene un dettaglio biologico non corretto.",
+      "Sintetizza proteine libere trasformando RNA messaggero in catene di amminoacidi": "Errata: è un distrattore vicino al tema, ma contiene un dettaglio biologico non corretto."
+    }
   },
   {
     "id": "BIO_014",
@@ -389,13 +431,13 @@
     "livello": "facile",
     "domanda": "A che cosa servono principalmente le radici di una pianta?",
     "opzioni": [
-      "Assorbono acqua e sali minerali dal terreno",
-      "Producono direttamente il DNA dei fiori",
-      "Trasformano sempre l’ossigeno in proteine",
-      "Permettono alla pianta di vedere la luce"
+      "Assorbono acqua e sali minerali e contribuiscono ad ancorare la pianta al terreno",
+      "Producono zuccheri tramite fotosintesi grazie ai pigmenti presenti nei tessuti verdi",
+      "Trasportano il polline verso l’ovulo durante la riproduzione sessuata della pianta",
+      "Liberano ossigeno nell’aria come prodotto diretto della respirazione cellulare"
     ],
-    "risposta_corretta": "Assorbono acqua e sali minerali dal terreno",
-    "spiegazione": "Le radici ancorano la pianta al terreno e assorbono acqua e sali minerali necessari alla sua crescita.",
+    "risposta_corretta": "Assorbono acqua e sali minerali e contribuiscono ad ancorare la pianta al terreno",
+    "spiegazione": "Le radici assorbono acqua e sali minerali dal terreno e aiutano a stabilizzare la pianta. La fotosintesi avviene soprattutto nelle foglie, non nelle radici.",
     "tags": [
       "biologia",
       "piante",
@@ -405,7 +447,13 @@
     "distrattore_forte": "Permettono alla pianta di vedere la luce",
     "punteggio_distrattore_forte": 4,
     "motivo_distrattore_forte": "È vicino perché riguarda la relazione della pianta con l’ambiente, ma le radici assorbono sostanze dal suolo.",
-    "qualita": "controllata"
+    "qualita": "controllata",
+    "spiegazioni_opzioni": {
+      "Assorbono acqua e sali minerali e contribuiscono ad ancorare la pianta al terreno": "Corretta: descrive il concetto biologico richiesto dalla domanda.",
+      "Producono zuccheri tramite fotosintesi grazie ai pigmenti presenti nei tessuti verdi": "Errata: è un distrattore vicino al tema, ma contiene un dettaglio biologico non corretto.",
+      "Trasportano il polline verso l’ovulo durante la riproduzione sessuata della pianta": "Errata: è un distrattore vicino al tema, ma contiene un dettaglio biologico non corretto.",
+      "Liberano ossigeno nell’aria come prodotto diretto della respirazione cellulare": "Errata: è un distrattore vicino al tema, ma contiene un dettaglio biologico non corretto."
+    }
   },
   {
     "id": "BIO_017",

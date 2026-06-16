@@ -7,7 +7,7 @@ Questo report separa i problemi qualitativi reali dagli avvisi non bloccanti sul
 | Motore | Domande | Problemi qualità reali | Risposta in A nel sorgente |
 |---|---:|---:|---:|
 | Scienze generali | 40 | 16 | 34 |
-| Biologia | 40 | 22 | 40 |
+| Biologia | 40 | 14 | 40 |
 | Fisica | 40 | 21 | 40 |
 | Chimica | 40 | 23 | 40 |
 | Fisica quantistica | 40 | 21 | 40 |
@@ -356,7 +356,7 @@ Distribuzione risposta corretta nel sorgente:
 ## Biologia
 
 Domande sorgente: **40**
-Domande con problemi qualità reali: **22**
+Domande con problemi qualità reali: **14**
 Risposte corrette in A nel sorgente: **40**
 
 Distribuzione risposta corretta nel sorgente:
@@ -366,169 +366,6 @@ Distribuzione risposta corretta nel sorgente:
 ```
 
 ### Domande da migliorare davvero
-
-### BIO_004 — livello: facile
-
-**Domanda:** Quale molecola energetica viene prodotta soprattutto dai mitocondri durante la respirazione cellulare?
-
-**Opzioni attuali:**
-- A. ATP ✅
-- B. DNA
-- C. Clorofilla
-- D. Emoglobina
-
-**Risposta corretta nel sorgente:** A
-
-**Problemi reali:**
-- Opzioni con lunghezze molto sbilanciate: una risposta può risultare troppo riconoscibile.
-
-**Regola di revisione:**
-- Ogni domanda deve avere almeno un distrattore forte: una risposta sbagliata molto vicina alla corretta, ma falsa per un dettaglio preciso.
-- Evitare parole assolute come “sempre” e “mai”, se rendono il distrattore troppo eliminabile.
-- Rendere le quattro opzioni simili per lunghezza, struttura e livello tecnico.
-
-### BIO_005 — livello: intermedio
-
-**Domanda:** Qual è la differenza principale tra mitosi e meiosi?
-
-**Opzioni attuali:**
-- A. La mitosi produce cellule geneticamente identiche, la meiosi produce gameti con metà dei cromosomi ✅
-- B. La mitosi produce sempre gameti, la meiosi produce solo cellule della pelle
-- C. La mitosi dimezza i cromosomi, la meiosi li raddoppia in ogni cellula figlia
-- D. La mitosi avviene solo nei batteri, la meiosi solo nei virus
-
-**Risposta corretta nel sorgente:** A
-
-**Problemi reali:**
-- Possibile opzione debole/generica: contiene “sempre”.
-
-**Regola di revisione:**
-- Ogni domanda deve avere almeno un distrattore forte: una risposta sbagliata molto vicina alla corretta, ma falsa per un dettaglio preciso.
-- Evitare parole assolute come “sempre” e “mai”, se rendono il distrattore troppo eliminabile.
-- Rendere le quattro opzioni simili per lunghezza, struttura e livello tecnico.
-
-### BIO_008 — livello: intermedio
-
-**Domanda:** Che cosa distingue il trasporto attivo dalla diffusione semplice attraverso la membrana cellulare?
-
-**Opzioni attuali:**
-- A. Il trasporto attivo richiede energia per spostare sostanze anche contro gradiente ✅
-- B. Il trasporto attivo avviene sempre senza consumo di energia e solo con l’acqua
-- C. La diffusione semplice richiede ATP per spostare sostanze verso zone più concentrate
-- D. La diffusione semplice usa sempre pompe proteiche alimentate da energia chimica
-
-**Risposta corretta nel sorgente:** A
-
-**Problemi reali:**
-- Possibile opzione debole/generica: contiene “sempre”.
-- Possibile opzione debole/generica: contiene “sempre”.
-
-**Regola di revisione:**
-- Ogni domanda deve avere almeno un distrattore forte: una risposta sbagliata molto vicina alla corretta, ma falsa per un dettaglio preciso.
-- Evitare parole assolute come “sempre” e “mai”, se rendono il distrattore troppo eliminabile.
-- Rendere le quattro opzioni simili per lunghezza, struttura e livello tecnico.
-
-### BIO_009 — livello: avanzato
-
-**Domanda:** Qual è il rapporto corretto tra gene, RNA messaggero e proteina?
-
-**Opzioni attuali:**
-- A. Un gene può essere trascritto in RNA messaggero, che poi guida la sintesi di una proteina ✅
-- B. Una proteina viene trascritta in RNA messaggero, che poi costruisce direttamente un gene
-- C. L’RNA messaggero contiene sempre tutti i geni dell’organismo
-- D. Un gene viene prodotto solo dopo che la proteina è già stata sintetizzata
-
-**Risposta corretta nel sorgente:** A
-
-**Problemi reali:**
-- Possibile opzione debole/generica: contiene “sempre”.
-
-**Regola di revisione:**
-- Ogni domanda deve avere almeno un distrattore forte: una risposta sbagliata molto vicina alla corretta, ma falsa per un dettaglio preciso.
-- Evitare parole assolute come “sempre” e “mai”, se rendono il distrattore troppo eliminabile.
-- Rendere le quattro opzioni simili per lunghezza, struttura e livello tecnico.
-
-### BIO_010 — livello: avanzato
-
-**Domanda:** Quale affermazione descrive meglio la selezione naturale?
-
-**Opzioni attuali:**
-- A. Gli individui con caratteristiche vantaggiose tendono a lasciare più discendenti in un certo ambiente ✅
-- B. Gli organismi scelgono volontariamente quali caratteristiche trasmettere ai figli
-- C. Tutti gli individui di una specie cambiano nello stesso modo durante la vita
-- D. Le mutazioni utili compaiono sempre perché l’ambiente ne ha bisogno
-
-**Risposta corretta nel sorgente:** A
-
-**Problemi reali:**
-- Possibile opzione debole/generica: contiene “sempre”.
-
-**Regola di revisione:**
-- Ogni domanda deve avere almeno un distrattore forte: una risposta sbagliata molto vicina alla corretta, ma falsa per un dettaglio preciso.
-- Evitare parole assolute come “sempre” e “mai”, se rendono il distrattore troppo eliminabile.
-- Rendere le quattro opzioni simili per lunghezza, struttura e livello tecnico.
-
-### BIO_012 — livello: avanzato
-
-**Domanda:** Che cosa distingue una cellula procariotica da una cellula eucariotica?
-
-**Opzioni attuali:**
-- A. La cellula procariotica non possiede un nucleo delimitato da membrana ✅
-- B. La cellula procariotica possiede sempre più nuclei separati
-- C. La cellula eucariotica non contiene mai materiale genetico
-- D. La cellula eucariotica è sempre priva di organuli cellulari
-
-**Risposta corretta nel sorgente:** A
-
-**Problemi reali:**
-- Possibile opzione debole/generica: contiene “sempre”.
-- Possibile opzione debole/generica: contiene “mai”.
-- Possibile opzione debole/generica: contiene “sempre”.
-
-**Regola di revisione:**
-- Ogni domanda deve avere almeno un distrattore forte: una risposta sbagliata molto vicina alla corretta, ma falsa per un dettaglio preciso.
-- Evitare parole assolute come “sempre” e “mai”, se rendono il distrattore troppo eliminabile.
-- Rendere le quattro opzioni simili per lunghezza, struttura e livello tecnico.
-
-### BIO_013 — livello: facile
-
-**Domanda:** Quale funzione svolge principalmente la membrana cellulare?
-
-**Opzioni attuali:**
-- A. Controlla gli scambi tra interno ed esterno della cellula ✅
-- B. Produce direttamente tutti i cromosomi della cellula
-- C. Trasforma ogni cellula in un organismo completo
-- D. Elimina sempre il bisogno di energia cellulare
-
-**Risposta corretta nel sorgente:** A
-
-**Problemi reali:**
-- Possibile opzione debole/generica: contiene “sempre”.
-
-**Regola di revisione:**
-- Ogni domanda deve avere almeno un distrattore forte: una risposta sbagliata molto vicina alla corretta, ma falsa per un dettaglio preciso.
-- Evitare parole assolute come “sempre” e “mai”, se rendono il distrattore troppo eliminabile.
-- Rendere le quattro opzioni simili per lunghezza, struttura e livello tecnico.
-
-### BIO_016 — livello: facile
-
-**Domanda:** A che cosa servono principalmente le radici di una pianta?
-
-**Opzioni attuali:**
-- A. Assorbono acqua e sali minerali dal terreno ✅
-- B. Producono direttamente il DNA dei fiori
-- C. Trasformano sempre l’ossigeno in proteine
-- D. Permettono alla pianta di vedere la luce
-
-**Risposta corretta nel sorgente:** A
-
-**Problemi reali:**
-- Possibile opzione debole/generica: contiene “sempre”.
-
-**Regola di revisione:**
-- Ogni domanda deve avere almeno un distrattore forte: una risposta sbagliata molto vicina alla corretta, ma falsa per un dettaglio preciso.
-- Evitare parole assolute come “sempre” e “mai”, se rendono il distrattore troppo eliminabile.
-- Rendere le quattro opzioni simili per lunghezza, struttura e livello tecnico.
 
 ### BIO_017 — livello: intermedio
 
