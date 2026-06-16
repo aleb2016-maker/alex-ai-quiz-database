@@ -774,17 +774,17 @@
     "percorso": "data/matematica.json",
     "file_esiste": true,
     "errore_file": "",
-    "totale_domande": 40,
+    "totale_domande": 80,
     "livelli": {
-      "facile": 12,
-      "intermedio": 14,
-      "avanzato": 14
+      "facile": 24,
+      "intermedio": 28,
+      "avanzato": 28
     },
     "categorie": {
-      "matematica": 40
+      "matematica": 80
     },
     "posizioni_risposta": {
-      "A": 27,
+      "A": 67,
       "C": 6,
       "B": 6,
       "D": 1
@@ -792,7 +792,7 @@
     "problemi_tecnici_totali": 0,
     "avvisi_qualita_reali_totali": 0,
     "errori_linguistici_totali": 0,
-    "note_informative_totali": 2,
+    "note_informative_totali": 5,
     "domande_con_problemi_tecnici": [],
     "domande_con_avvisi_qualita_reali": [],
     "domande_con_errori_linguistici": [],
@@ -835,6 +835,66 @@
         "errori_linguistici": [],
         "note_informative": [
           "spiegazione: possibile frase poco fluida, controllare gli incontri vocalici"
+        ]
+      },
+      {
+        "id": "MAT-FAC-0204",
+        "domanda": "Qual è la media aritmetica dei numeri 12, 15, 18 e 15?",
+        "categoria": "matematica",
+        "livello": "facile",
+        "opzioni": [
+          "15",
+          "14",
+          "16",
+          "60"
+        ],
+        "risposta_corretta": "15",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "spiegazione: possibile frase poco fluida, controllare gli incontri vocalici"
+        ]
+      },
+      {
+        "id": "MAT-INT-0210",
+        "domanda": "Quale descrizione risolve correttamente la disequazione tre x meno quattro maggiore di otto?",
+        "categoria": "matematica",
+        "livello": "intermedio",
+        "opzioni": [
+          "Sono validi tutti i valori di x maggiori di 4.",
+          "Sono validi tutti i valori di x minori di 4.",
+          "Sono validi soltanto i valori di x maggiori di 12.",
+          "Sono validi soltanto i valori di x compresi tra 0 e 4."
+        ],
+        "risposta_corretta": "Sono validi tutti i valori di x maggiori di 4.",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “tutti”"
+        ]
+      },
+      {
+        "id": "MAT-AV-0204",
+        "domanda": "Qual è il dominio della funzione f(x) = 1 / (x - 2)?",
+        "categoria": "matematica",
+        "livello": "avanzato",
+        "opzioni": [
+          "Tutti i numeri reali tranne x = 2.",
+          "Tutti i numeri reali tranne x = 0.",
+          "Solo i numeri reali maggiori di 2.",
+          "Solo i numeri interi diversi da 2."
+        ],
+        "risposta_corretta": "Tutti i numeri reali tranne x = 2.",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “tutti”"
         ]
       }
     ],
