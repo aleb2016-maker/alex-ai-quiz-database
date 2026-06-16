@@ -7,16 +7,13 @@
     "domanda": "Quanto vale il 20% di 50?",
     "opzioni": [
       "10",
+      "12",
       "8",
-      "15",
-      "12"
+      "15"
     ],
     "risposta_corretta": "10",
     "spiegazione": "Il 20% significa 20 su 100. Quindi 50 × 20 / 100 = 10.",
-    "tags": [
-      "percentuali",
-      "calcolo base"
-    ],
+    "tags": ["percentuali", "calcolo base"],
     "difficolta": 1
   },
   {
@@ -26,17 +23,14 @@
     "livello": "intermedio",
     "domanda": "Qual è il valore di x nell'equazione 3x + 4 = 19?",
     "opzioni": [
-      "4",
-      "7",
       "5",
-      "6"
+      "4",
+      "6",
+      "7"
     ],
     "risposta_corretta": "5",
     "spiegazione": "Prima togli 4 da entrambi i lati: 3x = 15. Poi dividi per 3: x = 5.",
-    "tags": [
-      "equazioni",
-      "algebra"
-    ],
+    "tags": ["equazioni", "algebra"],
     "difficolta": 2
   },
   {
@@ -46,17 +40,14 @@
     "livello": "avanzato",
     "domanda": "Se 6 operai completano un lavoro in 12 giorni, quanti giorni servono a 9 operai con lo stesso ritmo?",
     "opzioni": [
-      "7 giorni",
       "8 giorni",
       "9 giorni",
-      "10 giorni"
+      "10 giorni",
+      "7 giorni"
     ],
     "risposta_corretta": "8 giorni",
     "spiegazione": "Il lavoro totale è 6 × 12 = 72 giornate-operaio. Con 9 operai servono 72 / 9 = 8 giorni.",
-    "tags": [
-      "proporzioni inverse",
-      "problemi"
-    ],
+    "tags": ["proporzioni inverse", "problemi"],
     "difficolta": 3
   }
 ]

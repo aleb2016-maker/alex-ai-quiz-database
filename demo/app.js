@@ -427,6 +427,70 @@ function prendiDomandeSenzaRipetere(domandeFiltrate, numeroDaPrendere) {
     });
 }
 
+
+let codaPosizioniCorretteQuizAi = [];
+
+function mescolaArrayQuizAi(lista) {
+    for (let indice = lista.length - 1; indice > 0; indice -= 1) {
+        const indiceCasuale = Math.floor(Math.random() * (indice + 1));
+        const temporaneo = lista[indice];
+
+        lista[indice] = lista[indiceCasuale];
+        lista[indiceCasuale] = temporaneo;
+    }
+
+    return lista;
+}
+
+function prendiPosizioneCorrettaQuizAi(numeroOpzioni) {
+    if (codaPosizioniCorretteQuizAi.length === 0) {
+        codaPosizioniCorretteQuizAi = [];
+
+        for (let indice = 0; indice < numeroOpzioni; indice += 1) {
+            codaPosizioniCorretteQuizAi.push(indice);
+        }
+
+        mescolaArrayQuizAi(codaPosizioniCorretteQuizAi);
+    }
+
+    return codaPosizioniCorretteQuizAi.shift();
+}
+
+function creaOpzioniMescolateQuizAi(opzioniOriginali, rispostaCorretta) {
+    if (!Array.isArray(opzioniOriginali)) {
+        return [];
+    }
+
+    const opzioniConIndice = opzioniOriginali.map((testo, indiceOriginale) => {
+        return {
+            testo,
+            indiceOriginale,
+        };
+    });
+
+    const opzioneCorretta = opzioniConIndice.find(opzione => {
+        return opzione.testo === rispostaCorretta;
+    });
+
+    if (!opzioneCorretta) {
+        return mescolaArrayQuizAi(opzioniConIndice);
+    }
+
+    const opzioniSbagliate = opzioniConIndice.filter(opzione => {
+        return opzione !== opzioneCorretta;
+    });
+
+    mescolaArrayQuizAi(opzioniSbagliate);
+
+    const posizioneCorretta = prendiPosizioneCorrettaQuizAi(opzioniConIndice.length);
+
+    const opzioniFinali = [...opzioniSbagliate];
+
+    opzioniFinali.splice(posizioneCorretta, 0, opzioneCorretta);
+
+    return opzioniFinali;
+}
+
 function mostraDomandaCorrente() {
     rispostaGiaData = false;
 
@@ -497,7 +561,14 @@ function mostraImmagineDomanda(domanda) {
 function mostraOpzioni(domanda) {
     elementi.optionsBox.innerHTML = "";
 
-    domanda.opzioni.forEach((opzione, indice) => {
+    const opzioniMescolateQuizAi = creaOpzioniMescolateQuizAi(
+        domanda.opzioni,
+        domanda.risposta_corretta
+    );
+
+    opzioniMescolateQuizAi.forEach((opzioneMescolata, indice) => {
+        const opzione = opzioneMescolata.testo;
+        const indiceOriginaleOpzione = opzioneMescolata.indiceOriginale;
         const bottone = document.createElement("button");
         bottone.className = "option-button";
         bottone.type = "button";
