@@ -192,7 +192,7 @@
       "Marco prende l'ombrello",
       "Marco prende l'ombrello solo se piove molto forte",
       "Oggi non piove",
-      "Marco prende sempre l'ombrello"
+      "Marco prende l'ombrello solo quando piove molto forte"
     ],
     "risposta_corretta": "Marco prende l'ombrello",
     "spiegazione": "La regola dice che quando piove Marco prende l'ombrello. Poiché oggi piove, la conclusione corretta è che Marco prende l'ombrello. Non possiamo aggiungere condizioni non presenti, come 'solo se piove molto forte'.",
@@ -214,7 +214,7 @@
     "opzioni": [
       "L'app non ha superato tutti i test",
       "L'app potrebbe aver superato tutti i test anche se non viene pubblicata",
-      "I test non sono mai stati eseguiti",
+      "L'app può essere stata bloccata per motivi indipendenti dai test",
       "Ogni app pubblicata supera i test"
     ],
     "risposta_corretta": "L'app non ha superato tutti i test",

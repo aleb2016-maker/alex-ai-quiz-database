@@ -7,9 +7,9 @@ Questo report distingue problemi tecnici, avvisi qualità reali, errori linguist
 ## Riepilogo generale
 
 - Problemi tecnici totali: **0**
-- Avvisi qualità reali totali: **2**
-- Errori linguistici totali: **9**
-- Note informative totali: **83**
+- Avvisi qualità reali totali: **0**
+- Errori linguistici totali: **0**
+- Note informative totali: **80**
 - Gruppi di domande duplicate identiche: **0**
 - Coppie di domande molto simili: **0**
 
@@ -148,21 +148,6 @@ Note informative: **22**
 Duplicati identici: **0**
 Domande molto simili: **0**
 
-## Logica numerica.backup prima consolidamento 10
-
-File: `data/logica/logica_numerica.backup_prima_consolidamento_10.json`
-File trovato: **True**
-Domande totali: **3**
-Livelli: `{'facile': 1, 'intermedio': 1, 'avanzato': 1}`
-Categorie: `{'logica': 3}`
-Posizione risposta corretta nel sorgente: `{'A': 3}`
-Problemi tecnici: **0**
-Avvisi qualità reali: **0**
-Errori linguistici: **0**
-Note informative: **1**
-Duplicati identici: **0**
-Domande molto simili: **0**
-
 ## Logica numerica
 
 File: `data/logica/logica_numerica.json`
@@ -178,21 +163,6 @@ Note informative: **1**
 Duplicati identici: **0**
 Domande molto simili: **0**
 
-## Logica verbale.backup prima consolidamento 10
-
-File: `data/logica/logica_verbale.backup_prima_consolidamento_10.json`
-File trovato: **True**
-Domande totali: **3**
-Livelli: `{'facile': 1, 'intermedio': 1, 'avanzato': 1}`
-Categorie: `{'logica': 3}`
-Posizione risposta corretta nel sorgente: `{'A': 3}`
-Problemi tecnici: **0**
-Avvisi qualità reali: **0**
-Errori linguistici: **0**
-Note informative: **0**
-Duplicati identici: **0**
-Domande molto simili: **0**
-
 ## Logica verbale
 
 File: `data/logica/logica_verbale.json`
@@ -203,35 +173,8 @@ Categorie: `{'logica': 10}`
 Posizione risposta corretta nel sorgente: `{'A': 10}`
 Problemi tecnici: **0**
 Avvisi qualità reali: **0**
-Errori linguistici: **7**
-Note informative: **1**
-Duplicati identici: **0**
-Domande molto simili: **0**
-
-### Errori linguistici
-
-- **LOG-VER-INT-0102** — Quale coppia mantiene la stessa relazione di: seme : pianta?
-  - domanda: contiene spazio prima della punteggiatura
-  - opzione A: contiene spazio prima della punteggiatura
-  - opzione B: contiene spazio prima della punteggiatura
-  - opzione C: contiene spazio prima della punteggiatura
-  - opzione D: contiene spazio prima della punteggiatura
-  - spiegazione: contiene spazio prima della punteggiatura
-- **LOG-VER-AV-0103** — Completa l'analogia: biblioteca : libri = pinacoteca : ?
-  - domanda: contiene spazio prima della punteggiatura
-
-## Ragionamento astratto.backup prima consolidamento 10
-
-File: `data/logica/ragionamento_astratto.backup_prima_consolidamento_10.json`
-File trovato: **True**
-Domande totali: **3**
-Livelli: `{'facile': 1, 'intermedio': 1, 'avanzato': 1}`
-Categorie: `{'logica': 3}`
-Posizione risposta corretta nel sorgente: `{'A': 3}`
-Problemi tecnici: **0**
-Avvisi qualità reali: **0**
 Errori linguistici: **0**
-Note informative: **0**
+Note informative: **1**
 Duplicati identici: **0**
 Domande molto simili: **0**
 
@@ -245,29 +188,8 @@ Categorie: `{'logica': 10}`
 Posizione risposta corretta nel sorgente: `{'A': 10}`
 Problemi tecnici: **0**
 Avvisi qualità reali: **0**
-Errori linguistici: **2**
-Note informative: **1**
-Duplicati identici: **0**
-Domande molto simili: **0**
-
-### Errori linguistici
-
-- **LOG-AST-INT-0101** — Una sequenza alterna numero di lati così: triangolo, quadrato, pentagono, esagono, ?. Quale forma segue?
-  - domanda: contiene spazio prima della punteggiatura
-  - domanda: manca spazio dopo la punteggiatura
-
-## Ragionamento critico.backup prima consolidamento 10
-
-File: `data/logica/ragionamento_critico.backup_prima_consolidamento_10.json`
-File trovato: **True**
-Domande totali: **3**
-Livelli: `{'facile': 1, 'intermedio': 1, 'avanzato': 1}`
-Categorie: `{'logica': 3}`
-Posizione risposta corretta nel sorgente: `{'A': 3}`
-Problemi tecnici: **0**
-Avvisi qualità reali: **0**
 Errori linguistici: **0**
-Note informative: **2**
+Note informative: **1**
 Duplicati identici: **0**
 Domande molto simili: **0**
 
@@ -280,16 +202,9 @@ Livelli: `{'facile': 3, 'intermedio': 4, 'avanzato': 3}`
 Categorie: `{'logica': 10}`
 Posizione risposta corretta nel sorgente: `{'A': 10}`
 Problemi tecnici: **0**
-Avvisi qualità reali: **2**
+Avvisi qualità reali: **0**
 Errori linguistici: **0**
 Note informative: **7**
 Duplicati identici: **0**
 Domande molto simili: **0**
-
-### Avvisi qualità reali
-
-- **LOG-CRI-FAC-0102** — Se oggi piove, Marco prende l'ombrello. Oggi piove. Cosa si può concludere?
-  - Possibile distrattore troppo assoluto: contiene “sempre”
-- **LOG-CRI-INT-0102** — Se un'app supera tutti i test, viene pubblicata. L'app non viene pubblicata. Quale conclusione è logicamente corretta?
-  - Possibile distrattore troppo assoluto: contiene “mai”
 

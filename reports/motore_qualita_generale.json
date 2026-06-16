@@ -1552,55 +1552,6 @@
     "domande_simili": []
   },
   {
-    "nome": "Logica numerica.backup prima consolidamento 10",
-    "percorso": "data/logica/logica_numerica.backup_prima_consolidamento_10.json",
-    "file_esiste": true,
-    "errore_file": "",
-    "totale_domande": 3,
-    "livelli": {
-      "facile": 1,
-      "intermedio": 1,
-      "avanzato": 1
-    },
-    "categorie": {
-      "logica": 3
-    },
-    "posizioni_risposta": {
-      "A": 3
-    },
-    "problemi_tecnici_totali": 0,
-    "avvisi_qualita_reali_totali": 0,
-    "errori_linguistici_totali": 0,
-    "note_informative_totali": 1,
-    "domande_con_problemi_tecnici": [],
-    "domande_con_avvisi_qualita_reali": [],
-    "domande_con_errori_linguistici": [],
-    "domande_con_note_informative": [
-      {
-        "id": "LOG-NUM-INT-0002",
-        "domanda": "Completa la serie: 2, 9, 4, 12, 6, 15, ?",
-        "categoria": "logica",
-        "livello": "intermedio",
-        "opzioni": [
-          "8",
-          "18",
-          "9",
-          "16"
-        ],
-        "risposta_corretta": "8",
-        "posizione_risposta": "A",
-        "problemi_tecnici": [],
-        "avvisi_qualita_reali": [],
-        "errori_linguistici": [],
-        "note_informative": [
-          "spiegazione: testo molto lungo, controllare leggibilità"
-        ]
-      }
-    ],
-    "duplicati_identici": {},
-    "domande_simili": []
-  },
-  {
     "nome": "Logica numerica",
     "percorso": "data/logica/logica_numerica.json",
     "file_esiste": true,
@@ -1650,34 +1601,6 @@
     "domande_simili": []
   },
   {
-    "nome": "Logica verbale.backup prima consolidamento 10",
-    "percorso": "data/logica/logica_verbale.backup_prima_consolidamento_10.json",
-    "file_esiste": true,
-    "errore_file": "",
-    "totale_domande": 3,
-    "livelli": {
-      "facile": 1,
-      "intermedio": 1,
-      "avanzato": 1
-    },
-    "categorie": {
-      "logica": 3
-    },
-    "posizioni_risposta": {
-      "A": 3
-    },
-    "problemi_tecnici_totali": 0,
-    "avvisi_qualita_reali_totali": 0,
-    "errori_linguistici_totali": 0,
-    "note_informative_totali": 0,
-    "domande_con_problemi_tecnici": [],
-    "domande_con_avvisi_qualita_reali": [],
-    "domande_con_errori_linguistici": [],
-    "domande_con_note_informative": [],
-    "duplicati_identici": {},
-    "domande_simili": []
-  },
-  {
     "nome": "Logica verbale",
     "percorso": "data/logica/logica_verbale.json",
     "file_esiste": true,
@@ -1696,57 +1619,11 @@
     },
     "problemi_tecnici_totali": 0,
     "avvisi_qualita_reali_totali": 0,
-    "errori_linguistici_totali": 7,
+    "errori_linguistici_totali": 0,
     "note_informative_totali": 1,
     "domande_con_problemi_tecnici": [],
     "domande_con_avvisi_qualita_reali": [],
-    "domande_con_errori_linguistici": [
-      {
-        "id": "LOG-VER-INT-0102",
-        "domanda": "Quale coppia mantiene la stessa relazione di: seme : pianta?",
-        "categoria": "logica",
-        "livello": "intermedio",
-        "opzioni": [
-          "uovo : uccello",
-          "germoglio : pianta",
-          "foglia : ramo",
-          "frutto : albero"
-        ],
-        "risposta_corretta": "uovo : uccello",
-        "posizione_risposta": "A",
-        "problemi_tecnici": [],
-        "avvisi_qualita_reali": [],
-        "errori_linguistici": [
-          "domanda: contiene spazio prima della punteggiatura",
-          "opzione A: contiene spazio prima della punteggiatura",
-          "opzione B: contiene spazio prima della punteggiatura",
-          "opzione C: contiene spazio prima della punteggiatura",
-          "opzione D: contiene spazio prima della punteggiatura",
-          "spiegazione: contiene spazio prima della punteggiatura"
-        ],
-        "note_informative": []
-      },
-      {
-        "id": "LOG-VER-AV-0103",
-        "domanda": "Completa l'analogia: biblioteca : libri = pinacoteca : ?",
-        "categoria": "logica",
-        "livello": "avanzato",
-        "opzioni": [
-          "quadri",
-          "cataloghi",
-          "sculture",
-          "cornici"
-        ],
-        "risposta_corretta": "quadri",
-        "posizione_risposta": "A",
-        "problemi_tecnici": [],
-        "avvisi_qualita_reali": [],
-        "errori_linguistici": [
-          "domanda: contiene spazio prima della punteggiatura"
-        ],
-        "note_informative": []
-      }
-    ],
+    "domande_con_errori_linguistici": [],
     "domande_con_note_informative": [
       {
         "id": "LOG-VER-INT-0004",
@@ -1773,34 +1650,6 @@
     "domande_simili": []
   },
   {
-    "nome": "Ragionamento astratto.backup prima consolidamento 10",
-    "percorso": "data/logica/ragionamento_astratto.backup_prima_consolidamento_10.json",
-    "file_esiste": true,
-    "errore_file": "",
-    "totale_domande": 3,
-    "livelli": {
-      "facile": 1,
-      "intermedio": 1,
-      "avanzato": 1
-    },
-    "categorie": {
-      "logica": 3
-    },
-    "posizioni_risposta": {
-      "A": 3
-    },
-    "problemi_tecnici_totali": 0,
-    "avvisi_qualita_reali_totali": 0,
-    "errori_linguistici_totali": 0,
-    "note_informative_totali": 0,
-    "domande_con_problemi_tecnici": [],
-    "domande_con_avvisi_qualita_reali": [],
-    "domande_con_errori_linguistici": [],
-    "domande_con_note_informative": [],
-    "duplicati_identici": {},
-    "domande_simili": []
-  },
-  {
     "nome": "Ragionamento astratto",
     "percorso": "data/logica/ragionamento_astratto.json",
     "file_esiste": true,
@@ -1819,33 +1668,11 @@
     },
     "problemi_tecnici_totali": 0,
     "avvisi_qualita_reali_totali": 0,
-    "errori_linguistici_totali": 2,
+    "errori_linguistici_totali": 0,
     "note_informative_totali": 1,
     "domande_con_problemi_tecnici": [],
     "domande_con_avvisi_qualita_reali": [],
-    "domande_con_errori_linguistici": [
-      {
-        "id": "LOG-AST-INT-0101",
-        "domanda": "Una sequenza alterna numero di lati così: triangolo, quadrato, pentagono, esagono, ?. Quale forma segue?",
-        "categoria": "logica",
-        "livello": "intermedio",
-        "opzioni": [
-          "ettagono",
-          "esagono",
-          "ottagono",
-          "pentagono"
-        ],
-        "risposta_corretta": "ettagono",
-        "posizione_risposta": "A",
-        "problemi_tecnici": [],
-        "avvisi_qualita_reali": [],
-        "errori_linguistici": [
-          "domanda: contiene spazio prima della punteggiatura",
-          "domanda: manca spazio dopo la punteggiatura"
-        ],
-        "note_informative": []
-      }
-    ],
+    "domande_con_errori_linguistici": [],
     "domande_con_note_informative": [
       {
         "id": "LOG-AST-AV-0103",
@@ -1872,75 +1699,6 @@
     "domande_simili": []
   },
   {
-    "nome": "Ragionamento critico.backup prima consolidamento 10",
-    "percorso": "data/logica/ragionamento_critico.backup_prima_consolidamento_10.json",
-    "file_esiste": true,
-    "errore_file": "",
-    "totale_domande": 3,
-    "livelli": {
-      "facile": 1,
-      "intermedio": 1,
-      "avanzato": 1
-    },
-    "categorie": {
-      "logica": 3
-    },
-    "posizioni_risposta": {
-      "A": 3
-    },
-    "problemi_tecnici_totali": 0,
-    "avvisi_qualita_reali_totali": 0,
-    "errori_linguistici_totali": 0,
-    "note_informative_totali": 2,
-    "domande_con_problemi_tecnici": [],
-    "domande_con_avvisi_qualita_reali": [],
-    "domande_con_errori_linguistici": [],
-    "domande_con_note_informative": [
-      {
-        "id": "LOG-CRI-FAC-0001",
-        "domanda": "Tutti i treni della linea A arrivano in stazione. Il treno 25 è della linea A. Cosa si può concludere?",
-        "categoria": "logica",
-        "livello": "facile",
-        "opzioni": [
-          "Il treno 25 arriva in stazione",
-          "Il treno 25 arriva in stazione solo se è in orario",
-          "Tutti i treni che arrivano in stazione sono della linea A",
-          "Solo il treno 25 della linea A arriva in stazione"
-        ],
-        "risposta_corretta": "Il treno 25 arriva in stazione",
-        "posizione_risposta": "A",
-        "problemi_tecnici": [],
-        "avvisi_qualita_reali": [],
-        "errori_linguistici": [],
-        "note_informative": [
-          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “tutti”"
-        ]
-      },
-      {
-        "id": "LOG-CRI-AV-0003",
-        "domanda": "Un negozio afferma: 'Tutti i prodotti scontati sono esposti nello scaffale rosso'. Un cliente trova un prodotto nello scaffale rosso. Quale conclusione è logicamente corretta?",
-        "categoria": "logica",
-        "livello": "avanzato",
-        "opzioni": [
-          "Non è certo che il prodotto sia scontato",
-          "Il prodotto è sicuramente scontato perché si trova nello scaffale rosso",
-          "Tutti i prodotti nello scaffale rosso sono sicuramente scontati",
-          "Nessun prodotto non scontato può trovarsi nello scaffale rosso"
-        ],
-        "risposta_corretta": "Non è certo che il prodotto sia scontato",
-        "posizione_risposta": "A",
-        "problemi_tecnici": [],
-        "avvisi_qualita_reali": [],
-        "errori_linguistici": [],
-        "note_informative": [
-          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “tutti”"
-        ]
-      }
-    ],
-    "duplicati_identici": {},
-    "domande_simili": []
-  },
-  {
     "nome": "Ragionamento critico",
     "percorso": "data/logica/ragionamento_critico.json",
     "file_esiste": true,
@@ -1958,54 +1716,11 @@
       "A": 10
     },
     "problemi_tecnici_totali": 0,
-    "avvisi_qualita_reali_totali": 2,
+    "avvisi_qualita_reali_totali": 0,
     "errori_linguistici_totali": 0,
     "note_informative_totali": 7,
     "domande_con_problemi_tecnici": [],
-    "domande_con_avvisi_qualita_reali": [
-      {
-        "id": "LOG-CRI-FAC-0102",
-        "domanda": "Se oggi piove, Marco prende l'ombrello. Oggi piove. Cosa si può concludere?",
-        "categoria": "logica",
-        "livello": "facile",
-        "opzioni": [
-          "Marco prende l'ombrello",
-          "Marco prende l'ombrello solo se piove molto forte",
-          "Oggi non piove",
-          "Marco prende sempre l'ombrello"
-        ],
-        "risposta_corretta": "Marco prende l'ombrello",
-        "posizione_risposta": "A",
-        "problemi_tecnici": [],
-        "avvisi_qualita_reali": [
-          "Possibile distrattore troppo assoluto: contiene “sempre”"
-        ],
-        "errori_linguistici": [],
-        "note_informative": []
-      },
-      {
-        "id": "LOG-CRI-INT-0102",
-        "domanda": "Se un'app supera tutti i test, viene pubblicata. L'app non viene pubblicata. Quale conclusione è logicamente corretta?",
-        "categoria": "logica",
-        "livello": "intermedio",
-        "opzioni": [
-          "L'app non ha superato tutti i test",
-          "L'app potrebbe aver superato tutti i test anche se non viene pubblicata",
-          "I test non sono mai stati eseguiti",
-          "Ogni app pubblicata supera i test"
-        ],
-        "risposta_corretta": "L'app non ha superato tutti i test",
-        "posizione_risposta": "A",
-        "problemi_tecnici": [],
-        "avvisi_qualita_reali": [
-          "Possibile distrattore troppo assoluto: contiene “mai”"
-        ],
-        "errori_linguistici": [],
-        "note_informative": [
-          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “tutti”"
-        ]
-      }
-    ],
+    "domande_con_avvisi_qualita_reali": [],
     "domande_con_errori_linguistici": [],
     "domande_con_note_informative": [
       {
@@ -2136,15 +1851,13 @@
         "opzioni": [
           "L'app non ha superato tutti i test",
           "L'app potrebbe aver superato tutti i test anche se non viene pubblicata",
-          "I test non sono mai stati eseguiti",
+          "L'app può essere stata bloccata per motivi indipendenti dai test",
           "Ogni app pubblicata supera i test"
         ],
         "risposta_corretta": "L'app non ha superato tutti i test",
         "posizione_risposta": "A",
         "problemi_tecnici": [],
-        "avvisi_qualita_reali": [
-          "Possibile distrattore troppo assoluto: contiene “mai”"
-        ],
+        "avvisi_qualita_reali": [],
         "errori_linguistici": [],
         "note_informative": [
           "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “tutti”"

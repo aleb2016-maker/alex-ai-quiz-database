@@ -4,7 +4,7 @@
     "categoria": "logica",
     "sottocategoria": "logica_verbale",
     "livello": "facile",
-    "domanda": "Osserva la sequenza: AB → BA, CD → DC, EF → ?",
+    "domanda": "Osserva la sequenza: AB → BA, CD → DC, EF →?",
     "opzioni": [
       "FE",
       "EF",
@@ -27,7 +27,7 @@
     "categoria": "logica",
     "sottocategoria": "logica_verbale",
     "livello": "intermedio",
-    "domanda": "Completa l'analogia: penna sta a scrivere come forbici stanno a ?",
+    "domanda": "Completa l'analogia: penna sta a scrivere come forbici stanno a?",
     "opzioni": [
       "tagliare",
       "incollare",
@@ -187,22 +187,22 @@
     "categoria": "logica",
     "sottocategoria": "logica_verbale",
     "livello": "intermedio",
-    "domanda": "Quale coppia mantiene la stessa relazione di: seme : pianta?",
+    "domanda": "Quale coppia mantiene la stessa relazione di: seme sta a pianta?",
     "opzioni": [
-      "uovo : uccello",
-      "germoglio : pianta",
-      "foglia : ramo",
-      "frutto : albero"
+      "uovo: uccello",
+      "germoglio: pianta",
+      "foglia: ramo",
+      "frutto: albero"
     ],
-    "risposta_corretta": "uovo : uccello",
-    "spiegazione": "Dal seme può svilupparsi una pianta. In modo simile, dall'uovo può svilupparsi un uccello. Germoglio : pianta è vicino, ma rappresenta una fase già successiva allo sviluppo iniziale, mentre seme e uovo sono punti di origine.",
+    "risposta_corretta": "uovo: uccello",
+    "spiegazione": "Dal seme può svilupparsi una pianta. In modo simile, dall'uovo può svilupparsi un uccello. Germoglio: pianta è vicino, ma rappresenta una fase già successiva allo sviluppo iniziale, mentre seme e uovo sono punti di origine.",
     "tags": [
       "analogie",
       "relazioni",
       "logica_verbale"
     ],
     "difficolta": 2,
-    "distrattore_forte": "germoglio : pianta",
+    "distrattore_forte": "germoglio: pianta",
     "motivo_distrattore_forte": "È vicino perché anche il germoglio può diventare una pianta, ma è sbagliato rispetto all'analogia più precisa: seme e uovo sono elementi iniziali da cui nasce lo sviluppo."
   },
   {
@@ -210,7 +210,7 @@
     "categoria": "logica",
     "livello": "avanzato",
     "difficolta": "avanzato",
-    "domanda": "Completa l'analogia: biblioteca : libri = pinacoteca : ?",
+    "domanda": "Completa l'analogia: biblioteca sta a libri come pinacoteca sta a quale parola?",
     "opzioni": [
       "quadri",
       "cataloghi",
