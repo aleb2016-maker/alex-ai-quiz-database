@@ -1,4 +1,4 @@
-const DATA_URL = "../dist/database_quiz_finale.json?v=logica-visiva-40-fix-finale";
+const DATA_URL = "../dist/database_quiz_finale.json?v=ai-its-440-completo";
 
 let databaseQuiz = [];
 let domandeTest = [];
