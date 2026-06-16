@@ -5264,9 +5264,9 @@
     "difficolta": 1,
     "distrattore_forte": "15",
     "motivo_distrattore_forte": "È vicino perché è molto vicino al valore corretto, ma sbaglia la sequenza: si aggiunge sempre 3, quindi dopo 13 viene 16.",
-    "_materia_demo": "Logica numerica",
+    "_materia_demo": "Logica",
     "_file_origine": "data/logica/logica_numerica.json",
-    "materia": "Logica numerica"
+    "materia": "Logica"
   },
   {
     "id": "LOG-NUM-INT-0002",
@@ -5290,9 +5290,9 @@
     "difficolta": 2,
     "distrattore_forte": "18",
     "motivo_distrattore_forte": "È vicino perché continua correttamente la sottosequenza 9, 12, 15 aggiungendo 3, ma è sbagliato perché il prossimo posto della serie appartiene alla sottosequenza dispari 2, 4, 6, quindi deve essere 8.",
-    "_materia_demo": "Logica numerica",
+    "_materia_demo": "Logica",
     "_file_origine": "data/logica/logica_numerica.json",
-    "materia": "Logica numerica"
+    "materia": "Logica"
   },
   {
     "id": "LOG-NUM-AV-0003",
@@ -5316,9 +5316,9 @@
     "difficolta": 3,
     "distrattore_forte": "44",
     "motivo_distrattore_forte": "È vicino perché continua con +4, una regola presente nella sequenza, ma sbaglia perché la sequenza alterna +4 e ×2: dopo 40 bisogna fare ×2.",
-    "_materia_demo": "Logica numerica",
+    "_materia_demo": "Logica",
     "_file_origine": "data/logica/logica_numerica.json",
-    "materia": "Logica numerica"
+    "materia": "Logica"
   },
   {
     "id": "LOG-NUM-AV-0004",
@@ -5342,9 +5342,9 @@
     "difficolta": 3,
     "distrattore_forte": "42",
     "motivo_distrattore_forte": "È vicino perché sembra continuare dopo 41 aumentando ancora, ma la sequenza alterna un aumento e poi -1: dopo 41 viene 40.",
-    "_materia_demo": "Logica numerica",
+    "_materia_demo": "Logica",
     "_file_origine": "data/logica/logica_numerica.json",
-    "materia": "Logica numerica"
+    "materia": "Logica"
   },
   {
     "id": "LOG-NUM-FAC-0101",
@@ -5368,9 +5368,9 @@
     "difficolta": 1,
     "distrattore_forte": "16",
     "motivo_distrattore_forte": "È vicino perché usa lo stesso ritmo di 4 pezzi al minuto, ma calcola 4 × 4 invece di 4 × 5.",
-    "_materia_demo": "Logica numerica",
+    "_materia_demo": "Logica",
     "_file_origine": "data/logica/logica_numerica.json",
-    "materia": "Logica numerica"
+    "materia": "Logica"
   },
   {
     "id": "LOG-NUM-INT-0101",
@@ -5394,9 +5394,9 @@
     "difficolta": 2,
     "distrattore_forte": "46",
     "motivo_distrattore_forte": "È vicino perché sembra derivare dal raddoppio finale di 23, ma dimentica il +1 dell'ultimo passaggio: 23 × 2 + 1 = 47.",
-    "_materia_demo": "Logica numerica",
+    "_materia_demo": "Logica",
     "_file_origine": "data/logica/logica_numerica.json",
-    "materia": "Logica numerica"
+    "materia": "Logica"
   },
   {
     "id": "LOG-NUM-AV-0101",
@@ -5420,9 +5420,9 @@
     "difficolta": 3,
     "distrattore_forte": "35",
     "motivo_distrattore_forte": "È vicino perché è molto prossimo a 36, ma è sbagliato perché non è un quadrato perfetto della sequenza.",
-    "_materia_demo": "Logica numerica",
+    "_materia_demo": "Logica",
     "_file_origine": "data/logica/logica_numerica.json",
-    "materia": "Logica numerica"
+    "materia": "Logica"
   },
   {
     "id": "LOG-NUM-FAC-0102",
@@ -5446,9 +5446,9 @@
     "difficolta": 1,
     "distrattore_forte": "24",
     "motivo_distrattore_forte": "È vicino perché segue correttamente i raddoppi, ma si ferma al terzo raddoppio invece di arrivare al quarto.",
-    "_materia_demo": "Logica numerica",
+    "_materia_demo": "Logica",
     "_file_origine": "data/logica/logica_numerica.json",
-    "materia": "Logica numerica"
+    "materia": "Logica"
   },
   {
     "id": "LOG-NUM-INT-0102",
@@ -5472,9 +5472,9 @@
     "difficolta": 2,
     "distrattore_forte": "13",
     "motivo_distrattore_forte": "È vicino perché continua a diminuire la sequenza, ma usa una sottrazione di 5 invece della sottrazione corretta di 6.",
-    "_materia_demo": "Logica numerica",
+    "_materia_demo": "Logica",
     "_file_origine": "data/logica/logica_numerica.json",
-    "materia": "Logica numerica"
+    "materia": "Logica"
   },
   {
     "id": "LOG-NUM-AV-0102",
@@ -5498,9 +5498,9 @@
     "difficolta": 3,
     "distrattore_forte": "40",
     "motivo_distrattore_forte": "È vicino perché aggiunge ancora 10 all'ultimo valore noto, ma è sbagliato perché la differenza deve aumentare a 12.",
-    "_materia_demo": "Logica numerica",
+    "_materia_demo": "Logica",
     "_file_origine": "data/logica/logica_numerica.json",
-    "materia": "Logica numerica"
+    "materia": "Logica"
   },
   {
     "id": "LOG-NUM-0201",
@@ -5516,9 +5516,9 @@
     ],
     "risposta_corretta": "63",
     "spiegazione": "La risposta corretta è A. Ogni numero si ottiene moltiplicando il precedente per 2 e aggiungendo 1: 3 diventa 7, 7 diventa 15, 15 diventa 31, quindi 31 × 2 + 1 = 63.",
-    "_materia_demo": "Logica numerica",
+    "_materia_demo": "Logica",
     "_file_origine": "data/logica/logica_numerica.json",
-    "materia": "Logica numerica"
+    "materia": "Logica"
   },
   {
     "id": "LOG-NUM-0202",
@@ -5534,9 +5534,9 @@
     ],
     "risposta_corretta": "42",
     "spiegazione": "La risposta corretta è A. Le differenze sono 4, 6, 8 e 10. La differenza successiva è 12, quindi 30 + 12 = 42.",
-    "_materia_demo": "Logica numerica",
+    "_materia_demo": "Logica",
     "_file_origine": "data/logica/logica_numerica.json",
-    "materia": "Logica numerica"
+    "materia": "Logica"
   },
   {
     "id": "LOG-NUM-0203",
@@ -5552,9 +5552,9 @@
     ],
     "risposta_corretta": "1",
     "spiegazione": "La risposta corretta è A. Ogni numero viene diviso per 3: 81 diventa 27, 27 diventa 9, 9 diventa 3, quindi 3 diventa 1.",
-    "_materia_demo": "Logica numerica",
+    "_materia_demo": "Logica",
     "_file_origine": "data/logica/logica_numerica.json",
-    "materia": "Logica numerica"
+    "materia": "Logica"
   },
   {
     "id": "LOG-NUM-0204",
@@ -5570,9 +5570,9 @@
     ],
     "risposta_corretta": "37",
     "spiegazione": "La risposta corretta è A. La regola alterna più 3 e per 2: 4 + 3 = 7, 7 × 2 = 14, 14 + 3 = 17, 17 × 2 = 34, quindi 34 + 3 = 37.",
-    "_materia_demo": "Logica numerica",
+    "_materia_demo": "Logica",
     "_file_origine": "data/logica/logica_numerica.json",
-    "materia": "Logica numerica"
+    "materia": "Logica"
   },
   {
     "id": "LOG-NUM-0205",
@@ -5588,9 +5588,9 @@
     ],
     "risposta_corretta": "14",
     "spiegazione": "La risposta corretta è A. C vale 6 e D vale 8, quindi C più D vale 6 + 8 = 14.",
-    "_materia_demo": "Logica numerica",
+    "_materia_demo": "Logica",
     "_file_origine": "data/logica/logica_numerica.json",
-    "materia": "Logica numerica"
+    "materia": "Logica"
   },
   {
     "id": "LOG-NUM-0206",
@@ -5606,9 +5606,9 @@
     ],
     "risposta_corretta": "95",
     "spiegazione": "La risposta corretta è A. Ogni numero si ottiene moltiplicando il precedente per 2 e aggiungendo 1: 5 diventa 11, 11 diventa 23, 23 diventa 47, quindi 47 × 2 + 1 = 95.",
-    "_materia_demo": "Logica numerica",
+    "_materia_demo": "Logica",
     "_file_origine": "data/logica/logica_numerica.json",
-    "materia": "Logica numerica"
+    "materia": "Logica"
   },
   {
     "id": "LOG-NUM-0207",
@@ -5624,9 +5624,9 @@
     ],
     "risposta_corretta": "40",
     "spiegazione": "La risposta corretta è A. Le sottrazioni aumentano di 4: meno 4, meno 8, meno 12, meno 16. La sottrazione successiva è meno 20, quindi 60 - 20 = 40.",
-    "_materia_demo": "Logica numerica",
+    "_materia_demo": "Logica",
     "_file_origine": "data/logica/logica_numerica.json",
-    "materia": "Logica numerica"
+    "materia": "Logica"
   },
   {
     "id": "LOG-NUM-0208",
@@ -5642,9 +5642,9 @@
     ],
     "risposta_corretta": "21",
     "spiegazione": "La risposta corretta è A. Ogni termine è la somma dei due precedenti: 2 + 3 = 5, 3 + 5 = 8, 5 + 8 = 13, quindi 8 + 13 = 21.",
-    "_materia_demo": "Logica numerica",
+    "_materia_demo": "Logica",
     "_file_origine": "data/logica/logica_numerica.json",
-    "materia": "Logica numerica"
+    "materia": "Logica"
   },
   {
     "id": "LOG-NUM-0209",
@@ -5660,9 +5660,9 @@
     ],
     "risposta_corretta": "72",
     "spiegazione": "La risposta corretta è A. La regola è n moltiplicato per n più 1: 2 × 3 = 6, 4 × 5 = 20, 6 × 7 = 42, quindi 8 × 9 = 72.",
-    "_materia_demo": "Logica numerica",
+    "_materia_demo": "Logica",
     "_file_origine": "data/logica/logica_numerica.json",
-    "materia": "Logica numerica"
+    "materia": "Logica"
   },
   {
     "id": "LOG-NUM-0210",
@@ -5678,9 +5678,9 @@
     ],
     "risposta_corretta": "94",
     "spiegazione": "La risposta corretta è A. Ogni termine si ottiene raddoppiando il precedente e aggiungendo 2: 1 diventa 4, 4 diventa 10, 10 diventa 22, 22 diventa 46, quindi 46 × 2 + 2 = 94.",
-    "_materia_demo": "Logica numerica",
+    "_materia_demo": "Logica",
     "_file_origine": "data/logica/logica_numerica.json",
-    "materia": "Logica numerica"
+    "materia": "Logica"
   },
   {
     "id": "LOG-VER-FAC-0001",
@@ -5704,9 +5704,9 @@
     "difficolta": 1,
     "distrattore_forte": "EF",
     "motivo_distrattore_forte": "È vicino perché contiene le stesse due lettere della coppia di partenza, ma è sbagliato perché non le inverte.",
-    "_materia_demo": "Logica verbale",
+    "_materia_demo": "Logica",
     "_file_origine": "data/logica/logica_verbale.json",
-    "materia": "Logica verbale"
+    "materia": "Logica"
   },
   {
     "id": "LOG-VER-INT-0002",
@@ -5730,9 +5730,9 @@
     "difficolta": 2,
     "distrattore_forte": "incollare",
     "motivo_distrattore_forte": "È vicino perché è un'azione manuale spesso collegata a carta, forbici e lavori pratici, ma è sbagliato perché la funzione principale delle forbici è tagliare, non incollare.",
-    "_materia_demo": "Logica verbale",
+    "_materia_demo": "Logica",
     "_file_origine": "data/logica/logica_verbale.json",
-    "materia": "Logica verbale"
+    "materia": "Logica"
   },
   {
     "id": "LOG-VER-AV-0003",
@@ -5756,9 +5756,9 @@
     "difficolta": 3,
     "distrattore_forte": "prova → verdetto",
     "motivo_distrattore_forte": "È vicino perché collega un elemento osservato a una conclusione, ma è sbagliato perché prova e verdetto indicano un rapporto più forte e conclusivo rispetto a sintomo e diagnosi.",
-    "_materia_demo": "Logica verbale",
+    "_materia_demo": "Logica",
     "_file_origine": "data/logica/logica_verbale.json",
-    "materia": "Logica verbale"
+    "materia": "Logica"
   },
   {
     "id": "LOG-VER-INT-0004",
@@ -5781,9 +5781,9 @@
     "difficolta": 2,
     "distrattore_forte": "bozza → revisione",
     "motivo_distrattore_forte": "È vicino perché riguarda il miglioramento di una bozza, ma è sbagliato perché la revisione è una fase intermedia, non il prodotto finale equivalente.",
-    "_materia_demo": "Logica verbale",
+    "_materia_demo": "Logica",
     "_file_origine": "data/logica/logica_verbale.json",
-    "materia": "Logica verbale"
+    "materia": "Logica"
   },
   {
     "id": "LOG-VER-FAC-0101",
@@ -5807,9 +5807,9 @@
     "difficolta": 1,
     "distrattore_forte": "piccolo",
     "motivo_distrattore_forte": "È vicino perché riguarda una grandezza o dimensione, ma è sbagliato perché il contrario diretto di alto è basso, non piccolo.",
-    "_materia_demo": "Logica verbale",
+    "_materia_demo": "Logica",
     "_file_origine": "data/logica/logica_verbale.json",
-    "materia": "Logica verbale"
+    "materia": "Logica"
   },
   {
     "id": "LOG-VER-INT-0101",
@@ -5833,9 +5833,9 @@
     "difficolta": 2,
     "distrattore_forte": "classe",
     "motivo_distrattore_forte": "È vicino perché l'insegnante lavora spesso in classe, ma la relazione più generale equivalente a medico → ospedale è insegnante → scuola.",
-    "_materia_demo": "Logica verbale",
+    "_materia_demo": "Logica",
     "_file_origine": "data/logica/logica_verbale.json",
-    "materia": "Logica verbale"
+    "materia": "Logica"
   },
   {
     "id": "LOG-VER-AV-0101",
@@ -5859,9 +5859,9 @@
     "difficolta": 3,
     "distrattore_forte": "interrogazione",
     "motivo_distrattore_forte": "È vicino perché è collegata allo studio, ma è sbagliato perché l'interrogazione è una verifica, mentre l'apprendimento è il risultato dello studio.",
-    "_materia_demo": "Logica verbale",
+    "_materia_demo": "Logica",
     "_file_origine": "data/logica/logica_verbale.json",
-    "materia": "Logica verbale"
+    "materia": "Logica"
   },
   {
     "id": "LOG-VER-FAC-0102",
@@ -5885,9 +5885,9 @@
     "difficolta": 1,
     "distrattore_forte": "armadio",
     "motivo_distrattore_forte": "È vicino perché è comunque un oggetto della casa, ma è sbagliato perché appartiene al gruppo dei mobili come tavolo e sedia.",
-    "_materia_demo": "Logica verbale",
+    "_materia_demo": "Logica",
     "_file_origine": "data/logica/logica_verbale.json",
-    "materia": "Logica verbale"
+    "materia": "Logica"
   },
   {
     "id": "LOG-VER-INT-0102",
@@ -5911,9 +5911,9 @@
     "difficolta": 2,
     "distrattore_forte": "germoglio: pianta",
     "motivo_distrattore_forte": "È vicino perché anche il germoglio può diventare una pianta, ma è sbagliato rispetto all'analogia più precisa: seme e uovo sono elementi iniziali da cui nasce lo sviluppo.",
-    "_materia_demo": "Logica verbale",
+    "_materia_demo": "Logica",
     "_file_origine": "data/logica/logica_verbale.json",
-    "materia": "Logica verbale"
+    "materia": "Logica"
   },
   {
     "id": "LOG-VER-AV-0103",
@@ -5931,9 +5931,9 @@
     "spiegazione": "Una biblioteca è un luogo in cui si raccolgono e consultano libri. Una pinacoteca è un luogo in cui si raccolgono ed espongono quadri.",
     "distrattore_forte": "cataloghi",
     "motivo_distrattore_forte": "È plausibile perché può essere presente in una pinacoteca, ma non rappresenta l'oggetto principale dell'analogia.",
-    "_materia_demo": "Logica verbale",
+    "_materia_demo": "Logica",
     "_file_origine": "data/logica/logica_verbale.json",
-    "materia": "Logica verbale"
+    "materia": "Logica"
   },
   {
     "id": "LOG-VER-0201",
@@ -5949,9 +5949,9 @@
     ],
     "risposta_corretta": "Scuola",
     "spiegazione": "La risposta corretta è A. Il medico lavora tipicamente in ospedale; allo stesso modo, l'insegnante lavora tipicamente a scuola.",
-    "_materia_demo": "Logica verbale",
+    "_materia_demo": "Logica",
     "_file_origine": "data/logica/logica_verbale.json",
-    "materia": "Logica verbale"
+    "materia": "Logica"
   },
   {
     "id": "LOG-VER-0202",
@@ -5967,9 +5967,9 @@
     ],
     "risposta_corretta": "Robusto",
     "spiegazione": "La risposta corretta è A. Fragile indica qualcosa che si rompe facilmente; robusto indica qualcosa di resistente.",
-    "_materia_demo": "Logica verbale",
+    "_materia_demo": "Logica",
     "_file_origine": "data/logica/logica_verbale.json",
-    "materia": "Logica verbale"
+    "materia": "Logica"
   },
   {
     "id": "LOG-VER-0203",
@@ -5985,9 +5985,9 @@
     ],
     "risposta_corretta": "Rosa",
     "spiegazione": "La risposta corretta è A. Cane, gatto e leone sono animali; rosa è un fiore.",
-    "_materia_demo": "Logica verbale",
+    "_materia_demo": "Logica",
     "_file_origine": "data/logica/logica_verbale.json",
-    "materia": "Logica verbale"
+    "materia": "Logica"
   },
   {
     "id": "LOG-VER-0204",
@@ -6003,9 +6003,9 @@
     ],
     "risposta_corretta": "Prodotti",
     "spiegazione": "La risposta corretta è A. In biblioteca si trovano libri; in supermercato si trovano prodotti da acquistare.",
-    "_materia_demo": "Logica verbale",
+    "_materia_demo": "Logica",
     "_file_origine": "data/logica/logica_verbale.json",
-    "materia": "Logica verbale"
+    "materia": "Logica"
   },
   {
     "id": "LOG-VER-0205",
@@ -6021,9 +6021,9 @@
     ],
     "risposta_corretta": "Penna",
     "spiegazione": "La risposta corretta è A. Il pittore usa il pennello come strumento principale; lo scrittore usa la penna come strumento di scrittura.",
-    "_materia_demo": "Logica verbale",
+    "_materia_demo": "Logica",
     "_file_origine": "data/logica/logica_verbale.json",
-    "materia": "Logica verbale"
+    "materia": "Logica"
   },
   {
     "id": "LOG-VER-0206",
@@ -6039,9 +6039,9 @@
     ],
     "risposta_corretta": "Tutti i poeti sono scrittori",
     "spiegazione": "La risposta corretta è A. È l'unica affermazione garantita dalla premessa. Le altre aggiungono informazioni non dimostrate.",
-    "_materia_demo": "Logica verbale",
+    "_materia_demo": "Logica",
     "_file_origine": "data/logica/logica_verbale.json",
-    "materia": "Logica verbale"
+    "materia": "Logica"
   },
   {
     "id": "LOG-VER-0207",
@@ -6057,9 +6057,9 @@
     ],
     "risposta_corretta": "Preciso",
     "spiegazione": "La risposta corretta è A. Accurato significa fatto con attenzione e precisione.",
-    "_materia_demo": "Logica verbale",
+    "_materia_demo": "Logica",
     "_file_origine": "data/logica/logica_verbale.json",
-    "materia": "Logica verbale"
+    "materia": "Logica"
   },
   {
     "id": "LOG-VER-0208",
@@ -6075,9 +6075,9 @@
     ],
     "risposta_corretta": "Tutte le serre sono strutture chiuse",
     "spiegazione": "La risposta corretta è A. La prima premessa lo afferma direttamente. Non si può dedurre che tutte le serre siano riscaldate.",
-    "_materia_demo": "Logica verbale",
+    "_materia_demo": "Logica",
     "_file_origine": "data/logica/logica_verbale.json",
-    "materia": "Logica verbale"
+    "materia": "Logica"
   },
   {
     "id": "LOG-VER-0209",
@@ -6093,9 +6093,9 @@
     ],
     "risposta_corretta": "Allenamento e miglioramento",
     "spiegazione": "La risposta corretta è A. Lo studio può produrre preparazione, come l'allenamento può produrre miglioramento.",
-    "_materia_demo": "Logica verbale",
+    "_materia_demo": "Logica",
     "_file_origine": "data/logica/logica_verbale.json",
-    "materia": "Logica verbale"
+    "materia": "Logica"
   },
   {
     "id": "LOG-VER-0210",
@@ -6111,13 +6111,13 @@
     ],
     "risposta_corretta": "Per guidare serve la patente",
     "spiegazione": "La risposta corretta è A. La frase indica che la patente è necessaria per guidare legalmente. Le altre frasi non esprimono una condizione necessaria nello stesso modo.",
-    "_materia_demo": "Logica verbale",
+    "_materia_demo": "Logica",
     "_file_origine": "data/logica/logica_verbale.json",
-    "materia": "Logica verbale"
+    "materia": "Logica"
   },
   {
     "id": "LOG-VIS-FAC-0001",
-    "categoria": "logica",
+    "categoria": "logica_visiva",
     "sottocategoria": "logica_visiva",
     "tipo_domanda": "immagine",
     "livello": "facile",
@@ -6229,7 +6229,7 @@
   },
   {
     "id": "LOG-VIS-INT-0002",
-    "categoria": "logica",
+    "categoria": "logica_visiva",
     "sottocategoria": "logica_visiva",
     "tipo_domanda": "immagine",
     "livello": "intermedio",
@@ -6391,7 +6391,7 @@
   },
   {
     "id": "LOG-VIS-AV-0003",
-    "categoria": "logica",
+    "categoria": "logica_visiva",
     "sottocategoria": "logica_visiva",
     "tipo_domanda": "immagine",
     "livello": "avanzato",
@@ -6410,7 +6410,7 @@
       "assets/logica_visiva/log_vis_av_0003_D.png"
     ],
     "risposta_corretta": "D",
-    "spiegazione": "Corretta: triangolo pieno. Regola: ogni riga mantiene la forma e ogni colonna aumenta il riempimento.",
+    "spiegazione": "La risposta corretta è il triangolo pieno perché la forma resta un triangolo e il riempimento passa dalla figura non piena alla figura piena.",
     "tags": [
       "logica",
       "logica_visiva",
@@ -6590,7 +6590,7 @@
   },
   {
     "id": "LOG-VIS-FAC-0004",
-    "categoria": "logica",
+    "categoria": "logica_visiva",
     "sottocategoria": "logica_visiva",
     "livello": "facile",
     "tipo": "visiva",
@@ -6760,7 +6760,7 @@
   },
   {
     "id": "LOG-VIS-FAC-0005",
-    "categoria": "logica",
+    "categoria": "logica_visiva",
     "sottocategoria": "logica_visiva",
     "livello": "facile",
     "tipo": "visiva",
@@ -6923,7 +6923,7 @@
   },
   {
     "id": "LOG-VIS-FAC-0006",
-    "categoria": "logica",
+    "categoria": "logica_visiva",
     "sottocategoria": "logica_visiva",
     "livello": "facile",
     "tipo": "visiva",
@@ -7078,7 +7078,7 @@
   },
   {
     "id": "LOG-VIS-FAC-0007",
-    "categoria": "logica",
+    "categoria": "logica_visiva",
     "sottocategoria": "logica_visiva",
     "livello": "facile",
     "tipo": "visiva",
@@ -7236,7 +7236,7 @@
   },
   {
     "id": "LOG-VIS-FAC-0008",
-    "categoria": "logica",
+    "categoria": "logica_visiva",
     "sottocategoria": "logica_visiva",
     "livello": "facile",
     "tipo": "visiva",
@@ -7249,7 +7249,7 @@
       "D"
     ],
     "risposta_corretta": "A",
-    "spiegazione": "Corretta: triangolo verde con 3 pallini. Regola: la riga fissa forma/colore e la colonna porta i pallini a 3.",
+    "spiegazione": "La risposta corretta è il triangolo verde con 3 pallini perché la forma resta un triangolo, il colore resta verde e gli oggetti interni aumentano fino a 3 pallini.",
     "immagine": "assets/logica_visiva/LOG-VIS-FAC-0008_domanda.svg",
     "immagine_domanda": "assets/logica_visiva/LOG-VIS-FAC-0008_domanda.svg",
     "immagini_opzioni": [
@@ -7451,7 +7451,7 @@
   },
   {
     "id": "LOG-VIS-INT-0004",
-    "categoria": "logica",
+    "categoria": "logica_visiva",
     "sottocategoria": "logica_visiva",
     "livello": "intermedio",
     "tipo": "visiva",
@@ -7606,7 +7606,7 @@
   },
   {
     "id": "LOG-VIS-INT-0005",
-    "categoria": "logica",
+    "categoria": "logica_visiva",
     "sottocategoria": "logica_visiva",
     "livello": "intermedio",
     "tipo": "visiva",
@@ -7618,7 +7618,7 @@
       "D"
     ],
     "risposta_corretta": "B",
-    "spiegazione": "Corretta: triangolo verde con 3 pallini. Regola: terza riga = triangolo, terza colonna = 3 pallini verdi.",
+    "spiegazione": "La risposta corretta è il triangolo verde con 3 pallini perché la forma finale è un triangolo, il colore finale è verde e gli oggetti interni sono 3 pallini.",
     "immagine": "assets/logica_visiva/LOG-VIS-INT-0005_domanda.svg",
     "immagine_domanda": "assets/logica_visiva/LOG-VIS-INT-0005_domanda.svg",
     "immagini_opzioni": [
@@ -7821,7 +7821,7 @@
   },
   {
     "id": "LOG-VIS-INT-0006",
-    "categoria": "logica",
+    "categoria": "logica_visiva",
     "sottocategoria": "logica_visiva",
     "livello": "intermedio",
     "tipo": "visiva",
@@ -8032,7 +8032,7 @@
   },
   {
     "id": "LOG-VIS-INT-0007",
-    "categoria": "logica",
+    "categoria": "logica_visiva",
     "sottocategoria": "logica_visiva",
     "livello": "intermedio",
     "tipo": "visiva",
@@ -8246,7 +8246,7 @@
   },
   {
     "id": "LOG-VIS-INT-0008",
-    "categoria": "logica",
+    "categoria": "logica_visiva",
     "sottocategoria": "logica_visiva",
     "livello": "intermedio",
     "tipo": "visiva",
@@ -8528,7 +8528,7 @@
   },
   {
     "id": "LOG-VIS-AV-0004",
-    "categoria": "logica",
+    "categoria": "logica_visiva",
     "sottocategoria": "logica_visiva",
     "livello": "avanzato",
     "tipo": "visiva",
@@ -8540,7 +8540,7 @@
       "D"
     ],
     "risposta_corretta": "A",
-    "spiegazione": "Corretta: triangolo blu con 3 linee. Regola: ogni riga mantiene la forma, i colori alternano blu/rosso/blu e le linee aumentano di 1.",
+    "spiegazione": "La risposta corretta è il triangolo blu con 3 linee perché la forma resta un triangolo, il colore finale è blu e gli elementi interni aumentano fino a 3 linee.",
     "immagine": "assets/logica_visiva/LOG-VIS-AV-0004_domanda.svg",
     "immagine_domanda": "assets/logica_visiva/LOG-VIS-AV-0004_domanda.svg",
     "immagini_opzioni": [
@@ -8743,7 +8743,7 @@
   },
   {
     "id": "LOG-VIS-AV-0005",
-    "categoria": "logica",
+    "categoria": "logica_visiva",
     "sottocategoria": "logica_visiva",
     "livello": "avanzato",
     "tipo": "visiva",
@@ -8755,7 +8755,7 @@
       "D"
     ],
     "risposta_corretta": "C",
-    "spiegazione": "Corretta: esagono con 3 contorni e puntini. Regola: aumentano i contorni e la terza colonna ha puntini.",
+    "spiegazione": "La risposta corretta è l'esagono con 3 contorni e puntini perché la forma finale è un esagono con 6 lati, i contorni aumentano fino a 3 e sono presenti i puntini interni.",
     "immagine": "assets/logica_visiva/LOG-VIS-AV-0005_domanda.svg",
     "immagine_domanda": "assets/logica_visiva/LOG-VIS-AV-0005_domanda.svg",
     "immagini_opzioni": [
@@ -9049,7 +9049,7 @@
   },
   {
     "id": "LOG-VIS-AV-0006",
-    "categoria": "logica",
+    "categoria": "logica_visiva",
     "sottocategoria": "logica_visiva",
     "livello": "avanzato",
     "tipo": "visiva",
@@ -9260,7 +9260,7 @@
   },
   {
     "id": "LOG-VIS-AV-0007",
-    "categoria": "logica",
+    "categoria": "logica_visiva",
     "sottocategoria": "logica_visiva",
     "livello": "avanzato",
     "tipo": "visiva",
@@ -9272,7 +9272,7 @@
       "D"
     ],
     "risposta_corretta": "A",
-    "spiegazione": "Corretta: triangolo verde con 4 stelle. Regola: in ogni riga il terzo riquadro somma gli elementi dei primi due: 1 stella + 3 stelle = 4.",
+    "spiegazione": "La risposta corretta è il triangolo verde con 4 stelle perché la forma finale è un triangolo, il colore finale è verde e gli oggetti interni arrivano a 4 stelle.",
     "immagine": "assets/logica_visiva/LOG-VIS-AV-0007_domanda.svg",
     "immagine_domanda": "assets/logica_visiva/LOG-VIS-AV-0007_domanda.svg",
     "immagini_opzioni": [
@@ -9475,7 +9475,7 @@
   },
   {
     "id": "LOG-VIS-AV-0008",
-    "categoria": "logica",
+    "categoria": "logica_visiva",
     "sottocategoria": "logica_visiva",
     "livello": "avanzato",
     "tipo": "visiva",
@@ -9690,7 +9690,7 @@
   },
   {
     "id": "LOG-VIS-0019",
-    "categoria": "logica",
+    "categoria": "logica_visiva",
     "sottocategoria": "logica_visiva",
     "tipo_domanda": "immagine",
     "livello": "facile",
@@ -9709,7 +9709,7 @@
       "assets/logica_visiva/LOG-VIS-0019_D.png"
     ],
     "risposta_corretta": "quadrato rosso con 4 lati e 5 pallini interni",
-    "spiegazione": "La risposta corretta è A: quadrato rosso con 4 lati e 5 pallini interni. La figura rispetta forma, colore, numero di lati e oggetti interni richiesti dalla sequenza.",
+    "spiegazione": "La risposta corretta è quadrato rosso con 4 lati e 5 pallini interni perché la forma finale è un quadrato con 4 lati, il colore finale è rosso, gli oggetti interni sono 5 pallini.",
     "tags": [
       "logica",
       "logica_visiva",
@@ -9804,7 +9804,7 @@
   },
   {
     "id": "LOG-VIS-0020",
-    "categoria": "logica",
+    "categoria": "logica_visiva",
     "sottocategoria": "logica_visiva",
     "tipo_domanda": "immagine",
     "livello": "facile",
@@ -9823,7 +9823,7 @@
       "assets/logica_visiva/LOG-VIS-0020_D.png"
     ],
     "risposta_corretta": "ettagono verde con 7 lati e 1 triangolo interno",
-    "spiegazione": "La risposta corretta è A: ettagono verde con 7 lati e 1 triangolo interno. La figura rispetta forma, colore, numero di lati e oggetti interni richiesti dalla sequenza.",
+    "spiegazione": "La risposta corretta è ettagono verde con 7 lati e 1 triangolo interno perché la forma finale è un triangolo con 3 lati, il colore finale è verde, gli oggetti interni sono 1 triangolo.",
     "tags": [
       "logica",
       "logica_visiva",
@@ -9918,7 +9918,7 @@
   },
   {
     "id": "LOG-VIS-0021",
-    "categoria": "logica",
+    "categoria": "logica_visiva",
     "sottocategoria": "logica_visiva",
     "tipo_domanda": "immagine",
     "livello": "facile",
@@ -9937,7 +9937,7 @@
       "assets/logica_visiva/LOG-VIS-0021_D.png"
     ],
     "risposta_corretta": "cerchio rosso con 0 lati e 2 quadratini interni",
-    "spiegazione": "La risposta corretta è A: cerchio rosso con 0 lati e 2 quadratini interni. La figura rispetta forma, colore, numero di lati e oggetti interni richiesti dalla sequenza.",
+    "spiegazione": "La risposta corretta è cerchio rosso con 0 lati e 2 quadratini interni perché la forma finale è un cerchio, il colore finale è rosso.",
     "tags": [
       "logica",
       "logica_visiva",
@@ -10032,7 +10032,7 @@
   },
   {
     "id": "LOG-VIS-0022",
-    "categoria": "logica",
+    "categoria": "logica_visiva",
     "sottocategoria": "logica_visiva",
     "tipo_domanda": "immagine",
     "livello": "facile",
@@ -10051,7 +10051,7 @@
       "assets/logica_visiva/LOG-VIS-0022_D.png"
     ],
     "risposta_corretta": "triangolo arancione con 3 lati e 1 pallino interno",
-    "spiegazione": "La risposta corretta è A: triangolo arancione con 3 lati e 1 pallino interno. La figura rispetta forma, colore, numero di lati e oggetti interni richiesti dalla sequenza.",
+    "spiegazione": "La risposta corretta è triangolo arancione con 3 lati e 1 pallino interno perché la forma finale è un triangolo con 3 lati, il colore finale è arancione, gli oggetti interni sono 1 pallino.",
     "tags": [
       "logica",
       "logica_visiva",
@@ -10146,7 +10146,7 @@
   },
   {
     "id": "LOG-VIS-0023",
-    "categoria": "logica",
+    "categoria": "logica_visiva",
     "sottocategoria": "logica_visiva",
     "tipo_domanda": "immagine",
     "livello": "facile",
@@ -10165,7 +10165,7 @@
       "assets/logica_visiva/LOG-VIS-0023_D.png"
     ],
     "risposta_corretta": "pentagono viola con 5 lati e 0 oggetti interni",
-    "spiegazione": "La risposta corretta è A: pentagono viola con 5 lati e 0 oggetti interni. La figura rispetta forma, colore, numero di lati e oggetti interni richiesti dalla sequenza.",
+    "spiegazione": "La risposta corretta è pentagono viola con 5 lati e 0 oggetti interni perché la forma finale è un pentagono con 5 lati, il colore finale è viola.",
     "tags": [
       "logica",
       "logica_visiva",
@@ -10260,7 +10260,7 @@
   },
   {
     "id": "LOG-VIS-0024",
-    "categoria": "logica",
+    "categoria": "logica_visiva",
     "sottocategoria": "logica_visiva",
     "tipo_domanda": "immagine",
     "livello": "facile",
@@ -10279,7 +10279,7 @@
       "assets/logica_visiva/LOG-VIS-0024_D.png"
     ],
     "risposta_corretta": "quadrato azzurro con 4 lati e 3 triangoli interni",
-    "spiegazione": "La risposta corretta è A: quadrato azzurro con 4 lati e 3 triangoli interni. La figura rispetta forma, colore, numero di lati e oggetti interni richiesti dalla sequenza.",
+    "spiegazione": "La risposta corretta è quadrato azzurro con 4 lati e 3 triangoli interni perché la forma finale è un quadrato con 4 lati, il colore finale è azzurro, gli oggetti interni sono 3 triangoli.",
     "tags": [
       "logica",
       "logica_visiva",
@@ -10374,7 +10374,7 @@
   },
   {
     "id": "LOG-VIS-0025",
-    "categoria": "logica",
+    "categoria": "logica_visiva",
     "sottocategoria": "logica_visiva",
     "tipo_domanda": "immagine",
     "livello": "intermedio",
@@ -10393,7 +10393,7 @@
       "assets/logica_visiva/LOG-VIS-0025_D.png"
     ],
     "risposta_corretta": "ettagono rosso con 7 lati e 3 quadratini interni",
-    "spiegazione": "La risposta corretta è A: ettagono rosso con 7 lati e 3 quadratini interni. La figura rispetta forma, colore, numero di lati e oggetti interni richiesti dalla sequenza.",
+    "spiegazione": "La risposta corretta è ettagono rosso con 7 lati e 3 quadratini interni perché il colore finale è rosso.",
     "tags": [
       "logica",
       "logica_visiva",
@@ -10488,7 +10488,7 @@
   },
   {
     "id": "LOG-VIS-0026",
-    "categoria": "logica",
+    "categoria": "logica_visiva",
     "sottocategoria": "logica_visiva",
     "tipo_domanda": "immagine",
     "livello": "intermedio",
@@ -10507,7 +10507,7 @@
       "assets/logica_visiva/LOG-VIS-0026_D.png"
     ],
     "risposta_corretta": "triangolo rosso con 3 lati e 5 pallini interni",
-    "spiegazione": "La risposta corretta è A: triangolo rosso con 3 lati e 5 pallini interni. La figura rispetta forma, colore, numero di lati e oggetti interni richiesti dalla sequenza.",
+    "spiegazione": "La risposta corretta è triangolo rosso con 3 lati e 5 pallini interni perché la forma finale è un triangolo con 3 lati, il colore finale è rosso, gli oggetti interni sono 5 pallini.",
     "tags": [
       "logica",
       "logica_visiva",
@@ -10602,7 +10602,7 @@
   },
   {
     "id": "LOG-VIS-0027",
-    "categoria": "logica",
+    "categoria": "logica_visiva",
     "sottocategoria": "logica_visiva",
     "tipo_domanda": "immagine",
     "livello": "intermedio",
@@ -10621,7 +10621,7 @@
       "assets/logica_visiva/LOG-VIS-0027_D.png"
     ],
     "risposta_corretta": "cerchio giallo con 0 lati e 2 pallini interni",
-    "spiegazione": "La risposta corretta è A: cerchio giallo con 0 lati e 2 pallini interni. La figura rispetta forma, colore, numero di lati e oggetti interni richiesti dalla sequenza.",
+    "spiegazione": "La risposta corretta è cerchio giallo con 0 lati e 2 pallini interni perché la forma finale è un cerchio, il colore finale è giallo, gli oggetti interni sono 2 pallini.",
     "tags": [
       "logica",
       "logica_visiva",
@@ -10716,7 +10716,7 @@
   },
   {
     "id": "LOG-VIS-0028",
-    "categoria": "logica",
+    "categoria": "logica_visiva",
     "sottocategoria": "logica_visiva",
     "tipo_domanda": "immagine",
     "livello": "intermedio",
@@ -10735,7 +10735,7 @@
       "assets/logica_visiva/LOG-VIS-0028_D.png"
     ],
     "risposta_corretta": "esagono blu con 6 lati e 3 triangoli interni",
-    "spiegazione": "La risposta corretta è A: esagono blu con 6 lati e 3 triangoli interni. La figura rispetta forma, colore, numero di lati e oggetti interni richiesti dalla sequenza.",
+    "spiegazione": "La risposta corretta è esagono blu con 6 lati e 3 triangoli interni perché la forma finale è un esagono con 6 lati, il colore finale è blu, gli oggetti interni sono 3 triangoli.",
     "tags": [
       "logica",
       "logica_visiva",
@@ -10830,7 +10830,7 @@
   },
   {
     "id": "LOG-VIS-0029",
-    "categoria": "logica",
+    "categoria": "logica_visiva",
     "sottocategoria": "logica_visiva",
     "tipo_domanda": "immagine",
     "livello": "intermedio",
@@ -10849,7 +10849,7 @@
       "assets/logica_visiva/LOG-VIS-0029_D.png"
     ],
     "risposta_corretta": "quadrato azzurro con 4 lati e 2 pallini interni",
-    "spiegazione": "La risposta corretta è A: quadrato azzurro con 4 lati e 2 pallini interni. La figura rispetta forma, colore, numero di lati e oggetti interni richiesti dalla sequenza.",
+    "spiegazione": "La risposta corretta è quadrato azzurro con 4 lati e 2 pallini interni perché la forma finale è un quadrato con 4 lati, il colore finale è azzurro, gli oggetti interni sono 2 pallini.",
     "tags": [
       "logica",
       "logica_visiva",
@@ -10944,7 +10944,7 @@
   },
   {
     "id": "LOG-VIS-0030",
-    "categoria": "logica",
+    "categoria": "logica_visiva",
     "sottocategoria": "logica_visiva",
     "tipo_domanda": "immagine",
     "livello": "intermedio",
@@ -10963,7 +10963,7 @@
       "assets/logica_visiva/LOG-VIS-0030_D.png"
     ],
     "risposta_corretta": "esagono rosso con 6 lati e 0 oggetti interni",
-    "spiegazione": "La risposta corretta è A: esagono rosso con 6 lati e 0 oggetti interni. La figura rispetta forma, colore, numero di lati e oggetti interni richiesti dalla sequenza.",
+    "spiegazione": "La risposta corretta è esagono rosso con 6 lati e 0 oggetti interni perché la forma finale è un esagono con 6 lati, il colore finale è rosso.",
     "tags": [
       "logica",
       "logica_visiva",
@@ -11058,7 +11058,7 @@
   },
   {
     "id": "LOG-VIS-0031",
-    "categoria": "logica",
+    "categoria": "logica_visiva",
     "sottocategoria": "logica_visiva",
     "tipo_domanda": "immagine",
     "livello": "intermedio",
@@ -11077,7 +11077,7 @@
       "assets/logica_visiva/LOG-VIS-0031_D.png"
     ],
     "risposta_corretta": "pentagono verde con 5 lati e 2 triangoli interni",
-    "spiegazione": "La risposta corretta è A: pentagono verde con 5 lati e 2 triangoli interni. La figura rispetta forma, colore, numero di lati e oggetti interni richiesti dalla sequenza.",
+    "spiegazione": "La risposta corretta è pentagono verde con 5 lati e 2 triangoli interni perché la forma finale è un pentagono con 5 lati, il colore finale è verde, gli oggetti interni sono 2 triangoli.",
     "tags": [
       "logica",
       "logica_visiva",
@@ -11172,7 +11172,7 @@
   },
   {
     "id": "LOG-VIS-0032",
-    "categoria": "logica",
+    "categoria": "logica_visiva",
     "sottocategoria": "logica_visiva",
     "tipo_domanda": "immagine",
     "livello": "intermedio",
@@ -11191,7 +11191,7 @@
       "assets/logica_visiva/LOG-VIS-0032_D.png"
     ],
     "risposta_corretta": "esagono giallo con 6 lati e 3 pallini interni",
-    "spiegazione": "La risposta corretta è A: esagono giallo con 6 lati e 3 pallini interni. La figura rispetta forma, colore, numero di lati e oggetti interni richiesti dalla sequenza.",
+    "spiegazione": "La risposta corretta è esagono giallo con 6 lati e 3 pallini interni perché la forma finale è un esagono con 6 lati, il colore finale è giallo, gli oggetti interni sono 3 pallini.",
     "tags": [
       "logica",
       "logica_visiva",
@@ -11286,7 +11286,7 @@
   },
   {
     "id": "LOG-VIS-0033",
-    "categoria": "logica",
+    "categoria": "logica_visiva",
     "sottocategoria": "logica_visiva",
     "tipo_domanda": "immagine",
     "livello": "avanzato",
@@ -11305,7 +11305,7 @@
       "assets/logica_visiva/LOG-VIS-0033_D.png"
     ],
     "risposta_corretta": "pentagono blu con 5 lati e 3 triangoli interni",
-    "spiegazione": "La risposta corretta è A: pentagono blu con 5 lati e 3 triangoli interni. La figura rispetta forma, colore, numero di lati e oggetti interni richiesti dalla sequenza.",
+    "spiegazione": "La risposta corretta è pentagono blu con 5 lati e 3 triangoli interni perché la forma finale è un pentagono con 5 lati, il colore finale è blu, gli oggetti interni sono 3 triangoli.",
     "tags": [
       "logica",
       "logica_visiva",
@@ -11400,7 +11400,7 @@
   },
   {
     "id": "LOG-VIS-0034",
-    "categoria": "logica",
+    "categoria": "logica_visiva",
     "sottocategoria": "logica_visiva",
     "tipo_domanda": "immagine",
     "livello": "avanzato",
@@ -11419,7 +11419,7 @@
       "assets/logica_visiva/LOG-VIS-0034_D.png"
     ],
     "risposta_corretta": "esagono verde con 6 lati e 1 quadratino interno",
-    "spiegazione": "La risposta corretta è A: esagono verde con 6 lati e 1 quadratino interno. La figura rispetta forma, colore, numero di lati e oggetti interni richiesti dalla sequenza.",
+    "spiegazione": "La risposta corretta è esagono verde con 6 lati e 1 quadratino interno perché la forma finale è un esagono con 6 lati, il colore finale è verde.",
     "tags": [
       "logica",
       "logica_visiva",
@@ -11514,7 +11514,7 @@
   },
   {
     "id": "LOG-VIS-0035",
-    "categoria": "logica",
+    "categoria": "logica_visiva",
     "sottocategoria": "logica_visiva",
     "tipo_domanda": "immagine",
     "livello": "avanzato",
@@ -11533,7 +11533,7 @@
       "assets/logica_visiva/LOG-VIS-0035_D.png"
     ],
     "risposta_corretta": "ottagono blu con 8 lati e 2 pallini interni",
-    "spiegazione": "La risposta corretta è A: ottagono blu con 8 lati e 2 pallini interni. La figura rispetta forma, colore, numero di lati e oggetti interni richiesti dalla sequenza.",
+    "spiegazione": "La risposta corretta è ottagono blu con 8 lati e 2 pallini interni perché il colore finale è blu, gli oggetti interni sono 2 pallini.",
     "tags": [
       "logica",
       "logica_visiva",
@@ -11628,7 +11628,7 @@
   },
   {
     "id": "LOG-VIS-0036",
-    "categoria": "logica",
+    "categoria": "logica_visiva",
     "sottocategoria": "logica_visiva",
     "tipo_domanda": "immagine",
     "livello": "avanzato",
@@ -11647,7 +11647,7 @@
       "assets/logica_visiva/LOG-VIS-0036_D.png"
     ],
     "risposta_corretta": "ottagono giallo con 8 lati e 2 triangoli interni",
-    "spiegazione": "La risposta corretta è A: ottagono giallo con 8 lati e 2 triangoli interni. La figura rispetta forma, colore, numero di lati e oggetti interni richiesti dalla sequenza.",
+    "spiegazione": "La risposta corretta è ottagono giallo con 8 lati e 2 triangoli interni perché il colore finale è giallo, gli oggetti interni sono 2 triangoli.",
     "tags": [
       "logica",
       "logica_visiva",
@@ -11742,7 +11742,7 @@
   },
   {
     "id": "LOG-VIS-0037",
-    "categoria": "logica",
+    "categoria": "logica_visiva",
     "sottocategoria": "logica_visiva",
     "tipo_domanda": "immagine",
     "livello": "avanzato",
@@ -11761,7 +11761,7 @@
       "assets/logica_visiva/LOG-VIS-0037_D.png"
     ],
     "risposta_corretta": "triangolo blu con 3 lati e 1 quadratino interno",
-    "spiegazione": "La risposta corretta è A: triangolo blu con 3 lati e 1 quadratino interno. La figura rispetta forma, colore, numero di lati e oggetti interni richiesti dalla sequenza.",
+    "spiegazione": "La risposta corretta è triangolo blu con 3 lati e 1 quadratino interno perché la forma finale è un triangolo con 3 lati, il colore finale è blu.",
     "tags": [
       "logica",
       "logica_visiva",
@@ -11856,7 +11856,7 @@
   },
   {
     "id": "LOG-VIS-0038",
-    "categoria": "logica",
+    "categoria": "logica_visiva",
     "sottocategoria": "logica_visiva",
     "tipo_domanda": "immagine",
     "livello": "avanzato",
@@ -11875,7 +11875,7 @@
       "assets/logica_visiva/LOG-VIS-0038_D.png"
     ],
     "risposta_corretta": "ettagono rosso con 7 lati e 3 pallini interni",
-    "spiegazione": "La risposta corretta è A: ettagono rosso con 7 lati e 3 pallini interni. La figura rispetta forma, colore, numero di lati e oggetti interni richiesti dalla sequenza.",
+    "spiegazione": "La risposta corretta è ettagono rosso con 7 lati e 3 pallini interni perché il colore finale è rosso, gli oggetti interni sono 3 pallini.",
     "tags": [
       "logica",
       "logica_visiva",
@@ -11970,7 +11970,7 @@
   },
   {
     "id": "LOG-VIS-0039",
-    "categoria": "logica",
+    "categoria": "logica_visiva",
     "sottocategoria": "logica_visiva",
     "tipo_domanda": "immagine",
     "livello": "avanzato",
@@ -11989,7 +11989,7 @@
       "assets/logica_visiva/LOG-VIS-0039_D.png"
     ],
     "risposta_corretta": "cerchio verde con 0 lati e 2 triangoli interni",
-    "spiegazione": "La risposta corretta è A: cerchio verde con 0 lati e 2 triangoli interni. La figura rispetta forma, colore, numero di lati e oggetti interni richiesti dalla sequenza.",
+    "spiegazione": "La risposta corretta è cerchio verde con 0 lati e 2 triangoli interni perché la forma finale è un cerchio, il colore finale è verde, gli oggetti interni sono 2 triangoli.",
     "tags": [
       "logica",
       "logica_visiva",
@@ -12084,7 +12084,7 @@
   },
   {
     "id": "LOG-VIS-0040",
-    "categoria": "logica",
+    "categoria": "logica_visiva",
     "sottocategoria": "logica_visiva",
     "tipo_domanda": "immagine",
     "livello": "avanzato",
@@ -12103,7 +12103,7 @@
       "assets/logica_visiva/LOG-VIS-0040_D.png"
     ],
     "risposta_corretta": "pentagono giallo con 5 lati e 3 pallini interni",
-    "spiegazione": "La risposta corretta è A: pentagono giallo con 5 lati e 3 pallini interni. La figura rispetta forma, colore, numero di lati e oggetti interni richiesti dalla sequenza.",
+    "spiegazione": "La risposta corretta è pentagono giallo con 5 lati e 3 pallini interni perché la forma finale è un pentagono con 5 lati, il colore finale è giallo, gli oggetti interni sono 3 pallini.",
     "tags": [
       "logica",
       "logica_visiva",
@@ -12218,9 +12218,9 @@
     "difficolta": 1,
     "distrattore_forte": "Quadrato",
     "motivo_distrattore_forte": "È vicino perché è l'altra forma presente nella sequenza, ma è sbagliato perché ripeterebbe il quadrato invece di rispettare l'alternanza.",
-    "_materia_demo": "Ragionamento astratto",
+    "_materia_demo": "Logica",
     "_file_origine": "data/logica/ragionamento_astratto.json",
-    "materia": "Ragionamento astratto"
+    "materia": "Logica"
   },
   {
     "id": "LOG-AST-INT-0002",
@@ -12244,9 +12244,9 @@
     "difficolta": 2,
     "distrattore_forte": "E",
     "motivo_distrattore_forte": "È vicino perché è la lettera successiva a D, ma è sbagliato perché la regola non avanza di una posizione: avanza di due.",
-    "_materia_demo": "Ragionamento astratto",
+    "_materia_demo": "Logica",
     "_file_origine": "data/logica/ragionamento_astratto.json",
-    "materia": "Ragionamento astratto"
+    "materia": "Logica"
   },
   {
     "id": "LOG-AST-AV-0003",
@@ -12271,9 +12271,9 @@
     "difficolta": 3,
     "distrattore_forte": "I8K",
     "motivo_distrattore_forte": "È vicino perché aggiorna correttamente le due lettere esterne, ma è sbagliato perché il numero deve essere raddoppiato: 5 diventa 10, non 8.",
-    "_materia_demo": "Ragionamento astratto",
+    "_materia_demo": "Logica",
     "_file_origine": "data/logica/ragionamento_astratto.json",
-    "materia": "Ragionamento astratto"
+    "materia": "Logica"
   },
   {
     "id": "LOG-AST-INT-0004",
@@ -12297,9 +12297,9 @@
     "difficolta": 2,
     "distrattore_forte": "F5",
     "motivo_distrattore_forte": "È vicino perché aggiorna correttamente la lettera da E a F, ma è sbagliato perché lascia invariato il numero invece di aumentarlo da 5 a 6.",
-    "_materia_demo": "Ragionamento astratto",
+    "_materia_demo": "Logica",
     "_file_origine": "data/logica/ragionamento_astratto.json",
-    "materia": "Ragionamento astratto"
+    "materia": "Logica"
   },
   {
     "id": "LOG-AST-INT-0101",
@@ -12323,9 +12323,9 @@
     "difficolta": 2,
     "distrattore_forte": "ottagono",
     "motivo_distrattore_forte": "È vicino perché continua con un poligono successivo, ma salta un passaggio: dopo 6 lati viene 7, non 8.",
-    "_materia_demo": "Ragionamento astratto",
+    "_materia_demo": "Logica",
     "_file_origine": "data/logica/ragionamento_astratto.json",
-    "materia": "Ragionamento astratto"
+    "materia": "Logica"
   },
   {
     "id": "LOG-AST-AV-0101",
@@ -12349,9 +12349,9 @@
     "difficolta": 3,
     "distrattore_forte": "ettagono blu",
     "motivo_distrattore_forte": "È vicino perché individua correttamente la forma con 7 lati, ma è sbagliato perché non rispetta l'alternanza dei colori: dopo blu deve tornare rosso.",
-    "_materia_demo": "Ragionamento astratto",
+    "_materia_demo": "Logica",
     "_file_origine": "data/logica/ragionamento_astratto.json",
-    "materia": "Ragionamento astratto"
+    "materia": "Logica"
   },
   {
     "id": "LOG-AST-AV-0102",
@@ -12375,9 +12375,9 @@
     "difficolta": 3,
     "distrattore_forte": "alto",
     "motivo_distrattore_forte": "È vicino perché appartiene allo stesso ciclo di direzioni, ma è sbagliato perché alto arriva dopo un ulteriore passaggio, non subito dopo basso.",
-    "_materia_demo": "Ragionamento astratto",
+    "_materia_demo": "Logica",
     "_file_origine": "data/logica/ragionamento_astratto.json",
-    "materia": "Ragionamento astratto"
+    "materia": "Logica"
   },
   {
     "id": "LOG-AST-FAC-0103",
@@ -12395,9 +12395,9 @@
     "spiegazione": "Le forme seguono il ciclo cerchio, quadrato, triangolo. I colori alternano rosso e blu. Dopo quadrato rosso viene quindi triangolo blu.",
     "distrattore_forte": "triangolo rosso",
     "motivo_distrattore_forte": "È plausibile perché rispetta la forma corretta, ma sbaglia il colore alternato.",
-    "_materia_demo": "Ragionamento astratto",
+    "_materia_demo": "Logica",
     "_file_origine": "data/logica/ragionamento_astratto.json",
-    "materia": "Ragionamento astratto"
+    "materia": "Logica"
   },
   {
     "id": "LOG-AST-INT-0103",
@@ -12415,9 +12415,9 @@
     "spiegazione": "Il pentagono ha 5 lati. Aumentando di 1 il numero dei lati diventa un esagono, e aumentando di 1 i punti interni si passa da 3 a 4 punti.",
     "distrattore_forte": "esagono con 3 punti",
     "motivo_distrattore_forte": "È plausibile perché aggiorna correttamente la forma, ma dimentica l'aumento dei punti interni.",
-    "_materia_demo": "Ragionamento astratto",
+    "_materia_demo": "Logica",
     "_file_origine": "data/logica/ragionamento_astratto.json",
-    "materia": "Ragionamento astratto"
+    "materia": "Logica"
   },
   {
     "id": "LOG-AST-AV-0103",
@@ -12435,9 +12435,9 @@
     "spiegazione": "L'esagono ha 6 lati, quindi aumentando di 1 diventa un ettagono. Il colore passa da chiaro a scuro e i punti interni aumentano da 3 a 5.",
     "distrattore_forte": "ettagono chiaro con 5 punti",
     "motivo_distrattore_forte": "È plausibile perché rispetta lati e punti, ma non applica l'alternanza del colore.",
-    "_materia_demo": "Ragionamento astratto",
+    "_materia_demo": "Logica",
     "_file_origine": "data/logica/ragionamento_astratto.json",
-    "materia": "Ragionamento astratto"
+    "materia": "Logica"
   },
   {
     "id": "LOG-AST-0201",
@@ -12453,9 +12453,9 @@
     ],
     "risposta_corretta": "CBA",
     "spiegazione": "La risposta corretta è A. Invertire l'ordine significa leggere le lettere da destra verso sinistra, quindi ABC diventa CBA.",
-    "_materia_demo": "Ragionamento astratto",
+    "_materia_demo": "Logica",
     "_file_origine": "data/logica/ragionamento_astratto.json",
-    "materia": "Ragionamento astratto"
+    "materia": "Logica"
   },
   {
     "id": "LOG-AST-0202",
@@ -12471,9 +12471,9 @@
     ],
     "risposta_corretta": "A A B B C C",
     "spiegazione": "La risposta corretta è A. Ogni elemento viene duplicato mantenendo lo stesso ordine.",
-    "_materia_demo": "Ragionamento astratto",
+    "_materia_demo": "Logica",
     "_file_origine": "data/logica/ragionamento_astratto.json",
-    "materia": "Ragionamento astratto"
+    "materia": "Logica"
   },
   {
     "id": "LOG-AST-0203",
@@ -12489,9 +12489,9 @@
     ],
     "risposta_corretta": "765",
     "spiegazione": "La risposta corretta è A. La regola inverte l'ordine delle cifre: 567 letto al contrario diventa 765.",
-    "_materia_demo": "Ragionamento astratto",
+    "_materia_demo": "Logica",
     "_file_origine": "data/logica/ragionamento_astratto.json",
-    "materia": "Ragionamento astratto"
+    "materia": "Logica"
   },
   {
     "id": "LOG-AST-0204",
@@ -12507,9 +12507,9 @@
     ],
     "risposta_corretta": "E5",
     "spiegazione": "La risposta corretta è A. Aumentano insieme sia la lettera sia il numero: dopo D4 viene E5.",
-    "_materia_demo": "Ragionamento astratto",
+    "_materia_demo": "Logica",
     "_file_origine": "data/logica/ragionamento_astratto.json",
-    "materia": "Ragionamento astratto"
+    "materia": "Logica"
   },
   {
     "id": "LOG-AST-0205",
@@ -12525,9 +12525,9 @@
     ],
     "risposta_corretta": "CEG",
     "spiegazione": "La risposta corretta è A. B diventa C, D diventa E e F diventa G.",
-    "_materia_demo": "Ragionamento astratto",
+    "_materia_demo": "Logica",
     "_file_origine": "data/logica/ragionamento_astratto.json",
-    "materia": "Ragionamento astratto"
+    "materia": "Logica"
   },
   {
     "id": "LOG-AST-0206",
@@ -12543,9 +12543,9 @@
     ],
     "risposta_corretta": "FE",
     "spiegazione": "La risposta corretta è A. La regola scambia la posizione delle due lettere.",
-    "_materia_demo": "Ragionamento astratto",
+    "_materia_demo": "Logica",
     "_file_origine": "data/logica/ragionamento_astratto.json",
-    "materia": "Ragionamento astratto"
+    "materia": "Logica"
   },
   {
     "id": "LOG-AST-0207",
@@ -12561,9 +12561,9 @@
     ],
     "risposta_corretta": "Z X Y",
     "spiegazione": "La risposta corretta è A. L'ultimo elemento diventa il primo, poi restano il primo e il secondo nell'ordine indicato.",
-    "_materia_demo": "Ragionamento astratto",
+    "_materia_demo": "Logica",
     "_file_origine": "data/logica/ragionamento_astratto.json",
-    "materia": "Ragionamento astratto"
+    "materia": "Logica"
   },
   {
     "id": "LOG-AST-0208",
@@ -12579,9 +12579,9 @@
     ],
     "risposta_corretta": "D8",
     "spiegazione": "La risposta corretta è A. A corrisponde a 2, B a 4, C a 6, quindi D corrisponde a 8.",
-    "_materia_demo": "Ragionamento astratto",
+    "_materia_demo": "Logica",
     "_file_origine": "data/logica/ragionamento_astratto.json",
-    "materia": "Ragionamento astratto"
+    "materia": "Logica"
   },
   {
     "id": "LOG-AST-0209",
@@ -12597,9 +12597,9 @@
     ],
     "risposta_corretta": "DC8",
     "spiegazione": "La risposta corretta è A. Le lettere vengono invertite e il numero viene raddoppiato: CD diventa DC e 4 diventa 8.",
-    "_materia_demo": "Ragionamento astratto",
+    "_materia_demo": "Logica",
     "_file_origine": "data/logica/ragionamento_astratto.json",
-    "materia": "Ragionamento astratto"
+    "materia": "Logica"
   },
   {
     "id": "LOG-AST-0210",
@@ -12615,9 +12615,9 @@
     ],
     "risposta_corretta": "I10",
     "spiegazione": "La risposta corretta è A. Le lettere avanzano saltando una lettera e i numeri aumentano di 2. Dopo G8 viene I10.",
-    "_materia_demo": "Ragionamento astratto",
+    "_materia_demo": "Logica",
     "_file_origine": "data/logica/ragionamento_astratto.json",
-    "materia": "Ragionamento astratto"
+    "materia": "Logica"
   },
   {
     "id": "LOG-CRI-FAC-0001",
@@ -12641,9 +12641,9 @@
     "difficolta": 1,
     "distrattore_forte": "Il treno 25 arriva in stazione solo se è in orario",
     "motivo_distrattore_forte": "È vicino perché parla dello stesso treno e dell'arrivo in stazione, ma è sbagliato perché aggiunge la condizione dell'orario, che non compare nelle premesse.",
-    "_materia_demo": "Ragionamento critico",
+    "_materia_demo": "Logica",
     "_file_origine": "data/logica/ragionamento_critico.json",
-    "materia": "Ragionamento critico"
+    "materia": "Logica"
   },
   {
     "id": "LOG-CRI-INT-0002",
@@ -12667,9 +12667,9 @@
     "difficolta": 2,
     "distrattore_forte": "Non si può dedurre nulla sul tempo",
     "motivo_distrattore_forte": "È vicino perché sembra prudente non aggiungere informazioni, ma è sbagliato: con questa premessa logica possiamo dedurre per contrapposizione che oggi non piove.",
-    "_materia_demo": "Ragionamento critico",
+    "_materia_demo": "Logica",
     "_file_origine": "data/logica/ragionamento_critico.json",
-    "materia": "Ragionamento critico"
+    "materia": "Logica"
   },
   {
     "id": "LOG-CRI-AV-0003",
@@ -12693,9 +12693,9 @@
     "difficolta": 3,
     "distrattore_forte": "Il prodotto è sicuramente scontato perché si trova nello scaffale rosso",
     "motivo_distrattore_forte": "È molto vicino perché usa proprio l'informazione dello scaffale rosso, ma è sbagliato perché confonde una condizione necessaria con una condizione sufficiente: sappiamo che gli scontati stanno nello scaffale rosso, non che tutto ciò che sta nello scaffale rosso sia scontato.",
-    "_materia_demo": "Ragionamento critico",
+    "_materia_demo": "Logica",
     "_file_origine": "data/logica/ragionamento_critico.json",
-    "materia": "Ragionamento critico"
+    "materia": "Logica"
   },
   {
     "id": "LOG-CRI-INT-0004",
@@ -12718,9 +12718,9 @@
     "difficolta": 2,
     "distrattore_forte": "Tutte le persone che documentano gli errori controllano i log",
     "motivo_distrattore_forte": "È vicino perché riguarda persone che documentano errori e controllano log, ma è sbagliato perché dalle premesse sappiamo solo che alcuni tecnici documentano errori, non tutti quelli che documentano errori.",
-    "_materia_demo": "Ragionamento critico",
+    "_materia_demo": "Logica",
     "_file_origine": "data/logica/ragionamento_critico.json",
-    "materia": "Ragionamento critico"
+    "materia": "Logica"
   },
   {
     "id": "LOG-CRI-AV-0005",
@@ -12744,9 +12744,9 @@
     "difficolta": 3,
     "distrattore_forte": "L'aggiornamento è la causa più probabile solo perché è avvenuto prima degli errori",
     "motivo_distrattore_forte": "È vicino perché considera correttamente la vicinanza temporale, ma è sbagliato perché confonde una possibile correlazione con una causa già dimostrata.",
-    "_materia_demo": "Ragionamento critico",
+    "_materia_demo": "Logica",
     "_file_origine": "data/logica/ragionamento_critico.json",
-    "materia": "Ragionamento critico"
+    "materia": "Logica"
   },
   {
     "id": "LOG-CRI-FAC-0101",
@@ -12770,9 +12770,9 @@
     "difficolta": 1,
     "distrattore_forte": "Fido potrebbe non essere un animale anche se è un cane",
     "motivo_distrattore_forte": "È vicino perché parla proprio di Fido e del fatto che sia un cane, ma contraddice la premessa: se tutti i cani sono animali, Fido deve essere un animale.",
-    "_materia_demo": "Ragionamento critico",
+    "_materia_demo": "Logica",
     "_file_origine": "data/logica/ragionamento_critico.json",
-    "materia": "Ragionamento critico"
+    "materia": "Logica"
   },
   {
     "id": "LOG-CRI-INT-0101",
@@ -12796,9 +12796,9 @@
     "difficolta": 2,
     "distrattore_forte": "Tutti i programmatori sanno usare variabili",
     "motivo_distrattore_forte": "È vicino perché la premessa collega Python e variabili, ma è sbagliato perché sappiamo solo che alcuni programmatori conoscono Python, non tutti.",
-    "_materia_demo": "Ragionamento critico",
+    "_materia_demo": "Logica",
     "_file_origine": "data/logica/ragionamento_critico.json",
-    "materia": "Ragionamento critico"
+    "materia": "Logica"
   },
   {
     "id": "LOG-CRI-AV-0101",
@@ -12822,9 +12822,9 @@
     "difficolta": 3,
     "distrattore_forte": "Alcune persone che lavorano su database sono sviluppatori del team",
     "motivo_distrattore_forte": "È vicino perché collega database, Git e sviluppatori, ma è sbagliato perché la premessa non dice che le persone che usano Git e lavorano su database siano sviluppatori del team.",
-    "_materia_demo": "Ragionamento critico",
+    "_materia_demo": "Logica",
     "_file_origine": "data/logica/ragionamento_critico.json",
-    "materia": "Ragionamento critico"
+    "materia": "Logica"
   },
   {
     "id": "LOG-CRI-FAC-0102",
@@ -12848,9 +12848,9 @@
     "difficolta": 1,
     "distrattore_forte": "Marco prende l'ombrello solo se piove molto forte",
     "motivo_distrattore_forte": "È vicino perché collega ombrello e pioggia, ma è sbagliato perché aggiunge una condizione non presente nella premessa.",
-    "_materia_demo": "Ragionamento critico",
+    "_materia_demo": "Logica",
     "_file_origine": "data/logica/ragionamento_critico.json",
-    "materia": "Ragionamento critico"
+    "materia": "Logica"
   },
   {
     "id": "LOG-CRI-INT-0102",
@@ -12874,9 +12874,9 @@
     "difficolta": 2,
     "distrattore_forte": "L'app potrebbe aver superato tutti i test anche se non viene pubblicata",
     "motivo_distrattore_forte": "È vicino perché nella realtà potrebbero esistere altri motivi di blocco, ma nella logica della premessa data è sbagliato: se supera tutti i test, viene pubblicata.",
-    "_materia_demo": "Ragionamento critico",
+    "_materia_demo": "Logica",
     "_file_origine": "data/logica/ragionamento_critico.json",
-    "materia": "Ragionamento critico"
+    "materia": "Logica"
   },
   {
     "id": "LOG-CRI-0201",
@@ -12892,9 +12892,9 @@
     ],
     "risposta_corretta": "Marco non può entrare",
     "spiegazione": "La risposta corretta è A. Se l'ingresso è consentito solo ai dipendenti e Marco non è dipendente, Marco non rientra tra le persone autorizzate dalla regola indicata.",
-    "_materia_demo": "Ragionamento critico",
+    "_materia_demo": "Logica",
     "_file_origine": "data/logica/ragionamento_critico.json",
-    "materia": "Ragionamento critico"
+    "materia": "Logica"
   },
   {
     "id": "LOG-CRI-0202",
@@ -12910,9 +12910,9 @@
     ],
     "risposta_corretta": "Anna prende l'ombrello",
     "spiegazione": "La risposta corretta è A. La condizione si verifica, quindi segue l'azione dichiarata.",
-    "_materia_demo": "Ragionamento critico",
+    "_materia_demo": "Logica",
     "_file_origine": "data/logica/ragionamento_critico.json",
-    "materia": "Ragionamento critico"
+    "materia": "Logica"
   },
   {
     "id": "LOG-CRI-0203",
@@ -12928,9 +12928,9 @@
     ],
     "risposta_corretta": "Il biglietto non è valido",
     "spiegazione": "La risposta corretta è A. Se tutti i biglietti validi hanno il codice QR, un biglietto senza codice QR non può essere valido.",
-    "_materia_demo": "Ragionamento critico",
+    "_materia_demo": "Logica",
     "_file_origine": "data/logica/ragionamento_critico.json",
-    "materia": "Ragionamento critico"
+    "materia": "Logica"
   },
   {
     "id": "LOG-CRI-0204",
@@ -12946,9 +12946,9 @@
     ],
     "risposta_corretta": "I nuovi corsi potrebbero aver contribuito all'aumento",
     "spiegazione": "La risposta corretta è A. Il dato suggerisce una possibile relazione, ma non dimostra che i nuovi corsi siano l'unica causa.",
-    "_materia_demo": "Ragionamento critico",
+    "_materia_demo": "Logica",
     "_file_origine": "data/logica/ragionamento_critico.json",
-    "materia": "Ragionamento critico"
+    "materia": "Logica"
   },
   {
     "id": "LOG-CRI-0205",
@@ -12964,9 +12964,9 @@
     ],
     "risposta_corretta": "Le recensioni sono incoraggianti, ma il campione è ancora limitato",
     "spiegazione": "La risposta corretta è A. Le recensioni positive sono un segnale utile, ma pochi download rendono il giudizio meno solido.",
-    "_materia_demo": "Ragionamento critico",
+    "_materia_demo": "Logica",
     "_file_origine": "data/logica/ragionamento_critico.json",
-    "materia": "Ragionamento critico"
+    "materia": "Logica"
   },
   {
     "id": "LOG-CRI-0206",
@@ -12982,9 +12982,9 @@
     ],
     "risposta_corretta": "Serve provarla anche in condizioni più ampie",
     "spiegazione": "La risposta corretta è A. Un test piccolo è utile, ma non garantisce il comportamento in ogni situazione.",
-    "_materia_demo": "Ragionamento critico",
+    "_materia_demo": "Logica",
     "_file_origine": "data/logica/ragionamento_critico.json",
-    "materia": "Ragionamento critico"
+    "materia": "Logica"
   },
   {
     "id": "LOG-CRI-0207",
@@ -13000,9 +13000,9 @@
     ],
     "risposta_corretta": "Il punto esatto in cui gli studenti abbandonano",
     "spiegazione": "La risposta corretta è A. Sapere dove avviene l'abbandono aiuta a individuare difficoltà, contenuti deboli o problemi di percorso.",
-    "_materia_demo": "Ragionamento critico",
+    "_materia_demo": "Logica",
     "_file_origine": "data/logica/ragionamento_critico.json",
-    "materia": "Ragionamento critico"
+    "materia": "Logica"
   },
   {
     "id": "LOG-CRI-0208",
@@ -13018,9 +13018,9 @@
     ],
     "risposta_corretta": "Il campione potrebbe non rappresentare tutti gli utenti",
     "spiegazione": "La risposta corretta è A. Un sondaggio fatto solo tra fan può essere sbilanciato e non rappresentare il pubblico generale.",
-    "_materia_demo": "Ragionamento critico",
+    "_materia_demo": "Logica",
     "_file_origine": "data/logica/ragionamento_critico.json",
-    "materia": "Ragionamento critico"
+    "materia": "Logica"
   },
   {
     "id": "LOG-CRI-0209",
@@ -13036,9 +13036,9 @@
     ],
     "risposta_corretta": "Se nello stesso periodo sono cambiati anche personale o procedure",
     "spiegazione": "La risposta corretta è A. Per capire se il miglioramento dipende dal software bisogna controllare altri fattori cambiati nello stesso periodo.",
-    "_materia_demo": "Ragionamento critico",
+    "_materia_demo": "Logica",
     "_file_origine": "data/logica/ragionamento_critico.json",
-    "materia": "Ragionamento critico"
+    "materia": "Logica"
   },
   {
     "id": "LOG-CRI-0210",
@@ -13054,9 +13054,9 @@
     ],
     "risposta_corretta": "Esiste un'associazione, ma servono altri dati per parlare di causa",
     "spiegazione": "La risposta corretta è A. Una correlazione non basta da sola a dimostrare un rapporto di causa ed effetto.",
-    "_materia_demo": "Ragionamento critico",
+    "_materia_demo": "Logica",
     "_file_origine": "data/logica/ragionamento_critico.json",
-    "materia": "Ragionamento critico"
+    "materia": "Logica"
   },
   {
     "id": "MAT-FAC-0001",
