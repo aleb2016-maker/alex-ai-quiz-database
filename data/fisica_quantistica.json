@@ -455,12 +455,12 @@
     "domanda": "Che cosa afferma il principio di esclusione di Pauli?",
     "opzioni": [
       "Due fermioni identici non possono occupare lo stesso stato quantico completo",
-      "Due fotoni non possono mai trovarsi nello stesso luogo",
-      "Ogni elettrone deve avere sempre energia infinita",
-      "Ogni particella deve decadere immediatamente"
+      "Due fermioni identici possono condividere lo stesso stato se hanno energia simile",
+      "Due bosoni identici sono esclusi dallo stesso livello energetico atomico",
+      "Due particelle classiche sono obbligate ad avere spin opposto nello stesso punto"
     ],
     "risposta_corretta": "Due fermioni identici non possono occupare lo stesso stato quantico completo",
-    "spiegazione": "Il principio di esclusione di Pauli è fondamentale per spiegare la struttura elettronica degli atomi: due elettroni nello stesso atomo non possono avere tutti i numeri quantici uguali.",
+    "spiegazione": "Il principio di esclusione di Pauli afferma che due fermioni identici non possono trovarsi nello stesso identico stato quantico completo. È fondamentale per spiegare la struttura elettronica degli atomi.",
     "tags": [
       "fisica_quantistica",
       "pauli",
@@ -470,7 +470,13 @@
     "distrattore_forte": "Due fotoni non possono mai trovarsi nello stesso luogo",
     "punteggio_distrattore_forte": 4,
     "motivo_distrattore_forte": "È vicino perché parla di particelle identiche, ma il principio di Pauli riguarda i fermioni, non i bosoni come i fotoni.",
-    "qualita": "controllata"
+    "qualita": "controllata",
+    "spiegazioni_opzioni": {
+      "Due fermioni identici non possono occupare lo stesso stato quantico completo": "Corretta: descrive in modo preciso il concetto quantistico richiesto.",
+      "Due fermioni identici possono condividere lo stesso stato se hanno energia simile": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio quantistico non corretto.",
+      "Due bosoni identici sono esclusi dallo stesso livello energetico atomico": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio quantistico non corretto.",
+      "Due particelle classiche sono obbligate ad avere spin opposto nello stesso punto": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio quantistico non corretto."
+    }
   },
   {
     "id": "FQ_018",
@@ -504,13 +510,13 @@
     "livello": "intermedio",
     "domanda": "Che cosa succede alla funzione d'onda secondo l'idea del collasso durante una misura?",
     "opzioni": [
-      "Lo stato viene associato a uno dei risultati possibili della misura",
-      "La particella perde sempre tutta la massa",
-      "Il sistema diventa automaticamente invisibile",
-      "La funzione d'onda si trasforma sempre in calore"
+      "La descrizione probabilistica passa a uno stato compatibile con il risultato misurato",
+      "La funzione d’onda diventa una traiettoria classica visibile dopo ogni osservazione",
+      "La misura trasforma la particella in un oggetto macroscopico con massa maggiore",
+      "Lo stato quantistico perde ogni informazione fisica e non descrive più il sistema"
     ],
-    "risposta_corretta": "Lo stato viene associato a uno dei risultati possibili della misura",
-    "spiegazione": "Nell'interpretazione del collasso, la misura porta il sistema da una sovrapposizione di possibilità a un risultato osservato.",
+    "risposta_corretta": "La descrizione probabilistica passa a uno stato compatibile con il risultato misurato",
+    "spiegazione": "Nell’idea del collasso, la funzione d’onda che descrive più risultati possibili viene aggiornata a uno stato compatibile con il risultato ottenuto dalla misura.",
     "tags": [
       "fisica_quantistica",
       "misura",
@@ -520,7 +526,13 @@
     "distrattore_forte": "Il sistema diventa automaticamente invisibile",
     "punteggio_distrattore_forte": 2,
     "motivo_distrattore_forte": "È collegato all'idea di osservazione, ma non descrive il significato fisico del collasso della funzione d'onda.",
-    "qualita": "controllata"
+    "qualita": "controllata",
+    "spiegazioni_opzioni": {
+      "La descrizione probabilistica passa a uno stato compatibile con il risultato misurato": "Corretta: descrive in modo preciso il concetto quantistico richiesto.",
+      "La funzione d’onda diventa una traiettoria classica visibile dopo ogni osservazione": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio quantistico non corretto.",
+      "La misura trasforma la particella in un oggetto macroscopico con massa maggiore": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio quantistico non corretto.",
+      "Lo stato quantistico perde ogni informazione fisica e non descrive più il sistema": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio quantistico non corretto."
+    }
   },
   {
     "id": "FQ_020",
@@ -579,13 +591,13 @@
     "livello": "avanzato",
     "domanda": "In meccanica quantistica, che cosa rappresenta un operatore?",
     "opzioni": [
-      "Un oggetto matematico associato a una grandezza fisica misurabile",
-      "Una particella che trasporta sempre carica elettrica positiva",
-      "Una forza macroscopica che agisce solo sui liquidi",
-      "Un dispositivo meccanico usato solo nei motori termici"
+      "Un oggetto matematico che agisce sullo stato quantistico e rappresenta osservabili o trasformazioni",
+      "Una particella materiale che trasporta energia tra due livelli atomici vicini",
+      "Una grandezza classica usata solo per indicare la posizione precisa dell’elettrone",
+      "Un campo macroscopico che sostituisce la funzione d’onda durante una misura"
     ],
-    "risposta_corretta": "Un oggetto matematico associato a una grandezza fisica misurabile",
-    "spiegazione": "In meccanica quantistica grandezze come energia, posizione e quantità di moto sono rappresentate da operatori che agiscono sugli stati del sistema.",
+    "risposta_corretta": "Un oggetto matematico che agisce sullo stato quantistico e rappresenta osservabili o trasformazioni",
+    "spiegazione": "In meccanica quantistica un operatore è un oggetto matematico che agisce sugli stati. Può rappresentare osservabili fisiche, come energia o quantità di moto, oppure trasformazioni.",
     "tags": [
       "fisica_quantistica",
       "operatori",
@@ -595,7 +607,13 @@
     "distrattore_forte": "Una particella che trasporta sempre carica elettrica positiva",
     "punteggio_distrattore_forte": 3,
     "motivo_distrattore_forte": "È vicino perché parla di fisica delle particelle, ma un operatore non è una particella: è un oggetto matematico.",
-    "qualita": "controllata"
+    "qualita": "controllata",
+    "spiegazioni_opzioni": {
+      "Un oggetto matematico che agisce sullo stato quantistico e rappresenta osservabili o trasformazioni": "Corretta: descrive in modo preciso il concetto quantistico richiesto.",
+      "Una particella materiale che trasporta energia tra due livelli atomici vicini": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio quantistico non corretto.",
+      "Una grandezza classica usata solo per indicare la posizione precisa dell’elettrone": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio quantistico non corretto.",
+      "Un campo macroscopico che sostituisce la funzione d’onda durante una misura": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio quantistico non corretto."
+    }
   },
   {
     "id": "FQ_023",
@@ -629,13 +647,13 @@
     "livello": "avanzato",
     "domanda": "Perché il commutatore tra due operatori è importante in meccanica quantistica?",
     "opzioni": [
-      "Perché indica se due grandezze possono avere valori ben definiti simultaneamente",
-      "Perché misura sempre la velocità della luce nel vuoto",
-      "Perché trasforma automaticamente un bosone in un fermione",
-      "Perché stabilisce la massa totale dell'universo"
+      "Indica se due operatori sono compatibili e se l’ordine delle operazioni cambia il risultato",
+      "Indica la distanza classica tra due particelle dopo una collisione elastica",
+      "Misura la quantità di energia persa da un elettrone durante un salto orbitale",
+      "Stabilisce la massa assoluta di una particella indipendentemente dallo stato quantico"
     ],
-    "risposta_corretta": "Perché indica se due grandezze possono avere valori ben definiti simultaneamente",
-    "spiegazione": "Se due operatori non commutano, le grandezze associate non possono in generale essere determinate simultaneamente con precisione arbitraria.",
+    "risposta_corretta": "Indica se due operatori sono compatibili e se l’ordine delle operazioni cambia il risultato",
+    "spiegazione": "Il commutatore misura quanto conta l’ordine con cui due operatori vengono applicati. Se il commutatore non è nullo, le osservabili associate non sono pienamente compatibili e possono essere legate a relazioni di indeterminazione.",
     "tags": [
       "fisica_quantistica",
       "commutatore",
@@ -645,7 +663,13 @@
     "distrattore_forte": "Perché misura sempre la velocità della luce nel vuoto",
     "punteggio_distrattore_forte": 2,
     "motivo_distrattore_forte": "È un concetto fisico fondamentale, ma il commutatore non serve a misurare la velocità della luce.",
-    "qualita": "controllata"
+    "qualita": "controllata",
+    "spiegazioni_opzioni": {
+      "Indica se due operatori sono compatibili e se l’ordine delle operazioni cambia il risultato": "Corretta: descrive in modo preciso il concetto quantistico richiesto.",
+      "Indica la distanza classica tra due particelle dopo una collisione elastica": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio quantistico non corretto.",
+      "Misura la quantità di energia persa da un elettrone durante un salto orbitale": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio quantistico non corretto.",
+      "Stabilisce la massa assoluta di una particella indipendentemente dallo stato quantico": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio quantistico non corretto."
+    }
   },
   {
     "id": "FQ_025",
@@ -655,12 +679,12 @@
     "domanda": "Che cosa suggeriscono le disuguaglianze di Bell quando vengono violate sperimentalmente?",
     "opzioni": [
       "Che certe correlazioni quantistiche non sono spiegabili con semplici variabili nascoste locali",
-      "Che la fisica quantistica è sempre identica alla meccanica newtoniana",
-      "Che gli elettroni non possiedono mai carica elettrica",
-      "Che la luce non può mai comportarsi come particella"
+      "Che la meccanica quantistica coincide con un modello classico deterministico locale",
+      "Che ogni misura quantistica rivela proprietà già fissate e indipendenti dal contesto",
+      "Che l’entanglement è un effetto dovuto soltanto a errori sperimentali ordinari"
     ],
     "risposta_corretta": "Che certe correlazioni quantistiche non sono spiegabili con semplici variabili nascoste locali",
-    "spiegazione": "La violazione delle disuguaglianze di Bell mostra che le correlazioni quantistiche dell'entanglement non possono essere spiegate da modelli locali semplici a variabili nascoste.",
+    "spiegazione": "La violazione sperimentale delle disuguaglianze di Bell indica che alcune correlazioni quantistiche non possono essere spiegate da modelli classici basati su variabili nascoste locali semplici.",
     "tags": [
       "fisica_quantistica",
       "bell",
@@ -670,7 +694,13 @@
     "distrattore_forte": "Che la fisica quantistica è sempre identica alla meccanica newtoniana",
     "punteggio_distrattore_forte": 4,
     "motivo_distrattore_forte": "È vicino perché confronta quantistica e fisica classica, ma la violazione di Bell evidenzia proprio una differenza profonda.",
-    "qualita": "controllata"
+    "qualita": "controllata",
+    "spiegazioni_opzioni": {
+      "Che certe correlazioni quantistiche non sono spiegabili con semplici variabili nascoste locali": "Corretta: descrive in modo preciso il concetto quantistico richiesto.",
+      "Che la meccanica quantistica coincide con un modello classico deterministico locale": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio quantistico non corretto.",
+      "Che ogni misura quantistica rivela proprietà già fissate e indipendenti dal contesto": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio quantistico non corretto.",
+      "Che l’entanglement è un effetto dovuto soltanto a errori sperimentali ordinari": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio quantistico non corretto."
+    }
   },
   {
     "id": "FQ_026",
@@ -704,13 +734,13 @@
     "livello": "avanzato",
     "domanda": "Qual è una differenza tra fermioni e bosoni?",
     "opzioni": [
-      "I fermioni obbediscono al principio di esclusione di Pauli, mentre i bosoni possono condividere lo stesso stato quantico",
-      "I bosoni hanno sempre carica negativa, mentre i fermioni sono sempre neutri",
-      "I fermioni sono solo onde sonore, mentre i bosoni sono solo pianeti",
-      "I bosoni non esistono nella fisica quantistica"
+      "I fermioni hanno spin semi-intero e rispettano Pauli; i bosoni hanno spin intero",
+      "I fermioni hanno spin intero e possono accumularsi nello stesso stato come i fotoni",
+      "I bosoni hanno spin semi-intero e formano la struttura elettronica degli atomi",
+      "Fermioni e bosoni differiscono solo per la massa, non per spin o comportamento statistico"
     ],
-    "risposta_corretta": "I fermioni obbediscono al principio di esclusione di Pauli, mentre i bosoni possono condividere lo stesso stato quantico",
-    "spiegazione": "Elettroni, protoni e neutroni sono fermioni e rispettano il principio di esclusione. I bosoni, come i fotoni, possono occupare lo stesso stato quantico.",
+    "risposta_corretta": "I fermioni hanno spin semi-intero e rispettano Pauli; i bosoni hanno spin intero",
+    "spiegazione": "I fermioni hanno spin semi-intero e obbediscono al principio di esclusione di Pauli. I bosoni hanno spin intero e possono occupare collettivamente lo stesso stato quantico.",
     "tags": [
       "fisica_quantistica",
       "fermioni",
@@ -720,7 +750,13 @@
     "distrattore_forte": "I bosoni hanno sempre carica negativa, mentre i fermioni sono sempre neutri",
     "punteggio_distrattore_forte": 3,
     "motivo_distrattore_forte": "È vicino perché confronta fermioni e bosoni, ma usa una distinzione sbagliata basata sulla carica.",
-    "qualita": "controllata"
+    "qualita": "controllata",
+    "spiegazioni_opzioni": {
+      "I fermioni hanno spin semi-intero e rispettano Pauli; i bosoni hanno spin intero": "Corretta: descrive in modo preciso il concetto quantistico richiesto.",
+      "I fermioni hanno spin intero e possono accumularsi nello stesso stato come i fotoni": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio quantistico non corretto.",
+      "I bosoni hanno spin semi-intero e formano la struttura elettronica degli atomi": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio quantistico non corretto.",
+      "Fermioni e bosoni differiscono solo per la massa, non per spin o comportamento statistico": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio quantistico non corretto."
+    }
   },
   {
     "id": "FQ_028",
@@ -754,13 +790,13 @@
     "livello": "avanzato",
     "domanda": "Nel modello quantistico dell'atomo, che cosa indicano gli orbitali?",
     "opzioni": [
-      "Regioni associate alla probabilità di trovare un elettrone",
-      "Percorsi circolari rigidi identici alle orbite dei pianeti",
-      "Canali vuoti dove non può mai trovarsi un elettrone",
-      "Zone del nucleo occupate solo da fotoni"
+      "Regioni descritte da probabilità in cui è più probabile trovare l’elettrone",
+      "Traiettorie circolari precise percorse dall’elettrone come un pianeta intorno al Sole",
+      "Superfici materiali solide che separano elettroni di atomi diversi nello spazio",
+      "Percorsi visibili che l’elettrone segue quando viene osservato con un microscopio"
     ],
-    "risposta_corretta": "Regioni associate alla probabilità di trovare un elettrone",
-    "spiegazione": "Gli orbitali non sono orbite classiche: rappresentano distribuzioni di probabilità legate alla funzione d'onda dell'elettrone.",
+    "risposta_corretta": "Regioni descritte da probabilità in cui è più probabile trovare l’elettrone",
+    "spiegazione": "Gli orbitali non sono orbite classiche. Descrivono distribuzioni di probabilità associate alla possibilità di trovare l’elettrone in certe regioni dello spazio.",
     "tags": [
       "fisica_quantistica",
       "orbitali",
@@ -770,7 +806,13 @@
     "distrattore_forte": "Percorsi circolari rigidi identici alle orbite dei pianeti",
     "punteggio_distrattore_forte": 4,
     "motivo_distrattore_forte": "È vicino perché richiama modelli atomici intuitivi, ma gli orbitali quantistici non sono orbite planetarie.",
-    "qualita": "controllata"
+    "qualita": "controllata",
+    "spiegazioni_opzioni": {
+      "Regioni descritte da probabilità in cui è più probabile trovare l’elettrone": "Corretta: descrive in modo preciso il concetto quantistico richiesto.",
+      "Traiettorie circolari precise percorse dall’elettrone come un pianeta intorno al Sole": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio quantistico non corretto.",
+      "Superfici materiali solide che separano elettroni di atomi diversi nello spazio": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio quantistico non corretto.",
+      "Percorsi visibili che l’elettrone segue quando viene osservato con un microscopio": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio quantistico non corretto."
+    }
   },
   {
     "id": "FQ_030",
@@ -854,13 +896,13 @@
     "livello": "facile",
     "domanda": "Che cosa succede se un fotone ha frequenza maggiore?",
     "opzioni": [
-      "Ha energia maggiore",
-      "Ha massa a riposo maggiore",
-      "Diventa automaticamente un protone",
-      "Perde sempre la sua natura elettromagnetica"
+      "Ha energia maggiore, perché l’energia del fotone è proporzionale alla frequenza",
+      "Ha energia minore, perché frequenza ed energia del fotone sono inversamente proporzionali",
+      "Ha la stessa energia, perché l’energia dipende solo dalla velocità della luce",
+      "Ha massa maggiore, perché aumentando la frequenza il fotone diventa particella materiale"
     ],
-    "risposta_corretta": "Ha energia maggiore",
-    "spiegazione": "L'energia di un fotone è proporzionale alla frequenza: maggiore è la frequenza, maggiore è l'energia.",
+    "risposta_corretta": "Ha energia maggiore, perché l’energia del fotone è proporzionale alla frequenza",
+    "spiegazione": "L’energia di un fotone è data dalla relazione E = h f. Quindi, se la frequenza aumenta, aumenta anche l’energia del fotone.",
     "tags": [
       "fisica_quantistica",
       "fotone",
@@ -871,7 +913,13 @@
     "distrattore_forte": "Ha massa a riposo maggiore",
     "punteggio_distrattore_forte": 4,
     "motivo_distrattore_forte": "È vicino perché collega energia e particelle, ma il fotone non ha massa a riposo.",
-    "qualita": "controllata"
+    "qualita": "controllata",
+    "spiegazioni_opzioni": {
+      "Ha energia maggiore, perché l’energia del fotone è proporzionale alla frequenza": "Corretta: descrive in modo preciso il concetto quantistico richiesto.",
+      "Ha energia minore, perché frequenza ed energia del fotone sono inversamente proporzionali": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio quantistico non corretto.",
+      "Ha la stessa energia, perché l’energia dipende solo dalla velocità della luce": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio quantistico non corretto.",
+      "Ha massa maggiore, perché aumentando la frequenza il fotone diventa particella materiale": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio quantistico non corretto."
+    }
   },
   {
     "id": "FQ_034",

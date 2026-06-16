@@ -10,7 +10,7 @@ Questo report separa i problemi qualitativi reali dagli avvisi non bloccanti sul
 | Biologia | 40 | 0 | 40 |
 | Fisica | 40 | 0 | 40 |
 | Chimica | 40 | 0 | 40 |
-| Fisica quantistica | 40 | 13 | 40 |
+| Fisica quantistica | 40 | 5 | 40 |
 
 **Nota:** la risposta in A nel sorgente non è più bloccante, perché il runtime ora usa il mescolatore generale.
 
@@ -398,7 +398,7 @@ Nessun problema qualitativo reale rilevato.
 ## Fisica quantistica
 
 Domande sorgente: **40**
-Domande con problemi qualità reali: **13**
+Domande con problemi qualità reali: **5**
 Risposte corrette in A nel sorgente: **40**
 
 Distribuzione risposta corretta nel sorgente:
@@ -408,170 +408,6 @@ Distribuzione risposta corretta nel sorgente:
 ```
 
 ### Domande da migliorare davvero
-
-### FQ_017 — livello: intermedio
-
-**Domanda:** Che cosa afferma il principio di esclusione di Pauli?
-
-**Opzioni attuali:**
-- A. Due fermioni identici non possono occupare lo stesso stato quantico completo ✅
-- B. Due fotoni non possono mai trovarsi nello stesso luogo
-- C. Ogni elettrone deve avere sempre energia infinita
-- D. Ogni particella deve decadere immediatamente
-
-**Risposta corretta nel sorgente:** A
-
-**Problemi reali:**
-- Possibile opzione debole/generica: contiene “mai”.
-- Possibile opzione debole/generica: contiene “sempre”.
-
-**Regola di revisione:**
-- Ogni domanda deve avere almeno un distrattore forte: una risposta sbagliata molto vicina alla corretta, ma falsa per un dettaglio preciso.
-- Evitare parole assolute come “sempre” e “mai”, se rendono il distrattore troppo eliminabile.
-- Rendere le quattro opzioni simili per lunghezza, struttura e livello tecnico.
-
-### FQ_019 — livello: intermedio
-
-**Domanda:** Che cosa succede alla funzione d'onda secondo l'idea del collasso durante una misura?
-
-**Opzioni attuali:**
-- A. Lo stato viene associato a uno dei risultati possibili della misura ✅
-- B. La particella perde sempre tutta la massa
-- C. Il sistema diventa automaticamente invisibile
-- D. La funzione d'onda si trasforma sempre in calore
-
-**Risposta corretta nel sorgente:** A
-
-**Problemi reali:**
-- Possibile opzione debole/generica: contiene “sempre”.
-- Possibile opzione debole/generica: contiene “sempre”.
-
-**Regola di revisione:**
-- Ogni domanda deve avere almeno un distrattore forte: una risposta sbagliata molto vicina alla corretta, ma falsa per un dettaglio preciso.
-- Evitare parole assolute come “sempre” e “mai”, se rendono il distrattore troppo eliminabile.
-- Rendere le quattro opzioni simili per lunghezza, struttura e livello tecnico.
-
-### FQ_022 — livello: avanzato
-
-**Domanda:** In meccanica quantistica, che cosa rappresenta un operatore?
-
-**Opzioni attuali:**
-- A. Un oggetto matematico associato a una grandezza fisica misurabile ✅
-- B. Una particella che trasporta sempre carica elettrica positiva
-- C. Una forza macroscopica che agisce solo sui liquidi
-- D. Un dispositivo meccanico usato solo nei motori termici
-
-**Risposta corretta nel sorgente:** A
-
-**Problemi reali:**
-- Possibile opzione debole/generica: contiene “sempre”.
-
-**Regola di revisione:**
-- Ogni domanda deve avere almeno un distrattore forte: una risposta sbagliata molto vicina alla corretta, ma falsa per un dettaglio preciso.
-- Evitare parole assolute come “sempre” e “mai”, se rendono il distrattore troppo eliminabile.
-- Rendere le quattro opzioni simili per lunghezza, struttura e livello tecnico.
-
-### FQ_024 — livello: avanzato
-
-**Domanda:** Perché il commutatore tra due operatori è importante in meccanica quantistica?
-
-**Opzioni attuali:**
-- A. Perché indica se due grandezze possono avere valori ben definiti simultaneamente ✅
-- B. Perché misura sempre la velocità della luce nel vuoto
-- C. Perché trasforma automaticamente un bosone in un fermione
-- D. Perché stabilisce la massa totale dell'universo
-
-**Risposta corretta nel sorgente:** A
-
-**Problemi reali:**
-- Possibile opzione debole/generica: contiene “sempre”.
-
-**Regola di revisione:**
-- Ogni domanda deve avere almeno un distrattore forte: una risposta sbagliata molto vicina alla corretta, ma falsa per un dettaglio preciso.
-- Evitare parole assolute come “sempre” e “mai”, se rendono il distrattore troppo eliminabile.
-- Rendere le quattro opzioni simili per lunghezza, struttura e livello tecnico.
-
-### FQ_025 — livello: avanzato
-
-**Domanda:** Che cosa suggeriscono le disuguaglianze di Bell quando vengono violate sperimentalmente?
-
-**Opzioni attuali:**
-- A. Che certe correlazioni quantistiche non sono spiegabili con semplici variabili nascoste locali ✅
-- B. Che la fisica quantistica è sempre identica alla meccanica newtoniana
-- C. Che gli elettroni non possiedono mai carica elettrica
-- D. Che la luce non può mai comportarsi come particella
-
-**Risposta corretta nel sorgente:** A
-
-**Problemi reali:**
-- Possibile opzione debole/generica: contiene “sempre”.
-- Possibile opzione debole/generica: contiene “mai”.
-- Possibile opzione debole/generica: contiene “mai”.
-
-**Regola di revisione:**
-- Ogni domanda deve avere almeno un distrattore forte: una risposta sbagliata molto vicina alla corretta, ma falsa per un dettaglio preciso.
-- Evitare parole assolute come “sempre” e “mai”, se rendono il distrattore troppo eliminabile.
-- Rendere le quattro opzioni simili per lunghezza, struttura e livello tecnico.
-
-### FQ_027 — livello: avanzato
-
-**Domanda:** Qual è una differenza tra fermioni e bosoni?
-
-**Opzioni attuali:**
-- A. I fermioni obbediscono al principio di esclusione di Pauli, mentre i bosoni possono condividere lo stesso stato quantico ✅
-- B. I bosoni hanno sempre carica negativa, mentre i fermioni sono sempre neutri
-- C. I fermioni sono solo onde sonore, mentre i bosoni sono solo pianeti
-- D. I bosoni non esistono nella fisica quantistica
-
-**Risposta corretta nel sorgente:** A
-
-**Problemi reali:**
-- Possibile opzione debole/generica: contiene “sempre”.
-
-**Regola di revisione:**
-- Ogni domanda deve avere almeno un distrattore forte: una risposta sbagliata molto vicina alla corretta, ma falsa per un dettaglio preciso.
-- Evitare parole assolute come “sempre” e “mai”, se rendono il distrattore troppo eliminabile.
-- Rendere le quattro opzioni simili per lunghezza, struttura e livello tecnico.
-
-### FQ_029 — livello: avanzato
-
-**Domanda:** Nel modello quantistico dell'atomo, che cosa indicano gli orbitali?
-
-**Opzioni attuali:**
-- A. Regioni associate alla probabilità di trovare un elettrone ✅
-- B. Percorsi circolari rigidi identici alle orbite dei pianeti
-- C. Canali vuoti dove non può mai trovarsi un elettrone
-- D. Zone del nucleo occupate solo da fotoni
-
-**Risposta corretta nel sorgente:** A
-
-**Problemi reali:**
-- Possibile opzione debole/generica: contiene “mai”.
-
-**Regola di revisione:**
-- Ogni domanda deve avere almeno un distrattore forte: una risposta sbagliata molto vicina alla corretta, ma falsa per un dettaglio preciso.
-- Evitare parole assolute come “sempre” e “mai”, se rendono il distrattore troppo eliminabile.
-- Rendere le quattro opzioni simili per lunghezza, struttura e livello tecnico.
-
-### FQ_033 — livello: facile
-
-**Domanda:** Che cosa succede se un fotone ha frequenza maggiore?
-
-**Opzioni attuali:**
-- A. Ha energia maggiore ✅
-- B. Ha massa a riposo maggiore
-- C. Diventa automaticamente un protone
-- D. Perde sempre la sua natura elettromagnetica
-
-**Risposta corretta nel sorgente:** A
-
-**Problemi reali:**
-- Possibile opzione debole/generica: contiene “sempre”.
-
-**Regola di revisione:**
-- Ogni domanda deve avere almeno un distrattore forte: una risposta sbagliata molto vicina alla corretta, ma falsa per un dettaglio preciso.
-- Evitare parole assolute come “sempre” e “mai”, se rendono il distrattore troppo eliminabile.
-- Rendere le quattro opzioni simili per lunghezza, struttura e livello tecnico.
 
 ### FQ_034 — livello: facile
 
