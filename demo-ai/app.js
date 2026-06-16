@@ -500,23 +500,138 @@ function mostraDomanda() {
   });
 }
 
-function effettoRispostaCorretta() {
-  const effetto = document.createElement("div");
-  effetto.className = "success-effect";
+function effettoRispostaCorretta(elementoPartenza) {
+  const rettangolo = elementoPartenza.getBoundingClientRect();
 
-  for (let i = 0; i < 22; i++) {
-    const particella = document.createElement("span");
-    particella.style.setProperty("--x", `${Math.random() * 220 - 110}px`);
-    particella.style.setProperty("--y", `${Math.random() * -180 - 40}px`);
-    particella.style.setProperty("--delay", `${Math.random() * 0.18}s`);
-    effetto.appendChild(particella);
+  const origineX = rettangolo.left + rettangolo.width / 2;
+  const origineY = rettangolo.top + rettangolo.height / 2;
+
+  const canvas = document.createElement("canvas");
+  canvas.className = "confetti-canvas";
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+  canvas.style.position = "fixed";
+  canvas.style.left = "0";
+  canvas.style.top = "0";
+  canvas.style.width = "100vw";
+  canvas.style.height = "100vh";
+  canvas.style.zIndex = "9999";
+  canvas.style.pointerEvents = "none";
+
+  document.body.appendChild(canvas);
+
+  const ctx = canvas.getContext("2d");
+
+  const colori = [
+    "#17d98f",
+    "#1fe0ff",
+    "#4aa3ff",
+    "#ffda66",
+    "#ff5d73",
+    "#ffffff",
+    "#b388ff",
+    "#ff8a00",
+    "#ff4fd8",
+    "#7cff6b"
+  ];
+
+  const coriandoli = [];
+  const quantita = 180;
+
+  for (let i = 0; i < quantita; i++) {
+    const lato = Math.random() < 0.5 ? -1 : 1;
+
+    const velocitaLaterale = lato * (180 + Math.random() * 760);
+    const velocitaVerticale = -(520 + Math.random() * 760);
+
+    coriandoli.push({
+      x: origineX + (Math.random() * 80 - 40),
+      y: origineY + (Math.random() * 36 - 18),
+      vx: velocitaLaterale,
+      vy: velocitaVerticale,
+      gravita: 720 + Math.random() * 420,
+      resistenza: 0.992 + Math.random() * 0.004,
+      larghezza: 10 + Math.random() * 16,
+      altezza: 7 + Math.random() * 13,
+      rotazione: Math.random() * Math.PI * 2,
+      velocitaRotazione: (Math.random() * 10 - 5),
+      colore: colori[Math.floor(Math.random() * colori.length)],
+      vita: 0,
+      durata: 3.8 + Math.random() * 1.5,
+      forma: Math.random() < 0.72 ? "rettangolo" : "cerchio",
+      oscillazione: Math.random() * Math.PI * 2,
+      oscillazioneVelocita: 2 + Math.random() * 4
+    });
   }
 
-  document.body.appendChild(effetto);
+  let ultimoTempo = performance.now();
 
-  setTimeout(() => {
-    effetto.remove();
-  }, 900);
+  function anima(tempoCorrente) {
+    const deltaSecondi = Math.min((tempoCorrente - ultimoTempo) / 1000, 0.033);
+    ultimoTempo = tempoCorrente;
+
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    let ancoraVisibili = false;
+
+    for (const pezzo of coriandoli) {
+      pezzo.vita += deltaSecondi;
+
+      pezzo.vx *= pezzo.resistenza;
+      pezzo.vy += pezzo.gravita * deltaSecondi;
+
+      const movimentoOndulato = Math.sin(
+        pezzo.vita * pezzo.oscillazioneVelocita + pezzo.oscillazione
+      ) * 38;
+
+      pezzo.x += (pezzo.vx * deltaSecondi) + movimentoOndulato * deltaSecondi;
+      pezzo.y += pezzo.vy * deltaSecondi;
+      pezzo.rotazione += pezzo.velocitaRotazione * deltaSecondi;
+
+      const parteFinaleVita = Math.max(0, (pezzo.vita - pezzo.durata * 0.72) / (pezzo.durata * 0.28));
+      const uscitaBassa = Math.max(0, (pezzo.y - canvas.height * 0.72) / (canvas.height * 0.35));
+      const dissolvenza = Math.max(parteFinaleVita, uscitaBassa);
+      const opacita = Math.max(0, 1 - dissolvenza);
+
+      if (
+        opacita > 0 &&
+        pezzo.y < canvas.height + 160 &&
+        pezzo.x > -220 &&
+        pezzo.x < canvas.width + 220
+      ) {
+        ancoraVisibili = true;
+      }
+
+      ctx.save();
+      ctx.globalAlpha = opacita;
+      ctx.translate(pezzo.x, pezzo.y);
+      ctx.rotate(pezzo.rotazione);
+      ctx.fillStyle = pezzo.colore;
+
+      if (pezzo.forma === "cerchio") {
+        ctx.beginPath();
+        ctx.arc(0, 0, pezzo.larghezza * 0.45, 0, Math.PI * 2);
+        ctx.fill();
+      } else {
+        ctx.fillRect(
+          -pezzo.larghezza / 2,
+          -pezzo.altezza / 2,
+          pezzo.larghezza,
+          pezzo.altezza
+        );
+      }
+
+      ctx.restore();
+    }
+
+    if (ancoraVisibili) {
+      requestAnimationFrame(anima);
+    } else {
+      canvas.remove();
+    }
+  }
+
+  requestAnimationFrame(anima);
 }
 
 function controllaRisposta(buttonCliccato, opzioneScelta, opzioni) {
@@ -543,7 +658,7 @@ function controllaRisposta(buttonCliccato, opzioneScelta, opzioni) {
   if (opzioneScelta.corretta) {
     STATO.punteggio += 1;
     document.querySelector(".quiz-card")?.classList.add("correct-glow");
-    effettoRispostaCorretta();
+    effettoRispostaCorretta(buttonCliccato);
   } else {
     buttonCliccato.classList.add("shake");
   }

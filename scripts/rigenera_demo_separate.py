@@ -640,23 +640,138 @@ function mostraDomanda() {
   });
 }
 
-function effettoRispostaCorretta() {
-  const effetto = document.createElement("div");
-  effetto.className = "success-effect";
+function effettoRispostaCorretta(elementoPartenza) {
+  const rettangolo = elementoPartenza.getBoundingClientRect();
 
-  for (let i = 0; i < 22; i++) {
-    const particella = document.createElement("span");
-    particella.style.setProperty("--x", `${Math.random() * 220 - 110}px`);
-    particella.style.setProperty("--y", `${Math.random() * -180 - 40}px`);
-    particella.style.setProperty("--delay", `${Math.random() * 0.18}s`);
-    effetto.appendChild(particella);
+  const origineX = rettangolo.left + rettangolo.width / 2;
+  const origineY = rettangolo.top + rettangolo.height / 2;
+
+  const canvas = document.createElement("canvas");
+  canvas.className = "confetti-canvas";
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+  canvas.style.position = "fixed";
+  canvas.style.left = "0";
+  canvas.style.top = "0";
+  canvas.style.width = "100vw";
+  canvas.style.height = "100vh";
+  canvas.style.zIndex = "9999";
+  canvas.style.pointerEvents = "none";
+
+  document.body.appendChild(canvas);
+
+  const ctx = canvas.getContext("2d");
+
+  const colori = [
+    "#17d98f",
+    "#1fe0ff",
+    "#4aa3ff",
+    "#ffda66",
+    "#ff5d73",
+    "#ffffff",
+    "#b388ff",
+    "#ff8a00",
+    "#ff4fd8",
+    "#7cff6b"
+  ];
+
+  const coriandoli = [];
+  const quantita = 180;
+
+  for (let i = 0; i < quantita; i++) {
+    const lato = Math.random() < 0.5 ? -1 : 1;
+
+    const velocitaLaterale = lato * (180 + Math.random() * 760);
+    const velocitaVerticale = -(520 + Math.random() * 760);
+
+    coriandoli.push({
+      x: origineX + (Math.random() * 80 - 40),
+      y: origineY + (Math.random() * 36 - 18),
+      vx: velocitaLaterale,
+      vy: velocitaVerticale,
+      gravita: 720 + Math.random() * 420,
+      resistenza: 0.992 + Math.random() * 0.004,
+      larghezza: 10 + Math.random() * 16,
+      altezza: 7 + Math.random() * 13,
+      rotazione: Math.random() * Math.PI * 2,
+      velocitaRotazione: (Math.random() * 10 - 5),
+      colore: colori[Math.floor(Math.random() * colori.length)],
+      vita: 0,
+      durata: 3.8 + Math.random() * 1.5,
+      forma: Math.random() < 0.72 ? "rettangolo" : "cerchio",
+      oscillazione: Math.random() * Math.PI * 2,
+      oscillazioneVelocita: 2 + Math.random() * 4
+    });
   }
 
-  document.body.appendChild(effetto);
+  let ultimoTempo = performance.now();
 
-  setTimeout(() => {
-    effetto.remove();
-  }, 900);
+  function anima(tempoCorrente) {
+    const deltaSecondi = Math.min((tempoCorrente - ultimoTempo) / 1000, 0.033);
+    ultimoTempo = tempoCorrente;
+
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    let ancoraVisibili = false;
+
+    for (const pezzo of coriandoli) {
+      pezzo.vita += deltaSecondi;
+
+      pezzo.vx *= pezzo.resistenza;
+      pezzo.vy += pezzo.gravita * deltaSecondi;
+
+      const movimentoOndulato = Math.sin(
+        pezzo.vita * pezzo.oscillazioneVelocita + pezzo.oscillazione
+      ) * 38;
+
+      pezzo.x += (pezzo.vx * deltaSecondi) + movimentoOndulato * deltaSecondi;
+      pezzo.y += pezzo.vy * deltaSecondi;
+      pezzo.rotazione += pezzo.velocitaRotazione * deltaSecondi;
+
+      const parteFinaleVita = Math.max(0, (pezzo.vita - pezzo.durata * 0.72) / (pezzo.durata * 0.28));
+      const uscitaBassa = Math.max(0, (pezzo.y - canvas.height * 0.72) / (canvas.height * 0.35));
+      const dissolvenza = Math.max(parteFinaleVita, uscitaBassa);
+      const opacita = Math.max(0, 1 - dissolvenza);
+
+      if (
+        opacita > 0 &&
+        pezzo.y < canvas.height + 160 &&
+        pezzo.x > -220 &&
+        pezzo.x < canvas.width + 220
+      ) {
+        ancoraVisibili = true;
+      }
+
+      ctx.save();
+      ctx.globalAlpha = opacita;
+      ctx.translate(pezzo.x, pezzo.y);
+      ctx.rotate(pezzo.rotazione);
+      ctx.fillStyle = pezzo.colore;
+
+      if (pezzo.forma === "cerchio") {
+        ctx.beginPath();
+        ctx.arc(0, 0, pezzo.larghezza * 0.45, 0, Math.PI * 2);
+        ctx.fill();
+      } else {
+        ctx.fillRect(
+          -pezzo.larghezza / 2,
+          -pezzo.altezza / 2,
+          pezzo.larghezza,
+          pezzo.altezza
+        );
+      }
+
+      ctx.restore();
+    }
+
+    if (ancoraVisibili) {
+      requestAnimationFrame(anima);
+    } else {
+      canvas.remove();
+    }
+  }
+
+  requestAnimationFrame(anima);
 }
 
 function controllaRisposta(buttonCliccato, opzioneScelta, opzioni) {
@@ -683,7 +798,7 @@ function controllaRisposta(buttonCliccato, opzioneScelta, opzioni) {
   if (opzioneScelta.corretta) {
     STATO.punteggio += 1;
     document.querySelector(".quiz-card")?.classList.add("correct-glow");
-    effettoRispostaCorretta();
+    effettoRispostaCorretta(buttonCliccato);
   } else {
     buttonCliccato.classList.add("shake");
   }
@@ -1097,33 +1212,70 @@ button.secondary {
 
 .success-effect {
   position: fixed;
-  left: 50%;
-  top: 52%;
   width: 1px;
   height: 1px;
   z-index: 9999;
   pointer-events: none;
+  overflow: visible;
 }
 
 .success-effect span {
   position: absolute;
-  width: 8px;
-  height: 8px;
-  border-radius: 999px;
-  background: var(--green);
-  box-shadow: 0 0 14px rgba(23, 217, 143, 0.9);
-  animation: particle 0.85s ease-out forwards;
+  left: 0;
+  top: 0;
+  width: var(--size);
+  height: calc(var(--size) * 0.62);
+  background: var(--color);
+  opacity: 1;
+  border-radius: 3px;
+  box-shadow:
+    0 0 10px rgba(255, 255, 255, 0.38),
+    0 0 18px rgba(31, 224, 255, 0.12);
+  will-change: transform, opacity;
+  animation: confettiSoftBurst var(--dur) forwards;
   animation-delay: var(--delay);
 }
 
-@keyframes particle {
-  from {
-    transform: translate(0, 0) scale(1);
+.success-effect span:nth-child(3n) {
+  border-radius: 999px;
+}
+
+.success-effect span:nth-child(4n) {
+  height: var(--size);
+}
+
+.success-effect span:nth-child(5n) {
+  width: calc(var(--size) * 0.65);
+  height: calc(var(--size) * 1.15);
+}
+
+@keyframes confettiSoftBurst {
+  0% {
+    transform: translate3d(0, 0, 0) rotate(0deg) scale(0.72);
     opacity: 1;
+    animation-timing-function: cubic-bezier(0.18, 0.88, 0.25, 1);
   }
 
-  to {
-    transform: translate(var(--x), var(--y)) scale(0.3);
+  18% {
+    transform: translate3d(calc(var(--open-x) * 0.55), var(--up-y), 0) rotate(calc(var(--rot-mid) * 0.45)) scale(1.08);
+    opacity: 1;
+    animation-timing-function: cubic-bezier(0.22, 0.72, 0.24, 1);
+  }
+
+  42% {
+    transform: translate3d(var(--open-x), calc(var(--up-y) * 0.72), 0) rotate(var(--rot-mid)) scale(1);
+    opacity: 1;
+    animation-timing-function: cubic-bezier(0.28, 0.02, 0.36, 1);
+  }
+
+  78% {
+    transform: translate3d(calc(var(--fall-x) * 0.82), calc(var(--fall-y) * 0.72), 0) rotate(calc(var(--rot-end) * 0.82)) scale(0.94);
+    opacity: 1;
+    animation-timing-function: cubic-bezier(0.2, 0.0, 0.2, 1);
+  }
+
+  100% {
+    transform: translate3d(var(--fall-x), var(--fall-y), 0) rotate(var(--rot-end)) scale(0.76);
     opacity: 0;
   }
 }
