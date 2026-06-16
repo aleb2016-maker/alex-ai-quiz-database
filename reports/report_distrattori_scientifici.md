@@ -6,7 +6,7 @@ Questo report separa i problemi qualitativi reali dagli avvisi non bloccanti sul
 
 | Motore | Domande | Problemi qualità reali | Risposta in A nel sorgente |
 |---|---:|---:|---:|
-| Scienze generali | 40 | 16 | 34 |
+| Scienze generali | 40 | 8 | 34 |
 | Biologia | 40 | 0 | 40 |
 | Fisica | 40 | 0 | 40 |
 | Chimica | 40 | 0 | 40 |
@@ -17,7 +17,7 @@ Questo report separa i problemi qualitativi reali dagli avvisi non bloccanti sul
 ## Scienze generali
 
 Domande sorgente: **40**
-Domande con problemi qualità reali: **16**
+Domande con problemi qualità reali: **8**
 Risposte corrette in A nel sorgente: **34**
 
 Distribuzione risposta corretta nel sorgente:
@@ -27,167 +27,6 @@ Distribuzione risposta corretta nel sorgente:
 ```
 
 ### Domande da migliorare davvero
-
-### SCI_001 — livello: facile
-
-**Domanda:** Quale organulo cellulare è principalmente responsabile della produzione di energia nella cellula?
-
-**Opzioni attuali:**
-- A. Nucleo
-- B. Mitocondrio ✅
-- C. Ribosoma
-- D. Membrana cellulare
-
-**Risposta corretta nel sorgente:** B
-
-**Problemi reali:**
-- Opzioni con lunghezze molto sbilanciate: una risposta può risultare troppo riconoscibile.
-
-**Regola di revisione:**
-- Ogni domanda deve avere almeno un distrattore forte: una risposta sbagliata molto vicina alla corretta, ma falsa per un dettaglio preciso.
-- Evitare parole assolute come “sempre” e “mai”, se rendono il distrattore troppo eliminabile.
-- Rendere le quattro opzioni simili per lunghezza, struttura e livello tecnico.
-
-### SCI_005 — livello: intermedio
-
-**Domanda:** Durante la fotosintesi, quale gas viene assorbito principalmente dalle piante?
-
-**Opzioni attuali:**
-- A. Ossigeno
-- B. Azoto
-- C. Anidride carbonica ✅
-- D. Idrogeno
-
-**Risposta corretta nel sorgente:** C
-
-**Problemi reali:**
-- Opzioni con lunghezze molto sbilanciate: una risposta può risultare troppo riconoscibile.
-
-**Regola di revisione:**
-- Ogni domanda deve avere almeno un distrattore forte: una risposta sbagliata molto vicina alla corretta, ma falsa per un dettaglio preciso.
-- Evitare parole assolute come “sempre” e “mai”, se rendono il distrattore troppo eliminabile.
-- Rendere le quattro opzioni simili per lunghezza, struttura e livello tecnico.
-
-### SCI_006 — livello: intermedio
-
-**Domanda:** Quale valore di pH indica una soluzione acida?
-
-**Opzioni attuali:**
-- A. pH uguale a 7
-- B. pH maggiore di 7
-- C. pH minore di 7 ✅
-- D. pH sempre uguale a 14
-
-**Risposta corretta nel sorgente:** C
-
-**Problemi reali:**
-- Possibile opzione debole/generica: contiene “sempre”.
-
-**Regola di revisione:**
-- Ogni domanda deve avere almeno un distrattore forte: una risposta sbagliata molto vicina alla corretta, ma falsa per un dettaglio preciso.
-- Evitare parole assolute come “sempre” e “mai”, se rendono il distrattore troppo eliminabile.
-- Rendere le quattro opzioni simili per lunghezza, struttura e livello tecnico.
-
-### SCI_007 — livello: intermedio
-
-**Domanda:** Se la massa di un oggetto resta costante e la forza applicata aumenta, che cosa succede alla sua accelerazione secondo la seconda legge di Newton?
-
-**Opzioni attuali:**
-- A. Aumenta ✅
-- B. Diminuisce
-- C. Resta sempre nulla
-- D. Diventa indipendente dalla forza
-
-**Risposta corretta nel sorgente:** A
-
-**Problemi reali:**
-- Possibile opzione debole/generica: contiene “sempre”.
-- Opzioni con lunghezze molto sbilanciate: una risposta può risultare troppo riconoscibile.
-
-**Regola di revisione:**
-- Ogni domanda deve avere almeno un distrattore forte: una risposta sbagliata molto vicina alla corretta, ma falsa per un dettaglio preciso.
-- Evitare parole assolute come “sempre” e “mai”, se rendono il distrattore troppo eliminabile.
-- Rendere le quattro opzioni simili per lunghezza, struttura e livello tecnico.
-
-### SCI_008 — livello: intermedio
-
-**Domanda:** Quale molecola contiene le istruzioni genetiche ereditarie degli esseri viventi?
-
-**Opzioni attuali:**
-- A. ATP
-- B. DNA ✅
-- C. Glucosio
-- D. Emoglobina
-
-**Risposta corretta nel sorgente:** B
-
-**Problemi reali:**
-- Opzioni con lunghezze molto sbilanciate: una risposta può risultare troppo riconoscibile.
-
-**Regola di revisione:**
-- Ogni domanda deve avere almeno un distrattore forte: una risposta sbagliata molto vicina alla corretta, ma falsa per un dettaglio preciso.
-- Evitare parole assolute come “sempre” e “mai”, se rendono il distrattore troppo eliminabile.
-- Rendere le quattro opzioni simili per lunghezza, struttura e livello tecnico.
-
-### SCI_011 — livello: avanzato
-
-**Domanda:** Quale affermazione descrive meglio la differenza tra massa e peso?
-
-**Opzioni attuali:**
-- A. La massa dipende dalla gravità, il peso no
-- B. La massa è la quantità di materia, il peso è la forza gravitazionale su quella massa ✅
-- C. Massa e peso sono sempre la stessa grandezza
-- D. Il peso si misura in chilogrammi, la massa in Newton
-
-**Risposta corretta nel sorgente:** B
-
-**Problemi reali:**
-- Possibile opzione debole/generica: contiene “sempre”.
-
-**Regola di revisione:**
-- Ogni domanda deve avere almeno un distrattore forte: una risposta sbagliata molto vicina alla corretta, ma falsa per un dettaglio preciso.
-- Evitare parole assolute come “sempre” e “mai”, se rendono il distrattore troppo eliminabile.
-- Rendere le quattro opzioni simili per lunghezza, struttura e livello tecnico.
-
-### SCI_013 — livello: facile
-
-**Domanda:** Qual è la funzione principale della membrana cellulare?
-
-**Opzioni attuali:**
-- A. Delimita la cellula e regola gli scambi con l'esterno ✅
-- B. Produce direttamente tutta l'energia della cellula
-- C. Contiene sempre il DNA in tutte le cellule
-- D. Trasforma il sangue in ossigeno
-
-**Risposta corretta nel sorgente:** A
-
-**Problemi reali:**
-- Possibile opzione debole/generica: contiene “sempre”.
-
-**Regola di revisione:**
-- Ogni domanda deve avere almeno un distrattore forte: una risposta sbagliata molto vicina alla corretta, ma falsa per un dettaglio preciso.
-- Evitare parole assolute come “sempre” e “mai”, se rendono il distrattore troppo eliminabile.
-- Rendere le quattro opzioni simili per lunghezza, struttura e livello tecnico.
-
-### SCI_023 — livello: intermedio
-
-**Domanda:** Una soluzione con pH minore di 7 è generalmente considerata:
-
-**Opzioni attuali:**
-- A. Acida ✅
-- B. Basica
-- C. Neutra
-- D. Sempre salina
-
-**Risposta corretta nel sorgente:** A
-
-**Problemi reali:**
-- Possibile opzione debole/generica: contiene “sempre”.
-
-**Regola di revisione:**
-- Ogni domanda deve avere almeno un distrattore forte: una risposta sbagliata molto vicina alla corretta, ma falsa per un dettaglio preciso.
-- Evitare parole assolute come “sempre” e “mai”, se rendono il distrattore troppo eliminabile.
-- Rendere le quattro opzioni simili per lunghezza, struttura e livello tecnico.
 
 ### SCI_029 — livello: intermedio
 

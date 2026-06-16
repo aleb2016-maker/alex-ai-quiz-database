@@ -6,13 +6,13 @@
     "livello": "facile",
     "domanda": "Quale organulo cellulare è principalmente responsabile della produzione di energia nella cellula?",
     "opzioni": [
-      "Nucleo",
-      "Mitocondrio",
-      "Ribosoma",
-      "Membrana cellulare"
+      "Il nucleo, perché contiene il DNA e coordina molte attività cellulari",
+      "Il mitocondrio, perché produce gran parte dell’ATP usato dalla cellula",
+      "Il ribosoma, perché costruisce proteine leggendo le informazioni genetiche",
+      "La membrana cellulare, perché regola gli scambi con l’ambiente esterno"
     ],
-    "risposta_corretta": "Mitocondrio",
-    "spiegazione": "Il mitocondrio produce energia sotto forma di ATP attraverso la respirazione cellulare. Il nucleo contiene il DNA, i ribosomi producono proteine e la membrana cellulare delimita la cellula.",
+    "risposta_corretta": "Il mitocondrio, perché produce gran parte dell’ATP usato dalla cellula",
+    "spiegazione": "Il mitocondrio è l’organulo principalmente coinvolto nella produzione di ATP, la molecola che la cellula usa come fonte immediata di energia.",
     "tags": [
       "biologia",
       "scienze"
@@ -21,7 +21,13 @@
     "distrattore_forte": "Ribosoma",
     "punteggio_distrattore_forte": 0.92,
     "motivo_distrattore_forte": "È un distrattore plausibile perché è collegato allo stesso argomento della risposta corretta, ma non identifica precisamente il concetto richiesto. La risposta corretta resta 'Mitocondrio', non 'Ribosoma'.",
-    "qualita": 100
+    "qualita": 100,
+    "spiegazioni_opzioni": {
+      "Il nucleo, perché contiene il DNA e coordina molte attività cellulari": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio scientifico non corretto.",
+      "Il mitocondrio, perché produce gran parte dell’ATP usato dalla cellula": "Corretta: descrive in modo preciso il concetto scientifico richiesto.",
+      "Il ribosoma, perché costruisce proteine leggendo le informazioni genetiche": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio scientifico non corretto.",
+      "La membrana cellulare, perché regola gli scambi con l’ambiente esterno": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio scientifico non corretto."
+    }
   },
   {
     "id": "SCI_002",
@@ -102,13 +108,13 @@
     "livello": "intermedio",
     "domanda": "Durante la fotosintesi, quale gas viene assorbito principalmente dalle piante?",
     "opzioni": [
-      "Ossigeno",
-      "Azoto",
-      "Anidride carbonica",
-      "Idrogeno"
+      "Ossigeno, che viene liberato come prodotto durante la fotosintesi",
+      "Azoto, che le piante usano soprattutto tramite composti presenti nel suolo",
+      "Anidride carbonica, che viene assorbita per produrre zuccheri",
+      "Idrogeno molecolare, che non è il gas principale assorbito dalle foglie"
     ],
-    "risposta_corretta": "Anidride carbonica",
-    "spiegazione": "Durante la fotosintesi le piante assorbono anidride carbonica e acqua per produrre glucosio e liberare ossigeno.",
+    "risposta_corretta": "Anidride carbonica, che viene assorbita per produrre zuccheri",
+    "spiegazione": "Durante la fotosintesi le piante assorbono anidride carbonica e acqua. Usando l’energia luminosa producono zuccheri e liberano ossigeno.",
     "tags": [
       "biologia",
       "scienze"
@@ -117,7 +123,13 @@
     "distrattore_forte": "Idrogeno",
     "punteggio_distrattore_forte": 0.38,
     "motivo_distrattore_forte": "È un distrattore plausibile perché è collegato allo stesso argomento della risposta corretta, ma non identifica precisamente il concetto richiesto. La risposta corretta resta 'Anidride carbonica', non 'Idrogeno'.",
-    "qualita": 80
+    "qualita": 80,
+    "spiegazioni_opzioni": {
+      "Ossigeno, che viene liberato come prodotto durante la fotosintesi": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio scientifico non corretto.",
+      "Azoto, che le piante usano soprattutto tramite composti presenti nel suolo": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio scientifico non corretto.",
+      "Anidride carbonica, che viene assorbita per produrre zuccheri": "Corretta: descrive in modo preciso il concetto scientifico richiesto.",
+      "Idrogeno molecolare, che non è il gas principale assorbito dalle foglie": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio scientifico non corretto."
+    }
   },
   {
     "id": "SCI_006",
@@ -126,13 +138,13 @@
     "livello": "intermedio",
     "domanda": "Quale valore di pH indica una soluzione acida?",
     "opzioni": [
-      "pH uguale a 7",
-      "pH maggiore di 7",
-      "pH minore di 7",
-      "pH sempre uguale a 14"
+      "pH uguale a 7, che indica una soluzione neutra",
+      "pH maggiore di 7, che indica una soluzione basica",
+      "pH minore di 7, che indica una soluzione acida",
+      "pH vicino a 14, che indica una soluzione fortemente basica"
     ],
-    "risposta_corretta": "pH minore di 7",
-    "spiegazione": "Una soluzione è acida quando ha pH minore di 7. Il pH 7 è neutro, mentre un pH maggiore di 7 indica una soluzione basica.",
+    "risposta_corretta": "pH minore di 7, che indica una soluzione acida",
+    "spiegazione": "La scala del pH distingue soluzioni acide, neutre e basiche. Un pH minore di 7 indica una soluzione acida.",
     "tags": [
       "chimica_base",
       "scienze"
@@ -141,7 +153,13 @@
     "distrattore_forte": "pH uguale a 7",
     "punteggio_distrattore_forte": 0.7,
     "motivo_distrattore_forte": "È un distrattore plausibile perché è collegato allo stesso argomento della risposta corretta, ma non identifica precisamente il concetto richiesto. La risposta corretta resta 'pH minore di 7', non 'pH uguale a 7'.",
-    "qualita": 100
+    "qualita": 100,
+    "spiegazioni_opzioni": {
+      "pH uguale a 7, che indica una soluzione neutra": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio scientifico non corretto.",
+      "pH maggiore di 7, che indica una soluzione basica": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio scientifico non corretto.",
+      "pH minore di 7, che indica una soluzione acida": "Corretta: descrive in modo preciso il concetto scientifico richiesto.",
+      "pH vicino a 14, che indica una soluzione fortemente basica": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio scientifico non corretto."
+    }
   },
   {
     "id": "SCI_007",
@@ -150,13 +168,13 @@
     "livello": "intermedio",
     "domanda": "Se la massa di un oggetto resta costante e la forza applicata aumenta, che cosa succede alla sua accelerazione secondo la seconda legge di Newton?",
     "opzioni": [
-      "Aumenta",
-      "Diminuisce",
-      "Resta sempre nulla",
-      "Diventa indipendente dalla forza"
+      "L’accelerazione aumenta, perché a massa costante dipende dalla forza risultante",
+      "L’accelerazione diminuisce, perché una forza maggiore riduce il moto del corpo",
+      "L’accelerazione resta nulla, perché la massa impedisce qualunque variazione",
+      "L’accelerazione diventa indipendente dalla forza applicata al corpo"
     ],
-    "risposta_corretta": "Aumenta",
-    "spiegazione": "Secondo la formula F = m · a, se la massa resta costante e la forza aumenta, aumenta anche l'accelerazione.",
+    "risposta_corretta": "L’accelerazione aumenta, perché a massa costante dipende dalla forza risultante",
+    "spiegazione": "Secondo la seconda legge di Newton, F = m · a. Se la massa resta costante e la forza aumenta, anche l’accelerazione aumenta.",
     "tags": [
       "fisica_base",
       "scienze"
@@ -165,7 +183,13 @@
     "distrattore_forte": "Diminuisce",
     "punteggio_distrattore_forte": 0.34,
     "motivo_distrattore_forte": "È un distrattore plausibile perché è collegato allo stesso argomento della risposta corretta, ma non identifica precisamente il concetto richiesto. La risposta corretta resta 'Aumenta', non 'Diminuisce'.",
-    "qualita": 70
+    "qualita": 70,
+    "spiegazioni_opzioni": {
+      "L’accelerazione aumenta, perché a massa costante dipende dalla forza risultante": "Corretta: descrive in modo preciso il concetto scientifico richiesto.",
+      "L’accelerazione diminuisce, perché una forza maggiore riduce il moto del corpo": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio scientifico non corretto.",
+      "L’accelerazione resta nulla, perché la massa impedisce qualunque variazione": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio scientifico non corretto.",
+      "L’accelerazione diventa indipendente dalla forza applicata al corpo": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio scientifico non corretto."
+    }
   },
   {
     "id": "SCI_008",
@@ -174,13 +198,13 @@
     "livello": "intermedio",
     "domanda": "Quale molecola contiene le istruzioni genetiche ereditarie degli esseri viventi?",
     "opzioni": [
-      "ATP",
-      "DNA",
-      "Glucosio",
-      "Emoglobina"
+      "ATP, che fornisce energia immediata a molte reazioni cellulari",
+      "DNA, che contiene le istruzioni genetiche ereditarie",
+      "Glucosio, che è uno zucchero usato come fonte energetica",
+      "Emoglobina, che trasporta ossigeno nei globuli rossi"
     ],
-    "risposta_corretta": "DNA",
-    "spiegazione": "Il DNA contiene le informazioni genetiche ereditarie. L'ATP trasporta energia, il glucosio è uno zucchero e l'emoglobina trasporta ossigeno nel sangue.",
+    "risposta_corretta": "DNA, che contiene le istruzioni genetiche ereditarie",
+    "spiegazione": "Il DNA contiene le informazioni genetiche ereditarie degli esseri viventi. Queste istruzioni guidano molte funzioni cellulari e possono essere trasmesse alla discendenza.",
     "tags": [
       "biologia",
       "scienze"
@@ -189,7 +213,13 @@
     "distrattore_forte": "ATP",
     "punteggio_distrattore_forte": 0.43,
     "motivo_distrattore_forte": "È un distrattore plausibile perché è collegato allo stesso argomento della risposta corretta, ma non identifica precisamente il concetto richiesto. La risposta corretta resta 'DNA', non 'ATP'.",
-    "qualita": 80
+    "qualita": 80,
+    "spiegazioni_opzioni": {
+      "ATP, che fornisce energia immediata a molte reazioni cellulari": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio scientifico non corretto.",
+      "DNA, che contiene le istruzioni genetiche ereditarie": "Corretta: descrive in modo preciso il concetto scientifico richiesto.",
+      "Glucosio, che è uno zucchero usato come fonte energetica": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio scientifico non corretto.",
+      "Emoglobina, che trasporta ossigeno nei globuli rossi": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio scientifico non corretto."
+    }
   },
   {
     "id": "SCI_009",
@@ -246,13 +276,13 @@
     "livello": "avanzato",
     "domanda": "Quale affermazione descrive meglio la differenza tra massa e peso?",
     "opzioni": [
-      "La massa dipende dalla gravità, il peso no",
-      "La massa è la quantità di materia, il peso è la forza gravitazionale su quella massa",
-      "Massa e peso sono sempre la stessa grandezza",
-      "Il peso si misura in chilogrammi, la massa in Newton"
+      "La massa dipende dal luogo, mentre il peso resta uguale su ogni pianeta",
+      "La massa indica quantità di materia, il peso è la forza gravitazionale sulla massa",
+      "Massa e peso indicano la stessa grandezza ma con due nomi diversi",
+      "Il peso si misura in chilogrammi, mentre la massa si misura in Newton"
     ],
-    "risposta_corretta": "La massa è la quantità di materia, il peso è la forza gravitazionale su quella massa",
-    "spiegazione": "La massa indica quanta materia contiene un corpo e si misura in chilogrammi. Il peso è una forza dovuta alla gravità e si misura in Newton.",
+    "risposta_corretta": "La massa indica quantità di materia, il peso è la forza gravitazionale sulla massa",
+    "spiegazione": "La massa descrive la quantità di materia di un corpo. Il peso, invece, è una forza e dipende dall’attrazione gravitazionale.",
     "tags": [
       "fisica_base",
       "scienze"
@@ -261,7 +291,13 @@
     "distrattore_forte": "La massa dipende dalla gravità, il peso no",
     "punteggio_distrattore_forte": 0.94,
     "motivo_distrattore_forte": "È un distrattore plausibile perché è collegato allo stesso argomento della risposta corretta, ma non identifica precisamente il concetto richiesto. La risposta corretta resta 'La massa è la quantità di materia, il peso è la forza gravitazionale su quella massa', non 'La massa dipende dalla gravità, il peso no'.",
-    "qualita": 100
+    "qualita": 100,
+    "spiegazioni_opzioni": {
+      "La massa dipende dal luogo, mentre il peso resta uguale su ogni pianeta": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio scientifico non corretto.",
+      "La massa indica quantità di materia, il peso è la forza gravitazionale sulla massa": "Corretta: descrive in modo preciso il concetto scientifico richiesto.",
+      "Massa e peso indicano la stessa grandezza ma con due nomi diversi": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio scientifico non corretto.",
+      "Il peso si misura in chilogrammi, mentre la massa si misura in Newton": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio scientifico non corretto."
+    }
   },
   {
     "id": "SCI_012",
@@ -294,13 +330,13 @@
     "livello": "facile",
     "domanda": "Qual è la funzione principale della membrana cellulare?",
     "opzioni": [
-      "Delimita la cellula e regola gli scambi con l'esterno",
-      "Produce direttamente tutta l'energia della cellula",
-      "Contiene sempre il DNA in tutte le cellule",
-      "Trasforma il sangue in ossigeno"
+      "Delimita la cellula e regola gli scambi con l’ambiente esterno",
+      "Produce la maggior parte dell’ATP usato nelle cellule eucariotiche",
+      "Contiene il materiale genetico principale nelle cellule eucariotiche",
+      "Costruisce proteine assemblando amminoacidi nel citoplasma"
     ],
-    "risposta_corretta": "Delimita la cellula e regola gli scambi con l'esterno",
-    "spiegazione": "La membrana cellulare separa l'interno della cellula dall'ambiente esterno e controlla il passaggio di molte sostanze.",
+    "risposta_corretta": "Delimita la cellula e regola gli scambi con l’ambiente esterno",
+    "spiegazione": "La membrana cellulare delimita la cellula e controlla il passaggio di sostanze tra interno ed esterno, contribuendo all’equilibrio cellulare.",
     "tags": [
       "cellula",
       "membrana",
@@ -310,7 +346,13 @@
     "distrattore_forte": "Produce direttamente tutta l'energia della cellula",
     "punteggio_distrattore_forte": 0.58,
     "motivo_distrattore_forte": "È un distrattore plausibile perché è collegato allo stesso argomento della risposta corretta, ma non identifica precisamente il concetto richiesto. La risposta corretta resta 'Delimita la cellula e regola gli scambi con l'esterno', non 'Produce direttamente tutta l'energia della cellula'.",
-    "qualita": 100
+    "qualita": 100,
+    "spiegazioni_opzioni": {
+      "Delimita la cellula e regola gli scambi con l’ambiente esterno": "Corretta: descrive in modo preciso il concetto scientifico richiesto.",
+      "Produce la maggior parte dell’ATP usato nelle cellule eucariotiche": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio scientifico non corretto.",
+      "Contiene il materiale genetico principale nelle cellule eucariotiche": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio scientifico non corretto.",
+      "Costruisce proteine assemblando amminoacidi nel citoplasma": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio scientifico non corretto."
+    }
   },
   {
     "id": "SCI_014",
@@ -544,13 +586,13 @@
     "livello": "intermedio",
     "domanda": "Una soluzione con pH minore di 7 è generalmente considerata:",
     "opzioni": [
-      "Acida",
-      "Basica",
-      "Neutra",
-      "Sempre salina"
+      "Acida, perché ha un valore di pH inferiore a 7",
+      "Basica, perché ha un valore di pH superiore a 7",
+      "Neutra, perché ha un valore di pH uguale a 7",
+      "Tampone, perché impedisce qualunque variazione del pH"
     ],
-    "risposta_corretta": "Acida",
-    "spiegazione": "Un pH minore di 7 indica una soluzione acida; pH 7 è neutro, mentre pH maggiore di 7 è basico.",
+    "risposta_corretta": "Acida, perché ha un valore di pH inferiore a 7",
+    "spiegazione": "Una soluzione con pH minore di 7 è considerata acida. Una soluzione con pH uguale a 7 è neutra, mentre con pH maggiore di 7 è basica.",
     "tags": [
       "pH",
       "acidi",
@@ -560,7 +602,13 @@
     "distrattore_forte": "Basica",
     "punteggio_distrattore_forte": 0.55,
     "motivo_distrattore_forte": "È un distrattore plausibile perché è collegato allo stesso argomento della risposta corretta, ma non identifica precisamente il concetto richiesto. La risposta corretta resta 'Acida', non 'Basica'.",
-    "qualita": 100
+    "qualita": 100,
+    "spiegazioni_opzioni": {
+      "Acida, perché ha un valore di pH inferiore a 7": "Corretta: descrive in modo preciso il concetto scientifico richiesto.",
+      "Basica, perché ha un valore di pH superiore a 7": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio scientifico non corretto.",
+      "Neutra, perché ha un valore di pH uguale a 7": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio scientifico non corretto.",
+      "Tampone, perché impedisce qualunque variazione del pH": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio scientifico non corretto."
+    }
   },
   {
     "id": "SCI_024",
