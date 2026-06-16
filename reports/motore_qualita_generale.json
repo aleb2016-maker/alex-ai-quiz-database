@@ -906,22 +906,22 @@
     "percorso": "data/inglese.json",
     "file_esiste": true,
     "errore_file": "",
-    "totale_domande": 40,
+    "totale_domande": 80,
     "livelli": {
-      "facile": 12,
-      "intermedio": 14,
-      "avanzato": 14
+      "facile": 24,
+      "intermedio": 28,
+      "avanzato": 28
     },
     "categorie": {
-      "inglese": 40
+      "inglese": 80
     },
     "posizioni_risposta": {
-      "A": 40
+      "A": 80
     },
     "problemi_tecnici_totali": 0,
     "avvisi_qualita_reali_totali": 0,
     "errori_linguistici_totali": 0,
-    "note_informative_totali": 23,
+    "note_informative_totali": 31,
     "domande_con_problemi_tecnici": [],
     "domande_con_avvisi_qualita_reali": [],
     "domande_con_errori_linguistici": [],
@@ -1378,6 +1378,166 @@
           "You send the file to me."
         ],
         "risposta_corretta": "Could you please send me the updated file?",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "spiegazione: testo molto lungo, controllare leggibilità"
+        ]
+      },
+      {
+        "id": "ING-AV-0201",
+        "domanda": "Select the unreal past pattern for this idea: Se lo avessi saputo, ti avrei chiamato.",
+        "categoria": "inglese",
+        "livello": "avanzato",
+        "opzioni": [
+          "If I had known, I would have called you.",
+          "If I knew, I would have call you.",
+          "If I have known, I would call you.",
+          "If I had knew, I would have called you."
+        ],
+        "risposta_corretta": "If I had known, I would have called you.",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "spiegazione: testo molto lungo, controllare leggibilità"
+        ]
+      },
+      {
+        "id": "ING-AV-0203",
+        "domanda": "Choose the correct inversion after a negative adverb.",
+        "categoria": "inglese",
+        "livello": "avanzato",
+        "opzioni": [
+          "Rarely have I seen such a clear explanation.",
+          "Rarely I have seen such a clear explanation.",
+          "Rarely have seen I such a clear explanation.",
+          "Rarely I seen have such a clear explanation."
+        ],
+        "risposta_corretta": "Rarely have I seen such a clear explanation.",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "spiegazione: testo molto lungo, controllare leggibilità"
+        ]
+      },
+      {
+        "id": "ING-AV-0204",
+        "domanda": "Choose the sentence with the correct use of despite.",
+        "categoria": "inglese",
+        "livello": "avanzato",
+        "opzioni": [
+          "Despite the rain, we went out.",
+          "Despite it was raining, we went out.",
+          "Despite of the rain, we went out.",
+          "Despite raining was, we went out."
+        ],
+        "risposta_corretta": "Despite the rain, we went out.",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "spiegazione: testo molto lungo, controllare leggibilità"
+        ]
+      },
+      {
+        "id": "ING-AV-0206",
+        "domanda": "After hardly at the beginning of a sentence, which word order is correct?",
+        "categoria": "inglese",
+        "livello": "avanzato",
+        "opzioni": [
+          "Hardly had we arrived when it started to rain.",
+          "Hardly we had arrived when it started to rain.",
+          "Hardly had arrived we when it started to rain.",
+          "Hardly we arrived had when it started to rain."
+        ],
+        "risposta_corretta": "Hardly had we arrived when it started to rain.",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "spiegazione: testo molto lungo, controllare leggibilità"
+        ]
+      },
+      {
+        "id": "ING-AV-0207",
+        "domanda": "Which sentence connects a past unreal condition to a present result?",
+        "categoria": "inglese",
+        "livello": "avanzato",
+        "opzioni": [
+          "If I had studied medicine, I would be a doctor now.",
+          "If I studied medicine, I would have been a doctor now.",
+          "If I had study medicine, I would be a doctor now.",
+          "If I have studied medicine, I would be a doctor now."
+        ],
+        "risposta_corretta": "If I had studied medicine, I would be a doctor now.",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "spiegazione: testo molto lungo, controllare leggibilità"
+        ]
+      },
+      {
+        "id": "ING-AV-0208",
+        "domanda": "Which cleft structure emphasizes John as the person who solved the problem?",
+        "categoria": "inglese",
+        "livello": "avanzato",
+        "opzioni": [
+          "It was John who solved the problem.",
+          "It was John which solved the problem.",
+          "It John was who solved the problem.",
+          "It was John solved who the problem."
+        ],
+        "risposta_corretta": "It was John who solved the problem.",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "spiegazione: testo molto lungo, controllare leggibilità"
+        ]
+      },
+      {
+        "id": "ING-AV-0209",
+        "domanda": "Which option is the most polite way to ask someone to send a document?",
+        "categoria": "inglese",
+        "livello": "avanzato",
+        "opzioni": [
+          "I would appreciate it if you could send me the document.",
+          "I want you send me document now.",
+          "Send me document because I need.",
+          "I appreciate if you can send document me."
+        ],
+        "risposta_corretta": "I would appreciate it if you could send me the document.",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "spiegazione: testo molto lungo, controllare leggibilità"
+        ]
+      },
+      {
+        "id": "ING-AV-0212",
+        "domanda": "Complete the condition with unless: You will miss the train ___.",
+        "categoria": "inglese",
+        "livello": "avanzato",
+        "opzioni": [
+          "unless you leave now",
+          "unless you will leave now",
+          "unless you left now",
+          "unless you leaving now"
+        ],
+        "risposta_corretta": "unless you leave now",
         "posizione_risposta": "A",
         "problemi_tecnici": [],
         "avvisi_qualita_reali": [],
