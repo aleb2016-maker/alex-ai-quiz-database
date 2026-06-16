@@ -1,0 +1,718 @@
+[
+  {
+    "nome": "Scienze generali",
+    "percorso": "data/scienze.json",
+    "file_esiste": true,
+    "errore_file": "",
+    "totale_domande": 40,
+    "livelli": {
+      "facile": 12,
+      "intermedio": 14,
+      "avanzato": 14
+    },
+    "categorie": {
+      "scienze": 40
+    },
+    "posizioni_risposta": {
+      "B": 3,
+      "A": 34,
+      "C": 3
+    },
+    "problemi_tecnici_totali": 0,
+    "avvisi_qualita_reali_totali": 0,
+    "note_informative_totali": 5,
+    "domande_con_problemi_tecnici": [],
+    "domande_con_avvisi_qualita_reali": [],
+    "domande_con_note_informative": [
+      {
+        "id": "SCI_010",
+        "domanda": "In una reazione chimica bilanciata, che cosa deve rimanere uguale tra reagenti e prodotti?",
+        "categoria": "scienze",
+        "livello": "avanzato",
+        "opzioni": [
+          "Il numero di atomi di ogni elemento",
+          "Il numero di molecole totali",
+          "Lo stato fisico di tutte le sostanze",
+          "Il colore delle sostanze coinvolte"
+        ],
+        "risposta_corretta": "Il numero di atomi di ogni elemento",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "note_informative": [
+          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “tutte”"
+        ]
+      },
+      {
+        "id": "SCI_019",
+        "domanda": "Qual è la funzione principale dei polmoni?",
+        "categoria": "scienze",
+        "livello": "facile",
+        "opzioni": [
+          "Permettere lo scambio di ossigeno e anidride carbonica",
+          "Pompare il sangue in tutto il corpo",
+          "Filtrare direttamente tutte le sostanze tossiche del sangue",
+          "Produrre globuli rossi in modo continuo"
+        ],
+        "risposta_corretta": "Permettere lo scambio di ossigeno e anidride carbonica",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "note_informative": [
+          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “tutte”"
+        ]
+      },
+      {
+        "id": "SCI_022",
+        "domanda": "Qual è il risultato principale della mitosi?",
+        "categoria": "scienze",
+        "livello": "intermedio",
+        "opzioni": [
+          "Due cellule figlie geneticamente uguali alla cellula di partenza",
+          "Quattro cellule figlie con metà del patrimonio genetico",
+          "Una sola cellula con DNA completamente diverso",
+          "Due cellule senza nucleo e senza cromosomi"
+        ],
+        "risposta_corretta": "Due cellule figlie geneticamente uguali alla cellula di partenza",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "note_informative": [
+          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “completamente”"
+        ]
+      },
+      {
+        "id": "SCI_033",
+        "domanda": "Che cosa caratterizza la successione ecologica primaria?",
+        "categoria": "scienze",
+        "livello": "avanzato",
+        "opzioni": [
+          "Inizia su superfici prive di suolo sviluppato, con colonizzazione graduale",
+          "Inizia in ecosistemi maturi dopo una piccola variazione stagionale",
+          "Consiste nello spostamento rapido di una specie animale verso un nuovo clima",
+          "Consiste nella sostituzione immediata di tutti i produttori con consumatori"
+        ],
+        "risposta_corretta": "Inizia su superfici prive di suolo sviluppato, con colonizzazione graduale",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "note_informative": [
+          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “tutti”"
+        ]
+      },
+      {
+        "id": "SCI_039",
+        "domanda": "Che cosa avviene durante l'osmosi?",
+        "categoria": "scienze",
+        "livello": "avanzato",
+        "opzioni": [
+          "L’acqua attraversa una membrana semipermeabile verso la soluzione più concentrata",
+          "I soluti attraversano liberamente la membrana verso la soluzione meno concentrata",
+          "L’acqua si trasforma chimicamente in sale durante il passaggio attraverso la membrana",
+          "La membrana si dissolve per permettere il passaggio indistinto di tutte le sostanze"
+        ],
+        "risposta_corretta": "L’acqua attraversa una membrana semipermeabile verso la soluzione più concentrata",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "note_informative": [
+          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “tutte”"
+        ]
+      }
+    ],
+    "duplicati_identici": {},
+    "domande_simili": []
+  },
+  {
+    "nome": "Biologia",
+    "percorso": "data/biologia.json",
+    "file_esiste": true,
+    "errore_file": "",
+    "totale_domande": 40,
+    "livelli": {
+      "facile": 12,
+      "intermedio": 14,
+      "avanzato": 14
+    },
+    "categorie": {
+      "scienze": 40
+    },
+    "posizioni_risposta": {
+      "A": 40
+    },
+    "problemi_tecnici_totali": 0,
+    "avvisi_qualita_reali_totali": 0,
+    "note_informative_totali": 12,
+    "domande_con_problemi_tecnici": [],
+    "domande_con_avvisi_qualita_reali": [],
+    "domande_con_note_informative": [
+      {
+        "id": "BIO_010",
+        "domanda": "Quale affermazione descrive meglio la selezione naturale?",
+        "categoria": "scienze",
+        "livello": "avanzato",
+        "opzioni": [
+          "Gli individui con tratti vantaggiosi tendono a lasciare più discendenti in un certo ambiente",
+          "Gli individui sviluppano tratti utili durante la vita e li trasmettono ai figli",
+          "Tutti gli individui cambiano nello stesso modo quando l’ambiente esercita pressione",
+          "Le mutazioni compaiono perché l’ambiente richiede direttamente un certo adattamento"
+        ],
+        "risposta_corretta": "Gli individui con tratti vantaggiosi tendono a lasciare più discendenti in un certo ambiente",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "note_informative": [
+          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “tutti”"
+        ]
+      },
+      {
+        "id": "BIO_011",
+        "domanda": "Perché la respirazione cellulare è importante per le cellule?",
+        "categoria": "scienze",
+        "livello": "avanzato",
+        "opzioni": [
+          "Permette di ricavare ATP demolendo molecole organiche come il glucosio",
+          "Permette di creare DNA direttamente dalla luce solare",
+          "Permette di trasformare tutti i rifiuti cellulari in proteine",
+          "Permette di eliminare i cromosomi in eccesso durante la mitosi"
+        ],
+        "risposta_corretta": "Permette di ricavare ATP demolendo molecole organiche come il glucosio",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "note_informative": [
+          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “tutti”"
+        ]
+      },
+      {
+        "id": "BIO_022",
+        "domanda": "Perché una mutazione genetica non produce sempre un effetto visibile sull’organismo?",
+        "categoria": "scienze",
+        "livello": "avanzato",
+        "opzioni": [
+          "Può cadere in una regione non codificante o non cambiare la funzione della proteina",
+          "Produce necessariamente una nuova proteina visibile in ogni cellula dell’organismo",
+          "Elimina l’intero cromosoma interessato rendendo ogni effetto subito osservabile",
+          "Impedisce in ogni caso la trascrizione di tutti i geni collegati a quel carattere"
+        ],
+        "risposta_corretta": "Può cadere in una regione non codificante o non cambiare la funzione della proteina",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "note_informative": [
+          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “tutti”"
+        ]
+      },
+      {
+        "id": "BIO_023",
+        "domanda": "Che cosa rappresenta una relazione di predazione in un ecosistema?",
+        "categoria": "scienze",
+        "livello": "avanzato",
+        "opzioni": [
+          "Un organismo consuma un altro organismo come fonte di energia e materia",
+          "Due organismi ricavano beneficio reciproco senza perdita per nessuno dei due",
+          "Un organismo vive su un altro ottenendo risorse e danneggiandolo gradualmente",
+          "Due organismi competono per la stessa risorsa limitata nello stesso ambiente"
+        ],
+        "risposta_corretta": "Un organismo consuma un altro organismo come fonte di energia e materia",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "note_informative": [
+          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “nessuno”"
+        ]
+      },
+      {
+        "id": "BIO_028",
+        "domanda": "Che cosa succede durante la traduzione dell’informazione genetica?",
+        "categoria": "scienze",
+        "livello": "intermedio",
+        "opzioni": [
+          "I ribosomi usano l’RNA messaggero per assemblare una catena di amminoacidi",
+          "Il DNA viene copiato in RNA dentro il nucleo",
+          "La membrana cellulare duplica tutti i cromosomi",
+          "I mitocondri trasformano direttamente il glucosio in DNA"
+        ],
+        "risposta_corretta": "I ribosomi usano l’RNA messaggero per assemblare una catena di amminoacidi",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "note_informative": [
+          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “tutti”"
+        ]
+      },
+      {
+        "id": "BIO_029",
+        "domanda": "Perché i vaccini aiutano il sistema immunitario a rispondere più rapidamente a un agente infettivo?",
+        "categoria": "scienze",
+        "livello": "intermedio",
+        "opzioni": [
+          "Stimolano la formazione di memoria immunitaria contro specifici antigeni",
+          "Eliminano definitivamente tutti i microrganismi presenti nell’ambiente",
+          "Sostituiscono tutti i globuli bianchi con globuli rossi",
+          "Impediscono al corpo di produrre anticorpi"
+        ],
+        "risposta_corretta": "Stimolano la formazione di memoria immunitaria contro specifici antigeni",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "note_informative": [
+          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “tutti”"
+        ]
+      },
+      {
+        "id": "BIO_030",
+        "domanda": "Che cosa indica l’espressione selezione naturale?",
+        "categoria": "scienze",
+        "livello": "avanzato",
+        "opzioni": [
+          "Il diverso successo riproduttivo degli individui in base a caratteristiche ereditarie vantaggiose",
+          "La scelta volontaria degli organismi di modificare il proprio DNA quando serve",
+          "La trasformazione immediata di ogni individuo in una nuova specie",
+          "L’eliminazione casuale di tutte le variazioni genetiche"
+        ],
+        "risposta_corretta": "Il diverso successo riproduttivo degli individui in base a caratteristiche ereditarie vantaggiose",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "note_informative": [
+          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “tutte”"
+        ]
+      },
+      {
+        "id": "BIO_035",
+        "domanda": "Perché le cellule dell’intestino tenue possiedono microvilli?",
+        "categoria": "scienze",
+        "livello": "intermedio",
+        "opzioni": [
+          "Per aumentare la superficie disponibile all’assorbimento delle sostanze nutritive",
+          "Per impedire completamente il passaggio dei nutrienti nel sangue",
+          "Per trasformare il cibo direttamente in DNA",
+          "Per produrre aria durante la digestione"
+        ],
+        "risposta_corretta": "Per aumentare la superficie disponibile all’assorbimento delle sostanze nutritive",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "note_informative": [
+          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “completamente”"
+        ]
+      },
+      {
+        "id": "BIO_037",
+        "domanda": "Che cosa accade quando un ormone si lega al recettore corretto di una cellula bersaglio?",
+        "categoria": "scienze",
+        "livello": "intermedio",
+        "opzioni": [
+          "Si attiva una risposta cellulare specifica tramite vie di segnalazione interne",
+          "Il recettore trasforma direttamente l’ormone in una nuova proteina strutturale",
+          "La cellula bersaglio perde il proprio DNA e viene sostituita dall’ormone",
+          "L’ormone entra nel nucleo e replica tutti i geni della cellula bersaglio"
+        ],
+        "risposta_corretta": "Si attiva una risposta cellulare specifica tramite vie di segnalazione interne",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "note_informative": [
+          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “tutti”"
+        ]
+      },
+      {
+        "id": "BIO_038",
+        "domanda": "Perché una popolazione con bassa variabilità genetica può essere più vulnerabile ai cambiamenti ambientali?",
+        "categoria": "scienze",
+        "livello": "avanzato",
+        "opzioni": [
+          "Ha meno varianti ereditarie utili su cui la selezione naturale può agire",
+          "Produce più mutazioni vantaggiose quando l’ambiente cambia rapidamente",
+          "Elimina la competizione interna perché tutti gli individui sono geneticamente simili",
+          "Rende ogni individuo capace di adattarsi allo stesso modo a qualsiasi pressione ambientale"
+        ],
+        "risposta_corretta": "Ha meno varianti ereditarie utili su cui la selezione naturale può agire",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "note_informative": [
+          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “qualsiasi”",
+          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “tutti”"
+        ]
+      },
+      {
+        "id": "BIO_039",
+        "domanda": "Che cosa descrive un meccanismo di feedback negativo nell’organismo?",
+        "categoria": "scienze",
+        "livello": "avanzato",
+        "opzioni": [
+          "Una risposta che contrasta una variazione e riporta una variabile verso l’equilibrio",
+          "Una risposta che amplifica una variazione finché il sistema perde ogni controllo",
+          "Un segnale che elimina il recettore e impedisce alla cellula di comunicare",
+          "Un processo che sostituisce tutti gli ormoni con enzimi digestivi nel sangue"
+        ],
+        "risposta_corretta": "Una risposta che contrasta una variazione e riporta una variabile verso l’equilibrio",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "note_informative": [
+          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “tutti”"
+        ]
+      }
+    ],
+    "duplicati_identici": {},
+    "domande_simili": []
+  },
+  {
+    "nome": "Chimica",
+    "percorso": "data/chimica.json",
+    "file_esiste": true,
+    "errore_file": "",
+    "totale_domande": 40,
+    "livelli": {
+      "facile": 12,
+      "intermedio": 14,
+      "avanzato": 14
+    },
+    "categorie": {
+      "scienze": 40
+    },
+    "posizioni_risposta": {
+      "A": 40
+    },
+    "problemi_tecnici_totali": 0,
+    "avvisi_qualita_reali_totali": 0,
+    "note_informative_totali": 8,
+    "domande_con_problemi_tecnici": [],
+    "domande_con_avvisi_qualita_reali": [],
+    "domande_con_note_informative": [
+      {
+        "id": "CHE_017",
+        "domanda": "Perché il cloruro di sodio solido conduce poco la corrente, mentre sciolto in acqua può condurla?",
+        "categoria": "scienze",
+        "livello": "intermedio",
+        "opzioni": [
+          "Perché in soluzione gli ioni sono liberi di muoversi",
+          "Perché in acqua il sale si trasforma completamente in metallo",
+          "Perché il solido contiene elettroni liberi come un filo di rame",
+          "Perché l’acqua elimina tutte le cariche elettriche del sale"
+        ],
+        "risposta_corretta": "Perché in soluzione gli ioni sono liberi di muoversi",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "note_informative": [
+          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “completamente”",
+          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “tutte”"
+        ]
+      },
+      {
+        "id": "CHE_018",
+        "domanda": "Che cosa significa dire che una soluzione è concentrata?",
+        "categoria": "scienze",
+        "livello": "intermedio",
+        "opzioni": [
+          "Contiene molta quantità di soluto rispetto alla quantità di solvente",
+          "Contiene molto solvente rispetto alla quantità di soluto disciolto",
+          "Contiene soluto non disciolto separato completamente dal solvente",
+          "Contiene soltanto solvente puro senza particelle di soluto"
+        ],
+        "risposta_corretta": "Contiene molta quantità di soluto rispetto alla quantità di solvente",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "note_informative": [
+          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “completamente”"
+        ]
+      },
+      {
+        "id": "CHE_024",
+        "domanda": "Che cosa descrive l’energia di attivazione di una reazione?",
+        "categoria": "scienze",
+        "livello": "avanzato",
+        "opzioni": [
+          "L’energia minima necessaria perché i reagenti possano trasformarsi in prodotti",
+          "L’energia totale liberata quando tutti i prodotti sono già formati",
+          "L’energia conservata nei prodotti dopo il completamento della reazione",
+          "L’energia che misura solo la massa dei reagenti prima dell’urto efficace"
+        ],
+        "risposta_corretta": "L’energia minima necessaria perché i reagenti possano trasformarsi in prodotti",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "note_informative": [
+          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “tutti”"
+        ]
+      },
+      {
+        "id": "CHE_029",
+        "domanda": "Che cosa rappresenta una mole in chimica?",
+        "categoria": "scienze",
+        "livello": "intermedio",
+        "opzioni": [
+          "Una quantità di sostanza contenente un numero definito di particelle",
+          "La massa esatta di una singola molecola espressa in grammi",
+          "Il volume occupato da qualsiasi liquido a temperatura ambiente",
+          "La carica elettrica totale di un atomo neutro"
+        ],
+        "risposta_corretta": "Una quantità di sostanza contenente un numero definito di particelle",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "note_informative": [
+          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “qualsiasi”"
+        ]
+      },
+      {
+        "id": "CHE_030",
+        "domanda": "Perché l’aumento della temperatura può accelerare molte reazioni chimiche?",
+        "categoria": "scienze",
+        "livello": "avanzato",
+        "opzioni": [
+          "Perché aumenta l’energia cinetica media e il numero di urti efficaci",
+          "Perché elimina la necessità di superare l’energia di attivazione",
+          "Perché trasforma automaticamente tutti i reagenti in catalizzatori",
+          "Perché impedisce alle molecole di urtarsi tra loro"
+        ],
+        "risposta_corretta": "Perché aumenta l’energia cinetica media e il numero di urti efficaci",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "note_informative": [
+          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “tutti”"
+        ]
+      },
+      {
+        "id": "CHE_031",
+        "domanda": "Che cosa distingue un acido forte da un acido debole in soluzione acquosa?",
+        "categoria": "scienze",
+        "livello": "avanzato",
+        "opzioni": [
+          "Un acido forte si ionizza quasi completamente, un acido debole solo parzialmente",
+          "Un acido forte ha pH alto, un acido debole ha pH basso alla stessa concentrazione",
+          "Un acido forte contiene più atomi, un acido debole contiene meno legami chimici",
+          "Un acido forte non produce ioni H⁺, un acido debole li produce in grande quantità"
+        ],
+        "risposta_corretta": "Un acido forte si ionizza quasi completamente, un acido debole solo parzialmente",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "note_informative": [
+          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “completamente”"
+        ]
+      },
+      {
+        "id": "CHE_039",
+        "domanda": "Che cosa caratterizza una soluzione tampone?",
+        "categoria": "scienze",
+        "livello": "avanzato",
+        "opzioni": [
+          "Resiste a variazioni moderate di pH grazie a una coppia acido debole/base coniugata",
+          "Trasforma ogni acido forte in acqua pura eliminando tutti gli ioni presenti",
+          "Mantiene il pH usando soltanto un sale neutro privo di componenti acide o basiche",
+          "Aumenta rapidamente il pH quando viene aggiunta una piccola quantità di acido"
+        ],
+        "risposta_corretta": "Resiste a variazioni moderate di pH grazie a una coppia acido debole/base coniugata",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "note_informative": [
+          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “tutti”"
+        ]
+      }
+    ],
+    "duplicati_identici": {},
+    "domande_simili": []
+  },
+  {
+    "nome": "Fisica",
+    "percorso": "data/fisica.json",
+    "file_esiste": true,
+    "errore_file": "",
+    "totale_domande": 40,
+    "livelli": {
+      "facile": 12,
+      "intermedio": 14,
+      "avanzato": 14
+    },
+    "categorie": {
+      "scienze": 40
+    },
+    "posizioni_risposta": {
+      "A": 40
+    },
+    "problemi_tecnici_totali": 0,
+    "avvisi_qualita_reali_totali": 0,
+    "note_informative_totali": 3,
+    "domande_con_problemi_tecnici": [],
+    "domande_con_avvisi_qualita_reali": [],
+    "domande_con_note_informative": [
+      {
+        "id": "FIS_004",
+        "domanda": "Quando un corpo è fermo rispetto a un osservatore?",
+        "categoria": "scienze",
+        "livello": "facile",
+        "opzioni": [
+          "Quando la sua posizione non cambia rispetto a quell’osservatore",
+          "Quando non è sottoposto a nessuna forza in assoluto",
+          "Quando la sua massa diventa uguale a zero",
+          "Quando la sua temperatura resta costante"
+        ],
+        "risposta_corretta": "Quando la sua posizione non cambia rispetto a quell’osservatore",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "note_informative": [
+          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “nessuna”"
+        ]
+      },
+      {
+        "id": "FIS_014",
+        "domanda": "Che cosa descrive meglio l’inerzia di un corpo?",
+        "categoria": "scienze",
+        "livello": "facile",
+        "opzioni": [
+          "La tendenza a mantenere il proprio stato di quiete o di moto",
+          "La capacità di produrre calore senza energia",
+          "La forza che fa cadere tutti i corpi verso l’alto",
+          "La velocità massima raggiungibile nel vuoto"
+        ],
+        "risposta_corretta": "La tendenza a mantenere il proprio stato di quiete o di moto",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "note_informative": [
+          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “tutti”"
+        ]
+      },
+      {
+        "id": "FIS_016",
+        "domanda": "Che cosa indica la frequenza di un fenomeno periodico?",
+        "categoria": "scienze",
+        "livello": "facile",
+        "opzioni": [
+          "Quante volte il fenomeno si ripete in un secondo",
+          "Quanto spazio occupa il fenomeno in metri cubi",
+          "Quanta massa perde il corpo durante l’oscillazione",
+          "Quanto calore serve per fermare completamente il moto"
+        ],
+        "risposta_corretta": "Quante volte il fenomeno si ripete in un secondo",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "note_informative": [
+          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “completamente”"
+        ]
+      }
+    ],
+    "duplicati_identici": {},
+    "domande_simili": []
+  },
+  {
+    "nome": "Fisica quantistica",
+    "percorso": "data/fisica_quantistica.json",
+    "file_esiste": true,
+    "errore_file": "",
+    "totale_domande": 40,
+    "livelli": {
+      "facile": 14,
+      "intermedio": 13,
+      "avanzato": 13
+    },
+    "categorie": {
+      "scienze": 40
+    },
+    "posizioni_risposta": {
+      "A": 40
+    },
+    "problemi_tecnici_totali": 0,
+    "avvisi_qualita_reali_totali": 0,
+    "note_informative_totali": 3,
+    "domande_con_problemi_tecnici": [],
+    "domande_con_avvisi_qualita_reali": [],
+    "domande_con_note_informative": [
+      {
+        "id": "FQ_018",
+        "domanda": "Perché gli elettroni negli atomi occupano livelli energetici specifici?",
+        "categoria": "scienze",
+        "livello": "intermedio",
+        "opzioni": [
+          "Perché sono descritti da stati quantizzati compatibili con le condizioni dell'atomo",
+          "Perché si muovono come pianeti su orbite classiche qualsiasi",
+          "Perché non hanno alcuna relazione con il nucleo",
+          "Perché la loro energia dipende solo dal colore dell'atomo"
+        ],
+        "risposta_corretta": "Perché sono descritti da stati quantizzati compatibili con le condizioni dell'atomo",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "note_informative": [
+          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “qualsiasi”"
+        ]
+      },
+      {
+        "id": "FQ_020",
+        "domanda": "Qual è una differenza importante tra fisica classica e fisica quantistica?",
+        "categoria": "scienze",
+        "livello": "intermedio",
+        "opzioni": [
+          "La fisica quantistica usa spesso descrizioni probabilistiche per i sistemi microscopici",
+          "La fisica quantistica elimina completamente il concetto di energia",
+          "La fisica classica vale solo per gli elettroni negli atomi",
+          "La fisica quantistica descrive solo oggetti grandi come pianeti"
+        ],
+        "risposta_corretta": "La fisica quantistica usa spesso descrizioni probabilistiche per i sistemi microscopici",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "note_informative": [
+          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “completamente”"
+        ]
+      },
+      {
+        "id": "FQ_040",
+        "domanda": "Perché la fisica quantistica è importante per le tecnologie moderne?",
+        "categoria": "scienze",
+        "livello": "avanzato",
+        "opzioni": [
+          "Perché sta alla base di tecnologie come semiconduttori, laser, risonanza magnetica e computer quantistici",
+          "Perché sostituisce completamente ogni legge della fisica classica in ogni situazione quotidiana",
+          "Perché permette di ignorare energia, carica e massa nei dispositivi elettronici",
+          "Perché descrive solo fenomeni senza applicazioni pratiche"
+        ],
+        "risposta_corretta": "Perché sta alla base di tecnologie come semiconduttori, laser, risonanza magnetica e computer quantistici",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "note_informative": [
+          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “completamente”"
+        ]
+      }
+    ],
+    "duplicati_identici": {},
+    "domande_simili": []
+  },
+  {
+    "nome": "AI",
+    "percorso": "data/ai.json",
+    "file_esiste": true,
+    "errore_file": "",
+    "totale_domande": 3,
+    "livelli": {
+      "facile": 1,
+      "intermedio": 1,
+      "avanzato": 1
+    },
+    "categorie": {
+      "ai": 3
+    },
+    "posizioni_risposta": {
+      "A": 3
+    },
+    "problemi_tecnici_totali": 0,
+    "avvisi_qualita_reali_totali": 0,
+    "note_informative_totali": 0,
+    "domande_con_problemi_tecnici": [],
+    "domande_con_avvisi_qualita_reali": [],
+    "domande_con_note_informative": [],
+    "duplicati_identici": {},
+    "domande_simili": []
+  }
+]
