@@ -335,33 +335,70 @@ button.secondary {
 
 .success-effect {
   position: fixed;
-  left: 50%;
-  top: 52%;
   width: 1px;
   height: 1px;
   z-index: 9999;
   pointer-events: none;
+  overflow: visible;
 }
 
 .success-effect span {
   position: absolute;
-  width: 8px;
-  height: 8px;
-  border-radius: 999px;
-  background: var(--green);
-  box-shadow: 0 0 14px rgba(23, 217, 143, 0.9);
-  animation: particle 0.85s ease-out forwards;
+  left: 0;
+  top: 0;
+  width: var(--size);
+  height: calc(var(--size) * 0.62);
+  background: var(--color);
+  opacity: 1;
+  border-radius: 3px;
+  box-shadow:
+    0 0 10px rgba(255, 255, 255, 0.38),
+    0 0 18px rgba(31, 224, 255, 0.12);
+  will-change: transform, opacity;
+  animation: confettiSoftBurst var(--dur) forwards;
   animation-delay: var(--delay);
 }
 
-@keyframes particle {
-  from {
-    transform: translate(0, 0) scale(1);
+.success-effect span:nth-child(3n) {
+  border-radius: 999px;
+}
+
+.success-effect span:nth-child(4n) {
+  height: var(--size);
+}
+
+.success-effect span:nth-child(5n) {
+  width: calc(var(--size) * 0.65);
+  height: calc(var(--size) * 1.15);
+}
+
+@keyframes confettiSoftBurst {
+  0% {
+    transform: translate3d(0, 0, 0) rotate(0deg) scale(0.72);
     opacity: 1;
+    animation-timing-function: cubic-bezier(0.18, 0.88, 0.25, 1);
   }
 
-  to {
-    transform: translate(var(--x), var(--y)) scale(0.3);
+  18% {
+    transform: translate3d(calc(var(--open-x) * 0.55), var(--up-y), 0) rotate(calc(var(--rot-mid) * 0.45)) scale(1.08);
+    opacity: 1;
+    animation-timing-function: cubic-bezier(0.22, 0.72, 0.24, 1);
+  }
+
+  42% {
+    transform: translate3d(var(--open-x), calc(var(--up-y) * 0.72), 0) rotate(var(--rot-mid)) scale(1);
+    opacity: 1;
+    animation-timing-function: cubic-bezier(0.28, 0.02, 0.36, 1);
+  }
+
+  78% {
+    transform: translate3d(calc(var(--fall-x) * 0.82), calc(var(--fall-y) * 0.72), 0) rotate(calc(var(--rot-end) * 0.82)) scale(0.94);
+    opacity: 1;
+    animation-timing-function: cubic-bezier(0.2, 0.0, 0.2, 1);
+  }
+
+  100% {
+    transform: translate3d(var(--fall-x), var(--fall-y), 0) rotate(var(--rot-end)) scale(0.76);
     opacity: 0;
   }
 }
