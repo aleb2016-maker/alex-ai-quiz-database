@@ -5,6 +5,86 @@
  */
 
 (function () {
+    
+const ALEX_FINAL_REWARD_CSS = `
+.alex-final-reward-container {
+    margin-top: 24px;
+}
+
+.alex-final-reward-card {
+    padding: 24px;
+    border-radius: 26px;
+    background:
+        radial-gradient(circle at top left, rgba(59, 130, 246, 0.18), transparent 32%),
+        radial-gradient(circle at bottom right, rgba(16, 185, 129, 0.18), transparent 34%),
+        rgba(255, 255, 255, 0.94);
+    box-shadow: 0 18px 45px rgba(15, 23, 42, 0.16);
+    display: flex;
+    gap: 18px;
+    align-items: flex-start;
+    border: 1px solid rgba(148, 163, 184, 0.38);
+}
+
+.alex-final-reward-drawing {
+    width: 72px;
+    height: 72px;
+    border-radius: 22px;
+    display: grid;
+    place-items: center;
+    font-size: 42px;
+    background: rgba(255, 255, 255, 0.72);
+    box-shadow: inset 0 0 0 1px rgba(148, 163, 184, 0.25);
+    flex: 0 0 auto;
+}
+
+.alex-final-reward-body h3 {
+    margin: 0 0 8px;
+    font-size: 1.35rem;
+}
+
+.alex-final-reward-body p {
+    margin: 6px 0;
+}
+
+.alex-final-reward-kicker {
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-weight: 800;
+    opacity: 0.72;
+}
+
+.alex-final-reward-score {
+    font-weight: 900;
+}
+
+.alex-final-reward-motivation {
+    font-weight: 800;
+}
+
+@media (max-width: 640px) {
+    .alex-final-reward-card {
+        flex-direction: column;
+    }
+}
+`;
+
+function installaStiliPremioFinaleAlex() {
+    if (typeof document === "undefined") {
+        return;
+    }
+
+    if (document.getElementById("alex-final-reward-style")) {
+        return;
+    }
+
+    const stile = document.createElement("style");
+    stile.id = "alex-final-reward-style";
+    stile.textContent = ALEX_FINAL_REWARD_CSS;
+    document.head.appendChild(stile);
+}
+
+
     const PREMI_FINALI_GENERALI = {
         perfetto: [
             {
@@ -227,6 +307,8 @@
     }
 
     function mostraPremioFinale(contenitore, datiRisultato) {
+        installaStiliPremioFinaleAlex();
+
         if (!contenitore) {
             return null;
         }
