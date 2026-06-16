@@ -427,6 +427,71 @@ function prendiDomandeSenzaRipetere(domandeFiltrate, numeroDaPrendere) {
     });
 }
 
+
+let alexCodaPosizioniCorretteBilanciate = [];
+
+function alexMescolaArrayQuiz(lista) {
+    for (let indice = lista.length - 1; indice > 0; indice -= 1) {
+        const indiceCasuale = Math.floor(Math.random() * (indice + 1));
+        const valoreTemporaneo = lista[indice];
+
+        lista[indice] = lista[indiceCasuale];
+        lista[indiceCasuale] = valoreTemporaneo;
+    }
+
+    return lista;
+}
+
+function alexPrendiPosizioneCorrettaBilanciata(numeroOpzioni) {
+    if (!alexCodaPosizioniCorretteBilanciate.length) {
+        alexCodaPosizioniCorretteBilanciate = [0, 1, 2, 3]
+            .filter(indice => indice < numeroOpzioni);
+
+        alexMescolaArrayQuiz(alexCodaPosizioniCorretteBilanciate);
+    }
+
+    return alexCodaPosizioniCorretteBilanciate.shift();
+}
+
+function alexCreaOpzioniMescolateBilanciate(domanda) {
+    const opzioniOriginali = Array.isArray(domanda.opzioni)
+        ? domanda.opzioni
+        : [];
+
+    const rispostaCorretta = domanda.risposta_corretta;
+
+    const opzioniConIndice = opzioniOriginali.map((testo, indiceOriginale) => {
+        return {
+            testo,
+            indiceOriginale,
+        };
+    });
+
+    const opzioneCorretta = opzioniConIndice.find(opzione => {
+        return opzione.testo === rispostaCorretta;
+    });
+
+    if (!opzioneCorretta) {
+        return opzioniConIndice;
+    }
+
+    const opzioniSbagliate = opzioniConIndice.filter(opzione => {
+        return opzione !== opzioneCorretta;
+    });
+
+    alexMescolaArrayQuiz(opzioniSbagliate);
+
+    const posizioneCorretta = alexPrendiPosizioneCorrettaBilanciata(
+        opzioniConIndice.length
+    );
+
+    const opzioniFinali = [...opzioniSbagliate];
+
+    opzioniFinali.splice(posizioneCorretta, 0, opzioneCorretta);
+
+    return opzioniFinali;
+}
+
 function mostraDomandaCorrente() {
     rispostaGiaData = false;
 
@@ -497,7 +562,11 @@ function mostraImmagineDomanda(domanda) {
 function mostraOpzioni(domanda) {
     elementi.optionsBox.innerHTML = "";
 
-    domanda.opzioni.forEach((opzione, indice) => {
+    const opzioniDaMostrare = alexCreaOpzioniMescolateBilanciate(domanda);
+
+    opzioniDaMostrare.forEach((opzioneMescolata, indice) => {
+        const opzione = opzioneMescolata.testo;
+        const indiceOriginaleOpzione = opzioneMescolata.indiceOriginale;
         const bottone = document.createElement("button");
         bottone.className = "option-button";
         bottone.type = "button";

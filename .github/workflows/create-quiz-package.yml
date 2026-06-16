@@ -69,9 +69,10 @@ jobs:
             --level "${{ inputs.level }}" \
             --number "${{ inputs.number }}"
 
-      - name: Mescola posizione delle risposte corrette
+
+      - name: Bilancia risposte nel pacchetto generato
         run: |
-          python scripts/shuffle_answer_positions.py dist/generated
+          python scripts/balance_answers_in_packages.py dist/generated
 
       - name: Rende chiari i nomi dei file nel pacchetto
         run: |
