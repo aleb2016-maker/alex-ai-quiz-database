@@ -9,7 +9,7 @@ Questo report separa i problemi qualitativi reali dagli avvisi non bloccanti sul
 | Scienze generali | 40 | 16 | 34 |
 | Biologia | 40 | 0 | 40 |
 | Fisica | 40 | 21 | 40 |
-| Chimica | 40 | 23 | 40 |
+| Chimica | 40 | 16 | 40 |
 | Fisica quantistica | 40 | 21 | 40 |
 
 **Nota:** la risposta in A nel sorgente non è più bloccante, perché il runtime ora usa il mescolatore generale.
@@ -816,7 +816,7 @@ Distribuzione risposta corretta nel sorgente:
 ## Chimica
 
 Domande sorgente: **40**
-Domande con problemi qualità reali: **23**
+Domande con problemi qualità reali: **16**
 Risposte corrette in A nel sorgente: **40**
 
 Distribuzione risposta corretta nel sorgente:
@@ -826,149 +826,6 @@ Distribuzione risposta corretta nel sorgente:
 ```
 
 ### Domande da migliorare davvero
-
-### CHE_005 — livello: intermedio
-
-**Domanda:** Qual è la differenza principale tra legame ionico e legame covalente?
-
-**Opzioni attuali:**
-- A. Nel legame ionico c’è trasferimento di elettroni, nel covalente condivisione di elettroni ✅
-- B. Nel legame ionico c’è condivisione di protoni, nel covalente trasferimento di neutroni
-- C. Nel legame ionico gli atomi restano neutri, nel covalente diventano sempre ioni
-- D. Nel legame ionico partecipano solo gas nobili, nel covalente solo metalli
-
-**Risposta corretta nel sorgente:** A
-
-**Problemi reali:**
-- Possibile opzione debole/generica: contiene “sempre”.
-
-**Regola di revisione:**
-- Ogni domanda deve avere almeno un distrattore forte: una risposta sbagliata molto vicina alla corretta, ma falsa per un dettaglio preciso.
-- Evitare parole assolute come “sempre” e “mai”, se rendono il distrattore troppo eliminabile.
-- Rendere le quattro opzioni simili per lunghezza, struttura e livello tecnico.
-
-### CHE_012 — livello: avanzato
-
-**Domanda:** Perché un catalizzatore aumenta la velocità di una reazione chimica?
-
-**Opzioni attuali:**
-- A. Fornisce un percorso alternativo con energia di attivazione più bassa ✅
-- B. Aumenta sempre la quantità finale di prodotto ottenibile all’equilibrio
-- C. Viene consumato completamente e trasformato nel prodotto principale
-- D. Rende impossibile la reazione inversa dopo la formazione dei prodotti
-
-**Risposta corretta nel sorgente:** A
-
-**Problemi reali:**
-- Possibile opzione debole/generica: contiene “sempre”.
-
-**Regola di revisione:**
-- Ogni domanda deve avere almeno un distrattore forte: una risposta sbagliata molto vicina alla corretta, ma falsa per un dettaglio preciso.
-- Evitare parole assolute come “sempre” e “mai”, se rendono il distrattore troppo eliminabile.
-- Rendere le quattro opzioni simili per lunghezza, struttura e livello tecnico.
-
-### CHE_013 — livello: facile
-
-**Domanda:** Che cosa distingue una sostanza pura da una miscela?
-
-**Opzioni attuali:**
-- A. Una sostanza pura ha composizione definita, una miscela può avere composizione variabile ✅
-- B. Una sostanza pura contiene sempre più elementi, una miscela contiene sempre un solo elemento
-- C. Una sostanza pura si separa sempre con un filtro, una miscela non può mai essere separata
-- D. Una sostanza pura cambia massa durante l’uso, una miscela mantiene sempre la stessa massa
-
-**Risposta corretta nel sorgente:** A
-
-**Problemi reali:**
-- Possibile opzione debole/generica: contiene “sempre”.
-- Possibile opzione debole/generica: contiene “sempre”.
-- Possibile opzione debole/generica: contiene “mai”.
-- Possibile opzione debole/generica: contiene “sempre”.
-
-**Regola di revisione:**
-- Ogni domanda deve avere almeno un distrattore forte: una risposta sbagliata molto vicina alla corretta, ma falsa per un dettaglio preciso.
-- Evitare parole assolute come “sempre” e “mai”, se rendono il distrattore troppo eliminabile.
-- Rendere le quattro opzioni simili per lunghezza, struttura e livello tecnico.
-
-### CHE_016 — livello: facile
-
-**Domanda:** Che cosa succede alle particelle di un gas quando aumenta la temperatura?
-
-**Opzioni attuali:**
-- A. Si muovono mediamente più velocemente ✅
-- B. Si trasformano tutte in particelle solide
-- C. Perdono sempre tutti gli elettroni
-- D. Diventano immobili ma più pesanti
-
-**Risposta corretta nel sorgente:** A
-
-**Problemi reali:**
-- Possibile opzione debole/generica: contiene “sempre”.
-
-**Regola di revisione:**
-- Ogni domanda deve avere almeno un distrattore forte: una risposta sbagliata molto vicina alla corretta, ma falsa per un dettaglio preciso.
-- Evitare parole assolute come “sempre” e “mai”, se rendono il distrattore troppo eliminabile.
-- Rendere le quattro opzioni simili per lunghezza, struttura e livello tecnico.
-
-### CHE_018 — livello: intermedio
-
-**Domanda:** Che cosa significa dire che una soluzione è concentrata?
-
-**Opzioni attuali:**
-- A. Contiene una quantità relativamente elevata di soluto rispetto al solvente ✅
-- B. Contiene solo solvente e nessuna sostanza disciolta
-- C. Contiene sempre un soluto solido non sciolto sul fondo
-- D. Contiene solo molecole di acqua senza altre particelle
-
-**Risposta corretta nel sorgente:** A
-
-**Problemi reali:**
-- Possibile opzione debole/generica: contiene “sempre”.
-
-**Regola di revisione:**
-- Ogni domanda deve avere almeno un distrattore forte: una risposta sbagliata molto vicina alla corretta, ma falsa per un dettaglio preciso.
-- Evitare parole assolute come “sempre” e “mai”, se rendono il distrattore troppo eliminabile.
-- Rendere le quattro opzioni simili per lunghezza, struttura e livello tecnico.
-
-### CHE_019 — livello: intermedio
-
-**Domanda:** In una reazione esotermica, che cosa avviene in generale?
-
-**Opzioni attuali:**
-- A. Il sistema libera energia verso l’ambiente ✅
-- B. Il sistema assorbe sempre energia dall’ambiente
-- C. La massa dei reagenti scompare durante la reazione
-- D. Gli atomi vengono distrutti e non riorganizzati
-
-**Risposta corretta nel sorgente:** A
-
-**Problemi reali:**
-- Possibile opzione debole/generica: contiene “sempre”.
-
-**Regola di revisione:**
-- Ogni domanda deve avere almeno un distrattore forte: una risposta sbagliata molto vicina alla corretta, ma falsa per un dettaglio preciso.
-- Evitare parole assolute come “sempre” e “mai”, se rendono il distrattore troppo eliminabile.
-- Rendere le quattro opzioni simili per lunghezza, struttura e livello tecnico.
-
-### CHE_020 — livello: intermedio
-
-**Domanda:** Perché il carbonio può formare moltissimi composti diversi?
-
-**Opzioni attuali:**
-- A. Perché può formare quattro legami covalenti e catene stabili ✅
-- B. Perché ha sempre carica positiva in ogni composto
-- C. Perché non può legarsi con altri atomi di carbonio
-- D. Perché possiede un solo elettrone nel livello esterno
-
-**Risposta corretta nel sorgente:** A
-
-**Problemi reali:**
-- Possibile opzione debole/generica: contiene “sempre”.
-
-**Regola di revisione:**
-- Ogni domanda deve avere almeno un distrattore forte: una risposta sbagliata molto vicina alla corretta, ma falsa per un dettaglio preciso.
-- Evitare parole assolute come “sempre” e “mai”, se rendono il distrattore troppo eliminabile.
-- Rendere le quattro opzioni simili per lunghezza, struttura e livello tecnico.
 
 ### CHE_021 — livello: avanzato
 

@@ -106,13 +106,13 @@
     "livello": "intermedio",
     "domanda": "Qual è la differenza principale tra legame ionico e legame covalente?",
     "opzioni": [
-      "Nel legame ionico c’è trasferimento di elettroni, nel covalente condivisione di elettroni",
-      "Nel legame ionico c’è condivisione di protoni, nel covalente trasferimento di neutroni",
-      "Nel legame ionico gli atomi restano neutri, nel covalente diventano sempre ioni",
-      "Nel legame ionico partecipano solo gas nobili, nel covalente solo metalli"
+      "Nel legame ionico si trasferiscono elettroni, nel covalente si condividono elettroni",
+      "Nel legame ionico si condividono elettroni, nel covalente si formano ioni opposti",
+      "Nel legame ionico si condividono protoni, nel covalente si trasferiscono neutroni",
+      "Nel legame ionico si rompono nuclei atomici, nel covalente si fondono elettroni"
     ],
-    "risposta_corretta": "Nel legame ionico c’è trasferimento di elettroni, nel covalente condivisione di elettroni",
-    "spiegazione": "Nel legame ionico un atomo cede elettroni e un altro li acquista. Nel legame covalente gli atomi condividono coppie di elettroni.",
+    "risposta_corretta": "Nel legame ionico si trasferiscono elettroni, nel covalente si condividono elettroni",
+    "spiegazione": "Nel legame ionico uno o più elettroni vengono trasferiti, formando ioni di carica opposta. Nel legame covalente, invece, gli atomi condividono coppie di elettroni.",
     "tags": [
       "chimica",
       "legami_chimici",
@@ -123,7 +123,13 @@
     "distrattore_forte": "Nel legame ionico gli atomi restano neutri, nel covalente diventano sempre ioni",
     "punteggio_distrattore_forte": 4,
     "motivo_distrattore_forte": "È vicino perché parla di ioni e neutralità, ma inverte la logica del legame ionico.",
-    "qualita": "controllata"
+    "qualita": "controllata",
+    "spiegazioni_opzioni": {
+      "Nel legame ionico si trasferiscono elettroni, nel covalente si condividono elettroni": "Corretta: descrive in modo preciso il concetto chimico richiesto.",
+      "Nel legame ionico si condividono elettroni, nel covalente si formano ioni opposti": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio chimico non corretto.",
+      "Nel legame ionico si condividono protoni, nel covalente si trasferiscono neutroni": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio chimico non corretto.",
+      "Nel legame ionico si rompono nuclei atomici, nel covalente si fondono elettroni": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio chimico non corretto."
+    }
   },
   {
     "id": "CHE_006",
@@ -282,13 +288,13 @@
     "livello": "avanzato",
     "domanda": "Perché un catalizzatore aumenta la velocità di una reazione chimica?",
     "opzioni": [
-      "Fornisce un percorso alternativo con energia di attivazione più bassa",
-      "Aumenta sempre la quantità finale di prodotto ottenibile all’equilibrio",
-      "Viene consumato completamente e trasformato nel prodotto principale",
-      "Rende impossibile la reazione inversa dopo la formazione dei prodotti"
+      "Offre un percorso alternativo con energia di attivazione più bassa",
+      "Aumenta l’energia di attivazione ma rende più stabili i reagenti",
+      "Sposta l’equilibrio producendo più prodotto finale in ogni condizione",
+      "Si consuma trasformandosi nel prodotto principale della reazione"
     ],
-    "risposta_corretta": "Fornisce un percorso alternativo con energia di attivazione più bassa",
-    "spiegazione": "Il catalizzatore accelera la reazione abbassando l’energia di attivazione, ma non viene consumato e non cambia la posizione dell’equilibrio.",
+    "risposta_corretta": "Offre un percorso alternativo con energia di attivazione più bassa",
+    "spiegazione": "Un catalizzatore accelera una reazione perché fornisce un percorso con energia di attivazione più bassa. Non viene consumato in modo permanente e non cambia necessariamente la quantità di prodotto all’equilibrio.",
     "tags": [
       "chimica",
       "catalizzatore",
@@ -298,7 +304,13 @@
     "distrattore_forte": "Aumenta sempre la quantità finale di prodotto ottenibile all’equilibrio",
     "punteggio_distrattore_forte": 4,
     "motivo_distrattore_forte": "È vicino perché collega catalizzatore e resa, ma il catalizzatore modifica la velocità, non l’equilibrio finale.",
-    "qualita": "controllata"
+    "qualita": "controllata",
+    "spiegazioni_opzioni": {
+      "Offre un percorso alternativo con energia di attivazione più bassa": "Corretta: descrive in modo preciso il concetto chimico richiesto.",
+      "Aumenta l’energia di attivazione ma rende più stabili i reagenti": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio chimico non corretto.",
+      "Sposta l’equilibrio producendo più prodotto finale in ogni condizione": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio chimico non corretto.",
+      "Si consuma trasformandosi nel prodotto principale della reazione": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio chimico non corretto."
+    }
   },
   {
     "id": "CHE_013",
@@ -308,12 +320,12 @@
     "domanda": "Che cosa distingue una sostanza pura da una miscela?",
     "opzioni": [
       "Una sostanza pura ha composizione definita, una miscela può avere composizione variabile",
-      "Una sostanza pura contiene sempre più elementi, una miscela contiene sempre un solo elemento",
-      "Una sostanza pura si separa sempre con un filtro, una miscela non può mai essere separata",
-      "Una sostanza pura cambia massa durante l’uso, una miscela mantiene sempre la stessa massa"
+      "Una sostanza pura contiene componenti separabili fisicamente, una miscela no",
+      "Una miscela ha formula chimica fissa, una sostanza pura cambia composizione",
+      "Una miscela contiene un solo tipo di particella, una sostanza pura più componenti"
     ],
     "risposta_corretta": "Una sostanza pura ha composizione definita, una miscela può avere composizione variabile",
-    "spiegazione": "Una sostanza pura ha composizione chimica definita. Una miscela invece può contenere componenti in proporzioni variabili.",
+    "spiegazione": "Una sostanza pura ha composizione definita e proprietà caratteristiche. Una miscela contiene più componenti e può avere proporzioni variabili.",
     "tags": [
       "chimica",
       "sostanza_pura",
@@ -323,7 +335,13 @@
     "distrattore_forte": "Una sostanza pura si separa sempre con un filtro, una miscela non può mai essere separata",
     "punteggio_distrattore_forte": 4,
     "motivo_distrattore_forte": "È vicino perché parla di separazione delle sostanze, ma descrive in modo errato sostanze pure e miscele.",
-    "qualita": "controllata"
+    "qualita": "controllata",
+    "spiegazioni_opzioni": {
+      "Una sostanza pura ha composizione definita, una miscela può avere composizione variabile": "Corretta: descrive in modo preciso il concetto chimico richiesto.",
+      "Una sostanza pura contiene componenti separabili fisicamente, una miscela no": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio chimico non corretto.",
+      "Una miscela ha formula chimica fissa, una sostanza pura cambia composizione": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio chimico non corretto.",
+      "Una miscela contiene un solo tipo di particella, una sostanza pura più componenti": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio chimico non corretto."
+    }
   },
   {
     "id": "CHE_014",
@@ -382,13 +400,13 @@
     "livello": "facile",
     "domanda": "Che cosa succede alle particelle di un gas quando aumenta la temperatura?",
     "opzioni": [
-      "Si muovono mediamente più velocemente",
-      "Si trasformano tutte in particelle solide",
-      "Perdono sempre tutti gli elettroni",
-      "Diventano immobili ma più pesanti"
+      "Aumenta l’energia cinetica media e si muovono più velocemente",
+      "Diminuisce l’energia cinetica media e si muovono più lentamente",
+      "Aumenta la massa delle particelle senza cambiare il loro movimento",
+      "Diminuisce la distanza tra particelle fino a formare un solido"
     ],
-    "risposta_corretta": "Si muovono mediamente più velocemente",
-    "spiegazione": "Aumentando la temperatura aumenta l’energia cinetica media delle particelle, quindi le particelle si muovono più velocemente.",
+    "risposta_corretta": "Aumenta l’energia cinetica media e si muovono più velocemente",
+    "spiegazione": "Quando la temperatura di un gas aumenta, aumenta anche l’energia cinetica media delle sue particelle. Per questo le particelle si muovono mediamente più velocemente.",
     "tags": [
       "chimica",
       "gas",
@@ -399,7 +417,13 @@
     "distrattore_forte": "Si trasformano tutte in particelle solide",
     "punteggio_distrattore_forte": 4,
     "motivo_distrattore_forte": "È vicino perché parla di stato della materia, ma aumentando la temperatura non avviene solidificazione.",
-    "qualita": "controllata"
+    "qualita": "controllata",
+    "spiegazioni_opzioni": {
+      "Aumenta l’energia cinetica media e si muovono più velocemente": "Corretta: descrive in modo preciso il concetto chimico richiesto.",
+      "Diminuisce l’energia cinetica media e si muovono più lentamente": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio chimico non corretto.",
+      "Aumenta la massa delle particelle senza cambiare il loro movimento": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio chimico non corretto.",
+      "Diminuisce la distanza tra particelle fino a formare un solido": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio chimico non corretto."
+    }
   },
   {
     "id": "CHE_017",
@@ -434,13 +458,13 @@
     "livello": "intermedio",
     "domanda": "Che cosa significa dire che una soluzione è concentrata?",
     "opzioni": [
-      "Contiene una quantità relativamente elevata di soluto rispetto al solvente",
-      "Contiene solo solvente e nessuna sostanza disciolta",
-      "Contiene sempre un soluto solido non sciolto sul fondo",
-      "Contiene solo molecole di acqua senza altre particelle"
+      "Contiene molta quantità di soluto rispetto alla quantità di solvente",
+      "Contiene molto solvente rispetto alla quantità di soluto disciolto",
+      "Contiene soluto non disciolto separato completamente dal solvente",
+      "Contiene soltanto solvente puro senza particelle di soluto"
     ],
-    "risposta_corretta": "Contiene una quantità relativamente elevata di soluto rispetto al solvente",
-    "spiegazione": "Una soluzione concentrata contiene molto soluto rispetto alla quantità di solvente. Non significa necessariamente che ci sia solido non sciolto.",
+    "risposta_corretta": "Contiene molta quantità di soluto rispetto alla quantità di solvente",
+    "spiegazione": "Una soluzione concentrata contiene una quantità relativamente elevata di soluto rispetto al solvente. Non significa che il soluto sia per forza solido o non disciolto.",
     "tags": [
       "chimica",
       "soluzione",
@@ -450,7 +474,13 @@
     "distrattore_forte": "Contiene sempre un soluto solido non sciolto sul fondo",
     "punteggio_distrattore_forte": 4,
     "motivo_distrattore_forte": "È vicino perché richiama una soluzione molto ricca di soluto, ma il soluto non sciolto indica saturazione o eccesso.",
-    "qualita": "controllata"
+    "qualita": "controllata",
+    "spiegazioni_opzioni": {
+      "Contiene molta quantità di soluto rispetto alla quantità di solvente": "Corretta: descrive in modo preciso il concetto chimico richiesto.",
+      "Contiene molto solvente rispetto alla quantità di soluto disciolto": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio chimico non corretto.",
+      "Contiene soluto non disciolto separato completamente dal solvente": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio chimico non corretto.",
+      "Contiene soltanto solvente puro senza particelle di soluto": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio chimico non corretto."
+    }
   },
   {
     "id": "CHE_019",
@@ -459,13 +489,13 @@
     "livello": "intermedio",
     "domanda": "In una reazione esotermica, che cosa avviene in generale?",
     "opzioni": [
-      "Il sistema libera energia verso l’ambiente",
-      "Il sistema assorbe sempre energia dall’ambiente",
-      "La massa dei reagenti scompare durante la reazione",
-      "Gli atomi vengono distrutti e non riorganizzati"
+      "Il sistema libera energia verso l’ambiente, spesso sotto forma di calore",
+      "Il sistema assorbe energia dall’ambiente per trasformare i reagenti",
+      "Il sistema elimina massa perché gli atomi vengono distrutti nella reazione",
+      "Il sistema blocca il trasferimento di energia tra reagenti e ambiente"
     ],
-    "risposta_corretta": "Il sistema libera energia verso l’ambiente",
-    "spiegazione": "Una reazione esotermica libera energia, spesso sotto forma di calore, verso l’ambiente esterno.",
+    "risposta_corretta": "Il sistema libera energia verso l’ambiente, spesso sotto forma di calore",
+    "spiegazione": "In una reazione esotermica il sistema libera energia verso l’ambiente, spesso come calore. La massa non scompare: gli atomi si riorganizzano formando nuove sostanze.",
     "tags": [
       "chimica",
       "reazioni",
@@ -476,7 +506,13 @@
     "distrattore_forte": "Il sistema assorbe sempre energia dall’ambiente",
     "punteggio_distrattore_forte": 4,
     "motivo_distrattore_forte": "È vicino perché descrive lo scambio di energia, ma corrisponde a una reazione endotermica.",
-    "qualita": "controllata"
+    "qualita": "controllata",
+    "spiegazioni_opzioni": {
+      "Il sistema libera energia verso l’ambiente, spesso sotto forma di calore": "Corretta: descrive in modo preciso il concetto chimico richiesto.",
+      "Il sistema assorbe energia dall’ambiente per trasformare i reagenti": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio chimico non corretto.",
+      "Il sistema elimina massa perché gli atomi vengono distrutti nella reazione": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio chimico non corretto.",
+      "Il sistema blocca il trasferimento di energia tra reagenti e ambiente": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio chimico non corretto."
+    }
   },
   {
     "id": "CHE_020",
@@ -485,13 +521,13 @@
     "livello": "intermedio",
     "domanda": "Perché il carbonio può formare moltissimi composti diversi?",
     "opzioni": [
-      "Perché può formare quattro legami covalenti e catene stabili",
-      "Perché ha sempre carica positiva in ogni composto",
-      "Perché non può legarsi con altri atomi di carbonio",
-      "Perché possiede un solo elettrone nel livello esterno"
+      "Ha quattro elettroni di valenza e può formare legami covalenti stabili e catene",
+      "Ha otto elettroni di valenza e forma solo legami ionici con elementi metallici",
+      "Ha un solo elettrone esterno e può legarsi soltanto con atomi di idrogeno",
+      "Ha un nucleo instabile e cambia elemento durante ogni reazione organica"
     ],
-    "risposta_corretta": "Perché può formare quattro legami covalenti e catene stabili",
-    "spiegazione": "Il carbonio è tetravalente e può legarsi ad altri atomi di carbonio formando catene, anelli e strutture molto varie.",
+    "risposta_corretta": "Ha quattro elettroni di valenza e può formare legami covalenti stabili e catene",
+    "spiegazione": "Il carbonio può formare moltissimi composti perché ha quattro elettroni di valenza e può creare legami covalenti stabili, anche con altri atomi di carbonio, formando catene e strutture complesse.",
     "tags": [
       "chimica",
       "carbonio",
@@ -501,7 +537,13 @@
     "distrattore_forte": "Perché non può legarsi con altri atomi di carbonio",
     "punteggio_distrattore_forte": 4,
     "motivo_distrattore_forte": "È vicino perché parla dei legami del carbonio, ma è il contrario: il carbonio si lega facilmente con altri carboni.",
-    "qualita": "controllata"
+    "qualita": "controllata",
+    "spiegazioni_opzioni": {
+      "Ha quattro elettroni di valenza e può formare legami covalenti stabili e catene": "Corretta: descrive in modo preciso il concetto chimico richiesto.",
+      "Ha otto elettroni di valenza e forma solo legami ionici con elementi metallici": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio chimico non corretto.",
+      "Ha un solo elettrone esterno e può legarsi soltanto con atomi di idrogeno": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio chimico non corretto.",
+      "Ha un nucleo instabile e cambia elemento durante ogni reazione organica": "Errata: è collegata allo stesso argomento, ma contiene un dettaglio chimico non corretto."
+    }
   },
   {
     "id": "CHE_021",
