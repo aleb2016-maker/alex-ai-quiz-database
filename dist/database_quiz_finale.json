@@ -9133,6 +9133,283 @@
     "motivo_distrattore_forte": "È vicino perché appartiene allo stesso ciclo di direzioni, ma è sbagliato perché alto arriva dopo un ulteriore passaggio, non subito dopo basso."
   },
   {
+    "id": "LOG-VER-FAC-0001",
+    "categoria": "logica",
+    "sottocategoria": "logica_verbale",
+    "livello": "facile",
+    "domanda": "Osserva la sequenza: AB → BA, CD → DC, EF → ?",
+    "opzioni": [
+      "FE",
+      "EF",
+      "FG",
+      "GF"
+    ],
+    "risposta_corretta": "FE",
+    "spiegazione": "In ogni coppia le due lettere vengono invertite: AB diventa BA, CD diventa DC. Seguendo la stessa regola, EF diventa FE.",
+    "tags": [
+      "lettere",
+      "sequenze",
+      "logica_verbale"
+    ],
+    "difficolta": 1,
+    "distrattore_forte": "EF",
+    "motivo_distrattore_forte": "È vicino perché contiene le stesse due lettere della coppia di partenza, ma è sbagliato perché non le inverte."
+  },
+  {
+    "id": "LOG-VER-INT-0002",
+    "categoria": "logica",
+    "sottocategoria": "logica_verbale",
+    "livello": "intermedio",
+    "domanda": "Completa l'analogia: penna sta a scrivere come forbici stanno a ?",
+    "opzioni": [
+      "tagliare",
+      "incollare",
+      "misurare",
+      "disegnare"
+    ],
+    "risposta_corretta": "tagliare",
+    "spiegazione": "La relazione è tra uno strumento e la sua funzione principale. La penna serve principalmente per scrivere; le forbici servono principalmente per tagliare.",
+    "tags": [
+      "analogie",
+      "strumenti",
+      "logica_verbale"
+    ],
+    "difficolta": 2,
+    "distrattore_forte": "incollare",
+    "motivo_distrattore_forte": "È vicino perché è un'azione manuale spesso collegata a carta, forbici e lavori pratici, ma è sbagliato perché la funzione principale delle forbici è tagliare, non incollare."
+  },
+  {
+    "id": "LOG-VER-AV-0003",
+    "categoria": "logica",
+    "sottocategoria": "logica_verbale",
+    "livello": "avanzato",
+    "domanda": "Quale coppia mantiene meglio la stessa relazione logica di: sintomo → diagnosi?",
+    "opzioni": [
+      "indizio → ipotesi",
+      "prova → verdetto",
+      "errore → correzione",
+      "causa → conseguenza"
+    ],
+    "risposta_corretta": "indizio → ipotesi",
+    "spiegazione": "Un sintomo è un segnale che aiuta a formulare una diagnosi, ma non coincide con la diagnosi. Allo stesso modo, un indizio aiuta a formulare un'ipotesi, ma non coincide con una conclusione certa.",
+    "tags": [
+      "analogie",
+      "relazioni_logiche",
+      "logica_verbale"
+    ],
+    "difficolta": 3,
+    "distrattore_forte": "prova → verdetto",
+    "motivo_distrattore_forte": "È vicino perché collega un elemento osservato a una conclusione, ma è sbagliato perché prova e verdetto indicano un rapporto più forte e conclusivo rispetto a sintomo e diagnosi."
+  },
+  {
+    "id": "LOG-AST-FAC-0001",
+    "categoria": "logica",
+    "sottocategoria": "ragionamento astratto",
+    "livello": "facile",
+    "domanda": "In una sequenza le forme seguono questo ordine: cerchio, quadrato, cerchio, quadrato. Quale forma viene dopo?",
+    "opzioni": [
+      "Cerchio",
+      "Quadrato",
+      "Triangolo",
+      "Rettangolo"
+    ],
+    "risposta_corretta": "Cerchio",
+    "spiegazione": "La sequenza alterna sempre cerchio e quadrato: cerchio, quadrato, cerchio, quadrato. Dopo il quadrato torna quindi il cerchio.",
+    "tags": [
+      "pattern",
+      "alternanza",
+      "ragionamento astratto"
+    ],
+    "difficolta": 1,
+    "distrattore_forte": "Quadrato",
+    "motivo_distrattore_forte": "È vicino perché è l'altra forma presente nella sequenza, ma è sbagliato perché ripeterebbe il quadrato invece di rispettare l'alternanza."
+  },
+  {
+    "id": "LOG-AST-INT-0002",
+    "categoria": "logica",
+    "sottocategoria": "ragionamento astratto",
+    "livello": "intermedio",
+    "domanda": "Una regola trasforma A in C, B in D e C in E. Seguendo la stessa regola, in cosa si trasforma D?",
+    "opzioni": [
+      "F",
+      "E",
+      "G",
+      "H"
+    ],
+    "risposta_corretta": "F",
+    "spiegazione": "Ogni lettera viene spostata avanti di due posizioni nell'alfabeto: A diventa C, B diventa D, C diventa E. Seguendo la stessa regola, D diventa F.",
+    "tags": [
+      "pattern astratto",
+      "alfabeto",
+      "trasformazioni"
+    ],
+    "difficolta": 2,
+    "distrattore_forte": "E",
+    "motivo_distrattore_forte": "È vicino perché è la lettera successiva a D, ma è sbagliato perché la regola non avanza di una posizione: avanza di due."
+  },
+  {
+    "id": "LOG-AST-AV-0003",
+    "categoria": "logica",
+    "sottocategoria": "ragionamento_astratto",
+    "livello": "avanzato",
+    "domanda": "Osserva le trasformazioni: A3C → B6D, D4F → E8G, H5J → ?",
+    "opzioni": [
+      "I10K",
+      "I8K",
+      "J10K",
+      "I10J"
+    ],
+    "risposta_corretta": "I10K",
+    "spiegazione": "Nelle trasformazioni la prima e l'ultima lettera avanzano di una posizione nell'alfabeto, mentre il numero viene raddoppiato. Quindi H diventa I, 5 diventa 10 e J diventa K.",
+    "tags": [
+      "trasformazioni",
+      "lettere",
+      "numeri",
+      "ragionamento_astratto"
+    ],
+    "difficolta": 3,
+    "distrattore_forte": "I8K",
+    "motivo_distrattore_forte": "È vicino perché aggiorna correttamente le due lettere esterne, ma è sbagliato perché il numero deve essere raddoppiato: 5 diventa 10, non 8."
+  },
+  {
+    "id": "LOG-CRI-FAC-0001",
+    "categoria": "logica",
+    "sottocategoria": "ragionamento critico",
+    "livello": "facile",
+    "domanda": "Tutti i treni della linea A arrivano in stazione. Il treno 25 è della linea A. Cosa si può concludere?",
+    "opzioni": [
+      "Il treno 25 arriva in stazione",
+      "Il treno 25 arriva in stazione solo se è in orario",
+      "Tutti i treni che arrivano in stazione sono della linea A",
+      "Solo il treno 25 della linea A arriva in stazione"
+    ],
+    "risposta_corretta": "Il treno 25 arriva in stazione",
+    "spiegazione": "Se tutti i treni della linea A arrivano in stazione e il treno 25 è della linea A, allora il treno 25 arriva in stazione. Non possiamo aggiungere condizioni non presenti, come l'orario.",
+    "tags": [
+      "deduzione",
+      "sillogismi",
+      "ragionamento critico"
+    ],
+    "difficolta": 1,
+    "distrattore_forte": "Il treno 25 arriva in stazione solo se è in orario",
+    "motivo_distrattore_forte": "È vicino perché parla dello stesso treno e dell'arrivo in stazione, ma è sbagliato perché aggiunge la condizione dell'orario, che non compare nelle premesse."
+  },
+  {
+    "id": "LOG-CRI-INT-0002",
+    "categoria": "logica",
+    "sottocategoria": "ragionamento critico",
+    "livello": "intermedio",
+    "domanda": "Se l'affermazione 'Se piove, Marco prende l'ombrello' è vera e oggi Marco non prende l'ombrello, cosa si può dedurre con certezza?",
+    "opzioni": [
+      "Oggi non piove",
+      "Non si può dedurre nulla sul tempo",
+      "Oggi piove sicuramente",
+      "Marco potrebbe non prendere l'ombrello anche se piove"
+    ],
+    "risposta_corretta": "Oggi non piove",
+    "spiegazione": "La regola dice: se piove, Marco prende l'ombrello. Se oggi Marco non prende l'ombrello, allora la condizione 'piove' non si è verificata. È una deduzione per contrapposizione: se P implica Q, allora non Q implica non P.",
+    "tags": [
+      "condizioni",
+      "deduzione",
+      "logica proposizionale"
+    ],
+    "difficolta": 2,
+    "distrattore_forte": "Non si può dedurre nulla sul tempo",
+    "motivo_distrattore_forte": "È vicino perché sembra prudente non aggiungere informazioni, ma è sbagliato: con questa premessa logica possiamo dedurre per contrapposizione che oggi non piove."
+  },
+  {
+    "id": "LOG-CRI-AV-0003",
+    "categoria": "logica",
+    "sottocategoria": "ragionamento critico",
+    "livello": "avanzato",
+    "domanda": "Un negozio afferma: 'Tutti i prodotti scontati sono esposti nello scaffale rosso'. Un cliente trova un prodotto nello scaffale rosso. Quale conclusione è logicamente corretta?",
+    "opzioni": [
+      "Non è certo che il prodotto sia scontato",
+      "Il prodotto è sicuramente scontato perché si trova nello scaffale rosso",
+      "Tutti i prodotti nello scaffale rosso sono sicuramente scontati",
+      "Nessun prodotto non scontato può trovarsi nello scaffale rosso"
+    ],
+    "risposta_corretta": "Non è certo che il prodotto sia scontato",
+    "spiegazione": "L'affermazione dice che tutti i prodotti scontati sono nello scaffale rosso. Questo non significa che tutti i prodotti nello scaffale rosso siano scontati. Trovare un prodotto nello scaffale rosso non basta quindi per concludere con certezza che sia scontato.",
+    "tags": [
+      "deduzione",
+      "errore logico",
+      "condizione sufficiente"
+    ],
+    "difficolta": 3,
+    "distrattore_forte": "Il prodotto è sicuramente scontato perché si trova nello scaffale rosso",
+    "motivo_distrattore_forte": "È molto vicino perché usa proprio l'informazione dello scaffale rosso, ma è sbagliato perché confonde una condizione necessaria con una condizione sufficiente: sappiamo che gli scontati stanno nello scaffale rosso, non che tutto ciò che sta nello scaffale rosso sia scontato."
+  },
+  {
+    "id": "LOG-NUM-FAC-0001",
+    "categoria": "logica",
+    "sottocategoria": "logica_numerica",
+    "livello": "facile",
+    "domanda": "Trova il numero mancante: 4, 7, 10, 13, ?",
+    "opzioni": [
+      "16",
+      "15",
+      "17",
+      "19"
+    ],
+    "risposta_corretta": "16",
+    "spiegazione": "La sequenza aumenta sempre di 3: 4, 7, 10, 13, 16. Per questo il numero mancante è 16.",
+    "tags": [
+      "sequenze",
+      "numeri",
+      "logica"
+    ],
+    "difficolta": 1,
+    "distrattore_forte": "15",
+    "motivo_distrattore_forte": "È vicino perché è molto vicino al valore corretto, ma sbaglia la sequenza: si aggiunge sempre 3, quindi dopo 13 viene 16."
+  },
+  {
+    "id": "LOG-NUM-INT-0002",
+    "categoria": "logica",
+    "sottocategoria": "logica_numerica",
+    "livello": "intermedio",
+    "domanda": "Completa la serie: 2, 9, 4, 12, 6, 15, ?",
+    "opzioni": [
+      "8",
+      "18",
+      "9",
+      "16"
+    ],
+    "risposta_corretta": "8",
+    "spiegazione": "La serie alterna due sequenze. Nelle posizioni dispari ci sono 2, 4, 6, quindi il numero successivo è 8. Nelle posizioni pari ci sono 9, 12, 15, che aumentano di 3: 18 sarebbe il prossimo valore della sequenza pari, ma non è il valore richiesto in questa posizione.",
+    "tags": [
+      "sequenze alternate",
+      "logica_numerica",
+      "ragionamento"
+    ],
+    "difficolta": 2,
+    "distrattore_forte": "18",
+    "motivo_distrattore_forte": "È vicino perché continua correttamente la sottosequenza 9, 12, 15 aggiungendo 3, ma è sbagliato perché il prossimo posto della serie appartiene alla sottosequenza dispari 2, 4, 6, quindi deve essere 8."
+  },
+  {
+    "id": "LOG-NUM-AV-0003",
+    "categoria": "logica",
+    "sottocategoria": "logica_numerica",
+    "livello": "avanzato",
+    "domanda": "Completa la sequenza: 3, 7, 14, 18, 36, 40, ?",
+    "opzioni": [
+      "80",
+      "44",
+      "72",
+      "76"
+    ],
+    "risposta_corretta": "80",
+    "spiegazione": "La sequenza alterna due operazioni: prima si aggiunge 4, poi si moltiplica per 2. Infatti 3 + 4 = 7, 7 × 2 = 14, 14 + 4 = 18, 18 × 2 = 36, 36 + 4 = 40. Il passo successivo è 40 × 2 = 80.",
+    "tags": [
+      "sequenze",
+      "operazioni alternate",
+      "logica_numerica"
+    ],
+    "difficolta": 3,
+    "distrattore_forte": "44",
+    "motivo_distrattore_forte": "È vicino perché continua con +4, una regola presente nella sequenza, ma sbaglia perché la sequenza alterna +4 e ×2: dopo 40 bisogna fare ×2."
+  },
+  {
     "id": "LOG-VIS-FAC-0001",
     "categoria": "logica",
     "sottocategoria": "logica_visiva",
@@ -12652,280 +12929,2445 @@
     }
   },
   {
-    "id": "LOG-VER-FAC-0001",
+    "id": "LOG-VIS-0019",
     "categoria": "logica",
-    "sottocategoria": "logica_verbale",
+    "sottocategoria": "logica_visiva",
+    "tipo_domanda": "immagine",
     "livello": "facile",
-    "domanda": "Osserva la sequenza: AB → BA, CD → DC, EF → ?",
+    "domanda": "Osserva la sequenza visiva e scegli la figura successiva. La forma resta quadrato, il colore alterna rosso e blu, i pallini interni aumentano di uno. La risposta corretta deve rispettare forma, colore, numero di lati e oggetti interni.",
+    "immagine_domanda": "assets/logica_visiva/LOG-VIS-0019_domanda.png",
     "opzioni": [
-      "FE",
-      "EF",
-      "FG",
-      "GF"
+      "quadrato rosso con 4 lati e 5 pallini interni",
+      "quadrato blu con 4 lati e 5 pallini interni",
+      "quadrato rosso con 4 lati e 4 pallini interni",
+      "triangolo rosso con 3 lati e 5 pallini interni"
     ],
-    "risposta_corretta": "FE",
-    "spiegazione": "In ogni coppia le due lettere vengono invertite: AB diventa BA, CD diventa DC. Seguendo la stessa regola, EF diventa FE.",
+    "immagini_opzioni": [
+      "assets/logica_visiva/LOG-VIS-0019_A.png",
+      "assets/logica_visiva/LOG-VIS-0019_B.png",
+      "assets/logica_visiva/LOG-VIS-0019_C.png",
+      "assets/logica_visiva/LOG-VIS-0019_D.png"
+    ],
+    "risposta_corretta": "quadrato rosso con 4 lati e 5 pallini interni",
+    "spiegazione": "La risposta corretta è A: quadrato rosso con 4 lati e 5 pallini interni. La figura rispetta forma, colore, numero di lati e oggetti interni richiesti dalla sequenza.",
     "tags": [
-      "lettere",
-      "sequenze",
-      "logica_verbale"
+      "logica",
+      "logica_visiva",
+      "visuale",
+      "facile",
+      "visiva"
     ],
     "difficolta": 1,
-    "distrattore_forte": "EF",
-    "motivo_distrattore_forte": "È vicino perché contiene le stesse due lettere della coppia di partenza, ma è sbagliato perché non le inverte."
+    "distrattore_forte": "A",
+    "motivo_distrattore_forte": "È vicino perché è una delle opzioni visive proposte, ma non rispetta l'alternanza corretta cerchio-quadrato: dopo il quadrato deve tornare il cerchio indicato dall'opzione C.",
+    "tipo": "visual_logic",
+    "spiegazioni_opzioni": {
+      "A": "A non torna: è triangolo, ma serve cerchio.",
+      "B": "B non torna: è quadrato, ma serve cerchio.",
+      "C": "C corretta: cerchio.",
+      "D": "D non torna: è rettangolo, ma serve cerchio."
+    },
+    "visual_logic": {
+      "type": "sequence",
+      "uses_position": false,
+      "rule": {
+        "description": "alterna cerchio/quadrato; dopo il quadrato torna il cerchio.",
+        "color_alternation": {
+          "enabled": false,
+          "colors": []
+        }
+      },
+      "sequence": [
+        {
+          "outer_shape": "cerchio",
+          "outer_color": "nero",
+          "sides": 0,
+          "inner_objects": []
+        },
+        {
+          "outer_shape": "quadrato",
+          "outer_color": "nero",
+          "sides": 4,
+          "inner_objects": []
+        },
+        {
+          "outer_shape": "cerchio",
+          "outer_color": "nero",
+          "sides": 0,
+          "inner_objects": []
+        },
+        {
+          "outer_shape": "quadrato",
+          "outer_color": "nero",
+          "sides": 4,
+          "inner_objects": []
+        }
+      ],
+      "expected_answer": {
+        "outer_shape": "cerchio",
+        "outer_color": "nero",
+        "sides": 0,
+        "inner_objects": []
+      },
+      "options": {
+        "A": {
+          "outer_shape": "triangolo",
+          "outer_color": "nero",
+          "sides": 3,
+          "inner_objects": []
+        },
+        "B": {
+          "outer_shape": "quadrato",
+          "outer_color": "nero",
+          "sides": 4,
+          "inner_objects": []
+        },
+        "C": {
+          "outer_shape": "cerchio",
+          "outer_color": "nero",
+          "sides": 0,
+          "inner_objects": []
+        },
+        "D": {
+          "outer_shape": "rettangolo",
+          "outer_color": "nero",
+          "sides": 4,
+          "inner_objects": []
+        }
+      }
+    },
+    "risposta_corretta_testo": "quadrato rosso con 4 lati e 5 pallini interni",
+    "risposta_corretta_lettera": "A"
   },
   {
-    "id": "LOG-VER-INT-0002",
+    "id": "LOG-VIS-0020",
     "categoria": "logica",
-    "sottocategoria": "logica_verbale",
-    "livello": "intermedio",
-    "domanda": "Completa l'analogia: penna sta a scrivere come forbici stanno a ?",
-    "opzioni": [
-      "tagliare",
-      "incollare",
-      "misurare",
-      "disegnare"
-    ],
-    "risposta_corretta": "tagliare",
-    "spiegazione": "La relazione è tra uno strumento e la sua funzione principale. La penna serve principalmente per scrivere; le forbici servono principalmente per tagliare.",
-    "tags": [
-      "analogie",
-      "strumenti",
-      "logica_verbale"
-    ],
-    "difficolta": 2,
-    "distrattore_forte": "incollare",
-    "motivo_distrattore_forte": "È vicino perché è un'azione manuale spesso collegata a carta, forbici e lavori pratici, ma è sbagliato perché la funzione principale delle forbici è tagliare, non incollare."
-  },
-  {
-    "id": "LOG-VER-AV-0003",
-    "categoria": "logica",
-    "sottocategoria": "logica_verbale",
-    "livello": "avanzato",
-    "domanda": "Quale coppia mantiene meglio la stessa relazione logica di: sintomo → diagnosi?",
-    "opzioni": [
-      "indizio → ipotesi",
-      "prova → verdetto",
-      "errore → correzione",
-      "causa → conseguenza"
-    ],
-    "risposta_corretta": "indizio → ipotesi",
-    "spiegazione": "Un sintomo è un segnale che aiuta a formulare una diagnosi, ma non coincide con la diagnosi. Allo stesso modo, un indizio aiuta a formulare un'ipotesi, ma non coincide con una conclusione certa.",
-    "tags": [
-      "analogie",
-      "relazioni_logiche",
-      "logica_verbale"
-    ],
-    "difficolta": 3,
-    "distrattore_forte": "prova → verdetto",
-    "motivo_distrattore_forte": "È vicino perché collega un elemento osservato a una conclusione, ma è sbagliato perché prova e verdetto indicano un rapporto più forte e conclusivo rispetto a sintomo e diagnosi."
-  },
-  {
-    "id": "LOG-AST-FAC-0001",
-    "categoria": "logica",
-    "sottocategoria": "ragionamento astratto",
+    "sottocategoria": "logica_visiva",
+    "tipo_domanda": "immagine",
     "livello": "facile",
-    "domanda": "In una sequenza le forme seguono questo ordine: cerchio, quadrato, cerchio, quadrato. Quale forma viene dopo?",
+    "domanda": "Osserva la sequenza visiva e scegli la figura successiva. La forma aumenta il numero di lati, il colore resta verde e resta un triangolo interno. La risposta corretta deve rispettare forma, colore, numero di lati e oggetti interni.",
+    "immagine_domanda": "assets/logica_visiva/LOG-VIS-0020_domanda.png",
     "opzioni": [
-      "Cerchio",
-      "Quadrato",
-      "Triangolo",
-      "Rettangolo"
+      "ettagono verde con 7 lati e 1 triangolo interno",
+      "esagono verde con 6 lati e 2 triangoli interni",
+      "ettagono blu con 7 lati e 1 triangolo interno",
+      "pentagono verde con 5 lati e 1 triangolo interno"
     ],
-    "risposta_corretta": "Cerchio",
-    "spiegazione": "La sequenza alterna sempre cerchio e quadrato: cerchio, quadrato, cerchio, quadrato. Dopo il quadrato torna quindi il cerchio.",
+    "immagini_opzioni": [
+      "assets/logica_visiva/LOG-VIS-0020_A.png",
+      "assets/logica_visiva/LOG-VIS-0020_B.png",
+      "assets/logica_visiva/LOG-VIS-0020_C.png",
+      "assets/logica_visiva/LOG-VIS-0020_D.png"
+    ],
+    "risposta_corretta": "ettagono verde con 7 lati e 1 triangolo interno",
+    "spiegazione": "La risposta corretta è A: ettagono verde con 7 lati e 1 triangolo interno. La figura rispetta forma, colore, numero di lati e oggetti interni richiesti dalla sequenza.",
     "tags": [
-      "pattern",
-      "alternanza",
-      "ragionamento astratto"
+      "logica",
+      "logica_visiva",
+      "visuale",
+      "facile",
+      "visiva"
     ],
     "difficolta": 1,
-    "distrattore_forte": "Quadrato",
-    "motivo_distrattore_forte": "È vicino perché è l'altra forma presente nella sequenza, ma è sbagliato perché ripeterebbe il quadrato invece di rispettare l'alternanza."
+    "distrattore_forte": "A",
+    "motivo_distrattore_forte": "È vicino perché è una delle opzioni visive proposte, ma non rispetta l'alternanza corretta cerchio-quadrato: dopo il quadrato deve tornare il cerchio indicato dall'opzione C.",
+    "tipo": "visual_logic",
+    "spiegazioni_opzioni": {
+      "A": "A non torna: è triangolo, ma serve cerchio.",
+      "B": "B non torna: è quadrato, ma serve cerchio.",
+      "C": "C corretta: cerchio.",
+      "D": "D non torna: è rettangolo, ma serve cerchio."
+    },
+    "visual_logic": {
+      "type": "sequence",
+      "uses_position": false,
+      "rule": {
+        "description": "alterna cerchio/quadrato; dopo il quadrato torna il cerchio.",
+        "color_alternation": {
+          "enabled": false,
+          "colors": []
+        }
+      },
+      "sequence": [
+        {
+          "outer_shape": "cerchio",
+          "outer_color": "nero",
+          "sides": 0,
+          "inner_objects": []
+        },
+        {
+          "outer_shape": "quadrato",
+          "outer_color": "nero",
+          "sides": 4,
+          "inner_objects": []
+        },
+        {
+          "outer_shape": "cerchio",
+          "outer_color": "nero",
+          "sides": 0,
+          "inner_objects": []
+        },
+        {
+          "outer_shape": "quadrato",
+          "outer_color": "nero",
+          "sides": 4,
+          "inner_objects": []
+        }
+      ],
+      "expected_answer": {
+        "outer_shape": "cerchio",
+        "outer_color": "nero",
+        "sides": 0,
+        "inner_objects": []
+      },
+      "options": {
+        "A": {
+          "outer_shape": "triangolo",
+          "outer_color": "nero",
+          "sides": 3,
+          "inner_objects": []
+        },
+        "B": {
+          "outer_shape": "quadrato",
+          "outer_color": "nero",
+          "sides": 4,
+          "inner_objects": []
+        },
+        "C": {
+          "outer_shape": "cerchio",
+          "outer_color": "nero",
+          "sides": 0,
+          "inner_objects": []
+        },
+        "D": {
+          "outer_shape": "rettangolo",
+          "outer_color": "nero",
+          "sides": 4,
+          "inner_objects": []
+        }
+      }
+    },
+    "risposta_corretta_testo": "ettagono verde con 7 lati e 1 triangolo interno",
+    "risposta_corretta_lettera": "A"
   },
   {
-    "id": "LOG-AST-INT-0002",
+    "id": "LOG-VIS-0021",
     "categoria": "logica",
-    "sottocategoria": "ragionamento astratto",
-    "livello": "intermedio",
-    "domanda": "Una regola trasforma A in C, B in D e C in E. Seguendo la stessa regola, in cosa si trasforma D?",
-    "opzioni": [
-      "F",
-      "E",
-      "G",
-      "H"
-    ],
-    "risposta_corretta": "F",
-    "spiegazione": "Ogni lettera viene spostata avanti di due posizioni nell'alfabeto: A diventa C, B diventa D, C diventa E. Seguendo la stessa regola, D diventa F.",
-    "tags": [
-      "pattern astratto",
-      "alfabeto",
-      "trasformazioni"
-    ],
-    "difficolta": 2,
-    "distrattore_forte": "E",
-    "motivo_distrattore_forte": "È vicino perché è la lettera successiva a D, ma è sbagliato perché la regola non avanza di una posizione: avanza di due."
-  },
-  {
-    "id": "LOG-AST-AV-0003",
-    "categoria": "logica",
-    "sottocategoria": "ragionamento_astratto",
-    "livello": "avanzato",
-    "domanda": "Osserva le trasformazioni: A3C → B6D, D4F → E8G, H5J → ?",
-    "opzioni": [
-      "I10K",
-      "I8K",
-      "J10K",
-      "I10J"
-    ],
-    "risposta_corretta": "I10K",
-    "spiegazione": "Nelle trasformazioni la prima e l'ultima lettera avanzano di una posizione nell'alfabeto, mentre il numero viene raddoppiato. Quindi H diventa I, 5 diventa 10 e J diventa K.",
-    "tags": [
-      "trasformazioni",
-      "lettere",
-      "numeri",
-      "ragionamento_astratto"
-    ],
-    "difficolta": 3,
-    "distrattore_forte": "I8K",
-    "motivo_distrattore_forte": "È vicino perché aggiorna correttamente le due lettere esterne, ma è sbagliato perché il numero deve essere raddoppiato: 5 diventa 10, non 8."
-  },
-  {
-    "id": "LOG-CRI-FAC-0001",
-    "categoria": "logica",
-    "sottocategoria": "ragionamento critico",
+    "sottocategoria": "logica_visiva",
+    "tipo_domanda": "immagine",
     "livello": "facile",
-    "domanda": "Tutti i treni della linea A arrivano in stazione. Il treno 25 è della linea A. Cosa si può concludere?",
+    "domanda": "Osserva la sequenza visiva e scegli la figura successiva. La forma resta cerchio, i colori seguono rosso, giallo, verde, blu e il numero di quadratini resta due. La risposta corretta deve rispettare forma, colore, numero di lati e oggetti interni.",
+    "immagine_domanda": "assets/logica_visiva/LOG-VIS-0021_domanda.png",
     "opzioni": [
-      "Il treno 25 arriva in stazione",
-      "Il treno 25 arriva in stazione solo se è in orario",
-      "Tutti i treni che arrivano in stazione sono della linea A",
-      "Solo il treno 25 della linea A arriva in stazione"
+      "cerchio rosso con 0 lati e 2 quadratini interni",
+      "cerchio viola con 0 lati e 2 quadratini interni",
+      "quadrato rosso con 4 lati e 2 quadratini interni",
+      "cerchio rosso con 0 lati e 3 quadratini interni"
     ],
-    "risposta_corretta": "Il treno 25 arriva in stazione",
-    "spiegazione": "Se tutti i treni della linea A arrivano in stazione e il treno 25 è della linea A, allora il treno 25 arriva in stazione. Non possiamo aggiungere condizioni non presenti, come l'orario.",
+    "immagini_opzioni": [
+      "assets/logica_visiva/LOG-VIS-0021_A.png",
+      "assets/logica_visiva/LOG-VIS-0021_B.png",
+      "assets/logica_visiva/LOG-VIS-0021_C.png",
+      "assets/logica_visiva/LOG-VIS-0021_D.png"
+    ],
+    "risposta_corretta": "cerchio rosso con 0 lati e 2 quadratini interni",
+    "spiegazione": "La risposta corretta è A: cerchio rosso con 0 lati e 2 quadratini interni. La figura rispetta forma, colore, numero di lati e oggetti interni richiesti dalla sequenza.",
     "tags": [
-      "deduzione",
-      "sillogismi",
-      "ragionamento critico"
+      "logica",
+      "logica_visiva",
+      "visuale",
+      "facile",
+      "visiva"
     ],
     "difficolta": 1,
-    "distrattore_forte": "Il treno 25 arriva in stazione solo se è in orario",
-    "motivo_distrattore_forte": "È vicino perché parla dello stesso treno e dell'arrivo in stazione, ma è sbagliato perché aggiunge la condizione dell'orario, che non compare nelle premesse."
+    "distrattore_forte": "A",
+    "motivo_distrattore_forte": "È vicino perché è una delle opzioni visive proposte, ma non rispetta l'alternanza corretta cerchio-quadrato: dopo il quadrato deve tornare il cerchio indicato dall'opzione C.",
+    "tipo": "visual_logic",
+    "spiegazioni_opzioni": {
+      "A": "A non torna: è triangolo, ma serve cerchio.",
+      "B": "B non torna: è quadrato, ma serve cerchio.",
+      "C": "C corretta: cerchio.",
+      "D": "D non torna: è rettangolo, ma serve cerchio."
+    },
+    "visual_logic": {
+      "type": "sequence",
+      "uses_position": false,
+      "rule": {
+        "description": "alterna cerchio/quadrato; dopo il quadrato torna il cerchio.",
+        "color_alternation": {
+          "enabled": false,
+          "colors": []
+        }
+      },
+      "sequence": [
+        {
+          "outer_shape": "cerchio",
+          "outer_color": "nero",
+          "sides": 0,
+          "inner_objects": []
+        },
+        {
+          "outer_shape": "quadrato",
+          "outer_color": "nero",
+          "sides": 4,
+          "inner_objects": []
+        },
+        {
+          "outer_shape": "cerchio",
+          "outer_color": "nero",
+          "sides": 0,
+          "inner_objects": []
+        },
+        {
+          "outer_shape": "quadrato",
+          "outer_color": "nero",
+          "sides": 4,
+          "inner_objects": []
+        }
+      ],
+      "expected_answer": {
+        "outer_shape": "cerchio",
+        "outer_color": "nero",
+        "sides": 0,
+        "inner_objects": []
+      },
+      "options": {
+        "A": {
+          "outer_shape": "triangolo",
+          "outer_color": "nero",
+          "sides": 3,
+          "inner_objects": []
+        },
+        "B": {
+          "outer_shape": "quadrato",
+          "outer_color": "nero",
+          "sides": 4,
+          "inner_objects": []
+        },
+        "C": {
+          "outer_shape": "cerchio",
+          "outer_color": "nero",
+          "sides": 0,
+          "inner_objects": []
+        },
+        "D": {
+          "outer_shape": "rettangolo",
+          "outer_color": "nero",
+          "sides": 4,
+          "inner_objects": []
+        }
+      }
+    },
+    "risposta_corretta_testo": "cerchio rosso con 0 lati e 2 quadratini interni",
+    "risposta_corretta_lettera": "A"
   },
   {
-    "id": "LOG-CRI-INT-0002",
+    "id": "LOG-VIS-0022",
     "categoria": "logica",
-    "sottocategoria": "ragionamento critico",
-    "livello": "intermedio",
-    "domanda": "Se l'affermazione 'Se piove, Marco prende l'ombrello' è vera e oggi Marco non prende l'ombrello, cosa si può dedurre con certezza?",
-    "opzioni": [
-      "Oggi non piove",
-      "Non si può dedurre nulla sul tempo",
-      "Oggi piove sicuramente",
-      "Marco potrebbe non prendere l'ombrello anche se piove"
-    ],
-    "risposta_corretta": "Oggi non piove",
-    "spiegazione": "La regola dice: se piove, Marco prende l'ombrello. Se oggi Marco non prende l'ombrello, allora la condizione 'piove' non si è verificata. È una deduzione per contrapposizione: se P implica Q, allora non Q implica non P.",
-    "tags": [
-      "condizioni",
-      "deduzione",
-      "logica proposizionale"
-    ],
-    "difficolta": 2,
-    "distrattore_forte": "Non si può dedurre nulla sul tempo",
-    "motivo_distrattore_forte": "È vicino perché sembra prudente non aggiungere informazioni, ma è sbagliato: con questa premessa logica possiamo dedurre per contrapposizione che oggi non piove."
-  },
-  {
-    "id": "LOG-CRI-AV-0003",
-    "categoria": "logica",
-    "sottocategoria": "ragionamento critico",
-    "livello": "avanzato",
-    "domanda": "Un negozio afferma: 'Tutti i prodotti scontati sono esposti nello scaffale rosso'. Un cliente trova un prodotto nello scaffale rosso. Quale conclusione è logicamente corretta?",
-    "opzioni": [
-      "Non è certo che il prodotto sia scontato",
-      "Il prodotto è sicuramente scontato perché si trova nello scaffale rosso",
-      "Tutti i prodotti nello scaffale rosso sono sicuramente scontati",
-      "Nessun prodotto non scontato può trovarsi nello scaffale rosso"
-    ],
-    "risposta_corretta": "Non è certo che il prodotto sia scontato",
-    "spiegazione": "L'affermazione dice che tutti i prodotti scontati sono nello scaffale rosso. Questo non significa che tutti i prodotti nello scaffale rosso siano scontati. Trovare un prodotto nello scaffale rosso non basta quindi per concludere con certezza che sia scontato.",
-    "tags": [
-      "deduzione",
-      "errore logico",
-      "condizione sufficiente"
-    ],
-    "difficolta": 3,
-    "distrattore_forte": "Il prodotto è sicuramente scontato perché si trova nello scaffale rosso",
-    "motivo_distrattore_forte": "È molto vicino perché usa proprio l'informazione dello scaffale rosso, ma è sbagliato perché confonde una condizione necessaria con una condizione sufficiente: sappiamo che gli scontati stanno nello scaffale rosso, non che tutto ciò che sta nello scaffale rosso sia scontato."
-  },
-  {
-    "id": "LOG-NUM-FAC-0001",
-    "categoria": "logica",
-    "sottocategoria": "logica_numerica",
+    "sottocategoria": "logica_visiva",
+    "tipo_domanda": "immagine",
     "livello": "facile",
-    "domanda": "Trova il numero mancante: 4, 7, 10, 13, ?",
+    "domanda": "Osserva la sequenza visiva e scegli la figura successiva. La forma alterna triangolo e cerchio, il colore resta arancione e i pallini alternano uno e due. La risposta corretta deve rispettare forma, colore, numero di lati e oggetti interni.",
+    "immagine_domanda": "assets/logica_visiva/LOG-VIS-0022_domanda.png",
     "opzioni": [
-      "16",
-      "15",
-      "17",
-      "19"
+      "triangolo arancione con 3 lati e 1 pallino interno",
+      "cerchio arancione con 0 lati e 1 pallino interno",
+      "triangolo arancione con 3 lati e 2 pallini interni",
+      "triangolo blu con 3 lati e 1 pallino interno"
     ],
-    "risposta_corretta": "16",
-    "spiegazione": "La sequenza aumenta sempre di 3: 4, 7, 10, 13, 16. Per questo il numero mancante è 16.",
+    "immagini_opzioni": [
+      "assets/logica_visiva/LOG-VIS-0022_A.png",
+      "assets/logica_visiva/LOG-VIS-0022_B.png",
+      "assets/logica_visiva/LOG-VIS-0022_C.png",
+      "assets/logica_visiva/LOG-VIS-0022_D.png"
+    ],
+    "risposta_corretta": "triangolo arancione con 3 lati e 1 pallino interno",
+    "spiegazione": "La risposta corretta è A: triangolo arancione con 3 lati e 1 pallino interno. La figura rispetta forma, colore, numero di lati e oggetti interni richiesti dalla sequenza.",
     "tags": [
-      "sequenze",
-      "numeri",
-      "logica"
+      "logica",
+      "logica_visiva",
+      "visuale",
+      "facile",
+      "visiva"
     ],
     "difficolta": 1,
-    "distrattore_forte": "15",
-    "motivo_distrattore_forte": "È vicino perché è molto vicino al valore corretto, ma sbaglia la sequenza: si aggiunge sempre 3, quindi dopo 13 viene 16."
+    "distrattore_forte": "A",
+    "motivo_distrattore_forte": "È vicino perché è una delle opzioni visive proposte, ma non rispetta l'alternanza corretta cerchio-quadrato: dopo il quadrato deve tornare il cerchio indicato dall'opzione C.",
+    "tipo": "visual_logic",
+    "spiegazioni_opzioni": {
+      "A": "A non torna: è triangolo, ma serve cerchio.",
+      "B": "B non torna: è quadrato, ma serve cerchio.",
+      "C": "C corretta: cerchio.",
+      "D": "D non torna: è rettangolo, ma serve cerchio."
+    },
+    "visual_logic": {
+      "type": "sequence",
+      "uses_position": false,
+      "rule": {
+        "description": "alterna cerchio/quadrato; dopo il quadrato torna il cerchio.",
+        "color_alternation": {
+          "enabled": false,
+          "colors": []
+        }
+      },
+      "sequence": [
+        {
+          "outer_shape": "cerchio",
+          "outer_color": "nero",
+          "sides": 0,
+          "inner_objects": []
+        },
+        {
+          "outer_shape": "quadrato",
+          "outer_color": "nero",
+          "sides": 4,
+          "inner_objects": []
+        },
+        {
+          "outer_shape": "cerchio",
+          "outer_color": "nero",
+          "sides": 0,
+          "inner_objects": []
+        },
+        {
+          "outer_shape": "quadrato",
+          "outer_color": "nero",
+          "sides": 4,
+          "inner_objects": []
+        }
+      ],
+      "expected_answer": {
+        "outer_shape": "cerchio",
+        "outer_color": "nero",
+        "sides": 0,
+        "inner_objects": []
+      },
+      "options": {
+        "A": {
+          "outer_shape": "triangolo",
+          "outer_color": "nero",
+          "sides": 3,
+          "inner_objects": []
+        },
+        "B": {
+          "outer_shape": "quadrato",
+          "outer_color": "nero",
+          "sides": 4,
+          "inner_objects": []
+        },
+        "C": {
+          "outer_shape": "cerchio",
+          "outer_color": "nero",
+          "sides": 0,
+          "inner_objects": []
+        },
+        "D": {
+          "outer_shape": "rettangolo",
+          "outer_color": "nero",
+          "sides": 4,
+          "inner_objects": []
+        }
+      }
+    },
+    "risposta_corretta_testo": "triangolo arancione con 3 lati e 1 pallino interno",
+    "risposta_corretta_lettera": "A"
   },
   {
-    "id": "LOG-NUM-INT-0002",
+    "id": "LOG-VIS-0023",
     "categoria": "logica",
-    "sottocategoria": "logica_numerica",
+    "sottocategoria": "logica_visiva",
+    "tipo_domanda": "immagine",
+    "livello": "facile",
+    "domanda": "Osserva la sequenza visiva e scegli la figura successiva. La forma resta pentagono, il colore alterna viola e giallo, gli oggetti interni passano da zero a uno. La risposta corretta deve rispettare forma, colore, numero di lati e oggetti interni.",
+    "immagine_domanda": "assets/logica_visiva/LOG-VIS-0023_domanda.png",
+    "opzioni": [
+      "pentagono viola con 5 lati e 0 oggetti interni",
+      "pentagono viola con 5 lati e 1 pallino interno",
+      "quadrato viola con 4 lati e 0 oggetti interni",
+      "pentagono giallo con 5 lati e 0 oggetti interni"
+    ],
+    "immagini_opzioni": [
+      "assets/logica_visiva/LOG-VIS-0023_A.png",
+      "assets/logica_visiva/LOG-VIS-0023_B.png",
+      "assets/logica_visiva/LOG-VIS-0023_C.png",
+      "assets/logica_visiva/LOG-VIS-0023_D.png"
+    ],
+    "risposta_corretta": "pentagono viola con 5 lati e 0 oggetti interni",
+    "spiegazione": "La risposta corretta è A: pentagono viola con 5 lati e 0 oggetti interni. La figura rispetta forma, colore, numero di lati e oggetti interni richiesti dalla sequenza.",
+    "tags": [
+      "logica",
+      "logica_visiva",
+      "visuale",
+      "facile",
+      "visiva"
+    ],
+    "difficolta": 1,
+    "distrattore_forte": "A",
+    "motivo_distrattore_forte": "È vicino perché è una delle opzioni visive proposte, ma non rispetta l'alternanza corretta cerchio-quadrato: dopo il quadrato deve tornare il cerchio indicato dall'opzione C.",
+    "tipo": "visual_logic",
+    "spiegazioni_opzioni": {
+      "A": "A non torna: è triangolo, ma serve cerchio.",
+      "B": "B non torna: è quadrato, ma serve cerchio.",
+      "C": "C corretta: cerchio.",
+      "D": "D non torna: è rettangolo, ma serve cerchio."
+    },
+    "visual_logic": {
+      "type": "sequence",
+      "uses_position": false,
+      "rule": {
+        "description": "alterna cerchio/quadrato; dopo il quadrato torna il cerchio.",
+        "color_alternation": {
+          "enabled": false,
+          "colors": []
+        }
+      },
+      "sequence": [
+        {
+          "outer_shape": "cerchio",
+          "outer_color": "nero",
+          "sides": 0,
+          "inner_objects": []
+        },
+        {
+          "outer_shape": "quadrato",
+          "outer_color": "nero",
+          "sides": 4,
+          "inner_objects": []
+        },
+        {
+          "outer_shape": "cerchio",
+          "outer_color": "nero",
+          "sides": 0,
+          "inner_objects": []
+        },
+        {
+          "outer_shape": "quadrato",
+          "outer_color": "nero",
+          "sides": 4,
+          "inner_objects": []
+        }
+      ],
+      "expected_answer": {
+        "outer_shape": "cerchio",
+        "outer_color": "nero",
+        "sides": 0,
+        "inner_objects": []
+      },
+      "options": {
+        "A": {
+          "outer_shape": "triangolo",
+          "outer_color": "nero",
+          "sides": 3,
+          "inner_objects": []
+        },
+        "B": {
+          "outer_shape": "quadrato",
+          "outer_color": "nero",
+          "sides": 4,
+          "inner_objects": []
+        },
+        "C": {
+          "outer_shape": "cerchio",
+          "outer_color": "nero",
+          "sides": 0,
+          "inner_objects": []
+        },
+        "D": {
+          "outer_shape": "rettangolo",
+          "outer_color": "nero",
+          "sides": 4,
+          "inner_objects": []
+        }
+      }
+    },
+    "risposta_corretta_testo": "pentagono viola con 5 lati e 0 oggetti interni",
+    "risposta_corretta_lettera": "A"
+  },
+  {
+    "id": "LOG-VIS-0024",
+    "categoria": "logica",
+    "sottocategoria": "logica_visiva",
+    "tipo_domanda": "immagine",
+    "livello": "facile",
+    "domanda": "Osserva la sequenza visiva e scegli la figura successiva. Il colore resta azzurro, la forma alterna quadrato ed esagono, i triangoli interni aumentano di uno ogni due passaggi. La risposta corretta deve rispettare forma, colore, numero di lati e oggetti interni.",
+    "immagine_domanda": "assets/logica_visiva/LOG-VIS-0024_domanda.png",
+    "opzioni": [
+      "quadrato azzurro con 4 lati e 3 triangoli interni",
+      "esagono azzurro con 6 lati e 3 triangoli interni",
+      "quadrato azzurro con 4 lati e 2 triangoli interni",
+      "quadrato verde con 4 lati e 3 triangoli interni"
+    ],
+    "immagini_opzioni": [
+      "assets/logica_visiva/LOG-VIS-0024_A.png",
+      "assets/logica_visiva/LOG-VIS-0024_B.png",
+      "assets/logica_visiva/LOG-VIS-0024_C.png",
+      "assets/logica_visiva/LOG-VIS-0024_D.png"
+    ],
+    "risposta_corretta": "quadrato azzurro con 4 lati e 3 triangoli interni",
+    "spiegazione": "La risposta corretta è A: quadrato azzurro con 4 lati e 3 triangoli interni. La figura rispetta forma, colore, numero di lati e oggetti interni richiesti dalla sequenza.",
+    "tags": [
+      "logica",
+      "logica_visiva",
+      "visuale",
+      "facile",
+      "visiva"
+    ],
+    "difficolta": 1,
+    "distrattore_forte": "A",
+    "motivo_distrattore_forte": "È vicino perché è una delle opzioni visive proposte, ma non rispetta l'alternanza corretta cerchio-quadrato: dopo il quadrato deve tornare il cerchio indicato dall'opzione C.",
+    "tipo": "visual_logic",
+    "spiegazioni_opzioni": {
+      "A": "A non torna: è triangolo, ma serve cerchio.",
+      "B": "B non torna: è quadrato, ma serve cerchio.",
+      "C": "C corretta: cerchio.",
+      "D": "D non torna: è rettangolo, ma serve cerchio."
+    },
+    "visual_logic": {
+      "type": "sequence",
+      "uses_position": false,
+      "rule": {
+        "description": "alterna cerchio/quadrato; dopo il quadrato torna il cerchio.",
+        "color_alternation": {
+          "enabled": false,
+          "colors": []
+        }
+      },
+      "sequence": [
+        {
+          "outer_shape": "cerchio",
+          "outer_color": "nero",
+          "sides": 0,
+          "inner_objects": []
+        },
+        {
+          "outer_shape": "quadrato",
+          "outer_color": "nero",
+          "sides": 4,
+          "inner_objects": []
+        },
+        {
+          "outer_shape": "cerchio",
+          "outer_color": "nero",
+          "sides": 0,
+          "inner_objects": []
+        },
+        {
+          "outer_shape": "quadrato",
+          "outer_color": "nero",
+          "sides": 4,
+          "inner_objects": []
+        }
+      ],
+      "expected_answer": {
+        "outer_shape": "cerchio",
+        "outer_color": "nero",
+        "sides": 0,
+        "inner_objects": []
+      },
+      "options": {
+        "A": {
+          "outer_shape": "triangolo",
+          "outer_color": "nero",
+          "sides": 3,
+          "inner_objects": []
+        },
+        "B": {
+          "outer_shape": "quadrato",
+          "outer_color": "nero",
+          "sides": 4,
+          "inner_objects": []
+        },
+        "C": {
+          "outer_shape": "cerchio",
+          "outer_color": "nero",
+          "sides": 0,
+          "inner_objects": []
+        },
+        "D": {
+          "outer_shape": "rettangolo",
+          "outer_color": "nero",
+          "sides": 4,
+          "inner_objects": []
+        }
+      }
+    },
+    "risposta_corretta_testo": "quadrato azzurro con 4 lati e 3 triangoli interni",
+    "risposta_corretta_lettera": "A"
+  },
+  {
+    "id": "LOG-VIS-0025",
+    "categoria": "logica",
+    "sottocategoria": "logica_visiva",
+    "tipo_domanda": "immagine",
     "livello": "intermedio",
-    "domanda": "Completa la serie: 2, 9, 4, 12, 6, 15, ?",
+    "domanda": "Osserva la sequenza visiva e scegli la figura successiva. I lati aumentano di uno, il colore alterna rosso e blu, i quadratini interni restano tre. La risposta corretta deve rispettare forma, colore, numero di lati e oggetti interni.",
+    "immagine_domanda": "assets/logica_visiva/LOG-VIS-0025_domanda.png",
     "opzioni": [
-      "8",
-      "18",
-      "9",
-      "16"
+      "ettagono rosso con 7 lati e 3 quadratini interni",
+      "ettagono blu con 7 lati e 3 quadratini interni",
+      "esagono rosso con 6 lati e 3 quadratini interni",
+      "ettagono rosso con 7 lati e 4 quadratini interni"
     ],
-    "risposta_corretta": "8",
-    "spiegazione": "La serie alterna due sequenze. Nelle posizioni dispari ci sono 2, 4, 6, quindi il numero successivo è 8. Nelle posizioni pari ci sono 9, 12, 15, che aumentano di 3: 18 sarebbe il prossimo valore della sequenza pari, ma non è il valore richiesto in questa posizione.",
+    "immagini_opzioni": [
+      "assets/logica_visiva/LOG-VIS-0025_A.png",
+      "assets/logica_visiva/LOG-VIS-0025_B.png",
+      "assets/logica_visiva/LOG-VIS-0025_C.png",
+      "assets/logica_visiva/LOG-VIS-0025_D.png"
+    ],
+    "risposta_corretta": "ettagono rosso con 7 lati e 3 quadratini interni",
+    "spiegazione": "La risposta corretta è A: ettagono rosso con 7 lati e 3 quadratini interni. La figura rispetta forma, colore, numero di lati e oggetti interni richiesti dalla sequenza.",
     "tags": [
-      "sequenze alternate",
-      "logica_numerica",
-      "ragionamento"
+      "logica",
+      "logica_visiva",
+      "visuale",
+      "facile",
+      "visiva"
     ],
-    "difficolta": 2,
-    "distrattore_forte": "18",
-    "motivo_distrattore_forte": "È vicino perché continua correttamente la sottosequenza 9, 12, 15 aggiungendo 3, ma è sbagliato perché il prossimo posto della serie appartiene alla sottosequenza dispari 2, 4, 6, quindi deve essere 8."
+    "difficolta": 1,
+    "distrattore_forte": "A",
+    "motivo_distrattore_forte": "È vicino perché è una delle opzioni visive proposte, ma non rispetta l'alternanza corretta cerchio-quadrato: dopo il quadrato deve tornare il cerchio indicato dall'opzione C.",
+    "tipo": "visual_logic",
+    "spiegazioni_opzioni": {
+      "A": "A non torna: è triangolo, ma serve cerchio.",
+      "B": "B non torna: è quadrato, ma serve cerchio.",
+      "C": "C corretta: cerchio.",
+      "D": "D non torna: è rettangolo, ma serve cerchio."
+    },
+    "visual_logic": {
+      "type": "sequence",
+      "uses_position": false,
+      "rule": {
+        "description": "alterna cerchio/quadrato; dopo il quadrato torna il cerchio.",
+        "color_alternation": {
+          "enabled": false,
+          "colors": []
+        }
+      },
+      "sequence": [
+        {
+          "outer_shape": "cerchio",
+          "outer_color": "nero",
+          "sides": 0,
+          "inner_objects": []
+        },
+        {
+          "outer_shape": "quadrato",
+          "outer_color": "nero",
+          "sides": 4,
+          "inner_objects": []
+        },
+        {
+          "outer_shape": "cerchio",
+          "outer_color": "nero",
+          "sides": 0,
+          "inner_objects": []
+        },
+        {
+          "outer_shape": "quadrato",
+          "outer_color": "nero",
+          "sides": 4,
+          "inner_objects": []
+        }
+      ],
+      "expected_answer": {
+        "outer_shape": "cerchio",
+        "outer_color": "nero",
+        "sides": 0,
+        "inner_objects": []
+      },
+      "options": {
+        "A": {
+          "outer_shape": "triangolo",
+          "outer_color": "nero",
+          "sides": 3,
+          "inner_objects": []
+        },
+        "B": {
+          "outer_shape": "quadrato",
+          "outer_color": "nero",
+          "sides": 4,
+          "inner_objects": []
+        },
+        "C": {
+          "outer_shape": "cerchio",
+          "outer_color": "nero",
+          "sides": 0,
+          "inner_objects": []
+        },
+        "D": {
+          "outer_shape": "rettangolo",
+          "outer_color": "nero",
+          "sides": 4,
+          "inner_objects": []
+        }
+      }
+    },
+    "risposta_corretta_testo": "ettagono rosso con 7 lati e 3 quadratini interni",
+    "risposta_corretta_lettera": "A"
   },
   {
-    "id": "LOG-NUM-AV-0003",
+    "id": "LOG-VIS-0026",
     "categoria": "logica",
-    "sottocategoria": "logica_numerica",
-    "livello": "avanzato",
-    "domanda": "Completa la sequenza: 3, 7, 14, 18, 36, 40, ?",
+    "sottocategoria": "logica_visiva",
+    "tipo_domanda": "immagine",
+    "livello": "intermedio",
+    "domanda": "Osserva la sequenza visiva e scegli la figura successiva. La forma resta triangolo, il colore avanza rosso, verde, blu, viola e i pallini interni aumentano. La risposta corretta deve rispettare forma, colore, numero di lati e oggetti interni.",
+    "immagine_domanda": "assets/logica_visiva/LOG-VIS-0026_domanda.png",
     "opzioni": [
-      "80",
-      "44",
-      "72",
-      "76"
+      "triangolo rosso con 3 lati e 5 pallini interni",
+      "triangolo viola con 3 lati e 5 pallini interni",
+      "quadrato rosso con 4 lati e 5 pallini interni",
+      "triangolo rosso con 3 lati e 4 pallini interni"
     ],
-    "risposta_corretta": "80",
-    "spiegazione": "La sequenza alterna due operazioni: prima si aggiunge 4, poi si moltiplica per 2. Infatti 3 + 4 = 7, 7 × 2 = 14, 14 + 4 = 18, 18 × 2 = 36, 36 + 4 = 40. Il passo successivo è 40 × 2 = 80.",
+    "immagini_opzioni": [
+      "assets/logica_visiva/LOG-VIS-0026_A.png",
+      "assets/logica_visiva/LOG-VIS-0026_B.png",
+      "assets/logica_visiva/LOG-VIS-0026_C.png",
+      "assets/logica_visiva/LOG-VIS-0026_D.png"
+    ],
+    "risposta_corretta": "triangolo rosso con 3 lati e 5 pallini interni",
+    "spiegazione": "La risposta corretta è A: triangolo rosso con 3 lati e 5 pallini interni. La figura rispetta forma, colore, numero di lati e oggetti interni richiesti dalla sequenza.",
     "tags": [
-      "sequenze",
-      "operazioni alternate",
-      "logica_numerica"
+      "logica",
+      "logica_visiva",
+      "visuale",
+      "facile",
+      "visiva"
     ],
-    "difficolta": 3,
-    "distrattore_forte": "44",
-    "motivo_distrattore_forte": "È vicino perché continua con +4, una regola presente nella sequenza, ma sbaglia perché la sequenza alterna +4 e ×2: dopo 40 bisogna fare ×2."
+    "difficolta": 1,
+    "distrattore_forte": "A",
+    "motivo_distrattore_forte": "È vicino perché è una delle opzioni visive proposte, ma non rispetta l'alternanza corretta cerchio-quadrato: dopo il quadrato deve tornare il cerchio indicato dall'opzione C.",
+    "tipo": "visual_logic",
+    "spiegazioni_opzioni": {
+      "A": "A non torna: è triangolo, ma serve cerchio.",
+      "B": "B non torna: è quadrato, ma serve cerchio.",
+      "C": "C corretta: cerchio.",
+      "D": "D non torna: è rettangolo, ma serve cerchio."
+    },
+    "visual_logic": {
+      "type": "sequence",
+      "uses_position": false,
+      "rule": {
+        "description": "alterna cerchio/quadrato; dopo il quadrato torna il cerchio.",
+        "color_alternation": {
+          "enabled": false,
+          "colors": []
+        }
+      },
+      "sequence": [
+        {
+          "outer_shape": "cerchio",
+          "outer_color": "nero",
+          "sides": 0,
+          "inner_objects": []
+        },
+        {
+          "outer_shape": "quadrato",
+          "outer_color": "nero",
+          "sides": 4,
+          "inner_objects": []
+        },
+        {
+          "outer_shape": "cerchio",
+          "outer_color": "nero",
+          "sides": 0,
+          "inner_objects": []
+        },
+        {
+          "outer_shape": "quadrato",
+          "outer_color": "nero",
+          "sides": 4,
+          "inner_objects": []
+        }
+      ],
+      "expected_answer": {
+        "outer_shape": "cerchio",
+        "outer_color": "nero",
+        "sides": 0,
+        "inner_objects": []
+      },
+      "options": {
+        "A": {
+          "outer_shape": "triangolo",
+          "outer_color": "nero",
+          "sides": 3,
+          "inner_objects": []
+        },
+        "B": {
+          "outer_shape": "quadrato",
+          "outer_color": "nero",
+          "sides": 4,
+          "inner_objects": []
+        },
+        "C": {
+          "outer_shape": "cerchio",
+          "outer_color": "nero",
+          "sides": 0,
+          "inner_objects": []
+        },
+        "D": {
+          "outer_shape": "rettangolo",
+          "outer_color": "nero",
+          "sides": 4,
+          "inner_objects": []
+        }
+      }
+    },
+    "risposta_corretta_testo": "triangolo rosso con 3 lati e 5 pallini interni",
+    "risposta_corretta_lettera": "A"
+  },
+  {
+    "id": "LOG-VIS-0027",
+    "categoria": "logica",
+    "sottocategoria": "logica_visiva",
+    "tipo_domanda": "immagine",
+    "livello": "intermedio",
+    "domanda": "Osserva la sequenza visiva e scegli la figura successiva. La forma alterna cerchio e quadrato, il colore alterna giallo e verde, gli oggetti interni alternano pallini e quadratini. La risposta corretta deve rispettare forma, colore, numero di lati e oggetti interni.",
+    "immagine_domanda": "assets/logica_visiva/LOG-VIS-0027_domanda.png",
+    "opzioni": [
+      "cerchio giallo con 0 lati e 2 pallini interni",
+      "cerchio verde con 0 lati e 2 pallini interni",
+      "quadrato giallo con 4 lati e 2 quadratini interni",
+      "cerchio giallo con 0 lati e 2 quadratini interni"
+    ],
+    "immagini_opzioni": [
+      "assets/logica_visiva/LOG-VIS-0027_A.png",
+      "assets/logica_visiva/LOG-VIS-0027_B.png",
+      "assets/logica_visiva/LOG-VIS-0027_C.png",
+      "assets/logica_visiva/LOG-VIS-0027_D.png"
+    ],
+    "risposta_corretta": "cerchio giallo con 0 lati e 2 pallini interni",
+    "spiegazione": "La risposta corretta è A: cerchio giallo con 0 lati e 2 pallini interni. La figura rispetta forma, colore, numero di lati e oggetti interni richiesti dalla sequenza.",
+    "tags": [
+      "logica",
+      "logica_visiva",
+      "visuale",
+      "facile",
+      "visiva"
+    ],
+    "difficolta": 1,
+    "distrattore_forte": "A",
+    "motivo_distrattore_forte": "È vicino perché è una delle opzioni visive proposte, ma non rispetta l'alternanza corretta cerchio-quadrato: dopo il quadrato deve tornare il cerchio indicato dall'opzione C.",
+    "tipo": "visual_logic",
+    "spiegazioni_opzioni": {
+      "A": "A non torna: è triangolo, ma serve cerchio.",
+      "B": "B non torna: è quadrato, ma serve cerchio.",
+      "C": "C corretta: cerchio.",
+      "D": "D non torna: è rettangolo, ma serve cerchio."
+    },
+    "visual_logic": {
+      "type": "sequence",
+      "uses_position": false,
+      "rule": {
+        "description": "alterna cerchio/quadrato; dopo il quadrato torna il cerchio.",
+        "color_alternation": {
+          "enabled": false,
+          "colors": []
+        }
+      },
+      "sequence": [
+        {
+          "outer_shape": "cerchio",
+          "outer_color": "nero",
+          "sides": 0,
+          "inner_objects": []
+        },
+        {
+          "outer_shape": "quadrato",
+          "outer_color": "nero",
+          "sides": 4,
+          "inner_objects": []
+        },
+        {
+          "outer_shape": "cerchio",
+          "outer_color": "nero",
+          "sides": 0,
+          "inner_objects": []
+        },
+        {
+          "outer_shape": "quadrato",
+          "outer_color": "nero",
+          "sides": 4,
+          "inner_objects": []
+        }
+      ],
+      "expected_answer": {
+        "outer_shape": "cerchio",
+        "outer_color": "nero",
+        "sides": 0,
+        "inner_objects": []
+      },
+      "options": {
+        "A": {
+          "outer_shape": "triangolo",
+          "outer_color": "nero",
+          "sides": 3,
+          "inner_objects": []
+        },
+        "B": {
+          "outer_shape": "quadrato",
+          "outer_color": "nero",
+          "sides": 4,
+          "inner_objects": []
+        },
+        "C": {
+          "outer_shape": "cerchio",
+          "outer_color": "nero",
+          "sides": 0,
+          "inner_objects": []
+        },
+        "D": {
+          "outer_shape": "rettangolo",
+          "outer_color": "nero",
+          "sides": 4,
+          "inner_objects": []
+        }
+      }
+    },
+    "risposta_corretta_testo": "cerchio giallo con 0 lati e 2 pallini interni",
+    "risposta_corretta_lettera": "A"
+  },
+  {
+    "id": "LOG-VIS-0028",
+    "categoria": "logica",
+    "sottocategoria": "logica_visiva",
+    "tipo_domanda": "immagine",
+    "livello": "intermedio",
+    "domanda": "Osserva la sequenza visiva e scegli la figura successiva. La forma resta esagono, il colore passa blu, arancione, blu, arancione e i triangoli interni aumentano solo nei passaggi blu. La risposta corretta deve rispettare forma, colore, numero di lati e oggetti interni.",
+    "immagine_domanda": "assets/logica_visiva/LOG-VIS-0028_domanda.png",
+    "opzioni": [
+      "esagono blu con 6 lati e 3 triangoli interni",
+      "esagono arancione con 6 lati e 3 triangoli interni",
+      "pentagono blu con 5 lati e 3 triangoli interni",
+      "esagono blu con 6 lati e 2 triangoli interni"
+    ],
+    "immagini_opzioni": [
+      "assets/logica_visiva/LOG-VIS-0028_A.png",
+      "assets/logica_visiva/LOG-VIS-0028_B.png",
+      "assets/logica_visiva/LOG-VIS-0028_C.png",
+      "assets/logica_visiva/LOG-VIS-0028_D.png"
+    ],
+    "risposta_corretta": "esagono blu con 6 lati e 3 triangoli interni",
+    "spiegazione": "La risposta corretta è A: esagono blu con 6 lati e 3 triangoli interni. La figura rispetta forma, colore, numero di lati e oggetti interni richiesti dalla sequenza.",
+    "tags": [
+      "logica",
+      "logica_visiva",
+      "visuale",
+      "facile",
+      "visiva"
+    ],
+    "difficolta": 1,
+    "distrattore_forte": "A",
+    "motivo_distrattore_forte": "È vicino perché è una delle opzioni visive proposte, ma non rispetta l'alternanza corretta cerchio-quadrato: dopo il quadrato deve tornare il cerchio indicato dall'opzione C.",
+    "tipo": "visual_logic",
+    "spiegazioni_opzioni": {
+      "A": "A non torna: è triangolo, ma serve cerchio.",
+      "B": "B non torna: è quadrato, ma serve cerchio.",
+      "C": "C corretta: cerchio.",
+      "D": "D non torna: è rettangolo, ma serve cerchio."
+    },
+    "visual_logic": {
+      "type": "sequence",
+      "uses_position": false,
+      "rule": {
+        "description": "alterna cerchio/quadrato; dopo il quadrato torna il cerchio.",
+        "color_alternation": {
+          "enabled": false,
+          "colors": []
+        }
+      },
+      "sequence": [
+        {
+          "outer_shape": "cerchio",
+          "outer_color": "nero",
+          "sides": 0,
+          "inner_objects": []
+        },
+        {
+          "outer_shape": "quadrato",
+          "outer_color": "nero",
+          "sides": 4,
+          "inner_objects": []
+        },
+        {
+          "outer_shape": "cerchio",
+          "outer_color": "nero",
+          "sides": 0,
+          "inner_objects": []
+        },
+        {
+          "outer_shape": "quadrato",
+          "outer_color": "nero",
+          "sides": 4,
+          "inner_objects": []
+        }
+      ],
+      "expected_answer": {
+        "outer_shape": "cerchio",
+        "outer_color": "nero",
+        "sides": 0,
+        "inner_objects": []
+      },
+      "options": {
+        "A": {
+          "outer_shape": "triangolo",
+          "outer_color": "nero",
+          "sides": 3,
+          "inner_objects": []
+        },
+        "B": {
+          "outer_shape": "quadrato",
+          "outer_color": "nero",
+          "sides": 4,
+          "inner_objects": []
+        },
+        "C": {
+          "outer_shape": "cerchio",
+          "outer_color": "nero",
+          "sides": 0,
+          "inner_objects": []
+        },
+        "D": {
+          "outer_shape": "rettangolo",
+          "outer_color": "nero",
+          "sides": 4,
+          "inner_objects": []
+        }
+      }
+    },
+    "risposta_corretta_testo": "esagono blu con 6 lati e 3 triangoli interni",
+    "risposta_corretta_lettera": "A"
+  },
+  {
+    "id": "LOG-VIS-0029",
+    "categoria": "logica",
+    "sottocategoria": "logica_visiva",
+    "tipo_domanda": "immagine",
+    "livello": "intermedio",
+    "domanda": "Osserva la sequenza visiva e scegli la figura successiva. Il numero di lati resta quattro, il colore cambia a ciclo viola, azzurro, arancione, viola e gli oggetti interni sono sempre due pallini. La risposta corretta deve rispettare forma, colore, numero di lati e oggetti interni.",
+    "immagine_domanda": "assets/logica_visiva/LOG-VIS-0029_domanda.png",
+    "opzioni": [
+      "quadrato azzurro con 4 lati e 2 pallini interni",
+      "quadrato arancione con 4 lati e 2 pallini interni",
+      "pentagono azzurro con 5 lati e 2 pallini interni",
+      "quadrato azzurro con 4 lati e 3 pallini interni"
+    ],
+    "immagini_opzioni": [
+      "assets/logica_visiva/LOG-VIS-0029_A.png",
+      "assets/logica_visiva/LOG-VIS-0029_B.png",
+      "assets/logica_visiva/LOG-VIS-0029_C.png",
+      "assets/logica_visiva/LOG-VIS-0029_D.png"
+    ],
+    "risposta_corretta": "quadrato azzurro con 4 lati e 2 pallini interni",
+    "spiegazione": "La risposta corretta è A: quadrato azzurro con 4 lati e 2 pallini interni. La figura rispetta forma, colore, numero di lati e oggetti interni richiesti dalla sequenza.",
+    "tags": [
+      "logica",
+      "logica_visiva",
+      "visuale",
+      "facile",
+      "visiva"
+    ],
+    "difficolta": 1,
+    "distrattore_forte": "A",
+    "motivo_distrattore_forte": "È vicino perché è una delle opzioni visive proposte, ma non rispetta l'alternanza corretta cerchio-quadrato: dopo il quadrato deve tornare il cerchio indicato dall'opzione C.",
+    "tipo": "visual_logic",
+    "spiegazioni_opzioni": {
+      "A": "A non torna: è triangolo, ma serve cerchio.",
+      "B": "B non torna: è quadrato, ma serve cerchio.",
+      "C": "C corretta: cerchio.",
+      "D": "D non torna: è rettangolo, ma serve cerchio."
+    },
+    "visual_logic": {
+      "type": "sequence",
+      "uses_position": false,
+      "rule": {
+        "description": "alterna cerchio/quadrato; dopo il quadrato torna il cerchio.",
+        "color_alternation": {
+          "enabled": false,
+          "colors": []
+        }
+      },
+      "sequence": [
+        {
+          "outer_shape": "cerchio",
+          "outer_color": "nero",
+          "sides": 0,
+          "inner_objects": []
+        },
+        {
+          "outer_shape": "quadrato",
+          "outer_color": "nero",
+          "sides": 4,
+          "inner_objects": []
+        },
+        {
+          "outer_shape": "cerchio",
+          "outer_color": "nero",
+          "sides": 0,
+          "inner_objects": []
+        },
+        {
+          "outer_shape": "quadrato",
+          "outer_color": "nero",
+          "sides": 4,
+          "inner_objects": []
+        }
+      ],
+      "expected_answer": {
+        "outer_shape": "cerchio",
+        "outer_color": "nero",
+        "sides": 0,
+        "inner_objects": []
+      },
+      "options": {
+        "A": {
+          "outer_shape": "triangolo",
+          "outer_color": "nero",
+          "sides": 3,
+          "inner_objects": []
+        },
+        "B": {
+          "outer_shape": "quadrato",
+          "outer_color": "nero",
+          "sides": 4,
+          "inner_objects": []
+        },
+        "C": {
+          "outer_shape": "cerchio",
+          "outer_color": "nero",
+          "sides": 0,
+          "inner_objects": []
+        },
+        "D": {
+          "outer_shape": "rettangolo",
+          "outer_color": "nero",
+          "sides": 4,
+          "inner_objects": []
+        }
+      }
+    },
+    "risposta_corretta_testo": "quadrato azzurro con 4 lati e 2 pallini interni",
+    "risposta_corretta_lettera": "A"
+  },
+  {
+    "id": "LOG-VIS-0030",
+    "categoria": "logica",
+    "sottocategoria": "logica_visiva",
+    "tipo_domanda": "immagine",
+    "livello": "intermedio",
+    "domanda": "Osserva la sequenza visiva e scegli la figura successiva. La forma passa cerchio, triangolo, quadrato, pentagono; il colore resta rosso e i quadratini interni diminuiscono. La risposta corretta deve rispettare forma, colore, numero di lati e oggetti interni.",
+    "immagine_domanda": "assets/logica_visiva/LOG-VIS-0030_domanda.png",
+    "opzioni": [
+      "esagono rosso con 6 lati e 0 oggetti interni",
+      "esagono rosso con 6 lati e 1 quadratino interno",
+      "pentagono rosso con 5 lati e 0 oggetti interni",
+      "esagono blu con 6 lati e 0 oggetti interni"
+    ],
+    "immagini_opzioni": [
+      "assets/logica_visiva/LOG-VIS-0030_A.png",
+      "assets/logica_visiva/LOG-VIS-0030_B.png",
+      "assets/logica_visiva/LOG-VIS-0030_C.png",
+      "assets/logica_visiva/LOG-VIS-0030_D.png"
+    ],
+    "risposta_corretta": "esagono rosso con 6 lati e 0 oggetti interni",
+    "spiegazione": "La risposta corretta è A: esagono rosso con 6 lati e 0 oggetti interni. La figura rispetta forma, colore, numero di lati e oggetti interni richiesti dalla sequenza.",
+    "tags": [
+      "logica",
+      "logica_visiva",
+      "visuale",
+      "facile",
+      "visiva"
+    ],
+    "difficolta": 1,
+    "distrattore_forte": "A",
+    "motivo_distrattore_forte": "È vicino perché è una delle opzioni visive proposte, ma non rispetta l'alternanza corretta cerchio-quadrato: dopo il quadrato deve tornare il cerchio indicato dall'opzione C.",
+    "tipo": "visual_logic",
+    "spiegazioni_opzioni": {
+      "A": "A non torna: è triangolo, ma serve cerchio.",
+      "B": "B non torna: è quadrato, ma serve cerchio.",
+      "C": "C corretta: cerchio.",
+      "D": "D non torna: è rettangolo, ma serve cerchio."
+    },
+    "visual_logic": {
+      "type": "sequence",
+      "uses_position": false,
+      "rule": {
+        "description": "alterna cerchio/quadrato; dopo il quadrato torna il cerchio.",
+        "color_alternation": {
+          "enabled": false,
+          "colors": []
+        }
+      },
+      "sequence": [
+        {
+          "outer_shape": "cerchio",
+          "outer_color": "nero",
+          "sides": 0,
+          "inner_objects": []
+        },
+        {
+          "outer_shape": "quadrato",
+          "outer_color": "nero",
+          "sides": 4,
+          "inner_objects": []
+        },
+        {
+          "outer_shape": "cerchio",
+          "outer_color": "nero",
+          "sides": 0,
+          "inner_objects": []
+        },
+        {
+          "outer_shape": "quadrato",
+          "outer_color": "nero",
+          "sides": 4,
+          "inner_objects": []
+        }
+      ],
+      "expected_answer": {
+        "outer_shape": "cerchio",
+        "outer_color": "nero",
+        "sides": 0,
+        "inner_objects": []
+      },
+      "options": {
+        "A": {
+          "outer_shape": "triangolo",
+          "outer_color": "nero",
+          "sides": 3,
+          "inner_objects": []
+        },
+        "B": {
+          "outer_shape": "quadrato",
+          "outer_color": "nero",
+          "sides": 4,
+          "inner_objects": []
+        },
+        "C": {
+          "outer_shape": "cerchio",
+          "outer_color": "nero",
+          "sides": 0,
+          "inner_objects": []
+        },
+        "D": {
+          "outer_shape": "rettangolo",
+          "outer_color": "nero",
+          "sides": 4,
+          "inner_objects": []
+        }
+      }
+    },
+    "risposta_corretta_testo": "esagono rosso con 6 lati e 0 oggetti interni",
+    "risposta_corretta_lettera": "A"
+  },
+  {
+    "id": "LOG-VIS-0031",
+    "categoria": "logica",
+    "sottocategoria": "logica_visiva",
+    "tipo_domanda": "immagine",
+    "livello": "intermedio",
+    "domanda": "Osserva la sequenza visiva e scegli la figura successiva. La forma resta pentagono, i colori alternano verde e viola, gli oggetti interni alternano triangoli e pallini. La risposta corretta deve rispettare forma, colore, numero di lati e oggetti interni.",
+    "immagine_domanda": "assets/logica_visiva/LOG-VIS-0031_domanda.png",
+    "opzioni": [
+      "pentagono verde con 5 lati e 2 triangoli interni",
+      "pentagono verde con 5 lati e 2 pallini interni",
+      "pentagono viola con 5 lati e 2 triangoli interni",
+      "esagono verde con 6 lati e 2 triangoli interni"
+    ],
+    "immagini_opzioni": [
+      "assets/logica_visiva/LOG-VIS-0031_A.png",
+      "assets/logica_visiva/LOG-VIS-0031_B.png",
+      "assets/logica_visiva/LOG-VIS-0031_C.png",
+      "assets/logica_visiva/LOG-VIS-0031_D.png"
+    ],
+    "risposta_corretta": "pentagono verde con 5 lati e 2 triangoli interni",
+    "spiegazione": "La risposta corretta è A: pentagono verde con 5 lati e 2 triangoli interni. La figura rispetta forma, colore, numero di lati e oggetti interni richiesti dalla sequenza.",
+    "tags": [
+      "logica",
+      "logica_visiva",
+      "visuale",
+      "facile",
+      "visiva"
+    ],
+    "difficolta": 1,
+    "distrattore_forte": "A",
+    "motivo_distrattore_forte": "È vicino perché è una delle opzioni visive proposte, ma non rispetta l'alternanza corretta cerchio-quadrato: dopo il quadrato deve tornare il cerchio indicato dall'opzione C.",
+    "tipo": "visual_logic",
+    "spiegazioni_opzioni": {
+      "A": "A non torna: è triangolo, ma serve cerchio.",
+      "B": "B non torna: è quadrato, ma serve cerchio.",
+      "C": "C corretta: cerchio.",
+      "D": "D non torna: è rettangolo, ma serve cerchio."
+    },
+    "visual_logic": {
+      "type": "sequence",
+      "uses_position": false,
+      "rule": {
+        "description": "alterna cerchio/quadrato; dopo il quadrato torna il cerchio.",
+        "color_alternation": {
+          "enabled": false,
+          "colors": []
+        }
+      },
+      "sequence": [
+        {
+          "outer_shape": "cerchio",
+          "outer_color": "nero",
+          "sides": 0,
+          "inner_objects": []
+        },
+        {
+          "outer_shape": "quadrato",
+          "outer_color": "nero",
+          "sides": 4,
+          "inner_objects": []
+        },
+        {
+          "outer_shape": "cerchio",
+          "outer_color": "nero",
+          "sides": 0,
+          "inner_objects": []
+        },
+        {
+          "outer_shape": "quadrato",
+          "outer_color": "nero",
+          "sides": 4,
+          "inner_objects": []
+        }
+      ],
+      "expected_answer": {
+        "outer_shape": "cerchio",
+        "outer_color": "nero",
+        "sides": 0,
+        "inner_objects": []
+      },
+      "options": {
+        "A": {
+          "outer_shape": "triangolo",
+          "outer_color": "nero",
+          "sides": 3,
+          "inner_objects": []
+        },
+        "B": {
+          "outer_shape": "quadrato",
+          "outer_color": "nero",
+          "sides": 4,
+          "inner_objects": []
+        },
+        "C": {
+          "outer_shape": "cerchio",
+          "outer_color": "nero",
+          "sides": 0,
+          "inner_objects": []
+        },
+        "D": {
+          "outer_shape": "rettangolo",
+          "outer_color": "nero",
+          "sides": 4,
+          "inner_objects": []
+        }
+      }
+    },
+    "risposta_corretta_testo": "pentagono verde con 5 lati e 2 triangoli interni",
+    "risposta_corretta_lettera": "A"
+  },
+  {
+    "id": "LOG-VIS-0032",
+    "categoria": "logica",
+    "sottocategoria": "logica_visiva",
+    "tipo_domanda": "immagine",
+    "livello": "intermedio",
+    "domanda": "Osserva la sequenza visiva e scegli la figura successiva. La forma alterna esagono e cerchio, il colore resta giallo, i pallini aumentano dopo ogni coppia. La risposta corretta deve rispettare forma, colore, numero di lati e oggetti interni.",
+    "immagine_domanda": "assets/logica_visiva/LOG-VIS-0032_domanda.png",
+    "opzioni": [
+      "esagono giallo con 6 lati e 3 pallini interni",
+      "cerchio giallo con 0 lati e 3 pallini interni",
+      "esagono giallo con 6 lati e 2 pallini interni",
+      "esagono verde con 6 lati e 3 pallini interni"
+    ],
+    "immagini_opzioni": [
+      "assets/logica_visiva/LOG-VIS-0032_A.png",
+      "assets/logica_visiva/LOG-VIS-0032_B.png",
+      "assets/logica_visiva/LOG-VIS-0032_C.png",
+      "assets/logica_visiva/LOG-VIS-0032_D.png"
+    ],
+    "risposta_corretta": "esagono giallo con 6 lati e 3 pallini interni",
+    "spiegazione": "La risposta corretta è A: esagono giallo con 6 lati e 3 pallini interni. La figura rispetta forma, colore, numero di lati e oggetti interni richiesti dalla sequenza.",
+    "tags": [
+      "logica",
+      "logica_visiva",
+      "visuale",
+      "facile",
+      "visiva"
+    ],
+    "difficolta": 1,
+    "distrattore_forte": "A",
+    "motivo_distrattore_forte": "È vicino perché è una delle opzioni visive proposte, ma non rispetta l'alternanza corretta cerchio-quadrato: dopo il quadrato deve tornare il cerchio indicato dall'opzione C.",
+    "tipo": "visual_logic",
+    "spiegazioni_opzioni": {
+      "A": "A non torna: è triangolo, ma serve cerchio.",
+      "B": "B non torna: è quadrato, ma serve cerchio.",
+      "C": "C corretta: cerchio.",
+      "D": "D non torna: è rettangolo, ma serve cerchio."
+    },
+    "visual_logic": {
+      "type": "sequence",
+      "uses_position": false,
+      "rule": {
+        "description": "alterna cerchio/quadrato; dopo il quadrato torna il cerchio.",
+        "color_alternation": {
+          "enabled": false,
+          "colors": []
+        }
+      },
+      "sequence": [
+        {
+          "outer_shape": "cerchio",
+          "outer_color": "nero",
+          "sides": 0,
+          "inner_objects": []
+        },
+        {
+          "outer_shape": "quadrato",
+          "outer_color": "nero",
+          "sides": 4,
+          "inner_objects": []
+        },
+        {
+          "outer_shape": "cerchio",
+          "outer_color": "nero",
+          "sides": 0,
+          "inner_objects": []
+        },
+        {
+          "outer_shape": "quadrato",
+          "outer_color": "nero",
+          "sides": 4,
+          "inner_objects": []
+        }
+      ],
+      "expected_answer": {
+        "outer_shape": "cerchio",
+        "outer_color": "nero",
+        "sides": 0,
+        "inner_objects": []
+      },
+      "options": {
+        "A": {
+          "outer_shape": "triangolo",
+          "outer_color": "nero",
+          "sides": 3,
+          "inner_objects": []
+        },
+        "B": {
+          "outer_shape": "quadrato",
+          "outer_color": "nero",
+          "sides": 4,
+          "inner_objects": []
+        },
+        "C": {
+          "outer_shape": "cerchio",
+          "outer_color": "nero",
+          "sides": 0,
+          "inner_objects": []
+        },
+        "D": {
+          "outer_shape": "rettangolo",
+          "outer_color": "nero",
+          "sides": 4,
+          "inner_objects": []
+        }
+      }
+    },
+    "risposta_corretta_testo": "esagono giallo con 6 lati e 3 pallini interni",
+    "risposta_corretta_lettera": "A"
+  },
+  {
+    "id": "LOG-VIS-0033",
+    "categoria": "logica",
+    "sottocategoria": "logica_visiva",
+    "tipo_domanda": "immagine",
+    "livello": "avanzato",
+    "domanda": "Osserva la sequenza visiva e scegli la figura successiva. Il numero di lati cresce di due, il colore alterna blu e rosso, gli oggetti interni restano tre triangoli. La risposta corretta deve rispettare forma, colore, numero di lati e oggetti interni.",
+    "immagine_domanda": "assets/logica_visiva/LOG-VIS-0033_domanda.png",
+    "opzioni": [
+      "pentagono blu con 5 lati e 3 triangoli interni",
+      "pentagono rosso con 5 lati e 3 triangoli interni",
+      "ettagono blu con 7 lati e 3 triangoli interni",
+      "pentagono blu con 5 lati e 4 triangoli interni"
+    ],
+    "immagini_opzioni": [
+      "assets/logica_visiva/LOG-VIS-0033_A.png",
+      "assets/logica_visiva/LOG-VIS-0033_B.png",
+      "assets/logica_visiva/LOG-VIS-0033_C.png",
+      "assets/logica_visiva/LOG-VIS-0033_D.png"
+    ],
+    "risposta_corretta": "pentagono blu con 5 lati e 3 triangoli interni",
+    "spiegazione": "La risposta corretta è A: pentagono blu con 5 lati e 3 triangoli interni. La figura rispetta forma, colore, numero di lati e oggetti interni richiesti dalla sequenza.",
+    "tags": [
+      "logica",
+      "logica_visiva",
+      "visuale",
+      "facile",
+      "visiva"
+    ],
+    "difficolta": 1,
+    "distrattore_forte": "A",
+    "motivo_distrattore_forte": "È vicino perché è una delle opzioni visive proposte, ma non rispetta l'alternanza corretta cerchio-quadrato: dopo il quadrato deve tornare il cerchio indicato dall'opzione C.",
+    "tipo": "visual_logic",
+    "spiegazioni_opzioni": {
+      "A": "A non torna: è triangolo, ma serve cerchio.",
+      "B": "B non torna: è quadrato, ma serve cerchio.",
+      "C": "C corretta: cerchio.",
+      "D": "D non torna: è rettangolo, ma serve cerchio."
+    },
+    "visual_logic": {
+      "type": "sequence",
+      "uses_position": false,
+      "rule": {
+        "description": "alterna cerchio/quadrato; dopo il quadrato torna il cerchio.",
+        "color_alternation": {
+          "enabled": false,
+          "colors": []
+        }
+      },
+      "sequence": [
+        {
+          "outer_shape": "cerchio",
+          "outer_color": "nero",
+          "sides": 0,
+          "inner_objects": []
+        },
+        {
+          "outer_shape": "quadrato",
+          "outer_color": "nero",
+          "sides": 4,
+          "inner_objects": []
+        },
+        {
+          "outer_shape": "cerchio",
+          "outer_color": "nero",
+          "sides": 0,
+          "inner_objects": []
+        },
+        {
+          "outer_shape": "quadrato",
+          "outer_color": "nero",
+          "sides": 4,
+          "inner_objects": []
+        }
+      ],
+      "expected_answer": {
+        "outer_shape": "cerchio",
+        "outer_color": "nero",
+        "sides": 0,
+        "inner_objects": []
+      },
+      "options": {
+        "A": {
+          "outer_shape": "triangolo",
+          "outer_color": "nero",
+          "sides": 3,
+          "inner_objects": []
+        },
+        "B": {
+          "outer_shape": "quadrato",
+          "outer_color": "nero",
+          "sides": 4,
+          "inner_objects": []
+        },
+        "C": {
+          "outer_shape": "cerchio",
+          "outer_color": "nero",
+          "sides": 0,
+          "inner_objects": []
+        },
+        "D": {
+          "outer_shape": "rettangolo",
+          "outer_color": "nero",
+          "sides": 4,
+          "inner_objects": []
+        }
+      }
+    },
+    "risposta_corretta_testo": "pentagono blu con 5 lati e 3 triangoli interni",
+    "risposta_corretta_lettera": "A"
+  },
+  {
+    "id": "LOG-VIS-0034",
+    "categoria": "logica",
+    "sottocategoria": "logica_visiva",
+    "tipo_domanda": "immagine",
+    "livello": "avanzato",
+    "domanda": "Osserva la sequenza visiva e scegli la figura successiva. La forma segue quadrato, cerchio, pentagono, cerchio; il colore alterna verde e arancione; i quadratini aumentano nei cerchi. La risposta corretta deve rispettare forma, colore, numero di lati e oggetti interni.",
+    "immagine_domanda": "assets/logica_visiva/LOG-VIS-0034_domanda.png",
+    "opzioni": [
+      "esagono verde con 6 lati e 1 quadratino interno",
+      "cerchio verde con 0 lati e 4 quadratini interni",
+      "esagono arancione con 6 lati e 1 quadratino interno",
+      "esagono verde con 6 lati e 2 quadratini interni"
+    ],
+    "immagini_opzioni": [
+      "assets/logica_visiva/LOG-VIS-0034_A.png",
+      "assets/logica_visiva/LOG-VIS-0034_B.png",
+      "assets/logica_visiva/LOG-VIS-0034_C.png",
+      "assets/logica_visiva/LOG-VIS-0034_D.png"
+    ],
+    "risposta_corretta": "esagono verde con 6 lati e 1 quadratino interno",
+    "spiegazione": "La risposta corretta è A: esagono verde con 6 lati e 1 quadratino interno. La figura rispetta forma, colore, numero di lati e oggetti interni richiesti dalla sequenza.",
+    "tags": [
+      "logica",
+      "logica_visiva",
+      "visuale",
+      "facile",
+      "visiva"
+    ],
+    "difficolta": 1,
+    "distrattore_forte": "A",
+    "motivo_distrattore_forte": "È vicino perché è una delle opzioni visive proposte, ma non rispetta l'alternanza corretta cerchio-quadrato: dopo il quadrato deve tornare il cerchio indicato dall'opzione C.",
+    "tipo": "visual_logic",
+    "spiegazioni_opzioni": {
+      "A": "A non torna: è triangolo, ma serve cerchio.",
+      "B": "B non torna: è quadrato, ma serve cerchio.",
+      "C": "C corretta: cerchio.",
+      "D": "D non torna: è rettangolo, ma serve cerchio."
+    },
+    "visual_logic": {
+      "type": "sequence",
+      "uses_position": false,
+      "rule": {
+        "description": "alterna cerchio/quadrato; dopo il quadrato torna il cerchio.",
+        "color_alternation": {
+          "enabled": false,
+          "colors": []
+        }
+      },
+      "sequence": [
+        {
+          "outer_shape": "cerchio",
+          "outer_color": "nero",
+          "sides": 0,
+          "inner_objects": []
+        },
+        {
+          "outer_shape": "quadrato",
+          "outer_color": "nero",
+          "sides": 4,
+          "inner_objects": []
+        },
+        {
+          "outer_shape": "cerchio",
+          "outer_color": "nero",
+          "sides": 0,
+          "inner_objects": []
+        },
+        {
+          "outer_shape": "quadrato",
+          "outer_color": "nero",
+          "sides": 4,
+          "inner_objects": []
+        }
+      ],
+      "expected_answer": {
+        "outer_shape": "cerchio",
+        "outer_color": "nero",
+        "sides": 0,
+        "inner_objects": []
+      },
+      "options": {
+        "A": {
+          "outer_shape": "triangolo",
+          "outer_color": "nero",
+          "sides": 3,
+          "inner_objects": []
+        },
+        "B": {
+          "outer_shape": "quadrato",
+          "outer_color": "nero",
+          "sides": 4,
+          "inner_objects": []
+        },
+        "C": {
+          "outer_shape": "cerchio",
+          "outer_color": "nero",
+          "sides": 0,
+          "inner_objects": []
+        },
+        "D": {
+          "outer_shape": "rettangolo",
+          "outer_color": "nero",
+          "sides": 4,
+          "inner_objects": []
+        }
+      }
+    },
+    "risposta_corretta_testo": "esagono verde con 6 lati e 1 quadratino interno",
+    "risposta_corretta_lettera": "A"
+  },
+  {
+    "id": "LOG-VIS-0035",
+    "categoria": "logica",
+    "sottocategoria": "logica_visiva",
+    "tipo_domanda": "immagine",
+    "livello": "avanzato",
+    "domanda": "Osserva la sequenza visiva e scegli la figura successiva. La forma resta ottagono, il colore torna ogni tre passaggi e gli oggetti interni seguono uno, due, tre, uno. La risposta corretta deve rispettare forma, colore, numero di lati e oggetti interni.",
+    "immagine_domanda": "assets/logica_visiva/LOG-VIS-0035_domanda.png",
+    "opzioni": [
+      "ottagono blu con 8 lati e 2 pallini interni",
+      "ottagono verde con 8 lati e 2 pallini interni",
+      "ettagono blu con 7 lati e 2 pallini interni",
+      "ottagono blu con 8 lati e 3 pallini interni"
+    ],
+    "immagini_opzioni": [
+      "assets/logica_visiva/LOG-VIS-0035_A.png",
+      "assets/logica_visiva/LOG-VIS-0035_B.png",
+      "assets/logica_visiva/LOG-VIS-0035_C.png",
+      "assets/logica_visiva/LOG-VIS-0035_D.png"
+    ],
+    "risposta_corretta": "ottagono blu con 8 lati e 2 pallini interni",
+    "spiegazione": "La risposta corretta è A: ottagono blu con 8 lati e 2 pallini interni. La figura rispetta forma, colore, numero di lati e oggetti interni richiesti dalla sequenza.",
+    "tags": [
+      "logica",
+      "logica_visiva",
+      "visuale",
+      "facile",
+      "visiva"
+    ],
+    "difficolta": 1,
+    "distrattore_forte": "A",
+    "motivo_distrattore_forte": "È vicino perché è una delle opzioni visive proposte, ma non rispetta l'alternanza corretta cerchio-quadrato: dopo il quadrato deve tornare il cerchio indicato dall'opzione C.",
+    "tipo": "visual_logic",
+    "spiegazioni_opzioni": {
+      "A": "A non torna: è triangolo, ma serve cerchio.",
+      "B": "B non torna: è quadrato, ma serve cerchio.",
+      "C": "C corretta: cerchio.",
+      "D": "D non torna: è rettangolo, ma serve cerchio."
+    },
+    "visual_logic": {
+      "type": "sequence",
+      "uses_position": false,
+      "rule": {
+        "description": "alterna cerchio/quadrato; dopo il quadrato torna il cerchio.",
+        "color_alternation": {
+          "enabled": false,
+          "colors": []
+        }
+      },
+      "sequence": [
+        {
+          "outer_shape": "cerchio",
+          "outer_color": "nero",
+          "sides": 0,
+          "inner_objects": []
+        },
+        {
+          "outer_shape": "quadrato",
+          "outer_color": "nero",
+          "sides": 4,
+          "inner_objects": []
+        },
+        {
+          "outer_shape": "cerchio",
+          "outer_color": "nero",
+          "sides": 0,
+          "inner_objects": []
+        },
+        {
+          "outer_shape": "quadrato",
+          "outer_color": "nero",
+          "sides": 4,
+          "inner_objects": []
+        }
+      ],
+      "expected_answer": {
+        "outer_shape": "cerchio",
+        "outer_color": "nero",
+        "sides": 0,
+        "inner_objects": []
+      },
+      "options": {
+        "A": {
+          "outer_shape": "triangolo",
+          "outer_color": "nero",
+          "sides": 3,
+          "inner_objects": []
+        },
+        "B": {
+          "outer_shape": "quadrato",
+          "outer_color": "nero",
+          "sides": 4,
+          "inner_objects": []
+        },
+        "C": {
+          "outer_shape": "cerchio",
+          "outer_color": "nero",
+          "sides": 0,
+          "inner_objects": []
+        },
+        "D": {
+          "outer_shape": "rettangolo",
+          "outer_color": "nero",
+          "sides": 4,
+          "inner_objects": []
+        }
+      }
+    },
+    "risposta_corretta_testo": "ottagono blu con 8 lati e 2 pallini interni",
+    "risposta_corretta_lettera": "A"
+  },
+  {
+    "id": "LOG-VIS-0036",
+    "categoria": "logica",
+    "sottocategoria": "logica_visiva",
+    "tipo_domanda": "immagine",
+    "livello": "avanzato",
+    "domanda": "Osserva la sequenza visiva e scegli la figura successiva. La figura alterna forma con lati pari e forma con lati dispari; il colore cambia a ogni passaggio; gli oggetti interni restano due. La risposta corretta deve rispettare forma, colore, numero di lati e oggetti interni.",
+    "immagine_domanda": "assets/logica_visiva/LOG-VIS-0036_domanda.png",
+    "opzioni": [
+      "ottagono giallo con 8 lati e 2 triangoli interni",
+      "ettagono giallo con 7 lati e 2 triangoli interni",
+      "ottagono arancione con 8 lati e 2 triangoli interni",
+      "ottagono giallo con 8 lati e 2 pallini interni"
+    ],
+    "immagini_opzioni": [
+      "assets/logica_visiva/LOG-VIS-0036_A.png",
+      "assets/logica_visiva/LOG-VIS-0036_B.png",
+      "assets/logica_visiva/LOG-VIS-0036_C.png",
+      "assets/logica_visiva/LOG-VIS-0036_D.png"
+    ],
+    "risposta_corretta": "ottagono giallo con 8 lati e 2 triangoli interni",
+    "spiegazione": "La risposta corretta è A: ottagono giallo con 8 lati e 2 triangoli interni. La figura rispetta forma, colore, numero di lati e oggetti interni richiesti dalla sequenza.",
+    "tags": [
+      "logica",
+      "logica_visiva",
+      "visuale",
+      "facile",
+      "visiva"
+    ],
+    "difficolta": 1,
+    "distrattore_forte": "A",
+    "motivo_distrattore_forte": "È vicino perché è una delle opzioni visive proposte, ma non rispetta l'alternanza corretta cerchio-quadrato: dopo il quadrato deve tornare il cerchio indicato dall'opzione C.",
+    "tipo": "visual_logic",
+    "spiegazioni_opzioni": {
+      "A": "A non torna: è triangolo, ma serve cerchio.",
+      "B": "B non torna: è quadrato, ma serve cerchio.",
+      "C": "C corretta: cerchio.",
+      "D": "D non torna: è rettangolo, ma serve cerchio."
+    },
+    "visual_logic": {
+      "type": "sequence",
+      "uses_position": false,
+      "rule": {
+        "description": "alterna cerchio/quadrato; dopo il quadrato torna il cerchio.",
+        "color_alternation": {
+          "enabled": false,
+          "colors": []
+        }
+      },
+      "sequence": [
+        {
+          "outer_shape": "cerchio",
+          "outer_color": "nero",
+          "sides": 0,
+          "inner_objects": []
+        },
+        {
+          "outer_shape": "quadrato",
+          "outer_color": "nero",
+          "sides": 4,
+          "inner_objects": []
+        },
+        {
+          "outer_shape": "cerchio",
+          "outer_color": "nero",
+          "sides": 0,
+          "inner_objects": []
+        },
+        {
+          "outer_shape": "quadrato",
+          "outer_color": "nero",
+          "sides": 4,
+          "inner_objects": []
+        }
+      ],
+      "expected_answer": {
+        "outer_shape": "cerchio",
+        "outer_color": "nero",
+        "sides": 0,
+        "inner_objects": []
+      },
+      "options": {
+        "A": {
+          "outer_shape": "triangolo",
+          "outer_color": "nero",
+          "sides": 3,
+          "inner_objects": []
+        },
+        "B": {
+          "outer_shape": "quadrato",
+          "outer_color": "nero",
+          "sides": 4,
+          "inner_objects": []
+        },
+        "C": {
+          "outer_shape": "cerchio",
+          "outer_color": "nero",
+          "sides": 0,
+          "inner_objects": []
+        },
+        "D": {
+          "outer_shape": "rettangolo",
+          "outer_color": "nero",
+          "sides": 4,
+          "inner_objects": []
+        }
+      }
+    },
+    "risposta_corretta_testo": "ottagono giallo con 8 lati e 2 triangoli interni",
+    "risposta_corretta_lettera": "A"
+  },
+  {
+    "id": "LOG-VIS-0037",
+    "categoria": "logica",
+    "sottocategoria": "logica_visiva",
+    "tipo_domanda": "immagine",
+    "livello": "avanzato",
+    "domanda": "Osserva la sequenza visiva e scegli la figura successiva. Il colore resta blu, la forma torna alla prima dopo tre passaggi, e gli oggetti interni alternano zero, uno, due, zero. La risposta corretta deve rispettare forma, colore, numero di lati e oggetti interni.",
+    "immagine_domanda": "assets/logica_visiva/LOG-VIS-0037_domanda.png",
+    "opzioni": [
+      "triangolo blu con 3 lati e 1 quadratino interno",
+      "triangolo blu con 3 lati e 2 quadratini interni",
+      "quadrato blu con 4 lati e 1 quadratino interno",
+      "triangolo rosso con 3 lati e 1 quadratino interno"
+    ],
+    "immagini_opzioni": [
+      "assets/logica_visiva/LOG-VIS-0037_A.png",
+      "assets/logica_visiva/LOG-VIS-0037_B.png",
+      "assets/logica_visiva/LOG-VIS-0037_C.png",
+      "assets/logica_visiva/LOG-VIS-0037_D.png"
+    ],
+    "risposta_corretta": "triangolo blu con 3 lati e 1 quadratino interno",
+    "spiegazione": "La risposta corretta è A: triangolo blu con 3 lati e 1 quadratino interno. La figura rispetta forma, colore, numero di lati e oggetti interni richiesti dalla sequenza.",
+    "tags": [
+      "logica",
+      "logica_visiva",
+      "visuale",
+      "facile",
+      "visiva"
+    ],
+    "difficolta": 1,
+    "distrattore_forte": "A",
+    "motivo_distrattore_forte": "È vicino perché è una delle opzioni visive proposte, ma non rispetta l'alternanza corretta cerchio-quadrato: dopo il quadrato deve tornare il cerchio indicato dall'opzione C.",
+    "tipo": "visual_logic",
+    "spiegazioni_opzioni": {
+      "A": "A non torna: è triangolo, ma serve cerchio.",
+      "B": "B non torna: è quadrato, ma serve cerchio.",
+      "C": "C corretta: cerchio.",
+      "D": "D non torna: è rettangolo, ma serve cerchio."
+    },
+    "visual_logic": {
+      "type": "sequence",
+      "uses_position": false,
+      "rule": {
+        "description": "alterna cerchio/quadrato; dopo il quadrato torna il cerchio.",
+        "color_alternation": {
+          "enabled": false,
+          "colors": []
+        }
+      },
+      "sequence": [
+        {
+          "outer_shape": "cerchio",
+          "outer_color": "nero",
+          "sides": 0,
+          "inner_objects": []
+        },
+        {
+          "outer_shape": "quadrato",
+          "outer_color": "nero",
+          "sides": 4,
+          "inner_objects": []
+        },
+        {
+          "outer_shape": "cerchio",
+          "outer_color": "nero",
+          "sides": 0,
+          "inner_objects": []
+        },
+        {
+          "outer_shape": "quadrato",
+          "outer_color": "nero",
+          "sides": 4,
+          "inner_objects": []
+        }
+      ],
+      "expected_answer": {
+        "outer_shape": "cerchio",
+        "outer_color": "nero",
+        "sides": 0,
+        "inner_objects": []
+      },
+      "options": {
+        "A": {
+          "outer_shape": "triangolo",
+          "outer_color": "nero",
+          "sides": 3,
+          "inner_objects": []
+        },
+        "B": {
+          "outer_shape": "quadrato",
+          "outer_color": "nero",
+          "sides": 4,
+          "inner_objects": []
+        },
+        "C": {
+          "outer_shape": "cerchio",
+          "outer_color": "nero",
+          "sides": 0,
+          "inner_objects": []
+        },
+        "D": {
+          "outer_shape": "rettangolo",
+          "outer_color": "nero",
+          "sides": 4,
+          "inner_objects": []
+        }
+      }
+    },
+    "risposta_corretta_testo": "triangolo blu con 3 lati e 1 quadratino interno",
+    "risposta_corretta_lettera": "A"
+  },
+  {
+    "id": "LOG-VIS-0038",
+    "categoria": "logica",
+    "sottocategoria": "logica_visiva",
+    "tipo_domanda": "immagine",
+    "livello": "avanzato",
+    "domanda": "Osserva la sequenza visiva e scegli la figura successiva. Il colore alterna rosso e azzurro, la forma cresce di un lato ogni volta, i pallini interni alternano tre e uno. La risposta corretta deve rispettare forma, colore, numero di lati e oggetti interni.",
+    "immagine_domanda": "assets/logica_visiva/LOG-VIS-0038_domanda.png",
+    "opzioni": [
+      "ettagono rosso con 7 lati e 3 pallini interni",
+      "ettagono azzurro con 7 lati e 3 pallini interni",
+      "ettagono rosso con 7 lati e 1 pallino interno",
+      "esagono rosso con 6 lati e 3 pallini interni"
+    ],
+    "immagini_opzioni": [
+      "assets/logica_visiva/LOG-VIS-0038_A.png",
+      "assets/logica_visiva/LOG-VIS-0038_B.png",
+      "assets/logica_visiva/LOG-VIS-0038_C.png",
+      "assets/logica_visiva/LOG-VIS-0038_D.png"
+    ],
+    "risposta_corretta": "ettagono rosso con 7 lati e 3 pallini interni",
+    "spiegazione": "La risposta corretta è A: ettagono rosso con 7 lati e 3 pallini interni. La figura rispetta forma, colore, numero di lati e oggetti interni richiesti dalla sequenza.",
+    "tags": [
+      "logica",
+      "logica_visiva",
+      "visuale",
+      "facile",
+      "visiva"
+    ],
+    "difficolta": 1,
+    "distrattore_forte": "A",
+    "motivo_distrattore_forte": "È vicino perché è una delle opzioni visive proposte, ma non rispetta l'alternanza corretta cerchio-quadrato: dopo il quadrato deve tornare il cerchio indicato dall'opzione C.",
+    "tipo": "visual_logic",
+    "spiegazioni_opzioni": {
+      "A": "A non torna: è triangolo, ma serve cerchio.",
+      "B": "B non torna: è quadrato, ma serve cerchio.",
+      "C": "C corretta: cerchio.",
+      "D": "D non torna: è rettangolo, ma serve cerchio."
+    },
+    "visual_logic": {
+      "type": "sequence",
+      "uses_position": false,
+      "rule": {
+        "description": "alterna cerchio/quadrato; dopo il quadrato torna il cerchio.",
+        "color_alternation": {
+          "enabled": false,
+          "colors": []
+        }
+      },
+      "sequence": [
+        {
+          "outer_shape": "cerchio",
+          "outer_color": "nero",
+          "sides": 0,
+          "inner_objects": []
+        },
+        {
+          "outer_shape": "quadrato",
+          "outer_color": "nero",
+          "sides": 4,
+          "inner_objects": []
+        },
+        {
+          "outer_shape": "cerchio",
+          "outer_color": "nero",
+          "sides": 0,
+          "inner_objects": []
+        },
+        {
+          "outer_shape": "quadrato",
+          "outer_color": "nero",
+          "sides": 4,
+          "inner_objects": []
+        }
+      ],
+      "expected_answer": {
+        "outer_shape": "cerchio",
+        "outer_color": "nero",
+        "sides": 0,
+        "inner_objects": []
+      },
+      "options": {
+        "A": {
+          "outer_shape": "triangolo",
+          "outer_color": "nero",
+          "sides": 3,
+          "inner_objects": []
+        },
+        "B": {
+          "outer_shape": "quadrato",
+          "outer_color": "nero",
+          "sides": 4,
+          "inner_objects": []
+        },
+        "C": {
+          "outer_shape": "cerchio",
+          "outer_color": "nero",
+          "sides": 0,
+          "inner_objects": []
+        },
+        "D": {
+          "outer_shape": "rettangolo",
+          "outer_color": "nero",
+          "sides": 4,
+          "inner_objects": []
+        }
+      }
+    },
+    "risposta_corretta_testo": "ettagono rosso con 7 lati e 3 pallini interni",
+    "risposta_corretta_lettera": "A"
+  },
+  {
+    "id": "LOG-VIS-0039",
+    "categoria": "logica",
+    "sottocategoria": "logica_visiva",
+    "tipo_domanda": "immagine",
+    "livello": "avanzato",
+    "domanda": "Osserva la sequenza visiva e scegli la figura successiva. La forma resta cerchio, il colore segue viola, verde, arancione, viola e gli oggetti interni alternano triangoli e quadratini. La risposta corretta deve rispettare forma, colore, numero di lati e oggetti interni.",
+    "immagine_domanda": "assets/logica_visiva/LOG-VIS-0039_domanda.png",
+    "opzioni": [
+      "cerchio verde con 0 lati e 2 triangoli interni",
+      "cerchio verde con 0 lati e 2 quadratini interni",
+      "quadrato verde con 4 lati e 2 triangoli interni",
+      "cerchio arancione con 0 lati e 2 triangoli interni"
+    ],
+    "immagini_opzioni": [
+      "assets/logica_visiva/LOG-VIS-0039_A.png",
+      "assets/logica_visiva/LOG-VIS-0039_B.png",
+      "assets/logica_visiva/LOG-VIS-0039_C.png",
+      "assets/logica_visiva/LOG-VIS-0039_D.png"
+    ],
+    "risposta_corretta": "cerchio verde con 0 lati e 2 triangoli interni",
+    "spiegazione": "La risposta corretta è A: cerchio verde con 0 lati e 2 triangoli interni. La figura rispetta forma, colore, numero di lati e oggetti interni richiesti dalla sequenza.",
+    "tags": [
+      "logica",
+      "logica_visiva",
+      "visuale",
+      "facile",
+      "visiva"
+    ],
+    "difficolta": 1,
+    "distrattore_forte": "A",
+    "motivo_distrattore_forte": "È vicino perché è una delle opzioni visive proposte, ma non rispetta l'alternanza corretta cerchio-quadrato: dopo il quadrato deve tornare il cerchio indicato dall'opzione C.",
+    "tipo": "visual_logic",
+    "spiegazioni_opzioni": {
+      "A": "A non torna: è triangolo, ma serve cerchio.",
+      "B": "B non torna: è quadrato, ma serve cerchio.",
+      "C": "C corretta: cerchio.",
+      "D": "D non torna: è rettangolo, ma serve cerchio."
+    },
+    "visual_logic": {
+      "type": "sequence",
+      "uses_position": false,
+      "rule": {
+        "description": "alterna cerchio/quadrato; dopo il quadrato torna il cerchio.",
+        "color_alternation": {
+          "enabled": false,
+          "colors": []
+        }
+      },
+      "sequence": [
+        {
+          "outer_shape": "cerchio",
+          "outer_color": "nero",
+          "sides": 0,
+          "inner_objects": []
+        },
+        {
+          "outer_shape": "quadrato",
+          "outer_color": "nero",
+          "sides": 4,
+          "inner_objects": []
+        },
+        {
+          "outer_shape": "cerchio",
+          "outer_color": "nero",
+          "sides": 0,
+          "inner_objects": []
+        },
+        {
+          "outer_shape": "quadrato",
+          "outer_color": "nero",
+          "sides": 4,
+          "inner_objects": []
+        }
+      ],
+      "expected_answer": {
+        "outer_shape": "cerchio",
+        "outer_color": "nero",
+        "sides": 0,
+        "inner_objects": []
+      },
+      "options": {
+        "A": {
+          "outer_shape": "triangolo",
+          "outer_color": "nero",
+          "sides": 3,
+          "inner_objects": []
+        },
+        "B": {
+          "outer_shape": "quadrato",
+          "outer_color": "nero",
+          "sides": 4,
+          "inner_objects": []
+        },
+        "C": {
+          "outer_shape": "cerchio",
+          "outer_color": "nero",
+          "sides": 0,
+          "inner_objects": []
+        },
+        "D": {
+          "outer_shape": "rettangolo",
+          "outer_color": "nero",
+          "sides": 4,
+          "inner_objects": []
+        }
+      }
+    },
+    "risposta_corretta_testo": "cerchio verde con 0 lati e 2 triangoli interni",
+    "risposta_corretta_lettera": "A"
+  },
+  {
+    "id": "LOG-VIS-0040",
+    "categoria": "logica",
+    "sottocategoria": "logica_visiva",
+    "tipo_domanda": "immagine",
+    "livello": "avanzato",
+    "domanda": "Osserva la sequenza visiva e scegli la figura successiva. La forma alterna pentagono ed esagono, il colore alterna giallo e blu, gli oggetti interni crescono di uno a ogni coppia. La risposta corretta deve rispettare forma, colore, numero di lati e oggetti interni.",
+    "immagine_domanda": "assets/logica_visiva/LOG-VIS-0040_domanda.png",
+    "opzioni": [
+      "pentagono giallo con 5 lati e 3 pallini interni",
+      "esagono giallo con 6 lati e 3 pallini interni",
+      "pentagono blu con 5 lati e 3 pallini interni",
+      "pentagono giallo con 5 lati e 2 pallini interni"
+    ],
+    "immagini_opzioni": [
+      "assets/logica_visiva/LOG-VIS-0040_A.png",
+      "assets/logica_visiva/LOG-VIS-0040_B.png",
+      "assets/logica_visiva/LOG-VIS-0040_C.png",
+      "assets/logica_visiva/LOG-VIS-0040_D.png"
+    ],
+    "risposta_corretta": "pentagono giallo con 5 lati e 3 pallini interni",
+    "spiegazione": "La risposta corretta è A: pentagono giallo con 5 lati e 3 pallini interni. La figura rispetta forma, colore, numero di lati e oggetti interni richiesti dalla sequenza.",
+    "tags": [
+      "logica",
+      "logica_visiva",
+      "visuale",
+      "facile",
+      "visiva"
+    ],
+    "difficolta": 1,
+    "distrattore_forte": "A",
+    "motivo_distrattore_forte": "È vicino perché è una delle opzioni visive proposte, ma non rispetta l'alternanza corretta cerchio-quadrato: dopo il quadrato deve tornare il cerchio indicato dall'opzione C.",
+    "tipo": "visual_logic",
+    "spiegazioni_opzioni": {
+      "A": "A non torna: è triangolo, ma serve cerchio.",
+      "B": "B non torna: è quadrato, ma serve cerchio.",
+      "C": "C corretta: cerchio.",
+      "D": "D non torna: è rettangolo, ma serve cerchio."
+    },
+    "visual_logic": {
+      "type": "sequence",
+      "uses_position": false,
+      "rule": {
+        "description": "alterna cerchio/quadrato; dopo il quadrato torna il cerchio.",
+        "color_alternation": {
+          "enabled": false,
+          "colors": []
+        }
+      },
+      "sequence": [
+        {
+          "outer_shape": "cerchio",
+          "outer_color": "nero",
+          "sides": 0,
+          "inner_objects": []
+        },
+        {
+          "outer_shape": "quadrato",
+          "outer_color": "nero",
+          "sides": 4,
+          "inner_objects": []
+        },
+        {
+          "outer_shape": "cerchio",
+          "outer_color": "nero",
+          "sides": 0,
+          "inner_objects": []
+        },
+        {
+          "outer_shape": "quadrato",
+          "outer_color": "nero",
+          "sides": 4,
+          "inner_objects": []
+        }
+      ],
+      "expected_answer": {
+        "outer_shape": "cerchio",
+        "outer_color": "nero",
+        "sides": 0,
+        "inner_objects": []
+      },
+      "options": {
+        "A": {
+          "outer_shape": "triangolo",
+          "outer_color": "nero",
+          "sides": 3,
+          "inner_objects": []
+        },
+        "B": {
+          "outer_shape": "quadrato",
+          "outer_color": "nero",
+          "sides": 4,
+          "inner_objects": []
+        },
+        "C": {
+          "outer_shape": "cerchio",
+          "outer_color": "nero",
+          "sides": 0,
+          "inner_objects": []
+        },
+        "D": {
+          "outer_shape": "rettangolo",
+          "outer_color": "nero",
+          "sides": 4,
+          "inner_objects": []
+        }
+      }
+    },
+    "risposta_corretta_testo": "pentagono giallo con 5 lati e 3 pallini interni",
+    "risposta_corretta_lettera": "A"
   }
 ]
