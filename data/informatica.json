@@ -919,5 +919,565 @@
     "difficolta": 3,
     "distrattore_forte": "Perché conferma ogni singola modifica appena viene eseguita, anche se le operazioni successive falliscono",
     "motivo_distrattore_forte": "È vicino perché parla di modifiche e conferma, ma descrive il comportamento opposto a una transazione atomica."
+  },
+  {
+    "id": "INF-FAC-0201",
+    "categoria": "informatica",
+    "livello": "facile",
+    "domanda": "Che cosa rappresenta un algoritmo in informatica?",
+    "opzioni": [
+      "Una sequenza ordinata di passaggi per risolvere un problema.",
+      "Un archivio di file salvati senza un ordine preciso.",
+      "Un componente fisico usato per raffreddare il processore.",
+      "Un indirizzo web usato per aprire una pagina internet."
+    ],
+    "risposta_corretta": "Una sequenza ordinata di passaggi per risolvere un problema.",
+    "spiegazione": "La risposta corretta è A perché un algoritmo descrive passaggi logici per arrivare a un risultato. B parla di archiviazione, C di hardware, D di navigazione web."
+  },
+  {
+    "id": "INF-FAC-0202",
+    "categoria": "informatica",
+    "livello": "facile",
+    "domanda": "Che cosa indica l'estensione di un file, per esempio TXT, JSON o PNG?",
+    "opzioni": [
+      "Una parte del nome che aiuta a riconoscere il formato o il tipo di contenuto del file.",
+      "La cartella esatta in cui il file è salvato dentro il computer.",
+      "La password necessaria per aprire qualunque documento protetto.",
+      "La quantità di memoria RAM usata dal file durante l'avvio del sistema."
+    ],
+    "risposta_corretta": "Una parte del nome che aiuta a riconoscere il formato o il tipo di contenuto del file.",
+    "spiegazione": "La risposta corretta è A. L'estensione aiuta a capire il formato del file, per esempio testo, JSON o immagine. B descrive il percorso, C riguarda la protezione, D confonde il file con l'uso della RAM."
+  },
+  {
+    "id": "INF-FAC-0203",
+    "categoria": "informatica",
+    "livello": "facile",
+    "domanda": "Che cosa fa una funzione in un programma?",
+    "opzioni": [
+      "Raggruppa istruzioni riutilizzabili per svolgere un compito specifico.",
+      "Cancella il codice sorgente dopo ogni esecuzione.",
+      "Trasforma il monitor in un dispositivo di memoria.",
+      "Sostituisce la connessione internet durante il download."
+    ],
+    "risposta_corretta": "Raggruppa istruzioni riutilizzabili per svolgere un compito specifico.",
+    "spiegazione": "La risposta corretta è A. Una funzione permette di organizzare codice e riutilizzarlo. Le altre opzioni confondono la funzione con operazioni non legate alla programmazione."
+  },
+  {
+    "id": "INF-FAC-0204",
+    "categoria": "informatica",
+    "livello": "facile",
+    "domanda": "Quando è utile un ciclo in programmazione?",
+    "opzioni": [
+      "Quando bisogna ripetere più volte una o più istruzioni.",
+      "Quando bisogna cambiare il colore fisico della tastiera.",
+      "Quando si vuole evitare qualsiasi controllo sui dati.",
+      "Quando si deve salvare un'immagine senza aprire un programma."
+    ],
+    "risposta_corretta": "Quando bisogna ripetere più volte una o più istruzioni.",
+    "spiegazione": "La risposta corretta è A. Un ciclo ripete istruzioni finché una condizione o una sequenza lo richiede. B, C e D non spiegano l'uso dei cicli."
+  },
+  {
+    "id": "INF-FAC-0205",
+    "categoria": "informatica",
+    "livello": "facile",
+    "domanda": "Che cos'è un database?",
+    "opzioni": [
+      "Un sistema organizzato per memorizzare, cercare e gestire dati.",
+      "Un linguaggio usato soltanto per disegnare icone.",
+      "Un cavo che collega lo schermo alla corrente.",
+      "Un programma che cancella la cronologia del browser."
+    ],
+    "risposta_corretta": "Un sistema organizzato per memorizzare, cercare e gestire dati.",
+    "spiegazione": "La risposta corretta è A. Un database conserva dati in modo strutturato. B, C e D descrivono elementi diversi."
+  },
+  {
+    "id": "INF-FAC-0206",
+    "categoria": "informatica",
+    "livello": "facile",
+    "domanda": "Che cosa indica HTTP nel contesto del web?",
+    "opzioni": [
+      "Un protocollo usato per lo scambio di informazioni tra client e server web.",
+      "Un formato audio usato per comprimere musica.",
+      "Un tipo di memoria interna del processore.",
+      "Un comando per spegnere un database relazionale."
+    ],
+    "risposta_corretta": "Un protocollo usato per lo scambio di informazioni tra client e server web.",
+    "spiegazione": "La risposta corretta è A. HTTP regola richieste e risposte sul web. B riguarda audio, C hardware, D database."
+  },
+  {
+    "id": "INF-FAC-0207",
+    "categoria": "informatica",
+    "livello": "facile",
+    "domanda": "Qual è una differenza semplice tra frontend e backend?",
+    "opzioni": [
+      "Il frontend riguarda l'interfaccia visibile, mentre il backend gestisce logica, dati e servizi.",
+      "Il frontend conserva i dati su disco, mentre il backend mostra solo colori e pulsanti.",
+      "Il frontend è il cavo di rete, mentre il backend è il monitor.",
+      "Il frontend funziona senza codice, mentre il backend funziona senza dati."
+    ],
+    "risposta_corretta": "Il frontend riguarda l'interfaccia visibile, mentre il backend gestisce logica, dati e servizi.",
+    "spiegazione": "La risposta corretta è A. Il frontend è la parte con cui l'utente interagisce, il backend gestisce elaborazione e dati. B inverte i ruoli, C e D sono errate."
+  },
+  {
+    "id": "INF-FAC-0208",
+    "categoria": "informatica",
+    "livello": "facile",
+    "domanda": "A cosa serve Git in un progetto software?",
+    "opzioni": [
+      "A tenere traccia delle modifiche al codice e collaborare sul progetto.",
+      "A compilare automaticamente qualsiasi programma senza configurazione.",
+      "A proteggere il computer da ogni tipo di virus.",
+      "A convertire immagini in documenti di testo modificabili."
+    ],
+    "risposta_corretta": "A tenere traccia delle modifiche al codice e collaborare sul progetto.",
+    "spiegazione": "La risposta corretta è A. Git è un sistema di versionamento. B attribuisce a Git un compito di build, C riguarda sicurezza, D conversione di formati."
+  },
+  {
+    "id": "INF-FAC-0209",
+    "categoria": "informatica",
+    "livello": "facile",
+    "domanda": "Che cos'è un file JSON?",
+    "opzioni": [
+      "Un formato testuale strutturato per rappresentare dati con coppie chiave-valore, liste e oggetti.",
+      "Un'immagine compressa usata per fotografie ad alta risoluzione.",
+      "Un cavo per collegare un computer a una stampante.",
+      "Un sistema operativo installato dentro il browser."
+    ],
+    "risposta_corretta": "Un formato testuale strutturato per rappresentare dati con coppie chiave-valore, liste e oggetti.",
+    "spiegazione": "La risposta corretta è A. JSON è un formato dati leggibile e strutturato. B, C e D appartengono ad altri ambiti."
+  },
+  {
+    "id": "INF-FAC-0210",
+    "categoria": "informatica",
+    "livello": "facile",
+    "domanda": "Che cosa indica una API?",
+    "opzioni": [
+      "Un insieme di regole e punti di accesso che permette a software diversi di comunicare.",
+      "Una cartella temporanea creata dal sistema operativo per salvare immagini.",
+      "Un tipo di tastiera pensata per scrivere codice più velocemente.",
+      "Un errore grafico che compare quando lo schermo è spento."
+    ],
+    "risposta_corretta": "Un insieme di regole e punti di accesso che permette a software diversi di comunicare.",
+    "spiegazione": "La risposta corretta è A. Una API permette interazione tra componenti software. B, C e D non descrivono una API."
+  },
+  {
+    "id": "INF-FAC-0211",
+    "categoria": "informatica",
+    "livello": "facile",
+    "domanda": "Che cosa rappresenta un valore booleano?",
+    "opzioni": [
+      "Un valore logico che può indicare vero o falso.",
+      "Un testo lungo usato per descrivere un database.",
+      "Un'immagine salvata con sfondo trasparente.",
+      "Un indirizzo numerico assegnato a una stampante."
+    ],
+    "risposta_corretta": "Un valore logico che può indicare vero o falso.",
+    "spiegazione": "La risposta corretta è A. Un booleano rappresenta una condizione vera o falsa. Le altre opzioni riguardano testo, immagini o rete."
+  },
+  {
+    "id": "INF-FAC-0212",
+    "categoria": "informatica",
+    "livello": "facile",
+    "domanda": "Che cosa indica il percorso di un file in un computer?",
+    "opzioni": [
+      "La posizione del file dentro cartelle e sottocartelle del sistema.",
+      "Il colore usato per mostrare il nome del file sullo schermo.",
+      "La quantità di energia elettrica consumata dal file quando viene aperto.",
+      "Il numero di righe di codice presenti dentro ogni programma installato."
+    ],
+    "risposta_corretta": "La posizione del file dentro cartelle e sottocartelle del sistema.",
+    "spiegazione": "La risposta corretta è A. Il percorso indica dove si trova un file nel sistema. B riguarda l'aspetto grafico, C non ha senso tecnico, D riguarda il codice dei programmi."
+  },
+  {
+    "id": "INF-INT-0201",
+    "categoria": "informatica",
+    "livello": "intermedio",
+    "domanda": "Perché la complessità temporale di un algoritmo è importante?",
+    "opzioni": [
+      "Per stimare come cresce il tempo di esecuzione al crescere della quantità di dati.",
+      "Per scegliere il colore migliore dell'interfaccia utente.",
+      "Per indicare il numero di file presenti nella cartella del progetto.",
+      "Per misurare la temperatura fisica del processore durante l'uso."
+    ],
+    "risposta_corretta": "Per stimare come cresce il tempo di esecuzione al crescere della quantità di dati.",
+    "spiegazione": "La risposta corretta è A. La complessità temporale aiuta a valutare la scalabilità di un algoritmo. B, C e D non riguardano questo concetto."
+  },
+  {
+    "id": "INF-INT-0202",
+    "categoria": "informatica",
+    "livello": "intermedio",
+    "domanda": "A cosa serve una JOIN in SQL?",
+    "opzioni": [
+      "A combinare righe provenienti da più tabelle in base a una relazione tra i dati.",
+      "A cancellare tutte le tabelle non utilizzate dal database.",
+      "A cambiare automaticamente il linguaggio di programmazione del progetto.",
+      "A comprimere immagini prima di salvarle in una cartella."
+    ],
+    "risposta_corretta": "A combinare righe provenienti da più tabelle in base a una relazione tra i dati.",
+    "spiegazione": "La risposta corretta è A. Una JOIN collega dati distribuiti su tabelle diverse. B è cancellazione, C e D non riguardano SQL."
+  },
+  {
+    "id": "INF-INT-0203",
+    "categoria": "informatica",
+    "livello": "intermedio",
+    "domanda": "Che cosa caratterizza una API REST ben progettata?",
+    "opzioni": [
+      "Usa risorse identificabili, metodi HTTP coerenti e risposte comprensibili per il client.",
+      "Richiede che ogni operazione venga eseguita direttamente modificando il database dal browser.",
+      "Evita di usare codici di stato perché renderebbero il client meno informato.",
+      "Mescola interfaccia grafica e query SQL nella stessa risposta JSON."
+    ],
+    "risposta_corretta": "Usa risorse identificabili, metodi HTTP coerenti e risposte comprensibili per il client.",
+    "spiegazione": "La risposta corretta è A. REST valorizza risorse, metodi HTTP e risposte chiare. B, C e D descrivono pratiche poco corrette."
+  },
+  {
+    "id": "INF-INT-0204",
+    "categoria": "informatica",
+    "livello": "intermedio",
+    "domanda": "Che cosa indica l'incapsulamento nella programmazione orientata agli oggetti?",
+    "opzioni": [
+      "Proteggere lo stato interno di un oggetto esponendo metodi controllati per interagire con esso.",
+      "Unire tutti i file del progetto in una singola immagine.",
+      "Eseguire un programma senza usare classi, oggetti o metodi.",
+      "Salvare ogni variabile globale in un database esterno."
+    ],
+    "risposta_corretta": "Proteggere lo stato interno di un oggetto esponendo metodi controllati per interagire con esso.",
+    "spiegazione": "La risposta corretta è A. L'incapsulamento limita l'accesso diretto allo stato interno. B, C e D non definiscono questo principio."
+  },
+  {
+    "id": "INF-INT-0205",
+    "categoria": "informatica",
+    "livello": "intermedio",
+    "domanda": "Perché il pattern MVC può essere utile in un'applicazione?",
+    "opzioni": [
+      "Per separare dati, logica di presentazione e controllo del flusso dell'applicazione.",
+      "Per trasformare ogni schermata in una tabella del database.",
+      "Per impedire al codice di usare funzioni riutilizzabili.",
+      "Per sostituire i test con nomi di file più lunghi."
+    ],
+    "risposta_corretta": "Per separare dati, logica di presentazione e controllo del flusso dell'applicazione.",
+    "spiegazione": "La risposta corretta è A. MVC separa responsabilità diverse. B, C e D non descrivono il vantaggio del pattern."
+  },
+  {
+    "id": "INF-INT-0206",
+    "categoria": "informatica",
+    "livello": "intermedio",
+    "domanda": "Qual è la differenza tra autenticazione e autorizzazione?",
+    "opzioni": [
+      "L'autenticazione verifica l'identità, mentre l'autorizzazione stabilisce cosa l'utente può fare.",
+      "L'autenticazione decide i permessi, mentre l'autorizzazione crea l'identità anagrafica dell'utente.",
+      "L'autenticazione riguarda solo il design grafico, mentre l'autorizzazione riguarda solo il database.",
+      "Autenticazione e autorizzazione indicano entrambe il salvataggio dei file temporanei."
+    ],
+    "risposta_corretta": "L'autenticazione verifica l'identità, mentre l'autorizzazione stabilisce cosa l'utente può fare.",
+    "spiegazione": "La risposta corretta è A. Prima si identifica l'utente, poi si valutano i permessi. B inverte i concetti, C e D sono errate."
+  },
+  {
+    "id": "INF-INT-0207",
+    "categoria": "informatica",
+    "livello": "intermedio",
+    "domanda": "A cosa serve il rate limiting in una API?",
+    "opzioni": [
+      "A limitare il numero di richieste consentite in un certo periodo per proteggere servizio e risorse.",
+      "A trasformare ogni richiesta HTTP in una query SQL più lunga.",
+      "A impedire al server di distinguere tra utenti autenticati e non autenticati.",
+      "A sostituire la validazione dei dati inseriti dall'utente."
+    ],
+    "risposta_corretta": "A limitare il numero di richieste consentite in un certo periodo per proteggere servizio e risorse.",
+    "spiegazione": "La risposta corretta è A. Il rate limiting controlla quante richieste può fare un client in un intervallo di tempo. B non c'entra, C indebolisce la sicurezza, D confonde rate limiting e validazione."
+  },
+  {
+    "id": "INF-INT-0208",
+    "categoria": "informatica",
+    "livello": "intermedio",
+    "domanda": "Che cosa significa che una transazione rispetta le proprietà ACID?",
+    "opzioni": [
+      "Che punta a garantire atomicità, consistenza, isolamento e durabilità delle operazioni.",
+      "Che trasforma una tabella SQL in un file HTML statico.",
+      "Che rende una query più colorata nella console del database.",
+      "Che permette di ignorare vincoli e controlli sui dati scritti."
+    ],
+    "risposta_corretta": "Che punta a garantire atomicità, consistenza, isolamento e durabilità delle operazioni.",
+    "spiegazione": "La risposta corretta è A. ACID descrive proprietà importanti delle transazioni. B, C e D non riguardano la correttezza transazionale."
+  },
+  {
+    "id": "INF-INT-0209",
+    "categoria": "informatica",
+    "livello": "intermedio",
+    "domanda": "A cosa serve un test unitario?",
+    "opzioni": [
+      "A verificare il comportamento di una piccola parte del codice in modo controllato.",
+      "A sostituire tutta la documentazione tecnica del progetto.",
+      "A pubblicare direttamente l'applicazione sugli store.",
+      "A modificare la risoluzione delle immagini usate nell'interfaccia."
+    ],
+    "risposta_corretta": "A verificare il comportamento di una piccola parte del codice in modo controllato.",
+    "spiegazione": "La risposta corretta è A. Un test unitario controlla una porzione limitata di codice. B, C e D non sono scopi del testing unitario."
+  },
+  {
+    "id": "INF-INT-0210",
+    "categoria": "informatica",
+    "livello": "intermedio",
+    "domanda": "Che cosa offre un container Docker rispetto all'esecuzione diretta su una macchina?",
+    "opzioni": [
+      "Un ambiente isolato e riproducibile con dipendenze definite.",
+      "Un sistema grafico per disegnare icone senza codice.",
+      "Un metodo per aumentare la RAM fisica del computer.",
+      "Un modo per evitare la configurazione di qualunque porta o variabile."
+    ],
+    "risposta_corretta": "Un ambiente isolato e riproducibile con dipendenze definite.",
+    "spiegazione": "La risposta corretta è A. Docker aiuta a impacchettare ambiente e dipendenze. B, C e D non descrivono il vantaggio principale dei container."
+  },
+  {
+    "id": "INF-INT-0211",
+    "categoria": "informatica",
+    "livello": "intermedio",
+    "domanda": "Che differenza c'è tra esecuzione sincrona e asincrona?",
+    "opzioni": [
+      "Nel modello sincrono si attende il completamento dell'operazione, mentre nell'asincrono il programma può proseguire e gestire il risultato dopo.",
+      "Nel modello sincrono il codice usa immagini, mentre nell'asincrono usa soltanto database.",
+      "Nel modello asincrono le funzioni non possono restituire risultati.",
+      "Nel modello sincrono il programma viene eseguito senza processore."
+    ],
+    "risposta_corretta": "Nel modello sincrono si attende il completamento dell'operazione, mentre nell'asincrono il programma può proseguire e gestire il risultato dopo.",
+    "spiegazione": "La risposta corretta è A. La differenza riguarda il modo in cui il flusso attende o prosegue. B, C e D sono errate."
+  },
+  {
+    "id": "INF-INT-0212",
+    "categoria": "informatica",
+    "livello": "intermedio",
+    "domanda": "Che cosa significa rollback dopo una modifica software?",
+    "opzioni": [
+      "Tornare a una versione precedente o a uno stato stabile quando una modifica crea problemi.",
+      "Aggiungere nuove funzionalità senza controllare il comportamento dell'applicazione.",
+      "Duplicare tutti i file del progetto senza sapere quale versione usare.",
+      "Cambiare il nome del repository senza modificare il codice."
+    ],
+    "risposta_corretta": "Tornare a una versione precedente o a uno stato stabile quando una modifica crea problemi.",
+    "spiegazione": "La risposta corretta è A. Il rollback serve a rientrare da una modifica problematica tornando a una versione funzionante. B è rischioso, C crea confusione, D riguarda solo il nome del repository."
+  },
+  {
+    "id": "INF-INT-0213",
+    "categoria": "informatica",
+    "livello": "intermedio",
+    "domanda": "Perché un indice può rendere più veloce una query SQL?",
+    "opzioni": [
+      "Perché aiuta il database a trovare righe senza dover scandire molti dati inutilmente.",
+      "Perché trasforma ogni query in codice JavaScript.",
+      "Perché sostituisce le relazioni tra tabelle con immagini.",
+      "Perché elimina la necessità di progettare correttamente le tabelle."
+    ],
+    "risposta_corretta": "Perché aiuta il database a trovare righe senza dover scandire molti dati inutilmente.",
+    "spiegazione": "La risposta corretta è A. Un indice migliora l'accesso ai dati in molte ricerche. B, C e D non spiegano il funzionamento degli indici."
+  },
+  {
+    "id": "INF-INT-0214",
+    "categoria": "informatica",
+    "livello": "intermedio",
+    "domanda": "Perché è importante validare l'input dell'utente?",
+    "opzioni": [
+      "Per ridurre errori, dati non coerenti e possibili vulnerabilità.",
+      "Per impedire all'utente di interagire con l'interfaccia.",
+      "Per sostituire il backend con una pagina statica.",
+      "Per rendere il codice meno leggibile durante la manutenzione."
+    ],
+    "risposta_corretta": "Per ridurre errori, dati non coerenti e possibili vulnerabilità.",
+    "spiegazione": "La risposta corretta è A. La validazione protegge qualità dei dati e sicurezza. B, C e D descrivono effetti non desiderabili."
+  },
+  {
+    "id": "INF-AV-0201",
+    "categoria": "informatica",
+    "livello": "avanzato",
+    "domanda": "Che cosa significa che un'operazione HTTP è idempotente?",
+    "opzioni": [
+      "Che ripetere la stessa richiesta produce lo stesso effetto sullo stato del sistema.",
+      "Che la richiesta viene eseguita soltanto se contiene un'immagine allegata.",
+      "Che il server risponde con dati casuali per aumentare la sicurezza.",
+      "Che il client deve aprire una nuova porta di rete per ogni carattere inviato."
+    ],
+    "risposta_corretta": "Che ripetere la stessa richiesta produce lo stesso effetto sullo stato del sistema.",
+    "spiegazione": "La risposta corretta è A. L'idempotenza riguarda l'effetto ripetuto di una richiesta. B, C e D non definiscono questo concetto."
+  },
+  {
+    "id": "INF-AV-0202",
+    "categoria": "informatica",
+    "livello": "avanzato",
+    "domanda": "Che cos'è una race condition?",
+    "opzioni": [
+      "Un problema in cui il risultato dipende dall'ordine temporale non controllato di operazioni concorrenti.",
+      "Un metodo per ordinare alfabeticamente i file sorgente del progetto.",
+      "Una tecnica grafica per animare pulsanti in sequenza.",
+      "Un errore che riguarda esclusivamente la scelta del font nell'interfaccia."
+    ],
+    "risposta_corretta": "Un problema in cui il risultato dipende dall'ordine temporale non controllato di operazioni concorrenti.",
+    "spiegazione": "La risposta corretta è A. Le race condition nascono da concorrenza non gestita. B, C e D non riguardano la concorrenza."
+  },
+  {
+    "id": "INF-AV-0203",
+    "categoria": "informatica",
+    "livello": "avanzato",
+    "domanda": "Perché la dependency injection può rendere un'applicazione più testabile?",
+    "opzioni": [
+      "Perché permette di fornire dipendenze dall'esterno e sostituirle con versioni controllate nei test.",
+      "Perché obbliga a scrivere tutto il codice in una sola classe.",
+      "Perché impedisce l'uso di interfacce tra componenti.",
+      "Perché elimina la necessità di separare le responsabilità."
+    ],
+    "risposta_corretta": "Perché permette di fornire dipendenze dall'esterno e sostituirle con versioni controllate nei test.",
+    "spiegazione": "La risposta corretta è A. Iniettare dipendenze facilita mock e test. B, C e D vanno contro la modularità."
+  },
+  {
+    "id": "INF-AV-0204",
+    "categoria": "informatica",
+    "livello": "avanzato",
+    "domanda": "Che cosa cerca di separare il pattern CQRS?",
+    "opzioni": [
+      "Le operazioni di lettura dei dati dalle operazioni di modifica dello stato.",
+      "La tastiera dal monitor durante l'esecuzione del programma.",
+      "Il codice sorgente dai commenti presenti nei file.",
+      "Le immagini statiche dai colori usati nel tema grafico."
+    ],
+    "risposta_corretta": "Le operazioni di lettura dei dati dalle operazioni di modifica dello stato.",
+    "spiegazione": "La risposta corretta è A. CQRS separa query e comandi. B, C e D non descrivono il pattern."
+  },
+  {
+    "id": "INF-AV-0205",
+    "categoria": "informatica",
+    "livello": "avanzato",
+    "domanda": "Perché la normalizzazione può essere utile nella progettazione di un database relazionale?",
+    "opzioni": [
+      "Per ridurre ridondanze e anomalie organizzando i dati in tabelle coerenti.",
+      "Per salvare ogni informazione in una singola colonna di testo.",
+      "Per evitare l'uso di chiavi primarie e relazioni tra tabelle.",
+      "Per trasformare automaticamente SQL in codice HTML."
+    ],
+    "risposta_corretta": "Per ridurre ridondanze e anomalie organizzando i dati in tabelle coerenti.",
+    "spiegazione": "La risposta corretta è A. La normalizzazione aiuta coerenza e manutenzione dei dati. B, C e D descrivono scelte scorrette o non pertinenti."
+  },
+  {
+    "id": "INF-AV-0206",
+    "categoria": "informatica",
+    "livello": "avanzato",
+    "domanda": "Che cosa indica la consistenza eventuale in un sistema distribuito?",
+    "opzioni": [
+      "Un modello in cui le repliche possono allinearsi dopo un intervallo, invece di essere aggiornate nello stesso istante.",
+      "Un modello in cui tutti i dati vengono salvati su un unico file locale.",
+      "Una tecnica per impedire la comunicazione tra servizi diversi.",
+      "Un formato grafico usato per descrivere schermate mobili."
+    ],
+    "risposta_corretta": "Un modello in cui le repliche possono allinearsi dopo un intervallo, invece di essere aggiornate nello stesso istante.",
+    "spiegazione": "La risposta corretta è A. La consistenza eventuale accetta un ritardo di allineamento tra repliche. B, C e D non riguardano sistemi distribuiti."
+  },
+  {
+    "id": "INF-AV-0207",
+    "categoria": "informatica",
+    "livello": "avanzato",
+    "domanda": "A cosa serve un load balancer in un'architettura web?",
+    "opzioni": [
+      "A distribuire le richieste tra più istanze o server per migliorare disponibilità e gestione del carico.",
+      "A correggere automaticamente errori logici nel codice sorgente.",
+      "A sostituire il database con una memoria temporanea nel browser.",
+      "A convertire richieste HTTP in immagini vettoriali."
+    ],
+    "risposta_corretta": "A distribuire le richieste tra più istanze o server per migliorare disponibilità e gestione del carico.",
+    "spiegazione": "La risposta corretta è A. Il load balancer distribuisce traffico tra risorse disponibili. B, C e D non sono il suo ruolo."
+  },
+  {
+    "id": "INF-AV-0208",
+    "categoria": "informatica",
+    "livello": "avanzato",
+    "domanda": "Qual è lo scopo principale di una pipeline CI/CD?",
+    "opzioni": [
+      "Automatizzare integrazione, test e distribuzione del software in modo controllato.",
+      "Disegnare automaticamente il logo dell'applicazione.",
+      "Rimuovere la necessità di revisionare le modifiche importanti.",
+      "Impedire al team di eseguire test prima della pubblicazione."
+    ],
+    "risposta_corretta": "Automatizzare integrazione, test e distribuzione del software in modo controllato.",
+    "spiegazione": "La risposta corretta è A. CI/CD rende più controllati build, test e rilascio. B, C e D non descrivono una pipeline sana."
+  },
+  {
+    "id": "INF-AV-0209",
+    "categoria": "informatica",
+    "livello": "avanzato",
+    "domanda": "Perché un JWT deve essere validato dal server prima di fidarsi delle informazioni contenute?",
+    "opzioni": [
+      "Per verificare firma, scadenza e coerenza dei dati dichiarati nel token.",
+      "Per cambiare il colore del token prima di mostrarlo all'utente.",
+      "Per trasformare il token in una tabella SQL permanente.",
+      "Per evitare di usare HTTPS nelle comunicazioni con il client."
+    ],
+    "risposta_corretta": "Per verificare firma, scadenza e coerenza dei dati dichiarati nel token.",
+    "spiegazione": "La risposta corretta è A. Un JWT va validato per evitare fiducia non controllata. B, C e D sono scorrette."
+  },
+  {
+    "id": "INF-AV-0210",
+    "categoria": "informatica",
+    "livello": "avanzato",
+    "domanda": "Perché una coda di messaggi può aiutare in un sistema distribuito?",
+    "opzioni": [
+      "Per disaccoppiare servizi e gestire lavori asincroni con maggiore resilienza.",
+      "Per sostituire ogni database relazionale con un file di testo.",
+      "Per obbligare tutti i servizi a rispondere nello stesso millisecondo.",
+      "Per eliminare la necessità di gestire errori o ritentativi."
+    ],
+    "risposta_corretta": "Per disaccoppiare servizi e gestire lavori asincroni con maggiore resilienza.",
+    "spiegazione": "La risposta corretta è A. Le code aiutano comunicazione asincrona e disaccoppiamento. B, C e D non rappresentano il loro scopo."
+  },
+  {
+    "id": "INF-AV-0211",
+    "categoria": "informatica",
+    "livello": "avanzato",
+    "domanda": "Che cos'è un deadlock?",
+    "opzioni": [
+      "Una situazione in cui processi o thread restano bloccati perché attendono risorse trattenute reciprocamente.",
+      "Una funzione che migliora la qualità grafica delle icone.",
+      "Un file temporaneo generato durante l'apertura del browser.",
+      "Un metodo per comprimere log senza perderne il contenuto."
+    ],
+    "risposta_corretta": "Una situazione in cui processi o thread restano bloccati perché attendono risorse trattenute reciprocamente.",
+    "spiegazione": "La risposta corretta è A. Un deadlock nasce da attese circolari su risorse. B, C e D non descrivono il fenomeno."
+  },
+  {
+    "id": "INF-AV-0212",
+    "categoria": "informatica",
+    "livello": "avanzato",
+    "domanda": "Che cosa significa scalare orizzontalmente un servizio?",
+    "opzioni": [
+      "Aggiungere più istanze del servizio per distribuire il carico.",
+      "Aumentare soltanto la dimensione del monitor usato dal server.",
+      "Spostare tutte le funzioni in un singolo metodo molto lungo.",
+      "Ridurre il numero di utenti supportati dall'applicazione."
+    ],
+    "risposta_corretta": "Aggiungere più istanze del servizio per distribuire il carico.",
+    "spiegazione": "La risposta corretta è A. La scalabilità orizzontale aggiunge istanze. B non è tecnico, C peggiora il design, D va nella direzione opposta."
+  },
+  {
+    "id": "INF-AV-0213",
+    "categoria": "informatica",
+    "livello": "avanzato",
+    "domanda": "Perché l'osservabilità è importante in produzione?",
+    "opzioni": [
+      "Per capire lo stato del sistema usando log, metriche e tracce quando emergono problemi.",
+      "Per nascondere gli errori agli sviluppatori durante il debug.",
+      "Per sostituire la sicurezza applicativa con grafici più dettagliati.",
+      "Per evitare di raccogliere informazioni sul comportamento dei servizi."
+    ],
+    "risposta_corretta": "Per capire lo stato del sistema usando log, metriche e tracce quando emergono problemi.",
+    "spiegazione": "La risposta corretta è A. L'osservabilità aiuta diagnosi e controllo del sistema. B, C e D non descrivono il suo obiettivo."
+  },
+  {
+    "id": "INF-AV-0214",
+    "categoria": "informatica",
+    "livello": "avanzato",
+    "domanda": "Perché la versioning delle API può essere utile?",
+    "opzioni": [
+      "Per introdurre cambiamenti mantenendo compatibilità e chiarezza per i client esistenti.",
+      "Per impedire ai client di conoscere quali endpoint stanno usando.",
+      "Per trasformare ogni richiesta HTTP in una query non documentata.",
+      "Per eliminare la necessità di comunicare modifiche importanti agli sviluppatori."
+    ],
+    "risposta_corretta": "Per introdurre cambiamenti mantenendo compatibilità e chiarezza per i client esistenti.",
+    "spiegazione": "La risposta corretta è A. Il versioning aiuta evoluzione e compatibilità delle API. B, C e D sono pratiche dannose o confuse."
   }
 ]

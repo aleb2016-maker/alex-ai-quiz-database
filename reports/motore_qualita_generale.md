@@ -9,7 +9,7 @@ Questo report distingue problemi tecnici, avvisi qualità reali, errori linguist
 - Problemi tecnici totali: **0**
 - Avvisi qualità reali totali: **0**
 - Errori linguistici totali: **0**
-- Note informative totali: **117**
+- Note informative totali: **126**
 - Gruppi di domande duplicate identiche: **0**
 - Coppie di domande molto simili: **0**
 
@@ -122,14 +122,14 @@ Domande molto simili: **0**
 
 File: `data/informatica.json`
 File trovato: **True**
-Domande totali: **40**
-Livelli: `{'facile': 12, 'intermedio': 14, 'avanzato': 14}`
-Categorie: `{'informatica': 40}`
-Posizione risposta corretta nel sorgente: `{'A': 40}`
+Domande totali: **80**
+Livelli: `{'facile': 24, 'intermedio': 28, 'avanzato': 28}`
+Categorie: `{'informatica': 80}`
+Posizione risposta corretta nel sorgente: `{'A': 80}`
 Problemi tecnici: **0**
 Avvisi qualità reali: **0**
 Errori linguistici: **0**
-Note informative: **11**
+Note informative: **20**
 Duplicati identici: **0**
 Domande molto simili: **0**
 

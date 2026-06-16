@@ -1335,22 +1335,22 @@
     "percorso": "data/informatica.json",
     "file_esiste": true,
     "errore_file": "",
-    "totale_domande": 40,
+    "totale_domande": 80,
     "livelli": {
-      "facile": 12,
-      "intermedio": 14,
-      "avanzato": 14
+      "facile": 24,
+      "intermedio": 28,
+      "avanzato": 28
     },
     "categorie": {
-      "informatica": 40
+      "informatica": 80
     },
     "posizioni_risposta": {
-      "A": 40
+      "A": 80
     },
     "problemi_tecnici_totali": 0,
     "avvisi_qualita_reali_totali": 0,
     "errori_linguistici_totali": 0,
-    "note_informative_totali": 11,
+    "note_informative_totali": 20,
     "domande_con_problemi_tecnici": [],
     "domande_con_avvisi_qualita_reali": [],
     "domande_con_errori_linguistici": [],
@@ -1567,6 +1567,167 @@
           "Perché corregge automaticamente le query SQL quando una condizione è sbagliata"
         ],
         "risposta_corretta": "Perché permette di confermare tutte le modifiche solo se l'intera operazione va a buon fine",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “tutte”"
+        ]
+      },
+      {
+        "id": "INF-FAC-0204",
+        "domanda": "Quando è utile un ciclo in programmazione?",
+        "categoria": "informatica",
+        "livello": "facile",
+        "opzioni": [
+          "Quando bisogna ripetere più volte una o più istruzioni.",
+          "Quando bisogna cambiare il colore fisico della tastiera.",
+          "Quando si vuole evitare qualsiasi controllo sui dati.",
+          "Quando si deve salvare un'immagine senza aprire un programma."
+        ],
+        "risposta_corretta": "Quando bisogna ripetere più volte una o più istruzioni.",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “qualsiasi”"
+        ]
+      },
+      {
+        "id": "INF-FAC-0208",
+        "domanda": "A cosa serve Git in un progetto software?",
+        "categoria": "informatica",
+        "livello": "facile",
+        "opzioni": [
+          "A tenere traccia delle modifiche al codice e collaborare sul progetto.",
+          "A compilare automaticamente qualsiasi programma senza configurazione.",
+          "A proteggere il computer da ogni tipo di virus.",
+          "A convertire immagini in documenti di testo modificabili."
+        ],
+        "risposta_corretta": "A tenere traccia delle modifiche al codice e collaborare sul progetto.",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “qualsiasi”"
+        ]
+      },
+      {
+        "id": "INF-INT-0202",
+        "domanda": "A cosa serve una JOIN in SQL?",
+        "categoria": "informatica",
+        "livello": "intermedio",
+        "opzioni": [
+          "A combinare righe provenienti da più tabelle in base a una relazione tra i dati.",
+          "A cancellare tutte le tabelle non utilizzate dal database.",
+          "A cambiare automaticamente il linguaggio di programmazione del progetto.",
+          "A comprimere immagini prima di salvarle in una cartella."
+        ],
+        "risposta_corretta": "A combinare righe provenienti da più tabelle in base a una relazione tra i dati.",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “tutte”"
+        ]
+      },
+      {
+        "id": "INF-INT-0204",
+        "domanda": "Che cosa indica l'incapsulamento nella programmazione orientata agli oggetti?",
+        "categoria": "informatica",
+        "livello": "intermedio",
+        "opzioni": [
+          "Proteggere lo stato interno di un oggetto esponendo metodi controllati per interagire con esso.",
+          "Unire tutti i file del progetto in una singola immagine.",
+          "Eseguire un programma senza usare classi, oggetti o metodi.",
+          "Salvare ogni variabile globale in un database esterno."
+        ],
+        "risposta_corretta": "Proteggere lo stato interno di un oggetto esponendo metodi controllati per interagire con esso.",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “tutti”"
+        ]
+      },
+      {
+        "id": "INF-INT-0212",
+        "domanda": "Che cosa significa rollback dopo una modifica software?",
+        "categoria": "informatica",
+        "livello": "intermedio",
+        "opzioni": [
+          "Tornare a una versione precedente o a uno stato stabile quando una modifica crea problemi.",
+          "Aggiungere nuove funzionalità senza controllare il comportamento dell'applicazione.",
+          "Duplicare tutti i file del progetto senza sapere quale versione usare.",
+          "Cambiare il nome del repository senza modificare il codice."
+        ],
+        "risposta_corretta": "Tornare a una versione precedente o a uno stato stabile quando una modifica crea problemi.",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “tutti”",
+          "opzione A: possibile frase poco fluida, controllare gli incontri vocalici"
+        ]
+      },
+      {
+        "id": "INF-AV-0206",
+        "domanda": "Che cosa indica la consistenza eventuale in un sistema distribuito?",
+        "categoria": "informatica",
+        "livello": "avanzato",
+        "opzioni": [
+          "Un modello in cui le repliche possono allinearsi dopo un intervallo, invece di essere aggiornate nello stesso istante.",
+          "Un modello in cui tutti i dati vengono salvati su un unico file locale.",
+          "Una tecnica per impedire la comunicazione tra servizi diversi.",
+          "Un formato grafico usato per descrivere schermate mobili."
+        ],
+        "risposta_corretta": "Un modello in cui le repliche possono allinearsi dopo un intervallo, invece di essere aggiornate nello stesso istante.",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “tutti”"
+        ]
+      },
+      {
+        "id": "INF-AV-0210",
+        "domanda": "Perché una coda di messaggi può aiutare in un sistema distribuito?",
+        "categoria": "informatica",
+        "livello": "avanzato",
+        "opzioni": [
+          "Per disaccoppiare servizi e gestire lavori asincroni con maggiore resilienza.",
+          "Per sostituire ogni database relazionale con un file di testo.",
+          "Per obbligare tutti i servizi a rispondere nello stesso millisecondo.",
+          "Per eliminare la necessità di gestire errori o ritentativi."
+        ],
+        "risposta_corretta": "Per disaccoppiare servizi e gestire lavori asincroni con maggiore resilienza.",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “tutti”"
+        ]
+      },
+      {
+        "id": "INF-AV-0212",
+        "domanda": "Che cosa significa scalare orizzontalmente un servizio?",
+        "categoria": "informatica",
+        "livello": "avanzato",
+        "opzioni": [
+          "Aggiungere più istanze del servizio per distribuire il carico.",
+          "Aumentare soltanto la dimensione del monitor usato dal server.",
+          "Spostare tutte le funzioni in un singolo metodo molto lungo.",
+          "Ridurre il numero di utenti supportati dall'applicazione."
+        ],
+        "risposta_corretta": "Aggiungere più istanze del servizio per distribuire il carico.",
         "posizione_risposta": "A",
         "problemi_tecnici": [],
         "avvisi_qualita_reali": [],
