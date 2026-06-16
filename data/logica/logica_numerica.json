@@ -228,5 +228,155 @@
     "difficolta": 3,
     "distrattore_forte": "40",
     "motivo_distrattore_forte": "È vicino perché aggiunge ancora 10 all'ultimo valore noto, ma è sbagliato perché la differenza deve aumentare a 12."
+  },
+  {
+    "id": "LOG-NUM-0201",
+    "categoria": "logica",
+    "sottocategoria": "logica_numerica",
+    "livello": "facile",
+    "domanda": "Quale numero completa la successione 3, 7, 15, 31?",
+    "opzioni": [
+      "63",
+      "47",
+      "62",
+      "64"
+    ],
+    "risposta_corretta": "63",
+    "spiegazione": "La risposta corretta è A. Ogni numero si ottiene moltiplicando il precedente per 2 e aggiungendo 1: 3 diventa 7, 7 diventa 15, 15 diventa 31, quindi 31 × 2 + 1 = 63."
+  },
+  {
+    "id": "LOG-NUM-0202",
+    "categoria": "logica",
+    "sottocategoria": "logica_numerica",
+    "livello": "facile",
+    "domanda": "Quale numero viene dopo nella successione 2, 6, 12, 20, 30?",
+    "opzioni": [
+      "42",
+      "40",
+      "44",
+      "36"
+    ],
+    "risposta_corretta": "42",
+    "spiegazione": "La risposta corretta è A. Le differenze sono 4, 6, 8 e 10. La differenza successiva è 12, quindi 30 + 12 = 42."
+  },
+  {
+    "id": "LOG-NUM-0203",
+    "categoria": "logica",
+    "sottocategoria": "logica_numerica",
+    "livello": "facile",
+    "domanda": "Quale numero completa la serie 81, 27, 9, 3?",
+    "opzioni": [
+      "1",
+      "0",
+      "2",
+      "6"
+    ],
+    "risposta_corretta": "1",
+    "spiegazione": "La risposta corretta è A. Ogni numero viene diviso per 3: 81 diventa 27, 27 diventa 9, 9 diventa 3, quindi 3 diventa 1."
+  },
+  {
+    "id": "LOG-NUM-0204",
+    "categoria": "logica",
+    "sottocategoria": "logica_numerica",
+    "livello": "intermedio",
+    "domanda": "Nella successione 4, 7, 14, 17, 34, quale numero viene dopo?",
+    "opzioni": [
+      "37",
+      "68",
+      "35",
+      "41"
+    ],
+    "risposta_corretta": "37",
+    "spiegazione": "La risposta corretta è A. La regola alterna più 3 e per 2: 4 + 3 = 7, 7 × 2 = 14, 14 + 3 = 17, 17 × 2 = 34, quindi 34 + 3 = 37."
+  },
+  {
+    "id": "LOG-NUM-0205",
+    "categoria": "logica",
+    "sottocategoria": "logica_numerica",
+    "livello": "intermedio",
+    "domanda": "Se A vale 2, B vale 4, C vale 6 e D vale 8, quanto vale C più D?",
+    "opzioni": [
+      "14",
+      "12",
+      "10",
+      "16"
+    ],
+    "risposta_corretta": "14",
+    "spiegazione": "La risposta corretta è A. C vale 6 e D vale 8, quindi C più D vale 6 + 8 = 14."
+  },
+  {
+    "id": "LOG-NUM-0206",
+    "categoria": "logica",
+    "sottocategoria": "logica_numerica",
+    "livello": "intermedio",
+    "domanda": "Quale numero continua la successione 5, 11, 23, 47?",
+    "opzioni": [
+      "95",
+      "94",
+      "96",
+      "89"
+    ],
+    "risposta_corretta": "95",
+    "spiegazione": "La risposta corretta è A. Ogni numero si ottiene moltiplicando il precedente per 2 e aggiungendo 1: 5 diventa 11, 11 diventa 23, 23 diventa 47, quindi 47 × 2 + 1 = 95."
+  },
+  {
+    "id": "LOG-NUM-0207",
+    "categoria": "logica",
+    "sottocategoria": "logica_numerica",
+    "livello": "intermedio",
+    "domanda": "Quale numero manca nella successione 100, 96, 88, 76, 60?",
+    "opzioni": [
+      "40",
+      "44",
+      "48",
+      "52"
+    ],
+    "risposta_corretta": "40",
+    "spiegazione": "La risposta corretta è A. Le sottrazioni aumentano di 4: meno 4, meno 8, meno 12, meno 16. La sottrazione successiva è meno 20, quindi 60 - 20 = 40."
+  },
+  {
+    "id": "LOG-NUM-0208",
+    "categoria": "logica",
+    "sottocategoria": "logica_numerica",
+    "livello": "avanzato",
+    "domanda": "Quale numero completa la sequenza 2, 3, 5, 8, 13?",
+    "opzioni": [
+      "21",
+      "20",
+      "18",
+      "26"
+    ],
+    "risposta_corretta": "21",
+    "spiegazione": "La risposta corretta è A. Ogni termine è la somma dei due precedenti: 2 + 3 = 5, 3 + 5 = 8, 5 + 8 = 13, quindi 8 + 13 = 21."
+  },
+  {
+    "id": "LOG-NUM-0209",
+    "categoria": "logica",
+    "sottocategoria": "logica_numerica",
+    "livello": "avanzato",
+    "domanda": "Osserva le coppie 2 diventa 6, 4 diventa 20, 6 diventa 42. Seguendo la stessa regola, quanto diventa 8?",
+    "opzioni": [
+      "72",
+      "64",
+      "56",
+      "80"
+    ],
+    "risposta_corretta": "72",
+    "spiegazione": "La risposta corretta è A. La regola è n moltiplicato per n più 1: 2 × 3 = 6, 4 × 5 = 20, 6 × 7 = 42, quindi 8 × 9 = 72."
+  },
+  {
+    "id": "LOG-NUM-0210",
+    "categoria": "logica",
+    "sottocategoria": "logica_numerica",
+    "livello": "avanzato",
+    "domanda": "Quale valore completa la serie 1, 4, 10, 22, 46?",
+    "opzioni": [
+      "94",
+      "92",
+      "88",
+      "96"
+    ],
+    "risposta_corretta": "94",
+    "spiegazione": "La risposta corretta è A. Ogni termine si ottiene raddoppiando il precedente e aggiungendo 2: 1 diventa 4, 4 diventa 10, 10 diventa 22, 22 diventa 46, quindi 46 × 2 + 2 = 94."
   }
 ]

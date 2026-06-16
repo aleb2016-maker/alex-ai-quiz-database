@@ -2620,17 +2620,17 @@
     "percorso": "data/logica/logica_numerica.json",
     "file_esiste": true,
     "errore_file": "",
-    "totale_domande": 10,
+    "totale_domande": 20,
     "livelli": {
-      "facile": 3,
-      "intermedio": 3,
-      "avanzato": 4
+      "facile": 6,
+      "intermedio": 7,
+      "avanzato": 7
     },
     "categorie": {
-      "logica": 10
+      "logica": 20
     },
     "posizioni_risposta": {
-      "A": 10
+      "A": 20
     },
     "problemi_tecnici_totali": 0,
     "avvisi_qualita_reali_totali": 0,
@@ -2669,22 +2669,22 @@
     "percorso": "data/logica/logica_verbale.json",
     "file_esiste": true,
     "errore_file": "",
-    "totale_domande": 10,
+    "totale_domande": 20,
     "livelli": {
-      "facile": 3,
-      "intermedio": 4,
-      "avanzato": 3
+      "facile": 6,
+      "intermedio": 8,
+      "avanzato": 6
     },
     "categorie": {
-      "logica": 10
+      "logica": 20
     },
     "posizioni_risposta": {
-      "A": 10
+      "A": 20
     },
     "problemi_tecnici_totali": 0,
     "avvisi_qualita_reali_totali": 0,
     "errori_linguistici_totali": 0,
-    "note_informative_totali": 1,
+    "note_informative_totali": 4,
     "domande_con_problemi_tecnici": [],
     "domande_con_avvisi_qualita_reali": [],
     "domande_con_errori_linguistici": [],
@@ -2708,6 +2708,47 @@
         "note_informative": [
           "spiegazione: testo molto lungo, controllare leggibilità"
         ]
+      },
+      {
+        "id": "LOG-VER-0206",
+        "domanda": "Se tutti i poeti sono scrittori e alcuni scrittori sono insegnanti, quale affermazione è sicuramente vera?",
+        "categoria": "logica",
+        "livello": "intermedio",
+        "opzioni": [
+          "Tutti i poeti sono scrittori",
+          "Tutti gli insegnanti sono poeti",
+          "Tutti gli scrittori sono poeti",
+          "Nessun poeta è scrittore"
+        ],
+        "risposta_corretta": "Tutti i poeti sono scrittori",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “tutti”"
+        ]
+      },
+      {
+        "id": "LOG-VER-0208",
+        "domanda": "Tutte le serre sono strutture chiuse. Alcune strutture chiuse sono riscaldate. Quale conclusione segue con certezza?",
+        "categoria": "logica",
+        "livello": "avanzato",
+        "opzioni": [
+          "Tutte le serre sono strutture chiuse",
+          "Tutte le serre sono riscaldate",
+          "Nessuna struttura chiusa è serra",
+          "Alcune serre non sono strutture chiuse"
+        ],
+        "risposta_corretta": "Tutte le serre sono strutture chiuse",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “nessuna”",
+          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “tutte”"
+        ]
       }
     ],
     "duplicati_identici": {},
@@ -2718,22 +2759,22 @@
     "percorso": "data/logica/ragionamento_astratto.json",
     "file_esiste": true,
     "errore_file": "",
-    "totale_domande": 10,
+    "totale_domande": 20,
     "livelli": {
-      "facile": 2,
-      "intermedio": 4,
-      "avanzato": 4
+      "facile": 5,
+      "intermedio": 8,
+      "avanzato": 7
     },
     "categorie": {
-      "logica": 10
+      "logica": 20
     },
     "posizioni_risposta": {
-      "A": 10
+      "A": 20
     },
     "problemi_tecnici_totali": 0,
     "avvisi_qualita_reali_totali": 0,
     "errori_linguistici_totali": 0,
-    "note_informative_totali": 1,
+    "note_informative_totali": 4,
     "domande_con_problemi_tecnici": [],
     "domande_con_avvisi_qualita_reali": [],
     "domande_con_errori_linguistici": [],
@@ -2757,6 +2798,66 @@
         "note_informative": [
           "spiegazione: possibile frase poco fluida, controllare gli incontri vocalici"
         ]
+      },
+      {
+        "id": "LOG-AST-0202",
+        "domanda": "Se ogni simbolo viene ripetuto una volta, cosa diventa A B C?",
+        "categoria": "logica",
+        "livello": "facile",
+        "opzioni": [
+          "A A B B C C",
+          "A B C A",
+          "A C B",
+          "B B C C A"
+        ],
+        "risposta_corretta": "A A B B C C",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "opzione A: possibile frase poco fluida, controllare gli incontri vocalici"
+        ]
+      },
+      {
+        "id": "LOG-AST-0205",
+        "domanda": "Se la trasformazione cambia ogni lettera con quella successiva nell'alfabeto, cosa diventa BDF?",
+        "categoria": "logica",
+        "livello": "intermedio",
+        "opzioni": [
+          "CEG",
+          "ACE",
+          "CFG",
+          "BEG"
+        ],
+        "risposta_corretta": "CEG",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "spiegazione: possibile frase poco fluida, controllare gli incontri vocalici"
+        ]
+      },
+      {
+        "id": "LOG-AST-0210",
+        "domanda": "Nella serie A2, C4, E6, G8, quale elemento viene dopo?",
+        "categoria": "logica",
+        "livello": "avanzato",
+        "opzioni": [
+          "I10",
+          "H10",
+          "I9",
+          "J10"
+        ],
+        "risposta_corretta": "I10",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "spiegazione: possibile frase poco fluida, controllare gli incontri vocalici"
+        ]
       }
     ],
     "duplicati_identici": {},
@@ -2767,22 +2868,22 @@
     "percorso": "data/logica/ragionamento_critico.json",
     "file_esiste": true,
     "errore_file": "",
-    "totale_domande": 10,
+    "totale_domande": 20,
     "livelli": {
-      "facile": 3,
-      "intermedio": 4,
-      "avanzato": 3
+      "facile": 6,
+      "intermedio": 8,
+      "avanzato": 6
     },
     "categorie": {
-      "logica": 10
+      "logica": 20
     },
     "posizioni_risposta": {
-      "A": 10
+      "A": 20
     },
     "problemi_tecnici_totali": 0,
     "avvisi_qualita_reali_totali": 0,
     "errori_linguistici_totali": 0,
-    "note_informative_totali": 7,
+    "note_informative_totali": 11,
     "domande_con_problemi_tecnici": [],
     "domande_con_avvisi_qualita_reali": [],
     "domande_con_errori_linguistici": [],
@@ -2919,6 +3020,67 @@
           "Ogni app pubblicata supera i test"
         ],
         "risposta_corretta": "L'app non ha superato tutti i test",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “tutti”"
+        ]
+      },
+      {
+        "id": "LOG-CRI-0203",
+        "domanda": "Tutti i biglietti validi hanno un codice QR. Questo biglietto non ha codice QR. Cosa si può concludere?",
+        "categoria": "logica",
+        "livello": "facile",
+        "opzioni": [
+          "Il biglietto non è valido",
+          "Il biglietto è sicuramente valido",
+          "Il codice QR è nascosto",
+          "Tutti i biglietti sono falsi"
+        ],
+        "risposta_corretta": "Il biglietto non è valido",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “tutti”"
+        ]
+      },
+      {
+        "id": "LOG-CRI-0204",
+        "domanda": "Una palestra aumenta gli iscritti dopo aver introdotto nuovi corsi. Quale conclusione è più prudente?",
+        "categoria": "logica",
+        "livello": "intermedio",
+        "opzioni": [
+          "I nuovi corsi potrebbero aver contribuito all'aumento",
+          "I nuovi corsi sono sicuramente l'unica causa",
+          "Gli iscritti sono aumentati per caso impossibile",
+          "La palestra perderà tutti gli iscritti"
+        ],
+        "risposta_corretta": "I nuovi corsi potrebbero aver contribuito all'aumento",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “impossibile”",
+          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “tutti”"
+        ]
+      },
+      {
+        "id": "LOG-CRI-0208",
+        "domanda": "Un sondaggio online mostra che il 90% dei partecipanti ama una nuova app, ma il sondaggio è stato pubblicato solo nella community dei fan. Qual è il limite principale?",
+        "categoria": "logica",
+        "livello": "avanzato",
+        "opzioni": [
+          "Il campione potrebbe non rappresentare tutti gli utenti",
+          "Il risultato è positivo, ma può essere influenzato dalla community scelta",
+          "Il sondaggio indica interesse tra i fan, non necessariamente nel pubblico generale",
+          "La community dei fan può rendere il campione poco neutrale"
+        ],
+        "risposta_corretta": "Il campione potrebbe non rappresentare tutti gli utenti",
         "posizione_risposta": "A",
         "problemi_tecnici": [],
         "avvisi_qualita_reali": [],

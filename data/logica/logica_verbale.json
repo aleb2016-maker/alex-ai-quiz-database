@@ -221,5 +221,155 @@
     "spiegazione": "Una biblioteca è un luogo in cui si raccolgono e consultano libri. Una pinacoteca è un luogo in cui si raccolgono ed espongono quadri.",
     "distrattore_forte": "cataloghi",
     "motivo_distrattore_forte": "È plausibile perché può essere presente in una pinacoteca, ma non rappresenta l'oggetto principale dell'analogia."
+  },
+  {
+    "id": "LOG-VER-0201",
+    "categoria": "logica",
+    "sottocategoria": "logica_verbale",
+    "livello": "facile",
+    "domanda": "Medico sta a ospedale come insegnante sta a quale luogo?",
+    "opzioni": [
+      "Scuola",
+      "Aeroporto",
+      "Farmacia",
+      "Tribunale"
+    ],
+    "risposta_corretta": "Scuola",
+    "spiegazione": "La risposta corretta è A. Il medico lavora tipicamente in ospedale; allo stesso modo, l'insegnante lavora tipicamente a scuola."
+  },
+  {
+    "id": "LOG-VER-0202",
+    "categoria": "logica",
+    "sottocategoria": "logica_verbale",
+    "livello": "facile",
+    "domanda": "Quale parola è il contrario più adatto di fragile?",
+    "opzioni": [
+      "Robusto",
+      "Delicato",
+      "Leggero",
+      "Piccolo"
+    ],
+    "risposta_corretta": "Robusto",
+    "spiegazione": "La risposta corretta è A. Fragile indica qualcosa che si rompe facilmente; robusto indica qualcosa di resistente."
+  },
+  {
+    "id": "LOG-VER-0203",
+    "categoria": "logica",
+    "sottocategoria": "logica_verbale",
+    "livello": "facile",
+    "domanda": "Quale parola non appartiene al gruppo: cane, gatto, leone, rosa?",
+    "opzioni": [
+      "Rosa",
+      "Cane",
+      "Gatto",
+      "Leone"
+    ],
+    "risposta_corretta": "Rosa",
+    "spiegazione": "La risposta corretta è A. Cane, gatto e leone sono animali; rosa è un fiore."
+  },
+  {
+    "id": "LOG-VER-0204",
+    "categoria": "logica",
+    "sottocategoria": "logica_verbale",
+    "livello": "intermedio",
+    "domanda": "Biblioteca sta a libri come supermercato sta a cosa?",
+    "opzioni": [
+      "Prodotti",
+      "Strade",
+      "Biglietti",
+      "Pazienti"
+    ],
+    "risposta_corretta": "Prodotti",
+    "spiegazione": "La risposta corretta è A. In biblioteca si trovano libri; in supermercato si trovano prodotti da acquistare."
+  },
+  {
+    "id": "LOG-VER-0205",
+    "categoria": "logica",
+    "sottocategoria": "logica_verbale",
+    "livello": "intermedio",
+    "domanda": "Quale parola completa meglio la relazione: pittore sta a pennello come scrittore sta a cosa?",
+    "opzioni": [
+      "Penna",
+      "Tela",
+      "Colore",
+      "Cornice"
+    ],
+    "risposta_corretta": "Penna",
+    "spiegazione": "La risposta corretta è A. Il pittore usa il pennello come strumento principale; lo scrittore usa la penna come strumento di scrittura."
+  },
+  {
+    "id": "LOG-VER-0206",
+    "categoria": "logica",
+    "sottocategoria": "logica_verbale",
+    "livello": "intermedio",
+    "domanda": "Se tutti i poeti sono scrittori e alcuni scrittori sono insegnanti, quale affermazione è sicuramente vera?",
+    "opzioni": [
+      "Tutti i poeti sono scrittori",
+      "Tutti gli insegnanti sono poeti",
+      "Tutti gli scrittori sono poeti",
+      "Nessun poeta è scrittore"
+    ],
+    "risposta_corretta": "Tutti i poeti sono scrittori",
+    "spiegazione": "La risposta corretta è A. È l'unica affermazione garantita dalla premessa. Le altre aggiungono informazioni non dimostrate."
+  },
+  {
+    "id": "LOG-VER-0207",
+    "categoria": "logica",
+    "sottocategoria": "logica_verbale",
+    "livello": "intermedio",
+    "domanda": "Quale parola è più vicina al significato di accurato?",
+    "opzioni": [
+      "Preciso",
+      "Veloce",
+      "Rumoroso",
+      "Imprevisto"
+    ],
+    "risposta_corretta": "Preciso",
+    "spiegazione": "La risposta corretta è A. Accurato significa fatto con attenzione e precisione."
+  },
+  {
+    "id": "LOG-VER-0208",
+    "categoria": "logica",
+    "sottocategoria": "logica_verbale",
+    "livello": "avanzato",
+    "domanda": "Tutte le serre sono strutture chiuse. Alcune strutture chiuse sono riscaldate. Quale conclusione segue con certezza?",
+    "opzioni": [
+      "Tutte le serre sono strutture chiuse",
+      "Tutte le serre sono riscaldate",
+      "Nessuna struttura chiusa è serra",
+      "Alcune serre non sono strutture chiuse"
+    ],
+    "risposta_corretta": "Tutte le serre sono strutture chiuse",
+    "spiegazione": "La risposta corretta è A. La prima premessa lo afferma direttamente. Non si può dedurre che tutte le serre siano riscaldate."
+  },
+  {
+    "id": "LOG-VER-0209",
+    "categoria": "logica",
+    "sottocategoria": "logica_verbale",
+    "livello": "avanzato",
+    "domanda": "Quale coppia mantiene la stessa relazione di causa ed effetto: studio e preparazione?",
+    "opzioni": [
+      "Allenamento e miglioramento",
+      "Pioggia e ombrello",
+      "Libro e scaffale",
+      "Finestra e stanza"
+    ],
+    "risposta_corretta": "Allenamento e miglioramento",
+    "spiegazione": "La risposta corretta è A. Lo studio può produrre preparazione, come l'allenamento può produrre miglioramento."
+  },
+  {
+    "id": "LOG-VER-0210",
+    "categoria": "logica",
+    "sottocategoria": "logica_verbale",
+    "livello": "avanzato",
+    "domanda": "In quale frase la parola chiave indica una condizione necessaria?",
+    "opzioni": [
+      "Per guidare serve la patente",
+      "Piove perché ho l'ombrello",
+      "Studio anche se sono stanco",
+      "Parto oppure resto"
+    ],
+    "risposta_corretta": "Per guidare serve la patente",
+    "spiegazione": "La risposta corretta è A. La frase indica che la patente è necessaria per guidare legalmente. Le altre frasi non esprimono una condizione necessaria nello stesso modo."
   }
 ]

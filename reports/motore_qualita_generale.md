@@ -9,7 +9,7 @@ Questo report distingue problemi tecnici, avvisi qualità reali, errori linguist
 - Problemi tecnici totali: **0**
 - Avvisi qualità reali totali: **0**
 - Errori linguistici totali: **0**
-- Note informative totali: **137**
+- Note informative totali: **147**
 - Gruppi di domande duplicate identiche: **0**
 - Coppie di domande molto simili: **0**
 
@@ -152,10 +152,10 @@ Domande molto simili: **0**
 
 File: `data/logica/logica_numerica.json`
 File trovato: **True**
-Domande totali: **10**
-Livelli: `{'facile': 3, 'intermedio': 3, 'avanzato': 4}`
-Categorie: `{'logica': 10}`
-Posizione risposta corretta nel sorgente: `{'A': 10}`
+Domande totali: **20**
+Livelli: `{'facile': 6, 'intermedio': 7, 'avanzato': 7}`
+Categorie: `{'logica': 20}`
+Posizione risposta corretta nel sorgente: `{'A': 20}`
 Problemi tecnici: **0**
 Avvisi qualità reali: **0**
 Errori linguistici: **0**
@@ -167,14 +167,14 @@ Domande molto simili: **0**
 
 File: `data/logica/logica_verbale.json`
 File trovato: **True**
-Domande totali: **10**
-Livelli: `{'facile': 3, 'intermedio': 4, 'avanzato': 3}`
-Categorie: `{'logica': 10}`
-Posizione risposta corretta nel sorgente: `{'A': 10}`
+Domande totali: **20**
+Livelli: `{'facile': 6, 'intermedio': 8, 'avanzato': 6}`
+Categorie: `{'logica': 20}`
+Posizione risposta corretta nel sorgente: `{'A': 20}`
 Problemi tecnici: **0**
 Avvisi qualità reali: **0**
 Errori linguistici: **0**
-Note informative: **1**
+Note informative: **4**
 Duplicati identici: **0**
 Domande molto simili: **0**
 
@@ -182,14 +182,14 @@ Domande molto simili: **0**
 
 File: `data/logica/ragionamento_astratto.json`
 File trovato: **True**
-Domande totali: **10**
-Livelli: `{'facile': 2, 'intermedio': 4, 'avanzato': 4}`
-Categorie: `{'logica': 10}`
-Posizione risposta corretta nel sorgente: `{'A': 10}`
+Domande totali: **20**
+Livelli: `{'facile': 5, 'intermedio': 8, 'avanzato': 7}`
+Categorie: `{'logica': 20}`
+Posizione risposta corretta nel sorgente: `{'A': 20}`
 Problemi tecnici: **0**
 Avvisi qualità reali: **0**
 Errori linguistici: **0**
-Note informative: **1**
+Note informative: **4**
 Duplicati identici: **0**
 Domande molto simili: **0**
 
@@ -197,14 +197,14 @@ Domande molto simili: **0**
 
 File: `data/logica/ragionamento_critico.json`
 File trovato: **True**
-Domande totali: **10**
-Livelli: `{'facile': 3, 'intermedio': 4, 'avanzato': 3}`
-Categorie: `{'logica': 10}`
-Posizione risposta corretta nel sorgente: `{'A': 10}`
+Domande totali: **20**
+Livelli: `{'facile': 6, 'intermedio': 8, 'avanzato': 6}`
+Categorie: `{'logica': 20}`
+Posizione risposta corretta nel sorgente: `{'A': 20}`
 Problemi tecnici: **0**
 Avvisi qualità reali: **0**
 Errori linguistici: **0**
-Note informative: **7**
+Note informative: **11**
 Duplicati identici: **0**
 Domande molto simili: **0**
 

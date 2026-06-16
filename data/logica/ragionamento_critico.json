@@ -227,5 +227,155 @@
     "difficolta": 2,
     "distrattore_forte": "L'app potrebbe aver superato tutti i test anche se non viene pubblicata",
     "motivo_distrattore_forte": "È vicino perché nella realtà potrebbero esistere altri motivi di blocco, ma nella logica della premessa data è sbagliato: se supera tutti i test, viene pubblicata."
+  },
+  {
+    "id": "LOG-CRI-0201",
+    "categoria": "logica",
+    "sottocategoria": "ragionamento_critico",
+    "livello": "facile",
+    "domanda": "Un cartello dice che l'ingresso è consentito solo ai dipendenti. Marco non è dipendente. Quale conclusione è corretta?",
+    "opzioni": [
+      "Marco non può entrare",
+      "Marco può entrare se riceve un'autorizzazione non indicata dal cartello",
+      "Marco è probabilmente un responsabile esterno",
+      "Il cartello riguarda soprattutto i visitatori"
+    ],
+    "risposta_corretta": "Marco non può entrare",
+    "spiegazione": "La risposta corretta è A. Se l'ingresso è consentito solo ai dipendenti e Marco non è dipendente, Marco non rientra tra le persone autorizzate dalla regola indicata."
+  },
+  {
+    "id": "LOG-CRI-0202",
+    "categoria": "logica",
+    "sottocategoria": "ragionamento_critico",
+    "livello": "facile",
+    "domanda": "Anna dice: se piove, prendo l'ombrello. Oggi piove. Quale conclusione segue?",
+    "opzioni": [
+      "Anna prende l'ombrello",
+      "Anna non esce di casa",
+      "Anna perde l'ombrello",
+      "Anna prende il cappotto"
+    ],
+    "risposta_corretta": "Anna prende l'ombrello",
+    "spiegazione": "La risposta corretta è A. La condizione si verifica, quindi segue l'azione dichiarata."
+  },
+  {
+    "id": "LOG-CRI-0203",
+    "categoria": "logica",
+    "sottocategoria": "ragionamento_critico",
+    "livello": "facile",
+    "domanda": "Tutti i biglietti validi hanno un codice QR. Questo biglietto non ha codice QR. Cosa si può concludere?",
+    "opzioni": [
+      "Il biglietto non è valido",
+      "Il biglietto è sicuramente valido",
+      "Il codice QR è nascosto",
+      "Tutti i biglietti sono falsi"
+    ],
+    "risposta_corretta": "Il biglietto non è valido",
+    "spiegazione": "La risposta corretta è A. Se tutti i biglietti validi hanno il codice QR, un biglietto senza codice QR non può essere valido."
+  },
+  {
+    "id": "LOG-CRI-0204",
+    "categoria": "logica",
+    "sottocategoria": "ragionamento_critico",
+    "livello": "intermedio",
+    "domanda": "Una palestra aumenta gli iscritti dopo aver introdotto nuovi corsi. Quale conclusione è più prudente?",
+    "opzioni": [
+      "I nuovi corsi potrebbero aver contribuito all'aumento",
+      "I nuovi corsi sono sicuramente l'unica causa",
+      "Gli iscritti sono aumentati per caso impossibile",
+      "La palestra perderà tutti gli iscritti"
+    ],
+    "risposta_corretta": "I nuovi corsi potrebbero aver contribuito all'aumento",
+    "spiegazione": "La risposta corretta è A. Il dato suggerisce una possibile relazione, ma non dimostra che i nuovi corsi siano l'unica causa."
+  },
+  {
+    "id": "LOG-CRI-0205",
+    "categoria": "logica",
+    "sottocategoria": "ragionamento_critico",
+    "livello": "intermedio",
+    "domanda": "Un'app riceve molte recensioni positive, ma poche persone l'hanno scaricata. Quale valutazione è più equilibrata?",
+    "opzioni": [
+      "Le recensioni sono incoraggianti, ma il campione è ancora limitato",
+      "L'app potrebbe essere valida, ma i pochi download rendono il giudizio ancora debole",
+      "Le recensioni positive vanno considerate con attenzione perché il campione è piccolo",
+      "L'app dovrebbe essere valutata anche con dati d'uso più ampi"
+    ],
+    "risposta_corretta": "Le recensioni sono incoraggianti, ma il campione è ancora limitato",
+    "spiegazione": "La risposta corretta è A. Le recensioni positive sono un segnale utile, ma pochi download rendono il giudizio meno solido."
+  },
+  {
+    "id": "LOG-CRI-0206",
+    "categoria": "logica",
+    "sottocategoria": "ragionamento_critico",
+    "livello": "intermedio",
+    "domanda": "Se una soluzione funziona in un test piccolo, quale affermazione è più corretta?",
+    "opzioni": [
+      "Serve provarla anche in condizioni più ampie",
+      "È probabile che servano verifiche in contesti più vari",
+      "Il test piccolo è utile, ma non basta per generalizzare",
+      "La soluzione può essere promettente, ma va controllata meglio"
+    ],
+    "risposta_corretta": "Serve provarla anche in condizioni più ampie",
+    "spiegazione": "La risposta corretta è A. Un test piccolo è utile, ma non garantisce il comportamento in ogni situazione."
+  },
+  {
+    "id": "LOG-CRI-0207",
+    "categoria": "logica",
+    "sottocategoria": "ragionamento_critico",
+    "livello": "intermedio",
+    "domanda": "Un corso ha molti iscritti, ma pochi completano tutte le lezioni. Quale dato aiuterebbe di più a capire il problema?",
+    "opzioni": [
+      "Il punto esatto in cui gli studenti abbandonano",
+      "Il colore del logo del corso",
+      "Il numero di sedie nell'aula",
+      "Il nome del primo iscritto"
+    ],
+    "risposta_corretta": "Il punto esatto in cui gli studenti abbandonano",
+    "spiegazione": "La risposta corretta è A. Sapere dove avviene l'abbandono aiuta a individuare difficoltà, contenuti deboli o problemi di percorso."
+  },
+  {
+    "id": "LOG-CRI-0208",
+    "categoria": "logica",
+    "sottocategoria": "ragionamento_critico",
+    "livello": "avanzato",
+    "domanda": "Un sondaggio online mostra che il 90% dei partecipanti ama una nuova app, ma il sondaggio è stato pubblicato solo nella community dei fan. Qual è il limite principale?",
+    "opzioni": [
+      "Il campione potrebbe non rappresentare tutti gli utenti",
+      "Il risultato è positivo, ma può essere influenzato dalla community scelta",
+      "Il sondaggio indica interesse tra i fan, non necessariamente nel pubblico generale",
+      "La community dei fan può rendere il campione poco neutrale"
+    ],
+    "risposta_corretta": "Il campione potrebbe non rappresentare tutti gli utenti",
+    "spiegazione": "La risposta corretta è A. Un sondaggio fatto solo tra fan può essere sbilanciato e non rappresentare il pubblico generale."
+  },
+  {
+    "id": "LOG-CRI-0209",
+    "categoria": "logica",
+    "sottocategoria": "ragionamento_critico",
+    "livello": "avanzato",
+    "domanda": "Un'azienda riduce i tempi di risposta dopo aver cambiato software. Quale informazione serve per valutare meglio il miglioramento?",
+    "opzioni": [
+      "Se nello stesso periodo sono cambiati anche personale o procedure",
+      "Il colore dell'interfaccia del vecchio software",
+      "Il numero di lettere nel nome dell'azienda",
+      "La marca dei monitor usati"
+    ],
+    "risposta_corretta": "Se nello stesso periodo sono cambiati anche personale o procedure",
+    "spiegazione": "La risposta corretta è A. Per capire se il miglioramento dipende dal software bisogna controllare altri fattori cambiati nello stesso periodo."
+  },
+  {
+    "id": "LOG-CRI-0210",
+    "categoria": "logica",
+    "sottocategoria": "ragionamento_critico",
+    "livello": "avanzato",
+    "domanda": "Un ricercatore nota che chi dorme di più ottiene risultati migliori in un test. Quale conclusione è più corretta?",
+    "opzioni": [
+      "Esiste un'associazione, ma servono altri dati per parlare di causa",
+      "La relazione osservata basta da sola per dimostrare una causa diretta",
+      "Il test sembra misurare soprattutto la quantità di sonno",
+      "Chi dorme poco ha necessariamente risultati più bassi"
+    ],
+    "risposta_corretta": "Esiste un'associazione, ma servono altri dati per parlare di causa",
+    "spiegazione": "La risposta corretta è A. Una correlazione non basta da sola a dimostrare un rapporto di causa ed effetto."
   }
 ]
