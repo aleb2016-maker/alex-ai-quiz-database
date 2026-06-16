@@ -1,275 +1,102 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alex AI Quiz Database</title>
-    <link rel="stylesheet" href="style.css?v=demo-v1-21">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu demo quiz</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #f3f5f8;
+      color: #172033;
+    }
+
+    header {
+      padding: 36px 18px;
+      text-align: center;
+      background: linear-gradient(135deg, #12213f, #254a8b);
+      color: white;
+    }
+
+    header h1 {
+      margin: 0 0 8px;
+      font-size: 2rem;
+    }
+
+    main {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 28px 16px 60px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 18px;
+    }
+
+    .card {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      background: white;
+      border-radius: 24px;
+      padding: 26px;
+      box-shadow: 0 10px 30px rgba(20, 30, 55, 0.1);
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 14px 36px rgba(20, 30, 55, 0.14);
+    }
+
+    .card h2 {
+      margin: 0 0 10px;
+      color: #1b66d2;
+    }
+
+    .card p {
+      margin: 0 0 18px;
+      color: #566177;
+      line-height: 1.5;
+    }
+
+    .button {
+      display: inline-block;
+      background: #1b66d2;
+      color: white;
+      font-weight: 800;
+      border-radius: 999px;
+      padding: 11px 16px;
+    }
+  </style>
 </head>
 <body>
+  <header>
+    <h1>Demo Quiz</h1>
+    <p>Le sezioni sono ora separate: Quiz AI e Scienze hanno pagine e contatori indipendenti.</p>
+  </header>
 
-    <canvas id="confettiCanvas"></canvas>
+  <main>
+    <div class="grid">
+      <a class="card" href="../demo-ai/index.html">
+        <h2>Demo Quiz AI</h2>
+        <p>AI, Informatica, Matematica, Inglese, Logica testuale e Logica visiva.</p>
+        <span class="button">Apri Quiz AI</span>
+      </a>
 
-    <main class="page">
-
-        <section class="hero">
-            <div class="hero-badge">Alex AI Quiz Database</div>
-            <h1>Allenati con quiz intelligenti</h1>
-            <p>
-                Scegli categoria, livello e numero di domande. Alla fine ricevi voto,
-                giudizio, corrette, sbagliate e una card finale colorata.
-            </p>
-        </section>
-
-        <section id="loadingBox" class="card info-card">
-            Caricamento database quiz...
-        </section>
-
-        <section id="errorBox" class="card error-card hidden"></section>
-
-        <section id="setupBox" class="card setup-card hidden">
-            <h2>Imposta il test</h2>
-
-            <div class="controls-grid">
-                <label>
-                    Categoria
-                    <select id="categorySelect"></select>
-                </label>
-
-                <label>
-                    Livello
-                    <select id="levelSelect"></select>
-                </label>
-
-                <label>
-                    Numero domande
-                    <select id="questionCountSelect">
-                        <option value="10">10 domande</option>
-                        <option value="20">20 domande</option>
-                        <option value="all">Tutte disponibili</option>
-                    </select>
-                </label>
-            </div>
-
-            <p id="availableInfo" class="available-info"></p>
-
-            <button id="startButton" class="primary-button">
-                Inizia test
-            </button>
-        </section>
-
-        <section id="quizBox" class="card quiz-card hidden">
-
-            <div class="quiz-top">
-                <div>
-                    <span id="progressText" class="pill">Domanda 1/10</span>
-                    <span id="scoreText" class="pill">Corrette: 0</span>
-                </div>
-                <div id="questionMeta" class="meta"></div>
-            </div>
-
-            <div class="progress-bar">
-                <div id="progressFill" class="progress-fill"></div>
-            </div>
-
-            <h2 id="questionText" class="question-title"></h2>
-
-            <div id="questionImageBox" class="question-image-box hidden"></div>
-
-            <div id="optionsBox" class="options-grid"></div>
-
-            <div id="feedbackBox" class="feedback hidden"></div>
-
-            <div id="explanationBox" class="explanation hidden">
-                <h3>Spiegazione</h3>
-                <p id="explanationText"></p>
-            </div>
-
-            <button id="nextButton" class="primary-button hidden">
-                Prossima domanda
-            </button>
-        </section>
-
-        <section id="resultBox" class="card result-card hidden">
-
-            <div id="resultVisual" class="result-visual">
-                <div id="resultEmoji" class="result-emoji">🏆</div>
-                <h2 id="resultTitle">Risultato finale</h2>
-                <p id="resultPhrase"></p>
-            </div>
-
-            <div class="result-grid">
-                <div class="result-stat">
-                    <span>Domande</span>
-                    <strong id="totalQuestionsResult">0</strong>
-                </div>
-
-                <div class="result-stat">
-                    <span>Corrette</span>
-                    <strong id="correctResult">0</strong>
-                </div>
-
-                <div class="result-stat">
-                    <span>Sbagliate</span>
-                    <strong id="wrongResult">0</strong>
-                </div>
-
-                <div class="result-stat">
-                    <span>Percentuale</span>
-                    <strong id="percentageResult">0%</strong>
-                </div>
-            </div>
-
-            <div class="grade-box">
-                <span>Voto finale</span>
-                <strong id="gradeResult">0/10</strong>
-                <p id="judgementResult">Giudizio</p>
-            </div>
-
-            <div class="result-actions">
-                <button id="retryButton" class="primary-button">
-                    Riprova stesso filtro
-                </button>
-
-                <button id="settingsButton" class="secondary-button">
-                    Cambia impostazioni
-                </button>
-            </div>
-        </section>
-
-        <section id="creatorBox" class="card creator-card">
-            <div class="creator-heading">
-                <div>
-                    <span class="section-kicker">Generatore</span>
-                    <h2>Genera un nuovo test</h2>
-                    <p>
-                        Carica un file con più domande, scegli materia e quantità,
-                        poi genera un JSON pronto da riutilizzare.
-                    </p>
-                </div>
-                <span id="creatorQuestionCount" class="pill">0 domande caricate</span>
-            </div>
-
-            <form id="quizCreatorForm" class="creator-form">
-                <div class="creator-grid">
-                    <label>
-                        Titolo quiz
-                        <input id="creatorTitle" type="text" placeholder="Es. Test ingresso informatica">
-                    </label>
-
-                    <label>
-                        Materia
-                        <select id="creatorSubject">
-                            <option value="informatica">Informatica</option>
-                            <option value="ai">AI</option>
-                            <option value="matematica">Matematica</option>
-                            <option value="inglese">Inglese</option>
-                            <option value="logica">Logica</option>
-                            <option value="logica_visiva">Logica visiva</option>
-                            <option value="scienze">Scienze</option>
-                            <option value="fisica">Fisica</option>
-                            <option value="meccanica_quantistica">Meccanica quantistica</option>
-                            <option value="biologia">Biologia</option>
-                            <option value="chimica">Chimica</option>
-                            <option value="medicina">Medicina</option>
-                            <option value="economia">Economia</option>
-                            <option value="diritto">Diritto</option>
-                            <option value="filosofia">Filosofia</option>
-                            <option value="psicologia">Psicologia</option>
-                            <option value="storia">Storia</option>
-                            <option value="italiano">Italiano</option>
-                            <option value="geografia">Geografia</option>
-                            <option value="arte">Arte</option>
-                            <option value="musica">Musica</option>
-                            <option value="altro">Altro</option>
-                        </select>
-                    </label>
-
-                    <label>
-                        Livello
-                        <select id="creatorLevel">
-                            <option value="facile">Facile</option>
-                            <option value="intermedio">Intermedio</option>
-                            <option value="avanzato">Avanzato</option>
-                        </select>
-                    </label>
-                </div>
-
-                <div class="creator-grid">
-                    <label>
-                        Materia personalizzata
-                        <input id="creatorCustomSubject" type="text" placeholder="Es. neuroscienze, robotica, marketing">
-                    </label>
-
-                    <label>
-                        Numero domande
-                        <select id="creatorQuestionMode">
-                            <option value="10">10 domande</option>
-                            <option value="20">20 domande</option>
-                            <option value="all">Tutte le domande trovate</option>
-                            <option value="custom">Numero a scelta</option>
-                        </select>
-                    </label>
-
-                    <label>
-                        Numero personalizzato
-                        <input id="creatorCustomCount" type="number" min="1" max="200" value="10">
-                    </label>
-                </div>
-
-                <label>
-                    File sorgente
-                    <input id="creatorFile" type="file" accept=".json,.txt,.pdf,application/json,text/plain,application/pdf">
-                </label>
-
-                <label>
-                    Oppure incolla testo strutturato
-                    <textarea id="creatorSourceText" rows="8" placeholder="Domanda: ...&#10;A) ...&#10;B) ...&#10;C) ...&#10;D) ...&#10;Corretta: A&#10;Spiegazione: ..."></textarea>
-                </label>
-
-                <div id="creatorStatus" class="creator-status" aria-live="polite"></div>
-
-                <div class="creator-actions">
-                    <button id="generateQuizJsonButton" class="primary-button" type="submit">
-                        Genera nuovo test
-                    </button>
-
-                    <button id="copyQuizJsonButton" class="secondary-button" type="button" disabled>
-                        Copia JSON
-                    </button>
-
-                    <button id="downloadQuizJsonButton" class="secondary-button" type="button" disabled>
-                        Scarica JSON
-                    </button>
-                </div>
-
-                <p class="creator-help">
-                    Genera il tuo test personalizzato: puoi scegliere il tuo campo
-                    di interesse e trasformare il materiale caricato in un JSON pronto.
-                </p>
-            </form>
-
-            <div class="json-preview">
-                <div class="json-preview-header">
-                    <strong>Anteprima JSON</strong>
-                    <span>Compatibile con il motore quiz</span>
-                </div>
-                <pre id="quizJsonOutput">Carica un file o incolla un testo, poi genera il nuovo test.</pre>
-            </div>
-        </section>
-
-    </main>
-
-    <script src="app.js?v=ai-its-440-completo"></script>
-
-<footer class="demo-footer" id="demoFooter">
-    <p>
-        Progetto completo con database, demo interattiva e controlli qualità automatici.
-    </p>
-    <a href="https://github.com/aleb2016-maker/alex-ai-quiz-database" target="_blank" rel="noopener noreferrer">
-        Vedi il progetto su GitHub
-    </a>
-</footer>
-
+      <a class="card" href="../demo-scienze/index.html">
+        <h2>Demo Scienze</h2>
+        <p>Scienze generali, Biologia, Chimica, Fisica e Fisica quantistica.</p>
+        <span class="button">Apri Scienze</span>
+      </a>
+    </div>
+  </main>
 </body>
 </html>
