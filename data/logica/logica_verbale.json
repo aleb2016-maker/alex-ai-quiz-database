@@ -67,5 +67,159 @@
     "difficolta": 3,
     "distrattore_forte": "prova → verdetto",
     "motivo_distrattore_forte": "È vicino perché collega un elemento osservato a una conclusione, ma è sbagliato perché prova e verdetto indicano un rapporto più forte e conclusivo rispetto a sintomo e diagnosi."
+  },
+  {
+    "id": "LOG-VER-INT-0004",
+    "categoria": "logica",
+    "sottocategoria": "logica_verbale",
+    "livello": "intermedio",
+    "domanda": "Quale coppia mantiene meglio la relazione: bozza → documento finale?",
+    "opzioni": [
+      "prototipo → prodotto definitivo",
+      "bozza → revisione",
+      "indice → documento finale",
+      "idea → titolo"
+    ],
+    "risposta_corretta": "prototipo → prodotto definitivo",
+    "spiegazione": "Una bozza è una versione iniziale che può evolvere in un documento finale. Allo stesso modo, un prototipo è una versione iniziale che può evolvere in un prodotto definitivo. Bozza → revisione indica una fase intermedia, non il passaggio completo alla versione finale.",
+    "tags": [
+      "analogie",
+      "relazioni"
+    ],
+    "difficolta": 2,
+    "distrattore_forte": "bozza → revisione",
+    "motivo_distrattore_forte": "È vicino perché riguarda il miglioramento di una bozza, ma è sbagliato perché la revisione è una fase intermedia, non il prodotto finale equivalente."
+  },
+  {
+    "id": "LOG-VER-FAC-0101",
+    "categoria": "logica",
+    "sottocategoria": "logica_verbale",
+    "livello": "facile",
+    "domanda": "Quale parola completa meglio l'analogia: caldo sta a freddo come alto sta a ___?",
+    "opzioni": [
+      "basso",
+      "piccolo",
+      "lungo",
+      "vicino"
+    ],
+    "risposta_corretta": "basso",
+    "spiegazione": "Caldo e freddo sono contrari. Seguendo la stessa logica, il contrario di alto è basso. Piccolo è vicino come idea generale di dimensione, ma non è il contrario diretto di alto.",
+    "tags": [
+      "analogia",
+      "contrari",
+      "logica_verbale"
+    ],
+    "difficolta": 1,
+    "distrattore_forte": "piccolo",
+    "motivo_distrattore_forte": "È vicino perché riguarda una grandezza o dimensione, ma è sbagliato perché il contrario diretto di alto è basso, non piccolo."
+  },
+  {
+    "id": "LOG-VER-INT-0101",
+    "categoria": "logica",
+    "sottocategoria": "logica_verbale",
+    "livello": "intermedio",
+    "domanda": "Completa l'analogia: medico sta a ospedale come insegnante sta a ___?",
+    "opzioni": [
+      "scuola",
+      "classe",
+      "lezione",
+      "libro"
+    ],
+    "risposta_corretta": "scuola",
+    "spiegazione": "Il medico lavora tipicamente in ospedale. Allo stesso modo, l'insegnante lavora tipicamente in una scuola. Classe e lezione sono collegate all'insegnante, ma non rappresentano il luogo generale equivalente.",
+    "tags": [
+      "analogie",
+      "relazioni",
+      "logica_verbale"
+    ],
+    "difficolta": 2,
+    "distrattore_forte": "classe",
+    "motivo_distrattore_forte": "È vicino perché l'insegnante lavora spesso in classe, ma la relazione più generale equivalente a medico → ospedale è insegnante → scuola."
+  },
+  {
+    "id": "LOG-VER-AV-0101",
+    "categoria": "logica",
+    "sottocategoria": "logica_verbale",
+    "livello": "avanzato",
+    "domanda": "Completa l'analogia: allenamento sta a miglioramento come studio sta a ___?",
+    "opzioni": [
+      "apprendimento",
+      "interrogazione",
+      "lezione",
+      "materia"
+    ],
+    "risposta_corretta": "apprendimento",
+    "spiegazione": "L'allenamento può portare a un miglioramento. Allo stesso modo, lo studio può portare ad apprendimento. Interrogazione e lezione sono collegate allo studio, ma non rappresentano il risultato logico più diretto.",
+    "tags": [
+      "analogie",
+      "causa_effetto",
+      "logica_verbale"
+    ],
+    "difficolta": 3,
+    "distrattore_forte": "interrogazione",
+    "motivo_distrattore_forte": "È vicino perché è collegata allo studio, ma è sbagliato perché l'interrogazione è una verifica, mentre l'apprendimento è il risultato dello studio."
+  },
+  {
+    "id": "LOG-VER-FAC-0102",
+    "categoria": "logica",
+    "sottocategoria": "logica_verbale",
+    "livello": "facile",
+    "domanda": "Quale parola non appartiene allo stesso gruppo?",
+    "opzioni": [
+      "martello",
+      "armadio",
+      "tavolo",
+      "sedia"
+    ],
+    "risposta_corretta": "martello",
+    "spiegazione": "Tavolo, sedia e armadio sono mobili. Martello è un attrezzo, quindi non appartiene allo stesso gruppo.",
+    "tags": [
+      "classificazione",
+      "intruso",
+      "logica_verbale"
+    ],
+    "difficolta": 1,
+    "distrattore_forte": "armadio",
+    "motivo_distrattore_forte": "È vicino perché è comunque un oggetto della casa, ma è sbagliato perché appartiene al gruppo dei mobili come tavolo e sedia."
+  },
+  {
+    "id": "LOG-VER-INT-0102",
+    "categoria": "logica",
+    "sottocategoria": "logica_verbale",
+    "livello": "intermedio",
+    "domanda": "Quale coppia mantiene la stessa relazione di: seme : pianta?",
+    "opzioni": [
+      "uovo : uccello",
+      "germoglio : pianta",
+      "foglia : ramo",
+      "frutto : albero"
+    ],
+    "risposta_corretta": "uovo : uccello",
+    "spiegazione": "Dal seme può svilupparsi una pianta. In modo simile, dall'uovo può svilupparsi un uccello. Germoglio : pianta è vicino, ma rappresenta una fase già successiva allo sviluppo iniziale, mentre seme e uovo sono punti di origine.",
+    "tags": [
+      "analogie",
+      "relazioni",
+      "logica_verbale"
+    ],
+    "difficolta": 2,
+    "distrattore_forte": "germoglio : pianta",
+    "motivo_distrattore_forte": "È vicino perché anche il germoglio può diventare una pianta, ma è sbagliato rispetto all'analogia più precisa: seme e uovo sono elementi iniziali da cui nasce lo sviluppo."
+  },
+  {
+    "id": "LOG-VER-AV-0103",
+    "categoria": "logica",
+    "livello": "avanzato",
+    "difficolta": "avanzato",
+    "domanda": "Completa l'analogia: biblioteca : libri = pinacoteca : ?",
+    "opzioni": [
+      "quadri",
+      "cataloghi",
+      "sculture",
+      "cornici"
+    ],
+    "risposta_corretta": "quadri",
+    "spiegazione": "Una biblioteca è un luogo in cui si raccolgono e consultano libri. Una pinacoteca è un luogo in cui si raccolgono ed espongono quadri.",
+    "distrattore_forte": "cataloghi",
+    "motivo_distrattore_forte": "È plausibile perché può essere presente in una pinacoteca, ma non rappresenta l'oggetto principale dell'analogia."
   }
 ]

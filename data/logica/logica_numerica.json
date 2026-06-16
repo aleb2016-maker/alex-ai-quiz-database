@@ -67,5 +67,166 @@
     "difficolta": 3,
     "distrattore_forte": "44",
     "motivo_distrattore_forte": "È vicino perché continua con +4, una regola presente nella sequenza, ma sbaglia perché la sequenza alterna +4 e ×2: dopo 40 bisogna fare ×2."
+  },
+  {
+    "id": "LOG-NUM-AV-0004",
+    "categoria": "logica",
+    "sottocategoria": "logica_numerica",
+    "livello": "avanzato",
+    "domanda": "Completa la sequenza: 5, 11, 10, 21, 20, 41, ?",
+    "opzioni": [
+      "40",
+      "42",
+      "39",
+      "43"
+    ],
+    "risposta_corretta": "40",
+    "spiegazione": "La sequenza alterna due operazioni: moltiplicare per 2 e aggiungere 1, poi sottrarre 1. Infatti 5 × 2 + 1 = 11, poi 11 - 1 = 10. Poi 10 × 2 + 1 = 21, poi 21 - 1 = 20. Poi 20 × 2 + 1 = 41, quindi il passo successivo è 41 - 1 = 40.",
+    "tags": [
+      "sequenze",
+      "operazioni_alternate",
+      "logica_numerica"
+    ],
+    "difficolta": 3,
+    "distrattore_forte": "42",
+    "motivo_distrattore_forte": "È vicino perché sembra continuare dopo 41 aumentando ancora, ma la sequenza alterna un aumento e poi -1: dopo 41 viene 40."
+  },
+  {
+    "id": "LOG-NUM-FAC-0101",
+    "categoria": "logica",
+    "sottocategoria": "logica_numerica",
+    "livello": "facile",
+    "domanda": "Una macchina produce 4 pezzi al minuto. Quanti pezzi produce in 5 minuti?",
+    "opzioni": [
+      "20",
+      "16",
+      "24",
+      "25"
+    ],
+    "risposta_corretta": "20",
+    "spiegazione": "La macchina produce 4 pezzi ogni minuto. In 5 minuti produce 4 × 5 = 20 pezzi. 16 sarebbe corretto solo per 4 minuti, mentre 24 sarebbe corretto per 6 minuti.",
+    "tags": [
+      "moltiplicazione",
+      "problemi",
+      "logica_numerica"
+    ],
+    "difficolta": 1,
+    "distrattore_forte": "16",
+    "motivo_distrattore_forte": "È vicino perché usa lo stesso ritmo di 4 pezzi al minuto, ma calcola 4 × 4 invece di 4 × 5."
+  },
+  {
+    "id": "LOG-NUM-INT-0101",
+    "categoria": "logica",
+    "sottocategoria": "logica_numerica",
+    "livello": "intermedio",
+    "domanda": "Un algoritmo parte da 2. A ogni passaggio raddoppia il valore e aggiunge 1. Dopo quattro passaggi quale valore ottiene?",
+    "opzioni": [
+      "47",
+      "46",
+      "45",
+      "49"
+    ],
+    "risposta_corretta": "47",
+    "spiegazione": "Partiamo da 2. Passaggio 1: 2 × 2 + 1 = 5. Passaggio 2: 5 × 2 + 1 = 11. Passaggio 3: 11 × 2 + 1 = 23. Passaggio 4: 23 × 2 + 1 = 47.",
+    "tags": [
+      "algoritmo",
+      "pattern",
+      "logica_numerica"
+    ],
+    "difficolta": 2,
+    "distrattore_forte": "46",
+    "motivo_distrattore_forte": "È vicino perché sembra derivare dal raddoppio finale di 23, ma dimentica il +1 dell'ultimo passaggio: 23 × 2 + 1 = 47."
+  },
+  {
+    "id": "LOG-NUM-AV-0101",
+    "categoria": "logica",
+    "sottocategoria": "logica_numerica",
+    "livello": "avanzato",
+    "domanda": "Completa la successione: 1, 4, 9, 16, 25, ?",
+    "opzioni": [
+      "36",
+      "35",
+      "49",
+      "30"
+    ],
+    "risposta_corretta": "36",
+    "spiegazione": "La sequenza contiene quadrati perfetti: 1²=1, 2²=4, 3²=9, 4²=16, 5²=25. Il successivo è 6²=36.",
+    "tags": [
+      "successioni",
+      "quadrati",
+      "logica_numerica"
+    ],
+    "difficolta": 3,
+    "distrattore_forte": "35",
+    "motivo_distrattore_forte": "È vicino perché è molto prossimo a 36, ma è sbagliato perché non è un quadrato perfetto della sequenza."
+  },
+  {
+    "id": "LOG-NUM-FAC-0102",
+    "categoria": "logica",
+    "sottocategoria": "logica_numerica",
+    "livello": "facile",
+    "domanda": "Partendo da 3, un numero viene raddoppiato quattro volte. Quale valore si ottiene?",
+    "opzioni": [
+      "48",
+      "24",
+      "36",
+      "64"
+    ],
+    "risposta_corretta": "48",
+    "spiegazione": "Partiamo da 3. Primo raddoppio: 6. Secondo: 12. Terzo: 24. Quarto: 48. 24 è il valore dopo tre raddoppi, quindi è vicino ma incompleto.",
+    "tags": [
+      "raddoppio",
+      "calcolo",
+      "logica_numerica"
+    ],
+    "difficolta": 1,
+    "distrattore_forte": "24",
+    "motivo_distrattore_forte": "È vicino perché segue correttamente i raddoppi, ma si ferma al terzo raddoppio invece di arrivare al quarto."
+  },
+  {
+    "id": "LOG-NUM-INT-0102",
+    "categoria": "logica",
+    "sottocategoria": "logica_numerica",
+    "livello": "intermedio",
+    "domanda": "Completa la successione: 30, 27, 23, 18, ?",
+    "opzioni": [
+      "12",
+      "13",
+      "14",
+      "15"
+    ],
+    "risposta_corretta": "12",
+    "spiegazione": "Le diminuzioni aumentano di 1 ogni volta: -3, -4, -5. Dopo 18 bisogna togliere 6, quindi 18 - 6 = 12.",
+    "tags": [
+      "successioni",
+      "differenze",
+      "logica_numerica"
+    ],
+    "difficolta": 2,
+    "distrattore_forte": "13",
+    "motivo_distrattore_forte": "È vicino perché continua a diminuire la sequenza, ma usa una sottrazione di 5 invece della sottrazione corretta di 6."
+  },
+  {
+    "id": "LOG-NUM-AV-0102",
+    "categoria": "logica",
+    "sottocategoria": "logica_numerica",
+    "livello": "avanzato",
+    "domanda": "Le differenze tra valori consecutivi sono 4, 6, 8 e 10. Se l'ultimo valore noto è 30, quale sarà il valore successivo?",
+    "opzioni": [
+      "42",
+      "40",
+      "44",
+      "48"
+    ],
+    "risposta_corretta": "42",
+    "spiegazione": "Le differenze aumentano di 2: 4, 6, 8, 10. La differenza successiva è 12. Quindi 30 + 12 = 42.",
+    "tags": [
+      "differenze",
+      "pattern",
+      "logica_numerica"
+    ],
+    "difficolta": 3,
+    "distrattore_forte": "40",
+    "motivo_distrattore_forte": "È vicino perché aggiunge ancora 10 all'ultimo valore noto, ma è sbagliato perché la differenza deve aumentare a 12."
   }
 ]
