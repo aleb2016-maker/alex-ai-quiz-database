@@ -48,6 +48,7 @@ CHIAVI_RISPOSTA = [
 
 CHIAVI_REGOLA_VISIVA = [
     "regola_visiva",
+    "visual_logic",
     "regola",
     "pattern",
     "logica",
@@ -186,20 +187,63 @@ def contiene_parole_chiave_visive(testo):
     testo = normalizza_testo(testo).lower()
 
     parole_chiave = [
+        # parole generali
         "forma",
         "colore",
+        "colori",
         "lati",
         "lato",
         "oggetti",
         "oggetto",
         "interni",
         "interno",
-        "pallini",
-        "triangoli",
-        "alternanza",
-        "speculare",
-        "rotazione",
+        "trasformazione",
+        "modello",
         "sequenza",
+        "matrice",
+        "griglia",
+
+        # forme
+        "cerchio",
+        "cerchi",
+        "quadrato",
+        "quadrati",
+        "triangolo",
+        "triangoli",
+        "esagono",
+        "esagoni",
+        "freccia",
+        "frecce",
+        "simbolo",
+        "tassello",
+        "casella",
+
+        # elementi interni
+        "pallino",
+        "pallini",
+        "linea",
+        "linee",
+        "riempimento",
+        "pieno",
+        "vuoto",
+
+        # trasformazioni
+        "alterna",
+        "alternano",
+        "alternanza",
+        "aumenta",
+        "aumentano",
+        "diminuisce",
+        "diminuiscono",
+        "ruota",
+        "rotazione",
+        "orario",
+        "antiorario",
+        "speculare",
+        "fisso",
+        "fissa",
+        "mantiene",
+        "prosegue",
     ]
 
     return [
@@ -237,7 +281,12 @@ def analizza_domanda_visiva(indice, domanda):
     opzioni = estrai_opzioni(domanda)
     risposta = normalizza_testo(primo_valore(domanda, CHIAVI_RISPOSTA))
     regola_visiva = primo_valore(domanda, CHIAVI_REGOLA_VISIVA, default="")
+    testo_regola_visiva = normalizza_testo(regola_visiva)
     spiegazione = normalizza_testo(primo_valore(domanda, CHIAVI_SPIEGAZIONE, default=""))
+
+    # Per valutare se la spiegazione è completa, guardiamo sia la spiegazione
+    # sia la regola strutturata visual_logic, quando esiste.
+    testo_visivo_completo = f"{spiegazione} {testo_regola_visiva}".strip()
 
     if not id_domanda:
         problemi_tecnici.append("ID domanda mancante")
@@ -273,10 +322,10 @@ def analizza_domanda_visiva(indice, domanda):
     if immagini_mancanti:
         problemi_tecnici.append(f"Immagini mancanti: {len(immagini_mancanti)}")
 
-    if not regola_visiva:
+    if not testo_regola_visiva:
         avvisi_qualita.append("Regola visiva non dichiarata in modo strutturato")
 
-    parole_spiegazione = contiene_parole_chiave_visive(spiegazione)
+    parole_spiegazione = contiene_parole_chiave_visive(testo_visivo_completo)
 
     if not spiegazione:
         avvisi_qualita.append("Spiegazione mancante")
