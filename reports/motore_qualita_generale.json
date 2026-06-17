@@ -1980,7 +1980,7 @@
     "problemi_tecnici_totali": 0,
     "avvisi_qualita_reali_totali": 0,
     "errori_linguistici_totali": 0,
-    "note_informative_totali": 51,
+    "note_informative_totali": 52,
     "domande_con_problemi_tecnici": [],
     "domande_con_avvisi_qualita_reali": [],
     "domande_con_errori_linguistici": [],
@@ -2066,26 +2066,6 @@
         ]
       },
       {
-        "id": "AI-FAC-0004",
-        "domanda": "In un sistema di intelligenza artificiale, che cosa rappresentano i dati di addestramento?",
-        "categoria": "ai",
-        "livello": "facile",
-        "opzioni": [
-          "Esempi usati dal modello per imparare schemi e relazioni",
-          "Esempi usati solo per verificare il modello dopo l'addestramento",
-          "Regole scritte manualmente per ogni singola risposta possibile",
-          "Parametri finali già imparati dal modello dopo il training"
-        ],
-        "risposta_corretta": "Esempi usati dal modello per imparare schemi e relazioni",
-        "posizione_risposta": "A",
-        "problemi_tecnici": [],
-        "avvisi_qualita_reali": [],
-        "errori_linguistici": [],
-        "note_informative": [
-          "spiegazione: testo molto lungo, controllare leggibilità"
-        ]
-      },
-      {
         "id": "AI-INT-0004",
         "domanda": "In un sistema RAG, perché si cercano documenti esterni prima di generare la risposta?",
         "categoria": "ai",
@@ -2131,19 +2111,18 @@
         "categoria": "ai",
         "livello": "facile",
         "opzioni": [
-          "Riassumi questo testo in 5 righe usando un linguaggio semplice.",
-          "Riassumi questo testo usando un linguaggio semplice.",
-          "Riscrivi questo testo mantenendo tutti i dettagli principali.",
-          "Riformula il testo senza ridurlo e senza cambiarne il significato."
+          "Riassumi questo testo in 5 righe usando un linguaggio semplice",
+          "Riassumi questo testo usando un linguaggio semplice, ma senza indicare quanto deve essere breve",
+          "Riscrivi questo testo in modo semplice, mantenendo però quasi tutti i dettagli originali",
+          "Riformula questo testo con parole più chiare, ma senza chiedere una vera riduzione"
         ],
-        "risposta_corretta": "Riassumi questo testo in 5 righe usando un linguaggio semplice.",
+        "risposta_corretta": "Riassumi questo testo in 5 righe usando un linguaggio semplice",
         "posizione_risposta": "A",
         "problemi_tecnici": [],
         "avvisi_qualita_reali": [],
         "errori_linguistici": [],
         "note_informative": [
-          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “tutti”",
-          "spiegazione: testo molto lungo, controllare leggibilità"
+          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “tutti”"
         ]
       },
       {
@@ -2314,9 +2293,9 @@
         "livello": "intermedio",
         "opzioni": [
           "Perché chunk troppo grandi o troppo piccoli possono rendere il recupero meno preciso",
-          "Perché chunk più grandi possono contenere più contesto, ma anche mescolare dettagli non pertinenti",
-          "Perché i chunk servono ad addestrare nuovamente il modello prima di ogni risposta",
-          "Perché i chunk modificano in modo permanente i pesi del modello"
+          "Perché chunk molto grandi conservano contesto, ma possono mescolare informazioni non pertinenti",
+          "Perché chunk molto piccoli possono essere precisi, ma rischiano di perdere contesto utile",
+          "Perché la scelta dei chunk migliora il recupero, ma modifica anche i pesi del modello durante la risposta"
         ],
         "risposta_corretta": "Perché chunk troppo grandi o troppo piccoli possono rendere il recupero meno preciso",
         "posizione_risposta": "A",
@@ -2328,23 +2307,23 @@
         ]
       },
       {
-        "id": "AI-FAC-0102",
-        "domanda": "Quale prompt è più chiaro per chiedere un riassunto?",
+        "id": "AI-INT-0102",
+        "domanda": "Quale differenza c'è tra ricerca per parole esatte e ricerca semantica?",
         "categoria": "ai",
-        "livello": "facile",
+        "livello": "intermedio",
         "opzioni": [
-          "Riassumi questo testo in 5 righe indicando le idee principali.",
-          "Riassumi questo testo indicando le idee principali.",
-          "Spiega questo testo mantenendo tutti i dettagli importanti.",
-          "Riscrivi questo testo senza ridurlo e senza selezionare le idee principali."
+          "La ricerca semantica può trovare contenuti simili nel significato anche con parole diverse",
+          "La ricerca semantica può usare parole diverse, ma richiede comunque gli stessi termini principali",
+          "La ricerca per parole esatte può trovare sinonimi, ma solo quando il testo ha la stessa intenzione",
+          "La ricerca per parole esatte confronta il significato, ma funziona meglio se le parole non coincidono"
         ],
-        "risposta_corretta": "Riassumi questo testo in 5 righe indicando le idee principali.",
+        "risposta_corretta": "La ricerca semantica può trovare contenuti simili nel significato anche con parole diverse",
         "posizione_risposta": "A",
         "problemi_tecnici": [],
         "avvisi_qualita_reali": [],
         "errori_linguistici": [],
         "note_informative": [
-          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “tutti”"
+          "spiegazione: testo molto lungo, controllare leggibilità"
         ]
       },
       {
@@ -2384,6 +2363,47 @@
         "avvisi_qualita_reali": [],
         "errori_linguistici": [],
         "note_informative": [
+          "spiegazione: testo molto lungo, controllare leggibilità"
+        ]
+      },
+      {
+        "id": "AI-AV-0104",
+        "domanda": "Qual è un esempio realistico di prompt injection in un'app che legge documenti esterni?",
+        "categoria": "ai",
+        "livello": "avanzato",
+        "opzioni": [
+          "Un documento contiene istruzioni nascoste che provano a far ignorare le regole del sistema",
+          "Un documento contiene testo che sembra informativo, ma prova a essere trattato come istruzione operativa",
+          "Un documento contiene una richiesta esterna, ma viene letto solo come contenuto senza rischi per il comportamento",
+          "Un documento contiene testo ambiguo, ma il rischio riguarda soltanto la qualità linguistica della risposta"
+        ],
+        "risposta_corretta": "Un documento contiene istruzioni nascoste che provano a far ignorare le regole del sistema",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "spiegazione: testo molto lungo, controllare leggibilità"
+        ]
+      },
+      {
+        "id": "AI-AV-0105",
+        "domanda": "Perché in un'app AI conviene separare recupero dei dati, generazione e controllo finale?",
+        "categoria": "ai",
+        "livello": "avanzato",
+        "opzioni": [
+          "Per rendere più chiaro dove nasce un errore e migliorare ogni fase separatamente",
+          "Per analizzare recupero, generazione e controllo, ma senza collegare gli errori al risultato finale",
+          "Per separare le fasi dell'app, ma impedendo al modello di usare fonti esterne quando servono",
+          "Per rendere il sistema più ordinato, ma evitando controlli dopo la generazione della risposta"
+        ],
+        "risposta_corretta": "Per rendere più chiaro dove nasce un errore e migliorare ogni fase separatamente",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "spiegazione: possibile frase poco fluida, controllare gli incontri vocalici",
           "spiegazione: testo molto lungo, controllare leggibilità"
         ]
       },
@@ -2465,26 +2485,6 @@
         "errori_linguistici": [],
         "note_informative": [
           "spiegazione: testo molto lungo, controllare leggibilità"
-        ]
-      },
-      {
-        "id": "AI-FAC-0203",
-        "domanda": "Perché un dataset di addestramento è importante in un sistema di machine learning?",
-        "categoria": "ai",
-        "livello": "facile",
-        "opzioni": [
-          "Perché fornisce esempi da cui il modello può imparare relazioni e schemi.",
-          "Perché sostituisce completamente la fase di valutazione del modello.",
-          "Perché rende inutile scegliere un algoritmo adatto al problema.",
-          "Perché contiene risposte finali che il modello dovrebbe ricopiare senza imparare schemi generali."
-        ],
-        "risposta_corretta": "Perché fornisce esempi da cui il modello può imparare relazioni e schemi.",
-        "posizione_risposta": "A",
-        "problemi_tecnici": [],
-        "avvisi_qualita_reali": [],
-        "errori_linguistici": [],
-        "note_informative": [
-          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “completamente”"
         ]
       },
       {
@@ -2824,6 +2824,26 @@
           "Per gestire richieste non adatte, ma sostituendo la progettazione del comportamento con un blocco generico"
         ],
         "risposta_corretta": "Per limitare comportamenti rischiosi, applicare regole e gestire richieste non adatte",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "spiegazione: testo molto lungo, controllare leggibilità"
+        ]
+      },
+      {
+        "id": "AI-AV-0212",
+        "domanda": "Perché valutare le allucinazioni richiede spesso più di una metrica automatica semplice?",
+        "categoria": "ai",
+        "livello": "avanzato",
+        "opzioni": [
+          "Perché serve confrontare la risposta con fonti, contesto e correttezza fattuale, non solo con la forma del testo",
+          "Perché una risposta può sembrare ben scritta, ma richiedere verifica su fonti e contesto",
+          "Perché una metrica può premiare fluidità e somiglianza, ma non garantire correttezza fattuale",
+          "Perché valutare le allucinazioni richiede controllo del contenuto, ma può ignorare il supporto delle fonti"
+        ],
+        "risposta_corretta": "Perché serve confrontare la risposta con fonti, contesto e correttezza fattuale, non solo con la forma del testo",
         "posizione_risposta": "A",
         "problemi_tecnici": [],
         "avvisi_qualita_reali": [],

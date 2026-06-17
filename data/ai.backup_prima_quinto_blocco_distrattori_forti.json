@@ -109,12 +109,12 @@
     "domanda": "In un sistema di intelligenza artificiale, che cosa rappresentano i dati di addestramento?",
     "opzioni": [
       "Esempi usati dal modello per imparare schemi e relazioni",
-      "Esempi usati dal modello, ma solo per controllare il risultato dopo l'addestramento",
-      "Esempi da cui il modello apprende, ma già trasformati nei parametri finali del modello",
-      "Esempi usati nel training, ma scritti come regole manuali per ogni risposta possibile"
+      "Esempi usati solo per verificare il modello dopo l'addestramento",
+      "Regole scritte manualmente per ogni singola risposta possibile",
+      "Parametri finali già imparati dal modello dopo il training"
     ],
     "risposta_corretta": "Esempi usati dal modello per imparare schemi e relazioni",
-    "spiegazione": "I dati di addestramento sono esempi usati dal modello per imparare schemi e relazioni. Non sono soltanto dati di controllo dopo il training, non coincidono con i parametri finali e non sono regole manuali scritte risposta per risposta.",
+    "spiegazione": "I dati di addestramento sono esempi usati dal modello per imparare schemi e relazioni. I dati di test servono invece a verificare il modello dopo l'addestramento. Le regole manuali appartengono più ai sistemi esperti tradizionali, mentre i parametri sono il risultato dell'apprendimento.",
     "tags": [
       "ai",
       "training",
@@ -122,9 +122,7 @@
     ],
     "difficolta": 1,
     "distrattore_forte": "Esempi usati solo per verificare il modello dopo l'addestramento",
-    "motivo_distrattore_forte": "È vicino perché parla comunque di esempi e modello, ma confonde i dati di addestramento con i dati di test o validazione.",
-    "regola_distrattori": "tre_distrattori_forti",
-    "criterio_distrattori": "Ogni risposta errata deve condividere il concetto centrale della corretta e diventare sbagliata per un dettaglio tecnico, logico o pratico."
+    "motivo_distrattore_forte": "È vicino perché parla comunque di esempi e modello, ma confonde i dati di addestramento con i dati di test o validazione."
   },
   {
     "id": "AI-INT-0004",
@@ -183,13 +181,13 @@
     "livello": "facile",
     "domanda": "Quale prompt è più chiaro per chiedere a un modello AI di riassumere un testo?",
     "opzioni": [
-      "Riassumi questo testo in 5 righe usando un linguaggio semplice",
-      "Riassumi questo testo usando un linguaggio semplice, ma senza indicare quanto deve essere breve",
-      "Riscrivi questo testo in modo semplice, mantenendo però quasi tutti i dettagli originali",
-      "Riformula questo testo con parole più chiare, ma senza chiedere una vera riduzione"
+      "Riassumi questo testo in 5 righe usando un linguaggio semplice.",
+      "Riassumi questo testo usando un linguaggio semplice.",
+      "Riscrivi questo testo mantenendo tutti i dettagli principali.",
+      "Riformula il testo senza ridurlo e senza cambiarne il significato."
     ],
-    "risposta_corretta": "Riassumi questo testo in 5 righe usando un linguaggio semplice",
-    "spiegazione": "Il prompt più chiaro specifica compito, lunghezza e stile: riassumere il testo in 5 righe usando un linguaggio semplice. Gli altri prompt sono vicini, ma mancano il vincolo di lunghezza oppure chiedono una riscrittura invece di un riassunto breve.",
+    "risposta_corretta": "Riassumi questo testo in 5 righe usando un linguaggio semplice.",
+    "spiegazione": "Il prompt corretto specifica chiaramente il compito, la lunghezza e lo stile: un riassunto in 5 righe con linguaggio semplice. Il distrattore B è quasi corretto, ma è meno preciso perché non indica la lunghezza. C e D chiedono una riscrittura o riformulazione, non un vero riassunto breve.",
     "tags": [
       "ai",
       "prompt",
@@ -197,9 +195,7 @@
     ],
     "difficolta": 1,
     "distrattore_forte": "Riassumi questo testo usando un linguaggio semplice.",
-    "motivo_distrattore_forte": "È molto vicino perché chiede comunque un riassunto semplice, ma è meno preciso perché manca il vincolo delle 5 righe.",
-    "regola_distrattori": "tre_distrattori_forti",
-    "criterio_distrattori": "Ogni risposta errata deve condividere il concetto centrale della corretta e diventare sbagliata per un dettaglio tecnico, logico o pratico."
+    "motivo_distrattore_forte": "È molto vicino perché chiede comunque un riassunto semplice, ma è meno preciso perché manca il vincolo delle 5 righe."
   },
   {
     "id": "AI-INT-0005",
@@ -459,12 +455,12 @@
     "domanda": "Perché un modello AI può produrre risultati distorti anche se l'algoritmo è implementato correttamente?",
     "opzioni": [
       "Perché i dati, gli obiettivi di addestramento o le metriche possono introdurre distorsioni",
-      "Perché i dati possono introdurre distorsioni, ma obiettivi e metriche restano neutrali",
-      "Perché le metriche possono orientare il risultato, ma i dati iniziali hanno un ruolo marginale",
-      "Perché gli obiettivi di addestramento possono incidere, ma dati e metriche non modificano il comportamento"
+      "Perché i dati sbilanciati possono introdurre distorsioni, ma obiettivi e metriche non incidono",
+      "Perché una metrica scelta male può influenzare il risultato, mentre i dati di partenza hanno un ruolo secondario",
+      "Perché solo l'obiettivo di addestramento può creare distorsioni, mentre dati e metriche non contano"
     ],
     "risposta_corretta": "Perché i dati, gli obiettivi di addestramento o le metriche possono introdurre distorsioni",
-    "spiegazione": "Un modello può produrre risultati distorti anche con algoritmo implementato correttamente perché dati, obiettivi di addestramento e metriche possono introdurre distorsioni. Limitare il problema a una sola causa rende la spiegazione incompleta.",
+    "spiegazione": "Un modello può essere implementato correttamente ma produrre risultati distorti se dati, obiettivi o metriche sono sbilanciati. Le altre opzioni indicano cause reali, ma le restringono troppo e quindi non spiegano il problema generale.",
     "tags": [
       "ai",
       "bias",
@@ -472,9 +468,7 @@
     ],
     "difficolta": 3,
     "distrattore_forte": "Perché i dati sbilanciati possono introdurre distorsioni, ma obiettivi e metriche non incidono",
-    "motivo_distrattore_forte": "È vicino perché riconosce il ruolo dei dati sbilanciati, ma è sbagliato perché anche obiettivi e metriche possono introdurre distorsioni.",
-    "regola_distrattori": "tre_distrattori_forti",
-    "criterio_distrattori": "Ogni risposta errata deve condividere il concetto centrale della corretta e diventare sbagliata per un dettaglio tecnico, logico o pratico."
+    "motivo_distrattore_forte": "È vicino perché riconosce il ruolo dei dati sbilanciati, ma è sbagliato perché anche obiettivi e metriche possono introdurre distorsioni."
   },
   {
     "id": "AI-INT-0009",
@@ -534,12 +528,12 @@
     "domanda": "Quale attività descrive meglio un modello di intelligenza artificiale?",
     "opzioni": [
       "Riconoscere schemi nei dati e usare questi schemi per produrre risposte o previsioni",
-      "Riconoscere schemi nei dati, ma usarli principalmente per copiare esempi già presenti",
-      "Memorizzare dati ricevuti, ma senza trasformarli in schemi utili per nuove previsioni",
-      "Organizzare informazioni digitali, ma senza usarle per rispondere o prevedere casi nuovi"
+      "Riconoscere schemi nei dati ma usarli solo per copiare risposte già presenti negli esempi",
+      "Memorizzare dati senza estrarre schemi utili per fare previsioni",
+      "Salvare file del computer senza usarli per produrre risposte o previsioni"
     ],
     "risposta_corretta": "Riconoscere schemi nei dati e usare questi schemi per produrre risposte o previsioni",
-    "spiegazione": "Un modello di intelligenza artificiale riconosce schemi nei dati e li usa per produrre risposte o previsioni. Non si limita a copiare esempi, non è solo memoria grezza e non è un semplice archivio di informazioni.",
+    "spiegazione": "Un modello di intelligenza artificiale impara schemi dai dati e li usa per classificare, prevedere, generare testo o prendere decisioni. Non si limita a copiare esempi già presenti e non è semplicemente un archivio di file.",
     "tags": [
       "ai",
       "modelli",
@@ -547,9 +541,7 @@
     ],
     "difficolta": 1,
     "distrattore_forte": "Riconoscere schemi nei dati ma usarli solo per copiare risposte già presenti negli esempi",
-    "motivo_distrattore_forte": "È vicino perché parla di schemi nei dati, ma è sbagliato perché un modello AI non serve solo a copiare risposte già presenti: usa gli schemi per generalizzare.",
-    "regola_distrattori": "tre_distrattori_forti",
-    "criterio_distrattori": "Ogni risposta errata deve condividere il concetto centrale della corretta e diventare sbagliata per un dettaglio tecnico, logico o pratico."
+    "motivo_distrattore_forte": "È vicino perché parla di schemi nei dati, ma è sbagliato perché un modello AI non serve solo a copiare risposte già presenti: usa gli schemi per generalizzare."
   },
   {
     "id": "AI-INT-0101",
@@ -559,12 +551,12 @@
     "domanda": "In un sistema RAG, perché la scelta dei chunk del documento è importante?",
     "opzioni": [
       "Perché chunk troppo grandi o troppo piccoli possono rendere il recupero meno preciso",
-      "Perché chunk molto grandi conservano contesto, ma possono mescolare informazioni non pertinenti",
-      "Perché chunk molto piccoli possono essere precisi, ma rischiano di perdere contesto utile",
-      "Perché la scelta dei chunk migliora il recupero, ma modifica anche i pesi del modello durante la risposta"
+      "Perché chunk più grandi possono contenere più contesto, ma anche mescolare dettagli non pertinenti",
+      "Perché i chunk servono ad addestrare nuovamente il modello prima di ogni risposta",
+      "Perché i chunk modificano in modo permanente i pesi del modello"
     ],
     "risposta_corretta": "Perché chunk troppo grandi o troppo piccoli possono rendere il recupero meno preciso",
-    "spiegazione": "In un sistema RAG la scelta dei chunk è importante perché chunk troppo grandi o troppo piccoli possono rendere il recupero meno preciso. I chunk grandi possono mescolare contenuti non pertinenti, quelli piccoli possono perdere contesto, ma la loro scelta non modifica i pesi del modello.",
+    "spiegazione": "Nei sistemi RAG i documenti vengono spesso divisi in parti più piccole, chiamate chunk. Se i chunk sono troppo grandi, possono contenere troppe informazioni non pertinenti. Se sono troppo piccoli, possono perdere contesto utile. La dimensione dei chunk influenza quindi la qualità del recupero.",
     "tags": [
       "rag",
       "chunking",
@@ -572,9 +564,7 @@
     ],
     "difficolta": 2,
     "distrattore_forte": "Perché chunk più grandi possono contenere più contesto, ma anche mescolare dettagli non pertinenti",
-    "motivo_distrattore_forte": "È vicino perché la dimensione del chunk conta davvero, ma non basta dire che chunk più grandi siano automaticamente migliori.",
-    "regola_distrattori": "tre_distrattori_forti",
-    "criterio_distrattori": "Ogni risposta errata deve condividere il concetto centrale della corretta e diventare sbagliata per un dettaglio tecnico, logico o pratico."
+    "motivo_distrattore_forte": "È vicino perché la dimensione del chunk conta davvero, ma non basta dire che chunk più grandi siano automaticamente migliori."
   },
   {
     "id": "AI-AV-0102",
@@ -608,13 +598,13 @@
     "livello": "facile",
     "domanda": "Quale prompt è più chiaro per chiedere un riassunto?",
     "opzioni": [
-      "Riassumi questo testo in 5 righe indicando le idee principali",
-      "Riassumi questo testo indicando le idee principali, ma senza fissare una lunghezza precisa",
-      "Spiega questo testo indicando i punti importanti, ma mantenendo una forma più estesa",
-      "Riscrivi questo testo in modo ordinato, ma senza chiedere di selezionare solo le idee principali"
+      "Riassumi questo testo in 5 righe indicando le idee principali.",
+      "Riassumi questo testo indicando le idee principali.",
+      "Spiega questo testo mantenendo tutti i dettagli importanti.",
+      "Riscrivi questo testo senza ridurlo e senza selezionare le idee principali."
     ],
-    "risposta_corretta": "Riassumi questo testo in 5 righe indicando le idee principali",
-    "spiegazione": "Il prompt più chiaro chiede di riassumere il testo in 5 righe indicando le idee principali. Le altre opzioni sono vicine al lavoro sul testo, ma non uniscono in modo preciso compito, lunghezza e selezione delle idee essenziali.",
+    "risposta_corretta": "Riassumi questo testo in 5 righe indicando le idee principali.",
+    "spiegazione": "Un prompt chiaro specifica cosa fare e con quale formato. Dire 'in 5 righe' e 'idee principali' rende il compito più controllabile. Le altre opzioni sono vicine al lavoro sul testo, ma non danno lo stesso vincolo preciso di riassunto breve.",
     "tags": [
       "prompt",
       "riassunto",
@@ -622,9 +612,7 @@
     ],
     "difficolta": 1,
     "distrattore_forte": "Riassumi questo testo indicando le idee principali.",
-    "motivo_distrattore_forte": "È molto vicino perché chiede comunque un riassunto delle idee principali, ma è meno preciso perché manca il vincolo delle 5 righe.",
-    "regola_distrattori": "tre_distrattori_forti",
-    "criterio_distrattori": "Ogni risposta errata deve condividere il concetto centrale della corretta e diventare sbagliata per un dettaglio tecnico, logico o pratico."
+    "motivo_distrattore_forte": "È molto vicino perché chiede comunque un riassunto delle idee principali, ma è meno preciso perché manca il vincolo delle 5 righe."
   },
   {
     "id": "AI-INT-0102",
@@ -634,12 +622,12 @@
     "domanda": "Quale differenza c'è tra ricerca per parole esatte e ricerca semantica?",
     "opzioni": [
       "La ricerca semantica può trovare contenuti simili nel significato anche con parole diverse",
-      "La ricerca semantica può usare parole diverse, ma richiede comunque gli stessi termini principali",
-      "La ricerca per parole esatte può trovare sinonimi, ma solo quando il testo ha la stessa intenzione",
-      "La ricerca per parole esatte confronta il significato, ma funziona meglio se le parole non coincidono"
+      "La ricerca semantica può usare parole diverse, ma funziona solo se restano presenti gli stessi termini principali",
+      "La ricerca per parole esatte riconosce meglio sinonimi e intenzione rispetto alla ricerca semantica",
+      "La ricerca per parole esatte trova sinonimi anche quando non compaiono termini uguali"
     ],
     "risposta_corretta": "La ricerca semantica può trovare contenuti simili nel significato anche con parole diverse",
-    "spiegazione": "La ricerca semantica può trovare contenuti simili nel significato anche quando le parole sono diverse. La ricerca per parole esatte dipende di più dalle corrispondenze letterali e non riconosce automaticamente sinonimi o intenzioni come fa una ricerca basata sul significato.",
+    "spiegazione": "La ricerca per parole esatte cerca corrispondenze letterali. La ricerca semantica invece prova a confrontare il significato dei contenuti, quindi può trovare testi pertinenti anche se usano parole diverse dalla domanda.",
     "tags": [
       "ricerca_semantica",
       "similarita",
@@ -647,9 +635,7 @@
     ],
     "difficolta": 2,
     "distrattore_forte": "La ricerca semantica può usare parole diverse, ma funziona solo se restano presenti gli stessi termini principali",
-    "motivo_distrattore_forte": "È vicino perché parla di parole diverse e ricerca semantica, ma è sbagliato perché la ricerca semantica può basarsi sul significato anche senza gli stessi termini principali.",
-    "regola_distrattori": "tre_distrattori_forti",
-    "criterio_distrattori": "Ogni risposta errata deve condividere il concetto centrale della corretta e diventare sbagliata per un dettaglio tecnico, logico o pratico."
+    "motivo_distrattore_forte": "È vicino perché parla di parole diverse e ricerca semantica, ma è sbagliato perché la ricerca semantica può basarsi sul significato anche senza gli stessi termini principali."
   },
   {
     "id": "AI-AV-0103",
@@ -684,12 +670,12 @@
     "domanda": "Perché i dati di addestramento sono importanti per un modello AI?",
     "opzioni": [
       "Perché influenzano ciò che il modello impara e come risponde",
-      "Perché influenzano ciò che il modello impara, ma rendono superfluo controllare le risposte",
-      "Perché servono a verificare il modello dopo l'addestramento, più che a farlo imparare",
-      "Perché definiscono esempi utili, ma obbligano il modello a ricopiare risposte predefinite"
+      "Perché influenzano il modello, ma rendono inutile controllare le risposte generate",
+      "Perché servono solo a verificare il modello dopo l'addestramento",
+      "Perché definiscono manualmente ogni risposta che il modello dovrà dare"
     ],
     "risposta_corretta": "Perché influenzano ciò che il modello impara e come risponde",
-    "spiegazione": "I dati di addestramento sono importanti perché influenzano ciò che il modello impara e come risponde. Questo non rende inutili i controlli, non li trasforma in dati di semplice verifica e non significa che il modello debba ricopiare risposte predefinite.",
+    "spiegazione": "Il modello impara dai dati disponibili durante l'addestramento. Se i dati sono incompleti, distorti o poco adatti, anche le risposte possono risentirne. Questo però non elimina la necessità di controllare le risposte generate.",
     "tags": [
       "dataset",
       "addestramento",
@@ -697,9 +683,7 @@
     ],
     "difficolta": 1,
     "distrattore_forte": "Perché influenzano il modello, ma rendono inutile controllare le risposte generate",
-    "motivo_distrattore_forte": "È vicino perché riconosce che i dati influenzano il modello, ma è sbagliato perché le risposte vanno comunque controllate.",
-    "regola_distrattori": "tre_distrattori_forti",
-    "criterio_distrattori": "Ogni risposta errata deve condividere il concetto centrale della corretta e diventare sbagliata per un dettaglio tecnico, logico o pratico."
+    "motivo_distrattore_forte": "È vicino perché riconosce che i dati influenzano il modello, ma è sbagliato perché le risposte vanno comunque controllate."
   },
   {
     "id": "AI-INT-0103",
@@ -734,12 +718,12 @@
     "domanda": "Qual è un esempio realistico di prompt injection in un'app che legge documenti esterni?",
     "opzioni": [
       "Un documento contiene istruzioni nascoste che provano a far ignorare le regole del sistema",
-      "Un documento contiene testo che sembra informativo, ma prova a essere trattato come istruzione operativa",
-      "Un documento contiene una richiesta esterna, ma viene letto solo come contenuto senza rischi per il comportamento",
-      "Un documento contiene testo ambiguo, ma il rischio riguarda soltanto la qualità linguistica della risposta"
+      "Un documento contiene testo che il modello potrebbe scambiare per istruzioni operative",
+      "Un utente scrive una domanda troppo breve per essere capita",
+      "Una risposta contiene una parola inglese invece di una italiana"
     ],
     "risposta_corretta": "Un documento contiene istruzioni nascoste che provano a far ignorare le regole del sistema",
-    "spiegazione": "Un esempio realistico di prompt injection è un documento esterno che contiene istruzioni nascoste per far ignorare le regole del sistema. Il rischio nasce quando contenuto apparentemente informativo prova a influenzare il comportamento del modello o degli strumenti collegati.",
+    "spiegazione": "La prompt injection può arrivare anche da contenuti esterni. Un documento può contenere istruzioni malevole che cercano di far cambiare comportamento al modello o ai tool collegati.",
     "tags": [
       "prompt_injection",
       "sicurezza",
@@ -747,9 +731,7 @@
     ],
     "difficolta": 3,
     "distrattore_forte": "Un documento contiene testo che il modello potrebbe scambiare per istruzioni operative",
-    "motivo_distrattore_forte": "È vicino perché descrive il meccanismo della prompt injection da documenti esterni, ma è meno preciso: la risposta corretta indica istruzioni nascoste progettate per far ignorare le regole del sistema.",
-    "regola_distrattori": "tre_distrattori_forti",
-    "criterio_distrattori": "Ogni risposta errata deve condividere il concetto centrale della corretta e diventare sbagliata per un dettaglio tecnico, logico o pratico."
+    "motivo_distrattore_forte": "È vicino perché descrive il meccanismo della prompt injection da documenti esterni, ma è meno preciso: la risposta corretta indica istruzioni nascoste progettate per far ignorare le regole del sistema."
   },
   {
     "id": "AI-FAC-0104",
@@ -759,12 +741,12 @@
     "domanda": "Quale esempio rappresenta meglio un compito di classificazione?",
     "opzioni": [
       "Stabilire se un messaggio è spam o non spam",
-      "Stabilire una categoria per un messaggio, ma senza usare etichette definite in partenza",
-      "Analizzare messaggi simili, ma raggruppandoli senza scegliere una classe finale",
-      "Produrre una risposta a un messaggio, ma usando il testo come se fosse una categoria"
+      "Raggruppare messaggi simili senza etichette già definite",
+      "Generare una risposta automatica a un messaggio",
+      "Scrivere un nuovo messaggio partendo da un tema"
     ],
     "risposta_corretta": "Stabilire se un messaggio è spam o non spam",
-    "spiegazione": "Un compito di classificazione assegna un input a una categoria tra quelle previste, come spam o non spam. Raggruppare senza etichette è clustering, mentre generare una risposta appartiene alla generazione di contenuti.",
+    "spiegazione": "La classificazione assegna un'etichetta a un input. Spam/non spam è un esempio classico perché il modello sceglie una categoria tra alternative definite. Il clustering raggruppa elementi simili, mentre la generazione produce nuovi contenuti.",
     "tags": [
       "classificazione",
       "spam",
@@ -772,9 +754,7 @@
     ],
     "difficolta": 1,
     "distrattore_forte": "Raggruppare messaggi simili senza etichette già definite",
-    "motivo_distrattore_forte": "È vicino perché anche il clustering lavora su gruppi di dati, ma è sbagliato perché nella classificazione le categorie sono già definite.",
-    "regola_distrattori": "tre_distrattori_forti",
-    "criterio_distrattori": "Ogni risposta errata deve condividere il concetto centrale della corretta e diventare sbagliata per un dettaglio tecnico, logico o pratico."
+    "motivo_distrattore_forte": "È vicino perché anche il clustering lavora su gruppi di dati, ma è sbagliato perché nella classificazione le categorie sono già definite."
   },
   {
     "id": "AI-INT-0104",
@@ -809,12 +789,12 @@
     "domanda": "Perché in un'app AI conviene separare recupero dei dati, generazione e controllo finale?",
     "opzioni": [
       "Per rendere più chiaro dove nasce un errore e migliorare ogni fase separatamente",
-      "Per analizzare recupero, generazione e controllo, ma senza collegare gli errori al risultato finale",
-      "Per separare le fasi dell'app, ma impedendo al modello di usare fonti esterne quando servono",
-      "Per rendere il sistema più ordinato, ma evitando controlli dopo la generazione della risposta"
+      "Per analizzare ogni fase separatamente, ma senza collegare gli errori al risultato finale",
+      "Per evitare che il modello usi fonti esterne durante la generazione, anche quando sarebbero utili",
+      "Per impedire all'app di usare database o API"
     ],
     "risposta_corretta": "Per rendere più chiaro dove nasce un errore e migliorare ogni fase separatamente",
-    "spiegazione": "Separare recupero dei dati, generazione e controllo finale aiuta a capire dove nasce un errore e a migliorare ogni fase separatamente. La separazione non deve scollegare gli errori dal risultato finale, non impedisce l'uso di fonti esterne e non elimina il controllo conclusivo.",
+    "spiegazione": "Separare le fasi aiuta a capire se il problema nasce dal retrieval, dal prompt, dalla generazione o dal controllo finale. Questo rende debug e miglioramento molto più ordinati.",
     "tags": [
       "architettura",
       "debug",
@@ -822,9 +802,7 @@
     ],
     "difficolta": 3,
     "distrattore_forte": "Per analizzare ogni fase separatamente, ma senza collegare gli errori al risultato finale",
-    "motivo_distrattore_forte": "È vicino perché parla di analisi separata delle fasi, ma è sbagliato perché separare le fasi serve proprio a collegare gli errori al risultato finale.",
-    "regola_distrattori": "tre_distrattori_forti",
-    "criterio_distrattori": "Ogni risposta errata deve condividere il concetto centrale della corretta e diventare sbagliata per un dettaglio tecnico, logico o pratico."
+    "motivo_distrattore_forte": "È vicino perché parla di analisi separata delle fasi, ma è sbagliato perché separare le fasi serve proprio a collegare gli errori al risultato finale."
   },
   {
     "id": "AI-FAC-0105",
@@ -909,12 +887,12 @@
     "domanda": "Quando si parla di allucinazione in AI, a cosa ci si riferisce?",
     "opzioni": [
       "A una risposta plausibile ma falsa o non verificata",
-      "A una risposta plausibile e incompleta, ma senza informazioni false o inventate",
-      "A una risposta corretta ma troppo breve, quindi poco utile per l'utente",
-      "A una risposta prudente che segnala incertezza invece di inventare informazioni"
+      "A una risposta plausibile ma incompleta, senza informazioni false",
+      "A una risposta corretta ma troppo breve per essere utile",
+      "A una risposta prudente che dichiara chiaramente incertezza"
     ],
     "risposta_corretta": "A una risposta plausibile ma falsa o non verificata",
-    "spiegazione": "Un'allucinazione in AI è una risposta plausibile ma falsa, inventata o non verificata. Una risposta incompleta, breve o prudente può essere migliorabile, ma non è necessariamente un'allucinazione.",
+    "spiegazione": "Un'allucinazione in AI è una risposta che può sembrare credibile, ma contiene informazioni false, inventate o non verificate. Una risposta breve, incompleta o prudente può essere migliorabile, ma non è necessariamente un'allucinazione.",
     "tags": [
       "allucinazioni",
       "affidabilita",
@@ -922,9 +900,7 @@
     ],
     "difficolta": 1,
     "distrattore_forte": "A una risposta plausibile ma incompleta, senza informazioni false",
-    "motivo_distrattore_forte": "È vicino perché descrive una risposta plausibile ma problematica, ma è sbagliato perché l'allucinazione implica falsità, invenzione o mancanza di verifica.",
-    "regola_distrattori": "tre_distrattori_forti",
-    "criterio_distrattori": "Ogni risposta errata deve condividere il concetto centrale della corretta e diventare sbagliata per un dettaglio tecnico, logico o pratico."
+    "motivo_distrattore_forte": "È vicino perché descrive una risposta plausibile ma problematica, ma è sbagliato perché l'allucinazione implica falsità, invenzione o mancanza di verifica."
   },
   {
     "id": "AI-INT-0106",
@@ -1039,15 +1015,13 @@
     "livello": "facile",
     "domanda": "Perché un dataset di addestramento è importante in un sistema di machine learning?",
     "opzioni": [
-      "Perché fornisce esempi da cui il modello può imparare relazioni e schemi",
-      "Perché fornisce esempi di apprendimento, ma sostituisce la valutazione del modello",
-      "Perché contiene dati utili, ma rende meno importante scegliere un algoritmo adatto",
-      "Perché offre esempi al modello, ma serve soprattutto a fargli ricopiare risposte finali"
+      "Perché fornisce esempi da cui il modello può imparare relazioni e schemi.",
+      "Perché sostituisce completamente la fase di valutazione del modello.",
+      "Perché rende inutile scegliere un algoritmo adatto al problema.",
+      "Perché contiene risposte finali che il modello dovrebbe ricopiare senza imparare schemi generali."
     ],
-    "risposta_corretta": "Perché fornisce esempi da cui il modello può imparare relazioni e schemi",
-    "spiegazione": "Un dataset di addestramento è importante perché fornisce esempi da cui il modello può imparare relazioni e schemi. Non sostituisce la valutazione, non rende irrilevante l'algoritmo e non serve a far copiare meccanicamente risposte finali.",
-    "regola_distrattori": "tre_distrattori_forti",
-    "criterio_distrattori": "Ogni risposta errata deve condividere il concetto centrale della corretta e diventare sbagliata per un dettaglio tecnico, logico o pratico."
+    "risposta_corretta": "Perché fornisce esempi da cui il modello può imparare relazioni e schemi.",
+    "spiegazione": "La risposta corretta è A. Il dataset offre esempi utili all'apprendimento. B è falso perché la valutazione resta necessaria, C è errato perché l'algoritmo conta, D confonde apprendimento e copia meccanica."
   },
   {
     "id": "AI-FAC-0204",
@@ -1071,15 +1045,13 @@
     "livello": "facile",
     "domanda": "Che cosa indica il termine overfitting?",
     "opzioni": [
-      "Una situazione in cui il modello impara troppo bene gli esempi di addestramento e generalizza male su dati nuovi",
-      "Una situazione in cui il modello si adatta molto ai dati di training, ma migliora anche sui casi nuovi",
-      "Una situazione in cui il modello impara esempi specifici, ma senza perdere capacità di generalizzare",
-      "Una situazione in cui il modello memorizza dettagli del training, ma diventa più affidabile fuori dal training"
+      "Una situazione in cui il modello impara troppo bene gli esempi di addestramento e generalizza male su dati nuovi.",
+      "Una situazione in cui il modello non usa nessun dato durante l'addestramento.",
+      "Una tecnica per rendere un modello più piccolo senza perdere alcuna informazione.",
+      "Un metodo per aumentare casualmente la velocità di risposta del modello."
     ],
-    "risposta_corretta": "Una situazione in cui il modello impara troppo bene gli esempi di addestramento e generalizza male su dati nuovi",
-    "spiegazione": "L'overfitting avviene quando il modello impara troppo bene gli esempi di addestramento e generalizza male su dati nuovi. Il punto critico non è solo adattarsi al training, ma perdere affidabilità quando arrivano casi diversi da quelli visti.",
-    "regola_distrattori": "tre_distrattori_forti",
-    "criterio_distrattori": "Ogni risposta errata deve condividere il concetto centrale della corretta e diventare sbagliata per un dettaglio tecnico, logico o pratico."
+    "risposta_corretta": "Una situazione in cui il modello impara troppo bene gli esempi di addestramento e generalizza male su dati nuovi.",
+    "spiegazione": "La risposta corretta è A. L'overfitting avviene quando il modello si adatta troppo ai dati di training. B è assenza di apprendimento, C richiama compressione o distillazione, D riguarda prestazioni."
   },
   {
     "id": "AI-FAC-0206",
@@ -1231,15 +1203,13 @@
     "livello": "intermedio",
     "domanda": "Che effetto ha, in genere, aumentare la temperatura nella generazione di un modello linguistico?",
     "opzioni": [
-      "Rende le risposte più variabili e meno deterministiche",
-      "Rende le risposte più varie, ma riduce direttamente il numero di parametri del modello",
-      "Aumenta la variabilità della generazione, ma amplia anche la finestra di contesto disponibile",
-      "Rende la generazione meno prevedibile, ma impedisce al modello di produrre testo creativo"
+      "Rende le risposte più variabili e meno deterministiche.",
+      "Rende il modello più piccolo a livello di parametri.",
+      "Aumenta automaticamente la quantità di dati nel contesto.",
+      "Impedisce al modello di generare testo creativo."
     ],
-    "risposta_corretta": "Rende le risposte più variabili e meno deterministiche",
-    "spiegazione": "Aumentare la temperatura rende in genere le risposte più variabili e meno deterministiche. Non cambia direttamente il numero di parametri, non amplia la finestra di contesto e non impedisce la creatività: semmai tende ad aumentare la varietà.",
-    "regola_distrattori": "tre_distrattori_forti",
-    "criterio_distrattori": "Ogni risposta errata deve condividere il concetto centrale della corretta e diventare sbagliata per un dettaglio tecnico, logico o pratico."
+    "risposta_corretta": "Rende le risposte più variabili e meno deterministiche.",
+    "spiegazione": "La risposta corretta è A. Una temperatura più alta tende ad aumentare varietà e casualità. B riguarda dimensione del modello, C la finestra di contesto, D va nella direzione opposta."
   },
   {
     "id": "AI-INT-0204",
@@ -1599,15 +1569,13 @@
     "livello": "avanzato",
     "domanda": "Perché valutare le allucinazioni richiede spesso più di una metrica automatica semplice?",
     "opzioni": [
-      "Perché serve confrontare la risposta con fonti, contesto e correttezza fattuale, non solo con la forma del testo",
-      "Perché una risposta può sembrare ben scritta, ma richiedere verifica su fonti e contesto",
-      "Perché una metrica può premiare fluidità e somiglianza, ma non garantire correttezza fattuale",
-      "Perché valutare le allucinazioni richiede controllo del contenuto, ma può ignorare il supporto delle fonti"
+      "Perché serve confrontare la risposta con fonti, contesto e correttezza fattuale, non solo con la forma del testo.",
+      "Perché le allucinazioni compaiono nei contenuti visivi più che nelle risposte testuali.",
+      "Perché una metrica automatica può valutare positivamente anche una risposta non realmente corretta.",
+      "Perché la lunghezza della risposta è sufficiente a dimostrare la sua accuratezza."
     ],
-    "risposta_corretta": "Perché serve confrontare la risposta con fonti, contesto e correttezza fattuale, non solo con la forma del testo",
-    "spiegazione": "Valutare le allucinazioni richiede spesso più di una metrica automatica semplice perché bisogna confrontare risposta, fonti, contesto e correttezza fattuale. Fluidità, somiglianza o buona forma del testo non bastano a dimostrare che una risposta sia realmente corretta e supportata.",
-    "regola_distrattori": "tre_distrattori_forti",
-    "criterio_distrattori": "Ogni risposta errata deve condividere il concetto centrale della corretta e diventare sbagliata per un dettaglio tecnico, logico o pratico."
+    "risposta_corretta": "Perché serve confrontare la risposta con fonti, contesto e correttezza fattuale, non solo con la forma del testo.",
+    "spiegazione": "La risposta corretta è A. Le allucinazioni riguardano accuratezza e supporto informativo. B, C e D sono interpretazioni errate."
   },
   {
     "id": "AI-AV-0213",
