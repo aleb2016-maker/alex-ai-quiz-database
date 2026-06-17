@@ -1980,7 +1980,7 @@
     "problemi_tecnici_totali": 0,
     "avvisi_qualita_reali_totali": 0,
     "errori_linguistici_totali": 0,
-    "note_informative_totali": 37,
+    "note_informative_totali": 41,
     "domande_con_problemi_tecnici": [],
     "domande_con_avvisi_qualita_reali": [],
     "domande_con_errori_linguistici": [],
@@ -2006,15 +2006,55 @@
         ]
       },
       {
+        "id": "AI-INT-0002",
+        "domanda": "Perché un prompt dettagliato può migliorare la risposta di un modello AI?",
+        "categoria": "ai",
+        "livello": "intermedio",
+        "opzioni": [
+          "Perché fornisce più contesto e riduce le ambiguità della richiesta",
+          "Perché fornisce più contesto, ma modifica anche i parametri interni del modello durante la risposta",
+          "Perché chiarisce obiettivo e formato, ma rende inutile il controllo finale sulla qualità della risposta",
+          "Perché riduce le ambiguità della richiesta, ma garantisce che ogni vincolo venga applicato correttamente"
+        ],
+        "risposta_corretta": "Perché fornisce più contesto e riduce le ambiguità della richiesta",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "spiegazione: testo molto lungo, controllare leggibilità"
+        ]
+      },
+      {
+        "id": "AI-AV-0003",
+        "domanda": "A cosa serve principalmente un sistema RAG in un'applicazione AI?",
+        "categoria": "ai",
+        "livello": "avanzato",
+        "opzioni": [
+          "A recuperare informazioni da fonti esterne e usarle per generare risposte più fondate",
+          "A recuperare informazioni esterne e usarle come contesto, ma riaddestrando il modello sui documenti a ogni richiesta",
+          "A recuperare documenti esterni pertinenti, ma usarli solo per selezionare il tono della risposta",
+          "A usare fonti esterne durante la generazione, ma senza distinguere tra documenti rilevanti e documenti solo simili"
+        ],
+        "risposta_corretta": "A recuperare informazioni da fonti esterne e usarle per generare risposte più fondate",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "spiegazione: testo molto lungo, controllare leggibilità"
+        ]
+      },
+      {
         "id": "AI-AV-0004",
         "domanda": "In un sistema RAG, quale problema può nascere se il recupero dei documenti seleziona testi pertinenti solo in apparenza?",
         "categoria": "ai",
         "livello": "avanzato",
         "opzioni": [
           "Il modello può generare una risposta ben scritta ma basata su contesto non davvero rilevante",
-          "Il modello può produrre una risposta formalmente coerente, ma basata su dettagli non davvero utili alla domanda",
-          "Il modello può rifiutare automaticamente tutti i documenti recuperati",
-          "Il modello può bloccare la generazione ogni volta che il retrieval non è perfetto"
+          "Il modello può generare una risposta ben scritta, ma il problema riguarda solo lo stile e non la qualità del contesto",
+          "Il modello può usare documenti solo apparentemente rilevanti, ma correggere automaticamente il contenuto durante la generazione",
+          "Il modello può sembrare fondato su fonti esterne, ma il controllo necessario riguarda solo la lunghezza del contesto"
         ],
         "risposta_corretta": "Il modello può generare una risposta ben scritta ma basata su contesto non davvero rilevante",
         "posizione_risposta": "A",
@@ -2022,7 +2062,6 @@
         "avvisi_qualita_reali": [],
         "errori_linguistici": [],
         "note_informative": [
-          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “tutti”",
           "spiegazione: testo molto lungo, controllare leggibilità"
         ]
       },
@@ -2053,9 +2092,9 @@
         "livello": "intermedio",
         "opzioni": [
           "Per fornire al modello informazioni aggiornate o specifiche su cui basare la risposta",
-          "Per trovare testi semanticamente simili alla domanda, anche se poi non vengono usati come contesto",
-          "Per archiviare i documenti recuperati senza inserirli nel prompt",
-          "Per confrontare la domanda con esempi simili senza generare una risposta"
+          "Per fornire al modello documenti semanticamente vicini, ma senza verificare se contengono davvero informazioni utili",
+          "Per recuperare informazioni aggiornate, ma lasciarle separate dal prompt usato per generare la risposta",
+          "Per cercare fonti specifiche prima della risposta, ma usarle solo come elenco finale di riferimenti"
         ],
         "risposta_corretta": "Per fornire al modello informazioni aggiornate o specifiche su cui basare la risposta",
         "posizione_risposta": "A",
@@ -2073,9 +2112,9 @@
         "livello": "avanzato",
         "opzioni": [
           "Perché alcune risposte richiedono giudizi su completezza, coerenza, sicurezza e utilità",
-          "Perché basta valutare la completezza, senza considerare coerenza, sicurezza e utilità",
-          "Perché una risposta va valutata solo in base al formato richiesto",
-          "Perché una risposta va valutata solo in base alla fluidità del testo"
+          "Perché alcune risposte richiedono giudizi su completezza e coerenza, ma la sicurezza può essere ignorata se i fatti sono corretti",
+          "Perché una risposta può essere corretta nei fatti, ma il formato basta da solo a stabilire l'utilità finale",
+          "Perché una risposta può essere fluida e parziale, ma va valutata solo sul numero di informazioni presenti"
         ],
         "risposta_corretta": "Perché alcune risposte richiedono giudizi su completezza, coerenza, sicurezza e utilità",
         "posizione_risposta": "A",
@@ -2108,15 +2147,75 @@
         ]
       },
       {
+        "id": "AI-INT-0005",
+        "domanda": "A cosa serve un embedding in molte applicazioni di intelligenza artificiale?",
+        "categoria": "ai",
+        "livello": "intermedio",
+        "opzioni": [
+          "A rappresentare testi, immagini o dati come vettori confrontabili",
+          "A rappresentare testi, immagini o dati come vettori confrontabili, ma solo quando condividono parole o caratteristiche identiche",
+          "A trasformare contenuti in vettori numerici confrontabili, ma usandoli soprattutto come forma di compressione dei dati",
+          "A rappresentare contenuti come vettori, ma senza mantenere relazioni di vicinanza semantica tra elementi simili"
+        ],
+        "risposta_corretta": "A rappresentare testi, immagini o dati come vettori confrontabili",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "spiegazione: testo molto lungo, controllare leggibilità"
+        ]
+      },
+      {
+        "id": "AI-AV-0006",
+        "domanda": "Qual è il rischio principale di un prompt injection in un'applicazione AI collegata a strumenti esterni?",
+        "categoria": "ai",
+        "livello": "avanzato",
+        "opzioni": [
+          "Il modello può essere spinto a ignorare istruzioni originali e usare strumenti in modo non previsto",
+          "Il modello può ricevere istruzioni esterne che sembrano operative, ma il rischio riguarda solo il testo generato e non i tool",
+          "Il modello può confondere contenuto dell'utente e istruzioni, ma mantenere comunque invariato l'uso degli strumenti esterni",
+          "Il modello può trattare informazioni recuperate come comandi, ma solo se quelle informazioni sono già presenti nel prompt di sistema"
+        ],
+        "risposta_corretta": "Il modello può essere spinto a ignorare istruzioni originali e usare strumenti in modo non previsto",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "spiegazione: testo molto lungo, controllare leggibilità"
+        ]
+      },
+      {
+        "id": "AI-INT-0006",
+        "domanda": "Perché è utile testare un modello AI con esempi diversi da quelli usati in addestramento?",
+        "categoria": "ai",
+        "livello": "intermedio",
+        "opzioni": [
+          "Per verificare se il modello generalizza anche su casi nuovi",
+          "Per verificare se il modello generalizza su casi nuovi, ma usando esempi scelti dal training set",
+          "Per misurare la capacità di funzionare su dati non visti, ma premiando la memorizzazione degli esempi già appresi",
+          "Per controllare il comportamento su casi diversi, ma senza confrontare le previsioni con il risultato atteso"
+        ],
+        "risposta_corretta": "Per verificare se il modello generalizza anche su casi nuovi",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "spiegazione: testo molto lungo, controllare leggibilità"
+        ]
+      },
+      {
         "id": "AI-AV-0007",
         "domanda": "Quando ha più senso valutare il fine-tuning rispetto al solo prompt engineering?",
         "categoria": "ai",
         "livello": "avanzato",
         "opzioni": [
           "Quando servono comportamenti stabili e specifici su molti esempi simili",
-          "Quando serve un comportamento stabile, ma si dispone di un solo esempio isolato",
-          "Quando il problema dipende soprattutto da documenti recuperati male",
-          "Quando basta cambiare il prompt per correggere una risposta singola"
+          "Quando servono comportamenti stabili su molti esempi simili, ma l'obiettivo è correggere una singola risposta isolata",
+          "Quando si vuole rendere stabile uno stile o formato, ma senza avere esempi coerenti del comportamento desiderato",
+          "Quando il problema si ripete in molti casi simili, ma dipende soprattutto da documenti recuperati male"
         ],
         "risposta_corretta": "Quando servono comportamenti stabili e specifici su molti esempi simili",
         "posizione_risposta": "A",
@@ -2139,26 +2238,6 @@
           "Analizza solo dati numerici organizzati in tabelle"
         ],
         "risposta_corretta": "Lavora con il linguaggio per comprendere o generare testo",
-        "posizione_risposta": "A",
-        "problemi_tecnici": [],
-        "avvisi_qualita_reali": [],
-        "errori_linguistici": [],
-        "note_informative": [
-          "spiegazione: testo molto lungo, controllare leggibilità"
-        ]
-      },
-      {
-        "id": "AI-INT-0007",
-        "domanda": "Quale elemento rende più controllabile la risposta di un modello AI?",
-        "categoria": "ai",
-        "livello": "intermedio",
-        "opzioni": [
-          "Specificare ruolo, obiettivo, vincoli e formato della risposta",
-          "Specificare solo il ruolo del modello, senza indicare vincoli, obiettivo e formato",
-          "Fornire molti obiettivi diversi senza indicare priorità",
-          "Chiedere una risposta generica lasciando formato e criteri aperti"
-        ],
-        "risposta_corretta": "Specificare ruolo, obiettivo, vincoli e formato della risposta",
         "posizione_risposta": "A",
         "problemi_tecnici": [],
         "avvisi_qualita_reali": [],
@@ -2194,9 +2273,9 @@
         "livello": "intermedio",
         "opzioni": [
           "Il modello può imparare a favorire quella classe nelle previsioni",
-          "Il modello può imparare a favorire la classe meno presente per compensare automaticamente lo sbilanciamento",
-          "Il modello può migliorare sulle classi rare anche senza esempi sufficienti",
-          "Il modello può rendere inutile ogni metrica diversa dall'accuratezza"
+          "Il modello può assegnare maggiore importanza alla classe dominante, ma mantenere uguale sensibilità sulle classi rare",
+          "Il modello può ottenere un'accuratezza apparentemente buona, ma perché riconosce meglio tutte le classi allo stesso modo",
+          "Il modello può imparare lo sbilanciamento dei dati, ma compensarlo senza esempi aggiuntivi delle classi rare"
         ],
         "risposta_corretta": "Il modello può imparare a favorire quella classe nelle previsioni",
         "posizione_risposta": "A",
@@ -2204,6 +2283,7 @@
         "avvisi_qualita_reali": [],
         "errori_linguistici": [],
         "note_informative": [
+          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “tutte”",
           "spiegazione: testo molto lungo, controllare leggibilità"
         ]
       },
