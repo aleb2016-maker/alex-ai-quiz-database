@@ -1980,7 +1980,7 @@
     "problemi_tecnici_totali": 0,
     "avvisi_qualita_reali_totali": 0,
     "errori_linguistici_totali": 0,
-    "note_informative_totali": 41,
+    "note_informative_totali": 43,
     "domande_con_problemi_tecnici": [],
     "domande_con_avvisi_qualita_reali": [],
     "domande_con_errori_linguistici": [],
@@ -1992,9 +1992,9 @@
         "livello": "facile",
         "opzioni": [
           "Prevedere e generare testo in base al contesto ricevuto",
-          "Classificare testi in categorie fisse senza produrre nuove frasi",
-          "Recuperare documenti esterni senza generare una risposta autonoma",
-          "Tradurre parole usando solo un dizionario statico"
+          "Prevedere testo in base al contesto, ma scegliendo la continuazione più frequente senza adattarsi al significato della richiesta",
+          "Generare testo coerente con il contesto, ma funzionando come un archivio di frasi già salvate",
+          "Comprendere e produrre linguaggio naturale, ma usando il recupero di documenti come meccanismo principale di generazione"
         ],
         "risposta_corretta": "Prevedere e generare testo in base al contesto ricevuto",
         "posizione_risposta": "A",
@@ -2227,17 +2227,17 @@
         ]
       },
       {
-        "id": "AI-FAC-0007",
-        "domanda": "Che cosa fa principalmente un modello linguistico?",
+        "id": "AI-AV-0008",
+        "domanda": "In una pipeline AI, perché conviene separare recupero delle informazioni, generazione e controllo finale?",
         "categoria": "ai",
-        "livello": "facile",
+        "livello": "avanzato",
         "opzioni": [
-          "Lavora con il linguaggio per comprendere o generare testo",
-          "Classifica contenuti testuali senza produrre nuove frasi",
-          "Recupera pagine web pertinenti senza formulare una risposta",
-          "Analizza solo dati numerici organizzati in tabelle"
+          "Per rendere più controllabile ogni fase e individuare meglio dove nasce un errore",
+          "Per rendere più controllabile ogni fase, ma correggendo gli errori soltanto alla fine della pipeline",
+          "Per separare recupero, generazione e verifica, ma trattando ogni fase come indipendente dalle altre",
+          "Per distinguere retrieval, generazione e controllo, ma usando il controllo finale principalmente per salvare la risposta prodotta"
         ],
-        "risposta_corretta": "Lavora con il linguaggio per comprendere o generare testo",
+        "risposta_corretta": "Per rendere più controllabile ogni fase e individuare meglio dove nasce un errore",
         "posizione_risposta": "A",
         "problemi_tecnici": [],
         "avvisi_qualita_reali": [],
@@ -2514,18 +2514,18 @@
         "categoria": "ai",
         "livello": "facile",
         "opzioni": [
-          "A rappresentare testi, immagini o altri dati come vettori numerici confrontabili.",
-          "A sostituire ogni controllo qualità sui dati prodotti dal modello.",
-          "A trasformare automaticamente qualsiasi modello piccolo in un modello più grande.",
-          "A eliminare la necessità di salvare informazioni in memoria."
+          "A rappresentare testi, immagini o altri dati come vettori numerici confrontabili",
+          "A rappresentare testi, immagini o dati come vettori confrontabili quando condividono parole o caratteristiche identiche",
+          "A trasformare contenuti in vettori numerici confrontabili, ma usandoli principalmente come compressione dei dati",
+          "A creare vettori per confrontare contenuti, ma senza conservare relazioni di vicinanza semantica tra elementi simili"
         ],
-        "risposta_corretta": "A rappresentare testi, immagini o altri dati come vettori numerici confrontabili.",
+        "risposta_corretta": "A rappresentare testi, immagini o altri dati come vettori numerici confrontabili",
         "posizione_risposta": "A",
         "problemi_tecnici": [],
         "avvisi_qualita_reali": [],
         "errori_linguistici": [],
         "note_informative": [
-          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “qualsiasi”"
+          "spiegazione: testo molto lungo, controllare leggibilità"
         ]
       },
       {
@@ -2546,6 +2546,46 @@
         "errori_linguistici": [],
         "note_informative": [
           "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “tutti”"
+        ]
+      },
+      {
+        "id": "AI-INT-0201",
+        "domanda": "Qual è il vantaggio principale di una pipeline RAG rispetto a un semplice prompt senza recupero documentale?",
+        "categoria": "ai",
+        "livello": "intermedio",
+        "opzioni": [
+          "Può recuperare informazioni da fonti esterne e usarle per rendere la risposta più ancorata ai dati disponibili",
+          "Può recuperare informazioni esterne e usarle nel contesto, ma addestrando di nuovo il modello sul dominio a ogni richiesta",
+          "Può ancorare la risposta a fonti disponibili, ma senza verificare se le fonti recuperate sono davvero pertinenti",
+          "Può combinare recupero e generazione, ma sostituisce la valutazione della risposta con la semplice presenza di documenti"
+        ],
+        "risposta_corretta": "Può recuperare informazioni da fonti esterne e usarle per rendere la risposta più ancorata ai dati disponibili",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "spiegazione: testo molto lungo, controllare leggibilità"
+        ]
+      },
+      {
+        "id": "AI-INT-0209",
+        "domanda": "Perché un set di valutazione separato è importante nello sviluppo di un modello AI?",
+        "categoria": "ai",
+        "livello": "intermedio",
+        "opzioni": [
+          "Per misurare il comportamento del modello su esempi non usati direttamente per addestrarlo",
+          "Per misurare il comportamento su esempi separati, ma scegliendoli tra casi troppo simili a quelli già appresi",
+          "Per stimare la generalizzazione del modello, ma aggiornando il training set con gli errori durante la valutazione",
+          "Per valutare il modello su dati separati, ma senza confrontare le previsioni con risultati attesi o metriche definite"
+        ],
+        "risposta_corretta": "Per misurare il comportamento del modello su esempi non usati direttamente per addestrarlo",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "spiegazione: testo molto lungo, controllare leggibilità"
         ]
       },
       {
@@ -2575,19 +2615,38 @@
         "categoria": "ai",
         "livello": "avanzato",
         "opzioni": [
-          "Pesare l'importanza relativa di diverse parti della sequenza durante l'elaborazione.",
-          "Ridurre ogni input a una sola parola prima della generazione.",
-          "Sostituire completamente la fase di tokenizzazione.",
-          "Archiviare in modo permanente tutte le conversazioni degli utenti."
+          "Pesare l'importanza relativa di diverse parti della sequenza durante l'elaborazione",
+          "Pesare parti della sequenza, ma mantenendo quasi lo stesso peso per token con ruoli diversi",
+          "Individuare relazioni tra token della sequenza, ma usando una posizione fissa invece del contenuto corrente",
+          "Dare contesto alla generazione, ma dopo aver ridotto la sequenza a un riassunto unico non confrontabile"
         ],
-        "risposta_corretta": "Pesare l'importanza relativa di diverse parti della sequenza durante l'elaborazione.",
+        "risposta_corretta": "Pesare l'importanza relativa di diverse parti della sequenza durante l'elaborazione",
         "posizione_risposta": "A",
         "problemi_tecnici": [],
         "avvisi_qualita_reali": [],
         "errori_linguistici": [],
         "note_informative": [
-          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “completamente”",
-          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “tutte”"
+          "spiegazione: testo molto lungo, controllare leggibilità"
+        ]
+      },
+      {
+        "id": "AI-AV-0202",
+        "domanda": "Che cosa indica la finestra di contesto di un modello linguistico?",
+        "categoria": "ai",
+        "livello": "avanzato",
+        "opzioni": [
+          "La quantità massima di token che il modello può considerare in una singola interazione",
+          "La quantità di token gestibile dal modello, ma riferita al prompt iniziale ed escludendo la risposta generata",
+          "Il limite di contesto usabile in una conversazione, ma espresso come numero di frasi invece che di token",
+          "La porzione di testo che il modello considera, ma ampliabile durante la stessa richiesta senza vincoli tecnici"
+        ],
+        "risposta_corretta": "La quantità massima di token che il modello può considerare in una singola interazione",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "spiegazione: testo molto lungo, controllare leggibilità"
         ]
       },
       {
@@ -2596,18 +2655,19 @@
         "categoria": "ai",
         "livello": "avanzato",
         "opzioni": [
-          "Permette di addestrare piccoli adattatori a basso rango invece di aggiornare tutti i pesi del modello.",
-          "Richiede di ricostruire da zero l'intera architettura del Transformer.",
-          "Elimina la necessità di dati di addestramento specifici per il dominio.",
-          "Trasforma ogni modello testuale in un modello esclusivamente visuale."
+          "Permette di addestrare piccoli adattatori a basso rango invece di aggiornare tutti i pesi del modello",
+          "Permette di addestrare adattatori leggeri, ma richiede comunque l'aggiornamento completo dei pesi principali del modello",
+          "Riduce il costo del fine-tuning usando moduli aggiuntivi, ma elimina il bisogno di esempi specifici del dominio",
+          "Usa componenti a basso rango per adattare il modello, ma cambia l'architettura base del Transformer a ogni addestramento"
         ],
-        "risposta_corretta": "Permette di addestrare piccoli adattatori a basso rango invece di aggiornare tutti i pesi del modello.",
+        "risposta_corretta": "Permette di addestrare piccoli adattatori a basso rango invece di aggiornare tutti i pesi del modello",
         "posizione_risposta": "A",
         "problemi_tecnici": [],
         "avvisi_qualita_reali": [],
         "errori_linguistici": [],
         "note_informative": [
-          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “tutti”"
+          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “tutti”",
+          "spiegazione: testo molto lungo, controllare leggibilità"
         ]
       },
       {
@@ -2656,19 +2716,18 @@
         "categoria": "ai",
         "livello": "avanzato",
         "opzioni": [
-          "Per limitare comportamenti rischiosi, applicare regole e gestire richieste non adatte.",
-          "Per aumentare il numero di parametri del modello durante l'inferenza.",
-          "Per sostituire completamente la progettazione del prodotto.",
-          "Per impedire qualsiasi risposta anche quando la richiesta è lecita."
+          "Per limitare comportamenti rischiosi, applicare regole e gestire richieste non adatte",
+          "Per limitare comportamenti rischiosi, ma applicando le regole dopo che la risposta è già stata mostrata all'utente",
+          "Per applicare regole di sicurezza, ma senza distinguere tra richieste lecite, ambigue e non adatte",
+          "Per gestire richieste non adatte, ma sostituendo la progettazione del comportamento con un blocco generico"
         ],
-        "risposta_corretta": "Per limitare comportamenti rischiosi, applicare regole e gestire richieste non adatte.",
+        "risposta_corretta": "Per limitare comportamenti rischiosi, applicare regole e gestire richieste non adatte",
         "posizione_risposta": "A",
         "problemi_tecnici": [],
         "avvisi_qualita_reali": [],
         "errori_linguistici": [],
         "note_informative": [
-          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “completamente”",
-          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “qualsiasi”"
+          "spiegazione: testo molto lungo, controllare leggibilità"
         ]
       },
       {

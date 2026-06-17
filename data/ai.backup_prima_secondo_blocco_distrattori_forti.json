@@ -7,12 +7,12 @@
     "domanda": "Qual è il ruolo principale di un modello linguistico di grandi dimensioni, chiamato LLM?",
     "opzioni": [
       "Prevedere e generare testo in base al contesto ricevuto",
-      "Prevedere testo in base al contesto, ma scegliendo la continuazione più frequente senza adattarsi al significato della richiesta",
-      "Generare testo coerente con il contesto, ma funzionando come un archivio di frasi già salvate",
-      "Comprendere e produrre linguaggio naturale, ma usando il recupero di documenti come meccanismo principale di generazione"
+      "Classificare testi in categorie fisse senza produrre nuove frasi",
+      "Recuperare documenti esterni senza generare una risposta autonoma",
+      "Tradurre parole usando solo un dizionario statico"
     ],
     "risposta_corretta": "Prevedere e generare testo in base al contesto ricevuto",
-    "spiegazione": "Un LLM prevede e genera testo in base al contesto ricevuto, producendo linguaggio naturale coerente con la richiesta. Non sceglie semplicemente la continuazione più frequente, non funziona come archivio di frasi già salvate e non coincide con un sistema di recupero documentale.",
+    "spiegazione": "Un LLM lavora principalmente prevedendo e generando testo coerente con il contesto ricevuto. Può anche aiutare in classificazione, traduzione o recupero informazioni, ma il suo ruolo centrale è generare linguaggio naturale, non limitarsi a una singola funzione rigida.",
     "tags": [
       "llm",
       "modelli linguistici",
@@ -20,9 +20,7 @@
     ],
     "difficolta": 1,
     "distrattore_forte": "Classificare testi in categorie fisse senza produrre nuove frasi",
-    "motivo_distrattore_forte": "È vicino perché anche la classificazione può essere svolta da modelli AI sul testo, ma è troppo limitato: un LLM non si limita a classificare, genera anche linguaggio naturale.",
-    "regola_distrattori": "tre_distrattori_forti",
-    "criterio_distrattori": "Ogni risposta errata deve condividere il concetto centrale della corretta e diventare sbagliata per un dettaglio tecnico, logico o pratico."
+    "motivo_distrattore_forte": "È vicino perché anche la classificazione può essere svolta da modelli AI sul testo, ma è troppo limitato: un LLM non si limita a classificare, genera anche linguaggio naturale."
   },
   {
     "id": "AI-INT-0002",
@@ -328,12 +326,12 @@
     "domanda": "Che cosa fa principalmente un modello linguistico?",
     "opzioni": [
       "Lavora con il linguaggio per comprendere o generare testo",
-      "Lavora con il linguaggio per generare testo, ma senza tenere conto del contesto fornito dall'utente",
-      "Elabora testo naturale, ma lo usa principalmente per assegnare etichette fisse invece di generare risposte",
-      "Comprende e produce testo, ma basandosi su un elenco statico di regole scritte a mano"
+      "Classifica contenuti testuali senza produrre nuove frasi",
+      "Recupera pagine web pertinenti senza formulare una risposta",
+      "Analizza solo dati numerici organizzati in tabelle"
     ],
     "risposta_corretta": "Lavora con il linguaggio per comprendere o generare testo",
-    "spiegazione": "Un modello linguistico lavora con il linguaggio naturale per comprendere, completare, riassumere o generare testo. Non ignora il contesto, non è principalmente un classificatore a etichette fisse e non si basa solo su regole statiche scritte a mano.",
+    "spiegazione": "Un modello linguistico lavora con il linguaggio naturale: può comprendere, completare, riassumere o generare testo. Le altre opzioni descrivono attività possibili nell'AI o nell'informatica, ma sono più limitate e non rappresentano il ruolo principale di un modello linguistico.",
     "tags": [
       "ai",
       "llm",
@@ -341,9 +339,7 @@
     ],
     "difficolta": 1,
     "distrattore_forte": "Classifica contenuti testuali senza produrre nuove frasi",
-    "motivo_distrattore_forte": "È vicino perché un modello linguistico può anche classificare testi, ma è sbagliato come ruolo principale perché il modello linguistico può comprendere e generare testo.",
-    "regola_distrattori": "tre_distrattori_forti",
-    "criterio_distrattori": "Ogni risposta errata deve condividere il concetto centrale della corretta e diventare sbagliata per un dettaglio tecnico, logico o pratico."
+    "motivo_distrattore_forte": "È vicino perché un modello linguistico può anche classificare testi, ma è sbagliato come ruolo principale perché il modello linguistico può comprendere e generare testo."
   },
   {
     "id": "AI-INT-0007",
@@ -378,12 +374,12 @@
     "domanda": "In una pipeline AI, perché conviene separare recupero delle informazioni, generazione e controllo finale?",
     "opzioni": [
       "Per rendere più controllabile ogni fase e individuare meglio dove nasce un errore",
-      "Per rendere più controllabile ogni fase, ma correggendo gli errori soltanto alla fine della pipeline",
-      "Per separare recupero, generazione e verifica, ma trattando ogni fase come indipendente dalle altre",
-      "Per distinguere retrieval, generazione e controllo, ma usando il controllo finale principalmente per salvare la risposta prodotta"
+      "Per valutare separatamente le fasi, ma senza collegare gli errori alla risposta finale",
+      "Per controllare solo il recupero dei documenti ignorando la generazione",
+      "Per controllare solo la generazione ignorando retrieval e verifica finale"
     ],
     "risposta_corretta": "Per rendere più controllabile ogni fase e individuare meglio dove nasce un errore",
-    "spiegazione": "Separare recupero, generazione e controllo finale rende la pipeline più osservabile e permette di capire meglio dove nasce un errore. Non basta correggere alla fine, perché un errore nel recupero può influenzare la generazione; inoltre le fasi non sono indipendenti e il controllo finale non serve solo a salvare la risposta.",
+    "spiegazione": "Separare recupero, generazione e controllo finale rende la pipeline più osservabile e più facile da correggere. Non basta guardare una fase isolata: bisogna capire come ogni fase contribuisce alla qualità della risposta finale.",
     "tags": [
       "ai",
       "pipeline",
@@ -391,9 +387,7 @@
     ],
     "difficolta": 3,
     "distrattore_forte": "Per valutare separatamente le fasi, ma senza collegare gli errori alla risposta finale",
-    "motivo_distrattore_forte": "È vicino perché parla davvero di valutare le fasi separatamente, ma è sbagliato perché separare le fasi serve proprio a collegare gli errori al punto della pipeline in cui nascono.",
-    "regola_distrattori": "tre_distrattori_forti",
-    "criterio_distrattori": "Ogni risposta errata deve condividere il concetto centrale della corretta e diventare sbagliata per un dettaglio tecnico, logico o pratico."
+    "motivo_distrattore_forte": "È vicino perché parla davvero di valutare le fasi separatamente, ma è sbagliato perché separare le fasi serve proprio a collegare gli errori al punto della pipeline in cui nascono."
   },
   {
     "id": "AI-FAC-0008",
@@ -957,15 +951,13 @@
     "livello": "facile",
     "domanda": "Che cosa indica, in generale, un modello di intelligenza artificiale generativa?",
     "opzioni": [
-      "Un sistema capace di produrre nuovi contenuti, come testo, immagini o codice, partendo da dati e istruzioni",
-      "Un sistema capace di produrre contenuti nuovi, ma limitato a ricombinare esempi già presenti senza adattarsi davvero all'istruzione",
-      "Un sistema che genera testo, immagini o codice partendo da istruzioni, ma senza usare pattern appresi dai dati",
-      "Un sistema che produce contenuti a partire da dati e istruzioni, ma con risposte fissate prima dello specifico input dell'utente"
+      "Un sistema capace di produrre nuovi contenuti, come testo, immagini o codice, partendo da dati e istruzioni.",
+      "Un sistema che riconosce soltanto se un'immagine appartiene a una categoria già definita.",
+      "Un database che conserva esempi senza costruire risposte nuove.",
+      "Un programma che esegue solo calcoli numerici impostati manualmente."
     ],
-    "risposta_corretta": "Un sistema capace di produrre nuovi contenuti, come testo, immagini o codice, partendo da dati e istruzioni",
-    "spiegazione": "Un modello di AI generativa produce nuovi contenuti a partire da dati, istruzioni e pattern appresi. Non si limita a ricombinare esempi già presenti, non genera senza usare ciò che ha appreso dai dati e non usa risposte fissate prima dello specifico input.",
-    "regola_distrattori": "tre_distrattori_forti",
-    "criterio_distrattori": "Ogni risposta errata deve condividere il concetto centrale della corretta e diventare sbagliata per un dettaglio tecnico, logico o pratico."
+    "risposta_corretta": "Un sistema capace di produrre nuovi contenuti, come testo, immagini o codice, partendo da dati e istruzioni.",
+    "spiegazione": "La risposta corretta è A perché l'AI generativa produce contenuti nuovi. B descrive più da vicino un classificatore, C un archivio di dati, D un normale programma deterministico."
   },
   {
     "id": "AI-FAC-0202",
@@ -1029,15 +1021,13 @@
     "livello": "facile",
     "domanda": "Che cosa sono i token in un modello linguistico?",
     "opzioni": [
-      "Unità di testo, come parole o parti di parole, che il modello usa per elaborare il linguaggio",
-      "Unità di testo usate dal modello, ma trattate come parole intere senza suddivisioni interne",
-      "Parti di testo convertite in elementi gestibili dal modello, ma usate per valutare direttamente la qualità della risposta",
-      "Segmenti di linguaggio elaborati dal modello, ma creati dopo la generazione per correggere il testo finale"
+      "Unità di testo, come parole o parti di parole, che il modello usa per elaborare il linguaggio.",
+      "File immagine usati per addestrare soltanto modelli visivi.",
+      "Etichette numeriche che indicano esclusivamente la qualità di una risposta.",
+      "Password temporanee usate per accedere a un'applicazione."
     ],
-    "risposta_corretta": "Unità di testo, come parole o parti di parole, che il modello usa per elaborare il linguaggio",
-    "spiegazione": "I token sono unità di testo, come parole o parti di parole, che il modello usa per elaborare il linguaggio. Non corrispondono necessariamente a parole intere, non sono punteggi di qualità e non vengono creati dopo la generazione per correggere il testo.",
-    "regola_distrattori": "tre_distrattori_forti",
-    "criterio_distrattori": "Ogni risposta errata deve condividere il concetto centrale della corretta e diventare sbagliata per un dettaglio tecnico, logico o pratico."
+    "risposta_corretta": "Unità di testo, come parole o parti di parole, che il modello usa per elaborare il linguaggio.",
+    "spiegazione": "La risposta corretta è A. I token sono pezzi di testo gestibili dal modello. B riguarda immagini, C confonde token e punteggi, D usa il termine token in un altro contesto informatico."
   },
   {
     "id": "AI-FAC-0207",
@@ -1073,15 +1063,13 @@
     "livello": "facile",
     "domanda": "A cosa servono gli embedding in molte applicazioni AI?",
     "opzioni": [
-      "A rappresentare testi, immagini o altri dati come vettori numerici confrontabili",
-      "A rappresentare testi, immagini o dati come vettori confrontabili quando condividono parole o caratteristiche identiche",
-      "A trasformare contenuti in vettori numerici confrontabili, ma usandoli principalmente come compressione dei dati",
-      "A creare vettori per confrontare contenuti, ma senza conservare relazioni di vicinanza semantica tra elementi simili"
+      "A rappresentare testi, immagini o altri dati come vettori numerici confrontabili.",
+      "A sostituire ogni controllo qualità sui dati prodotti dal modello.",
+      "A trasformare automaticamente qualsiasi modello piccolo in un modello più grande.",
+      "A eliminare la necessità di salvare informazioni in memoria."
     ],
-    "risposta_corretta": "A rappresentare testi, immagini o altri dati come vettori numerici confrontabili",
-    "spiegazione": "Gli embedding rappresentano testi, immagini o altri dati come vettori numerici confrontabili, così contenuti simili possono risultare vicini anche senza parole identiche. Non servono principalmente a comprimere dati e non eliminano le relazioni semantiche: quelle relazioni sono una parte centrale della loro utilità.",
-    "regola_distrattori": "tre_distrattori_forti",
-    "criterio_distrattori": "Ogni risposta errata deve condividere il concetto centrale della corretta e diventare sbagliata per un dettaglio tecnico, logico o pratico."
+    "risposta_corretta": "A rappresentare testi, immagini o altri dati come vettori numerici confrontabili.",
+    "spiegazione": "La risposta corretta è A. Gli embedding trasformano dati in rappresentazioni numeriche utili per confronti semantici. B, C e D attribuiscono agli embedding funzioni che non hanno."
   },
   {
     "id": "AI-FAC-0210",
@@ -1131,15 +1119,13 @@
     "livello": "intermedio",
     "domanda": "Qual è il vantaggio principale di una pipeline RAG rispetto a un semplice prompt senza recupero documentale?",
     "opzioni": [
-      "Può recuperare informazioni da fonti esterne e usarle per rendere la risposta più ancorata ai dati disponibili",
-      "Può recuperare informazioni esterne e usarle nel contesto, ma addestrando di nuovo il modello sul dominio a ogni richiesta",
-      "Può ancorare la risposta a fonti disponibili, ma senza verificare se le fonti recuperate sono davvero pertinenti",
-      "Può combinare recupero e generazione, ma sostituisce la valutazione della risposta con la semplice presenza di documenti"
+      "Può recuperare informazioni da fonti esterne e usarle per rendere la risposta più ancorata ai dati disponibili.",
+      "Trasforma automaticamente il modello in un sistema addestrato da zero sul dominio aziendale.",
+      "Elimina ogni rischio di risposta errata anche quando le fonti sono incomplete.",
+      "Sostituisce il modello linguistico con un normale motore di ricerca."
     ],
-    "risposta_corretta": "Può recuperare informazioni da fonti esterne e usarle per rendere la risposta più ancorata ai dati disponibili",
-    "spiegazione": "Una pipeline RAG recupera informazioni da fonti esterne e le usa per rendere la risposta più ancorata ai dati disponibili. Non riaddestra il modello a ogni richiesta, non basta recuperare fonti senza verificarne la pertinenza e la presenza di documenti non sostituisce la valutazione della risposta.",
-    "regola_distrattori": "tre_distrattori_forti",
-    "criterio_distrattori": "Ogni risposta errata deve condividere il concetto centrale della corretta e diventare sbagliata per un dettaglio tecnico, logico o pratico."
+    "risposta_corretta": "Può recuperare informazioni da fonti esterne e usarle per rendere la risposta più ancorata ai dati disponibili.",
+    "spiegazione": "La risposta corretta è A. La RAG combina recupero e generazione. B confonde RAG e addestramento, C è troppo assoluta, D ignora il ruolo del modello generativo."
   },
   {
     "id": "AI-INT-0202",
@@ -1245,15 +1231,13 @@
     "livello": "intermedio",
     "domanda": "Perché un set di valutazione separato è importante nello sviluppo di un modello AI?",
     "opzioni": [
-      "Per misurare il comportamento del modello su esempi non usati direttamente per addestrarlo",
-      "Per misurare il comportamento su esempi separati, ma scegliendoli tra casi troppo simili a quelli già appresi",
-      "Per stimare la generalizzazione del modello, ma aggiornando il training set con gli errori durante la valutazione",
-      "Per valutare il modello su dati separati, ma senza confrontare le previsioni con risultati attesi o metriche definite"
+      "Per misurare il comportamento del modello su esempi non usati direttamente per addestrarlo.",
+      "Per aggiungere automaticamente nuove etichette al dataset di training.",
+      "Per sostituire del tutto il controllo umano quando il dominio è delicato.",
+      "Per rendere inutili metriche e analisi degli errori."
     ],
-    "risposta_corretta": "Per misurare il comportamento del modello su esempi non usati direttamente per addestrarlo",
-    "spiegazione": "Un set di valutazione separato serve a misurare il comportamento del modello su esempi non usati direttamente per addestrarlo. Se gli esempi sono troppo simili a quelli già appresi, se la valutazione modifica il training set o se mancano risultati attesi e metriche, la stima della generalizzazione diventa meno affidabile.",
-    "regola_distrattori": "tre_distrattori_forti",
-    "criterio_distrattori": "Ogni risposta errata deve condividere il concetto centrale della corretta e diventare sbagliata per un dettaglio tecnico, logico o pratico."
+    "risposta_corretta": "Per misurare il comportamento del modello su esempi non usati direttamente per addestrarlo.",
+    "spiegazione": "La risposta corretta è A. Un set separato aiuta a stimare la generalizzazione. B riguarda annotazione, C è troppo forte, D è falso perché metriche e analisi restano utili."
   },
   {
     "id": "AI-INT-0210",
@@ -1331,15 +1315,13 @@
     "livello": "avanzato",
     "domanda": "Qual è il ruolo principale del meccanismo di attention nei Transformer?",
     "opzioni": [
-      "Pesare l'importanza relativa di diverse parti della sequenza durante l'elaborazione",
-      "Pesare parti della sequenza, ma mantenendo quasi lo stesso peso per token con ruoli diversi",
-      "Individuare relazioni tra token della sequenza, ma usando una posizione fissa invece del contenuto corrente",
-      "Dare contesto alla generazione, ma dopo aver ridotto la sequenza a un riassunto unico non confrontabile"
+      "Pesare l'importanza relativa di diverse parti della sequenza durante l'elaborazione.",
+      "Ridurre ogni input a una sola parola prima della generazione.",
+      "Sostituire completamente la fase di tokenizzazione.",
+      "Archiviare in modo permanente tutte le conversazioni degli utenti."
     ],
-    "risposta_corretta": "Pesare l'importanza relativa di diverse parti della sequenza durante l'elaborazione",
-    "spiegazione": "Il meccanismo di attention pesa l'importanza relativa di diverse parti della sequenza durante l'elaborazione. Non assegna lo stesso peso a token con ruoli diversi, non usa solo una posizione fissa e non riduce la sequenza a un unico riassunto prima di considerare le relazioni tra token.",
-    "regola_distrattori": "tre_distrattori_forti",
-    "criterio_distrattori": "Ogni risposta errata deve condividere il concetto centrale della corretta e diventare sbagliata per un dettaglio tecnico, logico o pratico."
+    "risposta_corretta": "Pesare l'importanza relativa di diverse parti della sequenza durante l'elaborazione.",
+    "spiegazione": "La risposta corretta è A. L'attention permette al modello di considerare relazioni tra parti della sequenza. B, C e D descrivono funzioni diverse."
   },
   {
     "id": "AI-AV-0202",
@@ -1347,15 +1329,13 @@
     "livello": "avanzato",
     "domanda": "Che cosa indica la finestra di contesto di un modello linguistico?",
     "opzioni": [
-      "La quantità massima di token che il modello può considerare in una singola interazione",
-      "La quantità di token gestibile dal modello, ma riferita al prompt iniziale ed escludendo la risposta generata",
-      "Il limite di contesto usabile in una conversazione, ma espresso come numero di frasi invece che di token",
-      "La porzione di testo che il modello considera, ma ampliabile durante la stessa richiesta senza vincoli tecnici"
+      "La quantità massima di token che il modello può considerare in una singola interazione.",
+      "Il numero totale di utenti che possono usare il modello nello stesso momento.",
+      "La cartella locale in cui vengono salvati i prompt più recenti.",
+      "La dimensione fisica dello schermo su cui viene mostrata la risposta."
     ],
-    "risposta_corretta": "La quantità massima di token che il modello può considerare in una singola interazione",
-    "spiegazione": "La finestra di contesto indica la quantità massima di token che il modello può considerare in una singola interazione, includendo il contesto utile per produrre la risposta. Non riguarda solo il prompt iniziale, non si misura semplicemente in frasi e non può essere ampliata senza vincoli tecnici durante la stessa richiesta.",
-    "regola_distrattori": "tre_distrattori_forti",
-    "criterio_distrattori": "Ogni risposta errata deve condividere il concetto centrale della corretta e diventare sbagliata per un dettaglio tecnico, logico o pratico."
+    "risposta_corretta": "La quantità massima di token che il modello può considerare in una singola interazione.",
+    "spiegazione": "La risposta corretta è A. La finestra di contesto riguarda i token disponibili per input e output. B, C e D non definiscono questo limite."
   },
   {
     "id": "AI-AV-0203",
@@ -1363,15 +1343,13 @@
     "livello": "avanzato",
     "domanda": "Perché LoRA è utile nel fine-tuning di modelli di grandi dimensioni?",
     "opzioni": [
-      "Permette di addestrare piccoli adattatori a basso rango invece di aggiornare tutti i pesi del modello",
-      "Permette di addestrare adattatori leggeri, ma richiede comunque l'aggiornamento completo dei pesi principali del modello",
-      "Riduce il costo del fine-tuning usando moduli aggiuntivi, ma elimina il bisogno di esempi specifici del dominio",
-      "Usa componenti a basso rango per adattare il modello, ma cambia l'architettura base del Transformer a ogni addestramento"
+      "Permette di addestrare piccoli adattatori a basso rango invece di aggiornare tutti i pesi del modello.",
+      "Richiede di ricostruire da zero l'intera architettura del Transformer.",
+      "Elimina la necessità di dati di addestramento specifici per il dominio.",
+      "Trasforma ogni modello testuale in un modello esclusivamente visuale."
     ],
-    "risposta_corretta": "Permette di addestrare piccoli adattatori a basso rango invece di aggiornare tutti i pesi del modello",
-    "spiegazione": "LoRA è utile perché permette di addestrare piccoli adattatori a basso rango invece di aggiornare tutti i pesi del modello. Non richiede l'aggiornamento completo dei pesi principali, non elimina il bisogno di dati specifici e non cambia l'architettura base del Transformer a ogni addestramento.",
-    "regola_distrattori": "tre_distrattori_forti",
-    "criterio_distrattori": "Ogni risposta errata deve condividere il concetto centrale della corretta e diventare sbagliata per un dettaglio tecnico, logico o pratico."
+    "risposta_corretta": "Permette di addestrare piccoli adattatori a basso rango invece di aggiornare tutti i pesi del modello.",
+    "spiegazione": "La risposta corretta è A. LoRA rende il fine-tuning più leggero aggiornando componenti aggiuntive. B, C e D sono interpretazioni errate."
   },
   {
     "id": "AI-AV-0204",
@@ -1477,15 +1455,13 @@
     "livello": "avanzato",
     "domanda": "Perché le guardrail sono importanti in un sistema AI usato da utenti finali?",
     "opzioni": [
-      "Per limitare comportamenti rischiosi, applicare regole e gestire richieste non adatte",
-      "Per limitare comportamenti rischiosi, ma applicando le regole dopo che la risposta è già stata mostrata all'utente",
-      "Per applicare regole di sicurezza, ma senza distinguere tra richieste lecite, ambigue e non adatte",
-      "Per gestire richieste non adatte, ma sostituendo la progettazione del comportamento con un blocco generico"
+      "Per limitare comportamenti rischiosi, applicare regole e gestire richieste non adatte.",
+      "Per aumentare il numero di parametri del modello durante l'inferenza.",
+      "Per sostituire completamente la progettazione del prodotto.",
+      "Per impedire qualsiasi risposta anche quando la richiesta è lecita."
     ],
-    "risposta_corretta": "Per limitare comportamenti rischiosi, applicare regole e gestire richieste non adatte",
-    "spiegazione": "Le guardrail servono a limitare comportamenti rischiosi, applicare regole e gestire richieste non adatte prima o durante la produzione della risposta. Non devono intervenire solo dopo la risposta, non devono bloccare senza distinguere il tipo di richiesta e non sostituiscono una buona progettazione del sistema.",
-    "regola_distrattori": "tre_distrattori_forti",
-    "criterio_distrattori": "Ogni risposta errata deve condividere il concetto centrale della corretta e diventare sbagliata per un dettaglio tecnico, logico o pratico."
+    "risposta_corretta": "Per limitare comportamenti rischiosi, applicare regole e gestire richieste non adatte.",
+    "spiegazione": "La risposta corretta è A. Le guardrail aiutano a controllare sicurezza e comportamento. B riguarda architettura, C è troppo ampio, D sarebbe un blocco eccessivo."
   },
   {
     "id": "AI-AV-0212",
