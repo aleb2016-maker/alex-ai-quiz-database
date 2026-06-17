@@ -254,13 +254,13 @@
     "livello": "facile",
     "domanda": "Se un modello AI decide se una email è spam oppure no, quale tipo di attività sta svolgendo?",
     "opzioni": [
-      "È una classificazione, perché assegna l'email a una categoria come spam o non spam",
-      "È clustering, perché raggruppa email simili anche se usa categorie già definite",
-      "È regressione, perché produce una decisione binaria invece di stimare un valore numerico continuo",
-      "È analisi semantica libera, perché interpreta il testo senza assegnare una classe finale"
+      "Classificazione",
+      "Classificazione binaria, ma senza assegnare l'email a una classe finale",
+      "Clustering di email simili, ma usando categorie spam e non spam già definite",
+      "Regressione, ma applicata per scegliere tra due categorie invece di stimare un valore numerico"
     ],
-    "risposta_corretta": "È una classificazione, perché assegna l'email a una categoria come spam o non spam",
-    "spiegazione": "Decidere se una email è spam oppure no è un problema di classificazione, perché l'input viene assegnato a una categoria. Il clustering raggruppa elementi senza etichette già definite, la regressione stima valori numerici e l'analisi libera non descrive la scelta tra classi.",
+    "risposta_corretta": "Classificazione",
+    "spiegazione": "Decidere se una email è spam oppure no è un problema di classificazione, perché l'input viene assegnato a una categoria. Non è clustering se le categorie sono già definite e non è regressione, perché non si sta stimando un valore numerico continuo.",
     "tags": [
       "ai",
       "classificazione",
@@ -404,13 +404,13 @@
     "livello": "facile",
     "domanda": "Quando un modello AI inventa una risposta falsa ma la presenta come sicura, come viene chiamato di solito questo problema?",
     "opzioni": [
-      "È un'allucinazione, perché il modello produce contenuto falso presentandolo come sicuro",
-      "È un errore di grounding, perché la risposta sembra fondata ma non è supportata dai dati disponibili",
-      "È bias del dataset, perché la risposta falsa nasce da una distorsione sistematica nei dati",
-      "È overfitting, perché il modello ripete una risposta appresa invece di generare contenuto inventato"
+      "Allucinazione",
+      "Errore di grounding, ma con risposta comunque supportata dai dati disponibili",
+      "Bias del dataset, ma senza una distorsione sistematica nei risultati",
+      "Overfitting della risposta, ma riferito a un contenuto inventato durante l'inferenza"
     ],
-    "risposta_corretta": "È un'allucinazione, perché il modello produce contenuto falso presentandolo come sicuro",
-    "spiegazione": "Quando un modello inventa una risposta falsa e la presenta come sicura si parla normalmente di allucinazione. Un errore di grounding può essere collegato, ma non è il nome principale del fenomeno; bias e overfitting indicano problemi diversi.",
+    "risposta_corretta": "Allucinazione",
+    "spiegazione": "Quando un modello inventa una risposta falsa e la presenta come sicura si parla normalmente di allucinazione. Un errore di grounding è collegato ma non coincide sempre con il nome del fenomeno; bias e overfitting descrivono problemi diversi.",
     "tags": [
       "ai",
       "allucinazioni",
@@ -1068,12 +1068,12 @@
     "domanda": "Che cosa si intende per allucinazione di un modello linguistico?",
     "opzioni": [
       "Una risposta plausibile nella forma ma non corretta o non supportata dai dati",
-      "Una risposta fluida e sicura, ma supportata solo da fonti che il modello non ha realmente verificato",
-      "Una risposta non supportata dai dati, ma considerata corretta perché coerente con il tono della conversazione",
-      "Una risposta plausibile ma imprecisa, corretta durante la generazione senza verifiche esterne"
+      "Una risposta fluida e sicura, ma sempre verificata da fonti esterne fornite al modello",
+      "Una risposta non supportata dai dati, ma corretta perché coerente con il tono della conversazione",
+      "Una risposta plausibile ma imprecisa, corretta automaticamente quando viene generata con un prompt più lungo"
     ],
     "risposta_corretta": "Una risposta plausibile nella forma ma non corretta o non supportata dai dati",
-    "spiegazione": "Un'allucinazione è una risposta plausibile nella forma ma non corretta o non supportata dai dati. Una risposta non diventa affidabile solo perché è fluida, coerente nel tono o formulata con sicurezza.",
+    "spiegazione": "Un'allucinazione è una risposta plausibile nella forma ma non corretta o non supportata dai dati. Non è verificata solo perché suona sicura, il tono coerente non garantisce correttezza e un prompt più lungo non corregge automaticamente il problema.",
     "regola_distrattori": "tre_distrattori_forti",
     "criterio_distrattori": "Ogni risposta errata deve condividere il concetto centrale della corretta e diventare sbagliata per un dettaglio tecnico, logico o pratico."
   },
@@ -1251,11 +1251,11 @@
     "opzioni": [
       "Per controllare meglio quando l'agente deve pensare, chiamare strumenti, verificare risultati o fermarsi",
       "Per separare ragionamento e azioni, ma permettere comunque all'agente di eseguire strumenti senza verifica finale",
-      "Per controllare le fasi dell'agente, ma trattare la chiamata agli strumenti come sicura quando il ragionamento sembra coerente",
+      "Per controllare le fasi dell'agente, ma trattare la chiamata agli strumenti come sempre sicura se il ragionamento sembra coerente",
       "Per distinguere pensiero e azione, ma eliminando log e controlli quando l'agente produce una risposta fluida"
     ],
     "risposta_corretta": "Per controllare meglio quando l'agente deve pensare, chiamare strumenti, verificare risultati o fermarsi",
-    "spiegazione": "Separare ragionamento e azioni rende l'agente più controllabile: si può decidere quando pensare, chiamare strumenti, verificare risultati o fermarsi. Il ragionamento coerente non basta a rendere sicura una chiamata a strumenti esterni, e log, controlli e verifica finale restano necessari.",
+    "spiegazione": "Separare ragionamento e azioni rende l'agente più controllabile: si può decidere quando pensare, chiamare strumenti, verificare risultati o fermarsi. Non basta che il ragionamento sembri coerente, la verifica finale resta utile e log e controlli non vanno eliminati.",
     "regola_distrattori": "tre_distrattori_forti",
     "criterio_distrattori": "Ogni risposta errata deve condividere il concetto centrale della corretta e diventare sbagliata per un dettaglio tecnico, logico o pratico."
   },
@@ -1283,11 +1283,11 @@
     "opzioni": [
       "Una tendenza sistematica del modello a favorire o penalizzare certi risultati o gruppi",
       "Una tendenza del modello verso certi risultati, ma dovuta soltanto a errori casuali non ripetibili",
-      "Una distorsione sistematica nei risultati, ma intenzionale e progettata manualmente dagli sviluppatori",
-      "Una preferenza del modello per alcuni output, ma priva di effetti misurabili su gruppi, decisioni o risultati"
+      "Una distorsione sistematica nei risultati, ma sempre intenzionale e progettata manualmente dagli sviluppatori",
+      "Una preferenza del modello per alcuni output, ma senza effetti misurabili su gruppi, decisioni o risultati"
     ],
     "risposta_corretta": "Una tendenza sistematica del modello a favorire o penalizzare certi risultati o gruppi",
-    "spiegazione": "Il bias indica una tendenza sistematica del modello a favorire o penalizzare certi risultati o gruppi. Non è semplice rumore casuale, non deve essere per forza intenzionale e può avere effetti misurabili sui risultati.",
+    "spiegazione": "Il bias indica una tendenza sistematica del modello a favorire o penalizzare certi risultati o gruppi. Non è solo rumore casuale, non deve essere per forza intenzionale e può avere effetti misurabili sui risultati.",
     "regola_distrattori": "tre_distrattori_forti",
     "criterio_distrattori": "Ogni risposta errata deve condividere il concetto centrale della corretta e diventare sbagliata per un dettaglio tecnico, logico o pratico."
   },

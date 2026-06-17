@@ -284,13 +284,13 @@
     "livello": "facile",
     "domanda": "Se un modello AI decide se una email è spam oppure no, quale tipo di attività sta svolgendo?",
     "opzioni": [
-      "Classificazione",
-      "Clustering",
-      "Regressione",
-      "Stima di un valore numerico"
+      "È una classificazione, perché assegna l'email a una categoria come spam o non spam",
+      "È clustering, perché raggruppa email simili anche se usa categorie già definite",
+      "È regressione, perché produce una decisione binaria invece di stimare un valore numerico continuo",
+      "È analisi semantica libera, perché interpreta il testo senza assegnare una classe finale"
     ],
-    "risposta_corretta": "Classificazione",
-    "spiegazione": "La classificazione assegna un elemento a una categoria, per esempio spam o non spam. Il clustering è vicino perché raggruppa elementi simili, ma non usa etichette già definite. La regressione e la stima numerica servono invece a prevedere valori numerici.",
+    "risposta_corretta": "È una classificazione, perché assegna l'email a una categoria come spam o non spam",
+    "spiegazione": "Decidere se una email è spam oppure no è un problema di classificazione, perché l'input viene assegnato a una categoria. Il clustering raggruppa elementi senza etichette già definite, la regressione stima valori numerici e l'analisi libera non descrive la scelta tra classi.",
     "tags": [
       "ai",
       "classificazione",
@@ -299,6 +299,8 @@
     "difficolta": 1,
     "distrattore_forte": "Clustering",
     "motivo_distrattore_forte": "È vicino perché anche il clustering separa elementi in gruppi, ma è sbagliato perché nello spam/non spam le categorie sono già definite.",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve condividere il concetto centrale della corretta e diventare sbagliata per un dettaglio tecnico, logico o pratico.",
     "_materia_demo": "AI",
     "_file_origine": "data/ai.json",
     "materia": "AI"
@@ -450,13 +452,13 @@
     "livello": "facile",
     "domanda": "Quando un modello AI inventa una risposta falsa ma la presenta come sicura, come viene chiamato di solito questo problema?",
     "opzioni": [
-      "Allucinazione",
-      "Bias del dataset",
-      "Overfitting",
-      "Errore di classificazione"
+      "È un'allucinazione, perché il modello produce contenuto falso presentandolo come sicuro",
+      "È un errore di grounding, perché la risposta sembra fondata ma non è supportata dai dati disponibili",
+      "È bias del dataset, perché la risposta falsa nasce da una distorsione sistematica nei dati",
+      "È overfitting, perché il modello ripete una risposta appresa invece di generare contenuto inventato"
     ],
-    "risposta_corretta": "Allucinazione",
-    "spiegazione": "Un'allucinazione avviene quando un modello genera una risposta falsa o inventata presentandola come sicura. Il bias riguarda distorsioni nei dati o nei risultati, l'overfitting indica un modello troppo adattato ai dati di addestramento, mentre un errore di classificazione è una previsione di classe sbagliata.",
+    "risposta_corretta": "È un'allucinazione, perché il modello produce contenuto falso presentandolo come sicuro",
+    "spiegazione": "Quando un modello inventa una risposta falsa e la presenta come sicura si parla normalmente di allucinazione. Un errore di grounding può essere collegato, ma non è il nome principale del fenomeno; bias e overfitting indicano problemi diversi.",
     "tags": [
       "ai",
       "allucinazioni",
@@ -465,6 +467,8 @@
     "difficolta": 1,
     "distrattore_forte": "Bias del dataset",
     "motivo_distrattore_forte": "È vicino perché anche il bias può portare a risposte distorte o scorrette, ma l'allucinazione indica specificamente una risposta falsa inventata e presentata come sicura.",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve condividere il concetto centrale della corretta e diventare sbagliata per un dettaglio tecnico, logico o pratico.",
     "_materia_demo": "AI",
     "_file_origine": "data/ai.json",
     "materia": "AI"
@@ -1053,12 +1057,12 @@
     "domanda": "Perché conviene limitare le azioni che un agente AI può eseguire automaticamente?",
     "opzioni": [
       "Per ridurre il rischio che un errore o un prompt malevolo produca azioni dannose",
-      "Per velocizzare il flusso riducendo controlli e conferme dell'utente",
-      "Per impedire al modello di leggere qualsiasi istruzione dell'utente",
-      "Per rendere impossibile ogni controllo umano sulle azioni dell'agente"
+      "Per ridurre i rischi operativi, ma lasciando all'agente la possibilità di confermare da solo le azioni delicate",
+      "Per limitare le azioni automatiche, ma senza distinguere tra operazioni reversibili e operazioni rischiose",
+      "Per controllare meglio l'agente, ma concedendo permessi ampi quando il prompt sembra scritto in modo chiaro"
     ],
     "risposta_corretta": "Per ridurre il rischio che un errore o un prompt malevolo produca azioni dannose",
-    "spiegazione": "Un agente con troppi permessi può fare danni se interpreta male un comando o subisce prompt injection. Limitare permessi e richiedere conferme nei casi delicati rende il sistema più sicuro.",
+    "spiegazione": "Limitare le azioni automatiche riduce il rischio che errori, ambiguità o prompt malevoli producano azioni dannose. L'agente non dovrebbe confermare da solo azioni delicate, i permessi vanno graduati in base al rischio e un prompt chiaro non elimina la necessità di controlli.",
     "tags": [
       "sicurezza",
       "agenti",
@@ -1067,6 +1071,8 @@
     "difficolta": 2,
     "distrattore_forte": "Per velocizzare il flusso riducendo controlli e conferme dell'utente",
     "motivo_distrattore_forte": "È vicino perché parla di automazione, ma ridurre i controlli può aumentare i rischi invece di limitarli.",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve condividere il concetto centrale della corretta e diventare sbagliata per un dettaglio tecnico, logico o pratico.",
     "_materia_demo": "AI",
     "_file_origine": "data/ai.json",
     "materia": "AI"
@@ -1183,13 +1189,15 @@
     "livello": "facile",
     "domanda": "Che cosa significa inferenza in un modello AI già addestrato?",
     "opzioni": [
-      "Usare il modello per produrre una previsione o una risposta su un nuovo input.",
-      "Aggiungere manualmente tutte le regole che il modello dovrà seguire.",
-      "Cancellare i pesi del modello prima dell'utilizzo.",
-      "Preparare il dataset prima della fase di addestramento."
+      "Usare il modello per produrre una previsione o una risposta su un nuovo input",
+      "Usare il modello su un nuovo input, ma aggiornando i pesi durante ogni risposta",
+      "Produrre una risposta dopo l'addestramento, ma solo su esempi già presenti nel training set",
+      "Applicare il modello a un input, ma completando prima una nuova fase di addestramento"
     ],
-    "risposta_corretta": "Usare il modello per produrre una previsione o una risposta su un nuovo input.",
-    "spiegazione": "La risposta corretta è A. L'inferenza è l'uso del modello dopo l'addestramento. B è programmazione manuale, C distrugge il modello, D riguarda la preparazione dei dati.",
+    "risposta_corretta": "Usare il modello per produrre una previsione o una risposta su un nuovo input",
+    "spiegazione": "L'inferenza è l'uso di un modello già addestrato per produrre una previsione o una risposta su un nuovo input. Non aggiorna i pesi durante ogni risposta, non riguarda solo esempi già visti e non richiede una nuova fase di addestramento prima di ogni utilizzo.",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve condividere il concetto centrale della corretta e diventare sbagliata per un dettaglio tecnico, logico o pratico.",
     "_materia_demo": "AI",
     "_file_origine": "data/ai.json",
     "materia": "AI"
@@ -1200,13 +1208,15 @@
     "livello": "facile",
     "domanda": "Che cosa si intende per allucinazione di un modello linguistico?",
     "opzioni": [
-      "Una risposta plausibile nella forma ma non corretta o non supportata dai dati.",
-      "Una risposta presentata come verificata da fonti esterne affidabili.",
-      "Una traduzione letterale prodotta senza cambiare il significato.",
-      "Una compressione tecnica dei parametri del modello."
+      "Una risposta plausibile nella forma ma non corretta o non supportata dai dati",
+      "Una risposta fluida e sicura, ma supportata solo da fonti che il modello non ha realmente verificato",
+      "Una risposta non supportata dai dati, ma considerata corretta perché coerente con il tono della conversazione",
+      "Una risposta plausibile ma imprecisa, corretta durante la generazione senza verifiche esterne"
     ],
-    "risposta_corretta": "Una risposta plausibile nella forma ma non corretta o non supportata dai dati.",
-    "spiegazione": "La risposta corretta è A. L'allucinazione sembra credibile ma può essere falsa. B è l'opposto, C riguarda traduzione, D riguarda ottimizzazione del modello.",
+    "risposta_corretta": "Una risposta plausibile nella forma ma non corretta o non supportata dai dati",
+    "spiegazione": "Un'allucinazione è una risposta plausibile nella forma ma non corretta o non supportata dai dati. Una risposta non diventa affidabile solo perché è fluida, coerente nel tono o formulata con sicurezza.",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve condividere il concetto centrale della corretta e diventare sbagliata per un dettaglio tecnico, logico o pratico.",
     "_materia_demo": "AI",
     "_file_origine": "data/ai.json",
     "materia": "AI"
@@ -1270,13 +1280,15 @@
     "livello": "facile",
     "domanda": "Che cosa distingue un modello supervisionato da uno non supervisionato?",
     "opzioni": [
-      "Nel supervisionato gli esempi di addestramento hanno etichette o risposte corrette associate.",
-      "Nel supervisionato il modello può funzionare solo senza dati di esempio.",
-      "Nel non supervisionato ogni esempio contiene etichette esplicite simili a quelle del supervisionato.",
-      "Nel non supervisionato il modello non può trovare strutture nei dati."
+      "Nel supervisionato gli esempi di addestramento hanno etichette o risposte corrette associate",
+      "Nel supervisionato gli esempi hanno etichette, ma il modello non le usa per imparare la relazione input-risposta",
+      "Nel non supervisionato il modello cerca strutture nei dati, ma usando etichette corrette fornite per ogni esempio",
+      "Nel supervisionato e nel non supervisionato i dati sono uguali, cambia solo il numero di esempi usati"
     ],
-    "risposta_corretta": "Nel supervisionato gli esempi di addestramento hanno etichette o risposte corrette associate.",
-    "spiegazione": "La risposta corretta è A. L'apprendimento supervisionato usa esempi etichettati. B e C invertirebbero il significato, D è falso perché l'apprendimento non supervisionato cerca strutture nei dati.",
+    "risposta_corretta": "Nel supervisionato gli esempi di addestramento hanno etichette o risposte corrette associate",
+    "spiegazione": "Nell'apprendimento supervisionato gli esempi hanno etichette o risposte corrette associate. Nel non supervisionato il modello cerca strutture senza etichette esplicite; la differenza non riguarda solo il numero di esempi.",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve condividere il concetto centrale della corretta e diventare sbagliata per un dettaglio tecnico, logico o pratico.",
     "_materia_demo": "AI",
     "_file_origine": "data/ai.json",
     "materia": "AI"
@@ -1306,13 +1318,15 @@
     "livello": "intermedio",
     "domanda": "Perché un database vettoriale è utile in un sistema basato su embedding?",
     "opzioni": [
-      "Per cercare elementi semanticamente simili usando vettori numerici.",
-      "Per salvare esclusivamente immagini in formato compresso.",
-      "Per convertire un modello linguistico in un foglio di calcolo.",
-      "Per sostituire la fase di progettazione dei prompt."
+      "Per cercare elementi semanticamente simili usando vettori numerici",
+      "Per cercare elementi simili usando vettori, ma confrontando solo parole identiche presenti nei testi",
+      "Per conservare embedding numerici, ma senza permettere ricerche di vicinanza tra contenuti",
+      "Per trovare contenuti semanticamente vicini, ma sostituendo il modello linguistico con una tabella statica"
     ],
-    "risposta_corretta": "Per cercare elementi semanticamente simili usando vettori numerici.",
-    "spiegazione": "La risposta corretta è A. Un database vettoriale permette ricerche per similarità tra embedding. B, C e D non descrivono il suo uso principale.",
+    "risposta_corretta": "Per cercare elementi semanticamente simili usando vettori numerici",
+    "spiegazione": "Un database vettoriale è utile perché permette di cercare elementi semanticamente simili usando vettori numerici. Non si limita a parole identiche, non conserva vettori senza ricerca di vicinanza e non sostituisce da solo il modello linguistico.",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve condividere il concetto centrale della corretta e diventare sbagliata per un dettaglio tecnico, logico o pratico.",
     "_materia_demo": "AI",
     "_file_origine": "data/ai.json",
     "materia": "AI"
@@ -1374,13 +1388,15 @@
     "livello": "intermedio",
     "domanda": "Che cosa si intende per prompt injection?",
     "opzioni": [
-      "Un tentativo di inserire istruzioni malevole o fuorvianti nel testo dato al modello.",
-      "Una tecnica di compressione che riduce il numero di parametri del modello.",
-      "Un metodo per caricare immagini dentro un database relazionale.",
-      "Un sistema per rendere più veloce la connessione internet dell'app."
+      "Un tentativo di inserire istruzioni malevole o fuorvianti nel testo dato al modello",
+      "Un tentativo di inserire istruzioni nel testo, ma limitato a cambiare solo il tono della risposta",
+      "Una manipolazione del prompt, ma innocua se l'istruzione appare dentro un documento recuperato",
+      "Un attacco tramite testo, ma possibile solo quando il modello non ha istruzioni di sistema"
     ],
-    "risposta_corretta": "Un tentativo di inserire istruzioni malevole o fuorvianti nel testo dato al modello.",
-    "spiegazione": "La risposta corretta è A. La prompt injection cerca di manipolare il comportamento del modello tramite istruzioni nel testo. B, C e D sono concetti diversi.",
+    "risposta_corretta": "Un tentativo di inserire istruzioni malevole o fuorvianti nel testo dato al modello",
+    "spiegazione": "La prompt injection è un tentativo di inserire istruzioni malevole o fuorvianti nel testo dato al modello. Non riguarda solo il tono, può arrivare anche da documenti recuperati e può essere rischiosa anche se esistono istruzioni di sistema.",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve condividere il concetto centrale della corretta e diventare sbagliata per un dettaglio tecnico, logico o pratico.",
     "_materia_demo": "AI",
     "_file_origine": "data/ai.json",
     "materia": "AI"
@@ -1391,13 +1407,15 @@
     "livello": "intermedio",
     "domanda": "A cosa serve il tool calling in un'applicazione basata su LLM?",
     "opzioni": [
-      "A permettere al modello di richiedere l'uso di strumenti esterni, come API, calcoli o ricerche.",
-      "A impedire al modello di interagire con qualunque sistema esterno.",
-      "A sostituire la necessità di definire permessi e controlli sugli strumenti.",
-      "A trasformare ogni risposta testuale in un'immagine."
+      "A permettere al modello di richiedere l'uso di strumenti esterni, come API, calcoli o ricerche",
+      "A permettere l'uso di strumenti esterni, ma senza definire permessi, limiti o controlli sulle azioni",
+      "A collegare il modello a funzioni esterne, ma solo per leggere risultati senza usarli nella risposta",
+      "A far scegliere strumenti al modello, ma sostituendo la verifica del risultato con la chiamata del tool"
     ],
-    "risposta_corretta": "A permettere al modello di richiedere l'uso di strumenti esterni, come API, calcoli o ricerche.",
-    "spiegazione": "La risposta corretta è A. Il tool calling collega il modello a funzioni esterne. B è l'opposto, C è pericoloso perché i controlli restano necessari, D non è il suo scopo.",
+    "risposta_corretta": "A permettere al modello di richiedere l'uso di strumenti esterni, come API, calcoli o ricerche",
+    "spiegazione": "Il tool calling permette al modello di richiedere strumenti esterni, come API, calcoli o ricerche. Servono comunque permessi e controlli, i risultati devono essere usati e verificati correttamente, e chiamare un tool non sostituisce la validazione.",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve condividere il concetto centrale della corretta e diventare sbagliata per un dettaglio tecnico, logico o pratico.",
     "_materia_demo": "AI",
     "_file_origine": "data/ai.json",
     "materia": "AI"
@@ -1408,13 +1426,15 @@
     "livello": "intermedio",
     "domanda": "Perché è utile separare il ragionamento del sistema dalle azioni eseguite da un agente AI?",
     "opzioni": [
-      "Per controllare meglio quando l'agente deve pensare, chiamare strumenti, verificare risultati o fermarsi.",
-      "Per fare in modo che l'agente esegua comandi anche quando i controlli non sono sufficienti.",
-      "Per eliminare la necessità di log, test e gestione degli errori.",
-      "Per trasformare ogni agente in un semplice chatbot senza strumenti."
+      "Per controllare meglio quando l'agente deve pensare, chiamare strumenti, verificare risultati o fermarsi",
+      "Per separare ragionamento e azioni, ma permettere comunque all'agente di eseguire strumenti senza verifica finale",
+      "Per controllare le fasi dell'agente, ma trattare la chiamata agli strumenti come sicura quando il ragionamento sembra coerente",
+      "Per distinguere pensiero e azione, ma eliminando log e controlli quando l'agente produce una risposta fluida"
     ],
-    "risposta_corretta": "Per controllare meglio quando l'agente deve pensare, chiamare strumenti, verificare risultati o fermarsi.",
-    "spiegazione": "La risposta corretta è A. Separare fasi e azioni rende l'agente più controllabile. B è rischioso, C elimina controlli importanti, D riduce l'agente a un sistema meno capace.",
+    "risposta_corretta": "Per controllare meglio quando l'agente deve pensare, chiamare strumenti, verificare risultati o fermarsi",
+    "spiegazione": "Separare ragionamento e azioni rende l'agente più controllabile: si può decidere quando pensare, chiamare strumenti, verificare risultati o fermarsi. Il ragionamento coerente non basta a rendere sicura una chiamata a strumenti esterni, e log, controlli e verifica finale restano necessari.",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve condividere il concetto centrale della corretta e diventare sbagliata per un dettaglio tecnico, logico o pratico.",
     "_materia_demo": "AI",
     "_file_origine": "data/ai.json",
     "materia": "AI"
@@ -1444,13 +1464,15 @@
     "livello": "intermedio",
     "domanda": "Che cosa indica il concetto di bias in un sistema AI?",
     "opzioni": [
-      "Una tendenza sistematica del modello a favorire o penalizzare certi risultati o gruppi.",
-      "La capacità del modello di mantenere una neutralità perfetta nelle risposte.",
-      "La dimensione fisica del server su cui il modello viene eseguito.",
-      "Il tempo necessario per scaricare un dataset da internet."
+      "Una tendenza sistematica del modello a favorire o penalizzare certi risultati o gruppi",
+      "Una tendenza del modello verso certi risultati, ma dovuta soltanto a errori casuali non ripetibili",
+      "Una distorsione sistematica nei risultati, ma intenzionale e progettata manualmente dagli sviluppatori",
+      "Una preferenza del modello per alcuni output, ma priva di effetti misurabili su gruppi, decisioni o risultati"
     ],
-    "risposta_corretta": "Una tendenza sistematica del modello a favorire o penalizzare certi risultati o gruppi.",
-    "spiegazione": "La risposta corretta è A. Il bias è una distorsione sistematica. B nega il problema, C e D riguardano aspetti tecnici non collegati al bias.",
+    "risposta_corretta": "Una tendenza sistematica del modello a favorire o penalizzare certi risultati o gruppi",
+    "spiegazione": "Il bias indica una tendenza sistematica del modello a favorire o penalizzare certi risultati o gruppi. Non è semplice rumore casuale, non deve essere per forza intenzionale e può avere effetti misurabili sui risultati.",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve condividere il concetto centrale della corretta e diventare sbagliata per un dettaglio tecnico, logico o pratico.",
     "_materia_demo": "AI",
     "_file_origine": "data/ai.json",
     "materia": "AI"
@@ -1461,13 +1483,15 @@
     "livello": "intermedio",
     "domanda": "Che cosa significa grounding in una risposta generata da un modello linguistico?",
     "opzioni": [
-      "Collegare la risposta a informazioni verificabili o a fonti fornite al sistema.",
-      "Aumentare casualmente la creatività della risposta.",
-      "Ridurre il testo generato a una sola parola.",
-      "Cancellare tutti i riferimenti ai dati usati dal sistema."
+      "Collegare la risposta a informazioni verificabili o a fonti fornite al sistema",
+      "Collegare la risposta a fonti fornite, ma usarle solo come riferimento finale senza influenzare il contenuto generato",
+      "Ancorare la risposta a dati verificabili, ma senza distinguere tra fonti pertinenti e fonti solo semanticamente simili",
+      "Usare informazioni disponibili per rendere la risposta più credibile, ma senza verificare se supportano davvero l'affermazione"
     ],
-    "risposta_corretta": "Collegare la risposta a informazioni verificabili o a fonti fornite al sistema.",
-    "spiegazione": "La risposta corretta è A. Il grounding aiuta ad ancorare la risposta a dati disponibili. B riguarda creatività, C brevità, D va contro l'idea di ancoraggio.",
+    "risposta_corretta": "Collegare la risposta a informazioni verificabili o a fonti fornite al sistema",
+    "spiegazione": "Il grounding collega la risposta a informazioni verificabili o a fonti fornite al sistema. Non basta citare fonti alla fine, non basta usare contenuti solo simili e non basta rendere la risposta credibile se le informazioni non supportano davvero ciò che viene affermato.",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve condividere il concetto centrale della corretta e diventare sbagliata per un dettaglio tecnico, logico o pratico.",
     "_materia_demo": "AI",
     "_file_origine": "data/ai.json",
     "materia": "AI"
@@ -1478,13 +1502,15 @@
     "livello": "intermedio",
     "domanda": "Perché la quantizzazione può essere utile per eseguire modelli AI su dispositivi con risorse limitate?",
     "opzioni": [
-      "Per ridurre la precisione numerica dei pesi e diminuire memoria o costo computazionale.",
-      "Per aumentare il numero di neuroni senza cambiare la memoria richiesta.",
-      "Per trasformare un modello linguistico in un database vettoriale.",
-      "Per garantire automaticamente risposte più corrette in ogni dominio."
+      "Per ridurre la precisione numerica dei pesi e diminuire memoria o costo computazionale",
+      "Per ridurre la precisione numerica dei pesi, ma aumentando il numero totale di parametri del modello",
+      "Per rendere più leggero il modello, ma senza modificare il modo in cui i pesi vengono rappresentati numericamente",
+      "Per diminuire memoria e costo computazionale, ma garantendo la stessa precisione di calcolo in ogni passaggio"
     ],
-    "risposta_corretta": "Per ridurre la precisione numerica dei pesi e diminuire memoria o costo computazionale.",
-    "spiegazione": "La risposta corretta è A. La quantizzazione riduce il peso computazionale usando rappresentazioni numeriche più leggere. B, C e D descrivono effetti non corretti.",
+    "risposta_corretta": "Per ridurre la precisione numerica dei pesi e diminuire memoria o costo computazionale",
+    "spiegazione": "La quantizzazione riduce la precisione numerica con cui sono rappresentati i pesi o alcune operazioni, diminuendo memoria e costo computazionale. Non aumenta i parametri, non lascia invariata la rappresentazione numerica e non garantisce sempre la stessa precisione di calcolo.",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve condividere il concetto centrale della corretta e diventare sbagliata per un dettaglio tecnico, logico o pratico.",
     "_materia_demo": "AI",
     "_file_origine": "data/ai.json",
     "materia": "AI"
@@ -1495,13 +1521,15 @@
     "livello": "intermedio",
     "domanda": "Che cosa può indicare una bassa precisione in un classificatore?",
     "opzioni": [
-      "Molti elementi previsti come positivi dal modello sono in realtà negativi.",
-      "Il modello produce pochissimi risultati positivi.",
-      "Il dataset contiene solo esempi senza etichetta.",
-      "Il modello è stato addestrato esclusivamente su immagini ad alta risoluzione."
+      "Molti elementi previsti come positivi dal modello sono in realtà negativi",
+      "Molti positivi previsti sono errati, ma il modello ha comunque pochi falsi positivi",
+      "Il modello produce pochi risultati positivi, ma quelli previsti come positivi sono quasi tutti corretti",
+      "Il classificatore sbaglia molte predizioni negative, ma mantiene affidabili le predizioni positive"
     ],
-    "risposta_corretta": "Molti elementi previsti come positivi dal modello sono in realtà negativi.",
-    "spiegazione": "La risposta corretta è A. La precisione misura quanto sono affidabili le predizioni positive. B riguarda assenza di positivi, C il tipo di dati, D non definisce la precisione.",
+    "risposta_corretta": "Molti elementi previsti come positivi dal modello sono in realtà negativi",
+    "spiegazione": "Una bassa precisione indica che molti elementi previsti come positivi sono in realtà negativi, quindi ci sono molti falsi positivi. Non significa semplicemente produrre pochi positivi e non riguarda in modo diretto l'affidabilità delle predizioni negative.",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve condividere il concetto centrale della corretta e diventare sbagliata per un dettaglio tecnico, logico o pratico.",
     "_materia_demo": "AI",
     "_file_origine": "data/ai.json",
     "materia": "AI"
@@ -1512,13 +1540,15 @@
     "livello": "intermedio",
     "domanda": "Perché conviene registrare log e risultati durante i test di un'app AI?",
     "opzioni": [
-      "Per capire quali input causano errori, risposte deboli o comportamenti inattesi.",
-      "Per impedire al modello di generare risposte diverse tra loro.",
-      "Per sostituire la progettazione dell'interfaccia utente.",
-      "Per rendere inutili i controlli di sicurezza."
+      "Per capire quali input causano errori, risposte deboli o comportamenti inattesi",
+      "Per registrare input e risultati, ma senza collegarli agli errori osservati durante i test",
+      "Per capire i comportamenti inattesi, ma usando i log solo come archivio e non come base di analisi",
+      "Per conservare risultati dei test, ma sostituendo con i log la revisione qualitativa delle risposte"
     ],
-    "risposta_corretta": "Per capire quali input causano errori, risposte deboli o comportamenti inattesi.",
-    "spiegazione": "La risposta corretta è A. I log aiutano debug, valutazione e miglioramento. B è troppo rigido, C e D non sono scopi dei log.",
+    "risposta_corretta": "Per capire quali input causano errori, risposte deboli o comportamenti inattesi",
+    "spiegazione": "Registrare log e risultati durante i test aiuta a capire quali input causano errori, risposte deboli o comportamenti inattesi. I log devono essere collegati all'analisi degli errori e non sostituiscono la revisione qualitativa.",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve condividere il concetto centrale della corretta e diventare sbagliata per un dettaglio tecnico, logico o pratico.",
     "_materia_demo": "AI",
     "_file_origine": "data/ai.json",
     "materia": "AI"
@@ -1586,13 +1616,15 @@
     "livello": "avanzato",
     "domanda": "Qual è una differenza importante tra RLHF e DPO nell'allineamento dei modelli linguistici?",
     "opzioni": [
-      "RLHF usa un processo con modello di ricompensa e ottimizzazione tramite rinforzo, mentre DPO ottimizza direttamente su preferenze confrontate.",
-      "DPO richiede un modello di ricompensa separato più complesso, mentre RLHF ottimizza direttamente le preferenze.",
-      "RLHF funziona solo con modelli piccoli, mentre DPO funziona solo con database SQL.",
-      "DPO elimina la necessità di dati di preferenza umana o sintetica."
+      "RLHF usa un processo con modello di ricompensa e ottimizzazione tramite rinforzo, mentre DPO ottimizza direttamente su preferenze confrontate",
+      "RLHF usa preferenze e ricompensa, mentre DPO richiede comunque un modello di ricompensa separato per ogni confronto",
+      "DPO ottimizza su preferenze confrontate, ma usa rinforzo esplicito nello stesso modo centrale di RLHF",
+      "RLHF e DPO usano preferenze, ma differiscono solo per il formato dei dati e non per il modo di ottimizzare"
     ],
-    "risposta_corretta": "RLHF usa un processo con modello di ricompensa e ottimizzazione tramite rinforzo, mentre DPO ottimizza direttamente su preferenze confrontate.",
-    "spiegazione": "La risposta corretta è A. RLHF e DPO usano strategie diverse per sfruttare preferenze. B, C e D sono tecnicamente scorrette.",
+    "risposta_corretta": "RLHF usa un processo con modello di ricompensa e ottimizzazione tramite rinforzo, mentre DPO ottimizza direttamente su preferenze confrontate",
+    "spiegazione": "RLHF usa tipicamente un modello di ricompensa e ottimizzazione tramite rinforzo, mentre DPO ottimizza direttamente su preferenze confrontate. DPO non richiede lo stesso modello di ricompensa separato, non usa il rinforzo nello stesso modo centrale di RLHF e la differenza non riguarda solo il formato dei dati.",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve condividere il concetto centrale della corretta e diventare sbagliata per un dettaglio tecnico, logico o pratico.",
     "_materia_demo": "AI",
     "_file_origine": "data/ai.json",
     "materia": "AI"
@@ -1603,13 +1635,15 @@
     "livello": "avanzato",
     "domanda": "Che cosa indica il catastrophic forgetting nel machine learning?",
     "opzioni": [
-      "La perdita di prestazioni su conoscenze o compiti precedenti dopo un nuovo addestramento.",
-      "La capacità del modello di ricordare perfettamente tutti i dati passati.",
-      "La cancellazione automatica dei file temporanei dopo l'inferenza.",
-      "La riduzione della latenza causata da una cache più efficiente."
+      "La perdita di prestazioni su conoscenze o compiti precedenti dopo un nuovo addestramento",
+      "La perdita di prestazioni su compiti precedenti, ma dovuta solo alla cancellazione manuale del dataset originale",
+      "Il peggioramento su conoscenze già apprese, ma senza che il nuovo addestramento abbia influenzato i pesi del modello",
+      "La riduzione della capacità su compiti vecchi, ma compensata automaticamente dalla maggiore accuratezza sul nuovo compito"
     ],
-    "risposta_corretta": "La perdita di prestazioni su conoscenze o compiti precedenti dopo un nuovo addestramento.",
-    "spiegazione": "La risposta corretta è A. Il catastrophic forgetting riguarda il peggioramento su competenze precedenti. B è l'opposto, C e D appartengono ad altri ambiti.",
+    "risposta_corretta": "La perdita di prestazioni su conoscenze o compiti precedenti dopo un nuovo addestramento",
+    "spiegazione": "Il catastrophic forgetting è la perdita di prestazioni su conoscenze o compiti precedenti dopo un nuovo addestramento. Non dipende solo dalla cancellazione manuale del dataset, riguarda cambiamenti nel comportamento del modello e non viene compensato automaticamente dal miglioramento sul nuovo compito.",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve condividere il concetto centrale della corretta e diventare sbagliata per un dettaglio tecnico, logico o pratico.",
     "_materia_demo": "AI",
     "_file_origine": "data/ai.json",
     "materia": "AI"
@@ -1637,13 +1671,15 @@
     "livello": "avanzato",
     "domanda": "Che cosa può causare il context poisoning in un'applicazione basata su LLM?",
     "opzioni": [
-      "L'inserimento nel contesto di informazioni fuorvianti che influenzano negativamente le risposte successive.",
-      "La riduzione della temperatura a un valore più basso durante la generazione.",
-      "La conversione degli input testuali in token numerici.",
-      "L'uso di un monitor con risoluzione non adatta all'interfaccia."
+      "L'inserimento nel contesto di informazioni fuorvianti che influenzano negativamente le risposte successive",
+      "L'inserimento di informazioni nel contesto, ma con effetti limitati solo alla formattazione della risposta",
+      "La presenza di dati fuorvianti nel contesto, ma senza impatto sulle risposte successive del modello",
+      "La contaminazione del contesto con contenuti ingannevoli, ma corretta automaticamente dal modello prima della generazione"
     ],
-    "risposta_corretta": "L'inserimento nel contesto di informazioni fuorvianti che influenzano negativamente le risposte successive.",
-    "spiegazione": "La risposta corretta è A. Il context poisoning contamina il contesto con contenuti ingannevoli. B, C e D non descrivono questo rischio.",
+    "risposta_corretta": "L'inserimento nel contesto di informazioni fuorvianti che influenzano negativamente le risposte successive",
+    "spiegazione": "Il context poisoning avviene quando informazioni fuorvianti entrano nel contesto e influenzano negativamente risposte successive. Non riguarda solo la formattazione, può avere impatto sul comportamento del modello e non viene sempre corretto automaticamente.",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve condividere il concetto centrale della corretta e diventare sbagliata per un dettaglio tecnico, logico o pratico.",
     "_materia_demo": "AI",
     "_file_origine": "data/ai.json",
     "materia": "AI"
@@ -1654,13 +1690,15 @@
     "livello": "avanzato",
     "domanda": "Perché un sistema multimodale deve allineare informazioni provenienti da testo e immagini?",
     "opzioni": [
-      "Per collegare correttamente elementi visivi e descrizioni linguistiche durante il ragionamento o la generazione.",
-      "Per impedire al modello di usare dati testuali quando riceve un'immagine.",
-      "Per trasformare ogni immagine in un file audio prima dell'analisi.",
-      "Per cancellare automaticamente le parti meno colorate dell'immagine."
+      "Per collegare correttamente elementi visivi e descrizioni linguistiche durante il ragionamento o la generazione",
+      "Per collegare testo e immagini, ma usando il testo solo come etichetta esterna senza influenzare il ragionamento visivo",
+      "Per mettere in relazione descrizioni e contenuti visivi, ma trattando ogni modalità come indipendente nella risposta finale",
+      "Per usare testo e immagini nello stesso sistema, ma convertendo tutto in una sola modalità prima di ogni confronto"
     ],
-    "risposta_corretta": "Per collegare correttamente elementi visivi e descrizioni linguistiche durante il ragionamento o la generazione.",
-    "spiegazione": "La risposta corretta è A. L'allineamento multimodale mette in relazione contenuto visivo e linguaggio. B, C e D non descrivono questo processo.",
+    "risposta_corretta": "Per collegare correttamente elementi visivi e descrizioni linguistiche durante il ragionamento o la generazione",
+    "spiegazione": "Un sistema multimodale deve allineare testo e immagini per collegare elementi visivi e descrizioni linguistiche durante ragionamento o generazione. Non basta usare il testo come etichetta, non si devono trattare le modalità come indipendenti e non è sempre corretto ridurre tutto a una sola modalità prima del confronto.",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve condividere il concetto centrale della corretta e diventare sbagliata per un dettaglio tecnico, logico o pratico.",
     "_materia_demo": "AI",
     "_file_origine": "data/ai.json",
     "materia": "AI"
@@ -1671,13 +1709,15 @@
     "livello": "avanzato",
     "domanda": "Quale compromesso è spesso necessario quando si sceglie un modello AI per un'app reale?",
     "opzioni": [
-      "Bilanciare qualità delle risposte, latenza, costo computazionale e risorse disponibili.",
-      "Scegliere il modello più grande come criterio principale, senza valutare bene tempi e costi.",
-      "Usare solo modelli non addestrati per evitare ogni errore.",
-      "Eliminare i test perché le metriche rallentano l'applicazione."
+      "Bilanciare qualità delle risposte, latenza, costo computazionale e risorse disponibili",
+      "Bilanciare qualità e latenza, ma scegliendo comunque il modello più grande quando produce risposte più complete",
+      "Valutare costo e risorse disponibili, ma considerare la latenza solo dopo il rilascio dell'applicazione",
+      "Scegliere un modello con buone risposte, ma separando la qualità dai vincoli pratici di esecuzione"
     ],
-    "risposta_corretta": "Bilanciare qualità delle risposte, latenza, costo computazionale e risorse disponibili.",
-    "spiegazione": "La risposta corretta è A. In produzione bisogna bilanciare qualità e vincoli pratici. B è inefficiente, C non ha senso operativo, D rimuove controlli fondamentali.",
+    "risposta_corretta": "Bilanciare qualità delle risposte, latenza, costo computazionale e risorse disponibili",
+    "spiegazione": "In un'app reale bisogna bilanciare qualità, latenza, costo computazionale e risorse disponibili. Il modello più grande non è sempre la scelta migliore, la latenza va valutata prima del rilascio e la qualità non può essere separata dai vincoli pratici.",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve condividere il concetto centrale della corretta e diventare sbagliata per un dettaglio tecnico, logico o pratico.",
     "_materia_demo": "AI",
     "_file_origine": "data/ai.json",
     "materia": "AI"

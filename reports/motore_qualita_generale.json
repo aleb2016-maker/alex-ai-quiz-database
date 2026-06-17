@@ -1980,7 +1980,7 @@
     "problemi_tecnici_totali": 0,
     "avvisi_qualita_reali_totali": 0,
     "errori_linguistici_totali": 0,
-    "note_informative_totali": 43,
+    "note_informative_totali": 47,
     "domande_con_problemi_tecnici": [],
     "domande_con_avvisi_qualita_reali": [],
     "domande_con_errori_linguistici": [],
@@ -2187,6 +2187,26 @@
         ]
       },
       {
+        "id": "AI-FAC-0006",
+        "domanda": "Se un modello AI decide se una email è spam oppure no, quale tipo di attività sta svolgendo?",
+        "categoria": "ai",
+        "livello": "facile",
+        "opzioni": [
+          "È una classificazione, perché assegna l'email a una categoria come spam o non spam",
+          "È clustering, perché raggruppa email simili anche se usa categorie già definite",
+          "È regressione, perché produce una decisione binaria invece di stimare un valore numerico continuo",
+          "È analisi semantica libera, perché interpreta il testo senza assegnare una classe finale"
+        ],
+        "risposta_corretta": "È una classificazione, perché assegna l'email a una categoria come spam o non spam",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "spiegazione: testo molto lungo, controllare leggibilità"
+        ]
+      },
+      {
         "id": "AI-INT-0006",
         "domanda": "Perché è utile testare un modello AI con esempi diversi da quelli usati in addestramento?",
         "categoria": "ai",
@@ -2238,26 +2258,6 @@
           "Per distinguere retrieval, generazione e controllo, ma usando il controllo finale principalmente per salvare la risposta prodotta"
         ],
         "risposta_corretta": "Per rendere più controllabile ogni fase e individuare meglio dove nasce un errore",
-        "posizione_risposta": "A",
-        "problemi_tecnici": [],
-        "avvisi_qualita_reali": [],
-        "errori_linguistici": [],
-        "note_informative": [
-          "spiegazione: testo molto lungo, controllare leggibilità"
-        ]
-      },
-      {
-        "id": "AI-FAC-0008",
-        "domanda": "Quando un modello AI inventa una risposta falsa ma la presenta come sicura, come viene chiamato di solito questo problema?",
-        "categoria": "ai",
-        "livello": "facile",
-        "opzioni": [
-          "Allucinazione",
-          "Bias del dataset",
-          "Overfitting",
-          "Errore di classificazione"
-        ],
-        "risposta_corretta": "Allucinazione",
         "posizione_risposta": "A",
         "problemi_tecnici": [],
         "avvisi_qualita_reali": [],
@@ -2434,9 +2434,9 @@
         "livello": "intermedio",
         "opzioni": [
           "Per ridurre il rischio che un errore o un prompt malevolo produca azioni dannose",
-          "Per velocizzare il flusso riducendo controlli e conferme dell'utente",
-          "Per impedire al modello di leggere qualsiasi istruzione dell'utente",
-          "Per rendere impossibile ogni controllo umano sulle azioni dell'agente"
+          "Per ridurre i rischi operativi, ma lasciando all'agente la possibilità di confermare da solo le azioni delicate",
+          "Per limitare le azioni automatiche, ma senza distinguere tra operazioni reversibili e operazioni rischiose",
+          "Per controllare meglio l'agente, ma concedendo permessi ampi quando il prompt sembra scritto in modo chiaro"
         ],
         "risposta_corretta": "Per ridurre il rischio che un errore o un prompt malevolo produca azioni dannose",
         "posizione_risposta": "A",
@@ -2444,8 +2444,7 @@
         "avvisi_qualita_reali": [],
         "errori_linguistici": [],
         "note_informative": [
-          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “impossibile”",
-          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “qualsiasi”"
+          "spiegazione: testo molto lungo, controllare leggibilità"
         ]
       },
       {
@@ -2486,26 +2485,6 @@
         "errori_linguistici": [],
         "note_informative": [
           "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “completamente”"
-        ]
-      },
-      {
-        "id": "AI-FAC-0207",
-        "domanda": "Che cosa significa inferenza in un modello AI già addestrato?",
-        "categoria": "ai",
-        "livello": "facile",
-        "opzioni": [
-          "Usare il modello per produrre una previsione o una risposta su un nuovo input.",
-          "Aggiungere manualmente tutte le regole che il modello dovrà seguire.",
-          "Cancellare i pesi del modello prima dell'utilizzo.",
-          "Preparare il dataset prima della fase di addestramento."
-        ],
-        "risposta_corretta": "Usare il modello per produrre una previsione o una risposta su un nuovo input.",
-        "posizione_risposta": "A",
-        "problemi_tecnici": [],
-        "avvisi_qualita_reali": [],
-        "errori_linguistici": [],
-        "note_informative": [
-          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “tutte”"
         ]
       },
       {
@@ -2569,6 +2548,26 @@
         ]
       },
       {
+        "id": "AI-INT-0208",
+        "domanda": "Perché è utile separare il ragionamento del sistema dalle azioni eseguite da un agente AI?",
+        "categoria": "ai",
+        "livello": "intermedio",
+        "opzioni": [
+          "Per controllare meglio quando l'agente deve pensare, chiamare strumenti, verificare risultati o fermarsi",
+          "Per separare ragionamento e azioni, ma permettere comunque all'agente di eseguire strumenti senza verifica finale",
+          "Per controllare le fasi dell'agente, ma trattare la chiamata agli strumenti come sicura quando il ragionamento sembra coerente",
+          "Per distinguere pensiero e azione, ma eliminando log e controlli quando l'agente produce una risposta fluida"
+        ],
+        "risposta_corretta": "Per controllare meglio quando l'agente deve pensare, chiamare strumenti, verificare risultati o fermarsi",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "spiegazione: testo molto lungo, controllare leggibilità"
+        ]
+      },
+      {
         "id": "AI-INT-0209",
         "domanda": "Perché un set di valutazione separato è importante nello sviluppo di un modello AI?",
         "categoria": "ai",
@@ -2594,19 +2593,60 @@
         "categoria": "ai",
         "livello": "intermedio",
         "opzioni": [
-          "Collegare la risposta a informazioni verificabili o a fonti fornite al sistema.",
-          "Aumentare casualmente la creatività della risposta.",
-          "Ridurre il testo generato a una sola parola.",
-          "Cancellare tutti i riferimenti ai dati usati dal sistema."
+          "Collegare la risposta a informazioni verificabili o a fonti fornite al sistema",
+          "Collegare la risposta a fonti fornite, ma usarle solo come riferimento finale senza influenzare il contenuto generato",
+          "Ancorare la risposta a dati verificabili, ma senza distinguere tra fonti pertinenti e fonti solo semanticamente simili",
+          "Usare informazioni disponibili per rendere la risposta più credibile, ma senza verificare se supportano davvero l'affermazione"
         ],
-        "risposta_corretta": "Collegare la risposta a informazioni verificabili o a fonti fornite al sistema.",
+        "risposta_corretta": "Collegare la risposta a informazioni verificabili o a fonti fornite al sistema",
         "posizione_risposta": "A",
         "problemi_tecnici": [],
         "avvisi_qualita_reali": [],
         "errori_linguistici": [],
         "note_informative": [
-          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “tutti”",
-          "opzione A: possibile frase poco fluida, controllare gli incontri vocalici"
+          "opzione A: possibile frase poco fluida, controllare gli incontri vocalici",
+          "spiegazione: possibile frase poco fluida, controllare gli incontri vocalici",
+          "spiegazione: testo molto lungo, controllare leggibilità"
+        ]
+      },
+      {
+        "id": "AI-INT-0212",
+        "domanda": "Perché la quantizzazione può essere utile per eseguire modelli AI su dispositivi con risorse limitate?",
+        "categoria": "ai",
+        "livello": "intermedio",
+        "opzioni": [
+          "Per ridurre la precisione numerica dei pesi e diminuire memoria o costo computazionale",
+          "Per ridurre la precisione numerica dei pesi, ma aumentando il numero totale di parametri del modello",
+          "Per rendere più leggero il modello, ma senza modificare il modo in cui i pesi vengono rappresentati numericamente",
+          "Per diminuire memoria e costo computazionale, ma garantendo la stessa precisione di calcolo in ogni passaggio"
+        ],
+        "risposta_corretta": "Per ridurre la precisione numerica dei pesi e diminuire memoria o costo computazionale",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "spiegazione: testo molto lungo, controllare leggibilità"
+        ]
+      },
+      {
+        "id": "AI-INT-0213",
+        "domanda": "Che cosa può indicare una bassa precisione in un classificatore?",
+        "categoria": "ai",
+        "livello": "intermedio",
+        "opzioni": [
+          "Molti elementi previsti come positivi dal modello sono in realtà negativi",
+          "Molti positivi previsti sono errati, ma il modello ha comunque pochi falsi positivi",
+          "Il modello produce pochi risultati positivi, ma quelli previsti come positivi sono quasi tutti corretti",
+          "Il classificatore sbaglia molte predizioni negative, ma mantiene affidabili le predizioni positive"
+        ],
+        "risposta_corretta": "Molti elementi previsti come positivi dal modello sono in realtà negativi",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “tutti”"
         ]
       },
       {
@@ -2671,23 +2711,63 @@
         ]
       },
       {
-        "id": "AI-AV-0205",
-        "domanda": "Che cosa indica il catastrophic forgetting nel machine learning?",
+        "id": "AI-AV-0204",
+        "domanda": "Qual è una differenza importante tra RLHF e DPO nell'allineamento dei modelli linguistici?",
         "categoria": "ai",
         "livello": "avanzato",
         "opzioni": [
-          "La perdita di prestazioni su conoscenze o compiti precedenti dopo un nuovo addestramento.",
-          "La capacità del modello di ricordare perfettamente tutti i dati passati.",
-          "La cancellazione automatica dei file temporanei dopo l'inferenza.",
-          "La riduzione della latenza causata da una cache più efficiente."
+          "RLHF usa un processo con modello di ricompensa e ottimizzazione tramite rinforzo, mentre DPO ottimizza direttamente su preferenze confrontate",
+          "RLHF usa preferenze e ricompensa, mentre DPO richiede comunque un modello di ricompensa separato per ogni confronto",
+          "DPO ottimizza su preferenze confrontate, ma usa rinforzo esplicito nello stesso modo centrale di RLHF",
+          "RLHF e DPO usano preferenze, ma differiscono solo per il formato dei dati e non per il modo di ottimizzare"
         ],
-        "risposta_corretta": "La perdita di prestazioni su conoscenze o compiti precedenti dopo un nuovo addestramento.",
+        "risposta_corretta": "RLHF usa un processo con modello di ricompensa e ottimizzazione tramite rinforzo, mentre DPO ottimizza direttamente su preferenze confrontate",
         "posizione_risposta": "A",
         "problemi_tecnici": [],
         "avvisi_qualita_reali": [],
         "errori_linguistici": [],
         "note_informative": [
-          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “tutti”"
+          "spiegazione: testo molto lungo, controllare leggibilità"
+        ]
+      },
+      {
+        "id": "AI-AV-0205",
+        "domanda": "Che cosa indica il catastrophic forgetting nel machine learning?",
+        "categoria": "ai",
+        "livello": "avanzato",
+        "opzioni": [
+          "La perdita di prestazioni su conoscenze o compiti precedenti dopo un nuovo addestramento",
+          "La perdita di prestazioni su compiti precedenti, ma dovuta solo alla cancellazione manuale del dataset originale",
+          "Il peggioramento su conoscenze già apprese, ma senza che il nuovo addestramento abbia influenzato i pesi del modello",
+          "La riduzione della capacità su compiti vecchi, ma compensata automaticamente dalla maggiore accuratezza sul nuovo compito"
+        ],
+        "risposta_corretta": "La perdita di prestazioni su conoscenze o compiti precedenti dopo un nuovo addestramento",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "spiegazione: testo molto lungo, controllare leggibilità"
+        ]
+      },
+      {
+        "id": "AI-AV-0208",
+        "domanda": "Perché un sistema multimodale deve allineare informazioni provenienti da testo e immagini?",
+        "categoria": "ai",
+        "livello": "avanzato",
+        "opzioni": [
+          "Per collegare correttamente elementi visivi e descrizioni linguistiche durante il ragionamento o la generazione",
+          "Per collegare testo e immagini, ma usando il testo solo come etichetta esterna senza influenzare il ragionamento visivo",
+          "Per mettere in relazione descrizioni e contenuti visivi, ma trattando ogni modalità come indipendente nella risposta finale",
+          "Per usare testo e immagini nello stesso sistema, ma convertendo tutto in una sola modalità prima di ogni confronto"
+        ],
+        "risposta_corretta": "Per collegare correttamente elementi visivi e descrizioni linguistiche durante il ragionamento o la generazione",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "spiegazione: testo molto lungo, controllare leggibilità"
         ]
       },
       {
