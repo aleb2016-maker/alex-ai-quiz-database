@@ -563,12 +563,12 @@
     "domanda": "Qual è un rischio importante se il retrieval di un sistema RAG recupera documenti solo apparentemente pertinenti?",
     "opzioni": [
       "Il modello può generare una risposta ben scritta ma basata su contesto fuorviante",
-      "Il modello può generare una risposta fluida usando documenti recuperati solo in apparenza pertinenti",
-      "Il modello rifiuta automaticamente ogni documento non perfettamente pertinente",
-      "Il database vettoriale elimina da solo tutti i documenti non usati"
+      "Il modello può usare documenti apparentemente pertinenti, ma correggere il contesto durante la generazione",
+      "Il sistema può recuperare testi simili alla domanda, ma considerarli affidabili anche senza pertinenza reale",
+      "Il modello può produrre una risposta fluida, ma il problema riguarda solo la forma della risposta"
     ],
     "risposta_corretta": "Il modello può generare una risposta ben scritta ma basata su contesto fuorviante",
-    "spiegazione": "Se i documenti recuperati sembrano pertinenti ma non rispondono davvero alla domanda, il modello può appoggiarsi a informazioni sbagliate o parziali e produrre una risposta convincente ma non affidabile.",
+    "spiegazione": "Se il retrieval recupera documenti solo apparentemente pertinenti, il modello può generare una risposta ben scritta ma basata su contesto fuorviante. La generazione non corregge necessariamente un contesto sbagliato, la somiglianza non basta a garantire pertinenza e il problema non riguarda solo la forma.",
     "tags": [
       "rag",
       "retrieval",
@@ -577,6 +577,8 @@
     "difficolta": 3,
     "distrattore_forte": "Il modello può generare una risposta fluida usando documenti recuperati solo in apparenza pertinenti",
     "motivo_distrattore_forte": "È molto vicino perché descrive lo stesso rischio di una risposta fluida basata su retrieval debole, ma è meno completo: il punto centrale è che il contesto può essere fuorviante.",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve condividere il concetto centrale della corretta e diventare sbagliata per un dettaglio tecnico, logico o pratico.",
     "_materia_demo": "AI",
     "_file_origine": "data/ai.json",
     "materia": "AI"
@@ -641,12 +643,12 @@
     "domanda": "Quando il fine-tuning è più adatto del solo prompt engineering?",
     "opzioni": [
       "Quando serve modificare stabilmente il comportamento del modello su molti esempi simili",
-      "Quando serve un comportamento stabile, ma si dispone solo di pochi esempi isolati e non coerenti",
-      "Quando bisogna correggere una singola risposta occasionale",
-      "Quando basta cambiare il tono di una frase una sola volta"
+      "Quando serve stabilità su molti esempi, ma si dispone di casi isolati e poco coerenti",
+      "Quando si vuole correggere una singola risposta, ma rendendo permanente quel comportamento",
+      "Quando basta cambiare tono o formato di una risposta, ma si vuole evitare di scrivere prompt più chiari"
     ],
     "risposta_corretta": "Quando serve modificare stabilmente il comportamento del modello su molti esempi simili",
-    "spiegazione": "Il fine-tuning è utile se si hanno esempi di qualità e si vuole rendere stabile un comportamento su una famiglia di compiti. Per modifiche leggere o occasionali spesso basta il prompt.",
+    "spiegazione": "Il fine-tuning è più adatto quando serve modificare stabilmente il comportamento del modello su molti esempi simili. Per pochi casi isolati, correzioni occasionali o modifiche leggere di tono e formato, spesso è più adatto lavorare sul prompt.",
     "tags": [
       "fine_tuning",
       "prompting",
@@ -655,6 +657,8 @@
     "difficolta": 3,
     "distrattore_forte": "Quando serve un comportamento stabile, ma si dispone solo di pochi esempi isolati e non coerenti",
     "motivo_distrattore_forte": "È vicino perché parla di comportamento stabile, ma è sbagliato perché il fine-tuning richiede esempi coerenti e sufficienti, non casi isolati.",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve condividere il concetto centrale della corretta e diventare sbagliata per un dettaglio tecnico, logico o pratico.",
     "_materia_demo": "AI",
     "_file_origine": "data/ai.json",
     "materia": "AI"
@@ -719,12 +723,12 @@
     "domanda": "Perché valutare un sistema AI solo con risposta corretta o sbagliata può essere insufficiente?",
     "opzioni": [
       "Perché possono contare anche completezza, fonti, robustezza, sicurezza e chiarezza",
-      "Perché basta aggiungere la completezza alla valutazione, senza considerare sicurezza e fonti",
-      "Perché ogni risposta generata è corretta se è scritta in modo fluido",
-      "Perché la valutazione deve ignorare il contesto della domanda"
+      "Perché oltre alla correttezza conta la completezza, ma fonti e sicurezza restano aspetti secondari",
+      "Perché una risposta può essere corretta nei fatti, ma non adatta per contesto, chiarezza o sicurezza",
+      "Perché la valutazione deve includere più criteri, ma ignorare la robustezza sui casi difficili"
     ],
     "risposta_corretta": "Perché possono contare anche completezza, fonti, robustezza, sicurezza e chiarezza",
-    "spiegazione": "Molti sistemi AI non producono solo una risposta secca. Serve valutare qualità, affidabilità, aderenza al contesto, sicurezza e capacità di gestire casi difficili.",
+    "spiegazione": "Valutare un sistema AI solo con risposta corretta o sbagliata può essere insufficiente perché contano anche completezza, fonti, robustezza, sicurezza e chiarezza. Una risposta può essere parzialmente corretta ma poco utile, poco sicura, non chiara o non robusta in casi difficili.",
     "tags": [
       "valutazione",
       "metriche",
@@ -733,6 +737,8 @@
     "difficolta": 3,
     "distrattore_forte": "Perché basta aggiungere la completezza alla valutazione, senza considerare sicurezza e fonti",
     "motivo_distrattore_forte": "È vicino perché la completezza è davvero un criterio importante, ma è sbagliato perché da sola non basta: servono anche fonti, sicurezza, robustezza e chiarezza.",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve condividere il concetto centrale della corretta e diventare sbagliata per un dettaglio tecnico, logico o pratico.",
     "_materia_demo": "AI",
     "_file_origine": "data/ai.json",
     "materia": "AI"
@@ -771,12 +777,12 @@
     "domanda": "Perché è utile testare un modello su esempi che non ha visto durante lo sviluppo?",
     "opzioni": [
       "Per misurare se generalizza oltre i casi usati per costruirlo",
-      "Per verificare se ricorda con precisione gli esempi usati durante lo sviluppo",
-      "Per misurare solo la velocità sui casi nuovi senza valutare l'accuratezza",
-      "Per ridurre il tempo di esecuzione eliminando i dati di validazione"
+      "Per misurare la generalizzazione, ma usando esempi molto simili a quelli già memorizzati",
+      "Per verificare se funziona su casi nuovi, ma senza confrontare le risposte con risultati attesi",
+      "Per controllare esempi non visti, ma valutando solo la velocità e non la qualità delle previsioni"
     ],
     "risposta_corretta": "Per misurare se generalizza oltre i casi usati per costruirlo",
-    "spiegazione": "Un modello deve funzionare anche su casi nuovi. Testarlo solo su esempi già visti rischia di misurare la memoria, non la capacità di generalizzare.",
+    "spiegazione": "Testare un modello su esempi che non ha visto durante lo sviluppo serve a misurare se generalizza oltre i casi usati per costruirlo. Non basta usare esempi quasi memorizzati, non basta osservare casi nuovi senza risultati attesi e la velocità non sostituisce la qualità delle previsioni.",
     "tags": [
       "valutazione",
       "generalizzazione",
@@ -785,6 +791,8 @@
     "difficolta": 2,
     "distrattore_forte": "Per verificare se ricorda con precisione gli esempi usati durante lo sviluppo",
     "motivo_distrattore_forte": "È vicino perché parla degli esempi usati nello sviluppo, ma è sbagliato perché il test deve misurare generalizzazione, non memoria.",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve condividere il concetto centrale della corretta e diventare sbagliata per un dettaglio tecnico, logico o pratico.",
     "_materia_demo": "AI",
     "_file_origine": "data/ai.json",
     "materia": "AI"
@@ -849,12 +857,12 @@
     "domanda": "Quale indicazione rende un prompt più controllabile?",
     "opzioni": [
       "Specificare ruolo, obiettivo, formato di risposta e vincoli",
-      "Specificare solo il ruolo senza chiarire obiettivo, formato e vincoli",
-      "Chiedere al modello di fare il meglio possibile senza istruzioni precise",
-      "Lasciare la richiesta generica senza indicare criteri di risposta"
+      "Specificare ruolo e formato, ma lasciare implicito l'obiettivo principale della risposta",
+      "Indicare obiettivo e vincoli, ma senza chiarire il formato in cui deve rispondere il modello",
+      "Fornire molte istruzioni al modello, ma senza definire priorità quando i vincoli entrano in conflitto"
     ],
     "risposta_corretta": "Specificare ruolo, obiettivo, formato di risposta e vincoli",
-    "spiegazione": "Ruolo, obiettivo, formato e vincoli aiutano il modello a produrre una risposta più coerente con ciò che serve davvero. Specificare solo il ruolo può aiutare, ma non basta se mancano obiettivo, formato e vincoli.",
+    "spiegazione": "Un prompt è più controllabile quando specifica ruolo, obiettivo, formato di risposta e vincoli. Se mancano obiettivo, formato o priorità tra vincoli, il modello può produrre una risposta meno coerente con ciò che serve.",
     "tags": [
       "prompt",
       "controllo",
@@ -863,6 +871,8 @@
     "difficolta": 2,
     "distrattore_forte": "Specificare solo il ruolo senza chiarire obiettivo, formato e vincoli",
     "motivo_distrattore_forte": "È vicino perché il ruolo è davvero utile nel prompt, ma è incompleto: per controllare meglio la risposta servono anche obiettivo, formato e vincoli.",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve condividere il concetto centrale della corretta e diventare sbagliata per un dettaglio tecnico, logico o pratico.",
     "_materia_demo": "AI",
     "_file_origine": "data/ai.json",
     "materia": "AI"
@@ -901,12 +911,12 @@
     "domanda": "Che cosa significa dire che un modello generativo produce testo?",
     "opzioni": [
       "Che crea una risposta nuova seguendo il contesto ricevuto",
-      "Che riformula il testo ricevuto senza produrre realmente contenuto nuovo",
-      "Che rielabora frasi molto simili a quelle viste nei dati senza costruire nuovo contesto",
-      "Che seleziona una frase già scritta senza adattarla al contesto"
+      "Che crea testo seguendo il contesto, ma scegliendo frasi già pronte senza adattarle alla richiesta",
+      "Che produce una risposta nuova, ma senza usare il significato del prompt come guida",
+      "Che genera testo, ma limitandosi a riformulare l'input senza aggiungere contenuto utile"
     ],
     "risposta_corretta": "Che crea una risposta nuova seguendo il contesto ricevuto",
-    "spiegazione": "Un modello generativo produce una continuazione o una risposta in base al contesto. Non si limita necessariamente a copiare una frase identica o a selezionare testo già scritto.",
+    "spiegazione": "Dire che un modello generativo produce testo significa che crea una risposta nuova seguendo il contesto ricevuto. Non si limita a scegliere frasi già pronte, non ignora il significato del prompt e non coincide con una semplice riformulazione dell'input.",
     "tags": [
       "generativa",
       "testo",
@@ -915,6 +925,8 @@
     "difficolta": 1,
     "distrattore_forte": "Che riformula il testo ricevuto senza produrre realmente contenuto nuovo",
     "motivo_distrattore_forte": "È vicino perché parla comunque di testo e contesto, ma è sbagliato perché un modello generativo può produrre contenuto nuovo, non solo riformulare.",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve condividere il concetto centrale della corretta e diventare sbagliata per un dettaglio tecnico, logico o pratico.",
     "_materia_demo": "AI",
     "_file_origine": "data/ai.json",
     "materia": "AI"
@@ -927,12 +939,12 @@
     "domanda": "Che cosa può succedere se un dataset è molto sbilanciato?",
     "opzioni": [
       "Il modello può funzionare bene su alcuni casi e male su altri meno rappresentati",
-      "Il modello può favorire i casi più presenti e sbagliare più spesso quelli rari",
-      "Il modello diventa automaticamente più equo su tutte le classi",
-      "Il modello corregge da solo la mancanza di esempi nelle classi rare"
+      "Il modello può favorire i casi più presenti, ma mantenere uguale affidabilità sui casi rari",
+      "Il modello può imparare soprattutto dai casi frequenti, ma compensare i casi rari senza dati aggiuntivi",
+      "Il modello può sembrare accurato nel totale, ma perché corregge automaticamente gli errori sulle classi rare"
     ],
     "risposta_corretta": "Il modello può funzionare bene su alcuni casi e male su altri meno rappresentati",
-    "spiegazione": "Se alcune classi o situazioni sono poco rappresentate, il modello può imparare soprattutto i casi più frequenti e commettere più errori sui casi rari. Per questo bisogna controllare distribuzione dei dati e metriche.",
+    "spiegazione": "Se un dataset è molto sbilanciato, il modello può funzionare bene sui casi più rappresentati e male su quelli meno presenti. Non mantiene necessariamente la stessa affidabilità sui casi rari e non compensa da solo la mancanza di esempi o tecniche di bilanciamento.",
     "tags": [
       "bias",
       "dataset",
@@ -941,6 +953,8 @@
     "difficolta": 2,
     "distrattore_forte": "Il modello può favorire i casi più presenti e sbagliare più spesso quelli rari",
     "motivo_distrattore_forte": "È molto vicino perché descrive un effetto reale dello sbilanciamento, ma la risposta corretta è più generale: il modello può andare bene su alcuni casi e male su altri meno rappresentati.",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve condividere il concetto centrale della corretta e diventare sbagliata per un dettaglio tecnico, logico o pratico.",
     "_materia_demo": "AI",
     "_file_origine": "data/ai.json",
     "materia": "AI"
@@ -953,12 +967,12 @@
     "domanda": "Quale rischio nasce se un agente salva memoria personale senza criteri chiari?",
     "opzioni": [
       "Può conservare informazioni inutili, sensibili o non più valide e usarle fuori contesto",
-      "Può conservare informazioni personali utili, ma senza distinguere tra dati pertinenti e dati sensibili",
-      "Diventa automaticamente incapace di rispondere a domande generali",
-      "Trasforma ogni informazione salvata in codice eseguibile"
+      "Può conservare memoria personale utile, ma senza distinguere tra dati pertinenti e dati sensibili",
+      "Può salvare informazioni non più valide, ma aggiornarle correttamente senza criteri espliciti",
+      "Può migliorare la personalizzazione, ma usare ricordi deboli come se fossero ancora affidabili"
     ],
     "risposta_corretta": "Può conservare informazioni inutili, sensibili o non più valide e usarle fuori contesto",
-    "spiegazione": "La memoria può migliorare la personalizzazione, ma va gestita con criteri: cosa salvare, cosa evitare, quando aggiornare e come rispettare privacy e pertinenza.",
+    "spiegazione": "Se un agente salva memoria personale senza criteri chiari, può conservare informazioni inutili, sensibili o non più valide e usarle fuori contesto. La memoria deve distinguere dati pertinenti e sensibili, prevedere aggiornamenti e non trattare ricordi deboli o vecchi come automaticamente affidabili.",
     "tags": [
       "memoria",
       "privacy",
@@ -967,6 +981,8 @@
     "difficolta": 3,
     "distrattore_forte": "Può conservare informazioni personali utili, ma senza distinguere tra dati pertinenti e dati sensibili",
     "motivo_distrattore_forte": "È vicino perché parla di memoria personale e dati sensibili, ma è incompleto: il rischio riguarda anche informazioni inutili, non più valide o usate fuori contesto.",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve condividere il concetto centrale della corretta e diventare sbagliata per un dettaglio tecnico, logico o pratico.",
     "_materia_demo": "AI",
     "_file_origine": "data/ai.json",
     "materia": "AI"
@@ -1005,12 +1021,12 @@
     "domanda": "Perché un agente AI può usare una fase di pianificazione prima di agire?",
     "opzioni": [
       "Per scegliere i passaggi e gli strumenti più adatti prima di eseguire azioni",
-      "Per scegliere una sequenza di azioni, ma senza verificare se sono coerenti con l'obiettivo",
-      "Per trasformare ogni risposta in una lista casuale di operazioni",
-      "Per saltare completamente il controllo del risultato finale"
+      "Per scegliere una sequenza di azioni, ma senza verificare se resta coerente con l'obiettivo",
+      "Per decidere gli strumenti da usare, ma eseguendo il primo passaggio anche se mancano dati necessari",
+      "Per preparare le azioni dell'agente, ma evitando il controllo del risultato finale"
     ],
     "risposta_corretta": "Per scegliere i passaggi e gli strumenti più adatti prima di eseguire azioni",
-    "spiegazione": "Un agente AI può pianificare prima di agire per decidere quali passaggi seguire, quali strumenti usare e in quale ordine. Questo riduce il rischio di azioni impulsive o poco coerenti con l'obiettivo.",
+    "spiegazione": "Un agente AI può usare una fase di pianificazione per scegliere i passaggi e gli strumenti più adatti prima di eseguire azioni. La pianificazione deve restare coerente con l'obiettivo, considerare i dati necessari e mantenere il controllo sul risultato finale.",
     "tags": [
       "agenti",
       "pianificazione",
@@ -1019,6 +1035,8 @@
     "difficolta": 2,
     "distrattore_forte": "Per scegliere una sequenza di azioni, ma senza verificare se sono coerenti con l'obiettivo",
     "motivo_distrattore_forte": "È vicino perché parla di sequenza di azioni, ma è sbagliato perché la pianificazione deve restare coerente con l'obiettivo e non essere solo una lista di passaggi.",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve condividere il concetto centrale della corretta e diventare sbagliata per un dettaglio tecnico, logico o pratico.",
     "_materia_demo": "AI",
     "_file_origine": "data/ai.json",
     "materia": "AI"
@@ -1031,12 +1049,12 @@
     "domanda": "Perché un'app AI in produzione dovrebbe registrare errori e feedback degli utenti?",
     "opzioni": [
       "Per individuare casi problematici reali e migliorare sicurezza, qualità e affidabilità",
-      "Per individuare problemi reali, ma senza usarli per migliorare il sistema",
-      "Per sostituire ogni test prima del rilascio",
-      "Per evitare qualsiasi aggiornamento futuro del sistema"
+      "Per individuare casi problematici reali, ma lasciarli separati dal miglioramento del sistema",
+      "Per raccogliere feedback degli utenti, ma usarli come sostituto dei test prima del rilascio",
+      "Per registrare errori in produzione, ma senza collegarli a sicurezza, qualità o affidabilità"
     ],
     "risposta_corretta": "Per individuare casi problematici reali e migliorare sicurezza, qualità e affidabilità",
-    "spiegazione": "I test iniziali non coprono tutti gli scenari. Log e feedback aiutano a scoprire errori ricorrenti, casi limite e problemi di sicurezza emersi nell'uso reale.",
+    "spiegazione": "Un'app AI in produzione dovrebbe registrare errori e feedback per individuare casi problematici reali e migliorare sicurezza, qualità e affidabilità. I feedback non devono restare separati dal miglioramento, non sostituiscono i test iniziali e vanno collegati all'analisi del sistema.",
     "tags": [
       "monitoraggio",
       "feedback",
@@ -1045,6 +1063,8 @@
     "difficolta": 3,
     "distrattore_forte": "Per individuare problemi reali, ma senza usarli per migliorare il sistema",
     "motivo_distrattore_forte": "È vicino perché parla di individuare problemi reali, ma è sbagliato perché log e feedback servono proprio a migliorare sicurezza, qualità e affidabilità.",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve condividere il concetto centrale della corretta e diventare sbagliata per un dettaglio tecnico, logico o pratico.",
     "_materia_demo": "AI",
     "_file_origine": "data/ai.json",
     "materia": "AI"
@@ -1102,13 +1122,15 @@
     "livello": "facile",
     "domanda": "Che cosa rappresenta un prompt quando si usa un modello linguistico?",
     "opzioni": [
-      "L'istruzione o il testo iniziale dato al modello per guidare la risposta.",
-      "Il file interno che contiene tutti i pesi matematici del modello.",
-      "Il risultato finale generato dal modello dopo l'elaborazione.",
-      "Il database esterno usato per salvare le conversazioni dell'utente."
+      "L'istruzione o il testo iniziale dato al modello per guidare la risposta",
+      "Il testo dato al modello, ma usato come risultato finale invece che come input",
+      "L'indicazione iniziale per guidare la risposta, ma senza influenzare formato e contenuto",
+      "Il messaggio usato per orientare il modello, ma coincidente con i pesi interni del sistema"
     ],
-    "risposta_corretta": "L'istruzione o il testo iniziale dato al modello per guidare la risposta.",
-    "spiegazione": "La risposta corretta è A perché il prompt è l'input che orienta il comportamento del modello. B riguarda i pesi, C l'output, D una possibile memoria esterna.",
+    "risposta_corretta": "L'istruzione o il testo iniziale dato al modello per guidare la risposta",
+    "spiegazione": "Un prompt è l'istruzione o il testo iniziale dato al modello per guidare la risposta. Non è il risultato finale, può influenzare formato e contenuto, e non coincide con i pesi interni del modello.",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve condividere il concetto centrale della corretta e diventare sbagliata per un dettaglio tecnico, logico o pratico.",
     "_materia_demo": "AI",
     "_file_origine": "data/ai.json",
     "materia": "AI"
@@ -1136,13 +1158,15 @@
     "livello": "facile",
     "domanda": "Che cosa significa classificare un dato con l'intelligenza artificiale?",
     "opzioni": [
-      "Assegnare il dato a una categoria tra quelle previste.",
-      "Generare una nuova immagine partendo da una descrizione.",
-      "Salvare il dato in una cartella senza analizzarlo.",
-      "Cancellare i dati meno importanti da un archivio."
+      "Assegnare il dato a una categoria tra quelle previste",
+      "Assegnare il dato a una categoria, ma senza usare etichette o classi definite",
+      "Decidere la categoria di un dato, ma trasformando prima ogni input in nuovo contenuto generato",
+      "Collegare un dato a una classe, ma senza produrre una decisione finale tra le categorie"
     ],
-    "risposta_corretta": "Assegnare il dato a una categoria tra quelle previste.",
-    "spiegazione": "La risposta corretta è A perché la classificazione assegna un'etichetta. B riguarda la generazione, C è archiviazione, D è eliminazione o pulizia dei dati.",
+    "risposta_corretta": "Assegnare il dato a una categoria tra quelle previste",
+    "spiegazione": "Classificare un dato con l'intelligenza artificiale significa assegnarlo a una categoria tra quelle previste. Non è classificazione se mancano classi definite, se l'obiettivo principale è generare nuovo contenuto o se non viene prodotta una decisione finale.",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve condividere il concetto centrale della corretta e diventare sbagliata per un dettaglio tecnico, logico o pratico.",
     "_materia_demo": "AI",
     "_file_origine": "data/ai.json",
     "materia": "AI"
@@ -1246,13 +1270,15 @@
     "livello": "facile",
     "domanda": "Che cosa significa fine-tuning di un modello AI?",
     "opzioni": [
-      "Adattare un modello già addestrato a un compito o dominio più specifico.",
-      "Creare un modello da zero senza usare dati precedenti.",
-      "Usare il modello solo per cercare file in una cartella locale.",
-      "Ridurre la dimensione del monitor usato durante l'addestramento."
+      "Adattare un modello già addestrato a un compito o dominio più specifico",
+      "Adattare un modello a un dominio specifico, ma partendo ogni volta da pesi casuali",
+      "Specializzare un modello già addestrato, ma senza usare esempi collegati al nuovo compito",
+      "Modificare il comportamento del modello, ma cambiando soltanto il prompt usato dall'utente"
     ],
-    "risposta_corretta": "Adattare un modello già addestrato a un compito o dominio più specifico.",
-    "spiegazione": "La risposta corretta è A. Il fine-tuning specializza un modello preaddestrato. B descrive addestramento da zero, C è ricerca locale, D non riguarda l'AI.",
+    "risposta_corretta": "Adattare un modello già addestrato a un compito o dominio più specifico",
+    "spiegazione": "Il fine-tuning consiste nell'adattare un modello già addestrato a un compito o dominio più specifico. Non significa ripartire da pesi casuali, non funziona bene senza esempi pertinenti e non coincide con il semplice prompt engineering.",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve condividere il concetto centrale della corretta e diventare sbagliata per un dettaglio tecnico, logico o pratico.",
     "_materia_demo": "AI",
     "_file_origine": "data/ai.json",
     "materia": "AI"
@@ -1263,13 +1289,15 @@
     "livello": "facile",
     "domanda": "Perché la privacy è importante quando si usa un'app AI?",
     "opzioni": [
-      "Perché i dati inseriti dall'utente possono contenere informazioni personali o sensibili.",
-      "Perché un modello AI non può elaborare nessun testo se non conosce il nome dell'utente.",
-      "Perché la privacy serve solo a rendere più colorata l'interfaccia.",
-      "Perché tutti i dati personali devono essere pubblicati per migliorare il modello."
+      "Perché i dati inseriti dall'utente possono contenere informazioni personali o sensibili",
+      "Perché i dati dell'utente possono essere personali, ma diventano innocui appena entrano nel prompt",
+      "Perché l'app può ricevere dati sensibili, ma il problema riguarda soltanto il salvataggio in memoria",
+      "Perché le informazioni personali vanno gestite con attenzione, ma solo se l'utente scrive il proprio nome"
     ],
-    "risposta_corretta": "Perché i dati inseriti dall'utente possono contenere informazioni personali o sensibili.",
-    "spiegazione": "La risposta corretta è A. Le app AI possono ricevere dati personali, quindi vanno gestiti con attenzione. B, C e D sono concettualmente errate.",
+    "risposta_corretta": "Perché i dati inseriti dall'utente possono contenere informazioni personali o sensibili",
+    "spiegazione": "La privacy è importante perché i dati inseriti dall'utente possono contenere informazioni personali o sensibili. Questi dati non diventano innocui solo perché sono nel prompt, e la tutela non riguarda soltanto la memoria o la presenza del nome dell'utente.",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve condividere il concetto centrale della corretta e diventare sbagliata per un dettaglio tecnico, logico o pratico.",
     "_materia_demo": "AI",
     "_file_origine": "data/ai.json",
     "materia": "AI"
@@ -1354,13 +1382,15 @@
     "livello": "intermedio",
     "domanda": "In una ricerca semantica, perché il semplice confronto di parole chiave può essere meno efficace degli embedding?",
     "opzioni": [
-      "Perché gli embedding possono catturare somiglianze di significato anche quando le parole usate sono diverse.",
-      "Perché le parole chiave leggono direttamente i pensieri dell'utente.",
-      "Perché gli embedding eliminano la necessità di controllare i risultati recuperati.",
-      "Perché la ricerca per parole chiave funziona solo con immagini e non con testo."
+      "Perché gli embedding possono catturare somiglianze di significato anche quando le parole usate sono diverse",
+      "Perché gli embedding confrontano il significato, ma trovano risultati validi solo se le parole coincidono",
+      "Perché la ricerca semantica può superare le parole chiave, ma evita la verifica dei risultati recuperati",
+      "Perché gli embedding rappresentano il significato, ma sostituiscono completamente la domanda dell'utente"
     ],
-    "risposta_corretta": "Perché gli embedding possono catturare somiglianze di significato anche quando le parole usate sono diverse.",
-    "spiegazione": "La risposta corretta è A. Gli embedding rappresentano il significato in modo più flessibile. B è assurdo, C è troppo forte, D è falso.",
+    "risposta_corretta": "Perché gli embedding possono catturare somiglianze di significato anche quando le parole usate sono diverse",
+    "spiegazione": "Gli embedding possono rendere la ricerca semantica più efficace perché catturano somiglianze di significato anche quando le parole usate sono diverse. Non richiedono parole identiche, non eliminano la verifica dei risultati e non sostituiscono la domanda dell'utente.",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve condividere il concetto centrale della corretta e diventare sbagliata per un dettaglio tecnico, logico o pratico.",
     "_materia_demo": "AI",
     "_file_origine": "data/ai.json",
     "materia": "AI"
@@ -1371,13 +1401,15 @@
     "livello": "intermedio",
     "domanda": "Che cosa può fare un reranker in una pipeline RAG?",
     "opzioni": [
-      "Riordinare i documenti recuperati in base alla loro rilevanza rispetto alla domanda.",
-      "Generare immagini partendo direttamente dai documenti recuperati.",
-      "Cancellare i documenti meno recenti dal database originale.",
-      "Addestrare da zero il modello linguistico durante ogni richiesta."
+      "Riordinare i documenti recuperati in base alla loro rilevanza rispetto alla domanda",
+      "Riordinare i documenti recuperati, ma senza confrontarli con la domanda specifica dell'utente",
+      "Migliorare l'ordine dei risultati, ma usando solo la data del documento come criterio principale",
+      "Selezionare documenti già recuperati, ma sostituendo la generazione della risposta finale"
     ],
-    "risposta_corretta": "Riordinare i documenti recuperati in base alla loro rilevanza rispetto alla domanda.",
-    "spiegazione": "La risposta corretta è A. Il reranker migliora l'ordine dei risultati recuperati. B, C e D descrivono funzioni diverse e non tipiche del reranking.",
+    "risposta_corretta": "Riordinare i documenti recuperati in base alla loro rilevanza rispetto alla domanda",
+    "spiegazione": "Un reranker riordina i documenti recuperati in base alla loro rilevanza rispetto alla domanda. Non basta ordinare senza guardare la domanda, non si basa solo sulla data del documento e non sostituisce la generazione della risposta.",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve condividere il concetto centrale della corretta e diventare sbagliata per un dettaglio tecnico, logico o pratico.",
     "_materia_demo": "AI",
     "_file_origine": "data/ai.json",
     "materia": "AI"
@@ -1654,13 +1686,15 @@
     "livello": "avanzato",
     "domanda": "Perché il chunking semantico può migliorare una pipeline RAG rispetto a tagli fissi di testo?",
     "opzioni": [
-      "Perché cerca di dividere i documenti in parti coerenti dal punto di vista del significato.",
-      "Perché elimina la necessità di creare embedding dei documenti.",
-      "Perché impedisce al modello di usare il contenuto recuperato.",
-      "Perché trasforma ogni documento in una singola parola chiave."
+      "Perché cerca di dividere i documenti in parti coerenti dal punto di vista del significato",
+      "Perché divide i documenti in parti coerenti, ma elimina il bisogno di controllare se il contesto resta completo",
+      "Perché conserva meglio il significato dei passaggi, ma evita la creazione degli embedding per la ricerca",
+      "Perché crea blocchi più vicini al significato, ma tratta ogni blocco come indipendente dalla domanda"
     ],
-    "risposta_corretta": "Perché cerca di dividere i documenti in parti coerenti dal punto di vista del significato.",
-    "spiegazione": "La risposta corretta è A. Il chunking semantico conserva meglio il contesto logico. B, C e D riducono o distorcono il funzionamento della RAG.",
+    "risposta_corretta": "Perché cerca di dividere i documenti in parti coerenti dal punto di vista del significato",
+    "spiegazione": "Il chunking semantico può migliorare una pipeline RAG perché cerca di dividere i documenti in parti coerenti dal punto di vista del significato. Non elimina il controllo sul contesto, non sostituisce gli embedding e non basta creare blocchi coerenti se poi non vengono confrontati con la domanda.",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve condividere il concetto centrale della corretta e diventare sbagliata per un dettaglio tecnico, logico o pratico.",
     "_materia_demo": "AI",
     "_file_origine": "data/ai.json",
     "materia": "AI"
@@ -1728,13 +1762,15 @@
     "livello": "avanzato",
     "domanda": "Che cosa indica un modello Mixture of Experts?",
     "opzioni": [
-      "Un'architettura che può attivare solo una parte di esperti specializzati per elaborare un input.",
-      "Un modello composto da molte copie identiche attivate tutte insieme per ogni token.",
-      "Un sistema che sceglie casualmente un database esterno senza usare il contenuto dell'input.",
-      "Un metodo per trasformare immagini in codice eseguibile senza controlli."
+      "Un'architettura che può attivare solo una parte di esperti specializzati per elaborare un input",
+      "Un'architettura con esperti specializzati, ma attivati tutti insieme per ogni input ricevuto",
+      "Un modello con più esperti, ma scelti senza usare il contenuto o le caratteristiche dell'input",
+      "Un sistema con componenti specializzati, ma usati per sostituire la tokenizzazione iniziale"
     ],
-    "risposta_corretta": "Un'architettura che può attivare solo una parte di esperti specializzati per elaborare un input.",
-    "spiegazione": "La risposta corretta è A. Nei Mixture of Experts una rete di routing seleziona esperti rilevanti. B, C e D non descrivono correttamente questa architettura.",
+    "risposta_corretta": "Un'architettura che può attivare solo una parte di esperti specializzati per elaborare un input",
+    "spiegazione": "Un modello Mixture of Experts usa un'architettura in cui una parte di esperti specializzati può essere attivata per elaborare un input. Non richiede di attivare tutti gli esperti, non sceglie gli esperti senza considerare l'input e non sostituisce la tokenizzazione.",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve condividere il concetto centrale della corretta e diventare sbagliata per un dettaglio tecnico, logico o pratico.",
     "_materia_demo": "AI",
     "_file_origine": "data/ai.json",
     "materia": "AI"
@@ -1781,13 +1817,15 @@
     "livello": "avanzato",
     "domanda": "Che cosa rende delicata la memoria a lungo termine in un assistente AI personale?",
     "opzioni": [
-      "Deve conservare informazioni utili senza salvare dati inutili, sensibili o fuori contesto.",
-      "Deve salvare ogni frase dell'utente senza distinzione.",
-      "Deve impedire all'utente di correggere preferenze già memorizzate.",
-      "Deve sostituire tutte le funzioni dell'applicazione principale."
+      "Deve conservare informazioni utili senza salvare dati inutili, sensibili o fuori contesto",
+      "Deve conservare informazioni utili, ma senza permettere all'utente di correggere preferenze memorizzate",
+      "Deve salvare elementi della conversazione, ma senza distinguere tra dati pertinenti e dati sensibili",
+      "Deve migliorare la personalizzazione, ma trattando la memoria come archivio completo della chat"
     ],
-    "risposta_corretta": "Deve conservare informazioni utili senza salvare dati inutili, sensibili o fuori contesto.",
-    "spiegazione": "La risposta corretta è A. La memoria richiede utilità, controllo e attenzione alla privacy. B è eccessivo, C nega il controllo dell'utente, D confonde memoria e funzionalità dell'app.",
+    "risposta_corretta": "Deve conservare informazioni utili senza salvare dati inutili, sensibili o fuori contesto",
+    "spiegazione": "La memoria a lungo termine è delicata perché deve conservare informazioni utili senza salvare dati inutili, sensibili o fuori contesto. L'utente deve poter correggere le preferenze, e la memoria non dovrebbe diventare un archivio completo e indiscriminato della conversazione.",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve condividere il concetto centrale della corretta e diventare sbagliata per un dettaglio tecnico, logico o pratico.",
     "_materia_demo": "AI",
     "_file_origine": "data/ai.json",
     "materia": "AI"
@@ -1798,13 +1836,15 @@
     "livello": "avanzato",
     "domanda": "Perché un agente AI dovrebbe verificare l'esito di uno strumento prima di procedere con il passo successivo?",
     "opzioni": [
-      "Per evitare che errori, risultati vuoti o dati inattesi vengano usati come se fossero corretti.",
-      "Per rallentare volontariamente ogni operazione anche quando il risultato è chiaro.",
-      "Per impedire al sistema di registrare log utili al debug.",
-      "Per sostituire il controllo qualità con una risposta più lunga."
+      "Per evitare che errori, risultati vuoti o dati inattesi vengano usati come se fossero corretti",
+      "Per controllare l'esito dello strumento, ma procedere comunque se la risposta dell'agente sembra coerente",
+      "Per verificare i risultati ottenuti, ma senza distinguere tra dati vuoti, parziali o fuori formato",
+      "Per ridurre la propagazione degli errori, ma usando la verifica come semplice messaggio finale all'utente"
     ],
-    "risposta_corretta": "Per evitare che errori, risultati vuoti o dati inattesi vengano usati come se fossero corretti.",
-    "spiegazione": "La risposta corretta è A. Verificare l'esito degli strumenti riduce propagazione degli errori. B, C e D non descrivono una buona progettazione di agenti.",
+    "risposta_corretta": "Per evitare che errori, risultati vuoti o dati inattesi vengano usati come se fossero corretti",
+    "spiegazione": "Un agente deve verificare l'esito di uno strumento per evitare che errori, risultati vuoti o dati inattesi vengano usati come se fossero corretti. Una risposta apparentemente coerente non basta, perché il risultato del tool può essere mancante, parziale, fuori formato o non adatto al passo successivo.",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve condividere il concetto centrale della corretta e diventare sbagliata per un dettaglio tecnico, logico o pratico.",
     "_materia_demo": "AI",
     "_file_origine": "data/ai.json",
     "materia": "AI"

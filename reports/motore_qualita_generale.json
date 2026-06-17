@@ -1980,7 +1980,7 @@
     "problemi_tecnici_totali": 0,
     "avvisi_qualita_reali_totali": 0,
     "errori_linguistici_totali": 0,
-    "note_informative_totali": 47,
+    "note_informative_totali": 51,
     "domande_con_problemi_tecnici": [],
     "domande_con_avvisi_qualita_reali": [],
     "domande_con_errori_linguistici": [],
@@ -2294,9 +2294,9 @@
         "livello": "avanzato",
         "opzioni": [
           "Il modello può generare una risposta ben scritta ma basata su contesto fuorviante",
-          "Il modello può generare una risposta fluida usando documenti recuperati solo in apparenza pertinenti",
-          "Il modello rifiuta automaticamente ogni documento non perfettamente pertinente",
-          "Il database vettoriale elimina da solo tutti i documenti non usati"
+          "Il modello può usare documenti apparentemente pertinenti, ma correggere il contesto durante la generazione",
+          "Il sistema può recuperare testi simili alla domanda, ma considerarli affidabili anche senza pertinenza reale",
+          "Il modello può produrre una risposta fluida, ma il problema riguarda solo la forma della risposta"
         ],
         "risposta_corretta": "Il modello può generare una risposta ben scritta ma basata su contesto fuorviante",
         "posizione_risposta": "A",
@@ -2304,7 +2304,7 @@
         "avvisi_qualita_reali": [],
         "errori_linguistici": [],
         "note_informative": [
-          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “tutti”"
+          "spiegazione: testo molto lungo, controllare leggibilità"
         ]
       },
       {
@@ -2348,23 +2348,43 @@
         ]
       },
       {
-        "id": "AI-FAC-0105",
-        "domanda": "Che cosa significa dire che un modello generativo produce testo?",
+        "id": "AI-AV-0103",
+        "domanda": "Perché valutare un sistema AI solo con risposta corretta o sbagliata può essere insufficiente?",
         "categoria": "ai",
-        "livello": "facile",
+        "livello": "avanzato",
         "opzioni": [
-          "Che crea una risposta nuova seguendo il contesto ricevuto",
-          "Che riformula il testo ricevuto senza produrre realmente contenuto nuovo",
-          "Che rielabora frasi molto simili a quelle viste nei dati senza costruire nuovo contesto",
-          "Che seleziona una frase già scritta senza adattarla al contesto"
+          "Perché possono contare anche completezza, fonti, robustezza, sicurezza e chiarezza",
+          "Perché oltre alla correttezza conta la completezza, ma fonti e sicurezza restano aspetti secondari",
+          "Perché una risposta può essere corretta nei fatti, ma non adatta per contesto, chiarezza o sicurezza",
+          "Perché la valutazione deve includere più criteri, ma ignorare la robustezza sui casi difficili"
         ],
-        "risposta_corretta": "Che crea una risposta nuova seguendo il contesto ricevuto",
+        "risposta_corretta": "Perché possono contare anche completezza, fonti, robustezza, sicurezza e chiarezza",
         "posizione_risposta": "A",
         "problemi_tecnici": [],
         "avvisi_qualita_reali": [],
         "errori_linguistici": [],
         "note_informative": [
-          "spiegazione: possibile frase poco fluida, controllare gli incontri vocalici"
+          "spiegazione: testo molto lungo, controllare leggibilità"
+        ]
+      },
+      {
+        "id": "AI-INT-0103",
+        "domanda": "Perché è utile testare un modello su esempi che non ha visto durante lo sviluppo?",
+        "categoria": "ai",
+        "livello": "intermedio",
+        "opzioni": [
+          "Per misurare se generalizza oltre i casi usati per costruirlo",
+          "Per misurare la generalizzazione, ma usando esempi molto simili a quelli già memorizzati",
+          "Per verificare se funziona su casi nuovi, ma senza confrontare le risposte con risultati attesi",
+          "Per controllare esempi non visti, ma valutando solo la velocità e non la qualità delle previsioni"
+        ],
+        "risposta_corretta": "Per misurare se generalizza oltre i casi usati per costruirlo",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "spiegazione: testo molto lungo, controllare leggibilità"
         ]
       },
       {
@@ -2374,9 +2394,9 @@
         "livello": "intermedio",
         "opzioni": [
           "Il modello può funzionare bene su alcuni casi e male su altri meno rappresentati",
-          "Il modello può favorire i casi più presenti e sbagliare più spesso quelli rari",
-          "Il modello diventa automaticamente più equo su tutte le classi",
-          "Il modello corregge da solo la mancanza di esempi nelle classi rare"
+          "Il modello può favorire i casi più presenti, ma mantenere uguale affidabilità sui casi rari",
+          "Il modello può imparare soprattutto dai casi frequenti, ma compensare i casi rari senza dati aggiuntivi",
+          "Il modello può sembrare accurato nel totale, ma perché corregge automaticamente gli errori sulle classi rare"
         ],
         "risposta_corretta": "Il modello può funzionare bene su alcuni casi e male su altri meno rappresentati",
         "posizione_risposta": "A",
@@ -2384,27 +2404,27 @@
         "avvisi_qualita_reali": [],
         "errori_linguistici": [],
         "note_informative": [
-          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “tutte”"
+          "spiegazione: testo molto lungo, controllare leggibilità"
         ]
       },
       {
-        "id": "AI-INT-0106",
-        "domanda": "Perché un agente AI può usare una fase di pianificazione prima di agire?",
+        "id": "AI-AV-0106",
+        "domanda": "Quale rischio nasce se un agente salva memoria personale senza criteri chiari?",
         "categoria": "ai",
-        "livello": "intermedio",
+        "livello": "avanzato",
         "opzioni": [
-          "Per scegliere i passaggi e gli strumenti più adatti prima di eseguire azioni",
-          "Per scegliere una sequenza di azioni, ma senza verificare se sono coerenti con l'obiettivo",
-          "Per trasformare ogni risposta in una lista casuale di operazioni",
-          "Per saltare completamente il controllo del risultato finale"
+          "Può conservare informazioni inutili, sensibili o non più valide e usarle fuori contesto",
+          "Può conservare memoria personale utile, ma senza distinguere tra dati pertinenti e dati sensibili",
+          "Può salvare informazioni non più valide, ma aggiornarle correttamente senza criteri espliciti",
+          "Può migliorare la personalizzazione, ma usare ricordi deboli come se fossero ancora affidabili"
         ],
-        "risposta_corretta": "Per scegliere i passaggi e gli strumenti più adatti prima di eseguire azioni",
+        "risposta_corretta": "Può conservare informazioni inutili, sensibili o non più valide e usarle fuori contesto",
         "posizione_risposta": "A",
         "problemi_tecnici": [],
         "avvisi_qualita_reali": [],
         "errori_linguistici": [],
         "note_informative": [
-          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “completamente”"
+          "spiegazione: testo molto lungo, controllare leggibilità"
         ]
       },
       {
@@ -2414,9 +2434,9 @@
         "livello": "avanzato",
         "opzioni": [
           "Per individuare casi problematici reali e migliorare sicurezza, qualità e affidabilità",
-          "Per individuare problemi reali, ma senza usarli per migliorare il sistema",
-          "Per sostituire ogni test prima del rilascio",
-          "Per evitare qualsiasi aggiornamento futuro del sistema"
+          "Per individuare casi problematici reali, ma lasciarli separati dal miglioramento del sistema",
+          "Per raccogliere feedback degli utenti, ma usarli come sostituto dei test prima del rilascio",
+          "Per registrare errori in produzione, ma senza collegarli a sicurezza, qualità o affidabilità"
         ],
         "risposta_corretta": "Per individuare casi problematici reali e migliorare sicurezza, qualità e affidabilità",
         "posizione_risposta": "A",
@@ -2424,7 +2444,7 @@
         "avvisi_qualita_reali": [],
         "errori_linguistici": [],
         "note_informative": [
-          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “qualsiasi”"
+          "spiegazione: testo molto lungo, controllare leggibilità"
         ]
       },
       {
@@ -2445,26 +2465,6 @@
         "errori_linguistici": [],
         "note_informative": [
           "spiegazione: testo molto lungo, controllare leggibilità"
-        ]
-      },
-      {
-        "id": "AI-FAC-0202",
-        "domanda": "Che cosa rappresenta un prompt quando si usa un modello linguistico?",
-        "categoria": "ai",
-        "livello": "facile",
-        "opzioni": [
-          "L'istruzione o il testo iniziale dato al modello per guidare la risposta.",
-          "Il file interno che contiene tutti i pesi matematici del modello.",
-          "Il risultato finale generato dal modello dopo l'elaborazione.",
-          "Il database esterno usato per salvare le conversazioni dell'utente."
-        ],
-        "risposta_corretta": "L'istruzione o il testo iniziale dato al modello per guidare la risposta.",
-        "posizione_risposta": "A",
-        "problemi_tecnici": [],
-        "avvisi_qualita_reali": [],
-        "errori_linguistici": [],
-        "note_informative": [
-          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “tutti”"
         ]
       },
       {
@@ -2508,26 +2508,6 @@
         ]
       },
       {
-        "id": "AI-FAC-0211",
-        "domanda": "Perché la privacy è importante quando si usa un'app AI?",
-        "categoria": "ai",
-        "livello": "facile",
-        "opzioni": [
-          "Perché i dati inseriti dall'utente possono contenere informazioni personali o sensibili.",
-          "Perché un modello AI non può elaborare nessun testo se non conosce il nome dell'utente.",
-          "Perché la privacy serve solo a rendere più colorata l'interfaccia.",
-          "Perché tutti i dati personali devono essere pubblicati per migliorare il modello."
-        ],
-        "risposta_corretta": "Perché i dati inseriti dall'utente possono contenere informazioni personali o sensibili.",
-        "posizione_risposta": "A",
-        "problemi_tecnici": [],
-        "avvisi_qualita_reali": [],
-        "errori_linguistici": [],
-        "note_informative": [
-          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “tutti”"
-        ]
-      },
-      {
         "id": "AI-INT-0201",
         "domanda": "Qual è il vantaggio principale di una pipeline RAG rispetto a un semplice prompt senza recupero documentale?",
         "categoria": "ai",
@@ -2544,6 +2524,27 @@
         "avvisi_qualita_reali": [],
         "errori_linguistici": [],
         "note_informative": [
+          "spiegazione: testo molto lungo, controllare leggibilità"
+        ]
+      },
+      {
+        "id": "AI-INT-0204",
+        "domanda": "In una ricerca semantica, perché il semplice confronto di parole chiave può essere meno efficace degli embedding?",
+        "categoria": "ai",
+        "livello": "intermedio",
+        "opzioni": [
+          "Perché gli embedding possono catturare somiglianze di significato anche quando le parole usate sono diverse",
+          "Perché gli embedding confrontano il significato, ma trovano risultati validi solo se le parole coincidono",
+          "Perché la ricerca semantica può superare le parole chiave, ma evita la verifica dei risultati recuperati",
+          "Perché gli embedding rappresentano il significato, ma sostituiscono completamente la domanda dell'utente"
+        ],
+        "risposta_corretta": "Perché gli embedding possono catturare somiglianze di significato anche quando le parole usate sono diverse",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “completamente”",
           "spiegazione: testo molto lungo, controllare leggibilità"
         ]
       },
@@ -2751,6 +2752,26 @@
         ]
       },
       {
+        "id": "AI-AV-0206",
+        "domanda": "Perché il chunking semantico può migliorare una pipeline RAG rispetto a tagli fissi di testo?",
+        "categoria": "ai",
+        "livello": "avanzato",
+        "opzioni": [
+          "Perché cerca di dividere i documenti in parti coerenti dal punto di vista del significato",
+          "Perché divide i documenti in parti coerenti, ma elimina il bisogno di controllare se il contesto resta completo",
+          "Perché conserva meglio il significato dei passaggi, ma evita la creazione degli embedding per la ricerca",
+          "Perché crea blocchi più vicini al significato, ma tratta ogni blocco come indipendente dalla domanda"
+        ],
+        "risposta_corretta": "Perché cerca di dividere i documenti in parti coerenti dal punto di vista del significato",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "spiegazione: testo molto lungo, controllare leggibilità"
+        ]
+      },
+      {
         "id": "AI-AV-0208",
         "domanda": "Perché un sistema multimodale deve allineare informazioni provenienti da testo e immagini?",
         "categoria": "ai",
@@ -2776,18 +2797,19 @@
         "categoria": "ai",
         "livello": "avanzato",
         "opzioni": [
-          "Un'architettura che può attivare solo una parte di esperti specializzati per elaborare un input.",
-          "Un modello composto da molte copie identiche attivate tutte insieme per ogni token.",
-          "Un sistema che sceglie casualmente un database esterno senza usare il contenuto dell'input.",
-          "Un metodo per trasformare immagini in codice eseguibile senza controlli."
+          "Un'architettura che può attivare solo una parte di esperti specializzati per elaborare un input",
+          "Un'architettura con esperti specializzati, ma attivati tutti insieme per ogni input ricevuto",
+          "Un modello con più esperti, ma scelti senza usare il contenuto o le caratteristiche dell'input",
+          "Un sistema con componenti specializzati, ma usati per sostituire la tokenizzazione iniziale"
         ],
-        "risposta_corretta": "Un'architettura che può attivare solo una parte di esperti specializzati per elaborare un input.",
+        "risposta_corretta": "Un'architettura che può attivare solo una parte di esperti specializzati per elaborare un input",
         "posizione_risposta": "A",
         "problemi_tecnici": [],
         "avvisi_qualita_reali": [],
         "errori_linguistici": [],
         "note_informative": [
-          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “tutte”"
+          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “tutti”",
+          "spiegazione: testo molto lungo, controllare leggibilità"
         ]
       },
       {
@@ -2816,18 +2838,38 @@
         "categoria": "ai",
         "livello": "avanzato",
         "opzioni": [
-          "Deve conservare informazioni utili senza salvare dati inutili, sensibili o fuori contesto.",
-          "Deve salvare ogni frase dell'utente senza distinzione.",
-          "Deve impedire all'utente di correggere preferenze già memorizzate.",
-          "Deve sostituire tutte le funzioni dell'applicazione principale."
+          "Deve conservare informazioni utili senza salvare dati inutili, sensibili o fuori contesto",
+          "Deve conservare informazioni utili, ma senza permettere all'utente di correggere preferenze memorizzate",
+          "Deve salvare elementi della conversazione, ma senza distinguere tra dati pertinenti e dati sensibili",
+          "Deve migliorare la personalizzazione, ma trattando la memoria come archivio completo della chat"
         ],
-        "risposta_corretta": "Deve conservare informazioni utili senza salvare dati inutili, sensibili o fuori contesto.",
+        "risposta_corretta": "Deve conservare informazioni utili senza salvare dati inutili, sensibili o fuori contesto",
         "posizione_risposta": "A",
         "problemi_tecnici": [],
         "avvisi_qualita_reali": [],
         "errori_linguistici": [],
         "note_informative": [
-          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “tutte”"
+          "spiegazione: testo molto lungo, controllare leggibilità"
+        ]
+      },
+      {
+        "id": "AI-AV-0214",
+        "domanda": "Perché un agente AI dovrebbe verificare l'esito di uno strumento prima di procedere con il passo successivo?",
+        "categoria": "ai",
+        "livello": "avanzato",
+        "opzioni": [
+          "Per evitare che errori, risultati vuoti o dati inattesi vengano usati come se fossero corretti",
+          "Per controllare l'esito dello strumento, ma procedere comunque se la risposta dell'agente sembra coerente",
+          "Per verificare i risultati ottenuti, ma senza distinguere tra dati vuoti, parziali o fuori formato",
+          "Per ridurre la propagazione degli errori, ma usando la verifica come semplice messaggio finale all'utente"
+        ],
+        "risposta_corretta": "Per evitare che errori, risultati vuoti o dati inattesi vengano usati come se fossero corretti",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "spiegazione: testo molto lungo, controllare leggibilità"
         ]
       }
     ],
