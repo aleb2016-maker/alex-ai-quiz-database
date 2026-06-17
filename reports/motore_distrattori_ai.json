@@ -1,0 +1,2290 @@
+{
+  "file": "data/ai.json",
+  "domande_controllate": 80,
+  "domande_problematiche": 74,
+  "risultati": [
+    {
+      "id": "AI-INT-0005",
+      "livello": "intermedio",
+      "domanda": "A cosa serve un embedding in molte applicazioni di intelligenza artificiale?",
+      "opzioni": [
+        "A rappresentare testi, immagini o dati come vettori confrontabili",
+        "A trasformare contenuti in vettori numerici solo per conservarli come testo compresso",
+        "A confrontare contenuti solo quando usano le stesse parole identiche",
+        "A cercare parole uguali senza rappresentare il significato dei contenuti"
+      ],
+      "corretta": "A",
+      "distrattore_principale": "B",
+      "similarita_distrattore_principale": 0.353,
+      "migliore_errata": {
+        "lettera": "D",
+        "testo": "A cercare parole uguali senza rappresentare il significato dei contenuti",
+        "similarita": 0.405
+      },
+      "lunghezze": [
+        64,
+        85,
+        68,
+        72
+      ],
+      "problemi": [
+        "Distrattore principale B troppo lontano dalla corretta. Similarità: 0.353.",
+        "Nessun distrattore è davvero vicino alla risposta corretta. Migliore similarità: 0.405.",
+        "Opzione B eliminabile per parole troppo assolute: solo.",
+        "Opzione C eliminabile per parole troppo assolute: solo.",
+        "Il distrattore principale condivide pochi concetti chiave con la corretta. Sovrapposizione: 0.17."
+      ],
+      "gravita": 115
+    },
+    {
+      "id": "AI-AV-0008",
+      "livello": "avanzato",
+      "domanda": "In una pipeline AI, perché conviene separare recupero delle informazioni, generazione e controllo finale?",
+      "opzioni": [
+        "Per rendere più controllabile ogni fase e individuare meglio dove nasce un errore",
+        "Per valutare separatamente le fasi, ma senza collegare gli errori alla risposta finale",
+        "Per controllare solo il recupero dei documenti ignorando la generazione",
+        "Per controllare solo la generazione ignorando retrieval e verifica finale"
+      ],
+      "corretta": "A",
+      "distrattore_principale": "B",
+      "similarita_distrattore_principale": 0.35,
+      "migliore_errata": {
+        "lettera": "B",
+        "testo": "Per valutare separatamente le fasi, ma senza collegare gli errori alla risposta finale",
+        "similarita": 0.35
+      },
+      "lunghezze": [
+        81,
+        85,
+        71,
+        73
+      ],
+      "problemi": [
+        "Distrattore principale B troppo lontano dalla corretta. Similarità: 0.35.",
+        "Nessun distrattore è davvero vicino alla risposta corretta. Migliore similarità: 0.35.",
+        "Opzione C eliminabile per parole troppo assolute: solo.",
+        "Opzione D eliminabile per parole troppo assolute: solo.",
+        "Il distrattore principale condivide pochi concetti chiave con la corretta. Sovrapposizione: 0.0."
+      ],
+      "gravita": 115
+    },
+    {
+      "id": "AI-INT-0107",
+      "livello": "intermedio",
+      "domanda": "Perché conviene limitare le azioni che un agente AI può eseguire automaticamente?",
+      "opzioni": [
+        "Per ridurre il rischio che un errore o un prompt malevolo produca azioni dannose",
+        "Per velocizzare il flusso riducendo controlli e conferme dell'utente",
+        "Per impedire al modello di leggere qualsiasi istruzione dell'utente",
+        "Per rendere impossibile ogni controllo umano sulle azioni dell'agente"
+      ],
+      "corretta": "A",
+      "distrattore_principale": "B",
+      "similarita_distrattore_principale": 0.327,
+      "migliore_errata": {
+        "lettera": "D",
+        "testo": "Per rendere impossibile ogni controllo umano sulle azioni dell'agente",
+        "similarita": 0.391
+      },
+      "lunghezze": [
+        80,
+        68,
+        67,
+        69
+      ],
+      "problemi": [
+        "Distrattore principale B troppo lontano dalla corretta. Similarità: 0.327.",
+        "Nessun distrattore è davvero vicino alla risposta corretta. Migliore similarità: 0.391.",
+        "Opzione C eliminabile per parole troppo assolute: qualsiasi.",
+        "Opzione D eliminabile per parole troppo assolute: impossibile.",
+        "Il distrattore principale condivide pochi concetti chiave con la corretta. Sovrapposizione: 0.0."
+      ],
+      "gravita": 115
+    },
+    {
+      "id": "AI-FAC-0201",
+      "livello": "facile",
+      "domanda": "Che cosa indica, in generale, un modello di intelligenza artificiale generativa?",
+      "opzioni": [
+        "Un sistema capace di produrre nuovi contenuti, come testo, immagini o codice, partendo da dati e istruzioni.",
+        "Un sistema che riconosce soltanto se un'immagine appartiene a una categoria già definita.",
+        "Un database che conserva esempi senza costruire risposte nuove.",
+        "Un programma che esegue solo calcoli numerici impostati manualmente."
+      ],
+      "corretta": "A",
+      "distrattore_principale": "B",
+      "similarita_distrattore_principale": 0.373,
+      "migliore_errata": {
+        "lettera": "B",
+        "testo": "Un sistema che riconosce soltanto se un'immagine appartiene a una categoria già definita.",
+        "similarita": 0.373
+      },
+      "lunghezze": [
+        105,
+        89,
+        63,
+        68
+      ],
+      "problemi": [
+        "Distrattore principale B troppo lontano dalla corretta. Similarità: 0.373.",
+        "Nessun distrattore è davvero vicino alla risposta corretta. Migliore similarità: 0.373.",
+        "Opzione B eliminabile per parole troppo assolute: soltanto.",
+        "Opzione D eliminabile per parole troppo assolute: solo.",
+        "Il distrattore principale condivide pochi concetti chiave con la corretta. Sovrapposizione: 0.09."
+      ],
+      "gravita": 115
+    },
+    {
+      "id": "AI-FAC-0211",
+      "livello": "facile",
+      "domanda": "Perché la privacy è importante quando si usa un'app AI?",
+      "opzioni": [
+        "Perché i dati inseriti dall'utente possono contenere informazioni personali o sensibili.",
+        "Perché un modello AI non può elaborare nessun testo se non conosce il nome dell'utente.",
+        "Perché la privacy serve solo a rendere più colorata l'interfaccia.",
+        "Perché tutti i dati personali devono essere pubblicati per migliorare il modello."
+      ],
+      "corretta": "A",
+      "distrattore_principale": "B",
+      "similarita_distrattore_principale": 0.341,
+      "migliore_errata": {
+        "lettera": "D",
+        "testo": "Perché tutti i dati personali devono essere pubblicati per migliorare il modello.",
+        "similarita": 0.416
+      },
+      "lunghezze": [
+        88,
+        87,
+        66,
+        81
+      ],
+      "problemi": [
+        "Distrattore principale B troppo lontano dalla corretta. Similarità: 0.341.",
+        "Nessun distrattore è davvero vicino alla risposta corretta. Migliore similarità: 0.416.",
+        "Opzione C eliminabile per parole troppo assolute: solo.",
+        "Opzione D eliminabile per parole troppo assolute: tutti.",
+        "Il distrattore principale condivide pochi concetti chiave con la corretta. Sovrapposizione: 0.1."
+      ],
+      "gravita": 115
+    },
+    {
+      "id": "AI-AV-0211",
+      "livello": "avanzato",
+      "domanda": "Perché le guardrail sono importanti in un sistema AI usato da utenti finali?",
+      "opzioni": [
+        "Per limitare comportamenti rischiosi, applicare regole e gestire richieste non adatte.",
+        "Per aumentare il numero di parametri del modello durante l'inferenza.",
+        "Per sostituire completamente la progettazione del prodotto.",
+        "Per impedire qualsiasi risposta anche quando la richiesta è lecita."
+      ],
+      "corretta": "A",
+      "distrattore_principale": "B",
+      "similarita_distrattore_principale": 0.308,
+      "migliore_errata": {
+        "lettera": "D",
+        "testo": "Per impedire qualsiasi risposta anche quando la richiesta è lecita.",
+        "similarita": 0.342
+      },
+      "lunghezze": [
+        85,
+        69,
+        59,
+        67
+      ],
+      "problemi": [
+        "Distrattore principale B troppo lontano dalla corretta. Similarità: 0.308.",
+        "Nessun distrattore è davvero vicino alla risposta corretta. Migliore similarità: 0.342.",
+        "Opzione C eliminabile per parole troppo assolute: completamente.",
+        "Opzione D eliminabile per parole troppo assolute: qualsiasi.",
+        "Il distrattore principale condivide pochi concetti chiave con la corretta. Sovrapposizione: 0.0."
+      ],
+      "gravita": 115
+    },
+    {
+      "id": "AI-FAC-0001",
+      "livello": "facile",
+      "domanda": "Qual è il ruolo principale di un modello linguistico di grandi dimensioni, chiamato LLM?",
+      "opzioni": [
+        "Prevedere e generare testo in base al contesto ricevuto",
+        "Classificare testi in categorie fisse senza produrre nuove frasi",
+        "Recuperare documenti esterni senza generare una risposta autonoma",
+        "Tradurre parole usando solo un dizionario statico"
+      ],
+      "corretta": "A",
+      "distrattore_principale": "B",
+      "similarita_distrattore_principale": 0.326,
+      "migliore_errata": {
+        "lettera": "C",
+        "testo": "Recuperare documenti esterni senza generare una risposta autonoma",
+        "similarita": 0.369
+      },
+      "lunghezze": [
+        55,
+        64,
+        65,
+        49
+      ],
+      "problemi": [
+        "Distrattore principale B troppo lontano dalla corretta. Similarità: 0.326.",
+        "Nessun distrattore è davvero vicino alla risposta corretta. Migliore similarità: 0.369.",
+        "Opzione D eliminabile per parole troppo assolute: solo.",
+        "Il distrattore principale condivide pochi concetti chiave con la corretta. Sovrapposizione: 0.0."
+      ],
+      "gravita": 100
+    },
+    {
+      "id": "AI-INT-0006",
+      "livello": "intermedio",
+      "domanda": "Perché è utile testare un modello AI con esempi diversi da quelli usati in addestramento?",
+      "opzioni": [
+        "Per verificare se il modello generalizza anche su casi nuovi",
+        "Per confermare che il modello ricorda con precisione gli esempi usati in addestramento",
+        "Per scegliere automaticamente nuovi esempi da aggiungere al training set",
+        "Per aumentare il numero di esempi nel dataset senza controllare le prestazioni"
+      ],
+      "corretta": "A",
+      "distrattore_principale": "B",
+      "similarita_distrattore_principale": 0.321,
+      "migliore_errata": {
+        "lettera": "D",
+        "testo": "Per aumentare il numero di esempi nel dataset senza controllare le prestazioni",
+        "similarita": 0.334
+      },
+      "lunghezze": [
+        60,
+        86,
+        72,
+        78
+      ],
+      "problemi": [
+        "Distrattore principale B troppo lontano dalla corretta. Similarità: 0.321.",
+        "Nessun distrattore è davvero vicino alla risposta corretta. Migliore similarità: 0.334.",
+        "Opzione C eliminabile per parole troppo assolute: automaticamente.",
+        "Il distrattore principale condivide pochi concetti chiave con la corretta. Sovrapposizione: 0.17."
+      ],
+      "gravita": 100
+    },
+    {
+      "id": "AI-FAC-0007",
+      "livello": "facile",
+      "domanda": "Che cosa fa principalmente un modello linguistico?",
+      "opzioni": [
+        "Lavora con il linguaggio per comprendere o generare testo",
+        "Classifica contenuti testuali senza produrre nuove frasi",
+        "Recupera pagine web pertinenti senza formulare una risposta",
+        "Analizza solo dati numerici organizzati in tabelle"
+      ],
+      "corretta": "A",
+      "distrattore_principale": "B",
+      "similarita_distrattore_principale": 0.303,
+      "migliore_errata": {
+        "lettera": "C",
+        "testo": "Recupera pagine web pertinenti senza formulare una risposta",
+        "similarita": 0.338
+      },
+      "lunghezze": [
+        57,
+        56,
+        59,
+        50
+      ],
+      "problemi": [
+        "Distrattore principale B troppo lontano dalla corretta. Similarità: 0.303.",
+        "Nessun distrattore è davvero vicino alla risposta corretta. Migliore similarità: 0.338.",
+        "Opzione D eliminabile per parole troppo assolute: solo.",
+        "Il distrattore principale condivide pochi concetti chiave con la corretta. Sovrapposizione: 0.0."
+      ],
+      "gravita": 100
+    },
+    {
+      "id": "AI-FAC-0202",
+      "livello": "facile",
+      "domanda": "Che cosa rappresenta un prompt quando si usa un modello linguistico?",
+      "opzioni": [
+        "L'istruzione o il testo iniziale dato al modello per guidare la risposta.",
+        "Il file interno che contiene tutti i pesi matematici del modello.",
+        "Il risultato finale generato dal modello dopo l'elaborazione.",
+        "Il database esterno usato per salvare le conversazioni dell'utente."
+      ],
+      "corretta": "A",
+      "distrattore_principale": "B",
+      "similarita_distrattore_principale": 0.346,
+      "migliore_errata": {
+        "lettera": "C",
+        "testo": "Il risultato finale generato dal modello dopo l'elaborazione.",
+        "similarita": 0.413
+      },
+      "lunghezze": [
+        73,
+        65,
+        61,
+        67
+      ],
+      "problemi": [
+        "Distrattore principale B troppo lontano dalla corretta. Similarità: 0.346.",
+        "Nessun distrattore è davvero vicino alla risposta corretta. Migliore similarità: 0.413.",
+        "Opzione B eliminabile per parole troppo assolute: tutti.",
+        "Il distrattore principale condivide pochi concetti chiave con la corretta. Sovrapposizione: 0.0."
+      ],
+      "gravita": 100
+    },
+    {
+      "id": "AI-FAC-0206",
+      "livello": "facile",
+      "domanda": "Che cosa sono i token in un modello linguistico?",
+      "opzioni": [
+        "Unità di testo, come parole o parti di parole, che il modello usa per elaborare il linguaggio.",
+        "File immagine usati per addestrare soltanto modelli visivi.",
+        "Etichette numeriche che indicano esclusivamente la qualità di una risposta.",
+        "Password temporanee usate per accedere a un'applicazione."
+      ],
+      "corretta": "A",
+      "distrattore_principale": "B",
+      "similarita_distrattore_principale": 0.255,
+      "migliore_errata": {
+        "lettera": "D",
+        "testo": "Password temporanee usate per accedere a un'applicazione.",
+        "similarita": 0.274
+      },
+      "lunghezze": [
+        92,
+        59,
+        75,
+        57
+      ],
+      "problemi": [
+        "Distrattore principale B troppo lontano dalla corretta. Similarità: 0.255.",
+        "Nessun distrattore è davvero vicino alla risposta corretta. Migliore similarità: 0.274.",
+        "Opzione B eliminabile per parole troppo assolute: soltanto.",
+        "Il distrattore principale condivide pochi concetti chiave con la corretta. Sovrapposizione: 0.0."
+      ],
+      "gravita": 100
+    },
+    {
+      "id": "AI-FAC-0209",
+      "livello": "facile",
+      "domanda": "A cosa servono gli embedding in molte applicazioni AI?",
+      "opzioni": [
+        "A rappresentare testi, immagini o altri dati come vettori numerici confrontabili.",
+        "A sostituire ogni controllo qualità sui dati prodotti dal modello.",
+        "A trasformare automaticamente qualsiasi modello piccolo in un modello più grande.",
+        "A eliminare la necessità di salvare informazioni in memoria."
+      ],
+      "corretta": "A",
+      "distrattore_principale": "B",
+      "similarita_distrattore_principale": 0.365,
+      "migliore_errata": {
+        "lettera": "B",
+        "testo": "A sostituire ogni controllo qualità sui dati prodotti dal modello.",
+        "similarita": 0.365
+      },
+      "lunghezze": [
+        80,
+        66,
+        81,
+        60
+      ],
+      "problemi": [
+        "Distrattore principale B troppo lontano dalla corretta. Similarità: 0.365.",
+        "Nessun distrattore è davvero vicino alla risposta corretta. Migliore similarità: 0.365.",
+        "Opzione C eliminabile per parole troppo assolute: qualsiasi, automaticamente.",
+        "Il distrattore principale condivide pochi concetti chiave con la corretta. Sovrapposizione: 0.12."
+      ],
+      "gravita": 100
+    },
+    {
+      "id": "AI-FAC-0210",
+      "livello": "facile",
+      "domanda": "Che cosa significa fine-tuning di un modello AI?",
+      "opzioni": [
+        "Adattare un modello già addestrato a un compito o dominio più specifico.",
+        "Creare un modello da zero senza usare dati precedenti.",
+        "Usare il modello solo per cercare file in una cartella locale.",
+        "Ridurre la dimensione del monitor usato durante l'addestramento."
+      ],
+      "corretta": "A",
+      "distrattore_principale": "B",
+      "similarita_distrattore_principale": 0.388,
+      "migliore_errata": {
+        "lettera": "B",
+        "testo": "Creare un modello da zero senza usare dati precedenti.",
+        "similarita": 0.388
+      },
+      "lunghezze": [
+        72,
+        54,
+        62,
+        64
+      ],
+      "problemi": [
+        "Distrattore principale B troppo lontano dalla corretta. Similarità: 0.388.",
+        "Nessun distrattore è davvero vicino alla risposta corretta. Migliore similarità: 0.388.",
+        "Opzione C eliminabile per parole troppo assolute: solo.",
+        "Il distrattore principale condivide pochi concetti chiave con la corretta. Sovrapposizione: 0.12."
+      ],
+      "gravita": 100
+    },
+    {
+      "id": "AI-FAC-0212",
+      "livello": "facile",
+      "domanda": "Che cosa distingue un modello supervisionato da uno non supervisionato?",
+      "opzioni": [
+        "Nel supervisionato gli esempi di addestramento hanno etichette o risposte corrette associate.",
+        "Nel supervisionato il modello può funzionare solo senza dati di esempio.",
+        "Nel non supervisionato ogni esempio contiene etichette esplicite simili a quelle del supervisionato.",
+        "Nel non supervisionato il modello non può trovare strutture nei dati."
+      ],
+      "corretta": "A",
+      "distrattore_principale": "B",
+      "similarita_distrattore_principale": 0.327,
+      "migliore_errata": {
+        "lettera": "D",
+        "testo": "Nel non supervisionato il modello non può trovare strutture nei dati.",
+        "similarita": 0.33
+      },
+      "lunghezze": [
+        93,
+        72,
+        100,
+        69
+      ],
+      "problemi": [
+        "Distrattore principale B troppo lontano dalla corretta. Similarità: 0.327.",
+        "Nessun distrattore è davvero vicino alla risposta corretta. Migliore similarità: 0.33.",
+        "Opzione B eliminabile per parole troppo assolute: solo.",
+        "Il distrattore principale condivide pochi concetti chiave con la corretta. Sovrapposizione: 0.12."
+      ],
+      "gravita": 100
+    },
+    {
+      "id": "AI-INT-0201",
+      "livello": "intermedio",
+      "domanda": "Qual è il vantaggio principale di una pipeline RAG rispetto a un semplice prompt senza recupero documentale?",
+      "opzioni": [
+        "Può recuperare informazioni da fonti esterne e usarle per rendere la risposta più ancorata ai dati disponibili.",
+        "Trasforma automaticamente il modello in un sistema addestrato da zero sul dominio aziendale.",
+        "Elimina ogni rischio di risposta errata anche quando le fonti sono incomplete.",
+        "Sostituisce il modello linguistico con un normale motore di ricerca."
+      ],
+      "corretta": "A",
+      "distrattore_principale": "B",
+      "similarita_distrattore_principale": 0.264,
+      "migliore_errata": {
+        "lettera": "C",
+        "testo": "Elimina ogni rischio di risposta errata anche quando le fonti sono incomplete.",
+        "similarita": 0.335
+      },
+      "lunghezze": [
+        111,
+        92,
+        78,
+        68
+      ],
+      "problemi": [
+        "Distrattore principale B troppo lontano dalla corretta. Similarità: 0.264.",
+        "Nessun distrattore è davvero vicino alla risposta corretta. Migliore similarità: 0.335.",
+        "Opzione B eliminabile per parole troppo assolute: automaticamente.",
+        "Il distrattore principale condivide pochi concetti chiave con la corretta. Sovrapposizione: 0.0."
+      ],
+      "gravita": 100
+    },
+    {
+      "id": "AI-INT-0204",
+      "livello": "intermedio",
+      "domanda": "In una ricerca semantica, perché il semplice confronto di parole chiave può essere meno efficace degli embedding?",
+      "opzioni": [
+        "Perché gli embedding possono catturare somiglianze di significato anche quando le parole usate sono diverse.",
+        "Perché le parole chiave leggono direttamente i pensieri dell'utente.",
+        "Perché gli embedding eliminano la necessità di controllare i risultati recuperati.",
+        "Perché la ricerca per parole chiave funziona solo con immagini e non con testo."
+      ],
+      "corretta": "A",
+      "distrattore_principale": "B",
+      "similarita_distrattore_principale": 0.309,
+      "migliore_errata": {
+        "lettera": "C",
+        "testo": "Perché gli embedding eliminano la necessità di controllare i risultati recuperati.",
+        "similarita": 0.391
+      },
+      "lunghezze": [
+        108,
+        68,
+        82,
+        79
+      ],
+      "problemi": [
+        "Distrattore principale B troppo lontano dalla corretta. Similarità: 0.309.",
+        "Nessun distrattore è davvero vicino alla risposta corretta. Migliore similarità: 0.391.",
+        "Opzione D eliminabile per parole troppo assolute: solo.",
+        "Il distrattore principale condivide pochi concetti chiave con la corretta. Sovrapposizione: 0.18."
+      ],
+      "gravita": 100
+    },
+    {
+      "id": "AI-INT-0209",
+      "livello": "intermedio",
+      "domanda": "Perché un set di valutazione separato è importante nello sviluppo di un modello AI?",
+      "opzioni": [
+        "Per misurare il comportamento del modello su esempi non usati direttamente per addestrarlo.",
+        "Per aggiungere automaticamente nuove etichette al dataset di training.",
+        "Per sostituire del tutto il controllo umano quando il dominio è delicato.",
+        "Per rendere inutili metriche e analisi degli errori."
+      ],
+      "corretta": "A",
+      "distrattore_principale": "B",
+      "similarita_distrattore_principale": 0.303,
+      "migliore_errata": {
+        "lettera": "B",
+        "testo": "Per aggiungere automaticamente nuove etichette al dataset di training.",
+        "similarita": 0.303
+      },
+      "lunghezze": [
+        91,
+        70,
+        73,
+        52
+      ],
+      "problemi": [
+        "Distrattore principale B troppo lontano dalla corretta. Similarità: 0.303.",
+        "Nessun distrattore è davvero vicino alla risposta corretta. Migliore similarità: 0.303.",
+        "Opzione B eliminabile per parole troppo assolute: automaticamente.",
+        "Il distrattore principale condivide pochi concetti chiave con la corretta. Sovrapposizione: 0.0."
+      ],
+      "gravita": 100
+    },
+    {
+      "id": "AI-INT-0211",
+      "livello": "intermedio",
+      "domanda": "Che cosa significa grounding in una risposta generata da un modello linguistico?",
+      "opzioni": [
+        "Collegare la risposta a informazioni verificabili o a fonti fornite al sistema.",
+        "Aumentare casualmente la creatività della risposta.",
+        "Ridurre il testo generato a una sola parola.",
+        "Cancellare tutti i riferimenti ai dati usati dal sistema."
+      ],
+      "corretta": "A",
+      "distrattore_principale": "B",
+      "similarita_distrattore_principale": 0.234,
+      "migliore_errata": {
+        "lettera": "D",
+        "testo": "Cancellare tutti i riferimenti ai dati usati dal sistema.",
+        "similarita": 0.363
+      },
+      "lunghezze": [
+        79,
+        51,
+        44,
+        57
+      ],
+      "problemi": [
+        "Distrattore principale B troppo lontano dalla corretta. Similarità: 0.234.",
+        "Nessun distrattore è davvero vicino alla risposta corretta. Migliore similarità: 0.363.",
+        "Opzione D eliminabile per parole troppo assolute: tutti.",
+        "Il distrattore principale condivide pochi concetti chiave con la corretta. Sovrapposizione: 0.0."
+      ],
+      "gravita": 100
+    },
+    {
+      "id": "AI-INT-0212",
+      "livello": "intermedio",
+      "domanda": "Perché la quantizzazione può essere utile per eseguire modelli AI su dispositivi con risorse limitate?",
+      "opzioni": [
+        "Per ridurre la precisione numerica dei pesi e diminuire memoria o costo computazionale.",
+        "Per aumentare il numero di neuroni senza cambiare la memoria richiesta.",
+        "Per trasformare un modello linguistico in un database vettoriale.",
+        "Per garantire automaticamente risposte più corrette in ogni dominio."
+      ],
+      "corretta": "A",
+      "distrattore_principale": "B",
+      "similarita_distrattore_principale": 0.374,
+      "migliore_errata": {
+        "lettera": "B",
+        "testo": "Per aumentare il numero di neuroni senza cambiare la memoria richiesta.",
+        "similarita": 0.374
+      },
+      "lunghezze": [
+        87,
+        71,
+        65,
+        68
+      ],
+      "problemi": [
+        "Distrattore principale B troppo lontano dalla corretta. Similarità: 0.374.",
+        "Nessun distrattore è davvero vicino alla risposta corretta. Migliore similarità: 0.374.",
+        "Opzione D eliminabile per parole troppo assolute: automaticamente.",
+        "Il distrattore principale condivide pochi concetti chiave con la corretta. Sovrapposizione: 0.12."
+      ],
+      "gravita": 100
+    },
+    {
+      "id": "AI-INT-0213",
+      "livello": "intermedio",
+      "domanda": "Che cosa può indicare una bassa precisione in un classificatore?",
+      "opzioni": [
+        "Molti elementi previsti come positivi dal modello sono in realtà negativi.",
+        "Il modello produce pochissimi risultati positivi.",
+        "Il dataset contiene solo esempi senza etichetta.",
+        "Il modello è stato addestrato esclusivamente su immagini ad alta risoluzione."
+      ],
+      "corretta": "A",
+      "distrattore_principale": "B",
+      "similarita_distrattore_principale": 0.322,
+      "migliore_errata": {
+        "lettera": "D",
+        "testo": "Il modello è stato addestrato esclusivamente su immagini ad alta risoluzione.",
+        "similarita": 0.351
+      },
+      "lunghezze": [
+        74,
+        49,
+        48,
+        77
+      ],
+      "problemi": [
+        "Distrattore principale B troppo lontano dalla corretta. Similarità: 0.322.",
+        "Nessun distrattore è davvero vicino alla risposta corretta. Migliore similarità: 0.351.",
+        "Opzione C eliminabile per parole troppo assolute: solo.",
+        "Il distrattore principale condivide pochi concetti chiave con la corretta. Sovrapposizione: 0.12."
+      ],
+      "gravita": 100
+    },
+    {
+      "id": "AI-AV-0201",
+      "livello": "avanzato",
+      "domanda": "Qual è il ruolo principale del meccanismo di attention nei Transformer?",
+      "opzioni": [
+        "Pesare l'importanza relativa di diverse parti della sequenza durante l'elaborazione.",
+        "Ridurre ogni input a una sola parola prima della generazione.",
+        "Sostituire completamente la fase di tokenizzazione.",
+        "Archiviare in modo permanente tutte le conversazioni degli utenti."
+      ],
+      "corretta": "A",
+      "distrattore_principale": "B",
+      "similarita_distrattore_principale": 0.333,
+      "migliore_errata": {
+        "lettera": "B",
+        "testo": "Ridurre ogni input a una sola parola prima della generazione.",
+        "similarita": 0.333
+      },
+      "lunghezze": [
+        84,
+        61,
+        51,
+        66
+      ],
+      "problemi": [
+        "Distrattore principale B troppo lontano dalla corretta. Similarità: 0.333.",
+        "Nessun distrattore è davvero vicino alla risposta corretta. Migliore similarità: 0.333.",
+        "Opzione C eliminabile per parole troppo assolute: completamente.",
+        "Il distrattore principale condivide pochi concetti chiave con la corretta. Sovrapposizione: 0.0."
+      ],
+      "gravita": 100
+    },
+    {
+      "id": "AI-AV-0205",
+      "livello": "avanzato",
+      "domanda": "Che cosa indica il catastrophic forgetting nel machine learning?",
+      "opzioni": [
+        "La perdita di prestazioni su conoscenze o compiti precedenti dopo un nuovo addestramento.",
+        "La capacità del modello di ricordare perfettamente tutti i dati passati.",
+        "La cancellazione automatica dei file temporanei dopo l'inferenza.",
+        "La riduzione della latenza causata da una cache più efficiente."
+      ],
+      "corretta": "A",
+      "distrattore_principale": "B",
+      "similarita_distrattore_principale": 0.286,
+      "migliore_errata": {
+        "lettera": "C",
+        "testo": "La cancellazione automatica dei file temporanei dopo l'inferenza.",
+        "similarita": 0.333
+      },
+      "lunghezze": [
+        89,
+        72,
+        65,
+        63
+      ],
+      "problemi": [
+        "Distrattore principale B troppo lontano dalla corretta. Similarità: 0.286.",
+        "Nessun distrattore è davvero vicino alla risposta corretta. Migliore similarità: 0.333.",
+        "Opzione B eliminabile per parole troppo assolute: tutti.",
+        "Il distrattore principale condivide pochi concetti chiave con la corretta. Sovrapposizione: 0.0."
+      ],
+      "gravita": 100
+    },
+    {
+      "id": "AI-AV-0208",
+      "livello": "avanzato",
+      "domanda": "Perché un sistema multimodale deve allineare informazioni provenienti da testo e immagini?",
+      "opzioni": [
+        "Per collegare correttamente elementi visivi e descrizioni linguistiche durante il ragionamento o la generazione.",
+        "Per impedire al modello di usare dati testuali quando riceve un'immagine.",
+        "Per trasformare ogni immagine in un file audio prima dell'analisi.",
+        "Per cancellare automaticamente le parti meno colorate dell'immagine."
+      ],
+      "corretta": "A",
+      "distrattore_principale": "B",
+      "similarita_distrattore_principale": 0.256,
+      "migliore_errata": {
+        "lettera": "D",
+        "testo": "Per cancellare automaticamente le parti meno colorate dell'immagine.",
+        "similarita": 0.29
+      },
+      "lunghezze": [
+        112,
+        73,
+        66,
+        68
+      ],
+      "problemi": [
+        "Distrattore principale B troppo lontano dalla corretta. Similarità: 0.256.",
+        "Nessun distrattore è davvero vicino alla risposta corretta. Migliore similarità: 0.29.",
+        "Opzione D eliminabile per parole troppo assolute: automaticamente.",
+        "Il distrattore principale condivide pochi concetti chiave con la corretta. Sovrapposizione: 0.0."
+      ],
+      "gravita": 100
+    },
+    {
+      "id": "AI-AV-0209",
+      "livello": "avanzato",
+      "domanda": "Quale compromesso è spesso necessario quando si sceglie un modello AI per un'app reale?",
+      "opzioni": [
+        "Bilanciare qualità delle risposte, latenza, costo computazionale e risorse disponibili.",
+        "Scegliere il modello più grande come criterio principale, senza valutare bene tempi e costi.",
+        "Usare solo modelli non addestrati per evitare ogni errore.",
+        "Eliminare i test perché le metriche rallentano l'applicazione."
+      ],
+      "corretta": "A",
+      "distrattore_principale": "B",
+      "similarita_distrattore_principale": 0.319,
+      "migliore_errata": {
+        "lettera": "B",
+        "testo": "Scegliere il modello più grande come criterio principale, senza valutare bene tempi e costi.",
+        "similarita": 0.319
+      },
+      "lunghezze": [
+        85,
+        91,
+        58,
+        62
+      ],
+      "problemi": [
+        "Distrattore principale B troppo lontano dalla corretta. Similarità: 0.319.",
+        "Nessun distrattore è davvero vicino alla risposta corretta. Migliore similarità: 0.319.",
+        "Opzione C eliminabile per parole troppo assolute: solo.",
+        "Il distrattore principale condivide pochi concetti chiave con la corretta. Sovrapposizione: 0.0."
+      ],
+      "gravita": 100
+    },
+    {
+      "id": "AI-AV-0003",
+      "livello": "avanzato",
+      "domanda": "A cosa serve principalmente un sistema RAG in un'applicazione AI?",
+      "opzioni": [
+        "A recuperare informazioni da fonti esterne e usarle per generare risposte più fondate",
+        "A riaddestrare il modello sui documenti recuperati prima di ogni risposta",
+        "A cercare documenti simili senza passarli al modello durante la generazione",
+        "A sostituire il ragionamento del modello con una semplice ricerca per parole chiave"
+      ],
+      "corretta": "A",
+      "distrattore_principale": "B",
+      "similarita_distrattore_principale": 0.293,
+      "migliore_errata": {
+        "lettera": "D",
+        "testo": "A sostituire il ragionamento del modello con una semplice ricerca per parole chiave",
+        "similarita": 0.348
+      },
+      "lunghezze": [
+        85,
+        73,
+        75,
+        83
+      ],
+      "problemi": [
+        "Distrattore principale B troppo lontano dalla corretta. Similarità: 0.293.",
+        "Nessun distrattore è davvero vicino alla risposta corretta. Migliore similarità: 0.348.",
+        "Il distrattore principale condivide pochi concetti chiave con la corretta. Sovrapposizione: 0.0."
+      ],
+      "gravita": 85
+    },
+    {
+      "id": "AI-INT-0004",
+      "livello": "intermedio",
+      "domanda": "In un sistema RAG, perché si cercano documenti esterni prima di generare la risposta?",
+      "opzioni": [
+        "Per fornire al modello informazioni aggiornate o specifiche su cui basare la risposta",
+        "Per trovare testi semanticamente simili alla domanda, anche se poi non vengono usati come contesto",
+        "Per archiviare i documenti recuperati senza inserirli nel prompt",
+        "Per confrontare la domanda con esempi simili senza generare una risposta"
+      ],
+      "corretta": "A",
+      "distrattore_principale": "B",
+      "similarita_distrattore_principale": 0.325,
+      "migliore_errata": {
+        "lettera": "D",
+        "testo": "Per confrontare la domanda con esempi simili senza generare una risposta",
+        "similarita": 0.33
+      },
+      "lunghezze": [
+        85,
+        97,
+        64,
+        72
+      ],
+      "problemi": [
+        "Distrattore principale B troppo lontano dalla corretta. Similarità: 0.325.",
+        "Nessun distrattore è davvero vicino alla risposta corretta. Migliore similarità: 0.33.",
+        "Il distrattore principale condivide pochi concetti chiave con la corretta. Sovrapposizione: 0.0."
+      ],
+      "gravita": 85
+    },
+    {
+      "id": "AI-FAC-0006",
+      "livello": "facile",
+      "domanda": "Se un modello AI decide se una email è spam oppure no, quale tipo di attività sta svolgendo?",
+      "opzioni": [
+        "Classificazione",
+        "Clustering",
+        "Regressione",
+        "Stima di un valore numerico"
+      ],
+      "corretta": "A",
+      "distrattore_principale": "B",
+      "similarita_distrattore_principale": 0.293,
+      "migliore_errata": {
+        "lettera": "C",
+        "testo": "Regressione",
+        "similarita": 0.331
+      },
+      "lunghezze": [
+        15,
+        10,
+        11,
+        27
+      ],
+      "problemi": [
+        "Distrattore principale B troppo lontano dalla corretta. Similarità: 0.293.",
+        "Nessun distrattore è davvero vicino alla risposta corretta. Migliore similarità: 0.331.",
+        "Il distrattore principale condivide pochi concetti chiave con la corretta. Sovrapposizione: 0.0."
+      ],
+      "gravita": 85
+    },
+    {
+      "id": "AI-FAC-0008",
+      "livello": "facile",
+      "domanda": "Quando un modello AI inventa una risposta falsa ma la presenta come sicura, come viene chiamato di solito questo problema?",
+      "opzioni": [
+        "Allucinazione",
+        "Bias del dataset",
+        "Overfitting",
+        "Errore di classificazione"
+      ],
+      "corretta": "A",
+      "distrattore_principale": "B",
+      "similarita_distrattore_principale": 0.273,
+      "migliore_errata": {
+        "lettera": "B",
+        "testo": "Bias del dataset",
+        "similarita": 0.273
+      },
+      "lunghezze": [
+        13,
+        16,
+        11,
+        25
+      ],
+      "problemi": [
+        "Distrattore principale B troppo lontano dalla corretta. Similarità: 0.273.",
+        "Nessun distrattore è davvero vicino alla risposta corretta. Migliore similarità: 0.273.",
+        "Il distrattore principale condivide pochi concetti chiave con la corretta. Sovrapposizione: 0.0."
+      ],
+      "gravita": 85
+    },
+    {
+      "id": "AI-FAC-0207",
+      "livello": "facile",
+      "domanda": "Che cosa significa inferenza in un modello AI già addestrato?",
+      "opzioni": [
+        "Usare il modello per produrre una previsione o una risposta su un nuovo input.",
+        "Aggiungere manualmente tutte le regole che il modello dovrà seguire.",
+        "Cancellare i pesi del modello prima dell'utilizzo.",
+        "Preparare il dataset prima della fase di addestramento."
+      ],
+      "corretta": "A",
+      "distrattore_principale": "B",
+      "similarita_distrattore_principale": 0.331,
+      "migliore_errata": {
+        "lettera": "B",
+        "testo": "Aggiungere manualmente tutte le regole che il modello dovrà seguire.",
+        "similarita": 0.331
+      },
+      "lunghezze": [
+        78,
+        68,
+        50,
+        55
+      ],
+      "problemi": [
+        "Distrattore principale B troppo lontano dalla corretta. Similarità: 0.331.",
+        "Nessun distrattore è davvero vicino alla risposta corretta. Migliore similarità: 0.331.",
+        "Il distrattore principale condivide pochi concetti chiave con la corretta. Sovrapposizione: 0.14."
+      ],
+      "gravita": 85
+    },
+    {
+      "id": "AI-FAC-0208",
+      "livello": "facile",
+      "domanda": "Che cosa si intende per allucinazione di un modello linguistico?",
+      "opzioni": [
+        "Una risposta plausibile nella forma ma non corretta o non supportata dai dati.",
+        "Una risposta presentata come verificata da fonti esterne affidabili.",
+        "Una traduzione letterale prodotta senza cambiare il significato.",
+        "Una compressione tecnica dei parametri del modello."
+      ],
+      "corretta": "A",
+      "distrattore_principale": "B",
+      "similarita_distrattore_principale": 0.38,
+      "migliore_errata": {
+        "lettera": "B",
+        "testo": "Una risposta presentata come verificata da fonti esterne affidabili.",
+        "similarita": 0.38
+      },
+      "lunghezze": [
+        78,
+        68,
+        64,
+        51
+      ],
+      "problemi": [
+        "Distrattore principale B troppo lontano dalla corretta. Similarità: 0.38.",
+        "Nessun distrattore è davvero vicino alla risposta corretta. Migliore similarità: 0.38.",
+        "Il distrattore principale condivide pochi concetti chiave con la corretta. Sovrapposizione: 0.12."
+      ],
+      "gravita": 85
+    },
+    {
+      "id": "AI-INT-0202",
+      "livello": "intermedio",
+      "domanda": "Perché un database vettoriale è utile in un sistema basato su embedding?",
+      "opzioni": [
+        "Per cercare elementi semanticamente simili usando vettori numerici.",
+        "Per salvare esclusivamente immagini in formato compresso.",
+        "Per convertire un modello linguistico in un foglio di calcolo.",
+        "Per sostituire la fase di progettazione dei prompt."
+      ],
+      "corretta": "A",
+      "distrattore_principale": "B",
+      "similarita_distrattore_principale": 0.357,
+      "migliore_errata": {
+        "lettera": "C",
+        "testo": "Per convertire un modello linguistico in un foglio di calcolo.",
+        "similarita": 0.359
+      },
+      "lunghezze": [
+        67,
+        57,
+        62,
+        51
+      ],
+      "problemi": [
+        "Distrattore principale B troppo lontano dalla corretta. Similarità: 0.357.",
+        "Nessun distrattore è davvero vicino alla risposta corretta. Migliore similarità: 0.359.",
+        "Il distrattore principale condivide pochi concetti chiave con la corretta. Sovrapposizione: 0.0."
+      ],
+      "gravita": 85
+    },
+    {
+      "id": "AI-INT-0205",
+      "livello": "intermedio",
+      "domanda": "Che cosa può fare un reranker in una pipeline RAG?",
+      "opzioni": [
+        "Riordinare i documenti recuperati in base alla loro rilevanza rispetto alla domanda.",
+        "Generare immagini partendo direttamente dai documenti recuperati.",
+        "Cancellare i documenti meno recenti dal database originale.",
+        "Addestrare da zero il modello linguistico durante ogni richiesta."
+      ],
+      "corretta": "A",
+      "distrattore_principale": "B",
+      "similarita_distrattore_principale": 0.334,
+      "migliore_errata": {
+        "lettera": "C",
+        "testo": "Cancellare i documenti meno recenti dal database originale.",
+        "similarita": 0.359
+      },
+      "lunghezze": [
+        84,
+        65,
+        59,
+        65
+      ],
+      "problemi": [
+        "Distrattore principale B troppo lontano dalla corretta. Similarità: 0.334.",
+        "Nessun distrattore è davvero vicino alla risposta corretta. Migliore similarità: 0.359.",
+        "Il distrattore principale condivide pochi concetti chiave con la corretta. Sovrapposizione: 0.12."
+      ],
+      "gravita": 85
+    },
+    {
+      "id": "AI-INT-0206",
+      "livello": "intermedio",
+      "domanda": "Che cosa si intende per prompt injection?",
+      "opzioni": [
+        "Un tentativo di inserire istruzioni malevole o fuorvianti nel testo dato al modello.",
+        "Una tecnica di compressione che riduce il numero di parametri del modello.",
+        "Un metodo per caricare immagini dentro un database relazionale.",
+        "Un sistema per rendere più veloce la connessione internet dell'app."
+      ],
+      "corretta": "A",
+      "distrattore_principale": "B",
+      "similarita_distrattore_principale": 0.349,
+      "migliore_errata": {
+        "lettera": "B",
+        "testo": "Una tecnica di compressione che riduce il numero di parametri del modello.",
+        "similarita": 0.349
+      },
+      "lunghezze": [
+        84,
+        74,
+        63,
+        67
+      ],
+      "problemi": [
+        "Distrattore principale B troppo lontano dalla corretta. Similarità: 0.349.",
+        "Nessun distrattore è davvero vicino alla risposta corretta. Migliore similarità: 0.349.",
+        "Il distrattore principale condivide pochi concetti chiave con la corretta. Sovrapposizione: 0.12."
+      ],
+      "gravita": 85
+    },
+    {
+      "id": "AI-INT-0207",
+      "livello": "intermedio",
+      "domanda": "A cosa serve il tool calling in un'applicazione basata su LLM?",
+      "opzioni": [
+        "A permettere al modello di richiedere l'uso di strumenti esterni, come API, calcoli o ricerche.",
+        "A impedire al modello di interagire con qualunque sistema esterno.",
+        "A sostituire la necessità di definire permessi e controlli sugli strumenti.",
+        "A trasformare ogni risposta testuale in un'immagine."
+      ],
+      "corretta": "A",
+      "distrattore_principale": "B",
+      "similarita_distrattore_principale": 0.377,
+      "migliore_errata": {
+        "lettera": "B",
+        "testo": "A impedire al modello di interagire con qualunque sistema esterno.",
+        "similarita": 0.377
+      },
+      "lunghezze": [
+        93,
+        66,
+        75,
+        52
+      ],
+      "problemi": [
+        "Distrattore principale B troppo lontano dalla corretta. Similarità: 0.377.",
+        "Nessun distrattore è davvero vicino alla risposta corretta. Migliore similarità: 0.377.",
+        "Il distrattore principale condivide pochi concetti chiave con la corretta. Sovrapposizione: 0.11."
+      ],
+      "gravita": 85
+    },
+    {
+      "id": "AI-INT-0208",
+      "livello": "intermedio",
+      "domanda": "Perché è utile separare il ragionamento del sistema dalle azioni eseguite da un agente AI?",
+      "opzioni": [
+        "Per controllare meglio quando l'agente deve pensare, chiamare strumenti, verificare risultati o fermarsi.",
+        "Per fare in modo che l'agente esegua comandi anche quando i controlli non sono sufficienti.",
+        "Per eliminare la necessità di log, test e gestione degli errori.",
+        "Per trasformare ogni agente in un semplice chatbot senza strumenti."
+      ],
+      "corretta": "A",
+      "distrattore_principale": "B",
+      "similarita_distrattore_principale": 0.367,
+      "migliore_errata": {
+        "lettera": "B",
+        "testo": "Per fare in modo che l'agente esegua comandi anche quando i controlli non sono sufficienti.",
+        "similarita": 0.367
+      },
+      "lunghezze": [
+        103,
+        91,
+        63,
+        67
+      ],
+      "problemi": [
+        "Distrattore principale B troppo lontano dalla corretta. Similarità: 0.367.",
+        "Nessun distrattore è davvero vicino alla risposta corretta. Migliore similarità: 0.367.",
+        "Il distrattore principale condivide pochi concetti chiave con la corretta. Sovrapposizione: 0.18."
+      ],
+      "gravita": 85
+    },
+    {
+      "id": "AI-INT-0210",
+      "livello": "intermedio",
+      "domanda": "Che cosa indica il concetto di bias in un sistema AI?",
+      "opzioni": [
+        "Una tendenza sistematica del modello a favorire o penalizzare certi risultati o gruppi.",
+        "La capacità del modello di mantenere una neutralità perfetta nelle risposte.",
+        "La dimensione fisica del server su cui il modello viene eseguito.",
+        "Il tempo necessario per scaricare un dataset da internet."
+      ],
+      "corretta": "A",
+      "distrattore_principale": "B",
+      "similarita_distrattore_principale": 0.367,
+      "migliore_errata": {
+        "lettera": "B",
+        "testo": "La capacità del modello di mantenere una neutralità perfetta nelle risposte.",
+        "similarita": 0.367
+      },
+      "lunghezze": [
+        87,
+        76,
+        65,
+        57
+      ],
+      "problemi": [
+        "Distrattore principale B troppo lontano dalla corretta. Similarità: 0.367.",
+        "Nessun distrattore è davvero vicino alla risposta corretta. Migliore similarità: 0.367.",
+        "Il distrattore principale condivide pochi concetti chiave con la corretta. Sovrapposizione: 0.12."
+      ],
+      "gravita": 85
+    },
+    {
+      "id": "AI-INT-0214",
+      "livello": "intermedio",
+      "domanda": "Perché conviene registrare log e risultati durante i test di un'app AI?",
+      "opzioni": [
+        "Per capire quali input causano errori, risposte deboli o comportamenti inattesi.",
+        "Per impedire al modello di generare risposte diverse tra loro.",
+        "Per sostituire la progettazione dell'interfaccia utente.",
+        "Per rendere inutili i controlli di sicurezza."
+      ],
+      "corretta": "A",
+      "distrattore_principale": "B",
+      "similarita_distrattore_principale": 0.373,
+      "migliore_errata": {
+        "lettera": "B",
+        "testo": "Per impedire al modello di generare risposte diverse tra loro.",
+        "similarita": 0.373
+      },
+      "lunghezze": [
+        79,
+        62,
+        56,
+        45
+      ],
+      "problemi": [
+        "Distrattore principale B troppo lontano dalla corretta. Similarità: 0.373.",
+        "Nessun distrattore è davvero vicino alla risposta corretta. Migliore similarità: 0.373.",
+        "Il distrattore principale condivide pochi concetti chiave con la corretta. Sovrapposizione: 0.11."
+      ],
+      "gravita": 85
+    },
+    {
+      "id": "AI-AV-0202",
+      "livello": "avanzato",
+      "domanda": "Che cosa indica la finestra di contesto di un modello linguistico?",
+      "opzioni": [
+        "La quantità massima di token che il modello può considerare in una singola interazione.",
+        "Il numero totale di utenti che possono usare il modello nello stesso momento.",
+        "La cartella locale in cui vengono salvati i prompt più recenti.",
+        "La dimensione fisica dello schermo su cui viene mostrata la risposta."
+      ],
+      "corretta": "A",
+      "distrattore_principale": "B",
+      "similarita_distrattore_principale": 0.384,
+      "migliore_errata": {
+        "lettera": "B",
+        "testo": "Il numero totale di utenti che possono usare il modello nello stesso momento.",
+        "similarita": 0.384
+      },
+      "lunghezze": [
+        87,
+        77,
+        63,
+        69
+      ],
+      "problemi": [
+        "Distrattore principale B troppo lontano dalla corretta. Similarità: 0.384.",
+        "Nessun distrattore è davvero vicino alla risposta corretta. Migliore similarità: 0.384.",
+        "Il distrattore principale condivide pochi concetti chiave con la corretta. Sovrapposizione: 0.12."
+      ],
+      "gravita": 85
+    },
+    {
+      "id": "AI-AV-0203",
+      "livello": "avanzato",
+      "domanda": "Perché LoRA è utile nel fine-tuning di modelli di grandi dimensioni?",
+      "opzioni": [
+        "Permette di addestrare piccoli adattatori a basso rango invece di aggiornare tutti i pesi del modello.",
+        "Richiede di ricostruire da zero l'intera architettura del Transformer.",
+        "Elimina la necessità di dati di addestramento specifici per il dominio.",
+        "Trasforma ogni modello testuale in un modello esclusivamente visuale."
+      ],
+      "corretta": "A",
+      "distrattore_principale": "B",
+      "similarita_distrattore_principale": 0.3,
+      "migliore_errata": {
+        "lettera": "B",
+        "testo": "Richiede di ricostruire da zero l'intera architettura del Transformer.",
+        "similarita": 0.3
+      },
+      "lunghezze": [
+        102,
+        70,
+        71,
+        69
+      ],
+      "problemi": [
+        "Distrattore principale B troppo lontano dalla corretta. Similarità: 0.3.",
+        "Nessun distrattore è davvero vicino alla risposta corretta. Migliore similarità: 0.3.",
+        "Il distrattore principale condivide pochi concetti chiave con la corretta. Sovrapposizione: 0.0."
+      ],
+      "gravita": 85
+    },
+    {
+      "id": "AI-AV-0206",
+      "livello": "avanzato",
+      "domanda": "Perché il chunking semantico può migliorare una pipeline RAG rispetto a tagli fissi di testo?",
+      "opzioni": [
+        "Perché cerca di dividere i documenti in parti coerenti dal punto di vista del significato.",
+        "Perché elimina la necessità di creare embedding dei documenti.",
+        "Perché impedisce al modello di usare il contenuto recuperato.",
+        "Perché trasforma ogni documento in una singola parola chiave."
+      ],
+      "corretta": "A",
+      "distrattore_principale": "B",
+      "similarita_distrattore_principale": 0.322,
+      "migliore_errata": {
+        "lettera": "D",
+        "testo": "Perché trasforma ogni documento in una singola parola chiave.",
+        "similarita": 0.325
+      },
+      "lunghezze": [
+        90,
+        62,
+        61,
+        61
+      ],
+      "problemi": [
+        "Distrattore principale B troppo lontano dalla corretta. Similarità: 0.322.",
+        "Nessun distrattore è davvero vicino alla risposta corretta. Migliore similarità: 0.325.",
+        "Il distrattore principale condivide pochi concetti chiave con la corretta. Sovrapposizione: 0.1."
+      ],
+      "gravita": 85
+    },
+    {
+      "id": "AI-AV-0207",
+      "livello": "avanzato",
+      "domanda": "Che cosa può causare il context poisoning in un'applicazione basata su LLM?",
+      "opzioni": [
+        "L'inserimento nel contesto di informazioni fuorvianti che influenzano negativamente le risposte successive.",
+        "La riduzione della temperatura a un valore più basso durante la generazione.",
+        "La conversione degli input testuali in token numerici.",
+        "L'uso di un monitor con risoluzione non adatta all'interfaccia."
+      ],
+      "corretta": "A",
+      "distrattore_principale": "B",
+      "similarita_distrattore_principale": 0.243,
+      "migliore_errata": {
+        "lettera": "D",
+        "testo": "L'uso di un monitor con risoluzione non adatta all'interfaccia.",
+        "similarita": 0.259
+      },
+      "lunghezze": [
+        107,
+        76,
+        54,
+        63
+      ],
+      "problemi": [
+        "Distrattore principale B troppo lontano dalla corretta. Similarità: 0.243.",
+        "Nessun distrattore è davvero vicino alla risposta corretta. Migliore similarità: 0.259.",
+        "Il distrattore principale condivide pochi concetti chiave con la corretta. Sovrapposizione: 0.0."
+      ],
+      "gravita": 85
+    },
+    {
+      "id": "AI-AV-0210",
+      "livello": "avanzato",
+      "domanda": "Che cosa indica un modello Mixture of Experts?",
+      "opzioni": [
+        "Un'architettura che può attivare solo una parte di esperti specializzati per elaborare un input.",
+        "Un modello composto da molte copie identiche attivate tutte insieme per ogni token.",
+        "Un sistema che sceglie casualmente un database esterno senza usare il contenuto dell'input.",
+        "Un metodo per trasformare immagini in codice eseguibile senza controlli."
+      ],
+      "corretta": "A",
+      "distrattore_principale": "B",
+      "similarita_distrattore_principale": 0.311,
+      "migliore_errata": {
+        "lettera": "C",
+        "testo": "Un sistema che sceglie casualmente un database esterno senza usare il contenuto dell'input.",
+        "similarita": 0.353
+      },
+      "lunghezze": [
+        96,
+        83,
+        91,
+        72
+      ],
+      "problemi": [
+        "Distrattore principale B troppo lontano dalla corretta. Similarità: 0.311.",
+        "Nessun distrattore è davvero vicino alla risposta corretta. Migliore similarità: 0.353.",
+        "Il distrattore principale condivide pochi concetti chiave con la corretta. Sovrapposizione: 0.0."
+      ],
+      "gravita": 85
+    },
+    {
+      "id": "AI-AV-0212",
+      "livello": "avanzato",
+      "domanda": "Perché valutare le allucinazioni richiede spesso più di una metrica automatica semplice?",
+      "opzioni": [
+        "Perché serve confrontare la risposta con fonti, contesto e correttezza fattuale, non solo con la forma del testo.",
+        "Perché le allucinazioni compaiono nei contenuti visivi più che nelle risposte testuali.",
+        "Perché una metrica automatica può valutare positivamente anche una risposta non realmente corretta.",
+        "Perché la lunghezza della risposta è sufficiente a dimostrare la sua accuratezza."
+      ],
+      "corretta": "A",
+      "distrattore_principale": "B",
+      "similarita_distrattore_principale": 0.311,
+      "migliore_errata": {
+        "lettera": "C",
+        "testo": "Perché una metrica automatica può valutare positivamente anche una risposta non realmente corretta.",
+        "similarita": 0.398
+      },
+      "lunghezze": [
+        111,
+        87,
+        99,
+        81
+      ],
+      "problemi": [
+        "Distrattore principale B troppo lontano dalla corretta. Similarità: 0.311.",
+        "Nessun distrattore è davvero vicino alla risposta corretta. Migliore similarità: 0.398.",
+        "Il distrattore principale condivide pochi concetti chiave con la corretta. Sovrapposizione: 0.08."
+      ],
+      "gravita": 85
+    },
+    {
+      "id": "AI-AV-0214",
+      "livello": "avanzato",
+      "domanda": "Perché un agente AI dovrebbe verificare l'esito di uno strumento prima di procedere con il passo successivo?",
+      "opzioni": [
+        "Per evitare che errori, risultati vuoti o dati inattesi vengano usati come se fossero corretti.",
+        "Per rallentare volontariamente ogni operazione anche quando il risultato è chiaro.",
+        "Per impedire al sistema di registrare log utili al debug.",
+        "Per sostituire il controllo qualità con una risposta più lunga."
+      ],
+      "corretta": "A",
+      "distrattore_principale": "B",
+      "similarita_distrattore_principale": 0.324,
+      "migliore_errata": {
+        "lettera": "B",
+        "testo": "Per rallentare volontariamente ogni operazione anche quando il risultato è chiaro.",
+        "similarita": 0.324
+      },
+      "lunghezze": [
+        94,
+        82,
+        57,
+        63
+      ],
+      "problemi": [
+        "Distrattore principale B troppo lontano dalla corretta. Similarità: 0.324.",
+        "Nessun distrattore è davvero vicino alla risposta corretta. Migliore similarità: 0.324.",
+        "Il distrattore principale condivide pochi concetti chiave con la corretta. Sovrapposizione: 0.0."
+      ],
+      "gravita": 85
+    },
+    {
+      "id": "AI-INT-0106",
+      "livello": "intermedio",
+      "domanda": "Perché un agente AI può usare una fase di pianificazione prima di agire?",
+      "opzioni": [
+        "Per scegliere i passaggi e gli strumenti più adatti prima di eseguire azioni",
+        "Per scegliere una sequenza di azioni, ma senza verificare se sono coerenti con l'obiettivo",
+        "Per trasformare ogni risposta in una lista casuale di operazioni",
+        "Per saltare completamente il controllo del risultato finale"
+      ],
+      "corretta": "A",
+      "distrattore_principale": "B",
+      "similarita_distrattore_principale": 0.383,
+      "migliore_errata": {
+        "lettera": "B",
+        "testo": "Per scegliere una sequenza di azioni, ma senza verificare se sono coerenti con l'obiettivo",
+        "similarita": 0.383
+      },
+      "lunghezze": [
+        76,
+        89,
+        64,
+        59
+      ],
+      "problemi": [
+        "Distrattore principale B troppo lontano dalla corretta. Similarità: 0.383.",
+        "Nessun distrattore è davvero vicino alla risposta corretta. Migliore similarità: 0.383.",
+        "Opzione D eliminabile per parole troppo assolute: completamente."
+      ],
+      "gravita": 80
+    },
+    {
+      "id": "AI-INT-0002",
+      "livello": "intermedio",
+      "domanda": "Perché un prompt dettagliato può migliorare la risposta di un modello AI?",
+      "opzioni": [
+        "Perché fornisce più contesto e riduce le ambiguità della richiesta",
+        "Perché modifica i parametri interni del modello durante la risposta",
+        "Perché sostituisce il controllo finale sulla qualità della risposta",
+        "Perché obbliga il modello a copiare solo frasi presenti nel prompt"
+      ],
+      "corretta": "A",
+      "distrattore_principale": "B",
+      "similarita_distrattore_principale": 0.366,
+      "migliore_errata": {
+        "lettera": "C",
+        "testo": "Perché sostituisce il controllo finale sulla qualità della risposta",
+        "similarita": 0.48
+      },
+      "lunghezze": [
+        66,
+        67,
+        67,
+        66
+      ],
+      "problemi": [
+        "Distrattore principale B troppo lontano dalla corretta. Similarità: 0.366.",
+        "Opzione D eliminabile per parole troppo assolute: solo.",
+        "Il distrattore principale condivide pochi concetti chiave con la corretta. Sovrapposizione: 0.14."
+      ],
+      "gravita": 70
+    },
+    {
+      "id": "AI-INT-0103",
+      "livello": "intermedio",
+      "domanda": "Perché è utile testare un modello su esempi che non ha visto durante lo sviluppo?",
+      "opzioni": [
+        "Per misurare se generalizza oltre i casi usati per costruirlo",
+        "Per verificare se ricorda con precisione gli esempi usati durante lo sviluppo",
+        "Per misurare solo la velocità sui casi nuovi senza valutare l'accuratezza",
+        "Per ridurre il tempo di esecuzione eliminando i dati di validazione"
+      ],
+      "corretta": "A",
+      "distrattore_principale": "B",
+      "similarita_distrattore_principale": 0.377,
+      "migliore_errata": {
+        "lettera": "C",
+        "testo": "Per misurare solo la velocità sui casi nuovi senza valutare l'accuratezza",
+        "similarita": 0.426
+      },
+      "lunghezze": [
+        61,
+        77,
+        73,
+        67
+      ],
+      "problemi": [
+        "Distrattore principale B troppo lontano dalla corretta. Similarità: 0.377.",
+        "Opzione C eliminabile per parole troppo assolute: solo.",
+        "Il distrattore principale condivide pochi concetti chiave con la corretta. Sovrapposizione: 0.17."
+      ],
+      "gravita": 70
+    },
+    {
+      "id": "AI-FAC-0203",
+      "livello": "facile",
+      "domanda": "Perché un dataset di addestramento è importante in un sistema di machine learning?",
+      "opzioni": [
+        "Perché fornisce esempi da cui il modello può imparare relazioni e schemi.",
+        "Perché sostituisce completamente la fase di valutazione del modello.",
+        "Perché rende inutile scegliere un algoritmo adatto al problema.",
+        "Perché contiene risposte finali che il modello dovrebbe ricopiare senza imparare schemi generali."
+      ],
+      "corretta": "A",
+      "distrattore_principale": "B",
+      "similarita_distrattore_principale": 0.379,
+      "migliore_errata": {
+        "lettera": "D",
+        "testo": "Perché contiene risposte finali che il modello dovrebbe ricopiare senza imparare schemi generali.",
+        "similarita": 0.438
+      },
+      "lunghezze": [
+        73,
+        68,
+        63,
+        97
+      ],
+      "problemi": [
+        "Distrattore principale B troppo lontano dalla corretta. Similarità: 0.379.",
+        "Opzione B eliminabile per parole troppo assolute: completamente.",
+        "Il distrattore principale condivide pochi concetti chiave con la corretta. Sovrapposizione: 0.11."
+      ],
+      "gravita": 70
+    },
+    {
+      "id": "AI-AV-0213",
+      "livello": "avanzato",
+      "domanda": "Che cosa rende delicata la memoria a lungo termine in un assistente AI personale?",
+      "opzioni": [
+        "Deve conservare informazioni utili senza salvare dati inutili, sensibili o fuori contesto.",
+        "Deve salvare ogni frase dell'utente senza distinzione.",
+        "Deve impedire all'utente di correggere preferenze già memorizzate.",
+        "Deve sostituire tutte le funzioni dell'applicazione principale."
+      ],
+      "corretta": "A",
+      "distrattore_principale": "B",
+      "similarita_distrattore_principale": 0.353,
+      "migliore_errata": {
+        "lettera": "B",
+        "testo": "Deve salvare ogni frase dell'utente senza distinzione.",
+        "similarita": 0.353
+      },
+      "lunghezze": [
+        89,
+        54,
+        66,
+        63
+      ],
+      "problemi": [
+        "Distrattore principale B troppo lontano dalla corretta. Similarità: 0.353.",
+        "Nessun distrattore è davvero vicino alla risposta corretta. Migliore similarità: 0.353."
+      ],
+      "gravita": 65
+    },
+    {
+      "id": "AI-FAC-0104",
+      "livello": "facile",
+      "domanda": "Quale esempio rappresenta meglio un compito di classificazione?",
+      "opzioni": [
+        "Stabilire se un messaggio è spam o non spam",
+        "Raggruppare messaggi simili senza etichette già definite",
+        "Generare una risposta automatica a un messaggio",
+        "Scrivere un nuovo messaggio partendo da un tema"
+      ],
+      "corretta": "A",
+      "distrattore_principale": "B",
+      "similarita_distrattore_principale": 0.299,
+      "migliore_errata": {
+        "lettera": "D",
+        "testo": "Scrivere un nuovo messaggio partendo da un tema",
+        "similarita": 0.455
+      },
+      "lunghezze": [
+        43,
+        56,
+        47,
+        47
+      ],
+      "problemi": [
+        "Distrattore principale B troppo lontano dalla corretta. Similarità: 0.299.",
+        "Il distrattore principale condivide pochi concetti chiave con la corretta. Sovrapposizione: 0.0."
+      ],
+      "gravita": 55
+    },
+    {
+      "id": "AI-FAC-0105",
+      "livello": "facile",
+      "domanda": "Che cosa significa dire che un modello generativo produce testo?",
+      "opzioni": [
+        "Che crea una risposta nuova seguendo il contesto ricevuto",
+        "Che riformula il testo ricevuto senza produrre realmente contenuto nuovo",
+        "Che rielabora frasi molto simili a quelle viste nei dati senza costruire nuovo contesto",
+        "Che seleziona una frase già scritta senza adattarla al contesto"
+      ],
+      "corretta": "A",
+      "distrattore_principale": "B",
+      "similarita_distrattore_principale": 0.35,
+      "migliore_errata": {
+        "lettera": "D",
+        "testo": "Che seleziona una frase già scritta senza adattarla al contesto",
+        "similarita": 0.421
+      },
+      "lunghezze": [
+        57,
+        72,
+        87,
+        63
+      ],
+      "problemi": [
+        "Distrattore principale B troppo lontano dalla corretta. Similarità: 0.35.",
+        "Il distrattore principale condivide pochi concetti chiave con la corretta. Sovrapposizione: 0.17."
+      ],
+      "gravita": 55
+    },
+    {
+      "id": "AI-FAC-0204",
+      "livello": "facile",
+      "domanda": "Che cosa significa classificare un dato con l'intelligenza artificiale?",
+      "opzioni": [
+        "Assegnare il dato a una categoria tra quelle previste.",
+        "Generare una nuova immagine partendo da una descrizione.",
+        "Salvare il dato in una cartella senza analizzarlo.",
+        "Cancellare i dati meno importanti da un archivio."
+      ],
+      "corretta": "A",
+      "distrattore_principale": "B",
+      "similarita_distrattore_principale": 0.346,
+      "migliore_errata": {
+        "lettera": "C",
+        "testo": "Salvare il dato in una cartella senza analizzarlo.",
+        "similarita": 0.445
+      },
+      "lunghezze": [
+        54,
+        56,
+        50,
+        49
+      ],
+      "problemi": [
+        "Distrattore principale B troppo lontano dalla corretta. Similarità: 0.346.",
+        "Il distrattore principale condivide pochi concetti chiave con la corretta. Sovrapposizione: 0.0."
+      ],
+      "gravita": 55
+    },
+    {
+      "id": "AI-AV-0101",
+      "livello": "avanzato",
+      "domanda": "Qual è un rischio importante se il retrieval di un sistema RAG recupera documenti solo apparentemente pertinenti?",
+      "opzioni": [
+        "Il modello può generare una risposta ben scritta ma basata su contesto fuorviante",
+        "Il modello può generare una risposta fluida usando documenti recuperati solo in apparenza pertinenti",
+        "Il modello rifiuta automaticamente ogni documento non perfettamente pertinente",
+        "Il database vettoriale elimina da solo tutti i documenti non usati"
+      ],
+      "corretta": "A",
+      "distrattore_principale": "B",
+      "similarita_distrattore_principale": 0.474,
+      "migliore_errata": {
+        "lettera": "B",
+        "testo": "Il modello può generare una risposta fluida usando documenti recuperati solo in apparenza pertinenti",
+        "similarita": 0.474
+      },
+      "lunghezze": [
+        81,
+        100,
+        78,
+        66
+      ],
+      "problemi": [
+        "Opzione B eliminabile per parole troppo assolute: solo.",
+        "Opzione C eliminabile per parole troppo assolute: automaticamente.",
+        "Opzione D eliminabile per parole troppo assolute: solo, tutti."
+      ],
+      "gravita": 45
+    },
+    {
+      "id": "AI-AV-0007",
+      "livello": "avanzato",
+      "domanda": "Quando ha più senso valutare il fine-tuning rispetto al solo prompt engineering?",
+      "opzioni": [
+        "Quando servono comportamenti stabili e specifici su molti esempi simili",
+        "Quando serve un comportamento stabile, ma si dispone di un solo esempio isolato",
+        "Quando il problema dipende soprattutto da documenti recuperati male",
+        "Quando basta cambiare il prompt per correggere una risposta singola"
+      ],
+      "corretta": "A",
+      "distrattore_principale": "B",
+      "similarita_distrattore_principale": 0.481,
+      "migliore_errata": {
+        "lettera": "B",
+        "testo": "Quando serve un comportamento stabile, ma si dispone di un solo esempio isolato",
+        "similarita": 0.481
+      },
+      "lunghezze": [
+        71,
+        78,
+        67,
+        67
+      ],
+      "problemi": [
+        "Opzione B eliminabile per parole troppo assolute: solo.",
+        "Il distrattore principale condivide pochi concetti chiave con la corretta. Sovrapposizione: 0.12."
+      ],
+      "gravita": 35
+    },
+    {
+      "id": "AI-AV-0204",
+      "livello": "avanzato",
+      "domanda": "Qual è una differenza importante tra RLHF e DPO nell'allineamento dei modelli linguistici?",
+      "opzioni": [
+        "RLHF usa un processo con modello di ricompensa e ottimizzazione tramite rinforzo, mentre DPO ottimizza direttamente su preferenze confrontate.",
+        "DPO richiede un modello di ricompensa separato più complesso, mentre RLHF ottimizza direttamente le preferenze.",
+        "RLHF funziona solo con modelli piccoli, mentre DPO funziona solo con database SQL.",
+        "DPO elimina la necessità di dati di preferenza umana o sintetica."
+      ],
+      "corretta": "A",
+      "distrattore_principale": "B",
+      "similarita_distrattore_principale": 0.555,
+      "migliore_errata": {
+        "lettera": "B",
+        "testo": "DPO richiede un modello di ricompensa separato più complesso, mentre RLHF ottimizza direttamente le preferenze.",
+        "similarita": 0.555
+      },
+      "lunghezze": [
+        141,
+        110,
+        81,
+        65
+      ],
+      "problemi": [
+        "La risposta corretta spicca per lunghezza. Lunghezze opzioni: [141, 110, 81, 65].",
+        "Opzione C eliminabile per parole troppo assolute: solo."
+      ],
+      "gravita": 35
+    },
+    {
+      "id": "AI-AV-0005",
+      "livello": "avanzato",
+      "domanda": "Perché valutare un modello AI solo con risposte corrette o sbagliate può essere limitante?",
+      "opzioni": [
+        "Perché alcune risposte richiedono giudizi su completezza, coerenza, sicurezza e utilità",
+        "Perché basta valutare la completezza, senza considerare coerenza, sicurezza e utilità",
+        "Perché una risposta va valutata solo in base al formato richiesto",
+        "Perché una risposta va valutata solo in base alla fluidità del testo"
+      ],
+      "corretta": "A",
+      "distrattore_principale": "B",
+      "similarita_distrattore_principale": 0.602,
+      "migliore_errata": {
+        "lettera": "B",
+        "testo": "Perché basta valutare la completezza, senza considerare coerenza, sicurezza e utilità",
+        "similarita": 0.602
+      },
+      "lunghezze": [
+        85,
+        83,
+        65,
+        68
+      ],
+      "problemi": [
+        "Opzione C eliminabile per parole troppo assolute: solo.",
+        "Opzione D eliminabile per parole troppo assolute: solo."
+      ],
+      "gravita": 30
+    },
+    {
+      "id": "AI-AV-0006",
+      "livello": "avanzato",
+      "domanda": "Qual è il rischio principale di un prompt injection in un'applicazione AI collegata a strumenti esterni?",
+      "opzioni": [
+        "Il modello può essere spinto a ignorare istruzioni originali e usare strumenti in modo non previsto",
+        "Il modello può ricevere istruzioni esterne, ma queste possono influenzare solo lo stile della risposta",
+        "Il modello può confondere contenuto dell'utente e istruzioni operative solo senza tool collegati",
+        "Il modello può trattare informazioni recuperate come testo da copiare, ma non come comandi"
+      ],
+      "corretta": "A",
+      "distrattore_principale": "B",
+      "similarita_distrattore_principale": 0.455,
+      "migliore_errata": {
+        "lettera": "B",
+        "testo": "Il modello può ricevere istruzioni esterne, ma queste possono influenzare solo lo stile della risposta",
+        "similarita": 0.455
+      },
+      "lunghezze": [
+        99,
+        101,
+        96,
+        89
+      ],
+      "problemi": [
+        "Opzione B eliminabile per parole troppo assolute: solo.",
+        "Opzione C eliminabile per parole troppo assolute: solo."
+      ],
+      "gravita": 30
+    },
+    {
+      "id": "AI-INT-0105",
+      "livello": "intermedio",
+      "domanda": "Che cosa può succedere se un dataset è molto sbilanciato?",
+      "opzioni": [
+        "Il modello può funzionare bene su alcuni casi e male su altri meno rappresentati",
+        "Il modello può favorire i casi più presenti e sbagliare più spesso quelli rari",
+        "Il modello diventa automaticamente più equo su tutte le classi",
+        "Il modello corregge da solo la mancanza di esempi nelle classi rare"
+      ],
+      "corretta": "A",
+      "distrattore_principale": "B",
+      "similarita_distrattore_principale": 0.458,
+      "migliore_errata": {
+        "lettera": "B",
+        "testo": "Il modello può favorire i casi più presenti e sbagliare più spesso quelli rari",
+        "similarita": 0.458
+      },
+      "lunghezze": [
+        80,
+        78,
+        62,
+        67
+      ],
+      "problemi": [
+        "Opzione C eliminabile per parole troppo assolute: automaticamente.",
+        "Opzione D eliminabile per parole troppo assolute: solo."
+      ],
+      "gravita": 30
+    },
+    {
+      "id": "AI-AV-0004",
+      "livello": "avanzato",
+      "domanda": "In un sistema RAG, quale problema può nascere se il recupero dei documenti seleziona testi pertinenti solo in apparenza?",
+      "opzioni": [
+        "Il modello può generare una risposta ben scritta ma basata su contesto non davvero rilevante",
+        "Il modello può produrre una risposta formalmente coerente, ma basata su dettagli non davvero utili alla domanda",
+        "Il modello può rifiutare automaticamente tutti i documenti recuperati",
+        "Il modello può bloccare la generazione ogni volta che il retrieval non è perfetto"
+      ],
+      "corretta": "A",
+      "distrattore_principale": "B",
+      "similarita_distrattore_principale": 0.59,
+      "migliore_errata": {
+        "lettera": "B",
+        "testo": "Il modello può produrre una risposta formalmente coerente, ma basata su dettagli non davvero utili alla domanda",
+        "similarita": 0.59
+      },
+      "lunghezze": [
+        92,
+        110,
+        69,
+        81
+      ],
+      "problemi": [
+        "Opzione C eliminabile per parole troppo assolute: tutti, automaticamente."
+      ],
+      "gravita": 15
+    },
+    {
+      "id": "AI-FAC-0004",
+      "livello": "facile",
+      "domanda": "In un sistema di intelligenza artificiale, che cosa rappresentano i dati di addestramento?",
+      "opzioni": [
+        "Esempi usati dal modello per imparare schemi e relazioni",
+        "Esempi usati solo per verificare il modello dopo l'addestramento",
+        "Regole scritte manualmente per ogni singola risposta possibile",
+        "Parametri finali già imparati dal modello dopo il training"
+      ],
+      "corretta": "A",
+      "distrattore_principale": "B",
+      "similarita_distrattore_principale": 0.484,
+      "migliore_errata": {
+        "lettera": "B",
+        "testo": "Esempi usati solo per verificare il modello dopo l'addestramento",
+        "similarita": 0.484
+      },
+      "lunghezze": [
+        56,
+        64,
+        62,
+        58
+      ],
+      "problemi": [
+        "Opzione B eliminabile per parole troppo assolute: solo."
+      ],
+      "gravita": 15
+    },
+    {
+      "id": "AI-FAC-0005",
+      "livello": "facile",
+      "domanda": "Quale prompt è più chiaro per chiedere a un modello AI di riassumere un testo?",
+      "opzioni": [
+        "Riassumi questo testo in 5 righe usando un linguaggio semplice.",
+        "Riassumi questo testo usando un linguaggio semplice.",
+        "Riscrivi questo testo mantenendo tutti i dettagli principali.",
+        "Riformula il testo senza ridurlo e senza cambiarne il significato."
+      ],
+      "corretta": "A",
+      "distrattore_principale": "B",
+      "similarita_distrattore_principale": 0.86,
+      "migliore_errata": {
+        "lettera": "B",
+        "testo": "Riassumi questo testo usando un linguaggio semplice.",
+        "similarita": 0.86
+      },
+      "lunghezze": [
+        63,
+        52,
+        61,
+        66
+      ],
+      "problemi": [
+        "Opzione C eliminabile per parole troppo assolute: tutti."
+      ],
+      "gravita": 15
+    },
+    {
+      "id": "AI-INT-0007",
+      "livello": "intermedio",
+      "domanda": "Quale elemento rende più controllabile la risposta di un modello AI?",
+      "opzioni": [
+        "Specificare ruolo, obiettivo, vincoli e formato della risposta",
+        "Specificare solo il ruolo del modello, senza indicare vincoli, obiettivo e formato",
+        "Fornire molti obiettivi diversi senza indicare priorità",
+        "Chiedere una risposta generica lasciando formato e criteri aperti"
+      ],
+      "corretta": "A",
+      "distrattore_principale": "B",
+      "similarita_distrattore_principale": 0.561,
+      "migliore_errata": {
+        "lettera": "B",
+        "testo": "Specificare solo il ruolo del modello, senza indicare vincoli, obiettivo e formato",
+        "similarita": 0.561
+      },
+      "lunghezze": [
+        60,
+        80,
+        55,
+        65
+      ],
+      "problemi": [
+        "Opzione B eliminabile per parole troppo assolute: solo."
+      ],
+      "gravita": 15
+    },
+    {
+      "id": "AI-INT-0008",
+      "livello": "intermedio",
+      "domanda": "Che cosa può succedere se un dataset contiene molti esempi sbilanciati verso una sola classe?",
+      "opzioni": [
+        "Il modello può imparare a favorire quella classe nelle previsioni",
+        "Il modello può imparare a favorire la classe meno presente per compensare automaticamente lo sbilanciamento",
+        "Il modello può migliorare sulle classi rare anche senza esempi sufficienti",
+        "Il modello può rendere inutile ogni metrica diversa dall'accuratezza"
+      ],
+      "corretta": "A",
+      "distrattore_principale": "B",
+      "similarita_distrattore_principale": 0.554,
+      "migliore_errata": {
+        "lettera": "B",
+        "testo": "Il modello può imparare a favorire la classe meno presente per compensare automaticamente lo sbilanciamento",
+        "similarita": 0.554
+      },
+      "lunghezze": [
+        65,
+        107,
+        74,
+        68
+      ],
+      "problemi": [
+        "Opzione B eliminabile per parole troppo assolute: automaticamente."
+      ],
+      "gravita": 15
+    },
+    {
+      "id": "AI-AV-0009",
+      "livello": "avanzato",
+      "domanda": "Perché un modello AI può produrre risultati distorti anche se l'algoritmo è implementato correttamente?",
+      "opzioni": [
+        "Perché i dati, gli obiettivi di addestramento o le metriche possono introdurre distorsioni",
+        "Perché i dati sbilanciati possono introdurre distorsioni, ma obiettivi e metriche non incidono",
+        "Perché una metrica scelta male può influenzare il risultato, mentre i dati di partenza hanno un ruolo secondario",
+        "Perché solo l'obiettivo di addestramento può creare distorsioni, mentre dati e metriche non contano"
+      ],
+      "corretta": "A",
+      "distrattore_principale": "B",
+      "similarita_distrattore_principale": 0.661,
+      "migliore_errata": {
+        "lettera": "B",
+        "testo": "Perché i dati sbilanciati possono introdurre distorsioni, ma obiettivi e metriche non incidono",
+        "similarita": 0.661
+      },
+      "lunghezze": [
+        89,
+        93,
+        111,
+        98
+      ],
+      "problemi": [
+        "Opzione D eliminabile per parole troppo assolute: solo."
+      ],
+      "gravita": 15
+    },
+    {
+      "id": "AI-INT-0009",
+      "livello": "intermedio",
+      "domanda": "In un agente AI, che cosa rappresenta normalmente un tool?",
+      "opzioni": [
+        "Uno strumento esterno che l'agente può usare per compiere un'azione",
+        "Uno strumento esterno usato solo come fonte informativa, senza vera integrazione operativa",
+        "Una memoria conversazionale che conserva informazioni tra più messaggi",
+        "Un'istruzione di sistema che definisce il comportamento dell'agente"
+      ],
+      "corretta": "A",
+      "distrattore_principale": "B",
+      "similarita_distrattore_principale": 0.44,
+      "migliore_errata": {
+        "lettera": "B",
+        "testo": "Uno strumento esterno usato solo come fonte informativa, senza vera integrazione operativa",
+        "similarita": 0.44
+      },
+      "lunghezze": [
+        67,
+        89,
+        70,
+        67
+      ],
+      "problemi": [
+        "Opzione B eliminabile per parole troppo assolute: solo."
+      ],
+      "gravita": 15
+    },
+    {
+      "id": "AI-FAC-0101",
+      "livello": "facile",
+      "domanda": "Quale attività descrive meglio un modello di intelligenza artificiale?",
+      "opzioni": [
+        "Riconoscere schemi nei dati e usare questi schemi per produrre risposte o previsioni",
+        "Riconoscere schemi nei dati ma usarli solo per copiare risposte già presenti negli esempi",
+        "Memorizzare dati senza estrarre schemi utili per fare previsioni",
+        "Salvare file del computer senza usarli per produrre risposte o previsioni"
+      ],
+      "corretta": "A",
+      "distrattore_principale": "B",
+      "similarita_distrattore_principale": 0.585,
+      "migliore_errata": {
+        "lettera": "B",
+        "testo": "Riconoscere schemi nei dati ma usarli solo per copiare risposte già presenti negli esempi",
+        "similarita": 0.585
+      },
+      "lunghezze": [
+        84,
+        89,
+        64,
+        73
+      ],
+      "problemi": [
+        "Opzione B eliminabile per parole troppo assolute: solo."
+      ],
+      "gravita": 15
+    },
+    {
+      "id": "AI-AV-0102",
+      "livello": "avanzato",
+      "domanda": "Quando il fine-tuning è più adatto del solo prompt engineering?",
+      "opzioni": [
+        "Quando serve modificare stabilmente il comportamento del modello su molti esempi simili",
+        "Quando serve un comportamento stabile, ma si dispone solo di pochi esempi isolati e non coerenti",
+        "Quando bisogna correggere una singola risposta occasionale",
+        "Quando basta cambiare il tono di una frase una sola volta"
+      ],
+      "corretta": "A",
+      "distrattore_principale": "B",
+      "similarita_distrattore_principale": 0.501,
+      "migliore_errata": {
+        "lettera": "B",
+        "testo": "Quando serve un comportamento stabile, ma si dispone solo di pochi esempi isolati e non coerenti",
+        "similarita": 0.501
+      },
+      "lunghezze": [
+        87,
+        95,
+        58,
+        57
+      ],
+      "problemi": [
+        "Opzione B eliminabile per parole troppo assolute: solo."
+      ],
+      "gravita": 15
+    },
+    {
+      "id": "AI-FAC-0102",
+      "livello": "facile",
+      "domanda": "Quale prompt è più chiaro per chiedere un riassunto?",
+      "opzioni": [
+        "Riassumi questo testo in 5 righe indicando le idee principali.",
+        "Riassumi questo testo indicando le idee principali.",
+        "Spiega questo testo mantenendo tutti i dettagli importanti.",
+        "Riscrivi questo testo senza ridurlo e senza selezionare le idee principali."
+      ],
+      "corretta": "A",
+      "distrattore_principale": "B",
+      "similarita_distrattore_principale": 0.859,
+      "migliore_errata": {
+        "lettera": "B",
+        "testo": "Riassumi questo testo indicando le idee principali.",
+        "similarita": 0.859
+      },
+      "lunghezze": [
+        62,
+        51,
+        59,
+        75
+      ],
+      "problemi": [
+        "Opzione C eliminabile per parole troppo assolute: tutti."
+      ],
+      "gravita": 15
+    },
+    {
+      "id": "AI-INT-0102",
+      "livello": "intermedio",
+      "domanda": "Quale differenza c'è tra ricerca per parole esatte e ricerca semantica?",
+      "opzioni": [
+        "La ricerca semantica può trovare contenuti simili nel significato anche con parole diverse",
+        "La ricerca semantica può usare parole diverse, ma funziona solo se restano presenti gli stessi termini principali",
+        "La ricerca per parole esatte riconosce meglio sinonimi e intenzione rispetto alla ricerca semantica",
+        "La ricerca per parole esatte trova sinonimi anche quando non compaiono termini uguali"
+      ],
+      "corretta": "A",
+      "distrattore_principale": "B",
+      "similarita_distrattore_principale": 0.442,
+      "migliore_errata": {
+        "lettera": "B",
+        "testo": "La ricerca semantica può usare parole diverse, ma funziona solo se restano presenti gli stessi termini principali",
+        "similarita": 0.442
+      },
+      "lunghezze": [
+        90,
+        112,
+        99,
+        85
+      ],
+      "problemi": [
+        "Opzione B eliminabile per parole troppo assolute: solo."
+      ],
+      "gravita": 15
+    },
+    {
+      "id": "AI-FAC-0103",
+      "livello": "facile",
+      "domanda": "Perché i dati di addestramento sono importanti per un modello AI?",
+      "opzioni": [
+        "Perché influenzano ciò che il modello impara e come risponde",
+        "Perché influenzano il modello, ma rendono inutile controllare le risposte generate",
+        "Perché servono solo a verificare il modello dopo l'addestramento",
+        "Perché definiscono manualmente ogni risposta che il modello dovrà dare"
+      ],
+      "corretta": "A",
+      "distrattore_principale": "B",
+      "similarita_distrattore_principale": 0.518,
+      "migliore_errata": {
+        "lettera": "B",
+        "testo": "Perché influenzano il modello, ma rendono inutile controllare le risposte generate",
+        "similarita": 0.518
+      },
+      "lunghezze": [
+        60,
+        81,
+        64,
+        70
+      ],
+      "problemi": [
+        "Opzione C eliminabile per parole troppo assolute: solo."
+      ],
+      "gravita": 15
+    },
+    {
+      "id": "AI-INT-0104",
+      "livello": "intermedio",
+      "domanda": "Quale indicazione rende un prompt più controllabile?",
+      "opzioni": [
+        "Specificare ruolo, obiettivo, formato di risposta e vincoli",
+        "Specificare solo il ruolo senza chiarire obiettivo, formato e vincoli",
+        "Chiedere al modello di fare il meglio possibile senza istruzioni precise",
+        "Lasciare la richiesta generica senza indicare criteri di risposta"
+      ],
+      "corretta": "A",
+      "distrattore_principale": "B",
+      "similarita_distrattore_principale": 0.678,
+      "migliore_errata": {
+        "lettera": "B",
+        "testo": "Specificare solo il ruolo senza chiarire obiettivo, formato e vincoli",
+        "similarita": 0.678
+      },
+      "lunghezze": [
+        57,
+        68,
+        72,
+        65
+      ],
+      "problemi": [
+        "Opzione B eliminabile per parole troppo assolute: solo."
+      ],
+      "gravita": 15
+    },
+    {
+      "id": "AI-AV-0106",
+      "livello": "avanzato",
+      "domanda": "Quale rischio nasce se un agente salva memoria personale senza criteri chiari?",
+      "opzioni": [
+        "Può conservare informazioni inutili, sensibili o non più valide e usarle fuori contesto",
+        "Può conservare informazioni personali utili, ma senza distinguere tra dati pertinenti e dati sensibili",
+        "Diventa automaticamente incapace di rispondere a domande generali",
+        "Trasforma ogni informazione salvata in codice eseguibile"
+      ],
+      "corretta": "A",
+      "distrattore_principale": "B",
+      "similarita_distrattore_principale": 0.453,
+      "migliore_errata": {
+        "lettera": "B",
+        "testo": "Può conservare informazioni personali utili, ma senza distinguere tra dati pertinenti e dati sensibili",
+        "similarita": 0.453
+      },
+      "lunghezze": [
+        86,
+        101,
+        65,
+        56
+      ],
+      "problemi": [
+        "Opzione C eliminabile per parole troppo assolute: automaticamente."
+      ],
+      "gravita": 15
+    },
+    {
+      "id": "AI-AV-0107",
+      "livello": "avanzato",
+      "domanda": "Perché un'app AI in produzione dovrebbe registrare errori e feedback degli utenti?",
+      "opzioni": [
+        "Per individuare casi problematici reali e migliorare sicurezza, qualità e affidabilità",
+        "Per individuare problemi reali, ma senza usarli per migliorare il sistema",
+        "Per sostituire ogni test prima del rilascio",
+        "Per evitare qualsiasi aggiornamento futuro del sistema"
+      ],
+      "corretta": "A",
+      "distrattore_principale": "B",
+      "similarita_distrattore_principale": 0.514,
+      "migliore_errata": {
+        "lettera": "B",
+        "testo": "Per individuare problemi reali, ma senza usarli per migliorare il sistema",
+        "similarita": 0.514
+      },
+      "lunghezze": [
+        85,
+        72,
+        43,
+        54
+      ],
+      "problemi": [
+        "Opzione D eliminabile per parole troppo assolute: qualsiasi."
+      ],
+      "gravita": 15
+    },
+    {
+      "id": "AI-INT-0203",
+      "livello": "intermedio",
+      "domanda": "Che effetto ha, in genere, aumentare la temperatura nella generazione di un modello linguistico?",
+      "opzioni": [
+        "Rende le risposte più variabili e meno deterministiche.",
+        "Rende il modello più piccolo a livello di parametri.",
+        "Aumenta automaticamente la quantità di dati nel contesto.",
+        "Impedisce al modello di generare testo creativo."
+      ],
+      "corretta": "A",
+      "distrattore_principale": "B",
+      "similarita_distrattore_principale": 0.463,
+      "migliore_errata": {
+        "lettera": "B",
+        "testo": "Rende il modello più piccolo a livello di parametri.",
+        "similarita": 0.463
+      },
+      "lunghezze": [
+        55,
+        52,
+        57,
+        48
+      ],
+      "problemi": [
+        "Opzione C eliminabile per parole troppo assolute: automaticamente."
+      ],
+      "gravita": 15
+    }
+  ]
+}

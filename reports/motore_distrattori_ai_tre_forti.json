@@ -1,0 +1,4109 @@
+{
+  "file": "data/ai.json",
+  "regola": "A corretta + tre distrattori forti",
+  "domande_controllate": 80,
+  "domande_problematiche": 80,
+  "risultati": [
+    {
+      "id": "AI-AV-0008",
+      "livello": "avanzato",
+      "domanda": "In una pipeline AI, perché conviene separare recupero delle informazioni, generazione e controllo finale?",
+      "opzioni": [
+        "Per rendere più controllabile ogni fase e individuare meglio dove nasce un errore",
+        "Per valutare separatamente le fasi, ma senza collegare gli errori alla risposta finale",
+        "Per controllare solo il recupero dei documenti ignorando la generazione",
+        "Per controllare solo la generazione ignorando retrieval e verifica finale"
+      ],
+      "corretta": "A",
+      "analisi_opzioni": [
+        {
+          "lettera": "B",
+          "testo": "Per valutare separatamente le fasi, ma senza collegare gli errori alla risposta finale",
+          "similarita": 0.33,
+          "sovrapposizione": 0.0,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.33",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.0"
+          ]
+        },
+        {
+          "lettera": "C",
+          "testo": "Per controllare solo il recupero dei documenti ignorando la generazione",
+          "similarita": 0.318,
+          "sovrapposizione": 0.0,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.318",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.0",
+            "contiene parole che la rendono eliminabile: solo, ignorando"
+          ]
+        },
+        {
+          "lettera": "D",
+          "testo": "Per controllare solo la generazione ignorando retrieval e verifica finale",
+          "similarita": 0.303,
+          "sovrapposizione": 0.0,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.303",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.0",
+            "contiene parole che la rendono eliminabile: solo, ignorando"
+          ]
+        }
+      ],
+      "problemi": [
+        "Opzione B: troppo lontana dalla corretta, similarità 0.33.",
+        "Opzione B: condivide pochi concetti chiave con la corretta, sovrapposizione 0.0.",
+        "Opzione C: troppo lontana dalla corretta, similarità 0.318.",
+        "Opzione C: condivide pochi concetti chiave con la corretta, sovrapposizione 0.0.",
+        "Opzione C: contiene parole che la rendono eliminabile: solo, ignorando.",
+        "Opzione D: troppo lontana dalla corretta, similarità 0.303.",
+        "Opzione D: condivide pochi concetti chiave con la corretta, sovrapposizione 0.0.",
+        "Opzione D: contiene parole che la rendono eliminabile: solo, ignorando."
+      ],
+      "gravita": 175
+    },
+    {
+      "id": "AI-FAC-0201",
+      "livello": "facile",
+      "domanda": "Che cosa indica, in generale, un modello di intelligenza artificiale generativa?",
+      "opzioni": [
+        "Un sistema capace di produrre nuovi contenuti, come testo, immagini o codice, partendo da dati e istruzioni.",
+        "Un sistema che riconosce soltanto se un'immagine appartiene a una categoria già definita.",
+        "Un database che conserva esempi senza costruire risposte nuove.",
+        "Un programma che esegue solo calcoli numerici impostati manualmente."
+      ],
+      "corretta": "A",
+      "analisi_opzioni": [
+        {
+          "lettera": "B",
+          "testo": "Un sistema che riconosce soltanto se un'immagine appartiene a una categoria già definita.",
+          "similarita": 0.351,
+          "sovrapposizione": 0.09,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.351",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.09",
+            "contiene parole che la rendono eliminabile: soltanto"
+          ]
+        },
+        {
+          "lettera": "C",
+          "testo": "Un database che conserva esempi senza costruire risposte nuove.",
+          "similarita": 0.212,
+          "sovrapposizione": 0.0,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.212",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.0"
+          ]
+        },
+        {
+          "lettera": "D",
+          "testo": "Un programma che esegue solo calcoli numerici impostati manualmente.",
+          "similarita": 0.235,
+          "sovrapposizione": 0.0,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.235",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.0",
+            "contiene parole che la rendono eliminabile: solo"
+          ]
+        }
+      ],
+      "problemi": [
+        "Opzione B: troppo lontana dalla corretta, similarità 0.351.",
+        "Opzione B: condivide pochi concetti chiave con la corretta, sovrapposizione 0.09.",
+        "Opzione B: contiene parole che la rendono eliminabile: soltanto.",
+        "Opzione C: troppo lontana dalla corretta, similarità 0.212.",
+        "Opzione C: condivide pochi concetti chiave con la corretta, sovrapposizione 0.0.",
+        "Opzione D: troppo lontana dalla corretta, similarità 0.235.",
+        "Opzione D: condivide pochi concetti chiave con la corretta, sovrapposizione 0.0.",
+        "Opzione D: contiene parole che la rendono eliminabile: solo."
+      ],
+      "gravita": 175
+    },
+    {
+      "id": "AI-AV-0211",
+      "livello": "avanzato",
+      "domanda": "Perché le guardrail sono importanti in un sistema AI usato da utenti finali?",
+      "opzioni": [
+        "Per limitare comportamenti rischiosi, applicare regole e gestire richieste non adatte.",
+        "Per aumentare il numero di parametri del modello durante l'inferenza.",
+        "Per sostituire completamente la progettazione del prodotto.",
+        "Per impedire qualsiasi risposta anche quando la richiesta è lecita."
+      ],
+      "corretta": "A",
+      "analisi_opzioni": [
+        {
+          "lettera": "B",
+          "testo": "Per aumentare il numero di parametri del modello durante l'inferenza.",
+          "similarita": 0.286,
+          "sovrapposizione": 0.0,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.286",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.0"
+          ]
+        },
+        {
+          "lettera": "C",
+          "testo": "Per sostituire completamente la progettazione del prodotto.",
+          "similarita": 0.286,
+          "sovrapposizione": 0.0,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.286",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.0",
+            "contiene parole che la rendono eliminabile: completamente"
+          ]
+        },
+        {
+          "lettera": "D",
+          "testo": "Per impedire qualsiasi risposta anche quando la richiesta è lecita.",
+          "similarita": 0.316,
+          "sovrapposizione": 0.0,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.316",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.0",
+            "contiene parole che la rendono eliminabile: qualsiasi"
+          ]
+        }
+      ],
+      "problemi": [
+        "Opzione B: troppo lontana dalla corretta, similarità 0.286.",
+        "Opzione B: condivide pochi concetti chiave con la corretta, sovrapposizione 0.0.",
+        "Opzione C: troppo lontana dalla corretta, similarità 0.286.",
+        "Opzione C: condivide pochi concetti chiave con la corretta, sovrapposizione 0.0.",
+        "Opzione C: contiene parole che la rendono eliminabile: completamente.",
+        "Opzione D: troppo lontana dalla corretta, similarità 0.316.",
+        "Opzione D: condivide pochi concetti chiave con la corretta, sovrapposizione 0.0.",
+        "Opzione D: contiene parole che la rendono eliminabile: qualsiasi."
+      ],
+      "gravita": 175
+    },
+    {
+      "id": "AI-FAC-0001",
+      "livello": "facile",
+      "domanda": "Qual è il ruolo principale di un modello linguistico di grandi dimensioni, chiamato LLM?",
+      "opzioni": [
+        "Prevedere e generare testo in base al contesto ricevuto",
+        "Classificare testi in categorie fisse senza produrre nuove frasi",
+        "Recuperare documenti esterni senza generare una risposta autonoma",
+        "Tradurre parole usando solo un dizionario statico"
+      ],
+      "corretta": "A",
+      "analisi_opzioni": [
+        {
+          "lettera": "B",
+          "testo": "Classificare testi in categorie fisse senza produrre nuove frasi",
+          "similarita": 0.307,
+          "sovrapposizione": 0.0,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.307",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.0"
+          ]
+        },
+        {
+          "lettera": "C",
+          "testo": "Recuperare documenti esterni senza generare una risposta autonoma",
+          "similarita": 0.353,
+          "sovrapposizione": 0.17,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.353",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.17"
+          ]
+        },
+        {
+          "lettera": "D",
+          "testo": "Tradurre parole usando solo un dizionario statico",
+          "similarita": 0.286,
+          "sovrapposizione": 0.0,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.286",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.0",
+            "contiene parole che la rendono eliminabile: solo"
+          ]
+        }
+      ],
+      "problemi": [
+        "Opzione B: troppo lontana dalla corretta, similarità 0.307.",
+        "Opzione B: condivide pochi concetti chiave con la corretta, sovrapposizione 0.0.",
+        "Opzione C: troppo lontana dalla corretta, similarità 0.353.",
+        "Opzione C: condivide pochi concetti chiave con la corretta, sovrapposizione 0.17.",
+        "Opzione D: troppo lontana dalla corretta, similarità 0.286.",
+        "Opzione D: condivide pochi concetti chiave con la corretta, sovrapposizione 0.0.",
+        "Opzione D: contiene parole che la rendono eliminabile: solo."
+      ],
+      "gravita": 155
+    },
+    {
+      "id": "AI-INT-0006",
+      "livello": "intermedio",
+      "domanda": "Perché è utile testare un modello AI con esempi diversi da quelli usati in addestramento?",
+      "opzioni": [
+        "Per verificare se il modello generalizza anche su casi nuovi",
+        "Per confermare che il modello ricorda con precisione gli esempi usati in addestramento",
+        "Per scegliere automaticamente nuovi esempi da aggiungere al training set",
+        "Per aumentare il numero di esempi nel dataset senza controllare le prestazioni"
+      ],
+      "corretta": "A",
+      "analisi_opzioni": [
+        {
+          "lettera": "B",
+          "testo": "Per confermare che il modello ricorda con precisione gli esempi usati in addestramento",
+          "similarita": 0.306,
+          "sovrapposizione": 0.17,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.306",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.17"
+          ]
+        },
+        {
+          "lettera": "C",
+          "testo": "Per scegliere automaticamente nuovi esempi da aggiungere al training set",
+          "similarita": 0.305,
+          "sovrapposizione": 0.17,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.305",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.17",
+            "contiene parole che la rendono eliminabile: automaticamente"
+          ]
+        },
+        {
+          "lettera": "D",
+          "testo": "Per aumentare il numero di esempi nel dataset senza controllare le prestazioni",
+          "similarita": 0.311,
+          "sovrapposizione": 0.0,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.311",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.0"
+          ]
+        }
+      ],
+      "problemi": [
+        "Opzione B: troppo lontana dalla corretta, similarità 0.306.",
+        "Opzione B: condivide pochi concetti chiave con la corretta, sovrapposizione 0.17.",
+        "Opzione C: troppo lontana dalla corretta, similarità 0.305.",
+        "Opzione C: condivide pochi concetti chiave con la corretta, sovrapposizione 0.17.",
+        "Opzione C: contiene parole che la rendono eliminabile: automaticamente.",
+        "Opzione D: troppo lontana dalla corretta, similarità 0.311.",
+        "Opzione D: condivide pochi concetti chiave con la corretta, sovrapposizione 0.0."
+      ],
+      "gravita": 155
+    },
+    {
+      "id": "AI-FAC-0007",
+      "livello": "facile",
+      "domanda": "Che cosa fa principalmente un modello linguistico?",
+      "opzioni": [
+        "Lavora con il linguaggio per comprendere o generare testo",
+        "Classifica contenuti testuali senza produrre nuove frasi",
+        "Recupera pagine web pertinenti senza formulare una risposta",
+        "Analizza solo dati numerici organizzati in tabelle"
+      ],
+      "corretta": "A",
+      "analisi_opzioni": [
+        {
+          "lettera": "B",
+          "testo": "Classifica contenuti testuali senza produrre nuove frasi",
+          "similarita": 0.289,
+          "sovrapposizione": 0.0,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.289",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.0"
+          ]
+        },
+        {
+          "lettera": "C",
+          "testo": "Recupera pagine web pertinenti senza formulare una risposta",
+          "similarita": 0.32,
+          "sovrapposizione": 0.0,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.32",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.0"
+          ]
+        },
+        {
+          "lettera": "D",
+          "testo": "Analizza solo dati numerici organizzati in tabelle",
+          "similarita": 0.247,
+          "sovrapposizione": 0.0,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.247",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.0",
+            "contiene parole che la rendono eliminabile: solo"
+          ]
+        }
+      ],
+      "problemi": [
+        "Opzione B: troppo lontana dalla corretta, similarità 0.289.",
+        "Opzione B: condivide pochi concetti chiave con la corretta, sovrapposizione 0.0.",
+        "Opzione C: troppo lontana dalla corretta, similarità 0.32.",
+        "Opzione C: condivide pochi concetti chiave con la corretta, sovrapposizione 0.0.",
+        "Opzione D: troppo lontana dalla corretta, similarità 0.247.",
+        "Opzione D: condivide pochi concetti chiave con la corretta, sovrapposizione 0.0.",
+        "Opzione D: contiene parole che la rendono eliminabile: solo."
+      ],
+      "gravita": 155
+    },
+    {
+      "id": "AI-FAC-0206",
+      "livello": "facile",
+      "domanda": "Che cosa sono i token in un modello linguistico?",
+      "opzioni": [
+        "Unità di testo, come parole o parti di parole, che il modello usa per elaborare il linguaggio.",
+        "File immagine usati per addestrare soltanto modelli visivi.",
+        "Etichette numeriche che indicano esclusivamente la qualità di una risposta.",
+        "Password temporanee usate per accedere a un'applicazione."
+      ],
+      "corretta": "A",
+      "analisi_opzioni": [
+        {
+          "lettera": "B",
+          "testo": "File immagine usati per addestrare soltanto modelli visivi.",
+          "similarita": 0.236,
+          "sovrapposizione": 0.0,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.236",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.0",
+            "contiene parole che la rendono eliminabile: soltanto"
+          ]
+        },
+        {
+          "lettera": "C",
+          "testo": "Etichette numeriche che indicano esclusivamente la qualità di una risposta.",
+          "similarita": 0.214,
+          "sovrapposizione": 0.0,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.214",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.0"
+          ]
+        },
+        {
+          "lettera": "D",
+          "testo": "Password temporanee usate per accedere a un'applicazione.",
+          "similarita": 0.252,
+          "sovrapposizione": 0.0,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.252",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.0"
+          ]
+        }
+      ],
+      "problemi": [
+        "Opzione B: troppo lontana dalla corretta, similarità 0.236.",
+        "Opzione B: condivide pochi concetti chiave con la corretta, sovrapposizione 0.0.",
+        "Opzione B: contiene parole che la rendono eliminabile: soltanto.",
+        "Opzione C: troppo lontana dalla corretta, similarità 0.214.",
+        "Opzione C: condivide pochi concetti chiave con la corretta, sovrapposizione 0.0.",
+        "Opzione D: troppo lontana dalla corretta, similarità 0.252.",
+        "Opzione D: condivide pochi concetti chiave con la corretta, sovrapposizione 0.0."
+      ],
+      "gravita": 155
+    },
+    {
+      "id": "AI-FAC-0209",
+      "livello": "facile",
+      "domanda": "A cosa servono gli embedding in molte applicazioni AI?",
+      "opzioni": [
+        "A rappresentare testi, immagini o altri dati come vettori numerici confrontabili.",
+        "A sostituire ogni controllo qualità sui dati prodotti dal modello.",
+        "A trasformare automaticamente qualsiasi modello piccolo in un modello più grande.",
+        "A eliminare la necessità di salvare informazioni in memoria."
+      ],
+      "corretta": "A",
+      "analisi_opzioni": [
+        {
+          "lettera": "B",
+          "testo": "A sostituire ogni controllo qualità sui dati prodotti dal modello.",
+          "similarita": 0.343,
+          "sovrapposizione": 0.12,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.343",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.12"
+          ]
+        },
+        {
+          "lettera": "C",
+          "testo": "A trasformare automaticamente qualsiasi modello piccolo in un modello più grande.",
+          "similarita": 0.29,
+          "sovrapposizione": 0.0,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.29",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.0",
+            "contiene parole che la rendono eliminabile: qualsiasi, automaticamente"
+          ]
+        },
+        {
+          "lettera": "D",
+          "testo": "A eliminare la necessità di salvare informazioni in memoria.",
+          "similarita": 0.261,
+          "sovrapposizione": 0.0,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.261",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.0"
+          ]
+        }
+      ],
+      "problemi": [
+        "Opzione B: troppo lontana dalla corretta, similarità 0.343.",
+        "Opzione B: condivide pochi concetti chiave con la corretta, sovrapposizione 0.12.",
+        "Opzione C: troppo lontana dalla corretta, similarità 0.29.",
+        "Opzione C: condivide pochi concetti chiave con la corretta, sovrapposizione 0.0.",
+        "Opzione C: contiene parole che la rendono eliminabile: qualsiasi, automaticamente.",
+        "Opzione D: troppo lontana dalla corretta, similarità 0.261.",
+        "Opzione D: condivide pochi concetti chiave con la corretta, sovrapposizione 0.0."
+      ],
+      "gravita": 155
+    },
+    {
+      "id": "AI-INT-0201",
+      "livello": "intermedio",
+      "domanda": "Qual è il vantaggio principale di una pipeline RAG rispetto a un semplice prompt senza recupero documentale?",
+      "opzioni": [
+        "Può recuperare informazioni da fonti esterne e usarle per rendere la risposta più ancorata ai dati disponibili.",
+        "Trasforma automaticamente il modello in un sistema addestrato da zero sul dominio aziendale.",
+        "Elimina ogni rischio di risposta errata anche quando le fonti sono incomplete.",
+        "Sostituisce il modello linguistico con un normale motore di ricerca."
+      ],
+      "corretta": "A",
+      "analisi_opzioni": [
+        {
+          "lettera": "B",
+          "testo": "Trasforma automaticamente il modello in un sistema addestrato da zero sul dominio aziendale.",
+          "similarita": 0.249,
+          "sovrapposizione": 0.0,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.249",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.0",
+            "contiene parole che la rendono eliminabile: automaticamente"
+          ]
+        },
+        {
+          "lettera": "C",
+          "testo": "Elimina ogni rischio di risposta errata anche quando le fonti sono incomplete.",
+          "similarita": 0.321,
+          "sovrapposizione": 0.17,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.321",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.17"
+          ]
+        },
+        {
+          "lettera": "D",
+          "testo": "Sostituisce il modello linguistico con un normale motore di ricerca.",
+          "similarita": 0.201,
+          "sovrapposizione": 0.0,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.201",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.0"
+          ]
+        }
+      ],
+      "problemi": [
+        "Opzione B: troppo lontana dalla corretta, similarità 0.249.",
+        "Opzione B: condivide pochi concetti chiave con la corretta, sovrapposizione 0.0.",
+        "Opzione B: contiene parole che la rendono eliminabile: automaticamente.",
+        "Opzione C: troppo lontana dalla corretta, similarità 0.321.",
+        "Opzione C: condivide pochi concetti chiave con la corretta, sovrapposizione 0.17.",
+        "Opzione D: troppo lontana dalla corretta, similarità 0.201.",
+        "Opzione D: condivide pochi concetti chiave con la corretta, sovrapposizione 0.0."
+      ],
+      "gravita": 155
+    },
+    {
+      "id": "AI-INT-0209",
+      "livello": "intermedio",
+      "domanda": "Perché un set di valutazione separato è importante nello sviluppo di un modello AI?",
+      "opzioni": [
+        "Per misurare il comportamento del modello su esempi non usati direttamente per addestrarlo.",
+        "Per aggiungere automaticamente nuove etichette al dataset di training.",
+        "Per sostituire del tutto il controllo umano quando il dominio è delicato.",
+        "Per rendere inutili metriche e analisi degli errori."
+      ],
+      "corretta": "A",
+      "analisi_opzioni": [
+        {
+          "lettera": "B",
+          "testo": "Per aggiungere automaticamente nuove etichette al dataset di training.",
+          "similarita": 0.281,
+          "sovrapposizione": 0.0,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.281",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.0",
+            "contiene parole che la rendono eliminabile: automaticamente"
+          ]
+        },
+        {
+          "lettera": "C",
+          "testo": "Per sostituire del tutto il controllo umano quando il dominio è delicato.",
+          "similarita": 0.268,
+          "sovrapposizione": 0.0,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.268",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.0"
+          ]
+        },
+        {
+          "lettera": "D",
+          "testo": "Per rendere inutili metriche e analisi degli errori.",
+          "similarita": 0.218,
+          "sovrapposizione": 0.0,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.218",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.0"
+          ]
+        }
+      ],
+      "problemi": [
+        "Opzione B: troppo lontana dalla corretta, similarità 0.281.",
+        "Opzione B: condivide pochi concetti chiave con la corretta, sovrapposizione 0.0.",
+        "Opzione B: contiene parole che la rendono eliminabile: automaticamente.",
+        "Opzione C: troppo lontana dalla corretta, similarità 0.268.",
+        "Opzione C: condivide pochi concetti chiave con la corretta, sovrapposizione 0.0.",
+        "Opzione D: troppo lontana dalla corretta, similarità 0.218.",
+        "Opzione D: condivide pochi concetti chiave con la corretta, sovrapposizione 0.0."
+      ],
+      "gravita": 155
+    },
+    {
+      "id": "AI-INT-0211",
+      "livello": "intermedio",
+      "domanda": "Che cosa significa grounding in una risposta generata da un modello linguistico?",
+      "opzioni": [
+        "Collegare la risposta a informazioni verificabili o a fonti fornite al sistema.",
+        "Aumentare casualmente la creatività della risposta.",
+        "Ridurre il testo generato a una sola parola.",
+        "Cancellare tutti i riferimenti ai dati usati dal sistema."
+      ],
+      "corretta": "A",
+      "analisi_opzioni": [
+        {
+          "lettera": "B",
+          "testo": "Aumentare casualmente la creatività della risposta.",
+          "similarita": 0.261,
+          "sovrapposizione": 0.14,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.261",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.14"
+          ]
+        },
+        {
+          "lettera": "C",
+          "testo": "Ridurre il testo generato a una sola parola.",
+          "similarita": 0.232,
+          "sovrapposizione": 0.0,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.232",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.0"
+          ]
+        },
+        {
+          "lettera": "D",
+          "testo": "Cancellare tutti i riferimenti ai dati usati dal sistema.",
+          "similarita": 0.34,
+          "sovrapposizione": 0.14,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.34",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.14",
+            "contiene parole che la rendono eliminabile: tutti"
+          ]
+        }
+      ],
+      "problemi": [
+        "Opzione B: troppo lontana dalla corretta, similarità 0.261.",
+        "Opzione B: condivide pochi concetti chiave con la corretta, sovrapposizione 0.14.",
+        "Opzione C: troppo lontana dalla corretta, similarità 0.232.",
+        "Opzione C: condivide pochi concetti chiave con la corretta, sovrapposizione 0.0.",
+        "Opzione D: troppo lontana dalla corretta, similarità 0.34.",
+        "Opzione D: condivide pochi concetti chiave con la corretta, sovrapposizione 0.14.",
+        "Opzione D: contiene parole che la rendono eliminabile: tutti."
+      ],
+      "gravita": 155
+    },
+    {
+      "id": "AI-INT-0212",
+      "livello": "intermedio",
+      "domanda": "Perché la quantizzazione può essere utile per eseguire modelli AI su dispositivi con risorse limitate?",
+      "opzioni": [
+        "Per ridurre la precisione numerica dei pesi e diminuire memoria o costo computazionale.",
+        "Per aumentare il numero di neuroni senza cambiare la memoria richiesta.",
+        "Per trasformare un modello linguistico in un database vettoriale.",
+        "Per garantire automaticamente risposte più corrette in ogni dominio."
+      ],
+      "corretta": "A",
+      "analisi_opzioni": [
+        {
+          "lettera": "B",
+          "testo": "Per aumentare il numero di neuroni senza cambiare la memoria richiesta.",
+          "similarita": 0.352,
+          "sovrapposizione": 0.12,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.352",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.12"
+          ]
+        },
+        {
+          "lettera": "C",
+          "testo": "Per trasformare un modello linguistico in un database vettoriale.",
+          "similarita": 0.266,
+          "sovrapposizione": 0.0,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.266",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.0"
+          ]
+        },
+        {
+          "lettera": "D",
+          "testo": "Per garantire automaticamente risposte più corrette in ogni dominio.",
+          "similarita": 0.275,
+          "sovrapposizione": 0.0,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.275",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.0",
+            "contiene parole che la rendono eliminabile: automaticamente"
+          ]
+        }
+      ],
+      "problemi": [
+        "Opzione B: troppo lontana dalla corretta, similarità 0.352.",
+        "Opzione B: condivide pochi concetti chiave con la corretta, sovrapposizione 0.12.",
+        "Opzione C: troppo lontana dalla corretta, similarità 0.266.",
+        "Opzione C: condivide pochi concetti chiave con la corretta, sovrapposizione 0.0.",
+        "Opzione D: troppo lontana dalla corretta, similarità 0.275.",
+        "Opzione D: condivide pochi concetti chiave con la corretta, sovrapposizione 0.0.",
+        "Opzione D: contiene parole che la rendono eliminabile: automaticamente."
+      ],
+      "gravita": 155
+    },
+    {
+      "id": "AI-AV-0201",
+      "livello": "avanzato",
+      "domanda": "Qual è il ruolo principale del meccanismo di attention nei Transformer?",
+      "opzioni": [
+        "Pesare l'importanza relativa di diverse parti della sequenza durante l'elaborazione.",
+        "Ridurre ogni input a una sola parola prima della generazione.",
+        "Sostituire completamente la fase di tokenizzazione.",
+        "Archiviare in modo permanente tutte le conversazioni degli utenti."
+      ],
+      "corretta": "A",
+      "analisi_opzioni": [
+        {
+          "lettera": "B",
+          "testo": "Ridurre ogni input a una sola parola prima della generazione.",
+          "similarita": 0.306,
+          "sovrapposizione": 0.0,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.306",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.0"
+          ]
+        },
+        {
+          "lettera": "C",
+          "testo": "Sostituire completamente la fase di tokenizzazione.",
+          "similarita": 0.242,
+          "sovrapposizione": 0.0,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.242",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.0",
+            "contiene parole che la rendono eliminabile: completamente"
+          ]
+        },
+        {
+          "lettera": "D",
+          "testo": "Archiviare in modo permanente tutte le conversazioni degli utenti.",
+          "similarita": 0.27,
+          "sovrapposizione": 0.0,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.27",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.0"
+          ]
+        }
+      ],
+      "problemi": [
+        "Opzione B: troppo lontana dalla corretta, similarità 0.306.",
+        "Opzione B: condivide pochi concetti chiave con la corretta, sovrapposizione 0.0.",
+        "Opzione C: troppo lontana dalla corretta, similarità 0.242.",
+        "Opzione C: condivide pochi concetti chiave con la corretta, sovrapposizione 0.0.",
+        "Opzione C: contiene parole che la rendono eliminabile: completamente.",
+        "Opzione D: troppo lontana dalla corretta, similarità 0.27.",
+        "Opzione D: condivide pochi concetti chiave con la corretta, sovrapposizione 0.0."
+      ],
+      "gravita": 155
+    },
+    {
+      "id": "AI-AV-0205",
+      "livello": "avanzato",
+      "domanda": "Che cosa indica il catastrophic forgetting nel machine learning?",
+      "opzioni": [
+        "La perdita di prestazioni su conoscenze o compiti precedenti dopo un nuovo addestramento.",
+        "La capacità del modello di ricordare perfettamente tutti i dati passati.",
+        "La cancellazione automatica dei file temporanei dopo l'inferenza.",
+        "La riduzione della latenza causata da una cache più efficiente."
+      ],
+      "corretta": "A",
+      "analisi_opzioni": [
+        {
+          "lettera": "B",
+          "testo": "La capacità del modello di ricordare perfettamente tutti i dati passati.",
+          "similarita": 0.267,
+          "sovrapposizione": 0.0,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.267",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.0",
+            "contiene parole che la rendono eliminabile: tutti"
+          ]
+        },
+        {
+          "lettera": "C",
+          "testo": "La cancellazione automatica dei file temporanei dopo l'inferenza.",
+          "similarita": 0.314,
+          "sovrapposizione": 0.12,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.314",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.12"
+          ]
+        },
+        {
+          "lettera": "D",
+          "testo": "La riduzione della latenza causata da una cache più efficiente.",
+          "similarita": 0.234,
+          "sovrapposizione": 0.0,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.234",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.0"
+          ]
+        }
+      ],
+      "problemi": [
+        "Opzione B: troppo lontana dalla corretta, similarità 0.267.",
+        "Opzione B: condivide pochi concetti chiave con la corretta, sovrapposizione 0.0.",
+        "Opzione B: contiene parole che la rendono eliminabile: tutti.",
+        "Opzione C: troppo lontana dalla corretta, similarità 0.314.",
+        "Opzione C: condivide pochi concetti chiave con la corretta, sovrapposizione 0.12.",
+        "Opzione D: troppo lontana dalla corretta, similarità 0.234.",
+        "Opzione D: condivide pochi concetti chiave con la corretta, sovrapposizione 0.0."
+      ],
+      "gravita": 155
+    },
+    {
+      "id": "AI-AV-0208",
+      "livello": "avanzato",
+      "domanda": "Perché un sistema multimodale deve allineare informazioni provenienti da testo e immagini?",
+      "opzioni": [
+        "Per collegare correttamente elementi visivi e descrizioni linguistiche durante il ragionamento o la generazione.",
+        "Per impedire al modello di usare dati testuali quando riceve un'immagine.",
+        "Per trasformare ogni immagine in un file audio prima dell'analisi.",
+        "Per cancellare automaticamente le parti meno colorate dell'immagine."
+      ],
+      "corretta": "A",
+      "analisi_opzioni": [
+        {
+          "lettera": "B",
+          "testo": "Per impedire al modello di usare dati testuali quando riceve un'immagine.",
+          "similarita": 0.237,
+          "sovrapposizione": 0.0,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.237",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.0"
+          ]
+        },
+        {
+          "lettera": "C",
+          "testo": "Per trasformare ogni immagine in un file audio prima dell'analisi.",
+          "similarita": 0.197,
+          "sovrapposizione": 0.0,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.197",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.0"
+          ]
+        },
+        {
+          "lettera": "D",
+          "testo": "Per cancellare automaticamente le parti meno colorate dell'immagine.",
+          "similarita": 0.266,
+          "sovrapposizione": 0.0,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.266",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.0",
+            "contiene parole che la rendono eliminabile: automaticamente"
+          ]
+        }
+      ],
+      "problemi": [
+        "Opzione B: troppo lontana dalla corretta, similarità 0.237.",
+        "Opzione B: condivide pochi concetti chiave con la corretta, sovrapposizione 0.0.",
+        "Opzione C: troppo lontana dalla corretta, similarità 0.197.",
+        "Opzione C: condivide pochi concetti chiave con la corretta, sovrapposizione 0.0.",
+        "Opzione D: troppo lontana dalla corretta, similarità 0.266.",
+        "Opzione D: condivide pochi concetti chiave con la corretta, sovrapposizione 0.0.",
+        "Opzione D: contiene parole che la rendono eliminabile: automaticamente."
+      ],
+      "gravita": 155
+    },
+    {
+      "id": "AI-AV-0209",
+      "livello": "avanzato",
+      "domanda": "Quale compromesso è spesso necessario quando si sceglie un modello AI per un'app reale?",
+      "opzioni": [
+        "Bilanciare qualità delle risposte, latenza, costo computazionale e risorse disponibili.",
+        "Scegliere il modello più grande come criterio principale, senza valutare bene tempi e costi.",
+        "Usare solo modelli non addestrati per evitare ogni errore.",
+        "Eliminare i test perché le metriche rallentano l'applicazione."
+      ],
+      "corretta": "A",
+      "analisi_opzioni": [
+        {
+          "lettera": "B",
+          "testo": "Scegliere il modello più grande come criterio principale, senza valutare bene tempi e costi.",
+          "similarita": 0.299,
+          "sovrapposizione": 0.0,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.299",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.0"
+          ]
+        },
+        {
+          "lettera": "C",
+          "testo": "Usare solo modelli non addestrati per evitare ogni errore.",
+          "similarita": 0.23,
+          "sovrapposizione": 0.0,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.23",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.0",
+            "contiene parole che la rendono eliminabile: solo"
+          ]
+        },
+        {
+          "lettera": "D",
+          "testo": "Eliminare i test perché le metriche rallentano l'applicazione.",
+          "similarita": 0.247,
+          "sovrapposizione": 0.0,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.247",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.0"
+          ]
+        }
+      ],
+      "problemi": [
+        "Opzione B: troppo lontana dalla corretta, similarità 0.299.",
+        "Opzione B: condivide pochi concetti chiave con la corretta, sovrapposizione 0.0.",
+        "Opzione C: troppo lontana dalla corretta, similarità 0.23.",
+        "Opzione C: condivide pochi concetti chiave con la corretta, sovrapposizione 0.0.",
+        "Opzione C: contiene parole che la rendono eliminabile: solo.",
+        "Opzione D: troppo lontana dalla corretta, similarità 0.247.",
+        "Opzione D: condivide pochi concetti chiave con la corretta, sovrapposizione 0.0."
+      ],
+      "gravita": 155
+    },
+    {
+      "id": "AI-AV-0005",
+      "livello": "avanzato",
+      "domanda": "Perché valutare un modello AI solo con risposte corrette o sbagliate può essere limitante?",
+      "opzioni": [
+        "Perché alcune risposte richiedono giudizi su completezza, coerenza, sicurezza e utilità",
+        "Perché basta valutare la completezza, senza considerare coerenza, sicurezza e utilità",
+        "Perché una risposta va valutata solo in base al formato richiesto",
+        "Perché una risposta va valutata solo in base alla fluidità del testo"
+      ],
+      "corretta": "A",
+      "analisi_opzioni": [
+        {
+          "lettera": "B",
+          "testo": "Perché basta valutare la completezza, senza considerare coerenza, sicurezza e utilità",
+          "similarita": 0.589,
+          "sovrapposizione": 0.56,
+          "problemi": [
+            "contiene parole che la rendono eliminabile: senza considerare"
+          ]
+        },
+        {
+          "lettera": "C",
+          "testo": "Perché una risposta va valutata solo in base al formato richiesto",
+          "similarita": 0.304,
+          "sovrapposizione": 0.11,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.304",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.11",
+            "contiene parole che la rendono eliminabile: solo"
+          ]
+        },
+        {
+          "lettera": "D",
+          "testo": "Perché una risposta va valutata solo in base alla fluidità del testo",
+          "similarita": 0.332,
+          "sovrapposizione": 0.11,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.332",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.11",
+            "contiene parole che la rendono eliminabile: solo"
+          ]
+        }
+      ],
+      "problemi": [
+        "Opzione B: contiene parole che la rendono eliminabile: senza considerare.",
+        "Opzione C: troppo lontana dalla corretta, similarità 0.304.",
+        "Opzione C: condivide pochi concetti chiave con la corretta, sovrapposizione 0.11.",
+        "Opzione C: contiene parole che la rendono eliminabile: solo.",
+        "Opzione D: troppo lontana dalla corretta, similarità 0.332.",
+        "Opzione D: condivide pochi concetti chiave con la corretta, sovrapposizione 0.11.",
+        "Opzione D: contiene parole che la rendono eliminabile: solo."
+      ],
+      "gravita": 150
+    },
+    {
+      "id": "AI-INT-0005",
+      "livello": "intermedio",
+      "domanda": "A cosa serve un embedding in molte applicazioni di intelligenza artificiale?",
+      "opzioni": [
+        "A rappresentare testi, immagini o dati come vettori confrontabili",
+        "A trasformare contenuti in vettori numerici solo per conservarli come testo compresso",
+        "A confrontare contenuti solo quando usano le stesse parole identiche",
+        "A cercare parole uguali senza rappresentare il significato dei contenuti"
+      ],
+      "corretta": "A",
+      "analisi_opzioni": [
+        {
+          "lettera": "B",
+          "testo": "A trasformare contenuti in vettori numerici solo per conservarli come testo compresso",
+          "similarita": 0.336,
+          "sovrapposizione": 0.17,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.336",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.17",
+            "contiene parole che la rendono eliminabile: solo"
+          ]
+        },
+        {
+          "lettera": "C",
+          "testo": "A confrontare contenuti solo quando usano le stesse parole identiche",
+          "similarita": 0.262,
+          "sovrapposizione": 0.0,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.262",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.0",
+            "contiene parole che la rendono eliminabile: solo"
+          ]
+        },
+        {
+          "lettera": "D",
+          "testo": "A cercare parole uguali senza rappresentare il significato dei contenuti",
+          "similarita": 0.385,
+          "sovrapposizione": 0.17,
+          "problemi": [
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.17"
+          ]
+        }
+      ],
+      "problemi": [
+        "Opzione B: troppo lontana dalla corretta, similarità 0.336.",
+        "Opzione B: condivide pochi concetti chiave con la corretta, sovrapposizione 0.17.",
+        "Opzione B: contiene parole che la rendono eliminabile: solo.",
+        "Opzione C: troppo lontana dalla corretta, similarità 0.262.",
+        "Opzione C: condivide pochi concetti chiave con la corretta, sovrapposizione 0.0.",
+        "Opzione C: contiene parole che la rendono eliminabile: solo.",
+        "Opzione D: condivide pochi concetti chiave con la corretta, sovrapposizione 0.17."
+      ],
+      "gravita": 150
+    },
+    {
+      "id": "AI-INT-0107",
+      "livello": "intermedio",
+      "domanda": "Perché conviene limitare le azioni che un agente AI può eseguire automaticamente?",
+      "opzioni": [
+        "Per ridurre il rischio che un errore o un prompt malevolo produca azioni dannose",
+        "Per velocizzare il flusso riducendo controlli e conferme dell'utente",
+        "Per impedire al modello di leggere qualsiasi istruzione dell'utente",
+        "Per rendere impossibile ogni controllo umano sulle azioni dell'agente"
+      ],
+      "corretta": "A",
+      "analisi_opzioni": [
+        {
+          "lettera": "B",
+          "testo": "Per velocizzare il flusso riducendo controlli e conferme dell'utente",
+          "similarita": 0.307,
+          "sovrapposizione": 0.0,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.307",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.0"
+          ]
+        },
+        {
+          "lettera": "C",
+          "testo": "Per impedire al modello di leggere qualsiasi istruzione dell'utente",
+          "similarita": 0.32,
+          "sovrapposizione": 0.0,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.32",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.0",
+            "contiene parole che la rendono eliminabile: qualsiasi"
+          ]
+        },
+        {
+          "lettera": "D",
+          "testo": "Per rendere impossibile ogni controllo umano sulle azioni dell'agente",
+          "similarita": 0.37,
+          "sovrapposizione": 0.12,
+          "problemi": [
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.12",
+            "contiene parole che la rendono eliminabile: impossibile"
+          ]
+        }
+      ],
+      "problemi": [
+        "Opzione B: troppo lontana dalla corretta, similarità 0.307.",
+        "Opzione B: condivide pochi concetti chiave con la corretta, sovrapposizione 0.0.",
+        "Opzione C: troppo lontana dalla corretta, similarità 0.32.",
+        "Opzione C: condivide pochi concetti chiave con la corretta, sovrapposizione 0.0.",
+        "Opzione C: contiene parole che la rendono eliminabile: qualsiasi.",
+        "Opzione D: condivide pochi concetti chiave con la corretta, sovrapposizione 0.12.",
+        "Opzione D: contiene parole che la rendono eliminabile: impossibile."
+      ],
+      "gravita": 150
+    },
+    {
+      "id": "AI-AV-0204",
+      "livello": "avanzato",
+      "domanda": "Qual è una differenza importante tra RLHF e DPO nell'allineamento dei modelli linguistici?",
+      "opzioni": [
+        "RLHF usa un processo con modello di ricompensa e ottimizzazione tramite rinforzo, mentre DPO ottimizza direttamente su preferenze confrontate.",
+        "DPO richiede un modello di ricompensa separato più complesso, mentre RLHF ottimizza direttamente le preferenze.",
+        "RLHF funziona solo con modelli piccoli, mentre DPO funziona solo con database SQL.",
+        "DPO elimina la necessità di dati di preferenza umana o sintetica."
+      ],
+      "corretta": "A",
+      "analisi_opzioni": [
+        {
+          "lettera": "B",
+          "testo": "DPO richiede un modello di ricompensa separato più complesso, mentre RLHF ottimizza direttamente le preferenze.",
+          "similarita": 0.575,
+          "sovrapposizione": 0.57,
+          "problemi": []
+        },
+        {
+          "lettera": "C",
+          "testo": "RLHF funziona solo con modelli piccoli, mentre DPO funziona solo con database SQL.",
+          "similarita": 0.341,
+          "sovrapposizione": 0.21,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.341",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.21",
+            "contiene parole che la rendono eliminabile: solo"
+          ]
+        },
+        {
+          "lettera": "D",
+          "testo": "DPO elimina la necessità di dati di preferenza umana o sintetica.",
+          "similarita": 0.227,
+          "sovrapposizione": 0.07,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.227",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.07",
+            "troppo corta rispetto alla corretta, 64 caratteri contro 140"
+          ]
+        }
+      ],
+      "problemi": [
+        "Opzione C: troppo lontana dalla corretta, similarità 0.341.",
+        "Opzione C: condivide pochi concetti chiave con la corretta, sovrapposizione 0.21.",
+        "Opzione C: contiene parole che la rendono eliminabile: solo.",
+        "Opzione D: troppo lontana dalla corretta, similarità 0.227.",
+        "Opzione D: condivide pochi concetti chiave con la corretta, sovrapposizione 0.07.",
+        "Opzione D: troppo corta rispetto alla corretta, 64 caratteri contro 140.",
+        "La corretta spicca per lunghezza. Lunghezze: [140, 109, 80, 64]."
+      ],
+      "gravita": 150
+    },
+    {
+      "id": "AI-AV-0207",
+      "livello": "avanzato",
+      "domanda": "Che cosa può causare il context poisoning in un'applicazione basata su LLM?",
+      "opzioni": [
+        "L'inserimento nel contesto di informazioni fuorvianti che influenzano negativamente le risposte successive.",
+        "La riduzione della temperatura a un valore più basso durante la generazione.",
+        "La conversione degli input testuali in token numerici.",
+        "L'uso di un monitor con risoluzione non adatta all'interfaccia."
+      ],
+      "corretta": "A",
+      "analisi_opzioni": [
+        {
+          "lettera": "B",
+          "testo": "La riduzione della temperatura a un valore più basso durante la generazione.",
+          "similarita": 0.227,
+          "sovrapposizione": 0.0,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.227",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.0"
+          ]
+        },
+        {
+          "lettera": "C",
+          "testo": "La conversione degli input testuali in token numerici.",
+          "similarita": 0.206,
+          "sovrapposizione": 0.0,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.206",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.0",
+            "troppo corta rispetto alla corretta, 53 caratteri contro 106"
+          ]
+        },
+        {
+          "lettera": "D",
+          "testo": "L'uso di un monitor con risoluzione non adatta all'interfaccia.",
+          "similarita": 0.238,
+          "sovrapposizione": 0.0,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.238",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.0"
+          ]
+        }
+      ],
+      "problemi": [
+        "Opzione B: troppo lontana dalla corretta, similarità 0.227.",
+        "Opzione B: condivide pochi concetti chiave con la corretta, sovrapposizione 0.0.",
+        "Opzione C: troppo lontana dalla corretta, similarità 0.206.",
+        "Opzione C: condivide pochi concetti chiave con la corretta, sovrapposizione 0.0.",
+        "Opzione C: troppo corta rispetto alla corretta, 53 caratteri contro 106.",
+        "Opzione D: troppo lontana dalla corretta, similarità 0.238.",
+        "Opzione D: condivide pochi concetti chiave con la corretta, sovrapposizione 0.0."
+      ],
+      "gravita": 150
+    },
+    {
+      "id": "AI-AV-0003",
+      "livello": "avanzato",
+      "domanda": "A cosa serve principalmente un sistema RAG in un'applicazione AI?",
+      "opzioni": [
+        "A recuperare informazioni da fonti esterne e usarle per generare risposte più fondate",
+        "A riaddestrare il modello sui documenti recuperati prima di ogni risposta",
+        "A cercare documenti simili senza passarli al modello durante la generazione",
+        "A sostituire il ragionamento del modello con una semplice ricerca per parole chiave"
+      ],
+      "corretta": "A",
+      "analisi_opzioni": [
+        {
+          "lettera": "B",
+          "testo": "A riaddestrare il modello sui documenti recuperati prima di ogni risposta",
+          "similarita": 0.278,
+          "sovrapposizione": 0.0,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.278",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.0"
+          ]
+        },
+        {
+          "lettera": "C",
+          "testo": "A cercare documenti simili senza passarli al modello durante la generazione",
+          "similarita": 0.325,
+          "sovrapposizione": 0.0,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.325",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.0"
+          ]
+        },
+        {
+          "lettera": "D",
+          "testo": "A sostituire il ragionamento del modello con una semplice ricerca per parole chiave",
+          "similarita": 0.329,
+          "sovrapposizione": 0.0,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.329",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.0"
+          ]
+        }
+      ],
+      "problemi": [
+        "Opzione B: troppo lontana dalla corretta, similarità 0.278.",
+        "Opzione B: condivide pochi concetti chiave con la corretta, sovrapposizione 0.0.",
+        "Opzione C: troppo lontana dalla corretta, similarità 0.325.",
+        "Opzione C: condivide pochi concetti chiave con la corretta, sovrapposizione 0.0.",
+        "Opzione D: troppo lontana dalla corretta, similarità 0.329.",
+        "Opzione D: condivide pochi concetti chiave con la corretta, sovrapposizione 0.0."
+      ],
+      "gravita": 135
+    },
+    {
+      "id": "AI-INT-0004",
+      "livello": "intermedio",
+      "domanda": "In un sistema RAG, perché si cercano documenti esterni prima di generare la risposta?",
+      "opzioni": [
+        "Per fornire al modello informazioni aggiornate o specifiche su cui basare la risposta",
+        "Per trovare testi semanticamente simili alla domanda, anche se poi non vengono usati come contesto",
+        "Per archiviare i documenti recuperati senza inserirli nel prompt",
+        "Per confrontare la domanda con esempi simili senza generare una risposta"
+      ],
+      "corretta": "A",
+      "analisi_opzioni": [
+        {
+          "lettera": "B",
+          "testo": "Per trovare testi semanticamente simili alla domanda, anche se poi non vengono usati come contesto",
+          "similarita": 0.306,
+          "sovrapposizione": 0.0,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.306",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.0"
+          ]
+        },
+        {
+          "lettera": "C",
+          "testo": "Per archiviare i documenti recuperati senza inserirli nel prompt",
+          "similarita": 0.24,
+          "sovrapposizione": 0.0,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.24",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.0"
+          ]
+        },
+        {
+          "lettera": "D",
+          "testo": "Per confrontare la domanda con esempi simili senza generare una risposta",
+          "similarita": 0.317,
+          "sovrapposizione": 0.12,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.317",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.12"
+          ]
+        }
+      ],
+      "problemi": [
+        "Opzione B: troppo lontana dalla corretta, similarità 0.306.",
+        "Opzione B: condivide pochi concetti chiave con la corretta, sovrapposizione 0.0.",
+        "Opzione C: troppo lontana dalla corretta, similarità 0.24.",
+        "Opzione C: condivide pochi concetti chiave con la corretta, sovrapposizione 0.0.",
+        "Opzione D: troppo lontana dalla corretta, similarità 0.317.",
+        "Opzione D: condivide pochi concetti chiave con la corretta, sovrapposizione 0.12."
+      ],
+      "gravita": 135
+    },
+    {
+      "id": "AI-FAC-0006",
+      "livello": "facile",
+      "domanda": "Se un modello AI decide se una email è spam oppure no, quale tipo di attività sta svolgendo?",
+      "opzioni": [
+        "Classificazione",
+        "Clustering",
+        "Regressione",
+        "Stima di un valore numerico"
+      ],
+      "corretta": "A",
+      "analisi_opzioni": [
+        {
+          "lettera": "B",
+          "testo": "Clustering",
+          "similarita": 0.273,
+          "sovrapposizione": 0.0,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.273",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.0"
+          ]
+        },
+        {
+          "lettera": "C",
+          "testo": "Regressione",
+          "similarita": 0.308,
+          "sovrapposizione": 0.0,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.308",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.0"
+          ]
+        },
+        {
+          "lettera": "D",
+          "testo": "Stima di un valore numerico",
+          "similarita": 0.178,
+          "sovrapposizione": 0.0,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.178",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.0"
+          ]
+        }
+      ],
+      "problemi": [
+        "Opzione B: troppo lontana dalla corretta, similarità 0.273.",
+        "Opzione B: condivide pochi concetti chiave con la corretta, sovrapposizione 0.0.",
+        "Opzione C: troppo lontana dalla corretta, similarità 0.308.",
+        "Opzione C: condivide pochi concetti chiave con la corretta, sovrapposizione 0.0.",
+        "Opzione D: troppo lontana dalla corretta, similarità 0.178.",
+        "Opzione D: condivide pochi concetti chiave con la corretta, sovrapposizione 0.0."
+      ],
+      "gravita": 135
+    },
+    {
+      "id": "AI-FAC-0008",
+      "livello": "facile",
+      "domanda": "Quando un modello AI inventa una risposta falsa ma la presenta come sicura, come viene chiamato di solito questo problema?",
+      "opzioni": [
+        "Allucinazione",
+        "Bias del dataset",
+        "Overfitting",
+        "Errore di classificazione"
+      ],
+      "corretta": "A",
+      "analisi_opzioni": [
+        {
+          "lettera": "B",
+          "testo": "Bias del dataset",
+          "similarita": 0.259,
+          "sovrapposizione": 0.0,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.259",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.0"
+          ]
+        },
+        {
+          "lettera": "C",
+          "testo": "Overfitting",
+          "similarita": 0.228,
+          "sovrapposizione": 0.0,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.228",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.0"
+          ]
+        },
+        {
+          "lettera": "D",
+          "testo": "Errore di classificazione",
+          "similarita": 0.251,
+          "sovrapposizione": 0.0,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.251",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.0"
+          ]
+        }
+      ],
+      "problemi": [
+        "Opzione B: troppo lontana dalla corretta, similarità 0.259.",
+        "Opzione B: condivide pochi concetti chiave con la corretta, sovrapposizione 0.0.",
+        "Opzione C: troppo lontana dalla corretta, similarità 0.228.",
+        "Opzione C: condivide pochi concetti chiave con la corretta, sovrapposizione 0.0.",
+        "Opzione D: troppo lontana dalla corretta, similarità 0.251.",
+        "Opzione D: condivide pochi concetti chiave con la corretta, sovrapposizione 0.0."
+      ],
+      "gravita": 135
+    },
+    {
+      "id": "AI-FAC-0207",
+      "livello": "facile",
+      "domanda": "Che cosa significa inferenza in un modello AI già addestrato?",
+      "opzioni": [
+        "Usare il modello per produrre una previsione o una risposta su un nuovo input.",
+        "Aggiungere manualmente tutte le regole che il modello dovrà seguire.",
+        "Cancellare i pesi del modello prima dell'utilizzo.",
+        "Preparare il dataset prima della fase di addestramento."
+      ],
+      "corretta": "A",
+      "analisi_opzioni": [
+        {
+          "lettera": "B",
+          "testo": "Aggiungere manualmente tutte le regole che il modello dovrà seguire.",
+          "similarita": 0.316,
+          "sovrapposizione": 0.14,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.316",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.14"
+          ]
+        },
+        {
+          "lettera": "C",
+          "testo": "Cancellare i pesi del modello prima dell'utilizzo.",
+          "similarita": 0.287,
+          "sovrapposizione": 0.14,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.287",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.14"
+          ]
+        },
+        {
+          "lettera": "D",
+          "testo": "Preparare il dataset prima della fase di addestramento.",
+          "similarita": 0.258,
+          "sovrapposizione": 0.0,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.258",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.0"
+          ]
+        }
+      ],
+      "problemi": [
+        "Opzione B: troppo lontana dalla corretta, similarità 0.316.",
+        "Opzione B: condivide pochi concetti chiave con la corretta, sovrapposizione 0.14.",
+        "Opzione C: troppo lontana dalla corretta, similarità 0.287.",
+        "Opzione C: condivide pochi concetti chiave con la corretta, sovrapposizione 0.14.",
+        "Opzione D: troppo lontana dalla corretta, similarità 0.258.",
+        "Opzione D: condivide pochi concetti chiave con la corretta, sovrapposizione 0.0."
+      ],
+      "gravita": 135
+    },
+    {
+      "id": "AI-FAC-0208",
+      "livello": "facile",
+      "domanda": "Che cosa si intende per allucinazione di un modello linguistico?",
+      "opzioni": [
+        "Una risposta plausibile nella forma ma non corretta o non supportata dai dati.",
+        "Una risposta presentata come verificata da fonti esterne affidabili.",
+        "Una traduzione letterale prodotta senza cambiare il significato.",
+        "Una compressione tecnica dei parametri del modello."
+      ],
+      "corretta": "A",
+      "analisi_opzioni": [
+        {
+          "lettera": "B",
+          "testo": "Una risposta presentata come verificata da fonti esterne affidabili.",
+          "similarita": 0.359,
+          "sovrapposizione": 0.12,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.359",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.12"
+          ]
+        },
+        {
+          "lettera": "C",
+          "testo": "Una traduzione letterale prodotta senza cambiare il significato.",
+          "similarita": 0.279,
+          "sovrapposizione": 0.0,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.279",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.0"
+          ]
+        },
+        {
+          "lettera": "D",
+          "testo": "Una compressione tecnica dei parametri del modello.",
+          "similarita": 0.191,
+          "sovrapposizione": 0.0,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.191",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.0"
+          ]
+        }
+      ],
+      "problemi": [
+        "Opzione B: troppo lontana dalla corretta, similarità 0.359.",
+        "Opzione B: condivide pochi concetti chiave con la corretta, sovrapposizione 0.12.",
+        "Opzione C: troppo lontana dalla corretta, similarità 0.279.",
+        "Opzione C: condivide pochi concetti chiave con la corretta, sovrapposizione 0.0.",
+        "Opzione D: troppo lontana dalla corretta, similarità 0.191.",
+        "Opzione D: condivide pochi concetti chiave con la corretta, sovrapposizione 0.0."
+      ],
+      "gravita": 135
+    },
+    {
+      "id": "AI-FAC-0212",
+      "livello": "facile",
+      "domanda": "Che cosa distingue un modello supervisionato da uno non supervisionato?",
+      "opzioni": [
+        "Nel supervisionato gli esempi di addestramento hanno etichette o risposte corrette associate.",
+        "Nel supervisionato il modello può funzionare solo senza dati di esempio.",
+        "Nel non supervisionato ogni esempio contiene etichette esplicite simili a quelle del supervisionato.",
+        "Nel non supervisionato il modello non può trovare strutture nei dati."
+      ],
+      "corretta": "A",
+      "analisi_opzioni": [
+        {
+          "lettera": "B",
+          "testo": "Nel supervisionato il modello può funzionare solo senza dati di esempio.",
+          "similarita": 0.309,
+          "sovrapposizione": 0.12,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.309",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.12",
+            "contiene parole che la rendono eliminabile: solo"
+          ]
+        },
+        {
+          "lettera": "C",
+          "testo": "Nel non supervisionato ogni esempio contiene etichette esplicite simili a quelle del supervisionato.",
+          "similarita": 0.312,
+          "sovrapposizione": 0.25,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.312"
+          ]
+        },
+        {
+          "lettera": "D",
+          "testo": "Nel non supervisionato il modello non può trovare strutture nei dati.",
+          "similarita": 0.311,
+          "sovrapposizione": 0.12,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.311",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.12"
+          ]
+        }
+      ],
+      "problemi": [
+        "Opzione B: troppo lontana dalla corretta, similarità 0.309.",
+        "Opzione B: condivide pochi concetti chiave con la corretta, sovrapposizione 0.12.",
+        "Opzione B: contiene parole che la rendono eliminabile: solo.",
+        "Opzione C: troppo lontana dalla corretta, similarità 0.312.",
+        "Opzione D: troppo lontana dalla corretta, similarità 0.311.",
+        "Opzione D: condivide pochi concetti chiave con la corretta, sovrapposizione 0.12."
+      ],
+      "gravita": 135
+    },
+    {
+      "id": "AI-INT-0202",
+      "livello": "intermedio",
+      "domanda": "Perché un database vettoriale è utile in un sistema basato su embedding?",
+      "opzioni": [
+        "Per cercare elementi semanticamente simili usando vettori numerici.",
+        "Per salvare esclusivamente immagini in formato compresso.",
+        "Per convertire un modello linguistico in un foglio di calcolo.",
+        "Per sostituire la fase di progettazione dei prompt."
+      ],
+      "corretta": "A",
+      "analisi_opzioni": [
+        {
+          "lettera": "B",
+          "testo": "Per salvare esclusivamente immagini in formato compresso.",
+          "similarita": 0.33,
+          "sovrapposizione": 0.0,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.33",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.0"
+          ]
+        },
+        {
+          "lettera": "C",
+          "testo": "Per convertire un modello linguistico in un foglio di calcolo.",
+          "similarita": 0.334,
+          "sovrapposizione": 0.0,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.334",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.0"
+          ]
+        },
+        {
+          "lettera": "D",
+          "testo": "Per sostituire la fase di progettazione dei prompt.",
+          "similarita": 0.26,
+          "sovrapposizione": 0.0,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.26",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.0"
+          ]
+        }
+      ],
+      "problemi": [
+        "Opzione B: troppo lontana dalla corretta, similarità 0.33.",
+        "Opzione B: condivide pochi concetti chiave con la corretta, sovrapposizione 0.0.",
+        "Opzione C: troppo lontana dalla corretta, similarità 0.334.",
+        "Opzione C: condivide pochi concetti chiave con la corretta, sovrapposizione 0.0.",
+        "Opzione D: troppo lontana dalla corretta, similarità 0.26.",
+        "Opzione D: condivide pochi concetti chiave con la corretta, sovrapposizione 0.0."
+      ],
+      "gravita": 135
+    },
+    {
+      "id": "AI-INT-0206",
+      "livello": "intermedio",
+      "domanda": "Che cosa si intende per prompt injection?",
+      "opzioni": [
+        "Un tentativo di inserire istruzioni malevole o fuorvianti nel testo dato al modello.",
+        "Una tecnica di compressione che riduce il numero di parametri del modello.",
+        "Un metodo per caricare immagini dentro un database relazionale.",
+        "Un sistema per rendere più veloce la connessione internet dell'app."
+      ],
+      "corretta": "A",
+      "analisi_opzioni": [
+        {
+          "lettera": "B",
+          "testo": "Una tecnica di compressione che riduce il numero di parametri del modello.",
+          "similarita": 0.332,
+          "sovrapposizione": 0.12,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.332",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.12"
+          ]
+        },
+        {
+          "lettera": "C",
+          "testo": "Un metodo per caricare immagini dentro un database relazionale.",
+          "similarita": 0.26,
+          "sovrapposizione": 0.0,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.26",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.0"
+          ]
+        },
+        {
+          "lettera": "D",
+          "testo": "Un sistema per rendere più veloce la connessione internet dell'app.",
+          "similarita": 0.258,
+          "sovrapposizione": 0.0,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.258",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.0"
+          ]
+        }
+      ],
+      "problemi": [
+        "Opzione B: troppo lontana dalla corretta, similarità 0.332.",
+        "Opzione B: condivide pochi concetti chiave con la corretta, sovrapposizione 0.12.",
+        "Opzione C: troppo lontana dalla corretta, similarità 0.26.",
+        "Opzione C: condivide pochi concetti chiave con la corretta, sovrapposizione 0.0.",
+        "Opzione D: troppo lontana dalla corretta, similarità 0.258.",
+        "Opzione D: condivide pochi concetti chiave con la corretta, sovrapposizione 0.0."
+      ],
+      "gravita": 135
+    },
+    {
+      "id": "AI-INT-0207",
+      "livello": "intermedio",
+      "domanda": "A cosa serve il tool calling in un'applicazione basata su LLM?",
+      "opzioni": [
+        "A permettere al modello di richiedere l'uso di strumenti esterni, come API, calcoli o ricerche.",
+        "A impedire al modello di interagire con qualunque sistema esterno.",
+        "A sostituire la necessità di definire permessi e controlli sugli strumenti.",
+        "A trasformare ogni risposta testuale in un'immagine."
+      ],
+      "corretta": "A",
+      "analisi_opzioni": [
+        {
+          "lettera": "B",
+          "testo": "A impedire al modello di interagire con qualunque sistema esterno.",
+          "similarita": 0.352,
+          "sovrapposizione": 0.11,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.352",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.11"
+          ]
+        },
+        {
+          "lettera": "C",
+          "testo": "A sostituire la necessità di definire permessi e controlli sugli strumenti.",
+          "similarita": 0.301,
+          "sovrapposizione": 0.11,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.301",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.11"
+          ]
+        },
+        {
+          "lettera": "D",
+          "testo": "A trasformare ogni risposta testuale in un'immagine.",
+          "similarita": 0.233,
+          "sovrapposizione": 0.0,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.233",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.0"
+          ]
+        }
+      ],
+      "problemi": [
+        "Opzione B: troppo lontana dalla corretta, similarità 0.352.",
+        "Opzione B: condivide pochi concetti chiave con la corretta, sovrapposizione 0.11.",
+        "Opzione C: troppo lontana dalla corretta, similarità 0.301.",
+        "Opzione C: condivide pochi concetti chiave con la corretta, sovrapposizione 0.11.",
+        "Opzione D: troppo lontana dalla corretta, similarità 0.233.",
+        "Opzione D: condivide pochi concetti chiave con la corretta, sovrapposizione 0.0."
+      ],
+      "gravita": 135
+    },
+    {
+      "id": "AI-INT-0208",
+      "livello": "intermedio",
+      "domanda": "Perché è utile separare il ragionamento del sistema dalle azioni eseguite da un agente AI?",
+      "opzioni": [
+        "Per controllare meglio quando l'agente deve pensare, chiamare strumenti, verificare risultati o fermarsi.",
+        "Per fare in modo che l'agente esegua comandi anche quando i controlli non sono sufficienti.",
+        "Per eliminare la necessità di log, test e gestione degli errori.",
+        "Per trasformare ogni agente in un semplice chatbot senza strumenti."
+      ],
+      "corretta": "A",
+      "analisi_opzioni": [
+        {
+          "lettera": "B",
+          "testo": "Per fare in modo che l'agente esegua comandi anche quando i controlli non sono sufficienti.",
+          "similarita": 0.329,
+          "sovrapposizione": 0.1,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.329",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.1"
+          ]
+        },
+        {
+          "lettera": "C",
+          "testo": "Per eliminare la necessità di log, test e gestione degli errori.",
+          "similarita": 0.203,
+          "sovrapposizione": 0.0,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.203",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.0"
+          ]
+        },
+        {
+          "lettera": "D",
+          "testo": "Per trasformare ogni agente in un semplice chatbot senza strumenti.",
+          "similarita": 0.352,
+          "sovrapposizione": 0.2,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.352",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.2"
+          ]
+        }
+      ],
+      "problemi": [
+        "Opzione B: troppo lontana dalla corretta, similarità 0.329.",
+        "Opzione B: condivide pochi concetti chiave con la corretta, sovrapposizione 0.1.",
+        "Opzione C: troppo lontana dalla corretta, similarità 0.203.",
+        "Opzione C: condivide pochi concetti chiave con la corretta, sovrapposizione 0.0.",
+        "Opzione D: troppo lontana dalla corretta, similarità 0.352.",
+        "Opzione D: condivide pochi concetti chiave con la corretta, sovrapposizione 0.2."
+      ],
+      "gravita": 135
+    },
+    {
+      "id": "AI-INT-0210",
+      "livello": "intermedio",
+      "domanda": "Che cosa indica il concetto di bias in un sistema AI?",
+      "opzioni": [
+        "Una tendenza sistematica del modello a favorire o penalizzare certi risultati o gruppi.",
+        "La capacità del modello di mantenere una neutralità perfetta nelle risposte.",
+        "La dimensione fisica del server su cui il modello viene eseguito.",
+        "Il tempo necessario per scaricare un dataset da internet."
+      ],
+      "corretta": "A",
+      "analisi_opzioni": [
+        {
+          "lettera": "B",
+          "testo": "La capacità del modello di mantenere una neutralità perfetta nelle risposte.",
+          "similarita": 0.348,
+          "sovrapposizione": 0.12,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.348",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.12"
+          ]
+        },
+        {
+          "lettera": "C",
+          "testo": "La dimensione fisica del server su cui il modello viene eseguito.",
+          "similarita": 0.314,
+          "sovrapposizione": 0.12,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.314",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.12"
+          ]
+        },
+        {
+          "lettera": "D",
+          "testo": "Il tempo necessario per scaricare un dataset da internet.",
+          "similarita": 0.239,
+          "sovrapposizione": 0.0,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.239",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.0"
+          ]
+        }
+      ],
+      "problemi": [
+        "Opzione B: troppo lontana dalla corretta, similarità 0.348.",
+        "Opzione B: condivide pochi concetti chiave con la corretta, sovrapposizione 0.12.",
+        "Opzione C: troppo lontana dalla corretta, similarità 0.314.",
+        "Opzione C: condivide pochi concetti chiave con la corretta, sovrapposizione 0.12.",
+        "Opzione D: troppo lontana dalla corretta, similarità 0.239.",
+        "Opzione D: condivide pochi concetti chiave con la corretta, sovrapposizione 0.0."
+      ],
+      "gravita": 135
+    },
+    {
+      "id": "AI-INT-0213",
+      "livello": "intermedio",
+      "domanda": "Che cosa può indicare una bassa precisione in un classificatore?",
+      "opzioni": [
+        "Molti elementi previsti come positivi dal modello sono in realtà negativi.",
+        "Il modello produce pochissimi risultati positivi.",
+        "Il dataset contiene solo esempi senza etichetta.",
+        "Il modello è stato addestrato esclusivamente su immagini ad alta risoluzione."
+      ],
+      "corretta": "A",
+      "analisi_opzioni": [
+        {
+          "lettera": "B",
+          "testo": "Il modello produce pochissimi risultati positivi.",
+          "similarita": 0.346,
+          "sovrapposizione": 0.25,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.346"
+          ]
+        },
+        {
+          "lettera": "C",
+          "testo": "Il dataset contiene solo esempi senza etichetta.",
+          "similarita": 0.234,
+          "sovrapposizione": 0.0,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.234",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.0",
+            "contiene parole che la rendono eliminabile: solo"
+          ]
+        },
+        {
+          "lettera": "D",
+          "testo": "Il modello è stato addestrato esclusivamente su immagini ad alta risoluzione.",
+          "similarita": 0.337,
+          "sovrapposizione": 0.12,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.337",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.12"
+          ]
+        }
+      ],
+      "problemi": [
+        "Opzione B: troppo lontana dalla corretta, similarità 0.346.",
+        "Opzione C: troppo lontana dalla corretta, similarità 0.234.",
+        "Opzione C: condivide pochi concetti chiave con la corretta, sovrapposizione 0.0.",
+        "Opzione C: contiene parole che la rendono eliminabile: solo.",
+        "Opzione D: troppo lontana dalla corretta, similarità 0.337.",
+        "Opzione D: condivide pochi concetti chiave con la corretta, sovrapposizione 0.12."
+      ],
+      "gravita": 135
+    },
+    {
+      "id": "AI-INT-0214",
+      "livello": "intermedio",
+      "domanda": "Perché conviene registrare log e risultati durante i test di un'app AI?",
+      "opzioni": [
+        "Per capire quali input causano errori, risposte deboli o comportamenti inattesi.",
+        "Per impedire al modello di generare risposte diverse tra loro.",
+        "Per sostituire la progettazione dell'interfaccia utente.",
+        "Per rendere inutili i controlli di sicurezza."
+      ],
+      "corretta": "A",
+      "analisi_opzioni": [
+        {
+          "lettera": "B",
+          "testo": "Per impedire al modello di generare risposte diverse tra loro.",
+          "similarita": 0.35,
+          "sovrapposizione": 0.11,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.35",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.11"
+          ]
+        },
+        {
+          "lettera": "C",
+          "testo": "Per sostituire la progettazione dell'interfaccia utente.",
+          "similarita": 0.283,
+          "sovrapposizione": 0.0,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.283",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.0"
+          ]
+        },
+        {
+          "lettera": "D",
+          "testo": "Per rendere inutili i controlli di sicurezza.",
+          "similarita": 0.251,
+          "sovrapposizione": 0.0,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.251",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.0"
+          ]
+        }
+      ],
+      "problemi": [
+        "Opzione B: troppo lontana dalla corretta, similarità 0.35.",
+        "Opzione B: condivide pochi concetti chiave con la corretta, sovrapposizione 0.11.",
+        "Opzione C: troppo lontana dalla corretta, similarità 0.283.",
+        "Opzione C: condivide pochi concetti chiave con la corretta, sovrapposizione 0.0.",
+        "Opzione D: troppo lontana dalla corretta, similarità 0.251.",
+        "Opzione D: condivide pochi concetti chiave con la corretta, sovrapposizione 0.0."
+      ],
+      "gravita": 135
+    },
+    {
+      "id": "AI-AV-0203",
+      "livello": "avanzato",
+      "domanda": "Perché LoRA è utile nel fine-tuning di modelli di grandi dimensioni?",
+      "opzioni": [
+        "Permette di addestrare piccoli adattatori a basso rango invece di aggiornare tutti i pesi del modello.",
+        "Richiede di ricostruire da zero l'intera architettura del Transformer.",
+        "Elimina la necessità di dati di addestramento specifici per il dominio.",
+        "Trasforma ogni modello testuale in un modello esclusivamente visuale."
+      ],
+      "corretta": "A",
+      "analisi_opzioni": [
+        {
+          "lettera": "B",
+          "testo": "Richiede di ricostruire da zero l'intera architettura del Transformer.",
+          "similarita": 0.277,
+          "sovrapposizione": 0.0,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.277",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.0"
+          ]
+        },
+        {
+          "lettera": "C",
+          "testo": "Elimina la necessità di dati di addestramento specifici per il dominio.",
+          "similarita": 0.266,
+          "sovrapposizione": 0.0,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.266",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.0"
+          ]
+        },
+        {
+          "lettera": "D",
+          "testo": "Trasforma ogni modello testuale in un modello esclusivamente visuale.",
+          "similarita": 0.237,
+          "sovrapposizione": 0.09,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.237",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.09"
+          ]
+        }
+      ],
+      "problemi": [
+        "Opzione B: troppo lontana dalla corretta, similarità 0.277.",
+        "Opzione B: condivide pochi concetti chiave con la corretta, sovrapposizione 0.0.",
+        "Opzione C: troppo lontana dalla corretta, similarità 0.266.",
+        "Opzione C: condivide pochi concetti chiave con la corretta, sovrapposizione 0.0.",
+        "Opzione D: troppo lontana dalla corretta, similarità 0.237.",
+        "Opzione D: condivide pochi concetti chiave con la corretta, sovrapposizione 0.09."
+      ],
+      "gravita": 135
+    },
+    {
+      "id": "AI-AV-0206",
+      "livello": "avanzato",
+      "domanda": "Perché il chunking semantico può migliorare una pipeline RAG rispetto a tagli fissi di testo?",
+      "opzioni": [
+        "Perché cerca di dividere i documenti in parti coerenti dal punto di vista del significato.",
+        "Perché elimina la necessità di creare embedding dei documenti.",
+        "Perché impedisce al modello di usare il contenuto recuperato.",
+        "Perché trasforma ogni documento in una singola parola chiave."
+      ],
+      "corretta": "A",
+      "analisi_opzioni": [
+        {
+          "lettera": "B",
+          "testo": "Perché elimina la necessità di creare embedding dei documenti.",
+          "similarita": 0.337,
+          "sovrapposizione": 0.2,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.337",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.2"
+          ]
+        },
+        {
+          "lettera": "C",
+          "testo": "Perché impedisce al modello di usare il contenuto recuperato.",
+          "similarita": 0.287,
+          "sovrapposizione": 0.1,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.287",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.1"
+          ]
+        },
+        {
+          "lettera": "D",
+          "testo": "Perché trasforma ogni documento in una singola parola chiave.",
+          "similarita": 0.304,
+          "sovrapposizione": 0.1,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.304",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.1"
+          ]
+        }
+      ],
+      "problemi": [
+        "Opzione B: troppo lontana dalla corretta, similarità 0.337.",
+        "Opzione B: condivide pochi concetti chiave con la corretta, sovrapposizione 0.2.",
+        "Opzione C: troppo lontana dalla corretta, similarità 0.287.",
+        "Opzione C: condivide pochi concetti chiave con la corretta, sovrapposizione 0.1.",
+        "Opzione D: troppo lontana dalla corretta, similarità 0.304.",
+        "Opzione D: condivide pochi concetti chiave con la corretta, sovrapposizione 0.1."
+      ],
+      "gravita": 135
+    },
+    {
+      "id": "AI-AV-0210",
+      "livello": "avanzato",
+      "domanda": "Che cosa indica un modello Mixture of Experts?",
+      "opzioni": [
+        "Un'architettura che può attivare solo una parte di esperti specializzati per elaborare un input.",
+        "Un modello composto da molte copie identiche attivate tutte insieme per ogni token.",
+        "Un sistema che sceglie casualmente un database esterno senza usare il contenuto dell'input.",
+        "Un metodo per trasformare immagini in codice eseguibile senza controlli."
+      ],
+      "corretta": "A",
+      "analisi_opzioni": [
+        {
+          "lettera": "B",
+          "testo": "Un modello composto da molte copie identiche attivate tutte insieme per ogni token.",
+          "similarita": 0.291,
+          "sovrapposizione": 0.0,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.291",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.0"
+          ]
+        },
+        {
+          "lettera": "C",
+          "testo": "Un sistema che sceglie casualmente un database esterno senza usare il contenuto dell'input.",
+          "similarita": 0.336,
+          "sovrapposizione": 0.11,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.336",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.11"
+          ]
+        },
+        {
+          "lettera": "D",
+          "testo": "Un metodo per trasformare immagini in codice eseguibile senza controlli.",
+          "similarita": 0.255,
+          "sovrapposizione": 0.0,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.255",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.0"
+          ]
+        }
+      ],
+      "problemi": [
+        "Opzione B: troppo lontana dalla corretta, similarità 0.291.",
+        "Opzione B: condivide pochi concetti chiave con la corretta, sovrapposizione 0.0.",
+        "Opzione C: troppo lontana dalla corretta, similarità 0.336.",
+        "Opzione C: condivide pochi concetti chiave con la corretta, sovrapposizione 0.11.",
+        "Opzione D: troppo lontana dalla corretta, similarità 0.255.",
+        "Opzione D: condivide pochi concetti chiave con la corretta, sovrapposizione 0.0."
+      ],
+      "gravita": 135
+    },
+    {
+      "id": "AI-AV-0214",
+      "livello": "avanzato",
+      "domanda": "Perché un agente AI dovrebbe verificare l'esito di uno strumento prima di procedere con il passo successivo?",
+      "opzioni": [
+        "Per evitare che errori, risultati vuoti o dati inattesi vengano usati come se fossero corretti.",
+        "Per rallentare volontariamente ogni operazione anche quando il risultato è chiaro.",
+        "Per impedire al sistema di registrare log utili al debug.",
+        "Per sostituire il controllo qualità con una risposta più lunga."
+      ],
+      "corretta": "A",
+      "analisi_opzioni": [
+        {
+          "lettera": "B",
+          "testo": "Per rallentare volontariamente ogni operazione anche quando il risultato è chiaro.",
+          "similarita": 0.303,
+          "sovrapposizione": 0.0,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.303",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.0"
+          ]
+        },
+        {
+          "lettera": "C",
+          "testo": "Per impedire al sistema di registrare log utili al debug.",
+          "similarita": 0.21,
+          "sovrapposizione": 0.0,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.21",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.0"
+          ]
+        },
+        {
+          "lettera": "D",
+          "testo": "Per sostituire il controllo qualità con una risposta più lunga.",
+          "similarita": 0.237,
+          "sovrapposizione": 0.0,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.237",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.0"
+          ]
+        }
+      ],
+      "problemi": [
+        "Opzione B: troppo lontana dalla corretta, similarità 0.303.",
+        "Opzione B: condivide pochi concetti chiave con la corretta, sovrapposizione 0.0.",
+        "Opzione C: troppo lontana dalla corretta, similarità 0.21.",
+        "Opzione C: condivide pochi concetti chiave con la corretta, sovrapposizione 0.0.",
+        "Opzione D: troppo lontana dalla corretta, similarità 0.237.",
+        "Opzione D: condivide pochi concetti chiave con la corretta, sovrapposizione 0.0."
+      ],
+      "gravita": 135
+    },
+    {
+      "id": "AI-INT-0002",
+      "livello": "intermedio",
+      "domanda": "Perché un prompt dettagliato può migliorare la risposta di un modello AI?",
+      "opzioni": [
+        "Perché fornisce più contesto e riduce le ambiguità della richiesta",
+        "Perché modifica i parametri interni del modello durante la risposta",
+        "Perché sostituisce il controllo finale sulla qualità della risposta",
+        "Perché obbliga il modello a copiare solo frasi presenti nel prompt"
+      ],
+      "corretta": "A",
+      "analisi_opzioni": [
+        {
+          "lettera": "B",
+          "testo": "Perché modifica i parametri interni del modello durante la risposta",
+          "similarita": 0.353,
+          "sovrapposizione": 0.14,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.353",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.14"
+          ]
+        },
+        {
+          "lettera": "C",
+          "testo": "Perché sostituisce il controllo finale sulla qualità della risposta",
+          "similarita": 0.453,
+          "sovrapposizione": 0.14,
+          "problemi": [
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.14"
+          ]
+        },
+        {
+          "lettera": "D",
+          "testo": "Perché obbliga il modello a copiare solo frasi presenti nel prompt",
+          "similarita": 0.359,
+          "sovrapposizione": 0.14,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.359",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.14",
+            "contiene parole che la rendono eliminabile: solo"
+          ]
+        }
+      ],
+      "problemi": [
+        "Opzione B: troppo lontana dalla corretta, similarità 0.353.",
+        "Opzione B: condivide pochi concetti chiave con la corretta, sovrapposizione 0.14.",
+        "Opzione C: condivide pochi concetti chiave con la corretta, sovrapposizione 0.14.",
+        "Opzione D: troppo lontana dalla corretta, similarità 0.359.",
+        "Opzione D: condivide pochi concetti chiave con la corretta, sovrapposizione 0.14.",
+        "Opzione D: contiene parole che la rendono eliminabile: solo."
+      ],
+      "gravita": 130
+    },
+    {
+      "id": "AI-AV-0007",
+      "livello": "avanzato",
+      "domanda": "Quando ha più senso valutare il fine-tuning rispetto al solo prompt engineering?",
+      "opzioni": [
+        "Quando servono comportamenti stabili e specifici su molti esempi simili",
+        "Quando serve un comportamento stabile, ma si dispone di un solo esempio isolato",
+        "Quando il problema dipende soprattutto da documenti recuperati male",
+        "Quando basta cambiare il prompt per correggere una risposta singola"
+      ],
+      "corretta": "A",
+      "analisi_opzioni": [
+        {
+          "lettera": "B",
+          "testo": "Quando serve un comportamento stabile, ma si dispone di un solo esempio isolato",
+          "similarita": 0.422,
+          "sovrapposizione": 0.0,
+          "problemi": [
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.0",
+            "contiene parole che la rendono eliminabile: solo"
+          ]
+        },
+        {
+          "lettera": "C",
+          "testo": "Quando il problema dipende soprattutto da documenti recuperati male",
+          "similarita": 0.316,
+          "sovrapposizione": 0.0,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.316",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.0"
+          ]
+        },
+        {
+          "lettera": "D",
+          "testo": "Quando basta cambiare il prompt per correggere una risposta singola",
+          "similarita": 0.3,
+          "sovrapposizione": 0.0,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.3",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.0"
+          ]
+        }
+      ],
+      "problemi": [
+        "Opzione B: condivide pochi concetti chiave con la corretta, sovrapposizione 0.0.",
+        "Opzione B: contiene parole che la rendono eliminabile: solo.",
+        "Opzione C: troppo lontana dalla corretta, similarità 0.316.",
+        "Opzione C: condivide pochi concetti chiave con la corretta, sovrapposizione 0.0.",
+        "Opzione D: troppo lontana dalla corretta, similarità 0.3.",
+        "Opzione D: condivide pochi concetti chiave con la corretta, sovrapposizione 0.0."
+      ],
+      "gravita": 130
+    },
+    {
+      "id": "AI-INT-0105",
+      "livello": "intermedio",
+      "domanda": "Che cosa può succedere se un dataset è molto sbilanciato?",
+      "opzioni": [
+        "Il modello può funzionare bene su alcuni casi e male su altri meno rappresentati",
+        "Il modello può favorire i casi più presenti e sbagliare più spesso quelli rari",
+        "Il modello diventa automaticamente più equo su tutte le classi",
+        "Il modello corregge da solo la mancanza di esempi nelle classi rare"
+      ],
+      "corretta": "A",
+      "analisi_opzioni": [
+        {
+          "lettera": "B",
+          "testo": "Il modello può favorire i casi più presenti e sbagliare più spesso quelli rari",
+          "similarita": 0.443,
+          "sovrapposizione": 0.3,
+          "problemi": []
+        },
+        {
+          "lettera": "C",
+          "testo": "Il modello diventa automaticamente più equo su tutte le classi",
+          "similarita": 0.311,
+          "sovrapposizione": 0.1,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.311",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.1",
+            "contiene parole che la rendono eliminabile: automaticamente"
+          ]
+        },
+        {
+          "lettera": "D",
+          "testo": "Il modello corregge da solo la mancanza di esempi nelle classi rare",
+          "similarita": 0.291,
+          "sovrapposizione": 0.1,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.291",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.1",
+            "contiene parole che la rendono eliminabile: solo"
+          ]
+        }
+      ],
+      "problemi": [
+        "Opzione C: troppo lontana dalla corretta, similarità 0.311.",
+        "Opzione C: condivide pochi concetti chiave con la corretta, sovrapposizione 0.1.",
+        "Opzione C: contiene parole che la rendono eliminabile: automaticamente.",
+        "Opzione D: troppo lontana dalla corretta, similarità 0.291.",
+        "Opzione D: condivide pochi concetti chiave con la corretta, sovrapposizione 0.1.",
+        "Opzione D: contiene parole che la rendono eliminabile: solo."
+      ],
+      "gravita": 130
+    },
+    {
+      "id": "AI-FAC-0202",
+      "livello": "facile",
+      "domanda": "Che cosa rappresenta un prompt quando si usa un modello linguistico?",
+      "opzioni": [
+        "L'istruzione o il testo iniziale dato al modello per guidare la risposta.",
+        "Il file interno che contiene tutti i pesi matematici del modello.",
+        "Il risultato finale generato dal modello dopo l'elaborazione.",
+        "Il database esterno usato per salvare le conversazioni dell'utente."
+      ],
+      "corretta": "A",
+      "analisi_opzioni": [
+        {
+          "lettera": "B",
+          "testo": "Il file interno che contiene tutti i pesi matematici del modello.",
+          "similarita": 0.357,
+          "sovrapposizione": 0.14,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.357",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.14",
+            "contiene parole che la rendono eliminabile: tutti"
+          ]
+        },
+        {
+          "lettera": "C",
+          "testo": "Il risultato finale generato dal modello dopo l'elaborazione.",
+          "similarita": 0.387,
+          "sovrapposizione": 0.14,
+          "problemi": [
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.14"
+          ]
+        },
+        {
+          "lettera": "D",
+          "testo": "Il database esterno usato per salvare le conversazioni dell'utente.",
+          "similarita": 0.3,
+          "sovrapposizione": 0.0,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.3",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.0"
+          ]
+        }
+      ],
+      "problemi": [
+        "Opzione B: troppo lontana dalla corretta, similarità 0.357.",
+        "Opzione B: condivide pochi concetti chiave con la corretta, sovrapposizione 0.14.",
+        "Opzione B: contiene parole che la rendono eliminabile: tutti.",
+        "Opzione C: condivide pochi concetti chiave con la corretta, sovrapposizione 0.14.",
+        "Opzione D: troppo lontana dalla corretta, similarità 0.3.",
+        "Opzione D: condivide pochi concetti chiave con la corretta, sovrapposizione 0.0."
+      ],
+      "gravita": 130
+    },
+    {
+      "id": "AI-FAC-0210",
+      "livello": "facile",
+      "domanda": "Che cosa significa fine-tuning di un modello AI?",
+      "opzioni": [
+        "Adattare un modello già addestrato a un compito o dominio più specifico.",
+        "Creare un modello da zero senza usare dati precedenti.",
+        "Usare il modello solo per cercare file in una cartella locale.",
+        "Ridurre la dimensione del monitor usato durante l'addestramento."
+      ],
+      "corretta": "A",
+      "analisi_opzioni": [
+        {
+          "lettera": "B",
+          "testo": "Creare un modello da zero senza usare dati precedenti.",
+          "similarita": 0.362,
+          "sovrapposizione": 0.12,
+          "problemi": [
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.12"
+          ]
+        },
+        {
+          "lettera": "C",
+          "testo": "Usare il modello solo per cercare file in una cartella locale.",
+          "similarita": 0.331,
+          "sovrapposizione": 0.12,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.331",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.12",
+            "contiene parole che la rendono eliminabile: solo"
+          ]
+        },
+        {
+          "lettera": "D",
+          "testo": "Ridurre la dimensione del monitor usato durante l'addestramento.",
+          "similarita": 0.292,
+          "sovrapposizione": 0.0,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.292",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.0"
+          ]
+        }
+      ],
+      "problemi": [
+        "Opzione B: condivide pochi concetti chiave con la corretta, sovrapposizione 0.12.",
+        "Opzione C: troppo lontana dalla corretta, similarità 0.331.",
+        "Opzione C: condivide pochi concetti chiave con la corretta, sovrapposizione 0.12.",
+        "Opzione C: contiene parole che la rendono eliminabile: solo.",
+        "Opzione D: troppo lontana dalla corretta, similarità 0.292.",
+        "Opzione D: condivide pochi concetti chiave con la corretta, sovrapposizione 0.0."
+      ],
+      "gravita": 130
+    },
+    {
+      "id": "AI-FAC-0211",
+      "livello": "facile",
+      "domanda": "Perché la privacy è importante quando si usa un'app AI?",
+      "opzioni": [
+        "Perché i dati inseriti dall'utente possono contenere informazioni personali o sensibili.",
+        "Perché un modello AI non può elaborare nessun testo se non conosce il nome dell'utente.",
+        "Perché la privacy serve solo a rendere più colorata l'interfaccia.",
+        "Perché tutti i dati personali devono essere pubblicati per migliorare il modello."
+      ],
+      "corretta": "A",
+      "analisi_opzioni": [
+        {
+          "lettera": "B",
+          "testo": "Perché un modello AI non può elaborare nessun testo se non conosce il nome dell'utente.",
+          "similarita": 0.35,
+          "sovrapposizione": 0.2,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.35",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.2"
+          ]
+        },
+        {
+          "lettera": "C",
+          "testo": "Perché la privacy serve solo a rendere più colorata l'interfaccia.",
+          "similarita": 0.3,
+          "sovrapposizione": 0.1,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.3",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.1",
+            "contiene parole che la rendono eliminabile: solo"
+          ]
+        },
+        {
+          "lettera": "D",
+          "testo": "Perché tutti i dati personali devono essere pubblicati per migliorare il modello.",
+          "similarita": 0.404,
+          "sovrapposizione": 0.3,
+          "problemi": [
+            "contiene parole che la rendono eliminabile: tutti"
+          ]
+        }
+      ],
+      "problemi": [
+        "Opzione B: troppo lontana dalla corretta, similarità 0.35.",
+        "Opzione B: condivide pochi concetti chiave con la corretta, sovrapposizione 0.2.",
+        "Opzione C: troppo lontana dalla corretta, similarità 0.3.",
+        "Opzione C: condivide pochi concetti chiave con la corretta, sovrapposizione 0.1.",
+        "Opzione C: contiene parole che la rendono eliminabile: solo.",
+        "Opzione D: contiene parole che la rendono eliminabile: tutti."
+      ],
+      "gravita": 130
+    },
+    {
+      "id": "AI-INT-0204",
+      "livello": "intermedio",
+      "domanda": "In una ricerca semantica, perché il semplice confronto di parole chiave può essere meno efficace degli embedding?",
+      "opzioni": [
+        "Perché gli embedding possono catturare somiglianze di significato anche quando le parole usate sono diverse.",
+        "Perché le parole chiave leggono direttamente i pensieri dell'utente.",
+        "Perché gli embedding eliminano la necessità di controllare i risultati recuperati.",
+        "Perché la ricerca per parole chiave funziona solo con immagini e non con testo."
+      ],
+      "corretta": "A",
+      "analisi_opzioni": [
+        {
+          "lettera": "B",
+          "testo": "Perché le parole chiave leggono direttamente i pensieri dell'utente.",
+          "similarita": 0.298,
+          "sovrapposizione": 0.2,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.298",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.2"
+          ]
+        },
+        {
+          "lettera": "C",
+          "testo": "Perché gli embedding eliminano la necessità di controllare i risultati recuperati.",
+          "similarita": 0.375,
+          "sovrapposizione": 0.2,
+          "problemi": [
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.2"
+          ]
+        },
+        {
+          "lettera": "D",
+          "testo": "Perché la ricerca per parole chiave funziona solo con immagini e non con testo.",
+          "similarita": 0.316,
+          "sovrapposizione": 0.2,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.316",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.2",
+            "contiene parole che la rendono eliminabile: solo"
+          ]
+        }
+      ],
+      "problemi": [
+        "Opzione B: troppo lontana dalla corretta, similarità 0.298.",
+        "Opzione B: condivide pochi concetti chiave con la corretta, sovrapposizione 0.2.",
+        "Opzione C: condivide pochi concetti chiave con la corretta, sovrapposizione 0.2.",
+        "Opzione D: troppo lontana dalla corretta, similarità 0.316.",
+        "Opzione D: condivide pochi concetti chiave con la corretta, sovrapposizione 0.2.",
+        "Opzione D: contiene parole che la rendono eliminabile: solo."
+      ],
+      "gravita": 130
+    },
+    {
+      "id": "AI-AV-0101",
+      "livello": "avanzato",
+      "domanda": "Qual è un rischio importante se il retrieval di un sistema RAG recupera documenti solo apparentemente pertinenti?",
+      "opzioni": [
+        "Il modello può generare una risposta ben scritta ma basata su contesto fuorviante",
+        "Il modello può generare una risposta fluida usando documenti recuperati solo in apparenza pertinenti",
+        "Il modello rifiuta automaticamente ogni documento non perfettamente pertinente",
+        "Il database vettoriale elimina da solo tutti i documenti non usati"
+      ],
+      "corretta": "A",
+      "analisi_opzioni": [
+        {
+          "lettera": "B",
+          "testo": "Il modello può generare una risposta fluida usando documenti recuperati solo in apparenza pertinenti",
+          "similarita": 0.46,
+          "sovrapposizione": 0.44,
+          "problemi": [
+            "contiene parole che la rendono eliminabile: solo"
+          ]
+        },
+        {
+          "lettera": "C",
+          "testo": "Il modello rifiuta automaticamente ogni documento non perfettamente pertinente",
+          "similarita": 0.366,
+          "sovrapposizione": 0.11,
+          "problemi": [
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.11",
+            "contiene parole che la rendono eliminabile: automaticamente"
+          ]
+        },
+        {
+          "lettera": "D",
+          "testo": "Il database vettoriale elimina da solo tutti i documenti non usati",
+          "similarita": 0.253,
+          "sovrapposizione": 0.0,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.253",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.0",
+            "contiene parole che la rendono eliminabile: solo, tutti"
+          ]
+        }
+      ],
+      "problemi": [
+        "Opzione B: contiene parole che la rendono eliminabile: solo.",
+        "Opzione C: condivide pochi concetti chiave con la corretta, sovrapposizione 0.11.",
+        "Opzione C: contiene parole che la rendono eliminabile: automaticamente.",
+        "Opzione D: troppo lontana dalla corretta, similarità 0.253.",
+        "Opzione D: condivide pochi concetti chiave con la corretta, sovrapposizione 0.0.",
+        "Opzione D: contiene parole che la rendono eliminabile: solo, tutti."
+      ],
+      "gravita": 125
+    },
+    {
+      "id": "AI-AV-0107",
+      "livello": "avanzato",
+      "domanda": "Perché un'app AI in produzione dovrebbe registrare errori e feedback degli utenti?",
+      "opzioni": [
+        "Per individuare casi problematici reali e migliorare sicurezza, qualità e affidabilità",
+        "Per individuare problemi reali, ma senza usarli per migliorare il sistema",
+        "Per sostituire ogni test prima del rilascio",
+        "Per evitare qualsiasi aggiornamento futuro del sistema"
+      ],
+      "corretta": "A",
+      "analisi_opzioni": [
+        {
+          "lettera": "B",
+          "testo": "Per individuare problemi reali, ma senza usarli per migliorare il sistema",
+          "similarita": 0.496,
+          "sovrapposizione": 0.38,
+          "problemi": []
+        },
+        {
+          "lettera": "C",
+          "testo": "Per sostituire ogni test prima del rilascio",
+          "similarita": 0.205,
+          "sovrapposizione": 0.0,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.205",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.0",
+            "troppo corta rispetto alla corretta, 43 caratteri contro 85"
+          ]
+        },
+        {
+          "lettera": "D",
+          "testo": "Per evitare qualsiasi aggiornamento futuro del sistema",
+          "similarita": 0.233,
+          "sovrapposizione": 0.0,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.233",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.0",
+            "contiene parole che la rendono eliminabile: qualsiasi"
+          ]
+        }
+      ],
+      "problemi": [
+        "Opzione C: troppo lontana dalla corretta, similarità 0.205.",
+        "Opzione C: condivide pochi concetti chiave con la corretta, sovrapposizione 0.0.",
+        "Opzione C: troppo corta rispetto alla corretta, 43 caratteri contro 85.",
+        "Opzione D: troppo lontana dalla corretta, similarità 0.233.",
+        "Opzione D: condivide pochi concetti chiave con la corretta, sovrapposizione 0.0.",
+        "Opzione D: contiene parole che la rendono eliminabile: qualsiasi."
+      ],
+      "gravita": 125
+    },
+    {
+      "id": "AI-INT-0205",
+      "livello": "intermedio",
+      "domanda": "Che cosa può fare un reranker in una pipeline RAG?",
+      "opzioni": [
+        "Riordinare i documenti recuperati in base alla loro rilevanza rispetto alla domanda.",
+        "Generare immagini partendo direttamente dai documenti recuperati.",
+        "Cancellare i documenti meno recenti dal database originale.",
+        "Addestrare da zero il modello linguistico durante ogni richiesta."
+      ],
+      "corretta": "A",
+      "analisi_opzioni": [
+        {
+          "lettera": "B",
+          "testo": "Generare immagini partendo direttamente dai documenti recuperati.",
+          "similarita": 0.352,
+          "sovrapposizione": 0.25,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.352"
+          ]
+        },
+        {
+          "lettera": "C",
+          "testo": "Cancellare i documenti meno recenti dal database originale.",
+          "similarita": 0.336,
+          "sovrapposizione": 0.12,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.336",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.12"
+          ]
+        },
+        {
+          "lettera": "D",
+          "testo": "Addestrare da zero il modello linguistico durante ogni richiesta.",
+          "similarita": 0.23,
+          "sovrapposizione": 0.0,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.23",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.0"
+          ]
+        }
+      ],
+      "problemi": [
+        "Opzione B: troppo lontana dalla corretta, similarità 0.352.",
+        "Opzione C: troppo lontana dalla corretta, similarità 0.336.",
+        "Opzione C: condivide pochi concetti chiave con la corretta, sovrapposizione 0.12.",
+        "Opzione D: troppo lontana dalla corretta, similarità 0.23.",
+        "Opzione D: condivide pochi concetti chiave con la corretta, sovrapposizione 0.0."
+      ],
+      "gravita": 115
+    },
+    {
+      "id": "AI-AV-0213",
+      "livello": "avanzato",
+      "domanda": "Che cosa rende delicata la memoria a lungo termine in un assistente AI personale?",
+      "opzioni": [
+        "Deve conservare informazioni utili senza salvare dati inutili, sensibili o fuori contesto.",
+        "Deve salvare ogni frase dell'utente senza distinzione.",
+        "Deve impedire all'utente di correggere preferenze già memorizzate.",
+        "Deve sostituire tutte le funzioni dell'applicazione principale."
+      ],
+      "corretta": "A",
+      "analisi_opzioni": [
+        {
+          "lettera": "B",
+          "testo": "Deve salvare ogni frase dell'utente senza distinzione.",
+          "similarita": 0.339,
+          "sovrapposizione": 0.27,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.339"
+          ]
+        },
+        {
+          "lettera": "C",
+          "testo": "Deve impedire all'utente di correggere preferenze già memorizzate.",
+          "similarita": 0.287,
+          "sovrapposizione": 0.09,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.287",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.09"
+          ]
+        },
+        {
+          "lettera": "D",
+          "testo": "Deve sostituire tutte le funzioni dell'applicazione principale.",
+          "similarita": 0.279,
+          "sovrapposizione": 0.09,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.279",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.09"
+          ]
+        }
+      ],
+      "problemi": [
+        "Opzione B: troppo lontana dalla corretta, similarità 0.339.",
+        "Opzione C: troppo lontana dalla corretta, similarità 0.287.",
+        "Opzione C: condivide pochi concetti chiave con la corretta, sovrapposizione 0.09.",
+        "Opzione D: troppo lontana dalla corretta, similarità 0.279.",
+        "Opzione D: condivide pochi concetti chiave con la corretta, sovrapposizione 0.09."
+      ],
+      "gravita": 115
+    },
+    {
+      "id": "AI-INT-0009",
+      "livello": "intermedio",
+      "domanda": "In un agente AI, che cosa rappresenta normalmente un tool?",
+      "opzioni": [
+        "Uno strumento esterno che l'agente può usare per compiere un'azione",
+        "Uno strumento esterno usato solo come fonte informativa, senza vera integrazione operativa",
+        "Una memoria conversazionale che conserva informazioni tra più messaggi",
+        "Un'istruzione di sistema che definisce il comportamento dell'agente"
+      ],
+      "corretta": "A",
+      "analisi_opzioni": [
+        {
+          "lettera": "B",
+          "testo": "Uno strumento esterno usato solo come fonte informativa, senza vera integrazione operativa",
+          "similarita": 0.417,
+          "sovrapposizione": 0.29,
+          "problemi": [
+            "contiene parole che la rendono eliminabile: solo"
+          ]
+        },
+        {
+          "lettera": "C",
+          "testo": "Una memoria conversazionale che conserva informazioni tra più messaggi",
+          "similarita": 0.329,
+          "sovrapposizione": 0.0,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.329",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.0"
+          ]
+        },
+        {
+          "lettera": "D",
+          "testo": "Un'istruzione di sistema che definisce il comportamento dell'agente",
+          "similarita": 0.352,
+          "sovrapposizione": 0.14,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.352",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.14"
+          ]
+        }
+      ],
+      "problemi": [
+        "Opzione B: contiene parole che la rendono eliminabile: solo.",
+        "Opzione C: troppo lontana dalla corretta, similarità 0.329.",
+        "Opzione C: condivide pochi concetti chiave con la corretta, sovrapposizione 0.0.",
+        "Opzione D: troppo lontana dalla corretta, similarità 0.352.",
+        "Opzione D: condivide pochi concetti chiave con la corretta, sovrapposizione 0.14."
+      ],
+      "gravita": 110
+    },
+    {
+      "id": "AI-AV-0102",
+      "livello": "avanzato",
+      "domanda": "Quando il fine-tuning è più adatto del solo prompt engineering?",
+      "opzioni": [
+        "Quando serve modificare stabilmente il comportamento del modello su molti esempi simili",
+        "Quando serve un comportamento stabile, ma si dispone solo di pochi esempi isolati e non coerenti",
+        "Quando bisogna correggere una singola risposta occasionale",
+        "Quando basta cambiare il tono di una frase una sola volta"
+      ],
+      "corretta": "A",
+      "analisi_opzioni": [
+        {
+          "lettera": "B",
+          "testo": "Quando serve un comportamento stabile, ma si dispone solo di pochi esempi isolati e non coerenti",
+          "similarita": 0.469,
+          "sovrapposizione": 0.38,
+          "problemi": [
+            "contiene parole che la rendono eliminabile: solo"
+          ]
+        },
+        {
+          "lettera": "C",
+          "testo": "Quando bisogna correggere una singola risposta occasionale",
+          "similarita": 0.24,
+          "sovrapposizione": 0.0,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.24",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.0"
+          ]
+        },
+        {
+          "lettera": "D",
+          "testo": "Quando basta cambiare il tono di una frase una sola volta",
+          "similarita": 0.282,
+          "sovrapposizione": 0.0,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.282",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.0"
+          ]
+        }
+      ],
+      "problemi": [
+        "Opzione B: contiene parole che la rendono eliminabile: solo.",
+        "Opzione C: troppo lontana dalla corretta, similarità 0.24.",
+        "Opzione C: condivide pochi concetti chiave con la corretta, sovrapposizione 0.0.",
+        "Opzione D: troppo lontana dalla corretta, similarità 0.282.",
+        "Opzione D: condivide pochi concetti chiave con la corretta, sovrapposizione 0.0."
+      ],
+      "gravita": 110
+    },
+    {
+      "id": "AI-AV-0103",
+      "livello": "avanzato",
+      "domanda": "Perché valutare un sistema AI solo con risposta corretta o sbagliata può essere insufficiente?",
+      "opzioni": [
+        "Perché possono contare anche completezza, fonti, robustezza, sicurezza e chiarezza",
+        "Perché basta aggiungere la completezza alla valutazione, senza considerare sicurezza e fonti",
+        "Perché ogni risposta generata è corretta se è scritta in modo fluido",
+        "Perché la valutazione deve ignorare il contesto della domanda"
+      ],
+      "corretta": "A",
+      "analisi_opzioni": [
+        {
+          "lettera": "B",
+          "testo": "Perché basta aggiungere la completezza alla valutazione, senza considerare sicurezza e fonti",
+          "similarita": 0.5,
+          "sovrapposizione": 0.44,
+          "problemi": [
+            "contiene parole che la rendono eliminabile: senza considerare"
+          ]
+        },
+        {
+          "lettera": "C",
+          "testo": "Perché ogni risposta generata è corretta se è scritta in modo fluido",
+          "similarita": 0.31,
+          "sovrapposizione": 0.11,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.31",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.11"
+          ]
+        },
+        {
+          "lettera": "D",
+          "testo": "Perché la valutazione deve ignorare il contesto della domanda",
+          "similarita": 0.287,
+          "sovrapposizione": 0.11,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.287",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.11"
+          ]
+        }
+      ],
+      "problemi": [
+        "Opzione B: contiene parole che la rendono eliminabile: senza considerare.",
+        "Opzione C: troppo lontana dalla corretta, similarità 0.31.",
+        "Opzione C: condivide pochi concetti chiave con la corretta, sovrapposizione 0.11.",
+        "Opzione D: troppo lontana dalla corretta, similarità 0.287.",
+        "Opzione D: condivide pochi concetti chiave con la corretta, sovrapposizione 0.11."
+      ],
+      "gravita": 110
+    },
+    {
+      "id": "AI-INT-0103",
+      "livello": "intermedio",
+      "domanda": "Perché è utile testare un modello su esempi che non ha visto durante lo sviluppo?",
+      "opzioni": [
+        "Per misurare se generalizza oltre i casi usati per costruirlo",
+        "Per verificare se ricorda con precisione gli esempi usati durante lo sviluppo",
+        "Per misurare solo la velocità sui casi nuovi senza valutare l'accuratezza",
+        "Per ridurre il tempo di esecuzione eliminando i dati di validazione"
+      ],
+      "corretta": "A",
+      "analisi_opzioni": [
+        {
+          "lettera": "B",
+          "testo": "Per verificare se ricorda con precisione gli esempi usati durante lo sviluppo",
+          "similarita": 0.358,
+          "sovrapposizione": 0.17,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.358",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.17"
+          ]
+        },
+        {
+          "lettera": "C",
+          "testo": "Per misurare solo la velocità sui casi nuovi senza valutare l'accuratezza",
+          "similarita": 0.409,
+          "sovrapposizione": 0.33,
+          "problemi": [
+            "contiene parole che la rendono eliminabile: solo"
+          ]
+        },
+        {
+          "lettera": "D",
+          "testo": "Per ridurre il tempo di esecuzione eliminando i dati di validazione",
+          "similarita": 0.291,
+          "sovrapposizione": 0.0,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.291",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.0"
+          ]
+        }
+      ],
+      "problemi": [
+        "Opzione B: troppo lontana dalla corretta, similarità 0.358.",
+        "Opzione B: condivide pochi concetti chiave con la corretta, sovrapposizione 0.17.",
+        "Opzione C: contiene parole che la rendono eliminabile: solo.",
+        "Opzione D: troppo lontana dalla corretta, similarità 0.291.",
+        "Opzione D: condivide pochi concetti chiave con la corretta, sovrapposizione 0.0."
+      ],
+      "gravita": 110
+    },
+    {
+      "id": "AI-INT-0104",
+      "livello": "intermedio",
+      "domanda": "Quale indicazione rende un prompt più controllabile?",
+      "opzioni": [
+        "Specificare ruolo, obiettivo, formato di risposta e vincoli",
+        "Specificare solo il ruolo senza chiarire obiettivo, formato e vincoli",
+        "Chiedere al modello di fare il meglio possibile senza istruzioni precise",
+        "Lasciare la richiesta generica senza indicare criteri di risposta"
+      ],
+      "corretta": "A",
+      "analisi_opzioni": [
+        {
+          "lettera": "B",
+          "testo": "Specificare solo il ruolo senza chiarire obiettivo, formato e vincoli",
+          "similarita": 0.67,
+          "sovrapposizione": 0.83,
+          "problemi": [
+            "contiene parole che la rendono eliminabile: solo"
+          ]
+        },
+        {
+          "lettera": "C",
+          "testo": "Chiedere al modello di fare il meglio possibile senza istruzioni precise",
+          "similarita": 0.267,
+          "sovrapposizione": 0.0,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.267",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.0"
+          ]
+        },
+        {
+          "lettera": "D",
+          "testo": "Lasciare la richiesta generica senza indicare criteri di risposta",
+          "similarita": 0.356,
+          "sovrapposizione": 0.17,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.356",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.17"
+          ]
+        }
+      ],
+      "problemi": [
+        "Opzione B: contiene parole che la rendono eliminabile: solo.",
+        "Opzione C: troppo lontana dalla corretta, similarità 0.267.",
+        "Opzione C: condivide pochi concetti chiave con la corretta, sovrapposizione 0.0.",
+        "Opzione D: troppo lontana dalla corretta, similarità 0.356.",
+        "Opzione D: condivide pochi concetti chiave con la corretta, sovrapposizione 0.17."
+      ],
+      "gravita": 110
+    },
+    {
+      "id": "AI-FAC-0105",
+      "livello": "facile",
+      "domanda": "Che cosa significa dire che un modello generativo produce testo?",
+      "opzioni": [
+        "Che crea una risposta nuova seguendo il contesto ricevuto",
+        "Che riformula il testo ricevuto senza produrre realmente contenuto nuovo",
+        "Che rielabora frasi molto simili a quelle viste nei dati senza costruire nuovo contesto",
+        "Che seleziona una frase già scritta senza adattarla al contesto"
+      ],
+      "corretta": "A",
+      "analisi_opzioni": [
+        {
+          "lettera": "B",
+          "testo": "Che riformula il testo ricevuto senza produrre realmente contenuto nuovo",
+          "similarita": 0.334,
+          "sovrapposizione": 0.17,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.334",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.17"
+          ]
+        },
+        {
+          "lettera": "C",
+          "testo": "Che rielabora frasi molto simili a quelle viste nei dati senza costruire nuovo contesto",
+          "similarita": 0.305,
+          "sovrapposizione": 0.17,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.305",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.17"
+          ]
+        },
+        {
+          "lettera": "D",
+          "testo": "Che seleziona una frase già scritta senza adattarla al contesto",
+          "similarita": 0.399,
+          "sovrapposizione": 0.17,
+          "problemi": [
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.17"
+          ]
+        }
+      ],
+      "problemi": [
+        "Opzione B: troppo lontana dalla corretta, similarità 0.334.",
+        "Opzione B: condivide pochi concetti chiave con la corretta, sovrapposizione 0.17.",
+        "Opzione C: troppo lontana dalla corretta, similarità 0.305.",
+        "Opzione C: condivide pochi concetti chiave con la corretta, sovrapposizione 0.17.",
+        "Opzione D: condivide pochi concetti chiave con la corretta, sovrapposizione 0.17."
+      ],
+      "gravita": 110
+    },
+    {
+      "id": "AI-AV-0106",
+      "livello": "avanzato",
+      "domanda": "Quale rischio nasce se un agente salva memoria personale senza criteri chiari?",
+      "opzioni": [
+        "Può conservare informazioni inutili, sensibili o non più valide e usarle fuori contesto",
+        "Può conservare informazioni personali utili, ma senza distinguere tra dati pertinenti e dati sensibili",
+        "Diventa automaticamente incapace di rispondere a domande generali",
+        "Trasforma ogni informazione salvata in codice eseguibile"
+      ],
+      "corretta": "A",
+      "analisi_opzioni": [
+        {
+          "lettera": "B",
+          "testo": "Può conservare informazioni personali utili, ma senza distinguere tra dati pertinenti e dati sensibili",
+          "similarita": 0.441,
+          "sovrapposizione": 0.36,
+          "problemi": []
+        },
+        {
+          "lettera": "C",
+          "testo": "Diventa automaticamente incapace di rispondere a domande generali",
+          "similarita": 0.239,
+          "sovrapposizione": 0.0,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.239",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.0",
+            "contiene parole che la rendono eliminabile: automaticamente"
+          ]
+        },
+        {
+          "lettera": "D",
+          "testo": "Trasforma ogni informazione salvata in codice eseguibile",
+          "similarita": 0.268,
+          "sovrapposizione": 0.0,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.268",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.0"
+          ]
+        }
+      ],
+      "problemi": [
+        "Opzione C: troppo lontana dalla corretta, similarità 0.239.",
+        "Opzione C: condivide pochi concetti chiave con la corretta, sovrapposizione 0.0.",
+        "Opzione C: contiene parole che la rendono eliminabile: automaticamente.",
+        "Opzione D: troppo lontana dalla corretta, similarità 0.268.",
+        "Opzione D: condivide pochi concetti chiave con la corretta, sovrapposizione 0.0."
+      ],
+      "gravita": 110
+    },
+    {
+      "id": "AI-INT-0106",
+      "livello": "intermedio",
+      "domanda": "Perché un agente AI può usare una fase di pianificazione prima di agire?",
+      "opzioni": [
+        "Per scegliere i passaggi e gli strumenti più adatti prima di eseguire azioni",
+        "Per scegliere una sequenza di azioni, ma senza verificare se sono coerenti con l'obiettivo",
+        "Per trasformare ogni risposta in una lista casuale di operazioni",
+        "Per saltare completamente il controllo del risultato finale"
+      ],
+      "corretta": "A",
+      "analisi_opzioni": [
+        {
+          "lettera": "B",
+          "testo": "Per scegliere una sequenza di azioni, ma senza verificare se sono coerenti con l'obiettivo",
+          "similarita": 0.372,
+          "sovrapposizione": 0.25,
+          "problemi": []
+        },
+        {
+          "lettera": "C",
+          "testo": "Per trasformare ogni risposta in una lista casuale di operazioni",
+          "similarita": 0.303,
+          "sovrapposizione": 0.0,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.303",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.0"
+          ]
+        },
+        {
+          "lettera": "D",
+          "testo": "Per saltare completamente il controllo del risultato finale",
+          "similarita": 0.28,
+          "sovrapposizione": 0.0,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.28",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.0",
+            "contiene parole che la rendono eliminabile: completamente"
+          ]
+        }
+      ],
+      "problemi": [
+        "Opzione C: troppo lontana dalla corretta, similarità 0.303.",
+        "Opzione C: condivide pochi concetti chiave con la corretta, sovrapposizione 0.0.",
+        "Opzione D: troppo lontana dalla corretta, similarità 0.28.",
+        "Opzione D: condivide pochi concetti chiave con la corretta, sovrapposizione 0.0.",
+        "Opzione D: contiene parole che la rendono eliminabile: completamente."
+      ],
+      "gravita": 110
+    },
+    {
+      "id": "AI-FAC-0204",
+      "livello": "facile",
+      "domanda": "Che cosa significa classificare un dato con l'intelligenza artificiale?",
+      "opzioni": [
+        "Assegnare il dato a una categoria tra quelle previste.",
+        "Generare una nuova immagine partendo da una descrizione.",
+        "Salvare il dato in una cartella senza analizzarlo.",
+        "Cancellare i dati meno importanti da un archivio."
+      ],
+      "corretta": "A",
+      "analisi_opzioni": [
+        {
+          "lettera": "B",
+          "testo": "Generare una nuova immagine partendo da una descrizione.",
+          "similarita": 0.316,
+          "sovrapposizione": 0.0,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.316",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.0"
+          ]
+        },
+        {
+          "lettera": "C",
+          "testo": "Salvare il dato in una cartella senza analizzarlo.",
+          "similarita": 0.42,
+          "sovrapposizione": 0.2,
+          "problemi": [
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.2"
+          ]
+        },
+        {
+          "lettera": "D",
+          "testo": "Cancellare i dati meno importanti da un archivio.",
+          "similarita": 0.334,
+          "sovrapposizione": 0.0,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.334",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.0"
+          ]
+        }
+      ],
+      "problemi": [
+        "Opzione B: troppo lontana dalla corretta, similarità 0.316.",
+        "Opzione B: condivide pochi concetti chiave con la corretta, sovrapposizione 0.0.",
+        "Opzione C: condivide pochi concetti chiave con la corretta, sovrapposizione 0.2.",
+        "Opzione D: troppo lontana dalla corretta, similarità 0.334.",
+        "Opzione D: condivide pochi concetti chiave con la corretta, sovrapposizione 0.0."
+      ],
+      "gravita": 110
+    },
+    {
+      "id": "AI-INT-0203",
+      "livello": "intermedio",
+      "domanda": "Che effetto ha, in genere, aumentare la temperatura nella generazione di un modello linguistico?",
+      "opzioni": [
+        "Rende le risposte più variabili e meno deterministiche.",
+        "Rende il modello più piccolo a livello di parametri.",
+        "Aumenta automaticamente la quantità di dati nel contesto.",
+        "Impedisce al modello di generare testo creativo."
+      ],
+      "corretta": "A",
+      "analisi_opzioni": [
+        {
+          "lettera": "B",
+          "testo": "Rende il modello più piccolo a livello di parametri.",
+          "similarita": 0.446,
+          "sovrapposizione": 0.33,
+          "problemi": []
+        },
+        {
+          "lettera": "C",
+          "testo": "Aumenta automaticamente la quantità di dati nel contesto.",
+          "similarita": 0.263,
+          "sovrapposizione": 0.0,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.263",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.0",
+            "contiene parole che la rendono eliminabile: automaticamente"
+          ]
+        },
+        {
+          "lettera": "D",
+          "testo": "Impedisce al modello di generare testo creativo.",
+          "similarita": 0.271,
+          "sovrapposizione": 0.0,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.271",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.0"
+          ]
+        }
+      ],
+      "problemi": [
+        "Opzione C: troppo lontana dalla corretta, similarità 0.263.",
+        "Opzione C: condivide pochi concetti chiave con la corretta, sovrapposizione 0.0.",
+        "Opzione C: contiene parole che la rendono eliminabile: automaticamente.",
+        "Opzione D: troppo lontana dalla corretta, similarità 0.271.",
+        "Opzione D: condivide pochi concetti chiave con la corretta, sovrapposizione 0.0."
+      ],
+      "gravita": 110
+    },
+    {
+      "id": "AI-AV-0202",
+      "livello": "avanzato",
+      "domanda": "Che cosa indica la finestra di contesto di un modello linguistico?",
+      "opzioni": [
+        "La quantità massima di token che il modello può considerare in una singola interazione.",
+        "Il numero totale di utenti che possono usare il modello nello stesso momento.",
+        "La cartella locale in cui vengono salvati i prompt più recenti.",
+        "La dimensione fisica dello schermo su cui viene mostrata la risposta."
+      ],
+      "corretta": "A",
+      "analisi_opzioni": [
+        {
+          "lettera": "B",
+          "testo": "Il numero totale di utenti che possono usare il modello nello stesso momento.",
+          "similarita": 0.362,
+          "sovrapposizione": 0.12,
+          "problemi": [
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.12"
+          ]
+        },
+        {
+          "lettera": "C",
+          "testo": "La cartella locale in cui vengono salvati i prompt più recenti.",
+          "similarita": 0.277,
+          "sovrapposizione": 0.0,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.277",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.0"
+          ]
+        },
+        {
+          "lettera": "D",
+          "testo": "La dimensione fisica dello schermo su cui viene mostrata la risposta.",
+          "similarita": 0.304,
+          "sovrapposizione": 0.0,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.304",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.0"
+          ]
+        }
+      ],
+      "problemi": [
+        "Opzione B: condivide pochi concetti chiave con la corretta, sovrapposizione 0.12.",
+        "Opzione C: troppo lontana dalla corretta, similarità 0.277.",
+        "Opzione C: condivide pochi concetti chiave con la corretta, sovrapposizione 0.0.",
+        "Opzione D: troppo lontana dalla corretta, similarità 0.304.",
+        "Opzione D: condivide pochi concetti chiave con la corretta, sovrapposizione 0.0."
+      ],
+      "gravita": 110
+    },
+    {
+      "id": "AI-INT-0007",
+      "livello": "intermedio",
+      "domanda": "Quale elemento rende più controllabile la risposta di un modello AI?",
+      "opzioni": [
+        "Specificare ruolo, obiettivo, vincoli e formato della risposta",
+        "Specificare solo il ruolo del modello, senza indicare vincoli, obiettivo e formato",
+        "Fornire molti obiettivi diversi senza indicare priorità",
+        "Chiedere una risposta generica lasciando formato e criteri aperti"
+      ],
+      "corretta": "A",
+      "analisi_opzioni": [
+        {
+          "lettera": "B",
+          "testo": "Specificare solo il ruolo del modello, senza indicare vincoli, obiettivo e formato",
+          "similarita": 0.56,
+          "sovrapposizione": 0.83,
+          "problemi": [
+            "contiene parole che la rendono eliminabile: solo"
+          ]
+        },
+        {
+          "lettera": "C",
+          "testo": "Fornire molti obiettivi diversi senza indicare priorità",
+          "similarita": 0.348,
+          "sovrapposizione": 0.0,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.348",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.0"
+          ]
+        },
+        {
+          "lettera": "D",
+          "testo": "Chiedere una risposta generica lasciando formato e criteri aperti",
+          "similarita": 0.356,
+          "sovrapposizione": 0.33,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.356"
+          ]
+        }
+      ],
+      "problemi": [
+        "Opzione B: contiene parole che la rendono eliminabile: solo.",
+        "Opzione C: troppo lontana dalla corretta, similarità 0.348.",
+        "Opzione C: condivide pochi concetti chiave con la corretta, sovrapposizione 0.0.",
+        "Opzione D: troppo lontana dalla corretta, similarità 0.356."
+      ],
+      "gravita": 90
+    },
+    {
+      "id": "AI-AV-0104",
+      "livello": "avanzato",
+      "domanda": "Qual è un esempio realistico di prompt injection in un'app che legge documenti esterni?",
+      "opzioni": [
+        "Un documento contiene istruzioni nascoste che provano a far ignorare le regole del sistema",
+        "Un documento contiene testo che il modello potrebbe scambiare per istruzioni operative",
+        "Un utente scrive una domanda troppo breve per essere capita",
+        "Una risposta contiene una parola inglese invece di una italiana"
+      ],
+      "corretta": "A",
+      "analisi_opzioni": [
+        {
+          "lettera": "B",
+          "testo": "Un documento contiene testo che il modello potrebbe scambiare per istruzioni operative",
+          "similarita": 0.439,
+          "sovrapposizione": 0.33,
+          "problemi": []
+        },
+        {
+          "lettera": "C",
+          "testo": "Un utente scrive una domanda troppo breve per essere capita",
+          "similarita": 0.22,
+          "sovrapposizione": 0.0,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.22",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.0"
+          ]
+        },
+        {
+          "lettera": "D",
+          "testo": "Una risposta contiene una parola inglese invece di una italiana",
+          "similarita": 0.3,
+          "sovrapposizione": 0.11,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.3",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.11"
+          ]
+        }
+      ],
+      "problemi": [
+        "Opzione C: troppo lontana dalla corretta, similarità 0.22.",
+        "Opzione C: condivide pochi concetti chiave con la corretta, sovrapposizione 0.0.",
+        "Opzione D: troppo lontana dalla corretta, similarità 0.3.",
+        "Opzione D: condivide pochi concetti chiave con la corretta, sovrapposizione 0.11."
+      ],
+      "gravita": 90
+    },
+    {
+      "id": "AI-AV-0105",
+      "livello": "avanzato",
+      "domanda": "Perché in un'app AI conviene separare recupero dei dati, generazione e controllo finale?",
+      "opzioni": [
+        "Per rendere più chiaro dove nasce un errore e migliorare ogni fase separatamente",
+        "Per analizzare ogni fase separatamente, ma senza collegare gli errori al risultato finale",
+        "Per evitare che il modello usi fonti esterne durante la generazione, anche quando sarebbero utili",
+        "Per impedire all'app di usare database o API"
+      ],
+      "corretta": "A",
+      "analisi_opzioni": [
+        {
+          "lettera": "B",
+          "testo": "Per analizzare ogni fase separatamente, ma senza collegare gli errori al risultato finale",
+          "similarita": 0.422,
+          "sovrapposizione": 0.33,
+          "problemi": []
+        },
+        {
+          "lettera": "C",
+          "testo": "Per evitare che il modello usi fonti esterne durante la generazione, anche quando sarebbero utili",
+          "similarita": 0.254,
+          "sovrapposizione": 0.0,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.254",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.0"
+          ]
+        },
+        {
+          "lettera": "D",
+          "testo": "Per impedire all'app di usare database o API",
+          "similarita": 0.24,
+          "sovrapposizione": 0.0,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.24",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.0"
+          ]
+        }
+      ],
+      "problemi": [
+        "Opzione C: troppo lontana dalla corretta, similarità 0.254.",
+        "Opzione C: condivide pochi concetti chiave con la corretta, sovrapposizione 0.0.",
+        "Opzione D: troppo lontana dalla corretta, similarità 0.24.",
+        "Opzione D: condivide pochi concetti chiave con la corretta, sovrapposizione 0.0."
+      ],
+      "gravita": 90
+    },
+    {
+      "id": "AI-FAC-0205",
+      "livello": "facile",
+      "domanda": "Che cosa indica il termine overfitting?",
+      "opzioni": [
+        "Una situazione in cui il modello impara troppo bene gli esempi di addestramento e generalizza male su dati nuovi.",
+        "Una situazione in cui il modello non usa nessun dato durante l'addestramento.",
+        "Una tecnica per rendere un modello più piccolo senza perdere alcuna informazione.",
+        "Un metodo per aumentare casualmente la velocità di risposta del modello."
+      ],
+      "corretta": "A",
+      "analisi_opzioni": [
+        {
+          "lettera": "B",
+          "testo": "Una situazione in cui il modello non usa nessun dato durante l'addestramento.",
+          "similarita": 0.443,
+          "sovrapposizione": 0.33,
+          "problemi": []
+        },
+        {
+          "lettera": "C",
+          "testo": "Una tecnica per rendere un modello più piccolo senza perdere alcuna informazione.",
+          "similarita": 0.282,
+          "sovrapposizione": 0.08,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.282",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.08"
+          ]
+        },
+        {
+          "lettera": "D",
+          "testo": "Un metodo per aumentare casualmente la velocità di risposta del modello.",
+          "similarita": 0.23,
+          "sovrapposizione": 0.08,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.23",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.08"
+          ]
+        }
+      ],
+      "problemi": [
+        "Opzione C: troppo lontana dalla corretta, similarità 0.282.",
+        "Opzione C: condivide pochi concetti chiave con la corretta, sovrapposizione 0.08.",
+        "Opzione D: troppo lontana dalla corretta, similarità 0.23.",
+        "Opzione D: condivide pochi concetti chiave con la corretta, sovrapposizione 0.08."
+      ],
+      "gravita": 90
+    },
+    {
+      "id": "AI-AV-0212",
+      "livello": "avanzato",
+      "domanda": "Perché valutare le allucinazioni richiede spesso più di una metrica automatica semplice?",
+      "opzioni": [
+        "Perché serve confrontare la risposta con fonti, contesto e correttezza fattuale, non solo con la forma del testo.",
+        "Perché le allucinazioni compaiono nei contenuti visivi più che nelle risposte testuali.",
+        "Perché una metrica automatica può valutare positivamente anche una risposta non realmente corretta.",
+        "Perché la lunghezza della risposta è sufficiente a dimostrare la sua accuratezza."
+      ],
+      "corretta": "A",
+      "analisi_opzioni": [
+        {
+          "lettera": "B",
+          "testo": "Perché le allucinazioni compaiono nei contenuti visivi più che nelle risposte testuali.",
+          "similarita": 0.294,
+          "sovrapposizione": 0.08,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.294",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.08"
+          ]
+        },
+        {
+          "lettera": "C",
+          "testo": "Perché una metrica automatica può valutare positivamente anche una risposta non realmente corretta.",
+          "similarita": 0.384,
+          "sovrapposizione": 0.25,
+          "problemi": []
+        },
+        {
+          "lettera": "D",
+          "testo": "Perché la lunghezza della risposta è sufficiente a dimostrare la sua accuratezza.",
+          "similarita": 0.335,
+          "sovrapposizione": 0.17,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.335",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.17"
+          ]
+        }
+      ],
+      "problemi": [
+        "Opzione B: troppo lontana dalla corretta, similarità 0.294.",
+        "Opzione B: condivide pochi concetti chiave con la corretta, sovrapposizione 0.08.",
+        "Opzione D: troppo lontana dalla corretta, similarità 0.335.",
+        "Opzione D: condivide pochi concetti chiave con la corretta, sovrapposizione 0.17."
+      ],
+      "gravita": 90
+    },
+    {
+      "id": "AI-AV-0004",
+      "livello": "avanzato",
+      "domanda": "In un sistema RAG, quale problema può nascere se il recupero dei documenti seleziona testi pertinenti solo in apparenza?",
+      "opzioni": [
+        "Il modello può generare una risposta ben scritta ma basata su contesto non davvero rilevante",
+        "Il modello può produrre una risposta formalmente coerente, ma basata su dettagli non davvero utili alla domanda",
+        "Il modello può rifiutare automaticamente tutti i documenti recuperati",
+        "Il modello può bloccare la generazione ogni volta che il retrieval non è perfetto"
+      ],
+      "corretta": "A",
+      "analisi_opzioni": [
+        {
+          "lettera": "B",
+          "testo": "Il modello può produrre una risposta formalmente coerente, ma basata su dettagli non davvero utili alla domanda",
+          "similarita": 0.572,
+          "sovrapposizione": 0.55,
+          "problemi": []
+        },
+        {
+          "lettera": "C",
+          "testo": "Il modello può rifiutare automaticamente tutti i documenti recuperati",
+          "similarita": 0.358,
+          "sovrapposizione": 0.18,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.358",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.18",
+            "contiene parole che la rendono eliminabile: tutti, automaticamente"
+          ]
+        },
+        {
+          "lettera": "D",
+          "testo": "Il modello può bloccare la generazione ogni volta che il retrieval non è perfetto",
+          "similarita": 0.425,
+          "sovrapposizione": 0.27,
+          "problemi": []
+        }
+      ],
+      "problemi": [
+        "Opzione C: troppo lontana dalla corretta, similarità 0.358.",
+        "Opzione C: condivide pochi concetti chiave con la corretta, sovrapposizione 0.18.",
+        "Opzione C: contiene parole che la rendono eliminabile: tutti, automaticamente."
+      ],
+      "gravita": 65
+    },
+    {
+      "id": "AI-FAC-0004",
+      "livello": "facile",
+      "domanda": "In un sistema di intelligenza artificiale, che cosa rappresentano i dati di addestramento?",
+      "opzioni": [
+        "Esempi usati dal modello per imparare schemi e relazioni",
+        "Esempi usati solo per verificare il modello dopo l'addestramento",
+        "Regole scritte manualmente per ogni singola risposta possibile",
+        "Parametri finali già imparati dal modello dopo il training"
+      ],
+      "corretta": "A",
+      "analisi_opzioni": [
+        {
+          "lettera": "B",
+          "testo": "Esempi usati solo per verificare il modello dopo l'addestramento",
+          "similarita": 0.473,
+          "sovrapposizione": 0.43,
+          "problemi": [
+            "contiene parole che la rendono eliminabile: solo"
+          ]
+        },
+        {
+          "lettera": "C",
+          "testo": "Regole scritte manualmente per ogni singola risposta possibile",
+          "similarita": 0.305,
+          "sovrapposizione": 0.0,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.305",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.0"
+          ]
+        },
+        {
+          "lettera": "D",
+          "testo": "Parametri finali già imparati dal modello dopo il training",
+          "similarita": 0.428,
+          "sovrapposizione": 0.29,
+          "problemi": []
+        }
+      ],
+      "problemi": [
+        "Opzione B: contiene parole che la rendono eliminabile: solo.",
+        "Opzione C: troppo lontana dalla corretta, similarità 0.305.",
+        "Opzione C: condivide pochi concetti chiave con la corretta, sovrapposizione 0.0."
+      ],
+      "gravita": 65
+    },
+    {
+      "id": "AI-FAC-0203",
+      "livello": "facile",
+      "domanda": "Perché un dataset di addestramento è importante in un sistema di machine learning?",
+      "opzioni": [
+        "Perché fornisce esempi da cui il modello può imparare relazioni e schemi.",
+        "Perché sostituisce completamente la fase di valutazione del modello.",
+        "Perché rende inutile scegliere un algoritmo adatto al problema.",
+        "Perché contiene risposte finali che il modello dovrebbe ricopiare senza imparare schemi generali."
+      ],
+      "corretta": "A",
+      "analisi_opzioni": [
+        {
+          "lettera": "B",
+          "testo": "Perché sostituisce completamente la fase di valutazione del modello.",
+          "similarita": 0.396,
+          "sovrapposizione": 0.22,
+          "problemi": [
+            "contiene parole che la rendono eliminabile: completamente"
+          ]
+        },
+        {
+          "lettera": "C",
+          "testo": "Perché rende inutile scegliere un algoritmo adatto al problema.",
+          "similarita": 0.312,
+          "sovrapposizione": 0.11,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.312",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.11"
+          ]
+        },
+        {
+          "lettera": "D",
+          "testo": "Perché contiene risposte finali che il modello dovrebbe ricopiare senza imparare schemi generali.",
+          "similarita": 0.45,
+          "sovrapposizione": 0.44,
+          "problemi": []
+        }
+      ],
+      "problemi": [
+        "Opzione B: contiene parole che la rendono eliminabile: completamente.",
+        "Opzione C: troppo lontana dalla corretta, similarità 0.312.",
+        "Opzione C: condivide pochi concetti chiave con la corretta, sovrapposizione 0.11."
+      ],
+      "gravita": 65
+    },
+    {
+      "id": "AI-FAC-0005",
+      "livello": "facile",
+      "domanda": "Quale prompt è più chiaro per chiedere a un modello AI di riassumere un testo?",
+      "opzioni": [
+        "Riassumi questo testo in 5 righe usando un linguaggio semplice.",
+        "Riassumi questo testo usando un linguaggio semplice.",
+        "Riscrivi questo testo mantenendo tutti i dettagli principali.",
+        "Riformula il testo senza ridurlo e senza cambiarne il significato."
+      ],
+      "corretta": "A",
+      "analisi_opzioni": [
+        {
+          "lettera": "B",
+          "testo": "Riassumi questo testo usando un linguaggio semplice.",
+          "similarita": 0.855,
+          "sovrapposizione": 0.83,
+          "problemi": []
+        },
+        {
+          "lettera": "C",
+          "testo": "Riscrivi questo testo mantenendo tutti i dettagli principali.",
+          "similarita": 0.418,
+          "sovrapposizione": 0.17,
+          "problemi": [
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.17",
+            "contiene parole che la rendono eliminabile: tutti"
+          ]
+        },
+        {
+          "lettera": "D",
+          "testo": "Riformula il testo senza ridurlo e senza cambiarne il significato.",
+          "similarita": 0.369,
+          "sovrapposizione": 0.17,
+          "problemi": [
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.17"
+          ]
+        }
+      ],
+      "problemi": [
+        "Opzione C: condivide pochi concetti chiave con la corretta, sovrapposizione 0.17.",
+        "Opzione C: contiene parole che la rendono eliminabile: tutti.",
+        "Opzione D: condivide pochi concetti chiave con la corretta, sovrapposizione 0.17."
+      ],
+      "gravita": 60
+    },
+    {
+      "id": "AI-AV-0009",
+      "livello": "avanzato",
+      "domanda": "Perché un modello AI può produrre risultati distorti anche se l'algoritmo è implementato correttamente?",
+      "opzioni": [
+        "Perché i dati, gli obiettivi di addestramento o le metriche possono introdurre distorsioni",
+        "Perché i dati sbilanciati possono introdurre distorsioni, ma obiettivi e metriche non incidono",
+        "Perché una metrica scelta male può influenzare il risultato, mentre i dati di partenza hanno un ruolo secondario",
+        "Perché solo l'obiettivo di addestramento può creare distorsioni, mentre dati e metriche non contano"
+      ],
+      "corretta": "A",
+      "analisi_opzioni": [
+        {
+          "lettera": "B",
+          "testo": "Perché i dati sbilanciati possono introdurre distorsioni, ma obiettivi e metriche non incidono",
+          "similarita": 0.666,
+          "sovrapposizione": 0.88,
+          "problemi": []
+        },
+        {
+          "lettera": "C",
+          "testo": "Perché una metrica scelta male può influenzare il risultato, mentre i dati di partenza hanno un ruolo secondario",
+          "similarita": 0.323,
+          "sovrapposizione": 0.25,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.323"
+          ]
+        },
+        {
+          "lettera": "D",
+          "testo": "Perché solo l'obiettivo di addestramento può creare distorsioni, mentre dati e metriche non contano",
+          "similarita": 0.53,
+          "sovrapposizione": 0.62,
+          "problemi": [
+            "contiene parole che la rendono eliminabile: solo"
+          ]
+        }
+      ],
+      "problemi": [
+        "Opzione C: troppo lontana dalla corretta, similarità 0.323.",
+        "Opzione D: contiene parole che la rendono eliminabile: solo."
+      ],
+      "gravita": 45
+    },
+    {
+      "id": "AI-INT-0102",
+      "livello": "intermedio",
+      "domanda": "Quale differenza c'è tra ricerca per parole esatte e ricerca semantica?",
+      "opzioni": [
+        "La ricerca semantica può trovare contenuti simili nel significato anche con parole diverse",
+        "La ricerca semantica può usare parole diverse, ma funziona solo se restano presenti gli stessi termini principali",
+        "La ricerca per parole esatte riconosce meglio sinonimi e intenzione rispetto alla ricerca semantica",
+        "La ricerca per parole esatte trova sinonimi anche quando non compaiono termini uguali"
+      ],
+      "corretta": "A",
+      "analisi_opzioni": [
+        {
+          "lettera": "B",
+          "testo": "La ricerca semantica può usare parole diverse, ma funziona solo se restano presenti gli stessi termini principali",
+          "similarita": 0.435,
+          "sovrapposizione": 0.5,
+          "problemi": [
+            "contiene parole che la rendono eliminabile: solo"
+          ]
+        },
+        {
+          "lettera": "C",
+          "testo": "La ricerca per parole esatte riconosce meglio sinonimi e intenzione rispetto alla ricerca semantica",
+          "similarita": 0.34,
+          "sovrapposizione": 0.3,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.34"
+          ]
+        },
+        {
+          "lettera": "D",
+          "testo": "La ricerca per parole esatte trova sinonimi anche quando non compaiono termini uguali",
+          "similarita": 0.368,
+          "sovrapposizione": 0.3,
+          "problemi": []
+        }
+      ],
+      "problemi": [
+        "Opzione B: contiene parole che la rendono eliminabile: solo.",
+        "Opzione C: troppo lontana dalla corretta, similarità 0.34."
+      ],
+      "gravita": 45
+    },
+    {
+      "id": "AI-FAC-0104",
+      "livello": "facile",
+      "domanda": "Quale esempio rappresenta meglio un compito di classificazione?",
+      "opzioni": [
+        "Stabilire se un messaggio è spam o non spam",
+        "Raggruppare messaggi simili senza etichette già definite",
+        "Generare una risposta automatica a un messaggio",
+        "Scrivere un nuovo messaggio partendo da un tema"
+      ],
+      "corretta": "A",
+      "analisi_opzioni": [
+        {
+          "lettera": "B",
+          "testo": "Raggruppare messaggi simili senza etichette già definite",
+          "similarita": 0.281,
+          "sovrapposizione": 0.0,
+          "problemi": [
+            "troppo lontana dalla corretta, similarità 0.281",
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.0"
+          ]
+        },
+        {
+          "lettera": "C",
+          "testo": "Generare una risposta automatica a un messaggio",
+          "similarita": 0.387,
+          "sovrapposizione": 0.25,
+          "problemi": []
+        },
+        {
+          "lettera": "D",
+          "testo": "Scrivere un nuovo messaggio partendo da un tema",
+          "similarita": 0.434,
+          "sovrapposizione": 0.25,
+          "problemi": []
+        }
+      ],
+      "problemi": [
+        "Opzione B: troppo lontana dalla corretta, similarità 0.281.",
+        "Opzione B: condivide pochi concetti chiave con la corretta, sovrapposizione 0.0."
+      ],
+      "gravita": 45
+    },
+    {
+      "id": "AI-AV-0006",
+      "livello": "avanzato",
+      "domanda": "Qual è il rischio principale di un prompt injection in un'applicazione AI collegata a strumenti esterni?",
+      "opzioni": [
+        "Il modello può essere spinto a ignorare istruzioni originali e usare strumenti in modo non previsto",
+        "Il modello può ricevere istruzioni esterne, ma queste possono influenzare solo lo stile della risposta",
+        "Il modello può confondere contenuto dell'utente e istruzioni operative solo senza tool collegati",
+        "Il modello può trattare informazioni recuperate come testo da copiare, ma non come comandi"
+      ],
+      "corretta": "A",
+      "analisi_opzioni": [
+        {
+          "lettera": "B",
+          "testo": "Il modello può ricevere istruzioni esterne, ma queste possono influenzare solo lo stile della risposta",
+          "similarita": 0.439,
+          "sovrapposizione": 0.27,
+          "problemi": [
+            "contiene parole che la rendono eliminabile: solo"
+          ]
+        },
+        {
+          "lettera": "C",
+          "testo": "Il modello può confondere contenuto dell'utente e istruzioni operative solo senza tool collegati",
+          "similarita": 0.434,
+          "sovrapposizione": 0.27,
+          "problemi": [
+            "contiene parole che la rendono eliminabile: solo"
+          ]
+        },
+        {
+          "lettera": "D",
+          "testo": "Il modello può trattare informazioni recuperate come testo da copiare, ma non come comandi",
+          "similarita": 0.43,
+          "sovrapposizione": 0.27,
+          "problemi": []
+        }
+      ],
+      "problemi": [
+        "Opzione B: contiene parole che la rendono eliminabile: solo.",
+        "Opzione C: contiene parole che la rendono eliminabile: solo."
+      ],
+      "gravita": 40
+    },
+    {
+      "id": "AI-INT-0101",
+      "livello": "intermedio",
+      "domanda": "In un sistema RAG, perché la scelta dei chunk del documento è importante?",
+      "opzioni": [
+        "Perché chunk troppo grandi o troppo piccoli possono rendere il recupero meno preciso",
+        "Perché chunk più grandi possono contenere più contesto, ma anche mescolare dettagli non pertinenti",
+        "Perché i chunk servono ad addestrare nuovamente il modello prima di ogni risposta",
+        "Perché i chunk modificano in modo permanente i pesi del modello"
+      ],
+      "corretta": "A",
+      "analisi_opzioni": [
+        {
+          "lettera": "B",
+          "testo": "Perché chunk più grandi possono contenere più contesto, ma anche mescolare dettagli non pertinenti",
+          "similarita": 0.451,
+          "sovrapposizione": 0.4,
+          "problemi": []
+        },
+        {
+          "lettera": "C",
+          "testo": "Perché i chunk servono ad addestrare nuovamente il modello prima di ogni risposta",
+          "similarita": 0.394,
+          "sovrapposizione": 0.2,
+          "problemi": [
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.2"
+          ]
+        },
+        {
+          "lettera": "D",
+          "testo": "Perché i chunk modificano in modo permanente i pesi del modello",
+          "similarita": 0.362,
+          "sovrapposizione": 0.2,
+          "problemi": [
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.2"
+          ]
+        }
+      ],
+      "problemi": [
+        "Opzione C: condivide pochi concetti chiave con la corretta, sovrapposizione 0.2.",
+        "Opzione D: condivide pochi concetti chiave con la corretta, sovrapposizione 0.2."
+      ],
+      "gravita": 40
+    },
+    {
+      "id": "AI-FAC-0102",
+      "livello": "facile",
+      "domanda": "Quale prompt è più chiaro per chiedere un riassunto?",
+      "opzioni": [
+        "Riassumi questo testo in 5 righe indicando le idee principali.",
+        "Riassumi questo testo indicando le idee principali.",
+        "Spiega questo testo mantenendo tutti i dettagli importanti.",
+        "Riscrivi questo testo senza ridurlo e senza selezionare le idee principali."
+      ],
+      "corretta": "A",
+      "analisi_opzioni": [
+        {
+          "lettera": "B",
+          "testo": "Riassumi questo testo indicando le idee principali.",
+          "similarita": 0.854,
+          "sovrapposizione": 0.83,
+          "problemi": []
+        },
+        {
+          "lettera": "C",
+          "testo": "Spiega questo testo mantenendo tutti i dettagli importanti.",
+          "similarita": 0.408,
+          "sovrapposizione": 0.17,
+          "problemi": [
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.17",
+            "contiene parole che la rendono eliminabile: tutti"
+          ]
+        },
+        {
+          "lettera": "D",
+          "testo": "Riscrivi questo testo senza ridurlo e senza selezionare le idee principali.",
+          "similarita": 0.538,
+          "sovrapposizione": 0.5,
+          "problemi": []
+        }
+      ],
+      "problemi": [
+        "Opzione C: condivide pochi concetti chiave con la corretta, sovrapposizione 0.17.",
+        "Opzione C: contiene parole che la rendono eliminabile: tutti."
+      ],
+      "gravita": 40
+    },
+    {
+      "id": "AI-FAC-0106",
+      "livello": "facile",
+      "domanda": "Quando si parla di allucinazione in AI, a cosa ci si riferisce?",
+      "opzioni": [
+        "A una risposta plausibile ma falsa o non verificata",
+        "A una risposta plausibile ma incompleta, senza informazioni false",
+        "A una risposta corretta ma troppo breve per essere utile",
+        "A una risposta prudente che dichiara chiaramente incertezza"
+      ],
+      "corretta": "A",
+      "analisi_opzioni": [
+        {
+          "lettera": "B",
+          "testo": "A una risposta plausibile ma incompleta, senza informazioni false",
+          "similarita": 0.466,
+          "sovrapposizione": 0.4,
+          "problemi": []
+        },
+        {
+          "lettera": "C",
+          "testo": "A una risposta corretta ma troppo breve per essere utile",
+          "similarita": 0.402,
+          "sovrapposizione": 0.2,
+          "problemi": [
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.2"
+          ]
+        },
+        {
+          "lettera": "D",
+          "testo": "A una risposta prudente che dichiara chiaramente incertezza",
+          "similarita": 0.401,
+          "sovrapposizione": 0.2,
+          "problemi": [
+            "condivide pochi concetti chiave con la corretta, sovrapposizione 0.2"
+          ]
+        }
+      ],
+      "problemi": [
+        "Opzione C: condivide pochi concetti chiave con la corretta, sovrapposizione 0.2.",
+        "Opzione D: condivide pochi concetti chiave con la corretta, sovrapposizione 0.2."
+      ],
+      "gravita": 40
+    },
+    {
+      "id": "AI-INT-0008",
+      "livello": "intermedio",
+      "domanda": "Che cosa può succedere se un dataset contiene molti esempi sbilanciati verso una sola classe?",
+      "opzioni": [
+        "Il modello può imparare a favorire quella classe nelle previsioni",
+        "Il modello può imparare a favorire la classe meno presente per compensare automaticamente lo sbilanciamento",
+        "Il modello può migliorare sulle classi rare anche senza esempi sufficienti",
+        "Il modello può rendere inutile ogni metrica diversa dall'accuratezza"
+      ],
+      "corretta": "A",
+      "analisi_opzioni": [
+        {
+          "lettera": "B",
+          "testo": "Il modello può imparare a favorire la classe meno presente per compensare automaticamente lo sbilanciamento",
+          "similarita": 0.546,
+          "sovrapposizione": 0.83,
+          "problemi": [
+            "contiene parole che la rendono eliminabile: automaticamente"
+          ]
+        },
+        {
+          "lettera": "C",
+          "testo": "Il modello può migliorare sulle classi rare anche senza esempi sufficienti",
+          "similarita": 0.406,
+          "sovrapposizione": 0.33,
+          "problemi": []
+        },
+        {
+          "lettera": "D",
+          "testo": "Il modello può rendere inutile ogni metrica diversa dall'accuratezza",
+          "similarita": 0.403,
+          "sovrapposizione": 0.33,
+          "problemi": []
+        }
+      ],
+      "problemi": [
+        "Opzione B: contiene parole che la rendono eliminabile: automaticamente."
+      ],
+      "gravita": 20
+    },
+    {
+      "id": "AI-FAC-0101",
+      "livello": "facile",
+      "domanda": "Quale attività descrive meglio un modello di intelligenza artificiale?",
+      "opzioni": [
+        "Riconoscere schemi nei dati e usare questi schemi per produrre risposte o previsioni",
+        "Riconoscere schemi nei dati ma usarli solo per copiare risposte già presenti negli esempi",
+        "Memorizzare dati senza estrarre schemi utili per fare previsioni",
+        "Salvare file del computer senza usarli per produrre risposte o previsioni"
+      ],
+      "corretta": "A",
+      "analisi_opzioni": [
+        {
+          "lettera": "B",
+          "testo": "Riconoscere schemi nei dati ma usarli solo per copiare risposte già presenti negli esempi",
+          "similarita": 0.564,
+          "sovrapposizione": 0.5,
+          "problemi": [
+            "contiene parole che la rendono eliminabile: solo"
+          ]
+        },
+        {
+          "lettera": "C",
+          "testo": "Memorizzare dati senza estrarre schemi utili per fare previsioni",
+          "similarita": 0.422,
+          "sovrapposizione": 0.38,
+          "problemi": []
+        },
+        {
+          "lettera": "D",
+          "testo": "Salvare file del computer senza usarli per produrre risposte o previsioni",
+          "similarita": 0.496,
+          "sovrapposizione": 0.38,
+          "problemi": []
+        }
+      ],
+      "problemi": [
+        "Opzione B: contiene parole che la rendono eliminabile: solo."
+      ],
+      "gravita": 20
+    },
+    {
+      "id": "AI-FAC-0103",
+      "livello": "facile",
+      "domanda": "Perché i dati di addestramento sono importanti per un modello AI?",
+      "opzioni": [
+        "Perché influenzano ciò che il modello impara e come risponde",
+        "Perché influenzano il modello, ma rendono inutile controllare le risposte generate",
+        "Perché servono solo a verificare il modello dopo l'addestramento",
+        "Perché definiscono manualmente ogni risposta che il modello dovrà dare"
+      ],
+      "corretta": "A",
+      "analisi_opzioni": [
+        {
+          "lettera": "B",
+          "testo": "Perché influenzano il modello, ma rendono inutile controllare le risposte generate",
+          "similarita": 0.499,
+          "sovrapposizione": 0.5,
+          "problemi": []
+        },
+        {
+          "lettera": "C",
+          "testo": "Perché servono solo a verificare il modello dopo l'addestramento",
+          "similarita": 0.461,
+          "sovrapposizione": 0.33,
+          "problemi": [
+            "contiene parole che la rendono eliminabile: solo"
+          ]
+        },
+        {
+          "lettera": "D",
+          "testo": "Perché definiscono manualmente ogni risposta che il modello dovrà dare",
+          "similarita": 0.43,
+          "sovrapposizione": 0.33,
+          "problemi": []
+        }
+      ],
+      "problemi": [
+        "Opzione C: contiene parole che la rendono eliminabile: solo."
+      ],
+      "gravita": 20
+    }
+  ]
+}
