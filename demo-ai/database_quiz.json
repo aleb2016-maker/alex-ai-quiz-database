@@ -3771,11 +3771,11 @@
     "opzioni": [
       "She has a blue backpack.",
       "She have a blue backpack.",
-      "She is have a blue backpack.",
-      "She has got blue backpack."
+      "She has blue backpack.",
+      "She is has a blue backpack."
     ],
     "risposta_corretta": "She has a blue backpack.",
-    "spiegazione": "Con 'she' al presente semplice si usa 'has'. 'She have' è sbagliato perché 'have' non concorda con 'she'. 'She is have' usa una struttura errata. 'She has got blue backpack' manca dell'articolo 'a' prima di 'blue backpack'. Traduzione domanda: \"Quale frase usa correttamente il presente semplice con il soggetto 'lei'?\" Traduzione risposta: \"Lei ha uno zaino blu.\"",
+    "spiegazione": "Con 'she' al presente semplice si usa 'has'. 'She have a blue backpack' sbaglia la concordanza del verbo. 'She has blue backpack' manca dell'articolo 'a'. 'She is has a blue backpack' mescola due verbi ausiliari in modo errato. Traduzione domanda: \"Quale frase usa correttamente il presente semplice con il soggetto 'lei'?\" Traduzione risposta: \"Lei ha uno zaino blu.\"",
     "tags": [
       "inglese",
       "grammatica",
@@ -3784,6 +3784,8 @@
     "difficolta": 1,
     "traduzione_italiana_domanda": "Quale frase usa correttamente il presente semplice con il soggetto 'lei'?",
     "traduzione_italiana_risposta_corretta": "Lei ha uno zaino blu.",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve essere vicina alla corretta per struttura, significato o contesto, ma sbagliata per un dettaglio preciso: verbo, tempo, articolo, preposizione, connettivo, registro o traduzione.",
     "_materia_demo": "Inglese",
     "_file_origine": "data/inglese.json",
     "materia": "Inglese"
@@ -3796,12 +3798,12 @@
     "domanda": "Quale frase usa correttamente il present perfect?",
     "opzioni": [
       "I have just finished my homework.",
-      "I have finished my homework yesterday.",
-      "I am finished my homework.",
-      "I just have finish my homework."
+      "I have just finish my homework.",
+      "I just finished my homework.",
+      "I have finished my homework yesterday."
     ],
     "risposta_corretta": "I have just finished my homework.",
-    "spiegazione": "Il present perfect si forma con 'have/has' + participio passato. 'I have just finished my homework' è corretto. Con un tempo passato preciso come 'yesterday' di solito si usa il past simple. Traduzione domanda: \"Quale frase usa correttamente il present perfect?\" Traduzione risposta: \"Ho appena finito i miei compiti.\"",
+    "spiegazione": "Il present perfect si forma con 'have/has' + participio passato. 'I have just finished my homework' è corretto perché usa 'have' + 'finished'. 'I have just finish' usa la forma base invece del participio passato. 'I just finished' è past simple, mentre con 'yesterday' di solito si usa il past simple e non il present perfect. Traduzione domanda: \"Quale frase usa correttamente il present perfect?\" Traduzione risposta: \"Ho appena finito i miei compiti.\"",
     "tags": [
       "inglese",
       "present perfect",
@@ -3810,6 +3812,8 @@
     "difficolta": 2,
     "traduzione_italiana_domanda": "Quale frase usa correttamente il present perfect?",
     "traduzione_italiana_risposta_corretta": "Ho appena finito i miei compiti.",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve essere vicina alla corretta per struttura, significato o contesto, ma sbagliata per un dettaglio preciso: verbo, tempo, articolo, preposizione, connettivo, registro o traduzione.",
     "_materia_demo": "Inglese",
     "_file_origine": "data/inglese.json",
     "materia": "Inglese"
@@ -3823,11 +3827,11 @@
     "opzioni": [
       "yet",
       "because",
-      "unless",
-      "therefore"
+      "therefore",
+      "although"
     ],
     "risposta_corretta": "yet",
-    "spiegazione": "'Yet' è corretto perché introduce un contrasto: l'app è semplice da usare, ma offre anche funzioni avanzate. 'Because' indica causa, 'unless' indica condizione negativa, 'therefore' indica conseguenza. Traduzione domanda: \"Completa la frase scegliendo il connettivo più adatto: L'app è semplice da usare, ___ offre funzionalità avanzate per utenti esperti.\" Traduzione risposta: \"eppure\"",
+    "spiegazione": "'Yet' è corretto perché introduce un contrasto tra due idee: l'app è semplice da usare, ma offre anche funzioni avanzate. 'Because' introduce una causa, 'therefore' una conseguenza. 'Although' esprime contrasto, ma in questa posizione dopo la virgola non completa la frase in modo naturale come 'yet'. Traduzione domanda: \"Completa la frase scegliendo il connettivo più adatto: L'app è semplice da usare, ___ offre funzionalità avanzate per utenti esperti.\" Traduzione risposta: \"eppure\"",
     "tags": [
       "inglese",
       "connettivi",
@@ -3836,6 +3840,8 @@
     "difficolta": 3,
     "traduzione_italiana_domanda": "Completa la frase scegliendo il connettivo più adatto: L'app è semplice da usare, ___ offre funzionalità avanzate per utenti esperti.",
     "traduzione_italiana_risposta_corretta": "eppure",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve essere vicina alla corretta per struttura, significato o contesto, ma sbagliata per un dettaglio preciso: verbo, tempo, articolo, preposizione, connettivo, registro o traduzione.",
     "_materia_demo": "Inglese",
     "_file_origine": "data/inglese.json",
     "materia": "Inglese"
@@ -3853,7 +3859,7 @@
       "They am students."
     ],
     "risposta_corretta": "They are students.",
-    "spiegazione": "'They are students' è corretto perché 'they' richiede 'are' e il nome deve essere al plurale: 'students'. 'They is' usa il verbo sbagliato, 'They are student' sbaglia il plurale, mentre 'They am' usa una forma che si usa solo con 'I'. Traduzione domanda: \"Quale frase usa correttamente il presente con il soggetto 'they'?\" Traduzione risposta: \"Loro sono studenti.\"",
+    "spiegazione": "'They are students' è corretto perché 'they' richiede 'are' e il nome deve essere al plurale: 'students'. 'They is students' usa il verbo sbagliato. 'They are student' sbaglia il plurale del nome. 'They am students' usa una forma verbale che si usa con 'I', non con 'they'. Traduzione domanda: \"Quale frase usa correttamente il presente con il soggetto 'they'?\" Traduzione risposta: \"Loro sono studenti.\"",
     "tags": [
       "inglese",
       "to be",
@@ -3862,6 +3868,8 @@
     "difficolta": 1,
     "traduzione_italiana_domanda": "Quale frase usa correttamente il presente con il soggetto 'they'?",
     "traduzione_italiana_risposta_corretta": "Loro sono studenti.",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve essere vicina alla corretta per struttura, significato o contesto, ma sbagliata per un dettaglio preciso: verbo, tempo, articolo, preposizione, connettivo, registro o traduzione.",
     "_materia_demo": "Inglese",
     "_file_origine": "data/inglese.json",
     "materia": "Inglese"
@@ -3876,10 +3884,10 @@
       "She visited London last year.",
       "She has visited London last year.",
       "She visit London last year.",
-      "She was visit London last year."
+      "She was visited London last year."
     ],
     "risposta_corretta": "She visited London last year.",
-    "spiegazione": "Con un tempo passato preciso come 'last year' si usa il past simple. 'Visited' è la forma corretta del verbo regolare al passato. Traduzione domanda: \"Quale frase usa correttamente il past simple?\" Traduzione risposta: \"Lei ha visitato Londra l'anno scorso.\"",
+    "spiegazione": "Con un tempo passato preciso come 'last year' si usa il past simple. 'She visited London last year' è corretto. 'She has visited London last year' mescola present perfect e tempo passato preciso. 'She visit London last year' non usa il passato. 'She was visited London last year' crea una struttura passiva non adatta al significato della frase. Traduzione domanda: \"Quale frase usa correttamente il past simple?\" Traduzione risposta: \"Lei ha visitato Londra l'anno scorso.\"",
     "tags": [
       "inglese",
       "past simple",
@@ -3888,6 +3896,8 @@
     "difficolta": 2,
     "traduzione_italiana_domanda": "Quale frase usa correttamente il past simple?",
     "traduzione_italiana_risposta_corretta": "Lei ha visitato Londra l'anno scorso.",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve essere vicina alla corretta per struttura, significato o contesto, ma sbagliata per un dettaglio preciso: verbo, tempo, articolo, preposizione, connettivo, registro o traduzione.",
     "_materia_demo": "Inglese",
     "_file_origine": "data/inglese.json",
     "materia": "Inglese"
@@ -3905,7 +3915,7 @@
       "otherwise"
     ],
     "risposta_corretta": "however",
-    "spiegazione": "'However' introduce un contrasto: il sistema è potente, ma richiede comunque test accurati. 'Therefore' indica conseguenza, 'moreover' aggiunge un'informazione, mentre 'otherwise' indica una conseguenza alternativa. Traduzione domanda: \"Completa la frase: Il sistema è potente; ___, richiede test accurati prima della distribuzione.\" Traduzione risposta: \"tuttavia\"",
+    "spiegazione": "'However' introduce un contrasto: il sistema è potente, ma richiede comunque test accurati prima della distribuzione. 'Therefore' indica conseguenza, 'moreover' aggiunge un'informazione nella stessa direzione, mentre 'otherwise' indica un'alternativa o conseguenza se non si fa qualcosa. Traduzione domanda: \"Completa la frase: Il sistema è potente; ___, richiede test accurati prima della distribuzione.\" Traduzione risposta: \"tuttavia\"",
     "tags": [
       "inglese",
       "connettivi",
@@ -3914,6 +3924,8 @@
     "difficolta": 3,
     "traduzione_italiana_domanda": "Completa la frase: Il sistema è potente; ___, richiede test accurati prima della distribuzione.",
     "traduzione_italiana_risposta_corretta": "tuttavia",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve essere vicina alla corretta per struttura, significato o contesto, ma sbagliata per un dettaglio preciso: verbo, tempo, articolo, preposizione, connettivo, registro o traduzione.",
     "_materia_demo": "Inglese",
     "_file_origine": "data/inglese.json",
     "materia": "Inglese"
@@ -3931,7 +3943,7 @@
       "some"
     ],
     "risposta_corretta": "an",
-    "spiegazione": "Si usa 'an' davanti a parole che iniziano con suono vocalico, come 'apple'. Traduzione domanda: \"Completa la frase: Ho ___ mela nella borsa.\" Traduzione risposta: \"una\"",
+    "spiegazione": "Si usa 'an' davanti a parole che iniziano con suono vocalico, come 'apple'. 'A' si usa davanti a suono consonantico. 'The' indica qualcosa di specifico, mentre 'some' non si usa normalmente con il singolare 'apple' in questa struttura. Traduzione domanda: \"Completa la frase: Ho ___ mela nella borsa.\" Traduzione risposta: \"una\"",
     "tags": [
       "inglese",
       "articoli",
@@ -3940,6 +3952,8 @@
     "difficolta": 1,
     "traduzione_italiana_domanda": "Completa la frase: Ho ___ mela nella borsa.",
     "traduzione_italiana_risposta_corretta": "una",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve essere vicina alla corretta per struttura, significato o contesto, ma sbagliata per un dettaglio preciso: verbo, tempo, articolo, preposizione, connettivo, registro o traduzione.",
     "_materia_demo": "Inglese",
     "_file_origine": "data/inglese.json",
     "materia": "Inglese"
@@ -3957,7 +3971,7 @@
       "difficulter"
     ],
     "risposta_corretta": "more difficult",
-    "spiegazione": "Dopo 'than' serve il comparativo. Con un aggettivo lungo come 'difficult' si usa 'more difficult'. 'Most difficult' è superlativo, 'more difficulty' usa un nome invece dell'aggettivo, mentre 'difficulter' non è la forma corretta. Traduzione domanda: \"Completa la frase: Questo esercizio è ___ del precedente.\" Traduzione risposta: \"più difficile\"",
+    "spiegazione": "Dopo 'than' serve il comparativo. Con un aggettivo lungo come 'difficult' si usa 'more difficult'. 'Most difficult' è superlativo, 'more difficulty' usa un nome invece dell'aggettivo, mentre 'difficulter' non è una forma corretta. Traduzione domanda: \"Completa la frase: Questo esercizio è ___ del precedente.\" Traduzione risposta: \"più difficile\"",
     "tags": [
       "inglese",
       "comparativi",
@@ -3966,6 +3980,8 @@
     "difficolta": 2,
     "traduzione_italiana_domanda": "Completa la frase: Questo esercizio è ___ del precedente.",
     "traduzione_italiana_risposta_corretta": "più difficile",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve essere vicina alla corretta per struttura, significato o contesto, ma sbagliata per un dettaglio preciso: verbo, tempo, articolo, preposizione, connettivo, registro o traduzione.",
     "_materia_demo": "Inglese",
     "_file_origine": "data/inglese.json",
     "materia": "Inglese"
@@ -3979,11 +3995,11 @@
     "opzioni": [
       "The developer who fixed the bug updated the repository.",
       "The developer which fixed the bug updated the repository.",
-      "The developer that fixing the bug updated the repository.",
+      "The developer who fixing the bug updated the repository.",
       "The developer whose fixed the bug updated the repository."
     ],
     "risposta_corretta": "The developer who fixed the bug updated the repository.",
-    "spiegazione": "Per riferirsi a una persona in una frase relativa si usa normalmente 'who'. 'Which' si usa più spesso per cose o animali, 'that fixing' è una struttura errata, mentre 'whose' indica possesso e non può sostituire 'who' in questa frase. Traduzione domanda: \"Scegli la frase corretta:\" Traduzione risposta: \"Lo sviluppatore che ha corretto il bug ha aggiornato il repository.\"",
+    "spiegazione": "Per riferirsi a una persona in una frase relativa si usa normalmente 'who'. 'The developer who fixed the bug updated the repository' è corretto. 'Which' si usa più spesso per cose o animali. 'Who fixing' manca del verbo corretto nella relativa. 'Whose' indica possesso e non può sostituire 'who' in questa frase. Traduzione domanda: \"Scegli la frase corretta:\" Traduzione risposta: \"Lo sviluppatore che ha corretto il bug ha aggiornato il repository.\"",
     "tags": [
       "inglese",
       "relative clauses",
@@ -3992,6 +4008,8 @@
     "difficolta": 3,
     "traduzione_italiana_domanda": "Scegli la frase corretta:",
     "traduzione_italiana_risposta_corretta": "Lo sviluppatore che ha corretto il bug ha aggiornato il repository.",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve essere vicina alla corretta per struttura, significato o contesto, ma sbagliata per un dettaglio preciso: verbo, tempo, articolo, preposizione, connettivo, registro o traduzione.",
     "_materia_demo": "Inglese",
     "_file_origine": "data/inglese.json",
     "materia": "Inglese"
@@ -4005,11 +4023,11 @@
     "opzioni": [
       "cold",
       "warm",
-      "dry",
-      "soft"
+      "cool",
+      "dry"
     ],
     "risposta_corretta": "cold",
-    "spiegazione": "'Hot' significa caldo. Il contrario più diretto è 'cold', cioè freddo. Traduzione domanda: \"Quale parola inglese indica il contrario di 'hot'?\" Traduzione risposta: \"freddo\"",
+    "spiegazione": "'Hot' significa caldo. Il contrario più diretto è 'cold', cioè freddo. 'Warm' significa caldo/tiepido, quindi è vicino ma non contrario. 'Cool' può significare fresco, ma non è il contrario più diretto in questa domanda base. 'Dry' significa asciutto. Traduzione domanda: \"Quale parola inglese indica il contrario di 'hot'?\" Traduzione risposta: \"freddo\"",
     "tags": [
       "inglese",
       "vocabolario",
@@ -4018,6 +4036,8 @@
     "difficolta": 1,
     "traduzione_italiana_domanda": "Quale parola inglese indica il contrario di 'hot'?",
     "traduzione_italiana_risposta_corretta": "freddo",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve essere vicina alla corretta per struttura, significato o contesto, ma sbagliata per un dettaglio preciso: verbo, tempo, articolo, preposizione, connettivo, registro o traduzione.",
     "_materia_demo": "Inglese",
     "_file_origine": "data/inglese.json",
     "materia": "Inglese"
@@ -4030,12 +4050,12 @@
     "domanda": "Quale frase esprime meglio un obbligo?",
     "opzioni": [
       "You must wear a helmet.",
+      "You should wear a helmet.",
       "You might wear a helmet.",
-      "You could wear a helmet.",
-      "You would wear a helmet."
+      "You could wear a helmet."
     ],
     "risposta_corretta": "You must wear a helmet.",
-    "spiegazione": "'Must' esprime obbligo o necessità forte. 'Might', 'could' e 'would' indicano possibilità o condizione, non obbligo. Traduzione domanda: \"Quale frase esprime meglio un obbligo?\" Traduzione risposta: \"Devi indossare il casco.\"",
+    "spiegazione": "'Must' esprime obbligo o necessità forte. 'You should wear a helmet' è un consiglio forte, ma non obbligo pieno. 'Might' e 'could' indicano possibilità, non obbligo. Traduzione domanda: \"Quale frase esprime meglio un obbligo?\" Traduzione risposta: \"Devi indossare il casco.\"",
     "tags": [
       "inglese",
       "modali",
@@ -4044,6 +4064,8 @@
     "difficolta": 2,
     "traduzione_italiana_domanda": "Quale frase esprime meglio un obbligo?",
     "traduzione_italiana_risposta_corretta": "Devi indossare il casco.",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve essere vicina alla corretta per struttura, significato o contesto, ma sbagliata per un dettaglio preciso: verbo, tempo, articolo, preposizione, connettivo, registro o traduzione.",
     "_materia_demo": "Inglese",
     "_file_origine": "data/inglese.json",
     "materia": "Inglese"
@@ -4061,7 +4083,7 @@
       "The report was reviewing by the team."
     ],
     "risposta_corretta": "The report was reviewed by the team.",
-    "spiegazione": "La forma passiva corretta usa il verbo 'to be' più il participio passato: 'was reviewed'. 'Has been review' è sbagliato perché manca il participio 'reviewed'. 'Is reviewed yesterday' mescola presente e tempo passato preciso. 'Was reviewing' è una forma attiva/progressiva, non passiva corretta. Traduzione domanda: \"Quale frase usa correttamente la forma passiva?\" Traduzione risposta: \"Il report è stato revisionato dal team.\"",
+    "spiegazione": "La forma passiva corretta usa il verbo 'to be' più il participio passato. 'The report was reviewed by the team' è corretto perché usa 'was reviewed'. 'Has been review' manca del participio passato 'reviewed'. 'Is reviewed yesterday' mescola presente e tempo passato preciso. 'Was reviewing' è progressivo, non passivo corretto in questa frase. Traduzione domanda: \"Quale frase usa correttamente la forma passiva?\" Traduzione risposta: \"Il report è stato revisionato dal team.\"",
     "tags": [
       "inglese",
       "passivo",
@@ -4070,6 +4092,8 @@
     "difficolta": 3,
     "traduzione_italiana_domanda": "Quale frase usa correttamente la forma passiva?",
     "traduzione_italiana_risposta_corretta": "Il report è stato revisionato dal team.",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve essere vicina alla corretta per struttura, significato o contesto, ma sbagliata per un dettaglio preciso: verbo, tempo, articolo, preposizione, connettivo, registro o traduzione.",
     "_materia_demo": "Inglese",
     "_file_origine": "data/inglese.json",
     "materia": "Inglese"
@@ -4082,12 +4106,12 @@
     "domanda": "Completa la frase: The book is ___ the table.",
     "opzioni": [
       "on",
+      "in",
       "at",
-      "to",
-      "from"
+      "to"
     ],
     "risposta_corretta": "on",
-    "spiegazione": "Si usa 'on' quando qualcosa si trova sopra una superficie. La frase significa: il libro è sul tavolo. Traduzione domanda: \"Completa la frase: Il libro è ___ tavolo.\" Traduzione risposta: \"sul\"",
+    "spiegazione": "Si usa 'on' quando qualcosa si trova sopra una superficie. 'The book is on the table' significa che il libro è sul tavolo. 'In' indica dentro, 'at' indica posizione generica o punto, 'to' indica movimento verso qualcosa. Traduzione domanda: \"Completa la frase: Il libro è ___ tavolo.\" Traduzione risposta: \"sul\"",
     "tags": [
       "inglese",
       "preposizioni",
@@ -4096,6 +4120,8 @@
     "difficolta": 1,
     "traduzione_italiana_domanda": "Completa la frase: Il libro è ___ tavolo.",
     "traduzione_italiana_risposta_corretta": "sul",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve essere vicina alla corretta per struttura, significato o contesto, ma sbagliata per un dettaglio preciso: verbo, tempo, articolo, preposizione, connettivo, registro o traduzione.",
     "_materia_demo": "Inglese",
     "_file_origine": "data/inglese.json",
     "materia": "Inglese"
@@ -4109,11 +4135,11 @@
     "opzioni": [
       "will stay",
       "would stay",
-      "are staying",
+      "stay",
       "stayed"
     ],
     "risposta_corretta": "will stay",
-    "spiegazione": "Nel first conditional si usa 'if' + present simple e poi 'will' + verbo base. Quindi: 'If it rains tomorrow, we will stay at home. ' 'Would stay' appartiene più al second conditional, 'are staying' indica un piano già organizzato, mentre 'stayed' è passato. Traduzione domanda: \"Completa la frase: Se domani piove, noi ___ a casa.\" Traduzione risposta: \"resteremo\"",
+    "spiegazione": "Nel first conditional si usa 'if' + present simple e poi 'will' + verbo base. La frase corretta è: 'If it rains tomorrow, we will stay at home.' 'Would stay' appartiene più al second conditional, 'stay' manca di 'will' nella frase principale, mentre 'stayed' è passato. Traduzione domanda: \"Completa la frase: Se domani piove, noi ___ a casa.\" Traduzione risposta: \"resteremo\"",
     "tags": [
       "inglese",
       "conditionals",
@@ -4122,6 +4148,8 @@
     "difficolta": 2,
     "traduzione_italiana_domanda": "Completa la frase: Se domani piove, noi ___ a casa.",
     "traduzione_italiana_risposta_corretta": "resteremo",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve essere vicina alla corretta per struttura, significato o contesto, ma sbagliata per un dettaglio preciso: verbo, tempo, articolo, preposizione, connettivo, registro o traduzione.",
     "_materia_demo": "Inglese",
     "_file_origine": "data/inglese.json",
     "materia": "Inglese"
@@ -4136,10 +4164,10 @@
       "You should consider updating the documentation.",
       "You should update the documentation immediately.",
       "You could update the documentation if necessary.",
-      "You might want to update the documentation."
+      "You must update the documentation now."
     ],
     "risposta_corretta": "You should consider updating the documentation.",
-    "spiegazione": "La frase 'You should consider updating it' esprime un consiglio formale e prudente. 'You should update it immediately' è più diretto, mentre 'could' indica possibilità e 'might want to' è più informale. Traduzione domanda: \"Quale frase esprime meglio un consiglio formale?\" Traduzione risposta: \"Dovresti valutare di aggiornare la documentazione.\"",
+    "spiegazione": "'You should consider updating the documentation' esprime un consiglio formale e prudente. 'You should update the documentation immediately' è più diretto e urgente. 'You could update the documentation if necessary' indica possibilità, non consiglio formale chiaro. 'You must update the documentation now' esprime obbligo immediato. Traduzione domanda: \"Quale frase esprime meglio un consiglio formale?\" Traduzione risposta: \"Dovresti valutare di aggiornare la documentazione.\"",
     "tags": [
       "inglese",
       "registro",
@@ -4148,6 +4176,8 @@
     "difficolta": 3,
     "traduzione_italiana_domanda": "Quale frase esprime meglio un consiglio formale?",
     "traduzione_italiana_risposta_corretta": "Dovresti valutare di aggiornare la documentazione.",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve essere vicina alla corretta per struttura, significato o contesto, ma sbagliata per un dettaglio preciso: verbo, tempo, articolo, preposizione, connettivo, registro o traduzione.",
     "_materia_demo": "Inglese",
     "_file_origine": "data/inglese.json",
     "materia": "Inglese"
@@ -4165,7 +4195,7 @@
       "childrens"
     ],
     "risposta_corretta": "children",
-    "spiegazione": "'Child' ha un plurale irregolare: 'children'. Le altre forme non sono corrette. Traduzione domanda: \"Qual è il plurale corretto di 'child'?\" Traduzione risposta: \"bambini\"",
+    "spiegazione": "'Child' ha un plurale irregolare: 'children'. 'Childs', 'childes' e 'childrens' sembrano forme plurali possibili, ma non sono corrette in inglese standard. Traduzione domanda: \"Qual è il plurale corretto di 'child'?\" Traduzione risposta: \"bambini\"",
     "tags": [
       "inglese",
       "plurali",
@@ -4174,6 +4204,8 @@
     "difficolta": 1,
     "traduzione_italiana_domanda": "Qual è il plurale corretto di 'child'?",
     "traduzione_italiana_risposta_corretta": "bambini",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve essere vicina alla corretta per struttura, significato o contesto, ma sbagliata per un dettaglio preciso: verbo, tempo, articolo, preposizione, connettivo, registro o traduzione.",
     "_materia_demo": "Inglese",
     "_file_origine": "data/inglese.json",
     "materia": "Inglese"
@@ -4188,10 +4220,10 @@
       "spegnere",
       "accendere",
       "abbassare",
-      "scollegare"
+      "staccare"
     ],
     "risposta_corretta": "spegnere",
-    "spiegazione": "'Turn off' significa spegnere. 'Turn on' significa accendere, 'turn down' può significare abbassare, mentre 'unplug' significa scollegare. Traduzione domanda: \"Nella frase 'Please turn off the light', che cosa significa 'turn off'?\" Traduzione risposta: \"spegnere\"",
+    "spiegazione": "'Turn off' significa spegnere. 'Turn on' significa accendere, 'turn down' può significare abbassare, mentre 'unplug' significa staccare o scollegare. Traduzione domanda: \"Nella frase 'Please turn off the light', che cosa significa 'turn off'?\" Traduzione risposta: \"spegnere\"",
     "tags": [
       "inglese",
       "phrasal verbs",
@@ -4200,6 +4232,8 @@
     "difficolta": 2,
     "traduzione_italiana_domanda": "Nella frase 'Please turn off the light', che cosa significa 'turn off'?",
     "traduzione_italiana_risposta_corretta": "spegnere",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve essere vicina alla corretta per struttura, significato o contesto, ma sbagliata per un dettaglio preciso: verbo, tempo, articolo, preposizione, connettivo, registro o traduzione.",
     "_materia_demo": "Inglese",
     "_file_origine": "data/inglese.json",
     "materia": "Inglese"
@@ -4213,11 +4247,11 @@
     "opzioni": [
       "He said that he was working on the project.",
       "He said that he is working on the project.",
-      "He said that he had worked on the project.",
+      "He said that he had been working on the project.",
       "He said that he worked on the project."
     ],
     "risposta_corretta": "He said that he was working on the project.",
-    "spiegazione": "Con il backshift standard del discorso indiretto, 'I am working' diventa 'he was working'. 'Is working' non applica il backshift, 'had worked' cambia il significato verso il past perfect, mentre 'worked' perde l'idea dell'azione in corso. Traduzione domanda: \"Quale frase trasforma correttamente 'I am working on the project' nel discorso indiretto con backshift standard?\" Traduzione risposta: \"Lui disse che stava lavorando al progetto.\"",
+    "spiegazione": "Con il backshift standard del discorso indiretto, 'I am working' diventa 'he was working'. 'He said that he was working on the project' mantiene l'idea dell'azione in corso. 'Is working' non applica il backshift. 'Had been working' sposta il tempo ancora più indietro. 'Worked' perde l'idea dell'azione in corso. Traduzione domanda: \"Quale frase trasforma correttamente 'I am working on the project' nel discorso indiretto con backshift standard?\" Traduzione risposta: \"Lui disse che stava lavorando al progetto.\"",
     "tags": [
       "inglese",
       "reported speech",
@@ -4226,6 +4260,8 @@
     "difficolta": 3,
     "traduzione_italiana_domanda": "Quale frase trasforma correttamente 'I am working on the project' nel discorso indiretto con backshift standard?",
     "traduzione_italiana_risposta_corretta": "Lui disse che stava lavorando al progetto.",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve essere vicina alla corretta per struttura, significato o contesto, ma sbagliata per un dettaglio preciso: verbo, tempo, articolo, preposizione, connettivo, registro o traduzione.",
     "_materia_demo": "Inglese",
     "_file_origine": "data/inglese.json",
     "materia": "Inglese"
@@ -4243,7 +4279,7 @@
       "I am looking after starting the course."
     ],
     "risposta_corretta": "I am looking forward to starting the course.",
-    "spiegazione": "'Look forward to' significa non vedere l'ora di fare qualcosa. Dopo 'to' in questa espressione si usa il verbo in -ing: 'starting'. 'Looking for' significa cercare, mentre 'looking after' significa prendersi cura di. Traduzione domanda: \"Quale frase corrisponde meglio a: 'Non vedo l'ora di iniziare il corso'?\" Traduzione risposta: \"Non vedo l'ora di iniziare il corso.\"",
+    "spiegazione": "'Look forward to' significa non vedere l'ora di fare qualcosa. Dopo 'to' in questa espressione si usa il verbo in -ing: 'starting'. 'Looking forward to start' usa la forma verbale sbagliata. 'Looking for' significa cercare, mentre 'looking after' significa prendersi cura di. Traduzione domanda: \"Quale frase corrisponde meglio a: 'Non vedo l'ora di iniziare il corso'?\" Traduzione risposta: \"Non vedo l'ora di iniziare il corso.\"",
     "tags": [
       "inglese",
       "espressioni",
@@ -4252,6 +4288,8 @@
     "difficolta": 2,
     "traduzione_italiana_domanda": "Quale frase corrisponde meglio a: 'Non vedo l'ora di iniziare il corso'?",
     "traduzione_italiana_risposta_corretta": "Non vedo l'ora di iniziare il corso.",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve essere vicina alla corretta per struttura, significato o contesto, ma sbagliata per un dettaglio preciso: verbo, tempo, articolo, preposizione, connettivo, registro o traduzione.",
     "_materia_demo": "Inglese",
     "_file_origine": "data/inglese.json",
     "materia": "Inglese"
@@ -4265,11 +4303,11 @@
     "opzioni": [
       "La funzionalità è compatibile con versioni precedenti.",
       "La funzionalità richiede solo versioni successive.",
-      "La funzionalità mantiene la stessa interfaccia ma non supporta versioni vecchie.",
+      "La funzionalità funziona solo se tutte le versioni vecchie vengono rimosse.",
       "La funzionalità è stata riscritta senza garantire compatibilità."
     ],
     "risposta_corretta": "La funzionalità è compatibile con versioni precedenti.",
-    "spiegazione": "'Backward compatible' significa che una funzionalità rimane compatibile con versioni precedenti del sistema o del software. Le altre opzioni sono plausibili nel contesto software, ma indicano compatibilità futura, mancato supporto o assenza di garanzie. Traduzione domanda: \"Nel contesto software, quale frase rende meglio 'The feature is backward compatible'?\" Traduzione risposta: \"La funzionalità è compatibile con versioni precedenti.\"",
+    "spiegazione": "'Backward compatible' significa che una funzionalità rimane compatibile con versioni precedenti del sistema o del software. Le altre opzioni sono plausibili nel contesto software, ma indicano compatibilità solo futura, rimozione del supporto alle versioni vecchie o assenza di garanzie. Traduzione domanda: \"Nel contesto software, quale frase rende meglio 'The feature is backward compatible'?\" Traduzione risposta: \"La funzionalità è compatibile con versioni precedenti.\"",
     "tags": [
       "inglese",
       "lessico_tecnico",
@@ -4278,6 +4316,8 @@
     "difficolta": 3,
     "traduzione_italiana_domanda": "Nel contesto software, quale frase rende meglio 'The feature is backward compatible'?",
     "traduzione_italiana_risposta_corretta": "La funzionalità è compatibile con versioni precedenti.",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve essere vicina alla corretta per struttura, significato o contesto, ma sbagliata per un dettaglio preciso: verbo, tempo, articolo, preposizione, connettivo, registro o traduzione.",
     "_materia_demo": "Inglese",
     "_file_origine": "data/inglese.json",
     "materia": "Inglese"

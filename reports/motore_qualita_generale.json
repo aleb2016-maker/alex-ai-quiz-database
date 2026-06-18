@@ -998,7 +998,7 @@
     "problemi_tecnici_totali": 0,
     "avvisi_qualita_reali_totali": 0,
     "errori_linguistici_totali": 0,
-    "note_informative_totali": 31,
+    "note_informative_totali": 37,
     "domande_con_problemi_tecnici": [],
     "domande_con_avvisi_qualita_reali": [],
     "domande_con_errori_linguistici": [],
@@ -1011,8 +1011,8 @@
         "opzioni": [
           "She has a blue backpack.",
           "She have a blue backpack.",
-          "She is have a blue backpack.",
-          "She has got blue backpack."
+          "She has blue backpack.",
+          "She is has a blue backpack."
         ],
         "risposta_corretta": "She has a blue backpack.",
         "posizione_risposta": "A",
@@ -1030,9 +1030,9 @@
         "livello": "intermedio",
         "opzioni": [
           "I have just finished my homework.",
-          "I have finished my homework yesterday.",
-          "I am finished my homework.",
-          "I just have finish my homework."
+          "I have just finish my homework.",
+          "I just finished my homework.",
+          "I have finished my homework yesterday."
         ],
         "risposta_corretta": "I have just finished my homework.",
         "posizione_risposta": "A",
@@ -1051,8 +1051,8 @@
         "opzioni": [
           "yet",
           "because",
-          "unless",
-          "therefore"
+          "therefore",
+          "although"
         ],
         "risposta_corretta": "yet",
         "posizione_risposta": "A",
@@ -1084,6 +1084,26 @@
         ]
       },
       {
+        "id": "ING-INT-0004",
+        "domanda": "Quale frase usa correttamente il past simple?",
+        "categoria": "inglese",
+        "livello": "intermedio",
+        "opzioni": [
+          "She visited London last year.",
+          "She has visited London last year.",
+          "She visit London last year.",
+          "She was visited London last year."
+        ],
+        "risposta_corretta": "She visited London last year.",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "spiegazione: testo molto lungo, controllare leggibilità"
+        ]
+      },
+      {
         "id": "ING-AV-0004",
         "domanda": "Completa la frase: The system is powerful; ___, it requires careful testing before deployment.",
         "categoria": "inglese",
@@ -1095,6 +1115,26 @@
           "otherwise"
         ],
         "risposta_corretta": "however",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "spiegazione: testo molto lungo, controllare leggibilità"
+        ]
+      },
+      {
+        "id": "ING-FAC-0005",
+        "domanda": "Completa la frase: I have ___ apple in my bag.",
+        "categoria": "inglese",
+        "livello": "facile",
+        "opzioni": [
+          "an",
+          "a",
+          "the",
+          "some"
+        ],
+        "risposta_corretta": "an",
         "posizione_risposta": "A",
         "problemi_tecnici": [],
         "avvisi_qualita_reali": [],
@@ -1131,10 +1171,50 @@
         "opzioni": [
           "The developer who fixed the bug updated the repository.",
           "The developer which fixed the bug updated the repository.",
-          "The developer that fixing the bug updated the repository.",
+          "The developer who fixing the bug updated the repository.",
           "The developer whose fixed the bug updated the repository."
         ],
         "risposta_corretta": "The developer who fixed the bug updated the repository.",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "spiegazione: testo molto lungo, controllare leggibilità"
+        ]
+      },
+      {
+        "id": "ING-FAC-0006",
+        "domanda": "Quale parola inglese indica il contrario di 'hot'?",
+        "categoria": "inglese",
+        "livello": "facile",
+        "opzioni": [
+          "cold",
+          "warm",
+          "cool",
+          "dry"
+        ],
+        "risposta_corretta": "cold",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "spiegazione: testo molto lungo, controllare leggibilità"
+        ]
+      },
+      {
+        "id": "ING-INT-0006",
+        "domanda": "Quale frase esprime meglio un obbligo?",
+        "categoria": "inglese",
+        "livello": "intermedio",
+        "opzioni": [
+          "You must wear a helmet.",
+          "You should wear a helmet.",
+          "You might wear a helmet.",
+          "You could wear a helmet."
+        ],
+        "risposta_corretta": "You must wear a helmet.",
         "posizione_risposta": "A",
         "problemi_tecnici": [],
         "avvisi_qualita_reali": [],
@@ -1164,6 +1244,26 @@
         ]
       },
       {
+        "id": "ING-FAC-0007",
+        "domanda": "Completa la frase: The book is ___ the table.",
+        "categoria": "inglese",
+        "livello": "facile",
+        "opzioni": [
+          "on",
+          "in",
+          "at",
+          "to"
+        ],
+        "risposta_corretta": "on",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "spiegazione: testo molto lungo, controllare leggibilità"
+        ]
+      },
+      {
         "id": "ING-INT-0007",
         "domanda": "Completa la frase: If it rains tomorrow, we ___ at home.",
         "categoria": "inglese",
@@ -1171,7 +1271,7 @@
         "opzioni": [
           "will stay",
           "would stay",
-          "are staying",
+          "stay",
           "stayed"
         ],
         "risposta_corretta": "will stay",
@@ -1192,7 +1292,7 @@
           "You should consider updating the documentation.",
           "You should update the documentation immediately.",
           "You could update the documentation if necessary.",
-          "You might want to update the documentation."
+          "You must update the documentation now."
         ],
         "risposta_corretta": "You should consider updating the documentation.",
         "posizione_risposta": "A",
@@ -1212,7 +1312,7 @@
           "spegnere",
           "accendere",
           "abbassare",
-          "scollegare"
+          "staccare"
         ],
         "risposta_corretta": "spegnere",
         "posizione_risposta": "A",
@@ -1231,7 +1331,7 @@
         "opzioni": [
           "He said that he was working on the project.",
           "He said that he is working on the project.",
-          "He said that he had worked on the project.",
+          "He said that he had been working on the project.",
           "He said that he worked on the project."
         ],
         "risposta_corretta": "He said that he was working on the project.",
@@ -1271,7 +1371,7 @@
         "opzioni": [
           "La funzionalità è compatibile con versioni precedenti.",
           "La funzionalità richiede solo versioni successive.",
-          "La funzionalità mantiene la stessa interfaccia ma non supporta versioni vecchie.",
+          "La funzionalità funziona solo se tutte le versioni vecchie vengono rimosse.",
           "La funzionalità è stata riscritta senza garantire compatibilità."
         ],
         "risposta_corretta": "La funzionalità è compatibile con versioni precedenti.",
@@ -1280,6 +1380,7 @@
         "avvisi_qualita_reali": [],
         "errori_linguistici": [],
         "note_informative": [
+          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “tutte”",
           "spiegazione: testo molto lungo, controllare leggibilità"
         ]
       },
