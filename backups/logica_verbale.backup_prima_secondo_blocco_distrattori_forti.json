@@ -1,0 +1,375 @@
+[
+  {
+    "id": "LOG-VER-FAC-0001",
+    "categoria": "logica",
+    "sottocategoria": "logica_verbale",
+    "livello": "facile",
+    "domanda": "Osserva la sequenza: AB → BA, CD → DC, EF →?",
+    "opzioni": [
+      "FE",
+      "EF",
+      "FG",
+      "GF"
+    ],
+    "risposta_corretta": "FE",
+    "spiegazione": "In ogni coppia le due lettere vengono invertite: AB diventa BA, CD diventa DC. Seguendo la stessa regola, EF diventa FE.",
+    "tags": [
+      "lettere",
+      "sequenze",
+      "logica_verbale"
+    ],
+    "difficolta": 1,
+    "distrattore_forte": "EF",
+    "motivo_distrattore_forte": "È vicino perché contiene le stesse due lettere della coppia di partenza, ma è sbagliato perché non le inverte."
+  },
+  {
+    "id": "LOG-VER-INT-0002",
+    "categoria": "logica",
+    "sottocategoria": "logica_verbale",
+    "livello": "intermedio",
+    "domanda": "Completa l'analogia: penna sta a scrivere come forbici stanno a?",
+    "opzioni": [
+      "tagliare",
+      "incollare",
+      "misurare",
+      "disegnare"
+    ],
+    "risposta_corretta": "tagliare",
+    "spiegazione": "La relazione è tra uno strumento e la sua funzione principale. La penna serve principalmente per scrivere; le forbici servono principalmente per tagliare.",
+    "tags": [
+      "analogie",
+      "strumenti",
+      "logica_verbale"
+    ],
+    "difficolta": 2,
+    "distrattore_forte": "incollare",
+    "motivo_distrattore_forte": "È vicino perché è un'azione manuale spesso collegata a carta, forbici e lavori pratici, ma è sbagliato perché la funzione principale delle forbici è tagliare, non incollare."
+  },
+  {
+    "id": "LOG-VER-AV-0003",
+    "categoria": "logica",
+    "sottocategoria": "logica_verbale",
+    "livello": "avanzato",
+    "domanda": "Quale coppia mantiene meglio la stessa relazione logica di: sintomo → diagnosi?",
+    "opzioni": [
+      "indizio → ipotesi",
+      "prova → verdetto",
+      "errore → correzione",
+      "causa → conseguenza"
+    ],
+    "risposta_corretta": "indizio → ipotesi",
+    "spiegazione": "Un sintomo è un segnale che aiuta a formulare una diagnosi, ma non coincide con la diagnosi. Allo stesso modo, un indizio aiuta a formulare un'ipotesi, ma non coincide con una conclusione certa.",
+    "tags": [
+      "analogie",
+      "relazioni_logiche",
+      "logica_verbale"
+    ],
+    "difficolta": 3,
+    "distrattore_forte": "prova → verdetto",
+    "motivo_distrattore_forte": "È vicino perché collega un elemento osservato a una conclusione, ma è sbagliato perché prova e verdetto indicano un rapporto più forte e conclusivo rispetto a sintomo e diagnosi."
+  },
+  {
+    "id": "LOG-VER-INT-0004",
+    "categoria": "logica",
+    "sottocategoria": "logica_verbale",
+    "livello": "intermedio",
+    "domanda": "Quale coppia mantiene meglio la relazione: bozza → documento finale?",
+    "opzioni": [
+      "prototipo → prodotto definitivo",
+      "bozza → revisione",
+      "indice → documento finale",
+      "idea → titolo"
+    ],
+    "risposta_corretta": "prototipo → prodotto definitivo",
+    "spiegazione": "Una bozza è una versione iniziale che può evolvere in un documento finale. Allo stesso modo, un prototipo è una versione iniziale che può evolvere in un prodotto definitivo. Bozza → revisione indica una fase intermedia, non il passaggio completo alla versione finale.",
+    "tags": [
+      "analogie",
+      "relazioni"
+    ],
+    "difficolta": 2,
+    "distrattore_forte": "bozza → revisione",
+    "motivo_distrattore_forte": "È vicino perché riguarda il miglioramento di una bozza, ma è sbagliato perché la revisione è una fase intermedia, non il prodotto finale equivalente."
+  },
+  {
+    "id": "LOG-VER-FAC-0101",
+    "categoria": "logica",
+    "sottocategoria": "logica_verbale",
+    "livello": "facile",
+    "domanda": "Quale parola completa meglio l'analogia: caldo sta a freddo come alto sta a ___?",
+    "opzioni": [
+      "basso",
+      "piccolo",
+      "lungo",
+      "vicino"
+    ],
+    "risposta_corretta": "basso",
+    "spiegazione": "Caldo e freddo sono contrari. Seguendo la stessa logica, il contrario di alto è basso. Piccolo è vicino come idea generale di dimensione, ma non è il contrario diretto di alto.",
+    "tags": [
+      "analogia",
+      "contrari",
+      "logica_verbale"
+    ],
+    "difficolta": 1,
+    "distrattore_forte": "piccolo",
+    "motivo_distrattore_forte": "È vicino perché riguarda una grandezza o dimensione, ma è sbagliato perché il contrario diretto di alto è basso, non piccolo."
+  },
+  {
+    "id": "LOG-VER-INT-0101",
+    "categoria": "logica",
+    "sottocategoria": "logica_verbale",
+    "livello": "intermedio",
+    "domanda": "Completa l'analogia: medico sta a ospedale come insegnante sta a ___?",
+    "opzioni": [
+      "scuola",
+      "classe",
+      "lezione",
+      "libro"
+    ],
+    "risposta_corretta": "scuola",
+    "spiegazione": "Il medico lavora tipicamente in ospedale. Allo stesso modo, l'insegnante lavora tipicamente in una scuola. Classe e lezione sono collegate all'insegnante, ma non rappresentano il luogo generale equivalente.",
+    "tags": [
+      "analogie",
+      "relazioni",
+      "logica_verbale"
+    ],
+    "difficolta": 2,
+    "distrattore_forte": "classe",
+    "motivo_distrattore_forte": "È vicino perché l'insegnante lavora spesso in classe, ma la relazione più generale equivalente a medico → ospedale è insegnante → scuola."
+  },
+  {
+    "id": "LOG-VER-AV-0101",
+    "categoria": "logica",
+    "sottocategoria": "logica_verbale",
+    "livello": "avanzato",
+    "domanda": "Completa l'analogia: allenamento sta a miglioramento come studio sta a ___?",
+    "opzioni": [
+      "apprendimento",
+      "interrogazione",
+      "lezione",
+      "materia"
+    ],
+    "risposta_corretta": "apprendimento",
+    "spiegazione": "L'allenamento può portare a un miglioramento. Allo stesso modo, lo studio può portare ad apprendimento. Interrogazione e lezione sono collegate allo studio, ma non rappresentano il risultato logico più diretto.",
+    "tags": [
+      "analogie",
+      "causa_effetto",
+      "logica_verbale"
+    ],
+    "difficolta": 3,
+    "distrattore_forte": "interrogazione",
+    "motivo_distrattore_forte": "È vicino perché è collegata allo studio, ma è sbagliato perché l'interrogazione è una verifica, mentre l'apprendimento è il risultato dello studio."
+  },
+  {
+    "id": "LOG-VER-FAC-0102",
+    "categoria": "logica",
+    "sottocategoria": "logica_verbale",
+    "livello": "facile",
+    "domanda": "Quale parola non appartiene allo stesso gruppo?",
+    "opzioni": [
+      "martello",
+      "armadio",
+      "tavolo",
+      "sedia"
+    ],
+    "risposta_corretta": "martello",
+    "spiegazione": "Tavolo, sedia e armadio sono mobili. Martello è un attrezzo, quindi non appartiene allo stesso gruppo.",
+    "tags": [
+      "classificazione",
+      "intruso",
+      "logica_verbale"
+    ],
+    "difficolta": 1,
+    "distrattore_forte": "armadio",
+    "motivo_distrattore_forte": "È vicino perché è comunque un oggetto della casa, ma è sbagliato perché appartiene al gruppo dei mobili come tavolo e sedia."
+  },
+  {
+    "id": "LOG-VER-INT-0102",
+    "categoria": "logica",
+    "sottocategoria": "logica_verbale",
+    "livello": "intermedio",
+    "domanda": "Quale coppia mantiene la stessa relazione di: seme sta a pianta?",
+    "opzioni": [
+      "uovo: uccello",
+      "germoglio: pianta",
+      "foglia: ramo",
+      "frutto: albero"
+    ],
+    "risposta_corretta": "uovo: uccello",
+    "spiegazione": "Dal seme può svilupparsi una pianta. In modo simile, dall'uovo può svilupparsi un uccello. Germoglio: pianta è vicino, ma rappresenta una fase già successiva allo sviluppo iniziale, mentre seme e uovo sono punti di origine.",
+    "tags": [
+      "analogie",
+      "relazioni",
+      "logica_verbale"
+    ],
+    "difficolta": 2,
+    "distrattore_forte": "germoglio: pianta",
+    "motivo_distrattore_forte": "È vicino perché anche il germoglio può diventare una pianta, ma è sbagliato rispetto all'analogia più precisa: seme e uovo sono elementi iniziali da cui nasce lo sviluppo."
+  },
+  {
+    "id": "LOG-VER-AV-0103",
+    "categoria": "logica",
+    "livello": "avanzato",
+    "difficolta": "avanzato",
+    "domanda": "Completa l'analogia: biblioteca sta a libri come pinacoteca sta a quale parola?",
+    "opzioni": [
+      "quadri",
+      "cataloghi",
+      "sculture",
+      "cornici"
+    ],
+    "risposta_corretta": "quadri",
+    "spiegazione": "Una biblioteca è un luogo in cui si raccolgono e consultano libri. Una pinacoteca è un luogo in cui si raccolgono ed espongono quadri.",
+    "distrattore_forte": "cataloghi",
+    "motivo_distrattore_forte": "È plausibile perché può essere presente in una pinacoteca, ma non rappresenta l'oggetto principale dell'analogia."
+  },
+  {
+    "id": "LOG-VER-0201",
+    "categoria": "logica",
+    "sottocategoria": "logica_verbale",
+    "livello": "facile",
+    "domanda": "Medico sta a ospedale come insegnante sta a quale luogo?",
+    "opzioni": [
+      "Scuola",
+      "Aeroporto",
+      "Farmacia",
+      "Tribunale"
+    ],
+    "risposta_corretta": "Scuola",
+    "spiegazione": "La risposta corretta è A. Il medico lavora tipicamente in ospedale; allo stesso modo, l'insegnante lavora tipicamente a scuola."
+  },
+  {
+    "id": "LOG-VER-0202",
+    "categoria": "logica",
+    "sottocategoria": "logica_verbale",
+    "livello": "facile",
+    "domanda": "Quale parola è il contrario più adatto di fragile?",
+    "opzioni": [
+      "Robusto",
+      "Delicato",
+      "Leggero",
+      "Piccolo"
+    ],
+    "risposta_corretta": "Robusto",
+    "spiegazione": "La risposta corretta è A. Fragile indica qualcosa che si rompe facilmente; robusto indica qualcosa di resistente."
+  },
+  {
+    "id": "LOG-VER-0203",
+    "categoria": "logica",
+    "sottocategoria": "logica_verbale",
+    "livello": "facile",
+    "domanda": "Quale parola non appartiene al gruppo: cane, gatto, leone, rosa?",
+    "opzioni": [
+      "Rosa",
+      "Cane",
+      "Gatto",
+      "Leone"
+    ],
+    "risposta_corretta": "Rosa",
+    "spiegazione": "La risposta corretta è A. Cane, gatto e leone sono animali; rosa è un fiore."
+  },
+  {
+    "id": "LOG-VER-0204",
+    "categoria": "logica",
+    "sottocategoria": "logica_verbale",
+    "livello": "intermedio",
+    "domanda": "Biblioteca sta a libri come supermercato sta a cosa?",
+    "opzioni": [
+      "Prodotti",
+      "Strade",
+      "Biglietti",
+      "Pazienti"
+    ],
+    "risposta_corretta": "Prodotti",
+    "spiegazione": "La risposta corretta è A. In biblioteca si trovano libri; in supermercato si trovano prodotti da acquistare."
+  },
+  {
+    "id": "LOG-VER-0205",
+    "categoria": "logica",
+    "sottocategoria": "logica_verbale",
+    "livello": "intermedio",
+    "domanda": "Quale parola completa meglio la relazione: pittore sta a pennello come scrittore sta a cosa?",
+    "opzioni": [
+      "Penna",
+      "Tela",
+      "Colore",
+      "Cornice"
+    ],
+    "risposta_corretta": "Penna",
+    "spiegazione": "La risposta corretta è A. Il pittore usa il pennello come strumento principale; lo scrittore usa la penna come strumento di scrittura."
+  },
+  {
+    "id": "LOG-VER-0206",
+    "categoria": "logica",
+    "sottocategoria": "logica_verbale",
+    "livello": "intermedio",
+    "domanda": "Se tutti i poeti sono scrittori e alcuni scrittori sono insegnanti, quale affermazione è sicuramente vera?",
+    "opzioni": [
+      "Tutti i poeti sono scrittori",
+      "Tutti gli insegnanti sono poeti",
+      "Tutti gli scrittori sono poeti",
+      "Nessun poeta è scrittore"
+    ],
+    "risposta_corretta": "Tutti i poeti sono scrittori",
+    "spiegazione": "La risposta corretta è A. È l'unica affermazione garantita dalla premessa. Le altre aggiungono informazioni non dimostrate."
+  },
+  {
+    "id": "LOG-VER-0207",
+    "categoria": "logica",
+    "sottocategoria": "logica_verbale",
+    "livello": "intermedio",
+    "domanda": "Quale parola è più vicina al significato di accurato?",
+    "opzioni": [
+      "Preciso",
+      "Veloce",
+      "Rumoroso",
+      "Imprevisto"
+    ],
+    "risposta_corretta": "Preciso",
+    "spiegazione": "La risposta corretta è A. Accurato significa fatto con attenzione e precisione."
+  },
+  {
+    "id": "LOG-VER-0208",
+    "categoria": "logica",
+    "sottocategoria": "logica_verbale",
+    "livello": "avanzato",
+    "domanda": "Tutte le serre sono strutture chiuse. Alcune strutture chiuse sono riscaldate. Quale conclusione segue con certezza?",
+    "opzioni": [
+      "Tutte le serre sono strutture chiuse",
+      "Tutte le serre sono riscaldate",
+      "Nessuna struttura chiusa è serra",
+      "Alcune serre non sono strutture chiuse"
+    ],
+    "risposta_corretta": "Tutte le serre sono strutture chiuse",
+    "spiegazione": "La risposta corretta è A. La prima premessa lo afferma direttamente. Non si può dedurre che tutte le serre siano riscaldate."
+  },
+  {
+    "id": "LOG-VER-0209",
+    "categoria": "logica",
+    "sottocategoria": "logica_verbale",
+    "livello": "avanzato",
+    "domanda": "Quale coppia mantiene la stessa relazione di causa ed effetto: studio e preparazione?",
+    "opzioni": [
+      "Allenamento e miglioramento",
+      "Pioggia e ombrello",
+      "Libro e scaffale",
+      "Finestra e stanza"
+    ],
+    "risposta_corretta": "Allenamento e miglioramento",
+    "spiegazione": "La risposta corretta è A. Lo studio può produrre preparazione, come l'allenamento può produrre miglioramento."
+  },
+  {
+    "id": "LOG-VER-0210",
+    "categoria": "logica",
+    "sottocategoria": "logica_verbale",
+    "livello": "avanzato",
+    "domanda": "In quale frase la parola chiave indica una condizione necessaria?",
+    "opzioni": [
+      "Per guidare serve la patente",
+      "Piove perché ho l'ombrello",
+      "Studio anche se sono stanco",
+      "Parto oppure resto"
+    ],
+    "risposta_corretta": "Per guidare serve la patente",
+    "spiegazione": "La risposta corretta è A. La frase indica che la patente è necessaria per guidare legalmente. Le altre frasi non esprimono una condizione necessaria nello stesso modo."
+  }
+]

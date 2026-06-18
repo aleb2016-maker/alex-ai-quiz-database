@@ -3945,11 +3945,51 @@
     "problemi_tecnici_totali": 0,
     "avvisi_qualita_reali_totali": 0,
     "errori_linguistici_totali": 0,
-    "note_informative_totali": 4,
+    "note_informative_totali": 18,
     "domande_con_problemi_tecnici": [],
     "domande_con_avvisi_qualita_reali": [],
     "domande_con_errori_linguistici": [],
     "domande_con_note_informative": [
+      {
+        "id": "LOG-VER-INT-0002",
+        "domanda": "Completa l'analogia: penna sta a scrivere come forbici stanno a?",
+        "categoria": "logica",
+        "livello": "intermedio",
+        "opzioni": [
+          "tagliare",
+          "incollare",
+          "misurare",
+          "disegnare"
+        ],
+        "risposta_corretta": "tagliare",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "spiegazione: testo molto lungo, controllare leggibilità"
+        ]
+      },
+      {
+        "id": "LOG-VER-AV-0003",
+        "domanda": "Quale coppia mantiene meglio la stessa relazione logica di: sintomo → diagnosi?",
+        "categoria": "logica",
+        "livello": "avanzato",
+        "opzioni": [
+          "indizio → ipotesi",
+          "prova → verdetto",
+          "errore → correzione",
+          "causa → conseguenza"
+        ],
+        "risposta_corretta": "indizio → ipotesi",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "spiegazione: testo molto lungo, controllare leggibilità"
+        ]
+      },
       {
         "id": "LOG-VER-INT-0004",
         "domanda": "Quale coppia mantiene meglio la relazione: bozza → documento finale?",
@@ -3958,10 +3998,171 @@
         "opzioni": [
           "prototipo → prodotto definitivo",
           "bozza → revisione",
-          "indice → documento finale",
-          "idea → titolo"
+          "idea → progetto iniziale",
+          "indice → documento finale"
         ],
         "risposta_corretta": "prototipo → prodotto definitivo",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "spiegazione: testo molto lungo, controllare leggibilità"
+        ]
+      },
+      {
+        "id": "LOG-VER-FAC-0101",
+        "domanda": "Quale parola completa meglio l'analogia: caldo sta a freddo come alto sta a ___?",
+        "categoria": "logica",
+        "livello": "facile",
+        "opzioni": [
+          "basso",
+          "piccolo",
+          "lungo",
+          "vicino"
+        ],
+        "risposta_corretta": "basso",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "spiegazione: testo molto lungo, controllare leggibilità"
+        ]
+      },
+      {
+        "id": "LOG-VER-INT-0101",
+        "domanda": "Completa l'analogia: medico sta a ospedale come insegnante sta a ___?",
+        "categoria": "logica",
+        "livello": "intermedio",
+        "opzioni": [
+          "scuola",
+          "classe",
+          "lezione",
+          "libro"
+        ],
+        "risposta_corretta": "scuola",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "spiegazione: testo molto lungo, controllare leggibilità"
+        ]
+      },
+      {
+        "id": "LOG-VER-AV-0101",
+        "domanda": "Completa l'analogia: allenamento sta a miglioramento come studio sta a ___?",
+        "categoria": "logica",
+        "livello": "avanzato",
+        "opzioni": [
+          "apprendimento",
+          "interrogazione",
+          "lezione",
+          "materia"
+        ],
+        "risposta_corretta": "apprendimento",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "spiegazione: testo molto lungo, controllare leggibilità"
+        ]
+      },
+      {
+        "id": "LOG-VER-INT-0102",
+        "domanda": "Quale coppia mantiene la stessa relazione di: seme sta a pianta?",
+        "categoria": "logica",
+        "livello": "intermedio",
+        "opzioni": [
+          "uovo: uccello",
+          "germoglio: pianta",
+          "foglia: ramo",
+          "frutto: albero"
+        ],
+        "risposta_corretta": "uovo: uccello",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "spiegazione: testo molto lungo, controllare leggibilità"
+        ]
+      },
+      {
+        "id": "LOG-VER-AV-0103",
+        "domanda": "Completa l'analogia: biblioteca sta a libri come pinacoteca sta a quale parola?",
+        "categoria": "logica",
+        "livello": "avanzato",
+        "opzioni": [
+          "quadri",
+          "cataloghi",
+          "sculture",
+          "cornici"
+        ],
+        "risposta_corretta": "quadri",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "spiegazione: possibile frase poco fluida, controllare gli incontri vocalici",
+          "spiegazione: testo molto lungo, controllare leggibilità"
+        ]
+      },
+      {
+        "id": "LOG-VER-0201",
+        "domanda": "Medico sta a ospedale come insegnante sta a quale luogo?",
+        "categoria": "logica",
+        "livello": "facile",
+        "opzioni": [
+          "Scuola",
+          "Classe",
+          "Aula",
+          "Biblioteca"
+        ],
+        "risposta_corretta": "Scuola",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "spiegazione: testo molto lungo, controllare leggibilità"
+        ]
+      },
+      {
+        "id": "LOG-VER-0204",
+        "domanda": "Biblioteca sta a libri come supermercato sta a cosa?",
+        "categoria": "logica",
+        "livello": "intermedio",
+        "opzioni": [
+          "Prodotti",
+          "Scaffali",
+          "Carrelli",
+          "Corsie"
+        ],
+        "risposta_corretta": "Prodotti",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "spiegazione: testo molto lungo, controllare leggibilità"
+        ]
+      },
+      {
+        "id": "LOG-VER-0205",
+        "domanda": "Quale parola completa meglio la relazione: pittore sta a pennello come scrittore sta a cosa?",
+        "categoria": "logica",
+        "livello": "intermedio",
+        "opzioni": [
+          "Penna",
+          "Tastiera",
+          "Libro",
+          "Carta"
+        ],
+        "risposta_corretta": "Penna",
         "posizione_risposta": "A",
         "problemi_tecnici": [],
         "avvisi_qualita_reali": [],
@@ -3977,9 +4178,9 @@
         "livello": "intermedio",
         "opzioni": [
           "Tutti i poeti sono scrittori",
-          "Tutti gli insegnanti sono poeti",
+          "Alcuni scrittori sono insegnanti",
           "Tutti gli scrittori sono poeti",
-          "Nessun poeta è scrittore"
+          "Tutti gli insegnanti sono poeti"
         ],
         "risposta_corretta": "Tutti i poeti sono scrittori",
         "posizione_risposta": "A",
@@ -3987,7 +4188,8 @@
         "avvisi_qualita_reali": [],
         "errori_linguistici": [],
         "note_informative": [
-          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “tutti”"
+          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “tutti”",
+          "spiegazione: testo molto lungo, controllare leggibilità"
         ]
       },
       {
@@ -3997,8 +4199,8 @@
         "livello": "avanzato",
         "opzioni": [
           "Tutte le serre sono strutture chiuse",
+          "Alcune strutture chiuse sono riscaldate",
           "Tutte le serre sono riscaldate",
-          "Nessuna struttura chiusa è serra",
           "Alcune serre non sono strutture chiuse"
         ],
         "risposta_corretta": "Tutte le serre sono strutture chiuse",
@@ -4007,8 +4209,48 @@
         "avvisi_qualita_reali": [],
         "errori_linguistici": [],
         "note_informative": [
-          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “nessuna”",
-          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “tutte”"
+          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “tutte”",
+          "spiegazione: testo molto lungo, controllare leggibilità"
+        ]
+      },
+      {
+        "id": "LOG-VER-0209",
+        "domanda": "Quale coppia mantiene la stessa relazione di causa ed effetto: studio e preparazione?",
+        "categoria": "logica",
+        "livello": "avanzato",
+        "opzioni": [
+          "Allenamento e miglioramento",
+          "Pioggia e ombrello",
+          "Libro e scaffale",
+          "Finestra e stanza"
+        ],
+        "risposta_corretta": "Allenamento e miglioramento",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "spiegazione: testo molto lungo, controllare leggibilità"
+        ]
+      },
+      {
+        "id": "LOG-VER-0210",
+        "domanda": "In quale frase la parola chiave indica una condizione necessaria?",
+        "categoria": "logica",
+        "livello": "avanzato",
+        "opzioni": [
+          "Per guidare serve la patente",
+          "Per guidare può servire una strada libera",
+          "Studio anche se sono stanco",
+          "Parto oppure resto"
+        ],
+        "risposta_corretta": "Per guidare serve la patente",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "spiegazione: testo molto lungo, controllare leggibilità"
         ]
       }
     ],

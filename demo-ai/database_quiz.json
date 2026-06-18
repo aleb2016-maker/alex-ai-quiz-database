@@ -6215,7 +6215,7 @@
       "GF"
     ],
     "risposta_corretta": "FE",
-    "spiegazione": "In ogni coppia le due lettere vengono invertite: AB diventa BA, CD diventa DC. Seguendo la stessa regola, EF diventa FE.",
+    "spiegazione": "La regola inverte l'ordine delle due lettere. AB diventa BA e CD diventa DC. Seguendo la stessa logica, EF diventa FE. EF non applica l'inversione, FG cambia una lettera, GF inverte una coppia diversa.",
     "tags": [
       "lettere",
       "sequenze",
@@ -6224,6 +6224,8 @@
     "difficolta": 1,
     "distrattore_forte": "EF",
     "motivo_distrattore_forte": "È vicino perché contiene le stesse due lettere della coppia di partenza, ma è sbagliato perché non le inverte.",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve essere semanticamente vicina alla corretta, ma sbagliata per una relazione logica precisa: categoria diversa, funzione non principale, luogo troppo specifico, causa confusa, opposizione non diretta o deduzione non garantita.",
     "_materia_demo": "Logica",
     "_file_origine": "data/logica/logica_verbale.json",
     "materia": "Logica"
@@ -6241,7 +6243,7 @@
       "disegnare"
     ],
     "risposta_corretta": "tagliare",
-    "spiegazione": "La relazione è tra uno strumento e la sua funzione principale. La penna serve principalmente per scrivere; le forbici servono principalmente per tagliare.",
+    "spiegazione": "La relazione è tra uno strumento e la sua funzione principale. La penna serve principalmente per scrivere; le forbici servono principalmente per tagliare. Incollare, misurare e disegnare sono azioni possibili con altri strumenti, ma non sono la funzione principale delle forbici.",
     "tags": [
       "analogie",
       "strumenti",
@@ -6250,6 +6252,8 @@
     "difficolta": 2,
     "distrattore_forte": "incollare",
     "motivo_distrattore_forte": "È vicino perché è un'azione manuale spesso collegata a carta, forbici e lavori pratici, ma è sbagliato perché la funzione principale delle forbici è tagliare, non incollare.",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve essere semanticamente vicina alla corretta, ma sbagliata per una relazione logica precisa: categoria diversa, funzione non principale, luogo troppo specifico, causa confusa, opposizione non diretta o deduzione non garantita.",
     "_materia_demo": "Logica",
     "_file_origine": "data/logica/logica_verbale.json",
     "materia": "Logica"
@@ -6267,7 +6271,7 @@
       "causa → conseguenza"
     ],
     "risposta_corretta": "indizio → ipotesi",
-    "spiegazione": "Un sintomo è un segnale che aiuta a formulare una diagnosi, ma non coincide con la diagnosi. Allo stesso modo, un indizio aiuta a formulare un'ipotesi, ma non coincide con una conclusione certa.",
+    "spiegazione": "Un sintomo è un segnale che aiuta a formulare una diagnosi, senza coincidere con una certezza finale. Allo stesso modo, un indizio aiuta a formulare un'ipotesi. Prova → verdetto è più vicino a decisione conclusiva, errore → correzione indica soluzione di un problema, causa → conseguenza indica rapporto diretto di produzione.",
     "tags": [
       "analogie",
       "relazioni_logiche",
@@ -6276,6 +6280,8 @@
     "difficolta": 3,
     "distrattore_forte": "prova → verdetto",
     "motivo_distrattore_forte": "È vicino perché collega un elemento osservato a una conclusione, ma è sbagliato perché prova e verdetto indicano un rapporto più forte e conclusivo rispetto a sintomo e diagnosi.",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve essere semanticamente vicina alla corretta, ma sbagliata per una relazione logica precisa: categoria diversa, funzione non principale, luogo troppo specifico, causa confusa, opposizione non diretta o deduzione non garantita.",
     "_materia_demo": "Logica",
     "_file_origine": "data/logica/logica_verbale.json",
     "materia": "Logica"
@@ -6289,11 +6295,11 @@
     "opzioni": [
       "prototipo → prodotto definitivo",
       "bozza → revisione",
-      "indice → documento finale",
-      "idea → titolo"
+      "idea → progetto iniziale",
+      "indice → documento finale"
     ],
     "risposta_corretta": "prototipo → prodotto definitivo",
-    "spiegazione": "Una bozza è una versione iniziale che può evolvere in un documento finale. Allo stesso modo, un prototipo è una versione iniziale che può evolvere in un prodotto definitivo. Bozza → revisione indica una fase intermedia, non il passaggio completo alla versione finale.",
+    "spiegazione": "Una bozza è una versione iniziale che può evolvere in un documento finale. Allo stesso modo, un prototipo è una versione iniziale che può evolvere in un prodotto definitivo. Bozza → revisione indica solo una fase intermedia. Idea → progetto iniziale resta ancora nella fase iniziale. Indice → documento finale collega una parte al documento, non una versione iniziale alla versione conclusiva.",
     "tags": [
       "analogie",
       "relazioni"
@@ -6301,6 +6307,8 @@
     "difficolta": 2,
     "distrattore_forte": "bozza → revisione",
     "motivo_distrattore_forte": "È vicino perché riguarda il miglioramento di una bozza, ma è sbagliato perché la revisione è una fase intermedia, non il prodotto finale equivalente.",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve essere semanticamente vicina alla corretta, ma sbagliata per una relazione logica precisa: categoria diversa, funzione non principale, luogo troppo specifico, causa confusa, opposizione non diretta o deduzione non garantita.",
     "_materia_demo": "Logica",
     "_file_origine": "data/logica/logica_verbale.json",
     "materia": "Logica"
@@ -6318,7 +6326,7 @@
       "vicino"
     ],
     "risposta_corretta": "basso",
-    "spiegazione": "Caldo e freddo sono contrari. Seguendo la stessa logica, il contrario di alto è basso. Piccolo è vicino come idea generale di dimensione, ma non è il contrario diretto di alto.",
+    "spiegazione": "La relazione è di opposizione diretta. Caldo e freddo sono contrari; allo stesso modo, alto e basso sono contrari. Piccolo riguarda la dimensione, lungo riguarda la lunghezza, vicino riguarda la distanza: sono concetti collegati allo spazio, ma non sono il contrario diretto di alto.",
     "tags": [
       "analogia",
       "contrari",
@@ -6327,6 +6335,8 @@
     "difficolta": 1,
     "distrattore_forte": "piccolo",
     "motivo_distrattore_forte": "È vicino perché riguarda una grandezza o dimensione, ma è sbagliato perché il contrario diretto di alto è basso, non piccolo.",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve essere semanticamente vicina alla corretta, ma sbagliata per una relazione logica precisa: categoria diversa, funzione non principale, luogo troppo specifico, causa confusa, opposizione non diretta o deduzione non garantita.",
     "_materia_demo": "Logica",
     "_file_origine": "data/logica/logica_verbale.json",
     "materia": "Logica"
@@ -6344,7 +6354,7 @@
       "libro"
     ],
     "risposta_corretta": "scuola",
-    "spiegazione": "Il medico lavora tipicamente in ospedale. Allo stesso modo, l'insegnante lavora tipicamente in una scuola. Classe e lezione sono collegate all'insegnante, ma non rappresentano il luogo generale equivalente.",
+    "spiegazione": "La relazione è tra una professione e il luogo generale in cui viene svolta. Il medico lavora tipicamente in ospedale; l'insegnante lavora tipicamente in una scuola. Classe e lezione sono collegate all'insegnamento, ma sono più specifiche. Libro è uno strumento o materiale, non il luogo equivalente.",
     "tags": [
       "analogie",
       "relazioni",
@@ -6353,6 +6363,8 @@
     "difficolta": 2,
     "distrattore_forte": "classe",
     "motivo_distrattore_forte": "È vicino perché l'insegnante lavora spesso in classe, ma la relazione più generale equivalente a medico → ospedale è insegnante → scuola.",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve essere semanticamente vicina alla corretta, ma sbagliata per una relazione logica precisa: categoria diversa, funzione non principale, luogo troppo specifico, causa confusa, opposizione non diretta o deduzione non garantita.",
     "_materia_demo": "Logica",
     "_file_origine": "data/logica/logica_verbale.json",
     "materia": "Logica"
@@ -6370,7 +6382,7 @@
       "materia"
     ],
     "risposta_corretta": "apprendimento",
-    "spiegazione": "L'allenamento può portare a un miglioramento. Allo stesso modo, lo studio può portare ad apprendimento. Interrogazione e lezione sono collegate allo studio, ma non rappresentano il risultato logico più diretto.",
+    "spiegazione": "La relazione è tra un'attività e il risultato che può produrre. L'allenamento può portare a un miglioramento; lo studio può portare ad apprendimento. Interrogazione, lezione e materia appartengono al contesto scolastico, ma non sono il risultato diretto dello studio.",
     "tags": [
       "analogie",
       "causa_effetto",
@@ -6379,6 +6391,8 @@
     "difficolta": 3,
     "distrattore_forte": "interrogazione",
     "motivo_distrattore_forte": "È vicino perché è collegata allo studio, ma è sbagliato perché l'interrogazione è una verifica, mentre l'apprendimento è il risultato dello studio.",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve essere semanticamente vicina alla corretta, ma sbagliata per una relazione logica precisa: categoria diversa, funzione non principale, luogo troppo specifico, causa confusa, opposizione non diretta o deduzione non garantita.",
     "_materia_demo": "Logica",
     "_file_origine": "data/logica/logica_verbale.json",
     "materia": "Logica"
@@ -6396,7 +6410,7 @@
       "sedia"
     ],
     "risposta_corretta": "martello",
-    "spiegazione": "Tavolo, sedia e armadio sono mobili. Martello è un attrezzo, quindi non appartiene allo stesso gruppo.",
+    "spiegazione": "Tavolo, sedia e armadio sono mobili. Martello è un attrezzo, quindi non appartiene allo stesso gruppo. Le altre opzioni sono plausibili perché sono oggetti domestici, ma condividono la categoria dei mobili.",
     "tags": [
       "classificazione",
       "intruso",
@@ -6405,6 +6419,8 @@
     "difficolta": 1,
     "distrattore_forte": "armadio",
     "motivo_distrattore_forte": "È vicino perché è comunque un oggetto della casa, ma è sbagliato perché appartiene al gruppo dei mobili come tavolo e sedia.",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve essere semanticamente vicina alla corretta, ma sbagliata per una relazione logica precisa: categoria diversa, funzione non principale, luogo troppo specifico, causa confusa, opposizione non diretta o deduzione non garantita.",
     "_materia_demo": "Logica",
     "_file_origine": "data/logica/logica_verbale.json",
     "materia": "Logica"
@@ -6422,7 +6438,7 @@
       "frutto: albero"
     ],
     "risposta_corretta": "uovo: uccello",
-    "spiegazione": "Dal seme può svilupparsi una pianta. In modo simile, dall'uovo può svilupparsi un uccello. Germoglio: pianta è vicino, ma rappresenta una fase già successiva allo sviluppo iniziale, mentre seme e uovo sono punti di origine.",
+    "spiegazione": "La relazione è tra un punto di origine e ciò che può svilupparsi da esso. Dal seme può svilupparsi una pianta; dall'uovo può svilupparsi un uccello. Germoglio: pianta è vicino, ma il germoglio è già una fase successiva. Foglia: ramo e frutto: albero indicano parti o prodotti collegati, non l'origine dello sviluppo.",
     "tags": [
       "analogie",
       "relazioni",
@@ -6431,6 +6447,8 @@
     "difficolta": 2,
     "distrattore_forte": "germoglio: pianta",
     "motivo_distrattore_forte": "È vicino perché anche il germoglio può diventare una pianta, ma è sbagliato rispetto all'analogia più precisa: seme e uovo sono elementi iniziali da cui nasce lo sviluppo.",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve essere semanticamente vicina alla corretta, ma sbagliata per una relazione logica precisa: categoria diversa, funzione non principale, luogo troppo specifico, causa confusa, opposizione non diretta o deduzione non garantita.",
     "_materia_demo": "Logica",
     "_file_origine": "data/logica/logica_verbale.json",
     "materia": "Logica"
@@ -6448,9 +6466,11 @@
       "cornici"
     ],
     "risposta_corretta": "quadri",
-    "spiegazione": "Una biblioteca è un luogo in cui si raccolgono e consultano libri. Una pinacoteca è un luogo in cui si raccolgono ed espongono quadri.",
+    "spiegazione": "La relazione è tra un luogo di raccolta e il tipo principale di opere o oggetti che contiene. Una biblioteca raccoglie libri; una pinacoteca raccoglie ed espone quadri. Cataloghi e cornici sono oggetti collegati, ma non sono il contenuto principale. Sculture appartengono più a un museo o a una galleria d'arte in senso diverso.",
     "distrattore_forte": "cataloghi",
     "motivo_distrattore_forte": "È plausibile perché può essere presente in una pinacoteca, ma non rappresenta l'oggetto principale dell'analogia.",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve essere semanticamente vicina alla corretta, ma sbagliata per una relazione logica precisa: categoria diversa, funzione non principale, luogo troppo specifico, causa confusa, opposizione non diretta o deduzione non garantita.",
     "_materia_demo": "Logica",
     "_file_origine": "data/logica/logica_verbale.json",
     "materia": "Logica"
@@ -6463,12 +6483,14 @@
     "domanda": "Medico sta a ospedale come insegnante sta a quale luogo?",
     "opzioni": [
       "Scuola",
-      "Aeroporto",
-      "Farmacia",
-      "Tribunale"
+      "Classe",
+      "Aula",
+      "Biblioteca"
     ],
     "risposta_corretta": "Scuola",
-    "spiegazione": "La risposta corretta è A. Il medico lavora tipicamente in ospedale; allo stesso modo, l'insegnante lavora tipicamente a scuola.",
+    "spiegazione": "La relazione è tra una professione e il luogo tipico di lavoro. Il medico lavora tipicamente in ospedale; l'insegnante lavora tipicamente a scuola. Classe e aula sono luoghi più specifici dentro la scuola. Biblioteca è un luogo di studio, ma non è il luogo generale equivalente dell'insegnante.",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve essere semanticamente vicina alla corretta, ma sbagliata per una relazione logica precisa: categoria diversa, funzione non principale, luogo troppo specifico, causa confusa, opposizione non diretta o deduzione non garantita.",
     "_materia_demo": "Logica",
     "_file_origine": "data/logica/logica_verbale.json",
     "materia": "Logica"
@@ -6483,10 +6505,12 @@
       "Robusto",
       "Delicato",
       "Leggero",
-      "Piccolo"
+      "Sottile"
     ],
     "risposta_corretta": "Robusto",
-    "spiegazione": "La risposta corretta è A. Fragile indica qualcosa che si rompe facilmente; robusto indica qualcosa di resistente.",
+    "spiegazione": "Fragile indica qualcosa che si rompe facilmente. Il contrario più adatto è robusto, cioè resistente. Delicato è vicino a fragile, leggero riguarda il peso, sottile riguarda lo spessore.",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve essere semanticamente vicina alla corretta, ma sbagliata per una relazione logica precisa: categoria diversa, funzione non principale, luogo troppo specifico, causa confusa, opposizione non diretta o deduzione non garantita.",
     "_materia_demo": "Logica",
     "_file_origine": "data/logica/logica_verbale.json",
     "materia": "Logica"
@@ -6504,7 +6528,9 @@
       "Leone"
     ],
     "risposta_corretta": "Rosa",
-    "spiegazione": "La risposta corretta è A. Cane, gatto e leone sono animali; rosa è un fiore.",
+    "spiegazione": "Cane, gatto e leone sono animali. Rosa è un fiore, quindi non appartiene allo stesso gruppo. Le altre tre parole appartengono alla stessa categoria generale degli animali.",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve essere semanticamente vicina alla corretta, ma sbagliata per una relazione logica precisa: categoria diversa, funzione non principale, luogo troppo specifico, causa confusa, opposizione non diretta o deduzione non garantita.",
     "_materia_demo": "Logica",
     "_file_origine": "data/logica/logica_verbale.json",
     "materia": "Logica"
@@ -6517,12 +6543,14 @@
     "domanda": "Biblioteca sta a libri come supermercato sta a cosa?",
     "opzioni": [
       "Prodotti",
-      "Strade",
-      "Biglietti",
-      "Pazienti"
+      "Scaffali",
+      "Carrelli",
+      "Corsie"
     ],
     "risposta_corretta": "Prodotti",
-    "spiegazione": "La risposta corretta è A. In biblioteca si trovano libri; in supermercato si trovano prodotti da acquistare.",
+    "spiegazione": "La relazione è tra un luogo e ciò che vi si trova principalmente. In biblioteca si trovano libri; in supermercato si trovano prodotti da acquistare. Scaffali, carrelli e corsie sono elementi presenti in un supermercato, ma non rappresentano il contenuto principale equivalente ai libri.",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve essere semanticamente vicina alla corretta, ma sbagliata per una relazione logica precisa: categoria diversa, funzione non principale, luogo troppo specifico, causa confusa, opposizione non diretta o deduzione non garantita.",
     "_materia_demo": "Logica",
     "_file_origine": "data/logica/logica_verbale.json",
     "materia": "Logica"
@@ -6535,12 +6563,14 @@
     "domanda": "Quale parola completa meglio la relazione: pittore sta a pennello come scrittore sta a cosa?",
     "opzioni": [
       "Penna",
-      "Tela",
-      "Colore",
-      "Cornice"
+      "Tastiera",
+      "Libro",
+      "Carta"
     ],
     "risposta_corretta": "Penna",
-    "spiegazione": "La risposta corretta è A. Il pittore usa il pennello come strumento principale; lo scrittore usa la penna come strumento di scrittura.",
+    "spiegazione": "La relazione è tra una persona e lo strumento principale usato nella sua attività. Il pittore usa il pennello; lo scrittore usa la penna come strumento di scrittura. Tastiera è plausibile in contesto moderno, ma cambia lo strumento classico dell'analogia. Libro e carta sono collegati alla scrittura, ma non sono lo strumento equivalente al pennello.",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve essere semanticamente vicina alla corretta, ma sbagliata per una relazione logica precisa: categoria diversa, funzione non principale, luogo troppo specifico, causa confusa, opposizione non diretta o deduzione non garantita.",
     "_materia_demo": "Logica",
     "_file_origine": "data/logica/logica_verbale.json",
     "materia": "Logica"
@@ -6553,12 +6583,14 @@
     "domanda": "Se tutti i poeti sono scrittori e alcuni scrittori sono insegnanti, quale affermazione è sicuramente vera?",
     "opzioni": [
       "Tutti i poeti sono scrittori",
-      "Tutti gli insegnanti sono poeti",
+      "Alcuni scrittori sono insegnanti",
       "Tutti gli scrittori sono poeti",
-      "Nessun poeta è scrittore"
+      "Tutti gli insegnanti sono poeti"
     ],
     "risposta_corretta": "Tutti i poeti sono scrittori",
-    "spiegazione": "La risposta corretta è A. È l'unica affermazione garantita dalla premessa. Le altre aggiungono informazioni non dimostrate.",
+    "spiegazione": "La conclusione sicuramente vera è quella già garantita dalla premessa: tutti i poeti sono scrittori. Anche 'alcuni scrittori sono insegnanti' è una premessa, ma non risponde alla relazione sui poeti. Non si può dedurre che tutti gli scrittori siano poeti, né che tutti gli insegnanti siano poeti.",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve essere semanticamente vicina alla corretta, ma sbagliata per una relazione logica precisa: categoria diversa, funzione non principale, luogo troppo specifico, causa confusa, opposizione non diretta o deduzione non garantita.",
     "_materia_demo": "Logica",
     "_file_origine": "data/logica/logica_verbale.json",
     "materia": "Logica"
@@ -6571,12 +6603,14 @@
     "domanda": "Quale parola è più vicina al significato di accurato?",
     "opzioni": [
       "Preciso",
+      "Attento",
       "Veloce",
-      "Rumoroso",
       "Imprevisto"
     ],
     "risposta_corretta": "Preciso",
-    "spiegazione": "La risposta corretta è A. Accurato significa fatto con attenzione e precisione.",
+    "spiegazione": "Accurato significa fatto con cura, attenzione e precisione. La parola più vicina è preciso. Attento è collegato, ma indica più l'atteggiamento che il risultato. Veloce e imprevisto cambiano completamente il significato.",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve essere semanticamente vicina alla corretta, ma sbagliata per una relazione logica precisa: categoria diversa, funzione non principale, luogo troppo specifico, causa confusa, opposizione non diretta o deduzione non garantita.",
     "_materia_demo": "Logica",
     "_file_origine": "data/logica/logica_verbale.json",
     "materia": "Logica"
@@ -6589,12 +6623,14 @@
     "domanda": "Tutte le serre sono strutture chiuse. Alcune strutture chiuse sono riscaldate. Quale conclusione segue con certezza?",
     "opzioni": [
       "Tutte le serre sono strutture chiuse",
+      "Alcune strutture chiuse sono riscaldate",
       "Tutte le serre sono riscaldate",
-      "Nessuna struttura chiusa è serra",
       "Alcune serre non sono strutture chiuse"
     ],
     "risposta_corretta": "Tutte le serre sono strutture chiuse",
-    "spiegazione": "La risposta corretta è A. La prima premessa lo afferma direttamente. Non si può dedurre che tutte le serre siano riscaldate.",
+    "spiegazione": "La conclusione certa è che tutte le serre sono strutture chiuse, perché è indicato direttamente dalla prima premessa. La frase 'alcune strutture chiuse sono riscaldate' è una premessa, ma non permette di stabilire quali strutture siano serre. Non si può dedurre che tutte le serre siano riscaldate. Dire che alcune serre non sono strutture chiuse contraddice la prima premessa.",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve essere semanticamente vicina alla corretta, ma sbagliata per una relazione logica precisa: categoria diversa, funzione non principale, luogo troppo specifico, causa confusa, opposizione non diretta o deduzione non garantita.",
     "_materia_demo": "Logica",
     "_file_origine": "data/logica/logica_verbale.json",
     "materia": "Logica"
@@ -6612,7 +6648,9 @@
       "Finestra e stanza"
     ],
     "risposta_corretta": "Allenamento e miglioramento",
-    "spiegazione": "La risposta corretta è A. Lo studio può produrre preparazione, come l'allenamento può produrre miglioramento.",
+    "spiegazione": "La relazione richiesta è di causa o attività che produce un risultato. Lo studio può produrre preparazione; allo stesso modo, l'allenamento può produrre miglioramento. Pioggia e ombrello sono collegati da bisogno o protezione, non da miglioramento prodotto. Libro e scaffale indicano oggetto e supporto. Finestra e stanza indicano parte e luogo.",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve essere semanticamente vicina alla corretta, ma sbagliata per una relazione logica precisa: categoria diversa, funzione non principale, luogo troppo specifico, causa confusa, opposizione non diretta o deduzione non garantita.",
     "_materia_demo": "Logica",
     "_file_origine": "data/logica/logica_verbale.json",
     "materia": "Logica"
@@ -6625,12 +6663,14 @@
     "domanda": "In quale frase la parola chiave indica una condizione necessaria?",
     "opzioni": [
       "Per guidare serve la patente",
-      "Piove perché ho l'ombrello",
+      "Per guidare può servire una strada libera",
       "Studio anche se sono stanco",
       "Parto oppure resto"
     ],
     "risposta_corretta": "Per guidare serve la patente",
-    "spiegazione": "La risposta corretta è A. La frase indica che la patente è necessaria per guidare legalmente. Le altre frasi non esprimono una condizione necessaria nello stesso modo.",
+    "spiegazione": "Una condizione necessaria indica qualcosa che deve esserci perché una certa azione sia possibile o valida. La frase 'Per guidare serve la patente' indica che la patente è necessaria per guidare legalmente. Una strada libera può aiutare ma non è la condizione logica richiesta. Anche se indica contrasto, mentre oppure indica alternativa.",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve essere semanticamente vicina alla corretta, ma sbagliata per una relazione logica precisa: categoria diversa, funzione non principale, luogo troppo specifico, causa confusa, opposizione non diretta o deduzione non garantita.",
     "_materia_demo": "Logica",
     "_file_origine": "data/logica/logica_verbale.json",
     "materia": "Logica"
