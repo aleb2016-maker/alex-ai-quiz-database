@@ -1576,15 +1576,35 @@
     "domande_con_errori_linguistici": [],
     "domande_con_note_informative": [
       {
+        "id": "INF-AV-0003",
+        "domanda": "Qual è lo scopo principale di un'API REST in un'applicazione web?",
+        "categoria": "informatica",
+        "livello": "avanzato",
+        "opzioni": [
+          "Permettere a frontend e backend di comunicare tramite richieste HTTP strutturate",
+          "Permettere al frontend di comunicare con il backend, ma leggendo direttamente le tabelle del database",
+          "Organizzare richieste HTTP tra client e server, ma lasciando la logica applicativa nel browser",
+          "Esporre dati e operazioni al frontend, ma sostituendo completamente il controllo del backend"
+        ],
+        "risposta_corretta": "Permettere a frontend e backend di comunicare tramite richieste HTTP strutturate",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “completamente”"
+        ]
+      },
+      {
         "id": "INF-AV-0004",
         "domanda": "Perché separare frontend e backend rende spesso un'applicazione più gestibile?",
         "categoria": "informatica",
         "livello": "avanzato",
         "opzioni": [
           "Perché interfaccia, logica applicativa e dati possono evolvere con responsabilità più chiare",
-          "Perché il frontend può gestire l'interfaccia mentre il backend espone dati e logica tramite API",
-          "Perché il backend può cambiare alcune regole senza riscrivere tutta l'interfaccia",
-          "Perché il frontend può consumare servizi diversi senza conoscere i dettagli interni del server"
+          "Perché il frontend può cambiare, ma solo se il backend espone direttamente le tabelle interne",
+          "Perché backend e frontend hanno responsabilità distinte, ma devono essere modificati insieme a ogni rilascio",
+          "Perché l'interfaccia può usare API, ma la logica applicativa viene spostata interamente nel browser"
         ],
         "risposta_corretta": "Perché interfaccia, logica applicativa e dati possono evolvere con responsabilità più chiare",
         "posizione_risposta": "A",
@@ -1596,37 +1616,17 @@
         ]
       },
       {
-        "id": "INF-INT-0005",
-        "domanda": "A cosa serve principalmente una chiave esterna in un database relazionale?",
+        "id": "INF-AV-0007",
+        "domanda": "Perché due operazioni simultanee sullo stesso dato possono creare problemi in un'applicazione?",
         "categoria": "informatica",
-        "livello": "intermedio",
+        "livello": "avanzato",
         "opzioni": [
-          "A collegare un record di una tabella a un record di un'altra tabella",
-          "A identificare in modo univoco ogni record della stessa tabella",
-          "A ordinare automaticamente tutti i record in base alla data",
-          "A trasformare una tabella relazionale in un file JSON"
+          "Perché possono produrre risultati incoerenti se non vengono gestite correttamente",
+          "Perché possono agire sullo stesso dato nello stesso momento, ma senza rischiare aggiornamenti persi",
+          "Perché possono creare conflitti sui dati, ma vengono risolte senza transazioni o isolamento",
+          "Perché possono sovrapporsi sullo stesso dato, ma il risultato resta coerente anche senza controllo"
         ],
-        "risposta_corretta": "A collegare un record di una tabella a un record di un'altra tabella",
-        "posizione_risposta": "A",
-        "problemi_tecnici": [],
-        "avvisi_qualita_reali": [],
-        "errori_linguistici": [],
-        "note_informative": [
-          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “tutti”"
-        ]
-      },
-      {
-        "id": "INF-FAC-0008",
-        "domanda": "Quale formato è molto usato nelle API web per rappresentare oggetti e liste con coppie chiave-valore?",
-        "categoria": "informatica",
-        "livello": "facile",
-        "opzioni": [
-          "JSON",
-          "XML",
-          "YAML",
-          "CSV"
-        ],
-        "risposta_corretta": "JSON",
+        "risposta_corretta": "Perché possono produrre risultati incoerenti se non vengono gestite correttamente",
         "posizione_risposta": "A",
         "problemi_tecnici": [],
         "avvisi_qualita_reali": [],
