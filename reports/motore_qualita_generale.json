@@ -3796,55 +3796,6 @@
     "domande_simili": []
   },
   {
-    "nome": "Logica numerica.backup prima primo blocco distrattori forti",
-    "percorso": "data/logica/logica_numerica.backup_prima_primo_blocco_distrattori_forti.json",
-    "file_esiste": true,
-    "errore_file": "",
-    "totale_domande": 20,
-    "livelli": {
-      "facile": 6,
-      "intermedio": 7,
-      "avanzato": 7
-    },
-    "categorie": {
-      "logica": 20
-    },
-    "posizioni_risposta": {
-      "A": 20
-    },
-    "problemi_tecnici_totali": 0,
-    "avvisi_qualita_reali_totali": 0,
-    "errori_linguistici_totali": 0,
-    "note_informative_totali": 1,
-    "domande_con_problemi_tecnici": [],
-    "domande_con_avvisi_qualita_reali": [],
-    "domande_con_errori_linguistici": [],
-    "domande_con_note_informative": [
-      {
-        "id": "LOG-NUM-INT-0002",
-        "domanda": "Completa la serie: 2, 9, 4, 12, 6, 15, ?",
-        "categoria": "logica",
-        "livello": "intermedio",
-        "opzioni": [
-          "8",
-          "18",
-          "9",
-          "16"
-        ],
-        "risposta_corretta": "8",
-        "posizione_risposta": "A",
-        "problemi_tecnici": [],
-        "avvisi_qualita_reali": [],
-        "errori_linguistici": [],
-        "note_informative": [
-          "spiegazione: testo molto lungo, controllare leggibilità"
-        ]
-      }
-    ],
-    "duplicati_identici": {},
-    "domande_simili": []
-  },
-  {
     "nome": "Logica numerica",
     "percorso": "data/logica/logica_numerica.json",
     "file_esiste": true,
