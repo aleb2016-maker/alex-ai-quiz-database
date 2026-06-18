@@ -4277,11 +4277,131 @@
     "problemi_tecnici_totali": 0,
     "avvisi_qualita_reali_totali": 0,
     "errori_linguistici_totali": 0,
-    "note_informative_totali": 4,
+    "note_informative_totali": 17,
     "domande_con_problemi_tecnici": [],
     "domande_con_avvisi_qualita_reali": [],
     "domande_con_errori_linguistici": [],
     "domande_con_note_informative": [
+      {
+        "id": "LOG-AST-FAC-0001",
+        "domanda": "In una sequenza le forme seguono questo ordine: cerchio, quadrato, cerchio, quadrato. Quale forma viene dopo?",
+        "categoria": "logica",
+        "livello": "facile",
+        "opzioni": [
+          "Cerchio",
+          "Quadrato",
+          "Triangolo",
+          "Rettangolo"
+        ],
+        "risposta_corretta": "Cerchio",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "spiegazione: testo molto lungo, controllare leggibilità"
+        ]
+      },
+      {
+        "id": "LOG-AST-AV-0003",
+        "domanda": "Osserva le trasformazioni: A3C → B6D, D4F → E8G, H5J →?",
+        "categoria": "logica",
+        "livello": "avanzato",
+        "opzioni": [
+          "I10K",
+          "I8K",
+          "J10K",
+          "I10J"
+        ],
+        "risposta_corretta": "I10K",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "spiegazione: testo molto lungo, controllare leggibilità"
+        ]
+      },
+      {
+        "id": "LOG-AST-AV-0101",
+        "domanda": "Una sequenza segue questa regola: una figura aumenta di un lato e cambia colore a ogni passaggio. Dopo triangolo rosso, quadrato blu, pentagono rosso, esagono blu, cosa viene?",
+        "categoria": "logica",
+        "livello": "avanzato",
+        "opzioni": [
+          "ettagono rosso",
+          "ettagono blu",
+          "ottagono rosso",
+          "esagono rosso"
+        ],
+        "risposta_corretta": "ettagono rosso",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "spiegazione: testo molto lungo, controllare leggibilità"
+        ]
+      },
+      {
+        "id": "LOG-AST-AV-0102",
+        "domanda": "In una sequenza, ogni figura ruota di 90° in senso orario a ogni passaggio. Se una freccia punta in alto, poi a destra, poi in basso, quale direzione segue?",
+        "categoria": "logica",
+        "livello": "avanzato",
+        "opzioni": [
+          "sinistra",
+          "alto",
+          "destra",
+          "basso"
+        ],
+        "risposta_corretta": "sinistra",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "spiegazione: testo molto lungo, controllare leggibilità"
+        ]
+      },
+      {
+        "id": "LOG-AST-FAC-0103",
+        "domanda": "Osserva la sequenza: cerchio rosso, quadrato blu, triangolo rosso, cerchio blu, quadrato rosso. Quale elemento completa la sequenza?",
+        "categoria": "logica",
+        "livello": "facile",
+        "opzioni": [
+          "triangolo blu",
+          "triangolo rosso",
+          "cerchio blu",
+          "quadrato blu"
+        ],
+        "risposta_corretta": "triangolo blu",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "spiegazione: testo molto lungo, controllare leggibilità"
+        ]
+      },
+      {
+        "id": "LOG-AST-INT-0103",
+        "domanda": "Una regola trasforma una figura aumentando di 1 il numero dei lati e di 1 il numero dei punti interni. Se un pentagono con 3 punti viene trasformato, quale risultato si ottiene?",
+        "categoria": "logica",
+        "livello": "intermedio",
+        "opzioni": [
+          "esagono con 4 punti",
+          "esagono con 3 punti",
+          "pentagono con 4 punti",
+          "ettagono con 4 punti"
+        ],
+        "risposta_corretta": "esagono con 4 punti",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "spiegazione: testo molto lungo, controllare leggibilità"
+        ]
+      },
       {
         "id": "LOG-AST-AV-0103",
         "domanda": "In una sequenza astratta, ogni passaggio aumenta i lati della figura di 1, alterna il colore chiaro/scuro e aumenta gli oggetti interni di 2. Dopo un esagono chiaro con 3 punti, quale figura viene?",
@@ -4299,7 +4419,7 @@
         "avvisi_qualita_reali": [],
         "errori_linguistici": [],
         "note_informative": [
-          "spiegazione: possibile frase poco fluida, controllare gli incontri vocalici"
+          "spiegazione: testo molto lungo, controllare leggibilità"
         ]
       },
       {
@@ -4309,9 +4429,9 @@
         "livello": "facile",
         "opzioni": [
           "A A B B C C",
-          "A B C A",
-          "A C B",
-          "B B C C A"
+          "A B C A B C",
+          "A B B C C",
+          "A A B C C"
         ],
         "risposta_corretta": "A A B B C C",
         "posizione_risposta": "A",
@@ -4319,7 +4439,30 @@
         "avvisi_qualita_reali": [],
         "errori_linguistici": [],
         "note_informative": [
-          "opzione A: possibile frase poco fluida, controllare gli incontri vocalici"
+          "opzione A: possibile frase poco fluida, controllare gli incontri vocalici",
+          "opzione D: possibile frase poco fluida, controllare gli incontri vocalici",
+          "spiegazione: possibile frase poco fluida, controllare gli incontri vocalici",
+          "spiegazione: testo molto lungo, controllare leggibilità"
+        ]
+      },
+      {
+        "id": "LOG-AST-0204",
+        "domanda": "Nella serie A1, B2, C3, D4, quale elemento viene dopo?",
+        "categoria": "logica",
+        "livello": "intermedio",
+        "opzioni": [
+          "E5",
+          "E4",
+          "D5",
+          "F5"
+        ],
+        "risposta_corretta": "E5",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "spiegazione: testo molto lungo, controllare leggibilità"
         ]
       },
       {
@@ -4343,6 +4486,66 @@
         ]
       },
       {
+        "id": "LOG-AST-0207",
+        "domanda": "Se X Y Z segue la regola ultimo, primo, secondo, quale ordine si ottiene?",
+        "categoria": "logica",
+        "livello": "intermedio",
+        "opzioni": [
+          "Z X Y",
+          "Y Z X",
+          "X Z Y",
+          "Z Y X"
+        ],
+        "risposta_corretta": "Z X Y",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "spiegazione: testo molto lungo, controllare leggibilità"
+        ]
+      },
+      {
+        "id": "LOG-AST-0208",
+        "domanda": "Se la sequenza alterna una lettera e il suo doppio numerico, quale elemento segue C6?",
+        "categoria": "logica",
+        "livello": "avanzato",
+        "opzioni": [
+          "D8",
+          "D7",
+          "E8",
+          "C8"
+        ],
+        "risposta_corretta": "D8",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "spiegazione: testo molto lungo, controllare leggibilità"
+        ]
+      },
+      {
+        "id": "LOG-AST-0209",
+        "domanda": "Se una regola trasforma AB3 in BA6 raddoppiando il numero e invertendo le lettere, cosa diventa CD4?",
+        "categoria": "logica",
+        "livello": "avanzato",
+        "opzioni": [
+          "DC8",
+          "DC4",
+          "CD8",
+          "DC7"
+        ],
+        "risposta_corretta": "DC8",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "spiegazione: testo molto lungo, controllare leggibilità"
+        ]
+      },
+      {
         "id": "LOG-AST-0210",
         "domanda": "Nella serie A2, C4, E6, G8, quale elemento viene dopo?",
         "categoria": "logica",
@@ -4359,7 +4562,7 @@
         "avvisi_qualita_reali": [],
         "errori_linguistici": [],
         "note_informative": [
-          "spiegazione: possibile frase poco fluida, controllare gli incontri vocalici"
+          "spiegazione: testo molto lungo, controllare leggibilità"
         ]
       }
     ],

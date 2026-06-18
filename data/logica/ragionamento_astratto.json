@@ -12,7 +12,7 @@
       "Rettangolo"
     ],
     "risposta_corretta": "Cerchio",
-    "spiegazione": "La sequenza alterna sempre cerchio e quadrato: cerchio, quadrato, cerchio, quadrato. Dopo il quadrato torna quindi il cerchio.",
+    "spiegazione": "La sequenza alterna sempre due forme: cerchio e quadrato. L'ordine è cerchio, quadrato, cerchio, quadrato. Dopo il quadrato torna quindi il cerchio. Quadrato ripeterebbe la stessa forma appena vista. Triangolo e rettangolo introdurrebbero forme nuove che non fanno parte dell'alternanza.",
     "tags": [
       "pattern",
       "alternanza",
@@ -20,7 +20,9 @@
     ],
     "difficolta": 1,
     "distrattore_forte": "Quadrato",
-    "motivo_distrattore_forte": "È vicino perché è l'altra forma presente nella sequenza, ma è sbagliato perché ripeterebbe il quadrato invece di rispettare l'alternanza."
+    "motivo_distrattore_forte": "È vicino perché è l'altra forma presente nella sequenza, ma è sbagliato perché ripeterebbe il quadrato invece di rispettare l'alternanza.",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve essere vicina alla corretta per struttura astratta, ma sbagliata per un dettaglio preciso: ordine invertito solo in parte, lettera avanzata male, numero non aggiornato, colore non alternato, lati o punti modificati in modo incompleto."
   },
   {
     "id": "LOG-AST-INT-0002",
@@ -35,7 +37,7 @@
       "H"
     ],
     "risposta_corretta": "F",
-    "spiegazione": "Ogni lettera viene spostata avanti di due posizioni nell'alfabeto: A diventa C, B diventa D, C diventa E. Seguendo la stessa regola, D diventa F.",
+    "spiegazione": "La regola sposta ogni lettera avanti di due posizioni nell'alfabeto. A diventa C, B diventa D e C diventa E. Seguendo la stessa regola, D diventa F. E avanza di una sola posizione, G avanza di tre, H avanza di quattro.",
     "tags": [
       "pattern astratto",
       "alfabeto",
@@ -43,7 +45,9 @@
     ],
     "difficolta": 2,
     "distrattore_forte": "E",
-    "motivo_distrattore_forte": "È vicino perché è la lettera successiva a D, ma è sbagliato perché la regola non avanza di una posizione: avanza di due."
+    "motivo_distrattore_forte": "È vicino perché è la lettera successiva a D, ma è sbagliato perché la regola non avanza di una posizione: avanza di due.",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve essere vicina alla corretta per struttura astratta, ma sbagliata per un dettaglio preciso: ordine invertito solo in parte, lettera avanzata male, numero non aggiornato, colore non alternato, lati o punti modificati in modo incompleto."
   },
   {
     "id": "LOG-AST-AV-0003",
@@ -58,7 +62,7 @@
       "I10J"
     ],
     "risposta_corretta": "I10K",
-    "spiegazione": "Nelle trasformazioni la prima e l'ultima lettera avanzano di una posizione nell'alfabeto, mentre il numero viene raddoppiato. Quindi H diventa I, 5 diventa 10 e J diventa K.",
+    "spiegazione": "La trasformazione modifica tre elementi insieme. La prima lettera avanza di una posizione, il numero raddoppia e l'ultima lettera avanza di una posizione. Quindi H diventa I, 5 diventa 10 e J diventa K. Il risultato corretto è I10K. I8K non raddoppia correttamente il numero. J10K avanza troppo la prima lettera. I10J non fa avanzare l'ultima lettera.",
     "tags": [
       "trasformazioni",
       "lettere",
@@ -67,7 +71,9 @@
     ],
     "difficolta": 3,
     "distrattore_forte": "I8K",
-    "motivo_distrattore_forte": "È vicino perché aggiorna correttamente le due lettere esterne, ma è sbagliato perché il numero deve essere raddoppiato: 5 diventa 10, non 8."
+    "motivo_distrattore_forte": "È vicino perché aggiorna correttamente le due lettere esterne, ma è sbagliato perché il numero deve essere raddoppiato: 5 diventa 10, non 8.",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve essere vicina alla corretta per struttura astratta, ma sbagliata per un dettaglio preciso: ordine invertito solo in parte, lettera avanzata male, numero non aggiornato, colore non alternato, lati o punti modificati in modo incompleto."
   },
   {
     "id": "LOG-AST-INT-0004",
@@ -82,7 +88,7 @@
       "G6"
     ],
     "risposta_corretta": "F6",
-    "spiegazione": "In ogni trasformazione la lettera avanza di una posizione nell'alfabeto e il numero aumenta di 1. Quindi E5 diventa F6.",
+    "spiegazione": "In ogni trasformazione la lettera avanza di una posizione e il numero aumenta di 1. A1 diventa B2, C3 diventa D4. Seguendo la stessa regola, E5 diventa F6. F5 cambia solo la lettera. E6 cambia solo il numero. G6 fa avanzare troppo la lettera.",
     "tags": [
       "trasformazioni",
       "lettere",
@@ -90,7 +96,9 @@
     ],
     "difficolta": 2,
     "distrattore_forte": "F5",
-    "motivo_distrattore_forte": "È vicino perché aggiorna correttamente la lettera da E a F, ma è sbagliato perché lascia invariato il numero invece di aumentarlo da 5 a 6."
+    "motivo_distrattore_forte": "È vicino perché aggiorna correttamente la lettera da E a F, ma è sbagliato perché lascia invariato il numero invece di aumentarlo da 5 a 6.",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve essere vicina alla corretta per struttura astratta, ma sbagliata per un dettaglio preciso: ordine invertito solo in parte, lettera avanzata male, numero non aggiornato, colore non alternato, lati o punti modificati in modo incompleto."
   },
   {
     "id": "LOG-AST-INT-0101",
@@ -105,7 +113,7 @@
       "pentagono"
     ],
     "risposta_corretta": "ettagono",
-    "spiegazione": "Le forme aumentano di un lato alla volta: triangolo 3 lati, quadrato 4, pentagono 5, esagono 6. Dopo viene l'ettagono, che ha 7 lati.",
+    "spiegazione": "La sequenza aumenta il numero di lati di una unità alla volta. Triangolo ha 3 lati, quadrato 4, pentagono 5, esagono 6. Dopo l'esagono viene l'ettagono, che ha 7 lati. Esagono ripete la forma precedente. Ottagono salta un passaggio. Pentagono torna indietro.",
     "tags": [
       "forme",
       "sequenze",
@@ -113,7 +121,9 @@
     ],
     "difficolta": 2,
     "distrattore_forte": "ottagono",
-    "motivo_distrattore_forte": "È vicino perché continua con un poligono successivo, ma salta un passaggio: dopo 6 lati viene 7, non 8."
+    "motivo_distrattore_forte": "È vicino perché continua con un poligono successivo, ma salta un passaggio: dopo 6 lati viene 7, non 8.",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve essere vicina alla corretta per struttura astratta, ma sbagliata per un dettaglio preciso: ordine invertito solo in parte, lettera avanzata male, numero non aggiornato, colore non alternato, lati o punti modificati in modo incompleto."
   },
   {
     "id": "LOG-AST-AV-0101",
@@ -128,7 +138,7 @@
       "esagono rosso"
     ],
     "risposta_corretta": "ettagono rosso",
-    "spiegazione": "Il numero di lati aumenta: 3, 4, 5, 6, quindi 7 lati, cioè ettagono. Il colore alterna rosso, blu, rosso, blu, quindi il prossimo è rosso.",
+    "spiegazione": "La sequenza cambia due elementi: numero di lati e colore. I lati aumentano di uno: triangolo, quadrato, pentagono, esagono, quindi ettagono. Il colore alterna rosso, blu, rosso, blu, quindi il prossimo colore è rosso. Il risultato corretto è ettagono rosso. Ettagono blu sbaglia il colore. Ottagono rosso salta un lato. Esagono rosso non aumenta il numero di lati.",
     "tags": [
       "forme",
       "sequenze",
@@ -136,7 +146,9 @@
     ],
     "difficolta": 3,
     "distrattore_forte": "ettagono blu",
-    "motivo_distrattore_forte": "È vicino perché individua correttamente la forma con 7 lati, ma è sbagliato perché non rispetta l'alternanza dei colori: dopo blu deve tornare rosso."
+    "motivo_distrattore_forte": "È vicino perché individua correttamente la forma con 7 lati, ma è sbagliato perché non rispetta l'alternanza dei colori: dopo blu deve tornare rosso.",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve essere vicina alla corretta per struttura astratta, ma sbagliata per un dettaglio preciso: ordine invertito solo in parte, lettera avanzata male, numero non aggiornato, colore non alternato, lati o punti modificati in modo incompleto."
   },
   {
     "id": "LOG-AST-AV-0102",
@@ -151,7 +163,7 @@
       "basso"
     ],
     "risposta_corretta": "sinistra",
-    "spiegazione": "La rotazione è sempre di 90 gradi in senso orario: alto, destra, basso, sinistra. Dopo basso, continuando la rotazione oraria, la freccia punta a sinistra.",
+    "spiegazione": "La freccia ruota sempre di 90 gradi in senso orario. La sequenza delle direzioni è alto, destra, basso, sinistra. Dopo basso viene quindi sinistra. Alto ricomincerebbe il ciclo troppo presto. Destra ripeterebbe una direzione già superata. Basso non applica la rotazione successiva.",
     "tags": [
       "rotazioni",
       "sequenze",
@@ -159,7 +171,9 @@
     ],
     "difficolta": 3,
     "distrattore_forte": "alto",
-    "motivo_distrattore_forte": "È vicino perché appartiene allo stesso ciclo di direzioni, ma è sbagliato perché alto arriva dopo un ulteriore passaggio, non subito dopo basso."
+    "motivo_distrattore_forte": "È vicino perché appartiene allo stesso ciclo di direzioni, ma è sbagliato perché alto arriva dopo un ulteriore passaggio, non subito dopo basso.",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve essere vicina alla corretta per struttura astratta, ma sbagliata per un dettaglio preciso: ordine invertito solo in parte, lettera avanzata male, numero non aggiornato, colore non alternato, lati o punti modificati in modo incompleto."
   },
   {
     "id": "LOG-AST-FAC-0103",
@@ -174,9 +188,11 @@
       "quadrato blu"
     ],
     "risposta_corretta": "triangolo blu",
-    "spiegazione": "Le forme seguono il ciclo cerchio, quadrato, triangolo. I colori alternano rosso e blu. Dopo quadrato rosso viene quindi triangolo blu.",
+    "spiegazione": "La sequenza combina un ciclo di forme e un'alternanza di colori. Le forme seguono cerchio, quadrato, triangolo e poi ricominciano. I colori alternano rosso e blu. Dopo quadrato rosso viene quindi triangolo blu. Triangolo rosso mantiene la forma ma sbaglia il colore. Cerchio blu anticipa il ciclo successivo. Quadrato blu ripete la forma precedente.",
     "distrattore_forte": "triangolo rosso",
-    "motivo_distrattore_forte": "È plausibile perché rispetta la forma corretta, ma sbaglia il colore alternato."
+    "motivo_distrattore_forte": "È plausibile perché rispetta la forma corretta, ma sbaglia il colore alternato.",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve essere vicina alla corretta per struttura astratta, ma sbagliata per un dettaglio preciso: ordine invertito solo in parte, lettera avanzata male, numero non aggiornato, colore non alternato, lati o punti modificati in modo incompleto."
   },
   {
     "id": "LOG-AST-INT-0103",
@@ -191,9 +207,11 @@
       "ettagono con 4 punti"
     ],
     "risposta_corretta": "esagono con 4 punti",
-    "spiegazione": "Il pentagono ha 5 lati. Aumentando di 1 il numero dei lati diventa un esagono, e aumentando di 1 i punti interni si passa da 3 a 4 punti.",
+    "spiegazione": "La regola aumenta di 1 sia il numero dei lati sia il numero dei punti interni. Il pentagono ha 5 lati, quindi diventa un esagono con 6 lati. I punti interni passano da 3 a 4. Il risultato corretto è esagono con 4 punti. Esagono con 3 punti cambia solo i lati. Pentagono con 4 punti cambia solo i punti. Ettagono con 4 punti aumenta troppo i lati.",
     "distrattore_forte": "esagono con 3 punti",
-    "motivo_distrattore_forte": "È plausibile perché aggiorna correttamente la forma, ma dimentica l'aumento dei punti interni."
+    "motivo_distrattore_forte": "È plausibile perché aggiorna correttamente la forma, ma dimentica l'aumento dei punti interni.",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve essere vicina alla corretta per struttura astratta, ma sbagliata per un dettaglio preciso: ordine invertito solo in parte, lettera avanzata male, numero non aggiornato, colore non alternato, lati o punti modificati in modo incompleto."
   },
   {
     "id": "LOG-AST-AV-0103",
@@ -208,9 +226,11 @@
       "ettagono scuro con 4 punti"
     ],
     "risposta_corretta": "ettagono scuro con 5 punti",
-    "spiegazione": "L'esagono ha 6 lati, quindi aumentando di 1 diventa un ettagono. Il colore passa da chiaro a scuro e i punti interni aumentano da 3 a 5.",
+    "spiegazione": "La regola cambia tre elementi insieme. L'esagono ha 6 lati, quindi aumentando di 1 diventa un ettagono. Il colore alterna da chiaro a scuro. Gli oggetti interni aumentano di 2, quindi i punti passano da 3 a 5. Il risultato corretto è ettagono scuro con 5 punti. Ettagono chiaro con 5 punti sbaglia il colore. Ottagono scuro con 5 punti aumenta troppo i lati. Ettagono scuro con 4 punti aumenta i punti di 1 invece che di 2.",
     "distrattore_forte": "ettagono chiaro con 5 punti",
-    "motivo_distrattore_forte": "È plausibile perché rispetta lati e punti, ma non applica l'alternanza del colore."
+    "motivo_distrattore_forte": "È plausibile perché rispetta lati e punti, ma non applica l'alternanza del colore.",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve essere vicina alla corretta per struttura astratta, ma sbagliata per un dettaglio preciso: ordine invertito solo in parte, lettera avanzata male, numero non aggiornato, colore non alternato, lati o punti modificati in modo incompleto."
   },
   {
     "id": "LOG-AST-0201",
@@ -225,7 +245,9 @@
       "CAB"
     ],
     "risposta_corretta": "CBA",
-    "spiegazione": "La risposta corretta è A. Invertire l'ordine significa leggere le lettere da destra verso sinistra, quindi ABC diventa CBA."
+    "spiegazione": "La regola inverte l'ordine completo delle lettere. ABC letto da destra verso sinistra diventa CBA. BAC scambia solo le prime due lettere. ACB scambia solo le ultime due. CAB sposta l'ultima lettera davanti, ma non inverte tutto l'ordine.",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve essere vicina alla corretta per struttura astratta, ma sbagliata per un dettaglio preciso: ordine invertito solo in parte, lettera avanzata male, numero non aggiornato, colore non alternato, lati o punti modificati in modo incompleto."
   },
   {
     "id": "LOG-AST-0202",
@@ -235,12 +257,14 @@
     "domanda": "Se ogni simbolo viene ripetuto una volta, cosa diventa A B C?",
     "opzioni": [
       "A A B B C C",
-      "A B C A",
-      "A C B",
-      "B B C C A"
+      "A B C A B C",
+      "A B B C C",
+      "A A B C C"
     ],
     "risposta_corretta": "A A B B C C",
-    "spiegazione": "La risposta corretta è A. Ogni elemento viene duplicato mantenendo lo stesso ordine."
+    "spiegazione": "La regola ripete ogni simbolo una volta mantenendo lo stesso ordine. A diventa A A, B diventa B B e C diventa C C. Il risultato corretto è A A B B C C. A B C A B C ripete l'intera sequenza invece dei singoli simboli. A B B C C non duplica A. A A B C C non duplica B.",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve essere vicina alla corretta per struttura astratta, ma sbagliata per un dettaglio preciso: ordine invertito solo in parte, lettera avanzata male, numero non aggiornato, colore non alternato, lati o punti modificati in modo incompleto."
   },
   {
     "id": "LOG-AST-0203",
@@ -255,7 +279,9 @@
       "756"
     ],
     "risposta_corretta": "765",
-    "spiegazione": "La risposta corretta è A. La regola inverte l'ordine delle cifre: 567 letto al contrario diventa 765."
+    "spiegazione": "La regola inverte l'ordine delle cifre. Se 1234 diventa 4321, allora 567 letto al contrario diventa 765. 657 scambia solo le prime due cifre. 576 scambia solo le ultime due. 756 sposta l'ultima cifra davanti, ma non inverte tutta la sequenza.",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve essere vicina alla corretta per struttura astratta, ma sbagliata per un dettaglio preciso: ordine invertito solo in parte, lettera avanzata male, numero non aggiornato, colore non alternato, lati o punti modificati in modo incompleto."
   },
   {
     "id": "LOG-AST-0204",
@@ -270,7 +296,9 @@
       "F5"
     ],
     "risposta_corretta": "E5",
-    "spiegazione": "La risposta corretta è A. Aumentano insieme sia la lettera sia il numero: dopo D4 viene E5."
+    "spiegazione": "Nella serie aumentano insieme sia la lettera sia il numero. A1, B2, C3 e D4 mostrano che la lettera avanza di una posizione e il numero aumenta di 1. Dopo D4 viene quindi E5. E4 cambia solo la lettera. D5 cambia solo il numero. F5 fa avanzare troppo la lettera.",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve essere vicina alla corretta per struttura astratta, ma sbagliata per un dettaglio preciso: ordine invertito solo in parte, lettera avanzata male, numero non aggiornato, colore non alternato, lati o punti modificati in modo incompleto."
   },
   {
     "id": "LOG-AST-0205",
@@ -285,7 +313,9 @@
       "BEG"
     ],
     "risposta_corretta": "CEG",
-    "spiegazione": "La risposta corretta è A. B diventa C, D diventa E e F diventa G."
+    "spiegazione": "Ogni lettera viene sostituita con quella successiva nell'alfabeto. B diventa C, D diventa E e F diventa G. Quindi BDF diventa CEG. ACE sposta le lettere indietro. CFG cambia correttamente B e F, ma non D. BEG lascia invariata la prima lettera.",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve essere vicina alla corretta per struttura astratta, ma sbagliata per un dettaglio preciso: ordine invertito solo in parte, lettera avanzata male, numero non aggiornato, colore non alternato, lati o punti modificati in modo incompleto."
   },
   {
     "id": "LOG-AST-0206",
@@ -300,7 +330,9 @@
       "DE"
     ],
     "risposta_corretta": "FE",
-    "spiegazione": "La risposta corretta è A. La regola scambia la posizione delle due lettere."
+    "spiegazione": "La regola scambia la posizione delle due lettere. AB diventa BA e CD diventa DC. Seguendo la stessa regola, EF diventa FE. EF non applica lo scambio. FG cambia una lettera. DE sposta la coppia verso lettere precedenti.",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve essere vicina alla corretta per struttura astratta, ma sbagliata per un dettaglio preciso: ordine invertito solo in parte, lettera avanzata male, numero non aggiornato, colore non alternato, lati o punti modificati in modo incompleto."
   },
   {
     "id": "LOG-AST-0207",
@@ -315,7 +347,9 @@
       "Z Y X"
     ],
     "risposta_corretta": "Z X Y",
-    "spiegazione": "La risposta corretta è A. L'ultimo elemento diventa il primo, poi restano il primo e il secondo nell'ordine indicato."
+    "spiegazione": "La regola chiede l'ordine ultimo, primo, secondo. Nella sequenza X Y Z, l'ultimo elemento è Z, il primo è X e il secondo è Y. Il risultato corretto è Z X Y. Y Z X parte dal secondo elemento. X Z Y lascia il primo al suo posto. Z Y X inverte l'intera sequenza, ma non segue ultimo, primo, secondo.",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve essere vicina alla corretta per struttura astratta, ma sbagliata per un dettaglio preciso: ordine invertito solo in parte, lettera avanzata male, numero non aggiornato, colore non alternato, lati o punti modificati in modo incompleto."
   },
   {
     "id": "LOG-AST-0208",
@@ -330,7 +364,9 @@
       "C8"
     ],
     "risposta_corretta": "D8",
-    "spiegazione": "La risposta corretta è A. A corrisponde a 2, B a 4, C a 6, quindi D corrisponde a 8."
+    "spiegazione": "La sequenza associa ogni lettera al doppio della sua posizione alfabetica. A corrisponde a 2, B a 4, C a 6. D è la lettera successiva e corrisponde a 8. D7 usa la lettera giusta ma il numero sbagliato. E8 usa il numero giusto ma salta una lettera. C8 aumenta solo il numero, senza avanzare la lettera.",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve essere vicina alla corretta per struttura astratta, ma sbagliata per un dettaglio preciso: ordine invertito solo in parte, lettera avanzata male, numero non aggiornato, colore non alternato, lati o punti modificati in modo incompleto."
   },
   {
     "id": "LOG-AST-0209",
@@ -345,7 +381,9 @@
       "DC7"
     ],
     "risposta_corretta": "DC8",
-    "spiegazione": "La risposta corretta è A. Le lettere vengono invertite e il numero viene raddoppiato: CD diventa DC e 4 diventa 8."
+    "spiegazione": "La trasformazione applica due regole: inverte le lettere e raddoppia il numero. AB3 diventa BA6 perché AB diventa BA e 3 diventa 6. Quindi CD4 diventa DC8. DC4 inverte le lettere ma non raddoppia il numero. CD8 raddoppia il numero ma non inverte le lettere. DC7 inverte le lettere ma aumenta il numero in modo sbagliato.",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve essere vicina alla corretta per struttura astratta, ma sbagliata per un dettaglio preciso: ordine invertito solo in parte, lettera avanzata male, numero non aggiornato, colore non alternato, lati o punti modificati in modo incompleto."
   },
   {
     "id": "LOG-AST-0210",
@@ -360,6 +398,8 @@
       "J10"
     ],
     "risposta_corretta": "I10",
-    "spiegazione": "La risposta corretta è A. Le lettere avanzano saltando una lettera e i numeri aumentano di 2. Dopo G8 viene I10."
+    "spiegazione": "La serie fa avanzare le lettere saltando una lettera e aumenta i numeri di 2. Le lettere sono A, C, E, G, quindi dopo G viene I. I numeri sono 2, 4, 6, 8, quindi dopo 8 viene 10. Il risultato corretto è I10. H10 non salta correttamente la lettera. I9 usa il numero sbagliato. J10 avanza troppo la lettera.",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve essere vicina alla corretta per struttura astratta, ma sbagliata per un dettaglio preciso: ordine invertito solo in parte, lettera avanzata male, numero non aggiornato, colore non alternato, lati o punti modificati in modo incompleto."
   }
 ]

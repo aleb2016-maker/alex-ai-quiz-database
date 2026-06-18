@@ -1,0 +1,365 @@
+[
+  {
+    "id": "LOG-AST-FAC-0001",
+    "categoria": "logica",
+    "sottocategoria": "ragionamento astratto",
+    "livello": "facile",
+    "domanda": "In una sequenza le forme seguono questo ordine: cerchio, quadrato, cerchio, quadrato. Quale forma viene dopo?",
+    "opzioni": [
+      "Cerchio",
+      "Quadrato",
+      "Triangolo",
+      "Rettangolo"
+    ],
+    "risposta_corretta": "Cerchio",
+    "spiegazione": "La sequenza alterna sempre cerchio e quadrato: cerchio, quadrato, cerchio, quadrato. Dopo il quadrato torna quindi il cerchio.",
+    "tags": [
+      "pattern",
+      "alternanza",
+      "ragionamento astratto"
+    ],
+    "difficolta": 1,
+    "distrattore_forte": "Quadrato",
+    "motivo_distrattore_forte": "È vicino perché è l'altra forma presente nella sequenza, ma è sbagliato perché ripeterebbe il quadrato invece di rispettare l'alternanza."
+  },
+  {
+    "id": "LOG-AST-INT-0002",
+    "categoria": "logica",
+    "sottocategoria": "ragionamento astratto",
+    "livello": "intermedio",
+    "domanda": "Una regola trasforma A in C, B in D e C in E. Seguendo la stessa regola, in cosa si trasforma D?",
+    "opzioni": [
+      "F",
+      "E",
+      "G",
+      "H"
+    ],
+    "risposta_corretta": "F",
+    "spiegazione": "Ogni lettera viene spostata avanti di due posizioni nell'alfabeto: A diventa C, B diventa D, C diventa E. Seguendo la stessa regola, D diventa F.",
+    "tags": [
+      "pattern astratto",
+      "alfabeto",
+      "trasformazioni"
+    ],
+    "difficolta": 2,
+    "distrattore_forte": "E",
+    "motivo_distrattore_forte": "È vicino perché è la lettera successiva a D, ma è sbagliato perché la regola non avanza di una posizione: avanza di due."
+  },
+  {
+    "id": "LOG-AST-AV-0003",
+    "categoria": "logica",
+    "sottocategoria": "ragionamento_astratto",
+    "livello": "avanzato",
+    "domanda": "Osserva le trasformazioni: A3C → B6D, D4F → E8G, H5J →?",
+    "opzioni": [
+      "I10K",
+      "I8K",
+      "J10K",
+      "I10J"
+    ],
+    "risposta_corretta": "I10K",
+    "spiegazione": "Nelle trasformazioni la prima e l'ultima lettera avanzano di una posizione nell'alfabeto, mentre il numero viene raddoppiato. Quindi H diventa I, 5 diventa 10 e J diventa K.",
+    "tags": [
+      "trasformazioni",
+      "lettere",
+      "numeri",
+      "ragionamento_astratto"
+    ],
+    "difficolta": 3,
+    "distrattore_forte": "I8K",
+    "motivo_distrattore_forte": "È vicino perché aggiorna correttamente le due lettere esterne, ma è sbagliato perché il numero deve essere raddoppiato: 5 diventa 10, non 8."
+  },
+  {
+    "id": "LOG-AST-INT-0004",
+    "categoria": "logica",
+    "sottocategoria": "ragionamento_astratto",
+    "livello": "intermedio",
+    "domanda": "Osserva le trasformazioni: A1 → B2, C3 → D4, E5 →?",
+    "opzioni": [
+      "F6",
+      "F5",
+      "E6",
+      "G6"
+    ],
+    "risposta_corretta": "F6",
+    "spiegazione": "In ogni trasformazione la lettera avanza di una posizione nell'alfabeto e il numero aumenta di 1. Quindi E5 diventa F6.",
+    "tags": [
+      "trasformazioni",
+      "lettere",
+      "numeri"
+    ],
+    "difficolta": 2,
+    "distrattore_forte": "F5",
+    "motivo_distrattore_forte": "È vicino perché aggiorna correttamente la lettera da E a F, ma è sbagliato perché lascia invariato il numero invece di aumentarlo da 5 a 6."
+  },
+  {
+    "id": "LOG-AST-INT-0101",
+    "categoria": "logica",
+    "sottocategoria": "ragionamento_astratto",
+    "livello": "intermedio",
+    "domanda": "Una sequenza alterna il numero di lati così: triangolo, quadrato, pentagono, esagono. Quale forma segue?",
+    "opzioni": [
+      "ettagono",
+      "esagono",
+      "ottagono",
+      "pentagono"
+    ],
+    "risposta_corretta": "ettagono",
+    "spiegazione": "Le forme aumentano di un lato alla volta: triangolo 3 lati, quadrato 4, pentagono 5, esagono 6. Dopo viene l'ettagono, che ha 7 lati.",
+    "tags": [
+      "forme",
+      "sequenze",
+      "ragionamento_astratto"
+    ],
+    "difficolta": 2,
+    "distrattore_forte": "ottagono",
+    "motivo_distrattore_forte": "È vicino perché continua con un poligono successivo, ma salta un passaggio: dopo 6 lati viene 7, non 8."
+  },
+  {
+    "id": "LOG-AST-AV-0101",
+    "categoria": "logica",
+    "sottocategoria": "ragionamento_astratto",
+    "livello": "avanzato",
+    "domanda": "Una sequenza segue questa regola: una figura aumenta di un lato e cambia colore a ogni passaggio. Dopo triangolo rosso, quadrato blu, pentagono rosso, esagono blu, cosa viene?",
+    "opzioni": [
+      "ettagono rosso",
+      "ettagono blu",
+      "ottagono rosso",
+      "esagono rosso"
+    ],
+    "risposta_corretta": "ettagono rosso",
+    "spiegazione": "Il numero di lati aumenta: 3, 4, 5, 6, quindi 7 lati, cioè ettagono. Il colore alterna rosso, blu, rosso, blu, quindi il prossimo è rosso.",
+    "tags": [
+      "forme",
+      "sequenze",
+      "ragionamento_astratto"
+    ],
+    "difficolta": 3,
+    "distrattore_forte": "ettagono blu",
+    "motivo_distrattore_forte": "È vicino perché individua correttamente la forma con 7 lati, ma è sbagliato perché non rispetta l'alternanza dei colori: dopo blu deve tornare rosso."
+  },
+  {
+    "id": "LOG-AST-AV-0102",
+    "categoria": "logica",
+    "sottocategoria": "ragionamento_astratto",
+    "livello": "avanzato",
+    "domanda": "In una sequenza, ogni figura ruota di 90° in senso orario a ogni passaggio. Se una freccia punta in alto, poi a destra, poi in basso, quale direzione segue?",
+    "opzioni": [
+      "sinistra",
+      "alto",
+      "destra",
+      "basso"
+    ],
+    "risposta_corretta": "sinistra",
+    "spiegazione": "La rotazione è sempre di 90 gradi in senso orario: alto, destra, basso, sinistra. Dopo basso, continuando la rotazione oraria, la freccia punta a sinistra.",
+    "tags": [
+      "rotazioni",
+      "sequenze",
+      "ragionamento_astratto"
+    ],
+    "difficolta": 3,
+    "distrattore_forte": "alto",
+    "motivo_distrattore_forte": "È vicino perché appartiene allo stesso ciclo di direzioni, ma è sbagliato perché alto arriva dopo un ulteriore passaggio, non subito dopo basso."
+  },
+  {
+    "id": "LOG-AST-FAC-0103",
+    "categoria": "logica",
+    "livello": "facile",
+    "difficolta": "facile",
+    "domanda": "Osserva la sequenza: cerchio rosso, quadrato blu, triangolo rosso, cerchio blu, quadrato rosso. Quale elemento completa la sequenza?",
+    "opzioni": [
+      "triangolo blu",
+      "triangolo rosso",
+      "cerchio blu",
+      "quadrato blu"
+    ],
+    "risposta_corretta": "triangolo blu",
+    "spiegazione": "Le forme seguono il ciclo cerchio, quadrato, triangolo. I colori alternano rosso e blu. Dopo quadrato rosso viene quindi triangolo blu.",
+    "distrattore_forte": "triangolo rosso",
+    "motivo_distrattore_forte": "È plausibile perché rispetta la forma corretta, ma sbaglia il colore alternato."
+  },
+  {
+    "id": "LOG-AST-INT-0103",
+    "categoria": "logica",
+    "livello": "intermedio",
+    "difficolta": "intermedio",
+    "domanda": "Una regola trasforma una figura aumentando di 1 il numero dei lati e di 1 il numero dei punti interni. Se un pentagono con 3 punti viene trasformato, quale risultato si ottiene?",
+    "opzioni": [
+      "esagono con 4 punti",
+      "esagono con 3 punti",
+      "pentagono con 4 punti",
+      "ettagono con 4 punti"
+    ],
+    "risposta_corretta": "esagono con 4 punti",
+    "spiegazione": "Il pentagono ha 5 lati. Aumentando di 1 il numero dei lati diventa un esagono, e aumentando di 1 i punti interni si passa da 3 a 4 punti.",
+    "distrattore_forte": "esagono con 3 punti",
+    "motivo_distrattore_forte": "È plausibile perché aggiorna correttamente la forma, ma dimentica l'aumento dei punti interni."
+  },
+  {
+    "id": "LOG-AST-AV-0103",
+    "categoria": "logica",
+    "livello": "avanzato",
+    "difficolta": "avanzato",
+    "domanda": "In una sequenza astratta, ogni passaggio aumenta i lati della figura di 1, alterna il colore chiaro/scuro e aumenta gli oggetti interni di 2. Dopo un esagono chiaro con 3 punti, quale figura viene?",
+    "opzioni": [
+      "ettagono scuro con 5 punti",
+      "ettagono chiaro con 5 punti",
+      "ottagono scuro con 5 punti",
+      "ettagono scuro con 4 punti"
+    ],
+    "risposta_corretta": "ettagono scuro con 5 punti",
+    "spiegazione": "L'esagono ha 6 lati, quindi aumentando di 1 diventa un ettagono. Il colore passa da chiaro a scuro e i punti interni aumentano da 3 a 5.",
+    "distrattore_forte": "ettagono chiaro con 5 punti",
+    "motivo_distrattore_forte": "È plausibile perché rispetta lati e punti, ma non applica l'alternanza del colore."
+  },
+  {
+    "id": "LOG-AST-0201",
+    "categoria": "logica",
+    "sottocategoria": "ragionamento_astratto",
+    "livello": "facile",
+    "domanda": "Se la regola inverte l'ordine delle lettere, cosa diventa ABC?",
+    "opzioni": [
+      "CBA",
+      "BAC",
+      "ACB",
+      "CAB"
+    ],
+    "risposta_corretta": "CBA",
+    "spiegazione": "La risposta corretta è A. Invertire l'ordine significa leggere le lettere da destra verso sinistra, quindi ABC diventa CBA."
+  },
+  {
+    "id": "LOG-AST-0202",
+    "categoria": "logica",
+    "sottocategoria": "ragionamento_astratto",
+    "livello": "facile",
+    "domanda": "Se ogni simbolo viene ripetuto una volta, cosa diventa A B C?",
+    "opzioni": [
+      "A A B B C C",
+      "A B C A",
+      "A C B",
+      "B B C C A"
+    ],
+    "risposta_corretta": "A A B B C C",
+    "spiegazione": "La risposta corretta è A. Ogni elemento viene duplicato mantenendo lo stesso ordine."
+  },
+  {
+    "id": "LOG-AST-0203",
+    "categoria": "logica",
+    "sottocategoria": "ragionamento_astratto",
+    "livello": "facile",
+    "domanda": "Se 1234 diventa 4321, cosa diventa 567?",
+    "opzioni": [
+      "765",
+      "657",
+      "576",
+      "756"
+    ],
+    "risposta_corretta": "765",
+    "spiegazione": "La risposta corretta è A. La regola inverte l'ordine delle cifre: 567 letto al contrario diventa 765."
+  },
+  {
+    "id": "LOG-AST-0204",
+    "categoria": "logica",
+    "sottocategoria": "ragionamento_astratto",
+    "livello": "intermedio",
+    "domanda": "Nella serie A1, B2, C3, D4, quale elemento viene dopo?",
+    "opzioni": [
+      "E5",
+      "E4",
+      "D5",
+      "F5"
+    ],
+    "risposta_corretta": "E5",
+    "spiegazione": "La risposta corretta è A. Aumentano insieme sia la lettera sia il numero: dopo D4 viene E5."
+  },
+  {
+    "id": "LOG-AST-0205",
+    "categoria": "logica",
+    "sottocategoria": "ragionamento_astratto",
+    "livello": "intermedio",
+    "domanda": "Se la trasformazione cambia ogni lettera con quella successiva nell'alfabeto, cosa diventa BDF?",
+    "opzioni": [
+      "CEG",
+      "ACE",
+      "CFG",
+      "BEG"
+    ],
+    "risposta_corretta": "CEG",
+    "spiegazione": "La risposta corretta è A. B diventa C, D diventa E e F diventa G."
+  },
+  {
+    "id": "LOG-AST-0206",
+    "categoria": "logica",
+    "sottocategoria": "ragionamento_astratto",
+    "livello": "intermedio",
+    "domanda": "Osserva la regola: AB diventa BA, CD diventa DC. Cosa diventa EF?",
+    "opzioni": [
+      "FE",
+      "EF",
+      "FG",
+      "DE"
+    ],
+    "risposta_corretta": "FE",
+    "spiegazione": "La risposta corretta è A. La regola scambia la posizione delle due lettere."
+  },
+  {
+    "id": "LOG-AST-0207",
+    "categoria": "logica",
+    "sottocategoria": "ragionamento_astratto",
+    "livello": "intermedio",
+    "domanda": "Se X Y Z segue la regola ultimo, primo, secondo, quale ordine si ottiene?",
+    "opzioni": [
+      "Z X Y",
+      "Y Z X",
+      "X Z Y",
+      "Z Y X"
+    ],
+    "risposta_corretta": "Z X Y",
+    "spiegazione": "La risposta corretta è A. L'ultimo elemento diventa il primo, poi restano il primo e il secondo nell'ordine indicato."
+  },
+  {
+    "id": "LOG-AST-0208",
+    "categoria": "logica",
+    "sottocategoria": "ragionamento_astratto",
+    "livello": "avanzato",
+    "domanda": "Se la sequenza alterna una lettera e il suo doppio numerico, quale elemento segue C6?",
+    "opzioni": [
+      "D8",
+      "D7",
+      "E8",
+      "C8"
+    ],
+    "risposta_corretta": "D8",
+    "spiegazione": "La risposta corretta è A. A corrisponde a 2, B a 4, C a 6, quindi D corrisponde a 8."
+  },
+  {
+    "id": "LOG-AST-0209",
+    "categoria": "logica",
+    "sottocategoria": "ragionamento_astratto",
+    "livello": "avanzato",
+    "domanda": "Se una regola trasforma AB3 in BA6 raddoppiando il numero e invertendo le lettere, cosa diventa CD4?",
+    "opzioni": [
+      "DC8",
+      "DC4",
+      "CD8",
+      "DC7"
+    ],
+    "risposta_corretta": "DC8",
+    "spiegazione": "La risposta corretta è A. Le lettere vengono invertite e il numero viene raddoppiato: CD diventa DC e 4 diventa 8."
+  },
+  {
+    "id": "LOG-AST-0210",
+    "categoria": "logica",
+    "sottocategoria": "ragionamento_astratto",
+    "livello": "avanzato",
+    "domanda": "Nella serie A2, C4, E6, G8, quale elemento viene dopo?",
+    "opzioni": [
+      "I10",
+      "H10",
+      "I9",
+      "J10"
+    ],
+    "risposta_corretta": "I10",
+    "spiegazione": "La risposta corretta è A. Le lettere avanzano saltando una lettera e i numeri aumentano di 2. Dopo G8 viene I10."
+  }
+]
