@@ -1235,9 +1235,7 @@
       "50"
     ],
     "risposta_corretta": "10",
-    "spiegazione": "La mediana è il valore centrale di una lista ordinata. I numeri 4, 9, 10, 12 e 15 sono già ordinati e il valore al centro è 10. 9 e 12 sono vicini al centro, mentre 50 è la somma dei valori e non la mediana.",
-    "regola_distrattori": "tre_distrattori_forti",
-    "criterio_distrattori": "Ogni risposta errata deve essere un errore matematico plausibile: calcolo vicino, passaggio saltato, formula invertita o interpretazione numerica quasi corretta."
+    "spiegazione": "La risposta corretta è A. I numeri sono già ordinati e il valore centrale è 10."
   },
   {
     "id": "MAT-INT-0210",
@@ -1248,12 +1246,10 @@
       "Sono validi tutti i valori di x maggiori di 4.",
       "Sono validi tutti i valori di x minori di 4.",
       "Sono validi soltanto i valori di x maggiori di 12.",
-      "Sono validi tutti i valori di x maggiori di 8."
+      "Sono validi soltanto i valori di x compresi tra 0 e 4."
     ],
     "risposta_corretta": "Sono validi tutti i valori di x maggiori di 4.",
-    "spiegazione": "La disequazione tre x meno quattro maggiore di otto diventa tre x maggiore di dodici. Dividendo per tre si ottiene x maggiore di 4. x minore di 4 inverte il verso, mentre x maggiore di 12 e x maggiore di 8 non completano correttamente la divisione finale.",
-    "regola_distrattori": "tre_distrattori_forti",
-    "criterio_distrattori": "Ogni risposta errata deve essere un errore matematico plausibile: calcolo vicino, passaggio saltato, formula invertita o interpretazione numerica quasi corretta."
+    "spiegazione": "La risposta corretta è A. Partendo da tre x meno quattro maggiore di otto, si ottiene tre x maggiore di dodici. Dividendo per tre si ricava x maggiore di 4."
   },
   {
     "id": "MAT-INT-0211",
@@ -1267,9 +1263,7 @@
       "1/2"
     ],
     "risposta_corretta": "2",
-    "spiegazione": "Il coefficiente angolare tra i punti (1, 2) e (5, 10) si calcola con la variazione di y divisa per la variazione di x. Quindi (10 - 2) / (5 - 1) = 8 / 4 = 2. 4 usa solo la variazione di x, 8 usa solo la variazione di y, 1/2 inverte il rapporto.",
-    "regola_distrattori": "tre_distrattori_forti",
-    "criterio_distrattori": "Ogni risposta errata deve essere un errore matematico plausibile: calcolo vicino, passaggio saltato, formula invertita o interpretazione numerica quasi corretta."
+    "spiegazione": "La risposta corretta è A. Il coefficiente angolare è (10 - 2) / (5 - 1) = 8 / 4 = 2."
   },
   {
     "id": "MAT-INT-0212",
@@ -1283,9 +1277,7 @@
       "27"
     ],
     "risposta_corretta": "21",
-    "spiegazione": "Nella funzione y = 4x - 3, sostituendo x = 6 si ottiene y = 4 × 6 - 3. Quindi y = 24 - 3 = 21. 24 dimentica il meno 3, 18 sottrae troppo, 27 aggiunge 3 invece di sottrarlo.",
-    "regola_distrattori": "tre_distrattori_forti",
-    "criterio_distrattori": "Ogni risposta errata deve essere un errore matematico plausibile: calcolo vicino, passaggio saltato, formula invertita o interpretazione numerica quasi corretta."
+    "spiegazione": "La risposta corretta è A. Sostituendo x = 6 nella funzione y = 4x - 3 si ottiene y = 4 × 6 - 3 = 24 - 3 = 21."
   },
   {
     "id": "MAT-INT-0213",
@@ -1299,9 +1291,7 @@
       "154"
     ],
     "risposta_corretta": "44",
-    "spiegazione": "La circonferenza di un cerchio si calcola con 2 × pi greco × raggio. Usando pi greco uguale a 22/7 e raggio 7 si ottiene 2 × 22/7 × 7 = 44. 22 usa solo pi greco per il diametro dimezzato, 49 confonde il calcolo con il quadrato del raggio, 154 è l'area.",
-    "regola_distrattori": "tre_distrattori_forti",
-    "criterio_distrattori": "Ogni risposta errata deve essere un errore matematico plausibile: calcolo vicino, passaggio saltato, formula invertita o interpretazione numerica quasi corretta."
+    "spiegazione": "La risposta corretta è A. La circonferenza è 2 × pi greco × raggio, quindi 2 × 22/7 × 7 = 44."
   },
   {
     "id": "MAT-INT-0214",
@@ -1311,13 +1301,11 @@
     "opzioni": [
       "125",
       "25",
-      "75",
+      "100",
       "15"
     ],
     "risposta_corretta": "125",
-    "spiegazione": "Il volume di un cubo si calcola elevando il lato alla terza potenza. Con lato 5 si ottiene 5³ = 5 × 5 × 5 = 125. 25 è l'area di una faccia, 75 moltiplica 25 per 3, 15 somma tre volte il lato.",
-    "regola_distrattori": "tre_distrattori_forti",
-    "criterio_distrattori": "Ogni risposta errata deve essere un errore matematico plausibile: calcolo vicino, passaggio saltato, formula invertita o interpretazione numerica quasi corretta."
+    "spiegazione": "La risposta corretta è A. Il volume del cubo è lato³, quindi 5³ = 125."
   },
   {
     "id": "MAT-AV-0201",
@@ -1326,14 +1314,12 @@
     "domanda": "Quale coppia di numeri annulla il polinomio x al quadrato meno cinque x più sei?",
     "opzioni": [
       "La coppia corretta è formata da 2 e 3.",
-      "La coppia 1 e 6 ha prodotto corretto, ma somma non coerente con il termine centrale.",
-      "La coppia -2 e -3 produce segni non coerenti con il polinomio.",
-      "La coppia 5 e 1 usa il coefficiente centrale, ma non annulla il polinomio."
+      "La coppia proposta 1 e 6 dà la somma giusta, ma non il prodotto richiesto.",
+      "La coppia negativa meno 2 e meno 3 produce segni non coerenti con il polinomio.",
+      "Il valore 5 da solo non può rappresentare due soluzioni distinte."
     ],
     "risposta_corretta": "La coppia corretta è formata da 2 e 3.",
-    "spiegazione": "Il polinomio x² - 5x + 6 si scompone come (x - 2)(x - 3). Le soluzioni sono quindi 2 e 3. 1 e 6 hanno prodotto 6 ma somma 7, -2 e -3 cambiano i segni, 5 e 1 non rispettano la scomposizione corretta.",
-    "regola_distrattori": "tre_distrattori_forti",
-    "criterio_distrattori": "Ogni risposta errata deve essere un errore matematico plausibile: calcolo vicino, passaggio saltato, formula invertita o interpretazione numerica quasi corretta."
+    "spiegazione": "La risposta corretta è A. Il polinomio x al quadrato meno cinque x più sei si scompone come prodotto tra x meno 2 e x meno 3. Quindi le soluzioni sono 2 e 3."
   },
   {
     "id": "MAT-AV-0202",
@@ -1347,9 +1333,7 @@
       "f'(x) = x² - 4"
     ],
     "risposta_corretta": "f'(x) = 6x - 4",
-    "spiegazione": "La derivata di 3x² è 6x, la derivata di -4x è -4 e la derivata della costante 1 è 0. Quindi f'(x) = 6x - 4. 3x - 4 dimezza il coefficiente, 6x + 1 mantiene la costante, x² - 4 lascia una potenza non derivata correttamente.",
-    "regola_distrattori": "tre_distrattori_forti",
-    "criterio_distrattori": "Ogni risposta errata deve essere un errore matematico plausibile: calcolo vicino, passaggio saltato, formula invertita o interpretazione numerica quasi corretta."
+    "spiegazione": "La risposta corretta è A. La derivata di 3x² è 6x, la derivata di -4x è -4 e la derivata della costante 1 è 0."
   },
   {
     "id": "MAT-AV-0203",
@@ -1363,9 +1347,7 @@
       "2 + C"
     ],
     "risposta_corretta": "x² + C",
-    "spiegazione": "Un integrale indefinito di 2x rispetto a x è x² + C, perché la derivata di x² è 2x. 2x² + C avrebbe derivata 4x, x + C avrebbe derivata 1, 2 + C avrebbe derivata 0.",
-    "regola_distrattori": "tre_distrattori_forti",
-    "criterio_distrattori": "Ogni risposta errata deve essere un errore matematico plausibile: calcolo vicino, passaggio saltato, formula invertita o interpretazione numerica quasi corretta."
+    "spiegazione": "La risposta corretta è A. Una primitiva di 2x è x², perché la derivata di x² è 2x."
   },
   {
     "id": "MAT-AV-0204",
@@ -1379,9 +1361,7 @@
       "Solo i numeri interi diversi da 2."
     ],
     "risposta_corretta": "Tutti i numeri reali tranne x = 2.",
-    "spiegazione": "Nella funzione f(x) = 1 / (x - 2), il denominatore non può essere uguale a zero. Quindi bisogna escludere x = 2, mentre tutti gli altri numeri reali sono ammessi. Non bisogna escludere x = 0, limitarsi ai valori maggiori di 2 o usare solo numeri interi.",
-    "regola_distrattori": "tre_distrattori_forti",
-    "criterio_distrattori": "Ogni risposta errata deve essere un errore matematico plausibile: calcolo vicino, passaggio saltato, formula invertita o interpretazione numerica quasi corretta."
+    "spiegazione": "La risposta corretta è A. Il denominatore non può essere uguale a zero, quindi bisogna escludere x = 2. Tutti gli altri numeri reali sono ammessi."
   },
   {
     "id": "MAT-AV-0205",
@@ -1395,9 +1375,7 @@
       "100"
     ],
     "risposta_corretta": "3",
-    "spiegazione": "Il logaritmo in base 10 di 1000 chiede a quale esponente bisogna elevare 10 per ottenere 1000. Poiché 10³ = 1000, il valore è 3. 2 darebbe 100, mentre 10 e 100 confondono base o risultato con l'esponente.",
-    "regola_distrattori": "tre_distrattori_forti",
-    "criterio_distrattori": "Ogni risposta errata deve essere un errore matematico plausibile: calcolo vicino, passaggio saltato, formula invertita o interpretazione numerica quasi corretta."
+    "spiegazione": "La risposta corretta è A. Il logaritmo in base 10 di 1000 vale 3 perché 10³ = 1000."
   },
   {
     "id": "MAT-AV-0206",
@@ -1411,9 +1389,7 @@
       "36"
     ],
     "risposta_corretta": "43",
-    "spiegazione": "In una progressione aritmetica si usa la formula a_n = a_1 + (n - 1)d. Con primo termine 7, differenza 4 e n = 10 si ottiene a_10 = 7 + 9 × 4 = 43. 47 aggiunge dieci differenze invece di nove, 40 dimentica il primo termine, 36 usa solo 9 × 4.",
-    "regola_distrattori": "tre_distrattori_forti",
-    "criterio_distrattori": "Ogni risposta errata deve essere un errore matematico plausibile: calcolo vicino, passaggio saltato, formula invertita o interpretazione numerica quasi corretta."
+    "spiegazione": "La risposta corretta è A. La formula è a_n = a_1 + (n - 1)d. Quindi a_10 = 7 + 9 × 4 = 43."
   },
   {
     "id": "MAT-AV-0207",
@@ -1427,9 +1403,7 @@
       "96"
     ],
     "risposta_corretta": "48",
-    "spiegazione": "In una progressione geometrica si usa la formula a_n = a_1 × r^(n - 1). Con primo termine 3, ragione 2 e n = 5 si ottiene a_5 = 3 × 2^4 = 48. 24 usa una potenza in meno, 32 ignora il primo termine 3, 96 usa una potenza in più.",
-    "regola_distrattori": "tre_distrattori_forti",
-    "criterio_distrattori": "Ogni risposta errata deve essere un errore matematico plausibile: calcolo vicino, passaggio saltato, formula invertita o interpretazione numerica quasi corretta."
+    "spiegazione": "La risposta corretta è A. La formula è a_n = a_1 × r^(n - 1). Quindi a_5 = 3 × 2^4 = 48."
   },
   {
     "id": "MAT-AV-0208",
@@ -1443,9 +1417,7 @@
       "16/3"
     ],
     "risposta_corretta": "8/3",
-    "spiegazione": "Per i valori 2, 4 e 6 la media è 4. Gli scarti quadratici sono (2 - 4)² = 4, (4 - 4)² = 0 e (6 - 4)² = 4. La varianza della popolazione è (4 + 0 + 4) / 3 = 8/3. 4 non divide per il numero dei valori, 2 usa gli scarti senza quadrato, 16/3 raddoppia la somma degli scarti quadratici.",
-    "regola_distrattori": "tre_distrattori_forti",
-    "criterio_distrattori": "Ogni risposta errata deve essere un errore matematico plausibile: calcolo vicino, passaggio saltato, formula invertita o interpretazione numerica quasi corretta."
+    "spiegazione": "La risposta corretta è A. La media è 4. Gli scarti quadratici sono 4, 0 e 4. La varianza della popolazione è (4 + 0 + 4) / 3 = 8/3."
   },
   {
     "id": "MAT-AV-0209",
@@ -1459,9 +1431,7 @@
       "9"
     ],
     "risposta_corretta": "6",
-    "spiegazione": "Si scompone x² - 9 come (x - 3)(x + 3). Dopo la semplificazione con x - 3 resta x + 3. Per x che tende a 3, x + 3 vale 6. 3 usa solo il valore verso cui tende x, 0 sostituisce direttamente prima di semplificare, 9 confonde il limite con 3².",
-    "regola_distrattori": "tre_distrattori_forti",
-    "criterio_distrattori": "Ogni risposta errata deve essere un errore matematico plausibile: calcolo vicino, passaggio saltato, formula invertita o interpretazione numerica quasi corretta."
+    "spiegazione": "La risposta corretta è A. Si scompone x² - 9 in (x - 3)(x + 3). Dopo la semplificazione resta x + 3, che per x = 3 vale 6."
   },
   {
     "id": "MAT-AV-0210",
@@ -1475,9 +1445,7 @@
       "3"
     ],
     "risposta_corretta": "5",
-    "spiegazione": "Il determinante della matrice 2x2 con righe [2, 3] e [1, 4] si calcola con 2 × 4 - 3 × 1. Quindi 8 - 3 = 5. 11 somma i prodotti invece di sottrarli, 8 usa solo il primo prodotto, 3 usa solo il secondo prodotto.",
-    "regola_distrattori": "tre_distrattori_forti",
-    "criterio_distrattori": "Ogni risposta errata deve essere un errore matematico plausibile: calcolo vicino, passaggio saltato, formula invertita o interpretazione numerica quasi corretta."
+    "spiegazione": "La risposta corretta è A. Il determinante è 2 × 4 - 3 × 1 = 8 - 3 = 5."
   },
   {
     "id": "MAT-AV-0211",
@@ -1491,9 +1459,7 @@
       "16"
     ],
     "risposta_corretta": "14",
-    "spiegazione": "Il prodotto scalare tra (2, -1, 3) e (4, 0, 2) si calcola moltiplicando le componenti corrispondenti e sommando. Quindi 2 × 4 + (-1) × 0 + 3 × 2 = 8 + 0 + 6 = 14. 10, 12 e 16 derivano da somme parziali o da errori sul termine con zero.",
-    "regola_distrattori": "tre_distrattori_forti",
-    "criterio_distrattori": "Ogni risposta errata deve essere un errore matematico plausibile: calcolo vicino, passaggio saltato, formula invertita o interpretazione numerica quasi corretta."
+    "spiegazione": "La risposta corretta è A. Il prodotto scalare è 2 × 4 + (-1) × 0 + 3 × 2 = 8 + 0 + 6 = 14."
   },
   {
     "id": "MAT-AV-0212",
@@ -1507,9 +1473,7 @@
       "30"
     ],
     "risposta_corretta": "25",
-    "spiegazione": "Tra i rettangoli con lo stesso perimetro, l'area massima si ottiene con il quadrato. Con perimetro 20, il lato del quadrato è 20 / 4 = 5. L'area massima è quindi 5 × 5 = 25. 20 è il perimetro, 16 è un'area possibile ma non massima, 30 supera il massimo consentito.",
-    "regola_distrattori": "tre_distrattori_forti",
-    "criterio_distrattori": "Ogni risposta errata deve essere un errore matematico plausibile: calcolo vicino, passaggio saltato, formula invertita o interpretazione numerica quasi corretta."
+    "spiegazione": "La risposta corretta è A. A parità di perimetro, il rettangolo con area massima è il quadrato. Con perimetro 20 il lato è 5, quindi l'area è 25."
   },
   {
     "id": "MAT-AV-0213",
@@ -1523,9 +1487,7 @@
       "1/4"
     ],
     "risposta_corretta": "3/8",
-    "spiegazione": "Con 3 prove indipendenti e probabilità di successo 1/2, ogni sequenza specifica ha probabilità (1/2)^3 = 1/8. Le sequenze con esattamente 2 successi sono 3, quindi la probabilità totale è 3 × 1/8 = 3/8. 1/8 conta una sola sequenza, 1/2 è troppo alto, 1/4 non considera correttamente le 3 combinazioni.",
-    "regola_distrattori": "tre_distrattori_forti",
-    "criterio_distrattori": "Ogni risposta errata deve essere un errore matematico plausibile: calcolo vicino, passaggio saltato, formula invertita o interpretazione numerica quasi corretta."
+    "spiegazione": "La risposta corretta è A. Ci sono 3 modi per scegliere le due prove con successo. Ogni sequenza ha probabilità (1/2)^3 = 1/8, quindi il totale è 3/8."
   },
   {
     "id": "MAT-AV-0214",
@@ -1539,8 +1501,6 @@
       "7"
     ],
     "risposta_corretta": "16",
-    "spiegazione": "Prima si calcola la funzione interna: g(3) = 3 + 1 = 4. Poi si applica f al risultato: f(4) = 4² = 16. 10 somma passaggi non corretti, 9 calcola f(3), 7 somma 3 e 4 senza applicare il quadrato.",
-    "regola_distrattori": "tre_distrattori_forti",
-    "criterio_distrattori": "Ogni risposta errata deve essere un errore matematico plausibile: calcolo vicino, passaggio saltato, formula invertita o interpretazione numerica quasi corretta."
+    "spiegazione": "La risposta corretta è A. Prima si calcola g(3) = 3 + 1 = 4. Poi f(4) = 4² = 16."
   }
 ]

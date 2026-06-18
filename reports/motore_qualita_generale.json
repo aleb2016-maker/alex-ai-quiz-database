@@ -789,7 +789,7 @@
     "problemi_tecnici_totali": 0,
     "avvisi_qualita_reali_totali": 0,
     "errori_linguistici_totali": 0,
-    "note_informative_totali": 6,
+    "note_informative_totali": 9,
     "domande_con_problemi_tecnici": [],
     "domande_con_avvisi_qualita_reali": [],
     "domande_con_errori_linguistici": [],
@@ -883,7 +883,7 @@
           "Sono validi tutti i valori di x maggiori di 4.",
           "Sono validi tutti i valori di x minori di 4.",
           "Sono validi soltanto i valori di x maggiori di 12.",
-          "Sono validi soltanto i valori di x compresi tra 0 e 4."
+          "Sono validi tutti i valori di x maggiori di 8."
         ],
         "risposta_corretta": "Sono validi tutti i valori di x maggiori di 4.",
         "posizione_risposta": "A",
@@ -912,6 +912,66 @@
         "errori_linguistici": [],
         "note_informative": [
           "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “tutti”"
+        ]
+      },
+      {
+        "id": "MAT-AV-0208",
+        "domanda": "Qual è la varianza della popolazione per i valori 2, 4 e 6?",
+        "categoria": "matematica",
+        "livello": "avanzato",
+        "opzioni": [
+          "8/3",
+          "4",
+          "2",
+          "16/3"
+        ],
+        "risposta_corretta": "8/3",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "spiegazione: testo molto lungo, controllare leggibilità"
+        ]
+      },
+      {
+        "id": "MAT-AV-0212",
+        "domanda": "Tra i rettangoli con perimetro 20, qual è l'area massima possibile?",
+        "categoria": "matematica",
+        "livello": "avanzato",
+        "opzioni": [
+          "25",
+          "20",
+          "16",
+          "30"
+        ],
+        "risposta_corretta": "25",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "spiegazione: testo molto lungo, controllare leggibilità"
+        ]
+      },
+      {
+        "id": "MAT-AV-0213",
+        "domanda": "In 3 prove indipendenti con probabilità di successo 1/2, qual è la probabilità di ottenere esattamente 2 successi?",
+        "categoria": "matematica",
+        "livello": "avanzato",
+        "opzioni": [
+          "3/8",
+          "1/8",
+          "1/2",
+          "1/4"
+        ],
+        "risposta_corretta": "3/8",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "spiegazione: testo molto lungo, controllare leggibilità"
         ]
       }
     ],
