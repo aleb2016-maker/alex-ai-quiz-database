@@ -1570,7 +1570,7 @@
     "problemi_tecnici_totali": 0,
     "avvisi_qualita_reali_totali": 0,
     "errori_linguistici_totali": 0,
-    "note_informative_totali": 17,
+    "note_informative_totali": 16,
     "domande_con_problemi_tecnici": [],
     "domande_con_avvisi_qualita_reali": [],
     "domande_con_errori_linguistici": [],
@@ -1736,63 +1736,24 @@
         ]
       },
       {
-        "id": "INF-FAC-0204",
-        "domanda": "Quando è utile un ciclo in programmazione?",
-        "categoria": "informatica",
-        "livello": "facile",
-        "opzioni": [
-          "Quando bisogna ripetere più volte una o più istruzioni.",
-          "Quando bisogna cambiare il colore fisico della tastiera.",
-          "Quando si vuole evitare qualsiasi controllo sui dati.",
-          "Quando si deve salvare un'immagine senza aprire un programma."
-        ],
-        "risposta_corretta": "Quando bisogna ripetere più volte una o più istruzioni.",
-        "posizione_risposta": "A",
-        "problemi_tecnici": [],
-        "avvisi_qualita_reali": [],
-        "errori_linguistici": [],
-        "note_informative": [
-          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “qualsiasi”"
-        ]
-      },
-      {
         "id": "INF-FAC-0208",
         "domanda": "A cosa serve Git in un progetto software?",
         "categoria": "informatica",
         "livello": "facile",
         "opzioni": [
-          "A tenere traccia delle modifiche al codice e collaborare sul progetto.",
-          "A compilare automaticamente qualsiasi programma senza configurazione.",
-          "A proteggere il computer da ogni tipo di virus.",
-          "A convertire immagini in documenti di testo modificabili."
+          "A tenere traccia delle modifiche al codice e collaborare sul progetto",
+          "A tracciare modifiche del codice, ma compilando il programma senza configurazione",
+          "A collaborare sul progetto, ma proteggendo il computer da tutti i virus",
+          "A versionare file di progetto, ma convertendo immagini in documenti di testo modificabili"
         ],
-        "risposta_corretta": "A tenere traccia delle modifiche al codice e collaborare sul progetto.",
+        "risposta_corretta": "A tenere traccia delle modifiche al codice e collaborare sul progetto",
         "posizione_risposta": "A",
         "problemi_tecnici": [],
         "avvisi_qualita_reali": [],
         "errori_linguistici": [],
         "note_informative": [
-          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “qualsiasi”"
-        ]
-      },
-      {
-        "id": "INF-INT-0202",
-        "domanda": "A cosa serve una JOIN in SQL?",
-        "categoria": "informatica",
-        "livello": "intermedio",
-        "opzioni": [
-          "A combinare righe provenienti da più tabelle in base a una relazione tra i dati.",
-          "A cancellare tutte le tabelle non utilizzate dal database.",
-          "A cambiare automaticamente il linguaggio di programmazione del progetto.",
-          "A comprimere immagini prima di salvarle in una cartella."
-        ],
-        "risposta_corretta": "A combinare righe provenienti da più tabelle in base a una relazione tra i dati.",
-        "posizione_risposta": "A",
-        "problemi_tecnici": [],
-        "avvisi_qualita_reali": [],
-        "errori_linguistici": [],
-        "note_informative": [
-          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “tutte”"
+          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “tutti”",
+          "spiegazione: possibile frase poco fluida, controllare gli incontri vocalici"
         ]
       },
       {
@@ -1801,12 +1762,12 @@
         "categoria": "informatica",
         "livello": "intermedio",
         "opzioni": [
-          "Proteggere lo stato interno di un oggetto esponendo metodi controllati per interagire con esso.",
-          "Unire tutti i file del progetto in una singola immagine.",
-          "Eseguire un programma senza usare classi, oggetti o metodi.",
-          "Salvare ogni variabile globale in un database esterno."
+          "Proteggere lo stato interno di un oggetto esponendo metodi controllati per interagire con esso",
+          "Proteggere lo stato di un oggetto, ma unendo tutti i file del progetto in una singola immagine",
+          "Limitare l'accesso interno ai dati, ma eseguendo il programma senza classi, oggetti o metodi",
+          "Controllare l'interazione con l'oggetto, ma salvando ogni variabile globale in un database esterno"
         ],
-        "risposta_corretta": "Proteggere lo stato interno di un oggetto esponendo metodi controllati per interagire con esso.",
+        "risposta_corretta": "Proteggere lo stato interno di un oggetto esponendo metodi controllati per interagire con esso",
         "posizione_risposta": "A",
         "problemi_tecnici": [],
         "avvisi_qualita_reali": [],

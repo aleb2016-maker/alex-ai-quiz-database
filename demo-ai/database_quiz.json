@@ -3008,13 +3008,15 @@
     "livello": "facile",
     "domanda": "Che cosa rappresenta un algoritmo in informatica?",
     "opzioni": [
-      "Una sequenza ordinata di passaggi per risolvere un problema.",
-      "Un archivio di file salvati senza un ordine preciso.",
-      "Un componente fisico usato per raffreddare il processore.",
-      "Un indirizzo web usato per aprire una pagina internet."
+      "Una sequenza ordinata di passaggi per risolvere un problema",
+      "Una sequenza di passaggi ordinati, ma usata per archiviare file senza elaborarli",
+      "Un insieme di istruzioni, ma riferito a un componente fisico del processore",
+      "Una procedura con passaggi, ma usata principalmente come indirizzo per aprire pagine web"
     ],
-    "risposta_corretta": "Una sequenza ordinata di passaggi per risolvere un problema.",
-    "spiegazione": "La risposta corretta è A perché un algoritmo descrive passaggi logici per arrivare a un risultato. B parla di archiviazione, C di hardware, D di navigazione web.",
+    "risposta_corretta": "Una sequenza ordinata di passaggi per risolvere un problema",
+    "spiegazione": "Un algoritmo è una sequenza ordinata di passaggi per risolvere un problema. Non è un archivio di file, non è un componente hardware e non coincide con un indirizzo web.",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve condividere il concetto centrale della corretta e diventare sbagliata per un dettaglio tecnico, logico o pratico.",
     "_materia_demo": "Informatica",
     "_file_origine": "data/informatica.json",
     "materia": "Informatica"
@@ -3025,13 +3027,15 @@
     "livello": "facile",
     "domanda": "Che cosa indica l'estensione di un file, per esempio TXT, JSON o PNG?",
     "opzioni": [
-      "Una parte del nome che aiuta a riconoscere il formato o il tipo di contenuto del file.",
-      "La cartella esatta in cui il file è salvato dentro il computer.",
-      "La password necessaria per aprire qualunque documento protetto.",
-      "La quantità di memoria RAM usata dal file durante l'avvio del sistema."
+      "Una parte del nome che aiuta a riconoscere il formato o il tipo di contenuto del file",
+      "Una parte del nome che indica il formato, ma anche la cartella esatta in cui il file si trova",
+      "Un'indicazione sul tipo di file, ma usata per stabilire la password necessaria ad aprirlo",
+      "Un elemento del nome del file, ma riferito alla memoria RAM usata durante l'avvio"
     ],
-    "risposta_corretta": "Una parte del nome che aiuta a riconoscere il formato o il tipo di contenuto del file.",
-    "spiegazione": "La risposta corretta è A. L'estensione aiuta a capire il formato del file, per esempio testo, JSON o immagine. B descrive il percorso, C riguarda la protezione, D confonde il file con l'uso della RAM.",
+    "risposta_corretta": "Una parte del nome che aiuta a riconoscere il formato o il tipo di contenuto del file",
+    "spiegazione": "L'estensione di un file aiuta a riconoscere il formato o il tipo di contenuto, per esempio testo, JSON o immagine. Non indica la cartella del file, non stabilisce la password e non misura la RAM usata dal sistema.",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve condividere il concetto centrale della corretta e diventare sbagliata per un dettaglio tecnico, logico o pratico.",
     "_materia_demo": "Informatica",
     "_file_origine": "data/informatica.json",
     "materia": "Informatica"
@@ -3042,13 +3046,15 @@
     "livello": "facile",
     "domanda": "Che cosa fa una funzione in un programma?",
     "opzioni": [
-      "Raggruppa istruzioni riutilizzabili per svolgere un compito specifico.",
-      "Cancella il codice sorgente dopo ogni esecuzione.",
-      "Trasforma il monitor in un dispositivo di memoria.",
-      "Sostituisce la connessione internet durante il download."
+      "Raggruppa istruzioni riutilizzabili per svolgere un compito specifico",
+      "Raggruppa istruzioni riutilizzabili, ma le cancella dopo ciascuna esecuzione",
+      "Organizza istruzioni del programma, ma le usa per trasformare il monitor in memoria",
+      "Raccoglie codice riutilizzabile, ma sostituisce la connessione internet durante i download"
     ],
-    "risposta_corretta": "Raggruppa istruzioni riutilizzabili per svolgere un compito specifico.",
-    "spiegazione": "La risposta corretta è A. Una funzione permette di organizzare codice e riutilizzarlo. Le altre opzioni confondono la funzione con operazioni non legate alla programmazione.",
+    "risposta_corretta": "Raggruppa istruzioni riutilizzabili per svolgere un compito specifico",
+    "spiegazione": "Una funzione raggruppa istruzioni riutilizzabili per svolgere un compito specifico. Non cancella il codice sorgente, non trasforma componenti hardware e non sostituisce la connessione internet.",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve condividere il concetto centrale della corretta e diventare sbagliata per un dettaglio tecnico, logico o pratico.",
     "_materia_demo": "Informatica",
     "_file_origine": "data/informatica.json",
     "materia": "Informatica"
@@ -3059,13 +3065,15 @@
     "livello": "facile",
     "domanda": "Quando è utile un ciclo in programmazione?",
     "opzioni": [
-      "Quando bisogna ripetere più volte una o più istruzioni.",
-      "Quando bisogna cambiare il colore fisico della tastiera.",
-      "Quando si vuole evitare qualsiasi controllo sui dati.",
-      "Quando si deve salvare un'immagine senza aprire un programma."
+      "Quando bisogna ripetere più volte una o più istruzioni",
+      "Quando bisogna ripetere istruzioni, ma cambiando il colore fisico della tastiera",
+      "Quando si ripete un controllo sui dati, ma evitando qualunque verifica della condizione",
+      "Quando si esegue più volte un'azione, ma per salvare immagini senza usare programmi"
     ],
-    "risposta_corretta": "Quando bisogna ripetere più volte una o più istruzioni.",
-    "spiegazione": "La risposta corretta è A. Un ciclo ripete istruzioni finché una condizione o una sequenza lo richiede. B, C e D non spiegano l'uso dei cicli.",
+    "risposta_corretta": "Quando bisogna ripetere più volte una o più istruzioni",
+    "spiegazione": "Un ciclo è utile quando bisogna ripetere più volte una o più istruzioni. La ripetizione dipende da una condizione o da una sequenza; non riguarda il colore della tastiera o il salvataggio di immagini.",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve condividere il concetto centrale della corretta e diventare sbagliata per un dettaglio tecnico, logico o pratico.",
     "_materia_demo": "Informatica",
     "_file_origine": "data/informatica.json",
     "materia": "Informatica"
@@ -3076,13 +3084,15 @@
     "livello": "facile",
     "domanda": "Che cos'è un database?",
     "opzioni": [
-      "Un sistema organizzato per memorizzare, cercare e gestire dati.",
-      "Un linguaggio usato soltanto per disegnare icone.",
-      "Un cavo che collega lo schermo alla corrente.",
-      "Un programma che cancella la cronologia del browser."
+      "Un sistema organizzato per memorizzare, cercare e gestire dati",
+      "Un sistema per gestire dati, ma usato principalmente per disegnare icone",
+      "Una struttura che conserva informazioni, ma coincidente con un cavo collegato allo schermo",
+      "Un sistema che contiene dati, ma pensato per cancellare la cronologia del browser"
     ],
-    "risposta_corretta": "Un sistema organizzato per memorizzare, cercare e gestire dati.",
-    "spiegazione": "La risposta corretta è A. Un database conserva dati in modo strutturato. B, C e D descrivono elementi diversi.",
+    "risposta_corretta": "Un sistema organizzato per memorizzare, cercare e gestire dati",
+    "spiegazione": "Un database è un sistema organizzato per memorizzare, cercare e gestire dati. Non è un linguaggio per icone, non è un cavo e non è un programma dedicato alla cronologia del browser.",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve condividere il concetto centrale della corretta e diventare sbagliata per un dettaglio tecnico, logico o pratico.",
     "_materia_demo": "Informatica",
     "_file_origine": "data/informatica.json",
     "materia": "Informatica"
@@ -3093,13 +3103,15 @@
     "livello": "facile",
     "domanda": "Che cosa indica HTTP nel contesto del web?",
     "opzioni": [
-      "Un protocollo usato per lo scambio di informazioni tra client e server web.",
-      "Un formato audio usato per comprimere musica.",
-      "Un tipo di memoria interna del processore.",
-      "Un comando per spegnere un database relazionale."
+      "Un protocollo usato per lo scambio di informazioni tra client e server web",
+      "Un protocollo del web, ma usato per comprimere file audio",
+      "Una regola di scambio tra client e server, ma collocata nella memoria interna del processore",
+      "Un meccanismo di comunicazione web, ma usato per spegnere database relazionali"
     ],
-    "risposta_corretta": "Un protocollo usato per lo scambio di informazioni tra client e server web.",
-    "spiegazione": "La risposta corretta è A. HTTP regola richieste e risposte sul web. B riguarda audio, C hardware, D database.",
+    "risposta_corretta": "Un protocollo usato per lo scambio di informazioni tra client e server web",
+    "spiegazione": "HTTP è un protocollo usato per lo scambio di informazioni tra client e server web. Non è un formato audio, non è memoria del processore e non è un comando per spegnere database.",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve condividere il concetto centrale della corretta e diventare sbagliata per un dettaglio tecnico, logico o pratico.",
     "_materia_demo": "Informatica",
     "_file_origine": "data/informatica.json",
     "materia": "Informatica"
@@ -3110,13 +3122,15 @@
     "livello": "facile",
     "domanda": "Qual è una differenza semplice tra frontend e backend?",
     "opzioni": [
-      "Il frontend riguarda l'interfaccia visibile, mentre il backend gestisce logica, dati e servizi.",
-      "Il frontend conserva i dati su disco, mentre il backend mostra solo colori e pulsanti.",
-      "Il frontend è il cavo di rete, mentre il backend è il monitor.",
-      "Il frontend funziona senza codice, mentre il backend funziona senza dati."
+      "Il frontend riguarda l'interfaccia visibile, mentre il backend gestisce logica, dati e servizi",
+      "Il frontend mostra l'interfaccia, ma conserva direttamente i dati principali su disco",
+      "Il backend gestisce logica e dati, ma si occupa principalmente di colori e pulsanti visibili",
+      "Frontend e backend dividono i compiti, ma il frontend funziona senza codice e il backend senza dati"
     ],
-    "risposta_corretta": "Il frontend riguarda l'interfaccia visibile, mentre il backend gestisce logica, dati e servizi.",
-    "spiegazione": "La risposta corretta è A. Il frontend è la parte con cui l'utente interagisce, il backend gestisce elaborazione e dati. B inverte i ruoli, C e D sono errate.",
+    "risposta_corretta": "Il frontend riguarda l'interfaccia visibile, mentre il backend gestisce logica, dati e servizi",
+    "spiegazione": "Il frontend riguarda l'interfaccia visibile con cui l'utente interagisce, mentre il backend gestisce logica, dati e servizi. Non bisogna invertire i ruoli: la parte visibile non sostituisce la gestione dati del backend.",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve condividere il concetto centrale della corretta e diventare sbagliata per un dettaglio tecnico, logico o pratico.",
     "_materia_demo": "Informatica",
     "_file_origine": "data/informatica.json",
     "materia": "Informatica"
@@ -3127,13 +3141,15 @@
     "livello": "facile",
     "domanda": "A cosa serve Git in un progetto software?",
     "opzioni": [
-      "A tenere traccia delle modifiche al codice e collaborare sul progetto.",
-      "A compilare automaticamente qualsiasi programma senza configurazione.",
-      "A proteggere il computer da ogni tipo di virus.",
-      "A convertire immagini in documenti di testo modificabili."
+      "A tenere traccia delle modifiche al codice e collaborare sul progetto",
+      "A tracciare modifiche del codice, ma compilando il programma senza configurazione",
+      "A collaborare sul progetto, ma proteggendo il computer da tutti i virus",
+      "A versionare file di progetto, ma convertendo immagini in documenti di testo modificabili"
     ],
-    "risposta_corretta": "A tenere traccia delle modifiche al codice e collaborare sul progetto.",
-    "spiegazione": "La risposta corretta è A. Git è un sistema di versionamento. B attribuisce a Git un compito di build, C riguarda sicurezza, D conversione di formati.",
+    "risposta_corretta": "A tenere traccia delle modifiche al codice e collaborare sul progetto",
+    "spiegazione": "Git serve a tenere traccia delle modifiche al codice e a collaborare sul progetto. Non è un compilatore automatico, non è un antivirus e non è uno strumento di conversione immagini-testo.",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve condividere il concetto centrale della corretta e diventare sbagliata per un dettaglio tecnico, logico o pratico.",
     "_materia_demo": "Informatica",
     "_file_origine": "data/informatica.json",
     "materia": "Informatica"
@@ -3144,13 +3160,15 @@
     "livello": "facile",
     "domanda": "Che cos'è un file JSON?",
     "opzioni": [
-      "Un formato testuale strutturato per rappresentare dati con coppie chiave-valore, liste e oggetti.",
-      "Un'immagine compressa usata per fotografie ad alta risoluzione.",
-      "Un cavo per collegare un computer a una stampante.",
-      "Un sistema operativo installato dentro il browser."
+      "Un formato testuale strutturato per rappresentare dati con coppie chiave-valore, liste e oggetti",
+      "Un formato testuale strutturato, ma usato principalmente come immagine compressa per fotografie",
+      "Un formato per rappresentare dati, ma collegato fisicamente al computer tramite un cavo",
+      "Una struttura dati leggibile, ma installata come sistema operativo dentro il browser"
     ],
-    "risposta_corretta": "Un formato testuale strutturato per rappresentare dati con coppie chiave-valore, liste e oggetti.",
-    "spiegazione": "La risposta corretta è A. JSON è un formato dati leggibile e strutturato. B, C e D appartengono ad altri ambiti.",
+    "risposta_corretta": "Un formato testuale strutturato per rappresentare dati con coppie chiave-valore, liste e oggetti",
+    "spiegazione": "Un file JSON è un formato testuale strutturato per rappresentare dati con coppie chiave-valore, liste e oggetti. Non è un'immagine, non è un cavo e non è un sistema operativo.",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve condividere il concetto centrale della corretta e diventare sbagliata per un dettaglio tecnico, logico o pratico.",
     "_materia_demo": "Informatica",
     "_file_origine": "data/informatica.json",
     "materia": "Informatica"
@@ -3161,13 +3179,15 @@
     "livello": "facile",
     "domanda": "Che cosa indica una API?",
     "opzioni": [
-      "Un insieme di regole e punti di accesso che permette a software diversi di comunicare.",
-      "Una cartella temporanea creata dal sistema operativo per salvare immagini.",
-      "Un tipo di tastiera pensata per scrivere codice più velocemente.",
-      "Un errore grafico che compare quando lo schermo è spento."
+      "Un insieme di regole e punti di accesso che permette a software diversi di comunicare",
+      "Un insieme di regole per software, ma usato come cartella temporanea di immagini",
+      "Un punto di accesso tra programmi, ma coincidente con un tipo di tastiera per scrivere codice",
+      "Un meccanismo di comunicazione software, ma riferito a un errore grafico dello schermo"
     ],
-    "risposta_corretta": "Un insieme di regole e punti di accesso che permette a software diversi di comunicare.",
-    "spiegazione": "La risposta corretta è A. Una API permette interazione tra componenti software. B, C e D non descrivono una API.",
+    "risposta_corretta": "Un insieme di regole e punti di accesso che permette a software diversi di comunicare",
+    "spiegazione": "Una API è un insieme di regole e punti di accesso che permette a software diversi di comunicare. Non è una cartella temporanea, non è una tastiera e non è un errore grafico.",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve condividere il concetto centrale della corretta e diventare sbagliata per un dettaglio tecnico, logico o pratico.",
     "_materia_demo": "Informatica",
     "_file_origine": "data/informatica.json",
     "materia": "Informatica"
@@ -3178,13 +3198,15 @@
     "livello": "facile",
     "domanda": "Che cosa rappresenta un valore booleano?",
     "opzioni": [
-      "Un valore logico che può indicare vero o falso.",
-      "Un testo lungo usato per descrivere un database.",
-      "Un'immagine salvata con sfondo trasparente.",
-      "Un indirizzo numerico assegnato a una stampante."
+      "Un valore logico che può indicare vero o falso",
+      "Un valore logico a due stati, ma usato per descrivere lunghi testi di database",
+      "Un valore che indica vero o falso, ma salvato principalmente come immagine trasparente",
+      "Un dato logico, ma usato per assegnare indirizzi numerici alle stampanti"
     ],
-    "risposta_corretta": "Un valore logico che può indicare vero o falso.",
-    "spiegazione": "La risposta corretta è A. Un booleano rappresenta una condizione vera o falsa. Le altre opzioni riguardano testo, immagini o rete.",
+    "risposta_corretta": "Un valore logico che può indicare vero o falso",
+    "spiegazione": "Un valore booleano rappresenta un valore logico che può indicare vero o falso. Non è un testo lungo, non è un'immagine e non è un indirizzo di rete.",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve condividere il concetto centrale della corretta e diventare sbagliata per un dettaglio tecnico, logico o pratico.",
     "_materia_demo": "Informatica",
     "_file_origine": "data/informatica.json",
     "materia": "Informatica"
@@ -3195,13 +3217,15 @@
     "livello": "facile",
     "domanda": "Che cosa indica il percorso di un file in un computer?",
     "opzioni": [
-      "La posizione del file dentro cartelle e sottocartelle del sistema.",
-      "Il colore usato per mostrare il nome del file sullo schermo.",
-      "La quantità di energia elettrica consumata dal file quando viene aperto.",
-      "Il numero di righe di codice presenti dentro ogni programma installato."
+      "La posizione del file dentro cartelle e sottocartelle del sistema",
+      "La posizione del file nel sistema, ma indicata dal colore del nome sullo schermo",
+      "Il punto in cui si trova il file, ma misurato tramite energia consumata quando viene aperto",
+      "La posizione del file, ma definita dal numero di righe di codice nei programmi installati"
     ],
-    "risposta_corretta": "La posizione del file dentro cartelle e sottocartelle del sistema.",
-    "spiegazione": "La risposta corretta è A. Il percorso indica dove si trova un file nel sistema. B riguarda l'aspetto grafico, C non ha senso tecnico, D riguarda il codice dei programmi.",
+    "risposta_corretta": "La posizione del file dentro cartelle e sottocartelle del sistema",
+    "spiegazione": "Il percorso di un file indica la posizione del file dentro cartelle e sottocartelle del sistema. Non dipende dal colore del nome, dal consumo elettrico o dal numero di righe di codice dei programmi.",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve condividere il concetto centrale della corretta e diventare sbagliata per un dettaglio tecnico, logico o pratico.",
     "_materia_demo": "Informatica",
     "_file_origine": "data/informatica.json",
     "materia": "Informatica"
@@ -3212,13 +3236,15 @@
     "livello": "intermedio",
     "domanda": "Perché la complessità temporale di un algoritmo è importante?",
     "opzioni": [
-      "Per stimare come cresce il tempo di esecuzione al crescere della quantità di dati.",
-      "Per scegliere il colore migliore dell'interfaccia utente.",
-      "Per indicare il numero di file presenti nella cartella del progetto.",
-      "Per misurare la temperatura fisica del processore durante l'uso."
+      "Per stimare come cresce il tempo di esecuzione al crescere della quantità di dati",
+      "Per valutare la crescita del tempo di esecuzione, ma scegliendo il colore dell'interfaccia",
+      "Per stimare il comportamento dell'algoritmo, ma contando i file nella cartella del progetto",
+      "Per misurare l'efficienza del codice, ma usando la temperatura fisica del processore"
     ],
-    "risposta_corretta": "Per stimare come cresce il tempo di esecuzione al crescere della quantità di dati.",
-    "spiegazione": "La risposta corretta è A. La complessità temporale aiuta a valutare la scalabilità di un algoritmo. B, C e D non riguardano questo concetto.",
+    "risposta_corretta": "Per stimare come cresce il tempo di esecuzione al crescere della quantità di dati",
+    "spiegazione": "La complessità temporale è importante perché permette di stimare come cresce il tempo di esecuzione al crescere della quantità di dati. Non riguarda colori dell'interfaccia, numero di file nella cartella o temperatura del processore.",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve condividere il concetto centrale della corretta e diventare sbagliata per un dettaglio tecnico, logico o pratico.",
     "_materia_demo": "Informatica",
     "_file_origine": "data/informatica.json",
     "materia": "Informatica"
@@ -3229,13 +3255,15 @@
     "livello": "intermedio",
     "domanda": "A cosa serve una JOIN in SQL?",
     "opzioni": [
-      "A combinare righe provenienti da più tabelle in base a una relazione tra i dati.",
-      "A cancellare tutte le tabelle non utilizzate dal database.",
-      "A cambiare automaticamente il linguaggio di programmazione del progetto.",
-      "A comprimere immagini prima di salvarle in una cartella."
+      "A combinare righe provenienti da più tabelle in base a una relazione tra i dati",
+      "A combinare dati tra tabelle, ma cancellando quelle non coinvolte nella relazione",
+      "A collegare righe di più tabelle, ma cambiando il linguaggio di programmazione del progetto",
+      "A unire dati relazionali, ma comprimendo immagini prima del salvataggio"
     ],
-    "risposta_corretta": "A combinare righe provenienti da più tabelle in base a una relazione tra i dati.",
-    "spiegazione": "La risposta corretta è A. Una JOIN collega dati distribuiti su tabelle diverse. B è cancellazione, C e D non riguardano SQL.",
+    "risposta_corretta": "A combinare righe provenienti da più tabelle in base a una relazione tra i dati",
+    "spiegazione": "Una JOIN in SQL serve a combinare righe provenienti da più tabelle in base a una relazione tra i dati. Non cancella tabelle, non cambia linguaggio di programmazione e non comprime immagini.",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve condividere il concetto centrale della corretta e diventare sbagliata per un dettaglio tecnico, logico o pratico.",
     "_materia_demo": "Informatica",
     "_file_origine": "data/informatica.json",
     "materia": "Informatica"
@@ -3246,13 +3274,15 @@
     "livello": "intermedio",
     "domanda": "Che cosa caratterizza una API REST ben progettata?",
     "opzioni": [
-      "Usa risorse identificabili, metodi HTTP coerenti e risposte comprensibili per il client.",
-      "Richiede che ogni operazione venga eseguita direttamente modificando il database dal browser.",
-      "Evita di usare codici di stato perché renderebbero il client meno informato.",
-      "Mescola interfaccia grafica e query SQL nella stessa risposta JSON."
+      "Usa risorse identificabili, metodi HTTP coerenti e risposte comprensibili per il client",
+      "Usa risorse e metodi HTTP, ma permette al browser di modificare direttamente il database",
+      "Organizza risposte per il client, ma evita i codici di stato rendendo meno chiaro l'esito",
+      "Espone dati tramite API, ma mescola interfaccia grafica e query SQL nella stessa risposta"
     ],
-    "risposta_corretta": "Usa risorse identificabili, metodi HTTP coerenti e risposte comprensibili per il client.",
-    "spiegazione": "La risposta corretta è A. REST valorizza risorse, metodi HTTP e risposte chiare. B, C e D descrivono pratiche poco corrette.",
+    "risposta_corretta": "Usa risorse identificabili, metodi HTTP coerenti e risposte comprensibili per il client",
+    "spiegazione": "Una API REST ben progettata usa risorse identificabili, metodi HTTP coerenti e risposte comprensibili per il client. Non dovrebbe far modificare direttamente il database dal browser, ignorare i codici di stato o mescolare interfaccia grafica e query SQL.",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve condividere il concetto centrale della corretta e diventare sbagliata per un dettaglio tecnico, logico o pratico.",
     "_materia_demo": "Informatica",
     "_file_origine": "data/informatica.json",
     "materia": "Informatica"
@@ -3263,13 +3293,15 @@
     "livello": "intermedio",
     "domanda": "Che cosa indica l'incapsulamento nella programmazione orientata agli oggetti?",
     "opzioni": [
-      "Proteggere lo stato interno di un oggetto esponendo metodi controllati per interagire con esso.",
-      "Unire tutti i file del progetto in una singola immagine.",
-      "Eseguire un programma senza usare classi, oggetti o metodi.",
-      "Salvare ogni variabile globale in un database esterno."
+      "Proteggere lo stato interno di un oggetto esponendo metodi controllati per interagire con esso",
+      "Proteggere lo stato di un oggetto, ma unendo tutti i file del progetto in una singola immagine",
+      "Limitare l'accesso interno ai dati, ma eseguendo il programma senza classi, oggetti o metodi",
+      "Controllare l'interazione con l'oggetto, ma salvando ogni variabile globale in un database esterno"
     ],
-    "risposta_corretta": "Proteggere lo stato interno di un oggetto esponendo metodi controllati per interagire con esso.",
-    "spiegazione": "La risposta corretta è A. L'incapsulamento limita l'accesso diretto allo stato interno. B, C e D non definiscono questo principio.",
+    "risposta_corretta": "Proteggere lo stato interno di un oggetto esponendo metodi controllati per interagire con esso",
+    "spiegazione": "L'incapsulamento significa proteggere lo stato interno di un oggetto esponendo metodi controllati per interagire con esso. Non riguarda immagini, esecuzione senza oggetti o salvataggio di variabili globali in database esterni.",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve condividere il concetto centrale della corretta e diventare sbagliata per un dettaglio tecnico, logico o pratico.",
     "_materia_demo": "Informatica",
     "_file_origine": "data/informatica.json",
     "materia": "Informatica"
@@ -3280,13 +3312,15 @@
     "livello": "intermedio",
     "domanda": "Perché il pattern MVC può essere utile in un'applicazione?",
     "opzioni": [
-      "Per separare dati, logica di presentazione e controllo del flusso dell'applicazione.",
-      "Per trasformare ogni schermata in una tabella del database.",
-      "Per impedire al codice di usare funzioni riutilizzabili.",
-      "Per sostituire i test con nomi di file più lunghi."
+      "Per separare dati, logica di presentazione e controllo del flusso dell'applicazione",
+      "Per separare responsabilità dell'applicazione, ma trasformando ogni schermata in una tabella",
+      "Per dividere dati e presentazione, ma impedendo l'uso di funzioni riutilizzabili",
+      "Per organizzare il codice, ma sostituendo i test con nomi di file più lunghi"
     ],
-    "risposta_corretta": "Per separare dati, logica di presentazione e controllo del flusso dell'applicazione.",
-    "spiegazione": "La risposta corretta è A. MVC separa responsabilità diverse. B, C e D non descrivono il vantaggio del pattern.",
+    "risposta_corretta": "Per separare dati, logica di presentazione e controllo del flusso dell'applicazione",
+    "spiegazione": "Il pattern MVC è utile perché separa dati, logica di presentazione e controllo del flusso dell'applicazione. Non trasforma schermate in tabelle, non impedisce funzioni riutilizzabili e non sostituisce i test.",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve condividere il concetto centrale della corretta e diventare sbagliata per un dettaglio tecnico, logico o pratico.",
     "_materia_demo": "Informatica",
     "_file_origine": "data/informatica.json",
     "materia": "Informatica"
@@ -3297,13 +3331,15 @@
     "livello": "intermedio",
     "domanda": "Qual è la differenza tra autenticazione e autorizzazione?",
     "opzioni": [
-      "L'autenticazione verifica l'identità, mentre l'autorizzazione stabilisce cosa l'utente può fare.",
-      "L'autenticazione decide i permessi, mentre l'autorizzazione crea l'identità anagrafica dell'utente.",
-      "L'autenticazione riguarda solo il design grafico, mentre l'autorizzazione riguarda solo il database.",
-      "Autenticazione e autorizzazione indicano entrambe il salvataggio dei file temporanei."
+      "L'autenticazione verifica l'identità, mentre l'autorizzazione stabilisce cosa l'utente può fare",
+      "L'autenticazione verifica l'identità, ma decide anche i permessi operativi dell'utente",
+      "L'autorizzazione stabilisce i permessi, ma crea l'identità anagrafica dell'utente",
+      "Autenticazione e autorizzazione gestiscono accessi, ma indicano il salvataggio dei file temporanei"
     ],
-    "risposta_corretta": "L'autenticazione verifica l'identità, mentre l'autorizzazione stabilisce cosa l'utente può fare.",
-    "spiegazione": "La risposta corretta è A. Prima si identifica l'utente, poi si valutano i permessi. B inverte i concetti, C e D sono errate.",
+    "risposta_corretta": "L'autenticazione verifica l'identità, mentre l'autorizzazione stabilisce cosa l'utente può fare",
+    "spiegazione": "L'autenticazione verifica l'identità dell'utente, mentre l'autorizzazione stabilisce cosa quell'utente può fare. Sono concetti collegati ma distinti: prima si riconosce l'utente, poi si valutano i permessi.",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve condividere il concetto centrale della corretta e diventare sbagliata per un dettaglio tecnico, logico o pratico.",
     "_materia_demo": "Informatica",
     "_file_origine": "data/informatica.json",
     "materia": "Informatica"
@@ -3314,13 +3350,15 @@
     "livello": "intermedio",
     "domanda": "A cosa serve il rate limiting in una API?",
     "opzioni": [
-      "A limitare il numero di richieste consentite in un certo periodo per proteggere servizio e risorse.",
-      "A trasformare ogni richiesta HTTP in una query SQL più lunga.",
-      "A impedire al server di distinguere tra utenti autenticati e non autenticati.",
-      "A sostituire la validazione dei dati inseriti dall'utente."
+      "A limitare il numero di richieste consentite in un certo periodo per proteggere servizio e risorse",
+      "A controllare il numero di richieste, ma trasformandole in query SQL più lunghe",
+      "A limitare richieste verso l'API, ma impedendo al server di distinguere gli utenti",
+      "A proteggere il servizio da troppe richieste, ma sostituendo la validazione dei dati inseriti"
     ],
-    "risposta_corretta": "A limitare il numero di richieste consentite in un certo periodo per proteggere servizio e risorse.",
-    "spiegazione": "La risposta corretta è A. Il rate limiting controlla quante richieste può fare un client in un intervallo di tempo. B non c'entra, C indebolisce la sicurezza, D confonde rate limiting e validazione.",
+    "risposta_corretta": "A limitare il numero di richieste consentite in un certo periodo per proteggere servizio e risorse",
+    "spiegazione": "Il rate limiting serve a limitare il numero di richieste consentite in un certo periodo per proteggere servizio e risorse. Non trasforma richieste in query SQL, non elimina la distinzione tra utenti e non sostituisce la validazione dei dati.",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve condividere il concetto centrale della corretta e diventare sbagliata per un dettaglio tecnico, logico o pratico.",
     "_materia_demo": "Informatica",
     "_file_origine": "data/informatica.json",
     "materia": "Informatica"
@@ -3331,13 +3369,15 @@
     "livello": "intermedio",
     "domanda": "Che cosa significa che una transazione rispetta le proprietà ACID?",
     "opzioni": [
-      "Che punta a garantire atomicità, consistenza, isolamento e durabilità delle operazioni.",
-      "Che trasforma una tabella SQL in un file HTML statico.",
-      "Che rende una query più colorata nella console del database.",
-      "Che permette di ignorare vincoli e controlli sui dati scritti."
+      "Che punta a garantire atomicità, consistenza, isolamento e durabilità delle operazioni",
+      "Che descrive proprietà delle transazioni, ma trasforma tabelle SQL in file HTML statici",
+      "Che rende più affidabili le operazioni, ma serve a colorare query nella console del database",
+      "Che regola le transazioni, ma permette di ignorare vincoli e controlli sui dati scritti"
     ],
-    "risposta_corretta": "Che punta a garantire atomicità, consistenza, isolamento e durabilità delle operazioni.",
-    "spiegazione": "La risposta corretta è A. ACID descrive proprietà importanti delle transazioni. B, C e D non riguardano la correttezza transazionale.",
+    "risposta_corretta": "Che punta a garantire atomicità, consistenza, isolamento e durabilità delle operazioni",
+    "spiegazione": "Le proprietà ACID puntano a garantire atomicità, consistenza, isolamento e durabilità delle operazioni. Non trasformano tabelle in HTML, non riguardano colori della console e non permettono di ignorare vincoli sui dati.",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve condividere il concetto centrale della corretta e diventare sbagliata per un dettaglio tecnico, logico o pratico.",
     "_materia_demo": "Informatica",
     "_file_origine": "data/informatica.json",
     "materia": "Informatica"
