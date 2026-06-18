@@ -9,7 +9,7 @@ Questo report distingue problemi tecnici, avvisi qualità reali, errori linguist
 - Problemi tecnici totali: **0**
 - Avvisi qualità reali totali: **0**
 - Errori linguistici totali: **0**
-- Note informative totali: **241**
+- Note informative totali: **255**
 - Gruppi di domande duplicate identiche: **0**
 - Coppie di domande molto simili: **0**
 
@@ -204,7 +204,7 @@ Posizione risposta corretta nel sorgente: `{'A': 20}`
 Problemi tecnici: **0**
 Avvisi qualità reali: **0**
 Errori linguistici: **0**
-Note informative: **11**
+Note informative: **25**
 Duplicati identici: **0**
 Domande molto simili: **0**
 

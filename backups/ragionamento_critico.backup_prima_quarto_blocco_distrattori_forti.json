@@ -1,0 +1,381 @@
+[
+  {
+    "id": "LOG-CRI-FAC-0001",
+    "categoria": "logica",
+    "sottocategoria": "ragionamento critico",
+    "livello": "facile",
+    "domanda": "Tutti i treni della linea A arrivano in stazione. Il treno 25 è della linea A. Cosa si può concludere?",
+    "opzioni": [
+      "Il treno 25 arriva in stazione",
+      "Il treno 25 arriva in stazione solo se è in orario",
+      "Tutti i treni che arrivano in stazione sono della linea A",
+      "Solo il treno 25 della linea A arriva in stazione"
+    ],
+    "risposta_corretta": "Il treno 25 arriva in stazione",
+    "spiegazione": "Se tutti i treni della linea A arrivano in stazione e il treno 25 è della linea A, allora il treno 25 arriva in stazione. Non possiamo aggiungere condizioni non presenti, come l'orario.",
+    "tags": [
+      "deduzione",
+      "sillogismi",
+      "ragionamento critico"
+    ],
+    "difficolta": 1,
+    "distrattore_forte": "Il treno 25 arriva in stazione solo se è in orario",
+    "motivo_distrattore_forte": "È vicino perché parla dello stesso treno e dell'arrivo in stazione, ma è sbagliato perché aggiunge la condizione dell'orario, che non compare nelle premesse."
+  },
+  {
+    "id": "LOG-CRI-INT-0002",
+    "categoria": "logica",
+    "sottocategoria": "ragionamento critico",
+    "livello": "intermedio",
+    "domanda": "Se l'affermazione 'Se piove, Marco prende l'ombrello' è vera e oggi Marco non prende l'ombrello, cosa si può dedurre con certezza?",
+    "opzioni": [
+      "Oggi non piove",
+      "Non si può dedurre nulla sul tempo",
+      "Oggi piove sicuramente",
+      "Marco potrebbe non prendere l'ombrello anche se piove"
+    ],
+    "risposta_corretta": "Oggi non piove",
+    "spiegazione": "La regola dice: se piove, Marco prende l'ombrello. Se oggi Marco non prende l'ombrello, allora la condizione 'piove' non si è verificata. È una deduzione per contrapposizione: se P implica Q, allora non Q implica non P.",
+    "tags": [
+      "condizioni",
+      "deduzione",
+      "logica proposizionale"
+    ],
+    "difficolta": 2,
+    "distrattore_forte": "Non si può dedurre nulla sul tempo",
+    "motivo_distrattore_forte": "È vicino perché sembra prudente non aggiungere informazioni, ma è sbagliato: con questa premessa logica possiamo dedurre per contrapposizione che oggi non piove."
+  },
+  {
+    "id": "LOG-CRI-AV-0003",
+    "categoria": "logica",
+    "sottocategoria": "ragionamento critico",
+    "livello": "avanzato",
+    "domanda": "Un negozio afferma: 'Tutti i prodotti scontati sono esposti nello scaffale rosso'. Un cliente trova un prodotto nello scaffale rosso. Quale conclusione è logicamente corretta?",
+    "opzioni": [
+      "Non è certo che il prodotto sia scontato",
+      "Il prodotto è sicuramente scontato perché si trova nello scaffale rosso",
+      "Tutti i prodotti nello scaffale rosso sono sicuramente scontati",
+      "Nessun prodotto non scontato può trovarsi nello scaffale rosso"
+    ],
+    "risposta_corretta": "Non è certo che il prodotto sia scontato",
+    "spiegazione": "L'affermazione dice che tutti i prodotti scontati sono nello scaffale rosso. Questo non significa che tutti i prodotti nello scaffale rosso siano scontati. Trovare un prodotto nello scaffale rosso non basta quindi per concludere con certezza che sia scontato.",
+    "tags": [
+      "deduzione",
+      "errore logico",
+      "condizione sufficiente"
+    ],
+    "difficolta": 3,
+    "distrattore_forte": "Il prodotto è sicuramente scontato perché si trova nello scaffale rosso",
+    "motivo_distrattore_forte": "È molto vicino perché usa proprio l'informazione dello scaffale rosso, ma è sbagliato perché confonde una condizione necessaria con una condizione sufficiente: sappiamo che gli scontati stanno nello scaffale rosso, non che tutto ciò che sta nello scaffale rosso sia scontato."
+  },
+  {
+    "id": "LOG-CRI-INT-0004",
+    "categoria": "logica",
+    "sottocategoria": "ragionamento_critico",
+    "livello": "intermedio",
+    "domanda": "Tutti i tecnici controllano i log. Alcuni tecnici documentano gli errori. Quale conclusione è sicuramente vera?",
+    "opzioni": [
+      "Alcune persone che documentano gli errori controllano i log",
+      "Tutte le persone che documentano gli errori controllano i log",
+      "Tutte le persone che controllano i log documentano errori",
+      "Alcuni tecnici non controllano i log"
+    ],
+    "risposta_corretta": "Alcune persone che documentano gli errori controllano i log",
+    "spiegazione": "Sappiamo che alcuni tecnici documentano gli errori e che tutti i tecnici controllano i log. Quindi almeno alcune persone che documentano errori controllano anche i log. Non possiamo però dire che tutte le persone che documentano errori controllino i log.",
+    "tags": [
+      "sillogismi",
+      "ragionamento_critico"
+    ],
+    "difficolta": 2,
+    "distrattore_forte": "Tutte le persone che documentano gli errori controllano i log",
+    "motivo_distrattore_forte": "È vicino perché riguarda persone che documentano errori e controllano log, ma è sbagliato perché dalle premesse sappiamo solo che alcuni tecnici documentano errori, non tutti quelli che documentano errori."
+  },
+  {
+    "id": "LOG-CRI-AV-0005",
+    "categoria": "logica",
+    "sottocategoria": "ragionamento_critico",
+    "livello": "avanzato",
+    "domanda": "Un'app è stata aggiornata e subito dopo alcuni utenti segnalano errori. Quale conclusione è più prudente?",
+    "opzioni": [
+      "L'aggiornamento potrebbe essere collegato agli errori, ma servono ulteriori verifiche",
+      "L'aggiornamento è la causa più probabile solo perché è avvenuto prima degli errori",
+      "Gli errori sono certamente indipendenti dall'aggiornamento perché li hanno segnalati solo alcuni utenti",
+      "Il numero di segnalazioni basta da solo per dimostrare la causa tecnica"
+    ],
+    "risposta_corretta": "L'aggiornamento potrebbe essere collegato agli errori, ma servono ulteriori verifiche",
+    "spiegazione": "La vicinanza temporale tra aggiornamento ed errori suggerisce una possibile relazione, ma non dimostra da sola una causa certa. Servono log, test, confronto tra versioni e verifica di altri fattori.",
+    "tags": [
+      "causalità",
+      "ragionamento_critico",
+      "debug"
+    ],
+    "difficolta": 3,
+    "distrattore_forte": "L'aggiornamento è la causa più probabile solo perché è avvenuto prima degli errori",
+    "motivo_distrattore_forte": "È vicino perché considera correttamente la vicinanza temporale, ma è sbagliato perché confonde una possibile correlazione con una causa già dimostrata."
+  },
+  {
+    "id": "LOG-CRI-FAC-0101",
+    "categoria": "logica",
+    "sottocategoria": "ragionamento_critico",
+    "livello": "facile",
+    "domanda": "Tutti i cani sono animali. Fido è un cane. Quale conclusione è corretta?",
+    "opzioni": [
+      "Fido è un animale",
+      "Fido potrebbe non essere un animale anche se è un cane",
+      "Tutti gli animali sono cani",
+      "Alcuni cani non sono animali"
+    ],
+    "risposta_corretta": "Fido è un animale",
+    "spiegazione": "Se tutti i cani sono animali e Fido è un cane, allora Fido appartiene al gruppo degli animali. Non vale invece il contrario: non tutti gli animali sono cani.",
+    "tags": [
+      "deduzione",
+      "sillogismi",
+      "ragionamento_critico"
+    ],
+    "difficolta": 1,
+    "distrattore_forte": "Fido potrebbe non essere un animale anche se è un cane",
+    "motivo_distrattore_forte": "È vicino perché parla proprio di Fido e del fatto che sia un cane, ma contraddice la premessa: se tutti i cani sono animali, Fido deve essere un animale."
+  },
+  {
+    "id": "LOG-CRI-INT-0101",
+    "categoria": "logica",
+    "sottocategoria": "ragionamento_critico",
+    "livello": "intermedio",
+    "domanda": "Alcuni programmatori conoscono Python. Tutti quelli che conoscono Python sanno usare variabili. Quale conclusione è sicuramente vera?",
+    "opzioni": [
+      "Alcuni programmatori sanno usare variabili",
+      "Tutti i programmatori sanno usare variabili",
+      "Tutti quelli che sanno usare variabili conoscono Python",
+      "Nessun programmatore conosce Python"
+    ],
+    "risposta_corretta": "Alcuni programmatori sanno usare variabili",
+    "spiegazione": "Alcuni programmatori conoscono Python e tutti quelli che conoscono Python sanno usare variabili. Quindi almeno alcuni programmatori sanno usare variabili. Non possiamo però concludere che tutti i programmatori sappiano usare variabili.",
+    "tags": [
+      "sillogismi",
+      "deduzione",
+      "ragionamento_critico"
+    ],
+    "difficolta": 2,
+    "distrattore_forte": "Tutti i programmatori sanno usare variabili",
+    "motivo_distrattore_forte": "È vicino perché la premessa collega Python e variabili, ma è sbagliato perché sappiamo solo che alcuni programmatori conoscono Python, non tutti."
+  },
+  {
+    "id": "LOG-CRI-AV-0101",
+    "categoria": "logica",
+    "sottocategoria": "ragionamento_critico",
+    "livello": "avanzato",
+    "domanda": "Tutti gli sviluppatori del team usano Git. Alcune persone che usano Git lavorano anche su database. Quale conclusione è sicuramente vera?",
+    "opzioni": [
+      "Alcune persone che usano Git lavorano su database",
+      "Alcune persone che lavorano su database sono sviluppatori del team",
+      "Tutti gli sviluppatori lavorano su database",
+      "Tutti quelli che usano Git sono sviluppatori"
+    ],
+    "risposta_corretta": "Alcune persone che usano Git lavorano su database",
+    "spiegazione": "La seconda premessa afferma direttamente che alcune persone che usano Git lavorano anche su database. Non possiamo però concludere che quelle persone siano sviluppatori del team, né che tutti gli sviluppatori lavorino su database.",
+    "tags": [
+      "deduzione",
+      "quantificatori",
+      "ragionamento_critico"
+    ],
+    "difficolta": 3,
+    "distrattore_forte": "Alcune persone che lavorano su database sono sviluppatori del team",
+    "motivo_distrattore_forte": "È vicino perché collega database, Git e sviluppatori, ma è sbagliato perché la premessa non dice che le persone che usano Git e lavorano su database siano sviluppatori del team."
+  },
+  {
+    "id": "LOG-CRI-FAC-0102",
+    "categoria": "logica",
+    "sottocategoria": "ragionamento_critico",
+    "livello": "facile",
+    "domanda": "Se oggi piove, Marco prende l'ombrello. Oggi piove. Cosa si può concludere?",
+    "opzioni": [
+      "Marco prende l'ombrello",
+      "Marco prende l'ombrello solo se piove molto forte",
+      "Oggi non piove",
+      "Marco prende l'ombrello solo quando piove molto forte"
+    ],
+    "risposta_corretta": "Marco prende l'ombrello",
+    "spiegazione": "La regola dice che quando piove Marco prende l'ombrello. Poiché oggi piove, la conclusione corretta è che Marco prende l'ombrello. Non possiamo aggiungere condizioni non presenti, come 'solo se piove molto forte'.",
+    "tags": [
+      "condizione",
+      "deduzione",
+      "ragionamento_critico"
+    ],
+    "difficolta": 1,
+    "distrattore_forte": "Marco prende l'ombrello solo se piove molto forte",
+    "motivo_distrattore_forte": "È vicino perché collega ombrello e pioggia, ma è sbagliato perché aggiunge una condizione non presente nella premessa."
+  },
+  {
+    "id": "LOG-CRI-INT-0102",
+    "categoria": "logica",
+    "sottocategoria": "ragionamento_critico",
+    "livello": "intermedio",
+    "domanda": "Se un'app supera tutti i test, viene pubblicata. L'app non viene pubblicata. Quale conclusione è logicamente corretta?",
+    "opzioni": [
+      "L'app non ha superato tutti i test",
+      "L'app potrebbe aver superato tutti i test anche se non viene pubblicata",
+      "L'app può essere stata bloccata per motivi indipendenti dai test",
+      "Ogni app pubblicata supera i test"
+    ],
+    "risposta_corretta": "L'app non ha superato tutti i test",
+    "spiegazione": "La regola dice: se un'app supera tutti i test, allora viene pubblicata. Se l'app non viene pubblicata, possiamo concludere che non ha superato tutti i test. È un ragionamento per contrapposizione.",
+    "tags": [
+      "condizioni",
+      "contrapposizione",
+      "ragionamento_critico"
+    ],
+    "difficolta": 2,
+    "distrattore_forte": "L'app potrebbe aver superato tutti i test anche se non viene pubblicata",
+    "motivo_distrattore_forte": "È vicino perché nella realtà potrebbero esistere altri motivi di blocco, ma nella logica della premessa data è sbagliato: se supera tutti i test, viene pubblicata."
+  },
+  {
+    "id": "LOG-CRI-0201",
+    "categoria": "logica",
+    "sottocategoria": "ragionamento_critico",
+    "livello": "facile",
+    "domanda": "Un cartello dice che l'ingresso è consentito solo ai dipendenti. Marco non è dipendente. Quale conclusione è corretta?",
+    "opzioni": [
+      "Marco non può entrare",
+      "Marco può entrare se riceve un'autorizzazione non indicata dal cartello",
+      "Marco è probabilmente un responsabile esterno",
+      "Il cartello riguarda soprattutto i visitatori"
+    ],
+    "risposta_corretta": "Marco non può entrare",
+    "spiegazione": "La risposta corretta è A. Se l'ingresso è consentito solo ai dipendenti e Marco non è dipendente, Marco non rientra tra le persone autorizzate dalla regola indicata."
+  },
+  {
+    "id": "LOG-CRI-0202",
+    "categoria": "logica",
+    "sottocategoria": "ragionamento_critico",
+    "livello": "facile",
+    "domanda": "Anna dice: se piove, prendo l'ombrello. Oggi piove. Quale conclusione segue?",
+    "opzioni": [
+      "Anna prende l'ombrello",
+      "Anna non esce di casa",
+      "Anna perde l'ombrello",
+      "Anna prende il cappotto"
+    ],
+    "risposta_corretta": "Anna prende l'ombrello",
+    "spiegazione": "La risposta corretta è A. La condizione si verifica, quindi segue l'azione dichiarata."
+  },
+  {
+    "id": "LOG-CRI-0203",
+    "categoria": "logica",
+    "sottocategoria": "ragionamento_critico",
+    "livello": "facile",
+    "domanda": "Tutti i biglietti validi hanno un codice QR. Questo biglietto non ha codice QR. Cosa si può concludere?",
+    "opzioni": [
+      "Il biglietto non è valido",
+      "Il biglietto è sicuramente valido",
+      "Il codice QR è nascosto",
+      "Tutti i biglietti sono falsi"
+    ],
+    "risposta_corretta": "Il biglietto non è valido",
+    "spiegazione": "La risposta corretta è A. Se tutti i biglietti validi hanno il codice QR, un biglietto senza codice QR non può essere valido."
+  },
+  {
+    "id": "LOG-CRI-0204",
+    "categoria": "logica",
+    "sottocategoria": "ragionamento_critico",
+    "livello": "intermedio",
+    "domanda": "Una palestra aumenta gli iscritti dopo aver introdotto nuovi corsi. Quale conclusione è più prudente?",
+    "opzioni": [
+      "I nuovi corsi potrebbero aver contribuito all'aumento",
+      "I nuovi corsi sono sicuramente l'unica causa",
+      "Gli iscritti sono aumentati per caso impossibile",
+      "La palestra perderà tutti gli iscritti"
+    ],
+    "risposta_corretta": "I nuovi corsi potrebbero aver contribuito all'aumento",
+    "spiegazione": "La risposta corretta è A. Il dato suggerisce una possibile relazione, ma non dimostra che i nuovi corsi siano l'unica causa."
+  },
+  {
+    "id": "LOG-CRI-0205",
+    "categoria": "logica",
+    "sottocategoria": "ragionamento_critico",
+    "livello": "intermedio",
+    "domanda": "Un'app riceve molte recensioni positive, ma poche persone l'hanno scaricata. Quale valutazione è più equilibrata?",
+    "opzioni": [
+      "Le recensioni sono incoraggianti, ma il campione è ancora limitato",
+      "L'app potrebbe essere valida, ma i pochi download rendono il giudizio ancora debole",
+      "Le recensioni positive vanno considerate con attenzione perché il campione è piccolo",
+      "L'app dovrebbe essere valutata anche con dati d'uso più ampi"
+    ],
+    "risposta_corretta": "Le recensioni sono incoraggianti, ma il campione è ancora limitato",
+    "spiegazione": "La risposta corretta è A. Le recensioni positive sono un segnale utile, ma pochi download rendono il giudizio meno solido."
+  },
+  {
+    "id": "LOG-CRI-0206",
+    "categoria": "logica",
+    "sottocategoria": "ragionamento_critico",
+    "livello": "intermedio",
+    "domanda": "Se una soluzione funziona in un test piccolo, quale affermazione è più corretta?",
+    "opzioni": [
+      "Serve provarla anche in condizioni più ampie",
+      "È probabile che servano verifiche in contesti più vari",
+      "Il test piccolo è utile, ma non basta per generalizzare",
+      "La soluzione può essere promettente, ma va controllata meglio"
+    ],
+    "risposta_corretta": "Serve provarla anche in condizioni più ampie",
+    "spiegazione": "La risposta corretta è A. Un test piccolo è utile, ma non garantisce il comportamento in ogni situazione."
+  },
+  {
+    "id": "LOG-CRI-0207",
+    "categoria": "logica",
+    "sottocategoria": "ragionamento_critico",
+    "livello": "intermedio",
+    "domanda": "Un corso ha molti iscritti, ma pochi completano tutte le lezioni. Quale dato aiuterebbe di più a capire il problema?",
+    "opzioni": [
+      "Il punto esatto in cui gli studenti abbandonano",
+      "Il colore del logo del corso",
+      "Il numero di sedie nell'aula",
+      "Il nome del primo iscritto"
+    ],
+    "risposta_corretta": "Il punto esatto in cui gli studenti abbandonano",
+    "spiegazione": "La risposta corretta è A. Sapere dove avviene l'abbandono aiuta a individuare difficoltà, contenuti deboli o problemi di percorso."
+  },
+  {
+    "id": "LOG-CRI-0208",
+    "categoria": "logica",
+    "sottocategoria": "ragionamento_critico",
+    "livello": "avanzato",
+    "domanda": "Un sondaggio online mostra che il 90% dei partecipanti ama una nuova app, ma il sondaggio è stato pubblicato solo nella community dei fan. Qual è il limite principale?",
+    "opzioni": [
+      "Il campione potrebbe non rappresentare tutti gli utenti",
+      "Il risultato è positivo, ma può essere influenzato dalla community scelta",
+      "Il sondaggio indica interesse tra i fan, non necessariamente nel pubblico generale",
+      "La community dei fan può rendere il campione poco neutrale"
+    ],
+    "risposta_corretta": "Il campione potrebbe non rappresentare tutti gli utenti",
+    "spiegazione": "La risposta corretta è A. Un sondaggio fatto solo tra fan può essere sbilanciato e non rappresentare il pubblico generale."
+  },
+  {
+    "id": "LOG-CRI-0209",
+    "categoria": "logica",
+    "sottocategoria": "ragionamento_critico",
+    "livello": "avanzato",
+    "domanda": "Un'azienda riduce i tempi di risposta dopo aver cambiato software. Quale informazione serve per valutare meglio il miglioramento?",
+    "opzioni": [
+      "Se nello stesso periodo sono cambiati anche personale o procedure",
+      "Il colore dell'interfaccia del vecchio software",
+      "Il numero di lettere nel nome dell'azienda",
+      "La marca dei monitor usati"
+    ],
+    "risposta_corretta": "Se nello stesso periodo sono cambiati anche personale o procedure",
+    "spiegazione": "La risposta corretta è A. Per capire se il miglioramento dipende dal software bisogna controllare altri fattori cambiati nello stesso periodo."
+  },
+  {
+    "id": "LOG-CRI-0210",
+    "categoria": "logica",
+    "sottocategoria": "ragionamento_critico",
+    "livello": "avanzato",
+    "domanda": "Un ricercatore nota che chi dorme di più ottiene risultati migliori in un test. Quale conclusione è più corretta?",
+    "opzioni": [
+      "Esiste un'associazione, ma servono altri dati per parlare di causa",
+      "La relazione osservata basta da sola per dimostrare una causa diretta",
+      "Il test sembra misurare soprattutto la quantità di sonno",
+      "Chi dorme poco ha necessariamente risultati più bassi"
+    ],
+    "risposta_corretta": "Esiste un'associazione, ma servono altri dati per parlare di causa",
+    "spiegazione": "La risposta corretta è A. Una correlazione non basta da sola a dimostrare un rapporto di causa ed effetto."
+  }
+]

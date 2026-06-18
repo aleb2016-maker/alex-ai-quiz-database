@@ -4589,7 +4589,7 @@
     "problemi_tecnici_totali": 0,
     "avvisi_qualita_reali_totali": 0,
     "errori_linguistici_totali": 0,
-    "note_informative_totali": 11,
+    "note_informative_totali": 25,
     "domande_con_problemi_tecnici": [],
     "domande_con_avvisi_qualita_reali": [],
     "domande_con_errori_linguistici": [],
@@ -4602,8 +4602,8 @@
         "opzioni": [
           "Il treno 25 arriva in stazione",
           "Il treno 25 arriva in stazione solo se è in orario",
-          "Tutti i treni che arrivano in stazione sono della linea A",
-          "Solo il treno 25 della linea A arriva in stazione"
+          "Ogni treno che arriva in stazione appartiene alla linea A",
+          "Il treno 25 è l'unico treno della linea A che arriva in stazione"
         ],
         "risposta_corretta": "Il treno 25 arriva in stazione",
         "posizione_risposta": "A",
@@ -4611,7 +4611,27 @@
         "avvisi_qualita_reali": [],
         "errori_linguistici": [],
         "note_informative": [
-          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “tutti”"
+          "spiegazione: testo molto lungo, controllare leggibilità"
+        ]
+      },
+      {
+        "id": "LOG-CRI-INT-0002",
+        "domanda": "Se l'affermazione 'Se piove, Marco prende l'ombrello' è vera e oggi Marco non prende l'ombrello, cosa si può dedurre con certezza?",
+        "categoria": "logica",
+        "livello": "intermedio",
+        "opzioni": [
+          "Oggi non piove",
+          "Marco ha dimenticato l'ombrello anche se piove",
+          "Oggi piove, ma Marco ha cambiato comportamento",
+          "Non si può collegare l'ombrello alla pioggia"
+        ],
+        "risposta_corretta": "Oggi non piove",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "spiegazione: testo molto lungo, controllare leggibilità"
         ]
       },
       {
@@ -4621,9 +4641,9 @@
         "livello": "avanzato",
         "opzioni": [
           "Non è certo che il prodotto sia scontato",
-          "Il prodotto è sicuramente scontato perché si trova nello scaffale rosso",
-          "Tutti i prodotti nello scaffale rosso sono sicuramente scontati",
-          "Nessun prodotto non scontato può trovarsi nello scaffale rosso"
+          "Il prodotto è scontato perché si trova nello scaffale rosso",
+          "Lo scaffale rosso contiene solo prodotti scontati",
+          "I prodotti non scontati sono esclusi dallo scaffale rosso"
         ],
         "risposta_corretta": "Non è certo che il prodotto sia scontato",
         "posizione_risposta": "A",
@@ -4631,7 +4651,7 @@
         "avvisi_qualita_reali": [],
         "errori_linguistici": [],
         "note_informative": [
-          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “tutti”"
+          "spiegazione: testo molto lungo, controllare leggibilità"
         ]
       },
       {
@@ -4642,8 +4662,8 @@
         "opzioni": [
           "Alcune persone che documentano gli errori controllano i log",
           "Tutte le persone che documentano gli errori controllano i log",
-          "Tutte le persone che controllano i log documentano errori",
-          "Alcuni tecnici non controllano i log"
+          "Alcune persone che controllano i log documentano gli errori",
+          "Chi controlla i log documenta anche gli errori"
         ],
         "risposta_corretta": "Alcune persone che documentano gli errori controllano i log",
         "posizione_risposta": "A",
@@ -4651,7 +4671,28 @@
         "avvisi_qualita_reali": [],
         "errori_linguistici": [],
         "note_informative": [
-          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “tutte”"
+          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “tutte”",
+          "spiegazione: testo molto lungo, controllare leggibilità"
+        ]
+      },
+      {
+        "id": "LOG-CRI-AV-0005",
+        "domanda": "Un'app è stata aggiornata e subito dopo alcuni utenti segnalano errori. Quale conclusione è più prudente?",
+        "categoria": "logica",
+        "livello": "avanzato",
+        "opzioni": [
+          "L'aggiornamento potrebbe essere collegato agli errori, ma servono ulteriori verifiche",
+          "L'aggiornamento è la causa perché è avvenuto prima degli errori",
+          "Gli errori sono indipendenti dall'aggiornamento perché li hanno segnalati solo alcuni utenti",
+          "Le segnalazioni bastano da sole per identificare la causa tecnica"
+        ],
+        "risposta_corretta": "L'aggiornamento potrebbe essere collegato agli errori, ma servono ulteriori verifiche",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "spiegazione: testo molto lungo, controllare leggibilità"
         ]
       },
       {
@@ -4662,8 +4703,8 @@
         "opzioni": [
           "Fido è un animale",
           "Fido potrebbe non essere un animale anche se è un cane",
-          "Tutti gli animali sono cani",
-          "Alcuni cani non sono animali"
+          "Ogni animale è un cane",
+          "Alcuni cani non appartengono agli animali"
         ],
         "risposta_corretta": "Fido è un animale",
         "posizione_risposta": "A",
@@ -4671,7 +4712,7 @@
         "avvisi_qualita_reali": [],
         "errori_linguistici": [],
         "note_informative": [
-          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “tutti”"
+          "spiegazione: testo molto lungo, controllare leggibilità"
         ]
       },
       {
@@ -4682,8 +4723,8 @@
         "opzioni": [
           "Alcuni programmatori sanno usare variabili",
           "Tutti i programmatori sanno usare variabili",
-          "Tutti quelli che sanno usare variabili conoscono Python",
-          "Nessun programmatore conosce Python"
+          "Chi sa usare variabili conosce Python",
+          "I programmatori che non conoscono Python non sanno usare variabili"
         ],
         "risposta_corretta": "Alcuni programmatori sanno usare variabili",
         "posizione_risposta": "A",
@@ -4691,7 +4732,8 @@
         "avvisi_qualita_reali": [],
         "errori_linguistici": [],
         "note_informative": [
-          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “tutti”"
+          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “tutti”",
+          "spiegazione: testo molto lungo, controllare leggibilità"
         ]
       },
       {
@@ -4701,9 +4743,9 @@
         "livello": "avanzato",
         "opzioni": [
           "Alcune persone che usano Git lavorano su database",
-          "Alcune persone che lavorano su database sono sviluppatori del team",
-          "Tutti gli sviluppatori lavorano su database",
-          "Tutti quelli che usano Git sono sviluppatori"
+          "Alcuni sviluppatori del team lavorano su database",
+          "Tutti gli sviluppatori del team lavorano su database",
+          "Chi usa Git appartiene al team di sviluppo"
         ],
         "risposta_corretta": "Alcune persone che usano Git lavorano su database",
         "posizione_risposta": "A",
@@ -4711,7 +4753,28 @@
         "avvisi_qualita_reali": [],
         "errori_linguistici": [],
         "note_informative": [
-          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “tutti”"
+          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “tutti”",
+          "spiegazione: testo molto lungo, controllare leggibilità"
+        ]
+      },
+      {
+        "id": "LOG-CRI-FAC-0102",
+        "domanda": "Se oggi piove, Marco prende l'ombrello. Oggi piove. Cosa si può concludere?",
+        "categoria": "logica",
+        "livello": "facile",
+        "opzioni": [
+          "Marco prende l'ombrello",
+          "Marco prende l'ombrello solo se piove molto forte",
+          "Marco prende l'ombrello perché non piove",
+          "Marco prende l'ombrello solo quando deve uscire"
+        ],
+        "risposta_corretta": "Marco prende l'ombrello",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "spiegazione: testo molto lungo, controllare leggibilità"
         ]
       },
       {
@@ -4721,9 +4784,9 @@
         "livello": "intermedio",
         "opzioni": [
           "L'app non ha superato tutti i test",
-          "L'app potrebbe aver superato tutti i test anche se non viene pubblicata",
-          "L'app può essere stata bloccata per motivi indipendenti dai test",
-          "Ogni app pubblicata supera i test"
+          "L'app ha superato i test, ma è stata bloccata per un altro motivo",
+          "L'app potrebbe essere pubblicata anche senza superare i test",
+          "Ogni app pubblicata supera tutti i test"
         ],
         "risposta_corretta": "L'app non ha superato tutti i test",
         "posizione_risposta": "A",
@@ -4731,7 +4794,48 @@
         "avvisi_qualita_reali": [],
         "errori_linguistici": [],
         "note_informative": [
-          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “tutti”"
+          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “tutti”",
+          "spiegazione: testo molto lungo, controllare leggibilità"
+        ]
+      },
+      {
+        "id": "LOG-CRI-0201",
+        "domanda": "Un cartello dice che l'ingresso è consentito solo ai dipendenti. Marco non è dipendente. Quale conclusione è corretta?",
+        "categoria": "logica",
+        "livello": "facile",
+        "opzioni": [
+          "Marco non può entrare",
+          "Marco può entrare se riceve un'autorizzazione non indicata dal cartello",
+          "Marco può entrare perché il cartello parla solo dei dipendenti",
+          "Marco può entrare se accompagna un dipendente"
+        ],
+        "risposta_corretta": "Marco non può entrare",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "spiegazione: testo molto lungo, controllare leggibilità"
+        ]
+      },
+      {
+        "id": "LOG-CRI-0202",
+        "domanda": "Anna dice: se piove, prendo l'ombrello. Oggi piove. Quale conclusione segue?",
+        "categoria": "logica",
+        "livello": "facile",
+        "opzioni": [
+          "Anna prende l'ombrello",
+          "Anna non esce di casa",
+          "Anna prende l'ombrello solo se piove molto",
+          "Anna prende anche il cappotto"
+        ],
+        "risposta_corretta": "Anna prende l'ombrello",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "spiegazione: testo molto lungo, controllare leggibilità"
         ]
       },
       {
@@ -4741,9 +4845,9 @@
         "livello": "facile",
         "opzioni": [
           "Il biglietto non è valido",
-          "Il biglietto è sicuramente valido",
-          "Il codice QR è nascosto",
-          "Tutti i biglietti sono falsi"
+          "Il biglietto potrebbe essere valido anche senza codice QR",
+          "Il codice QR potrebbe essere nascosto",
+          "Il biglietto è valido se è stato acquistato online"
         ],
         "risposta_corretta": "Il biglietto non è valido",
         "posizione_risposta": "A",
@@ -4751,7 +4855,7 @@
         "avvisi_qualita_reali": [],
         "errori_linguistici": [],
         "note_informative": [
-          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “tutti”"
+          "spiegazione: testo molto lungo, controllare leggibilità"
         ]
       },
       {
@@ -4761,9 +4865,9 @@
         "livello": "intermedio",
         "opzioni": [
           "I nuovi corsi potrebbero aver contribuito all'aumento",
-          "I nuovi corsi sono sicuramente l'unica causa",
-          "Gli iscritti sono aumentati per caso impossibile",
-          "La palestra perderà tutti gli iscritti"
+          "I nuovi corsi sono l'unica causa dell'aumento",
+          "L'aumento dipende solo dal periodo dell'anno",
+          "Il numero di iscritti dimostra già la causa precisa"
         ],
         "risposta_corretta": "I nuovi corsi potrebbero aver contribuito all'aumento",
         "posizione_risposta": "A",
@@ -4771,8 +4875,67 @@
         "avvisi_qualita_reali": [],
         "errori_linguistici": [],
         "note_informative": [
-          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “impossibile”",
-          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “tutti”"
+          "spiegazione: testo molto lungo, controllare leggibilità"
+        ]
+      },
+      {
+        "id": "LOG-CRI-0205",
+        "domanda": "Un'app riceve molte recensioni positive, ma poche persone l'hanno scaricata. Quale valutazione è più equilibrata?",
+        "categoria": "logica",
+        "livello": "intermedio",
+        "opzioni": [
+          "Le recensioni sono incoraggianti, ma il campione è ancora limitato",
+          "Le recensioni positive rendono già il giudizio solido",
+          "I pochi download annullano il valore delle recensioni positive",
+          "Le recensioni bastano senza altri dati d'uso"
+        ],
+        "risposta_corretta": "Le recensioni sono incoraggianti, ma il campione è ancora limitato",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "spiegazione: testo molto lungo, controllare leggibilità"
+        ]
+      },
+      {
+        "id": "LOG-CRI-0206",
+        "domanda": "Se una soluzione funziona in un test piccolo, quale affermazione è più corretta?",
+        "categoria": "logica",
+        "livello": "intermedio",
+        "opzioni": [
+          "Serve provarla anche in condizioni più ampie",
+          "Il test piccolo dimostra che funzionerà nei casi principali",
+          "Il test piccolo va ignorato finché non viene ripetuto su larga scala",
+          "La soluzione è valida se il primo test non mostra errori"
+        ],
+        "risposta_corretta": "Serve provarla anche in condizioni più ampie",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "spiegazione: testo molto lungo, controllare leggibilità"
+        ]
+      },
+      {
+        "id": "LOG-CRI-0207",
+        "domanda": "Un corso ha molti iscritti, ma pochi completano tutte le lezioni. Quale dato aiuterebbe di più a capire il problema?",
+        "categoria": "logica",
+        "livello": "intermedio",
+        "opzioni": [
+          "Il punto esatto in cui gli studenti abbandonano",
+          "La percentuale di studenti che si iscrivono per curiosità",
+          "Il numero di lezioni viste prima dell'abbandono medio",
+          "Il livello dichiarato dagli studenti prima del corso"
+        ],
+        "risposta_corretta": "Il punto esatto in cui gli studenti abbandonano",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "spiegazione: testo molto lungo, controllare leggibilità"
         ]
       },
       {
@@ -4782,9 +4945,9 @@
         "livello": "avanzato",
         "opzioni": [
           "Il campione potrebbe non rappresentare tutti gli utenti",
-          "Il risultato è positivo, ma può essere influenzato dalla community scelta",
-          "Il sondaggio indica interesse tra i fan, non necessariamente nel pubblico generale",
-          "La community dei fan può rendere il campione poco neutrale"
+          "Il risultato positivo dimostra che l'app piace al pubblico generale",
+          "Il sondaggio è utile solo per valutare la grafica dell'app",
+          "La community dei fan elimina il rischio di risposte sbilanciate"
         ],
         "risposta_corretta": "Il campione potrebbe non rappresentare tutti gli utenti",
         "posizione_risposta": "A",
@@ -4792,7 +4955,48 @@
         "avvisi_qualita_reali": [],
         "errori_linguistici": [],
         "note_informative": [
-          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “tutti”"
+          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “tutti”",
+          "spiegazione: testo molto lungo, controllare leggibilità"
+        ]
+      },
+      {
+        "id": "LOG-CRI-0209",
+        "domanda": "Un'azienda riduce i tempi di risposta dopo aver cambiato software. Quale informazione serve per valutare meglio il miglioramento?",
+        "categoria": "logica",
+        "livello": "avanzato",
+        "opzioni": [
+          "Se nello stesso periodo sono cambiati anche personale o procedure",
+          "Se il nuovo software ha un'interfaccia più moderna",
+          "Se i monitor usati dagli operatori sono stati sostituiti",
+          "Se il nome del software è più facile da ricordare"
+        ],
+        "risposta_corretta": "Se nello stesso periodo sono cambiati anche personale o procedure",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "spiegazione: testo molto lungo, controllare leggibilità"
+        ]
+      },
+      {
+        "id": "LOG-CRI-0210",
+        "domanda": "Un ricercatore nota che chi dorme di più ottiene risultati migliori in un test. Quale conclusione è più corretta?",
+        "categoria": "logica",
+        "livello": "avanzato",
+        "opzioni": [
+          "Esiste un'associazione, ma servono altri dati per parlare di causa",
+          "Dormire di più causa direttamente risultati migliori nel test",
+          "Il test misura soprattutto quante ore dormono i partecipanti",
+          "Chi dorme poco ottiene necessariamente risultati più bassi"
+        ],
+        "risposta_corretta": "Esiste un'associazione, ma servono altri dati per parlare di causa",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "spiegazione: testo molto lungo, controllare leggibilità"
         ]
       }
     ],
