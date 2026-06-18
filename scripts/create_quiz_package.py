@@ -1282,6 +1282,7 @@ def crea_pacchetto(piattaforma, materia, livello, numero):
 
     crea_readme_pacchetto(output_dir, piattaforma, materia, livello, len(domande))
 
+    blinda_interfaccia_web_generata_ai_its(output_dir)
     zip_path = output_dir.with_suffix(".zip")
 
     if zip_path.exists():
