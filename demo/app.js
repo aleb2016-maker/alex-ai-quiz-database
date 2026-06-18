@@ -1,4 +1,4 @@
-const DATA_URL = "../dist/database_quiz_finale.json?v=ai-its-440-completo";
+const DATA_URL = "../dist/database_quiz_finale.json?v=ai-its-personalizzato-blindato";
 
 let databaseQuiz = [];
 let domandeTest = [];
@@ -3295,7 +3295,7 @@ function alexLeggiCampiGeneratorePulito() {
   const creatorSourceText = document.getElementById("creatorSourceText");
 
   const materiaPersonalizzata = creatorCustomSubject?.value?.trim() || "";
-  const materia = materiaPersonalizzata || creatorSubject?.value || "scienze";
+  const materia = materiaPersonalizzata || creatorSubject?.value || "ai";
   const questionMode = creatorQuestionMode?.value || "10";
   const customCount = Number(creatorCustomCount?.value || "10");
 
@@ -3514,19 +3514,17 @@ document.addEventListener("DOMContentLoaded", () => {
         <label class="alex-gen-field">
           <span>Materia</span>
           <select id="alexGenMateria">
-            <option value="scienze">Scienze</option>
-            <option value="fisica">Fisica</option>
-            <option value="chimica">Chimica</option>
-            <option value="biologia">Biologia</option>
-            <option value="astronomia">Astronomia</option>
-            <option value="scienze_della_terra">Scienze della Terra</option>
-            <option value="fisica_quantistica_base">Fisica quantistica base</option>
-            <option value="ai">Intelligenza artificiale</option>
+            <option value="ai" selected>AI</option>
             <option value="informatica">Informatica</option>
             <option value="matematica">Matematica</option>
             <option value="inglese">Inglese</option>
             <option value="logica">Logica</option>
             <option value="logica_visiva">Logica visiva</option>
+            <option value="scienze">Scienze generali</option>
+            <option value="biologia">Biologia</option>
+            <option value="chimica">Chimica</option>
+            <option value="fisica">Fisica</option>
+            <option value="fisica_quantistica">Fisica quantistica</option>
           </select>
         </label>
 
