@@ -1568,11 +1568,32 @@
       "A": 80
     },
     "problemi_tecnici_totali": 0,
-    "avvisi_qualita_reali_totali": 0,
+    "avvisi_qualita_reali_totali": 1,
     "errori_linguistici_totali": 0,
-    "note_informative_totali": 20,
+    "note_informative_totali": 17,
     "domande_con_problemi_tecnici": [],
-    "domande_con_avvisi_qualita_reali": [],
+    "domande_con_avvisi_qualita_reali": [
+      {
+        "id": "INF-AV-0103",
+        "domanda": "Perché la cache può migliorare le prestazioni di un'applicazione?",
+        "categoria": "informatica",
+        "livello": "avanzato",
+        "opzioni": [
+          "Perché evita di ricalcolare o recuperare più volte dati usati spesso",
+          "Perché conserva dati usati spesso, ma garantisce che non diventino mai vecchi",
+          "Perché riduce accessi ripetuti a dati frequenti, ma sposta ogni dato del database in memoria locale",
+          "Perché migliora le prestazioni, ma anche quando i dati salvati non vengono riutilizzati"
+        ],
+        "risposta_corretta": "Perché evita di ricalcolare o recuperare più volte dati usati spesso",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [
+          "Possibile distrattore troppo assoluto: contiene “mai”"
+        ],
+        "errori_linguistici": [],
+        "note_informative": []
+      }
+    ],
     "domande_con_errori_linguistici": [],
     "domande_con_note_informative": [
       {
@@ -1636,17 +1657,17 @@
         ]
       },
       {
-        "id": "INF-FAC-0101",
-        "domanda": "Qual è il ruolo principale della CPU in un computer?",
+        "id": "INF-AV-0101",
+        "domanda": "Perché la validazione dei dati dovrebbe avvenire anche lato backend?",
         "categoria": "informatica",
-        "livello": "facile",
+        "livello": "avanzato",
         "opzioni": [
-          "Eseguire istruzioni ed elaborare operazioni",
-          "Conservare temporaneamente i dati usati dai programmi",
-          "Archiviare file e programmi anche a computer spento",
-          "Gestire principalmente l'elaborazione grafica delle immagini"
+          "Perché i dati inviati al server non devono essere considerati affidabili solo perché il frontend li controlla",
+          "Perché il frontend può controllare i dati, ma quei controlli possono essere aggirati prima dell'invio",
+          "Perché il backend deve validare i dati, ma questo sostituisce i test automatici dell'applicazione",
+          "Perché il frontend può mostrare errori all'utente, ma il server deve ignorare i dati già controllati"
         ],
-        "risposta_corretta": "Eseguire istruzioni ed elaborare operazioni",
+        "risposta_corretta": "Perché i dati inviati al server non devono essere considerati affidabili solo perché il frontend li controlla",
         "posizione_risposta": "A",
         "problemi_tecnici": [],
         "avvisi_qualita_reali": [],
@@ -1656,35 +1677,15 @@
         ]
       },
       {
-        "id": "INF-FAC-0102",
-        "domanda": "A cosa serve principalmente un SSD?",
-        "categoria": "informatica",
-        "livello": "facile",
-        "opzioni": [
-          "A salvare dati e programmi anche quando il computer è spento",
-          "A conservare temporaneamente i dati usati dai programmi durante l'esecuzione",
-          "A eseguire direttamente tutte le istruzioni della CPU",
-          "A gestire principalmente i calcoli grafici della scheda video"
-        ],
-        "risposta_corretta": "A salvare dati e programmi anche quando il computer è spento",
-        "posizione_risposta": "A",
-        "problemi_tecnici": [],
-        "avvisi_qualita_reali": [],
-        "errori_linguistici": [],
-        "note_informative": [
-          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “tutte”"
-        ]
-      },
-      {
         "id": "INF-INT-0103",
         "domanda": "Perché si usa un JOIN in un database relazionale?",
         "categoria": "informatica",
         "livello": "intermedio",
         "opzioni": [
           "Per combinare dati collegati provenienti da tabelle diverse",
-          "Per combinare tabelle diverse creando automaticamente relazioni non definite",
-          "Per rinominare automaticamente tutti i campi di una tabella",
-          "Per eliminare in molti casi le chiavi primarie dal database"
+          "Per combinare dati di tabelle diverse, ma creando relazioni anche quando non esiste alcun collegamento",
+          "Per unire informazioni tra tabelle, ma rinominando automaticamente tutti i campi coinvolti",
+          "Per collegare tabelle relazionali, ma eliminando il bisogno di chiavi primarie o esterne"
         ],
         "risposta_corretta": "Per combinare dati collegati provenienti da tabelle diverse",
         "posizione_risposta": "A",
@@ -1702,9 +1703,9 @@
         "livello": "facile",
         "opzioni": [
           "A ripetere un blocco di istruzioni più volte",
-          "A scegliere se eseguire un blocco una sola volta in base a una condizione",
-          "A salvare un file in modo permanente",
-          "A cancellare tutte le variabili del programma"
+          "A scegliere tra due rami di codice, ma senza ripetere automaticamente le istruzioni",
+          "A ripetere istruzioni, ma salvando prima un file in modo permanente",
+          "A controllare una condizione, ma cancellando tutte le variabili a ogni passaggio"
         ],
         "risposta_corretta": "A ripetere un blocco di istruzioni più volte",
         "posizione_risposta": "A",
@@ -1716,55 +1717,15 @@
         ]
       },
       {
-        "id": "INF-AV-0104",
-        "domanda": "Perché la paginazione è utile quando un'API restituisce molti risultati?",
-        "categoria": "informatica",
-        "livello": "avanzato",
-        "opzioni": [
-          "Per dividere i risultati in blocchi più piccoli e gestibili",
-          "Per limitare la quantità di dati restituiti in ogni risposta senza perdere l'accesso agli altri risultati",
-          "Per impedire all'API di restituire qualsiasi dato",
-          "Per trasformare ogni risposta in un errore 404"
-        ],
-        "risposta_corretta": "Per dividere i risultati in blocchi più piccoli e gestibili",
-        "posizione_risposta": "A",
-        "problemi_tecnici": [],
-        "avvisi_qualita_reali": [],
-        "errori_linguistici": [],
-        "note_informative": [
-          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “qualsiasi”"
-        ]
-      },
-      {
-        "id": "INF-AV-0105",
-        "domanda": "Che vantaggio offre una pipeline CI/CD in un progetto software?",
-        "categoria": "informatica",
-        "livello": "avanzato",
-        "opzioni": [
-          "Automatizza controlli, test e rilascio riducendo errori manuali ripetitivi",
-          "Automatizza test e build, ma richiede comunque controllo umano e codice scritto correttamente",
-          "Sostituisce completamente la necessità di scrivere codice",
-          "Impedisce a più sviluppatori di collaborare sullo stesso progetto"
-        ],
-        "risposta_corretta": "Automatizza controlli, test e rilascio riducendo errori manuali ripetitivi",
-        "posizione_risposta": "A",
-        "problemi_tecnici": [],
-        "avvisi_qualita_reali": [],
-        "errori_linguistici": [],
-        "note_informative": [
-          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “completamente”"
-        ]
-      },
-      {
         "id": "INF-AV-0106",
         "domanda": "Perché un container può rendere più prevedibile l'esecuzione di un'applicazione?",
         "categoria": "informatica",
         "livello": "avanzato",
         "opzioni": [
           "Perché include applicazione e dipendenze in un ambiente isolato e riproducibile",
-          "Perché include applicazione e dipendenze e quindi può favorire lo stesso risultato in qualunque ambiente",
-          "Perché aggiorna automaticamente tutte le dipendenze alla versione più recente",
-          "Perché installa automaticamente ogni libreria mancante a ogni avvio"
+          "Perché include applicazione e dipendenze, ma aggiorna le librerie a ogni avvio",
+          "Perché rende l'ambiente più prevedibile, ma installa da solo ogni libreria mancante durante l'esecuzione",
+          "Perché isola l'applicazione, ma modifica l'ambiente del computer host per uniformarlo al container"
         ],
         "risposta_corretta": "Perché include applicazione e dipendenze in un ambiente isolato e riproducibile",
         "posizione_risposta": "A",
@@ -1772,7 +1733,7 @@
         "avvisi_qualita_reali": [],
         "errori_linguistici": [],
         "note_informative": [
-          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “tutte”"
+          "spiegazione: testo molto lungo, controllare leggibilità"
         ]
       },
       {
@@ -1782,9 +1743,9 @@
         "livello": "avanzato",
         "opzioni": [
           "Perché permette di confermare tutte le modifiche solo se l'intera operazione va a buon fine",
-          "Perché conferma ogni singola modifica appena viene eseguita, anche se le operazioni successive falliscono",
-          "Perché controlla automaticamente che ogni query SQL sia scritta senza errori logici",
-          "Perché corregge automaticamente le query SQL quando una condizione è sbagliata"
+          "Perché conferma ogni modifica appena viene eseguita, anche se una fase successiva fallisce",
+          "Perché raggruppa più operazioni, ma non consente di annullarle se una parte non riesce",
+          "Perché controlla il risultato complessivo, ma corregge da sola query scritte con logica sbagliata"
         ],
         "risposta_corretta": "Perché permette di confermare tutte le modifiche solo se l'intera operazione va a buon fine",
         "posizione_risposta": "A",
