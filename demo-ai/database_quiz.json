@@ -13388,15 +13388,17 @@
       "10",
       "12",
       "8",
-      "15"
+      "20"
     ],
     "risposta_corretta": "10",
-    "spiegazione": "Il 20% significa 20 su 100. Quindi 50 × 20 / 100 = 10.",
+    "spiegazione": "Il 20% di 50 si calcola facendo 50 × 20 / 100 = 10. 12 e 8 sono risultati vicini ma non corrispondono al 20%, mentre 20 confonde la percentuale con il risultato.",
     "tags": [
       "percentuali",
       "calcolo base"
     ],
     "difficolta": 1,
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve essere un errore matematico plausibile: calcolo vicino, passaggio saltato, formula invertita o interpretazione numerica quasi corretta.",
     "_materia_demo": "Matematica",
     "_file_origine": "data/matematica.json",
     "materia": "Matematica"
@@ -13411,15 +13413,17 @@
       "5",
       "4",
       "6",
-      "7"
+      "15"
     ],
     "risposta_corretta": "5",
-    "spiegazione": "Prima togli 4 da entrambi i lati: 3x = 15. Poi dividi per 3: x = 5.",
+    "spiegazione": "Nell'equazione 3x + 4 = 19 si sottrae prima 4 da entrambi i lati: 3x = 15. Poi si divide per 3: x = 5. Il valore 15 è il risultato intermedio, non il valore finale di x.",
     "tags": [
       "equazioni",
       "algebra"
     ],
     "difficolta": 2,
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve essere un errore matematico plausibile: calcolo vicino, passaggio saltato, formula invertita o interpretazione numerica quasi corretta.",
     "_materia_demo": "Matematica",
     "_file_origine": "data/matematica.json",
     "materia": "Matematica"
@@ -13434,15 +13438,17 @@
       "8 giorni",
       "9 giorni",
       "10 giorni",
-      "7 giorni"
+      "18 giorni"
     ],
     "risposta_corretta": "8 giorni",
-    "spiegazione": "Il lavoro totale è 6 × 12 = 72 giornate-operaio. Con 9 operai servono 72 / 9 = 8 giorni.",
+    "spiegazione": "Il lavoro totale è 6 × 12 = 72 giornate-operaio. Con 9 operai servono 72 / 9 = 8 giorni. 9 e 10 sono stime vicine, mentre 18 nasce da un ragionamento diretto invece che inversamente proporzionale.",
     "tags": [
       "proporzioni inverse",
       "problemi"
     ],
     "difficolta": 3,
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve essere un errore matematico plausibile: calcolo vicino, passaggio saltato, formula invertita o interpretazione numerica quasi corretta.",
     "_materia_demo": "Matematica",
     "_file_origine": "data/matematica.json",
     "materia": "Matematica"
@@ -13454,19 +13460,21 @@
     "livello": "facile",
     "domanda": "Quanto vale tre quarti di 80?",
     "opzioni": [
-      "40",
-      "50",
       "60",
+      "40",
+      "20",
       "70"
     ],
     "risposta_corretta": "60",
-    "spiegazione": "Tre quarti di 80 significa dividere 80 in 4 parti uguali e prenderne 3. Prima calcoliamo 80 / 4 = 20, poi facciamo 20 × 3 = 60.",
+    "spiegazione": "Tre quarti di 80 significa dividere 80 in 4 parti uguali e prenderne 3. 80 / 4 = 20, poi 20 × 3 = 60. 40 è metà di 80, 20 è un solo quarto, 70 è vicino ma non deriva dalla frazione corretta.",
     "tags": [
       "frazioni",
       "calcolo",
       "parte_di_un_totale"
     ],
     "difficolta": 1,
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve essere un errore matematico plausibile: calcolo vicino, passaggio saltato, formula invertita o interpretazione numerica quasi corretta.",
     "_materia_demo": "Matematica",
     "_file_origine": "data/matematica.json",
     "materia": "Matematica"
@@ -13478,18 +13486,20 @@
     "livello": "intermedio",
     "domanda": "Risolvi l'equazione: 2(x + 4) = 22.",
     "opzioni": [
-      "x = 5",
       "x = 7",
+      "x = 5",
       "x = 9",
       "x = 11"
     ],
     "risposta_corretta": "x = 7",
-    "spiegazione": "Prima dividiamo entrambi i membri per 2: x + 4 = 11. Poi sottraiamo 4 da entrambi i lati: x = 7. Questa domanda è diversa da una semplice equazione 3x + 5 = 20 perché richiede anche di gestire le parentesi.",
+    "spiegazione": "Da 2(x + 4) = 22 si divide prima per 2: x + 4 = 11. Poi si sottrae 4: x = 7. x = 11 è il valore prima di togliere 4, mentre 5 e 9 derivano da passaggi non corretti.",
     "tags": [
       "equazioni",
       "algebra"
     ],
     "difficolta": 2,
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve essere un errore matematico plausibile: calcolo vicino, passaggio saltato, formula invertita o interpretazione numerica quasi corretta.",
     "_materia_demo": "Matematica",
     "_file_origine": "data/matematica.json",
     "materia": "Matematica"
@@ -13501,18 +13511,20 @@
     "livello": "avanzato",
     "domanda": "Un numero aumentato del suo 30% diventa 65. Qual era il numero iniziale?",
     "opzioni": [
-      "45",
       "50",
+      "45",
       "55",
       "60"
     ],
     "risposta_corretta": "50",
-    "spiegazione": "Se il numero iniziale è x, dopo l'aumento del 30% diventa 1,3x. Quindi 1,3x = 65 e x = 65 / 1,3 = 50.",
+    "spiegazione": "Se il numero iniziale è x, dopo l'aumento del 30% diventa 1,3x. Quindi 1,3x = 65 e x = 65 / 1,3 = 50. 45, 55 e 60 sono valori vicini, ma non producono 65 dopo un aumento del 30%.",
     "tags": [
       "percentuali_inverse",
       "equazioni"
     ],
     "difficolta": 3,
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve essere un errore matematico plausibile: calcolo vicino, passaggio saltato, formula invertita o interpretazione numerica quasi corretta.",
     "_materia_demo": "Matematica",
     "_file_origine": "data/matematica.json",
     "materia": "Matematica"
@@ -13524,18 +13536,20 @@
     "livello": "facile",
     "domanda": "Se 3 quaderni costano 6 euro, quanto costano 5 quaderni allo stesso prezzo unitario?",
     "opzioni": [
+      "10 euro",
       "8 euro",
       "9 euro",
-      "10 euro",
       "12 euro"
     ],
     "risposta_corretta": "10 euro",
-    "spiegazione": "Ogni quaderno costa 6 / 3 = 2 euro. Quindi 5 quaderni costano 5 × 2 = 10 euro.",
+    "spiegazione": "Se 3 quaderni costano 6 euro, un quaderno costa 6 / 3 = 2 euro. Quindi 5 quaderni costano 5 × 2 = 10 euro. 8 e 9 sono risultati vicini, mentre 12 corrisponde a 6 quaderni allo stesso prezzo unitario.",
     "tags": [
       "proporzioni",
       "prezzo_unitario"
     ],
     "difficolta": 1,
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve essere un errore matematico plausibile: calcolo vicino, passaggio saltato, formula invertita o interpretazione numerica quasi corretta.",
     "_materia_demo": "Matematica",
     "_file_origine": "data/matematica.json",
     "materia": "Matematica"
@@ -13547,18 +13561,20 @@
     "livello": "intermedio",
     "domanda": "Un prodotto costa 80 euro e viene scontato del 25%. Qual è il prezzo finale?",
     "opzioni": [
-      "55 euro",
       "60 euro",
+      "55 euro",
       "65 euro",
       "70 euro"
     ],
     "risposta_corretta": "60 euro",
-    "spiegazione": "Il 25% di 80 è 20. Il prezzo finale è 80 - 20 = 60 euro.",
+    "spiegazione": "Il 25% di 80 è 80 × 25 / 100 = 20. Il prezzo finale è 80 - 20 = 60 euro. 55, 65 e 70 sono prezzi vicini ma derivano da sconti diversi.",
     "tags": [
       "percentuali",
       "sconto"
     ],
     "difficolta": 2,
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve essere un errore matematico plausibile: calcolo vicino, passaggio saltato, formula invertita o interpretazione numerica quasi corretta.",
     "_materia_demo": "Matematica",
     "_file_origine": "data/matematica.json",
     "materia": "Matematica"
@@ -13570,19 +13586,21 @@
     "livello": "avanzato",
     "domanda": "Un treno percorre 180 km in 2 ore e 15 minuti. Qual è la sua velocità media?",
     "opzioni": [
-      "75 km/h",
       "80 km/h",
+      "75 km/h",
       "85 km/h",
       "90 km/h"
     ],
     "risposta_corretta": "80 km/h",
-    "spiegazione": "2 ore e 15 minuti non sono 2,15 ore: i 15 minuti vanno trasformati in ore. Poiché 15 minuti sono 15/60 = 0,25 ore, il tempo totale è 2 + 0,25 = 2,25 ore. La velocità media si calcola facendo distanza / tempo, quindi 180 / 2,25 = 80 km/h.",
+    "spiegazione": "2 ore e 15 minuti equivalgono a 2,25 ore, perché 15 minuti sono 15 / 60 = 0,25 ore. La velocità media è distanza / tempo, quindi 180 / 2,25 = 80 km/h. 75, 85 e 90 sono valori vicini, ma non usano correttamente il tempo di 2,25 ore.",
     "tags": [
       "velocità",
       "tempo",
       "problemi"
     ],
     "difficolta": 3,
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve essere un errore matematico plausibile: calcolo vicino, passaggio saltato, formula invertita o interpretazione numerica quasi corretta.",
     "_materia_demo": "Matematica",
     "_file_origine": "data/matematica.json",
     "materia": "Matematica"
@@ -13600,12 +13618,14 @@
       "36"
     ],
     "risposta_corretta": "32",
-    "spiegazione": "Prima si esegue la moltiplicazione: 7 × 2 = 14. Poi si somma 18 + 14 = 32. Il risultato 50 nasce dall'errore di fare prima 18 + 7 e poi moltiplicare per 2.",
+    "spiegazione": "Si esegue prima la moltiplicazione: 7 × 2 = 14. Poi si somma 18 + 14 = 32. 50 nasce facendo prima 18 + 7 e poi moltiplicando per 2; 25 ignora la priorità della moltiplicazione.",
     "tags": [
       "operazioni",
       "precedenza"
     ],
     "difficolta": 1,
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve essere un errore matematico plausibile: calcolo vicino, passaggio saltato, formula invertita o interpretazione numerica quasi corretta.",
     "_materia_demo": "Matematica",
     "_file_origine": "data/matematica.json",
     "materia": "Matematica"
@@ -13617,18 +13637,20 @@
     "livello": "intermedio",
     "domanda": "La media di 6, 8, 10 e 12 è:",
     "opzioni": [
-      "8",
       "9",
+      "8",
       "10",
       "11"
     ],
     "risposta_corretta": "9",
-    "spiegazione": "Sommiamo i valori: 6 + 8 + 10 + 12 = 36. Poi dividiamo per 4 valori: 36 / 4 = 9.",
+    "spiegazione": "La media si calcola sommando i valori e dividendo per quanti sono. 6 + 8 + 10 + 12 = 36 e 36 / 4 = 9. 8, 10 e 11 sono valori della zona centrale, ma non sono la media corretta.",
     "tags": [
       "media",
       "statistica_base"
     ],
     "difficolta": 2,
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve essere un errore matematico plausibile: calcolo vicino, passaggio saltato, formula invertita o interpretazione numerica quasi corretta.",
     "_materia_demo": "Matematica",
     "_file_origine": "data/matematica.json",
     "materia": "Matematica"
@@ -13640,18 +13662,20 @@
     "livello": "avanzato",
     "domanda": "Se 2x - 3 = x + 9, quale valore ha x?",
     "opzioni": [
+      "12",
       "9",
       "10",
-      "11",
-      "12"
+      "11"
     ],
     "risposta_corretta": "12",
-    "spiegazione": "Portiamo x a sinistra e -3 a destra: 2x - x = 9 + 3. Quindi x = 12.",
+    "spiegazione": "Da 2x - 3 = x + 9 si porta x a sinistra e -3 a destra: 2x - x = 9 + 3. Quindi x = 12. 9, 10 e 11 sono vicini, ma non rispettano lo spostamento corretto dei termini.",
     "tags": [
       "algebra",
       "equazioni"
     ],
     "difficolta": 3,
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve essere un errore matematico plausibile: calcolo vicino, passaggio saltato, formula invertita o interpretazione numerica quasi corretta.",
     "_materia_demo": "Matematica",
     "_file_origine": "data/matematica.json",
     "materia": "Matematica"
@@ -13669,12 +13693,14 @@
       "4/6"
     ],
     "risposta_corretta": "2/4",
-    "spiegazione": "Una frazione equivalente a 1/2 deve avere lo stesso valore. 2/4 si semplifica dividendo numeratore e denominatore per 2, ottenendo 1/2. 2/3, 3/4 e 4/6 sono frazioni vicine come forma, ma non valgono 1/2.",
+    "spiegazione": "La frazione 2/4 è equivalente a 1/2 perché dividendo numeratore e denominatore per 2 si ottiene 1/2. 2/3 e 3/4 sono frazioni maggiori di 1/2, mentre 4/6 si semplifica in 2/3 e quindi non vale 1/2.",
     "tags": [
       "frazioni",
       "equivalenza"
     ],
     "difficolta": 1,
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve essere un errore matematico plausibile: calcolo vicino, passaggio saltato, formula invertita o interpretazione numerica quasi corretta.",
     "_materia_demo": "Matematica",
     "_file_origine": "data/matematica.json",
     "materia": "Matematica"
@@ -13686,18 +13712,20 @@
     "livello": "intermedio",
     "domanda": "In una classe il rapporto tra studenti assenti e presenti è 1:5. Se gli assenti sono 4, quanti sono i presenti?",
     "opzioni": [
+      "20",
       "16",
       "18",
-      "20",
       "24"
     ],
     "risposta_corretta": "20",
-    "spiegazione": "Il rapporto 1:5 significa che per ogni assente ci sono 5 presenti. Se gli assenti sono 4, i presenti sono 4 × 5 = 20.",
+    "spiegazione": "Il rapporto tra assenti e presenti è 1 a 5, cioè per ogni assente ci sono 5 presenti. Se gli assenti sono 4, i presenti sono 4 × 5 = 20. 16, 18 e 24 sono valori vicini, ma non rispettano il rapporto corretto.",
     "tags": [
       "rapporti",
       "proporzioni"
     ],
     "difficolta": 2,
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve essere un errore matematico plausibile: calcolo vicino, passaggio saltato, formula invertita o interpretazione numerica quasi corretta.",
     "_materia_demo": "Matematica",
     "_file_origine": "data/matematica.json",
     "materia": "Matematica"
@@ -13709,18 +13737,20 @@
     "livello": "avanzato",
     "domanda": "Quanti codici diversi di 2 cifre si possono formare usando le cifre 1, 2, 3, 4 senza ripetizione?",
     "opzioni": [
+      "12",
       "8",
       "10",
-      "12",
       "16"
     ],
     "risposta_corretta": "12",
-    "spiegazione": "Per la prima cifra ci sono 4 scelte. Per la seconda restano 3 scelte, perché non si può ripetere la cifra. Quindi 4 × 3 = 12. 16 sarebbe corretto solo se la ripetizione fosse permessa.",
+    "spiegazione": "Per la prima cifra ci sono 4 scelte. Per la seconda restano 3 scelte perché non si può ripetere la cifra. Quindi i codici possibili sono 4 × 3 = 12. 16 sarebbe corretto se la ripetizione fosse permessa.",
     "tags": [
       "combinatoria",
       "conteggio"
     ],
     "difficolta": 3,
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve essere un errore matematico plausibile: calcolo vicino, passaggio saltato, formula invertita o interpretazione numerica quasi corretta.",
     "_materia_demo": "Matematica",
     "_file_origine": "data/matematica.json",
     "materia": "Matematica"
@@ -13738,13 +13768,15 @@
       "80 cm²"
     ],
     "risposta_corretta": "40 cm²",
-    "spiegazione": "L'area del rettangolo si calcola con base × altezza. Quindi 8 × 5 = 40 cm². 13 nasce da 8 + 5, 26 dal perimetro calcolato con 2 × (8 + 5), mentre 80 è il doppio dell'area.",
+    "spiegazione": "L'area del rettangolo si calcola con base × altezza. Quindi 8 × 5 = 40 cm². 13 è la somma 8 + 5, 26 è il perimetro 2 × (8 + 5), 80 è il doppio dell'area.",
     "tags": [
       "geometria",
       "area",
       "rettangolo"
     ],
     "difficolta": 1,
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve essere un errore matematico plausibile: calcolo vicino, passaggio saltato, formula invertita o interpretazione numerica quasi corretta.",
     "_materia_demo": "Matematica",
     "_file_origine": "data/matematica.json",
     "materia": "Matematica"
@@ -13756,19 +13788,21 @@
     "livello": "intermedio",
     "domanda": "Un quadrato ha perimetro 36 cm. Quanto misura il suo lato?",
     "opzioni": [
-      "6 cm",
-      "8 cm",
       "9 cm",
+      "8 cm",
+      "6 cm",
       "12 cm"
     ],
     "risposta_corretta": "9 cm",
-    "spiegazione": "Il perimetro del quadrato è formato da 4 lati uguali. Quindi il lato misura 36 / 4 = 9 cm. 12 nascerebbe dividendo per 3, 8 è vicino ma non corretto, mentre 6 sarebbe una divisione errata per 6.",
+    "spiegazione": "Un quadrato ha 4 lati uguali. Se il perimetro è 36 cm, il lato misura 36 / 4 = 9 cm. 8 è vicino ma non corretto, 6 e 12 derivano da divisioni non adatte al perimetro del quadrato.",
     "tags": [
       "geometria",
       "perimetro",
       "quadrato"
     ],
     "difficolta": 2,
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve essere un errore matematico plausibile: calcolo vicino, passaggio saltato, formula invertita o interpretazione numerica quasi corretta.",
     "_materia_demo": "Matematica",
     "_file_origine": "data/matematica.json",
     "materia": "Matematica"
@@ -13780,18 +13814,20 @@
     "livello": "avanzato",
     "domanda": "La somma di due numeri è 48 e uno è il doppio dell'altro. Qual è il numero maggiore?",
     "opzioni": [
+      "32",
       "24",
       "28",
-      "32",
       "36"
     ],
     "risposta_corretta": "32",
-    "spiegazione": "Se il numero minore è x, il maggiore è 2x. Quindi x + 2x = 48, cioè 3x = 48. Il minore è 16 e il maggiore è 32.",
+    "spiegazione": "Se il numero minore è x, il maggiore è 2x. La somma è x + 2x = 48, quindi 3x = 48 e x = 16. Il numero maggiore è 2 × 16 = 32. 24 è metà della somma, mentre 28 e 36 sono valori vicini ma non rispettano il rapporto doppio.",
     "tags": [
       "problemi",
       "equazioni"
     ],
     "difficolta": 3,
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve essere un errore matematico plausibile: calcolo vicino, passaggio saltato, formula invertita o interpretazione numerica quasi corretta.",
     "_materia_demo": "Matematica",
     "_file_origine": "data/matematica.json",
     "materia": "Matematica"
@@ -13809,12 +13845,14 @@
       "1/3"
     ],
     "risposta_corretta": "3/10",
-    "spiegazione": "La probabilità si calcola facendo casi favorevoli diviso casi totali. Le palline rosse sono 3, mentre le palline totali sono 3 + 7 = 10. Quindi la probabilità è 3/10. 7/10 sarebbe la probabilità di estrarre una blu, 3/7 confronta rosse e blu ma non usa il totale, mentre 1/3 non rappresenta il rapporto corretto.",
+    "spiegazione": "La probabilità si calcola con casi favorevoli diviso casi totali. Le palline rosse sono 3 e le palline totali sono 3 + 7 = 10. Quindi la probabilità è 3/10. 7/10 riguarda le blu, 3/7 confronta rosse e blu senza usare il totale.",
     "tags": [
       "probabilità",
       "frazioni"
     ],
     "difficolta": 2,
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve essere un errore matematico plausibile: calcolo vicino, passaggio saltato, formula invertita o interpretazione numerica quasi corretta.",
     "_materia_demo": "Matematica",
     "_file_origine": "data/matematica.json",
     "materia": "Matematica"
@@ -13826,18 +13864,20 @@
     "livello": "avanzato",
     "domanda": "Un valore passa da 120 a 150. Qual è l'aumento percentuale?",
     "opzioni": [
-      "20%",
       "25%",
+      "20%",
       "30%",
       "35%"
     ],
     "risposta_corretta": "25%",
-    "spiegazione": "L'aumento è 150 - 120 = 30. La percentuale di aumento si calcola rispetto al valore iniziale, quindi 30 / 120 × 100 = 25%. 30% nasce dall'errore di confondere l'aumento assoluto 30 con la percentuale.",
+    "spiegazione": "L'aumento è 150 - 120 = 30. La percentuale di aumento si calcola rispetto al valore iniziale: 30 / 120 × 100 = 25%. 30% confonde l'aumento assoluto 30 con la percentuale.",
     "tags": [
       "percentuali",
       "variazione"
     ],
     "difficolta": 3,
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve essere un errore matematico plausibile: calcolo vicino, passaggio saltato, formula invertita o interpretazione numerica quasi corretta.",
     "_materia_demo": "Matematica",
     "_file_origine": "data/matematica.json",
     "materia": "Matematica"
