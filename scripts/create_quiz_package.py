@@ -14,6 +14,103 @@ RUNTIME_WEB = ROOT / "runtime" / "web"
 
 
 # === BLINDATURA INTERFACCIA WEB AI ITS ===
+
+
+# === EFFETTI WEB AI ITS PACCHETTI PERSONALIZZATI ===
+ALEX_AI_EFFECTS_CSS = '/* ===== Effetti AI ITS: coriandoli + premi finali ===== */\n.alex-ai-confetti-piece {\n  position: fixed;\n  bottom: -36px;\n  left: 50%;\n  width: 14px;\n  height: 22px;\n  border-radius: 6px;\n  pointer-events: none;\n  z-index: 999999;\n  opacity: 0.98;\n  animation: alexAiConfettiRise 1650ms cubic-bezier(.16,.84,.33,1) forwards;\n}\n\n@keyframes alexAiConfettiRise {\n  0% {\n    transform: translate3d(0, 0, 0) rotate(0deg) scale(0.9);\n    opacity: 0;\n  }\n  8% {\n    opacity: 1;\n  }\n  74% {\n    opacity: 1;\n  }\n  100% {\n    transform: translate3d(var(--alex-ai-x), var(--alex-ai-y), 0) rotate(var(--alex-ai-rot)) scale(1.25);\n    opacity: 0;\n  }\n}\n\n.alex-ai-final-reward {\n  margin: 24px auto;\n  max-width: 760px;\n  padding: 22px;\n  border: 1px solid rgba(77, 208, 255, 0.42);\n  border-radius: 24px;\n  background:\n    radial-gradient(circle at top left, rgba(77,208,255,.22), transparent 34%),\n    linear-gradient(135deg, rgba(8,16,34,.96), rgba(22,10,48,.96));\n  box-shadow: 0 22px 70px rgba(0, 0, 0, .42), 0 0 36px rgba(77, 208, 255, .16);\n  color: #f5fbff;\n  display: grid;\n  grid-template-columns: 120px 1fr;\n  gap: 18px;\n  align-items: center;\n}\n\n.alex-ai-final-drawing {\n  min-height: 108px;\n  border-radius: 22px;\n  display: grid;\n  place-items: center;\n  font-size: 56px;\n  background: linear-gradient(160deg, rgba(93,95,239,.26), rgba(18,209,255,.16));\n  border: 1px solid rgba(255,255,255,.16);\n}\n\n.alex-ai-final-copy h3 {\n  margin: 0 0 8px;\n  font-size: 1.35rem;\n  letter-spacing: .01em;\n}\n\n.alex-ai-final-copy p {\n  margin: 6px 0;\n  line-height: 1.5;\n  color: rgba(245,251,255,.88);\n}\n\n.alex-ai-final-score {\n  display: inline-flex;\n  margin-top: 10px;\n  padding: 7px 12px;\n  border-radius: 999px;\n  background: rgba(77,208,255,.15);\n  border: 1px solid rgba(77,208,255,.28);\n  color: #9eeaff;\n  font-weight: 800;\n}\n\n@media (max-width: 640px) {\n  .alex-ai-final-reward {\n    grid-template-columns: 1fr;\n    text-align: center;\n  }\n}'
+ALEX_AI_EFFECTS_JS = '(function () {\n  if (window.__alexAiItsEffectsInstalled) {\n    return;\n  }\n\n  window.__alexAiItsEffectsInstalled = true;\n\n  const rewards = {\n    "10": [\n      ["🚀", "Missione perfetta", "Hai chiuso il test con precisione totale. Questa è mentalità da progetto professionale."],\n      ["🧠", "Prestazione eccellente", "Risposte pulite, ritmo alto e zero errori: ottimo segnale per un percorso AI ITS."],\n      ["🏆", "Dominio completo", "Hai gestito il test come un sistema ben addestrato: dati chiari, decisioni corrette, risultato massimo."]\n    ],\n    "9": [\n      ["⚡", "Quasi perfetto", "Ti manca pochissimo al massimo. La base è fortissima, ora serve solo rifinire i dettagli."],\n      ["🤖", "Livello molto alto", "Hai dimostrato controllo e ragionamento. Un errore non rovina una prova così solida."],\n      ["🌟", "Prestazione distinta", "Sei già in una zona alta: continua così e il 10 diventa naturale."]\n    ],\n    "8": [\n      ["🔥", "Ottimo risultato", "Hai superato bene il test. Ora lavora sui dettagli che separano il buono dall\'eccellente."],\n      ["💡", "Ragionamento solido", "Il risultato mostra comprensione reale. Con un po\' di revisione puoi salire ancora."],\n      ["🧩", "Buona padronanza", "Le basi ci sono e si vedono. Ora punta a rendere più stabili anche le risposte difficili."]\n    ],\n    "7": [\n      ["📈", "Buona prova", "Stai costruendo una base concreta. Rivedi gli errori e trasformali in punti forti."],\n      ["🔧", "In crescita", "Il risultato è positivo. Ora serve consolidare gli argomenti dove hai esitato."],\n      ["🛠️", "Base valida", "Hai materiale su cui costruire. La prossima prova può salire molto."]\n    ],\n    "6": [\n      ["🧱", "Sufficiente", "Hai superato la soglia. Ora bisogna rendere più sicure le risposte e ridurre gli errori evitabili."],\n      ["🧭", "Strada giusta", "La direzione è buona, ma serve più allenamento sui concetti chiave."],\n      ["📚", "Da consolidare", "Il test è passato, ma il prossimo obiettivo è trasformare il minimo in sicurezza."]\n    ],\n    "low": [\n      ["🔁", "Riprova strategica", "Non è una bocciatura: è una mappa degli argomenti da rinforzare."],\n      ["🧪", "Test diagnostico", "Questo risultato ti dice dove intervenire. Riparti dagli errori e migliora a blocchi."],\n      ["🧠", "Allenamento utile", "Ogni errore è un dato. Usalo per capire cosa rivedere prima del prossimo tentativo."]\n    ]\n  };\n\n  const confettiColors = ["#4dd0ff", "#8b5cf6", "#22c55e", "#facc15", "#fb7185", "#ffffff"];\n\n  function randomItem(items) {\n    return items[Math.floor(Math.random() * items.length)];\n  }\n\n  function rewardBucket(score, total) {\n    if (!total) {\n      return "low";\n    }\n\n    const voto = Math.round((score / total) * 10);\n\n    if (voto >= 10) return "10";\n    if (voto >= 9) return "9";\n    if (voto >= 8) return "8";\n    if (voto >= 7) return "7";\n    if (voto >= 6) return "6";\n    return "low";\n  }\n\n  function shootConfetti() {\n    const count = 46;\n\n    for (let index = 0; index < count; index += 1) {\n      const piece = document.createElement("span");\n      piece.className = "alex-ai-confetti-piece";\n\n      const spread = (Math.random() * 2 - 1) * Math.min(window.innerWidth * 0.64, 620);\n      const height = -(Math.random() * 360 + 300);\n      const rotation = (Math.random() * 920 - 460) + "deg";\n\n      piece.style.left = (window.innerWidth / 2 + (Math.random() * 80 - 40)) + "px";\n      piece.style.background = confettiColors[index % confettiColors.length];\n      piece.style.setProperty("--alex-ai-x", spread + "px");\n      piece.style.setProperty("--alex-ai-y", height + "px");\n      piece.style.setProperty("--alex-ai-rot", rotation);\n      piece.style.animationDelay = (Math.random() * 180) + "ms";\n\n      document.body.appendChild(piece);\n\n      setTimeout(function () {\n        piece.remove();\n      }, 2100);\n    }\n  }\n\n  function extractScoreFromText(text) {\n    const patterns = [\n      /(?:Risultato|Punteggio|Score)[^\\d]*(\\d+)\\s*\\/\\s*(\\d+)/i,\n      /(\\d+)\\s*\\/\\s*(\\d+)\\s*[-–—]\\s*(?:eccellente|ottimo|distinto|buono|discreto|sufficiente|insufficiente)/i,\n      /Hai totalizzato[^\\d]*(\\d+)\\s*\\/\\s*(\\d+)/i\n    ];\n\n    for (const pattern of patterns) {\n      const match = text.match(pattern);\n\n      if (match) {\n        return {\n          score: Number(match[1]),\n          total: Number(match[2])\n        };\n      }\n    }\n\n    return null;\n  }\n\n  function rewardAlreadyShown(score, total) {\n    const current = document.querySelector(".alex-ai-final-reward");\n\n    if (!current) {\n      return false;\n    }\n\n    return current.getAttribute("data-score") === score + "/" + total;\n  }\n\n  function renderReward(score, total) {\n    if (rewardAlreadyShown(score, total)) {\n      return;\n    }\n\n    document.querySelectorAll(".alex-ai-final-reward").forEach(function (node) {\n      node.remove();\n    });\n\n    const bucket = rewardBucket(score, total);\n    const reward = randomItem(rewards[bucket] || rewards.low);\n\n    const card = document.createElement("section");\n    card.className = "alex-ai-final-reward";\n    card.setAttribute("data-score", score + "/" + total);\n\n    card.innerHTML = [\n      \'<div class="alex-ai-final-drawing" aria-hidden="true">\' + reward[0] + \'</div>\',\n      \'<div class="alex-ai-final-copy">\',\n      \'<h3>\' + reward[1] + \'</h3>\',\n      \'<p>\' + reward[2] + \'</p>\',\n      \'<p class="alex-ai-final-score">Risultato: \' + score + \'/\' + total + \'</p>\',\n      \'</div>\'\n    ].join("");\n\n    const target =\n      document.querySelector("#result") ||\n      document.querySelector(".result") ||\n      document.querySelector(".results") ||\n      document.querySelector(".quiz-result") ||\n      document.querySelector("main") ||\n      document.body;\n\n    target.appendChild(card);\n  }\n\n  function scanForFinalReward() {\n    const text = document.body ? document.body.innerText || "" : "";\n    const score = extractScoreFromText(text);\n\n    if (score && score.total > 0) {\n      renderReward(score.score, score.total);\n    }\n  }\n\n  function maybeConfettiFromClick(event) {\n    const clicked =\n      event.target.closest("button") ||\n      event.target.closest(".option") ||\n      event.target.closest(".answer") ||\n      event.target.closest("[data-answer]");\n\n    if (!clicked) {\n      return;\n    }\n\n    setTimeout(function () {\n      const classText = String(clicked.className || "").toLowerCase();\n      const text = String(clicked.innerText || clicked.textContent || "").toLowerCase();\n\n      const looksCorrect =\n        classText.includes("correct") ||\n        classText.includes("corretta") ||\n        classText.includes("success") ||\n        text.includes("corretto");\n\n      const looksWrong =\n        classText.includes("wrong") ||\n        classText.includes("errore") ||\n        classText.includes("sbagli") ||\n        text.includes("sbagliato");\n\n      if (looksCorrect && !looksWrong) {\n        shootConfetti();\n      }\n\n      scanForFinalReward();\n    }, 180);\n  }\n\n  document.addEventListener("click", maybeConfettiFromClick, true);\n\n  const observer = new MutationObserver(function () {\n    scanForFinalReward();\n  });\n\n  function start() {\n    if (!document.body) {\n      return;\n    }\n\n    observer.observe(document.body, {\n      childList: true,\n      subtree: true,\n      characterData: true\n    });\n\n    scanForFinalReward();\n  }\n\n  if (document.readyState === "loading") {\n    document.addEventListener("DOMContentLoaded", start);\n  } else {\n    start();\n  }\n\n  window.alexAiShootConfetti = shootConfetti;\n  window.alexAiShowFinalReward = renderReward;\n})();'
+
+def scrivi_effetti_web_ai_its(output_dir):
+    from pathlib import Path as _Path
+    import json as _json
+
+    output_dir = _Path(output_dir)
+
+    possibili_database = [
+        output_dir / "database_quiz.json",
+        output_dir / "SOLO_FILE_DA_COPIARE_WEB" / "database_quiz.json",
+    ]
+
+    database_path = None
+
+    for candidato in possibili_database:
+        if candidato.exists():
+            database_path = candidato
+            break
+
+    if database_path is None:
+        return
+
+    try:
+        dati = _json.loads(database_path.read_text(encoding="utf-8"))
+    except Exception:
+        return
+
+    if isinstance(dati, list):
+        domande = dati
+    elif isinstance(dati, dict):
+        domande = []
+        for chiave in ["domande", "questions", "quiz", "items", "data"]:
+            valore = dati.get(chiave)
+            if isinstance(valore, list):
+                domande = valore
+                break
+    else:
+        domande = []
+
+    if not domande:
+        return
+
+    def categoria_da_id(domanda):
+        qid = str(domanda.get("id", "")).upper()
+
+        if qid.startswith("AI-"):
+            return "ai"
+        if qid.startswith("INF-"):
+            return "informatica"
+        if qid.startswith("ING-"):
+            return "inglese"
+        if qid.startswith("MAT-"):
+            return "matematica"
+        if qid.startswith("LOG-VIS-"):
+            return "logica_visiva"
+        if qid.startswith(("LOG-NUM-", "LOG-VER-", "LOG-AST-", "LOG-CRI-")):
+            return "logica"
+        if qid.startswith(("SCI-", "BIO-", "CHI-", "FIS-", "FQ-")):
+            return "scienze"
+
+        return "altro"
+
+    categorie = {categoria_da_id(domanda) for domanda in domande}
+    categorie.discard("altro")
+
+    categorie_ai_its = {
+        "ai",
+        "informatica",
+        "matematica",
+        "inglese",
+        "logica",
+        "logica_visiva",
+    }
+
+    if not categorie or "scienze" in categorie or not categorie.issubset(categorie_ai_its):
+        return
+
+    for html_file in sorted(set(output_dir.rglob("index.html")) | set(output_dir.rglob("1_APRI_QUIZ.html"))):
+        cartella = html_file.parent
+        (cartella / "ai-effects.css").write_text(ALEX_AI_EFFECTS_CSS.strip() + "\n", encoding="utf-8")
+        (cartella / "ai-effects.js").write_text(ALEX_AI_EFFECTS_JS.strip() + "\n", encoding="utf-8")
+
+        testo = html_file.read_text(encoding="utf-8", errors="ignore")
+
+        if "ai-effects.css" not in testo:
+            testo = testo.replace("</head>", '  <link rel="stylesheet" href="ai-effects.css">\n</head>')
+
+        if "ai-effects.js" not in testo:
+            testo = testo.replace("</body>", '  <script src="ai-effects.js"></script>\n</body>')
+
+        html_file.write_text(testo, encoding="utf-8")
+
 def blinda_interfaccia_web_generata_ai_its(output_dir):
     from pathlib import Path as _Path
     import json as _json
