@@ -1777,64 +1777,64 @@
         ]
       },
       {
+        "id": "INF-INT-0211",
+        "domanda": "Che differenza c'è tra esecuzione sincrona e asincrona?",
+        "categoria": "informatica",
+        "livello": "intermedio",
+        "opzioni": [
+          "Nel modello sincrono si attende il completamento dell'operazione, mentre nell'asincrono il programma può proseguire e gestire il risultato dopo",
+          "Nel modello sincrono si attende l'operazione, ma nell'asincrono il risultato non può essere gestito dal programma",
+          "Nel modello asincrono il programma può proseguire, ma questo dipende dal fatto che il codice usi immagini invece di dati",
+          "Nel modello sincrono il flusso attende, ma l'esecuzione avviene senza usare il processore"
+        ],
+        "risposta_corretta": "Nel modello sincrono si attende il completamento dell'operazione, mentre nell'asincrono il programma può proseguire e gestire il risultato dopo",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "spiegazione: testo molto lungo, controllare leggibilità"
+        ]
+      },
+      {
         "id": "INF-INT-0212",
         "domanda": "Che cosa significa rollback dopo una modifica software?",
         "categoria": "informatica",
         "livello": "intermedio",
         "opzioni": [
-          "Tornare a una versione precedente o a uno stato stabile quando una modifica crea problemi.",
-          "Aggiungere nuove funzionalità senza controllare il comportamento dell'applicazione.",
-          "Duplicare tutti i file del progetto senza sapere quale versione usare.",
-          "Cambiare il nome del repository senza modificare il codice."
+          "Tornare a una versione precedente o a uno stato stabile quando una modifica crea problemi",
+          "Tornare a uno stato precedente, ma aggiungendo nuove funzionalità senza controllare il comportamento",
+          "Ripristinare una versione stabile, ma duplicando i file senza sapere quale versione usare",
+          "Rientrare da una modifica problematica, ma cambiando solo il nome del repository"
         ],
-        "risposta_corretta": "Tornare a una versione precedente o a uno stato stabile quando una modifica crea problemi.",
+        "risposta_corretta": "Tornare a una versione precedente o a uno stato stabile quando una modifica crea problemi",
         "posizione_risposta": "A",
         "problemi_tecnici": [],
         "avvisi_qualita_reali": [],
         "errori_linguistici": [],
         "note_informative": [
-          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “tutti”",
-          "opzione A: possibile frase poco fluida, controllare gli incontri vocalici"
+          "opzione A: possibile frase poco fluida, controllare gli incontri vocalici",
+          "spiegazione: possibile frase poco fluida, controllare gli incontri vocalici"
         ]
       },
       {
-        "id": "INF-AV-0206",
-        "domanda": "Che cosa indica la consistenza eventuale in un sistema distribuito?",
+        "id": "INF-AV-0203",
+        "domanda": "Perché la dependency injection può rendere un'applicazione più testabile?",
         "categoria": "informatica",
         "livello": "avanzato",
         "opzioni": [
-          "Un modello in cui le repliche possono allinearsi dopo un intervallo, invece di essere aggiornate nello stesso istante.",
-          "Un modello in cui tutti i dati vengono salvati su un unico file locale.",
-          "Una tecnica per impedire la comunicazione tra servizi diversi.",
-          "Un formato grafico usato per descrivere schermate mobili."
+          "Perché permette di fornire dipendenze dall'esterno e sostituirle con versioni controllate nei test",
+          "Perché fornisce dipendenze dall'esterno, ma obbliga a scrivere il codice in una sola classe",
+          "Perché rende sostituibili alcune dipendenze, ma impedisce l'uso di interfacce tra componenti",
+          "Perché aiuta i test usando dipendenze controllate, ma elimina la separazione delle responsabilità"
         ],
-        "risposta_corretta": "Un modello in cui le repliche possono allinearsi dopo un intervallo, invece di essere aggiornate nello stesso istante.",
+        "risposta_corretta": "Perché permette di fornire dipendenze dall'esterno e sostituirle con versioni controllate nei test",
         "posizione_risposta": "A",
         "problemi_tecnici": [],
         "avvisi_qualita_reali": [],
         "errori_linguistici": [],
         "note_informative": [
-          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “tutti”"
-        ]
-      },
-      {
-        "id": "INF-AV-0210",
-        "domanda": "Perché una coda di messaggi può aiutare in un sistema distribuito?",
-        "categoria": "informatica",
-        "livello": "avanzato",
-        "opzioni": [
-          "Per disaccoppiare servizi e gestire lavori asincroni con maggiore resilienza.",
-          "Per sostituire ogni database relazionale con un file di testo.",
-          "Per obbligare tutti i servizi a rispondere nello stesso millisecondo.",
-          "Per eliminare la necessità di gestire errori o ritentativi."
-        ],
-        "risposta_corretta": "Per disaccoppiare servizi e gestire lavori asincroni con maggiore resilienza.",
-        "posizione_risposta": "A",
-        "problemi_tecnici": [],
-        "avvisi_qualita_reali": [],
-        "errori_linguistici": [],
-        "note_informative": [
-          "Nota: contiene parola da controllare solo se rende l’opzione troppo facile: “tutti”"
+          "spiegazione: testo molto lungo, controllare leggibilità"
         ]
       },
       {
@@ -1843,12 +1843,12 @@
         "categoria": "informatica",
         "livello": "avanzato",
         "opzioni": [
-          "Aggiungere più istanze del servizio per distribuire il carico.",
-          "Aumentare soltanto la dimensione del monitor usato dal server.",
-          "Spostare tutte le funzioni in un singolo metodo molto lungo.",
-          "Ridurre il numero di utenti supportati dall'applicazione."
+          "Aggiungere più istanze del servizio per distribuire il carico",
+          "Aumentare la capacità del servizio, ma modificando soltanto la dimensione del monitor del server",
+          "Distribuire il carico su più istanze, ma spostando tutte le funzioni in un solo metodo lungo",
+          "Aggiungere istanze del servizio, ma riducendo il numero di utenti supportati dall'applicazione"
         ],
-        "risposta_corretta": "Aggiungere più istanze del servizio per distribuire il carico.",
+        "risposta_corretta": "Aggiungere più istanze del servizio per distribuire il carico",
         "posizione_risposta": "A",
         "problemi_tecnici": [],
         "avvisi_qualita_reali": [],

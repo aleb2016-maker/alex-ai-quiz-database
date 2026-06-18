@@ -3388,13 +3388,15 @@
     "livello": "intermedio",
     "domanda": "A cosa serve un test unitario?",
     "opzioni": [
-      "A verificare il comportamento di una piccola parte del codice in modo controllato.",
-      "A sostituire tutta la documentazione tecnica del progetto.",
-      "A pubblicare direttamente l'applicazione sugli store.",
-      "A modificare la risoluzione delle immagini usate nell'interfaccia."
+      "A verificare il comportamento di una piccola parte del codice in modo controllato",
+      "A verificare una parte limitata del codice, ma sostituendo la documentazione tecnica del progetto",
+      "A controllare una porzione di codice, ma pubblicando direttamente l'applicazione sugli store",
+      "A provare il comportamento del codice, ma modificando la risoluzione delle immagini dell'interfaccia"
     ],
-    "risposta_corretta": "A verificare il comportamento di una piccola parte del codice in modo controllato.",
-    "spiegazione": "La risposta corretta è A. Un test unitario controlla una porzione limitata di codice. B, C e D non sono scopi del testing unitario.",
+    "risposta_corretta": "A verificare il comportamento di una piccola parte del codice in modo controllato",
+    "spiegazione": "Un test unitario serve a verificare il comportamento di una piccola parte del codice in modo controllato. Non sostituisce la documentazione, non pubblica l'applicazione e non riguarda la risoluzione delle immagini.",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve condividere il concetto centrale della corretta e diventare sbagliata per un dettaglio tecnico, logico o pratico.",
     "_materia_demo": "Informatica",
     "_file_origine": "data/informatica.json",
     "materia": "Informatica"
@@ -3405,13 +3407,15 @@
     "livello": "intermedio",
     "domanda": "Che cosa offre un container Docker rispetto all'esecuzione diretta su una macchina?",
     "opzioni": [
-      "Un ambiente isolato e riproducibile con dipendenze definite.",
-      "Un sistema grafico per disegnare icone senza codice.",
-      "Un metodo per aumentare la RAM fisica del computer.",
-      "Un modo per evitare la configurazione di qualunque porta o variabile."
+      "Un ambiente isolato e riproducibile con dipendenze definite",
+      "Un ambiente isolato con dipendenze definite, ma usato per disegnare icone senza codice",
+      "Un ambiente riproducibile per l'applicazione, ma capace di aumentare la RAM fisica del computer",
+      "Un ambiente con dipendenze controllate, ma pensato per evitare la configurazione di porte o variabili"
     ],
-    "risposta_corretta": "Un ambiente isolato e riproducibile con dipendenze definite.",
-    "spiegazione": "La risposta corretta è A. Docker aiuta a impacchettare ambiente e dipendenze. B, C e D non descrivono il vantaggio principale dei container.",
+    "risposta_corretta": "Un ambiente isolato e riproducibile con dipendenze definite",
+    "spiegazione": "Docker offre un ambiente isolato e riproducibile con dipendenze definite. Non serve a disegnare icone, non aumenta la RAM fisica e non elimina la necessità di configurare porte o variabili quando servono.",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve condividere il concetto centrale della corretta e diventare sbagliata per un dettaglio tecnico, logico o pratico.",
     "_materia_demo": "Informatica",
     "_file_origine": "data/informatica.json",
     "materia": "Informatica"
@@ -3422,13 +3426,15 @@
     "livello": "intermedio",
     "domanda": "Che differenza c'è tra esecuzione sincrona e asincrona?",
     "opzioni": [
-      "Nel modello sincrono si attende il completamento dell'operazione, mentre nell'asincrono il programma può proseguire e gestire il risultato dopo.",
-      "Nel modello sincrono il codice usa immagini, mentre nell'asincrono usa soltanto database.",
-      "Nel modello asincrono le funzioni non possono restituire risultati.",
-      "Nel modello sincrono il programma viene eseguito senza processore."
+      "Nel modello sincrono si attende il completamento dell'operazione, mentre nell'asincrono il programma può proseguire e gestire il risultato dopo",
+      "Nel modello sincrono si attende l'operazione, ma nell'asincrono il risultato non può essere gestito dal programma",
+      "Nel modello asincrono il programma può proseguire, ma questo dipende dal fatto che il codice usi immagini invece di dati",
+      "Nel modello sincrono il flusso attende, ma l'esecuzione avviene senza usare il processore"
     ],
-    "risposta_corretta": "Nel modello sincrono si attende il completamento dell'operazione, mentre nell'asincrono il programma può proseguire e gestire il risultato dopo.",
-    "spiegazione": "La risposta corretta è A. La differenza riguarda il modo in cui il flusso attende o prosegue. B, C e D sono errate.",
+    "risposta_corretta": "Nel modello sincrono si attende il completamento dell'operazione, mentre nell'asincrono il programma può proseguire e gestire il risultato dopo",
+    "spiegazione": "Nell'esecuzione sincrona il programma attende il completamento dell'operazione; nell'esecuzione asincrona può proseguire e gestire il risultato dopo. Il concetto riguarda il flusso di esecuzione, non immagini, assenza di processore o impossibilità di gestire risultati.",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve condividere il concetto centrale della corretta e diventare sbagliata per un dettaglio tecnico, logico o pratico.",
     "_materia_demo": "Informatica",
     "_file_origine": "data/informatica.json",
     "materia": "Informatica"
@@ -3439,13 +3445,15 @@
     "livello": "intermedio",
     "domanda": "Che cosa significa rollback dopo una modifica software?",
     "opzioni": [
-      "Tornare a una versione precedente o a uno stato stabile quando una modifica crea problemi.",
-      "Aggiungere nuove funzionalità senza controllare il comportamento dell'applicazione.",
-      "Duplicare tutti i file del progetto senza sapere quale versione usare.",
-      "Cambiare il nome del repository senza modificare il codice."
+      "Tornare a una versione precedente o a uno stato stabile quando una modifica crea problemi",
+      "Tornare a uno stato precedente, ma aggiungendo nuove funzionalità senza controllare il comportamento",
+      "Ripristinare una versione stabile, ma duplicando i file senza sapere quale versione usare",
+      "Rientrare da una modifica problematica, ma cambiando solo il nome del repository"
     ],
-    "risposta_corretta": "Tornare a una versione precedente o a uno stato stabile quando una modifica crea problemi.",
-    "spiegazione": "La risposta corretta è A. Il rollback serve a rientrare da una modifica problematica tornando a una versione funzionante. B è rischioso, C crea confusione, D riguarda solo il nome del repository.",
+    "risposta_corretta": "Tornare a una versione precedente o a uno stato stabile quando una modifica crea problemi",
+    "spiegazione": "Un rollback significa tornare a una versione precedente o a uno stato stabile quando una modifica crea problemi. Non significa aggiungere funzionalità senza controllo, duplicare file in modo confuso o cambiare solo il nome del repository.",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve condividere il concetto centrale della corretta e diventare sbagliata per un dettaglio tecnico, logico o pratico.",
     "_materia_demo": "Informatica",
     "_file_origine": "data/informatica.json",
     "materia": "Informatica"
@@ -3456,13 +3464,15 @@
     "livello": "intermedio",
     "domanda": "Perché un indice può rendere più veloce una query SQL?",
     "opzioni": [
-      "Perché aiuta il database a trovare righe senza dover scandire molti dati inutilmente.",
-      "Perché trasforma ogni query in codice JavaScript.",
-      "Perché sostituisce le relazioni tra tabelle con immagini.",
-      "Perché elimina la necessità di progettare correttamente le tabelle."
+      "Perché aiuta il database a trovare righe senza dover scandire molti dati inutilmente",
+      "Perché aiuta il database a trovare righe, ma trasformando la query in codice JavaScript",
+      "Perché migliora alcune ricerche, ma sostituisce le relazioni tra tabelle con immagini",
+      "Perché velocizza l'accesso ad alcuni dati, ma elimina il bisogno di progettare bene le tabelle"
     ],
-    "risposta_corretta": "Perché aiuta il database a trovare righe senza dover scandire molti dati inutilmente.",
-    "spiegazione": "La risposta corretta è A. Un indice migliora l'accesso ai dati in molte ricerche. B, C e D non spiegano il funzionamento degli indici.",
+    "risposta_corretta": "Perché aiuta il database a trovare righe senza dover scandire molti dati inutilmente",
+    "spiegazione": "Un indice può rendere più veloce una query SQL perché aiuta il database a trovare righe senza scandire molti dati inutilmente. Non trasforma SQL in JavaScript, non sostituisce relazioni con immagini e non elimina la necessità di progettare bene le tabelle.",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve condividere il concetto centrale della corretta e diventare sbagliata per un dettaglio tecnico, logico o pratico.",
     "_materia_demo": "Informatica",
     "_file_origine": "data/informatica.json",
     "materia": "Informatica"
@@ -3473,13 +3483,15 @@
     "livello": "intermedio",
     "domanda": "Perché è importante validare l'input dell'utente?",
     "opzioni": [
-      "Per ridurre errori, dati non coerenti e possibili vulnerabilità.",
-      "Per impedire all'utente di interagire con l'interfaccia.",
-      "Per sostituire il backend con una pagina statica.",
-      "Per rendere il codice meno leggibile durante la manutenzione."
+      "Per ridurre errori, dati non coerenti e possibili vulnerabilità",
+      "Per controllare i dati inseriti, ma impedendo all'utente di interagire con l'interfaccia",
+      "Per migliorare sicurezza e coerenza, ma sostituendo il backend con una pagina statica",
+      "Per verificare l'input dell'utente, ma rendendo il codice meno leggibile durante la manutenzione"
     ],
-    "risposta_corretta": "Per ridurre errori, dati non coerenti e possibili vulnerabilità.",
-    "spiegazione": "La risposta corretta è A. La validazione protegge qualità dei dati e sicurezza. B, C e D descrivono effetti non desiderabili.",
+    "risposta_corretta": "Per ridurre errori, dati non coerenti e possibili vulnerabilità",
+    "spiegazione": "Validare l'input dell'utente è importante per ridurre errori, dati non coerenti e possibili vulnerabilità. Non deve impedire l'interazione, non sostituisce il backend e non dovrebbe peggiorare la manutenzione del codice.",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve condividere il concetto centrale della corretta e diventare sbagliata per un dettaglio tecnico, logico o pratico.",
     "_materia_demo": "Informatica",
     "_file_origine": "data/informatica.json",
     "materia": "Informatica"
@@ -3490,13 +3502,15 @@
     "livello": "avanzato",
     "domanda": "Che cosa significa che un'operazione HTTP è idempotente?",
     "opzioni": [
-      "Che ripetere la stessa richiesta produce lo stesso effetto sullo stato del sistema.",
-      "Che la richiesta viene eseguita soltanto se contiene un'immagine allegata.",
-      "Che il server risponde con dati casuali per aumentare la sicurezza.",
-      "Che il client deve aprire una nuova porta di rete per ogni carattere inviato."
+      "Che ripetere la stessa richiesta produce lo stesso effetto sullo stato del sistema",
+      "Che ripetere la stessa richiesta produce lo stesso effetto, ma solo se contiene un'immagine allegata",
+      "Che la richiesta può essere ripetuta, ma il server risponde con dati casuali per aumentare la sicurezza",
+      "Che l'effetto resta controllato, ma il client deve aprire una porta diversa per ogni carattere inviato"
     ],
-    "risposta_corretta": "Che ripetere la stessa richiesta produce lo stesso effetto sullo stato del sistema.",
-    "spiegazione": "La risposta corretta è A. L'idempotenza riguarda l'effetto ripetuto di una richiesta. B, C e D non definiscono questo concetto.",
+    "risposta_corretta": "Che ripetere la stessa richiesta produce lo stesso effetto sullo stato del sistema",
+    "spiegazione": "Un'operazione HTTP idempotente produce lo stesso effetto sullo stato del sistema anche se la stessa richiesta viene ripetuta. Il concetto non dipende da immagini, risposte casuali o porte di rete aperte per carattere.",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve condividere il concetto centrale della corretta e diventare sbagliata per un dettaglio tecnico, logico o pratico.",
     "_materia_demo": "Informatica",
     "_file_origine": "data/informatica.json",
     "materia": "Informatica"
@@ -3507,13 +3521,15 @@
     "livello": "avanzato",
     "domanda": "Che cos'è una race condition?",
     "opzioni": [
-      "Un problema in cui il risultato dipende dall'ordine temporale non controllato di operazioni concorrenti.",
-      "Un metodo per ordinare alfabeticamente i file sorgente del progetto.",
-      "Una tecnica grafica per animare pulsanti in sequenza.",
-      "Un errore che riguarda esclusivamente la scelta del font nell'interfaccia."
+      "Un problema in cui il risultato dipende dall'ordine temporale non controllato di operazioni concorrenti",
+      "Un problema di concorrenza, ma risolto ordinando alfabeticamente i file sorgente",
+      "Una condizione legata all'ordine delle operazioni, ma usata per animare pulsanti in sequenza",
+      "Un errore dovuto a operazioni concorrenti, ma limitato alla scelta del font dell'interfaccia"
     ],
-    "risposta_corretta": "Un problema in cui il risultato dipende dall'ordine temporale non controllato di operazioni concorrenti.",
-    "spiegazione": "La risposta corretta è A. Le race condition nascono da concorrenza non gestita. B, C e D non riguardano la concorrenza.",
+    "risposta_corretta": "Un problema in cui il risultato dipende dall'ordine temporale non controllato di operazioni concorrenti",
+    "spiegazione": "Una race condition è un problema in cui il risultato dipende dall'ordine temporale non controllato di operazioni concorrenti. Non riguarda l'ordine alfabetico dei file, animazioni grafiche o scelta dei font.",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve condividere il concetto centrale della corretta e diventare sbagliata per un dettaglio tecnico, logico o pratico.",
     "_materia_demo": "Informatica",
     "_file_origine": "data/informatica.json",
     "materia": "Informatica"
@@ -3524,13 +3540,15 @@
     "livello": "avanzato",
     "domanda": "Perché la dependency injection può rendere un'applicazione più testabile?",
     "opzioni": [
-      "Perché permette di fornire dipendenze dall'esterno e sostituirle con versioni controllate nei test.",
-      "Perché obbliga a scrivere tutto il codice in una sola classe.",
-      "Perché impedisce l'uso di interfacce tra componenti.",
-      "Perché elimina la necessità di separare le responsabilità."
+      "Perché permette di fornire dipendenze dall'esterno e sostituirle con versioni controllate nei test",
+      "Perché fornisce dipendenze dall'esterno, ma obbliga a scrivere il codice in una sola classe",
+      "Perché rende sostituibili alcune dipendenze, ma impedisce l'uso di interfacce tra componenti",
+      "Perché aiuta i test usando dipendenze controllate, ma elimina la separazione delle responsabilità"
     ],
-    "risposta_corretta": "Perché permette di fornire dipendenze dall'esterno e sostituirle con versioni controllate nei test.",
-    "spiegazione": "La risposta corretta è A. Iniettare dipendenze facilita mock e test. B, C e D vanno contro la modularità.",
+    "risposta_corretta": "Perché permette di fornire dipendenze dall'esterno e sostituirle con versioni controllate nei test",
+    "spiegazione": "La dependency injection può rendere un'applicazione più testabile perché permette di fornire dipendenze dall'esterno e sostituirle con versioni controllate nei test. Non obbliga a usare una sola classe, non impedisce le interfacce e non elimina la separazione delle responsabilità.",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve condividere il concetto centrale della corretta e diventare sbagliata per un dettaglio tecnico, logico o pratico.",
     "_materia_demo": "Informatica",
     "_file_origine": "data/informatica.json",
     "materia": "Informatica"
@@ -3541,13 +3559,15 @@
     "livello": "avanzato",
     "domanda": "Che cosa cerca di separare il pattern CQRS?",
     "opzioni": [
-      "Le operazioni di lettura dei dati dalle operazioni di modifica dello stato.",
-      "La tastiera dal monitor durante l'esecuzione del programma.",
-      "Il codice sorgente dai commenti presenti nei file.",
-      "Le immagini statiche dai colori usati nel tema grafico."
+      "Le operazioni di lettura dei dati dalle operazioni di modifica dello stato",
+      "Le operazioni di lettura e scrittura, ma separando fisicamente tastiera e monitor",
+      "Query e comandi dell'applicazione, ma dividendo il codice sorgente dai commenti",
+      "Letture e modifiche dello stato, ma separando immagini statiche e colori del tema grafico"
     ],
-    "risposta_corretta": "Le operazioni di lettura dei dati dalle operazioni di modifica dello stato.",
-    "spiegazione": "La risposta corretta è A. CQRS separa query e comandi. B, C e D non descrivono il pattern.",
+    "risposta_corretta": "Le operazioni di lettura dei dati dalle operazioni di modifica dello stato",
+    "spiegazione": "Il pattern CQRS cerca di separare le operazioni di lettura dei dati dalle operazioni di modifica dello stato. Non riguarda periferiche fisiche, commenti del codice o elementi grafici del tema.",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve condividere il concetto centrale della corretta e diventare sbagliata per un dettaglio tecnico, logico o pratico.",
     "_materia_demo": "Informatica",
     "_file_origine": "data/informatica.json",
     "materia": "Informatica"
@@ -3558,13 +3578,15 @@
     "livello": "avanzato",
     "domanda": "Perché la normalizzazione può essere utile nella progettazione di un database relazionale?",
     "opzioni": [
-      "Per ridurre ridondanze e anomalie organizzando i dati in tabelle coerenti.",
-      "Per salvare ogni informazione in una singola colonna di testo.",
-      "Per evitare l'uso di chiavi primarie e relazioni tra tabelle.",
-      "Per trasformare automaticamente SQL in codice HTML."
+      "Per ridurre ridondanze e anomalie organizzando i dati in tabelle coerenti",
+      "Per organizzare meglio i dati, ma salvando ogni informazione in una singola colonna di testo",
+      "Per ridurre anomalie nei dati, ma evitando chiavi primarie e relazioni tra tabelle",
+      "Per rendere più coerente il database, ma trasformando automaticamente SQL in codice HTML"
     ],
-    "risposta_corretta": "Per ridurre ridondanze e anomalie organizzando i dati in tabelle coerenti.",
-    "spiegazione": "La risposta corretta è A. La normalizzazione aiuta coerenza e manutenzione dei dati. B, C e D descrivono scelte scorrette o non pertinenti.",
+    "risposta_corretta": "Per ridurre ridondanze e anomalie organizzando i dati in tabelle coerenti",
+    "spiegazione": "La normalizzazione può essere utile perché riduce ridondanze e anomalie organizzando i dati in tabelle coerenti. Non significa mettere tutto in una sola colonna, evitare chiavi e relazioni o trasformare SQL in HTML.",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve condividere il concetto centrale della corretta e diventare sbagliata per un dettaglio tecnico, logico o pratico.",
     "_materia_demo": "Informatica",
     "_file_origine": "data/informatica.json",
     "materia": "Informatica"
@@ -3575,13 +3597,15 @@
     "livello": "avanzato",
     "domanda": "Che cosa indica la consistenza eventuale in un sistema distribuito?",
     "opzioni": [
-      "Un modello in cui le repliche possono allinearsi dopo un intervallo, invece di essere aggiornate nello stesso istante.",
-      "Un modello in cui tutti i dati vengono salvati su un unico file locale.",
-      "Una tecnica per impedire la comunicazione tra servizi diversi.",
-      "Un formato grafico usato per descrivere schermate mobili."
+      "Un modello in cui le repliche possono allinearsi dopo un intervallo, invece di essere aggiornate nello stesso istante",
+      "Un modello di allineamento tra repliche, ma basato sul salvataggio dei dati in un unico file locale",
+      "Un modello per sistemi distribuiti, ma usato per impedire la comunicazione tra servizi diversi",
+      "Una forma di consistenza dei dati, ma descritta come formato grafico per schermate mobili"
     ],
-    "risposta_corretta": "Un modello in cui le repliche possono allinearsi dopo un intervallo, invece di essere aggiornate nello stesso istante.",
-    "spiegazione": "La risposta corretta è A. La consistenza eventuale accetta un ritardo di allineamento tra repliche. B, C e D non riguardano sistemi distribuiti.",
+    "risposta_corretta": "Un modello in cui le repliche possono allinearsi dopo un intervallo, invece di essere aggiornate nello stesso istante",
+    "spiegazione": "La consistenza eventuale indica un modello in cui le repliche possono allinearsi dopo un intervallo invece di essere aggiornate nello stesso istante. Non significa usare un unico file locale, bloccare la comunicazione tra servizi o descrivere formati grafici.",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve condividere il concetto centrale della corretta e diventare sbagliata per un dettaglio tecnico, logico o pratico.",
     "_materia_demo": "Informatica",
     "_file_origine": "data/informatica.json",
     "materia": "Informatica"
@@ -3592,13 +3616,15 @@
     "livello": "avanzato",
     "domanda": "A cosa serve un load balancer in un'architettura web?",
     "opzioni": [
-      "A distribuire le richieste tra più istanze o server per migliorare disponibilità e gestione del carico.",
-      "A correggere automaticamente errori logici nel codice sorgente.",
-      "A sostituire il database con una memoria temporanea nel browser.",
-      "A convertire richieste HTTP in immagini vettoriali."
+      "A distribuire le richieste tra più istanze o server per migliorare disponibilità e gestione del carico",
+      "A distribuire traffico tra server, ma correggendo automaticamente errori logici nel codice",
+      "A gestire il carico tra istanze, ma sostituendo il database con memoria temporanea nel browser",
+      "A smistare richieste HTTP, ma convertendole in immagini vettoriali prima dell'elaborazione"
     ],
-    "risposta_corretta": "A distribuire le richieste tra più istanze o server per migliorare disponibilità e gestione del carico.",
-    "spiegazione": "La risposta corretta è A. Il load balancer distribuisce traffico tra risorse disponibili. B, C e D non sono il suo ruolo.",
+    "risposta_corretta": "A distribuire le richieste tra più istanze o server per migliorare disponibilità e gestione del carico",
+    "spiegazione": "Un load balancer serve a distribuire le richieste tra più istanze o server per migliorare disponibilità e gestione del carico. Non corregge automaticamente il codice, non sostituisce il database e non converte richieste in immagini.",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve condividere il concetto centrale della corretta e diventare sbagliata per un dettaglio tecnico, logico o pratico.",
     "_materia_demo": "Informatica",
     "_file_origine": "data/informatica.json",
     "materia": "Informatica"
@@ -3609,13 +3635,15 @@
     "livello": "avanzato",
     "domanda": "Qual è lo scopo principale di una pipeline CI/CD?",
     "opzioni": [
-      "Automatizzare integrazione, test e distribuzione del software in modo controllato.",
-      "Disegnare automaticamente il logo dell'applicazione.",
-      "Rimuovere la necessità di revisionare le modifiche importanti.",
-      "Impedire al team di eseguire test prima della pubblicazione."
+      "Automatizzare integrazione, test e distribuzione del software in modo controllato",
+      "Automatizzare build e test, ma disegnando anche il logo dell'applicazione",
+      "Automatizzare il rilascio, ma rimuovendo la necessità di revisionare modifiche importanti",
+      "Automatizzare la distribuzione, ma impedendo al team di eseguire test prima della pubblicazione"
     ],
-    "risposta_corretta": "Automatizzare integrazione, test e distribuzione del software in modo controllato.",
-    "spiegazione": "La risposta corretta è A. CI/CD rende più controllati build, test e rilascio. B, C e D non descrivono una pipeline sana.",
+    "risposta_corretta": "Automatizzare integrazione, test e distribuzione del software in modo controllato",
+    "spiegazione": "Lo scopo principale di una pipeline CI/CD è automatizzare integrazione, test e distribuzione del software in modo controllato. Non disegna loghi, non elimina le revisioni importanti e non impedisce di eseguire test.",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve condividere il concetto centrale della corretta e diventare sbagliata per un dettaglio tecnico, logico o pratico.",
     "_materia_demo": "Informatica",
     "_file_origine": "data/informatica.json",
     "materia": "Informatica"
@@ -3626,13 +3654,15 @@
     "livello": "avanzato",
     "domanda": "Perché un JWT deve essere validato dal server prima di fidarsi delle informazioni contenute?",
     "opzioni": [
-      "Per verificare firma, scadenza e coerenza dei dati dichiarati nel token.",
-      "Per cambiare il colore del token prima di mostrarlo all'utente.",
-      "Per trasformare il token in una tabella SQL permanente.",
-      "Per evitare di usare HTTPS nelle comunicazioni con il client."
+      "Per verificare firma, scadenza e coerenza dei dati dichiarati nel token",
+      "Per controllare firma e scadenza del token, ma cambiandone il colore prima di mostrarlo",
+      "Per validare i dati dichiarati nel token, ma trasformandolo in una tabella SQL permanente",
+      "Per fidarsi del token in modo controllato, ma evitando di usare HTTPS nelle comunicazioni"
     ],
-    "risposta_corretta": "Per verificare firma, scadenza e coerenza dei dati dichiarati nel token.",
-    "spiegazione": "La risposta corretta è A. Un JWT va validato per evitare fiducia non controllata. B, C e D sono scorrette.",
+    "risposta_corretta": "Per verificare firma, scadenza e coerenza dei dati dichiarati nel token",
+    "spiegazione": "Un JWT deve essere validato dal server per verificare firma, scadenza e coerenza dei dati dichiarati nel token. Non va accettato sulla fiducia, e la validazione non sostituisce HTTPS né trasforma il token in una tabella SQL.",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve condividere il concetto centrale della corretta e diventare sbagliata per un dettaglio tecnico, logico o pratico.",
     "_materia_demo": "Informatica",
     "_file_origine": "data/informatica.json",
     "materia": "Informatica"
@@ -3643,13 +3673,15 @@
     "livello": "avanzato",
     "domanda": "Perché una coda di messaggi può aiutare in un sistema distribuito?",
     "opzioni": [
-      "Per disaccoppiare servizi e gestire lavori asincroni con maggiore resilienza.",
-      "Per sostituire ogni database relazionale con un file di testo.",
-      "Per obbligare tutti i servizi a rispondere nello stesso millisecondo.",
-      "Per eliminare la necessità di gestire errori o ritentativi."
+      "Per disaccoppiare servizi e gestire lavori asincroni con maggiore resilienza",
+      "Per disaccoppiare servizi, ma sostituendo ogni database relazionale con un file di testo",
+      "Per gestire lavori asincroni, ma obbligando i servizi a rispondere nello stesso millisecondo",
+      "Per rendere più resiliente il sistema, ma eliminando la gestione di errori o ritentativi"
     ],
-    "risposta_corretta": "Per disaccoppiare servizi e gestire lavori asincroni con maggiore resilienza.",
-    "spiegazione": "La risposta corretta è A. Le code aiutano comunicazione asincrona e disaccoppiamento. B, C e D non rappresentano il loro scopo.",
+    "risposta_corretta": "Per disaccoppiare servizi e gestire lavori asincroni con maggiore resilienza",
+    "spiegazione": "Una coda di messaggi può aiutare perché disaccoppia servizi e gestisce lavori asincroni con maggiore resilienza. Non sostituisce i database, non obbliga risposte simultanee e non elimina la gestione di errori o ritentativi.",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve condividere il concetto centrale della corretta e diventare sbagliata per un dettaglio tecnico, logico o pratico.",
     "_materia_demo": "Informatica",
     "_file_origine": "data/informatica.json",
     "materia": "Informatica"
@@ -3660,13 +3692,15 @@
     "livello": "avanzato",
     "domanda": "Che cos'è un deadlock?",
     "opzioni": [
-      "Una situazione in cui processi o thread restano bloccati perché attendono risorse trattenute reciprocamente.",
-      "Una funzione che migliora la qualità grafica delle icone.",
-      "Un file temporaneo generato durante l'apertura del browser.",
-      "Un metodo per comprimere log senza perderne il contenuto."
+      "Una situazione in cui processi o thread restano bloccati perché attendono risorse trattenute reciprocamente",
+      "Una situazione di blocco tra processi, ma usata per migliorare la qualità grafica delle icone",
+      "Un blocco legato a risorse trattenute, ma generato durante l'apertura del browser come file temporaneo",
+      "Una condizione di attesa tra thread, ma usata come metodo per comprimere log senza perdere contenuto"
     ],
-    "risposta_corretta": "Una situazione in cui processi o thread restano bloccati perché attendono risorse trattenute reciprocamente.",
-    "spiegazione": "La risposta corretta è A. Un deadlock nasce da attese circolari su risorse. B, C e D non descrivono il fenomeno.",
+    "risposta_corretta": "Una situazione in cui processi o thread restano bloccati perché attendono risorse trattenute reciprocamente",
+    "spiegazione": "Un deadlock è una situazione in cui processi o thread restano bloccati perché attendono risorse trattenute reciprocamente. Non riguarda qualità grafica, file temporanei del browser o compressione dei log.",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve condividere il concetto centrale della corretta e diventare sbagliata per un dettaglio tecnico, logico o pratico.",
     "_materia_demo": "Informatica",
     "_file_origine": "data/informatica.json",
     "materia": "Informatica"
@@ -3677,13 +3711,15 @@
     "livello": "avanzato",
     "domanda": "Che cosa significa scalare orizzontalmente un servizio?",
     "opzioni": [
-      "Aggiungere più istanze del servizio per distribuire il carico.",
-      "Aumentare soltanto la dimensione del monitor usato dal server.",
-      "Spostare tutte le funzioni in un singolo metodo molto lungo.",
-      "Ridurre il numero di utenti supportati dall'applicazione."
+      "Aggiungere più istanze del servizio per distribuire il carico",
+      "Aumentare la capacità del servizio, ma modificando soltanto la dimensione del monitor del server",
+      "Distribuire il carico su più istanze, ma spostando tutte le funzioni in un solo metodo lungo",
+      "Aggiungere istanze del servizio, ma riducendo il numero di utenti supportati dall'applicazione"
     ],
-    "risposta_corretta": "Aggiungere più istanze del servizio per distribuire il carico.",
-    "spiegazione": "La risposta corretta è A. La scalabilità orizzontale aggiunge istanze. B non è tecnico, C peggiora il design, D va nella direzione opposta.",
+    "risposta_corretta": "Aggiungere più istanze del servizio per distribuire il carico",
+    "spiegazione": "Scalare orizzontalmente un servizio significa aggiungere più istanze del servizio per distribuire il carico. Non riguarda il monitor, non significa concentrare tutto in un metodo lungo e non riduce gli utenti supportati.",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve condividere il concetto centrale della corretta e diventare sbagliata per un dettaglio tecnico, logico o pratico.",
     "_materia_demo": "Informatica",
     "_file_origine": "data/informatica.json",
     "materia": "Informatica"
@@ -3694,13 +3730,15 @@
     "livello": "avanzato",
     "domanda": "Perché l'osservabilità è importante in produzione?",
     "opzioni": [
-      "Per capire lo stato del sistema usando log, metriche e tracce quando emergono problemi.",
-      "Per nascondere gli errori agli sviluppatori durante il debug.",
-      "Per sostituire la sicurezza applicativa con grafici più dettagliati.",
-      "Per evitare di raccogliere informazioni sul comportamento dei servizi."
+      "Per capire lo stato del sistema usando log, metriche e tracce quando emergono problemi",
+      "Per osservare il sistema in produzione, ma nascondendo gli errori agli sviluppatori durante il debug",
+      "Per raccogliere segnali sul sistema, ma sostituendo la sicurezza applicativa con grafici dettagliati",
+      "Per capire il comportamento dei servizi, ma evitando di raccogliere informazioni operative"
     ],
-    "risposta_corretta": "Per capire lo stato del sistema usando log, metriche e tracce quando emergono problemi.",
-    "spiegazione": "La risposta corretta è A. L'osservabilità aiuta diagnosi e controllo del sistema. B, C e D non descrivono il suo obiettivo.",
+    "risposta_corretta": "Per capire lo stato del sistema usando log, metriche e tracce quando emergono problemi",
+    "spiegazione": "L'osservabilità è importante in produzione perché aiuta a capire lo stato del sistema usando log, metriche e tracce quando emergono problemi. Non serve a nascondere errori, non sostituisce la sicurezza e richiede segnali operativi utili.",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve condividere il concetto centrale della corretta e diventare sbagliata per un dettaglio tecnico, logico o pratico.",
     "_materia_demo": "Informatica",
     "_file_origine": "data/informatica.json",
     "materia": "Informatica"
@@ -3711,13 +3749,15 @@
     "livello": "avanzato",
     "domanda": "Perché la versioning delle API può essere utile?",
     "opzioni": [
-      "Per introdurre cambiamenti mantenendo compatibilità e chiarezza per i client esistenti.",
-      "Per impedire ai client di conoscere quali endpoint stanno usando.",
-      "Per trasformare ogni richiesta HTTP in una query non documentata.",
-      "Per eliminare la necessità di comunicare modifiche importanti agli sviluppatori."
+      "Per introdurre cambiamenti mantenendo compatibilità e chiarezza per i client esistenti",
+      "Per evolvere gli endpoint, ma impedendo ai client di sapere quale versione stanno usando",
+      "Per gestire cambiamenti nelle API, ma trasformando ogni richiesta HTTP in una query non documentata",
+      "Per mantenere compatibilità tra versioni, ma evitando di comunicare modifiche importanti agli sviluppatori"
     ],
-    "risposta_corretta": "Per introdurre cambiamenti mantenendo compatibilità e chiarezza per i client esistenti.",
-    "spiegazione": "La risposta corretta è A. Il versioning aiuta evoluzione e compatibilità delle API. B, C e D sono pratiche dannose o confuse.",
+    "risposta_corretta": "Per introdurre cambiamenti mantenendo compatibilità e chiarezza per i client esistenti",
+    "spiegazione": "Il versionamento delle API è utile per introdurre cambiamenti mantenendo compatibilità e chiarezza per i client esistenti. Non deve nascondere le versioni, creare richieste non documentate o evitare la comunicazione delle modifiche importanti.",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve condividere il concetto centrale della corretta e diventare sbagliata per un dettaglio tecnico, logico o pratico.",
     "_materia_demo": "Informatica",
     "_file_origine": "data/informatica.json",
     "materia": "Informatica"
