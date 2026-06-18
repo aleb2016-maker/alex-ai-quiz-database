@@ -998,7 +998,7 @@
     "problemi_tecnici_totali": 0,
     "avvisi_qualita_reali_totali": 0,
     "errori_linguistici_totali": 0,
-    "note_informative_totali": 37,
+    "note_informative_totali": 46,
     "domande_con_problemi_tecnici": [],
     "domande_con_avvisi_qualita_reali": [],
     "domande_con_errori_linguistici": [],
@@ -1385,6 +1385,26 @@
         ]
       },
       {
+        "id": "ING-FAC-0101",
+        "domanda": "Quale parola inglese significa 'finestra'?",
+        "categoria": "inglese",
+        "livello": "facile",
+        "opzioni": [
+          "window",
+          "wall",
+          "door",
+          "floor"
+        ],
+        "risposta_corretta": "window",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "spiegazione: testo molto lungo, controllare leggibilità"
+        ]
+      },
+      {
         "id": "ING-INT-0101",
         "domanda": "Completa la frase: I have lived in Rome ___ 2020.",
         "categoria": "inglese",
@@ -1425,6 +1445,26 @@
         ]
       },
       {
+        "id": "ING-INT-0102",
+        "domanda": "Completa la frase: There isn't ___ information on the website.",
+        "categoria": "inglese",
+        "livello": "intermedio",
+        "opzioni": [
+          "much",
+          "many",
+          "few",
+          "several"
+        ],
+        "risposta_corretta": "much",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "spiegazione: testo molto lungo, controllare leggibilità"
+        ]
+      },
+      {
         "id": "ING-AV-0102",
         "domanda": "Quale frase usa correttamente una relative clause riferita a un server?",
         "categoria": "inglese",
@@ -1436,6 +1476,46 @@
           "The server whose hosts the database is offline."
         ],
         "risposta_corretta": "The server that hosts the database is offline.",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "spiegazione: testo molto lungo, controllare leggibilità"
+        ]
+      },
+      {
+        "id": "ING-FAC-0103",
+        "domanda": "Completa la frase: This is Marco. ___ phone is new.",
+        "categoria": "inglese",
+        "livello": "facile",
+        "opzioni": [
+          "His",
+          "Her",
+          "Their",
+          "Our"
+        ],
+        "risposta_corretta": "His",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "spiegazione: testo molto lungo, controllare leggibilità"
+        ]
+      },
+      {
+        "id": "ING-INT-0103",
+        "domanda": "Completa la frase: I enjoy ___ new programming languages.",
+        "categoria": "inglese",
+        "livello": "intermedio",
+        "opzioni": [
+          "learning",
+          "to learn",
+          "learn",
+          "learned"
+        ],
+        "risposta_corretta": "learning",
         "posizione_risposta": "A",
         "problemi_tecnici": [],
         "avvisi_qualita_reali": [],
@@ -1465,6 +1545,46 @@
         ]
       },
       {
+        "id": "ING-FAC-0104",
+        "domanda": "Quale frase è una domanda corretta al presente semplice?",
+        "categoria": "inglese",
+        "livello": "facile",
+        "opzioni": [
+          "Do you like coffee?",
+          "You like coffee?",
+          "Does you like coffee?",
+          "Are you like coffee?"
+        ],
+        "risposta_corretta": "Do you like coffee?",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "spiegazione: testo molto lungo, controllare leggibilità"
+        ]
+      },
+      {
+        "id": "ING-INT-0104",
+        "domanda": "Completa la frase: The file is too large ___ upload.",
+        "categoria": "inglese",
+        "livello": "intermedio",
+        "opzioni": [
+          "to",
+          "for",
+          "than",
+          "that"
+        ],
+        "risposta_corretta": "to",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "spiegazione: testo molto lungo, controllare leggibilità"
+        ]
+      },
+      {
         "id": "ING-AV-0104",
         "domanda": "Trasforma correttamente in discorso indiretto: 'We will release the update tomorrow.'",
         "categoria": "inglese",
@@ -1473,9 +1593,29 @@
           "They said they would release the update the next day.",
           "They said they will release the update tomorrow.",
           "They said they released the update the next day.",
-          "They said they had released the update tomorrow."
+          "They said they had released the update the next day."
         ],
         "risposta_corretta": "They said they would release the update the next day.",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "spiegazione: testo molto lungo, controllare leggibilità"
+        ]
+      },
+      {
+        "id": "ING-FAC-0105",
+        "domanda": "Completa la frase: I go to work ___ bus.",
+        "categoria": "inglese",
+        "livello": "facile",
+        "opzioni": [
+          "by",
+          "on",
+          "at",
+          "with"
+        ],
+        "risposta_corretta": "by",
         "posizione_risposta": "A",
         "problemi_tecnici": [],
         "avvisi_qualita_reali": [],
@@ -1492,8 +1632,8 @@
         "opzioni": [
           "would start",
           "will start",
-          "start",
-          "started"
+          "started",
+          "start"
         ],
         "risposta_corretta": "would start",
         "posizione_risposta": "A",
@@ -1525,6 +1665,26 @@
         ]
       },
       {
+        "id": "ING-INT-0106",
+        "domanda": "Nella frase 'I need to set up the app', che cosa significa 'set up'?",
+        "categoria": "inglese",
+        "livello": "intermedio",
+        "opzioni": [
+          "configurare",
+          "spegnere",
+          "cercare",
+          "rimandare"
+        ],
+        "risposta_corretta": "configurare",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "spiegazione: testo molto lungo, controllare leggibilità"
+        ]
+      },
+      {
         "id": "ING-AV-0106",
         "domanda": "Nel contesto software, quale traduzione rende meglio 'The app crashed during startup'?",
         "categoria": "inglese",
@@ -1536,6 +1696,26 @@
           "L'app ha ignorato l'avvio."
         ],
         "risposta_corretta": "L'app si è bloccata durante l'avvio.",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "spiegazione: testo molto lungo, controllare leggibilità"
+        ]
+      },
+      {
+        "id": "ING-INT-0107",
+        "domanda": "Completa la frase: This laptop is ___ than my old one.",
+        "categoria": "inglese",
+        "livello": "intermedio",
+        "opzioni": [
+          "faster",
+          "fastest",
+          "more fast",
+          "fastly"
+        ],
+        "risposta_corretta": "faster",
         "posizione_risposta": "A",
         "problemi_tecnici": [],
         "avvisi_qualita_reali": [],

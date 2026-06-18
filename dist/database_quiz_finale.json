@@ -4335,7 +4335,7 @@
       "floor"
     ],
     "risposta_corretta": "window",
-    "spiegazione": "'Window' significa finestra. 'Wall' significa muro, 'door' significa porta, mentre 'floor' significa pavimento. Traduzione domanda: \"Quale parola inglese significa 'finestra'?\" Traduzione risposta: \"finestra\"",
+    "spiegazione": "'Window' significa finestra. 'Wall' significa muro, 'door' significa porta e 'floor' significa pavimento. Sono parole vicine perché appartengono tutte all'ambiente di una stanza, ma solo 'window' traduce correttamente 'finestra'. Traduzione domanda: \"Quale parola inglese significa 'finestra'?\" Traduzione risposta: \"finestra\"",
     "tags": [
       "vocabolario",
       "oggetti",
@@ -4344,6 +4344,8 @@
     "difficolta": 1,
     "traduzione_italiana_domanda": "Quale parola inglese significa 'finestra'?",
     "traduzione_italiana_risposta_corretta": "finestra",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve essere vicina alla corretta per struttura, significato o contesto, ma sbagliata per un dettaglio preciso: verbo, tempo, articolo, preposizione, connettivo, registro o traduzione.",
     "_materia_demo": "Inglese",
     "_file_origine": "data/inglese.json",
     "materia": "Inglese"
@@ -4361,7 +4363,7 @@
       "from"
     ],
     "risposta_corretta": "since",
-    "spiegazione": "Con il present perfect si usa 'since' quando indichiamo il punto di inizio, come un anno preciso: 'since 2020'. 'For' si usa con una durata, per esempio 'for three years'. Traduzione domanda: \"Completa la frase: Vivo a Roma ___ 2020.\" Traduzione risposta: \"dal\"",
+    "spiegazione": "Con il present perfect si usa 'since' quando si indica il punto di inizio di un'azione, come un anno preciso: 'since 2020'. 'For' si usa con una durata, per esempio 'for three years'. 'During' indica durante un periodo, mentre 'from' da solo non è la forma naturale in questa frase. Traduzione domanda: \"Completa la frase: Vivo a Roma ___ 2020.\" Traduzione risposta: \"dal\"",
     "tags": [
       "present_perfect",
       "since",
@@ -4370,6 +4372,8 @@
     "difficolta": 2,
     "traduzione_italiana_domanda": "Completa la frase: Vivo a Roma ___ 2020.",
     "traduzione_italiana_risposta_corretta": "dal",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve essere vicina alla corretta per struttura, significato o contesto, ma sbagliata per un dettaglio preciso: verbo, tempo, articolo, preposizione, connettivo, registro o traduzione.",
     "_materia_demo": "Inglese",
     "_file_origine": "data/inglese.json",
     "materia": "Inglese"
@@ -4387,7 +4391,7 @@
       "provided that"
     ],
     "risposta_corretta": "nevertheless",
-    "spiegazione": "'Nevertheless' introduce un contrasto simile a 'however': il software è affidabile, tuttavia ha comunque bisogno di manutenzione. Traduzione domanda: \"Completa la frase: Il software è affidabile; ___, ha comunque bisogno di manutenzione regolare.\" Traduzione risposta: \"ciononostante\"",
+    "spiegazione": "'Nevertheless' introduce un contrasto: il software è affidabile, ciononostante ha bisogno di manutenzione regolare. 'Therefore' indica conseguenza, 'because' indica causa e 'provided that' introduce una condizione. Traduzione domanda: \"Completa la frase: Il software è affidabile; ___, ha comunque bisogno di manutenzione regolare.\" Traduzione risposta: \"ciononostante\"",
     "tags": [
       "connettivi",
       "contrasto",
@@ -4396,6 +4400,8 @@
     "difficolta": 3,
     "traduzione_italiana_domanda": "Completa la frase: Il software è affidabile; ___, ha comunque bisogno di manutenzione regolare.",
     "traduzione_italiana_risposta_corretta": "ciononostante",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve essere vicina alla corretta per struttura, significato o contesto, ma sbagliata per un dettaglio preciso: verbo, tempo, articolo, preposizione, connettivo, registro o traduzione.",
     "_materia_demo": "Inglese",
     "_file_origine": "data/inglese.json",
     "materia": "Inglese"
@@ -4413,7 +4419,7 @@
       "They"
     ],
     "risposta_corretta": "I",
-    "spiegazione": "Con il verbo 'am' si usa il soggetto 'I'. La frase corretta è: 'I am from Italy'. Traduzione domanda: \"Completa la frase: ___ vengo dall'Italia.\" Traduzione risposta: \"io\"",
+    "spiegazione": "Con il verbo 'am' si usa il soggetto 'I'. La frase corretta è 'I am from Italy'. 'You' richiede 'are', 'he' richiede 'is' e 'they' richiede 'are'. Traduzione domanda: \"Completa la frase: ___ vengo dall'Italia.\" Traduzione risposta: \"io\"",
     "tags": [
       "pronomi",
       "to_be",
@@ -4422,6 +4428,8 @@
     "difficolta": 1,
     "traduzione_italiana_domanda": "Completa la frase: ___ vengo dall'Italia.",
     "traduzione_italiana_risposta_corretta": "io",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve essere vicina alla corretta per struttura, significato o contesto, ma sbagliata per un dettaglio preciso: verbo, tempo, articolo, preposizione, connettivo, registro o traduzione.",
     "_materia_demo": "Inglese",
     "_file_origine": "data/inglese.json",
     "materia": "Inglese"
@@ -4439,7 +4447,7 @@
       "several"
     ],
     "risposta_corretta": "much",
-    "spiegazione": "'Information' in inglese è normalmente non numerabile. Con i nomi non numerabili si usa 'much', non 'many'. Traduzione domanda: \"Completa la frase: Non ci sono ___ informazioni sul sito web.\" Traduzione risposta: \"molte\"",
+    "spiegazione": "'Information' in inglese è normalmente non numerabile. Con i nomi non numerabili si usa 'much', quindi la frase corretta è 'There isn't much information on the website'. 'Many', 'few' e 'several' si usano con nomi numerabili plurali. Traduzione domanda: \"Completa la frase: Non ci sono ___ informazioni sul sito web.\" Traduzione risposta: \"molte\"",
     "tags": [
       "much",
       "many",
@@ -4448,6 +4456,8 @@
     "difficolta": 2,
     "traduzione_italiana_domanda": "Completa la frase: Non ci sono ___ informazioni sul sito web.",
     "traduzione_italiana_risposta_corretta": "molte",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve essere vicina alla corretta per struttura, significato o contesto, ma sbagliata per un dettaglio preciso: verbo, tempo, articolo, preposizione, connettivo, registro o traduzione.",
     "_materia_demo": "Inglese",
     "_file_origine": "data/inglese.json",
     "materia": "Inglese"
@@ -4465,7 +4475,7 @@
       "The server whose hosts the database is offline."
     ],
     "risposta_corretta": "The server that hosts the database is offline.",
-    "spiegazione": "Per riferirsi a una cosa, come 'server', si può usare 'that' o 'which'. Qui 'that hosts the database' è corretto. 'Who' si usa per persone, mentre 'where' e 'whose' non funzionano in questa struttura. Traduzione domanda: \"Quale frase usa correttamente una proposizione relativa riferita a un server?\" Traduzione risposta: \"Il server che ospita il database è offline.\"",
+    "spiegazione": "Per riferirsi a una cosa, come 'server', si può usare 'that' o 'which'. 'The server that hosts the database is offline' è corretto. 'Who' si usa per persone, 'where hosts' non costruisce correttamente la relativa e 'whose hosts' usa male il possessivo. Traduzione domanda: \"Quale frase usa correttamente una proposizione relativa riferita a un server?\" Traduzione risposta: \"Il server che ospita il database è offline.\"",
     "tags": [
       "relative_clauses",
       "that",
@@ -4474,6 +4484,8 @@
     "difficolta": 3,
     "traduzione_italiana_domanda": "Quale frase usa correttamente una proposizione relativa riferita a un server?",
     "traduzione_italiana_risposta_corretta": "Il server che ospita il database è offline.",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve essere vicina alla corretta per struttura, significato o contesto, ma sbagliata per un dettaglio preciso: verbo, tempo, articolo, preposizione, connettivo, registro o traduzione.",
     "_materia_demo": "Inglese",
     "_file_origine": "data/inglese.json",
     "materia": "Inglese"
@@ -4491,7 +4503,7 @@
       "Our"
     ],
     "risposta_corretta": "His",
-    "spiegazione": "Marco è maschile singolare, quindi il possessivo corretto è 'his'. La frase significa: Questo è Marco. Il suo telefono è nuovo. Traduzione domanda: \"Completa la frase: Questo è Marco. ___ telefono è nuovo.\" Traduzione risposta: \"il suo\"",
+    "spiegazione": "Marco è maschile singolare, quindi il possessivo corretto è 'his'. 'Her' si usa per femminile singolare, 'their' per loro e 'our' per nostro. La frase corretta è 'This is Marco. His phone is new'. Traduzione domanda: \"Completa la frase: Questo è Marco. ___ telefono è nuovo.\" Traduzione risposta: \"il suo\"",
     "tags": [
       "possessivi",
       "pronomi",
@@ -4500,6 +4512,8 @@
     "difficolta": 1,
     "traduzione_italiana_domanda": "Completa la frase: Questo è Marco. ___ telefono è nuovo.",
     "traduzione_italiana_risposta_corretta": "il suo",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve essere vicina alla corretta per struttura, significato o contesto, ma sbagliata per un dettaglio preciso: verbo, tempo, articolo, preposizione, connettivo, registro o traduzione.",
     "_materia_demo": "Inglese",
     "_file_origine": "data/inglese.json",
     "materia": "Inglese"
@@ -4517,7 +4531,7 @@
       "learned"
     ],
     "risposta_corretta": "learning",
-    "spiegazione": "Dopo il verbo 'enjoy' si usa il verbo in -ing. La frase corretta è: 'I enjoy learning new programming languages'. Traduzione domanda: \"Completa la frase: Mi piace ___ nuovi linguaggi di programmazione.\" Traduzione risposta: \"imparare\"",
+    "spiegazione": "Dopo il verbo 'enjoy' si usa normalmente il verbo in -ing. La frase corretta è 'I enjoy learning new programming languages'. 'To learn', 'learn' e 'learned' sono forme vicine al verbo corretto, ma non rispettano la costruzione richiesta da 'enjoy'. Traduzione domanda: \"Completa la frase: Mi piace ___ nuovi linguaggi di programmazione.\" Traduzione risposta: \"imparare\"",
     "tags": [
       "gerundio",
       "verbi",
@@ -4526,6 +4540,8 @@
     "difficolta": 2,
     "traduzione_italiana_domanda": "Completa la frase: Mi piace ___ nuovi linguaggi di programmazione.",
     "traduzione_italiana_risposta_corretta": "imparare",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve essere vicina alla corretta per struttura, significato o contesto, ma sbagliata per un dettaglio preciso: verbo, tempo, articolo, preposizione, connettivo, registro o traduzione.",
     "_materia_demo": "Inglese",
     "_file_origine": "data/inglese.json",
     "materia": "Inglese"
@@ -4543,7 +4559,7 @@
       "The issue has been fix."
     ],
     "risposta_corretta": "The issue has been fixed.",
-    "spiegazione": "La frase corretta usa il passivo: 'has been' + participio passato. Quindi la forma giusta è 'The issue has been fixed'. È utile quando interessa il risultato dell'azione, non chi l'ha compiuta. Traduzione domanda: \"In un report tecnico, quale frase indica che il problema è stato risolto senza specificare chi lo ha risolto?\" Traduzione risposta: \"Il problema è stato risolto.\"",
+    "spiegazione": "La frase corretta usa il passivo al present perfect: 'has been' + participio passato. 'The issue has been fixed' è corretta perché comunica il risultato senza specificare chi ha risolto il problema. 'Has fixed' è attivo e richiederebbe un soggetto agente, 'was been fixed' combina male due forme di 'to be', 'has been fix' usa la forma base invece del participio 'fixed'. Traduzione domanda: \"In un report tecnico, quale frase indica che il problema è stato risolto senza specificare chi lo ha risolto?\" Traduzione risposta: \"Il problema è stato risolto.\"",
     "tags": [
       "passive_voice",
       "technical_english",
@@ -4552,6 +4568,8 @@
     "difficolta": 3,
     "traduzione_italiana_domanda": "In un report tecnico, quale frase indica che il problema è stato risolto senza specificare chi lo ha risolto?",
     "traduzione_italiana_risposta_corretta": "Il problema è stato risolto.",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve essere vicina alla corretta per struttura, significato o contesto, ma sbagliata per un dettaglio preciso: verbo, tempo, articolo, preposizione, connettivo, registro o traduzione.",
     "_materia_demo": "Inglese",
     "_file_origine": "data/inglese.json",
     "materia": "Inglese"
@@ -4569,7 +4587,7 @@
       "Are you like coffee?"
     ],
     "risposta_corretta": "Do you like coffee?",
-    "spiegazione": "Nel present simple, con 'you' si usa l'ausiliare 'do' per formare la domanda: 'Do you like coffee? '. 'Does' si usa con he/she/it. Traduzione domanda: \"Quale frase è una domanda corretta al presente semplice?\" Traduzione risposta: \"Ti piace il caffè?\"",
+    "spiegazione": "Nel present simple, con 'you' si usa l'ausiliare 'do' per formare la domanda. La frase corretta è 'Do you like coffee?'. 'You like coffee?' può essere colloquiale ma non è la forma grammaticale richiesta. 'Does you' sbaglia ausiliare, mentre 'Are you like coffee?' mescola il verbo 'to be' con il verbo principale 'like'. Traduzione domanda: \"Quale frase è una domanda corretta al presente semplice?\" Traduzione risposta: \"Ti piace il caffè?\"",
     "tags": [
       "domande",
       "present_simple",
@@ -4578,6 +4596,8 @@
     "difficolta": 1,
     "traduzione_italiana_domanda": "Quale frase è una domanda corretta al presente semplice?",
     "traduzione_italiana_risposta_corretta": "Ti piace il caffè?",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve essere vicina alla corretta per struttura, significato o contesto, ma sbagliata per un dettaglio preciso: verbo, tempo, articolo, preposizione, connettivo, registro o traduzione.",
     "_materia_demo": "Inglese",
     "_file_origine": "data/inglese.json",
     "materia": "Inglese"
@@ -4595,7 +4615,7 @@
       "that"
     ],
     "risposta_corretta": "to",
-    "spiegazione": "La struttura corretta è 'too + aggettivo + to + verbo'. Quindi: 'The file is too large to upload'. Traduzione domanda: \"Completa la frase: Il file è troppo grande ___ caricarlo.\" Traduzione risposta: \"per\"",
+    "spiegazione": "La struttura corretta è 'too + aggettivo + to + verbo'. Quindi si dice 'The file is too large to upload'. 'For', 'than' e 'that' sono parole grammaticali possibili in altre strutture, ma non completano correttamente questa costruzione. Traduzione domanda: \"Completa la frase: Il file è troppo grande ___ caricarlo.\" Traduzione risposta: \"per\"",
     "tags": [
       "too",
       "strutture",
@@ -4604,6 +4624,8 @@
     "difficolta": 2,
     "traduzione_italiana_domanda": "Completa la frase: Il file è troppo grande ___ caricarlo.",
     "traduzione_italiana_risposta_corretta": "per",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve essere vicina alla corretta per struttura, significato o contesto, ma sbagliata per un dettaglio preciso: verbo, tempo, articolo, preposizione, connettivo, registro o traduzione.",
     "_materia_demo": "Inglese",
     "_file_origine": "data/inglese.json",
     "materia": "Inglese"
@@ -4618,10 +4640,10 @@
       "They said they would release the update the next day.",
       "They said they will release the update tomorrow.",
       "They said they released the update the next day.",
-      "They said they had released the update tomorrow."
+      "They said they had released the update the next day."
     ],
     "risposta_corretta": "They said they would release the update the next day.",
-    "spiegazione": "Nel discorso indiretto, 'will' diventa spesso 'would' e 'tomorrow' diventa 'the next day', se il riferimento temporale cambia. Traduzione domanda: \"Trasforma correttamente in discorso indiretto: 'We will release the update tomorrow. '\" Traduzione risposta: \"Dissero che avrebbero rilasciato l'aggiornamento il giorno seguente.\"",
+    "spiegazione": "Nel discorso indiretto con backshift, 'will' diventa spesso 'would' e 'tomorrow' diventa 'the next day'. La trasformazione corretta è 'They said they would release the update the next day'. 'Will' e 'tomorrow' non applicano il backshift standard, 'released' cambia il futuro in passato semplice, 'had released' indica un'azione già completata prima del momento del discorso. Traduzione domanda: \"Trasforma correttamente in discorso indiretto: 'We will release the update tomorrow.'\" Traduzione risposta: \"Dissero che avrebbero rilasciato l'aggiornamento il giorno seguente.\"",
     "tags": [
       "reported_speech",
       "would",
@@ -4630,6 +4652,8 @@
     "difficolta": 3,
     "traduzione_italiana_domanda": "Trasforma correttamente in discorso indiretto: 'We will release the update tomorrow. '",
     "traduzione_italiana_risposta_corretta": "Dissero che avrebbero rilasciato l'aggiornamento il giorno seguente.",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve essere vicina alla corretta per struttura, significato o contesto, ma sbagliata per un dettaglio preciso: verbo, tempo, articolo, preposizione, connettivo, registro o traduzione.",
     "_materia_demo": "Inglese",
     "_file_origine": "data/inglese.json",
     "materia": "Inglese"
@@ -4647,7 +4671,7 @@
       "with"
     ],
     "risposta_corretta": "by",
-    "spiegazione": "Per indicare il mezzo di trasporto in generale si usa 'by': by bus, by train, by car. La frase corretta è: 'I go to work by bus'. Traduzione domanda: \"Completa la frase: Vado al lavoro ___ autobus.\" Traduzione risposta: \"in\"",
+    "spiegazione": "Per indicare il mezzo di trasporto in generale si usa 'by': by bus, by train, by car. La frase corretta è 'I go to work by bus'. 'On' può comparire in espressioni come 'on the bus', ma non nella struttura generale 'by bus'. 'At' indica luogo o punto, mentre 'with' significa con. Traduzione domanda: \"Completa la frase: Vado al lavoro ___ autobus.\" Traduzione risposta: \"in\"",
     "tags": [
       "preposizioni",
       "trasporti",
@@ -4656,6 +4680,8 @@
     "difficolta": 1,
     "traduzione_italiana_domanda": "Completa la frase: Vado al lavoro ___ autobus.",
     "traduzione_italiana_risposta_corretta": "in",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve essere vicina alla corretta per struttura, significato o contesto, ma sbagliata per un dettaglio preciso: verbo, tempo, articolo, preposizione, connettivo, registro o traduzione.",
     "_materia_demo": "Inglese",
     "_file_origine": "data/inglese.json",
     "materia": "Inglese"
@@ -4669,11 +4695,11 @@
     "opzioni": [
       "would start",
       "will start",
-      "start",
-      "started"
+      "started",
+      "start"
     ],
     "risposta_corretta": "would start",
-    "spiegazione": "Questa è una frase del second conditional: if + past simple, would + verbo base. Quindi: 'If I had more time, I would start a second project'. Traduzione domanda: \"Completa la frase: Se avessi più tempo, ___ un secondo progetto.\" Traduzione risposta: \"inizierei\"",
+    "spiegazione": "Questa frase usa il second conditional: if + past simple, would + verbo base. La forma corretta è 'If I had more time, I would start a second project'. 'Will start' appartiene al first conditional, 'started' è solo passato, 'start' manca dell'ausiliare 'would'. Traduzione domanda: \"Completa la frase: Se avessi più tempo, ___ un secondo progetto.\" Traduzione risposta: \"inizierei\"",
     "tags": [
       "second_conditional",
       "would",
@@ -4682,6 +4708,8 @@
     "difficolta": 2,
     "traduzione_italiana_domanda": "Completa la frase: Se avessi più tempo, ___ un secondo progetto.",
     "traduzione_italiana_risposta_corretta": "inizierei",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve essere vicina alla corretta per struttura, significato o contesto, ma sbagliata per un dettaglio preciso: verbo, tempo, articolo, preposizione, connettivo, registro o traduzione.",
     "_materia_demo": "Inglese",
     "_file_origine": "data/inglese.json",
     "materia": "Inglese"
@@ -4699,7 +4727,7 @@
       "had fixed"
     ],
     "risposta_corretta": "would have fixed",
-    "spiegazione": "Questa frase usa il third conditional: If + past perfect, would have + participio passato. La forma corretta è quindi: 'If I had known about the error, I would have fixed it earlier'. Traduzione domanda: \"Completa la frase: Se avessi saputo dell'errore, lo ___ prima.\" Traduzione risposta: \"avrei corretto\"",
+    "spiegazione": "Questa frase usa il third conditional: If + past perfect, would have + participio passato. La forma corretta è 'If I had known about the error, I would have fixed it earlier'. 'Will have fixed' usa il futuro perfetto, 'would fix' appartiene più al second conditional, 'had fixed' non completa correttamente la frase principale. Traduzione domanda: \"Completa la frase: Se avessi saputo dell'errore, lo ___ prima.\" Traduzione risposta: \"avrei corretto\"",
     "tags": [
       "third_conditional",
       "would_have",
@@ -4708,6 +4736,8 @@
     "difficolta": 3,
     "traduzione_italiana_domanda": "Completa la frase: Se avessi saputo dell'errore, lo ___ prima.",
     "traduzione_italiana_risposta_corretta": "avrei corretto",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve essere vicina alla corretta per struttura, significato o contesto, ma sbagliata per un dettaglio preciso: verbo, tempo, articolo, preposizione, connettivo, registro o traduzione.",
     "_materia_demo": "Inglese",
     "_file_origine": "data/inglese.json",
     "materia": "Inglese"
@@ -4725,7 +4755,7 @@
       "will"
     ],
     "risposta_corretta": "can",
-    "spiegazione": "'Can' indica capacità: 'I can swim' significa 'so nuotare'. 'Must' indica obbligo, 'should' consiglio, 'will' futuro. Traduzione domanda: \"Completa la frase: Io ___ nuotare, ma non so guidare.\" Traduzione risposta: \"so\"",
+    "spiegazione": "'Can' indica capacità. 'I can swim' significa 'so nuotare'. 'Must' indica obbligo, 'should' consiglio e 'will' futuro. Traduzione domanda: \"Completa la frase: Io ___ nuotare, ma non so guidare.\" Traduzione risposta: \"so\"",
     "tags": [
       "can",
       "modali",
@@ -4734,6 +4764,8 @@
     "difficolta": 1,
     "traduzione_italiana_domanda": "Completa la frase: Io ___ nuotare, ma non so guidare.",
     "traduzione_italiana_risposta_corretta": "so",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve essere vicina alla corretta per struttura, significato o contesto, ma sbagliata per un dettaglio preciso: verbo, tempo, articolo, preposizione, connettivo, registro o traduzione.",
     "_materia_demo": "Inglese",
     "_file_origine": "data/inglese.json",
     "materia": "Inglese"
@@ -4751,7 +4783,7 @@
       "rimandare"
     ],
     "risposta_corretta": "configurare",
-    "spiegazione": "'Set up' significa configurare, preparare o impostare qualcosa. In questo caso: devo configurare l'app. Traduzione domanda: \"Nella frase 'I need to set up the app', che cosa significa 'set up'?\" Traduzione risposta: \"configurare\"",
+    "spiegazione": "'Set up' significa configurare, preparare o impostare qualcosa. Nella frase 'I need to set up the app' significa 'devo configurare l'app'. 'Spegnere' corrisponde a 'turn off', 'cercare' a 'look for' o 'search', 'rimandare' a 'postpone' o 'put off'. Traduzione domanda: \"Nella frase 'I need to set up the app', che cosa significa 'set up'?\" Traduzione risposta: \"configurare\"",
     "tags": [
       "phrasal_verbs",
       "set_up",
@@ -4760,6 +4792,8 @@
     "difficolta": 2,
     "traduzione_italiana_domanda": "Nella frase 'I need to set up the app', che cosa significa 'set up'?",
     "traduzione_italiana_risposta_corretta": "configurare",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve essere vicina alla corretta per struttura, significato o contesto, ma sbagliata per un dettaglio preciso: verbo, tempo, articolo, preposizione, connettivo, registro o traduzione.",
     "_materia_demo": "Inglese",
     "_file_origine": "data/inglese.json",
     "materia": "Inglese"
@@ -4777,7 +4811,7 @@
       "L'app ha ignorato l'avvio."
     ],
     "risposta_corretta": "L'app si è bloccata durante l'avvio.",
-    "spiegazione": "Nel contesto software, 'to crash' significa bloccarsi o andare in errore. 'During startup' significa durante l'avvio. Traduzione domanda: \"Nel contesto software, quale traduzione rende meglio 'The app crashed during startup'?\" Traduzione risposta: \"L'app si è bloccata durante l'avvio.\"",
+    "spiegazione": "Nel contesto software, 'to crash' significa bloccarsi, chiudersi in modo anomalo o andare in errore. 'During startup' significa durante l'avvio. Quindi 'The app crashed during startup' significa 'L'app si è bloccata durante l'avvio'. Le altre opzioni cambiano il significato di 'crashed'. Traduzione domanda: \"Nel contesto software, quale traduzione rende meglio 'The app crashed during startup'?\" Traduzione risposta: \"L'app si è bloccata durante l'avvio.\"",
     "tags": [
       "traduzione",
       "software",
@@ -4786,6 +4820,8 @@
     "difficolta": 3,
     "traduzione_italiana_domanda": "Nel contesto software, quale traduzione rende meglio 'The app crashed during startup'?",
     "traduzione_italiana_risposta_corretta": "L'app si è bloccata durante l'avvio.",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve essere vicina alla corretta per struttura, significato o contesto, ma sbagliata per un dettaglio preciso: verbo, tempo, articolo, preposizione, connettivo, registro o traduzione.",
     "_materia_demo": "Inglese",
     "_file_origine": "data/inglese.json",
     "materia": "Inglese"
@@ -4803,7 +4839,7 @@
       "fastly"
     ],
     "risposta_corretta": "faster",
-    "spiegazione": "Con un aggettivo breve come 'fast' il comparativo si forma aggiungendo -er: 'faster'. 'Fastest' è superlativo. Traduzione domanda: \"Completa la frase: Questo portatile è ___ del mio vecchio.\" Traduzione risposta: \"più veloce\"",
+    "spiegazione": "Con un aggettivo breve come 'fast', il comparativo si forma aggiungendo -er: 'faster'. La frase corretta è 'This laptop is faster than my old one'. 'Fastest' è superlativo, 'more fast' non è la forma standard, 'fastly' non è l'avverbio corretto in inglese comune. Traduzione domanda: \"Completa la frase: Questo portatile è ___ del mio vecchio.\" Traduzione risposta: \"più veloce\"",
     "tags": [
       "comparativo",
       "aggettivi",
@@ -4812,6 +4848,8 @@
     "difficolta": 2,
     "traduzione_italiana_domanda": "Completa la frase: Questo portatile è ___ del mio vecchio.",
     "traduzione_italiana_risposta_corretta": "più veloce",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve essere vicina alla corretta per struttura, significato o contesto, ma sbagliata per un dettaglio preciso: verbo, tempo, articolo, preposizione, connettivo, registro o traduzione.",
     "_materia_demo": "Inglese",
     "_file_origine": "data/inglese.json",
     "materia": "Inglese"
@@ -4829,7 +4867,7 @@
       "You send the file to me."
     ],
     "risposta_corretta": "Could you please send me the updated file?",
-    "spiegazione": "La frase 'Could you please send me the report? ' usa una forma educata e professionale per fare una richiesta. Le altre frasi sono troppo dirette o poco naturali in un contesto formale. Traduzione domanda: \"Quale frase è più adatta in una comunicazione professionale?\" Traduzione risposta: \"Potresti per favore inviarmi il file aggiornato?\"",
+    "spiegazione": "'Could you please send me the updated file?' è una richiesta educata e professionale. 'Send me the file now' e 'Give me that file quickly' sono troppo dirette. 'You send the file to me' è poco naturale come richiesta professionale. Traduzione domanda: \"Quale frase è più adatta in una comunicazione professionale?\" Traduzione risposta: \"Potresti per favore inviarmi il file aggiornato?\"",
     "tags": [
       "registro_formale",
       "richieste",
@@ -4838,6 +4876,8 @@
     "difficolta": 3,
     "traduzione_italiana_domanda": "Quale frase è più adatta in una comunicazione professionale?",
     "traduzione_italiana_risposta_corretta": "Potresti per favore inviarmi il file aggiornato?",
+    "regola_distrattori": "tre_distrattori_forti",
+    "criterio_distrattori": "Ogni risposta errata deve essere vicina alla corretta per struttura, significato o contesto, ma sbagliata per un dettaglio preciso: verbo, tempo, articolo, preposizione, connettivo, registro o traduzione.",
     "_materia_demo": "Inglese",
     "_file_origine": "data/inglese.json",
     "materia": "Inglese"
