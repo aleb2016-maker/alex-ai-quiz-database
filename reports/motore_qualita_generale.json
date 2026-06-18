@@ -789,7 +789,7 @@
     "problemi_tecnici_totali": 0,
     "avvisi_qualita_reali_totali": 0,
     "errori_linguistici_totali": 0,
-    "note_informative_totali": 4,
+    "note_informative_totali": 5,
     "domande_con_problemi_tecnici": [],
     "domande_con_avvisi_qualita_reali": [],
     "domande_con_errori_linguistici": [],
@@ -812,6 +812,26 @@
         "errori_linguistici": [],
         "note_informative": [
           "spiegazione: possibile frase poco fluida, controllare gli incontri vocalici"
+        ]
+      },
+      {
+        "id": "MAT-AV-0104",
+        "domanda": "Da un gruppo di 5 persone bisogna scegliere presidente e vice. I ruoli sono diversi. Quante scelte possibili ci sono?",
+        "categoria": "matematica",
+        "livello": "avanzato",
+        "opzioni": [
+          "20",
+          "10",
+          "25",
+          "15"
+        ],
+        "risposta_corretta": "20",
+        "posizione_risposta": "A",
+        "problemi_tecnici": [],
+        "avvisi_qualita_reali": [],
+        "errori_linguistici": [],
+        "note_informative": [
+          "spiegazione: testo molto lungo, controllare leggibilità"
         ]
       },
       {
