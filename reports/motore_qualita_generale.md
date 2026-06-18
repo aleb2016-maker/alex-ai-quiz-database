@@ -9,7 +9,7 @@ Questo report distingue problemi tecnici, avvisi qualità reali, errori linguist
 - Problemi tecnici totali: **0**
 - Avvisi qualità reali totali: **0**
 - Errori linguistici totali: **0**
-- Note informative totali: **209**
+- Note informative totali: **215**
 - Gruppi di domande duplicate identiche: **0**
 - Coppie di domande molto simili: **0**
 
@@ -148,6 +148,21 @@ Note informative: **52**
 Duplicati identici: **0**
 Domande molto simili: **0**
 
+## Logica numerica.backup prima primo blocco distrattori forti
+
+File: `data/logica/logica_numerica.backup_prima_primo_blocco_distrattori_forti.json`
+File trovato: **True**
+Domande totali: **20**
+Livelli: `{'facile': 6, 'intermedio': 7, 'avanzato': 7}`
+Categorie: `{'logica': 20}`
+Posizione risposta corretta nel sorgente: `{'A': 20}`
+Problemi tecnici: **0**
+Avvisi qualità reali: **0**
+Errori linguistici: **0**
+Note informative: **1**
+Duplicati identici: **0**
+Domande molto simili: **0**
+
 ## Logica numerica
 
 File: `data/logica/logica_numerica.json`
@@ -159,7 +174,7 @@ Posizione risposta corretta nel sorgente: `{'A': 20}`
 Problemi tecnici: **0**
 Avvisi qualità reali: **0**
 Errori linguistici: **0**
-Note informative: **1**
+Note informative: **6**
 Duplicati identici: **0**
 Domande molto simili: **0**
 
