@@ -708,12 +708,12 @@
     "domanda": "Perché la cache può migliorare le prestazioni di un'applicazione?",
     "opzioni": [
       "Perché evita di ricalcolare o recuperare più volte dati usati spesso",
-      "Perché conserva dati usati spesso, ma garantisce che non diventino mai vecchi",
+      "Perché conserva dati usati spesso, ma può restituire dati non aggiornati se la cache non viene gestita bene",
       "Perché riduce accessi ripetuti a dati frequenti, ma sposta ogni dato del database in memoria locale",
       "Perché migliora le prestazioni, ma anche quando i dati salvati non vengono riutilizzati"
     ],
     "risposta_corretta": "Perché evita di ricalcolare o recuperare più volte dati usati spesso",
-    "spiegazione": "La cache può migliorare le prestazioni perché evita di ricalcolare o recuperare più volte dati usati spesso. Va gestita bene perché può diventare non aggiornata; non sposta tutto il database in memoria e non aiuta se i dati non vengono riutilizzati.",
+    "spiegazione": "La cache può migliorare le prestazioni perché evita di ricalcolare o recuperare più volte dati usati spesso. Va gestita bene perché può restituire dati non aggiornati; non sposta tutto il database in memoria e non aiuta se i dati non vengono riutilizzati.",
     "tags": [
       "cache",
       "performance",

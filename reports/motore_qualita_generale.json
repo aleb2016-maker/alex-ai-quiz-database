@@ -1568,32 +1568,11 @@
       "A": 80
     },
     "problemi_tecnici_totali": 0,
-    "avvisi_qualita_reali_totali": 1,
+    "avvisi_qualita_reali_totali": 0,
     "errori_linguistici_totali": 0,
     "note_informative_totali": 17,
     "domande_con_problemi_tecnici": [],
-    "domande_con_avvisi_qualita_reali": [
-      {
-        "id": "INF-AV-0103",
-        "domanda": "Perché la cache può migliorare le prestazioni di un'applicazione?",
-        "categoria": "informatica",
-        "livello": "avanzato",
-        "opzioni": [
-          "Perché evita di ricalcolare o recuperare più volte dati usati spesso",
-          "Perché conserva dati usati spesso, ma garantisce che non diventino mai vecchi",
-          "Perché riduce accessi ripetuti a dati frequenti, ma sposta ogni dato del database in memoria locale",
-          "Perché migliora le prestazioni, ma anche quando i dati salvati non vengono riutilizzati"
-        ],
-        "risposta_corretta": "Perché evita di ricalcolare o recuperare più volte dati usati spesso",
-        "posizione_risposta": "A",
-        "problemi_tecnici": [],
-        "avvisi_qualita_reali": [
-          "Possibile distrattore troppo assoluto: contiene “mai”"
-        ],
-        "errori_linguistici": [],
-        "note_informative": []
-      }
-    ],
+    "domande_con_avvisi_qualita_reali": [],
     "domande_con_errori_linguistici": [],
     "domande_con_note_informative": [
       {
