@@ -1,227 +1,457 @@
-(function () {
-  if (window.__alexAiItsEffectsInstalled) {
-    return;
-  }
+(() => {
+  "use strict";
 
-  window.__alexAiItsEffectsInstalled = true;
+  const CARD_SELECTOR = "[data-ai-its-final-reward], .ai-its-final-reward-card";
+  const CONFETTI_STAGE_CLASS = "ai-its-confetti-stage";
 
-  const rewards = {
-    "10": [
-      ["🚀", "Missione perfetta", "Hai chiuso il test con precisione totale. Questa è mentalità da progetto professionale."],
-      ["🧠", "Prestazione eccellente", "Risposte pulite, ritmo alto e zero errori: ottimo segnale per un percorso AI ITS."],
-      ["🏆", "Dominio completo", "Hai gestito il test come un sistema ben addestrato: dati chiari, decisioni corrette, risultato massimo."]
-    ],
-    "9": [
-      ["⚡", "Quasi perfetto", "Ti manca pochissimo al massimo. La base è fortissima, ora serve solo rifinire i dettagli."],
-      ["🤖", "Livello molto alto", "Hai dimostrato controllo e ragionamento. Un errore non rovina una prova così solida."],
-      ["🌟", "Prestazione distinta", "Sei già in una zona alta: continua così e il 10 diventa naturale."]
-    ],
-    "8": [
-      ["🔥", "Ottimo risultato", "Hai superato bene il test. Ora lavora sui dettagli che separano il buono dall'eccellente."],
-      ["💡", "Ragionamento solido", "Il risultato mostra comprensione reale. Con un po' di revisione puoi salire ancora."],
-      ["🧩", "Buona padronanza", "Le basi ci sono e si vedono. Ora punta a rendere più stabili anche le risposte difficili."]
-    ],
-    "7": [
-      ["📈", "Buona prova", "Stai costruendo una base concreta. Rivedi gli errori e trasformali in punti forti."],
-      ["🔧", "In crescita", "Il risultato è positivo. Ora serve consolidare gli argomenti dove hai esitato."],
-      ["🛠️", "Base valida", "Hai materiale su cui costruire. La prossima prova può salire molto."]
-    ],
-    "6": [
-      ["🧱", "Sufficiente", "Hai superato la soglia. Ora bisogna rendere più sicure le risposte e ridurre gli errori evitabili."],
-      ["🧭", "Strada giusta", "La direzione è buona, ma serve più allenamento sui concetti chiave."],
-      ["📚", "Da consolidare", "Il test è passato, ma il prossimo obiettivo è trasformare il minimo in sicurezza."]
-    ],
-    "low": [
-      ["🔁", "Riprova strategica", "Non è una bocciatura: è una mappa degli argomenti da rinforzare."],
-      ["🧪", "Test diagnostico", "Questo risultato ti dice dove intervenire. Riparti dagli errori e migliora a blocchi."],
-      ["🧠", "Allenamento utile", "Ogni errore è un dato. Usalo per capire cosa rivedere prima del prossimo tentativo."]
-    ]
+  const state = {
+    observerPausedUntil: 0,
+    lastRenderedScoreKey: null
   };
 
-  const confettiColors = ["#4dd0ff", "#8b5cf6", "#22c55e", "#facc15", "#fb7185", "#ffffff"];
+  const rewardGroups = [
+    {
+      min: 0,
+      max: 39,
+      items: [
+        {
+          emoji: "🧭",
+          title: "Allenamento utile",
+          badge: "Base da rinforzare",
+          message: "Questo risultato serve a capire dove lavorare. Ora il passo importante è correggere gli errori e riprovare meglio."
+        },
+        {
+          emoji: "🔧",
+          title: "Ripartenza intelligente",
+          badge: "Correzione mirata",
+          message: "Hai individuato una zona debole: è una buona notizia, perché adesso sai esattamente dove migliorare."
+        },
+        {
+          emoji: "📌",
+          title: "Primo passo utile",
+          badge: "Fondamenta",
+          message: "Il test non è perso: ti ha mostrato quali concetti vanno ricostruiti con più calma."
+        },
+        {
+          emoji: "🧱",
+          title: "Base in costruzione",
+          badge: "Allenamento attivo",
+          message: "Ogni errore corretto diventa una domanda più facile la prossima volta."
+        },
+        {
+          emoji: "💡",
+          title: "Errore trasformabile",
+          badge: "Studio pratico",
+          message: "Il punteggio è basso, ma il valore è alto se usi le spiegazioni per capire il motivo degli errori."
+        },
+        {
+          emoji: "🚦",
+          title: "Segnale chiaro",
+          badge: "Riprova guidata",
+          message: "Il quiz ti sta dicendo quali argomenti rallentano il percorso. Riparti da quelli."
+        }
+      ]
+    },
+    {
+      min: 40,
+      max: 59,
+      items: [
+        {
+          emoji: "⚙️",
+          title: "Meccanismo avviato",
+          badge: "In crescita",
+          message: "Hai già alcuni punti solidi. Ora devi trasformare le risposte incerte in risposte sicure."
+        },
+        {
+          emoji: "🧩",
+          title: "Pezzi da collegare",
+          badge: "Quasi sufficiente",
+          message: "La base c’è, ma alcuni collegamenti logici vanno resi più precisi."
+        },
+        {
+          emoji: "📈",
+          title: "Progressione visibile",
+          badge: "Miglioramento",
+          message: "Non sei lontano: con una revisione mirata puoi salire rapidamente."
+        },
+        {
+          emoji: "🎯",
+          title: "Obiettivo vicino",
+          badge: "Precisione",
+          message: "Ora serve attenzione ai dettagli: spesso la differenza è in una parola o in una condizione."
+        }
+      ]
+    },
+    {
+      min: 60,
+      max: 79,
+      items: [
+        {
+          emoji: "✅",
+          title: "Risultato solido",
+          badge: "Buona base",
+          message: "Hai superato la soglia utile. Ora punta a ridurre gli errori causati da fretta o distrattori simili."
+        },
+        {
+          emoji: "🏗️",
+          title: "Struttura buona",
+          badge: "Consolidamento",
+          message: "La preparazione c’è. Il prossimo salto arriva distinguendo meglio le opzioni molto vicine."
+        },
+        {
+          emoji: "🧠",
+          title: "Ragionamento attivo",
+          badge: "Buon controllo",
+          message: "Stai ragionando bene. Ora allena la parte più difficile: scegliere tra risposte quasi uguali."
+        },
+        {
+          emoji: "🚀",
+          title: "Salita iniziata",
+          badge: "Livello buono",
+          message: "Il risultato è positivo. Con qualche correzione mirata puoi entrare nella fascia alta."
+        }
+      ]
+    },
+    {
+      min: 80,
+      max: 94,
+      items: [
+        {
+          emoji: "🏆",
+          title: "Prestazione forte",
+          badge: "Ottimo livello",
+          message: "Hai gestito bene anche i distrattori. Ora lavora sulla costanza per arrivare al massimo."
+        },
+        {
+          emoji: "🔥",
+          title: "Controllo alto",
+          badge: "Quasi eccellente",
+          message: "Il livello è alto. Gli ultimi punti si recuperano controllando i dettagli più sottili."
+        },
+        {
+          emoji: "💎",
+          title: "Risultato brillante",
+          badge: "Preparazione forte",
+          message: "Hai una buona padronanza. Continua così e rendi automatico il ragionamento."
+        },
+        {
+          emoji: "🦾",
+          title: "Modalità avanzata",
+          badge: "Molto buono",
+          message: "Stai rispondendo con solidità. Ora il lavoro è rifinire, non ricostruire."
+        }
+      ]
+    },
+    {
+      min: 95,
+      max: 100,
+      items: [
+        {
+          emoji: "🌟",
+          title: "Eccellente",
+          badge: "Livello massimo",
+          message: "Prestazione quasi perfetta. Hai superato anche i distrattori più insidiosi."
+        },
+        {
+          emoji: "👑",
+          title: "Dominio del quiz",
+          badge: "Top performance",
+          message: "Risultato altissimo: ragionamento, attenzione e memoria stanno lavorando insieme."
+        },
+        {
+          emoji: "🚀",
+          title: "Prestazione da lancio",
+          badge: "Eccellenza",
+          message: "Hai completato il test con grande controllo. Questo è il livello da mantenere."
+        },
+        {
+          emoji: "🏅",
+          title: "Risultato elite",
+          badge: "Preparazione eccellente",
+          message: "Hai dimostrato precisione anche nelle risposte più simili. Ottimo lavoro."
+        }
+      ]
+    }
+  ];
 
-  function randomItem(items) {
-    return items[Math.floor(Math.random() * items.length)];
+  function clampNumber(value, min, max) {
+    const number = Number(value);
+    if (!Number.isFinite(number)) return min;
+    return Math.max(min, Math.min(max, number));
   }
 
-  function rewardBucket(score, total) {
-    if (!total) {
-      return "low";
+  function removeFinalRewardCards() {
+    document.querySelectorAll(CARD_SELECTOR).forEach((card) => card.remove());
+    document.body.classList.remove("ai-its-has-final-reward");
+    state.lastRenderedScoreKey = null;
+  }
+
+  function resetFinalRewardUi() {
+    removeFinalRewardCards();
+    state.observerPausedUntil = Date.now() + 900;
+  }
+
+  function findRewardGroup(score, total) {
+    const percent = total > 0 ? Math.round((score / total) * 100) : 0;
+    return rewardGroups.find((group) => percent >= group.min && percent <= group.max) || rewardGroups[0];
+  }
+
+  function pickReward(score, total) {
+    const group = findRewardGroup(score, total);
+    const scoreKey = `${score}/${total}`;
+    const storageKey = `ai-its-last-final-reward-${scoreKey}`;
+    const lastTitle = sessionStorage.getItem(storageKey);
+
+    let available = group.items.filter((item) => item.title !== lastTitle);
+
+    if (available.length === 0) {
+      available = group.items;
     }
 
-    const voto = Math.round((score / total) * 10);
+    const reward = available[Math.floor(Math.random() * available.length)];
+    sessionStorage.setItem(storageKey, reward.title);
 
-    if (voto >= 10) return "10";
-    if (voto >= 9) return "9";
-    if (voto >= 8) return "8";
-    if (voto >= 7) return "7";
-    if (voto >= 6) return "6";
-    return "low";
+    return reward;
   }
 
-  function shootConfetti() {
-    const count = 46;
-
-    for (let index = 0; index < count; index += 1) {
-      const piece = document.createElement("span");
-      piece.className = "alex-ai-confetti-piece";
-
-      const spread = (Math.random() * 2 - 1) * Math.min(window.innerWidth * 0.64, 620);
-      const height = -(Math.random() * 360 + 300);
-      const rotation = (Math.random() * 920 - 460) + "deg";
-
-      piece.style.left = (window.innerWidth / 2 + (Math.random() * 80 - 40)) + "px";
-      piece.style.background = confettiColors[index % confettiColors.length];
-      piece.style.setProperty("--alex-ai-x", spread + "px");
-      piece.style.setProperty("--alex-ai-y", height + "px");
-      piece.style.setProperty("--alex-ai-rot", rotation);
-      piece.style.animationDelay = (Math.random() * 180) + "ms";
-
-      document.body.appendChild(piece);
-
-      setTimeout(function () {
-        piece.remove();
-      }, 2100);
-    }
-  }
-
-  function extractScoreFromText(text) {
-    const patterns = [
-      /(?:Risultato|Punteggio|Score)[^\d]*(\d+)\s*\/\s*(\d+)/i,
-      /(\d+)\s*\/\s*(\d+)\s*[-–—]\s*(?:eccellente|ottimo|distinto|buono|discreto|sufficiente|insufficiente)/i,
-      /Hai totalizzato[^\d]*(\d+)\s*\/\s*(\d+)/i
+  function findResultTarget() {
+    const selectors = [
+      "[data-result]",
+      "[data-quiz-result]",
+      "#result",
+      "#results",
+      ".result",
+      ".results",
+      ".quiz-result",
+      ".final-result",
+      ".score-card",
+      "main",
+      "#app",
+      ".app"
     ];
 
-    for (const pattern of patterns) {
-      const match = text.match(pattern);
+    for (const selector of selectors) {
+      const element = document.querySelector(selector);
+      if (element) return element;
+    }
 
-      if (match) {
-        return {
-          score: Number(match[1]),
-          total: Number(match[2])
-        };
+    return document.body;
+  }
+
+  function renderFinalReward(rawScore, rawTotal, options = {}) {
+    const score = clampNumber(rawScore, 0, 999);
+    const total = clampNumber(rawTotal || 10, 1, 999);
+    const scoreKey = `${score}/${total}`;
+
+    const existing = document.querySelector(CARD_SELECTOR);
+
+    if (existing && !options.force && existing.dataset.scoreKey === scoreKey) {
+      return existing;
+    }
+
+    removeFinalRewardCards();
+
+    const reward = pickReward(score, total);
+    const percent = Math.round((score / total) * 100);
+
+    const card = document.createElement("section");
+    card.className = "ai-its-final-reward-card";
+    card.dataset.aiItsFinalReward = "true";
+    card.dataset.scoreKey = scoreKey;
+
+    card.innerHTML = `
+      <div class="ai-its-final-reward-glow"></div>
+      <div class="ai-its-final-reward-content">
+        <div class="ai-its-final-reward-emoji" aria-hidden="true">${reward.emoji}</div>
+        <div class="ai-its-final-reward-text">
+          <p class="ai-its-final-reward-kicker">Premio finale AI ITS</p>
+          <h2>${reward.title}</h2>
+          <p class="ai-its-final-reward-score">${score}/${total} · ${percent}% · ${reward.badge}</p>
+          <p class="ai-its-final-reward-message">${reward.message}</p>
+        </div>
+      </div>
+    `;
+
+    const target = options.target || findResultTarget();
+    target.appendChild(card);
+    document.body.classList.add("ai-its-has-final-reward");
+    state.lastRenderedScoreKey = scoreKey;
+
+    return card;
+  }
+
+  function launchConfetti(options = {}) {
+    const particleCount = clampNumber(options.count || 46, 12, 120);
+    const existingStage = document.querySelector("." + CONFETTI_STAGE_CLASS);
+
+    if (existingStage) {
+      existingStage.remove();
+    }
+
+    const stage = document.createElement("div");
+    stage.className = CONFETTI_STAGE_CLASS;
+    stage.setAttribute("aria-hidden", "true");
+
+    const colors = [
+      "#8be9fd",
+      "#50fa7b",
+      "#ffb86c",
+      "#ff79c6",
+      "#bd93f9",
+      "#f1fa8c",
+      "#ffffff"
+    ];
+
+    for (let index = 0; index < particleCount; index += 1) {
+      const piece = document.createElement("span");
+      piece.className = "ai-its-confetti-piece";
+
+      const startX = Math.round((Math.random() - 0.5) * window.innerWidth * 0.55);
+      const endX = Math.round((Math.random() - 0.5) * window.innerWidth * 1.35);
+      const rise = Math.round(window.innerHeight * (0.72 + Math.random() * 0.58));
+      const size = Math.round(9 + Math.random() * 13);
+      const duration = Math.round(1600 + Math.random() * 950);
+      const delay = Math.round(Math.random() * 220);
+      const spin = Math.round((Math.random() > 0.5 ? 1 : -1) * (260 + Math.random() * 620));
+
+      piece.style.setProperty("--start-x", `${startX}px`);
+      piece.style.setProperty("--end-x", `${endX}px`);
+      piece.style.setProperty("--rise", `${rise}px`);
+      piece.style.setProperty("--size", `${size}px`);
+      piece.style.setProperty("--duration", `${duration}ms`);
+      piece.style.setProperty("--delay", `${delay}ms`);
+      piece.style.setProperty("--spin", `${spin}deg`);
+      piece.style.background = colors[index % colors.length];
+
+      stage.appendChild(piece);
+    }
+
+    document.body.appendChild(stage);
+
+    window.setTimeout(() => {
+      stage.remove();
+    }, 3100);
+  }
+
+  function textLooksLikeFinalResult(text) {
+    return /risultato|punteggio|finale|terminato|completato|corrette|esatte|hai totalizzato|quiz finito|fine quiz/i.test(text);
+  }
+
+  function detectFinalScore() {
+    const elements = Array.from(document.querySelectorAll("body *"))
+      .filter((element) => {
+        const text = element.textContent || "";
+        return text.length > 0 && text.length < 900;
+      });
+
+    const scorePattern = /(\d{1,3})\s*\/\s*(\d{1,3})/;
+
+    for (const element of elements) {
+      const text = element.textContent || "";
+      const match = text.match(scorePattern);
+
+      if (!match) continue;
+
+      const ancestorText = [
+        text,
+        element.parentElement ? element.parentElement.textContent || "" : "",
+        element.closest("section, article, div") ? element.closest("section, article, div").textContent || "" : ""
+      ].join(" ");
+
+      if (!textLooksLikeFinalResult(ancestorText)) continue;
+
+      const score = Number(match[1]);
+      const total = Number(match[2]);
+
+      if (Number.isFinite(score) && Number.isFinite(total) && total > 0 && score <= total) {
+        return { score, total };
       }
     }
 
     return null;
   }
 
-  function rewardAlreadyShown(score, total) {
-    const current = document.querySelector(".alex-ai-final-reward");
+  function attachResetListeners() {
+    document.addEventListener("click", (event) => {
+      const clickable = event.target.closest("button, a, [role='button'], input[type='button'], input[type='submit']");
 
-    if (!current) {
-      return false;
-    }
+      if (!clickable) return;
 
-    return current.getAttribute("data-score") === score + "/" + total;
-  }
+      const text = [
+        clickable.textContent || "",
+        clickable.value || "",
+        clickable.getAttribute("aria-label") || "",
+        clickable.id || "",
+        clickable.className || ""
+      ].join(" ");
 
-  function renderReward(score, total) {
-    if (rewardAlreadyShown(score, total)) {
-      return;
-    }
-
-    document.querySelectorAll(".alex-ai-final-reward").forEach(function (node) {
-      node.remove();
-    });
-
-    const bucket = rewardBucket(score, total);
-    const reward = randomItem(rewards[bucket] || rewards.low);
-
-    const card = document.createElement("section");
-    card.className = "alex-ai-final-reward";
-    card.setAttribute("data-score", score + "/" + total);
-
-    card.innerHTML = [
-      '<div class="alex-ai-final-drawing" aria-hidden="true">' + reward[0] + '</div>',
-      '<div class="alex-ai-final-copy">',
-      '<h3>' + reward[1] + '</h3>',
-      '<p>' + reward[2] + '</p>',
-      '<p class="alex-ai-final-score">Risultato: ' + score + '/' + total + '</p>',
-      '</div>'
-    ].join("");
-
-    const target =
-      document.querySelector("#result") ||
-      document.querySelector(".result") ||
-      document.querySelector(".results") ||
-      document.querySelector(".quiz-result") ||
-      document.querySelector("main") ||
-      document.body;
-
-    target.appendChild(card);
-  }
-
-  function scanForFinalReward() {
-    const text = document.body ? document.body.innerText || "" : "";
-    const score = extractScoreFromText(text);
-
-    if (score && score.total > 0) {
-      renderReward(score.score, score.total);
-    }
-  }
-
-  function maybeConfettiFromClick(event) {
-    const clicked =
-      event.target.closest("button") ||
-      event.target.closest(".option") ||
-      event.target.closest(".answer") ||
-      event.target.closest("[data-answer]");
-
-    if (!clicked) {
-      return;
-    }
-
-    setTimeout(function () {
-      const classText = String(clicked.className || "").toLowerCase();
-      const text = String(clicked.innerText || clicked.textContent || "").toLowerCase();
-
-      const looksCorrect =
-        classText.includes("correct") ||
-        classText.includes("corretta") ||
-        classText.includes("success") ||
-        text.includes("corretto");
-
-      const looksWrong =
-        classText.includes("wrong") ||
-        classText.includes("errore") ||
-        classText.includes("sbagli") ||
-        text.includes("sbagliato");
-
-      if (looksCorrect && !looksWrong) {
-        shootConfetti();
+      if (/nuovo|genera|inizia|ricomincia|riprova|restart|start|reset|cambia materia|crea quiz/i.test(text)) {
+        resetFinalRewardUi();
       }
-
-      scanForFinalReward();
-    }, 180);
+    }, true);
   }
 
-  document.addEventListener("click", maybeConfettiFromClick, true);
+  function attachResultObserver() {
+    const observer = new MutationObserver(() => {
+      if (Date.now() < state.observerPausedUntil) return;
 
-  const observer = new MutationObserver(function () {
-    scanForFinalReward();
-  });
+      window.clearTimeout(attachResultObserver.timer);
+      attachResultObserver.timer = window.setTimeout(() => {
+        const detected = detectFinalScore();
 
-  function start() {
-    if (!document.body) {
-      return;
-    }
+        if (!detected) return;
+
+        const existing = document.querySelector(CARD_SELECTOR);
+        const scoreKey = `${detected.score}/${detected.total}`;
+
+        if (existing && existing.dataset.scoreKey === scoreKey) {
+          return;
+        }
+
+        renderFinalReward(detected.score, detected.total, { force: false });
+      }, 180);
+    });
 
     observer.observe(document.body, {
       childList: true,
       subtree: true,
       characterData: true
     });
+  }
 
-    scanForFinalReward();
+  function exposeApi() {
+    const api = {
+      resetFinalRewardUi,
+      removeFinalRewardCards,
+      renderFinalReward,
+      showFinalReward: (score, total, options = {}) => renderFinalReward(score, total, { ...options, force: true }),
+      launchConfetti
+    };
+
+    window.AiItsEffects = api;
+    window.AIEffects = api;
+
+    window.showAiItsFinalReward = api.showFinalReward;
+    window.showAiFinalReward = api.showFinalReward;
+    window.aiItsShowFinalReward = api.showFinalReward;
+    window.mostraPremioFinaleAiIts = api.showFinalReward;
+    window.mostraPremioFinaleAIITS = api.showFinalReward;
+    window.mostraPremioFinale = api.showFinalReward;
+
+    window.launchAiItsConfetti = launchConfetti;
+    window.launchAiConfetti = launchConfetti;
+    window.avviaCoriandoliAiIts = launchConfetti;
+  }
+
+  function boot() {
+    exposeApi();
+    attachResetListeners();
+    attachResultObserver();
   }
 
   if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", start);
+    document.addEventListener("DOMContentLoaded", boot);
   } else {
-    start();
+    boot();
   }
-
-  window.alexAiShootConfetti = shootConfetti;
-  window.alexAiShowFinalReward = renderReward;
 })();

@@ -1,87 +1,166 @@
-/* ===== Effetti AI ITS: coriandoli + premi finali ===== */
-.alex-ai-confetti-piece {
-  position: fixed;
-  bottom: -36px;
-  left: 50%;
-  width: 14px;
-  height: 22px;
-  border-radius: 6px;
-  pointer-events: none;
-  z-index: 999999;
-  opacity: 0.98;
-  animation: alexAiConfettiRise 1650ms cubic-bezier(.16,.84,.33,1) forwards;
-}
-
-@keyframes alexAiConfettiRise {
-  0% {
-    transform: translate3d(0, 0, 0) rotate(0deg) scale(0.9);
-    opacity: 0;
-  }
-  8% {
-    opacity: 1;
-  }
-  74% {
-    opacity: 1;
-  }
-  100% {
-    transform: translate3d(var(--alex-ai-x), var(--alex-ai-y), 0) rotate(var(--alex-ai-rot)) scale(1.25);
-    opacity: 0;
-  }
-}
-
-.alex-ai-final-reward {
+.ai-its-final-reward-card {
+  position: relative;
+  overflow: hidden;
   margin: 24px auto;
   max-width: 760px;
-  padding: 22px;
-  border: 1px solid rgba(77, 208, 255, 0.42);
-  border-radius: 24px;
+  border: 1px solid rgba(139, 233, 253, 0.35);
+  border-radius: 28px;
   background:
-    radial-gradient(circle at top left, rgba(77,208,255,.22), transparent 34%),
-    linear-gradient(135deg, rgba(8,16,34,.96), rgba(22,10,48,.96));
-  box-shadow: 0 22px 70px rgba(0, 0, 0, .42), 0 0 36px rgba(77, 208, 255, .16);
-  color: #f5fbff;
-  display: grid;
-  grid-template-columns: 120px 1fr;
-  gap: 18px;
-  align-items: center;
+    radial-gradient(circle at top left, rgba(139, 233, 253, 0.24), transparent 36%),
+    radial-gradient(circle at bottom right, rgba(189, 147, 249, 0.24), transparent 38%),
+    rgba(10, 16, 32, 0.92);
+  box-shadow:
+    0 18px 55px rgba(0, 0, 0, 0.45),
+    0 0 42px rgba(139, 233, 253, 0.18);
+  color: #ffffff;
+  animation: aiRewardEnter 560ms cubic-bezier(.2, .9, .25, 1) both;
 }
 
-.alex-ai-final-drawing {
-  min-height: 108px;
-  border-radius: 22px;
+.ai-its-final-reward-glow {
+  position: absolute;
+  inset: -35%;
+  background: conic-gradient(
+    from 90deg,
+    rgba(139, 233, 253, 0.0),
+    rgba(139, 233, 253, 0.18),
+    rgba(189, 147, 249, 0.18),
+    rgba(255, 121, 198, 0.14),
+    rgba(139, 233, 253, 0.0)
+  );
+  filter: blur(24px);
+  opacity: 0.75;
+  animation: aiRewardGlow 5.5s linear infinite;
+}
+
+.ai-its-final-reward-content {
+  position: relative;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  padding: 26px;
+}
+
+.ai-its-final-reward-emoji {
   display: grid;
   place-items: center;
-  font-size: 56px;
-  background: linear-gradient(160deg, rgba(93,95,239,.26), rgba(18,209,255,.16));
-  border: 1px solid rgba(255,255,255,.16);
+  flex: 0 0 auto;
+  width: 78px;
+  height: 78px;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.11);
+  border: 1px solid rgba(255, 255, 255, 0.20);
+  font-size: 42px;
+  box-shadow: inset 0 0 22px rgba(255, 255, 255, 0.08);
 }
 
-.alex-ai-final-copy h3 {
-  margin: 0 0 8px;
-  font-size: 1.35rem;
-  letter-spacing: .01em;
+.ai-its-final-reward-text {
+  position: relative;
+  z-index: 1;
 }
 
-.alex-ai-final-copy p {
-  margin: 6px 0;
-  line-height: 1.5;
-  color: rgba(245,251,255,.88);
-}
-
-.alex-ai-final-score {
-  display: inline-flex;
-  margin-top: 10px;
-  padding: 7px 12px;
-  border-radius: 999px;
-  background: rgba(77,208,255,.15);
-  border: 1px solid rgba(77,208,255,.28);
-  color: #9eeaff;
+.ai-its-final-reward-kicker {
+  margin: 0 0 6px;
+  font-size: 0.76rem;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: #8be9fd;
   font-weight: 800;
 }
 
+.ai-its-final-reward-card h2 {
+  margin: 0;
+  font-size: clamp(1.45rem, 4vw, 2.25rem);
+  line-height: 1.05;
+}
+
+.ai-its-final-reward-score {
+  margin: 10px 0 0;
+  color: #f1fa8c;
+  font-weight: 800;
+}
+
+.ai-its-final-reward-message {
+  margin: 10px 0 0;
+  color: rgba(255, 255, 255, 0.88);
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+.ai-its-confetti-stage {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.ai-its-confetti-piece {
+  position: absolute;
+  left: 50%;
+  bottom: -42px;
+  width: var(--size);
+  height: calc(var(--size) * 0.64);
+  border-radius: 4px;
+  opacity: 0;
+  transform: translate(var(--start-x), 40px) rotate(0deg);
+  animation: aiConfettiFromBottom var(--duration) cubic-bezier(.16, .78, .24, 1) var(--delay) forwards;
+  box-shadow: 0 0 14px rgba(255, 255, 255, 0.28);
+}
+
+@keyframes aiConfettiFromBottom {
+  0% {
+    opacity: 0;
+    transform: translate(var(--start-x), 42px) rotate(0deg) scale(0.88);
+  }
+
+  8% {
+    opacity: 1;
+  }
+
+  76% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform:
+      translate(
+        calc(var(--start-x) + var(--end-x)),
+        calc(-1 * var(--rise))
+      )
+      rotate(var(--spin))
+      scale(1.08);
+  }
+}
+
+@keyframes aiRewardEnter {
+  from {
+    opacity: 0;
+    transform: translateY(22px) scale(0.97);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes aiRewardGlow {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 @media (max-width: 640px) {
-  .alex-ai-final-reward {
-    grid-template-columns: 1fr;
-    text-align: center;
+  .ai-its-final-reward-content {
+    align-items: flex-start;
+    padding: 22px;
+  }
+
+  .ai-its-final-reward-emoji {
+    width: 58px;
+    height: 58px;
+    border-radius: 18px;
+    font-size: 32px;
   }
 }
