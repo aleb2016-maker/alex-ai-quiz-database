@@ -1,0 +1,30 @@
+{
+  "esito": "OK",
+  "totale_sorgenti": 640,
+  "totale_dist": 640,
+  "conteggio_sorgenti_per_file": {
+    "data/scienze.json": 40,
+    "data/biologia.json": 40,
+    "data/chimica.json": 40,
+    "data/fisica.json": 40,
+    "data/fisica_quantistica.json": 40,
+    "data/ai.json": 80,
+    "data/informatica.json": 80,
+    "data/matematica.json": 80,
+    "data/inglese.json": 80,
+    "data/logica/logica_numerica.json": 20,
+    "data/logica/logica_verbale.json": 20,
+    "data/logica/ragionamento_astratto.json": 20,
+    "data/logica/ragionamento_critico.json": 20,
+    "data/logica/logica_visiva.json": 40
+  },
+  "categorie_dist": {
+    "scienze": 200,
+    "ai": 80,
+    "informatica": 80,
+    "matematica": 80,
+    "inglese": 80,
+    "logica": 120
+  },
+  "problemi": []
+}

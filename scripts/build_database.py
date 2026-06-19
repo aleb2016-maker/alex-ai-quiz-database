@@ -1,109 +1,178 @@
-import json
+#!/usr/bin/env python3
+# BUILD_DATABASE_UFFICIALE_RINFORZATO
+# Costruisce dist/database_quiz_finale.json SOLO dai database ufficiali.
+# Non legge backup, revisioni, traduzioni o file di appoggio.
+
 from pathlib import Path
+import json
+import subprocess
+import sys
+from collections import Counter
 
-from visual_logic_validator import (
-    is_visual_logic_question,
-    validate_visual_logic_question,
-)
+ROOT = Path(__file__).resolve().parents[1]
+DIST = ROOT / "dist"
+REPORTS = ROOT / "reports"
 
+DIST.mkdir(exist_ok=True)
+REPORTS.mkdir(exist_ok=True)
 
-# Cartella dove si trovano i file JSON divisi per categoria.
-CARTELLA_DOMANDE = Path("data")
+OUTPUT = DIST / "database_quiz_finale.json"
+REPORT_MD = REPORTS / "build_database.md"
+REPORT_JSON = REPORTS / "build_database.json"
 
-
-# Cartella dove salveremo il database finale.
-CARTELLA_OUTPUT = Path("dist")
-
-
-# File finale che passeremo poi all'app Android o a Codex.
-FILE_DATABASE_FINALE = CARTELLA_OUTPUT / "database_quiz_finale.json"
-
-
-def trova_file_json():
-    # Cerca tutti i file JSON dentro data e nelle sue sottocartelle.
-    file_json = list(CARTELLA_DOMANDE.rglob("*.json"))
-
-    return file_json
-
-
-def carica_domande_da_file(percorso_file):
-    # Legge un singolo file JSON e restituisce la lista delle domande.
-    with open(percorso_file, "r", encoding="utf-8") as file:
-        domande = json.load(file)
-
-    return domande
-
-
-def salva_database_finale(tutte_le_domande):
-    # Crea la cartella dist se non esiste.
-    CARTELLA_OUTPUT.mkdir(exist_ok=True)
-
-    # Salva tutte le domande in un unico file JSON finale.
-    with open(FILE_DATABASE_FINALE, "w", encoding="utf-8") as file:
-        json.dump(
-            tutte_le_domande,
-            file,
-            ensure_ascii=False,
-            indent=2
-        )
+OFFICIAL_FILES = [
+    ("Scienze generali", "data/scienze.json"),
+    ("Biologia", "data/biologia.json"),
+    ("Chimica", "data/chimica.json"),
+    ("Fisica", "data/fisica.json"),
+    ("Fisica quantistica", "data/fisica_quantistica.json"),
+    ("AI", "data/ai.json"),
+    ("Informatica", "data/informatica.json"),
+    ("Matematica", "data/matematica.json"),
+    ("Inglese", "data/inglese.json"),
+    ("Logica numerica", "data/logica/logica_numerica.json"),
+    ("Logica verbale", "data/logica/logica_verbale.json"),
+    ("Ragionamento astratto", "data/logica/ragionamento_astratto.json"),
+    ("Ragionamento critico", "data/logica/ragionamento_critico.json"),
+    ("Logica visiva", "data/logica/logica_visiva.json"),
+]
 
 
-def filtra_domande_non_valide(domande, percorso_file):
-    domande_valide = []
-    domande_scartate = 0
+def run(command):
+    print("")
+    print("▶️", " ".join(command))
+    result = subprocess.run(command, cwd=ROOT)
 
-    for domanda in domande:
-        if not is_visual_logic_question(domanda):
-            domande_valide.append(domanda)
-            continue
+    if result.returncode != 0:
+        print("")
+        print("❌ Build database interrotta.")
+        print("Controllo fallito:", " ".join(command))
+        sys.exit(result.returncode)
 
-        risultato = validate_visual_logic_question(domanda)
 
-        if risultato["valid"]:
-            domande_valide.append(domanda)
-            continue
+def load_questions(path):
+    data = json.loads(path.read_text(encoding="utf-8"))
 
-        domande_scartate += 1
-        id_domanda = domanda.get("id", "ID_MANCANTE")
+    if not isinstance(data, list):
+        raise ValueError(f"{path} deve contenere una lista di domande")
 
-        print()
-        print(f"SCARTO domanda visiva non valida: {id_domanda}")
-        print(f"File: {percorso_file}")
+    return data
 
-        for errore in risultato["errors"]:
-            print(f"- {errore}")
 
-    return domande_valide, domande_scartate
+def get_id(item):
+    return str(
+        item.get("id")
+        or item.get("codice")
+        or item.get("question_id")
+        or item.get("uid")
+        or ""
+    ).strip()
+
+
+def get_category(item):
+    return str(item.get("categoria") or item.get("category") or "").strip().lower()
 
 
 def main():
-    # Cerca tutti i file JSON delle domande.
-    file_json = trova_file_json()
+    print("----- BUILD DATABASE UFFICIALE RINFORZATO -----")
 
-    # Qui metteremo tutte le domande raccolte dai vari file.
-    tutte_le_domande = []
-    totale_domande_scartate = 0
+    # Prima controlla i sorgenti ufficiali.
+    run([sys.executable, "scripts/validatore_core_database.py"])
 
-    print("----- CREAZIONE DATABASE FINALE -----")
+    all_questions = []
+    counts_by_file = {}
+    problems = []
 
-    for percorso_file in file_json:
-        print(f"Leggo file: {percorso_file}")
+    for label, relative_path in OFFICIAL_FILES:
+        path = ROOT / relative_path
+        print(f"Leggo sorgente ufficiale: {relative_path}")
 
-        domande_del_file = carica_domande_da_file(percorso_file)
-        domande_valide, domande_scartate = filtra_domande_non_valide(
-            domande_del_file,
-            percorso_file,
+        if not path.exists():
+            problems.append(f"File mancante: {relative_path}")
+            continue
+
+        try:
+            questions = load_questions(path)
+        except Exception as error:
+            problems.append(f"Errore in {relative_path}: {error}")
+            continue
+
+        counts_by_file[relative_path] = len(questions)
+        all_questions.extend(questions)
+
+    ids = [get_id(item) for item in all_questions]
+    duplicate_ids = [
+        question_id
+        for question_id, count in Counter(ids).items()
+        if question_id and count > 1
+    ]
+
+    if duplicate_ids:
+        problems.append(
+            "ID duplicati nei sorgenti ufficiali: "
+            + ", ".join(sorted(duplicate_ids)[:50])
         )
 
-        tutte_le_domande.extend(domande_valide)
-        totale_domande_scartate += domande_scartate
+    if problems:
+        for problem in problems:
+            print("❌", problem)
+        sys.exit(1)
 
-    salva_database_finale(tutte_le_domande)
+    OUTPUT.write_text(
+        json.dumps(all_questions, ensure_ascii=False, indent=2) + "\n",
+        encoding="utf-8",
+    )
 
-    print("\n----- RISULTATO FINALE -----")
-    print(f"Domande totali raccolte: {len(tutte_le_domande)}")
-    print(f"Domande visive scartate: {totale_domande_scartate}")
-    print(f"Database creato in: {FILE_DATABASE_FINALE}")
+    categories = Counter(get_category(item) for item in all_questions)
+
+    result = {
+        "esito": "OK",
+        "output": str(OUTPUT.relative_to(ROOT)),
+        "totale_domande": len(all_questions),
+        "conteggio_per_file": counts_by_file,
+        "conteggio_per_categoria": dict(categories),
+    }
+
+    REPORT_JSON.write_text(
+        json.dumps(result, ensure_ascii=False, indent=2) + "\n",
+        encoding="utf-8",
+    )
+
+    lines = [
+        "# Build database ufficiale rinforzato",
+        "",
+        f"Output: `{OUTPUT.relative_to(ROOT)}`",
+        f"Totale domande: {len(all_questions)}",
+        "",
+        "## Conteggio per file",
+        "",
+    ]
+
+    for path, count in counts_by_file.items():
+        lines.append(f"- `{path}`: {count}")
+
+    lines.extend(["", "## Conteggio per categoria", ""])
+
+    for category, count in sorted(categories.items()):
+        lines.append(f"- `{category or 'senza_categoria'}`: {count}")
+
+    lines.extend(["", "## Esito", "", "✅ Build completata correttamente."])
+
+    REPORT_MD.write_text("\n".join(lines) + "\n", encoding="utf-8")
+
+    print("")
+    print("✅ Build database completata.")
+    print(f"Output: {OUTPUT}")
+    print(f"Totale domande: {len(all_questions)}")
+    print(f"Report: {REPORT_MD}")
+
+    # Dopo la build controlla dist e duplicati.
+    run([sys.executable, "scripts/validatore_database_finale.py"])
+    run([sys.executable, "scripts/validatore_duplicati_database.py"])
+
+    print("")
+    print("✅ build_database.py rinforzato superato.")
 
 
-main()
+if __name__ == "__main__":
+    main()
