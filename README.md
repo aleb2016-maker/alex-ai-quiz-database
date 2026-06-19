@@ -1,179 +1,230 @@
-# Alex AI Quiz Database
+<!-- ALEX-QUIZ-DASHBOARD-START -->
 
-Progetto riutilizzabile per creare, controllare e distribuire quiz interattivi di qualità.
+# 🚀 Alex AI Quiz Database
 
-Non è solo una demo online: è un motore completo per costruire database di domande, verificare la qualità, generare pacchetti scaricabili e creare quiz personalizzati riutilizzabili in altri progetti web o Android.
+**Alex AI Quiz Database** è un motore riutilizzabile per creare quiz interattivi con:
 
-## Stato del progetto
+- database domande in formato JSON
+- motore Web HTML / JavaScript
+- motore Android Kotlin
+- controlli qualità su domande, risposte e duplicati
+- pacchetti scaricabili pronti da usare
 
-Il progetto contiene **640 domande ufficiali**, divise tra area AI ITS e area Scienze.
+Il progetto non è solo una demo online: può essere usato anche come base tecnica per creare nuove app quiz personalizzate su qualunque argomento.
 
-Sezioni incluse:
+## Aree disponibili
 
-- AI
-- Informatica
-- Matematica
-- Inglese
-- Logica testuale
-- Logica visiva
-- Scienze generali
-- Biologia
-- Chimica
-- Fisica
-- Fisica quantistica
+| Area | Contenuti |
+|---|---|
+| **AI / ITS** | AI, Informatica, Logica, Logica visiva, Matematica, Inglese |
+| **Scienze** | Fisica, Chimica, Biologia, Fisica Quantistica, Scienze generali |
 
-## Obiettivo
+## Pacchetti scaricabili
 
-L’obiettivo è creare una base solida per generare quiz su qualsiasi argomento, con controlli automatici che aiutano a evitare domande duplicate, risposte troppo facili, errori nei dati e problemi di qualità.
+<table align="center">
+  <tr>
+    <td align="center">
+      <a href="https://github.com/aleb2016-maker/alex-ai-quiz-database/raw/main/downloads/pacchetto-web-ai-its-demo.zip">
+        <img src="https://img.shields.io/badge/SCARICA%20WEB%20AI%20ITS-HTML%20DATABASE%20JS-00bcd4?style=for-the-badge&labelColor=00bcd4" alt="Scarica Web AI ITS">
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/aleb2016-maker/alex-ai-quiz-database/raw/main/downloads/pacchetto-android-ai-its-finale-semplice.zip">
+        <img src="https://img.shields.io/badge/SCARICA%20ANDROID%20AI%20ITS-DATABASE%20KOTLIN-673ab7?style=for-the-badge&labelColor=673ab7" alt="Scarica Android AI ITS">
+      </a>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <a href="https://github.com/aleb2016-maker/alex-ai-quiz-database/raw/main/downloads/pacchetto-web-scienze-demo.zip">
+        <img src="https://img.shields.io/badge/SCARICA%20WEB%20SCIENZE-HTML%20DATABASE%20JS-ff9800?style=for-the-badge&labelColor=ff9800" alt="Scarica Web Scienze">
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/aleb2016-maker/alex-ai-quiz-database/raw/main/downloads/pacchetto-android-scienze-finale-semplice.zip">
+        <img src="https://img.shields.io/badge/SCARICA%20ANDROID%20SCIENZE-DATABASE%20KOTLIN-2962ff?style=for-the-badge&labelColor=2962ff" alt="Scarica Android Scienze">
+      </a>
+    </td>
+  </tr>
+</table>
 
-Il progetto può essere usato per:
+### Cosa contiene ogni pacchetto
 
-- provare quiz già pronti nella demo online;
-- creare pacchetti personalizzati;
-- esportare pacchetti web e Android;
-- costruire nuove app quiz partendo da una struttura già controllata.
+Ogni ZIP scaricato contiene una cartella con nomi chiari e un solo file di istruzioni:
 
-## Qualità delle domande
+- **LEGGIMI.html**: spiegazione semplice del pacchetto.
+- **APRI_QUIZ.html**: presente nei pacchetti Web, serve per provare subito il quiz.
+- **SOLO_FILE_DA_COPIARE_WEB/**: file da copiare in un nuovo progetto Web.
+- **SOLO_FILE_DA_COPIARE_ANDROID/**: database e motore Kotlin da copiare in Android Studio.
 
-Ogni domanda è pensata per avere:
+## Crea un pacchetto personalizzato
 
-- una risposta corretta;
-- tre distrattori forti;
-- opzioni plausibili e simili tra loro;
-- spiegazioni chiare;
-- nessuna risposta palesemente eliminabile;
-- controlli contro duplicati e domande troppo simili.
+<p align="center">
+  <a href="https://github.com/aleb2016-maker/alex-ai-quiz-database/actions/workflows/create-quiz-package.yml">
+    <img src="https://img.shields.io/badge/%F0%9F%A7%A9%20CREA%20PACCHETTO%20PERSONALIZZATO-CLICCA%20QUI-e91e63?style=for-the-badge&labelColor=e91e63" alt="Crea pacchetto personalizzato">
+  </a>
+</p>
 
-Per le domande di inglese, le spiegazioni includono anche:
+Questo pulsante apre il workflow GitHub per generare un nuovo pacchetto quiz.
 
-- `Traduzione domanda:`
-- `Traduzione risposta:`
+### Passaggi rapidi
 
-In questo modo il quiz può funzionare anche come piccolo strumento di studio.
+1. Clicca sul pulsante rosa **CREA PACCHETTO PERSONALIZZATO**.
+2. Nella pagina GitHub che si apre, premi **Run workflow** in alto a destra.
+3. Scegli **materia**, **livello**, piattaforma e numero di domande.
+4. Premi il pulsante verde **Run workflow**.
+5. Quando compare la spunta verde, apri **Summary → Artifacts** e scarica lo ZIP.
 
-## Logica visiva
+<!-- ALEX-QUIZ-DASHBOARD-END -->
 
-La sezione di Logica visiva usa immagini e opzioni visuali.
 
-I controlli verificano:
+<!-- DEMO_BUTTON_START -->
 
-- coerenza tra immagine, risposta corretta e spiegazione;
-- presenza delle immagini;
-- assenza di domande suggerite;
-- spiegazioni complete;
-- forma, colore, numero di lati e oggetti interni.
+<table align="center">
+  <tr>
+    <td align="center" width="50%">
+      <a href="https://aleb2016-maker.github.io/alex-ai-quiz-database/demo/" target="_blank">
+        <img
+          src="https://img.shields.io/badge/%E2%96%B6%20AVVIA%20DEMO%20ONLINE%20AI%20ITS-0F766E?style=for-the-badge&logo=githubpages&logoColor=white"
+          alt="Avvia demo online AI ITS"
+        >
+      </a>
+      <br>
+      <br>
+      <div align="center" style="font-size: 28px;">☝️</div>
+      <strong>Prova subito il quiz AI / ITS</strong>
+      <br>
+      <small>AI · Informatica · Logica · Logica visiva · Matematica · Inglese</small>
+    </td>
+    <td align="center" width="50%">
+      <a href="https://aleb2016-maker.github.io/alex-ai-quiz-database/demo-scienze/" target="_blank">
+        <img
+          src="https://img.shields.io/badge/%F0%9F%AA%90%20AVVIA%20DEMO%20ONLINE%20SCIENZE-4F46E5?style=for-the-badge&logo=githubpages&logoColor=white"
+          alt="Avvia demo online Scienze"
+        >
+      </a>
+      <br>
+      <br>
+      <div align="center" style="font-size: 28px;">☝️</div>
+      <strong>Prova subito il quiz sulle materie scientifiche</strong>
+      <br>
+      <small>Fisica · Chimica · Biologia · Fisica Quantistica · Scienze generali</small>
+    </td>
+  </tr>
+</table>
 
-Nelle domande visive il testo può essere volutamente neutro, perché la differenza reale è nelle immagini, nelle opzioni e nella logica visuale interna.
+<!-- DEMO_BUTTON_END -->
 
-## Scarica pacchetto personalizzato
 
-Nella demo è presente una sezione dedicata alla creazione di un pacchetto personalizzato.
+## Demo online
 
-Passaggi semplici:
+La demo online permette di provare il progetto direttamente dal browser, senza installare nulla.
 
-1. apri la demo online del progetto;
-2. scorri fino alla sezione **Scarica pacchetto personalizzato**;
-3. scegli le materie o l’area di quiz che vuoi inserire nel pacchetto;
-4. genera il pacchetto;
-5. scarica il file `.zip`;
-6. estrai lo ZIP sul computer;
-7. apri il pacchetto web oppure usa i file generati come base per un nuovo progetto;
-8. se vuoi creare un’app Android, copia il database e i file del motore nella struttura Android indicata nel pacchetto.
+Sono disponibili due percorsi:
 
-Questa funzione serve a trasformare il progetto in una base riutilizzabile: non solo una demo da provare, ma uno strumento per creare nuovi quiz partendo da contenuti già controllati.
+- **Demo AI / ITS**: quiz su AI, Informatica, Logica, Logica visiva, Matematica e Inglese.
+- **Demo Scienze**: quiz su Fisica, Chimica, Biologia, Fisica Quantistica e Scienze generali.
 
-## Motori principali
+Funzioni principali:
 
-Comandi principali del progetto:
+- scelta categoria
+- scelta livello
+- domande casuali
+- feedback immediato
+- spiegazione dopo ogni risposta
+- supporto alle domande visuali
 
-```bash
-python3 scripts/validate_questions.py
-python3 scripts/build_database.py
-python3 scripts/check_duplicates.py
-python3 scripts/controllo_qualita_completo.py
-python3 scripts/controllo_totale_progetto.py
-```
 
-Il comando più importante è:
+## Descrizione del progetto
 
-```bash
-python3 scripts/controllo_totale_progetto.py
-```
+Il progetto è un sistema Python/JSON per creare, validare e distribuire quiz interattivi.
 
-Questo comando verifica in modo unico:
+Contiene due aree principali:
 
-- database ufficiali;
-- generazione del database finale;
-- controllo duplicati;
-- qualità testuale;
-- qualità Logica visiva;
-- premi ed effetti visivi AI ITS;
-- demo principali;
-- pacchetti ZIP principali.
+- **AI / ITS**: AI, Informatica, Logica, Logica visiva, Matematica e Inglese.
+- **Scienze**: Fisica, Chimica, Biologia, Fisica Quantistica e Scienze generali.
 
-## File principali
+Il database può essere usato per demo online, app Android, app web, simulatori di test, allenamento personale e nuovi quiz personalizzati.
+
+## Funzioni principali
+
+- creazione di domande in file JSON separati per categoria;
+- validazione automatica della struttura delle domande;
+- controllo duplicati, domande troppo simili e opzioni duplicate;
+- generazione del database finale unico;
+- generazione di report per categoria e livello;
+- pesca casuale intelligente delle domande;
+- spiegazioni dopo ogni risposta;
+- supporto a domande visuali di logica;
+- pacchetti Web e Android pronti da scaricare;
+- workflow GitHub per creare pacchetti personalizzati.
+
+## Controlli qualità
+
+Il progetto include controlli automatici per mantenere alta la qualità del database:
+
+- struttura JSON corretta;
+- risposte complete;
+- opzioni non duplicate;
+- domande non identiche;
+- domande non troppo simili;
+- controllo dei percorsi immagini;
+- revisione linguistica opzionale con AI locale tramite Ollama e Gemma 4 12B.
+
+## Categorie e sottosezioni
+
+| Area | Categorie |
+|---|---|
+| **AI / ITS** | AI, Informatica, Matematica, Inglese, Logica |
+| **Logica** | Logica verbale, Logica numerica, Ragionamento critico, Ragionamento astratto, Logica visiva |
+| **Scienze** | Fisica, Chimica, Biologia, Fisica Quantistica, Scienze generali |
+
+
+## Struttura del progetto
 
 ```text
-data/                 Database ufficiali
-data/logica/          Database di logica testuale e visiva
-demo-ai/              Demo web AI ITS
-demo-scienze/         Demo web Scienze
-dist/                 Database finale completo
-downloads/            Pacchetti web e Android
-scripts/              Motori, validatori e strumenti di build
-reports/              Report automatici dei controlli
-backups/              Backup non ufficiali
-runtime/              File riutilizzabili per effetti e logica web
+data/
+  ai.json
+  biologia.json
+  chimica.json
+  fisica.json
+  fisica_quantistica.json
+  informatica.json
+  inglese.json
+  matematica.json
+  scienze.json
+  logica/
+    logica_numerica.json
+    logica_verbale.json
+    logica_visiva.json
+    ragionamento_astratto.json
+    ragionamento_critico.json
+
+demo/
+  index.html
+  quiz-engine.js
+  database_quiz.json
+
+demo-scienze/
+  index.html
+  quiz-engine.js
+  database_quiz.json
+  science-space-effect.css
+  science-space-effect.js
+
+downloads/
+  pacchetto-web-ai-its-demo.zip
+  pacchetto-android-ai-its-finale-semplice.zip
+  pacchetto-web-scienze-demo.zip
+  pacchetto-android-finale-semplice.zip
+
+scripts/
+  validate_questions.py
+  check_duplicates.py
+  build_database.py
+  report_database.py
+  create_quiz_package.py
+
+dist/
+  database_quiz_finale.json
 ```
-
-## Pacchetti disponibili
-
-Il progetto genera e controlla pacchetti per:
-
-- demo web AI ITS;
-- demo web Scienze;
-- pacchetto Android AI ITS;
-- pacchetto Android Scienze;
-- pacchetti personalizzati creati dalla demo.
-
-I pacchetti vengono verificati dal controllo totale del progetto.
-
-## Flusso consigliato
-
-Dopo aver modificato o aggiunto domande:
-
-```bash
-python3 scripts/validate_questions.py
-python3 scripts/build_database.py
-python3 scripts/check_duplicates.py
-python3 scripts/controllo_qualita_completo.py
-python3 scripts/controllo_totale_progetto.py
-```
-
-Se tutti i controlli passano, il progetto è pronto per essere salvato e distribuito.
-
-## Riutilizzo
-
-Questo progetto può diventare la base per nuovi quiz e nuove app.
-
-Per creare un nuovo quiz si può:
-
-1. aggiungere un nuovo file JSON in `data/`;
-2. seguire la struttura delle domande esistenti;
-3. lanciare i motori di controllo;
-4. generare il database finale;
-5. esportare una demo o un pacchetto.
-
-## Stato qualità
-
-Lo stato attuale dei controlli è positivo:
-
-- validazione database superata;
-- build database superata;
-- controllo duplicati superato;
-- controllo qualità testuale superato;
-- controllo Logica visiva superato;
-- verifica premi ed effetti visivi superata;
-- pacchetti principali validi.
-
-Il progetto è pronto come base solida per nuove espansioni, nuovi argomenti e future app quiz.
