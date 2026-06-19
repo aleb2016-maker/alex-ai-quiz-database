@@ -1,0 +1,25 @@
+{
+  "esito": "OK",
+  "domande_totali_controllate": 640,
+  "problemi": [],
+  "avvisi": [
+    {
+      "file": "data/logica/logica_verbale.json",
+      "id": "LOG-VER-0206",
+      "tipo": "avviso",
+      "messaggio": "la risposta corretta sembra comparire già nel testo della domanda"
+    },
+    {
+      "file": "data/logica/logica_verbale.json",
+      "id": "LOG-VER-0208",
+      "tipo": "avviso",
+      "messaggio": "la risposta corretta sembra comparire già nel testo della domanda"
+    },
+    {
+      "file": "data/logica/ragionamento_critico.json",
+      "id": "LOG-CRI-FAC-0102",
+      "tipo": "avviso",
+      "messaggio": "la risposta corretta sembra comparire già nel testo della domanda"
+    }
+  ]
+}
