@@ -116,6 +116,23 @@ Questo pulsante apre il workflow GitHub per generare un nuovo pacchetto quiz.
 <!-- DEMO_BUTTON_END -->
 
 
+
+### Come usare il pacchetto personalizzato
+
+Passaggi semplici:
+
+1. Apri la demo online del progetto.
+2. Vai alla sezione **Crea un pacchetto personalizzato**.
+3. Scegli l'area o le materie che vuoi inserire nel quiz.
+4. Clicca sul pulsante per generare il pacchetto.
+5. Scarica il file `.zip`.
+6. Estrai lo ZIP sul computer.
+7. Apri il pacchetto web per provarlo subito nel browser.
+8. Se vuoi creare un'app Android, usa i file del pacchetto come base e copia il database nella cartella indicata dalle istruzioni.
+
+Questa funzione serve a trasformare il progetto in uno strumento riutilizzabile: non solo una demo online, ma una base per creare nuovi quiz personalizzati partendo da contenuti già controllati.
+
+
 ## Demo online
 
 La demo online permette di provare il progetto direttamente dal browser, senza installare nulla.
