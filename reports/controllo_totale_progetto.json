@@ -1,0 +1,80 @@
+{
+  "esito": "OK",
+  "comandi": [
+    {
+      "label": "Validate questions rinforzato",
+      "command": "/Users/alessandrobarbarossa/alex-ai-workspace/backend/.venv/bin/python3 scripts/validate_questions.py",
+      "returncode": 0,
+      "ok": true
+    },
+    {
+      "label": "Build database rinforzato",
+      "command": "/Users/alessandrobarbarossa/alex-ai-workspace/backend/.venv/bin/python3 scripts/build_database.py",
+      "returncode": 0,
+      "ok": true
+    },
+    {
+      "label": "Check duplicates rinforzato",
+      "command": "/Users/alessandrobarbarossa/alex-ai-workspace/backend/.venv/bin/python3 scripts/check_duplicates.py",
+      "returncode": 0,
+      "ok": true
+    },
+    {
+      "label": "Controllo qualità completo",
+      "command": "/Users/alessandrobarbarossa/alex-ai-workspace/backend/.venv/bin/python3 scripts/controllo_qualita_completo.py",
+      "returncode": 0,
+      "ok": true
+    },
+    {
+      "label": "Verifica premi/coriandoli AI ITS",
+      "command": "/Users/alessandrobarbarossa/alex-ai-workspace/backend/.venv/bin/python3 scripts/verifica_premi_ai_its_v2.py",
+      "returncode": 0,
+      "ok": true
+    }
+  ],
+  "conteggi": [
+    {
+      "file": "demo-ai/database_quiz.json",
+      "ok": true,
+      "expected": 440,
+      "actual": 440,
+      "message": "OK"
+    },
+    {
+      "file": "demo-scienze/database_quiz.json",
+      "ok": true,
+      "expected": 200,
+      "actual": 200,
+      "message": "OK"
+    },
+    {
+      "file": "dist/database_quiz_finale.json",
+      "ok": true,
+      "expected": 640,
+      "actual": 640,
+      "message": "OK"
+    }
+  ],
+  "zip": [
+    {
+      "file": "downloads/pacchetto-web-ai-its-demo.zip",
+      "ok": true,
+      "message": "zip valido con 6 file interni"
+    },
+    {
+      "file": "downloads/pacchetto-android-ai-its-finale-semplice.zip",
+      "ok": true,
+      "message": "zip valido con 212 file interni"
+    },
+    {
+      "file": "downloads/pacchetto-web-scienze-demo.zip",
+      "ok": true,
+      "message": "zip valido con 7 file interni"
+    },
+    {
+      "file": "downloads/pacchetto-android-scienze-finale-semplice.zip",
+      "ok": true,
+      "message": "zip valido con 17 file interni"
+    }
+  ]
+}
