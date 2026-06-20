@@ -1133,3 +1133,31 @@ textarea::placeholder {
 .rag-main-button{background:linear-gradient(135deg,#7c4dff,#00c2a8);box-shadow:0 14px 34px rgba(0,194,168,.25)}
 .rag-secondary-button{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.18)}
 /* FINE BLOCCO MOTORE RAG RIUTILIZZABILE */
+
+/* PULSANTE RAG VICINO AL PACCHETTO PERSONALIZZATO */
+.rag-near-custom-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 54px;
+  margin: 10px 8px 10px 0;
+  padding: 15px 22px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #7c4dff, #00c2a8);
+  color: #ffffff !important;
+  text-decoration: none !important;
+  font-weight: 900;
+  box-shadow: 0 14px 34px rgba(0, 194, 168, .28);
+  border: 0;
+}
+
+.rag-near-custom-button.secondary {
+  background: linear-gradient(135deg, #172033, #5b6cff);
+  border: 1px solid rgba(255,255,255,.22);
+}
+
+.rag-near-custom-button:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.06);
+}
+/* FINE PULSANTE RAG VICINO AL PACCHETTO PERSONALIZZATO */
