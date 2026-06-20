@@ -74,6 +74,37 @@ def main() -> None:
         ]
     )
 
+    if args.usa_ollama:
+        esegui(
+            [
+                python,
+                "scripts/rag_ripara_distrattori.py",
+                "dist/generated/rag_quiz_generato.json",
+                "--output",
+                "dist/generated/rag_quiz_generato.json",
+                "--modello",
+                args.modello,
+                "--cicli",
+                "2",
+            ]
+        )
+
+        esegui(
+            [
+                python,
+                "scripts/rag_valida_quiz_json.py",
+                "dist/generated/rag_quiz_generato.json",
+            ]
+        )
+
+        esegui(
+            [
+                python,
+                "scripts/rag_valida_distrattori_forti.py",
+                "dist/generated/rag_quiz_generato.json",
+            ]
+        )
+
     esegui(
         [
             python,

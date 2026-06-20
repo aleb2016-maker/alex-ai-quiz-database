@@ -344,3 +344,14 @@ Comando principale:
 Documentazione:
 
 - `docs/RAG_VALIDATORE_DISTRAZIONI.md`
+
+
+---
+
+## Riparatore automatico distrattori RAG
+
+La pipeline RAG include un primo ciclo di autoriparazione.
+
+Se il validatore trova distrattori troppo deboli o troppo lontani dalla risposta corretta, lo script `scripts/rag_ripara_distrattori.py` prova a riscrivere i distrattori prima della review.
+
+La riparazione lavora solo sui file temporanei generati dal RAG e non modifica i database ufficiali.
