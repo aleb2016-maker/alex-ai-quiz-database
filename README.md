@@ -364,3 +364,55 @@ La riparazione lavora solo sui file temporanei generati dal RAG e non modifica i
 Il progetto include un riparatore automatico che riconosce il tema della domanda RAG e riscrive i distrattori deboli con opzioni più vicine alla risposta corretta.
 
 Il sistema non modifica i database ufficiali: lavora sul JSON temporaneo e passa poi dalla review sicura.
+
+<!-- ALEX-RAG-FINALE-START -->
+
+## Motore RAG documenti e materiale formativo
+
+Il progetto include anche una pipeline RAG riutilizzabile per trasformare documenti in contenuti formativi. Il flusso previsto è:
+
+**documento → RAG → quiz/test/minicorso → revisione → pacchetto scaricabile**.
+
+<p>
+  <a href="demo-rag/index.html" style="display:inline-block;padding:12px 18px;border-radius:14px;background:linear-gradient(135deg,#36d6ff,#8a5cff);color:#06111e;font-weight:800;text-decoration:none;">
+    📄 Apri motore RAG documenti
+  </a>
+</p>
+
+La pagina `demo-rag/index.html` serve come cruscotto visuale per inserire o selezionare documenti e mostrare i comandi della pipeline. In ambiente GitHub Pages il file resta nel browser: per elaborarlo davvero va copiato nella cartella `rag/documenti/` del progetto locale.
+
+### Pipeline materiale formativo
+
+La pipeline può generare:
+
+- testo estratto/corretto;
+- mini-corso interattivo JSON;
+- mini-corso HTML;
+- pacchetto ZIP scaricabile;
+- report di controllo.
+
+Esempio:
+
+```bash
+python3 scripts/pipeline_formazione_completa.py rag/documenti/documento_rag_sicurezza_informatica_aziendale.md --titolo "Sicurezza informatica aziendale"
+```
+
+### Revisione sicura dei quiz generati da RAG
+
+Le domande generate dal RAG non vengono inserite automaticamente nei database ufficiali. Prima passano da validazione, revisione e import controllato. Per un controllo aggiuntivo sui distrattori:
+
+```bash
+python3 scripts/validatore_rag_distrattori_forti_v2.py review/rag/quiz_da_revisionare.json
+```
+
+### Motore grafico riutilizzabile
+
+Sono disponibili preset grafici riutilizzabili per futuri pacchetti formativi:
+
+```bash
+python3 scripts/applica_tema_formazione.py dark-tech
+```
+
+Temi iniziali: `dark-tech`, `light-clean`, `neon-purple`, `ocean-blue`.
+
+<!-- ALEX-RAG-FINALE-END -->

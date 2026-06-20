@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Motore RAG documenti | Alex AI Quiz</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-theme="dark-tech">
+  <main class="page-shell">
+    <section class="hero-card">
+      <p class="eyebrow">Motore RAG riutilizzabile</p>
+      <h1>Inserisci documenti e prepara quiz, test o mini-corsi</h1>
+      <p class="hero-text">
+        Questa pagina è il cruscotto visivo del flusso RAG: documento → estrazione contenuti → quiz/test → revisione → pacchetto formativo scaricabile.
+      </p>
+      <div class="hero-actions">
+        <a class="primary-action" href="../downloads/pacchetto-formazione-sicurezza-informatica-aziendale.zip">Scarica esempio aziendale</a>
+        <a class="secondary-action" href="../docs/RAG_INSERIMENTO_DOCUMENTI.md">Leggi istruzioni RAG</a>
+      </div>
+    </section>
+
+    <section class="grid-two">
+      <article class="panel">
+        <h2>1. Seleziona un documento</h2>
+        <p>
+          Su GitHub Pages il file resta nel tuo browser: non viene caricato su un server.
+          Per usarlo davvero nella pipeline, copialo nella cartella <code>rag/documenti/</code>.
+        </p>
+        <label class="upload-box" for="documentInput">
+          <span class="upload-icon">📄</span>
+          <strong>Inserisci documento</strong>
+          <small>TXT, MD, JSON, CSV, PDF o DOCX</small>
+        </label>
+        <input id="documentInput" type="file" accept=".txt,.md,.json,.csv,.pdf,.docx" />
+        <div id="fileResult" class="result-box muted">Nessun documento selezionato.</div>
+      </article>
+
+      <article class="panel">
+        <h2>2. Scegli lo stile grafico</h2>
+        <p>Il motore tema permette di preparare futuri pacchetti con stili diversi senza riscrivere ogni pagina.</p>
+        <select id="themeSelect">
+          <option value="dark-tech">Dark tech</option>
+          <option value="light-clean">Chiaro pulito</option>
+          <option value="neon-purple">Neon viola</option>
+          <option value="ocean-blue">Blu oceano</option>
+        </select>
+        <pre id="themeCommand" class="code-box">python3 scripts/applica_tema_formazione.py dark-tech</pre>
+      </article>
+    </section>
+
+    <section class="pipeline-card">
+      <h2>Flusso completo</h2>
+      <div class="pipeline">
+        <div><span>1</span><strong>Documento</strong><small>PDF, DOCX, TXT, MD</small></div>
+        <div><span>2</span><strong>RAG</strong><small>chunk, indice, recupero</small></div>
+        <div><span>3</span><strong>Generazione</strong><small>quiz/test/minicorso</small></div>
+        <div><span>4</span><strong>Revisione</strong><small>controlli e approvazione</small></div>
+        <div><span>5</span><strong>Pacchetto</strong><small>web/Android/formazione</small></div>
+      </div>
+    </section>
+
+    <section class="grid-two">
+      <article class="panel">
+        <h2>Comandi principali</h2>
+        <pre class="code-box">python3 scripts/rag_pipeline_completa_sicura.py
+python3 scripts/pipeline_formazione_completa.py rag/documenti/documento_rag_sicurezza_informatica_aziendale.md --titolo "Sicurezza informatica aziendale"
+python3 scripts/validatore_rag_distrattori_forti_v2.py review/rag/quiz_da_revisionare.json</pre>
+      </article>
+
+      <article class="panel">
+        <h2>Cosa rende sicura la pipeline</h2>
+        <ul>
+          <li>Le domande generate non entrano subito nel database ufficiale.</li>
+          <li>Prima passano da validazione, revisione e import controllato.</li>
+          <li>I pacchetti formativi possono essere generati come esempi scaricabili.</li>
+        </ul>
+      </article>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

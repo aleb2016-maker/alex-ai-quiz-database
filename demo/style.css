@@ -1072,3 +1072,52 @@ textarea::placeholder {
     }
 }
 
+/* ALEX-RAG-BUTTON-START: aggiunta non distruttiva, non modifica i pulsanti colorati esistenti */
+.rag-documenti-card {
+  margin: 32px auto;
+  width: min(1080px, calc(100% - 32px));
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 24px;
+  border-radius: 24px;
+  border: 1px solid rgba(54, 214, 255, 0.28);
+  background: linear-gradient(135deg, rgba(54, 214, 255, 0.14), rgba(138, 92, 255, 0.16));
+  box-shadow: 0 18px 60px rgba(0, 0, 0, 0.20);
+}
+
+.rag-documenti-card h2 {
+  margin: 0 0 8px;
+}
+
+.rag-documenti-card p {
+  margin: 0;
+}
+
+.rag-documenti-label {
+  color: #36d6ff;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  font-size: .8rem;
+}
+
+.rag-documenti-button {
+  flex: 0 0 auto;
+  display: inline-block;
+  padding: 13px 18px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #36d6ff, #8a5cff);
+  color: #06111e;
+  font-weight: 900;
+  text-decoration: none;
+}
+
+@media (max-width: 760px) {
+  .rag-documenti-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+/* ALEX-RAG-BUTTON-END */
