@@ -265,3 +265,22 @@ Comandi principali:
 Documentazione completa:
 
 docs/RAG_RIUTILIZZABILE.md
+
+
+---
+
+## Pipeline RAG → Quiz JSON
+
+Il progetto include anche un primo collegamento tra il motore RAG e la generazione di quiz JSON temporanei.
+
+Questo permette di partire da documenti caricati in `rag/documenti/`, recuperare il contesto utile e preparare un quiz JSON da validare prima dell'ingresso nei database ufficiali.
+
+Comandi principali:
+
+- `python3 scripts/rag_build_index.py`
+- `python3 scripts/rag_genera_quiz_json.py "argomento" --categoria informatica --livello intermedio --numero-domande 10`
+- `python3 scripts/rag_valida_quiz_json.py dist/generated/rag_quiz_generato.json`
+
+Documentazione:
+
+- `docs/RAG_PIPELINE_QUIZ.md`
