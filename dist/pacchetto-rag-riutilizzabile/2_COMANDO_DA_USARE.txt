@@ -1,0 +1,9 @@
+COMANDO BASE
+
+Apri il terminale dentro la cartella del pacchetto e usa:
+
+python3 scripts/rag_documenti_aziendali.py documenti/esempio_documento_aziendale_formazione.md --titolo "Formazione aziendale"
+
+Per usare un tuo documento:
+
+python3 scripts/rag_documenti_aziendali.py documenti/NOME_DEL_TUO_FILE.md --titolo "Titolo del tuo progetto"
