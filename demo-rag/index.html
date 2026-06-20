@@ -1,83 +1,79 @@
 <!doctype html>
 <html lang="it">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Motore RAG documenti | Alex AI Quiz</title>
-  <link rel="stylesheet" href="style.css" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Motore RAG documenti</title>
+<style>
+body{margin:0;font-family:Arial,sans-serif;background:linear-gradient(135deg,#07111f,#172846);color:white}
+header{padding:50px 24px;text-align:center}
+h1{font-size:clamp(2rem,5vw,4rem);margin:0 0 12px}
+p{color:#cdd6ee;line-height:1.6}
+.wrap{width:min(1120px,calc(100% - 32px));margin:auto}
+.actions{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;margin-top:24px}
+.btn{padding:15px 22px;border-radius:999px;color:white;text-decoration:none;font-weight:900}
+.btn-rag{background:linear-gradient(135deg,#7c4dff,#00c2a8)}
+.btn-demo{background:linear-gradient(135deg,#ff7a18,#ff3d71)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px;margin:30px 0}
+.card,.panel{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);border-radius:26px;padding:24px}
+input,select,textarea{width:100%;padding:14px;border-radius:14px;border:1px solid #ffffff33;background:#081326;color:white;margin-top:7px}
+label{font-weight:800;display:block;margin:14px 0}
+pre{white-space:pre-wrap;background:#050b14;border-radius:18px;padding:18px;color:#dce7ff}
+</style>
 </head>
-<body data-theme="dark-tech">
-  <main class="page-shell">
-    <section class="hero-card">
-      <p class="eyebrow">Motore RAG riutilizzabile</p>
-      <h1>Inserisci documenti e prepara quiz, test o mini-corsi</h1>
-      <p class="hero-text">
-        Questa pagina è il cruscotto visivo del flusso RAG: documento → estrazione contenuti → quiz/test → revisione → pacchetto formativo scaricabile.
-      </p>
-      <div class="hero-actions">
-        <a class="primary-action" href="../downloads/pacchetto-formazione-sicurezza-informatica-aziendale.zip">Scarica esempio aziendale</a>
-        <a class="secondary-action" href="../docs/RAG_INSERIMENTO_DOCUMENTI.md">Leggi istruzioni RAG</a>
-      </div>
-    </section>
+<body>
+<header>
+<h1>Motore RAG documenti</h1>
+<p>Carica documenti didattici o aziendali e genera quiz, riassunti, report, risposte, statistiche, grafici, card, slide e mini-corsi.</p>
+<div class="actions">
+<a class="btn btn-rag" href="../downloads/pacchetto-rag-riutilizzabile.zip" download>Scarica motore RAG riutilizzabile</a>
+<a class="btn btn-demo" href="../demo/index.html">Torna alla demo principale</a>
+</div>
+</header>
 
-    <section class="grid-two">
-      <article class="panel">
-        <h2>1. Seleziona un documento</h2>
-        <p>
-          Su GitHub Pages il file resta nel tuo browser: non viene caricato su un server.
-          Per usarlo davvero nella pipeline, copialo nella cartella <code>rag/documenti/</code>.
-        </p>
-        <label class="upload-box" for="documentInput">
-          <span class="upload-icon">📄</span>
-          <strong>Inserisci documento</strong>
-          <small>TXT, MD, JSON, CSV, PDF o DOCX</small>
-        </label>
-        <input id="documentInput" type="file" accept=".txt,.md,.json,.csv,.pdf,.docx" />
-        <div id="fileResult" class="result-box muted">Nessun documento selezionato.</div>
-      </article>
+<main class="wrap">
+<section class="panel">
+<h2>Cruscotto RAG</h2>
+<p>Su GitHub Pages questa è una demo statica. La generazione reale avviene in locale o in un backend futuro usando gli script scaricabili.</p>
+<label>Carica file <input type="file" multiple></label>
+<label>Output
+<select>
+<option>Pacchetto completo</option>
+<option>Quiz</option>
+<option>Riassunto</option>
+<option>Report aziendale</option>
+<option>Risposta a domanda specifica</option>
+<option>Statistiche e grafici</option>
+<option>Card</option>
+<option>Slide</option>
+<option>Mini-corso</option>
+</select>
+</label>
+<label>Materia o ambito <input placeholder="Esempio: sicurezza aziendale, privacy, informatica..."></label>
+<label>Numero domande/card/slide <input type="number" value="10"></label>
+<label>Difficoltà <select><option>facile</option><option selected>intermedio</option><option>avanzato</option></select></label>
+<label>Tema grafico <select><option>aziendale-blu</option><option>moderno-scuro</option><option>formazione-verde</option><option>tech-neon</option></select></label>
+</section>
 
-      <article class="panel">
-        <h2>2. Scegli lo stile grafico</h2>
-        <p>Il motore tema permette di preparare futuri pacchetti con stili diversi senza riscrivere ogni pagina.</p>
-        <select id="themeSelect">
-          <option value="dark-tech">Dark tech</option>
-          <option value="light-clean">Chiaro pulito</option>
-          <option value="neon-purple">Neon viola</option>
-          <option value="ocean-blue">Blu oceano</option>
-        </select>
-        <pre id="themeCommand" class="code-box">python3 scripts/applica_tema_formazione.py dark-tech</pre>
-      </article>
-    </section>
+<section class="grid">
+<div class="card"><h2>Quiz controllati</h2><p>Genera test con numero domande, materia, difficoltà e controlli qualità.</p></div>
+<div class="card"><h2>Report aziendali</h2><p>Produce sintesi operative, rischi, criticità e azioni consigliate.</p></div>
+<div class="card"><h2>Q&A sui documenti</h2><p>L'utente può fare domande specifiche e ricevere risposte basate sul documento.</p></div>
+<div class="card"><h2>Card e slide</h2><p>Genera materiale formativo per corsi, onboarding e presentazioni.</p></div>
+<div class="card"><h2>Statistiche e grafici</h2><p>Estrae parole chiave, dati sintetici e grafici SVG.</p></div>
+<div class="card"><h2>Pacchetto riutilizzabile</h2><p>Scarica script, configurazioni, template, docs e motori qualità.</p></div>
+</section>
 
-    <section class="pipeline-card">
-      <h2>Flusso completo</h2>
-      <div class="pipeline">
-        <div><span>1</span><strong>Documento</strong><small>PDF, DOCX, TXT, MD</small></div>
-        <div><span>2</span><strong>RAG</strong><small>chunk, indice, recupero</small></div>
-        <div><span>3</span><strong>Generazione</strong><small>quiz/test/minicorso</small></div>
-        <div><span>4</span><strong>Revisione</strong><small>controlli e approvazione</small></div>
-        <div><span>5</span><strong>Pacchetto</strong><small>web/Android/formazione</small></div>
-      </div>
-    </section>
-
-    <section class="grid-two">
-      <article class="panel">
-        <h2>Comandi principali</h2>
-        <pre class="code-box">python3 scripts/rag_pipeline_completa_sicura.py
-python3 scripts/pipeline_formazione_completa.py rag/documenti/documento_rag_sicurezza_informatica_aziendale.md --titolo "Sicurezza informatica aziendale"
-python3 scripts/validatore_rag_distrattori_forti_v2.py review/rag/quiz_da_revisionare.json</pre>
-      </article>
-
-      <article class="panel">
-        <h2>Cosa rende sicura la pipeline</h2>
-        <ul>
-          <li>Le domande generate non entrano subito nel database ufficiale.</li>
-          <li>Prima passano da validazione, revisione e import controllato.</li>
-          <li>I pacchetti formativi possono essere generati come esempi scaricabili.</li>
-        </ul>
-      </article>
-    </section>
-  </main>
-  <script src="app.js"></script>
+<section class="panel">
+<h2>Comando locale esempio</h2>
+<pre>python3 scripts/rag_documenti_aziendali.py rag/documenti/esempio_documento_aziendale_formazione.md \
+  --titolo "Formazione aziendale" \
+  --materia "sicurezza aziendale" \
+  --difficolta intermedio \
+  --domande 10 \
+  --tema aziendale-blu \
+  --output all</pre>
+</section>
+</main>
 </body>
 </html>

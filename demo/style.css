@@ -1121,3 +1121,15 @@ textarea::placeholder {
   }
 }
 /* ALEX-RAG-BUTTON-END */
+
+/* BLOCCO MOTORE RAG RIUTILIZZABILE */
+.rag-download-panel{margin:28px auto;padding:4px;max-width:1100px;border-radius:30px;background:linear-gradient(135deg,#7c4dff,#00c2a8,#ff7a18);box-shadow:0 22px 60px rgba(0,0,0,.18)}
+.rag-download-content{border-radius:26px;padding:28px;background:rgba(10,18,34,.92);color:#fff}
+.rag-kicker{display:inline-block;margin:0 0 10px;padding:7px 13px;border-radius:999px;background:rgba(255,255,255,.12);font-weight:800}
+.rag-download-content h2{margin:0 0 10px;font-size:clamp(1.7rem,4vw,2.8rem)}
+.rag-download-content p{max-width:900px;line-height:1.6;color:rgba(255,255,255,.86)}
+.rag-actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:18px}
+.rag-main-button,.rag-secondary-button{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:14px 20px;border-radius:999px;color:#fff;text-decoration:none;font-weight:900}
+.rag-main-button{background:linear-gradient(135deg,#7c4dff,#00c2a8);box-shadow:0 14px 34px rgba(0,194,168,.25)}
+.rag-secondary-button{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.18)}
+/* FINE BLOCCO MOTORE RAG RIUTILIZZABILE */
