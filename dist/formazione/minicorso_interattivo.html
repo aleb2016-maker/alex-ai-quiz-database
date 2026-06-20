@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<title>Sicurezza informatica aziendale</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #101522;
+  color: #f5f7fb;
+}
+.app {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 28px;
+}
+.card {
+  background: #182033;
+  border: 1px solid #2d3a5c;
+  border-radius: 22px;
+  padding: 28px;
+  box-shadow: 0 18px 45px rgba(0,0,0,.28);
+}
+.badge {
+  display: inline-block;
+  padding: 7px 12px;
+  border-radius: 999px;
+  background: #26375f;
+  margin-bottom: 16px;
+}
+p {
+  line-height: 1.65;
+  font-size: 18px;
+}
+button {
+  border: 0;
+  border-radius: 14px;
+  padding: 13px 18px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-right: 10px;
+}
+.primary {
+  background: #7c9cff;
+  color: #091020;
+}
+.secondary {
+  background: #2b3654;
+  color: #f5f7fb;
+}
+.progress {
+  margin: 18px 0;
+  height: 10px;
+  background: #26314d;
+  border-radius: 999px;
+  overflow: hidden;
+}
+.bar {
+  height: 100%;
+  width: 0%;
+  background: #7c9cff;
+}
+</style>
+</head>
+<body>
+<div class="app">
+  <h1>Sicurezza informatica aziendale</h1>
+  <div class="progress"><div id="bar" class="bar"></div></div>
+  <div class="card">
+    <div id="badge" class="badge"></div>
+    <h2 id="cardTitle"></h2>
+    <p id="cardText"></p>
+    <button class="secondary" onclick="prevCard()">Indietro</button>
+    <button class="primary" onclick="nextCard()">Avanti</button>
+  </div>
+</div>
+<script>
+const cards = [{"id": "CARD-001", "titolo": "Passaggio 1", "testo": "Questo documento è stato creato come fonte di prova per il motore RAG del progetto quiz.\nPuò essere inserito nella cartella `rag/documenti/` per generare quiz, test e mini-corsi sulla sicurezza informatica aziendale.", "tipo": "lezione"}, {"id": "CARD-002", "titolo": "Passaggio 2", "testo": "L'obiettivo è spiegare in modo semplice i concetti fondamentali di cybersecurity utili a dipendenti, studenti e nuovi utenti aziendali.\nIl documento non è pensato come manuale tecnico avanzato, ma come materiale formativo chiaro da cui un sistema RAG può recuperare contenuti e trasformarli in domande controllate.", "tipo": "lezione"}, {"id": "CARD-003", "titolo": "Passaggio 3", "testo": "La sicurezza informatica è l'insieme di pratiche, strumenti e comportamenti usati per proteggere dati, dispositivi, account e sistemi digitali.\nNon riguarda solo gli esperti informatici: ogni persona che usa un computer, uno smartphone, una rete aziendale o un account online contribuisce alla sicurezza generale.", "tipo": "lezione"}, {"id": "CARD-004", "titolo": "Passaggio 4", "testo": "Un sistema informatico può essere tecnicamente avanzato, ma rimanere vulnerabile se gli utenti usano password deboli, cliccano link sospetti o condividono dati riservati senza controllo.", "tipo": "lezione"}, {"id": "CARD-005", "titolo": "Passaggio 5", "testo": "- proteggere la riservatezza dei dati;\n- garantire l'integrità delle informazioni;\n- mantenere disponibili servizi e strumenti quando servono.", "tipo": "lezione"}, {"id": "CARD-006", "titolo": "Passaggio 6", "testo": "Riservatezza significa che solo le persone autorizzate possono accedere a certe informazioni.\nIntegrità significa che i dati non devono essere modificati in modo non autorizzato.\nDisponibilità significa che sistemi, documenti e servizi devono rimanere accessibili agli utenti autorizzati.", "tipo": "lezione"}, {"id": "CARD-007", "titolo": "Passaggio 7", "testo": "Una password sicura deve essere lunga, difficile da indovinare e diversa per ogni servizio.\nUsare la stessa password su più siti è rischioso: se un servizio viene violato, un attaccante può provare la stessa password anche su altri account.", "tipo": "lezione"}, {"id": "CARD-008", "titolo": "Passaggio 8", "testo": "Una buona password dovrebbe contenere parole non ovvie, numeri, simboli e una lunghezza adeguata.\nUn esempio debole è `password123`, perché è corta, comune e facile da provare automaticamente.\nUn esempio più forte è una frase lunga e personale, non facilmente collegabile alla persona, con alcune variazioni.", "tipo": "lezione"}];
+let index = 0;
+
+function render() {
+  const card = cards[index];
+  document.getElementById("badge").textContent = `Card ${index + 1} / ${cards.length}`;
+  document.getElementById("cardTitle").textContent = card.titolo;
+  document.getElementById("cardText").textContent = card.testo;
+  document.getElementById("bar").style.width = `${((index + 1) / cards.length) * 100}%`;
+}
+
+function nextCard() {
+  if (index < cards.length - 1) {
+    index++;
+    render();
+  }
+}
+
+function prevCard() {
+  if (index > 0) {
+    index--;
+    render();
+  }
+}
+
+render();
+</script>
+</body>
+</html>

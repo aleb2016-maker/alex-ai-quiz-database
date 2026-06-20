@@ -1,0 +1,54 @@
+{
+  "titolo": "Sicurezza informatica aziendale",
+  "numero_card": 8,
+  "cards": [
+    {
+      "id": "CARD-001",
+      "titolo": "Passaggio 1",
+      "testo": "Questo documento è stato creato come fonte di prova per il motore RAG del progetto quiz.\nPuò essere inserito nella cartella `rag/documenti/` per generare quiz, test e mini-corsi sulla sicurezza informatica aziendale.",
+      "tipo": "lezione"
+    },
+    {
+      "id": "CARD-002",
+      "titolo": "Passaggio 2",
+      "testo": "L'obiettivo è spiegare in modo semplice i concetti fondamentali di cybersecurity utili a dipendenti, studenti e nuovi utenti aziendali.\nIl documento non è pensato come manuale tecnico avanzato, ma come materiale formativo chiaro da cui un sistema RAG può recuperare contenuti e trasformarli in domande controllate.",
+      "tipo": "lezione"
+    },
+    {
+      "id": "CARD-003",
+      "titolo": "Passaggio 3",
+      "testo": "La sicurezza informatica è l'insieme di pratiche, strumenti e comportamenti usati per proteggere dati, dispositivi, account e sistemi digitali.\nNon riguarda solo gli esperti informatici: ogni persona che usa un computer, uno smartphone, una rete aziendale o un account online contribuisce alla sicurezza generale.",
+      "tipo": "lezione"
+    },
+    {
+      "id": "CARD-004",
+      "titolo": "Passaggio 4",
+      "testo": "Un sistema informatico può essere tecnicamente avanzato, ma rimanere vulnerabile se gli utenti usano password deboli, cliccano link sospetti o condividono dati riservati senza controllo.",
+      "tipo": "lezione"
+    },
+    {
+      "id": "CARD-005",
+      "titolo": "Passaggio 5",
+      "testo": "- proteggere la riservatezza dei dati;\n- garantire l'integrità delle informazioni;\n- mantenere disponibili servizi e strumenti quando servono.",
+      "tipo": "lezione"
+    },
+    {
+      "id": "CARD-006",
+      "titolo": "Passaggio 6",
+      "testo": "Riservatezza significa che solo le persone autorizzate possono accedere a certe informazioni.\nIntegrità significa che i dati non devono essere modificati in modo non autorizzato.\nDisponibilità significa che sistemi, documenti e servizi devono rimanere accessibili agli utenti autorizzati.",
+      "tipo": "lezione"
+    },
+    {
+      "id": "CARD-007",
+      "titolo": "Passaggio 7",
+      "testo": "Una password sicura deve essere lunga, difficile da indovinare e diversa per ogni servizio.\nUsare la stessa password su più siti è rischioso: se un servizio viene violato, un attaccante può provare la stessa password anche su altri account.",
+      "tipo": "lezione"
+    },
+    {
+      "id": "CARD-008",
+      "titolo": "Passaggio 8",
+      "testo": "Una buona password dovrebbe contenere parole non ovvie, numeri, simboli e una lunghezza adeguata.\nUn esempio debole è `password123`, perché è corta, comune e facile da provare automaticamente.\nUn esempio più forte è una frase lunga e personale, non facilmente collegabile alla persona, con alcune variazioni.",
+      "tipo": "lezione"
+    }
+  ]
+}
