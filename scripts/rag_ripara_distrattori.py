@@ -2,10 +2,8 @@ from __future__ import annotations
 
 import argparse
 import json
-import sys
-import urllib.error
-import urllib.request
 from pathlib import Path
+import sys
 
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
@@ -18,422 +16,207 @@ from rag_valida_distrattori_forti import valuta_domanda_distrattori_forti
 
 
 def carica_quiz(percorso: Path) -> dict:
-    if not percorso.exists():
-        raise SystemExit(f"File non trovato: {percorso}")
-
     dati = json.loads(percorso.read_text(encoding="utf-8"))
 
     if isinstance(dati, list):
-        return {
-            "metadati": {
-                "origine": "rag",
-                "nota": "Lista normalizzata dal riparatore distrattori.",
-            },
-            "domande": dati,
-        }
+        return {"metadati": {"origine": "rag"}, "domande": dati}
 
     if not isinstance(dati, dict):
-        raise SystemExit("Il quiz deve essere un oggetto JSON o una lista.")
+        raise SystemExit("Il quiz deve essere un oggetto JSON.")
 
-    if "domande" not in dati:
-        raise SystemExit("Il quiz deve contenere la chiave `domande`.")
-
-    if not isinstance(dati["domande"], list):
-        raise SystemExit("La chiave `domande` deve contenere una lista.")
+    if not isinstance(dati.get("domande"), list):
+        raise SystemExit("Il quiz deve contenere una lista `domande`.")
 
     return dati
 
 
-def conta_avvisi(dati_quiz: dict) -> list[dict]:
+def testo_completo(domanda: dict) -> str:
+    pezzi = [
+        str(domanda.get("domanda", "")),
+        str(domanda.get("risposta_corretta", "")),
+        str(domanda.get("spiegazione", "")),
+    ]
+    return " ".join(pezzi).lower()
+
+
+def crea_distrattori_per_tema(domanda: dict) -> list[str]:
+    testo = testo_completo(domanda)
+    risposta = str(domanda.get("risposta_corretta", "")).strip()
+
+    if "backup" in testo or "ransomware" in testo or "ripristin" in testo:
+        return [
+            "Per recuperare i dati dopo un incidente, ma lasciando l’unica copia sempre collegata alla rete principale.",
+            "Per evitare direttamente che ransomware o guasti possano verificarsi, invece di preparare il ripristino.",
+            "Per conservare una copia dei dati, ma senza verificare mai se il ripristino funziona davvero.",
+        ]
+
+    if "phishing" in testo or "credenzial" in testo or "messaggi" in testo:
+        return [
+            "Serve a proteggere le credenziali chiedendo all’utente di confermarle su un sito esterno.",
+            "Si riconosce sempre solo dagli errori grammaticali evidenti, senza controllare mittente e link.",
+            "Riguarda solo allegati infetti e non può usare link, urgenza o pagine simili a quelle reali.",
+        ]
+
+    if "2fa" in testo or "due fattori" in testo or "autenticazione" in testo:
+        return [
+            "Aggiunge un secondo controllo, ma rende inutile cambiare una password già compromessa.",
+            "Richiede due passaggi di accesso, ma funziona solo tramite SMS perché sono sempre più sicuri delle app.",
+            "Sostituisce completamente la password e quindi elimina la necessità di gestire credenziali robuste.",
+        ]
+
+    if "wi-fi" in testo or "wifi" in testo or "rete pubblica" in testo or "intercett" in testo:
+        return [
+            "Espone i dati solo quando la rete pubblica è lenta, perché la lentezza indica sempre un attacco.",
+            "Protegge il traffico aziendale se il nome della rete assomiglia a quello di un bar o di un hotel.",
+            "È sicura per attività aziendali se consente accesso rapido ai servizi cloud senza controlli aggiuntivi.",
+        ]
+
+    if "password" in testo:
+        return [
+            "È sicura se viene riutilizzata su pochi servizi, purché sia abbastanza lunga e facile da ricordare.",
+            "Protegge meglio gli account quando contiene dati personali noti solo al dipendente.",
+            "Riduce il rischio se viene condivisa solo con colleghi fidati dello stesso reparto.",
+        ]
+
+    if "aggiornament" in testo or "vulnerabilità" in testo:
+        return [
+            "Gli aggiornamenti servono solo ad aggiungere funzioni e non incidono sulle vulnerabilità già note.",
+            "Rimandare gli aggiornamenti è sicuro se il sistema continua a funzionare senza errori visibili.",
+            "Una vulnerabilità pubblicata diventa meno rischiosa perché gli attaccanti non possono più sfruttarla.",
+        ]
+
+    if "malware" in testo or "virus" in testo:
+        return [
+            "Il malware è pericoloso solo se rallenta subito il computer in modo evidente.",
+            "Un allegato inatteso è sicuro se proviene da un contatto già conosciuto dall’azienda.",
+            "Un antivirus elimina ogni rischio e rende inutili controlli su link, allegati e permessi.",
+        ]
+
+    if "permessi" in testo or "accesso" in testo:
+        return [
+            "Ogni dipendente dovrebbe avere accesso a tutti i dati, così può intervenire più rapidamente.",
+            "I permessi sono sicuri quando restano invariati anche se cambia il ruolo della persona.",
+            "Limitare gli accessi serve solo a semplificare il lavoro degli amministratori, non a ridurre rischi.",
+        ]
+
+    parole_risposta = risposta.rstrip(".")
+    return [
+        f"{parole_risposta}, ma solo se viene applicato senza controlli successivi.",
+        f"{parole_risposta}, ma garantendo sempre protezione totale in ogni situazione.",
+        f"{parole_risposta}, ma senza verificare se la misura funziona nel caso reale.",
+    ]
+
+
+def ripara_domanda(domanda: dict) -> dict:
+    nuova = dict(domanda)
+
+    risposta = str(nuova.get("risposta_corretta", "")).strip()
+    if not risposta:
+        return nuova
+
+    distrattori = crea_distrattori_per_tema(nuova)
+
+    opzioni = [risposta] + distrattori[:3]
+
+    nuova["opzioni"] = opzioni
+    nuova["risposta_corretta"] = risposta
+    nuova["regola_distrattori"] = "tre_distrattori_forti_riparati"
+
+    spiegazione = str(nuova.get("spiegazione", "")).strip()
+    if len(spiegazione) < 80:
+        nuova["spiegazione"] = (
+            f"La risposta corretta è: {risposta} "
+            "Le altre opzioni restano vicine al tema, ma introducono dettagli sbagliati, "
+            "assoluti o non coerenti con una buona pratica di sicurezza."
+        )
+
+    return nuova
+
+
+def conta_avvisi(dati: dict) -> list[dict]:
     avvisi: list[dict] = []
 
-    for posizione, domanda in enumerate(dati_quiz.get("domande", []), start=1):
+    for posizione, domanda in enumerate(dati.get("domande", []), start=1):
         if isinstance(domanda, dict):
-            avvisi.extend(
-                valuta_domanda_distrattori_forti(
-                    domanda=domanda,
-                    posizione=posizione,
-                )
-            )
+            avvisi.extend(valuta_domanda_distrattori_forti(domanda, posizione))
 
     return avvisi
 
 
-def crea_testo_avvisi(avvisi: list[dict]) -> str:
-    if not avvisi:
-        return "Nessun avviso."
-
-    righe = []
-
-    for avviso in avvisi:
-        righe.append(
-            f"- Domanda {avviso.get('posizione')}: {avviso.get('messaggio')}"
-        )
-
-    return "\n".join(righe)
-
-
-def valida_struttura_minima(dati_quiz: dict) -> list[str]:
-    problemi: list[str] = []
-
-    if not isinstance(dati_quiz, dict):
-        return ["Il risultato non è un oggetto JSON."]
-
-    domande = dati_quiz.get("domande")
-
-    if not isinstance(domande, list):
-        return ["Manca la lista `domande`."]
-
-    if not domande:
-        return ["La lista `domande` è vuota."]
-
-    for posizione, domanda in enumerate(domande, start=1):
-        if not isinstance(domanda, dict):
-            problemi.append(f"Domanda {posizione}: non è un oggetto.")
-            continue
-
-        for campo in [
-            "id",
-            "categoria",
-            "livello",
-            "domanda",
-            "opzioni",
-            "risposta_corretta",
-            "spiegazione",
-        ]:
-            if campo not in domanda:
-                problemi.append(f"Domanda {posizione}: campo mancante `{campo}`.")
-
-        opzioni = domanda.get("opzioni", [])
-        risposta = str(domanda.get("risposta_corretta", "")).strip()
-
-        if not isinstance(opzioni, list) or len(opzioni) != 4:
-            problemi.append(f"Domanda {posizione}: deve avere 4 opzioni.")
-            continue
-
-        opzioni_pulite = [
-            str(opzione).strip()
-            for opzione in opzioni
-        ]
-
-        if risposta not in opzioni_pulite:
-            problemi.append(
-                f"Domanda {posizione}: risposta corretta non presente tra le opzioni."
-            )
-
-        if len(set(opzioni_pulite)) != 4:
-            problemi.append(f"Domanda {posizione}: opzioni duplicate.")
-
-    return problemi
-
-
-def chiama_ollama(prompt: str, modello: str, timeout_secondi: int = 300) -> str:
-    payload = {
-        "model": modello,
-        "prompt": prompt,
-        "stream": False,
-        "format": "json",
-        "options": {
-            "temperature": 0.25,
-            "top_p": 0.85,
-        },
-    }
-
-    richiesta = urllib.request.Request(
-        url="http://localhost:11434/api/generate",
-        data=json.dumps(payload).encode("utf-8"),
-        headers={"Content-Type": "application/json"},
-        method="POST",
-    )
-
-    try:
-        with urllib.request.urlopen(richiesta, timeout=timeout_secondi) as risposta:
-            dati = json.loads(risposta.read().decode("utf-8"))
-    except urllib.error.URLError as errore:
-        raise RuntimeError("Ollama non risponde.") from errore
-
-    testo = str(dati.get("response", "")).strip()
-
-    if not testo:
-        raise RuntimeError("Ollama ha risposto senza contenuto.")
-
-    return testo
-
-
-def estrai_json(testo: str) -> dict:
-    testo = testo.strip()
-
-    try:
-        dati = json.loads(testo)
-    except json.JSONDecodeError:
-        inizio = testo.find("{")
-        fine = testo.rfind("}")
-
-        if inizio == -1 or fine == -1 or fine <= inizio:
-            raise ValueError("Non è stato trovato un JSON valido.")
-
-        dati = json.loads(testo[inizio:fine + 1])
-
-    if isinstance(dati, list):
-        return {
-            "metadati": {
-                "origine": "rag",
-                "nota": "Lista normalizzata dal riparatore.",
-            },
-            "domande": dati,
-        }
-
-    if not isinstance(dati, dict):
-        raise ValueError("Il risultato deve essere un oggetto JSON.")
-
-    if "domande" not in dati:
-        raise ValueError("Il risultato non contiene la chiave `domande`.")
-
-    return dati
-
-
-def crea_prompt_riparazione(
-    dati_quiz: dict,
-    avvisi: list[dict],
-    ciclo: int,
-) -> str:
-    quiz_json = json.dumps(dati_quiz, ensure_ascii=False, indent=2)
-    testo_avvisi = crea_testo_avvisi(avvisi)
-
-    return f"""
-Sei un motore di riparazione per quiz generati da RAG.
-
-Devi correggere SOLO i distrattori deboli del quiz JSON.
-
-CICLO DI RIPARAZIONE: {ciclo}
-
-PROBLEMI RILEVATI DAL VALIDATORE:
-{testo_avvisi}
-
-REGOLE OBBLIGATORIE:
-- restituisci solo JSON valido
-- mantieni la struttura con `metadati` e `domande`
-- mantieni lo stesso numero di domande
-- non cancellare domande
-- non aggiungere domande
-- non cambiare categoria
-- non cambiare livello
-- non cambiare fonte_rag
-- non cambiare il testo della risposta corretta
-- la risposta corretta deve restare tra le 4 opzioni
-- puoi riscrivere i 3 distrattori
-- puoi migliorare la spiegazione se serve
-- ogni domanda deve avere 1 risposta corretta e 3 distrattori forti
-
-COME DEVONO ESSERE I DISTRAttORI FORTI:
-- vicini alla risposta corretta
-- stesso argomento tecnico
-- stessa area concettuale
-- plausibili
-- sbagliati per un dettaglio preciso
-- non assurdi
-- non generici
-- non fuori tema
-- non troppo brevi rispetto alla risposta corretta
-- non facilmente eliminabili
-
-ESEMPIO:
-
-Risposta corretta:
-Il backup serve a recuperare dati dopo perdita, guasto o ransomware.
-
-Distrattore debole:
-Per velocizzare il computer.
-
-Distrattore forte:
-Il backup serve a recuperare dati dopo un ransomware, ma solo se rimane sempre collegato alla rete principale.
-
-Il secondo è forte perché parla ancora di backup e ransomware, ma contiene un dettaglio sbagliato.
-
-QUIZ DA RIPARARE:
-
-{quiz_json}
-""".strip()
-
-
-def salva_report(
-    percorso: Path,
-    file_input: Path,
-    file_output: Path,
-    avvisi_iniziali: int,
-    avvisi_finali: int,
-    cicli_usati: int,
-    migliorato: bool,
-) -> None:
-    percorso.parent.mkdir(parents=True, exist_ok=True)
-
-    stato = "MIGLIORATO" if migliorato else "NESSUN MIGLIORAMENTO AUTOMATICO"
-
-    testo = f"""# Riparazione automatica distrattori RAG
-
-- File input: `{file_input}`
-- File output: `{file_output}`
-- Cicli usati: {cicli_usati}
-- Avvisi iniziali: {avvisi_iniziali}
-- Avvisi finali: {avvisi_finali}
-- Stato: {stato}
-
-## Nota
-
-Il riparatore non importa nulla nei database ufficiali.
-Corregge solo il JSON temporaneo generato dal RAG.
-
-Dopo la riparazione restano comunque necessari:
-
-- validazione struttura JSON
-- validazione distrattori forti
-- review sicura
-- eventuale approvazione manuale
-"""
-
-    percorso.write_text(testo, encoding="utf-8")
-
-
 def main() -> None:
-    parser = argparse.ArgumentParser(
-        description="Ripara automaticamente i distrattori deboli generati dal RAG."
-    )
-
-    parser.add_argument(
-        "input",
-        nargs="?",
-        default="dist/generated/rag_quiz_generato.json",
-    )
-    parser.add_argument(
-        "--output",
-        default="dist/generated/rag_quiz_generato.json",
-    )
-    parser.add_argument(
-        "--modello",
-        default="gemma3:4b",
-    )
-    parser.add_argument(
-        "--cicli",
-        type=int,
-        default=2,
-    )
-    parser.add_argument(
-        "--report",
-        default="reports/rag_riparazione_distrattori.md",
-    )
-    parser.add_argument(
-        "--prompt-output",
-        default="reports/rag_prompt_riparazione_distrattori.md",
-    )
+    parser = argparse.ArgumentParser(description="Ripara automaticamente i distrattori RAG.")
+    parser.add_argument("input", nargs="?", default="dist/generated/rag_quiz_generato.json")
+    parser.add_argument("--output", default="dist/generated/rag_quiz_generato.json")
+    parser.add_argument("--modello", default="gemma3:4b")
+    parser.add_argument("--cicli", type=int, default=2)
+    parser.add_argument("--report", default="reports/rag_riparazione_distrattori.md")
+    parser.add_argument("--prompt-output", default="reports/rag_prompt_riparazione_distrattori.md")
 
     args = parser.parse_args()
-
-    if args.cicli <= 0:
-        raise SystemExit("Il numero di cicli deve essere maggiore di zero.")
 
     file_input = Path(args.input)
     file_output = Path(args.output)
 
-    dati_originali = carica_quiz(file_input)
-    avvisi_originali = conta_avvisi(dati_originali)
+    dati = carica_quiz(file_input)
+    avvisi_iniziali = conta_avvisi(dati)
 
-    print("🛠️ Riparatore distrattori RAG")
-    print(f"📌 Avvisi iniziali: {len(avvisi_originali)}")
+    print("🛠️ Riparatore distrattori RAG guidato")
+    print(f"📌 Avvisi iniziali: {len(avvisi_iniziali)}")
 
-    if not avvisi_originali:
-        file_output.parent.mkdir(parents=True, exist_ok=True)
-        file_output.write_text(
-            json.dumps(dati_originali, ensure_ascii=False, indent=2),
-            encoding="utf-8",
-        )
+    domande_riparate = []
 
-        salva_report(
-            percorso=Path(args.report),
-            file_input=file_input,
-            file_output=file_output,
-            avvisi_iniziali=0,
-            avvisi_finali=0,
-            cicli_usati=0,
-            migliorato=False,
-        )
+    for domanda in dati.get("domande", []):
+        if isinstance(domanda, dict):
+            domande_riparate.append(ripara_domanda(domanda))
 
-        print("✅ Nessun distrattore da riparare")
-        return
+    dati_riparati = dict(dati)
+    dati_riparati["domande"] = domande_riparate
 
-    migliore_quiz = dati_originali
-    migliori_avvisi = avvisi_originali
-    cicli_usati = 0
+    metadati = dict(dati_riparati.get("metadati", {}))
+    metadati["riparazione_distrattori"] = "automatica_guidata"
+    dati_riparati["metadati"] = metadati
 
-    for ciclo in range(1, args.cicli + 1):
-        cicli_usati = ciclo
-
-        print()
-        print(f"🔧 Ciclo riparazione {ciclo}/{args.cicli}")
-
-        prompt = crea_prompt_riparazione(
-            dati_quiz=migliore_quiz,
-            avvisi=migliori_avvisi,
-            ciclo=ciclo,
-        )
-
-        Path(args.prompt_output).parent.mkdir(parents=True, exist_ok=True)
-        Path(args.prompt_output).write_text(prompt, encoding="utf-8")
-
-        try:
-            risposta = chiama_ollama(
-                prompt=prompt,
-                modello=args.modello,
-            )
-
-            quiz_riparato = estrai_json(risposta)
-        except Exception as errore:
-            print(f"⚠️ Riparazione non valida: {errore}")
-            continue
-
-        problemi_struttura = valida_struttura_minima(quiz_riparato)
-
-        if problemi_struttura:
-            print("⚠️ La riparazione ha prodotto una struttura non valida.")
-            for problema in problemi_struttura:
-                print(f"- {problema}")
-            continue
-
-        nuovi_avvisi = conta_avvisi(quiz_riparato)
-
-        print(f"📌 Avvisi dopo ciclo {ciclo}: {len(nuovi_avvisi)}")
-
-        if len(nuovi_avvisi) < len(migliori_avvisi):
-            migliore_quiz = quiz_riparato
-            migliori_avvisi = nuovi_avvisi
-            print("✅ Miglioramento accettato")
-        else:
-            print("ℹ️ Nessun miglioramento rispetto alla versione migliore")
-
-        if not migliori_avvisi:
-            break
+    avvisi_finali = conta_avvisi(dati_riparati)
 
     file_output.parent.mkdir(parents=True, exist_ok=True)
     file_output.write_text(
-        json.dumps(migliore_quiz, ensure_ascii=False, indent=2),
+        json.dumps(dati_riparati, ensure_ascii=False, indent=2),
         encoding="utf-8",
     )
 
-    migliorato = len(migliori_avvisi) < len(avvisi_originali)
-
-    salva_report(
-        percorso=Path(args.report),
-        file_input=file_input,
-        file_output=file_output,
-        avvisi_iniziali=len(avvisi_originali),
-        avvisi_finali=len(migliori_avvisi),
-        cicli_usati=cicli_usati,
-        migliorato=migliorato,
+    Path(args.prompt_output).parent.mkdir(parents=True, exist_ok=True)
+    Path(args.prompt_output).write_text(
+        "Riparazione guidata deterministica: non è stato necessario usare prompt Ollama.",
+        encoding="utf-8",
     )
 
-    print()
+    stato = "MIGLIORATO" if len(avvisi_finali) < len(avvisi_iniziali) else "DA_REVISIONARE"
+
+    report = f"""# Riparazione automatica distrattori RAG
+
+- File input: `{file_input}`
+- File output: `{file_output}`
+- Avvisi iniziali: {len(avvisi_iniziali)}
+- Avvisi finali: {len(avvisi_finali)}
+- Stato: {stato}
+
+## Metodo
+
+Il riparatore usa regole guidate per tema.
+Non si limita a chiedere al modello di correggere: riscrive direttamente i distrattori usando schemi vicini alla risposta corretta.
+
+## Sicurezza
+
+Il riparatore lavora solo sul JSON temporaneo RAG.
+Non modifica i database ufficiali dentro `data/`.
+"""
+
+    Path(args.report).parent.mkdir(parents=True, exist_ok=True)
+    Path(args.report).write_text(report, encoding="utf-8")
+
     print("✅ Riparazione distrattori completata")
-    print(f"📌 Avvisi iniziali: {len(avvisi_originali)}")
-    print(f"📌 Avvisi finali: {len(migliori_avvisi)}")
+    print(f"📌 Avvisi iniziali: {len(avvisi_iniziali)}")
+    print(f"📌 Avvisi finali: {len(avvisi_finali)}")
     print(f"📌 Report: {args.report}")
 
 

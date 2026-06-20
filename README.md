@@ -355,3 +355,12 @@ La pipeline RAG include un primo ciclo di autoriparazione.
 Se il validatore trova distrattori troppo deboli o troppo lontani dalla risposta corretta, lo script `scripts/rag_ripara_distrattori.py` prova a riscrivere i distrattori prima della review.
 
 La riparazione lavora solo sui file temporanei generati dal RAG e non modifica i database ufficiali.
+
+
+---
+
+## Riparatore guidato dei distrattori RAG
+
+Il progetto include un riparatore automatico che riconosce il tema della domanda RAG e riscrive i distrattori deboli con opzioni più vicine alla risposta corretta.
+
+Il sistema non modifica i database ufficiali: lavora sul JSON temporaneo e passa poi dalla review sicura.

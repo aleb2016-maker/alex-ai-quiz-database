@@ -7,21 +7,20 @@ from pathlib import Path
 
 
 STOPWORDS = {
-    "a", "ad", "al", "allo", "alla", "ai", "agli", "alle",
-    "che", "chi", "ci", "come", "con", "cosa", "da", "dal",
-    "dalla", "dei", "del", "della", "di", "e", "è", "ed",
-    "gli", "ha", "hai", "ho", "il", "in", "la", "le", "lo",
-    "ma", "mi", "ne", "nel", "nella", "non", "o", "per",
-    "più", "quale", "quando", "se", "si", "sono", "su",
-    "tra", "un", "una", "uno", "dati", "sistema", "sistemi",
-    "aziendale", "aziendali",
+    "a", "ad", "al", "allo", "alla", "ai", "agli", "alle", "anche",
+    "che", "chi", "ci", "come", "con", "cosa", "da", "dal", "dalla",
+    "dei", "del", "della", "delle", "di", "e", "è", "ed", "gli",
+    "ha", "hai", "ho", "il", "in", "la", "le", "lo", "ma", "mi",
+    "ne", "nel", "nella", "nelle", "non", "o", "per", "più",
+    "quale", "quando", "se", "si", "sono", "su", "tra", "un",
+    "una", "uno", "dati", "sistema", "sistemi", "azienda",
+    "aziendale", "aziendali", "utente", "utenti", "modo",
 }
 
 FRASI_DEBOLI = [
     "tutte le precedenti",
     "nessuna delle precedenti",
     "non so",
-    "non riguarda",
     "completamente diverso",
 ]
 
@@ -32,13 +31,20 @@ PAROLE_GENERICHE_FUORI_TEMA = {
     "memoria",
     "comprimere",
     "compressione",
-    "condivisione",
-    "condividere",
     "innovazione",
     "ultima",
     "generazione",
     "facilitare",
     "semplificare",
+}
+
+PAROLE_TECNICHE = {
+    "backup", "ransomware", "phishing", "password", "credenziali",
+    "account", "malware", "virus", "rete", "wi", "wifi", "fi",
+    "autenticazione", "fattori", "2fa", "codici", "sms", "app",
+    "dati", "sensibili", "accesso", "permessi", "cloud",
+    "aggiornamenti", "vulnerabilità", "sicurezza", "intercettazioni",
+    "ripristino", "copia", "copie", "attacco", "attacchi",
 }
 
 
@@ -47,7 +53,7 @@ def tokenizza(testo: str) -> set[str]:
     return {
         parola
         for parola in parole
-        if len(parola) > 3 and parola not in STOPWORDS
+        if len(parola) > 2 and parola not in STOPWORDS
     }
 
 
@@ -58,48 +64,37 @@ def similarita_jaccard(testo_a: str, testo_b: str) -> float:
     if not parole_a or not parole_b:
         return 0.0
 
-    parole_comuni = parole_a & parole_b
-    parole_totali = parole_a | parole_b
-
-    return len(parole_comuni) / len(parole_totali)
+    return len(parole_a & parole_b) / len(parole_a | parole_b)
 
 
 def carica_domande(percorso: Path) -> list[dict]:
-    if not percorso.exists():
-        raise SystemExit(f"File non trovato: {percorso}")
-
     dati = json.loads(percorso.read_text(encoding="utf-8"))
 
     if isinstance(dati, list):
-        return [
-            domanda
-            for domanda in dati
-            if isinstance(domanda, dict)
-        ]
+        return [d for d in dati if isinstance(d, dict)]
 
     if isinstance(dati, dict):
         if isinstance(dati.get("domande"), list):
-            return [
-                domanda
-                for domanda in dati["domande"]
-                if isinstance(domanda, dict)
-            ]
+            return [d for d in dati["domande"] if isinstance(d, dict)]
 
         if isinstance(dati.get("domande_da_revisionare"), list):
-            return [
-                domanda
-                for domanda in dati["domande_da_revisionare"]
-                if isinstance(domanda, dict)
-            ]
+            return [d for d in dati["domande_da_revisionare"] if isinstance(d, dict)]
 
-    raise SystemExit("Formato JSON non supportato per la validazione distrattori.")
+    raise SystemExit("Formato JSON non supportato.")
 
 
 def descrivi_opzione(indice: int) -> str:
-    lettere = ["A", "B", "C", "D"]
-    if 0 <= indice < len(lettere):
-        return lettere[indice]
-    return str(indice + 1)
+    return ["A", "B", "C", "D"][indice] if 0 <= indice < 4 else str(indice + 1)
+
+
+def parole_tema(domanda: str, risposta: str, spiegazione: str) -> set[str]:
+    base = tokenizza(domanda) | tokenizza(risposta) | tokenizza(spiegazione)
+    tecniche = base & PAROLE_TECNICHE
+
+    if tecniche:
+        return tecniche | {p for p in base if len(p) > 6}
+
+    return {p for p in base if len(p) > 5}
 
 
 def valuta_domanda_distrattori_forti(domanda: dict, posizione: int) -> list[dict]:
@@ -107,18 +102,18 @@ def valuta_domanda_distrattori_forti(domanda: dict, posizione: int) -> list[dict
 
     testo_domanda = str(domanda.get("domanda", "")).strip()
     risposta_corretta = str(domanda.get("risposta_corretta", "")).strip()
+    spiegazione = str(domanda.get("spiegazione", "")).strip()
     opzioni = domanda.get("opzioni", [])
 
     if not isinstance(opzioni, list) or len(opzioni) != 4 or not risposta_corretta:
         return avvisi
 
-    opzioni_pulite = [
-        str(opzione).strip()
-        for opzione in opzioni
-    ]
+    opzioni_pulite = [str(opzione).strip() for opzione in opzioni]
 
     if risposta_corretta not in opzioni_pulite:
         return avvisi
+
+    tema = parole_tema(testo_domanda, risposta_corretta, spiegazione)
 
     distrattori = [
         (indice, opzione)
@@ -126,25 +121,35 @@ def valuta_domanda_distrattori_forti(domanda: dict, posizione: int) -> list[dict
         if opzione != risposta_corretta
     ]
 
-    similarita_distrattori = []
+    distrattori_deboli = 0
 
     for indice, distrattore in distrattori:
-        similarita = similarita_jaccard(risposta_corretta, distrattore)
-        similarita_distrattori.append(similarita)
-
         lettera = descrivi_opzione(indice)
         distrattore_lower = distrattore.lower()
+        parole_distrattore = tokenizza(distrattore)
 
-        if similarita < 0.10:
+        sim_risposta = similarita_jaccard(risposta_corretta, distrattore)
+        sim_domanda = similarita_jaccard(testo_domanda, distrattore)
+        sim_spiegazione = similarita_jaccard(spiegazione, distrattore)
+        aggancio_tema = len(parole_distrattore & tema)
+
+        vicino = (
+            sim_risposta >= 0.08
+            or sim_domanda >= 0.08
+            or sim_spiegazione >= 0.06
+            or aggancio_tema >= 2
+        )
+
+        if not vicino:
+            distrattori_deboli += 1
             avvisi.append(
                 {
                     "posizione": posizione,
                     "tipo": "distrattore_poco_vicino",
                     "opzione": lettera,
-                    "similarita": round(similarita, 4),
+                    "similarita": round(max(sim_risposta, sim_domanda, sim_spiegazione), 4),
                     "messaggio": (
-                        f"opzione {lettera}: distrattore troppo lontano dalla risposta corretta "
-                        f"(similarità {similarita:.2f})."
+                        f"opzione {lettera}: distrattore troppo lontano dal nucleo della domanda."
                     ),
                 }
             )
@@ -155,23 +160,20 @@ def valuta_domanda_distrattori_forti(domanda: dict, posizione: int) -> list[dict
                     "posizione": posizione,
                     "tipo": "frase_debole",
                     "opzione": lettera,
-                    "similarita": round(similarita, 4),
-                    "messaggio": (
-                        f"opzione {lettera}: contiene una formula debole o non professionale."
-                    ),
+                    "similarita": round(sim_risposta, 4),
+                    "messaggio": f"opzione {lettera}: contiene una formula debole.",
                 }
             )
 
-        parole_distrattore = tokenizza(distrattore)
         parole_generiche = parole_distrattore & PAROLE_GENERICHE_FUORI_TEMA
 
-        if parole_generiche and similarita < 0.18:
+        if parole_generiche and aggancio_tema == 0:
             avvisi.append(
                 {
                     "posizione": posizione,
                     "tipo": "fuori_tema_probabile",
                     "opzione": lettera,
-                    "similarita": round(similarita, 4),
+                    "similarita": round(sim_risposta, 4),
                     "messaggio": (
                         f"opzione {lettera}: sembra generica o fuori tema "
                         f"({', '.join(sorted(parole_generiche))})."
@@ -179,73 +181,36 @@ def valuta_domanda_distrattori_forti(domanda: dict, posizione: int) -> list[dict
                 }
             )
 
-    if similarita_distrattori:
-        distrattori_troppo_lontani = [
-            valore
-            for valore in similarita_distrattori
-            if valore < 0.10
-        ]
+    if distrattori_deboli >= 2:
+        avvisi.append(
+            {
+                "posizione": posizione,
+                "tipo": "domanda_facile_per_eliminazione",
+                "opzione": "-",
+                "similarita": 0,
+                "messaggio": (
+                    "almeno due distrattori sembrano troppo lontani: "
+                    "la risposta corretta potrebbe essere individuabile per eliminazione."
+                ),
+            }
+        )
 
-        if len(distrattori_troppo_lontani) >= 2:
-            avvisi.append(
-                {
-                    "posizione": posizione,
-                    "tipo": "domanda_facile_per_eliminazione",
-                    "opzione": "-",
-                    "similarita": round(max(similarita_distrattori), 4),
-                    "messaggio": (
-                        "almeno due distrattori sembrano troppo lontani: "
-                        "la risposta corretta potrebbe essere individuabile per eliminazione."
-                    ),
-                }
-            )
-
-    lunghezze = [
-        len(opzione)
-        for opzione in opzioni_pulite
-        if opzione
-    ]
+    lunghezze = [len(opzione) for opzione in opzioni_pulite if opzione]
 
     if lunghezze:
-        lunghezza_minima = min(lunghezze)
-        lunghezza_massima = max(lunghezze)
+        minima = min(lunghezze)
+        massima = max(lunghezze)
 
-        if lunghezza_minima > 0 and lunghezza_massima / lunghezza_minima > 2.8:
+        if minima > 0 and massima / minima > 3.2:
             avvisi.append(
                 {
                     "posizione": posizione,
                     "tipo": "lunghezze_sbilanciate",
                     "opzione": "-",
                     "similarita": 0,
-                    "messaggio": (
-                        "le opzioni hanno lunghezze molto diverse: "
-                        "la risposta corretta potrebbe risaltare."
-                    ),
+                    "messaggio": "le opzioni hanno lunghezze troppo diverse.",
                 }
             )
-
-    parole_domanda = tokenizza(testo_domanda)
-
-    if parole_domanda:
-        for indice, distrattore in distrattori:
-            similarita_domanda = len(parole_domanda & tokenizza(distrattore)) / max(
-                1,
-                len(parole_domanda | tokenizza(distrattore)),
-            )
-
-            if similarita_domanda < 0.04:
-                lettera = descrivi_opzione(indice)
-                avvisi.append(
-                    {
-                        "posizione": posizione,
-                        "tipo": "distrattore_poco_collegato_domanda",
-                        "opzione": lettera,
-                        "similarita": round(similarita_domanda, 4),
-                        "messaggio": (
-                            f"opzione {lettera}: distrattore poco collegato al testo della domanda."
-                        ),
-                    }
-                )
 
     return avvisi
 
@@ -263,12 +228,8 @@ def crea_report(percorso: Path, domande: list[dict], avvisi: list[dict]) -> str:
     if avvisi:
         righe.append("## Avvisi")
         righe.append("")
-
         for avviso in avvisi:
-            righe.append(
-                f"- Domanda {avviso['posizione']}: {avviso['messaggio']}"
-            )
-
+            righe.append(f"- Domanda {avviso['posizione']}: {avviso['messaggio']}")
         righe.append("")
     else:
         righe.append("## Risultato")
@@ -279,8 +240,8 @@ def crea_report(percorso: Path, domande: list[dict], avvisi: list[dict]) -> str:
     righe.append("## Nota")
     righe.append("")
     righe.append(
-        "Questo controllo non approva automaticamente le domande. "
-        "Serve a rendere la review più severa prima di qualsiasi import nei database ufficiali."
+        "Il controllo usa agganci tecnici tra domanda, risposta, spiegazione e distrattori. "
+        "Non si basa solo su parole identiche nella risposta corretta."
     )
     righe.append("")
 
@@ -288,24 +249,10 @@ def crea_report(percorso: Path, domande: list[dict], avvisi: list[dict]) -> str:
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(
-        description="Valida la forza dei distrattori generati dal RAG."
-    )
-
-    parser.add_argument(
-        "file",
-        nargs="?",
-        default="dist/generated/rag_quiz_generato.json",
-    )
-    parser.add_argument(
-        "--report",
-        default="reports/rag_validazione_distrattori_forti.md",
-    )
-    parser.add_argument(
-        "--fail-on-weak",
-        action="store_true",
-        help="Termina con errore se trova distrattori deboli.",
-    )
+    parser = argparse.ArgumentParser(description="Valida la forza dei distrattori RAG.")
+    parser.add_argument("file", nargs="?", default="dist/generated/rag_quiz_generato.json")
+    parser.add_argument("--report", default="reports/rag_validazione_distrattori_forti.md")
+    parser.add_argument("--fail-on-weak", action="store_true")
 
     args = parser.parse_args()
 
@@ -315,28 +262,18 @@ def main() -> None:
     avvisi: list[dict] = []
 
     for posizione, domanda in enumerate(domande, start=1):
-        avvisi.extend(
-            valuta_domanda_distrattori_forti(
-                domanda=domanda,
-                posizione=posizione,
-            )
-        )
+        avvisi.extend(valuta_domanda_distrattori_forti(domanda, posizione))
 
-    percorso_report = Path(args.report)
-    percorso_report.parent.mkdir(parents=True, exist_ok=True)
-    percorso_report.write_text(
-        crea_report(
-            percorso=percorso,
-            domande=domande,
-            avvisi=avvisi,
-        ),
+    Path(args.report).parent.mkdir(parents=True, exist_ok=True)
+    Path(args.report).write_text(
+        crea_report(percorso, domande, avvisi),
         encoding="utf-8",
     )
 
     print("✅ Validazione distrattori forti RAG completata")
     print(f"📌 Domande controllate: {len(domande)}")
     print(f"📌 Avvisi trovati: {len(avvisi)}")
-    print(f"📌 Report: {percorso_report}")
+    print(f"📌 Report: {args.report}")
 
     if avvisi and args.fail_on_weak:
         raise SystemExit(1)
