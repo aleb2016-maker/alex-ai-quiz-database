@@ -69,6 +69,14 @@ def main() -> None:
     esegui(
         [
             python,
+            "scripts/rag_valida_distrattori_forti.py",
+            "dist/generated/rag_quiz_generato.json",
+        ]
+    )
+
+    esegui(
+        [
+            python,
             "scripts/rag_prepara_review_quiz.py",
             "--input",
             "dist/generated/rag_quiz_generato.json",
@@ -113,11 +121,20 @@ OK: pipeline completata.
 
 {"Ollama locale" if args.usa_ollama else "Modalità sicura senza modello AI"}
 
+## Controlli eseguiti
+
+- Creazione indice RAG
+- Generazione quiz JSON temporaneo
+- Validazione struttura JSON
+- Validazione distrattori forti
+- Preparazione review sicura
+
 ## Output principali
 
 - Prompt generazione: reports/rag_prompt_generazione_quiz_json.md
 - JSON temporaneo locale: dist/generated/rag_quiz_generato.json
 - Report validazione: reports/rag_validazione_quiz_json.md
+- Report distrattori: reports/rag_validazione_distrattori_forti.md
 - Report review: reports/rag_review_quiz.md
 - File review locale: review/rag/quiz_da_revisionare.json
 

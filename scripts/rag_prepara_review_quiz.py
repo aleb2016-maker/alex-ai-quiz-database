@@ -7,6 +7,15 @@ import sys
 from pathlib import Path
 
 
+PROJECT_ROOT = Path(__file__).resolve().parents[1]
+SCRIPTS_DIR = PROJECT_ROOT / "scripts"
+
+if str(SCRIPTS_DIR) not in sys.path:
+    sys.path.insert(0, str(SCRIPTS_DIR))
+
+from rag_valida_distrattori_forti import valuta_domanda_distrattori_forti
+
+
 CAMPI_OBBLIGATORI = [
     "id",
     "categoria",
@@ -23,8 +32,6 @@ PAROLE_DEBOLI_DISTRACTOR = [
     "non so",
     "non riguarda",
     "completamente diverso",
-    "sempre",
-    "mai",
 ]
 
 
@@ -35,19 +42,6 @@ def tokenizza(testo: str) -> set[str]:
         for parola in parole
         if len(parola) > 3
     }
-
-
-def similarita_keyword(testo_a: str, testo_b: str) -> float:
-    parole_a = tokenizza(testo_a)
-    parole_b = tokenizza(testo_b)
-
-    if not parole_a or not parole_b:
-        return 0.0
-
-    parole_comuni = parole_a & parole_b
-    parole_totali = parole_a | parole_b
-
-    return len(parole_comuni) / len(parole_totali)
 
 
 def carica_json(percorso: Path) -> dict:
@@ -158,19 +152,18 @@ def valida_domanda(
         for parola_debole in PAROLE_DEBOLI_DISTRACTOR:
             if parola_debole in distrattore_lower:
                 avvisi_review.append(
-                    f"Domanda {posizione}: possibile distrattore debole o troppo assoluto: `{distrattore}`."
+                    f"Domanda {posizione}: possibile distrattore debole: `{distrattore}`."
                 )
 
-    if risposta_corretta and distrattori:
-        similarita_massima = max(
-            similarita_keyword(risposta_corretta, distrattore)
-            for distrattore in distrattori
-        )
+    avvisi_distrattori = valuta_domanda_distrattori_forti(
+        domanda=domanda,
+        posizione=posizione,
+    )
 
-        if similarita_massima < 0.12:
-            avvisi_review.append(
-                f"Domanda {posizione}: i distrattori sembrano poco vicini alla risposta corretta."
-            )
+    for avviso in avvisi_distrattori:
+        avvisi_review.append(
+            f"Domanda {posizione}: {avviso['messaggio']}"
+        )
 
     lunghezze = [
         len(opzione)
@@ -195,7 +188,7 @@ def valida_domanda(
 
 def prepara_domanda_review(domanda: dict, posizione: int) -> dict:
     return {
-        "id_review": f"RAG-REV-{posizione:04d}",
+        "id_review": f"RAG-REV-{positione_corretta(posizione)}",
         "id_originale": str(domanda.get("id", f"RAG-{posizione:04d}")),
         "categoria": str(domanda.get("categoria", "rag_generato")),
         "livello": str(domanda.get("livello", "intermedio")),
@@ -225,6 +218,10 @@ def prepara_domanda_review(domanda: dict, posizione: int) -> dict:
             "approvata_per_database_ufficiale": False,
         },
     }
+
+
+def positione_corretta(posizione: int) -> str:
+    return f"{posizione:04d}"
 
 
 def crea_report(

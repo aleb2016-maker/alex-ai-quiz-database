@@ -327,3 +327,20 @@ Comandi principali:
 Documentazione:
 
 - `docs/RAG_PIPELINE_COMPLETA.md`
+
+
+---
+
+## Validatore distrattori forti RAG
+
+La pipeline RAG include anche un controllo automatico sui distrattori generati.
+
+Il validatore segnala opzioni troppo lontane dalla risposta corretta, troppo generiche, fuori tema o facilmente eliminabili.
+
+Comando principale:
+
+- `python3 scripts/rag_valida_distrattori_forti.py dist/generated/rag_quiz_generato.json`
+
+Documentazione:
+
+- `docs/RAG_VALIDATORE_DISTRAZIONI.md`
