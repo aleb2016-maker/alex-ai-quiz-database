@@ -2,17 +2,13 @@
 
 - File sorgente: `dist/generated/rag_quiz_generato.json`
 - File review: `review/rag/quiz_da_revisionare.json`
-- Domande trovate: 0
+- Domande trovate: 3
 - Stato: OK
 
-## Nota
+## Avvisi da revisionare
 
-Il file contiene zero domande reali. Questo va bene in modalità sicura.
-La pipeline ha creato solo il contenitore temporaneo.
-
-## Risultato
-
-Nessun problema bloccante e nessun avviso rilevato.
+- Domanda 1: i distrattori sembrano poco vicini alla risposta corretta.
+- Domanda 2: i distrattori sembrano poco vicini alla risposta corretta.
 
 ## Regola di sicurezza
 

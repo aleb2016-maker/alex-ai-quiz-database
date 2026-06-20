@@ -35,7 +35,7 @@ def crea_prompt_quiz_json(
     )
 
     return f"""
-Sei un generatore professionale di quiz formativi.
+Sei un generatore professionale di quiz formativi basati su documenti RAG.
 
 Devi creare un file JSON basato SOLO sul contesto RAG fornito.
 
@@ -47,20 +47,101 @@ DATI QUIZ:
 - categoria: {categoria}
 - livello: {livello}
 
-REGOLE OBBLIGATORIE:
+REGOLE OBBLIGATORIE SULLE FONTI:
 - usa solo informazioni presenti nel contesto RAG
 - non inventare contenuti esterni
+- ogni domanda deve essere collegata al contesto recuperato
+- la spiegazione deve essere coerente con il documento
+- inserisci in fonte_rag il riferimento alla fonte usata, per esempio "[Fonte 1]"
+
+REGOLE OBBLIGATORIE SULLE DOMANDE:
+- crea esattamente {numero_domande} domande
 - ogni domanda deve avere 4 opzioni
-- 1 opzione corretta
-- 3 distrattori forti, plausibili e vicini alla risposta corretta
-- le opzioni devono essere simili per lunghezza, stile e livello tecnico
-- nessuna opzione deve essere assurda o eliminabile subito
-- la spiegazione deve essere chiara, didattica e collegata al contesto
-- lingua italiana corretta
-- niente markdown fuori dal JSON
-- restituisci solo JSON valido
+- 1 sola opzione deve essere corretta
+- 3 opzioni devono essere distrattori forti
+- non usare risposte palesemente assurde
+- non usare opzioni completamente fuori tema
+- non usare "tutte le precedenti" o "nessuna delle precedenti"
+- non rendere la risposta corretta più lunga, più tecnica o più completa delle altre in modo evidente
+- tutte le opzioni devono avere lunghezza, stile e livello tecnico simili
+
+REGOLA FONDAMENTALE SUI 3 DISTRAttORI FORTI:
+Ogni distrattore deve partire da un'idea plausibile e vicina alla risposta corretta,
+ma deve diventare sbagliato per un dettaglio preciso.
+
+NON creare distrattori come:
+- affermazioni positive quando la domanda chiede un rischio
+- frasi completamente scollegate dal tema
+- opzioni che si eliminano subito
+- opzioni ridicole o impossibili
+- frasi troppo generiche
+
+CREA invece distrattori di questo tipo:
+- stesso concetto della risposta corretta, ma con una conseguenza sbagliata
+- stessa premessa, ma con una limitazione errata
+- stessa area tecnica, ma con un dettaglio invertito
+- stessa funzione, ma applicata nel momento sbagliato
+- stessa misura di sicurezza, ma con un effetto esagerato o falso
+
+ESEMPIO DI QUALITÀ ATTESA:
+
+Domanda:
+Perché è rischioso usare la stessa password su più servizi?
+
+Risposta corretta:
+Perché se un servizio viene violato, la stessa password può essere provata anche su altri account.
+
+Distrattore forte 1:
+Perché usare la stessa password impedisce alla 2FA di generare codici temporanei.
+
+Distrattore forte 2:
+Perché una password riutilizzata viene automaticamente salvata in chiaro da tutti i siti.
+
+Distrattore forte 3:
+Perché il riutilizzo della password elimina sempre la possibilità di cambiarla in futuro.
+
+Nota:
+I tre distrattori sono vicini al tema password/account/sicurezza,
+ma sono sbagliati per un dettaglio specifico.
+
+ESEMPIO SU BACKUP:
+
+Risposta corretta:
+Il backup serve a recuperare dati dopo perdita, guasto o attacco ransomware.
+
+Distrattore forte 1:
+Il backup serve a impedire direttamente l'esecuzione di un ransomware prima dell'attacco.
+
+Distrattore forte 2:
+Il backup serve a recuperare i dati, ma solo se rimane sempre collegato alla stessa rete principale.
+
+Distrattore forte 3:
+Il backup serve a ripristinare i dati senza bisogno di verificare mai il recupero.
+
+ESEMPIO SU PHISHING:
+
+Risposta corretta:
+Il phishing cerca di ingannare l'utente per ottenere credenziali, dati sensibili o pagamenti.
+
+Distrattore forte 1:
+Il phishing protegge le credenziali chiedendo all'utente di confermarle su un sito esterno.
+
+Distrattore forte 2:
+Il phishing si riconosce sempre solo dalla presenza di errori grammaticali evidenti.
+
+Distrattore forte 3:
+Il phishing riguarda solo allegati infetti e non può usare link o messaggi urgenti.
+
+REGOLE SULLA SPIEGAZIONE:
+- spiega perché la risposta corretta è corretta
+- indica il dettaglio centrale della regola
+- non limitarti a dire "le altre risposte sono sbagliate"
+- non fare spiegazioni troppo brevi
+- non inventare informazioni non presenti nel contesto
 
 FORMATO JSON OBBLIGATORIO:
+Restituisci solo JSON valido.
+Non aggiungere markdown, commenti, testo prima o dopo.
 
 {{
   "metadati": {{
@@ -68,7 +149,8 @@ FORMATO JSON OBBLIGATORIO:
     "argomento": "{argomento}",
     "categoria": "{categoria}",
     "livello": "{livello}",
-    "numero_domande_richieste": {numero_domande}
+    "numero_domande_richieste": {numero_domande},
+    "regola_distrattori": "tre_distrattori_forti_vicini"
   }},
   "domande": [
     {{
@@ -78,14 +160,14 @@ FORMATO JSON OBBLIGATORIO:
       "domanda": "Testo della domanda",
       "opzioni": [
         "Risposta corretta",
-        "Distrattore forte 1",
-        "Distrattore forte 2",
-        "Distrattore forte 3"
+        "Distrattore forte vicino 1",
+        "Distrattore forte vicino 2",
+        "Distrattore forte vicino 3"
       ],
       "risposta_corretta": "Risposta corretta",
       "spiegazione": "Spiegazione chiara basata sul contesto RAG.",
-      "fonte_rag": "Documento o chunk usato come fonte",
-      "regola_distrattori": "tre_distrattori_forti"
+      "fonte_rag": "[Fonte 1]",
+      "regola_distrattori": "tre_distrattori_forti_vicini"
     }}
   ]
 }}

@@ -20,11 +20,11 @@ eventuale controllo qualità completo
 
 ## Argomento
 
-motore RAG riutilizzabile
+sicurezza informatica aziendale
 
 ## Categoria
 
-ai
+informatica
 
 ## Livello
 
@@ -36,7 +36,7 @@ intermedio
 
 ## Modalità generazione
 
-Modalità sicura senza modello AI
+Ollama locale
 
 ## Output principali
 
