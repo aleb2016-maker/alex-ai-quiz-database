@@ -59,6 +59,9 @@ Ogni ZIP scaricato contiene una cartella con nomi chiari e un solo file di istru
 
 ## Crea un pacchetto personalizzato
 
+[![Pacchetto RAG documenti](https://img.shields.io/badge/Pacchetto_RAG_documenti-Riassunti_Quiz_Report_Tabelle_Card-00D4FF?style=for-the-badge)](https://aleb2016-maker.github.io/alex-ai-quiz-database/demo-rag/)
+
+
 <p align="center">
   <a href="https://github.com/aleb2016-maker/alex-ai-quiz-database/actions/workflows/create-quiz-package.yml">
     <img src="https://img.shields.io/badge/%F0%9F%A7%A9%20CREA%20PACCHETTO%20PERSONALIZZATO-CLICCA%20QUI-e91e63?style=for-the-badge&labelColor=e91e63" alt="Crea pacchetto personalizzato">
