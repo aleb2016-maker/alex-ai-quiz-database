@@ -43,7 +43,7 @@ def main() -> None:
 
     comando_generazione = [
         python,
-        "scripts/rag_genera_quiz_json.py",
+        "scripts/rag_genera_quiz_json_retry.py",
         args.argomento,
         "--categoria",
         args.categoria,
