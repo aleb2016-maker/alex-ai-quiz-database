@@ -245,3 +245,23 @@ scripts/
 dist/
   database_quiz_finale.json
 ```
+
+
+---
+
+## Motore RAG riutilizzabile
+
+Il progetto include un primo motore RAG locale pensato per rendere il sistema più professionale e riutilizzabile.
+
+Il RAG permette di caricare documenti nella cartella rag/documenti/, creare un indice locale e recuperare contenuti utili per generare quiz, test, mini-corsi, slide e percorsi formativi.
+
+Comandi principali:
+
+- python3 scripts/rag_build_index.py
+- python3 scripts/rag_test_query.py "domanda o argomento"
+- python3 scripts/rag_crea_prompt_quiz.py "argomento"
+- python3 scripts/rag_crea_prompt_minicorso.py "argomento"
+
+Documentazione completa:
+
+docs/RAG_RIUTILIZZABILE.md
