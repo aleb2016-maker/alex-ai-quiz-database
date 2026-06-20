@@ -306,3 +306,24 @@ Comandi principali:
 Documentazione:
 
 - `docs/RAG_REVIEW_DATABASE.md`
+
+
+---
+
+## Pipeline completa RAG
+
+Il progetto ora può gestire un flusso RAG completo e sicuro:
+
+`documenti → RAG → quiz JSON temporaneo → validazione → review → preparazione import approvati`
+
+Le domande generate non entrano automaticamente nei database ufficiali. Solo le domande revisionate e approvate possono essere preparate per un futuro import controllato.
+
+Comandi principali:
+
+- `python3 scripts/rag_pipeline_completa_sicura.py "argomento" --categoria ai --livello intermedio --numero-domande 10`
+- `python3 scripts/rag_prepara_import_approvati.py`
+- `python3 scripts/rag_prepara_import_approvati.py --scrivi-database --confermo-scrittura-data --target-file data/ai.json`
+
+Documentazione:
+
+- `docs/RAG_PIPELINE_COMPLETA.md`
