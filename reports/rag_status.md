@@ -4,8 +4,8 @@
 
 - Versione: 1.0
 - Tipo: rag_locale_riutilizzabile
-- Documenti letti: 1
-- Chunk creati: 2
+- Documenti letti: 2
+- Chunk creati: 18
 
 ## Cartella documenti
 
