@@ -284,3 +284,25 @@ Comandi principali:
 Documentazione:
 
 - `docs/RAG_PIPELINE_QUIZ.md`
+
+
+---
+
+## Filtro review RAG
+
+Il progetto include un filtro di sicurezza per le domande generate dal RAG.
+
+Il flusso corretto è:
+
+`RAG → quiz JSON temporaneo → validazione → review → eventuale importazione controllata`
+
+Le domande generate non entrano automaticamente nei database ufficiali dentro `data/`.
+
+Comandi principali:
+
+- `python3 scripts/rag_prepara_review_quiz.py --input dist/generated/rag_quiz_generato.json`
+- `python3 scripts/rag_pipeline_sicura_quiz.py "argomento" --categoria ai --livello intermedio --numero-domande 10`
+
+Documentazione:
+
+- `docs/RAG_REVIEW_DATABASE.md`
