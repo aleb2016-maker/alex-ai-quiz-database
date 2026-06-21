@@ -151,3 +151,8 @@ Le card non devono comportarsi come una pagina web da aprire online. Devono dive
 ## Nota
 
 Il PDF viene salvato nella cartella Download del browser, salvo impostazioni diverse.
+
+
+## Card PDF locale senza librerie esterne
+
+Il pulsante `Scarica card PDF stampabile sul PC` genera direttamente un PDF nel browser. Su smartphone il file va cercato in Download o nell'app File.
