@@ -363,20 +363,159 @@ function makeGenericCards(rows, limit = 12) {
     .slice(0, limit);
 }
 
+function cleanCardTextSafe(text) {
+  return String(text || "")
+    .replace(/\[Pagina\s*\d+\]/gi, "")
+    .replace(/Curriculum\s+Vitae/gi, "")
+    .replace(/Alessandro\s+Barbarossa/gi, "")
+    .replace(/Email\s+\S+/gi, "")
+    .replace(/Telefono\s+[0-9\s+]+/gi, "")
+    .replace(/Indirizzo\s+[^.]+/gi, "")
+    .replace(/DATA E LUOGO DI NASCITA[^.]+/gi, "")
+    .replace(/NAZIONALITA'?[^.]+/gi, "")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function normalizeCardSafe(text) {
+  return String(text || "")
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .replace(/[^a-z0-9\s]+/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function hasCardWords(text, words) {
+  const normalized = normalizeCardSafe(text);
+  return words.some(word => normalized.includes(normalizeCardSafe(word)));
+}
+
+function shortCardTextSafe(text, fallback) {
+  const cleaned = cleanCardTextSafe(text);
+  if (!cleaned) return fallback;
+  if (cleaned.length <= 320) return cleaned;
+  return cleaned.slice(0, 320).replace(/\s+\S*$/, "") + "...";
+}
+
 function makeCards(rows, limit = 12) {
-  const fullText = rows.map(row => `${row.concetto || ""} ${row.spiegazione || ""}`).join(" ");
+  try {
+    const safeRows = Array.isArray(rows) ? rows : [];
+    const fullText = safeRows.map(row => `${row.concetto || ""} ${row.spiegazione || ""}`).join(" ");
 
-  const looksLikeCurriculum = containsCardKeyword(fullText, [
-    "curriculum", "vitae", "competenze", "esperienza lavorativa",
-    "profilo", "email", "telefono", "addetto", "presso",
-    "formazione", "progetti", "intelligenza artificiale"
-  ]);
+    const looksLikeCurriculum = hasCardWords(fullText, [
+      "curriculum", "vitae", "competenze", "esperienza", "profilo",
+      "email", "telefono", "addetto", "presso", "formazione",
+      "progetti", "intelligenza artificiale", "prompt", "android"
+    ]);
 
-  if (looksLikeCurriculum) {
-    return makeCurriculumCards(rows, limit);
+    if (looksLikeCurriculum) {
+      const cards = [];
+
+      function addCard(concetto, titolo, materia, parole) {
+        if (!hasCardWords(fullText, parole)) return;
+        if (cards.some(card => normalizeCardSafe(card.fronte) === normalizeCardSafe(titolo))) return;
+
+        cards.push({
+          id: "RAG-CV-" + String(cards.length + 1).padStart(4, "0"),
+          materia: materia || "curriculum",
+          concetto,
+          tema: materia === "ai" ? "AI" : materia === "informatica" ? "Informatica" : "Curriculum",
+          icona: "badge-check",
+          fronte: titolo,
+          retro: shortCardTextSafe(fullText, "Scheda riassuntiva del curriculum."),
+          uso: "Usa questa scheda per presentarti meglio o preparare un colloquio."
+        });
+      }
+
+      addCard("profilo professionale", "Scheda: profilo professionale", "curriculum", [
+        "profilo", "creativo", "adattabile", "presentazione", "obiettivo"
+      ]);
+
+      addCard("competenze trasversali", "Scheda: competenze trasversali", "curriculum", [
+        "pazienza", "creativita", "comunicazione", "lavoro di gruppo", "pubblico", "adattamenti", "competenze"
+      ]);
+
+      addCard("competenze digitali e AI", "Scheda: competenze digitali e AI", "ai", [
+        "intelligenza artificiale", "ai", "prompt", "generativa", "immagini", "prototipi"
+      ]);
+
+      addCard("progetti digitali", "Scheda: progetti e applicazioni", "informatica", [
+        "app", "android", "kotlin", "software", "github", "database", "quiz", "progetto"
+      ]);
+
+      addCard("esperienza lavorativa", "Scheda: esperienza lavorativa", "curriculum", [
+        "esperienza", "lavoro", "addetto", "presso", "mansione", "azienda", "pulizie", "contratto"
+      ]);
+
+      addCard("formazione e obiettivi", "Scheda: formazione e obiettivi", "curriculum", [
+        "formazione", "studio", "corso", "diploma", "its", "obiettivi"
+      ]);
+
+      if (!cards.length) {
+        cards.push({
+          id: "RAG-CV-0001",
+          materia: "curriculum",
+          concetto: "sintesi curriculum",
+          tema: "Curriculum",
+          icona: "badge-check",
+          fronte: "Scheda: sintesi curriculum",
+          retro: shortCardTextSafe(fullText, "Scheda riassuntiva del curriculum."),
+          uso: "Usa questa scheda per presentarti meglio o preparare un colloquio."
+        });
+      }
+
+      return cards.slice(0, Math.min(limit, 8));
+    }
+
+    const badConcepts = new Set([
+      "presso", "addetto", "pagina", "curriculum", "vitae", "email",
+      "telefono", "indirizzo", "nascita", "nazionalita", "contatti"
+    ]);
+
+    return safeRows
+      .filter(row => {
+        const text = normalizeCardSafe(`${row.concetto || ""} ${row.spiegazione || ""}`);
+        if (!text) return false;
+        if (text.includes("email") || text.includes("telefono") || text.includes("indirizzo")) return false;
+        return true;
+      })
+      .map((row, index) => {
+        let concept = String(row.concetto || "").trim();
+        const normalizedConcept = normalizeCardSafe(concept);
+
+        if (!concept || badConcepts.has(normalizedConcept) || concept.length < 4) {
+          concept = "punto importante " + (index + 1);
+        }
+
+        return {
+          id: "RAG-CARD-" + String(index + 1).padStart(4, "0"),
+          materia: "generico",
+          concetto: concept,
+          tema: "Generico",
+          icona: "spark",
+          fronte: "Scheda: " + concept,
+          retro: shortCardTextSafe(row.spiegazione || "", "Scheda riassuntiva del documento."),
+          uso: "Usa questa scheda per ripassare il concetto principale."
+        };
+      })
+      .slice(0, limit);
+
+  } catch (error) {
+    console.error("Errore makeCards:", error);
+
+    return (Array.isArray(rows) ? rows : []).slice(0, 6).map((row, index) => ({
+      id: "RAG-SAFE-" + String(index + 1).padStart(4, "0"),
+      materia: "generico",
+      concetto: "punto importante " + (index + 1),
+      tema: "Generico",
+      icona: "spark",
+      fronte: "Scheda: punto importante " + (index + 1),
+      retro: shortCardTextSafe(row.spiegazione || row.concetto || "", "Scheda riassuntiva."),
+      uso: "Usa questa scheda per ripassare."
+    }));
   }
-
-  return makeGenericCards(rows, limit);
 }
 
 function makeQuiz(rows, limit = 10) {
