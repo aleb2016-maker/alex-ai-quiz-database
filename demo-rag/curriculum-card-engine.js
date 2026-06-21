@@ -247,6 +247,20 @@ function iconSvg(icon, materia = "", concetto = "") {
   `);
 }
 
+function getCardBadge(card, index = 0) {
+  const raw = `${card.fronte || ""} ${card.concetto || ""} ${card.materia || ""}`.toLowerCase();
+
+  if (raw.includes("profilo")) return "Profilo";
+  if (raw.includes("competenze digitali") || raw.includes("ai") || raw.includes("prompt")) return "AI / Digitale";
+  if (raw.includes("competenze")) return "Competenze";
+  if (raw.includes("progetti") || raw.includes("software") || raw.includes("app")) return "Progetti";
+  if (raw.includes("esperienza") || raw.includes("lavoro")) return "Esperienza";
+  if (raw.includes("formazione") || raw.includes("obiettivi") || raw.includes("studio")) return "Formazione";
+
+  if (index === 0) return "Documento";
+  return "Sintesi";
+}
+
 function renderCard(card, index = 0) {
   const theme = CV_THEMES[card.materia] || CV_THEMES.curriculum;
 
@@ -280,10 +294,11 @@ function renderCard(card, index = 0) {
 
   const [primary, secondary, accent] = palette;
   const icon = iconSvg(theme.icon, card.materia || "", card.concetto || "");
+  const badge = getCardBadge(card, index);
 
   return `
     <article class="cv-card" style="--cv-primary:${primary};--cv-secondary:${secondary};--cv-accent:${accent};">
-      <div class="cv-badge">${escapeHtml(theme.badge || card.materia || "Documento")}</div>
+      <div class="cv-badge">${escapeHtml(badge)}</div>
       <div class="cv-icon" aria-hidden="true">${icon}</div>
       <h3>${escapeHtml(card.fronte || "Scheda documento")}</h3>
       <p>${escapeHtml(card.retro || "")}</p>
@@ -406,6 +421,22 @@ function downloadPdfFile() {
     font-size: 18px !important;
     line-height: 1.3 !important;
     font-weight: 900 !important;
+  }
+
+  
+  .pdf-card-page .cv-card {
+    box-shadow: none !important;
+    transform: none !important;
+  }
+
+  .pdf-card-page .cv-card::before,
+  .pdf-card-page .cv-card::after {
+    opacity: .14 !important;
+  }
+
+  .pdf-card-page .cv-inline-icon {
+    width: 60px !important;
+    height: 60px !important;
   }
 
   @page {
