@@ -69,8 +69,8 @@ Ogni ZIP scaricato contiene una cartella con nomi chiari e un solo file di istru
 </p>
 
 <p align="center">
-  <strong>Motore RAG documenti:</strong> apre la demo per trasformare documenti in riassunti, quiz, report, tabelle e card.
-  Il pacchetto scaricabile serve come base riutilizzabile per creare future app web, app Android, quiz, mini-corsi e sistemi documentali.
+  <strong>Apri motore RAG documenti:</strong> da qui puoi provare una demo veloce e testabile per trasformare documenti in riassunti, quiz, report, tabelle e card.
+  Dalla stessa area puoi anche scaricare il <strong>pacchetto RAG riutilizzabile</strong>, pensato come base per nuovi progetti, app Android, app Web, corsi interattivi e sistemi di analisi documenti.
 </p>
 <!-- RAG_BUTTON_END -->
 
@@ -80,7 +80,9 @@ Ogni ZIP scaricato contiene una cartella con nomi chiari e un solo file di istru
   </a>
 </p>
 
-Questo pulsante apre il workflow GitHub per generare un nuovo pacchetto quiz.
+Questo pulsante apre il workflow GitHub per generare un <strong>pacchetto quiz personalizzato</strong>.
+Puoi scegliere tra tutte le materie disponibili del progetto, sia <strong>scientifiche</strong> sia <strong>tecnologiche</strong>: AI, Informatica, Matematica, Inglese, Logica, Logica visiva, Scienze generali, Biologia, Chimica, Fisica e Fisica quantistica.
+Dopo aver scelto materia, livello, piattaforma e numero di domande, GitHub genera uno ZIP scaricabile pronto per Web o Android.
 
 ### Passaggi rapidi
 
