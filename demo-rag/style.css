@@ -508,3 +508,15 @@
     min-width: 220px !important;
   }
 }
+
+
+/* TEST_CARD_SVG_ICON_FIX */
+.cv-inline-icon {
+  width: 62px;
+  height: 62px;
+  display: block;
+}
+
+.cv-icon {
+  overflow: hidden;
+}

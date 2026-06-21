@@ -180,23 +180,103 @@ function buildCurriculumCards(text) {
 }
 
 function iconSvg(icon, materia = "", concetto = "") {
-  const m = String(materia || "").toLowerCase();
-  const c = String(concetto || "").toLowerCase();
-  const i = String(icon || "").toLowerCase();
+  const raw = `${icon || ""} ${materia || ""} ${concetto || ""}`.toLowerCase();
 
-  if (i === "chip" || m.includes("digitale") || c.includes("digitale") || c.includes("ai")) return "💻";
-  if (i === "code" || m.includes("informatica") || c.includes("software") || c.includes("app")) return "🧩";
-  if (i === "work" || m.includes("lavoro") || c.includes("lavorativa") || c.includes("colloquio")) return "💼";
-  if (c.includes("formazione") || c.includes("studio") || c.includes("obiettivi")) return "🎓";
-  if (c.includes("profilo") || m.includes("curriculum")) return "👤";
-  return "📄";
+  function svg(body) {
+    return `<svg viewBox="0 0 96 96" aria-hidden="true" focusable="false" class="cv-inline-icon">${body}</svg>`;
+  }
+
+  if (raw.includes("profilo") || raw.includes("curriculum")) {
+    return svg(`
+      <rect x="18" y="22" width="46" height="32" rx="10" fill="#f9a8d4" opacity="0.95"></rect>
+      <rect x="32" y="38" width="46" height="32" rx="10" fill="#f472b6" opacity="0.95"></rect>
+      <circle cx="41" cy="34" r="6" fill="#ffffff"></circle>
+      <path d="M30 49 c5 -10 18 -10 24 0" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round"></path>
+    `);
+  }
+
+  if (raw.includes("competen")) {
+    return svg(`
+      <rect x="18" y="22" width="48" height="34" rx="10" fill="#a78bfa"></rect>
+      <rect x="32" y="38" width="46" height="30" rx="10" fill="#7c3aed"></rect>
+      <path d="M38 53 l8 8 l18 -22" fill="none" stroke="#ffffff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"></path>
+      <circle cx="40" cy="31" r="4" fill="#ffffff"></circle>
+      <circle cx="52" cy="31" r="4" fill="#ffffff"></circle>
+    `);
+  }
+
+  if (raw.includes("progett") || raw.includes("software") || raw.includes("app") || raw.includes("informatica")) {
+    return svg(`
+      <rect x="18" y="22" width="48" height="34" rx="10" fill="#7dd3fc"></rect>
+      <rect x="32" y="38" width="46" height="30" rx="10" fill="#2563eb"></rect>
+      <path d="M41 53 l7 -7 l7 7" fill="none" stroke="#ffffff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"></path>
+      <path d="M39 32 h18 M39 40 h12" stroke="#ffffff" stroke-width="4" stroke-linecap="round"></path>
+    `);
+  }
+
+  if (raw.includes("formazione") || raw.includes("studio") || raw.includes("diploma") || raw.includes("obiettivi")) {
+    return svg(`
+      <rect x="18" y="22" width="48" height="34" rx="10" fill="#fdba74"></rect>
+      <rect x="32" y="38" width="46" height="30" rx="10" fill="#f97316"></rect>
+      <path d="M48 28 l18 9 l-18 9 l-18 -9 z" fill="#ffffff"></path>
+      <path d="M60 40 v8" stroke="#ffffff" stroke-width="4" stroke-linecap="round"></path>
+    `);
+  }
+
+  if (raw.includes("esperienza") || raw.includes("lavoro") || raw.includes("azienda")) {
+    return svg(`
+      <rect x="18" y="22" width="48" height="34" rx="10" fill="#86efac"></rect>
+      <rect x="32" y="38" width="46" height="30" rx="10" fill="#22c55e"></rect>
+      <rect x="42" y="28" width="16" height="10" rx="3" fill="#ffffff"></rect>
+      <rect x="38" y="43" width="28" height="16" rx="4" fill="#ffffff"></rect>
+    `);
+  }
+
+  if (raw.includes("digitale") || raw.includes("ai") || raw.includes("prompt")) {
+    return svg(`
+      <rect x="26" y="24" width="44" height="48" rx="12" fill="#3b82f6"></rect>
+      <path d="M39 40 h18 M39 49 h18" stroke="#ffffff" stroke-width="5" stroke-linecap="round"></path>
+      <circle cx="48" cy="61" r="4" fill="#ffffff"></circle>
+    `);
+  }
+
+  return svg(`
+    <rect x="22" y="24" width="46" height="34" rx="10" fill="#93c5fd"></rect>
+    <rect x="34" y="38" width="42" height="30" rx="10" fill="#60a5fa"></rect>
+    <path d="M42 50 h20 M42 58 h12" stroke="#ffffff" stroke-width="5" stroke-linecap="round"></path>
+  `);
 }
 
-function renderCard(card) {
+function renderCard(card, index = 0) {
   const theme = CV_THEMES[card.materia] || CV_THEMES.curriculum;
-  const palette = Array.isArray(theme.palette) && theme.palette.length >= 3
-    ? theme.palette
+
+  let palette = Array.isArray(theme.palette) && theme.palette.length >= 3
+    ? [...theme.palette]
     : ["#1e1b4b", "#7c3aed", "#22d3ee"];
+
+  const raw = `${card.fronte || ""} ${card.concetto || ""} ${card.materia || ""}`.toLowerCase();
+
+  if (raw.includes("profilo")) {
+    palette = index % 2 === 0
+      ? ["#6b1d55", "#d63384", "#ff7aa2"]
+      : ["#7a1f5c", "#c026d3", "#fb7185"];
+  } else if (raw.includes("competen")) {
+    palette = index % 2 === 0
+      ? ["#5b1f6e", "#8b5cf6", "#a78bfa"]
+      : ["#432dd7", "#7c3aed", "#60a5fa"];
+  } else if (raw.includes("progett") || raw.includes("software")) {
+    palette = index % 2 === 0
+      ? ["#0f4c81", "#2563eb", "#60a5fa"]
+      : ["#155e75", "#0891b2", "#67e8f9"];
+  } else if (raw.includes("formazione") || raw.includes("obiettivi")) {
+    palette = index % 2 === 0
+      ? ["#7a3b00", "#ea580c", "#fdba74"]
+      : ["#92400e", "#f97316", "#fbbf24"];
+  } else if (raw.includes("esperienza") || raw.includes("lavoro")) {
+    palette = index % 2 === 0
+      ? ["#14532d", "#16a34a", "#86efac"]
+      : ["#166534", "#22c55e", "#4ade80"];
+  }
 
   const [primary, secondary, accent] = palette;
   const icon = iconSvg(theme.icon, card.materia || "", card.concetto || "");
@@ -247,7 +327,7 @@ function downloadPdfFile() {
   }
 
   const styleUrl = new URL("style.css", window.location.href).href;
-  const cardsHtml = cards.map(card => renderCard(card)).join("");
+  const cardsHtml = cards.map((card, index) => renderCard(card, index)).join("");
 
   const printHtml = `
 <!doctype html>
@@ -351,9 +431,9 @@ function downloadPdfFile() {
 </style>
 </head>
 <body>
-  ${cards.map(card => `
+  ${cards.map((card, index) => `
     <section class="pdf-card-page">
-      ${renderCard(card)}
+      ${renderCard(card, index)}
     </section>
   `).join("")}
 
