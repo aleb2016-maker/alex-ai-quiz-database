@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Demo motore card grafiche</title>
+<style>
+body { margin:0; font-family:Arial,Helvetica,sans-serif; background:#020617; color:#f8fafc; }
+main { max-width:1180px; margin:0 auto; padding:42px 20px 70px; }
+h1 { font-size:clamp(34px,5vw,58px); margin:0 0 24px; }
+.cards-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(285px,1fr)); gap:18px; }
+.graphic-card { position:relative; overflow:hidden; border-radius:28px; padding:20px; background:linear-gradient(145deg,var(--card-primary),var(--card-secondary)); border:1px solid rgba(255,255,255,.16); box-shadow:0 26px 80px rgba(0,0,0,.34); min-height:430px; }
+.graphic-card::after { content:""; position:absolute; width:160px; height:160px; right:-60px; bottom:-60px; border-radius:50%; background:var(--card-accent); opacity:.13; }
+.graphic-card-badge { position:relative; z-index:2; display:inline-flex; padding:8px 12px; border-radius:999px; background:rgba(255,255,255,.16); color:#fff; font-size:12px; font-weight:900; letter-spacing:.08em; text-transform:uppercase; }
+.graphic-card-image { position:relative; z-index:2; margin:18px 0 16px; }
+.card-illustration { width:100%; height:auto; display:block; }
+.graphic-card h2 { position:relative; z-index:2; font-size:22px; line-height:1.16; margin:0 0 12px; }
+.graphic-card p { position:relative; z-index:2; color:#f8fafc; line-height:1.55; font-size:15px; }
+.graphic-card small { position:relative; z-index:2; display:block; color:#e5e7eb; font-weight:800; line-height:1.45; margin-top:14px; }
+</style>
+</head>
+<body>
+<main>
+<h1>Demo motore card grafiche</h1>
+<section class="cards-grid">
+
+    <article class="graphic-card" style="--card-primary:#0f172a; --card-secondary:#7c3aed; --card-accent:#ef4444;">
+      <div class="graphic-card-badge">Cybersecurity</div>
+      <div class="graphic-card-image">
+    <svg class="card-illustration" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 210" role="img" aria-label="Illustrazione backup">
+      <defs>
+        <linearGradient id="bg-backup" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#0f172a"/>
+          <stop offset="100%" stop-color="#7c3aed"/>
+        </linearGradient>
+      </defs>
+      <rect width="220" height="210" rx="28" fill="url(#bg-backup)"/>
+      <circle cx="48" cy="52" r="34" fill="#ef4444" opacity="0.16"/>
+      <circle cx="176" cy="176" r="60" fill="#ffffff" opacity="0.08"/>
+      
+        <path d="M74 126 h86 c20 0 35-14 35-32 0-17-13-30-31-32-7-20-25-32-48-32-28 0-49 18-53 44-20 3-34 17-34 35 0 10 5 17 13 17z" fill="#ef4444" opacity=".92"/>
+        <path d="M110 118 V78" stroke="#0f172a" stroke-width="10" stroke-linecap="round"/>
+        <path d="M90 96 l20-20 20 20" fill="none" stroke="#0f172a" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+        <rect x="72" y="142" width="76" height="24" rx="8" fill="#0f172a" opacity=".9"/>
+        
+    </svg>
+    </div>
+      <h2>Concetto chiave: Backup</h2>
+      <p>Il backup crea copie dei dati per permettere il ripristino in caso di errore, guasto o attacco informatico.</p>
+      <small>Ripassa questo punto e prova a rispiegarlo con parole tue.</small>
+    </article>
+    
+    <article class="graphic-card" style="--card-primary:#0f172a; --card-secondary:#7c3aed; --card-accent:#ef4444;">
+      <div class="graphic-card-badge">Cybersecurity</div>
+      <div class="graphic-card-image">
+    <svg class="card-illustration" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 210" role="img" aria-label="Illustrazione password">
+      <defs>
+        <linearGradient id="bg-password" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#0f172a"/>
+          <stop offset="100%" stop-color="#7c3aed"/>
+        </linearGradient>
+      </defs>
+      <rect width="220" height="210" rx="28" fill="url(#bg-password)"/>
+      <circle cx="48" cy="52" r="34" fill="#ef4444" opacity="0.16"/>
+      <circle cx="176" cy="176" r="60" fill="#ffffff" opacity="0.08"/>
+      
+        <circle cx="82" cy="88" r="30" fill="none" stroke="#ef4444" stroke-width="13"/>
+        <path d="M106 100 L170 164" stroke="#ef4444" stroke-width="15" stroke-linecap="round"/>
+        <path d="M148 142 h32 M132 126 h22" stroke="#ef4444" stroke-width="10" stroke-linecap="round"/>
+        
+    </svg>
+    </div>
+      <h2>Concetto chiave: Password</h2>
+      <p>La password protegge l&#x27;accesso a un sistema e deve essere forte, unica e gestita con attenzione.</p>
+      <small>Ripassa questo punto e prova a rispiegarlo con parole tue.</small>
+    </article>
+    
+    <article class="graphic-card" style="--card-primary:#0b3b66; --card-secondary:#38bdf8; --card-accent:#1e293b;">
+      <div class="graphic-card-badge">Informatica</div>
+      <div class="graphic-card-image">
+    <svg class="card-illustration" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 210" role="img" aria-label="Illustrazione database">
+      <defs>
+        <linearGradient id="bg-database" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#0b3b66"/>
+          <stop offset="100%" stop-color="#38bdf8"/>
+        </linearGradient>
+      </defs>
+      <rect width="220" height="210" rx="28" fill="url(#bg-database)"/>
+      <circle cx="48" cy="52" r="34" fill="#1e293b" opacity="0.16"/>
+      <circle cx="176" cy="176" r="60" fill="#ffffff" opacity="0.08"/>
+      
+        <ellipse cx="110" cy="58" rx="62" ry="24" fill="#1e293b" opacity=".95"/>
+        <path d="M48 58 v88 c0 14 28 25 62 25s62-11 62-25V58" fill="#1e293b" opacity=".75"/>
+        <ellipse cx="110" cy="146" rx="62" ry="24" fill="#1e293b" opacity=".9"/>
+        <path d="M48 90 c0 14 28 25 62 25s62-11 62-25 M48 118 c0 14 28 25 62 25s62-11 62-25" fill="none" stroke="#0b3b66" stroke-width="6" opacity=".65"/>
+        
+    </svg>
+    </div>
+      <h2>Concetto chiave: Database</h2>
+      <p>Un database organizza dati strutturati e permette di cercarli, aggiornarli e collegarli in modo controllato.</p>
+      <small>Ripassa questo punto e prova a rispiegarlo con parole tue.</small>
+    </article>
+    
+    <article class="graphic-card" style="--card-primary:#1e1b4b; --card-secondary:#8b5cf6; --card-accent:#22d3ee;">
+      <div class="graphic-card-badge">AI</div>
+      <div class="graphic-card-image">
+    <svg class="card-illustration" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 210" role="img" aria-label="Illustrazione rag">
+      <defs>
+        <linearGradient id="bg-rag" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#1e1b4b"/>
+          <stop offset="100%" stop-color="#8b5cf6"/>
+        </linearGradient>
+      </defs>
+      <rect width="220" height="210" rx="28" fill="url(#bg-rag)"/>
+      <circle cx="48" cy="52" r="34" fill="#22d3ee" opacity="0.16"/>
+      <circle cx="176" cy="176" r="60" fill="#ffffff" opacity="0.08"/>
+      
+        <rect x="66" y="54" width="88" height="88" rx="18" fill="#22d3ee" opacity=".9"/>
+        <path d="M46 72 h20 M46 96 h20 M46 120 h20 M154 72 h20 M154 96 h20 M154 120 h20" stroke="#22d3ee" stroke-width="8" stroke-linecap="round"/>
+        <circle cx="90" cy="86" r="7" fill="#1e1b4b"/><circle cx="128" cy="86" r="7" fill="#1e1b4b"/><circle cx="110" cy="118" r="7" fill="#1e1b4b"/>
+        <path d="M90 86 L110 118 L128 86" stroke="#1e1b4b" stroke-width="5" fill="none"/>
+        
+    </svg>
+    </div>
+      <h2>Concetto chiave: RAG</h2>
+      <p>Il RAG combina recupero di documenti e generazione AI per produrre risposte più collegate alle fonti.</p>
+      <small>Ripassa questo punto e prova a rispiegarlo con parole tue.</small>
+    </article>
+    
+    <article class="graphic-card" style="--card-primary:#0f766e; --card-secondary:#22c55e; --card-accent:#d9f99d;">
+      <div class="graphic-card-badge">Matematica</div>
+      <div class="graphic-card-image">
+    <svg class="card-illustration" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 210" role="img" aria-label="Illustrazione derivata">
+      <defs>
+        <linearGradient id="bg-derivata" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#0f766e"/>
+          <stop offset="100%" stop-color="#22c55e"/>
+        </linearGradient>
+      </defs>
+      <rect width="220" height="210" rx="28" fill="url(#bg-derivata)"/>
+      <circle cx="48" cy="52" r="34" fill="#d9f99d" opacity="0.16"/>
+      <circle cx="176" cy="176" r="60" fill="#ffffff" opacity="0.08"/>
+      
+        <path d="M44 150 H178 M58 164 V44" stroke="#fff" stroke-width="6" opacity=".75"/>
+        <path d="M58 136 C84 126 86 72 116 86 C140 98 142 132 174 58" fill="none" stroke="#d9f99d" stroke-width="11" stroke-linecap="round"/>
+        <path d="M86 112 L150 74" stroke="#0f766e" stroke-width="7" stroke-linecap="round" opacity=".88"/>
+        
+    </svg>
+    </div>
+      <h2>Concetto chiave: Derivata</h2>
+      <p>La derivata descrive quanto rapidamente cambia una funzione in un punto e può essere vista come pendenza della tangente.</p>
+      <small>Ripassa questo punto e prova a rispiegarlo con parole tue.</small>
+    </article>
+    
+    <article class="graphic-card" style="--card-primary:#14532d; --card-secondary:#2dd4bf; --card-accent:#fb923c;">
+      <div class="graphic-card-badge">Chimica</div>
+      <div class="graphic-card-image">
+    <svg class="card-illustration" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 210" role="img" aria-label="Illustrazione molecola">
+      <defs>
+        <linearGradient id="bg-molecola" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#14532d"/>
+          <stop offset="100%" stop-color="#2dd4bf"/>
+        </linearGradient>
+      </defs>
+      <rect width="220" height="210" rx="28" fill="url(#bg-molecola)"/>
+      <circle cx="48" cy="52" r="34" fill="#fb923c" opacity="0.16"/>
+      <circle cx="176" cy="176" r="60" fill="#ffffff" opacity="0.08"/>
+      
+        <circle cx="74" cy="92" r="26" fill="#fb923c"/><circle cx="146" cy="72" r="22" fill="#fb923c" opacity=".8"/><circle cx="142" cy="138" r="28" fill="#fb923c" opacity=".65"/>
+        <path d="M96 86 L126 78 M94 104 L120 126" stroke="#fff" stroke-width="8" stroke-linecap="round"/>
+        
+    </svg>
+    </div>
+      <h2>Concetto chiave: Molecola</h2>
+      <p>Una molecola è formata da atomi legati tra loro e rappresenta una struttura fondamentale della chimica.</p>
+      <small>Ripassa questo punto e prova a rispiegarlo con parole tue.</small>
+    </article>
+    
+    <article class="graphic-card" style="--card-primary:#166534; --card-secondary:#4ade80; --card-accent:#93c5fd;">
+      <div class="graphic-card-badge">Biologia</div>
+      <div class="graphic-card-image">
+    <svg class="card-illustration" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 210" role="img" aria-label="Illustrazione dna">
+      <defs>
+        <linearGradient id="bg-dna" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#166534"/>
+          <stop offset="100%" stop-color="#4ade80"/>
+        </linearGradient>
+      </defs>
+      <rect width="220" height="210" rx="28" fill="url(#bg-dna)"/>
+      <circle cx="48" cy="52" r="34" fill="#93c5fd" opacity="0.16"/>
+      <circle cx="176" cy="176" r="60" fill="#ffffff" opacity="0.08"/>
+      
+        <path d="M76 34 C148 70 148 138 76 174 M144 34 C72 70 72 138 144 174" fill="none" stroke="#93c5fd" stroke-width="9" stroke-linecap="round"/>
+        <path d="M88 60 h44 M78 88 h64 M78 120 h64 M88 148 h44" stroke="#fff" stroke-width="6" opacity=".7"/>
+        
+    </svg>
+    </div>
+      <h2>Concetto chiave: DNA</h2>
+      <p>Il DNA contiene informazioni genetiche e guida molti processi fondamentali degli organismi viventi.</p>
+      <small>Ripassa questo punto e prova a rispiegarlo con parole tue.</small>
+    </article>
+    
+</section>
+</main>
+</body>
+</html>
