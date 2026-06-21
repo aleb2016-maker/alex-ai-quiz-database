@@ -238,110 +238,169 @@ function generate() {
 
 
 function downloadPdfFile() {
-  const result = window.__cvCardsResult || {keywords: [], cards: []};
+  const result = window.__cvCardsResult || { keywords: [], cards: [] };
   const cards = Array.isArray(result.cards) ? result.cards : [];
   const keywords = Array.isArray(result.keywords) ? result.keywords : [];
 
-  const html = `
-<!doctype html>
-<html lang="it">
-<head>
-<meta charset="utf-8">
-<title>Card documento</title>
-<style>
-  body {
-    margin: 0;
-    padding: 24px;
-    font-family: Arial, sans-serif;
-    background: #f3f4f6;
-    color: #111827;
+  if (!cards.length) {
+    alert("Prima genera le card del documento.");
+    return;
   }
-  h1 {
-    margin: 0 0 18px;
-    font-size: 28px;
-  }
-  .keywords {
-    margin-bottom: 22px;
-  }
-  .keywords span {
-    display: inline-block;
-    margin: 4px;
-    padding: 7px 10px;
-    border-radius: 999px;
-    background: #111827;
-    color: white;
-    font-size: 13px;
-    font-weight: 700;
-  }
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(240px, 1fr));
-    gap: 18px;
-  }
-  .card {
-    min-height: 260px;
-    padding: 20px;
-    border-radius: 22px;
-    background: linear-gradient(145deg, #1e1b4b, #7c3aed);
-    color: white;
-    page-break-inside: avoid;
-  }
-  .badge {
-    display: inline-block;
-    padding: 7px 10px;
-    border-radius: 999px;
-    background: rgba(255,255,255,.18);
-    font-size: 12px;
-    font-weight: 800;
-    text-transform: uppercase;
-  }
-  h2 {
-    margin-top: 22px;
-    font-size: 22px;
-  }
-  p {
-    line-height: 1.45;
-  }
-  small {
-    display: block;
-    margin-top: 14px;
-    font-weight: 700;
-  }
-  @media print {
-    body { background: white; }
-  }
-</style>
-</head>
-<body>
-  <h1>Card documento</h1>
-  <div class="keywords">
-    ${keywords.map(k => `<span>${escapeHtml(k)}</span>`).join("")}
-  </div>
-  <div class="grid">
-    ${cards.map(card => `
-      <article class="card">
-        <div class="badge">${escapeHtml(card.materia || "Documento")}</div>
-        <h2>${escapeHtml(card.fronte || card.concetto || "Scheda documento")}</h2>
-        <p>${escapeHtml(card.retro || "")}</p>
-        <small>${escapeHtml(card.uso || "")}</small>
-      </article>
-    `).join("")}
-  </div>
-  <script>
-    setTimeout(() => window.print(), 300);
-  </script>
-</body>
-</html>`;
 
-  const blob = new Blob([html], {type: "text/html;charset=utf-8"});
+  function cleanPdfText(value) {
+    return String(value || "")
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .replace(/[^\x20-\x7E]/g, " ")
+      .replace(/\s+/g, " ")
+      .trim();
+  }
+
+  function esc(value) {
+    return cleanPdfText(value)
+      .replace(/\\/g, "\\\\")
+      .replace(/\(/g, "\\(")
+      .replace(/\)/g, "\\)");
+  }
+
+  function wrapText(text, maxChars) {
+    const words = cleanPdfText(text).split(" ");
+    const lines = [];
+    let line = "";
+
+    words.forEach(word => {
+      const candidate = line ? line + " " + word : word;
+      if (candidate.length > maxChars) {
+        if (line) lines.push(line);
+        line = word;
+      } else {
+        line = candidate;
+      }
+    });
+
+    if (line) lines.push(line);
+    return lines;
+  }
+
+  function textLinesPdf(lines, x, startY, fontSize, lineGap) {
+    let y = startY;
+    let out = "";
+    lines.forEach(line => {
+      out += "BT /F1 " + fontSize + " Tf " + x + " " + y + " Td (" + esc(line) + ") Tj ET\n";
+      y -= lineGap;
+    });
+    return out;
+  }
+
+  function pageContentForCard(card, index) {
+    const title = card.fronte || card.concetto || ("Scheda documento " + (index + 1));
+    const badge = card.materia || "Documento";
+    const body = card.retro || "";
+    const use = card.uso || "Usa questa scheda per ripassare il contenuto.";
+
+    let content = "";
+
+    // sfondo pagina
+    content += "q 0.96 0.97 0.99 rg 0 0 595 842 re f Q\n";
+
+    // card colorata
+    content += "q 0.34 0.08 0.24 rg 48 72 499 698 re f Q\n";
+    content += "q 0.74 0.09 0.34 rg 48 72 499 230 re f Q\n";
+    content += "q 0.98 0.72 0.16 rg 390 72 157 157 re f Q\n";
+
+    // badge
+    content += "q 1 1 1 rg 72 700 180 34 re f Q\n";
+    content += "0 0 0 rg\n";
+    content += "BT /F1 14 Tf 90 711 Td (" + esc(badge.toUpperCase()) + ") Tj ET\n";
+
+    // titolo
+    content += "1 1 1 rg\n";
+    content += textLinesPdf(wrapText(title, 28), 72, 640, 27, 34);
+
+    // corpo
+    content += textLinesPdf(wrapText(body, 52).slice(0, 14), 72, 520, 16, 23);
+
+    // uso
+    content += textLinesPdf(wrapText(use, 46).slice(0, 3), 72, 170, 15, 21);
+
+    return content;
+  }
+
+  function pageContentForCover() {
+    let content = "";
+    content += "q 0.96 0.97 0.99 rg 0 0 595 842 re f Q\n";
+    content += "q 0.12 0.10 0.28 rg 48 72 499 698 re f Q\n";
+    content += "q 0.49 0.18 0.82 rg 48 72 499 220 re f Q\n";
+
+    content += "1 1 1 rg\n";
+    content += textLinesPdf(["Card documento"], 72, 650, 34, 40);
+    content += textLinesPdf(["File PDF generato dalle card selezionate."], 72, 595, 17, 24);
+
+    if (keywords.length) {
+      content += textLinesPdf(["Parole chiave estratte:"], 72, 525, 20, 28);
+      content += textLinesPdf(wrapText(keywords.join("  -  "), 56).slice(0, 8), 72, 485, 15, 22);
+    }
+
+    content += textLinesPdf(["Pagine card: " + cards.length], 72, 170, 16, 24);
+
+    return content;
+  }
+
+  function buildPdfBlob() {
+    const pageStreams = [pageContentForCover(), ...cards.map(pageContentForCard)];
+
+    const objects = [];
+    objects.push("<< /Type /Catalog /Pages 2 0 R >>");
+
+    const pageIds = pageStreams.map((_, i) => 4 + i * 2);
+    objects.push("<< /Type /Pages /Kids [" + pageIds.map(id => id + " 0 R").join(" ") + "] /Count " + pageIds.length + " >>");
+
+    objects.push("<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>");
+
+    pageStreams.forEach((stream, i) => {
+      const pageObjId = 4 + i * 2;
+      const contentObjId = 5 + i * 2;
+
+      objects[pageObjId - 1] =
+        "<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R >> >> /Contents " + contentObjId + " 0 R >>";
+
+      objects[contentObjId - 1] =
+        "<< /Length " + stream.length + " >>\nstream\n" + stream + "\nendstream";
+    });
+
+    let pdf = "%PDF-1.4\n";
+    const offsets = [0];
+
+    objects.forEach((obj, index) => {
+      offsets.push(pdf.length);
+      pdf += (index + 1) + " 0 obj\n" + obj + "\nendobj\n";
+    });
+
+    const xrefStart = pdf.length;
+    pdf += "xref\n0 " + (objects.length + 1) + "\n";
+    pdf += "0000000000 65535 f \n";
+
+    offsets.slice(1).forEach(offset => {
+      pdf += String(offset).padStart(10, "0") + " 00000 n \n";
+    });
+
+    pdf += "trailer\n<< /Size " + (objects.length + 1) + " /Root 1 0 R >>\n";
+    pdf += "startxref\n" + xrefStart + "\n%%EOF";
+
+    return new Blob([pdf], { type: "application/pdf" });
+  }
+
+  const blob = buildPdfBlob();
   const url = URL.createObjectURL(blob);
-  const win = window.open(url, "_blank");
+  const link = document.createElement("a");
 
-  if (!win) {
-    window.location.href = url;
-  }
+  link.href = url;
+  link.download = "card-documento.pdf";
+  document.body.appendChild(link);
+  link.click();
+  link.remove();
 
-  setTimeout(() => URL.revokeObjectURL(url), 60000);
+  setTimeout(() => URL.revokeObjectURL(url), 30000);
 }
 
 
