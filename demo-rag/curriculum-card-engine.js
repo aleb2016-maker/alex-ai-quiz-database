@@ -520,3 +520,215 @@ document.addEventListener("DOMContentLoaded", () => {
     generate();
   });
 });
+
+
+
+/* RAG_DOCUMENT_QA_TEST_ENGINE */
+(function () {
+  if (window.__ragDocumentQaTestEngineInstalled) return;
+  window.__ragDocumentQaTestEngineInstalled = true;
+
+  const QA_STOPWORDS = new Set([
+    "che", "cosa", "quale", "quali", "come", "dove", "quando", "perche",
+    "del", "della", "delle", "degli", "dello", "nel", "nella", "nelle",
+    "con", "per", "tra", "fra", "sono", "viene", "vengono", "questo",
+    "questa", "questi", "quelle", "quelli", "documento", "testo",
+    "fammi", "dimmi", "spiega", "spiegami", "parla", "riguardo"
+  ]);
+
+  function qaNormalize(text) {
+    return String(text || "")
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .toLowerCase()
+      .replace(/[^a-z0-9+#.\s]+/g, " ")
+      .replace(/\s+/g, " ")
+      .trim();
+  }
+
+  function qaEscapeHtml(text) {
+    return String(text || "")
+      .replaceAll("&", "&amp;")
+      .replaceAll("<", "&lt;")
+      .replaceAll(">", "&gt;")
+      .replaceAll('"', "&quot;");
+  }
+
+  function qaCleanText(text) {
+    return String(text || "")
+      .replace(/\[Pagina\s*\d+\]/gi, "")
+      .replace(/\s+/g, " ")
+      .trim();
+  }
+
+  function qaQuestionTerms(question) {
+    return qaNormalize(question)
+      .split(/\s+/)
+      .filter(word => word.length >= 3)
+      .filter(word => !QA_STOPWORDS.has(word));
+  }
+
+  function qaSplitDocument(text) {
+    const cleaned = qaCleanText(text);
+
+    const paragraphs = cleaned
+      .split(/(?:\n\s*\n|\. |\; |\: )+/)
+      .map(part => part.trim())
+      .filter(part => part.length >= 35);
+
+    if (paragraphs.length) return paragraphs;
+
+    return cleaned
+      .match(/.{1,420}(?:\s|$)/g)
+      ?.map(part => part.trim())
+      .filter(Boolean) || [];
+  }
+
+  function qaScoreChunk(chunk, terms, question) {
+    const normalizedChunk = qaNormalize(chunk);
+    const normalizedQuestion = qaNormalize(question);
+    let score = 0;
+
+    for (const term of terms) {
+      if (normalizedChunk.includes(term)) {
+        score += term.length >= 6 ? 4 : 2;
+      }
+
+      if (term.endsWith("e") || term.endsWith("i") || term.endsWith("o") || term.endsWith("a")) {
+        const root = term.slice(0, -1);
+        if (root.length >= 4 && normalizedChunk.includes(root)) {
+          score += 1;
+        }
+      }
+    }
+
+    const intentBoosts = [
+      ["competenz", ["competenz", "abilita", "capacita", "skill"]],
+      ["esperienz", ["esperienz", "lavoro", "azienda", "mansione", "contratto"]],
+      ["progett", ["progett", "app", "software", "github", "database", "android"]],
+      ["formazion", ["formazion", "studio", "diploma", "corso", "its"]],
+      ["ai", ["intelligenza artificiale", "ai", "prompt", "generativa"]],
+      ["profilo", ["profilo", "presentazione", "creativo", "adattabile"]]
+    ];
+
+    for (const [questionKey, chunkKeys] of intentBoosts) {
+      if (normalizedQuestion.includes(questionKey)) {
+        for (const chunkKey of chunkKeys) {
+          if (normalizedChunk.includes(chunkKey)) score += 5;
+        }
+      }
+    }
+
+    return score;
+  }
+
+  function qaBestChunks(text, question, maxChunks = 5) {
+    const chunks = qaSplitDocument(text);
+    const terms = qaQuestionTerms(question);
+
+    return chunks
+      .map((chunk, index) => ({
+        index,
+        chunk,
+        score: qaScoreChunk(chunk, terms, question)
+      }))
+      .filter(item => item.score > 0)
+      .sort((a, b) => b.score - a.score)
+      .slice(0, maxChunks);
+  }
+
+  function qaBuildDetailedAnswer(question, bestChunks) {
+    const q = qaNormalize(question);
+    const selectedText = bestChunks.map(item => item.chunk).join(" ");
+
+    let intro = "Dal documento emergono questi elementi principali.";
+
+    if (q.includes("competenz")) {
+      intro = "Le competenze più rilevanti emergono dalle parti del documento che descrivono abilità pratiche, capacità personali e strumenti usati.";
+    } else if (q.includes("ai") || q.includes("intelligenza") || q.includes("prompt")) {
+      intro = "La parte relativa all'intelligenza artificiale evidenzia l'uso pratico di strumenti AI, prompt e contenuti generativi.";
+    } else if (q.includes("esperienz") || q.includes("lavoro")) {
+      intro = "L'esperienza lavorativa viene ricavata dalle sezioni che parlano di mansioni, attività svolte e contesto professionale.";
+    } else if (q.includes("progett") || q.includes("app") || q.includes("software")) {
+      intro = "I progetti e le attività digitali emergono dalle parti che citano applicazioni, software, database, GitHub o sviluppo.";
+    } else if (q.includes("formazion") || q.includes("studio") || q.includes("corso")) {
+      intro = "La formazione viene ricostruita dalle parti che parlano di studio, diploma, corsi, obiettivi o percorsi futuri.";
+    } else if (q.includes("profilo")) {
+      intro = "Il profilo generale viene ricavato dalle frasi che descrivono caratteristiche personali, obiettivi e modo di presentarsi.";
+    }
+
+    const details = qaSplitDocument(selectedText)
+      .slice(0, 4)
+      .map(sentence => qaCleanText(sentence))
+      .filter(Boolean);
+
+    if (!details.length) {
+      return "Non ho trovato nel documento una parte abbastanza chiara per rispondere in modo affidabile. Prova a fare una domanda più specifica.";
+    }
+
+    return `${intro}\n\n` + details.map((detail, index) => {
+      return `${index + 1}. ${detail}`;
+    }).join("\n\n");
+  }
+
+  function askDocument() {
+    const textArea = document.getElementById("cvText");
+    const questionArea = document.getElementById("documentQuestion");
+    const answerBox = document.getElementById("documentAnswerBox");
+
+    if (!textArea || !questionArea || !answerBox) return;
+
+    const documentText = textArea.value.trim();
+    const question = questionArea.value.trim();
+
+    if (!documentText) {
+      answerBox.innerHTML = `<div class="answer-error">Prima incolla un documento nel riquadro sopra.</div>`;
+      return;
+    }
+
+    if (!question) {
+      answerBox.innerHTML = `<div class="answer-error">Scrivi una domanda sul documento.</div>`;
+      return;
+    }
+
+    const bestChunks = qaBestChunks(documentText, question, 5);
+
+    if (!bestChunks.length) {
+      answerBox.innerHTML = `
+        <div class="answer-card-box">
+          <h3>Risposta</h3>
+          <p>Non ho trovato parti abbastanza rilevanti per rispondere bene. Prova con una domanda più precisa oppure incolla più testo del documento.</p>
+        </div>
+      `;
+      return;
+    }
+
+    const detailedAnswer = qaBuildDetailedAnswer(question, bestChunks);
+
+    answerBox.innerHTML = `
+      <div class="answer-card-box">
+        <h3>Risposta dettagliata</h3>
+        <p>${qaEscapeHtml(detailedAnswer).replaceAll("\n", "<br>")}</p>
+
+        <h4>Parti del documento usate</h4>
+        <ol>
+          ${bestChunks.map(item => `
+            <li>
+              <strong>Rilevanza ${item.score}</strong><br>
+              ${qaEscapeHtml(item.chunk)}
+            </li>
+          `).join("")}
+        </ol>
+      </div>
+    `;
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const button = document.getElementById("askDocumentButton");
+    if (button) {
+      button.addEventListener("click", askDocument);
+    }
+  });
+
+  window.askDocument = askDocument;
+})();
