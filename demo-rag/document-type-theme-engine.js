@@ -1,3 +1,8 @@
+/* NODE_BROWSER_COMPAT_FIX */
+if (typeof window === "undefined") {
+  globalThis.window = globalThis;
+}
+
 /* RAG_DOCUMENT_TYPE_THEME_ENGINE */
 
 (function () {
@@ -668,3 +673,18 @@
     generate = generateThemedCardsFast;
   } catch (error) {}
 })();
+
+
+
+/* NODE_EXPORT_COMPAT_FIX */
+if (typeof module !== "undefined" && module.exports) {
+  module.exports = {
+    DOCUMENT_THEMES: globalThis.DOCUMENT_THEMES,
+    detectDocumentType: globalThis.detectDocumentType,
+    themeForDocument: globalThis.themeForDocument,
+    buildCardsForDocumentType: globalThis.buildCardsForDocumentType,
+    generateThemedCardPlan: globalThis.generateThemedCardPlan,
+    generateThemedCards: globalThis.generateThemedCards,
+    DocumentTypeThemeEngine: globalThis.DocumentTypeThemeEngine
+  };
+}
