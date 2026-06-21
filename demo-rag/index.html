@@ -6,19 +6,22 @@
 
   <title>Motore RAG Documenti</title>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+
   <style>
     :root {
-      --bg-main: #070b16;
-      --bg-card: #10182b;
-      --bg-soft: #17223a;
-      --text-main: #f4f7ff;
-      --text-muted: #b8c2d8;
-      --accent-blue: #28b7ff;
-      --accent-purple: #9b5cff;
-      --accent-green: #36e38a;
-      --accent-red: #ff4d5e;
-      --border-soft: rgba(255, 255, 255, 0.12);
-      --shadow-soft: 0 24px 60px rgba(0, 0, 0, 0.35);
+      --bg: #070b16;
+      --card: #10182b;
+      --card-2: #17223a;
+      --text: #f4f7ff;
+      --muted: #b8c2d8;
+      --blue: #28b7ff;
+      --purple: #9b5cff;
+      --green: #36e38a;
+      --red: #ff4d5e;
+      --orange: #ff9f2e;
+      --border: rgba(255, 255, 255, 0.14);
+      --shadow: 0 22px 60px rgba(0, 0, 0, 0.38);
     }
 
     * {
@@ -29,85 +32,29 @@
       margin: 0;
       min-height: 100vh;
       font-family: Arial, Helvetica, sans-serif;
-      color: var(--text-main);
+      color: var(--text);
       background:
-        radial-gradient(circle at top left, rgba(40, 183, 255, 0.22), transparent 34%),
-        radial-gradient(circle at top right, rgba(155, 92, 255, 0.18), transparent 32%),
-        linear-gradient(135deg, #070b16 0%, #0b1020 55%, #090d18 100%);
+        radial-gradient(circle at top left, rgba(40, 183, 255, 0.24), transparent 34%),
+        radial-gradient(circle at top right, rgba(155, 92, 255, 0.22), transparent 32%),
+        linear-gradient(135deg, #070b16 0%, #0b1020 58%, #090d18 100%);
     }
 
     .page {
       width: min(1180px, calc(100% - 32px));
       margin: 0 auto;
-      padding: 32px 0 56px;
+      padding: 28px 0 56px;
     }
 
     .topbar {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      gap: 16px;
-      margin-bottom: 28px;
-    }
-
-    .home-button {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 44px;
-      padding: 0 18px;
-      border-radius: 999px;
-      color: white;
-      text-decoration: none;
-      font-weight: 700;
-      background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
-      box-shadow: 0 12px 30px rgba(40, 183, 255, 0.25);
-    }
-
-    .badge {
-      display: inline-flex;
-      padding: 8px 14px;
-      border: 1px solid var(--border-soft);
-      border-radius: 999px;
-      color: var(--accent-green);
-      background: rgba(54, 227, 138, 0.08);
-      font-weight: 700;
-      font-size: 0.92rem;
-    }
-
-    .hero {
-      padding: 34px;
-      border: 1px solid var(--border-soft);
-      border-radius: 28px;
-      background: rgba(16, 24, 43, 0.82);
-      box-shadow: var(--shadow-soft);
-      margin-bottom: 24px;
-    }
-
-    .hero h1 {
-      margin: 0 0 12px;
-      font-size: clamp(2rem, 5vw, 4rem);
-      line-height: 1;
-    }
-
-    .hero p {
-      max-width: 850px;
-      margin: 0;
-      color: var(--text-muted);
-      font-size: 1.08rem;
-      line-height: 1.7;
-    }
-
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
       gap: 14px;
-      margin-top: 26px;
+      margin-bottom: 24px;
+      flex-wrap: wrap;
     }
 
-    .primary-button,
-    .secondary-button,
-    .danger-button {
+    .button {
       border: 0;
       cursor: pointer;
       min-height: 48px;
@@ -120,138 +67,206 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
+      box-shadow: 0 14px 30px rgba(0, 0, 0, 0.26);
+      transition: transform 0.15s ease, filter 0.15s ease;
     }
 
-    .primary-button {
-      background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
+    .button:hover {
+      transform: translateY(-1px);
+      filter: brightness(1.08);
     }
 
-    .secondary-button {
-      background: linear-gradient(135deg, #22314f, #17223a);
-      border: 1px solid var(--border-soft);
+    .button-home {
+      background: linear-gradient(135deg, var(--blue), var(--purple));
     }
 
-    .danger-button {
-      background: linear-gradient(135deg, #ff4d5e, #c82235);
+    .button-download {
+      background: linear-gradient(135deg, var(--red), var(--orange));
+    }
+
+    .button-generate {
+      width: 100%;
+      background: linear-gradient(135deg, var(--green), var(--blue));
+      color: #031018;
+      margin-top: 18px;
+    }
+
+    .button-reset {
+      background: linear-gradient(135deg, #3b4968, #1e2a42);
+    }
+
+    .button-save {
+      background: linear-gradient(135deg, var(--purple), #5f7cff);
+    }
+
+    .hero {
+      padding: 30px;
+      border: 1px solid var(--border);
+      border-radius: 28px;
+      background: rgba(16, 24, 43, 0.88);
+      box-shadow: var(--shadow);
+      margin-bottom: 22px;
+    }
+
+    .hero h1 {
+      margin: 0 0 12px;
+      font-size: clamp(2rem, 5vw, 3.8rem);
+      line-height: 1;
+    }
+
+    .hero p {
+      max-width: 900px;
+      margin: 0;
+      color: var(--muted);
+      font-size: 1.08rem;
+      line-height: 1.7;
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 22px;
+    }
+
+    .step {
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 16px;
+      background: rgba(7, 11, 22, 0.5);
+    }
+
+    .step strong {
+      display: block;
+      color: var(--green);
+      margin-bottom: 6px;
+    }
+
+    .step span {
+      color: var(--muted);
+      line-height: 1.5;
     }
 
     .grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1.1fr 0.9fr;
       gap: 22px;
+      align-items: start;
     }
 
     .card {
       padding: 24px;
       border-radius: 24px;
-      border: 1px solid var(--border-soft);
-      background: rgba(16, 24, 43, 0.88);
-      box-shadow: var(--shadow-soft);
+      border: 1px solid var(--border);
+      background: rgba(16, 24, 43, 0.9);
+      box-shadow: var(--shadow);
     }
 
     .card h2 {
       margin: 0 0 14px;
-      font-size: 1.5rem;
+      font-size: 1.45rem;
     }
 
-    .card p {
-      color: var(--text-muted);
-      line-height: 1.6;
-    }
-
-    textarea {
-      width: 100%;
-      min-height: 260px;
-      resize: vertical;
-      border: 1px solid var(--border-soft);
-      border-radius: 18px;
-      padding: 16px;
-      color: var(--text-main);
-      background: rgba(7, 11, 22, 0.88);
-      font-size: 1rem;
+    .note {
+      color: var(--muted);
       line-height: 1.55;
-      outline: none;
+      font-size: 0.95rem;
+      margin: 10px 0 16px;
     }
 
     input[type="file"] {
       width: 100%;
       padding: 14px;
       border-radius: 16px;
-      color: var(--text-muted);
-      background: rgba(7, 11, 22, 0.75);
-      border: 1px dashed var(--border-soft);
+      color: var(--muted);
+      background: rgba(7, 11, 22, 0.76);
+      border: 1px dashed var(--border);
+    }
+
+    textarea {
+      width: 100%;
+      min-height: 330px;
+      resize: vertical;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 16px;
+      color: var(--text);
+      background: rgba(7, 11, 22, 0.88);
+      font-size: 1rem;
+      line-height: 1.55;
+      outline: none;
     }
 
     .options {
       display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 12px;
-      margin: 18px 0;
+      margin-top: 12px;
     }
 
     .option {
       display: flex;
-      gap: 10px;
-      align-items: center;
-      padding: 13px;
-      border-radius: 16px;
-      color: var(--text-muted);
-      border: 1px solid var(--border-soft);
+      align-items: flex-start;
+      gap: 12px;
+      padding: 14px;
+      border-radius: 18px;
+      color: var(--text);
+      border: 1px solid var(--border);
       background: rgba(7, 11, 22, 0.55);
       cursor: pointer;
     }
 
     .option input {
-      accent-color: var(--accent-blue);
+      margin-top: 4px;
+      accent-color: var(--green);
+    }
+
+    .option small {
+      display: block;
+      color: var(--muted);
+      margin-top: 4px;
+      line-height: 1.4;
+    }
+
+    .action-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-top: 14px;
+    }
+
+    .output-card {
+      margin-top: 22px;
     }
 
     .output {
       white-space: pre-wrap;
-      min-height: 260px;
+      min-height: 280px;
       padding: 18px;
       border-radius: 18px;
-      border: 1px solid var(--border-soft);
-      background: rgba(7, 11, 22, 0.82);
-      color: var(--text-main);
+      border: 1px solid var(--border);
+      background: rgba(7, 11, 22, 0.86);
+      color: var(--text);
       line-height: 1.65;
       overflow-wrap: anywhere;
     }
 
-    .small-note {
+    .status {
       margin-top: 12px;
-      color: var(--text-muted);
-      font-size: 0.92rem;
-      line-height: 1.55;
-    }
-
-    .pill-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 18px;
-    }
-
-    .pill {
-      padding: 9px 12px;
-      border-radius: 999px;
+      padding: 12px 14px;
+      border-radius: 16px;
       background: rgba(40, 183, 255, 0.1);
-      border: 1px solid rgba(40, 183, 255, 0.18);
+      border: 1px solid rgba(40, 183, 255, 0.2);
       color: #d8f2ff;
-      font-size: 0.92rem;
-      font-weight: 700;
+      line-height: 1.5;
     }
 
-    @media (max-width: 860px) {
-      .topbar {
-        align-items: flex-start;
-        flex-direction: column;
-      }
-
-      .grid {
+    @media (max-width: 900px) {
+      .grid,
+      .steps {
         grid-template-columns: 1fr;
       }
 
-      .options {
+      .action-row {
         grid-template-columns: 1fr;
       }
 
@@ -266,109 +281,141 @@
 <body>
   <main class="page">
     <div class="topbar">
-      <a class="home-button" href="../demo/">← Torna alla home</a>
-      <div class="badge">Motore RAG riutilizzabile</div>
+      <a class="button button-home" href="../">
+        ← Torna alla pagina principale
+      </a>
+
+      <a class="button button-download" href="../downloads/pacchetto-rag-riutilizzabile.zip" download>
+        Scarica pacchetto RAG completo
+      </a>
     </div>
 
     <section class="hero">
       <h1>Motore RAG Documenti</h1>
+
       <p>
-        Questo cruscotto serve per trasformare documenti aziendali, materiali di studio o testi tecnici
-        in output riutilizzabili: riassunti, quiz, card formative, tabelle operative e parole chiave.
-        La demo qui sotto lavora direttamente nel browser sui testi incollati o caricati in formato TXT/MD.
+        Carica o incolla un documento e genera subito una bozza di riassunto, quiz, card formative,
+        tabella operativa o parole chiave. Questa pagina è una demo browser leggera. Il pacchetto
+        scaricabile contiene invece la base riutilizzabile per pipeline più complete.
       </p>
 
-      <div class="hero-actions">
-        <a class="danger-button" href="../downloads/pacchetto-rag-riutilizzabile.zip" download>
-          Scarica pacchetto RAG completo
-        </a>
+      <div class="steps">
+        <div class="step">
+          <strong>1. Inserisci il documento</strong>
+          <span>Puoi incollare testo oppure caricare TXT, MD, CSV o PDF con testo selezionabile.</span>
+        </div>
 
-        <button class="primary-button" onclick="generaOutput()">
-          Genera output dal documento
-        </button>
+        <div class="step">
+          <strong>2. Scegli l’output</strong>
+          <span>Di base è selezionato solo il riassunto. Gli altri output li scegli tu.</span>
+        </div>
 
-        <button class="secondary-button" onclick="pulisciTutto()">
-          Pulisci
-        </button>
-      </div>
-
-      <div class="pill-row">
-        <span class="pill">Riassunti</span>
-        <span class="pill">Quiz</span>
-        <span class="pill">Card formative</span>
-        <span class="pill">Tabelle</span>
-        <span class="pill">Parole chiave</span>
-        <span class="pill">Pacchetto riutilizzabile</span>
+        <div class="step">
+          <strong>3. Genera e scarica</strong>
+          <span>Premi un solo pulsante principale: “Genera output”. Poi puoi scaricare il risultato.</span>
+        </div>
       </div>
     </section>
 
     <section class="grid">
       <div class="card">
-        <h2>1. Inserisci documento</h2>
+        <h2>Documento</h2>
 
-        <input id="fileInput" type="file" accept=".txt,.md,.csv" />
+        <input id="fileInput" type="file" accept=".txt,.md,.csv,.pdf" />
 
-        <p class="small-note">
-          Puoi caricare un file TXT/MD/CSV oppure incollare direttamente il testo qui sotto.
+        <p class="note">
+          Nota PDF: questa demo legge i PDF solo quando il testo è selezionabile. I PDF scannerizzati
+          come immagini richiedono OCR o una pipeline dedicata.
         </p>
 
-        <textarea id="documentText" placeholder="Incolla qui il documento da trasformare..."></textarea>
+        <textarea id="documentText" placeholder="Incolla qui il testo del documento oppure carica un file..."></textarea>
+
+        <div id="status" class="status">
+          Nessun documento caricato.
+        </div>
       </div>
 
       <div class="card">
-        <h2>2. Scegli cosa generare</h2>
+        <h2>Cosa vuoi generare?</h2>
+
+        <p class="note">
+          Scegli solo gli output che ti servono. Poi premi il pulsante verde in fondo.
+        </p>
 
         <div class="options">
           <label class="option">
             <input type="checkbox" id="optRiassunto" checked />
-            Riassunto operativo
+            <span>
+              Riassunto operativo
+              <small>Estrae i punti principali del documento.</small>
+            </span>
           </label>
 
           <label class="option">
-            <input type="checkbox" id="optQuiz" checked />
-            Quiz di controllo
+            <input type="checkbox" id="optQuiz" />
+            <span>
+              Quiz di controllo
+              <small>Crea domande base per verificare la comprensione.</small>
+            </span>
           </label>
 
           <label class="option">
-            <input type="checkbox" id="optCard" checked />
-            Card formative
+            <input type="checkbox" id="optCard" />
+            <span>
+              Card formative
+              <small>Trasforma il testo in schede brevi di studio/formazione.</small>
+            </span>
           </label>
 
           <label class="option">
-            <input type="checkbox" id="optTabella" checked />
-            Tabella punti chiave
+            <input type="checkbox" id="optTabella" />
+            <span>
+              Tabella punti chiave
+              <small>Organizza i concetti principali in formato tabellare.</small>
+            </span>
           </label>
 
           <label class="option">
-            <input type="checkbox" id="optParole" checked />
-            Parole chiave
+            <input type="checkbox" id="optParole" />
+            <span>
+              Parole chiave
+              <small>Trova le parole più ricorrenti e rilevanti.</small>
+            </span>
           </label>
         </div>
 
-        <button class="primary-button" onclick="generaOutput()">
-          Genera adesso
+        <button class="button button-generate" onclick="generaOutput()">
+          Genera output
         </button>
 
-        <button class="secondary-button" onclick="scaricaOutput()">
-          Scarica output TXT
-        </button>
+        <div class="action-row">
+          <button class="button button-save" onclick="scaricaOutput()">
+            Scarica output TXT
+          </button>
 
-        <p class="small-note">
-          Per PDF, DOCX, immagini, motore AI locale e pipeline completa si usa il pacchetto RAG scaricabile.
-        </p>
+          <button class="button button-reset" onclick="pulisciTutto()">
+            Pulisci pagina
+          </button>
+        </div>
       </div>
     </section>
 
-    <section class="card" style="margin-top: 22px;">
-      <h2>3. Output generato</h2>
-      <div id="output" class="output">L’output comparirà qui.</div>
+    <section class="card output-card">
+      <h2>Output generato</h2>
+      <div id="output" class="output">L’output comparirà qui dopo aver premuto “Genera output”.</div>
     </section>
   </main>
 
   <script>
+    if (window.pdfjsLib) {
+      pdfjsLib.GlobalWorkerOptions.workerSrc =
+        "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js";
+    }
+
     const fileInput = document.getElementById("fileInput");
     const documentText = document.getElementById("documentText");
     const output = document.getElementById("output");
+    const statusBox = document.getElementById("status");
 
     fileInput.addEventListener("change", async function () {
       const file = fileInput.files[0];
@@ -377,9 +424,66 @@
         return;
       }
 
-      const testo = await file.text();
-      documentText.value = testo;
+      const nomeFile = file.name.toLowerCase();
+
+      try {
+        statusBox.textContent = "Sto leggendo il file...";
+
+        if (nomeFile.endsWith(".pdf")) {
+          const testoPdf = await leggiPdf(file);
+
+          if (!testoPdf.trim()) {
+            documentText.value = "";
+            statusBox.textContent =
+              "PDF caricato, ma non ho trovato testo selezionabile. Probabilmente è un PDF scannerizzato: serve OCR.";
+            return;
+          }
+
+          documentText.value = testoPdf.trim();
+          statusBox.textContent =
+            "PDF letto correttamente. Ora puoi scegliere cosa generare.";
+          return;
+        }
+
+        const testo = await file.text();
+        documentText.value = testo.trim();
+        statusBox.textContent =
+          "File letto correttamente. Ora puoi scegliere cosa generare.";
+      } catch (errore) {
+        statusBox.textContent =
+          "Non sono riuscito a leggere il file. Prova con TXT, MD, CSV o PDF con testo selezionabile.";
+      }
     });
+
+    async function leggiPdf(file) {
+      if (!window.pdfjsLib) {
+        statusBox.textContent =
+          "Lettore PDF non disponibile. Controlla la connessione o usa il pacchetto RAG completo.";
+        return "";
+      }
+
+      const buffer = await file.arrayBuffer();
+      const pdf = await pdfjsLib.getDocument({ data: buffer }).promise;
+
+      let testoCompleto = "";
+
+      for (let numeroPagina = 1; numeroPagina <= pdf.numPages; numeroPagina++) {
+        const pagina = await pdf.getPage(numeroPagina);
+        const contenuto = await pagina.getTextContent();
+
+        const testoPagina = contenuto.items
+          .map(elemento => elemento.str)
+          .join(" ")
+          .replace(/\s+/g, " ")
+          .trim();
+
+        if (testoPagina) {
+          testoCompleto += `\n\n--- Pagina ${numeroPagina} ---\n${testoPagina}`;
+        }
+      }
+
+      return testoCompleto;
+    }
 
     function prendiTestoPulito() {
       return documentText.value
@@ -402,7 +506,8 @@
         "che", "con", "per", "una", "uno", "nel", "nei", "nelle", "sul",
         "sulla", "sono", "come", "deve", "devono", "viene", "essere",
         "anche", "questo", "questa", "quindi", "dopo", "prima", "tra",
-        "gli", "le", "la", "il", "lo", "un", "di", "a", "e", "o", "in"
+        "gli", "le", "la", "il", "lo", "un", "di", "a", "e", "o", "in",
+        "del", "dei", "dal", "dai", "più", "può", "tutti", "ogni"
       ]);
 
       const conteggio = {};
@@ -419,15 +524,15 @@
 
       return Object.entries(conteggio)
         .sort((a, b) => b[1] - a[1])
-        .slice(0, 12)
+        .slice(0, 14)
         .map(([parola, numero]) => `${parola} (${numero})`);
     }
 
     function creaRiassunto(frasi) {
-      const frasiScelte = frasi.slice(0, 5);
+      const frasiScelte = frasi.slice(0, 6);
 
       if (frasiScelte.length === 0) {
-        return "Testo troppo breve per generare un riassunto utile.";
+        return "Il testo è troppo breve per generare un riassunto utile.";
       }
 
       return frasiScelte
@@ -439,16 +544,16 @@
       const base = frasi.slice(0, 5);
 
       if (base.length === 0) {
-        return "Testo troppo breve per generare domande.";
+        return "Il testo è troppo breve per generare domande.";
       }
 
       return base.map((frase, indice) => {
         return [
-          `Domanda ${indice + 1}: Qual è il punto centrale di questo passaggio?`,
+          `Domanda ${indice + 1}: Qual è il punto centrale del passaggio seguente?`,
           `A. ${frase}`,
-          `B. Una conseguenza simile ma non identica al contenuto del documento.`,
-          `C. Un dettaglio collegato, ma meno preciso rispetto al testo originale.`,
-          `D. Una conclusione plausibile, ma non confermata direttamente dal documento.`,
+          `B. Una conseguenza collegata, ma non confermata direttamente dal documento.`,
+          `C. Un dettaglio simile, ma meno preciso rispetto al contenuto originale.`,
+          `D. Una conclusione possibile, ma troppo generica rispetto al testo.`,
           `Risposta corretta: A`,
           `Spiegazione: la risposta A riprende il contenuto realmente presente nel documento.`
         ].join("\n");
@@ -459,7 +564,7 @@
       const base = frasi.slice(0, 6);
 
       if (base.length === 0) {
-        return "Testo troppo breve per generare card formative.";
+        return "Il testo è troppo breve per generare card formative.";
       }
 
       return base.map((frase, indice) => {
@@ -467,7 +572,7 @@
           `Card ${indice + 1}`,
           `Titolo: Punto chiave ${indice + 1}`,
           `Contenuto: ${frase}`,
-          `Azione consigliata: trasformare questo punto in una regola pratica o domanda di verifica.`
+          `Uso pratico: trasformare questo punto in una regola, una domanda o una micro-lezione.`
         ].join("\n");
       }).join("\n\n");
     }
@@ -476,11 +581,11 @@
       const base = frasi.slice(0, 6);
 
       if (base.length === 0) {
-        return "Testo troppo breve per generare una tabella.";
+        return "Il testo è troppo breve per generare una tabella.";
       }
 
       const righe = base.map((frase, indice) => {
-        return `| ${indice + 1} | ${frase} | Da verificare/applicare |`;
+        return `| ${indice + 1} | ${frase} | Da trasformare in azione, regola o domanda |`;
       });
 
       return [
@@ -495,6 +600,19 @@
 
       if (!testo) {
         output.textContent = "Inserisci o carica prima un documento.";
+        return;
+      }
+
+      const opzioni = [
+        document.getElementById("optRiassunto").checked,
+        document.getElementById("optQuiz").checked,
+        document.getElementById("optCard").checked,
+        document.getElementById("optTabella").checked,
+        document.getElementById("optParole").checked
+      ];
+
+      if (!opzioni.some(Boolean)) {
+        output.textContent = "Seleziona almeno un tipo di output da generare.";
         return;
       }
 
@@ -518,16 +636,22 @@
       }
 
       if (document.getElementById("optParole").checked) {
-        blocchi.push("## PAROLE CHIAVE\n" + trovaParoleChiave(testo).join(", "));
+        const parole = trovaParoleChiave(testo);
+
+        blocchi.push(
+          "## PAROLE CHIAVE\n" +
+          (parole.length ? parole.join(", ") : "Non ho trovato parole chiave sufficienti.")
+        );
       }
 
       output.textContent = blocchi.join("\n\n-----------------------------\n\n");
+      statusBox.textContent = "Output generato. Puoi copiarlo o scaricarlo in TXT.";
     }
 
     function scaricaOutput() {
       const contenuto = output.textContent.trim();
 
-      if (!contenuto || contenuto === "L’output comparirà qui.") {
+      if (!contenuto || contenuto.includes("L’output comparirà qui")) {
         output.textContent = "Genera prima un output.";
         return;
       }
@@ -546,7 +670,8 @@
     function pulisciTutto() {
       fileInput.value = "";
       documentText.value = "";
-      output.textContent = "L’output comparirà qui.";
+      output.textContent = "L’output comparirà qui dopo aver premuto “Genera output”.";
+      statusBox.textContent = "Nessun documento caricato.";
     }
   </script>
 </body>
