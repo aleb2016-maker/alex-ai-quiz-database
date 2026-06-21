@@ -1759,3 +1759,186 @@ Formazione: diploma, obiettivo corso ITS full stack e AI.
   window.downloadCurrentPdf = downloadCurrentPdf;
   window.downloadCurrentJson = downloadCurrentJson;
 })();
+
+
+
+/* RAG_FILE_UPLOAD_PDF_TXT_ENGINE */
+(function () {
+  if (window.__ragFileUploadPdfTxtEngineInstalled) return;
+  window.__ragFileUploadPdfTxtEngineInstalled = true;
+
+  function uploadEscape(text) {
+    return String(text || "")
+      .replaceAll("&", "&amp;")
+      .replaceAll("<", "&lt;")
+      .replaceAll(">", "&gt;")
+      .replaceAll('"', "&quot;");
+  }
+
+  function uploadStatus(message, type = "info") {
+    const box =
+      document.getElementById("generatedOutputBox") ||
+      document.getElementById("documentAnswerBox") ||
+      document.getElementById("documentTypeBox");
+
+    if (!box) return;
+
+    const className = type === "error" ? "answer-error" : "answer-card-box";
+
+    box.innerHTML = `
+      <div class="${className}">
+        <h3>${type === "error" ? "Errore caricamento" : "Caricamento file"}</h3>
+        <p>${uploadEscape(message)}</p>
+      </div>
+    `;
+
+    box.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+
+  function clearGeneratedOutputs() {
+    const ids = [
+      "keywordsBox",
+      "cardsBox",
+      "jsonBox",
+      "documentTypeBox",
+      "generatedOutputBox",
+      "documentAnswerBox"
+    ];
+
+    ids.forEach(id => {
+      const el = document.getElementById(id);
+      if (!el) return;
+
+      if (id === "jsonBox") {
+        el.textContent = "";
+      } else {
+        el.innerHTML = "";
+      }
+    });
+
+    window.__cvCardsResult = null;
+    window.__currentDocumentOutput = null;
+  }
+
+  async function readTextFile(file) {
+    return await file.text();
+  }
+
+  async function readPdfFile(file) {
+    if (!window.pdfjsLib) {
+      throw new Error("Lettore PDF non disponibile. Controlla la connessione e ricarica la pagina.");
+    }
+
+    if (!window.pdfjsLib.GlobalWorkerOptions.workerSrc) {
+      window.pdfjsLib.GlobalWorkerOptions.workerSrc =
+        "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js";
+    }
+
+    const buffer = await file.arrayBuffer();
+    const pdf = await window.pdfjsLib.getDocument({ data: buffer }).promise;
+
+    const pages = [];
+    const maxPages = Math.min(pdf.numPages, 80);
+
+    for (let pageNumber = 1; pageNumber <= maxPages; pageNumber++) {
+      const page = await pdf.getPage(pageNumber);
+      const content = await page.getTextContent();
+
+      const pageText = content.items
+        .map(item => item.str || "")
+        .join(" ")
+        .replace(/\s+/g, " ")
+        .trim();
+
+      if (pageText) {
+        pages.push(`[Pagina ${pageNumber}] ${pageText}`);
+      }
+    }
+
+    const text = pages.join("\n\n").trim();
+
+    if (!text) {
+      throw new Error("Non sono riuscito a estrarre testo dal PDF. Potrebbe essere una scansione/immagine.");
+    }
+
+    return text;
+  }
+
+  async function handleDocumentFile(file) {
+    if (!file) return;
+
+    clearGeneratedOutputs();
+    uploadStatus(`Sto leggendo il file: ${file.name}`);
+
+    const name = file.name.toLowerCase();
+    const type = file.type || "";
+
+    let text = "";
+
+    if (name.endsWith(".pdf") || type.includes("pdf")) {
+      text = await readPdfFile(file);
+    } else if (
+      name.endsWith(".txt") ||
+      name.endsWith(".md") ||
+      type.includes("text")
+    ) {
+      text = await readTextFile(file);
+    } else {
+      throw new Error("Formato non supportato. Usa PDF, TXT o MD.");
+    }
+
+    const textArea = document.getElementById("cvText");
+
+    if (!textArea) {
+      throw new Error("Riquadro testo documento non trovato.");
+    }
+
+    textArea.value = text;
+
+    uploadStatus(
+      `File caricato correttamente: ${file.name}. Ora puoi generare riassunto, card, test, domande studio oppure interrogare il documento.`
+    );
+
+    textArea.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+
+  document.addEventListener("click", function (event) {
+    const button = event.target && event.target.closest
+      ? event.target.closest("#loadFileButton")
+      : null;
+
+    if (!button) return;
+
+    event.preventDefault();
+    event.stopImmediatePropagation();
+
+    const input = document.getElementById("documentFileInput");
+
+    if (!input) {
+      uploadStatus("Input file non trovato nella pagina.", "error");
+      return;
+    }
+
+    input.click();
+  }, true);
+
+  document.addEventListener("change", async function (event) {
+    const input = event.target && event.target.id === "documentFileInput"
+      ? event.target
+      : null;
+
+    if (!input) return;
+
+    const file = input.files && input.files[0];
+
+    try {
+      await handleDocumentFile(file);
+    } catch (error) {
+      uploadStatus(error.message || "Errore durante il caricamento del file.", "error");
+    } finally {
+      input.value = "";
+    }
+  }, true);
+
+  window.handleDocumentFile = handleDocumentFile;
+})();

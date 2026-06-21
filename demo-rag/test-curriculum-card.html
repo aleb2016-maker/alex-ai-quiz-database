@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Test Card Documento</title>
   <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
   <script src="curriculum-card-engine.js" defer></script>
   <script src="document-type-theme-engine.js" defer></script>
 </head>
@@ -20,7 +21,9 @@
       <textarea id="cvText" rows="14" placeholder="Incolla qui il testo del documento..."></textarea>
 
       <div class="actions test-doc-actions">
-        <button id="loadExample" type="button">Carica esempio</button>
+        <input id="documentFileInput" type="file" accept=".txt,.md,.pdf,text/plain,text/markdown,application/pdf" hidden>
+        <button id="loadFileButton" type="button">Carica file PDF / TXT</button>
+        <button id="loadExample" type="button" style="display:none !important;">Carica esempio</button>
         <button id="generateSummaryButton" type="button">Genera riassunto</button>
         <button id="generateCvCards" type="button">Genera card</button>
         <button id="generateTestButton" type="button">Genera test</button>
