@@ -36,3 +36,24 @@ output_generati/NOME-DOCUMENTO/riassunto.html
 ```
 
 I file `.md`, `.json` e `.csv` sono output tecnici esportabili.
+
+
+## Demo browser scaricabile
+
+La demo `demo-rag/index.html` permette di leggere gli output direttamente nella pagina e di scaricare:
+
+- ZIP completo degli output;
+- `index.html`;
+- `riassunto.html`;
+- `riassunto.md`;
+- `tabelle_concetti.md`;
+- `tabelle_concetti.csv`;
+- `cards.html`;
+- `cards.json`;
+- `quiz_interattivo.html`;
+- `quiz.json`;
+- `minicorso_interattivo.html`;
+- `analisi_completa.json`;
+- `statistiche.json`;
+- `report_rag.md`.
+

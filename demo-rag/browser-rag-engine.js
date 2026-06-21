@@ -243,6 +243,398 @@ function escapeHtml(value) {
     .replaceAll('"', "&quot;");
 }
 
+function downloadBlob(filename, content, mimeType = "text/plain;charset=utf-8") {
+  const blob = content instanceof Blob ? content : new Blob([content], { type: mimeType });
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement("a");
+
+  link.href = url;
+  link.download = filename;
+  document.body.appendChild(link);
+  link.click();
+  link.remove();
+
+  URL.revokeObjectURL(url);
+}
+
+function slugify(text) {
+  return String(text)
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/[^a-zA-Z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "")
+    .toLowerCase() || "documento-rag";
+}
+
+function markdownTable(headers, rows) {
+  const header = `| ${headers.join(" | ")} |`;
+  const separator = `| ${headers.map(() => "---").join(" | ")} |`;
+  const body = rows.map(row => {
+    return `| ${row.map(value => String(value).replaceAll("|", "\\|")).join(" | ")} |`;
+  });
+
+  return [header, separator, ...body].join("\n");
+}
+
+function makeSummaryMarkdown(analysis) {
+  return `# Riassunto - ${analysis.titolo}\n\n` +
+    analysis.riassunto.map((sentence, index) => `${index + 1}. ${sentence}`).join("\n") +
+    "\n";
+}
+
+function makeSummaryHtmlDocument(analysis) {
+  const items = analysis.riassunto
+    .map(sentence => `<li>${escapeHtml(sentence)}</li>`)
+    .join("\n");
+
+  return `<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Riassunto RAG - ${escapeHtml(analysis.titolo)}</title>
+<style>
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#0f172a;color:#f8fafc}
+main{max-width:920px;margin:0 auto;padding:42px 20px}
+section{border:1px solid rgba(255,255,255,.14);border-radius:28px;background:rgba(15,23,42,.88);padding:30px;box-shadow:0 24px 80px rgba(0,0,0,.34)}
+h1{font-size:clamp(32px,5vw,52px);line-height:1.05;margin-top:0}
+li{margin:16px 0;line-height:1.65;font-size:18px}
+</style>
+</head>
+<body>
+<main>
+<section>
+<h1>Riassunto - ${escapeHtml(analysis.titolo)}</h1>
+<ol>
+${items}
+</ol>
+</section>
+</main>
+</body>
+</html>`;
+}
+
+function makeConceptTableMarkdown(analysis) {
+  const rows = analysis.tabella_concetti.map(row => [
+    row.concetto,
+    row.frequenza,
+    `${row.importanza}/5`,
+    row.spiegazione
+  ]);
+
+  return `# Tabelle concetti - ${analysis.titolo}\n\n` +
+    markdownTable(["Concetto", "Frequenza", "Importanza", "Spiegazione"], rows) +
+    "\n";
+}
+
+function makeConceptTableCsv(analysis) {
+  const rows = [["Concetto", "Frequenza", "Importanza", "Spiegazione"]];
+
+  analysis.tabella_concetti.forEach(row => {
+    rows.push([row.concetto, row.frequenza, row.importanza, row.spiegazione]);
+  });
+
+  return rows.map(row => {
+    return row.map(value => `"${String(value).replaceAll('"', '""')}"`).join(",");
+  }).join("\n");
+}
+
+function makeCardsHtmlDocument(analysis) {
+  const cards = analysis.cards.map(card => `
+    <article class="card">
+      <h2>${escapeHtml(card.fronte)}</h2>
+      <p>${escapeHtml(card.retro)}</p>
+      <small>${escapeHtml(card.uso)}</small>
+    </article>
+  `).join("\n");
+
+  return `<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Card RAG - ${escapeHtml(analysis.titolo)}</title>
+<style>
+body{margin:0;font-family:Arial,sans-serif;background:#0f172a;color:#f8fafc}
+main{max-width:1100px;margin:0 auto;padding:36px 20px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+.card{border:1px solid rgba(255,255,255,.12);border-radius:22px;background:linear-gradient(145deg,rgba(124,58,237,.22),rgba(15,23,42,.94));padding:22px;box-shadow:0 20px 60px rgba(0,0,0,.28)}
+.card h2{font-size:20px;margin:0 0 12px}.card p{line-height:1.55}.card small{color:#cbd5e1;font-weight:700}
+</style>
+</head>
+<body>
+<main>
+<h1>Card di ripasso - ${escapeHtml(analysis.titolo)}</h1>
+<section class="grid">${cards}</section>
+</main>
+</body>
+</html>`;
+}
+
+function makeQuizHtmlDocument(analysis) {
+  const quizJson = JSON.stringify(analysis.quiz);
+
+  return `<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quiz RAG - ${escapeHtml(analysis.titolo)}</title>
+<style>
+body{margin:0;font-family:Arial,sans-serif;background:#111827;color:#f9fafb}
+main{max-width:980px;margin:0 auto;padding:34px 20px}
+.question{border:1px solid rgba(255,255,255,.12);border-radius:22px;padding:22px;margin:18px 0;background:rgba(255,255,255,.06)}
+button{display:block;width:100%;margin:10px 0;padding:14px;border-radius:14px;border:1px solid rgba(255,255,255,.16);background:#1f2937;color:#fff;cursor:pointer;font-weight:800;text-align:left}
+button.correct{background:#166534}button.wrong{background:#7f1d1d}.explanation{display:none;margin-top:12px;color:#d1d5db}
+</style>
+</head>
+<body>
+<main>
+<h1>Quiz generato dal documento - ${escapeHtml(analysis.titolo)}</h1>
+<div id="quiz"></div>
+</main>
+<script>
+const quiz = ${quizJson};
+const container = document.getElementById("quiz");
+quiz.forEach((item, questionIndex) => {
+  const box = document.createElement("section");
+  box.className = "question";
+  const title = document.createElement("h2");
+  title.textContent = \`\${questionIndex + 1}. \${item.domanda}\`;
+  box.appendChild(title);
+  const explanation = document.createElement("p");
+  explanation.className = "explanation";
+  explanation.textContent = item.spiegazione;
+  item.opzioni.forEach((option, optionIndex) => {
+    const button = document.createElement("button");
+    button.textContent = \`\${String.fromCharCode(65 + optionIndex)}. \${option}\`;
+    button.addEventListener("click", () => {
+      const allButtons = box.querySelectorAll("button");
+      allButtons.forEach(btn => btn.disabled = true);
+      if (option === item.risposta_corretta) {
+        button.classList.add("correct");
+      } else {
+        button.classList.add("wrong");
+        allButtons[item.indice_risposta_corretta].classList.add("correct");
+      }
+      explanation.style.display = "block";
+    });
+    box.appendChild(button);
+  });
+  box.appendChild(explanation);
+  container.appendChild(box);
+});
+</script>
+</body>
+</html>`;
+}
+
+function makeMiniCourseHtmlDocument(analysis) {
+  const slidesFromSummary = analysis.riassunto.slice(0, 5).map((sentence, index) => `
+    <section class="slide">
+      <span>Step ${index + 1}</span>
+      <h2>Punto chiave</h2>
+      <p>${escapeHtml(sentence)}</p>
+    </section>
+  `).join("\n");
+
+  const slidesFromCards = analysis.cards.slice(0, 4).map(card => `
+    <section class="slide">
+      <span>Ripasso</span>
+      <h2>${escapeHtml(card.fronte)}</h2>
+      <p>${escapeHtml(card.retro)}</p>
+    </section>
+  `).join("\n");
+
+  return `<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Minicorso RAG - ${escapeHtml(analysis.titolo)}</title>
+<style>
+body{margin:0;background:radial-gradient(circle at top,#312e81,#020617 65%);color:#f8fafc;font-family:Arial,sans-serif}
+main{max-width:1040px;margin:0 auto;padding:42px 20px}
+.slide{min-height:210px;margin:22px 0;border-radius:28px;padding:30px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);box-shadow:0 24px 70px rgba(0,0,0,.35)}
+.slide span{color:#a5b4fc;font-weight:900;text-transform:uppercase;letter-spacing:.08em}.slide h2{font-size:30px}.slide p{font-size:19px;line-height:1.6}
+</style>
+</head>
+<body>
+<main>
+<h1>Minicorso interattivo generato dal documento</h1>
+<p>${escapeHtml(analysis.titolo)}</p>
+${slidesFromSummary}
+${slidesFromCards}
+</main>
+</body>
+</html>`;
+}
+
+function makeIndexHtmlDocument(analysis) {
+  return `<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Output RAG - ${escapeHtml(analysis.titolo)}</title>
+<style>
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#020617;color:#f8fafc}
+main{max-width:1080px;margin:0 auto;padding:42px 20px 70px}
+.hero{border:1px solid rgba(255,255,255,.14);border-radius:30px;background:rgba(15,23,42,.88);padding:32px;box-shadow:0 24px 80px rgba(0,0,0,.34);margin-bottom:22px}
+h1{margin:0 0 12px;font-size:clamp(34px,5vw,56px);line-height:1.04}
+p{color:#cbd5e1;line-height:1.6}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(235px,1fr));gap:16px}
+.card{display:flex;flex-direction:column;gap:10px;padding:22px;border-radius:24px;border:1px solid rgba(255,255,255,.14);background:linear-gradient(145deg,rgba(124,58,237,.26),rgba(15,23,42,.95));color:#fff;text-decoration:none;min-height:126px}
+.card strong{font-size:20px}.card span{color:#cbd5e1;font-weight:800}
+</style>
+</head>
+<body>
+<main>
+<section class="hero">
+<h1>Output generati dal motore RAG</h1>
+<p>Documento: <strong>${escapeHtml(analysis.titolo)}</strong></p>
+<p>Apri prima il riassunto leggibile, poi quiz, minicorso e card.</p>
+</section>
+<section class="grid">
+<a class="card" href="riassunto.html"><strong>Riassunto leggibile</strong><span>riassunto.html</span></a>
+<a class="card" href="quiz_interattivo.html"><strong>Quiz interattivo</strong><span>quiz_interattivo.html</span></a>
+<a class="card" href="minicorso_interattivo.html"><strong>Minicorso interattivo</strong><span>minicorso_interattivo.html</span></a>
+<a class="card" href="cards.html"><strong>Card di ripasso</strong><span>cards.html</span></a>
+</section>
+</main>
+</body>
+</html>`;
+}
+
+function makeReportMarkdown(analysis) {
+  return `# Report RAG - ${analysis.titolo}
+
+- Generato il: ${analysis.generato_il}
+- File originale: ${analysis.file_originale}
+- Caratteri estratti: ${analysis.statistiche.caratteri}
+- Parole utili: ${analysis.statistiche.parole}
+- Frasi analizzate: ${analysis.statistiche.frasi}
+- Parole chiave: ${analysis.statistiche.parole_chiave}
+- Card generate: ${analysis.statistiche.card}
+- Domande quiz generate: ${analysis.statistiche.quiz}
+
+## File scaricabili
+
+- index.html
+- riassunto.html
+- riassunto.md
+- tabelle_concetti.md
+- tabelle_concetti.csv
+- cards.html
+- cards.json
+- quiz_interattivo.html
+- quiz.json
+- minicorso_interattivo.html
+- analisi_completa.json
+- statistiche.json
+- report_rag.md
+`;
+}
+
+function makeDownloadPackage(analysis) {
+  const files = {
+    "index.html": makeIndexHtmlDocument(analysis),
+    "riassunto.html": makeSummaryHtmlDocument(analysis),
+    "riassunto.md": makeSummaryMarkdown(analysis),
+    "tabelle_concetti.md": makeConceptTableMarkdown(analysis),
+    "tabelle_concetti.csv": makeConceptTableCsv(analysis),
+    "cards.html": makeCardsHtmlDocument(analysis),
+    "cards.json": JSON.stringify(analysis.cards, null, 2),
+    "quiz_interattivo.html": makeQuizHtmlDocument(analysis),
+    "quiz.json": JSON.stringify(analysis.quiz, null, 2),
+    "minicorso_interattivo.html": makeMiniCourseHtmlDocument(analysis),
+    "analisi_completa.json": JSON.stringify(analysis, null, 2),
+    "statistiche.json": JSON.stringify(analysis.statistiche, null, 2),
+    "report_rag.md": makeReportMarkdown(analysis)
+  };
+
+  return files;
+}
+
+async function downloadAllAsZip(analysis) {
+  const files = makeDownloadPackage(analysis);
+  const slug = slugify(analysis.titolo);
+
+  if (!window.JSZip) {
+    const fallbackName = `${slug}-pacchetto-rag.json`;
+    downloadBlob(fallbackName, JSON.stringify(files, null, 2), "application/json;charset=utf-8");
+    return;
+  }
+
+  const zip = new JSZip();
+  const folder = zip.folder(`output-rag-${slug}`);
+
+  Object.entries(files).forEach(([filename, content]) => {
+    folder.file(filename, content);
+  });
+
+  const blob = await zip.generateAsync({ type: "blob" });
+  downloadBlob(`output-rag-${slug}.zip`, blob, "application/zip");
+}
+
+function renderDownloadPanel(analysis) {
+  return `
+    <section class="panel">
+      <h2>Scarica output</h2>
+      <p>Puoi scaricare tutto in un unico ZIP oppure scaricare i singoli file principali.</p>
+      <div class="download-grid">
+        <button id="downloadZip">Scarica tutto in ZIP</button>
+        <button id="downloadIndexHtml">Scarica index.html</button>
+        <button id="downloadSummaryHtml">Scarica riassunto.html</button>
+        <button id="downloadSummaryMd">Scarica riassunto.md</button>
+        <button id="downloadTableMd">Scarica tabelle_concetti.md</button>
+        <button id="downloadTableCsv">Scarica tabelle_concetti.csv</button>
+        <button id="downloadCardsHtml">Scarica cards.html</button>
+        <button id="downloadCardsJson">Scarica cards.json</button>
+        <button id="downloadQuizHtml">Scarica quiz_interattivo.html</button>
+        <button id="downloadQuizJson">Scarica quiz.json</button>
+        <button id="downloadMiniCourseHtml">Scarica minicorso_interattivo.html</button>
+        <button id="downloadFullJson">Scarica analisi_completa.json</button>
+        <button id="downloadStatsJson">Scarica statistiche.json</button>
+        <button id="downloadReportMd">Scarica report_rag.md</button>
+      </div>
+    </section>
+  `;
+}
+
+function attachDownloadHandlers(analysis) {
+  const files = makeDownloadPackage(analysis);
+
+  const mapping = {
+    downloadIndexHtml: ["index.html", "text/html;charset=utf-8"],
+    downloadSummaryHtml: ["riassunto.html", "text/html;charset=utf-8"],
+    downloadSummaryMd: ["riassunto.md", "text/markdown;charset=utf-8"],
+    downloadTableMd: ["tabelle_concetti.md", "text/markdown;charset=utf-8"],
+    downloadTableCsv: ["tabelle_concetti.csv", "text/csv;charset=utf-8"],
+    downloadCardsHtml: ["cards.html", "text/html;charset=utf-8"],
+    downloadCardsJson: ["cards.json", "application/json;charset=utf-8"],
+    downloadQuizHtml: ["quiz_interattivo.html", "text/html;charset=utf-8"],
+    downloadQuizJson: ["quiz.json", "application/json;charset=utf-8"],
+    downloadMiniCourseHtml: ["minicorso_interattivo.html", "text/html;charset=utf-8"],
+    downloadFullJson: ["analisi_completa.json", "application/json;charset=utf-8"],
+    downloadStatsJson: ["statistiche.json", "application/json;charset=utf-8"],
+    downloadReportMd: ["report_rag.md", "text/markdown;charset=utf-8"]
+  };
+
+  const zipButton = document.getElementById("downloadZip");
+  if (zipButton) {
+    zipButton.addEventListener("click", () => downloadAllAsZip(analysis));
+  }
+
+  Object.entries(mapping).forEach(([buttonId, [filename, mimeType]]) => {
+    const button = document.getElementById(buttonId);
+    if (!button) return;
+
+    button.addEventListener("click", () => {
+      downloadBlob(filename, files[filename], mimeType);
+    });
+  });
+}
+
 function renderOutput(analysis) {
   const summaryHtml = analysis.riassunto.map(sentence => `<li>${escapeHtml(sentence)}</li>`).join("");
   const tableHtml = analysis.tabella_concetti.map(row => `
@@ -305,6 +697,8 @@ function renderOutput(analysis) {
       <h2>Quiz interattivo</h2>
       ${quizHtml}
     </section>
+
+    ${renderDownloadPanel(analysis)}
   `;
 
   document.querySelectorAll(".quiz-option").forEach(button => {
@@ -321,6 +715,8 @@ function renderOutput(analysis) {
       box.querySelector(".quiz-explanation").style.display = "block";
     });
   });
+
+  attachDownloadHandlers(analysis);
 }
 
 generateButton.addEventListener("click", async () => {
@@ -369,7 +765,7 @@ generateButton.addEventListener("click", async () => {
     };
 
     renderOutput(analysis);
-    setStatus("✅ Output generati correttamente nella demo.", "success");
+    setStatus("✅ Output generati correttamente nella demo. Puoi leggerli e scaricarli.", "success");
   } catch (error) {
     setStatus(`❌ ${error.message}`, "error");
   }

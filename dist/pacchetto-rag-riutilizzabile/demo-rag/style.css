@@ -1,1 +1,13 @@
 :root{color-scheme:dark;--bg:#020617;--panel:rgba(15,23,42,.88);--panel-strong:rgba(30,41,59,.94);--text:#f8fafc;--muted:#cbd5e1;--accent:#7c3aed;--accent-2:#b91c1c;--ok:#166534;--bad:#7f1d1d;--border:rgba(255,255,255,.13)}*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:radial-gradient(circle at top left,rgba(124,58,237,.28),transparent 34rem),radial-gradient(circle at top right,rgba(185,28,28,.22),transparent 28rem),var(--bg);color:var(--text)}.shell{max-width:1120px;margin:0 auto;padding:38px 20px 80px}.hero,.upload-panel,.local-panel,.panel{border:1px solid var(--border);border-radius:28px;background:var(--panel);box-shadow:0 24px 80px rgba(0,0,0,.34)}.hero{padding:36px;margin-bottom:22px}.eyebrow{margin:0 0 8px;color:#c4b5fd;font-weight:900;text-transform:uppercase;letter-spacing:.1em}h1{font-size:clamp(34px,5vw,58px);line-height:1.02;margin:0 0 18px}h2{margin-top:0}p{color:var(--muted);line-height:1.6}.upload-panel,.local-panel,.panel{padding:26px;margin:22px 0}label{display:block;margin:18px 0 8px;font-weight:900}input{width:100%;border:1px solid var(--border);border-radius:16px;padding:15px 16px;background:rgba(255,255,255,.08);color:var(--text);font-size:16px}button{border:0;border-radius:18px;padding:16px 20px;background:linear-gradient(135deg,var(--accent-2),var(--accent));color:white;font-weight:900;cursor:pointer;box-shadow:0 16px 42px rgba(124,58,237,.28)}#generateButton{width:100%;margin-top:20px;font-size:18px}.status{padding:14px 16px;border-radius:16px;background:rgba(255,255,255,.07);font-weight:800}.status.success{color:#bbf7d0;background:rgba(22,101,52,.25)}.status.error{color:#fecaca;background:rgba(127,29,29,.28)}pre{overflow-x:auto;padding:18px;border-radius:18px;background:rgba(0,0,0,.34);border:1px solid var(--border)}code{color:#e0e7ff}.table-wrap{overflow-x:auto}table{width:100%;border-collapse:collapse}th,td{border-bottom:1px solid var(--border);padding:13px;text-align:left;vertical-align:top}th{color:#c4b5fd}.cards-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}.mini-card,.quiz-card{padding:20px;border-radius:22px;background:var(--panel-strong);border:1px solid var(--border)}.quiz-option{width:100%;margin:10px 0;text-align:left;background:rgba(255,255,255,.08);box-shadow:none}.quiz-option.correct{background:var(--ok)}.quiz-option.wrong{background:var(--bad)}.quiz-explanation{display:none;color:#dbeafe;font-weight:800}.download-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px}
+
+
+/* DOWNLOAD_OUTPUT_RAG */
+.download-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 12px;
+}
+
+.download-grid button {
+  min-height: 56px;
+}
