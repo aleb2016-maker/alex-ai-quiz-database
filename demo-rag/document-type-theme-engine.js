@@ -415,3 +415,256 @@
     generate = generateThemedCards;
   } catch (error) {}
 })();
+
+
+
+/* RAG_FAST_THEMED_CARDS_FIX */
+(function () {
+  if (window.__ragFastThemedCardsFixInstalled) return;
+  window.__ragFastThemedCardsFixInstalled = true;
+
+  function fastClean(text) {
+    return String(text || "")
+      .replace(/\[Pagina\s*\d+\]/gi, "")
+      .replace(/Curriculum\s+Vitae/gi, "")
+      .replace(/Email\s+\S+/gi, "")
+      .replace(/Telefono\s+[0-9\s+]+/gi, "")
+      .replace(/Indirizzo\s+[^.]+/gi, "")
+      .replace(/\s+/g, " ")
+      .trim();
+  }
+
+  function fastShort(text, max = 300) {
+    const cleaned = fastClean(text);
+    if (cleaned.length <= max) return cleaned;
+    return cleaned.slice(0, max).replace(/\s+\S*$/, "") + "...";
+  }
+
+  function maxCardsForText(text) {
+    const length = fastClean(text).length;
+
+    if (length < 420) return 4;
+    if (length < 900) return 5;
+    return 6;
+  }
+
+  function hasFast(text, words) {
+    const t = String(text || "").toLowerCase();
+    return words.some(word => t.includes(String(word).toLowerCase()));
+  }
+
+  function variedPalette(type, index) {
+    const palettes = {
+      curriculum: [
+        ["#6b1d55", "#d63384", "#ff7aa2"],
+        ["#5b1f6e", "#8b5cf6", "#a78bfa"],
+        ["#0f4c81", "#2563eb", "#60a5fa"],
+        ["#14532d", "#16a34a", "#86efac"],
+        ["#7a3b00", "#ea580c", "#fdba74"],
+        ["#7c2d12", "#dc2626", "#fb7185"]
+      ],
+      storia: [
+        ["#312e81", "#7c3aed", "#facc15"],
+        ["#4c1d95", "#a855f7", "#f0abfc"],
+        ["#78350f", "#d97706", "#fde68a"]
+      ],
+      poesia: [
+        ["#4c1d95", "#a855f7", "#f0abfc"],
+        ["#831843", "#db2777", "#f9a8d4"],
+        ["#1e1b4b", "#6366f1", "#c4b5fd"]
+      ],
+      aziendale: [
+        ["#0f172a", "#2563eb", "#38bdf8"],
+        ["#164e63", "#0891b2", "#67e8f9"],
+        ["#1e3a8a", "#3b82f6", "#93c5fd"]
+      ],
+      test: [
+        ["#7c2d12", "#ea580c", "#fdba74"],
+        ["#78350f", "#d97706", "#facc15"],
+        ["#991b1b", "#ef4444", "#fca5a5"]
+      ],
+      formazione: [
+        ["#064e3b", "#059669", "#6ee7b7"],
+        ["#14532d", "#16a34a", "#86efac"],
+        ["#1e3a8a", "#2563eb", "#93c5fd"]
+      ],
+      generico: [
+        ["#1e1b4b", "#7c3aed", "#22d3ee"],
+        ["#0f172a", "#2563eb", "#38bdf8"],
+        ["#3f1235", "#be185d", "#fbbf24"]
+      ]
+    };
+
+    const list = palettes[type] || palettes.generico;
+    return list[index % list.length];
+  }
+
+  function buildCardsForDocumentTypeFast(text) {
+    const detected = window.themeForDocument
+      ? window.themeForDocument(text)
+      : { type: "generico", theme: { label: "Documento", palette: ["#1e1b4b", "#7c3aed", "#22d3ee"] } };
+
+    const type = detected.type;
+    const theme = detected.theme;
+    const cleaned = fastClean(text);
+    const limit = maxCardsForText(cleaned);
+    const cards = [];
+
+    function add(title, badge, visualKind, words, customUse) {
+      if (words && words.length && !hasFast(cleaned, words)) return;
+
+      cards.push({
+        materia: type,
+        documentType: type,
+        themeType: type,
+        visualKind,
+        badge,
+        concetto: badge,
+        fronte: title,
+        retro: fastShort(cleaned),
+        uso: customUse || "Usa questa scheda per studiare, ripassare o spiegare il documento."
+      });
+    }
+
+    if (type === "curriculum") {
+      add("Scheda: profilo professionale", "Profilo", "profile", ["profilo", "creativo", "adattabile"], "Usa questa scheda per presentarti meglio.");
+      add("Scheda: competenze trasversali", "Competenze", "skills", ["competenze", "comunicazione", "pazienza", "lavoro di gruppo"], "Usa questa scheda per preparare un colloquio.");
+      add("Scheda: competenze digitali e AI", "AI / Digitale", "digital", ["intelligenza artificiale", "ai", "prompt", "android", "kotlin", "python", "github"], "Usa questa scheda per valorizzare le competenze tecnologiche.");
+      add("Scheda: progetti software", "Progetti", "project", ["progetti", "app", "software", "github", "database", "quiz"], "Usa questa scheda per raccontare cosa sai costruire.");
+      add("Scheda: esperienza lavorativa", "Esperienza", "work", ["esperienza", "lavoro", "addetto", "azienda", "mansione"], "Usa questa scheda per spiegare le esperienze pratiche.");
+      add("Scheda: formazione e obiettivi", "Formazione", "study", ["formazione", "diploma", "corso", "its", "obiettivo"], "Usa questa scheda per spiegare il percorso formativo.");
+    } else if (type === "storia") {
+      add("Scheda: trama principale", "Trama", "story", ["storia", "trama", "racconto"]);
+      add("Scheda: personaggi", "Personaggi", "characters", ["personaggio", "personaggi", "protagonista"]);
+      add("Scheda: ambientazione", "Luogo", "place", ["luogo", "ambientazione", "città", "bosco", "casa"]);
+      add("Scheda: eventi importanti", "Eventi", "events", ["evento", "succede", "avventura"]);
+      add("Scheda: finale e messaggio", "Finale", "ending", ["finale", "messaggio"]);
+    } else if (type === "poesia") {
+      add("Scheda: tema della poesia", "Tema", "poetry", ["tema", "poesia"]);
+      add("Scheda: emozioni", "Emozioni", "emotion", ["emozione", "sentimento", "tristezza", "gioia"]);
+      add("Scheda: immagini poetiche", "Immagini", "image", ["immagine", "metafora", "simbolo"]);
+      add("Scheda: ritmo e versi", "Versi", "rhythm", ["verso", "versi", "strofa", "rima"]);
+    } else if (type === "aziendale") {
+      add("Scheda: obiettivo aziendale", "Obiettivo", "business", ["obiettivo", "azienda", "aziendale"]);
+      add("Scheda: processo", "Processo", "process", ["processo", "procedura"]);
+      add("Scheda: ruoli e responsabilità", "Ruoli", "roles", ["ruolo", "responsabile", "responsabilità"]);
+      add("Scheda: rischi e controlli", "Rischi", "risk", ["rischio", "controllo", "sicurezza"]);
+      add("Scheda: azioni operative", "Azioni", "actions", ["azione", "azioni", "operativo"]);
+    } else if (type === "test") {
+      add("Scheda: argomento del test", "Argomento", "test", ["test", "quiz"]);
+      add("Scheda: domanda", "Domanda", "question", ["domanda"]);
+      add("Scheda: risposta corretta", "Risposta", "answer", ["risposta", "corretta"]);
+      add("Scheda: spiegazione", "Spiegazione", "explain", ["spiegazione"]);
+    } else if (type === "formazione") {
+      add("Scheda: obiettivo della lezione", "Obiettivo", "study", ["obiettivo", "lezione", "corso"]);
+      add("Scheda: concetto chiave", "Concetto", "concept", ["concetto", "regola"]);
+      add("Scheda: esempio pratico", "Esempio", "example", ["esempio"]);
+      add("Scheda: verifica", "Verifica", "check", ["verifica", "esercizio"]);
+      add("Scheda: riepilogo", "Riepilogo", "summary", ["riepilogo", "sintesi"]);
+    } else {
+      add("Scheda: sintesi documento", "Sintesi", "document", []);
+      add("Scheda: punti importanti", "Punti", "list", []);
+      add("Scheda: concetti chiave", "Concetti", "concept", []);
+      add("Scheda: domande utili", "Domande", "question", []);
+    }
+
+    if (!cards.length) {
+      cards.push({
+        materia: type,
+        documentType: type,
+        themeType: type,
+        visualKind: "document",
+        badge: theme.label || "Documento",
+        concetto: "Sintesi",
+        fronte: "Scheda: sintesi documento",
+        retro: fastShort(cleaned),
+        uso: "Usa questa scheda per ripassare il documento."
+      });
+    }
+
+    return {
+      documentType: type,
+      theme,
+      keywords: window.extractUsefulKeywords ? window.extractUsefulKeywords(text, 10) : [],
+      cards: cards.slice(0, limit)
+    };
+  }
+
+  function renderThemedDocumentCardFast(card, index = 0) {
+    const type = card.documentType || card.themeType || card.materia || "generico";
+    const palette = variedPalette(type, index);
+    const primary = palette[0];
+    const secondary = palette[1];
+    const accent = palette[2];
+
+    const icon = window.themedIcon
+      ? window.themedIcon(card, index)
+      : (typeof themedIcon === "function" ? themedIcon(card, index) : "");
+
+    return `
+      <article class="cv-card" style="--cv-primary:${primary};--cv-secondary:${secondary};--cv-accent:${accent};">
+        <div class="cv-badge">${String(card.badge || "Documento").replaceAll("<", "&lt;").replaceAll(">", "&gt;")}</div>
+        <div class="cv-icon" aria-hidden="true">${icon}</div>
+        <h3>${String(card.fronte || "Scheda documento").replaceAll("<", "&lt;").replaceAll(">", "&gt;")}</h3>
+        <p>${String(card.retro || "").replaceAll("<", "&lt;").replaceAll(">", "&gt;")}</p>
+        <small>${String(card.uso || "Usa questa scheda per studiare o ripassare.").replaceAll("<", "&lt;").replaceAll(">", "&gt;")}</small>
+      </article>
+    `;
+  }
+
+  function generateThemedCardsFast() {
+    const textArea = document.getElementById("cvText");
+    const keywordsBox = document.getElementById("keywordsBox");
+    const cardsBox = document.getElementById("cardsBox");
+    const jsonBox = document.getElementById("jsonBox");
+    const typeBox = document.getElementById("documentTypeBox");
+
+    const text = textArea ? textArea.value.trim() : "";
+
+    if (!text) {
+      if (cardsBox) cardsBox.innerHTML = '<div class="answer-error">Prima incolla un documento o premi Carica esempio.</div>';
+      return;
+    }
+
+    const result = buildCardsForDocumentTypeFast(text);
+    window.__cvCardsResult = result;
+
+    if (typeBox) {
+      typeBox.innerHTML = `
+        <div class="detected-type-card">
+          <span>Tipo documento riconosciuto</span>
+          <strong>${result.theme.label}</strong>
+          <p>Card generate: ${result.cards.length}. Il numero viene ridotto automaticamente sui documenti corti.</p>
+        </div>
+      `;
+    }
+
+    if (keywordsBox) {
+      keywordsBox.innerHTML = "";
+    }
+
+    if (cardsBox) {
+      cardsBox.innerHTML = result.cards.map((card, index) => renderThemedDocumentCardFast(card, index)).join("");
+    }
+
+    if (jsonBox) {
+      jsonBox.textContent = JSON.stringify(result, null, 2);
+    }
+
+    return result;
+  }
+
+  window.buildCardsForDocumentType = buildCardsForDocumentTypeFast;
+  window.renderThemedDocumentCard = renderThemedDocumentCardFast;
+  window.renderCard = renderThemedDocumentCardFast;
+  window.generateThemedCards = generateThemedCardsFast;
+  window.generate = generateThemedCardsFast;
+
+  try {
+    buildCardsForDocumentType = buildCardsForDocumentTypeFast;
+    renderThemedDocumentCard = renderThemedDocumentCardFast;
+    renderCard = renderThemedDocumentCardFast;
+    generateThemedCards = generateThemedCardsFast;
+    generate = generateThemedCardsFast;
+  } catch (error) {}
+})();
