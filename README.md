@@ -59,8 +59,20 @@ Ogni ZIP scaricato contiene una cartella con nomi chiari e un solo file di istru
 
 ## Crea un pacchetto personalizzato
 
-[![Pacchetto RAG documenti](https://img.shields.io/badge/Pacchetto_RAG_documenti-Riassunti_Quiz_Report_Tabelle_Card-00D4FF?style=for-the-badge)](https://aleb2016-maker.github.io/alex-ai-quiz-database/demo-rag/)
 
+
+<!-- RAG_BUTTON_START -->
+<p align="center">
+  <a href="https://aleb2016-maker.github.io/alex-ai-quiz-database/demo-rag/">
+    <img src="https://img.shields.io/static/v1?label=&message=APRI%20MOTORE%20RAG%20DOCUMENTI%20-%20WEB%20ANDROID%20QUIZ%20CORSI&color=00B8D9&labelColor=00B8D9&style=for-the-badge" alt="Apri motore RAG documenti per app web Android quiz corsi">
+  </a>
+</p>
+
+<p align="center">
+  <strong>Motore RAG documenti:</strong> apre la demo per trasformare documenti in riassunti, quiz, report, tabelle e card.
+  Il pacchetto scaricabile serve come base riutilizzabile per creare future app web, app Android, quiz, mini-corsi e sistemi documentali.
+</p>
+<!-- RAG_BUTTON_END -->
 
 <p align="center">
   <a href="https://github.com/aleb2016-maker/alex-ai-quiz-database/actions/workflows/create-quiz-package.yml">
