@@ -19,3 +19,20 @@ Gli output vengono creati dentro output_generati/.
 ## Demo browser
 
 Apri demo-rag/index.html.
+
+
+## Output leggibili
+
+Dopo la generazione apri prima:
+
+```text
+output_generati/NOME-DOCUMENTO/index.html
+```
+
+oppure direttamente:
+
+```text
+output_generati/NOME-DOCUMENTO/riassunto.html
+```
+
+I file `.md`, `.json` e `.csv` sono output tecnici esportabili.
