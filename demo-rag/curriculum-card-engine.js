@@ -955,3 +955,325 @@ document.addEventListener("DOMContentLoaded", () => {
 
   window.askDocumentFixed = askDocumentFixed;
 })();
+
+
+
+/* RAG_DOCUMENT_QA_FINAL_ORDER_FIX */
+(function () {
+  if (window.__ragDocumentQaFinalOrderFixInstalled) return;
+  window.__ragDocumentQaFinalOrderFixInstalled = true;
+
+  function finalNormalize(text) {
+    return String(text || "")
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .toLowerCase()
+      .replace(/[^a-z0-9+#.\s]+/g, " ")
+      .replace(/\s+/g, " ")
+      .trim();
+  }
+
+  function finalEscapeHtml(text) {
+    return String(text || "")
+      .replaceAll("&", "&amp;")
+      .replaceAll("<", "&lt;")
+      .replaceAll(">", "&gt;")
+      .replaceAll('"', "&quot;");
+  }
+
+  function finalCleanText(text) {
+    return String(text || "")
+      .replace(/\[Pagina\s*\d+\]/gi, "")
+      .replace(/Curriculum\s+Vitae/gi, "")
+      .replace(/\s+/g, " ")
+      .trim();
+  }
+
+  function finalSplitDocument(text) {
+    const cleaned = finalCleanText(text);
+
+    let parts = cleaned
+      .split(/(?:\n+|\. |\; |\: )+/)
+      .map(part => part.trim())
+      .filter(part => part.length >= 22);
+
+    if (!parts.length && cleaned.length) {
+      parts = cleaned
+        .match(/.{1,360}(?:\s|$)/g)
+        ?.map(part => part.trim())
+        .filter(Boolean) || [];
+    }
+
+    return parts;
+  }
+
+  function finalQuestionTerms(question) {
+    const stop = new Set([
+      "che", "cosa", "quale", "quali", "come", "dove", "quando",
+      "perche", "del", "della", "delle", "degli", "dello",
+      "nel", "nella", "nelle", "con", "per", "sono", "emergono",
+      "documento", "testo", "dimmi", "spiegami", "fammi"
+    ]);
+
+    return finalNormalize(question)
+      .split(/\s+/)
+      .filter(word => word.length >= 3)
+      .filter(word => !stop.has(word));
+  }
+
+  function finalScorePart(part, terms, question) {
+    const text = finalNormalize(part);
+    const q = finalNormalize(question);
+    let score = 0;
+
+    for (const term of terms) {
+      if (text.includes(term)) score += term.length >= 6 ? 5 : 3;
+
+      const root = term.slice(0, -1);
+      if (root.length >= 4 && text.includes(root)) score += 2;
+    }
+
+    const boosts = [
+      ["competenz", ["competenz", "abilita", "capacita", "skill", "comunicazione", "creativita", "pazienza", "lavoro di gruppo"]],
+      ["digital", ["digitale", "digitali", "intelligenza artificiale", "ai", "prompt", "android", "kotlin", "python", "github", "database", "app", "software"]],
+      ["ai", ["intelligenza artificiale", "ai", "prompt", "generativa", "immagini", "prototipi"]],
+      ["progett", ["progetto", "progetti", "app", "software", "android", "github", "database", "quiz"]],
+      ["esperienz", ["esperienza", "lavoro", "addetto", "azienda", "mansione", "contratto"]],
+      ["formazion", ["formazione", "diploma", "corso", "studio", "its", "obiettivo"]],
+      ["profilo", ["profilo", "creativo", "adattabile", "presentazione"]]
+    ];
+
+    for (const [questionKey, words] of boosts) {
+      if (q.includes(questionKey)) {
+        for (const word of words) {
+          if (text.includes(word)) score += 6;
+        }
+      }
+    }
+
+    return score;
+  }
+
+  function finalExtractKnownItems(documentText, question) {
+    const text = finalNormalize(documentText);
+    const q = finalNormalize(question);
+
+    const groups = [];
+
+    function addGroup(title, items) {
+      const found = items.filter(item => text.includes(finalNormalize(item)));
+      if (found.length) groups.push({ title, found });
+    }
+
+    if (q.includes("digital") || q.includes("ai") || q.includes("competenz")) {
+      addGroup("Competenze digitali e AI", [
+        "intelligenza artificiale",
+        "prompt",
+        "immagini generative",
+        "app android",
+        "kotlin",
+        "python",
+        "database quiz",
+        "github",
+        "software",
+        "prototipi"
+      ]);
+    }
+
+    if (q.includes("competenz")) {
+      addGroup("Competenze trasversali", [
+        "comunicazione",
+        "creativita",
+        "pazienza",
+        "lavoro di gruppo",
+        "pubblico",
+        "adattabile"
+      ]);
+    }
+
+    if (q.includes("progett") || q.includes("app") || q.includes("software")) {
+      addGroup("Progetti e strumenti", [
+        "app android",
+        "kotlin",
+        "python",
+        "database quiz",
+        "github",
+        "software"
+      ]);
+    }
+
+    return groups;
+  }
+
+  function finalBuildAnswer(documentText, question, selectedParts) {
+    const q = finalNormalize(question);
+    const knownGroups = finalExtractKnownItems(documentText, question);
+
+    let intro = "Dal documento emergono questi elementi principali.";
+
+    if (q.includes("competenz") && q.includes("digital")) {
+      intro = "Dal documento emergono competenze digitali collegate all'uso pratico di strumenti tecnologici, sviluppo e intelligenza artificiale.";
+    } else if (q.includes("competenz")) {
+      intro = "Dal documento emergono competenze sia pratiche sia trasversali.";
+    } else if (q.includes("progett") || q.includes("app")) {
+      intro = "Dal documento emergono progetti e attività legate alla creazione di applicazioni o strumenti digitali.";
+    } else if (q.includes("esperienz") || q.includes("lavoro")) {
+      intro = "Dal documento emergono informazioni sull'esperienza lavorativa e sulle attività svolte.";
+    } else if (q.includes("formazion") || q.includes("studio")) {
+      intro = "Dal documento emergono informazioni sul percorso di formazione e sugli obiettivi.";
+    }
+
+    const lines = [intro];
+
+    if (knownGroups.length) {
+      lines.push("");
+      for (const group of knownGroups) {
+        lines.push(`${group.title}: ${group.found.join(", ")}.`);
+      }
+    }
+
+    if (selectedParts.length) {
+      lines.push("");
+      lines.push("Parti più utili del documento:");
+      selectedParts.slice(0, 4).forEach((item, index) => {
+        lines.push(`${index + 1}. ${item.part}`);
+      });
+    }
+
+    return lines.join("\n");
+  }
+
+  function finalAskDocument() {
+    const documentTextArea = document.getElementById("cvText");
+    const questionArea = document.getElementById("documentQuestion");
+    const answerBox = document.getElementById("documentAnswerBox");
+
+    if (!documentTextArea || !questionArea || !answerBox) {
+      alert("Pannello Interroga documento non trovato.");
+      return;
+    }
+
+    const documentText = documentTextArea.value.trim();
+    const question = questionArea.value.trim();
+
+    if (!documentText) {
+      answerBox.innerHTML = `<div class="answer-error">Prima incolla un documento o premi Carica esempio.</div>`;
+      answerBox.scrollIntoView({ behavior: "smooth", block: "start" });
+      return;
+    }
+
+    if (!question) {
+      answerBox.innerHTML = `<div class="answer-error">Scrivi una domanda sul documento.</div>`;
+      answerBox.scrollIntoView({ behavior: "smooth", block: "start" });
+      return;
+    }
+
+    answerBox.innerHTML = `
+      <div class="answer-card-box">
+        <h3>Analisi domanda...</h3>
+        <p>Sto cercando le parti più utili del documento.</p>
+      </div>
+    `;
+    answerBox.scrollIntoView({ behavior: "smooth", block: "start" });
+
+    setTimeout(() => {
+      const parts = finalSplitDocument(documentText);
+      const terms = finalQuestionTerms(question);
+
+      let selected = parts
+        .map((part, index) => ({
+          index,
+          part,
+          score: finalScorePart(part, terms, question)
+        }))
+        .sort((a, b) => b.score - a.score)
+        .filter(item => item.score > 0)
+        .slice(0, 5);
+
+      if (!selected.length) {
+        selected = parts.slice(0, 4).map((part, index) => ({
+          index,
+          part,
+          score: 1
+        }));
+      }
+
+      const answer = finalBuildAnswer(documentText, question, selected);
+
+      answerBox.innerHTML = `
+        <div class="answer-card-box">
+          <h3>Risposta dettagliata</h3>
+          <p>${finalEscapeHtml(answer).replaceAll("\\n", "<br>")}</p>
+
+          <h4>Frasi usate come base</h4>
+          <ol>
+            ${selected.slice(0, 5).map(item => `
+              <li>
+                <strong>Rilevanza ${item.score}</strong><br>
+                ${finalEscapeHtml(item.part)}
+              </li>
+            `).join("")}
+          </ol>
+        </div>
+      `;
+
+      answerBox.scrollIntoView({ behavior: "smooth", block: "start" });
+    }, 120);
+  }
+
+  function finalLoadExampleOnly() {
+    const textArea = document.getElementById("cvText");
+    const keywordsBox = document.getElementById("keywordsBox");
+    const cardsBox = document.getElementById("cardsBox");
+    const jsonBox = document.getElementById("jsonBox");
+    const answerBox = document.getElementById("documentAnswerBox");
+
+    if (!textArea) return;
+
+    textArea.value = `
+Profilo creativo e adattabile.
+Esperienza lavorativa come addetto presso azienda.
+Competenze: comunicazione, pazienza, lavoro di gruppo.
+Competenze digitali: intelligenza artificiale, prompt, immagini generative.
+Progetti: app Android, Kotlin, Python, database quiz, GitHub.
+Formazione: diploma, obiettivo corso ITS full stack e AI.
+`.trim();
+
+    if (keywordsBox) keywordsBox.innerHTML = "";
+    if (cardsBox) cardsBox.innerHTML = "";
+    if (jsonBox) jsonBox.textContent = "";
+    if (answerBox) answerBox.innerHTML = `
+      <div class="answer-card-box">
+        <h3>Esempio caricato</h3>
+        <p>Ora puoi interrogare il documento oppure generare le card con il pulsante dedicato.</p>
+      </div>
+    `;
+  }
+
+  document.addEventListener("click", function (event) {
+    const askButton = event.target && event.target.closest
+      ? event.target.closest("#askDocumentButton")
+      : null;
+
+    if (askButton) {
+      event.preventDefault();
+      event.stopImmediatePropagation();
+      finalAskDocument();
+      return;
+    }
+
+    const exampleButton = event.target && event.target.closest
+      ? event.target.closest("#loadExample")
+      : null;
+
+    if (exampleButton) {
+      event.preventDefault();
+      event.stopImmediatePropagation();
+      finalLoadExampleOnly();
+      return;
+    }
+  }, true);
+
+  window.finalAskDocument = finalAskDocument;
+  window.finalLoadExampleOnly = finalLoadExampleOnly;
+})();
