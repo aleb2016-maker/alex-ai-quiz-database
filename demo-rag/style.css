@@ -471,3 +471,40 @@
 .curriculum-grid {
   gap: 22px !important;
 }
+
+
+
+/* TEST_DOC_DOWNLOAD_BUTTONS_GAP_FIX */
+.download-doc-actions {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: stretch !important;
+  gap: 18px !important;
+  margin-top: 18px !important;
+  margin-bottom: 18px !important;
+}
+
+.download-doc-actions button {
+  width: 100% !important;
+  display: block !important;
+  min-height: 62px !important;
+  padding: 16px 22px !important;
+  margin: 0 !important;
+  border-radius: 999px !important;
+  font-size: 16px !important;
+  font-weight: 900 !important;
+  line-height: 1.2 !important;
+}
+
+@media (min-width: 760px) {
+  .download-doc-actions {
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    gap: 18px !important;
+  }
+
+  .download-doc-actions button {
+    width: auto !important;
+    min-width: 220px !important;
+  }
+}
