@@ -451,8 +451,8 @@ function makeDownloadPackage(analysis, selectedOutputs) {
     files["tabelle_concetti.csv"] = makeConceptTableCsv(analysis);
   }
   if (selectedOutputs.has("cards")) {
-    files["cards.html"] = makeCardsHtmlDocument(analysis);
-    files["cards.json"] = JSON.stringify(analysis.cards, null, 2);
+        files["cards.json"] = JSON.stringify(analysis.cards, null, 2);
+    files["ISTRUZIONI_CARD_PDF.txt"] = "Per le card usa il pulsante: Scarica card PDF stampabile sul PC. Il PDF funziona offline e si apre senza internet.";
   }
   if (selectedOutputs.has("data")) {
     files["analisi_completa.json"] = JSON.stringify(analysis, null, 2);
@@ -483,7 +483,257 @@ async function downloadSelectedZip(analysis, selectedOutputs) {
   downloadBlob(`output-rag-${slug}.zip`, blob, "application/zip");
 }
 
+function hexToRgb(hex) {
+  const clean = String(hex || "#334155").replace("#", "");
+  const full = clean.length === 3 ? clean.split("").map(c => c + c).join("") : clean;
+  const number = parseInt(full, 16);
+  return { r: (number >> 16) & 255, g: (number >> 8) & 255, b: number & 255 };
+}
+
+function setPdfFill(pdf, colorHex) {
+  const color = hexToRgb(colorHex);
+  pdf.setFillColor(color.r, color.g, color.b);
+}
+
+function setPdfDraw(pdf, colorHex) {
+  const color = hexToRgb(colorHex);
+  pdf.setDrawColor(color.r, color.g, color.b);
+}
+
+function pdfThemeForCard(card) {
+  const subject = card.materia || "generico";
+  if (window.RagCardGraphicEngine && window.RagCardGraphicEngine.themes) {
+    return window.RagCardGraphicEngine.themes[subject] || window.RagCardGraphicEngine.themes.generico;
+  }
+  const fallbackThemes = {
+    generico: { badge: "Generico", palette: ["#334155", "#64748b", "#e2e8f0"] },
+    cybersecurity: { badge: "Cybersecurity", palette: ["#0f172a", "#7c3aed", "#ef4444"] },
+    informatica: { badge: "Informatica", palette: ["#0b3b66", "#38bdf8", "#1e293b"] },
+    ai: { badge: "AI", palette: ["#1e1b4b", "#8b5cf6", "#22d3ee"] },
+    matematica: { badge: "Matematica", palette: ["#0f766e", "#22c55e", "#d9f99d"] },
+    fisica: { badge: "Fisica", palette: ["#172554", "#60a5fa", "#f59e0b"] },
+    chimica: { badge: "Chimica", palette: ["#14532d", "#2dd4bf", "#fb923c"] },
+    biologia: { badge: "Biologia", palette: ["#166534", "#4ade80", "#93c5fd"] }
+  };
+  return fallbackThemes[subject] || fallbackThemes.generico;
+}
+
+function drawPdfIcon(pdf, icon, x, y, size, palette) {
+  const primary = palette[0];
+  const accent = palette[2];
+
+  setPdfFill(pdf, accent);
+  setPdfDraw(pdf, accent);
+  pdf.setLineWidth(3);
+
+  if (["shield", "lock-code", "badge-check", "wall"].includes(icon)) {
+    pdf.triangle(x + size * 0.5, y, x + size, y + size * 0.22, x + size * 0.5, y + size, "F");
+    setPdfFill(pdf, primary);
+    pdf.roundedRect(x + size * 0.34, y + size * 0.48, size * 0.32, size * 0.25, 4, 4, "F");
+    return;
+  }
+
+  if (icon === "backup") {
+    pdf.circle(x + size * 0.38, y + size * 0.52, size * 0.22, "F");
+    pdf.circle(x + size * 0.58, y + size * 0.45, size * 0.28, "F");
+    pdf.circle(x + size * 0.72, y + size * 0.55, size * 0.2, "F");
+    pdf.rect(x + size * 0.26, y + size * 0.55, size * 0.56, size * 0.22, "F");
+    setPdfDraw(pdf, primary);
+    pdf.line(x + size * 0.52, y + size * 0.7, x + size * 0.52, y + size * 0.34);
+    pdf.line(x + size * 0.42, y + size * 0.45, x + size * 0.52, y + size * 0.34);
+    pdf.line(x + size * 0.62, y + size * 0.45, x + size * 0.52, y + size * 0.34);
+    return;
+  }
+
+  if (icon === "key") {
+    pdf.circle(x + size * 0.28, y + size * 0.38, size * 0.18, "S");
+    pdf.line(x + size * 0.42, y + size * 0.48, x + size * 0.9, y + size * 0.9);
+    pdf.line(x + size * 0.76, y + size * 0.78, x + size * 0.95, y + size * 0.78);
+    return;
+  }
+
+  if (icon === "database") {
+    pdf.ellipse(x + size * 0.5, y + size * 0.22, size * 0.34, size * 0.13, "F");
+    pdf.rect(x + size * 0.16, y + size * 0.22, size * 0.68, size * 0.52, "F");
+    pdf.ellipse(x + size * 0.5, y + size * 0.74, size * 0.34, size * 0.13, "F");
+    return;
+  }
+
+  if (["flow", "function", "api", "server", "json", "screen", "box"].includes(icon)) {
+    pdf.roundedRect(x + size * 0.16, y + size * 0.18, size * 0.28, size * 0.22, 5, 5, "F");
+    pdf.roundedRect(x + size * 0.58, y + size * 0.18, size * 0.28, size * 0.22, 5, 5, "F");
+    pdf.roundedRect(x + size * 0.37, y + size * 0.62, size * 0.28, size * 0.22, 5, 5, "F");
+    setPdfDraw(pdf, "#ffffff");
+    pdf.line(x + size * 0.44, y + size * 0.3, x + size * 0.58, y + size * 0.3);
+    pdf.line(x + size * 0.5, y + size * 0.4, x + size * 0.5, y + size * 0.62);
+    return;
+  }
+
+  if (["chip", "network", "vectors", "prompt", "rag", "table", "training", "inference"].includes(icon)) {
+    pdf.roundedRect(x + size * 0.25, y + size * 0.25, size * 0.5, size * 0.5, 8, 8, "F");
+    setPdfFill(pdf, primary);
+    pdf.circle(x + size * 0.4, y + size * 0.42, size * 0.04, "F");
+    pdf.circle(x + size * 0.6, y + size * 0.42, size * 0.04, "F");
+    pdf.circle(x + size * 0.5, y + size * 0.6, size * 0.04, "F");
+    return;
+  }
+
+  if (["chart", "derivative", "integral", "formula", "percent", "fraction"].includes(icon)) {
+    setPdfDraw(pdf, accent);
+    pdf.line(x + size * 0.15, y + size * 0.85, x + size * 0.9, y + size * 0.85);
+    pdf.line(x + size * 0.22, y + size * 0.9, x + size * 0.22, y + size * 0.15);
+    pdf.line(x + size * 0.25, y + size * 0.72, x + size * 0.45, y + size * 0.5);
+    pdf.line(x + size * 0.45, y + size * 0.5, x + size * 0.68, y + size * 0.58);
+    pdf.line(x + size * 0.68, y + size * 0.58, x + size * 0.86, y + size * 0.28);
+    return;
+  }
+
+  if (["atom", "energy", "vector", "speed", "acceleration", "circuit"].includes(icon)) {
+    pdf.circle(x + size * 0.5, y + size * 0.5, size * 0.06, "F");
+    pdf.ellipse(x + size * 0.5, y + size * 0.5, size * 0.42, size * 0.14, "S");
+    pdf.ellipse(x + size * 0.5, y + size * 0.5, size * 0.14, size * 0.42, "S");
+    return;
+  }
+
+  if (["molecule", "reaction", "bond", "flask", "beaker"].includes(icon)) {
+    pdf.circle(x + size * 0.32, y + size * 0.45, size * 0.12, "F");
+    pdf.circle(x + size * 0.66, y + size * 0.34, size * 0.1, "F");
+    pdf.circle(x + size * 0.66, y + size * 0.7, size * 0.13, "F");
+    pdf.line(x + size * 0.42, y + size * 0.43, x + size * 0.56, y + size * 0.36);
+    pdf.line(x + size * 0.42, y + size * 0.5, x + size * 0.56, y + size * 0.66);
+    return;
+  }
+
+  if (["dna", "cell", "protein", "organism", "leaf", "mitosis"].includes(icon)) {
+    setPdfDraw(pdf, accent);
+    pdf.line(x + size * 0.35, y + size * 0.12, x + size * 0.65, y + size * 0.88);
+    pdf.line(x + size * 0.65, y + size * 0.12, x + size * 0.35, y + size * 0.88);
+    pdf.line(x + size * 0.42, y + size * 0.3, x + size * 0.58, y + size * 0.3);
+    pdf.line(x + size * 0.38, y + size * 0.5, x + size * 0.62, y + size * 0.5);
+    pdf.line(x + size * 0.42, y + size * 0.7, x + size * 0.58, y + size * 0.7);
+    return;
+  }
+
+  pdf.circle(x + size * 0.5, y + size * 0.5, size * 0.28, "F");
+}
+
+function downloadCardsPdf(analysis) {
+  if (!analysis || !Array.isArray(analysis.cards) || !analysis.cards.length) {
+    setStatus("Nessuna card da salvare in PDF.", "error");
+    return;
+  }
+
+  if (!window.jspdf || !window.jspdf.jsPDF) {
+    setStatus("PDF non disponibile: ricarica la pagina e riprova. Serve la libreria jsPDF.", "error");
+    return;
+  }
+
+  const { jsPDF } = window.jspdf;
+  const pdf = new jsPDF({ orientation: "portrait", unit: "pt", format: "a4" });
+  const pageWidth = pdf.internal.pageSize.getWidth();
+
+  const margin = 36;
+  const gap = 20;
+  const cardWidth = (pageWidth - margin * 2 - gap) / 2;
+  const cardHeight = 330;
+
+  analysis.cards.forEach((card, index) => {
+    if (index > 0 && index % 4 === 0) {
+      pdf.addPage();
+    }
+
+    const position = index % 4;
+    const col = position % 2;
+    const row = Math.floor(position / 2);
+
+    const x = margin + col * (cardWidth + gap);
+    const y = margin + row * (cardHeight + gap);
+
+    const theme = pdfThemeForCard(card);
+    const palette = theme.palette || ["#334155", "#64748b", "#e2e8f0"];
+    const primary = palette[0];
+    const secondary = palette[1];
+    const accent = palette[2];
+
+    setPdfFill(pdf, primary);
+    pdf.roundedRect(x, y, cardWidth, cardHeight, 18, 18, "F");
+
+    setPdfFill(pdf, secondary);
+    pdf.roundedRect(x + 8, y + 8, cardWidth - 16, 96, 14, 14, "F");
+
+    setPdfFill(pdf, accent);
+    pdf.circle(x + cardWidth - 42, y + 48, 30, "F");
+
+    setPdfFill(pdf, "#ffffff");
+    pdf.roundedRect(x + 16, y + 16, Math.min(110, cardWidth - 32), 24, 10, 10, "F");
+
+    setPdfDraw(pdf, accent);
+    pdf.setLineWidth(1.2);
+    pdf.roundedRect(x, y, cardWidth, cardHeight, 18, 18, "S");
+
+    pdf.setTextColor(15, 23, 42);
+    pdf.setFont("helvetica", "bold");
+    pdf.setFontSize(9);
+    pdf.text(String(theme.badge || card.materia || "Card").toUpperCase(), x + 24, y + 32, { maxWidth: cardWidth - 48 });
+
+    drawPdfIcon(pdf, card.icona || "", x + 54, y + 42, 92, palette);
+
+    pdf.setTextColor(255, 255, 255);
+    pdf.setFont("helvetica", "bold");
+    pdf.setFontSize(15);
+    const titleLines = pdf.splitTextToSize(card.fronte || "Concetto chiave", cardWidth - 34);
+    pdf.text(titleLines.slice(0, 3), x + 17, y + 132);
+
+    pdf.setFont("helvetica", "normal");
+    pdf.setFontSize(10.5);
+    const bodyLines = pdf.splitTextToSize(card.retro || "", cardWidth - 34);
+    pdf.text(bodyLines.slice(0, 10), x + 17, y + 188);
+
+    pdf.setFont("helvetica", "bold");
+    pdf.setFontSize(9);
+    const usageLines = pdf.splitTextToSize(card.uso || "Ripassa questo punto e prova a rispiegarlo con parole tue.", cardWidth - 34);
+    pdf.text(usageLines.slice(0, 3), x + 17, y + cardHeight - 42);
+  });
+
+  const slug = slugify(analysis.titolo || "card-rag");
+  pdf.save(`card-rag-${slug}.pdf`);
+  setStatus("✅ PDF delle card scaricato. Lo trovi nella cartella Download del browser.", "success");
+}
+
+function openCardsPrintDialog(analysis) {
+  if (!analysis || !Array.isArray(analysis.cards) || !analysis.cards.length) {
+    setStatus("Nessuna card da stampare.", "error");
+    return;
+  }
+
+  const cardsHtml = makeCardsHtmlDocument(analysis);
+  const printWindow = window.open("", "_blank");
+  if (!printWindow) {
+    setStatus("Il browser ha bloccato la finestra di stampa. Consenti i popup o usa il download PDF.", "error");
+    return;
+  }
+
+  printWindow.document.open();
+  printWindow.document.write(cardsHtml);
+  printWindow.document.close();
+
+  setTimeout(() => {
+    printWindow.focus();
+    printWindow.print();
+  }, 400);
+}
+
 function renderDownloadPanel(analysis, selectedOutputs) {
+  const pdfCardsButton = document.getElementById("downloadCardsPdfButton");
+  if (pdfCardsButton) {
+    pdfCardsButton.addEventListener("click", () => downloadCardsPdf(analysis));
+  }
+
+  const printCardsButton = document.getElementById("printCardsButton");
+  if (printCardsButton) {
+    printCardsButton.addEventListener("click", () => openCardsPrintDialog(analysis));
+  }
+
   const downloadableSelected = new Set([...selectedOutputs].filter(key => DOWNLOADABLE_OUTPUTS.has(key)));
   const files = makeDownloadPackage(analysis, downloadableSelected);
 
@@ -495,10 +745,16 @@ function renderDownloadPanel(analysis, selectedOutputs) {
     <section class="panel">
       <h2>Scarica output</h2>
       <p>
-        I file vengono scaricati nella cartella Download del browser.
+        Il pulsante PDF delle card scarica un file stampabile sul PC. Il file si apre offline, senza internet. Lo ZIP scarica un pacchetto con gli output selezionati.
         Su Mac di solito è <strong>Download</strong>; su smartphone è nella cartella Download o File.
         Se vuoi scegliere ogni volta dove salvarli, attiva nel browser l'opzione “Chiedi dove salvare ogni file”.
       </p>
+      ${selectedOutputs.has("cards") ? `
+      <div class="download-grid card-pdf-actions">
+        <button type="button" id="downloadCardsPdfButton">Scarica card PDF stampabile sul PC</button>
+        <button type="button" id="printCardsButton">Stampa / salva card come PDF</button>
+      </div>
+    ` : ""}
       <div class="download-grid">
         <button type="button" id="downloadSelectedZip">Scarica ZIP con riassunti, tabelle e card selezionati</button>
         ${fileButtons}

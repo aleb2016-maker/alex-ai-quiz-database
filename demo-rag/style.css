@@ -243,3 +243,24 @@
   line-height: 1.45;
   margin-top: 14px;
 }
+
+/* RAG_CARD_PDF_PRINT_ACTIONS */
+.card-pdf-actions {
+  margin: 16px 0 18px;
+}
+
+.card-pdf-actions button {
+  min-height: 58px;
+  font-size: 15px;
+  font-weight: 900;
+  border: 1px solid rgba(255,255,255,.18);
+  box-shadow: 0 14px 34px rgba(0,0,0,.22);
+}
+
+#downloadCardsPdfButton {
+  background: linear-gradient(135deg, #7c3aed, #ef4444);
+}
+
+#printCardsButton {
+  background: linear-gradient(135deg, #0f766e, #38bdf8);
+}
