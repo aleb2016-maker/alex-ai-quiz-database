@@ -1,79 +1,553 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="it">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Motore RAG documenti</title>
-<style>
-body{margin:0;font-family:Arial,sans-serif;background:linear-gradient(135deg,#07111f,#172846);color:white}
-header{padding:50px 24px;text-align:center}
-h1{font-size:clamp(2rem,5vw,4rem);margin:0 0 12px}
-p{color:#cdd6ee;line-height:1.6}
-.wrap{width:min(1120px,calc(100% - 32px));margin:auto}
-.actions{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;margin-top:24px}
-.btn{padding:15px 22px;border-radius:999px;color:white;text-decoration:none;font-weight:900}
-.btn-rag{background:linear-gradient(135deg,#7c4dff,#00c2a8)}
-.btn-demo{background:linear-gradient(135deg,#ff7a18,#ff3d71)}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px;margin:30px 0}
-.card,.panel{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);border-radius:26px;padding:24px}
-input,select,textarea{width:100%;padding:14px;border-radius:14px;border:1px solid #ffffff33;background:#081326;color:white;margin-top:7px}
-label{font-weight:800;display:block;margin:14px 0}
-pre{white-space:pre-wrap;background:#050b14;border-radius:18px;padding:18px;color:#dce7ff}
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Motore RAG Documenti</title>
+
+  <style>
+    :root {
+      --bg-main: #070b16;
+      --bg-card: #10182b;
+      --bg-soft: #17223a;
+      --text-main: #f4f7ff;
+      --text-muted: #b8c2d8;
+      --accent-blue: #28b7ff;
+      --accent-purple: #9b5cff;
+      --accent-green: #36e38a;
+      --accent-red: #ff4d5e;
+      --border-soft: rgba(255, 255, 255, 0.12);
+      --shadow-soft: 0 24px 60px rgba(0, 0, 0, 0.35);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text-main);
+      background:
+        radial-gradient(circle at top left, rgba(40, 183, 255, 0.22), transparent 34%),
+        radial-gradient(circle at top right, rgba(155, 92, 255, 0.18), transparent 32%),
+        linear-gradient(135deg, #070b16 0%, #0b1020 55%, #090d18 100%);
+    }
+
+    .page {
+      width: min(1180px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 32px 0 56px;
+    }
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 28px;
+    }
+
+    .home-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 0 18px;
+      border-radius: 999px;
+      color: white;
+      text-decoration: none;
+      font-weight: 700;
+      background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
+      box-shadow: 0 12px 30px rgba(40, 183, 255, 0.25);
+    }
+
+    .badge {
+      display: inline-flex;
+      padding: 8px 14px;
+      border: 1px solid var(--border-soft);
+      border-radius: 999px;
+      color: var(--accent-green);
+      background: rgba(54, 227, 138, 0.08);
+      font-weight: 700;
+      font-size: 0.92rem;
+    }
+
+    .hero {
+      padding: 34px;
+      border: 1px solid var(--border-soft);
+      border-radius: 28px;
+      background: rgba(16, 24, 43, 0.82);
+      box-shadow: var(--shadow-soft);
+      margin-bottom: 24px;
+    }
+
+    .hero h1 {
+      margin: 0 0 12px;
+      font-size: clamp(2rem, 5vw, 4rem);
+      line-height: 1;
+    }
+
+    .hero p {
+      max-width: 850px;
+      margin: 0;
+      color: var(--text-muted);
+      font-size: 1.08rem;
+      line-height: 1.7;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 26px;
+    }
+
+    .primary-button,
+    .secondary-button,
+    .danger-button {
+      border: 0;
+      cursor: pointer;
+      min-height: 48px;
+      padding: 0 20px;
+      border-radius: 16px;
+      color: white;
+      font-size: 1rem;
+      font-weight: 800;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .primary-button {
+      background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
+    }
+
+    .secondary-button {
+      background: linear-gradient(135deg, #22314f, #17223a);
+      border: 1px solid var(--border-soft);
+    }
+
+    .danger-button {
+      background: linear-gradient(135deg, #ff4d5e, #c82235);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 22px;
+    }
+
+    .card {
+      padding: 24px;
+      border-radius: 24px;
+      border: 1px solid var(--border-soft);
+      background: rgba(16, 24, 43, 0.88);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .card h2 {
+      margin: 0 0 14px;
+      font-size: 1.5rem;
+    }
+
+    .card p {
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    textarea {
+      width: 100%;
+      min-height: 260px;
+      resize: vertical;
+      border: 1px solid var(--border-soft);
+      border-radius: 18px;
+      padding: 16px;
+      color: var(--text-main);
+      background: rgba(7, 11, 22, 0.88);
+      font-size: 1rem;
+      line-height: 1.55;
+      outline: none;
+    }
+
+    input[type="file"] {
+      width: 100%;
+      padding: 14px;
+      border-radius: 16px;
+      color: var(--text-muted);
+      background: rgba(7, 11, 22, 0.75);
+      border: 1px dashed var(--border-soft);
+    }
+
+    .options {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      margin: 18px 0;
+    }
+
+    .option {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      padding: 13px;
+      border-radius: 16px;
+      color: var(--text-muted);
+      border: 1px solid var(--border-soft);
+      background: rgba(7, 11, 22, 0.55);
+      cursor: pointer;
+    }
+
+    .option input {
+      accent-color: var(--accent-blue);
+    }
+
+    .output {
+      white-space: pre-wrap;
+      min-height: 260px;
+      padding: 18px;
+      border-radius: 18px;
+      border: 1px solid var(--border-soft);
+      background: rgba(7, 11, 22, 0.82);
+      color: var(--text-main);
+      line-height: 1.65;
+      overflow-wrap: anywhere;
+    }
+
+    .small-note {
+      margin-top: 12px;
+      color: var(--text-muted);
+      font-size: 0.92rem;
+      line-height: 1.55;
+    }
+
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .pill {
+      padding: 9px 12px;
+      border-radius: 999px;
+      background: rgba(40, 183, 255, 0.1);
+      border: 1px solid rgba(40, 183, 255, 0.18);
+      color: #d8f2ff;
+      font-size: 0.92rem;
+      font-weight: 700;
+    }
+
+    @media (max-width: 860px) {
+      .topbar {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .options {
+        grid-template-columns: 1fr;
+      }
+
+      .hero,
+      .card {
+        padding: 22px;
+      }
+    }
+  </style>
 </head>
+
 <body>
-<header>
-<h1>Motore RAG documenti</h1>
-<p>Carica documenti didattici o aziendali e genera quiz, riassunti, report, risposte, statistiche, grafici, card, slide e mini-corsi.</p>
-<div class="actions">
-<a class="btn btn-rag" href="../downloads/pacchetto-rag-riutilizzabile.zip" download>Scarica motore RAG riutilizzabile</a>
-<a class="btn btn-demo" href="../demo/index.html">Torna alla demo principale</a>
-</div>
-</header>
+  <main class="page">
+    <div class="topbar">
+      <a class="home-button" href="../demo/">← Torna alla home</a>
+      <div class="badge">Motore RAG riutilizzabile</div>
+    </div>
 
-<main class="wrap">
-<section class="panel">
-<h2>Cruscotto RAG</h2>
-<p>Su GitHub Pages questa è una demo statica. La generazione reale avviene in locale o in un backend futuro usando gli script scaricabili.</p>
-<label>Carica file <input type="file" multiple></label>
-<label>Output
-<select>
-<option>Pacchetto completo</option>
-<option>Quiz</option>
-<option>Riassunto</option>
-<option>Report aziendale</option>
-<option>Risposta a domanda specifica</option>
-<option>Statistiche e grafici</option>
-<option>Card</option>
-<option>Slide</option>
-<option>Mini-corso</option>
-</select>
-</label>
-<label>Materia o ambito <input placeholder="Esempio: sicurezza aziendale, privacy, informatica..."></label>
-<label>Numero domande/card/slide <input type="number" value="10"></label>
-<label>Difficoltà <select><option>facile</option><option selected>intermedio</option><option>avanzato</option></select></label>
-<label>Tema grafico <select><option>aziendale-blu</option><option>moderno-scuro</option><option>formazione-verde</option><option>tech-neon</option></select></label>
-</section>
+    <section class="hero">
+      <h1>Motore RAG Documenti</h1>
+      <p>
+        Questo cruscotto serve per trasformare documenti aziendali, materiali di studio o testi tecnici
+        in output riutilizzabili: riassunti, quiz, card formative, tabelle operative e parole chiave.
+        La demo qui sotto lavora direttamente nel browser sui testi incollati o caricati in formato TXT/MD.
+      </p>
 
-<section class="grid">
-<div class="card"><h2>Quiz controllati</h2><p>Genera test con numero domande, materia, difficoltà e controlli qualità.</p></div>
-<div class="card"><h2>Report aziendali</h2><p>Produce sintesi operative, rischi, criticità e azioni consigliate.</p></div>
-<div class="card"><h2>Q&A sui documenti</h2><p>L'utente può fare domande specifiche e ricevere risposte basate sul documento.</p></div>
-<div class="card"><h2>Card e slide</h2><p>Genera materiale formativo per corsi, onboarding e presentazioni.</p></div>
-<div class="card"><h2>Statistiche e grafici</h2><p>Estrae parole chiave, dati sintetici e grafici SVG.</p></div>
-<div class="card"><h2>Pacchetto riutilizzabile</h2><p>Scarica script, configurazioni, template, docs e motori qualità.</p></div>
-</section>
+      <div class="hero-actions">
+        <a class="danger-button" href="../downloads/pacchetto-rag-riutilizzabile.zip" download>
+          Scarica pacchetto RAG completo
+        </a>
 
-<section class="panel">
-<h2>Comando locale esempio</h2>
-<pre>python3 scripts/rag_documenti_aziendali.py rag/documenti/esempio_documento_aziendale_formazione.md \
-  --titolo "Formazione aziendale" \
-  --materia "sicurezza aziendale" \
-  --difficolta intermedio \
-  --domande 10 \
-  --tema aziendale-blu \
-  --output all</pre>
-</section>
-</main>
+        <button class="primary-button" onclick="generaOutput()">
+          Genera output dal documento
+        </button>
+
+        <button class="secondary-button" onclick="pulisciTutto()">
+          Pulisci
+        </button>
+      </div>
+
+      <div class="pill-row">
+        <span class="pill">Riassunti</span>
+        <span class="pill">Quiz</span>
+        <span class="pill">Card formative</span>
+        <span class="pill">Tabelle</span>
+        <span class="pill">Parole chiave</span>
+        <span class="pill">Pacchetto riutilizzabile</span>
+      </div>
+    </section>
+
+    <section class="grid">
+      <div class="card">
+        <h2>1. Inserisci documento</h2>
+
+        <input id="fileInput" type="file" accept=".txt,.md,.csv" />
+
+        <p class="small-note">
+          Puoi caricare un file TXT/MD/CSV oppure incollare direttamente il testo qui sotto.
+        </p>
+
+        <textarea id="documentText" placeholder="Incolla qui il documento da trasformare..."></textarea>
+      </div>
+
+      <div class="card">
+        <h2>2. Scegli cosa generare</h2>
+
+        <div class="options">
+          <label class="option">
+            <input type="checkbox" id="optRiassunto" checked />
+            Riassunto operativo
+          </label>
+
+          <label class="option">
+            <input type="checkbox" id="optQuiz" checked />
+            Quiz di controllo
+          </label>
+
+          <label class="option">
+            <input type="checkbox" id="optCard" checked />
+            Card formative
+          </label>
+
+          <label class="option">
+            <input type="checkbox" id="optTabella" checked />
+            Tabella punti chiave
+          </label>
+
+          <label class="option">
+            <input type="checkbox" id="optParole" checked />
+            Parole chiave
+          </label>
+        </div>
+
+        <button class="primary-button" onclick="generaOutput()">
+          Genera adesso
+        </button>
+
+        <button class="secondary-button" onclick="scaricaOutput()">
+          Scarica output TXT
+        </button>
+
+        <p class="small-note">
+          Per PDF, DOCX, immagini, motore AI locale e pipeline completa si usa il pacchetto RAG scaricabile.
+        </p>
+      </div>
+    </section>
+
+    <section class="card" style="margin-top: 22px;">
+      <h2>3. Output generato</h2>
+      <div id="output" class="output">L’output comparirà qui.</div>
+    </section>
+  </main>
+
+  <script>
+    const fileInput = document.getElementById("fileInput");
+    const documentText = document.getElementById("documentText");
+    const output = document.getElementById("output");
+
+    fileInput.addEventListener("change", async function () {
+      const file = fileInput.files[0];
+
+      if (!file) {
+        return;
+      }
+
+      const testo = await file.text();
+      documentText.value = testo;
+    });
+
+    function prendiTestoPulito() {
+      return documentText.value
+        .replace(/\r/g, "")
+        .replace(/[ \t]+/g, " ")
+        .replace(/\n{3,}/g, "\n\n")
+        .trim();
+    }
+
+    function dividiInFrasi(testo) {
+      return testo
+        .split(/(?<=[.!?])\s+/)
+        .map(frase => frase.trim())
+        .filter(frase => frase.length > 35);
+    }
+
+    function trovaParoleChiave(testo) {
+      const paroleDaIgnorare = new Set([
+        "della", "delle", "degli", "dello", "alla", "alle", "agli", "allo",
+        "che", "con", "per", "una", "uno", "nel", "nei", "nelle", "sul",
+        "sulla", "sono", "come", "deve", "devono", "viene", "essere",
+        "anche", "questo", "questa", "quindi", "dopo", "prima", "tra",
+        "gli", "le", "la", "il", "lo", "un", "di", "a", "e", "o", "in"
+      ]);
+
+      const conteggio = {};
+
+      testo
+        .toLowerCase()
+        .replace(/[^\p{L}\p{N}\s]/gu, " ")
+        .split(/\s+/)
+        .filter(parola => parola.length > 4)
+        .filter(parola => !paroleDaIgnorare.has(parola))
+        .forEach(parola => {
+          conteggio[parola] = (conteggio[parola] || 0) + 1;
+        });
+
+      return Object.entries(conteggio)
+        .sort((a, b) => b[1] - a[1])
+        .slice(0, 12)
+        .map(([parola, numero]) => `${parola} (${numero})`);
+    }
+
+    function creaRiassunto(frasi) {
+      const frasiScelte = frasi.slice(0, 5);
+
+      if (frasiScelte.length === 0) {
+        return "Testo troppo breve per generare un riassunto utile.";
+      }
+
+      return frasiScelte
+        .map((frase, indice) => `${indice + 1}. ${frase}`)
+        .join("\n");
+    }
+
+    function creaQuiz(frasi) {
+      const base = frasi.slice(0, 5);
+
+      if (base.length === 0) {
+        return "Testo troppo breve per generare domande.";
+      }
+
+      return base.map((frase, indice) => {
+        return [
+          `Domanda ${indice + 1}: Qual è il punto centrale di questo passaggio?`,
+          `A. ${frase}`,
+          `B. Una conseguenza simile ma non identica al contenuto del documento.`,
+          `C. Un dettaglio collegato, ma meno preciso rispetto al testo originale.`,
+          `D. Una conclusione plausibile, ma non confermata direttamente dal documento.`,
+          `Risposta corretta: A`,
+          `Spiegazione: la risposta A riprende il contenuto realmente presente nel documento.`
+        ].join("\n");
+      }).join("\n\n");
+    }
+
+    function creaCard(frasi) {
+      const base = frasi.slice(0, 6);
+
+      if (base.length === 0) {
+        return "Testo troppo breve per generare card formative.";
+      }
+
+      return base.map((frase, indice) => {
+        return [
+          `Card ${indice + 1}`,
+          `Titolo: Punto chiave ${indice + 1}`,
+          `Contenuto: ${frase}`,
+          `Azione consigliata: trasformare questo punto in una regola pratica o domanda di verifica.`
+        ].join("\n");
+      }).join("\n\n");
+    }
+
+    function creaTabella(frasi) {
+      const base = frasi.slice(0, 6);
+
+      if (base.length === 0) {
+        return "Testo troppo breve per generare una tabella.";
+      }
+
+      const righe = base.map((frase, indice) => {
+        return `| ${indice + 1} | ${frase} | Da verificare/applicare |`;
+      });
+
+      return [
+        "| # | Punto chiave | Uso pratico |",
+        "|---|-------------|-------------|",
+        ...righe
+      ].join("\n");
+    }
+
+    function generaOutput() {
+      const testo = prendiTestoPulito();
+
+      if (!testo) {
+        output.textContent = "Inserisci o carica prima un documento.";
+        return;
+      }
+
+      const frasi = dividiInFrasi(testo);
+      const blocchi = [];
+
+      if (document.getElementById("optRiassunto").checked) {
+        blocchi.push("## RIASSUNTO OPERATIVO\n" + creaRiassunto(frasi));
+      }
+
+      if (document.getElementById("optQuiz").checked) {
+        blocchi.push("## QUIZ DI CONTROLLO\n" + creaQuiz(frasi));
+      }
+
+      if (document.getElementById("optCard").checked) {
+        blocchi.push("## CARD FORMATIVE\n" + creaCard(frasi));
+      }
+
+      if (document.getElementById("optTabella").checked) {
+        blocchi.push("## TABELLA PUNTI CHIAVE\n" + creaTabella(frasi));
+      }
+
+      if (document.getElementById("optParole").checked) {
+        blocchi.push("## PAROLE CHIAVE\n" + trovaParoleChiave(testo).join(", "));
+      }
+
+      output.textContent = blocchi.join("\n\n-----------------------------\n\n");
+    }
+
+    function scaricaOutput() {
+      const contenuto = output.textContent.trim();
+
+      if (!contenuto || contenuto === "L’output comparirà qui.") {
+        output.textContent = "Genera prima un output.";
+        return;
+      }
+
+      const blob = new Blob([contenuto], { type: "text/plain;charset=utf-8" });
+      const url = URL.createObjectURL(blob);
+
+      const link = document.createElement("a");
+      link.href = url;
+      link.download = "output-rag-documento.txt";
+      link.click();
+
+      URL.revokeObjectURL(url);
+    }
+
+    function pulisciTutto() {
+      fileInput.value = "";
+      documentText.value = "";
+      output.textContent = "L’output comparirà qui.";
+    }
+  </script>
 </body>
 </html>
