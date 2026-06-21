@@ -1,36 +1,9 @@
-PACCHETTO RAG RIUTILIZZABILE
+MOTORE RAG RIUTILIZZABILE
 
-Questo pacchetto serve per trasformare documenti in materiali utili.
+1. Copia il tuo file dentro documenti/
+2. Apri il terminale dentro questa cartella
+3. Esegui:
 
-Cosa può generare:
-- riassunti
-- quiz e test
-- report
-- tabelle
-- grafici
-- card formative
-- slide / mini-corsi
-- domande e risposte
+python3 scripts/rag_motore_documenti_completo.py documenti/tuo_file.md --titolo "Titolo documento"
 
-COME SI USA
-
-1. Metti il tuo documento dentro la cartella:
-
-   documenti/
-
-Sono consigliati file .txt o .md.
-
-2. Apri il terminale dentro questa cartella.
-
-3. Lancia un comando come questo:
-
-   python3 scripts/rag_documenti_aziendali.py documenti/esempio_documento_aziendale_formazione.md --titolo "Formazione aziendale"
-
-4. Gli output vengono generati nella cartella:
-
-   output_generati/
-
-NOTA IMPORTANTE
-
-La pagina online su GitHub serve per presentare e scaricare il pacchetto.
-La generazione vera dei contenuti avviene usando questo pacchetto sul computer.
+Il terminale NON resta bloccato. Gli output finiscono in output_generati/.

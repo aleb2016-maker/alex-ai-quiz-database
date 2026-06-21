@@ -1161,3 +1161,29 @@ textarea::placeholder {
   filter: brightness(1.06);
 }
 /* FINE PULSANTE RAG VICINO AL PACCHETTO PERSONALIZZATO */
+
+
+.rag-documenti-entry {
+  margin: 28px auto;
+  padding: 24px;
+  border-radius: 24px;
+  border: 1px solid rgba(255,255,255,.14);
+  background: rgba(15,23,42,.82);
+}
+.rag-documenti-entry h2,
+.rag-documenti-entry p,
+.rag-documenti-button {
+  font-weight: 900;
+}
+.rag-documenti-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 12px;
+  padding: 15px 22px;
+  border-radius: 18px;
+  color: #fff;
+  text-decoration: none;
+  background: linear-gradient(135deg, #7f1d1d, #991b1b);
+  box-shadow: 0 16px 42px rgba(127, 29, 29, .30);
+}
