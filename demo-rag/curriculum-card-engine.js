@@ -225,13 +225,122 @@ function generate() {
   window.__cvCardsResult = {keywords, cards};
 }
 
+
+function downloadPdfFile() {
+  const result = window.__cvCardsResult || {keywords: [], cards: []};
+  const cards = Array.isArray(result.cards) ? result.cards : [];
+  const keywords = Array.isArray(result.keywords) ? result.keywords : [];
+
+  const html = `
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<title>Card documento</title>
+<style>
+  body {
+    margin: 0;
+    padding: 24px;
+    font-family: Arial, sans-serif;
+    background: #f3f4f6;
+    color: #111827;
+  }
+  h1 {
+    margin: 0 0 18px;
+    font-size: 28px;
+  }
+  .keywords {
+    margin-bottom: 22px;
+  }
+  .keywords span {
+    display: inline-block;
+    margin: 4px;
+    padding: 7px 10px;
+    border-radius: 999px;
+    background: #111827;
+    color: white;
+    font-size: 13px;
+    font-weight: 700;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(240px, 1fr));
+    gap: 18px;
+  }
+  .card {
+    min-height: 260px;
+    padding: 20px;
+    border-radius: 22px;
+    background: linear-gradient(145deg, #1e1b4b, #7c3aed);
+    color: white;
+    page-break-inside: avoid;
+  }
+  .badge {
+    display: inline-block;
+    padding: 7px 10px;
+    border-radius: 999px;
+    background: rgba(255,255,255,.18);
+    font-size: 12px;
+    font-weight: 800;
+    text-transform: uppercase;
+  }
+  h2 {
+    margin-top: 22px;
+    font-size: 22px;
+  }
+  p {
+    line-height: 1.45;
+  }
+  small {
+    display: block;
+    margin-top: 14px;
+    font-weight: 700;
+  }
+  @media print {
+    body { background: white; }
+  }
+</style>
+</head>
+<body>
+  <h1>Card documento</h1>
+  <div class="keywords">
+    ${keywords.map(k => `<span>${escapeHtml(k)}</span>`).join("")}
+  </div>
+  <div class="grid">
+    ${cards.map(card => `
+      <article class="card">
+        <div class="badge">${escapeHtml(card.materia || "Documento")}</div>
+        <h2>${escapeHtml(card.fronte || card.concetto || "Scheda documento")}</h2>
+        <p>${escapeHtml(card.retro || "")}</p>
+        <small>${escapeHtml(card.uso || "")}</small>
+      </article>
+    `).join("")}
+  </div>
+  <script>
+    setTimeout(() => window.print(), 300);
+  </script>
+</body>
+</html>`;
+
+  const blob = new Blob([html], {type: "text/html;charset=utf-8"});
+  const url = URL.createObjectURL(blob);
+  const win = window.open(url, "_blank");
+
+  if (!win) {
+    window.location.href = url;
+  }
+
+  setTimeout(() => URL.revokeObjectURL(url), 60000);
+}
+
+
 function downloadJson() {
   const result = window.__cvCardsResult || {keywords: [], cards: []};
   const blob = new Blob([JSON.stringify(result, null, 2)], {type: "application/json"});
   const url = URL.createObjectURL(blob);
   const link = document.createElement("a");
   link.href = url;
-  link.download = "card-curriculum.json";
+  link.download = "card-documento.json";
   link.click();
   URL.revokeObjectURL(url);
 }
@@ -247,6 +356,7 @@ Formazione: diploma, obiettivo corso ITS full stack e AI.
 
 document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("generateCvCards").addEventListener("click", generate);
+  document.getElementById("downloadPdf").addEventListener("click", downloadPdfFile);
   document.getElementById("downloadJson").addEventListener("click", downloadJson);
   document.getElementById("loadExample").addEventListener("click", () => {
     document.getElementById("cvText").value = example;

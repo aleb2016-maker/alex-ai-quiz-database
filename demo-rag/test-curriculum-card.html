@@ -3,24 +3,24 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Test Card Curriculum</title>
+  <title>Test Card Documento</title>
   <link rel="stylesheet" href="style.css">
   <script src="curriculum-card-engine.js" defer></script>
 </head>
 <body>
   <main class="rag-shell">
     <section class="hero">
-      <h1>Test card Curriculum</h1>
-      <p>Pagina separata di prova. Non modifica la demo RAG principale.</p>
+      <h1>Test card documento</h1>
+      <p>Pagina separata di prova per documenti, curriculum, testi aziendali e materiale formativo. Non modifica la demo RAG principale.</p>
     </section>
 
     <section class="panel">
-      <h2>Incolla testo curriculum</h2>
-      <textarea id="cvText" rows="14" placeholder="Incolla qui il testo del curriculum..."></textarea>
+      <h2>Incolla testo documento</h2>
+      <textarea id="cvText" rows="14" placeholder="Incolla qui il testo del documento..."></textarea>
 
       <div class="actions">
         <button id="loadExample">Carica esempio</button>
-        <button id="generateCvCards">Genera card curriculum</button>
+        <button id="generateCvCards">Genera card documento</button>
       </div>
     </section>
 
@@ -36,7 +36,8 @@
 
     <section class="panel">
       <h2>Dati tecnici</h2>
-      <button id="downloadJson">Scarica JSON card curriculum</button>
+      <button id="downloadPdf">Scarica file PDF</button>
+      <button id="downloadJson">Scarica JSON dati</button>
       <pre id="jsonBox"></pre>
     </section>
   </main>
