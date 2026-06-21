@@ -4,6 +4,7 @@
 */
 (function () {
   const THEMES = {
+    curriculum: { label: "Curriculum", palette: ["#3f1235", "#be185d", "#fbbf24"], badge: "Curriculum", baseIcon: "badge-check", keywords: ["curriculum","competenze","esperienza","profilo","formazione","progetti"] },
     generico: { label: "Generico", palette: ["#334155", "#64748b", "#e2e8f0"], badge: "Generico", baseIcon: "spark", keywords: ["concetto","studio","formazione"] },
     cybersecurity: { label: "Cybersecurity", palette: ["#0f172a", "#7c3aed", "#ef4444"], badge: "Cybersecurity", baseIcon: "shield", keywords: ["sicurezza","backup","password","phishing","malware","firewall","crittografia","autenticazione"] },
     informatica: { label: "Informatica", palette: ["#0b3b66", "#38bdf8", "#1e293b"], badge: "Informatica", baseIcon: "server", keywords: ["database","algoritmo","funzione","variabile","api","frontend","backend","json"] },
@@ -15,6 +16,13 @@
   };
 
   const CONCEPTS = {
+    curriculum: {
+      "profilo professionale": "badge-check",
+      "competenze trasversali": "badge-check",
+      "esperienza lavorativa": "badge-check",
+      "formazione e obiettivi": "badge-check",
+      "sintesi curriculum": "badge-check"
+    },
     cybersecurity: {
       sicurezza: "shield", backup: "backup", password: "key", phishing: "email-hook",
       malware: "bug", firewall: "wall", autenticazione: "badge-check", crittografia: "lock-code"

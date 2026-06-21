@@ -206,14 +206,177 @@ function makeConceptRows(keywords, sentences, limit = 14) {
   }));
 }
 
+function cleanCvCardText(text) {
+  return String(text || "")
+    .replace(/\[Pagina\s*\d+\]/gi, "")
+    .replace(/Curriculum\s+Vitae/gi, "")
+    .replace(/Alessandro\s+Barbarossa/gi, "")
+    .replace(/Email\s+\S+/gi, "")
+    .replace(/Telefono\s+[0-9\s+]+/gi, "")
+    .replace(/Indirizzo\s+[^.]+/gi, "")
+    .replace(/DATA E LUOGO DI NASCITA[^.]+/gi, "")
+    .replace(/NAZIONALITA'?[^.]+/gi, "")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function normalizeCardText(text) {
+  return String(text || "")
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .replace(/[^a-z0-9\s]+/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function containsCardKeyword(text, keywords) {
+  const normalized = normalizeCardText(text);
+  return keywords.some(keyword => normalized.includes(normalizeCardText(keyword)));
+}
+
+function makeShortCardText(text, fallback) {
+  const cleaned = cleanCvCardText(text);
+  if (!cleaned) return fallback;
+  if (cleaned.length <= 330) return cleaned;
+  return cleaned.slice(0, 330).replace(/\s+\S*$/, "") + "...";
+}
+
+function makeCurriculumCards(rows, limit = 8) {
+  const fullText = rows.map(row => `${row.concetto || ""} ${row.spiegazione || ""}`).join(" ");
+  const cards = [];
+
+  function addCard(concetto, titolo, testo, materia = "curriculum") {
+    const key = normalizeCardText(titolo);
+    if (cards.some(card => normalizeCardText(card.fronte) === key)) return;
+
+    cards.push({
+      id: "RAG-CV-" + String(cards.length + 1).padStart(4, "0"),
+      materia,
+      concetto,
+      tema: "Curriculum",
+      icona: "badge-check",
+      fronte: titolo,
+      retro: makeShortCardText(testo, "Scheda riassuntiva del curriculum."),
+      uso: "Usa questa scheda per presentarti meglio o preparare un colloquio."
+    });
+  }
+
+  if (containsCardKeyword(fullText, ["profilo", "creativo", "adattabile", "presentazione", "obiettivo"])) {
+    addCard(
+      "profilo professionale",
+      "Scheda: profilo professionale",
+      fullText,
+      "curriculum"
+    );
+  }
+
+  if (containsCardKeyword(fullText, ["pazienza", "creativita", "comunicazione", "lavoro di gruppo", "pubblico", "adattamenti"])) {
+    addCard(
+      "competenze trasversali",
+      "Scheda: competenze trasversali",
+      fullText,
+      "curriculum"
+    );
+  }
+
+  if (containsCardKeyword(fullText, ["intelligenza artificiale", "ai", "prompt", "generativa", "immagini", "prototipi"])) {
+    addCard(
+      "competenze digitali e AI",
+      "Scheda: competenze digitali e AI",
+      fullText,
+      "ai"
+    );
+  }
+
+  if (containsCardKeyword(fullText, ["app", "android", "kotlin", "software", "github", "database", "quiz", "progetto"])) {
+    addCard(
+      "progetti digitali",
+      "Scheda: progetti e applicazioni",
+      fullText,
+      "informatica"
+    );
+  }
+
+  if (containsCardKeyword(fullText, ["esperienza", "lavoro", "addetto", "presso", "mansione", "azienda", "pulizie", "contratto"])) {
+    addCard(
+      "esperienza lavorativa",
+      "Scheda: esperienza lavorativa",
+      fullText,
+      "curriculum"
+    );
+  }
+
+  if (containsCardKeyword(fullText, ["formazione", "studio", "corso", "diploma", "its", "obiettivi"])) {
+    addCard(
+      "formazione e obiettivi",
+      "Scheda: formazione e obiettivi",
+      fullText,
+      "curriculum"
+    );
+  }
+
+  if (!cards.length) {
+    addCard(
+      "sintesi curriculum",
+      "Scheda: sintesi curriculum",
+      fullText,
+      "curriculum"
+    );
+  }
+
+  return cards.slice(0, Math.min(limit, 8));
+}
+
+function makeGenericCards(rows, limit = 12) {
+  const badConcepts = new Set([
+    "presso", "addetto", "pagina", "curriculum", "vitae", "email",
+    "telefono", "indirizzo", "nascita", "nazionalita", "contatti"
+  ]);
+
+  return rows
+    .filter(row => {
+      const text = normalizeCardText(`${row.concetto || ""} ${row.spiegazione || ""}`);
+      if (!text) return false;
+      if (text.includes("email") || text.includes("telefono") || text.includes("indirizzo")) return false;
+      return true;
+    })
+    .map((row, index) => {
+      let concept = String(row.concetto || "").trim();
+      let normalizedConcept = normalizeCardText(concept);
+
+      if (!concept || badConcepts.has(normalizedConcept) || concept.length < 4) {
+        concept = "punto importante " + (index + 1);
+      }
+
+      return {
+        id: "RAG-CARD-" + String(index + 1).padStart(4, "0"),
+        materia: "generico",
+        concetto: concept,
+        tema: "Generico",
+        icona: "spark",
+        fronte: "Scheda: " + concept,
+        retro: makeShortCardText(row.spiegazione || "", "Scheda riassuntiva del documento."),
+        uso: "Usa questa scheda per ripassare il concetto principale."
+      };
+    })
+    .slice(0, limit);
+}
+
 function makeCards(rows, limit = 12) {
-  return rows.slice(0, limit).map((row, index) => ({
-    id: `RAG-CARD-${String(index + 1).padStart(4, "0")}`,
-    fronte: `Concetto chiave: ${row.concetto}`,
-    retro: row.spiegazione,
-    uso: "Ripassa questo punto e prova a rispiegarlo con parole tue.",
-    illustrazione: buildCardIllustration(row.concetto, index)
-  }));
+  const fullText = rows.map(row => `${row.concetto || ""} ${row.spiegazione || ""}`).join(" ");
+
+  const looksLikeCurriculum = containsCardKeyword(fullText, [
+    "curriculum", "vitae", "competenze", "esperienza lavorativa",
+    "profilo", "email", "telefono", "addetto", "presso",
+    "formazione", "progetti", "intelligenza artificiale"
+  ]);
+
+  if (looksLikeCurriculum) {
+    return makeCurriculumCards(rows, limit);
+  }
+
+  return makeGenericCards(rows, limit);
 }
 
 function makeQuiz(rows, limit = 10) {
@@ -956,6 +1119,7 @@ generateButton.addEventListener("click", async () => {
   function colorFor(card) {
     const subject = card.materia || "generico";
     const map = {
+      curriculum: "0.34 0.08 0.24",
       generico: "0.20 0.25 0.35",
       cybersecurity: "0.06 0.09 0.16",
       informatica: "0.04 0.23 0.40",
@@ -971,6 +1135,7 @@ generateButton.addEventListener("click", async () => {
   function badgeFor(card) {
     const subject = card.materia || "generico";
     const map = {
+      curriculum: "Curriculum",
       generico: "Generico",
       cybersecurity: "Cybersecurity",
       informatica: "Informatica",

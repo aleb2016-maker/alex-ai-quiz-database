@@ -169,3 +169,8 @@ La demo mostra due pulsanti distinti per le card:
 
 - `Scarica card in PDF`: scarica il file PDF sul dispositivo.
 - `Apri card nel browser / stampa`: apre le card nel browser per vederle, stamparle o salvarle manualmente.
+
+
+## Tema Curriculum e card CV
+
+Il motore RAG riconosce i curriculum e genera card più utili: profilo professionale, competenze trasversali, competenze digitali e AI, progetti, esperienza lavorativa e formazione.
