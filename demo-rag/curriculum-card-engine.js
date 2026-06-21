@@ -732,3 +732,226 @@ document.addEventListener("DOMContentLoaded", () => {
 
   window.askDocument = askDocument;
 })();
+
+
+
+/* RAG_DOCUMENT_QA_CLICK_FIX */
+(function () {
+  if (window.__ragDocumentQaClickFixInstalled) return;
+  window.__ragDocumentQaClickFixInstalled = true;
+
+  function qaFixNormalize(text) {
+    return String(text || "")
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .toLowerCase()
+      .replace(/[^a-z0-9+#.\s]+/g, " ")
+      .replace(/\s+/g, " ")
+      .trim();
+  }
+
+  function qaFixEscapeHtml(text) {
+    return String(text || "")
+      .replaceAll("&", "&amp;")
+      .replaceAll("<", "&lt;")
+      .replaceAll(">", "&gt;")
+      .replaceAll('"', "&quot;");
+  }
+
+  function qaFixSplitText(text) {
+    const cleaned = String(text || "")
+      .replace(/\[Pagina\s*\d+\]/gi, "")
+      .replace(/\s+/g, " ")
+      .trim();
+
+    const parts = cleaned
+      .split(/(?:\. |\n+|; |: )+/)
+      .map(part => part.trim())
+      .filter(part => part.length >= 25);
+
+    if (parts.length) return parts;
+
+    return cleaned
+      .match(/.{1,380}(?:\s|$)/g)
+      ?.map(part => part.trim())
+      .filter(Boolean) || [];
+  }
+
+  function qaFixQuestionTerms(question) {
+    const stop = new Set([
+      "che", "cosa", "quale", "quali", "come", "dove", "quando",
+      "del", "della", "delle", "degli", "dello", "nel", "nella",
+      "con", "per", "sono", "emergono", "documento", "testo"
+    ]);
+
+    return qaFixNormalize(question)
+      .split(/\s+/)
+      .filter(word => word.length >= 3)
+      .filter(word => !stop.has(word));
+  }
+
+  function qaFixScore(part, terms, question) {
+    const text = qaFixNormalize(part);
+    const q = qaFixNormalize(question);
+    let score = 0;
+
+    for (const term of terms) {
+      if (text.includes(term)) score += term.length >= 6 ? 4 : 2;
+
+      const root = term.slice(0, -1);
+      if (root.length >= 4 && text.includes(root)) score += 1;
+    }
+
+    const boosts = [
+      ["competenz", ["competenz", "abilita", "capacita", "skill", "comunicazione", "creativita", "pazienza"]],
+      ["digital", ["digitale", "digitali", "intelligenza artificiale", "ai", "prompt", "android", "kotlin", "python", "github", "database", "app"]],
+      ["esperienz", ["esperienza", "lavoro", "addetto", "azienda", "mansione", "contratto"]],
+      ["progett", ["progetto", "progetti", "app", "software", "android", "github", "database", "quiz"]],
+      ["formazion", ["formazione", "diploma", "corso", "studio", "its", "obiettivo"]],
+      ["profilo", ["profilo", "creativo", "adattabile", "presentazione"]]
+    ];
+
+    for (const [questionKey, words] of boosts) {
+      if (q.includes(questionKey)) {
+        for (const word of words) {
+          if (text.includes(word)) score += 5;
+        }
+      }
+    }
+
+    return score;
+  }
+
+  function qaFixBuildAnswer(question, selectedParts) {
+    const q = qaFixNormalize(question);
+
+    let title = "Dal documento emergono questi elementi principali.";
+
+    if (q.includes("competenz") && q.includes("digital")) {
+      title = "Dal documento emergono competenze digitali legate all'uso pratico di strumenti, applicazioni e tecnologie.";
+    } else if (q.includes("competenz")) {
+      title = "Dal documento emergono competenze personali e operative ricavate dalle frasi più rilevanti.";
+    } else if (q.includes("ai") || q.includes("intelligenza") || q.includes("prompt")) {
+      title = "La parte sull'intelligenza artificiale riguarda strumenti generativi, prompt e uso pratico dell'AI.";
+    } else if (q.includes("progett") || q.includes("app")) {
+      title = "I progetti emergono dalle parti che citano applicazioni, software, database o sviluppo.";
+    } else if (q.includes("esperienz") || q.includes("lavoro")) {
+      title = "L'esperienza lavorativa emerge dalle parti che parlano di attività, mansioni e contesto professionale.";
+    }
+
+    const details = selectedParts
+      .slice(0, 5)
+      .map(item => item.part)
+      .filter(Boolean);
+
+    return title + "\n\n" + details.map((part, index) => {
+      return `${index + 1}. ${part}`;
+    }).join("\n\n");
+  }
+
+  function askDocumentFixed() {
+    const documentTextArea = document.getElementById("cvText");
+    const questionArea = document.getElementById("documentQuestion");
+    let answerBox = document.getElementById("documentAnswerBox");
+
+    if (!answerBox) {
+      const panel = document.getElementById("documentQuestionPanel");
+      answerBox = document.createElement("div");
+      answerBox.id = "documentAnswerBox";
+      answerBox.className = "document-answer-box";
+      if (panel) panel.appendChild(answerBox);
+    }
+
+    if (!documentTextArea || !questionArea || !answerBox) {
+      alert("Errore: pannello Interroga documento non inizializzato correttamente.");
+      return;
+    }
+
+    const documentText = documentTextArea.value.trim();
+    const question = questionArea.value.trim();
+
+    if (!documentText) {
+      answerBox.innerHTML = `<div class="answer-error">Prima incolla o carica un documento nel riquadro sopra.</div>`;
+      answerBox.scrollIntoView({ behavior: "smooth", block: "start" });
+      return;
+    }
+
+    if (!question) {
+      answerBox.innerHTML = `<div class="answer-error">Scrivi una domanda sul documento.</div>`;
+      answerBox.scrollIntoView({ behavior: "smooth", block: "start" });
+      return;
+    }
+
+    answerBox.innerHTML = `<div class="answer-card-box"><h3>Analisi domanda...</h3><p>Sto cercando le parti più rilevanti del documento.</p></div>`;
+    answerBox.scrollIntoView({ behavior: "smooth", block: "start" });
+
+    setTimeout(() => {
+      const parts = qaFixSplitText(documentText);
+      const terms = qaFixQuestionTerms(question);
+
+      let selected = parts
+        .map((part, index) => ({
+          index,
+          part,
+          score: qaFixScore(part, terms, question)
+        }))
+        .filter(item => item.score > 0)
+        .sort((a, b) => b.score - a.score)
+        .slice(0, 5);
+
+      if (!selected.length) {
+        selected = parts.slice(0, 4).map((part, index) => ({
+          index,
+          part,
+          score: 1
+        }));
+      }
+
+      if (!selected.length) {
+        answerBox.innerHTML = `
+          <div class="answer-card-box">
+            <h3>Risposta</h3>
+            <p>Non ho trovato abbastanza testo nel documento per rispondere.</p>
+          </div>
+        `;
+        return;
+      }
+
+      const answer = qaFixBuildAnswer(question, selected);
+
+      answerBox.innerHTML = `
+        <div class="answer-card-box">
+          <h3>Risposta dettagliata</h3>
+          <p>${qaFixEscapeHtml(answer).replaceAll("\\n", "<br>")}</p>
+
+          <h4>Parti del documento usate</h4>
+          <ol>
+            ${selected.map(item => `
+              <li>
+                <strong>Rilevanza ${item.score}</strong><br>
+                ${qaFixEscapeHtml(item.part)}
+              </li>
+            `).join("")}
+          </ol>
+        </div>
+      `;
+
+      answerBox.scrollIntoView({ behavior: "smooth", block: "start" });
+    }, 120);
+  }
+
+  document.addEventListener("click", function (event) {
+    const button = event.target && event.target.closest
+      ? event.target.closest("#askDocumentButton")
+      : null;
+
+    if (!button) return;
+
+    event.preventDefault();
+    event.stopPropagation();
+
+    askDocumentFixed();
+  }, true);
+
+  window.askDocumentFixed = askDocumentFixed;
+})();
