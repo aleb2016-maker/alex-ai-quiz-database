@@ -724,3 +724,40 @@
 .generated-test-list > li {
   margin-bottom: 22px;
 }
+
+
+/* DOCUMENT_TYPE_BOX_STYLE */
+.document-type-box {
+  margin-top: 22px;
+  margin-bottom: 22px;
+}
+
+.detected-type-card {
+  border-radius: 22px;
+  padding: 18px;
+  background: linear-gradient(145deg, rgba(15,23,42,.96), rgba(147,51,234,.82));
+  border: 1px solid rgba(255,255,255,.16);
+  color: white;
+}
+
+.detected-type-card span {
+  display: block;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: .10em;
+  font-weight: 900;
+  color: rgba(255,255,255,.70);
+  margin-bottom: 8px;
+}
+
+.detected-type-card strong {
+  display: block;
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+
+.detected-type-card p {
+  margin: 0;
+  line-height: 1.45;
+  color: rgba(255,255,255,.82);
+}
