@@ -64,7 +64,7 @@ Ogni ZIP scaricato contiene una cartella con nomi chiari e un solo file di istru
 <!-- RAG_BUTTON_START -->
 <p align="center">
   <a href="https://aleb2016-maker.github.io/alex-ai-quiz-database/demo-rag/">
-    <img src="" alt="Apri motore RAG documenti per app web Android quiz corsi">
+    <img src="https://img.shields.io/static/v1?label=&message=APRI%20MOTORE%20RAG%20DOCUMENTI%20-%20WEB%20ANDROID%20QUIZ%20CORSI&color=8B0032&labelColor=8B0032&style=for-the-badge" alt="Apri motore RAG documenti - web android quiz corsi">
   </a>
 </p>
 
