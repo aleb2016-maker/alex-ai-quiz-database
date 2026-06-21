@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Test Card Curriculum</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="curriculum-card-engine.js" defer></script>
+</head>
+<body>
+  <main class="rag-shell">
+    <section class="hero">
+      <h1>Test card Curriculum</h1>
+      <p>Pagina separata di prova. Non modifica la demo RAG principale.</p>
+    </section>
+
+    <section class="panel">
+      <h2>Incolla testo curriculum</h2>
+      <textarea id="cvText" rows="14" placeholder="Incolla qui il testo del curriculum..."></textarea>
+
+      <div class="actions">
+        <button id="loadExample">Carica esempio</button>
+        <button id="generateCvCards">Genera card curriculum</button>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Parole chiave vere estratte</h2>
+      <div id="keywordsBox" class="keyword-box"></div>
+    </section>
+
+    <section class="panel">
+      <h2>Card generate</h2>
+      <div id="cardsBox" class="curriculum-grid"></div>
+    </section>
+
+    <section class="panel">
+      <h2>Dati tecnici</h2>
+      <button id="downloadJson">Scarica JSON card curriculum</button>
+      <pre id="jsonBox"></pre>
+    </section>
+  </main>
+</body>
+</html>

@@ -264,3 +264,96 @@
 #printCardsButton {
   background: linear-gradient(135deg, #0f766e, #38bdf8);
 }
+
+
+/* Test Curriculum Cards */
+.curriculum-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px;
+}
+
+.cv-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 26px;
+  padding: 20px;
+  min-height: 340px;
+  color: white;
+  background: linear-gradient(145deg, var(--cv-primary), var(--cv-secondary));
+  border: 1px solid rgba(255,255,255,.18);
+  box-shadow: 0 22px 60px rgba(0,0,0,.25);
+}
+
+.cv-card::after {
+  content: "";
+  position: absolute;
+  width: 160px;
+  height: 160px;
+  right: -58px;
+  bottom: -58px;
+  border-radius: 50%;
+  background: var(--cv-accent);
+  opacity: .18;
+}
+
+.cv-badge {
+  display: inline-flex;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.18);
+  font-weight: 900;
+  font-size: 12px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.cv-icon {
+  margin: 24px 0 18px;
+  width: 96px;
+  height: 96px;
+  display: grid;
+  place-items: center;
+  border-radius: 26px;
+  background: rgba(255,255,255,.18);
+  font-size: 38px;
+  font-weight: 900;
+}
+
+.cv-card h3 {
+  position: relative;
+  z-index: 2;
+  font-size: 22px;
+  line-height: 1.15;
+  margin: 0 0 12px;
+}
+
+.cv-card p {
+  position: relative;
+  z-index: 2;
+  line-height: 1.5;
+}
+
+.cv-card small {
+  position: relative;
+  z-index: 2;
+  display: block;
+  margin-top: 14px;
+  font-weight: 800;
+  color: #f8fafc;
+}
+
+.keyword-box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.keyword-box span {
+  display: inline-flex;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.12);
+  color: #fff;
+  font-weight: 800;
+}
