@@ -240,167 +240,143 @@ function generate() {
 function downloadPdfFile() {
   const result = window.__cvCardsResult || { keywords: [], cards: [] };
   const cards = Array.isArray(result.cards) ? result.cards : [];
-  const keywords = Array.isArray(result.keywords) ? result.keywords : [];
 
   if (!cards.length) {
     alert("Prima genera le card del documento.");
     return;
   }
 
-  function cleanPdfText(value) {
-    return String(value || "")
-      .normalize("NFD")
-      .replace(/[\u0300-\u036f]/g, "")
-      .replace(/[^\x20-\x7E]/g, " ")
-      .replace(/\s+/g, " ")
-      .trim();
+  const styleUrl = new URL("style.css", window.location.href).href;
+  const cardsHtml = cards.map(card => renderCard(card)).join("");
+
+  const printHtml = `
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Card documento PDF</title>
+<link rel="stylesheet" href="${styleUrl}">
+<style>
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    box-sizing: border-box;
   }
 
-  function esc(value) {
-    return cleanPdfText(value)
-      .replace(/\\/g, "\\\\")
-      .replace(/\(/g, "\\(")
-      .replace(/\)/g, "\\)");
+  html,
+  body {
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #f4f6fb !important;
   }
 
-  function wrapText(text, maxChars) {
-    const words = cleanPdfText(text).split(" ");
-    const lines = [];
-    let line = "";
-
-    words.forEach(word => {
-      const candidate = line ? line + " " + word : word;
-      if (candidate.length > maxChars) {
-        if (line) lines.push(line);
-        line = word;
-      } else {
-        line = candidate;
-      }
-    });
-
-    if (line) lines.push(line);
-    return lines;
+  .pdf-card-page {
+    width: 210mm;
+    min-height: 297mm;
+    padding: 14mm;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    page-break-after: always;
+    break-after: page;
+    background: #f4f6fb !important;
   }
 
-  function textLinesPdf(lines, x, startY, fontSize, lineGap) {
-    let y = startY;
-    let out = "";
-    lines.forEach(line => {
-      out += "BT /F1 " + fontSize + " Tf " + x + " " + y + " Td (" + esc(line) + ") Tj ET\n";
-      y -= lineGap;
-    });
-    return out;
+  .pdf-card-page:last-child {
+    page-break-after: auto;
+    break-after: auto;
   }
 
-  function pageContentForCard(card, index) {
-    const title = card.fronte || card.concetto || ("Scheda documento " + (index + 1));
-    const badge = card.materia || "Documento";
-    const body = card.retro || "";
-    const use = card.uso || "Usa questa scheda per ripassare il contenuto.";
-
-    let content = "";
-
-    // sfondo pagina
-    content += "q 0.96 0.97 0.99 rg 0 0 595 842 re f Q\n";
-
-    // card colorata
-    content += "q 0.34 0.08 0.24 rg 48 72 499 698 re f Q\n";
-    content += "q 0.74 0.09 0.34 rg 48 72 499 230 re f Q\n";
-    content += "q 0.98 0.72 0.16 rg 390 72 157 157 re f Q\n";
-
-    // badge
-    content += "q 1 1 1 rg 72 700 180 34 re f Q\n";
-    content += "0 0 0 rg\n";
-    content += "BT /F1 14 Tf 90 711 Td (" + esc(badge.toUpperCase()) + ") Tj ET\n";
-
-    // titolo
-    content += "1 1 1 rg\n";
-    content += textLinesPdf(wrapText(title, 28), 72, 640, 27, 34);
-
-    // corpo
-    content += textLinesPdf(wrapText(body, 52).slice(0, 14), 72, 520, 16, 23);
-
-    // uso
-    content += textLinesPdf(wrapText(use, 46).slice(0, 3), 72, 170, 15, 21);
-
-    return content;
+  .pdf-card-page .cv-card {
+    width: 100% !important;
+    max-width: 165mm !important;
+    min-height: 245mm !important;
+    margin: 0 auto !important;
+    border-radius: 32px !important;
+    padding: 24mm 18mm 18mm !important;
   }
 
-  function pageContentForCover() {
-    let content = "";
-    content += "q 0.96 0.97 0.99 rg 0 0 595 842 re f Q\n";
-    content += "q 0.12 0.10 0.28 rg 48 72 499 698 re f Q\n";
-    content += "q 0.49 0.18 0.82 rg 48 72 499 220 re f Q\n";
+  .pdf-card-page .cv-badge {
+    font-size: 13px !important;
+    padding: 9px 16px !important;
+  }
 
-    content += "1 1 1 rg\n";
-    content += textLinesPdf(["Card documento"], 72, 650, 34, 40);
-    content += textLinesPdf(["File PDF generato dalle card selezionate."], 72, 595, 17, 24);
+  .pdf-card-page .cv-icon {
+    width: 38mm !important;
+    height: 38mm !important;
+    font-size: 42px !important;
+    margin: 24mm 0 18mm !important;
+  }
 
-    if (keywords.length) {
-      content += textLinesPdf(["Parole chiave estratte:"], 72, 525, 20, 28);
-      content += textLinesPdf(wrapText(keywords.join("  -  "), 56).slice(0, 8), 72, 485, 15, 22);
+  .pdf-card-page .cv-card h3 {
+    font-size: 34px !important;
+    line-height: 1.12 !important;
+    margin-bottom: 12mm !important;
+  }
+
+  .pdf-card-page .cv-card p {
+    font-size: 20px !important;
+    line-height: 1.48 !important;
+  }
+
+  .pdf-card-page .cv-card small {
+    display: block !important;
+    margin-top: 16mm !important;
+    font-size: 18px !important;
+    line-height: 1.3 !important;
+    font-weight: 900 !important;
+  }
+
+  @page {
+    size: A4;
+    margin: 0;
+  }
+
+  @media print {
+    body {
+      background: #f4f6fb !important;
     }
 
-    content += textLinesPdf(["Pagine card: " + cards.length], 72, 170, 16, 24);
+    .pdf-card-page {
+      page-break-after: always;
+      break-after: page;
+    }
 
-    return content;
+    .pdf-card-page:last-child {
+      page-break-after: auto;
+      break-after: auto;
+    }
+  }
+</style>
+</head>
+<body>
+  ${cards.map(card => `
+    <section class="pdf-card-page">
+      ${renderCard(card)}
+    </section>
+  `).join("")}
+
+  <script>
+    window.addEventListener("load", function () {
+      setTimeout(function () {
+        window.print();
+      }, 700);
+    });
+  </script>
+</body>
+</html>`;
+
+  const printWindow = window.open("", "_blank");
+
+  if (!printWindow) {
+    alert("Il browser ha bloccato l'apertura della finestra PDF. Consenti i popup per questa pagina.");
+    return;
   }
 
-  function buildPdfBlob() {
-    const pageStreams = [pageContentForCover(), ...cards.map(pageContentForCard)];
-
-    const objects = [];
-    objects.push("<< /Type /Catalog /Pages 2 0 R >>");
-
-    const pageIds = pageStreams.map((_, i) => 4 + i * 2);
-    objects.push("<< /Type /Pages /Kids [" + pageIds.map(id => id + " 0 R").join(" ") + "] /Count " + pageIds.length + " >>");
-
-    objects.push("<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>");
-
-    pageStreams.forEach((stream, i) => {
-      const pageObjId = 4 + i * 2;
-      const contentObjId = 5 + i * 2;
-
-      objects[pageObjId - 1] =
-        "<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R >> >> /Contents " + contentObjId + " 0 R >>";
-
-      objects[contentObjId - 1] =
-        "<< /Length " + stream.length + " >>\nstream\n" + stream + "\nendstream";
-    });
-
-    let pdf = "%PDF-1.4\n";
-    const offsets = [0];
-
-    objects.forEach((obj, index) => {
-      offsets.push(pdf.length);
-      pdf += (index + 1) + " 0 obj\n" + obj + "\nendobj\n";
-    });
-
-    const xrefStart = pdf.length;
-    pdf += "xref\n0 " + (objects.length + 1) + "\n";
-    pdf += "0000000000 65535 f \n";
-
-    offsets.slice(1).forEach(offset => {
-      pdf += String(offset).padStart(10, "0") + " 00000 n \n";
-    });
-
-    pdf += "trailer\n<< /Size " + (objects.length + 1) + " /Root 1 0 R >>\n";
-    pdf += "startxref\n" + xrefStart + "\n%%EOF";
-
-    return new Blob([pdf], { type: "application/pdf" });
-  }
-
-  const blob = buildPdfBlob();
-  const url = URL.createObjectURL(blob);
-  const link = document.createElement("a");
-
-  link.href = url;
-  link.download = "card-documento.pdf";
-  document.body.appendChild(link);
-  link.click();
-  link.remove();
-
-  setTimeout(() => URL.revokeObjectURL(url), 30000);
+  printWindow.document.open();
+  printWindow.document.write(printHtml);
+  printWindow.document.close();
 }
 
 
