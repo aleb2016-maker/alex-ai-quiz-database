@@ -452,7 +452,7 @@ function makeDownloadPackage(analysis, selectedOutputs) {
   }
   if (selectedOutputs.has("cards")) {
         files["cards.json"] = JSON.stringify(analysis.cards, null, 2);
-    files["ISTRUZIONI_CARD_PDF.txt"] = "Per le card usa il pulsante: Scarica card PDF stampabile sul PC. Il PDF funziona offline e si apre senza internet.";
+    files["ISTRUZIONI_CARD_PDF.txt"] = "Per le card usa il pulsante: Scarica card in PDF. Il PDF funziona offline e si apre senza internet.";
   }
   if (selectedOutputs.has("data")) {
     files["analisi_completa.json"] = JSON.stringify(analysis, null, 2);
@@ -752,8 +752,8 @@ function renderDownloadPanel(analysis, selectedOutputs) {
       </p>
       ${selectedOutputs.has("cards") ? `
       <div class="download-grid card-pdf-actions">
-        <button type="button" id="downloadCardsPdfButton">Scarica card PDF stampabile sul PC</button>
-        <button type="button" id="printCardsButton">Stampa / salva card come PDF</button>
+        <button type="button" id="downloadCardsPdfButton">Scarica card in PDF</button>
+        <button type="button" id="printCardsButton">Apri card nel browser / stampa</button>
       </div>
     ` : ""}
       <div class="download-grid">
@@ -1113,4 +1113,114 @@ generateButton.addEventListener("click", async () => {
     event.stopImmediatePropagation();
     downloadPdf(window.__latestRagAnalysis);
   }, true);
+})();
+
+
+/* RAG_CARD_BROWSER_BUTTON_FIX */
+(function () {
+  if (window.__ragCardBrowserButtonFixInstalled) return;
+  window.__ragCardBrowserButtonFixInstalled = true;
+
+  function ensureLatestAnalysisHook() {
+    try {
+      if (!window.__latestRagAnalysis && typeof currentAnalysis !== "undefined") {
+        window.__latestRagAnalysis = currentAnalysis;
+      }
+    } catch (error) {}
+  }
+
+  function openCardsInBrowser(analysis) {
+    const realAnalysis = analysis || window.__latestRagAnalysis;
+
+    if (!realAnalysis || !Array.isArray(realAnalysis.cards) || !realAnalysis.cards.length) {
+      if (typeof setStatus === "function") {
+        setStatus("Nessuna card da aprire nel browser.", "error");
+      }
+      return;
+    }
+
+    if (typeof makeCardsHtmlDocument !== "function") {
+      if (typeof setStatus === "function") {
+        setStatus("Anteprima browser non disponibile per le card.", "error");
+      }
+      return;
+    }
+
+    const html = makeCardsHtmlDocument(realAnalysis);
+    const blob = new Blob([html], { type: "text/html;charset=utf-8" });
+    const url = URL.createObjectURL(blob);
+
+    const opened = window.open(url, "_blank");
+
+    if (!opened) {
+      window.location.href = url;
+      return;
+    }
+
+    setTimeout(() => {
+      URL.revokeObjectURL(url);
+    }, 60000);
+
+    if (typeof setStatus === "function") {
+      setStatus("✅ Card aperte nel browser. Da lì puoi stampare o salvare come PDF.", "success");
+    }
+  }
+
+  function fixCardButtons() {
+    ensureLatestAnalysisHook();
+
+    const pdfButton = document.getElementById("downloadCardsPdfButton");
+    let browserButton = document.getElementById("printCardsButton");
+
+    if (pdfButton) {
+      pdfButton.textContent = "Scarica card in PDF";
+      pdfButton.style.width = "";
+      pdfButton.style.gridColumn = "";
+    }
+
+    if (!browserButton && pdfButton && pdfButton.parentElement) {
+      browserButton = document.createElement("button");
+      browserButton.type = "button";
+      browserButton.id = "printCardsButton";
+      pdfButton.parentElement.appendChild(browserButton);
+    }
+
+    if (browserButton) {
+      browserButton.textContent = "Apri card nel browser / stampa";
+      browserButton.style.display = "";
+      browserButton.style.width = "";
+      browserButton.disabled = false;
+    }
+
+    document.querySelectorAll("button").forEach(button => {
+      const text = (button.textContent || "").trim().toLowerCase();
+
+      if (text === "stampa / salva card come pdf" || text === "salva / stampa card come pdf") {
+        button.textContent = "Apri card nel browser / stampa";
+      }
+    });
+  }
+
+  document.addEventListener("click", function (event) {
+    const browserButton = event.target && event.target.closest
+      ? event.target.closest("#printCardsButton")
+      : null;
+
+    if (!browserButton) return;
+
+    event.preventDefault();
+    event.stopImmediatePropagation();
+
+    openCardsInBrowser(window.__latestRagAnalysis);
+  }, true);
+
+  document.addEventListener("DOMContentLoaded", fixCardButtons);
+
+  const observer = new MutationObserver(fixCardButtons);
+  observer.observe(document.documentElement, { childList: true, subtree: true });
+
+  setTimeout(fixCardButtons, 200);
+  setTimeout(fixCardButtons, 800);
+
+  window.openCardsInBrowser = openCardsInBrowser;
 })();

@@ -264,3 +264,18 @@
 #printCardsButton {
   background: linear-gradient(135deg, #0f766e, #38bdf8);
 }
+
+
+/* RAG_CARD_BROWSER_BUTTON_STYLE */
+#downloadCardsPdfButton,
+#printCardsButton {
+  min-height: 62px;
+  font-size: 16px;
+  font-weight: 900;
+}
+
+#printCardsButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}

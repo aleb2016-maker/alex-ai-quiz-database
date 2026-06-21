@@ -161,3 +161,11 @@ Il pulsante `Scarica card PDF stampabile sul PC` genera direttamente un PDF nel 
 ## Miglioramento card curriculum
 
 Le card generate da curriculum e documenti personali evitano parole casuali come `presso`, `addetto`, `pagina` e provano a creare schede più utili: profilo professionale, competenze, esperienza, progetti e competenze digitali.
+
+
+## Pulsanti card PDF e browser
+
+La demo mostra due pulsanti distinti per le card:
+
+- `Scarica card in PDF`: scarica il file PDF sul dispositivo.
+- `Apri card nel browser / stampa`: apre le card nel browser per vederle, stamparle o salvarle manualmente.
