@@ -1277,3 +1277,485 @@ Formazione: diploma, obiettivo corso ITS full stack e AI.
   window.finalAskDocument = finalAskDocument;
   window.finalLoadExampleOnly = finalLoadExampleOnly;
 })();
+
+
+
+/* RAG_DOCUMENT_OUTPUT_BUTTONS_ENGINE */
+(function () {
+  if (window.__ragDocumentOutputButtonsEngineInstalled) return;
+  window.__ragDocumentOutputButtonsEngineInstalled = true;
+
+  function outText() {
+    const el = document.getElementById("cvText");
+    return el ? el.value.trim() : "";
+  }
+
+  function outBox() {
+    return document.getElementById("generatedOutputBox");
+  }
+
+  function outEscape(text) {
+    return String(text || "")
+      .replaceAll("&", "&amp;")
+      .replaceAll("<", "&lt;")
+      .replaceAll(">", "&gt;")
+      .replaceAll('"', "&quot;");
+  }
+
+  function outNormalize(text) {
+    return String(text || "")
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .toLowerCase()
+      .replace(/[^a-z0-9+#.\s]+/g, " ")
+      .replace(/\s+/g, " ")
+      .trim();
+  }
+
+  function outSentences(text) {
+    return String(text || "")
+      .replace(/\[Pagina\s*\d+\]/gi, "")
+      .replace(/Curriculum\s+Vitae/gi, "")
+      .split(/(?:\. |\n+|; |: )+/)
+      .map(part => part.trim())
+      .filter(part => part.length >= 25)
+      .slice(0, 10);
+  }
+
+  function outKeywords(text, limit = 18) {
+    if (typeof extractUsefulKeywords === "function") {
+      return extractUsefulKeywords(text, limit);
+    }
+
+    const stop = new Set([
+      "documento", "testo", "pagina", "curriculum", "vitae",
+      "alessandro", "barbarossa", "email", "telefono", "indirizzo",
+      "della", "delle", "degli", "dello", "sono", "come", "anche",
+      "alla", "alle", "con", "per", "nel", "nella", "dove", "quando"
+    ]);
+
+    const words = outNormalize(text)
+      .split(/\s+/)
+      .filter(word => word.length >= 4)
+      .filter(word => !stop.has(word));
+
+    const counts = new Map();
+    words.forEach(word => counts.set(word, (counts.get(word) || 0) + 1));
+
+    return [...counts.entries()]
+      .sort((a, b) => b[1] - a[1])
+      .map(([word]) => word)
+      .slice(0, limit);
+  }
+
+  function has(text, words) {
+    const normalized = outNormalize(text);
+    return words.some(word => normalized.includes(outNormalize(word)));
+  }
+
+  function detectGroups(text) {
+    const groups = [];
+
+    if (has(text, ["profilo", "creativo", "adattabile", "presentazione"])) {
+      groups.push({
+        title: "Profilo",
+        detail: "Il documento contiene elementi di presentazione personale o professionale."
+      });
+    }
+
+    if (has(text, ["comunicazione", "pazienza", "creativita", "lavoro di gruppo", "competenze"])) {
+      groups.push({
+        title: "Competenze trasversali",
+        detail: "Emergono capacità personali come comunicazione, adattabilità, pazienza, creatività o lavoro di gruppo."
+      });
+    }
+
+    if (has(text, ["intelligenza artificiale", "ai", "prompt", "generativa", "android", "kotlin", "python", "github", "database", "software", "app"])) {
+      groups.push({
+        title: "Competenze digitali e AI",
+        detail: "Sono presenti elementi digitali, strumenti AI, sviluppo software, app, database o uso pratico della tecnologia."
+      });
+    }
+
+    if (has(text, ["progetto", "progetti", "app", "software", "github", "database", "quiz"])) {
+      groups.push({
+        title: "Progetti",
+        detail: "Il documento cita attività progettuali, applicazioni, software o strumenti realizzati."
+      });
+    }
+
+    if (has(text, ["esperienza", "lavoro", "azienda", "mansione", "addetto", "contratto"])) {
+      groups.push({
+        title: "Esperienza",
+        detail: "Sono presenti informazioni su attività lavorative, mansioni o contesto professionale."
+      });
+    }
+
+    if (has(text, ["formazione", "diploma", "corso", "studio", "its", "obiettivo"])) {
+      groups.push({
+        title: "Formazione",
+        detail: "Sono presenti elementi legati a studio, diploma, corsi, obiettivi o percorso formativo."
+      });
+    }
+
+    if (!groups.length) {
+      groups.push({
+        title: "Sintesi documento",
+        detail: "Il documento contiene informazioni da riassumere e trasformare in materiale di studio."
+      });
+    }
+
+    return groups;
+  }
+
+  function requireDocument() {
+    const text = outText();
+    const box = outBox();
+
+    if (!text) {
+      if (box) {
+        box.innerHTML = `<div class="answer-error">Prima incolla un documento o premi Carica esempio.</div>`;
+        box.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+      return "";
+    }
+
+    return text;
+  }
+
+  function setOutput(type, title, html, data) {
+    const box = outBox();
+    if (!box) return;
+
+    window.__currentDocumentOutput = {
+      type,
+      title,
+      html,
+      data: data || {},
+      createdAt: new Date().toISOString()
+    };
+
+    box.innerHTML = `
+      <div class="output-result-card">
+        <div class="output-result-badge">${outEscape(type)}</div>
+        <h3>${outEscape(title)}</h3>
+        ${html}
+      </div>
+    `;
+
+    box.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+
+  function generateSummaryOutput() {
+    const text = requireDocument();
+    if (!text) return;
+
+    const groups = detectGroups(text);
+    const keywords = outKeywords(text, 14);
+    const sentences = outSentences(text).slice(0, 4);
+
+    const html = `
+      <p>Il documento contiene ${groups.length} aree principali utili da trasformare in materiale di studio o presentazione.</p>
+
+      <h4>Punti principali</h4>
+      <ul>
+        ${groups.map(group => `<li><strong>${outEscape(group.title)}:</strong> ${outEscape(group.detail)}</li>`).join("")}
+      </ul>
+
+      <h4>Parole utili</h4>
+      <p>${outEscape(keywords.join(", "))}</p>
+
+      <h4>Frasi base</h4>
+      <ol>
+        ${sentences.map(sentence => `<li>${outEscape(sentence)}</li>`).join("")}
+      </ol>
+    `;
+
+    setOutput("Riassunto", "Riassunto documento", html, { groups, keywords, sentences });
+  }
+
+  function generateCardsOutput() {
+    const text = requireDocument();
+    if (!text) return;
+
+    if (typeof generate === "function") {
+      generate();
+    }
+
+    const result = window.__cvCardsResult || {};
+    const cards = Array.isArray(result.cards) ? result.cards : [];
+    const keywords = Array.isArray(result.keywords) ? result.keywords : outKeywords(text);
+
+    const html = `
+      <p>Sono state generate ${cards.length} card grafiche dal documento.</p>
+      <p>Usa il pulsante <strong>Scarica file PDF</strong> per scaricare le card con lo stesso stile grafico mostrato nella pagina.</p>
+    `;
+
+    setOutput("Card", "Card documento generate", html, { cards, keywords });
+  }
+
+  function generateTestOutput() {
+    const text = requireDocument();
+    if (!text) return;
+
+    const groups = detectGroups(text);
+    const keywords = outKeywords(text, 12);
+
+    const questions = groups.slice(0, 6).map((group, index) => {
+      const wrongA = groups[(index + 1) % groups.length]?.title || "Altro argomento";
+      const wrongB = keywords[(index + 2) % keywords.length] || "dato generico";
+      const wrongC = keywords[(index + 4) % keywords.length] || "informazione secondaria";
+
+      return {
+        domanda: `Quale area del documento è collegata a: ${group.detail}`,
+        risposta_corretta: group.title,
+        opzioni: [group.title, wrongA, wrongB, wrongC]
+      };
+    });
+
+    const html = `
+      <ol class="generated-test-list">
+        ${questions.map((q, index) => `
+          <li>
+            <strong>Domanda ${index + 1}</strong><br>
+            ${outEscape(q.domanda)}
+            <ul>
+              ${q.opzioni.map((option, optIndex) => `
+                <li>${String.fromCharCode(65 + optIndex)}. ${outEscape(option)}</li>
+              `).join("")}
+            </ul>
+            <em>Risposta corretta: ${outEscape(q.risposta_corretta)}</em>
+          </li>
+        `).join("")}
+      </ol>
+    `;
+
+    setOutput("Test", "Test generato dal documento", html, { questions });
+  }
+
+  function generateStudyQuestionsOutput() {
+    const text = requireDocument();
+    if (!text) return;
+
+    const groups = detectGroups(text);
+    const keywords = outKeywords(text, 10);
+
+    const questions = [
+      ...groups.map(group => `Quali informazioni importanti contiene il documento su ${group.title.toLowerCase()}?`),
+      ...keywords.slice(0, 5).map(keyword => `Perché il concetto "${keyword}" è rilevante nel documento?`),
+      "Quali punti del documento potrebbero essere trasformati in card di studio?",
+      "Quali informazioni del documento potrebbero diventare domande di test?"
+    ].slice(0, 10);
+
+    const html = `
+      <ol>
+        ${questions.map(question => `<li>${outEscape(question)}</li>`).join("")}
+      </ol>
+    `;
+
+    setOutput("Domande studio", "Domande di studio generate", html, { questions });
+  }
+
+  function downloadCurrentJson() {
+    const output = window.__currentDocumentOutput;
+
+    if (!output) {
+      alert("Prima genera un output: riassunto, card, test o domande.");
+      return;
+    }
+
+    const blob = new Blob([JSON.stringify(output, null, 2)], { type: "application/json" });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+
+    link.href = url;
+    link.download = `output-documento-${output.type.toLowerCase().replaceAll(" ", "-")}.json`;
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+
+    setTimeout(() => URL.revokeObjectURL(url), 30000);
+  }
+
+  function downloadCurrentPdf() {
+    const output = window.__currentDocumentOutput;
+
+    if (!output) {
+      alert("Prima genera un output: riassunto, card, test o domande.");
+      return;
+    }
+
+    let bodyHtml = "";
+
+    if (output.type === "Card") {
+      const cards = output.data.cards || [];
+
+      if (!cards.length) {
+        alert("Prima genera le card.");
+        return;
+      }
+
+      bodyHtml = cards.map((card, index) => `
+        <section class="pdf-card-page">
+          ${renderCard(card, index)}
+        </section>
+      `).join("");
+    } else {
+      bodyHtml = `
+        <section class="pdf-document-page">
+          <article class="pdf-document-card">
+            <h1>${outEscape(output.title)}</h1>
+            ${output.html}
+          </article>
+        </section>
+      `;
+    }
+
+    const styleUrl = new URL("style.css", window.location.href).href;
+
+    const printHtml = `
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>${outEscape(output.title)}</title>
+<link rel="stylesheet" href="${styleUrl}">
+<style>
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #f4f6fb !important;
+    font-family: Arial, sans-serif;
+  }
+
+  .pdf-card-page {
+    width: 210mm;
+    min-height: 297mm;
+    padding: 14mm;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    page-break-after: always;
+    background: #f4f6fb !important;
+  }
+
+  .pdf-card-page .cv-card {
+    width: 100% !important;
+    max-width: 165mm !important;
+    min-height: 245mm !important;
+    margin: 0 auto !important;
+    box-shadow: none !important;
+  }
+
+  .pdf-document-page {
+    width: 210mm;
+    min-height: 297mm;
+    padding: 18mm;
+    page-break-after: always;
+    background: #f4f6fb !important;
+  }
+
+  .pdf-document-card {
+    min-height: 250mm;
+    padding: 18mm;
+    border-radius: 28px;
+    background: linear-gradient(145deg, #111827, #4338ca);
+    color: white;
+  }
+
+  .pdf-document-card h1 {
+    margin-top: 0;
+    font-size: 32px;
+  }
+
+  .pdf-document-card p,
+  .pdf-document-card li {
+    font-size: 16px;
+    line-height: 1.55;
+  }
+
+  @page {
+    size: A4;
+    margin: 0;
+  }
+</style>
+</head>
+<body>
+  ${bodyHtml}
+  <script>
+    window.addEventListener("load", function () {
+      setTimeout(function () {
+        window.print();
+      }, 500);
+    });
+  </script>
+</body>
+</html>`;
+
+    const printWindow = window.open("", "_blank");
+
+    if (!printWindow) {
+      alert("Il browser ha bloccato la finestra PDF. Consenti i popup per questa pagina.");
+      return;
+    }
+
+    printWindow.document.open();
+    printWindow.document.write(printHtml);
+    printWindow.document.close();
+  }
+
+  document.addEventListener("click", function (event) {
+    const target = event.target && event.target.closest ? event.target.closest("button") : null;
+    if (!target) return;
+
+    if (target.id === "generateSummaryButton") {
+      event.preventDefault();
+      event.stopImmediatePropagation();
+      generateSummaryOutput();
+    }
+
+    if (target.id === "generateCvCards") {
+      event.preventDefault();
+      event.stopImmediatePropagation();
+      generateCardsOutput();
+    }
+
+    if (target.id === "generateTestButton") {
+      event.preventDefault();
+      event.stopImmediatePropagation();
+      generateTestOutput();
+    }
+
+    if (target.id === "generateStudyQuestionsButton") {
+      event.preventDefault();
+      event.stopImmediatePropagation();
+      generateStudyQuestionsOutput();
+    }
+
+    if (target.id === "downloadPdf") {
+      event.preventDefault();
+      event.stopImmediatePropagation();
+      downloadCurrentPdf();
+    }
+
+    if (target.id === "downloadJson") {
+      event.preventDefault();
+      event.stopImmediatePropagation();
+      downloadCurrentJson();
+    }
+  }, true);
+
+  window.generateSummaryOutput = generateSummaryOutput;
+  window.generateCardsOutput = generateCardsOutput;
+  window.generateTestOutput = generateTestOutput;
+  window.generateStudyQuestionsOutput = generateStudyQuestionsOutput;
+  window.downloadCurrentPdf = downloadCurrentPdf;
+  window.downloadCurrentJson = downloadCurrentJson;
+})();

@@ -655,3 +655,72 @@
   color: white !important;
   font-weight: 900 !important;
 }
+
+
+
+/* RAG_DOCUMENT_OUTPUT_BUTTONS_STYLE */
+.test-doc-actions {
+  display: grid !important;
+  grid-template-columns: 1fr !important;
+  gap: 16px !important;
+  align-items: stretch !important;
+  margin-top: 20px !important;
+}
+
+.test-doc-actions button {
+  width: 100% !important;
+  min-height: 62px !important;
+  padding: 16px 22px !important;
+  border-radius: 999px !important;
+  font-size: 16px !important;
+  font-weight: 900 !important;
+  line-height: 1.2 !important;
+}
+
+@media (min-width: 760px) {
+  .test-doc-actions {
+    grid-template-columns: repeat(2, minmax(220px, 1fr)) !important;
+  }
+}
+
+.generated-output-box {
+  margin-top: 24px !important;
+}
+
+.output-result-card {
+  border-radius: 26px;
+  padding: 24px;
+  background: linear-gradient(145deg, rgba(15,23,42,.96), rgba(76,29,149,.90));
+  border: 1px solid rgba(255,255,255,.16);
+  color: white;
+}
+
+.output-result-badge {
+  display: inline-flex;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.18);
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: .08em;
+}
+
+.output-result-card h3 {
+  margin-top: 18px;
+  font-size: 26px;
+}
+
+.output-result-card h4 {
+  margin-top: 22px;
+}
+
+.output-result-card p,
+.output-result-card li {
+  line-height: 1.55;
+  font-size: 16px;
+}
+
+.generated-test-list > li {
+  margin-bottom: 22px;
+}
