@@ -7,6 +7,7 @@
   <title>Motore RAG Documenti</title>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 
   <style>
     :root {
@@ -20,6 +21,7 @@
       --green: #36e38a;
       --red: #ff4d5e;
       --orange: #ff9f2e;
+      --yellow: #ffd166;
       --border: rgba(255, 255, 255, 0.14);
       --shadow: 0 22px 60px rgba(0, 0, 0, 0.38);
     }
@@ -80,7 +82,7 @@
       background: linear-gradient(135deg, var(--blue), var(--purple));
     }
 
-    .button-download {
+    .button-package {
       background: linear-gradient(135deg, var(--red), var(--orange));
     }
 
@@ -91,12 +93,16 @@
       margin-top: 18px;
     }
 
-    .button-reset {
-      background: linear-gradient(135deg, #3b4968, #1e2a42);
+    .button-pdf {
+      background: linear-gradient(135deg, var(--red), var(--orange));
     }
 
-    .button-save {
+    .button-txt {
       background: linear-gradient(135deg, var(--purple), #5f7cff);
+    }
+
+    .button-reset {
+      background: linear-gradient(135deg, #3b4968, #1e2a42);
     }
 
     .hero {
@@ -115,11 +121,38 @@
     }
 
     .hero p {
-      max-width: 900px;
+      max-width: 940px;
       margin: 0;
       color: var(--muted);
       font-size: 1.08rem;
       line-height: 1.7;
+    }
+
+    .package-box {
+      display: grid;
+      grid-template-columns: 1.3fr auto;
+      gap: 18px;
+      align-items: center;
+      margin-top: 24px;
+      padding: 20px;
+      border-radius: 22px;
+      border: 1px solid rgba(255, 209, 102, 0.26);
+      background:
+        radial-gradient(circle at top left, rgba(255, 159, 46, 0.18), transparent 45%),
+        rgba(7, 11, 22, 0.58);
+    }
+
+    .package-box h2 {
+      margin: 0 0 8px;
+      color: var(--yellow);
+      font-size: 1.35rem;
+    }
+
+    .package-box p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.6;
+      font-size: 0.98rem;
     }
 
     .steps {
@@ -229,7 +262,7 @@
 
     .action-row {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
       gap: 12px;
       margin-top: 14px;
     }
@@ -262,7 +295,8 @@
 
     @media (max-width: 900px) {
       .grid,
-      .steps {
+      .steps,
+      .package-box {
         grid-template-columns: 1fr;
       }
 
@@ -281,12 +315,8 @@
 <body>
   <main class="page">
     <div class="topbar">
-      <a class="button button-home" href="../">
-        ← Torna alla pagina principale
-      </a>
-
-      <a class="button button-download" href="../downloads/pacchetto-rag-riutilizzabile.zip" download>
-        Scarica pacchetto RAG completo
+      <a class="button button-home" href="../demo/">
+        ← Torna alla home del progetto
       </a>
     </div>
 
@@ -294,38 +324,52 @@
       <h1>Motore RAG Documenti</h1>
 
       <p>
-        Carica o incolla un documento e genera subito una bozza di riassunto, quiz, card formative,
-        tabella operativa o parole chiave. Questa pagina è una demo browser leggera. Il pacchetto
-        scaricabile contiene invece la base riutilizzabile per pipeline più complete.
+        Questa pagina serve per provare subito il motore RAG sui documenti.
+        Puoi caricare o incollare un testo, generare un output e scaricarlo in TXT o PDF.
       </p>
+
+      <div class="package-box">
+        <div>
+          <h2>Motore RAG riutilizzabile per nuove app</h2>
+          <p>
+            Scarica il pacchetto completo se vuoi usare questo sistema come base per creare
+            app web, app Android, quiz, mini-corsi, report aziendali, card formative,
+            analisi documenti e pipeline RAG per futuri progetti.
+          </p>
+        </div>
+
+        <a class="button button-package" href="../downloads/pacchetto-rag-riutilizzabile.zip" download>
+          Scarica motore RAG completo
+        </a>
+      </div>
 
       <div class="steps">
         <div class="step">
           <strong>1. Inserisci il documento</strong>
-          <span>Puoi incollare testo oppure caricare TXT, MD, CSV o PDF con testo selezionabile.</span>
+          <span>Carica TXT, MD, CSV, PDF testuale oppure incolla direttamente il contenuto.</span>
         </div>
 
         <div class="step">
-          <strong>2. Scegli l’output</strong>
-          <span>Di base è selezionato solo il riassunto. Gli altri output li scegli tu.</span>
+          <strong>2. Scegli cosa generare</strong>
+          <span>Di base è attivo solo il riassunto. Gli altri output li scegli tu.</span>
         </div>
 
         <div class="step">
-          <strong>3. Genera e scarica</strong>
-          <span>Premi un solo pulsante principale: “Genera output”. Poi puoi scaricare il risultato.</span>
+          <strong>3. Scarica il risultato</strong>
+          <span>Dopo la generazione puoi scaricare l’output in TXT oppure in PDF.</span>
         </div>
       </div>
     </section>
 
     <section class="grid">
       <div class="card">
-        <h2>Documento</h2>
+        <h2>Documento da analizzare</h2>
 
         <input id="fileInput" type="file" accept=".txt,.md,.csv,.pdf" />
 
         <p class="note">
-          Nota PDF: questa demo legge i PDF solo quando il testo è selezionabile. I PDF scannerizzati
-          come immagini richiedono OCR o una pipeline dedicata.
+          I PDF vengono letti solo se contengono testo selezionabile. I PDF scannerizzati come immagini
+          richiedono OCR o la pipeline completa del pacchetto RAG.
         </p>
 
         <textarea id="documentText" placeholder="Incolla qui il testo del documento oppure carica un file..."></textarea>
@@ -339,7 +383,7 @@
         <h2>Cosa vuoi generare?</h2>
 
         <p class="note">
-          Scegli solo gli output che ti servono. Poi premi il pulsante verde in fondo.
+          Seleziona gli output necessari e premi il pulsante verde.
         </p>
 
         <div class="options">
@@ -363,7 +407,7 @@
             <input type="checkbox" id="optCard" />
             <span>
               Card formative
-              <small>Trasforma il testo in schede brevi di studio/formazione.</small>
+              <small>Trasforma il testo in schede brevi di studio o formazione.</small>
             </span>
           </label>
 
@@ -389,12 +433,16 @@
         </button>
 
         <div class="action-row">
-          <button class="button button-save" onclick="scaricaOutput()">
-            Scarica output TXT
+          <button class="button button-pdf" onclick="scaricaOutputPdf()">
+            Scarica PDF
+          </button>
+
+          <button class="button button-txt" onclick="scaricaOutputTxt()">
+            Scarica TXT
           </button>
 
           <button class="button button-reset" onclick="pulisciTutto()">
-            Pulisci pagina
+            Pulisci
           </button>
         </div>
       </div>
@@ -645,14 +693,24 @@
       }
 
       output.textContent = blocchi.join("\n\n-----------------------------\n\n");
-      statusBox.textContent = "Output generato. Puoi copiarlo o scaricarlo in TXT.";
+      statusBox.textContent = "Output generato. Puoi copiarlo oppure scaricarlo in TXT o PDF.";
     }
 
-    function scaricaOutput() {
+    function prendiOutputScaricabile() {
       const contenuto = output.textContent.trim();
 
       if (!contenuto || contenuto.includes("L’output comparirà qui")) {
         output.textContent = "Genera prima un output.";
+        return "";
+      }
+
+      return contenuto;
+    }
+
+    function scaricaOutputTxt() {
+      const contenuto = prendiOutputScaricabile();
+
+      if (!contenuto) {
         return;
       }
 
@@ -665,6 +723,62 @@
       link.click();
 
       URL.revokeObjectURL(url);
+    }
+
+    function scaricaOutputPdf() {
+      const contenutoOriginale = prendiOutputScaricabile();
+
+      if (!contenutoOriginale) {
+        return;
+      }
+
+      if (!window.jspdf || !window.jspdf.jsPDF) {
+        statusBox.textContent =
+          "Generatore PDF non disponibile. Controlla la connessione e riprova.";
+        return;
+      }
+
+      const contenuto = contenutoOriginale
+        .replace(/[“”]/g, '"')
+        .replace(/[’]/g, "'")
+        .replace(/…/g, "...");
+
+      const { jsPDF } = window.jspdf;
+      const pdf = new jsPDF({
+        orientation: "p",
+        unit: "mm",
+        format: "a4"
+      });
+
+      const margineSinistro = 14;
+      const margineAlto = 18;
+      const larghezzaTesto = 182;
+      const altezzaRiga = 7;
+      const altezzaPagina = 285;
+
+      pdf.setFont("helvetica", "bold");
+      pdf.setFontSize(16);
+      pdf.text("Output RAG documento", margineSinistro, margineAlto);
+
+      pdf.setFont("helvetica", "normal");
+      pdf.setFontSize(11);
+
+      const righe = pdf.splitTextToSize(contenuto, larghezzaTesto);
+
+      let y = margineAlto + 12;
+
+      righe.forEach(riga => {
+        if (y > altezzaPagina) {
+          pdf.addPage();
+          y = margineAlto;
+        }
+
+        pdf.text(riga, margineSinistro, y);
+        y += altezzaRiga;
+      });
+
+      pdf.save("output-rag-documento.pdf");
+      statusBox.textContent = "PDF generato e scaricato correttamente.";
     }
 
     function pulisciTutto() {
