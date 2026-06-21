@@ -724,6 +724,7 @@ function openCardsPrintDialog(analysis) {
 }
 
 function renderDownloadPanel(analysis, selectedOutputs) {
+  window.__latestRagAnalysis = analysis;
   const pdfCardsButton = document.getElementById("downloadCardsPdfButton");
   if (pdfCardsButton) {
     pdfCardsButton.addEventListener("click", () => downloadCardsPdf(analysis));
@@ -906,3 +907,210 @@ generateButton.addEventListener("click", async () => {
     setStatus(`❌ ${error.message}`, "error");
   }
 });
+
+
+/* RAG_MOBILE_LOCAL_PDF_FIX */
+(function () {
+  if (window.__ragMobileLocalPdfFixInstalled) return;
+  window.__ragMobileLocalPdfFixInstalled = true;
+
+  function cleanText(value) {
+    return String(value || "")
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .replace(/[^\x20-\x7E]/g, " ")
+      .replace(/\s+/g, " ")
+      .trim();
+  }
+
+  function esc(value) {
+    return cleanText(value)
+      .replace(/\\/g, "\\\\")
+      .replace(/\(/g, "\\(")
+      .replace(/\)/g, "\\)");
+  }
+
+  function wrap(text, maxChars, maxLines) {
+    const words = cleanText(text).split(/\s+/).filter(Boolean);
+    const lines = [];
+    let line = "";
+    words.forEach(word => {
+      const next = line ? line + " " + word : word;
+      if (next.length <= maxChars) line = next;
+      else {
+        if (line) lines.push(line);
+        line = word.length > maxChars ? word.slice(0, maxChars - 1) + "." : word;
+      }
+    });
+    if (line) lines.push(line);
+    return lines.slice(0, maxLines);
+  }
+
+  function slug(text) {
+    return cleanText(text || "card-rag")
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, "-")
+      .replace(/^-+|-+$/g, "") || "card-rag";
+  }
+
+  function colorFor(card) {
+    const subject = card.materia || "generico";
+    const map = {
+      generico: "0.20 0.25 0.35",
+      cybersecurity: "0.06 0.09 0.16",
+      informatica: "0.04 0.23 0.40",
+      ai: "0.12 0.11 0.29",
+      matematica: "0.06 0.46 0.43",
+      fisica: "0.09 0.15 0.33",
+      chimica: "0.08 0.33 0.18",
+      biologia: "0.09 0.40 0.20"
+    };
+    return map[subject] || map.generico;
+  }
+
+  function badgeFor(card) {
+    const subject = card.materia || "generico";
+    const map = {
+      generico: "Generico",
+      cybersecurity: "Cybersecurity",
+      informatica: "Informatica",
+      ai: "AI",
+      matematica: "Matematica",
+      fisica: "Fisica",
+      chimica: "Chimica",
+      biologia: "Biologia"
+    };
+    return map[subject] || "Card";
+  }
+
+  function pageStream(cards, title) {
+    const pageH = 841.89;
+    const margin = 36;
+    const gap = 18;
+    const cardW = (595.28 - margin * 2 - gap) / 2;
+    const cardH = 330;
+
+    function py(y, h) { return pageH - y - (h || 0); }
+    function rect(x, y, w, h, rgb) {
+      return rgb + " rg " + x.toFixed(2) + " " + py(y, h).toFixed(2) + " " + w.toFixed(2) + " " + h.toFixed(2) + " re f\n";
+    }
+    function txt(x, y, size, rgb, value, bold) {
+      return rgb + " rg BT " + (bold ? "/F2" : "/F1") + " " + size + " Tf " + x.toFixed(2) + " " + py(y).toFixed(2) + " Td (" + esc(value) + ") Tj ET\n";
+    }
+
+    let out = "";
+    out += txt(margin, 28, 18, "0.05 0.09 0.16", "Card RAG - " + (title || "Documento"), true);
+
+    cards.forEach((card, index) => {
+      const col = index % 2;
+      const row = Math.floor(index / 2);
+      const x = margin + col * (cardW + gap);
+      const y = 56 + row * (cardH + gap);
+      const bg = colorFor(card);
+
+      out += rect(x, y, cardW, cardH, bg);
+      out += rect(x + 10, y + 10, cardW - 20, 64, "0.15 0.20 0.35");
+      out += rect(x + 18, y + 18, 112, 24, "1 1 1");
+
+      out += txt(x + 24, y + 34, 9, "0.05 0.09 0.16", badgeFor(card).toUpperCase(), true);
+      out += txt(x + cardW - 70, y + 50, 30, "1 1 1", "*", true);
+      out += txt(x + cardW - 48, y + 50, 30, "1 1 1", "*", true);
+
+      wrap(card.fronte || "Concetto chiave", 30, 3).forEach((line, i) => {
+        out += txt(x + 18, y + 104 + i * 18, 14, "1 1 1", line, true);
+      });
+
+      wrap(card.retro || "", 44, 12).forEach((line, i) => {
+        out += txt(x + 18, y + 172 + i * 13, 10, "1 1 1", line, false);
+      });
+
+      wrap(card.uso || "Ripassa questo punto e prova a rispiegarlo con parole tue.", 42, 2).forEach((line, i) => {
+        out += txt(x + 18, y + cardH - 42 + i * 12, 9, "0.90 0.90 0.90", line, true);
+      });
+    });
+
+    return out;
+  }
+
+  function buildPdfBlob(analysis) {
+    const cards = Array.isArray(analysis.cards) ? analysis.cards : [];
+    const pages = [];
+    for (let i = 0; i < cards.length; i += 4) pages.push(cards.slice(i, i + 4));
+    if (!pages.length) pages.push([]);
+
+    const objects = [];
+    objects[1] = "<< /Type /Catalog /Pages 2 0 R >>";
+    objects[3] = "<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>";
+    objects[4] = "<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>";
+
+    const refs = [];
+    let next = 5;
+
+    pages.forEach(pageCards => {
+      const pageObj = next++;
+      const contentObj = next++;
+      refs.push(pageObj + " 0 R");
+      const stream = pageStream(pageCards, analysis.titolo || "Documento");
+      objects[contentObj] = "<< /Length " + stream.length + " >>\nstream\n" + stream + "endstream";
+      objects[pageObj] = "<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents " + contentObj + " 0 R >>";
+    });
+
+    objects[2] = "<< /Type /Pages /Kids [" + refs.join(" ") + "] /Count " + refs.length + " >>";
+
+    let pdf = "%PDF-1.4\n";
+    const offsets = [0];
+
+    for (let i = 1; i < objects.length; i++) {
+      if (!objects[i]) continue;
+      offsets[i] = pdf.length;
+      pdf += i + " 0 obj\n" + objects[i] + "\nendobj\n";
+    }
+
+    const xref = pdf.length;
+    pdf += "xref\n0 " + objects.length + "\n0000000000 65535 f \n";
+
+    for (let i = 1; i < objects.length; i++) {
+      pdf += objects[i] ? String(offsets[i]).padStart(10, "0") + " 00000 n \n" : "0000000000 65535 f \n";
+    }
+
+    pdf += "trailer\n<< /Size " + objects.length + " /Root 1 0 R >>\nstartxref\n" + xref + "\n%%EOF";
+    return new Blob([pdf], { type: "application/pdf" });
+  }
+
+  function downloadPdf(analysis) {
+    const realAnalysis = analysis || window.__latestRagAnalysis;
+    if (!realAnalysis || !Array.isArray(realAnalysis.cards) || !realAnalysis.cards.length) {
+      if (typeof setStatus === "function") setStatus("Nessuna card da scaricare in PDF.", "error");
+      return;
+    }
+
+    const blob = buildPdfBlob(realAnalysis);
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = "card-rag-" + slug(realAnalysis.titolo || "documento") + ".pdf";
+    link.target = "_self";
+    link.style.display = "none";
+    document.body.appendChild(link);
+    link.click();
+
+    setTimeout(() => {
+      link.remove();
+      URL.revokeObjectURL(url);
+    }, 700);
+
+    if (typeof setStatus === "function") setStatus("PDF delle card scaricato. Su smartphone controlla Download o File.", "success");
+  }
+
+  window.ragDownloadCardsPdfLocal = downloadPdf;
+  window.downloadCardsPdf = downloadPdf;
+  try { downloadCardsPdf = downloadPdf; } catch (error) {}
+
+  document.addEventListener("click", function (event) {
+    const button = event.target && event.target.closest ? event.target.closest("#downloadCardsPdfButton") : null;
+    if (!button) return;
+    event.preventDefault();
+    event.stopImmediatePropagation();
+    downloadPdf(window.__latestRagAnalysis);
+  }, true);
+})();
