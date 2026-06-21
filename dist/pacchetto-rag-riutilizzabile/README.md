@@ -156,3 +156,8 @@ Il PDF viene salvato nella cartella Download del browser, salvo impostazioni div
 ## Card PDF locale senza librerie esterne
 
 Il pulsante `Scarica card PDF stampabile sul PC` genera direttamente un PDF nel browser. Su smartphone il file va cercato in Download o nell'app File.
+
+
+## Miglioramento card curriculum
+
+Le card generate da curriculum e documenti personali evitano parole casuali come `presso`, `addetto`, `pagina` e provano a creare schede più utili: profilo professionale, competenze, esperienza, progetti e competenze digitali.
