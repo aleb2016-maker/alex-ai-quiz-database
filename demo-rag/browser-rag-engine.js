@@ -6,6 +6,15 @@ const RAG_STOPWORDS = new Set([
   "fra", "gli", "sul", "sulla", "dai", "dal", "dalle", "ad", "ed"
 ]);
 
+const OUTPUT_OPTIONS = [
+  { id: "summary", label: "Riassunto", files: ["riassunto.html", "riassunto.md"] },
+  { id: "tables", label: "Tabelle", files: ["tabelle_concetti.md", "tabelle_concetti.csv"] },
+  { id: "cards", label: "Card", files: ["cards.html", "cards.json"] },
+  { id: "quiz", label: "Quiz", files: ["quiz_interattivo.html", "quiz.json"] },
+  { id: "minicourse", label: "Minicorso", files: ["minicorso_interattivo.html"] },
+  { id: "data", label: "Dati tecnici", files: ["analisi_completa.json", "statistiche.json", "report_rag.md"] }
+];
+
 const fileInput = document.getElementById("fileInput");
 const titleInput = document.getElementById("titleInput");
 const generateButton = document.getElementById("generateButton");
@@ -15,6 +24,56 @@ const outputBox = document.getElementById("outputBox");
 if (window.pdfjsLib) {
   pdfjsLib.GlobalWorkerOptions.workerSrc =
     "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js";
+}
+
+function ensureGenerationOptions() {
+  if (!generateButton || document.getElementById("generationOptions")) {
+    return;
+  }
+
+  const box = document.createElement("section");
+  box.id = "generationOptions";
+  box.className = "generation-options";
+  box.innerHTML = `
+    <h2>Scegli cosa generare</h2>
+    <p>Puoi generare tutto oppure solo riassunto, tabelle, card, quiz o minicorso.</p>
+    <div class="option-grid">
+      ${OUTPUT_OPTIONS.map(option => `
+        <label class="option-pill">
+          <input type="checkbox" data-output-option value="${option.id}" checked>
+          <span>${option.label}</span>
+        </label>
+      `).join("")}
+    </div>
+    <div class="quick-actions">
+      <button type="button" id="selectAllOutputs">Seleziona tutto</button>
+      <button type="button" id="clearAllOutputs">Deseleziona tutto</button>
+    </div>
+  `;
+
+  generateButton.parentNode.insertBefore(box, generateButton);
+
+  document.getElementById("selectAllOutputs").addEventListener("click", () => {
+    document.querySelectorAll("[data-output-option]").forEach(input => input.checked = true);
+  });
+
+  document.getElementById("clearAllOutputs").addEventListener("click", () => {
+    document.querySelectorAll("[data-output-option]").forEach(input => input.checked = false);
+  });
+
+  generateButton.textContent = "Genera output selezionati";
+}
+
+ensureGenerationOptions();
+
+function getSelectedOutputs() {
+  const selected = new Set();
+
+  document.querySelectorAll("[data-output-option]:checked").forEach(input => {
+    selected.add(input.value);
+  });
+
+  return selected;
 }
 
 function fixMojibakeText(text) {
@@ -470,41 +529,6 @@ ${slidesFromCards}
 </html>`;
 }
 
-function makeIndexHtmlDocument(analysis) {
-  return `<!doctype html>
-<html lang="it">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Output RAG - ${escapeHtml(analysis.titolo)}</title>
-<style>
-body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#020617;color:#f8fafc}
-main{max-width:1080px;margin:0 auto;padding:42px 20px 70px}
-.hero{border:1px solid rgba(255,255,255,.14);border-radius:30px;background:rgba(15,23,42,.88);padding:32px;box-shadow:0 24px 80px rgba(0,0,0,.34);margin-bottom:22px}
-h1{margin:0 0 12px;font-size:clamp(34px,5vw,56px);line-height:1.04}
-p{color:#cbd5e1;line-height:1.6}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(235px,1fr));gap:16px}
-.card{display:flex;flex-direction:column;gap:10px;padding:22px;border-radius:24px;border:1px solid rgba(255,255,255,.14);background:linear-gradient(145deg,rgba(124,58,237,.26),rgba(15,23,42,.95));color:#fff;text-decoration:none;min-height:126px}
-.card strong{font-size:20px}.card span{color:#cbd5e1;font-weight:800}
-</style>
-</head>
-<body>
-<main>
-<section class="hero">
-<h1>Output generati dal motore RAG</h1>
-<p>Documento: <strong>${escapeHtml(analysis.titolo)}</strong></p>
-<p>Apri prima il riassunto leggibile, poi quiz, minicorso e card.</p>
-</section>
-<section class="grid">
-<a class="card" href="riassunto.html"><strong>Riassunto leggibile</strong><span>riassunto.html</span></a>
-<a class="card" href="quiz_interattivo.html"><strong>Quiz interattivo</strong><span>quiz_interattivo.html</span></a>
-<a class="card" href="minicorso_interattivo.html"><strong>Minicorso interattivo</strong><span>minicorso_interattivo.html</span></a>
-<a class="card" href="cards.html"><strong>Card di ripasso</strong><span>cards.html</span></a>
-</section>
-</main>
-</body>
-</html>`;
-}
-
 function makeReportMarkdown(analysis) {
   return `# Report RAG - ${analysis.titolo}
 
@@ -516,52 +540,56 @@ function makeReportMarkdown(analysis) {
 - Parole chiave: ${analysis.statistiche.parole_chiave}
 - Card generate: ${analysis.statistiche.card}
 - Domande quiz generate: ${analysis.statistiche.quiz}
-
-## File scaricabili
-
-- index.html
-- riassunto.html
-- riassunto.md
-- tabelle_concetti.md
-- tabelle_concetti.csv
-- cards.html
-- cards.json
-- quiz_interattivo.html
-- quiz.json
-- minicorso_interattivo.html
-- analisi_completa.json
-- statistiche.json
-- report_rag.md
 `;
 }
 
-function makeDownloadPackage(analysis) {
-  const files = {
-    "index.html": makeIndexHtmlDocument(analysis),
-    "riassunto.html": makeSummaryHtmlDocument(analysis),
-    "riassunto.md": makeSummaryMarkdown(analysis),
-    "tabelle_concetti.md": makeConceptTableMarkdown(analysis),
-    "tabelle_concetti.csv": makeConceptTableCsv(analysis),
-    "cards.html": makeCardsHtmlDocument(analysis),
-    "cards.json": JSON.stringify(analysis.cards, null, 2),
-    "quiz_interattivo.html": makeQuizHtmlDocument(analysis),
-    "quiz.json": JSON.stringify(analysis.quiz, null, 2),
-    "minicorso_interattivo.html": makeMiniCourseHtmlDocument(analysis),
-    "analisi_completa.json": JSON.stringify(analysis, null, 2),
-    "statistiche.json": JSON.stringify(analysis.statistiche, null, 2),
-    "report_rag.md": makeReportMarkdown(analysis)
-  };
+function makeDownloadPackage(analysis, selectedOutputs) {
+  const files = {};
+
+  if (selectedOutputs.has("summary")) {
+    files["riassunto.html"] = makeSummaryHtmlDocument(analysis);
+    files["riassunto.md"] = makeSummaryMarkdown(analysis);
+  }
+
+  if (selectedOutputs.has("tables")) {
+    files["tabelle_concetti.md"] = makeConceptTableMarkdown(analysis);
+    files["tabelle_concetti.csv"] = makeConceptTableCsv(analysis);
+  }
+
+  if (selectedOutputs.has("cards")) {
+    files["cards.html"] = makeCardsHtmlDocument(analysis);
+    files["cards.json"] = JSON.stringify(analysis.cards, null, 2);
+  }
+
+  if (selectedOutputs.has("quiz")) {
+    files["quiz_interattivo.html"] = makeQuizHtmlDocument(analysis);
+    files["quiz.json"] = JSON.stringify(analysis.quiz, null, 2);
+  }
+
+  if (selectedOutputs.has("minicourse")) {
+    files["minicorso_interattivo.html"] = makeMiniCourseHtmlDocument(analysis);
+  }
+
+  if (selectedOutputs.has("data")) {
+    files["analisi_completa.json"] = JSON.stringify(analysis, null, 2);
+    files["statistiche.json"] = JSON.stringify(analysis.statistiche, null, 2);
+    files["report_rag.md"] = makeReportMarkdown(analysis);
+  }
 
   return files;
 }
 
-async function downloadAllAsZip(analysis) {
-  const files = makeDownloadPackage(analysis);
+async function downloadSelectedZip(analysis, selectedOutputs) {
+  const files = makeDownloadPackage(analysis, selectedOutputs);
   const slug = slugify(analysis.titolo);
 
+  if (!Object.keys(files).length) {
+    setStatus("Seleziona almeno un output da scaricare.", "error");
+    return;
+  }
+
   if (!window.JSZip) {
-    const fallbackName = `${slug}-pacchetto-rag.json`;
-    downloadBlob(fallbackName, JSON.stringify(files, null, 2), "application/json;charset=utf-8");
+    downloadBlob(`${slug}-output-rag.json`, JSON.stringify(files, null, 2), "application/json;charset=utf-8");
     return;
   }
 
@@ -576,68 +604,43 @@ async function downloadAllAsZip(analysis) {
   downloadBlob(`output-rag-${slug}.zip`, blob, "application/zip");
 }
 
-function renderDownloadPanel(analysis) {
+function renderDownloadPanel(analysis, selectedOutputs) {
+  const files = makeDownloadPackage(analysis, selectedOutputs);
+  const fileButtons = Object.keys(files).map(filename => {
+    return `<button type="button" class="single-download-button" data-download-file="${escapeHtml(filename)}">Scarica ${escapeHtml(filename)}</button>`;
+  }).join("");
+
   return `
     <section class="panel">
       <h2>Scarica output</h2>
-      <p>Puoi scaricare tutto in un unico ZIP oppure scaricare i singoli file principali.</p>
+      <p>
+        I file vengono scaricati nella cartella Download del browser.
+        Su Mac di solito è <strong>Download</strong>; su smartphone è nella cartella Download/File.
+        Per scegliere ogni volta dove salvarli, attiva l'opzione del browser “Chiedi dove salvare ogni file”.
+      </p>
       <div class="download-grid">
-        <button id="downloadZip">Scarica tutto in ZIP</button>
-        <button id="downloadIndexHtml">Scarica index.html</button>
-        <button id="downloadSummaryHtml">Scarica riassunto.html</button>
-        <button id="downloadSummaryMd">Scarica riassunto.md</button>
-        <button id="downloadTableMd">Scarica tabelle_concetti.md</button>
-        <button id="downloadTableCsv">Scarica tabelle_concetti.csv</button>
-        <button id="downloadCardsHtml">Scarica cards.html</button>
-        <button id="downloadCardsJson">Scarica cards.json</button>
-        <button id="downloadQuizHtml">Scarica quiz_interattivo.html</button>
-        <button id="downloadQuizJson">Scarica quiz.json</button>
-        <button id="downloadMiniCourseHtml">Scarica minicorso_interattivo.html</button>
-        <button id="downloadFullJson">Scarica analisi_completa.json</button>
-        <button id="downloadStatsJson">Scarica statistiche.json</button>
-        <button id="downloadReportMd">Scarica report_rag.md</button>
+        <button type="button" id="downloadSelectedZip">Scarica ZIP con output selezionati</button>
+        ${fileButtons}
       </div>
     </section>
   `;
 }
 
-function attachDownloadHandlers(analysis) {
-  const files = makeDownloadPackage(analysis);
+function renderOutput(analysis, selectedOutputs) {
+  const sections = [];
 
-  const mapping = {
-    downloadIndexHtml: ["index.html", "text/html;charset=utf-8"],
-    downloadSummaryHtml: ["riassunto.html", "text/html;charset=utf-8"],
-    downloadSummaryMd: ["riassunto.md", "text/markdown;charset=utf-8"],
-    downloadTableMd: ["tabelle_concetti.md", "text/markdown;charset=utf-8"],
-    downloadTableCsv: ["tabelle_concetti.csv", "text/csv;charset=utf-8"],
-    downloadCardsHtml: ["cards.html", "text/html;charset=utf-8"],
-    downloadCardsJson: ["cards.json", "application/json;charset=utf-8"],
-    downloadQuizHtml: ["quiz_interattivo.html", "text/html;charset=utf-8"],
-    downloadQuizJson: ["quiz.json", "application/json;charset=utf-8"],
-    downloadMiniCourseHtml: ["minicorso_interattivo.html", "text/html;charset=utf-8"],
-    downloadFullJson: ["analisi_completa.json", "application/json;charset=utf-8"],
-    downloadStatsJson: ["statistiche.json", "application/json;charset=utf-8"],
-    downloadReportMd: ["report_rag.md", "text/markdown;charset=utf-8"]
-  };
-
-  const zipButton = document.getElementById("downloadZip");
-  if (zipButton) {
-    zipButton.addEventListener("click", () => downloadAllAsZip(analysis));
+  if (selectedOutputs.has("summary")) {
+    const summaryHtml = analysis.riassunto.map(sentence => `<li>${escapeHtml(sentence)}</li>`).join("");
+    sections.push(`
+      <section class="panel">
+        <h2>Riassunto leggibile</h2>
+        <ol>${summaryHtml}</ol>
+      </section>
+    `);
   }
 
-  Object.entries(mapping).forEach(([buttonId, [filename, mimeType]]) => {
-    const button = document.getElementById(buttonId);
-    if (!button) return;
-
-    button.addEventListener("click", () => {
-      downloadBlob(filename, files[filename], mimeType);
-    });
-  });
-}
-
-function renderOutput(analysis) {
-  const summaryHtml = analysis.riassunto.map(sentence => `<li>${escapeHtml(sentence)}</li>`).join("");
-  const tableHtml = analysis.tabella_concetti.map(row => `
+  if (selectedOutputs.has("tables")) {
+    const tableHtml = analysis.tabella_concetti.map(row => `
       <tr>
         <td>${escapeHtml(row.concetto)}</td>
         <td>${row.frequenza}</td>
@@ -646,14 +649,44 @@ function renderOutput(analysis) {
       </tr>
     `).join("");
 
-  const cardsHtml = analysis.cards.map(card => `
+    sections.push(`
+      <section class="panel">
+        <h2>Tabella concetti</h2>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Concetto</th>
+                <th>Frequenza</th>
+                <th>Importanza</th>
+                <th>Spiegazione</th>
+              </tr>
+            </thead>
+            <tbody>${tableHtml}</tbody>
+          </table>
+        </div>
+      </section>
+    `);
+  }
+
+  if (selectedOutputs.has("cards")) {
+    const cardsHtml = analysis.cards.map(card => `
       <article class="mini-card">
         <h3>${escapeHtml(card.fronte)}</h3>
         <p>${escapeHtml(card.retro)}</p>
       </article>
     `).join("");
 
-  const quizHtml = analysis.quiz.map((item, questionIndex) => `
+    sections.push(`
+      <section class="panel">
+        <h2>Card di ripasso</h2>
+        <div class="cards-grid">${cardsHtml}</div>
+      </section>
+    `);
+  }
+
+  if (selectedOutputs.has("quiz")) {
+    const quizHtml = analysis.quiz.map((item, questionIndex) => `
       <article class="quiz-card">
         <h3>${questionIndex + 1}. ${escapeHtml(item.domanda)}</h3>
         ${item.opzioni.map((option, optionIndex) => `
@@ -665,41 +698,25 @@ function renderOutput(analysis) {
       </article>
     `).join("");
 
-  outputBox.innerHTML = `
-    <section class="panel">
-      <h2>Riassunto leggibile</h2>
-      <ol>${summaryHtml}</ol>
-    </section>
+    sections.push(`
+      <section class="panel">
+        <h2>Quiz interattivo</h2>
+        ${quizHtml}
+      </section>
+    `);
+  }
 
-    <section class="panel">
-      <h2>Tabella concetti</h2>
-      <div class="table-wrap">
-        <table>
-          <thead>
-            <tr>
-              <th>Concetto</th>
-              <th>Frequenza</th>
-              <th>Importanza</th>
-              <th>Spiegazione</th>
-            </tr>
-          </thead>
-          <tbody>${tableHtml}</tbody>
-        </table>
-      </div>
-    </section>
+  if (selectedOutputs.has("minicourse")) {
+    sections.push(`
+      <section class="panel">
+        <h2>Minicorso</h2>
+        <p>Il minicorso è pronto come file scaricabile HTML.</p>
+      </section>
+    `);
+  }
 
-    <section class="panel">
-      <h2>Card di ripasso</h2>
-      <div class="cards-grid">${cardsHtml}</div>
-    </section>
-
-    <section class="panel">
-      <h2>Quiz interattivo</h2>
-      ${quizHtml}
-    </section>
-
-    ${renderDownloadPanel(analysis)}
-  `;
+  sections.push(renderDownloadPanel(analysis, selectedOutputs));
+  outputBox.innerHTML = sections.join("");
 
   document.querySelectorAll(".quiz-option").forEach(button => {
     button.addEventListener("click", () => {
@@ -716,19 +733,49 @@ function renderOutput(analysis) {
     });
   });
 
-  attachDownloadHandlers(analysis);
+  const zipButton = document.getElementById("downloadSelectedZip");
+  if (zipButton) {
+    zipButton.addEventListener("click", () => downloadSelectedZip(analysis, selectedOutputs));
+  }
+
+  const files = makeDownloadPackage(analysis, selectedOutputs);
+  document.querySelectorAll("[data-download-file]").forEach(button => {
+    button.addEventListener("click", () => {
+      const filename = button.dataset.downloadFile;
+      const content = files[filename];
+
+      if (!content) {
+        setStatus(`File non trovato: ${filename}`, "error");
+        return;
+      }
+
+      let mimeType = "text/plain;charset=utf-8";
+      if (filename.endsWith(".html")) mimeType = "text/html;charset=utf-8";
+      if (filename.endsWith(".json")) mimeType = "application/json;charset=utf-8";
+      if (filename.endsWith(".csv")) mimeType = "text/csv;charset=utf-8";
+      if (filename.endsWith(".md")) mimeType = "text/markdown;charset=utf-8";
+
+      downloadBlob(filename, content, mimeType);
+    });
+  });
 }
 
 generateButton.addEventListener("click", async () => {
   const file = fileInput.files[0];
+  const selectedOutputs = getSelectedOutputs();
 
   if (!file) {
     setStatus("Seleziona prima un file TXT, PDF o Markdown.", "error");
     return;
   }
 
+  if (!selectedOutputs.size) {
+    setStatus("Seleziona almeno una cosa da generare: riassunto, tabelle, card, quiz o minicorso.", "error");
+    return;
+  }
+
   try {
-    setStatus("Analisi in corso. Il motore sta estraendo testo, riassunto, tabelle, card e quiz...", "info");
+    setStatus("Analisi in corso. Il motore sta generando solo gli output selezionati...", "info");
 
     const rawText = await readUploadedFile(file);
     const cleanedText = cleanText(rawText);
@@ -764,8 +811,8 @@ generateButton.addEventListener("click", async () => {
       quiz
     };
 
-    renderOutput(analysis);
-    setStatus("✅ Output generati correttamente nella demo. Puoi leggerli e scaricarli.", "success");
+    renderOutput(analysis, selectedOutputs);
+    setStatus("✅ Output selezionati generati. Ora puoi scaricarli con i pulsanti sotto.", "success");
   } catch (error) {
     setStatus(`❌ ${error.message}`, "error");
   }

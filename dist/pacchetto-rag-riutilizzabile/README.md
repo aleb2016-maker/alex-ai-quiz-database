@@ -57,3 +57,17 @@ La demo `demo-rag/index.html` permette di leggere gli output direttamente nella 
 - `statistiche.json`;
 - `report_rag.md`.
 
+
+
+## Demo browser con scelta output
+
+La demo `demo-rag/index.html` permette di scegliere cosa generare:
+
+- riassunto;
+- tabelle;
+- card;
+- quiz;
+- minicorso;
+- dati tecnici.
+
+Dopo la generazione mostra pulsanti separati per scaricare ogni file e un pulsante ZIP per scaricare tutti gli output selezionati.
