@@ -179,24 +179,35 @@ function buildCurriculumCards(text) {
   return cards.slice(0, 8);
 }
 
-function iconSvg(icon) {
-  if (icon === "chip") return "▣";
-  if (icon === "code") return "</>";
-  if (icon === "work") return "▤";
-  return "◎";
+function iconSvg(icon, materia = "", concetto = "") {
+  const m = String(materia || "").toLowerCase();
+  const c = String(concetto || "").toLowerCase();
+  const i = String(icon || "").toLowerCase();
+
+  if (i === "chip" || m.includes("digitale") || c.includes("digitale") || c.includes("ai")) return "💻";
+  if (i === "code" || m.includes("informatica") || c.includes("software") || c.includes("app")) return "🧩";
+  if (i === "work" || m.includes("lavoro") || c.includes("lavorativa") || c.includes("colloquio")) return "💼";
+  if (c.includes("formazione") || c.includes("studio") || c.includes("obiettivi")) return "🎓";
+  if (c.includes("profilo") || m.includes("curriculum")) return "👤";
+  return "📄";
 }
 
 function renderCard(card) {
   const theme = CV_THEMES[card.materia] || CV_THEMES.curriculum;
-  const [primary, secondary, accent] = theme.palette;
+  const palette = Array.isArray(theme.palette) && theme.palette.length >= 3
+    ? theme.palette
+    : ["#1e1b4b", "#7c3aed", "#22d3ee"];
+
+  const [primary, secondary, accent] = palette;
+  const icon = iconSvg(theme.icon, card.materia || "", card.concetto || "");
 
   return `
     <article class="cv-card" style="--cv-primary:${primary};--cv-secondary:${secondary};--cv-accent:${accent};">
-      <div class="cv-badge">${theme.badge}</div>
-      <div class="cv-icon">${iconSvg(theme.icon)}</div>
-      <h3>${escapeHtml(card.fronte)}</h3>
-      <p>${escapeHtml(card.retro)}</p>
-      <small>${escapeHtml(card.uso)}</small>
+      <div class="cv-badge">${escapeHtml(theme.badge || card.materia || "Documento")}</div>
+      <div class="cv-icon" aria-hidden="true">${icon}</div>
+      <h3>${escapeHtml(card.fronte || "Scheda documento")}</h3>
+      <p>${escapeHtml(card.retro || "")}</p>
+      <small>${escapeHtml(card.uso || "Usa questa scheda per ripassare il contenuto.")}</small>
     </article>
   `;
 }
