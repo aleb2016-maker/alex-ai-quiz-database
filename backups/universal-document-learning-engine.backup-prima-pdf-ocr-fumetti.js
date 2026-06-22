@@ -1507,12 +1507,7 @@ Risultato finale: un diario ordinato, colorato e facile da sfogliare.`
 
     const arrayBuffer = await file.arrayBuffer();
     const pdf = await window.pdfjsLib.getDocument({ data: arrayBuffer }).promise;
-
-    mostraStatoCaricamentoFile(
-      "Lettura PDF in corso: controllo testo selezionabile..."
-    );
-
-    const pagineTesto = [];
+    const pagine = [];
 
     for (let numeroPagina = 1; numeroPagina <= pdf.numPages; numeroPagina += 1) {
       const pagina = await pdf.getPage(numeroPagina);
@@ -1548,90 +1543,10 @@ Risultato finale: un diario ordinato, colorato e facile da sfogliare.`
         righe.push(rigaCorrente.join(" "));
       }
 
-      pagineTesto.push(righe.join("\n"));
+      pagine.push(righe.join("\n"));
     }
 
-    const testoDiretto = pulisciTestoEstrattoDaPdf(pagineTesto.join("\n\n"));
-    const analisiDiretta = analizzaQualitaTesto(testoDiretto);
-
-    if (testoDiretto && analisiDiretta.valido) {
-      return testoDiretto;
-    }
-
-    if (!window.Tesseract) {
-      throw new Error("PDF immagine rilevato, ma libreria OCR non caricata.");
-    }
-
-    mostraStatoCaricamentoFile(
-      "PDF senza testo selezionabile. Avvio OCR sulle pagine..."
-    );
-
-    const testiOcr = [];
-    const pagineMassime = Math.min(pdf.numPages, 8);
-
-    for (let numeroPagina = 1; numeroPagina <= pagineMassime; numeroPagina += 1) {
-      mostraStatoCaricamentoFile(
-        "OCR PDF immagine: pagina " + numeroPagina + " di " + pagineMassime
-      );
-
-      const pagina = await pdf.getPage(numeroPagina);
-      const viewport = pagina.getViewport({ scale: 2.2 });
-
-      const canvas = document.createElement("canvas");
-      const context = canvas.getContext("2d");
-
-      canvas.width = Math.floor(viewport.width);
-      canvas.height = Math.floor(viewport.height);
-
-      await pagina.render({
-        canvasContext: context,
-        viewport: viewport
-      }).promise;
-
-      const blob = await new Promise(function (resolve) {
-        canvas.toBlob(resolve, "image/png");
-      });
-
-      if (!blob) {
-        continue;
-      }
-
-      const risultato = await window.Tesseract.recognize(
-        blob,
-        "ita+eng",
-        {
-          logger: function (m) {
-            if (m && m.status) {
-              mostraStatoCaricamentoFile(
-                "OCR PDF pagina " + numeroPagina + "/" + pagineMassime +
-                ": " + m.status +
-                (m.progress ? " " + Math.round(m.progress * 100) + "%" : "")
-              );
-            }
-          }
-        }
-      );
-
-      const testoPagina =
-        risultato &&
-        risultato.data &&
-        risultato.data.text
-          ? risultato.data.text
-          : "";
-
-      if (testoPagina.trim()) {
-        testiOcr.push(testoPagina.trim());
-      }
-    }
-
-    const testoOcr = pulisciTestoEstrattoDaPdf(testiOcr.join("\n\n"));
-    const analisiOcr = analizzaQualitaTesto(testoOcr);
-
-    if (!testoOcr || !analisiOcr.valido) {
-      return "";
-    }
-
-    return testoOcr;
+    return pulisciTestoEstrattoDaPdf(pagine.join("\n\n"));
   }
 
   async function estraiTestoDaImmagine(file) {
@@ -1698,8 +1613,8 @@ Risultato finale: un diario ordinato, colorato e facile da sfogliare.`
 
         if (!testoPdf) {
           mostraErrore(
-            "PDF non leggibile",
-            "Il PDF è stato caricato, ma non è stato possibile estrarre testo utile neanche con OCR. Se è un fumetto, prova una pagina più nitida, con balloon grandi e testo ben leggibile."
+            "PDF senza testo leggibile",
+            "Il PDF è stato caricato, ma non contiene testo selezionabile. Prova a caricare una foto/JPG/PNG e verrà usato l’OCR."
           );
           return;
         }

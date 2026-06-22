@@ -911,296 +911,155 @@ Risultato finale: un diario ordinato, colorato e facile da sfogliare.`
 
   function disegnoSvg(card) {
     const tema = card.profilo.classe;
-    const ramo = String(card.ramo || "").toLowerCase();
-    const titolo = String(card.titolo || "").toLowerCase();
-    const testo = String(card.originale || "").toLowerCase();
-    const chiave = `${ramo} ${titolo} ${testo}`;
+    const ramo = card.ramo;
 
-    function contiene(...parole) {
-      return parole.some(function (parola) {
-        return chiave.includes(parola);
-      });
-    }
+    if (tema === "theme-sport") {
+      if (ramo.includes("attività")) {
+        return `
+          <svg class="card-svg" viewBox="0 0 240 150" xmlns="http://www.w3.org/2000/svg">
+            <rect x="12" y="12" width="216" height="126" rx="28" fill="rgba(255,255,255,0.08)"/>
+            <circle cx="68" cy="94" r="22" fill="#22d3ee"/>
+            <circle cx="174" cy="94" r="22" fill="#8b5cf6"/>
+            <path d="M68 94 L104 56 L138 56 L174 94" stroke="#f8fafc" stroke-width="9" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="122" cy="38" r="13" fill="#f8fafc"/>
+          </svg>
+        `;
+      }
 
-    function base(contenuto, sfondo = "rgba(255,255,255,0.08)") {
+      if (ramo.includes("recupero")) {
+        return `
+          <svg class="card-svg" viewBox="0 0 240 150" xmlns="http://www.w3.org/2000/svg">
+            <rect x="12" y="12" width="216" height="126" rx="28" fill="rgba(255,255,255,0.08)"/>
+            <rect x="58" y="86" width="124" height="18" rx="9" fill="#8b5cf6"/>
+            <rect x="52" y="72" width="14" height="44" rx="7" fill="#f8fafc"/>
+            <rect x="176" y="72" width="14" height="44" rx="7" fill="#f8fafc"/>
+            <text x="88" y="60" font-size="30" font-weight="900" fill="#f8fafc">Z</text>
+            <text x="124" y="46" font-size="22" font-weight="900" fill="#ddd6fe">Z</text>
+          </svg>
+        `;
+      }
+
       return `
         <svg class="card-svg" viewBox="0 0 240 150" xmlns="http://www.w3.org/2000/svg">
-          <rect x="12" y="12" width="216" height="126" rx="28" fill="${sfondo}"/>
-          ${contenuto}
+          <rect x="12" y="12" width="216" height="126" rx="28" fill="rgba(255,255,255,0.08)"/>
+          <circle cx="120" cy="38" r="13" fill="#f8fafc"/>
+          <path d="M120 54 L120 90" stroke="#22d3ee" stroke-width="9" stroke-linecap="round"/>
+          <path d="M120 66 L88 82" stroke="#f472b6" stroke-width="9" stroke-linecap="round"/>
+          <path d="M120 66 L152 82" stroke="#f472b6" stroke-width="9" stroke-linecap="round"/>
+          <path d="M120 90 L94 118" stroke="#8b5cf6" stroke-width="9" stroke-linecap="round"/>
+          <path d="M120 90 L148 118" stroke="#8b5cf6" stroke-width="9" stroke-linecap="round"/>
         </svg>
       `;
     }
 
-    function ramoEsatto(nome) {
-      return ramo === nome || ramo.includes(nome);
-    }
-
-    /* CURRICULUM: scelta rigida per ramo, così non si ripetono più */
     if (tema === "theme-cv") {
-      if (ramoEsatto("profilo")) {
-        return base(`
-          <circle cx="74" cy="58" r="24" fill="#93c5fd"/>
-          <path d="M36 120 C44 88 104 88 114 120" fill="#60a5fa"/>
-          <rect x="132" y="38" width="58" height="12" rx="6" fill="#f8fafc"/>
-          <rect x="132" y="62" width="76" height="12" rx="6" fill="#bfdbfe"/>
-          <rect x="132" y="86" width="44" height="12" rx="6" fill="#93c5fd"/>
-          <circle cx="190" cy="104" r="15" fill="#22d3ee"/>
-          <path d="M184 104 L189 110 L199 94" stroke="#0f172a" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-        `);
+      if (ramo.includes("competenze")) {
+        return `
+          <svg class="card-svg" viewBox="0 0 240 150" xmlns="http://www.w3.org/2000/svg">
+            <rect x="18" y="18" width="204" height="114" rx="24" fill="rgba(255,255,255,0.08)"/>
+            <rect x="54" y="44" width="132" height="66" rx="14" fill="#1d4ed8"/>
+            <path d="M86 74 L104 58 L122 74 L104 90 Z" fill="#93c5fd"/>
+            <path d="M132 62 H164" stroke="#f8fafc" stroke-width="8" stroke-linecap="round"/>
+            <path d="M132 84 H154" stroke="#f8fafc" stroke-width="8" stroke-linecap="round"/>
+          </svg>
+        `;
       }
 
-      if (ramoEsatto("esperienze")) {
-        return base(`
-          <path d="M64 38 V118" stroke="#bfdbfe" stroke-width="8" stroke-linecap="round"/>
-          <circle cx="64" cy="48" r="12" fill="#f8fafc"/>
-          <circle cx="64" cy="78" r="12" fill="#60a5fa"/>
-          <circle cx="64" cy="108" r="12" fill="#1d4ed8"/>
-          <rect x="94" y="36" width="82" height="20" rx="8" fill="#bfdbfe"/>
-          <rect x="94" y="68" width="108" height="20" rx="8" fill="#60a5fa"/>
-          <rect x="94" y="100" width="68" height="20" rx="8" fill="#1d4ed8"/>
-          <path d="M174 110 L188 122 L208 92" stroke="#fbbf24" stroke-width="7" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-        `);
+      if (ramo.includes("formazione")) {
+        return `
+          <svg class="card-svg" viewBox="0 0 240 150" xmlns="http://www.w3.org/2000/svg">
+            <rect x="18" y="18" width="204" height="114" rx="24" fill="rgba(255,255,255,0.08)"/>
+            <path d="M52 62 L120 34 L188 62 L120 90 Z" fill="#60a5fa"/>
+            <path d="M76 78 V98 C100 116 140 116 164 98 V78" fill="#1d4ed8"/>
+            <path d="M188 62 V94" stroke="#f8fafc" stroke-width="6" stroke-linecap="round"/>
+          </svg>
+        `;
       }
 
-      if (ramo.includes("competenze tecniche")) {
-        return base(`
-          <rect x="42" y="42" width="156" height="84" rx="16" fill="#1d4ed8"/>
-          <rect x="58" y="58" width="124" height="48" rx="9" fill="#0f172a"/>
-          <path d="M88 84 L72 74 L88 64" stroke="#22d3ee" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M152 64 L168 74 L152 84" stroke="#22d3ee" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M112 92 L128 56" stroke="#f8fafc" stroke-width="6" stroke-linecap="round"/>
-          <circle cx="190" cy="118" r="10" fill="#fbbf24"/>
-        `);
-      }
-
-      if (ramo.includes("competenze trasversali")) {
-        return base(`
-          <circle cx="78" cy="56" r="18" fill="#93c5fd"/>
-          <circle cx="120" cy="46" r="20" fill="#60a5fa"/>
-          <circle cx="164" cy="56" r="18" fill="#bfdbfe"/>
-          <path d="M48 118 C54 88 100 88 108 118" fill="#2563eb"/>
-          <path d="M84 122 C92 84 148 84 156 122" fill="#1d4ed8"/>
-          <path d="M134 118 C142 88 188 88 194 118" fill="#3b82f6"/>
-          <path d="M82 96 H158" stroke="#fbbf24" stroke-width="6" stroke-linecap="round"/>
-        `);
-      }
-
-      if (ramoEsatto("formazione")) {
-        return base(`
-          <path d="M52 62 L120 34 L188 62 L120 90 Z" fill="#60a5fa"/>
-          <path d="M76 78 V98 C100 116 140 116 164 98 V78" fill="#1d4ed8"/>
-          <path d="M188 62 V94" stroke="#f8fafc" stroke-width="6" stroke-linecap="round"/>
-          <circle cx="188" cy="102" r="8" fill="#fbbf24"/>
-          <rect x="84" y="112" width="72" height="10" rx="5" fill="#bfdbfe"/>
-        `);
-      }
-
-      if (ramoEsatto("obiettivo")) {
-        return base(`
-          <circle cx="120" cy="78" r="52" fill="#1e3a8a"/>
-          <circle cx="120" cy="78" r="34" fill="#3b82f6"/>
-          <circle cx="120" cy="78" r="16" fill="#f8fafc"/>
-          <path d="M120 78 L182 38" stroke="#fbbf24" stroke-width="8" stroke-linecap="round"/>
-          <path d="M174 36 L196 30 L188 52" fill="#fbbf24"/>
-          <path d="M62 118 H178" stroke="#93c5fd" stroke-width="7" stroke-linecap="round"/>
-        `);
-      }
-
-      if (ramo.includes("punti forti")) {
-        return base(`
-          <path d="M120 34 L142 72 L186 78 L154 106 L162 132 L120 116 L78 132 L86 106 L54 78 L98 72 Z" fill="#fbbf24"/>
-          <circle cx="120" cy="84" r="24" fill="#1d4ed8"/>
-          <path d="M108 84 L116 92 L136 70" stroke="#f8fafc" stroke-width="7" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-        `);
-      }
+      return `
+        <svg class="card-svg" viewBox="0 0 240 150" xmlns="http://www.w3.org/2000/svg">
+          <rect x="18" y="18" width="204" height="114" rx="24" fill="rgba(255,255,255,0.08)"/>
+          <circle cx="82" cy="58" r="24" fill="#93c5fd"/>
+          <path d="M44 116 C52 86 112 86 120 116" fill="#60a5fa"/>
+          <rect x="132" y="48" width="54" height="12" rx="6" fill="#f8fafc"/>
+          <rect x="132" y="72" width="72" height="12" rx="6" fill="#bfdbfe"/>
+          <rect x="132" y="96" width="44" height="12" rx="6" fill="#93c5fd"/>
+        </svg>
+      `;
     }
 
-    /* SPORT */
-    if (tema === "theme-sport") {
-      if (ramoEsatto("riscaldamento")) {
-        return base(`
-          <circle cx="72" cy="68" r="18" fill="#f8fafc"/>
-          <path d="M72 88 L72 118" stroke="#22d3ee" stroke-width="8" stroke-linecap="round"/>
-          <path d="M72 98 L42 84" stroke="#f472b6" stroke-width="8" stroke-linecap="round"/>
-          <path d="M72 98 L104 84" stroke="#f472b6" stroke-width="8" stroke-linecap="round"/>
-          <path d="M132 48 C166 54 186 78 192 104" stroke="#fbbf24" stroke-width="8" fill="none" stroke-linecap="round"/>
-          <path d="M182 100 L194 114 L204 96" stroke="#fbbf24" stroke-width="7" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-        `);
-      }
-
-      if (ramoEsatto("cardio")) {
-        return base(`
-          <circle cx="62" cy="100" r="22" fill="#22d3ee"/>
-          <circle cx="172" cy="100" r="22" fill="#8b5cf6"/>
-          <path d="M62 100 L104 62 L134 62 L172 100" stroke="#f8fafc" stroke-width="9" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-          <circle cx="120" cy="40" r="13" fill="#f8fafc"/>
-          <path d="M120 54 L104 62" stroke="#f8fafc" stroke-width="8" stroke-linecap="round"/>
-        `);
-      }
-
-      if (ramoEsatto("forza")) {
-        return base(`
-          <rect x="44" y="68" width="28" height="42" rx="8" fill="#94a3b8"/>
-          <rect x="168" y="68" width="28" height="42" rx="8" fill="#94a3b8"/>
-          <path d="M70 88 H170" stroke="#f8fafc" stroke-width="10" stroke-linecap="round"/>
-          <circle cx="120" cy="42" r="13" fill="#f8fafc"/>
-          <path d="M120 56 V92" stroke="#22d3ee" stroke-width="8" stroke-linecap="round"/>
-        `);
-      }
-
-      if (ramoEsatto("mobilità") || ramoEsatto("mobilita")) {
-        return base(`
-          <circle cx="118" cy="42" r="13" fill="#f8fafc"/>
-          <path d="M118 58 C98 78 88 96 72 120" stroke="#22d3ee" stroke-width="9" fill="none" stroke-linecap="round"/>
-          <path d="M118 62 C146 74 168 92 184 118" stroke="#f472b6" stroke-width="9" fill="none" stroke-linecap="round"/>
-          <path d="M82 110 C114 96 142 96 176 112" stroke="#a78bfa" stroke-width="7" fill="none" stroke-linecap="round"/>
-        `);
-      }
-
-      if (ramoEsatto("equilibrio")) {
-        return base(`
-          <path d="M48 120 H192" stroke="#f8fafc" stroke-width="8" stroke-linecap="round"/>
-          <circle cx="120" cy="42" r="13" fill="#f8fafc"/>
-          <path d="M120 56 V92" stroke="#22d3ee" stroke-width="8" stroke-linecap="round"/>
-          <path d="M120 72 L82 58" stroke="#f472b6" stroke-width="8" stroke-linecap="round"/>
-          <path d="M120 72 L158 58" stroke="#f472b6" stroke-width="8" stroke-linecap="round"/>
-          <circle cx="120" cy="120" r="9" fill="#fbbf24"/>
-        `);
-      }
-
-      if (ramoEsatto("recupero")) {
-        return base(`
-          <rect x="58" y="88" width="124" height="18" rx="9" fill="#8b5cf6"/>
-          <rect x="52" y="74" width="14" height="44" rx="7" fill="#f8fafc"/>
-          <rect x="176" y="74" width="14" height="44" rx="7" fill="#f8fafc"/>
-          <text x="84" y="62" font-size="30" font-weight="900" fill="#f8fafc">Z</text>
-          <text x="124" y="48" font-size="22" font-weight="900" fill="#ddd6fe">Z</text>
-        `);
-      }
-
-      if (ramoEsatto("defaticamento")) {
-        return base(`
-          <path d="M54 84 C88 54 150 54 186 84" stroke="#22d3ee" stroke-width="8" fill="none" stroke-linecap="round"/>
-          <path d="M72 106 C102 126 140 126 168 106" stroke="#8b5cf6" stroke-width="8" fill="none" stroke-linecap="round"/>
-          <circle cx="120" cy="76" r="18" fill="#f8fafc"/>
-          <path d="M104 78 H136" stroke="#0f172a" stroke-width="6" stroke-linecap="round"/>
-        `);
-      }
-    }
-
-    /* ALTRI TEMI: manteniamo logica distinta per ramo */
     if (tema === "theme-personal") {
-      if (ramoEsatto("identità")) {
-        return base(`
-          <rect x="42" y="36" width="156" height="84" rx="18" fill="#0f766e"/>
-          <circle cx="78" cy="72" r="18" fill="#ccfbf1"/>
-          <path d="M52 108 C58 84 98 84 106 108" fill="#5eead4"/>
-          <rect x="122" y="58" width="52" height="10" rx="5" fill="#f8fafc"/>
-          <rect x="122" y="82" width="62" height="10" rx="5" fill="#ccfbf1"/>
-        `);
-      }
-
-      if (ramoEsatto("residenza")) {
-        return base(`
-          <path d="M120 34 C90 34 70 56 70 84 C70 112 120 128 120 128 C120 128 170 112 170 84 C170 56 150 34 120 34 Z" fill="#14b8a6"/>
-          <circle cx="120" cy="82" r="22" fill="#ccfbf1"/>
-          <path d="M96 84 L120 62 L144 84 V112 H104 V84" fill="#0f766e"/>
-        `);
-      }
-
-      if (ramoEsatto("documento")) {
-        return base(`
-          <rect x="48" y="34" width="144" height="92" rx="16" fill="#0f766e"/>
-          <rect x="68" y="58" width="80" height="10" rx="5" fill="#f8fafc"/>
-          <rect x="68" y="80" width="104" height="10" rx="5" fill="#ccfbf1"/>
-          <path d="M72 108 V96 M88 108 V96 M104 108 V96 M128 108 V96 M144 108 V96 M164 108 V96" stroke="#f8fafc" stroke-width="5" stroke-linecap="round"/>
-        `);
-      }
-
-      if (ramoEsatto("scadenze")) {
-        return base(`
-          <rect x="58" y="42" width="124" height="86" rx="16" fill="#0f766e"/>
-          <rect x="58" y="42" width="124" height="28" rx="16" fill="#5eead4"/>
-          <path d="M82 34 V54 M158 34 V54" stroke="#f8fafc" stroke-width="7" stroke-linecap="round"/>
-          <circle cx="96" cy="92" r="9" fill="#f8fafc"/>
-          <circle cx="120" cy="92" r="9" fill="#fbbf24"/>
-          <circle cx="144" cy="92" r="9" fill="#f8fafc"/>
-        `);
-      }
+      return `
+        <svg class="card-svg" viewBox="0 0 240 150" xmlns="http://www.w3.org/2000/svg">
+          <rect x="54" y="24" width="132" height="102" rx="18" fill="#0f766e"/>
+          <path d="M150 24 L186 60 H150 Z" fill="#5eead4"/>
+          <rect x="78" y="62" width="72" height="10" rx="5" fill="#f8fafc"/>
+          <rect x="78" y="84" width="84" height="10" rx="5" fill="#ccfbf1"/>
+          <circle cx="158" cy="102" r="18" fill="#14b8a6"/>
+          <path d="M150 102 L156 108 L168 94" stroke="#f8fafc" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      `;
     }
 
     if (tema === "theme-business") {
-      if (ramoEsatto("obiettivo")) {
-        return base(`<circle cx="120" cy="78" r="48" fill="#475569"/><circle cx="120" cy="78" r="30" fill="#94a3b8"/><circle cx="120" cy="78" r="12" fill="#f8fafc"/><path d="M120 78 L176 44" stroke="#38bdf8" stroke-width="8" stroke-linecap="round"/>`);
+      if (ramo.includes("rischi")) {
+        return `
+          <svg class="card-svg" viewBox="0 0 240 150" xmlns="http://www.w3.org/2000/svg">
+            <rect x="18" y="18" width="204" height="114" rx="24" fill="rgba(255,255,255,0.08)"/>
+            <path d="M120 30 L176 54 V84 C176 110 150 124 120 134 C90 124 64 110 64 84 V54 Z" fill="#64748b"/>
+            <path d="M120 60 V86" stroke="#f8fafc" stroke-width="8" stroke-linecap="round"/>
+            <circle cx="120" cy="106" r="6" fill="#f8fafc"/>
+          </svg>
+        `;
       }
-      if (ramoEsatto("processo")) {
-        return base(`<rect x="42" y="62" width="42" height="34" rx="12" fill="#94a3b8"/><rect x="100" y="62" width="42" height="34" rx="12" fill="#cbd5e1"/><rect x="158" y="62" width="42" height="34" rx="12" fill="#64748b"/><path d="M86 79 H98 M144 79 H156" stroke="#38bdf8" stroke-width="8" stroke-linecap="round"/><path d="M94 70 L104 79 L94 88 M152 70 L162 79 L152 88" stroke="#38bdf8" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>`);
-      }
-      if (ramoEsatto("responsabilità")) {
-        return base(`<circle cx="120" cy="42" r="18" fill="#f8fafc"/><circle cx="72" cy="98" r="18" fill="#94a3b8"/><circle cx="168" cy="98" r="18" fill="#cbd5e1"/><path d="M120 60 V78 M120 78 H72 M120 78 H168" stroke="#38bdf8" stroke-width="7" fill="none" stroke-linecap="round"/>`);
-      }
-      if (ramoEsatto("rischi")) {
-        return base(`<path d="M120 30 L176 54 V84 C176 110 150 124 120 134 C90 124 64 110 64 84 V54 Z" fill="#64748b"/><path d="M120 60 V88" stroke="#f8fafc" stroke-width="8" stroke-linecap="round"/><circle cx="120" cy="108" r="7" fill="#f8fafc"/>`);
-      }
-      if (ramoEsatto("metriche")) {
-        return base(`<rect x="50" y="92" width="28" height="30" rx="8" fill="#94a3b8"/><rect x="94" y="70" width="28" height="52" rx="8" fill="#cbd5e1"/><rect x="138" y="46" width="28" height="76" rx="8" fill="#f8fafc"/><path d="M50 54 L90 46 L128 58 L184 34" stroke="#38bdf8" stroke-width="7" fill="none" stroke-linecap="round" stroke-linejoin="round"/>`);
-      }
+
+      return `
+        <svg class="card-svg" viewBox="0 0 240 150" xmlns="http://www.w3.org/2000/svg">
+          <rect x="18" y="18" width="204" height="114" rx="24" fill="rgba(255,255,255,0.08)"/>
+          <rect x="46" y="86" width="32" height="34" rx="8" fill="#94a3b8"/>
+          <rect x="96" y="58" width="32" height="62" rx="8" fill="#cbd5e1"/>
+          <rect x="146" y="36" width="32" height="84" rx="8" fill="#f8fafc"/>
+          <path d="M52 60 L96 44 L140 48 L184 28" stroke="#38bdf8" stroke-width="7" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      `;
     }
 
     if (tema === "theme-story") {
-      if (ramoEsatto("personaggi")) {
-        return base(`<circle cx="84" cy="58" r="22" fill="#c4b5fd"/><circle cx="154" cy="58" r="22" fill="#a78bfa"/><path d="M48 118 C56 86 112 86 120 118" fill="#7c3aed"/><path d="M122 118 C130 86 186 86 194 118" fill="#6d28d9"/>`);
-      }
-      if (ramoEsatto("ambientazione")) {
-        return base(`<circle cx="178" cy="46" r="18" fill="#fde68a"/><path d="M44 120 L88 58 L126 120 Z" fill="#6d28d9"/><path d="M100 120 L150 44 L202 120 Z" fill="#a78bfa"/><path d="M44 120 H202" stroke="#f8fafc" stroke-width="7" stroke-linecap="round"/>`);
-      }
-      if (ramoEsatto("problema")) {
-        return base(`<path d="M120 34 L184 120 H56 Z" fill="#7c3aed"/><path d="M120 66 V94" stroke="#f8fafc" stroke-width="8" stroke-linecap="round"/><circle cx="120" cy="110" r="7" fill="#f8fafc"/>`);
-      }
-      if (ramoEsatto("svolta")) {
-        return base(`<circle cx="120" cy="76" r="44" fill="#7c3aed"/><path d="M120 38 V76 L152 96" stroke="#f8fafc" stroke-width="8" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M172 42 L194 32 L184 56" fill="#fbbf24"/>`);
-      }
+      return `
+        <svg class="card-svg" viewBox="0 0 240 150" xmlns="http://www.w3.org/2000/svg">
+          <rect x="18" y="18" width="204" height="114" rx="24" fill="rgba(255,255,255,0.08)"/>
+          <path d="M62 42 H112 C124 42 132 52 132 64 V112 H78 C68 112 62 106 62 96 Z" fill="#a78bfa"/>
+          <path d="M132 64 C132 52 140 42 152 42 H178 V96 C178 106 172 112 162 112 H132 Z" fill="#7c3aed"/>
+          <circle cx="94" cy="72" r="8" fill="#f8fafc"/>
+          <path d="M92 98 C110 84 134 84 150 100" stroke="#f8fafc" stroke-width="6" fill="none" stroke-linecap="round"/>
+        </svg>
+      `;
     }
 
     if (tema === "theme-poetry") {
-      if (ramoEsatto("tema")) {
-        return base(`<circle cx="78" cy="58" r="24" fill="#fce7f3"/><path d="M112 104 C112 74 148 72 148 102 C148 72 184 74 184 104 C184 124 148 132 148 132 C148 132 112 124 112 104 Z" fill="#f472b6"/>`);
-      }
-      if (ramoEsatto("immagini")) {
-        return base(`<circle cx="66" cy="48" r="18" fill="#fce7f3"/><path d="M44 106 Q76 84 108 106 T172 106 T210 106" stroke="#f8fafc" stroke-width="6" fill="none" stroke-linecap="round"/><path d="M70 74 C104 50 136 50 170 74" stroke="#f9a8d4" stroke-width="7" fill="none" stroke-linecap="round"/>`);
-      }
-      if (ramoEsatto("emozione")) {
-        return base(`<circle cx="120" cy="78" r="44" fill="#f9a8d4"/><path d="M100 70 H100 M140 70 H140" stroke="#831843" stroke-width="8" stroke-linecap="round"/><path d="M94 98 C112 114 132 114 148 98" stroke="#831843" stroke-width="7" fill="none" stroke-linecap="round"/>`);
-      }
-      if (ramoEsatto("metafora")) {
-        return base(`<rect x="64" y="38" width="112" height="84" rx="18" fill="#f9a8d4"/><path d="M120 46 V114" stroke="#831843" stroke-width="6" stroke-linecap="round"/><circle cx="96" cy="78" r="20" fill="#fce7f3"/><path d="M134 98 C148 70 162 62 178 68 C174 96 154 110 134 98 Z" fill="#f472b6"/>`);
-      }
+      return `
+        <svg class="card-svg" viewBox="0 0 240 150" xmlns="http://www.w3.org/2000/svg">
+          <rect x="18" y="18" width="204" height="114" rx="24" fill="rgba(255,255,255,0.08)"/>
+          <path d="M82 112 C124 38 162 28 184 42 C170 86 130 114 82 112 Z" fill="#f9a8d4"/>
+          <path d="M84 112 C112 82 138 60 180 42" stroke="#831843" stroke-width="5" fill="none" stroke-linecap="round"/>
+          <circle cx="64" cy="54" r="18" fill="#fce7f3"/>
+          <path d="M54 96 Q82 82 110 96 T166 96" stroke="#f8fafc" stroke-width="5" fill="none" stroke-linecap="round"/>
+        </svg>
+      `;
     }
 
-    if (tema === "theme-hobby") {
-      if (ramoEsatto("attività")) {
-        return base(`<circle cx="78" cy="78" r="30" fill="#fb923c"/><circle cx="116" cy="56" r="18" fill="#facc15"/><circle cx="150" cy="90" r="24" fill="#22d3ee"/><path d="M62 116 H180" stroke="#f8fafc" stroke-width="8" stroke-linecap="round"/>`);
-      }
-      if (ramoEsatto("materiali")) {
-        return base(`<path d="M64 110 L118 56" stroke="#f8fafc" stroke-width="9" stroke-linecap="round"/><path d="M112 50 L132 70" stroke="#fb923c" stroke-width="10" stroke-linecap="round"/><rect x="138" y="52" width="36" height="70" rx="10" fill="#22d3ee"/>`);
-      }
-      if (ramoEsatto("passaggi")) {
-        return base(`<rect x="50" y="94" width="42" height="26" rx="10" fill="#fb923c"/><rect x="100" y="70" width="42" height="50" rx="10" fill="#facc15"/><rect x="150" y="44" width="42" height="76" rx="10" fill="#22d3ee"/><path d="M70 82 L108 58 L156 34" stroke="#f8fafc" stroke-width="7" fill="none" stroke-linecap="round"/>`);
-      }
-      if (ramoEsatto("tecnica")) {
-        return base(`<circle cx="120" cy="78" r="36" fill="#fb923c"/><path d="M120 34 V52 M120 104 V122 M76 78 H94 M146 78 H164" stroke="#f8fafc" stroke-width="8" stroke-linecap="round"/><circle cx="120" cy="78" r="14" fill="#f8fafc"/>`);
-      }
-      if (ramoEsatto("obiettivo")) {
-        return base(`<circle cx="120" cy="78" r="46" fill="#fb923c"/><circle cx="120" cy="78" r="28" fill="#facc15"/><circle cx="120" cy="78" r="12" fill="#f8fafc"/><path d="M120 78 L174 46" stroke="#22d3ee" stroke-width="8" stroke-linecap="round"/>`);
-      }
-    }
-
-    return base(`
-      <rect x="58" y="42" width="124" height="74" rx="18" fill="#334155"/>
-      <path d="M82 68 H158 M82 90 H140" stroke="#f8fafc" stroke-width="7" stroke-linecap="round"/>
-      <circle cx="178" cy="108" r="18" fill="#22d3ee"/>
-    `);
+    return `
+      <svg class="card-svg" viewBox="0 0 240 150" xmlns="http://www.w3.org/2000/svg">
+        <rect x="18" y="18" width="204" height="114" rx="24" fill="rgba(255,255,255,0.08)"/>
+        <circle cx="82" cy="70" r="28" fill="#fb923c"/>
+        <circle cx="122" cy="54" r="20" fill="#facc15"/>
+        <circle cx="154" cy="86" r="26" fill="#22d3ee"/>
+        <path d="M70 112 L178 112" stroke="#f8fafc" stroke-width="8" stroke-linecap="round"/>
+        <path d="M96 100 L120 76 L146 100" stroke="#f8fafc" stroke-width="7" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    `;
   }
+
 
   function generaCardVisive() {
     const testo = leggiTesto();
@@ -1502,17 +1361,12 @@ Risultato finale: un diario ordinato, colorato e facile da sfogliare.`
 
   async function estraiTestoDaPdf(file) {
     if (!window.pdfjsLib) {
-      throw new Error("Libreria PDF non caricata.");
+      throw new Error("Libreria PDF non caricata. Controlla la connessione o lo script PDF.js nella pagina.");
     }
 
     const arrayBuffer = await file.arrayBuffer();
     const pdf = await window.pdfjsLib.getDocument({ data: arrayBuffer }).promise;
-
-    mostraStatoCaricamentoFile(
-      "Lettura PDF in corso: controllo testo selezionabile..."
-    );
-
-    const pagineTesto = [];
+    const pagine = [];
 
     for (let numeroPagina = 1; numeroPagina <= pdf.numPages; numeroPagina += 1) {
       const pagina = await pdf.getPage(numeroPagina);
@@ -1548,119 +1402,10 @@ Risultato finale: un diario ordinato, colorato e facile da sfogliare.`
         righe.push(rigaCorrente.join(" "));
       }
 
-      pagineTesto.push(righe.join("\n"));
+      pagine.push(righe.join("\n"));
     }
 
-    const testoDiretto = pulisciTestoEstrattoDaPdf(pagineTesto.join("\n\n"));
-    const analisiDiretta = analizzaQualitaTesto(testoDiretto);
-
-    if (testoDiretto && analisiDiretta.valido) {
-      return testoDiretto;
-    }
-
-    if (!window.Tesseract) {
-      throw new Error("PDF immagine rilevato, ma libreria OCR non caricata.");
-    }
-
-    mostraStatoCaricamentoFile(
-      "PDF senza testo selezionabile. Avvio OCR sulle pagine..."
-    );
-
-    const testiOcr = [];
-    const pagineMassime = Math.min(pdf.numPages, 8);
-
-    for (let numeroPagina = 1; numeroPagina <= pagineMassime; numeroPagina += 1) {
-      mostraStatoCaricamentoFile(
-        "OCR PDF immagine: pagina " + numeroPagina + " di " + pagineMassime
-      );
-
-      const pagina = await pdf.getPage(numeroPagina);
-      const viewport = pagina.getViewport({ scale: 2.2 });
-
-      const canvas = document.createElement("canvas");
-      const context = canvas.getContext("2d");
-
-      canvas.width = Math.floor(viewport.width);
-      canvas.height = Math.floor(viewport.height);
-
-      await pagina.render({
-        canvasContext: context,
-        viewport: viewport
-      }).promise;
-
-      const blob = await new Promise(function (resolve) {
-        canvas.toBlob(resolve, "image/png");
-      });
-
-      if (!blob) {
-        continue;
-      }
-
-      const risultato = await window.Tesseract.recognize(
-        blob,
-        "ita+eng",
-        {
-          logger: function (m) {
-            if (m && m.status) {
-              mostraStatoCaricamentoFile(
-                "OCR PDF pagina " + numeroPagina + "/" + pagineMassime +
-                ": " + m.status +
-                (m.progress ? " " + Math.round(m.progress * 100) + "%" : "")
-              );
-            }
-          }
-        }
-      );
-
-      const testoPagina =
-        risultato &&
-        risultato.data &&
-        risultato.data.text
-          ? risultato.data.text
-          : "";
-
-      if (testoPagina.trim()) {
-        testiOcr.push(testoPagina.trim());
-      }
-    }
-
-    const testoOcr = pulisciTestoEstrattoDaPdf(testiOcr.join("\n\n"));
-    const analisiOcr = analizzaQualitaTesto(testoOcr);
-
-    if (!testoOcr || !analisiOcr.valido) {
-      return "";
-    }
-
-    return testoOcr;
-  }
-
-  async function estraiTestoDaImmagine(file) {
-    if (!window.Tesseract) {
-      throw new Error("Libreria OCR non caricata.");
-    }
-
-    const risultato = await window.Tesseract.recognize(
-      file,
-      "ita+eng",
-      {
-        logger: function (m) {
-          if (m && m.status) {
-            mostraStatoCaricamentoFile(
-              "OCR immagine in corso: " + m.status +
-              (m.progress ? " " + Math.round(m.progress * 100) + "%" : "")
-            );
-          }
-        }
-      }
-    );
-
-    return pulisciTestoEstrattoDaPdf(
-      risultato &&
-      risultato.data &&
-      risultato.data.text
-        ? risultato.data.text
-        : ""
-    );
+    return pulisciTestoEstrattoDaPdf(pagine.join("\n\n"));
   }
 
   function mostraStatoCaricamentoFile(messaggio) {
@@ -1698,8 +1443,8 @@ Risultato finale: un diario ordinato, colorato e facile da sfogliare.`
 
         if (!testoPdf) {
           mostraErrore(
-            "PDF non leggibile",
-            "Il PDF è stato caricato, ma non è stato possibile estrarre testo utile neanche con OCR. Se è un fumetto, prova una pagina più nitida, con balloon grandi e testo ben leggibile."
+            "PDF senza testo leggibile",
+            "Il PDF è stato caricato, ma non è stato trovato testo estraibile. Potrebbe essere una scansione immagine."
           );
           return;
         }
@@ -1708,31 +1453,6 @@ Risultato finale: un diario ordinato, colorato e facile da sfogliare.`
 
         mostraStatoCaricamentoFile(
           "PDF letto correttamente. Ora puoi generare riassunto, card, test e domande studio."
-        );
-
-        return;
-      }
-
-      if (
-        /^image\//i.test(tipoFile) ||
-        /\.(png|jpe?g|webp)$/i.test(nomeFile)
-      ) {
-        mostraStatoCaricamentoFile("Immagine caricata. Avvio OCR...");
-
-        const testoImmagine = await estraiTestoDaImmagine(file);
-
-        if (!testoImmagine) {
-          mostraErrore(
-            "OCR senza testo leggibile",
-            "L’immagine è stata caricata, ma non è stato trovato testo leggibile. Prova con una foto più nitida."
-          );
-          return;
-        }
-
-        input.value = testoImmagine;
-
-        mostraStatoCaricamentoFile(
-          "OCR completato. Testo estratto dall’immagine e inserito nella textarea."
         );
 
         return;
@@ -1749,7 +1469,7 @@ Risultato finale: un diario ordinato, colorato e facile da sfogliare.`
 
       mostraErrore(
         "Errore lettura file",
-        "Non sono riuscito a leggere il file. Prova con TXT, PDF con testo selezionabile oppure JPG/PNG nitido."
+        "Non sono riuscito a leggere il file. Prova con un TXT o con un PDF contenente testo selezionabile."
       );
     } finally {
       evento.target.value = "";
