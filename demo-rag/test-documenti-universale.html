@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Motore Universale Documenti</title>
+
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: #f8fafc;
+      background:
+        radial-gradient(circle at top left, rgba(59, 130, 246, 0.25), transparent 34%),
+        radial-gradient(circle at top right, rgba(147, 51, 234, 0.25), transparent 34%),
+        linear-gradient(135deg, #020617, #0f172a 45%, #111827);
+    }
+
+    main {
+      width: min(1180px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 42px 0 70px;
+    }
+
+    .hero,
+    .panel,
+    .output-card {
+      padding: 30px;
+      border-radius: 30px;
+      background: rgba(15, 23, 42, 0.84);
+      border: 1px solid rgba(148, 163, 184, 0.35);
+      box-shadow: 0 24px 70px rgba(0, 0, 0, 0.35);
+    }
+
+    .hero { margin-bottom: 28px; }
+
+    .hero h1 {
+      margin: 0 0 12px;
+      font-size: clamp(34px, 5vw, 60px);
+      line-height: 1.02;
+      font-weight: 950;
+    }
+
+    .hero p {
+      margin: 0;
+      color: #cbd5e1;
+      font-weight: 800;
+      font-size: 18px;
+      line-height: 1.5;
+    }
+
+    label {
+      display: block;
+      font-size: 28px;
+      font-weight: 950;
+      margin-bottom: 16px;
+    }
+
+    textarea {
+      width: 100%;
+      min-height: 320px;
+      resize: vertical;
+      padding: 18px;
+      border-radius: 18px;
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      background: #343434;
+      color: #f8fafc;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 19px;
+      font-weight: 800;
+      line-height: 1.45;
+      outline: none;
+    }
+
+    .buttons {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(220px, 1fr));
+      gap: 18px;
+      margin-top: 24px;
+    }
+
+    button {
+      border: 0;
+      min-height: 72px;
+      border-radius: 999px;
+      color: #ffffff;
+      font-size: 20px;
+      font-weight: 950;
+      cursor: pointer;
+      background: linear-gradient(135deg, #be123c, #9333ea);
+      box-shadow: 0 16px 34px rgba(124, 58, 237, 0.34);
+    }
+
+    button.blue {
+      background: linear-gradient(135deg, #0ea5e9, #8b5cf6);
+    }
+
+    .status,
+    .pill,
+    .badge {
+      display: inline-block;
+      padding: 8px 13px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.17);
+      font-weight: 950;
+      color: #f8fafc;
+    }
+
+    .status {
+      margin-top: 22px;
+      color: #dbeafe;
+      background: rgba(15, 23, 42, 0.78);
+      border: 1px solid rgba(148, 163, 184, 0.35);
+    }
+
+    #output { margin-top: 30px; }
+
+    .output-card h2 {
+      margin: 14px 0 18px;
+      font-size: 34px;
+      font-weight: 950;
+    }
+
+    .output-card h3 {
+      margin-top: 22px;
+      font-size: 22px;
+      font-weight: 950;
+    }
+
+    .output-card p,
+    .output-card li {
+      font-weight: 800;
+      line-height: 1.55;
+      font-size: 18px;
+    }
+
+    .cards-grid,
+    .study-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(245px, 1fr));
+      gap: 18px;
+      margin-top: 24px;
+    }
+
+    .universal-card,
+    .study-card,
+    .quiz-panel {
+      padding: 22px;
+      border-radius: 24px;
+      background:
+        radial-gradient(circle at top left, rgba(34,211,238,0.22), transparent 35%),
+        linear-gradient(135deg, rgba(30,41,59,0.98), rgba(88,28,135,0.92));
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.30);
+    }
+
+    .icon {
+      font-size: 58px;
+      margin-bottom: 14px;
+    }
+
+    .originale,
+    .study-extra {
+      margin-top: 14px;
+      padding: 12px;
+      border-radius: 16px;
+      background: rgba(255,255,255,0.10);
+      color: #dbeafe;
+      font-weight: 800;
+    }
+
+    .quiz-start-button,
+    .quiz-next-button {
+      margin-top: 18px;
+      padding: 15px 24px;
+      min-height: auto;
+      font-size: 18px;
+    }
+
+    .quiz-progress {
+      display: inline-block;
+      margin-bottom: 16px;
+      padding: 8px 13px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.13);
+      font-weight: 950;
+      color: #dbeafe;
+    }
+
+    .quiz-options {
+      display: grid;
+      gap: 14px;
+      margin-top: 18px;
+    }
+
+    .quiz-option {
+      width: 100%;
+      min-height: 64px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: 18px;
+      padding: 16px;
+      text-align: left;
+      color: #f8fafc;
+      font-size: 17px;
+      font-weight: 850;
+      background: rgba(15, 23, 42, 0.72);
+    }
+
+    .quiz-option.correct { background: rgba(22, 163, 74, 0.85); }
+    .quiz-option.wrong { background: rgba(220, 38, 38, 0.85); }
+
+    .feedback-ok,
+    .feedback-ko {
+      margin-top: 18px;
+      padding: 16px;
+      border-radius: 18px;
+      font-weight: 850;
+    }
+
+    .feedback-ok {
+      background: rgba(22, 163, 74, 0.22);
+      border: 1px solid rgba(34, 197, 94, 0.55);
+    }
+
+    .feedback-ko {
+      background: rgba(220, 38, 38, 0.22);
+      border: 1px solid rgba(248, 113, 113, 0.55);
+    }
+
+    .quiz-final-score {
+      font-size: 28px;
+      font-weight: 950;
+      color: #bae6fd;
+    }
+
+    .theme-cv .universal-card,
+    .theme-cv.universal-card { background: linear-gradient(135deg, rgba(15,23,42,0.98), rgba(30,64,175,0.92)); }
+
+    .theme-personal .universal-card,
+    .theme-personal.universal-card { background: linear-gradient(135deg, rgba(15,23,42,0.98), rgba(13,148,136,0.82)); }
+
+    .theme-business .universal-card,
+    .theme-business.universal-card { background: linear-gradient(135deg, rgba(15,23,42,0.98), rgba(100,116,139,0.92)); }
+
+    .theme-story .universal-card,
+    .theme-story.universal-card { background: linear-gradient(135deg, rgba(30,41,59,0.98), rgba(124,58,237,0.92)); }
+
+    .theme-poetry .universal-card,
+    .theme-poetry.universal-card { background: linear-gradient(135deg, rgba(88,28,135,0.98), rgba(190,24,93,0.86)); }
+
+    .theme-hobby .universal-card,
+    .theme-hobby.universal-card { background: linear-gradient(135deg, rgba(15,23,42,0.98), rgba(234,88,12,0.82)); }
+
+    @media (max-width: 760px) {
+      .buttons { grid-template-columns: 1fr; }
+      textarea { font-size: 17px; }
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <section class="hero">
+      <h1>Motore universale documenti</h1>
+      <p>
+        Incolla un documento o carica un TXT. Il motore riconosce il tema e genera
+        riassunto, card visive, test interattivo e domande studio.
+      </p>
+    </section>
+
+    <section class="panel">
+      <label for="documentoInput">Incolla testo documento</label>
+
+      <textarea id="documentoInput" spellcheck="false">Mario Rossi
+Sviluppatore junior con interesse per web app, intelligenza artificiale e strumenti digitali.
+Esperienza in piccoli progetti HTML, CSS e JavaScript.
+Competenze: problem solving, organizzazione, GitHub, basi di programmazione.
+Formazione: diploma tecnico e percorso di aggiornamento in sviluppo software.
+Obiettivo: entrare in un team dove crescere come full stack developer.</textarea>
+
+      <input id="fileInput" type="file" accept=".txt,.pdf" hidden>
+
+      <div class="buttons">
+        <button id="btnFile" class="blue" type="button">Carica file PDF / TXT</button>
+        <button id="btnRiassunto" type="button">Genera riassunto</button>
+        <button id="btnCard" type="button">Genera card</button>
+        <button id="btnTest" type="button">Genera test</button>
+        <button id="btnStudio" type="button">Genera domande studio</button>
+      </div>
+
+      <div class="status">
+        Motore universale base collegato ai 4 bottoni - Blocco 1
+      </div>
+
+      <div id="output"></div>
+    </section>
+  </main>
+
+  <script src="universal-document-learning-engine.js?v=blocco-1-fix-ripetizioni"></script>
+</body>
+</html>
