@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Motore OCR Documenti</title>
+
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: #f8fafc;
+      background:
+        radial-gradient(circle at top left, rgba(14, 165, 233, 0.24), transparent 32%),
+        radial-gradient(circle at top right, rgba(168, 85, 247, 0.26), transparent 34%),
+        linear-gradient(135deg, #020617, #0f172a 48%, #111827);
+    }
+
+    main {
+      width: min(1180px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 40px 0 70px;
+    }
+
+    .hero,
+    .panel,
+    .result-card {
+      padding: 28px;
+      border-radius: 30px;
+      background: rgba(15, 23, 42, 0.86);
+      border: 1px solid rgba(148, 163, 184, 0.34);
+      box-shadow: 0 24px 70px rgba(0, 0, 0, 0.36);
+    }
+
+    .hero { margin-bottom: 24px; }
+
+    h1 {
+      margin: 0 0 12px;
+      font-size: clamp(34px, 5vw, 58px);
+      font-weight: 950;
+      line-height: 1.04;
+    }
+
+    p {
+      color: #dbeafe;
+      font-size: 18px;
+      font-weight: 800;
+      line-height: 1.55;
+    }
+
+    .buttons {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(240px, 1fr));
+      gap: 18px;
+      margin-top: 22px;
+    }
+
+    button,
+    .link-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      min-height: 68px;
+      border: 0;
+      border-radius: 999px;
+      color: #fff;
+      cursor: pointer;
+      font-size: 19px;
+      font-weight: 950;
+      background: linear-gradient(135deg, #0ea5e9, #7c3aed);
+      box-shadow: 0 16px 34px rgba(14, 165, 233, 0.24);
+    }
+
+    button.red {
+      background: linear-gradient(135deg, #be123c, #9333ea);
+    }
+
+    input { display: none; }
+
+    textarea {
+      width: 100%;
+      min-height: 280px;
+      margin-top: 18px;
+      padding: 18px;
+      border-radius: 18px;
+      border: 1px solid rgba(255,255,255,0.28);
+      background: #303030;
+      color: #f8fafc;
+      font-size: 18px;
+      font-weight: 800;
+      line-height: 1.45;
+      outline: none;
+    }
+
+    .pill {
+      display: inline-block;
+      padding: 8px 13px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.14);
+      font-weight: 950;
+      color: #e0f2fe;
+      margin-bottom: 12px;
+    }
+
+    .status {
+      margin-top: 20px;
+      padding: 16px;
+      border-radius: 20px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.12);
+      color: #dbeafe;
+      font-size: 17px;
+      font-weight: 850;
+      line-height: 1.5;
+    }
+
+    .preview {
+      max-width: 100%;
+      margin-top: 18px;
+      border-radius: 18px;
+      border: 1px solid rgba(255,255,255,0.18);
+      display: none;
+    }
+
+    .quality-ok { color: #86efac; }
+    .quality-warn { color: #fde68a; }
+    .quality-bad { color: #fca5a5; }
+
+    .result-card {
+      margin-top: 24px;
+    }
+
+    @media (max-width: 760px) {
+      .buttons { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <section class="hero">
+      <h1>Motore OCR documenti</h1>
+      <p>
+        Qui gestiamo i file difficili: immagini, JPG, PNG, WEBP, PDF immagine,
+        fumetti con balloon e scansioni. Se il testo è leggibile, viene estratto.
+        Se l’immagine non contiene testo utile, viene riconosciuta come immagine non documentale.
+      </p>
+    </section>
+
+    <section class="panel">
+      <span class="pill">OCR separato ma collegato al motore universale</span>
+
+      <div class="buttons">
+        <button id="btnFile" type="button">Carica immagine / PDF / TXT</button>
+        <button id="btnOcrFile" class="red" type="button">Estrai testo OCR dal file</button>
+        <button id="btnOcrTabella" type="button">OCR tabella / scheda</button>
+        <button id="btnOcrFumetto" type="button">OCR fumetto / balloon</button>
+        <button id="btnAnalizza" class="red" type="button">Analizza testo estratto</button>
+        <a class="link-button" href="test-documenti-universale.html?v=da-ocr" target="_blank">
+          Apri motore universale
+        </a>
+        <button id="btnCopia" type="button">Copia testo estratto</button>
+      </div>
+
+      <input id="fileInput" type="file" accept=".txt,.pdf,.png,.jpg,.jpeg,.webp,image/*">
+
+      <div id="status" class="status">
+        Carica un file. Il motore sceglierà automaticamente lettura diretta, PDF.js oppure OCR.
+      </div>
+
+      <img id="preview" class="preview" alt="Anteprima immagine">
+
+      <textarea id="testoEstratto" spellcheck="false" placeholder="Qui apparirà il testo estratto dal file..."></textarea>
+
+      <div id="risultato"></div>
+    </section>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+  <script>
+    if (window.pdfjsLib) {
+      window.pdfjsLib.GlobalWorkerOptions.workerSrc =
+        "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js";
+    }
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
+  <script src="ocr-document-reader-engine.js?v=ocr-separato-4-tabella-fumetto"></script>
+</body>
+</html>

@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <title>OCR locale documenti</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: #f8fafc;
+      background: linear-gradient(135deg, #020617, #111827, #1e1b4b);
+    }
+
+    main {
+      width: min(1180px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 40px 0 70px;
+    }
+
+    section {
+      padding: 28px;
+      border-radius: 30px;
+      background: rgba(15, 23, 42, 0.88);
+      border: 1px solid rgba(148, 163, 184, 0.34);
+      margin-bottom: 24px;
+    }
+
+    h1 {
+      margin: 0 0 12px;
+      font-size: clamp(34px, 5vw, 58px);
+      font-weight: 950;
+    }
+
+    p, label {
+      color: #dbeafe;
+      font-size: 18px;
+      font-weight: 800;
+      line-height: 1.55;
+    }
+
+    .buttons {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(240px, 1fr));
+      gap: 16px;
+      margin-top: 20px;
+    }
+
+    button, a {
+      min-height: 66px;
+      border: 0;
+      border-radius: 999px;
+      color: #fff;
+      font-size: 18px;
+      font-weight: 950;
+      cursor: pointer;
+      background: linear-gradient(135deg, #0ea5e9, #7c3aed);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    button.red {
+      background: linear-gradient(135deg, #be123c, #9333ea);
+    }
+
+    input {
+      margin-top: 16px;
+      font-size: 17px;
+      color: #f8fafc;
+    }
+
+    textarea {
+      width: 100%;
+      min-height: 280px;
+      margin-top: 18px;
+      padding: 18px;
+      border-radius: 18px;
+      border: 1px solid rgba(255,255,255,0.25);
+      background: #303030;
+      color: #f8fafc;
+      font-size: 18px;
+      font-weight: 800;
+      line-height: 1.45;
+    }
+
+    .status {
+      margin-top: 18px;
+      padding: 16px;
+      border-radius: 18px;
+      background: rgba(255,255,255,0.08);
+      color: #dbeafe;
+      font-weight: 900;
+    }
+
+    .ok { color: #86efac; }
+    .bad { color: #fca5a5; }
+    .warn { color: #fde68a; }
+
+    @media (max-width: 760px) {
+      .buttons { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <section>
+      <h1>OCR locale documenti</h1>
+      <p>
+        Motore separato per file difficili: immagini, tabelle, schede sportive,
+        PDF immagine, fumetti e scansioni. Usa OCR locale, non solo Tesseract nel browser.
+      </p>
+    </section>
+
+    <section>
+      <label for="fileInput">Carica TXT, PDF, PNG, JPG, JPEG o WEBP</label>
+      <input id="fileInput" type="file" accept=".txt,.pdf,.png,.jpg,.jpeg,.webp,image/*">
+
+      <div class="buttons">
+        <button id="btnAuto" type="button">OCR automatico</button>
+        <button id="btnTabella" type="button">OCR tabella / scheda</button>
+        <button id="btnFumetto" type="button">OCR fumetto / balloon</button>
+        <button id="btnCopia" class="red" type="button">Copia testo buono</button>
+        <a href="test-documenti-universale.html?v=da-ocr-locale" target="_blank">Apri motore universale</a>
+      </div>
+
+      <div id="status" class="status">Carica un file e scegli la modalità.</div>
+
+      <textarea id="output" placeholder="Qui apparirà solo testo utile o testo riparato."></textarea>
+
+      <div id="analisi" class="status"></div>
+    </section>
+  </main>
+
+  <script>
+    let fileSelezionato = null;
+
+    const fileInput = document.getElementById("fileInput");
+    const statusBox = document.getElementById("status");
+    const output = document.getElementById("output");
+    const analisi = document.getElementById("analisi");
+
+    fileInput.addEventListener("change", () => {
+      fileSelezionato = fileInput.files[0] || null;
+      output.value = "";
+      analisi.innerHTML = "";
+
+      if (fileSelezionato) {
+        statusBox.textContent = "File caricato: " + fileSelezionato.name + ". Ora scegli la modalità OCR.";
+      }
+    });
+
+    async function inviaOcr(modo) {
+      if (!fileSelezionato) {
+        statusBox.textContent = "Prima carica un file.";
+        return;
+      }
+
+      statusBox.textContent = "Elaborazione OCR locale in corso...";
+
+      const form = new FormData();
+      form.append("file", fileSelezionato);
+      form.append("modo", modo);
+
+      try {
+        const res = await fetch("/api/ocr", {
+          method: "POST",
+          body: form
+        });
+
+        const data = await res.json();
+
+        if (!data.ok) {
+          statusBox.textContent = "Errore OCR: " + (data.errore || "errore sconosciuto");
+          return;
+        }
+
+        output.value = data.testo || data.testo_grezzo || "";
+
+        const classe = data.analisi && data.analisi.valido ? "ok" : "bad";
+
+        analisi.innerHTML = `
+          <div class="${classe}">
+            <strong>${data.tipo}</strong><br>
+            ${data.messaggio}<br>
+            Parole: ${data.analisi.parole}<br>
+            Parole uniche: ${data.analisi.parole_uniche}<br>
+            Qualità lettere: ${data.analisi.qualita_lettere}%<br>
+            Simboli strani: ${data.analisi.simboli_strani}%
+          </div>
+        `;
+
+        statusBox.textContent = data.analisi.valido || modo === "tabella"
+          ? "Testo estratto o riparato."
+          : "OCR non abbastanza affidabile.";
+
+      } catch (err) {
+        statusBox.textContent = "Errore collegamento server OCR: " + err.message;
+      }
+    }
+
+    document.getElementById("btnAuto").addEventListener("click", () => inviaOcr("auto"));
+    document.getElementById("btnTabella").addEventListener("click", () => inviaOcr("tabella"));
+    document.getElementById("btnFumetto").addEventListener("click", () => inviaOcr("fumetto"));
+
+    document.getElementById("btnCopia").addEventListener("click", async () => {
+      const testo = output.value.trim();
+
+      if (!testo) {
+        statusBox.textContent = "Non c’è testo da copiare.";
+        return;
+      }
+
+      await navigator.clipboard.writeText(testo);
+      statusBox.textContent = "Testo copiato. Incollalo nel motore universale.";
+    });
+  </script>
+</body>
+</html>
