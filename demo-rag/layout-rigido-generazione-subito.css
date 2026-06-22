@@ -1,0 +1,117 @@
+/* PATCH LAYOUT DEFINITIVA:
+   download sotto incolla testo,
+   7 pulsanti in 2 righe,
+   spiegazioni solo in fondo.
+*/
+
+#download-subito-sotto-input {
+  width: min(1180px, calc(100% - 48px));
+  margin: 18px auto 26px auto;
+}
+
+#download-subito-sotto-input section,
+#download-subito-sotto-input .section,
+#download-subito-sotto-input .panel,
+#download-subito-sotto-input .card,
+#download-subito-sotto-input .box {
+  margin: 0 !important;
+}
+
+#download-subito-sotto-input button,
+#download-subito-sotto-input a {
+  font-weight: 900 !important;
+}
+
+#azioni-generazione-rigide {
+  width: min(1180px, calc(100% - 48px));
+  margin: 18px auto 28px auto;
+  display: grid !important;
+  grid-template-columns: repeat(4, minmax(190px, 1fr));
+  gap: 18px;
+  align-items: stretch;
+}
+
+#azioni-generazione-rigide button,
+#azioni-generazione-rigide a,
+#azioni-generazione-rigide label,
+#azioni-generazione-rigide [role='button'] {
+  width: 100% !important;
+  min-height: 86px !important;
+  margin: 0 !important;
+  padding: 18px 20px !important;
+  border-radius: 999px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  font-weight: 900 !important;
+  font-size: clamp(18px, 1.45vw, 24px) !important;
+  line-height: 1.12 !important;
+  white-space: normal !important;
+}
+
+#azioni-generazione-rigide > * {
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+}
+
+#risultati-generati-subito {
+  width: min(1180px, calc(100% - 48px));
+  margin: 0 auto 30px auto;
+}
+
+#risultati-generati-subito:empty {
+  display: none;
+}
+
+#spiegazioni-finali-compatte {
+  width: min(1180px, calc(100% - 48px));
+  margin: 42px auto 52px auto;
+}
+
+#spiegazioni-finali-compatte section,
+#spiegazioni-finali-compatte .section,
+#spiegazioni-finali-compatte .panel,
+#spiegazioni-finali-compatte .card,
+#spiegazioni-finali-compatte .box {
+  margin-top: 16px !important;
+}
+
+#spiegazioni-finali-compatte h2,
+#spiegazioni-finali-compatte h3 {
+  margin-bottom: 10px !important;
+}
+
+#spiegazioni-finali-compatte p,
+#spiegazioni-finali-compatte li {
+  font-size: 16px !important;
+  line-height: 1.3 !important;
+}
+
+#spiegazioni-finali-compatte ul {
+  margin-top: 6px !important;
+  margin-bottom: 6px !important;
+}
+
+.layout-rigido-nascosto {
+  display: none !important;
+}
+
+@media (max-width: 1050px) {
+  #azioni-generazione-rigide {
+    grid-template-columns: repeat(3, minmax(190px, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  #azioni-generazione-rigide {
+    grid-template-columns: repeat(2, minmax(170px, 1fr));
+  }
+}
+
+@media (max-width: 520px) {
+  #azioni-generazione-rigide {
+    grid-template-columns: 1fr;
+  }
+}

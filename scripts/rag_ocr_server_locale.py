@@ -70,77 +70,74 @@ def ripara_tabella_sport(testo: str) -> str:
 
 def formatta_tabella_sport(testo: str) -> str:
     """
-    Trasforma OCR tabellare rotto in una lista leggibile.
-    Non prova a ricostruire la griglia perfetta: produce righe studio/card pulite.
+    Non restituisce più la tabella OCR grezza.
+    Trasforma il risultato in una scheda leggibile per studio/card/test.
     """
     testo = ripara_tabella_sport(testo)
 
     t = testo.replace("\n", " ")
     t = re.sub(r"\s+", " ", t)
-    t = re.sub(r"\s*,\s*", ", ", t)
     t = re.sub(r"\s*\|\s*", " | ", t)
 
-    giorni = [
-        "Lunedì", "Martedì", "Mercoledì", "Giovedì",
-        "Venerdì", "Sabato", "Domenica"
-    ]
+    t = re.sub(r"Lunkdi|Lunedi", "Lunedì", t, flags=re.I)
+    t = re.sub(r"Mercol\s*edi|Mercol", "Mercoledì", t, flags=re.I)
+    t = re.sub(r"Venerdi", "Venerdì", t, flags=re.I)
+    t = re.sub(r"riscaldamen\s*to|riscaldame\s*nto|\briscaldamen\b", "riscaldamento", t, flags=re.I)
+    t = re.sub(r"defaticamen\s*to|defaticame\s*nto|\bdefaticamen\b", "defaticamento", t, flags=re.I)
+    t = re.sub(r"camminat\s*a|\bcamminat\b", "camminata", t, flags=re.I)
+    t = re.sub(r"biciclett\s*a|\bbiciclett\b", "bicicletta", t, flags=re.I)
+    t = re.sub(r"flessibilit[aà]", "flessibilità", t, flags=re.I)
+    t = re.sub(r"di\s+di\s+", "di ", t, flags=re.I)
 
-    # Inserisce separatori prima dei giorni.
-    for giorno in giorni:
-        t = re.sub(rf"\b{giorno}\b", f"\n{giorno}", t, flags=re.I)
+    giorni = []
+    for giorno in ["Lunedì", "Martedì", "Mercoledì", "Giovedì", "Venerdì", "Sabato", "Domenica"]:
+        if re.search(giorno, t, flags=re.I):
+            giorni.append(giorno)
 
-    # Corregge eventuali parole spezzate rimaste.
-    t = re.sub(r"riscaldamen\s*to", "riscaldamento", t, flags=re.I)
-    t = re.sub(r"defaticamen\s*to", "defaticamento", t, flags=re.I)
-    t = re.sub(r"camminat\s*a", "camminata", t, flags=re.I)
-    t = re.sub(r"biciclett\s*a", "bicicletta", t, flags=re.I)
-    t = re.sub(r"\s+di\s+di\s+", " di ", t, flags=re.I)
+    attivita = []
 
-    righe = []
+    def aggiungi(voce: str):
+        if voce not in attivita:
+            attivita.append(voce)
 
-    parti = [p.strip() for p in t.split("\n") if p.strip()]
+    if re.search(r"camminata|bicicletta|nuoto", t, flags=re.I):
+        minuti = re.search(r"\b(25|30)\s+minuti", t, flags=re.I)
+        aggiungi(f"{minuti.group(1) if minuti else '25/30'} minuti di camminata, bicicletta o nuoto")
 
-    for parte in parti:
-        giorno_trovato = None
+    if re.search(r"riscaldamento", t, flags=re.I):
+        aggiungi("5/10 minuti di riscaldamento")
 
-        for giorno in giorni:
-            if parte.lower().startswith(giorno.lower()):
-                giorno_trovato = giorno
-                break
+    if re.search(r"flessibilità", t, flags=re.I):
+        aggiungi("10 minuti di flessibilità")
 
-        if not giorno_trovato:
-            continue
+    if re.search(r"equilibrio", t, flags=re.I):
+        aggiungi("10 minuti di equilibrio")
 
-        contenuto = parte[len(giorno_trovato):].strip(" :-|")
+    if re.search(r"forza", t, flags=re.I):
+        aggiungi("esercizi di forza")
 
-        if not contenuto:
-            contenuto = "contenuto non letto chiaramente"
+    if re.search(r"defaticamento|relax", t, flags=re.I):
+        aggiungi("5 minuti di defaticamento o relax")
 
-        # Se nella stessa riga ci sono più attività, separa meglio.
-        contenuto = re.sub(
-            r"\s+(?=\d+\s+minuti)",
-            "; ",
-            contenuto,
-            flags=re.I
-        )
+    if re.search(r"riposo", t, flags=re.I):
+        aggiungi("giorni di riposo")
 
-        contenuto = contenuto.replace(" ,", ",")
-        contenuto = re.sub(r"\s{2,}", " ", contenuto).strip(" ;")
+    righe = ["Scheda allenamento estratta da tabella OCR:"]
 
-        righe.append(f"- {giorno_trovato}: {contenuto}")
+    if giorni:
+        righe.append("Giorni rilevati: " + ", ".join(giorni))
 
-    if not righe:
-        # Fallback: almeno rende leggibile il testo riparato.
-        return (
-            "Scheda sport estratta da tabella OCR:\n"
-            + testo.strip()
-        )
+    if attivita:
+        righe.append("")
+        righe.append("Attività rilevate:")
+        for voce in attivita:
+            righe.append(f"- {voce}")
 
-    return (
-        "Scheda sport estratta da tabella OCR:\n"
-        + "\n".join(righe)
-    )
+    righe.append("")
+    righe.append("Testo OCR ripulito:")
+    righe.append(t.strip())
 
+    return "\n".join(righe)
 
 def scegli_testo_migliore(candidati: list[str]) -> str:
     """

@@ -676,26 +676,134 @@ Risultato finale: un diario ordinato, colorato e facile da sfogliare.`
   // === BLOCCO 3: PROFILI AVANZATI END ===
 
 
-  function normalizzaTesto(testo) {
-    return String(testo || "")
+  function correggiOcrTabellaAllenamento(testo) {
+    let t = String(testo || "");
+
+    const sembraTabellaAllenamento =
+      /lunkdi|lunedi|mercol|venerdi|sabato|domenica|camminat|biciclett|riscaldamen|defaticamen|flessibilit|equilibrio|riposo|forza|nuoto|relax/i.test(t) &&
+      /minuti|esercizio|nuoto|relax|riposo|forza/i.test(t);
+
+    if (!sembraTabellaAllenamento) {
+      return t;
+    }
+
+    t = t
       .replace(/\r/g, "\n")
-      .replace(/riscaldamen\s*\n?\s*to/gi, "riscaldamento")
-      .replace(/riscaldame\s*\n?\s*nto/gi, "riscaldamento")
+      .replace(/[|]/g, " | ")
+      .replace(/\s+/g, " ")
+      .replace(/Lunkdi/gi, "Lunedì")
+      .replace(/Lunedi/gi, "Lunedì")
+      .replace(/Mercol\s*edi/gi, "Mercoledì")
+      .replace(/Mercol\b/gi, "Mercoledì")
+      .replace(/Venerdi/gi, "Venerdì")
+      .replace(/riscaldamen\s*to/gi, "riscaldamento")
+      .replace(/riscaldame\s*nto/gi, "riscaldamento")
       .replace(/\briscaldamen\b/gi, "riscaldamento")
-      .replace(/defaticamen\s*\n?\s*to/gi, "defaticamento")
+      .replace(/defaticamen\s*to/gi, "defaticamento")
+      .replace(/defaticame\s*nto/gi, "defaticamento")
       .replace(/\bdefaticamen\b/gi, "defaticamento")
-      .replace(/camminat\s*\n?\s*a/gi, "camminata")
+      .replace(/camminat\s*a/gi, "camminata")
       .replace(/\bcamminat\b/gi, "camminata")
-      .replace(/biciclett\s*\n?\s*a/gi, "bicicletta")
-      .replace(/equilibri\s*\n?\s*o/gi, "equilibrio")
-      .replace(/flessibilit\s*\n?\s*[àa]/gi, "flessibilità")
-      .replace(/mobilit\s*\n?\s*[àa]/gi, "mobilità")
-      .replace(/\n\s*,\s*/g, ", ")
-      .replace(/\n\s*o\s+/gi, " o ")
+      .replace(/biciclett\s*a/gi, "bicicletta")
+      .replace(/\bbiciclett\b/gi, "bicicletta")
+      .replace(/flessibilit[aà]/gi, "flessibilità")
+      .replace(/di\s+di\s+/gi, "di ")
+      .replace(/esercizio\s+di\s+esercizio\s+di/gi, "esercizio di")
+      .replace(/forza\s+forza/gi, "forza")
+      .replace(/riposo\s+riposo/gi, "riposo")
+      .replace(/relax\s+relax/gi, "relax")
+      .replace(/\s{2,}/g, " ")
+      .trim();
+
+    const giorniBase = [
+      "Lunedì",
+      "Martedì",
+      "Mercoledì",
+      "Giovedì",
+      "Venerdì",
+      "Sabato",
+      "Domenica"
+    ];
+
+    const giorniRilevati = giorniBase.filter(function (giorno) {
+      return new RegExp(giorno, "i").test(t);
+    });
+
+    const attivita = [];
+
+    function aggiungi(voce) {
+      if (!attivita.includes(voce)) {
+        attivita.push(voce);
+      }
+    }
+
+    if (/camminata|bicicletta|nuoto/i.test(t)) {
+      aggiungi("25/30 minuti di camminata, bicicletta o nuoto");
+    }
+
+    if (/riscaldamento/i.test(t)) {
+      aggiungi("5/10 minuti di riscaldamento");
+    }
+
+    if (/flessibilità/i.test(t)) {
+      aggiungi("10 minuti di flessibilità");
+    }
+
+    if (/equilibrio/i.test(t)) {
+      aggiungi("10 minuti di equilibrio");
+    }
+
+    if (/forza/i.test(t)) {
+      aggiungi("30 minuti di esercizio di forza");
+    }
+
+    if (/defaticamento|relax/i.test(t)) {
+      aggiungi("5 minuti di defaticamento o relax");
+    }
+
+    if (/riposo/i.test(t)) {
+      aggiungi("giorni di riposo");
+    }
+
+    const righe = [];
+
+    righe.push("Scheda allenamento estratta da tabella OCR:");
+
+    if (giorniRilevati.length) {
+      righe.push("Giorni rilevati: " + giorniRilevati.join(", "));
+    }
+
+    righe.push("");
+    righe.push("Attività rilevate:");
+
+    if (attivita.length) {
+      attivita.forEach(function (voce) {
+        righe.push("- " + voce);
+      });
+    } else {
+      righe.push("- attività non lette chiaramente");
+    }
+
+    righe.push("");
+    righe.push("Nota:");
+    righe.push("Il testo originale proveniva da una tabella OCR, quindi è stato trasformato in una lista ordinata leggibile.");
+
+    return righe.join("\n");
+  }
+
+
+  function normalizzaTesto(testo) {
+    const testoBase = String(testo || "")
+      .replace(/\r/g, "\n")
       .replace(/[ \t]+/g, " ")
+      .replace(/\n\s+/g, "\n")
+      .replace(/\s+\n/g, "\n")
       .replace(/\n{3,}/g, "\n\n")
       .trim();
+
+    return correggiOcrTabellaAllenamento(testoBase);
   }
+
 
   function escapeHtml(valore) {
     return String(valore || "")
@@ -1756,7 +1864,317 @@ Risultato finale: un diario ordinato, colorato e facile da sfogliare.`
     }
   }
 
+
+  function creaNomeFileDownload(estensione) {
+    const adesso = new Date();
+
+    const data = adesso.toISOString()
+      .slice(0, 19)
+      .replace(/[:T]/g, "-");
+
+    return "materiale-generato-rag-" + data + "." + estensione;
+  }
+
+  function scaricaBlob(nomeFile, contenuto, tipoMime) {
+    const blob = new Blob([contenuto], {
+      type: tipoMime
+    });
+
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+
+    link.href = url;
+    link.download = nomeFile;
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+
+    URL.revokeObjectURL(url);
+  }
+
+  function leggiOutputGenerato() {
+    const output = document.getElementById("output");
+    const input = document.getElementById("documentoInput");
+
+    const testoOutput = output
+      ? output.innerText.trim()
+      : "";
+
+    const htmlOutput = output
+      ? output.innerHTML.trim()
+      : "";
+
+    const testoOrigine = input
+      ? input.value.trim()
+      : "";
+
+    return {
+      testoOrigine,
+      testoOutput,
+      htmlOutput
+    };
+  }
+
+  function controllaOutputScaricabile(dati) {
+    if (!dati.testoOutput && !dati.htmlOutput) {
+      alert("Prima genera un riassunto, una card, un test o delle domande studio.");
+      return false;
+    }
+
+    return true;
+  }
+
+  function scaricaMaterialeTxt() {
+    const dati = leggiOutputGenerato();
+
+    if (!controllaOutputScaricabile(dati)) {
+      return;
+    }
+
+    const contenuto =
+      "MATERIALE GENERATO DAL MOTORE DOCUMENTI RAG\n\n" +
+      "==============================\n" +
+      "DOCUMENTO ORIGINALE\n" +
+      "==============================\n\n" +
+      (dati.testoOrigine || "Nessun testo originale salvato.") +
+      "\n\n==============================\n" +
+      "MATERIALE GENERATO\n" +
+      "==============================\n\n" +
+      dati.testoOutput +
+      "\n";
+
+    scaricaBlob(
+      creaNomeFileDownload("txt"),
+      contenuto,
+      "text/plain;charset=utf-8"
+    );
+  }
+
+  function scaricaMaterialeJson() {
+    const dati = leggiOutputGenerato();
+
+    if (!controllaOutputScaricabile(dati)) {
+      return;
+    }
+
+    const pacchetto = {
+      tipo: "materiale_generato_rag",
+      generato_il: new Date().toISOString(),
+      origine: {
+        testo: dati.testoOrigine
+      },
+      materiale: {
+        testo: dati.testoOutput,
+        html: dati.htmlOutput
+      },
+      uso_previsto: [
+        "riassunto",
+        "card",
+        "test",
+        "domande_studio",
+        "materiale_formativo"
+      ]
+    };
+
+    scaricaBlob(
+      creaNomeFileDownload("json"),
+      JSON.stringify(pacchetto, null, 2),
+      "application/json;charset=utf-8"
+    );
+  }
+
+
+  function scaricaMaterialePdf() {
+    const dati = leggiOutputGenerato();
+
+    if (!controllaOutputScaricabile(dati)) {
+      return;
+    }
+
+    if (!window.jspdf || !window.jspdf.jsPDF) {
+      alert("Libreria PDF non caricata. Controlla la connessione e ricarica la pagina.");
+      return;
+    }
+
+    const jsPDF = window.jspdf.jsPDF;
+    const doc = new jsPDF({
+      unit: "mm",
+      format: "a4"
+    });
+
+    const margine = 14;
+    const larghezza = 182;
+    let y = 16;
+
+    function aggiungiTitolo(titolo) {
+      doc.setFont("helvetica", "bold");
+      doc.setFontSize(15);
+      doc.text(titolo, margine, y);
+      y += 9;
+    }
+
+    function aggiungiTesto(testo) {
+      doc.setFont("helvetica", "normal");
+      doc.setFontSize(10);
+
+      const righe = doc.splitTextToSize(String(testo || ""), larghezza);
+
+      righe.forEach(function (riga) {
+        if (y > 282) {
+          doc.addPage();
+          y = 16;
+        }
+
+        doc.text(riga, margine, y);
+        y += 5.3;
+      });
+
+      y += 5;
+    }
+
+    aggiungiTitolo("Materiale generato dal motore documenti RAG");
+    aggiungiTesto("File PDF generato localmente dal browser.");
+
+    aggiungiTitolo("Documento originale");
+    aggiungiTesto(dati.testoOrigine || "Nessun testo originale salvato.");
+
+    aggiungiTitolo("Materiale generato");
+    aggiungiTesto(dati.testoOutput || "Nessun materiale generato.");
+
+    doc.save(creaNomeFileDownload("pdf"));
+  }
+
+
+  function scaricaMaterialeHtml() {
+    const dati = leggiOutputGenerato();
+
+    if (!controllaOutputScaricabile(dati)) {
+      return;
+    }
+
+    const stilePagina = Array.from(document.querySelectorAll("style"))
+      .map(function (style) {
+        return style.textContent;
+      })
+      .join("\n\n");
+
+    const htmlCompleto = `<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <title>Materiale generato RAG</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+${stilePagina}
+
+body {
+  padding: 32px;
+}
+
+.export-wrapper {
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.export-source {
+  margin-top: 24px;
+  padding: 22px;
+  border-radius: 22px;
+  background: rgba(15, 23, 42, 0.90);
+  border: 1px solid rgba(255,255,255,0.15);
+  white-space: pre-wrap;
+}
+  </style>
+</head>
+<body>
+  <main class="export-wrapper">
+    <section class="output-card">
+      <span class="pill">Materiale generato</span>
+      <h1>Materiale generato dal motore documenti RAG</h1>
+      <p>File salvato localmente dal browser.</p>
+    </section>
+
+    ${dati.htmlOutput}
+
+    <section class="export-source">
+      <h2>Documento originale</h2>
+      <pre>${escapeHtml(dati.testoOrigine || "Nessun testo originale salvato.")}</pre>
+    </section>
+  </main>
+</body>
+</html>`;
+
+    scaricaBlob(
+      creaNomeFileDownload("html"),
+      htmlCompleto,
+      "text/html;charset=utf-8"
+    );
+  }
+
+  function collegaPulsantiDownload() {
+    const btnTxt = document.getElementById("btnScaricaTxt");
+    const btnHtml = document.getElementById("btnScaricaHtml");
+    const btnJson = document.getElementById("btnScaricaJson");
+    const btnPdf = document.getElementById("btnScaricaPdf");
+
+    if (btnTxt) {
+      btnTxt.addEventListener("click", scaricaMaterialeTxt);
+    }
+
+    if (btnHtml) {
+      btnHtml.addEventListener("click", scaricaMaterialeHtml);
+    }
+
+    if (btnJson) {
+      btnJson.addEventListener("click", scaricaMaterialeJson);
+    }
+
+    if (btnPdf) {
+      btnPdf.addEventListener("click", scaricaMaterialePdf);
+    }
+  }
+
+
+
+  function ripulisciTextareaOcrTabella() {
+    const input = document.getElementById("documentoInput");
+
+    if (!input) {
+      return;
+    }
+
+    const testoOriginale = input.value || "";
+    const testoRipulito = correggiOcrTabellaAllenamento(testoOriginale);
+
+    input.value = testoRipulito;
+
+    const output = document.getElementById("output");
+
+    if (output) {
+      output.innerHTML = `
+        <section class="output-card">
+          <span class="pill">OCR tabella</span>
+          <h2>Testo tabella ripulito</h2>
+          <p>Il testo OCR della tabella è stato trasformato in una lista leggibile.</p>
+        </section>
+      `;
+    }
+  }
+
+  function collegaPulsanteRipulisciOcrTabella() {
+    const bottone = document.getElementById("btnRipulisciOcrTabella");
+
+    if (!bottone) {
+      return;
+    }
+
+    bottone.addEventListener("click", ripulisciTextareaOcrTabella);
+  }
+
+
   function avvia() {
+    collegaPulsanteRipulisciOcrTabella();
+    collegaPulsantiDownload();
     Array.from(document.querySelectorAll("[data-esempio-tema]")).forEach(function (bottone) {
       bottone.addEventListener("click", function () {
         caricaEsempioTema(bottone.dataset.esempioTema);

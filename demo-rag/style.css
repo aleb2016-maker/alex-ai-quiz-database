@@ -823,3 +823,57 @@
     width: 120mm !important;
   }
 }
+
+/* =========================================================
+   FIX LAYOUT PULSANTI TEST DOCUMENTI UNIVERSALE
+   Riga 1: upload + OCR
+   Riga 2-3: quattro generatori
+   ========================================================= */
+
+.layout-pulsanti-documenti-fix {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 22px !important;
+  margin-top: 26px !important;
+  margin-bottom: 30px !important;
+  max-width: 760px !important;
+}
+
+.riga-strumenti-documenti-fix,
+.griglia-generatori-documenti-fix {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(260px, 1fr)) !important;
+  gap: 22px !important;
+  width: 100% !important;
+}
+
+.riga-strumenti-documenti-fix button,
+.griglia-generatori-documenti-fix button,
+.riga-strumenti-documenti-fix .button,
+.griglia-generatori-documenti-fix .button,
+.riga-strumenti-documenti-fix a,
+.griglia-generatori-documenti-fix a {
+  width: 100% !important;
+  min-height: 78px !important;
+  border-radius: 999px !important;
+  font-weight: 900 !important;
+  font-size: 1.15rem !important;
+  text-align: center !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+.riga-strumenti-documenti-fix {
+  margin-bottom: 0 !important;
+}
+
+.griglia-generatori-documenti-fix {
+  margin-top: 0 !important;
+}
+
+@media (max-width: 720px) {
+  .riga-strumenti-documenti-fix,
+  .griglia-generatori-documenti-fix {
+    grid-template-columns: 1fr !important;
+  }
+}

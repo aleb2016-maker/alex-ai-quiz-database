@@ -396,11 +396,129 @@
       background: linear-gradient(135deg, #be123c, #7c3aed) !important;
     }
 
+
+    /* UI FINALE: pulsanti evidenti e movimento hover */
+    button,
+    .link-button,
+    .ocr-local-button,
+    .quiz-start-button,
+    .quiz-next-button,
+    .quiz-option {
+      transition:
+        transform 0.18s ease,
+        box-shadow 0.18s ease,
+        filter 0.18s ease,
+        border-color 0.18s ease;
+      will-change: transform;
+    }
+
+    button:hover,
+    .link-button:hover,
+    .ocr-local-button:hover,
+    .quiz-start-button:hover,
+    .quiz-next-button:hover,
+    .quiz-option:hover {
+      transform: translateY(-4px) scale(1.025);
+      filter: brightness(1.08);
+      box-shadow: 0 18px 38px rgba(14, 165, 233, 0.28);
+    }
+
+    button:active,
+    .link-button:active,
+    .ocr-local-button:active,
+    .quiz-start-button:active,
+    .quiz-next-button:active,
+    .quiz-option:active {
+      transform: translateY(0) scale(0.98);
+    }
+
+    .link-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 68px;
+      padding: 14px 24px;
+      border-radius: 999px;
+      text-decoration: none;
+      color: #ffffff;
+      font-size: 19px;
+      font-weight: 950;
+      text-align: center;
+      background: linear-gradient(135deg, #0ea5e9, #7c3aed);
+      box-shadow: 0 16px 34px rgba(14, 165, 233, 0.24);
+    }
+
+    .ocr-local-button {
+      width: 100%;
+      min-height: 76px;
+      font-size: 21px;
+      background: linear-gradient(135deg, #be123c, #9333ea) !important;
+      border: 1px solid rgba(255,255,255,0.22);
+      box-shadow: 0 18px 42px rgba(190, 18, 60, 0.30);
+    }
+
+    .ocr-local-button:hover {
+      box-shadow: 0 22px 50px rgba(190, 18, 60, 0.40);
+    }
+
+
+    /* DOWNLOAD MATERIALI GENERATI */
+    .download-panel {
+      margin-top: 22px;
+      padding: 22px;
+      border-radius: 24px;
+      background:
+        radial-gradient(circle at top left, rgba(34, 211, 238, 0.13), transparent 38%),
+        rgba(255, 255, 255, 0.07);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+    }
+
+    .download-panel h3 {
+      margin: 0 0 12px;
+      font-size: 24px;
+      font-weight: 950;
+      color: #f8fafc;
+    }
+
+    .download-panel p {
+      margin: 0 0 16px;
+      color: #dbeafe;
+      font-size: 16px;
+      font-weight: 800;
+      line-height: 1.45;
+    }
+
+    .download-buttons {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 14px;
+    }
+
+    .download-buttons button {
+      min-height: 64px;
+      border-radius: 999px;
+      font-size: 17px;
+      font-weight: 950;
+      background: linear-gradient(135deg, #0ea5e9, #7c3aed);
+      box-shadow: 0 16px 34px rgba(14, 165, 233, 0.22);
+    }
+
+    .download-buttons button:nth-child(2) {
+      background: linear-gradient(135deg, #16a34a, #0ea5e9);
+    }
+
+    .download-buttons button:nth-child(3) {
+      background: linear-gradient(135deg, #be123c, #9333ea);
+    }
+
     @media (max-width: 760px) {
       .buttons { grid-template-columns: 1fr; }
       textarea { font-size: 17px; }
     }
   </style>
+  <link rel="stylesheet" href="layout-rigido-generazione-subito.css?v=20260622-1802">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="buttons-full-row.css">
 </head>
 
 <body>
@@ -424,23 +542,9 @@ Formazione: diploma tecnico e percorso di aggiornamento in sviluppo software.
 Obiettivo: entrare in un team dove crescere come full stack developer.</textarea>
 
       <input id="fileInput" type="file" accept=".txt,.pdf,.png,.jpg,.jpeg,.webp,image/*" hidden>
-
-      <div class="example-panel">
-        <strong>Esempi rapidi per testare tutti i temi e sotto-rami</strong>
-        <div class="example-buttons">
-          <button type="button" data-esempio-tema="sport">🏃 Sport</button>
-          <button type="button" data-esempio-tema="curriculum">👤 Curriculum</button>
-          <button type="button" data-esempio-tema="personale">📄 Personale</button>
-          <button type="button" data-esempio-tema="aziendale">🏢 Aziendale</button>
-          <button type="button" data-esempio-tema="storia">📚 Storia</button>
-          <button type="button" data-esempio-tema="poesia">🪶 Poesia</button>
-          <button type="button" data-esempio-tema="hobby">🎨 Hobby/progetto</button>
-        </div>
-      </div>
-
-
-      <div class="buttons">
+<div class="buttons">
         <button id="btnFile" class="blue" type="button">Carica file PDF / TXT</button>
+        <button id="btnRipulisciOcrTabella" type="button">Ripulisci testo OCR tabella</button>
         <button id="btnRiassunto" type="button">Genera riassunto</button>
         <button id="btnCard" type="button">Genera card</button>
         <button id="btnTest" type="button">Genera test</button>
@@ -450,19 +554,7 @@ Obiettivo: entrare in un team dove crescere come full stack developer.</textarea
       <div class="status">
         Motore universale base collegato ai 4 bottoni - Blocco 1
       </div>
-
-      
-      <div class="example-panel">
-        <strong>OCR per immagini, fumetti e PDF immagine</strong>
-        <div class="example-buttons">
-          <a class="link-button" href="test-ocr-documenti.html?v=ocr-separato-1" target="_blank">
-            Apri motore OCR immagini / PDF
-          </a>
-        </div>
-      </div>
-
-
-      <div class="final-workflow">
+<div class="final-workflow">
         <h3>Flusso finale del motore documenti</h3>
 
         <div class="workflow-grid">
@@ -478,7 +570,7 @@ Obiettivo: entrare in un team dove crescere come full stack developer.</textarea
 
           <div class="workflow-card">
             <strong>Immagini, tabelle e fumetti</strong>
-            <p>Usa il motore OCR locale per immagini, PDF immagine, tabelle, schede e balloon dei fumetti.</p>
+            <p>Usa il motore OCR locale per immagini, PDF immagine, tabelle, schede o pagine di fumetti con balloon.</p>
           </div>
 
           <div class="workflow-card">
@@ -489,7 +581,7 @@ Obiettivo: entrare in un team dove crescere come full stack developer.</textarea
 
         <div class="buttons" style="margin-top: 18px;">
           <a class="link-button ocr-local-button" href="http://localhost:8010/demo-rag/test-ocr-locale.html?v=5" target="_blank">
-            Apri OCR locale immagini / PDF / fumetti
+            Apri motore OCR immagini / PDF / fumetti
           </a>
         </div>
 
@@ -582,6 +674,23 @@ Obiettivo: entrare in un team dove crescere come full stack developer.</textarea
       </div>
 
 
+
+      <div class="download-panel">
+        <h3>Scarica materiale generato</h3>
+        <p>
+          Dopo aver generato riassunto, card, test o domande studio,
+          puoi salvare il risultato sul computer o sullo smartphone.
+        </p>
+
+        <div class="download-buttons">
+          <button id="btnScaricaTxt" type="button">Scarica TXT</button>
+          <button id="btnScaricaHtml" type="button">Scarica HTML</button>
+          <button id="btnScaricaPdf" type="button">Scarica PDF</button>
+          <button id="btnScaricaJson" type="button">Scarica JSON</button>
+        </div>
+      </div>
+
+
       <div id="output"></div>
     </section>
   </main>
@@ -595,6 +704,11 @@ Obiettivo: entrare in un team dove crescere come full stack developer.</textarea
   </script>
 
   <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
-  <script src="universal-document-learning-engine.js?v=integrazione-ocr-finale"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="universal-document-learning-engine.js?v=motore-vero-ocr-ok-20260622"></script>
+  <script src="layout-rigido-rag.js?v=layout-rigido-generazione-subito-20260622"></script>
+  <script src="layout-rigido-generazione-subito.js?v=20260622-1802"></script>
+  <script src="buttons-full-row.js"></script>
+  <script src="auto-scroll-generazione.js"></script>
 </body>
 </html>
