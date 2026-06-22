@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Test Card Documento</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+  <script src="curriculum-card-engine.js" defer></script>
+  <script src="document-type-theme-engine.js" defer></script>
+</head>
+<body>
+  <main class="rag-shell">
+    <section class="hero">
+      <h1>Test card documento</h1>
+      <p>Pagina separata di prova per documenti, curriculum, testi aziendali e materiale formativo. Non modifica la demo RAG principale.</p>
+    </section>
+
+    <section class="panel">
+      <h2>Incolla testo documento</h2>
+      <textarea id="cvText" rows="14" placeholder="Incolla qui il testo del documento..."></textarea>
+
+      <div class="actions test-doc-actions">
+        <input id="documentFileInput" type="file" accept=".txt,.md,.pdf,text/plain,text/markdown,application/pdf" hidden>
+        <button id="loadFileButton" type="button">Carica file PDF / TXT</button>
+        <button id="loadExample" type="button" style="display:none !important;">Carica esempio</button>
+        <button id="generateSummaryButton" type="button">Genera riassunto</button>
+        <button id="generateCvCards" type="button">Genera card</button>
+        <button id="generateTestButton" type="button">Genera test</button>
+        <button id="generateStudyQuestionsButton" type="button">Genera domande studio</button>
+      </div>
+
+      <div id="documentTypeBox" class="document-type-box"></div>
+
+      <div id="generatedOutputBox" class="generated-output-box"></div>
+    </section>
+
+
+    <section class="panel" id="documentQuestionPanel">
+      <h2>Interroga documento</h2>
+      <p class="helper-text">Fai una domanda sul testo incollato sopra. Il motore cerca le parti più rilevanti e costruisce una risposta dettagliata.</p>
+
+      <textarea id="documentQuestion" rows="4" placeholder="Esempio: quali competenze digitali emergono dal documento?"></textarea>
+
+      <div class="actions question-doc-actions">
+        <button id="askDocumentButton" type="button">Interroga documento</button>
+      </div>
+
+      <div id="documentAnswerBox" class="document-answer-box"></div>
+    </section>
+
+
+    <section class="panel">
+      <h2>Parole chiave vere estratte</h2>
+      <div id="keywordsBox" class="keyword-box"></div>
+    </section>
+
+    <section class="panel">
+      <h2>Card generate</h2>
+      <div id="cardsBox" class="curriculum-grid"></div>
+    </section>
+
+
+    <section class="panel">
+      <h2>Dati tecnici</h2>
+      <div class="download-doc-actions">
+        <button id="downloadPdf" type="button">Scarica file PDF</button>
+        <button id="downloadJson" type="button">Scarica JSON dati</button>
+      </div>
+      <pre id="jsonBox"></pre>
+    </section>
+  </main>
+  <script src="sport-training-document-engine.js?v=sport-document-engine-1"></script>
+</body>
+</html>
