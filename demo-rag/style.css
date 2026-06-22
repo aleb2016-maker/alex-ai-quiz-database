@@ -773,3 +773,53 @@
 #loadExample {
   display: none !important;
 }
+
+
+
+/* RAG_RICH_BRANCH_CARD_RENDERER_STYLE */
+.rich-theme-card {
+  min-height: 430px;
+}
+
+.cv-hero-visual {
+  width: 100%;
+  min-height: 150px;
+  margin: 22px 0 18px;
+  display: grid;
+  place-items: center;
+  border-radius: 28px;
+  background:
+    radial-gradient(circle at 90% 20%, rgba(255,255,255,.22), transparent 32%),
+    rgba(255,255,255,.14);
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.10);
+}
+
+.cv-scene-svg {
+  width: min(230px, 84%);
+  height: auto;
+  display: block;
+}
+
+.rich-theme-card h3 {
+  margin-top: 0 !important;
+}
+
+.rich-theme-card p {
+  font-size: 17px;
+  line-height: 1.48;
+}
+
+@media print {
+  .pdf-card-page .rich-theme-card {
+    min-height: 245mm !important;
+  }
+
+  .pdf-card-page .cv-hero-visual {
+    min-height: 70mm !important;
+    margin: 14mm 0 10mm !important;
+  }
+
+  .pdf-card-page .cv-scene-svg {
+    width: 120mm !important;
+  }
+}
