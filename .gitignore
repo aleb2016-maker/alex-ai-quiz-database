@@ -37,3 +37,16 @@ dist/domande_usate_demo.json
 dist/text_quality_ai_report.md
 
 dist/generated/
+
+# Java PDF engine generated files
+java/rag-pdf-engine/build/
+java/rag-pdf-engine/output/
+java/rag-pdf-engine/lib/
+java/rag-pdf-engine/assets/
+tmp/
+
+# Temporary PDF/card packages
+blocco_java_pdf_engine*/
+motore_scarica_pdf_card_images_v1/
+pacchetto_fix_scarica_pdf_card_playground/
+pacchetto_pdf_solo_card_playground/

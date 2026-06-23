@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <title>Test scarica PDF card immagini</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body{font-family:system-ui,Arial,sans-serif;margin:0;background:#111827;color:#fff}
+    main{max-width:1100px;margin:0 auto;padding:24px}
+    .actions{display:flex;gap:12px;flex-wrap:wrap;margin:20px 0}
+    button{border:0;border-radius:14px;padding:14px 18px;font-weight:800;cursor:pointer}
+    .primary{background:#12b5a5;color:#06151f}
+    .pdf{background:#2563eb;color:white}
+    .cards{display:grid;gap:18px}
+    .training-card{aspect-ratio:16/9;border-radius:24px;overflow:hidden;background:#071426;border:2px solid #22d3ee;box-shadow:0 18px 60px rgba(0,0,0,.35);position:relative;padding:34px}
+    .training-card h2{font-size:48px;line-height:.95;margin:0 0 12px;text-transform:uppercase}
+    .training-card h2 span{color:#19d5c2;display:block}
+    .badge{display:inline-block;background:#19d5c2;color:#06151f;font-weight:900;padding:8px 18px;border-radius:12px;margin-bottom:24px}
+    .box{position:absolute;right:34px;bottom:34px;width:45%;background:rgba(255,255,255,.08);border:1px solid #67e8f9;border-radius:18px;padding:18px}
+    .photo{position:absolute;left:34px;bottom:34px;width:34%;height:42%;border-radius:22px;background:linear-gradient(135deg,#0f766e,#111827);display:grid;place-items:center;font-size:54px}
+    .num{position:absolute;right:28px;top:28px;background:#d9f99d;color:#06151f;border-radius:10px;padding:8px 14px;font-weight:900}
+  </style>
+</head>
+<body>
+<main>
+  <h1>Test motore Scarica PDF card immagini</h1>
+  <p>Questa pagina serve solo per verificare il flusso: cattura card HTML → PNG → Java PDF → download.</p>
+  <div class="actions">
+    <button class="primary" onclick="generaCardDemo()">Genera card demo</button>
+    <button class="pdf">Scarica PDF</button>
+  </div>
+  <section id="cards" class="cards"></section>
+</main>
+
+<script>
+function generaCardDemo(){
+  const data = [
+    ["Riscaldamento", "efficace", "5-10 minuti di attivazione", "🏃"],
+    ["Esercizi", "principali", "Tecnica corretta in ogni fase", "🏋️"],
+    ["Serie e", "ripetizioni", "Progressione controllata nel tempo", "📈"]
+  ];
+  const root = document.querySelector("#cards");
+  root.innerHTML = data.map((c,i)=>`
+    <article class="training-card" data-pdf-card>
+      <div class="badge">SPORT</div>
+      <div class="num">${i+1} / ${data.length}</div>
+      <h2>${c[0]}<span>${c[1]}</span></h2>
+      <p>Card generata dalla demo, pronta per essere trasformata in immagine e stampata nel PDF.</p>
+      <div class="photo">${c[3]}</div>
+      <div class="box">
+        <strong>PUNTI CHIAVE</strong>
+        <p>${c[2]}</p>
+        <p>PDF image-only, nessun ridisegno Java.</p>
+      </div>
+    </article>
+  `).join("");
+}
+</script>
+<script src="./pdf-export-cards.js"></script>
+</body>
+</html>
