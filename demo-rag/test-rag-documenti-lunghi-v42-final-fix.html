@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Riassunto pulito</title>
+
+  <link rel="stylesheet" href="long-document-rag-v42-final-fix.css" />
+</head>
+
+<body>
+  <main class="page">
+    <section class="hero">
+      <p class="eyebrow">Motore separato di test - V4.2 finale</p>
+      <h1>RAG documenti lunghi + domande studio migliorate</h1>
+      <p>
+        Carica PDF/TXT/MD, scegli quante pagine leggere e genera riassunti,
+        card e domande studio. La V4.2 corregge articoli, preposizioni, accordi,
+        sigle RAG/PDF, duplicati e risposte stampate nel PDF.
+      </p>
+    </section>
+
+    <section class="panel input-panel">
+      <div class="toolbar primary-toolbar">
+        <label class="file-button">
+          <span class="button-icon">📄</span>
+          <span>Carica PDF/TXT/MD</span>
+          <input id="fileInput" type="file" accept=".pdf,.txt,.md,.text,application/pdf,text/plain,text/markdown" />
+        </label>
+
+        <button id="cleanButton" type="button">
+          <span class="button-icon">🧹</span>
+          <span>Ripulisci testo</span>
+        </button>
+
+        <button id="generateButton" type="button">
+          <span class="button-icon">⚙️</span>
+          <span>Genera finale V4.2</span>
+        </button>
+
+        <button id="printButton" type="button">
+          <span class="button-icon">🖨️</span>
+          <span>Scarica / stampa PDF</span>
+        </button>
+
+        <button id="clearButton" type="button">
+          <span class="button-icon">✖</span>
+          <span>Svuota</span>
+        </button>
+      </div>
+
+      <div class="settings-grid">
+        <label>
+          Da pagina
+          <input id="startPageInput" type="number" min="1" value="1" />
+        </label>
+
+        <label>
+          A pagina
+          <input id="endPageInput" type="number" min="1" placeholder="tutte" />
+        </label>
+
+        <label>
+          Parole per blocco RAG
+          <input id="chunkSizeInput" type="number" min="350" max="1400" value="850" />
+        </label>
+
+        <label>
+          Numero massimo card
+          <input id="maxCardsInput" type="number" min="4" max="30" value="6" />
+        </label>
+      </div>
+
+      <div id="fileStatus" class="file-status">
+        Nessun file caricato. Puoi incollare testo oppure selezionare un PDF.
+      </div>
+
+      <textarea
+        id="sourceText"
+        placeholder="Incolla qui un documento lungo oppure carica un PDF/TXT/MD..."
+      ></textarea>
+
+      <div id="stats" class="stats"></div>
+    </section>
+
+    <section id="output" class="output hidden">
+      <section class="print-cover">
+        <p class="eyebrow">Documento generato</p>
+        <h2 id="documentTitle">Riassunto intelligente</h2>
+        <p id="documentSubtitle"></p>
+      </section>
+
+      <section class="result-block quality-block">
+        <h2>Controllo qualità V4.1</h2>
+        <div id="qualityBox" class="quality-grid"></div>
+      </section>
+
+      <section class="result-block">
+        <h2>Riassunto migliorato</h2>
+        <div id="summaryBox" class="summary-box"></div>
+      </section>
+
+      <section class="result-block">
+        <h2>Card riassuntive</h2>
+        <div id="cardsBox" class="cards-grid"></div>
+      </section>
+
+      <section class="result-block">
+        <h2>Domande studio</h2>
+        <p class="screen-note">
+          Nella pagina web la risposta resta nascosta. Nel PDF stampato compare automaticamente sotto ogni domanda.
+        </p>
+        <div id="questionsBox" class="questions-list"></div>
+      </section>
+    </section>
+  </main>
+
+  <script type="module" src="long-document-rag-v42-final-fix.js"></script>
+</body>
+</html>
