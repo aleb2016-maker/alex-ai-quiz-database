@@ -1,0 +1,328 @@
+:root {
+  color-scheme: dark;
+  --bg: #07111f;
+  --panel: rgba(15, 27, 46, 0.94);
+  --panel2: rgba(11, 20, 35, 0.96);
+  --line: rgba(157, 181, 214, 0.24);
+  --text: #eef6ff;
+  --muted: #a9b8cc;
+  --green: #39e7b1;
+  --cyan: #4ecbff;
+  --yellow: #ffd166;
+  --red: #ff7a7a;
+  --shadow: 0 24px 70px rgba(0,0,0,.34);
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background:
+    radial-gradient(circle at 18% 0%, rgba(57, 231, 177, 0.12), transparent 34%),
+    radial-gradient(circle at 88% 6%, rgba(78, 203, 255, 0.14), transparent 34%),
+    linear-gradient(180deg, #08111f 0%, #07111f 100%);
+  color: var(--text);
+}
+.page-shell { width: min(1440px, calc(100% - 64px)); margin: 0 auto; padding: 40px 0 80px; }
+.hero, .work-panel, .output-section {
+  border: 1px solid var(--line);
+  border-radius: 28px;
+  background: linear-gradient(145deg, rgba(15,27,46,.95), rgba(8,15,28,.96));
+  box-shadow: var(--shadow);
+}
+.hero { padding: 54px 40px; margin-bottom: 22px; }
+.eyebrow { margin: 0 0 14px; color: var(--green); font-weight: 900; letter-spacing: .22em; text-transform: uppercase; font-size: 13px; }
+h1 { margin: 0; max-width: 980px; font-size: clamp(44px, 6vw, 82px); line-height: .96; letter-spacing: -.055em; }
+h2 { margin: 0; font-size: clamp(28px, 3vw, 44px); letter-spacing: -.035em; }
+h3 { margin: 0 0 12px; font-size: 22px; }
+.hero-text { margin: 26px 0 0; color: var(--muted); font-size: 22px; max-width: 960px; }
+.work-panel { padding: 28px; margin-bottom: 24px; }
+.main-actions {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(180px, 1fr));
+  gap: 16px;
+  margin-bottom: 18px;
+}
+.big-btn, .small-btn {
+  border: 1px solid rgba(255,255,255,.16);
+  border-radius: 20px;
+  color: #06121e;
+  font-weight: 950;
+  font-size: 17px;
+  padding: 20px 24px;
+  cursor: pointer;
+  min-height: 64px;
+  box-shadow: 0 14px 34px rgba(0,0,0,.22);
+}
+.big-btn.file { background: linear-gradient(135deg, var(--green), var(--cyan)); }
+.big-btn.download { background: linear-gradient(135deg, #6ee7ff, #37e3b0); }
+.big-btn:disabled { cursor: not-allowed; opacity: .42; filter: grayscale(.4); }
+.small-btn { min-height: 54px; padding: 14px 18px; background: linear-gradient(135deg, var(--green), var(--cyan)); }
+.status-box {
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: rgba(255,255,255,.045);
+  color: var(--muted);
+  padding: 16px 18px;
+  margin-bottom: 18px;
+  font-weight: 750;
+}
+.status-box.ok { color: var(--green); }
+.status-box.error { color: var(--red); }
+.input-label { display: block; margin: 0 0 10px; color: var(--muted); font-weight: 900; }
+textarea {
+  width: 100%; min-height: 230px; resize: vertical;
+  border: 1px solid var(--line); border-radius: 22px;
+  background: rgba(2,8,18,.78); color: var(--text);
+  font-size: 18px; line-height: 1.6; padding: 22px;
+  outline: none;
+}
+.output-root { display: grid; gap: 24px; }
+.output-section { padding: 34px; margin-bottom: 24px; }
+.section-header { margin-bottom: 24px; }
+.summary-box { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.summary-card {
+  border: 1px solid var(--line); border-radius: 24px;
+  background: rgba(255,255,255,.045); padding: 24px;
+}
+.summary-card.wide { grid-column: 1 / -1; }
+.summary-card p, .summary-card li { color: #dceaff; line-height: 1.65; font-size: 17px; }
+.summary-card ul { margin: 0; padding-left: 22px; }
+.keyword-row { display: flex; flex-wrap: wrap; gap: 10px; }
+.keyword-pill { border: 1px solid var(--line); border-radius: 999px; padding: 8px 12px; color: var(--green); background: rgba(57,231,177,.08); font-weight: 900; }
+.cards-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 18px; }
+.study-card {
+  position: relative; overflow: hidden; min-height: 310px;
+  border: 1px solid rgba(255,255,255,.16); border-radius: 30px;
+  padding: 24px; background: linear-gradient(145deg, #123251, #0d1e34);
+  box-shadow: 0 18px 46px rgba(0,0,0,.28);
+}
+.study-card::after {
+  content: ""; position: absolute; right: -42px; top: -42px; width: 170px; height: 170px;
+  border-radius: 45px; transform: rotate(16deg); background: rgba(255,255,255,.11);
+}
+.card-illustration { position: relative; z-index: 1; width: 82px; height: 82px; margin-bottom: 18px; }
+.study-card h3 { position: relative; z-index: 1; font-size: 27px; line-height: 1.05; }
+.study-card p { position: relative; z-index: 1; color: #e6f3ff; font-size: 17px; line-height: 1.45; margin: 0; }
+.card-tag { position: relative; z-index: 1; display: inline-flex; margin-top: 18px; border-radius: 999px; padding: 7px 11px; background: rgba(255,255,255,.1); color: #cfe6ff; font-weight: 900; font-size: 13px; }
+.qa-section { margin-bottom: 0; }
+.qa-controls { display: grid; grid-template-columns: 1fr auto; gap: 14px; }
+.qa-controls input {
+  border: 1px solid var(--line); border-radius: 18px; background: rgba(2,8,18,.72);
+  color: var(--text); padding: 0 18px; font-size: 17px; outline: none;
+}
+.answer-box {
+  margin-top: 18px; border: 1px solid var(--line); border-radius: 22px;
+  background: rgba(255,255,255,.045); padding: 22px; color: #dceaff;
+  font-size: 17px; line-height: 1.65;
+}
+.answer-box strong { color: var(--green); }
+.source { margin-top: 12px; color: var(--muted); font-size: 14px; }
+@media (max-width: 860px) {
+  .page-shell { width: min(100% - 28px, 1440px); padding-top: 20px; }
+  .main-actions { grid-template-columns: 1fr; }
+  .summary-box { grid-template-columns: 1fr; }
+  .qa-controls { grid-template-columns: 1fr; }
+}
+
+/* PDF finale V4.4: pagine intere, nessuna card tagliata */
+.rag-pdf-page-final {
+  width: 1240px;
+  min-height: 760px;
+  background: radial-gradient(circle at top left, rgba(43, 213, 181, 0.16), transparent 34%),
+              linear-gradient(135deg, #07111f 0%, #0b1729 55%, #07111f 100%);
+  color: #eef6ff;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  padding: 52px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.rag-pdf-page-inner {
+  width: 100%;
+  height: 100%;
+}
+
+.rag-pdf-kicker {
+  color: #35e6bf;
+  font-size: 16px;
+  font-weight: 900;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.rag-pdf-page-final h1 {
+  font-size: 46px;
+  line-height: 1.05;
+  margin: 0 0 28px 0;
+  color: #f4f8ff;
+}
+
+.rag-pdf-content {
+  font-size: 20px;
+  line-height: 1.45;
+}
+
+.rag-pdf-content section,
+.rag-pdf-content .panel,
+.rag-pdf-content .rag-section,
+.rag-pdf-content .output-section {
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+}
+
+.rag-pdf-card-grid-final {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+  align-items: stretch;
+}
+
+.rag-pdf-card-grid-final > * {
+  height: 440px !important;
+  max-height: 440px !important;
+  min-height: 440px !important;
+  overflow: hidden !important;
+  box-sizing: border-box !important;
+  break-inside: avoid !important;
+  page-break-inside: avoid !important;
+}
+
+.rag-pdf-card-grid-final h2,
+.rag-pdf-card-grid-final h3,
+.rag-pdf-card-grid-final .title {
+  font-size: 28px !important;
+  line-height: 1.08 !important;
+}
+
+.rag-pdf-card-grid-final p,
+.rag-pdf-card-grid-final li,
+.rag-pdf-card-grid-final div {
+  overflow-wrap: break-word;
+}
+
+/* Export PDF V4.4 paginato: niente card tagliate */
+.v44-pdf-page {
+  width: 1240px;
+  height: 760px;
+  box-sizing: border-box;
+  padding: 44px 52px;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at top left, rgba(43, 213, 181, 0.18), transparent 34%),
+    linear-gradient(135deg, #07111f 0%, #0b1729 58%, #07111f 100%);
+  color: #eef6ff;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.v44-pdf-kicker {
+  color: #35e6bf;
+  font-size: 15px;
+  font-weight: 900;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.v44-pdf-page h1 {
+  color: #f4f8ff;
+  font-size: 40px;
+  line-height: 1.05;
+  margin: 0 0 24px 0;
+}
+
+.v44-pdf-body {
+  width: 100%;
+  height: 610px;
+  overflow: hidden;
+}
+
+.v44-pdf-body section,
+.v44-pdf-body article,
+.v44-pdf-body .panel,
+.v44-pdf-body .rag-section,
+.v44-pdf-body .output-section,
+.v44-pdf-body .result-section {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.v44-pdf-card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+  width: 100%;
+  height: 100%;
+  align-items: stretch;
+}
+
+.v44-pdf-card-grid > * {
+  width: 100% !important;
+  height: 560px !important;
+  max-height: 560px !important;
+  min-height: 560px !important;
+  box-sizing: border-box !important;
+  overflow: hidden !important;
+  break-inside: avoid !important;
+  page-break-inside: avoid !important;
+  transform: none !important;
+}
+
+.v44-pdf-card-grid .v44-pdf-card-clone h2,
+.v44-pdf-card-grid .v44-pdf-card-clone h3,
+.v44-pdf-card-grid .v44-pdf-card-clone h4 {
+  font-size: 34px !important;
+  line-height: 1.05 !important;
+}
+
+.v44-pdf-card-grid .v44-pdf-card-clone p,
+.v44-pdf-card-grid .v44-pdf-card-clone li,
+.v44-pdf-card-grid .v44-pdf-card-clone div {
+  overflow-wrap: break-word !important;
+}
+
+.v44-pdf-card-grid .v44-pdf-card-clone img,
+.v44-pdf-card-grid .v44-pdf-card-clone svg {
+  max-width: 96px !important;
+  max-height: 96px !important;
+}
+
+/* Fix finale: niente card tagliate nel PDF */
+.v44-pdf-card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+  width: 100%;
+  height: 100%;
+  align-items: stretch;
+}
+
+.v44-pdf-card-grid.single {
+  grid-template-columns: 1fr;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.v44-pdf-card-grid > * {
+  width: 100% !important;
+  height: 560px !important;
+  min-height: 560px !important;
+  max-height: 560px !important;
+  overflow: hidden !important;
+  box-sizing: border-box !important;
+}
+
+.v44-pdf-card-grid.single > * {
+  max-width: 760px !important;
+  justify-self: center;
+}
+
+.v44-pdf-card-clone {
+  overflow: hidden !important;
+}

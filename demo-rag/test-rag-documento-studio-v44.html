@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RAG Documento Studio V4.4</title>
+  <link rel="stylesheet" href="/demo-rag/rag-documento-studio-v44.css">
+  <link rel="stylesheet" href="rag-documento-studio-v44-pdf-exact.css">
+</head>
+<body>
+  <main class="page-shell">
+    <section class="hero">
+      <p class="eyebrow">RAG DOCUMENTO STUDIO V4.4</p>
+      <h1>Carica un documento e genera materiale di studio</h1>
+      <p class="hero-text">Carichi TXT/PDF, il testo viene pulito automaticamente e ottieni riassunto, card colorate e risposte alle domande sul documento.</p>
+    </section>
+
+    <section class="work-panel no-pdf">
+      <div class="main-actions" aria-label="Azioni principali">
+        <button id="btnCaricaFile" class="big-btn file" type="button">Carica TXT/PDF</button>
+        <button id="btnScaricaTxt" class="big-btn download" type="button" disabled>Scarica TXT</button>
+        <button id="btnScaricaPdf" class="big-btn download" type="button" disabled>Scarica PDF</button>
+      </div>
+
+      <input id="fileInput" type="file" hidden accept=".txt,.md,.pdf,text/plain,text/markdown,application/pdf">
+      <div id="statusBox" class="status-box">Pronto. Carica un file TXT/PDF oppure incolla testo: l’analisi parte automaticamente.</div>
+
+      <label class="input-label" for="documentText">Testo documento</label>
+      <textarea id="documentText" spellcheck="false" placeholder="Incolla qui un documento lungo: dopo pochi secondi verrà analizzato automaticamente..."></textarea>
+    </section>
+
+    <section id="pdfRoot" class="output-root">
+      <article id="summarySection" class="output-section pdf-export-group" hidden>
+        <div class="section-header">
+          <p class="eyebrow">RIASSUNTO</p>
+          <h2>Riassunto pulito</h2>
+        </div>
+        <div id="summaryOutput" class="summary-box"></div>
+      </article>
+
+      <article id="cardsSection" class="output-section pdf-export-group" hidden>
+        <div class="section-header">
+          <p class="eyebrow">CARD</p>
+          <h2>Card colorate con disegni</h2>
+        </div>
+        <div id="cardsOutput" class="cards-grid"></div>
+      </article>
+    </section>
+
+    <section id="qaSection" class="output-section qa-section no-pdf" hidden>
+      <div class="section-header">
+        <p class="eyebrow">INTERROGA IL DOCUMENTO</p>
+        <h2>Fai una domanda sul testo</h2>
+      </div>
+      <div class="qa-controls">
+        <input id="questionInput" type="text" placeholder="Esempio: perché sono importanti i backup?">
+        <button id="btnInterroga" class="small-btn" type="button">Rispondi dal documento</button>
+      </div>
+      <div id="answerOutput" class="answer-box">Carica prima un documento, poi scrivi una domanda.</div>
+    </section>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+  <script src="/runtime/web/card-graphic-engine.js"></script>
+  <script src="/demo-rag/pdf-export-browser-v6.js"></script>
+  <script src="/demo-rag/rag-documento-studio-v44.js"></script>
+
+  <script src="rag-documento-studio-v44-pdf-pagine.js"></script>
+</body>
+</html>

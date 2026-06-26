@@ -1,0 +1,39 @@
+/* Fix layout pulsanti V4.4: niente sovrapposizioni, comandi semplici */
+.rag-v44-actions,
+.toolbar,
+.actions,
+.controls,
+.button-row,
+.cta-row {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 14px !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  position: relative !important;
+  overflow: visible !important;
+}
+
+.rag-v44-actions button,
+.toolbar button,
+.actions button,
+.controls button,
+.button-row button,
+.cta-row button,
+button {
+  position: relative !important;
+  margin: 0 !important;
+  white-space: nowrap !important;
+}
+
+@media (max-width: 800px) {
+  .rag-v44-actions,
+  .toolbar,
+  .actions,
+  .controls,
+  .button-row,
+  .cta-row {
+    flex-direction: column !important;
+    align-items: stretch !important;
+  }
+}
