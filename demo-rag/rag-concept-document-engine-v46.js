@@ -2,6 +2,8 @@
 (function () {
   "use strict";
 
+  let ragV46DownloadPanel = null;
+
   function id(x) { return document.getElementById(x); }
 
   function esc(v) {
@@ -87,6 +89,13 @@
         color: #f8fafc;
         border: 1px solid rgba(148,163,184,.30);
         box-sizing: border-box;
+      }
+      .rag-v46-download-slot {
+        margin: 12px 0 18px 0;
+      }
+      .rag-v46-download-slot > * {
+        width: 100% !important;
+        margin: 0 !important;
       }
       .rag-v46-panel h2 {
         font-size: clamp(2rem, 4vw, 3.2rem);
@@ -302,19 +311,60 @@
     return m;
   }
 
+
+  function captureDownloadPanel() {
+    if (ragV46DownloadPanel) return ragV46DownloadPanel;
+
+    const candidates = Array.from(document.querySelectorAll("section, article, div"))
+      .filter(function (node) {
+        const txt = node.textContent || "";
+        return txt.includes("Scarica materiale generato") &&
+          txt.includes("Scarica PDF") &&
+          !node.closest("#risultati-generati-subito");
+      })
+      .sort(function (a, b) {
+        return (a.textContent || "").length - (b.textContent || "").length;
+      });
+
+    ragV46DownloadPanel = candidates[0] || null;
+    return ragV46DownloadPanel;
+  }
+
+  function placeDownloadPanelInsideOutput() {
+    const panel = ragV46DownloadPanel || captureDownloadPanel();
+    const slot = document.getElementById("ragV46DownloadSlot");
+
+    if (!panel || !slot) return;
+
+    slot.appendChild(panel);
+  }
+
+  function finalizeOutputScroll() {
+    placeDownloadPanelInsideOutput();
+
+    const target = outputBox().querySelector(".rag-v46-panel") || outputBox();
+
+    window.requestAnimationFrame(function () {
+      window.setTimeout(function () {
+        target.scrollIntoView({ behavior: "smooth", block: "start" });
+      }, 80);
+    });
+  }
+
   function renderSummary() {
     const m = needMap();
     if (!m) return;
 
     outputBox().innerHTML = `
       <section class="rag-v46-panel" data-export-section="summary">
+        
         <span class="rag-v46-pill">📄 ${esc(m.profile.contesto)}</span>
-        <h2>Riassunto: ${esc(m.profile.materia)}</h2>
+        <h2>Riassunto: ${esc(m.profile.materia)}</h2>\n        <div id="ragV46DownloadSlot" class="rag-v46-download-slot"></div>
         <p>Il documento riguarda <strong>${esc(m.profile.materia)}</strong> e contiene indicazioni pratiche su ${esc(m.profile.categoria)}.</p>
         <ol>${m.concepts.map(c => `<li><strong>${esc(c.title)}:</strong> ${esc(c.fatto)}</li>`).join("")}</ol>
       </section>
     `;
-    outputBox().scrollIntoView({ behavior: "smooth", block: "start" });
+    finalizeOutputScroll();
   }
 
   function renderCards() {
@@ -323,8 +373,9 @@
 
     outputBox().innerHTML = `
       <section class="rag-v46-panel" data-export-section="cards">
+        
         <span class="rag-v46-pill">🧩 Card concetti</span>
-        <h2>Card su ${esc(m.profile.materia)}</h2>
+        <h2>Card su ${esc(m.profile.materia)}</h2>\n        <div id="ragV46DownloadSlot" class="rag-v46-download-slot"></div>
         <p>Ogni card rappresenta un concetto reale del documento.</p>
         <div class="rag-v46-grid">
           ${m.concepts.map((c, i) => `
@@ -338,7 +389,7 @@
         </div>
       </section>
     `;
-    outputBox().scrollIntoView({ behavior: "smooth", block: "start" });
+    finalizeOutputScroll();
   }
 
   function renderStudy() {
@@ -347,8 +398,9 @@
 
     outputBox().innerHTML = `
       <section class="rag-v46-panel" data-export-section="study">
+        
         <span class="rag-v46-pill">🎓 Domande studio</span>
-        <h2>Domande studio: ${esc(m.profile.materia)}</h2>
+        <h2>Domande studio: ${esc(m.profile.materia)}</h2>\n        <div id="ragV46DownloadSlot" class="rag-v46-download-slot"></div>
         <div class="rag-v46-grid">
           ${m.concepts.map((c, i) => `
             <article class="rag-v46-card">
@@ -360,7 +412,7 @@
         </div>
       </section>
     `;
-    outputBox().scrollIntoView({ behavior: "smooth", block: "start" });
+    finalizeOutputScroll();
   }
 
   function shuffle(a) {
@@ -425,8 +477,9 @@
 
     outputBox().innerHTML = `
       <section class="rag-v46-panel" data-export-section="test">
+        
         <span class="rag-v46-pill">🧪 Test concetti</span>
-        <h2>Test: ${esc(m.profile.materia)}</h2>
+        <h2>Test: ${esc(m.profile.materia)}</h2>\n        <div id="ragV46DownloadSlot" class="rag-v46-download-slot"></div>
         <p>Il test usa concetti reali del documento e distrattori vicini ma sbagliati.</p>
         <button id="ragV46Start" class="rag-v46-start" type="button">Inizia test</button>
         <div id="ragV46QuizBox"></div>
@@ -434,7 +487,7 @@
     `;
 
     id("ragV46Start").addEventListener("click", showQuestion);
-    outputBox().scrollIntoView({ behavior: "smooth", block: "start" });
+    finalizeOutputScroll();
   }
 
   function showQuestion() {
@@ -552,6 +605,7 @@
 
   function init() {
     addStyle();
+    captureDownloadPanel();
 
     const fileInput = id("fileInput");
 
