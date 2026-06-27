@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Test RAG pipeline intelligente V1</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #07111f;
+      --panel: #111c31;
+      --panel-2: #17233c;
+      --text: #f8fafc;
+      --muted: #cbd5e1;
+      --accent: #38bdf8;
+      --good: #22c55e;
+      --warn: #f59e0b;
+      --bad: #ef4444;
+      --border: rgba(148, 163, 184, 0.35);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top left, #1e3a8a 0, var(--bg) 44%, #020617 100%);
+      color: var(--text);
+    }
+
+    main {
+      width: min(1180px, calc(100% - 28px));
+      margin: 0 auto;
+      padding: 32px 0 80px;
+    }
+
+    header {
+      border: 1px solid var(--border);
+      background: rgba(17, 28, 49, 0.82);
+      border-radius: 26px;
+      padding: 28px;
+      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.25);
+    }
+
+    h1 { margin: 0 0 8px; font-size: clamp(30px, 4vw, 52px); line-height: 1.02; }
+    h2 { margin: 0 0 14px; font-size: 28px; }
+    h3 { margin: 0 0 10px; }
+    p { color: var(--muted); line-height: 1.55; }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 18px;
+      margin-top: 18px;
+    }
+
+    .panel {
+      border: 1px solid var(--border);
+      background: rgba(17, 28, 49, 0.86);
+      border-radius: 22px;
+      padding: 20px;
+    }
+
+    textarea {
+      width: 100%;
+      min-height: 230px;
+      border-radius: 18px;
+      border: 1px solid var(--border);
+      background: #07111f;
+      color: var(--text);
+      padding: 16px;
+      font-size: 16px;
+      line-height: 1.5;
+      resize: vertical;
+      outline: none;
+    }
+
+    input[type="file"] {
+      width: 100%;
+      border: 1px dashed var(--border);
+      background: rgba(15, 23, 42, 0.85);
+      border-radius: 18px;
+      padding: 16px;
+      color: var(--muted);
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    button, .link-button {
+      appearance: none;
+      border: 0;
+      border-radius: 999px;
+      padding: 12px 18px;
+      font-weight: 800;
+      color: #05111f;
+      background: linear-gradient(135deg, #67e8f9, #22c55e);
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    button.secondary {
+      color: var(--text);
+      background: rgba(148, 163, 184, 0.18);
+      border: 1px solid var(--border);
+    }
+
+    button.danger {
+      color: white;
+      background: rgba(239, 68, 68, 0.9);
+    }
+
+    .status {
+      margin-top: 12px;
+      color: var(--muted);
+      font-weight: 700;
+    }
+
+    .columns {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 16px;
+    }
+
+    .rag-smart-card,
+    .rag-smart-question,
+    .rag-smart-test-question,
+    .rag-smart-summary {
+      border: 1px solid rgba(125, 211, 252, 0.25);
+      border-radius: 24px;
+      background: linear-gradient(180deg, rgba(59, 130, 246, 0.32), rgba(88, 28, 135, 0.32));
+      padding: 20px;
+      min-height: 170px;
+      box-shadow: 0 22px 40px rgba(0, 0, 0, 0.20);
+    }
+
+    .rag-smart-card-badge {
+      display: inline-flex;
+      border-radius: 999px;
+      padding: 6px 10px;
+      background: rgba(148, 163, 184, 0.24);
+      color: var(--text);
+      font-weight: 800;
+      margin-bottom: 10px;
+      font-size: 13px;
+    }
+
+    details {
+      margin-top: 12px;
+      color: var(--muted);
+    }
+
+    .rag-smart-options {
+      display: grid;
+      gap: 8px;
+      margin-top: 12px;
+    }
+
+    .rag-smart-options button {
+      width: 100%;
+      justify-content: flex-start;
+      color: var(--text);
+      background: rgba(15, 23, 42, 0.55);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+    }
+
+    pre {
+      overflow: auto;
+      max-height: 420px;
+      padding: 14px;
+      background: #020617;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      color: #bfdbfe;
+      white-space: pre-wrap;
+    }
+
+    .validation-ok { color: var(--good); font-weight: 900; }
+    .validation-warn { color: var(--warn); font-weight: 900; }
+    .validation-bad { color: var(--bad); font-weight: 900; }
+  </style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>Pipeline intelligente RAG V1</h1>
+    <p>Pagina separata di test per i blocchi 2-10: DocumentInput unico, pulitore OCR, estrattori concetti/fatti/relazioni, knowledge base JSON, planner, generatore collegato alla conoscenza e validatore generale.</p>
+    <p>Questa pagina non modifica la demo principale: serve per provare i motori separati prima di collegarli ai pulsanti ufficiali.</p>
+  </header>
+
+  <section class="grid">
+    <div class="panel">
+      <h2>1. Input reale</h2>
+      <input id="fileInput" type="file" accept=".txt,.md,.markdown,.pdf,text/plain,text/markdown,application/pdf">
+      <p class="status" id="status">Carica un file TXT/MD oppure incolla testo. PDF funziona solo se pdf.js è già collegato nella pagina.</p>
+      <textarea id="documentText" placeholder="Incolla qui il tuo documento reale oppure carica un file."></textarea>
+      <div class="actions">
+        <button id="runPipeline">Genera pipeline completa</button>
+        <button id="clearAll" class="secondary">Pulisci</button>
+        <a class="link-button" href="./test-documenti-universale.html">Torna pagina universale</a>
+      </div>
+    </div>
+
+    <div class="panel">
+      <h2>2. Stato lettura e validazione</h2>
+      <div id="validationBox" class="status">Nessuna elaborazione avviata.</div>
+      <pre id="documentInputJson"></pre>
+    </div>
+
+    <div class="panel">
+      <h2>3. Riassunto</h2>
+      <div id="summaryOutput"></div>
+    </div>
+
+    <div class="panel">
+      <h2>4. Card dai concetti</h2>
+      <div id="cardsOutput" class="columns"></div>
+    </div>
+
+    <div class="panel">
+      <h2>5. Domande studio dalle relazioni</h2>
+      <div id="studyOutput" class="columns"></div>
+    </div>
+
+    <div class="panel">
+      <h2>6. Test dai fatti</h2>
+      <div id="testOutput" class="columns"></div>
+    </div>
+
+    <div class="panel">
+      <h2>7. Knowledge Base JSON</h2>
+      <pre id="kbJson"></pre>
+    </div>
+
+    <div class="panel">
+      <h2>8. Piano didattico JSON</h2>
+      <pre id="planJson"></pre>
+    </div>
+  </section>
+</main>
+
+<script src="./rag-input-reale-guard.js"></script>
+<script src="./rag-text-cleaner-ocr-v1.js"></script>
+<script src="./rag-document-input-unico-v1.js"></script>
+<script src="./rag-knowledge-extractors-v1.js"></script>
+<script src="./rag-didactic-planner-v1.js"></script>
+<script src="./rag-knowledge-linked-generator-v1.js"></script>
+<script src="./rag-general-validator-v1.js"></script>
+<script src="./rag-smart-pipeline-v1.js"></script>
+<script>
+(function () {
+  "use strict";
+
+  const fileInput = document.getElementById("fileInput");
+  const textArea = document.getElementById("documentText");
+  const status = document.getElementById("status");
+  const validationBox = document.getElementById("validationBox");
+  const docJson = document.getElementById("documentInputJson");
+  const kbJson = document.getElementById("kbJson");
+  const planJson = document.getElementById("planJson");
+
+  let currentDocumentInput = null;
+
+  function writeJson(el, value) {
+    el.textContent = value ? JSON.stringify(value, null, 2) : "";
+  }
+
+  function setValidation(validation) {
+    if (!validation) {
+      validationBox.textContent = "Nessuna validazione.";
+      validationBox.className = "status";
+      return;
+    }
+
+    validationBox.className = validation.valid
+      ? "status validation-ok"
+      : validation.score >= 60
+        ? "status validation-warn"
+        : "status validation-bad";
+
+    const kbWarnings = validation.knowledgeBase ? validation.knowledgeBase.warnings.length : 0;
+    const outputWarnings = validation.output ? validation.output.warnings.length : 0;
+    validationBox.textContent = `Valido: ${validation.valid ? "sì" : "no"} - punteggio: ${validation.score}/100 - avvisi KB: ${kbWarnings} - avvisi output: ${outputWarnings}`;
+  }
+
+  window.RagDocumentInputUnicoV1.bindFileInputToTextArea({
+    fileInput,
+    textArea,
+    statusEl: status,
+    onDocument: (doc) => {
+      currentDocumentInput = doc;
+      writeJson(docJson, doc);
+    }
+  });
+
+  document.getElementById("clearAll").addEventListener("click", () => {
+    textArea.value = "";
+    fileInput.value = "";
+    currentDocumentInput = null;
+    status.textContent = "Pulito. Carica o incolla un nuovo documento.";
+    validationBox.textContent = "Nessuna elaborazione avviata.";
+    validationBox.className = "status";
+    [docJson, kbJson, planJson].forEach((el) => el.textContent = "");
+    ["summaryOutput", "cardsOutput", "studyOutput", "testOutput"].forEach((id) => document.getElementById(id).innerHTML = "");
+  });
+
+  document.getElementById("runPipeline").addEventListener("click", async () => {
+    try {
+      const text = textArea.value.trim();
+      if (!text) {
+        status.textContent = "Errore: nessun testo disponibile. Carica un documento o incolla testo.";
+        return;
+      }
+
+      status.textContent = "Elaborazione pipeline intelligente in corso...";
+      const result = await window.RagSmartPipelineV1.runFromText(text, currentDocumentInput ? currentDocumentInput.title : "Documento utente");
+
+      currentDocumentInput = result.documentInput;
+      writeJson(docJson, result.documentInput);
+      writeJson(kbJson, result.knowledgeBase);
+      writeJson(planJson, result.plan);
+      setValidation(result.validation);
+
+      window.RagSmartPipelineV1.renderSummary(result.output.summary, "#summaryOutput");
+      window.RagSmartPipelineV1.renderCards(result.output.cards, "#cardsOutput");
+      window.RagSmartPipelineV1.renderStudyQuestions(result.output.studyQuestions, "#studyOutput");
+      window.RagSmartPipelineV1.renderTest(result.output.test, "#testOutput");
+
+      status.textContent = "Pipeline completata.";
+    } catch (error) {
+      console.error(error);
+      status.textContent = `Errore pipeline: ${error.message || error}`;
+    }
+  });
+})();
+</script>
+</body>
+</html>
