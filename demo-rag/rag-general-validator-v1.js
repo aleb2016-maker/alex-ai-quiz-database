@@ -1,7 +1,7 @@
 (function () {
   "use strict";
 
-  const VERSION = "rag-general-validator-v2-quality";
+  const VERSION = "rag-general-validator-v33-final-polish";
 
   function clean(text) {
     return String(text || "").replace(/\s+/g, " ").trim();
@@ -40,12 +40,18 @@
     return /#\s*documento|problema_soluzione|prima_dopo|appartiene_a|relation_|concept_|fact_|→|\s->\s|che cosa afferma #|secondo il documento, che cosa afferma #/.test(value);
   }
 
-  function looksLikeDemoCensorship(text) {
-    const value = clean(text).toLowerCase();
-  }
 
   function tooLongOption(text) {
-    return clean(text).length > 100;
+    const value = clean(text);
+    return value.length > 80 || /…|\.\.\./.test(value);
+  }
+
+  function weakOption(text) {
+    const value = clean(text).toLowerCase();
+    if (!value || value.length < 4) return true;
+    if (/documento rag di test|pensato come manuale tecnico|materiale formativo|distrattore medio|esempio debole|esempio più forte|esempio piu forte|metodo migliore|hotel aeroporto|intercettare traffico utenti/.test(value)) return true;
+    if (/^(non|obiettivo|documento)$/.test(value)) return true;
+    return false;
   }
 
   function weakQuestion(text) {
@@ -53,6 +59,8 @@
     if (!value.endsWith("?")) return true;
     if (/che cosa afferma\s*(#|documento|può essere|puo essere|-)\b/.test(value)) return true;
     if (/secondo il documento, che cosa afferma/.test(value)) return true;
+    if (/che cosa dice il documento su (non|l\'obiettivo|obiettivo|esempio debole|esempio più forte|esempio piu forte|metodo migliore)\b/.test(value)) return true;
+    if (/documento rag di test|pensato come manuale tecnico|distrattore medio|esempio debole|esempio più forte|esempio piu forte|metodo migliore|hotel aeroporto|intercettare traffico utenti/.test(value)) return true;
     return false;
   }
 
@@ -75,6 +83,7 @@
     (kb.concepts || []).forEach((concept) => {
       if (containsRawTechnicalText(concept.label)) warnings.push(`concetto_sporco:${concept.id || "senza_id"}`);
       if (clean(concept.label).length > 70) warnings.push(`concetto_troppo_lungo:${concept.id || "senza_id"}`);
+      if (/distrattore medio|documento rag di test|manuale tecnico|esempio debole|esempio più forte|esempio piu forte|metodo migliore|hotel aeroporto|intercettare traffico utenti/i.test(concept.label)) warnings.push(`concetto_non_didattico:${concept.id || "senza_id"}`);
     });
 
     (kb.facts || []).forEach((fact) => {
@@ -157,6 +166,7 @@
       question.options.forEach((option) => {
         if (containsRawTechnicalText(option)) warnings.push(`opzione_sporca:${question.id || "senza_id"}`);
         if (tooLongOption(option)) warnings.push(`opzione_troppo_lunga:${question.id || "senza_id"}`);
+        if (weakOption(option)) warnings.push(`opzione_debole:${question.id || "senza_id"}`);
       });
       if (question.evidence && !evidenceExistsInDocument(question.evidence, documentText)) warnings.push(`test_non_dimostrato:${question.id || "senza_id"}`);
     });
@@ -188,6 +198,7 @@
     validateGeneratedOutput,
     validateAll,
     evidenceExistsInDocument,
-    containsRawTechnicalText
+    containsRawTechnicalText,
+    weakOption
   };
 })();

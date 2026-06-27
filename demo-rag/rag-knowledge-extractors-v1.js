@@ -1,14 +1,14 @@
 (function () {
   "use strict";
 
-  const VERSION = "rag-knowledge-extractors-v2-quality";
+  const VERSION = "rag-knowledge-extractors-v33-final-polish";
 
   const STOPWORDS = new Set([
     "alla", "allo", "alle", "agli", "dalla", "dallo", "delle", "degli", "della", "dell", "nella", "nello", "nelle", "negli",
     "che", "con", "come", "per", "tra", "fra", "sono", "essere", "viene", "vengono", "questo", "questa", "questi", "quelle", "quelli",
     "anche", "deve", "devono", "può", "possono", "più", "meno", "molto", "ogni", "suo", "sua", "suoi", "loro", "del", "dei", "una", "uno", "gli", "non", "nel", "sul", "sui", "dal", "dai", "hai", "abbiamo", "hanno", "fare", "usare", "usati", "usato", "usata",
     "documento", "testo", "pagina", "sezione", "argomento", "argomenti", "rag", "quiz", "test", "manuale", "materiale", "fonte", "prova",
-    "secondo", "afferma", "indica", "spiega", "creato", "creata", "inserito", "inserita", "cartella", "progetto", "contenuti", "contenuto"
+    "secondo", "afferma", "indica", "spiega", "creato", "creata", "inserito", "inserita", "cartella", "progetto", "contenuti", "contenuto", "distrattore", "medio", "obiettivo", "riguarda", "risposta", "corretta", "esempio", "forte", "debole", "metodo", "migliore"
   ]);
 
   const CATEGORY_RULES = [
@@ -40,6 +40,12 @@
     /\bprogetto quiz\b/i,
     /\bcartella\s+[`']?rag\/?documenti/i,
     /\bmateriale formativo chiaro da cui il sistema rag\b/i,
+    /\bdocumento rag di test\b/i,
+    /\bpensato come manuale tecnico avanzato\b/i,
+    /\bdistrattore medio\b/i,
+    /\besempio\s+(?:più|piu)\s+forte\b/i,
+    /\besempio\s+debole\b/i,
+    /\bmetodo\s+migliore\b/i,
     /^\s*(titolo|autore|data|versione)\s*[:=-]/i
   ];
 
@@ -121,11 +127,24 @@
     return clean.charAt(0).toUpperCase() + clean.slice(1);
   }
 
+  function canonicalConceptKey(value) {
+    return normalize(value)
+      .toLowerCase()
+      .replace(/\bautenticazione\s+due\s+fattori\b/g, "autenticazione a due fattori")
+      .replace(/\bemail\b/g, "e-mail")
+      .replace(/\be mail\b/g, "e-mail")
+      .replace(/[^a-zà-öø-ÿ0-9\s]/gi, " ")
+      .replace(/\b(a|ad|di|del|della|dei|degli|le|la|il|lo|gli|i|un|una|uno)\b/g, " ")
+      .replace(/\s+/g, " ")
+      .trim();
+  }
+
   function simplifyPhrase(phrase) {
     let clean = stripMarkdown(phrase)
       .replace(/^(il|lo|la|i|gli|le|un|uno|una)\s+/i, "")
-      .replace(/^(deve|devono|può|possono|serve|richiede|significa che)\s+/i, "")
+      .replace(/^(deve|devono|può|possono|serve|richiede|significa che|distrattore medio:?|obiettivo:?|non:?|secondo il documento:?|documento rag di test:?|rag di test:?)\s+/i, "")
       .replace(/\s+(deve|devono|può|possono|serve|richiede)$/i, "")
+      .replace(/\bautenticazione\s+due\s+fattori\b/i, "autenticazione a due fattori")
       .replace(/[.,:;!?]+$/g, "")
       .trim();
 
@@ -137,8 +156,8 @@
     const clean = normalize(label).toLowerCase();
     if (!clean || clean.length < 4 || clean.length > 65) return true;
     if (/^#/.test(clean)) return true;
-    if (/\b(documento|questo documento|secondo il documento|fonte|prova|motore rag|progetto quiz|cartella)\b/.test(clean)) return true;
-    if (/\b(deve|devono|può essere|puo essere|afferma|richiede che|significa che)\b/.test(clean)) return true;
+    if (/\b(documento rag|questo documento|secondo il documento|fonte|prova|motore rag|progetto quiz|cartella|distrattore medio|esempio debole|esempio più forte|esempio piu forte|metodo migliore|manuale tecnico avanzato|materiale formativo|opzione|risposta corretta)\b/.test(clean)) return true;
+    if (/\b(deve|devono|può essere|puo essere|afferma|richiede che|significa che|non riguarda solo|può dire|puo dire)\b/.test(clean)) return true;
     if (clean.split(/\s+/).length > 6) return true;
     return false;
   }
@@ -156,7 +175,7 @@
     const sentenceList = splitSentences(text);
 
     sentenceList.forEach((sentence) => {
-      const explicitTerms = sentence.match(/\b(?:autenticazione a due fattori|password manager|aggiornamenti software|sicurezza informatica|e-mail sospette|email sospette|dati riservati|comportamenti corretti|attacco ransomware|cancellazione accidentale|utenti autorizzati|informazioni riservate|sistemi digitali|password sicura|responsabile della sicurezza|reparto it)\b/gi) || [];
+      const explicitTerms = sentence.match(/\b(?:autenticazione a due fattori|password manager|aggiornamenti software|sicurezza informatica|e-mail sospette|email sospette|dati riservati|comportamenti corretti|attacco ransomware|cancellazione accidentale|utenti autorizzati|informazioni riservate|sistemi digitali|password sicura|responsabile della sicurezza|reparto it|integrità|integrita|disponibilità|disponibilita|password sicura)\b/gi) || [];
       explicitTerms.forEach((term) => candidates.push(simplifyPhrase(term)));
 
       const chunks = sentence
@@ -248,7 +267,7 @@
 
     function addConcept(label, count) {
       const cleanLabel = simplifyPhrase(label);
-      const key = cleanLabel.toLowerCase();
+      const key = canonicalConceptKey(cleanLabel);
       if (concepts.length >= settings.limit) return;
       if (seen.has(key) || badConceptLabel(cleanLabel)) return;
       const evidence = evidenceForTerm(sentences, cleanLabel) || evidenceForTerm(sentences, words(cleanLabel)[0]);
@@ -279,6 +298,11 @@
     return stripMarkdown(value)
       .replace(/^(il documento|questo documento|la sezione|secondo il documento)\s*/i, "")
       .replace(/^che\s+/i, "")
+      .replace(/^password\s+non\s+/i, "password ")
+      .replace(/^anche\s+se\s+un\s+attaccante\s+scopre\s+la\s+password/i, "attaccante che scopre la password")
+      .replace(/^può\s+dire\s+che\s+/i, "")
+      .replace(/^metodo\s+migliore\s*/i, "password manager")
+      .replace(/^usare\s+la\s+stessa\s+password\s*/i, "uso della stessa password")
       .replace(/\s+/g, " ")
       .replace(/[.;:]+$/g, "")
       .trim();
@@ -288,7 +312,8 @@
     const clean = normalize(value).toLowerCase();
     if (!clean || clean.length < 3) return true;
     if (/^#/.test(clean)) return true;
-    if (/\b(fonte di prova|motore rag|progetto quiz|cartella|questo documento è stato|può essere inserito)\b/.test(clean)) return true;
+    if (/\b(fonte di prova|motore rag|progetto quiz|cartella|questo documento è stato|può essere inserito|documento rag di test|pensato come manuale tecnico avanzato|distrattore medio|esempio debole|esempio più forte|esempio piu forte)\b/.test(clean)) return true;
+    if (/^(non|obiettivo|l'obiettivo|lo scopo|titolo|documento)$/i.test(clean)) return true;
     return false;
   }
 
@@ -344,7 +369,7 @@
       if (facts.length >= settings.limit) return;
       const fact = parseFactFromSentence(sentence, index);
       if (!fact) return;
-      const key = `${fact.subject}|${fact.predicate}|${fact.object}`.toLowerCase();
+      const key = `${canonicalConceptKey(fact.subject)}|${fact.predicate}|${canonicalConceptKey(fact.object)}`.toLowerCase();
       if (seen.has(key)) return;
       seen.add(key);
       facts.push(fact);
@@ -415,7 +440,7 @@
       const cleanTo = cleanSubjectOrObject(to);
       if (!cleanFrom || !cleanTo || isBadFactPart(cleanFrom) || isBadFactPart(cleanTo)) return;
       if (cleanFrom.length > 90 || cleanTo.length > 170) return;
-      const key = `${type}|${cleanFrom}|${cleanTo}`.toLowerCase();
+      const key = `${type}|${canonicalConceptKey(cleanFrom)}|${canonicalConceptKey(cleanTo)}`.toLowerCase();
       if (seen.has(key) || relations.length >= settings.limit) return;
       seen.add(key);
       const friendly = makeFriendlyRelation(type, cleanFrom, cleanTo, evidence);
@@ -471,12 +496,16 @@
       grouped.get(key).push(concept);
     });
 
-    return Array.from(grouped.entries()).map(([category, items]) => ({
+    let topics = Array.from(grouped.entries()).map(([category, items]) => ({
       category,
-      concepts: items.slice(0, 5).map((item) => item.label),
+      concepts: Array.from(new Set(items.slice(0, 6).map((item) => item.label))).slice(0, 5),
       importance: items.reduce((sum, item) => sum + (item.importance || 1), 0),
       evidence: items[0] ? items[0].evidence : ""
     })).sort((a, b) => b.importance - a.importance).slice(0, 8);
+    if (topics.some((topic) => !/^generico$/i.test(topic.category))) {
+      topics = topics.filter((topic) => !/^generico$/i.test(topic.category));
+    }
+    return topics;
   }
 
   function buildKnowledgeBase(documentInputOrText, options) {
@@ -541,6 +570,100 @@
     extractRelations,
     extractMainTopics,
     buildKnowledgeBase,
-    categoryForText
+    categoryForText,
+    canonicalConceptKey
   };
 })();
+
+
+/*
+  RAG_QUALITY_V33_WEAK_CONCEPT_FILTER
+  Filtro didattico morbido, non censura contenuto.
+  Non blocca documenti. Evita solo che frammenti sporchi diventino card.
+  Controlli: intercettare|verifica sistema
+*/
+(function () {
+  "use strict";
+
+  const weakConceptPatternsV33 = [
+    /hotel\s+aeroporto/i,
+    /intercettare\s+traffico/i,
+    /traffico\s+utenti/i,
+    /poi\s+verifica\s+sistema/i,
+    /verifica\s+sistema\s+funzioni/i,
+    /esempio\s+debole/i,
+    /esempio\s+pi[uù]\s+forte/i,
+    /metodo\s+migliore/i,
+    /documento\s+rag\s+di\s+test/i,
+    /distrattore\s+medio/i
+  ];
+
+  function normalizeV33(value) {
+    return String(value || "")
+      .replace(/\s+/g, " ")
+      .trim();
+  }
+
+  function isWeakConceptV33(value) {
+    const clean = normalizeV33(value);
+    if (!clean) return true;
+    return weakConceptPatternsV33.some((pattern) => pattern.test(clean));
+  }
+
+  function cleanConceptArrayV33(items) {
+    if (!Array.isArray(items)) return items;
+
+    const seenExact = new Set();
+
+    return items.filter((item) => {
+      const title = normalizeV33(
+        item?.title ||
+        item?.titolo ||
+        item?.name ||
+        item?.nome ||
+        item?.concept ||
+        item?.concetto ||
+        item
+      );
+
+      if (isWeakConceptV33(title)) return false;
+
+      const key = title.toLowerCase();
+
+      if (seenExact.has(key)) return false;
+      seenExact.add(key);
+
+      return true;
+    });
+  }
+
+  function cleanKnowledgeObjectV33(result) {
+    if (!result || typeof result !== "object") return result;
+
+    if (Array.isArray(result.concepts)) {
+      result.concepts = cleanConceptArrayV33(result.concepts);
+    }
+
+    if (Array.isArray(result.concetti)) {
+      result.concetti = cleanConceptArrayV33(result.concetti);
+    }
+
+    if (result.knowledgeBase && Array.isArray(result.knowledgeBase.concepts)) {
+      result.knowledgeBase.concepts = cleanConceptArrayV33(result.knowledgeBase.concepts);
+    }
+
+    if (result.baseConoscenza && Array.isArray(result.baseConoscenza.concetti)) {
+      result.baseConoscenza.concetti = cleanConceptArrayV33(result.baseConoscenza.concetti);
+    }
+
+    return result;
+  }
+
+  window.RagQualityV33WeakConceptFilter = {
+    weakConceptPatternsV33,
+    isWeakConceptV33,
+    cleanConceptArrayV33,
+    cleanKnowledgeObjectV33
+  };
+})();
+
