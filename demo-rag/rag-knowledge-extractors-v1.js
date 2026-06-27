@@ -1,19 +1,20 @@
 (function () {
   "use strict";
 
-  const VERSION = "rag-knowledge-extractors-v1";
+  const VERSION = "rag-knowledge-extractors-v2-quality";
 
   const STOPWORDS = new Set([
     "alla", "allo", "alle", "agli", "dalla", "dallo", "delle", "degli", "della", "dell", "nella", "nello", "nelle", "negli",
     "che", "con", "come", "per", "tra", "fra", "sono", "essere", "viene", "vengono", "questo", "questa", "questi", "quelle", "quelli",
-    "anche", "deve", "devono", "può", "possono", "più", "meno", "molto", "ogni", "suo", "sua", "suoi", "loro", "del", "dei", "una", "uno", "gli", "non", "nel", "sul", "sui", "dal", "dai", "hai", "abbiamo", "hanno", "fare", "usare", "usati",
-    "documento", "testo", "pagina", "sezione", "argomento"
+    "anche", "deve", "devono", "può", "possono", "più", "meno", "molto", "ogni", "suo", "sua", "suoi", "loro", "del", "dei", "una", "uno", "gli", "non", "nel", "sul", "sui", "dal", "dai", "hai", "abbiamo", "hanno", "fare", "usare", "usati", "usato", "usata",
+    "documento", "testo", "pagina", "sezione", "argomento", "argomenti", "rag", "quiz", "test", "manuale", "materiale", "fonte", "prova",
+    "secondo", "afferma", "indica", "spiega", "creato", "creata", "inserito", "inserita", "cartella", "progetto", "contenuti", "contenuto"
   ]);
 
   const CATEGORY_RULES = [
-    { id: "sicurezza", label: "Sicurezza", terms: ["sicurezza", "protezione", "rischio", "accesso", "password", "credenziali", "malware", "phishing", "backup", "firewall"] },
-    { id: "formazione", label: "Formazione", terms: ["formazione", "corso", "lezione", "studio", "apprendimento", "verifica", "esame", "competenza"] },
-    { id: "lavoro", label: "Lavoro", terms: ["azienda", "lavoro", "cliente", "processo", "reparto", "responsabile", "procedura", "attività"] },
+    { id: "sicurezza", label: "Sicurezza", terms: ["sicurezza", "protezione", "rischio", "accesso", "password", "credenziali", "malware", "phishing", "backup", "firewall", "ransomware", "antivirus", "vulnerabilità", "autenticazione"] },
+    { id: "formazione", label: "Formazione", terms: ["formazione", "corso", "lezione", "studio", "apprendimento", "verifica", "esame", "competenza", "didattico", "spiegare"] },
+    { id: "lavoro", label: "Lavoro", terms: ["azienda", "lavoro", "cliente", "processo", "reparto", "responsabile", "procedura", "attività", "dipendente", "utenti"] },
     { id: "sport", label: "Sport e allenamento", terms: ["allenamento", "esercizio", "serie", "ripetizioni", "recupero", "forza", "corsa", "mobilità", "carico"] },
     { id: "curriculum", label: "Curriculum", terms: ["curriculum", "esperienza", "profilo", "competenze", "istruzione", "candidato", "ruolo", "progetto"] },
     { id: "storia", label: "Storia o racconto", terms: ["racconto", "personaggio", "storia", "scena", "capitolo", "narrazione", "dialogo"] },
@@ -22,13 +23,24 @@
   ];
 
   const RELATION_PATTERNS = [
-    { type: "causa", patterns: [/\bperch[eé]\b/i, /\ba causa di\b/i, /\bpoich[eé]\b/i, /\bquindi\b/i, /\bdi conseguenza\b/i] },
-    { type: "richiede", patterns: [/\brichiede\b/i, /\bdeve\b/i, /\bdevono\b/i, /\bnecessita\b/i, /\bserve\b/i] },
-    { type: "evita", patterns: [/\bevitar[ea]\b/i, /\bpreviene\b/i, /\bripara da\b/i, /\brimuove\b/i, /\brallenta\b/i] },
-    { type: "protegge", patterns: [/\bprotegge\b/i, /\bproteggere\b/i, /\bdifende\b/i, /\bsalvaguarda\b/i] },
-    { type: "appartiene_a", patterns: [/\bfa parte di\b/i, /\bappartiene a\b/i, /\binclude\b/i, /\bcomprende\b/i, /\bcontiene\b/i] },
-    { type: "prima_dopo", patterns: [/\bprima\b/i, /\bdopo\b/i, /\bsuccessivamente\b/i, /\bin seguito\b/i] },
-    { type: "problema_soluzione", patterns: [/\bproblema\b/i, /\bsoluzione\b/i, /\brisolvere\b/i, /\bcontrollo\b/i, /\bcorrezione\b/i] }
+    { type: "causa", label: "causa", patterns: [/\bperch[eé]\b/i, /\ba causa di\b/i, /\bpoich[eé]\b/i, /\bquindi\b/i, /\bdi conseguenza\b/i] },
+    { type: "richiede", label: "richiede", patterns: [/\brichiede\b/i, /\bdeve\b/i, /\bdevono\b/i, /\bnecessita\b/i, /\bserve\b/i, /\bbisogna\b/i] },
+    { type: "evita", label: "evita", patterns: [/\bevitar[ea]\b/i, /\bpreviene\b/i, /\bripara da\b/i, /\brimuove\b/i, /\brallenta\b/i, /\bruce\b/i] },
+    { type: "protegge", label: "protegge", patterns: [/\bprotegge\b/i, /\bproteggere\b/i, /\bdifende\b/i, /\bsalvaguarda\b/i] },
+    { type: "appartiene_a", label: "appartiene a", patterns: [/\bfa parte di\b/i, /\bappartiene a\b/i, /\binclude\b/i, /\bcomprende\b/i, /\bcontiene\b/i] },
+    { type: "prima_dopo", label: "prima/dopo", patterns: [/\bprima\b/i, /\bdopo\b/i, /\bsuccessivamente\b/i, /\bin seguito\b/i] },
+    { type: "problema_soluzione", label: "problema/soluzione", patterns: [/\bproblema\b/i, /\bsoluzione\b/i, /\brisolvere\b/i, /\bcontrollo\b/i, /\bcorrezione\b/i] }
+  ];
+
+  const NOISE_PATTERNS = [
+    /^\s*#{1,6}\s*documento\b/i,
+    /^\s*#{1,6}\s*$/i,
+    /\bquesto documento\s+(?:è stato|e stato|serve|può essere|puo essere|viene)/i,
+    /\bfonte di prova per il motore rag\b/i,
+    /\bprogetto quiz\b/i,
+    /\bcartella\s+[`']?rag\/?documenti/i,
+    /\bmateriale formativo chiaro da cui il sistema rag\b/i,
+    /^\s*(titolo|autore|data|versione)\s*[:=-]/i
   ];
 
   function textOf(documentInputOrText) {
@@ -38,22 +50,55 @@
   }
 
   function normalize(text) {
-    return String(text || "").replace(/\u00A0/g, " ").replace(/[ \t]+/g, " ").trim();
+    return String(text || "")
+      .replace(/\u00A0/g, " ")
+      .replace(/[“”]/g, '"')
+      .replace(/[‘’]/g, "'")
+      .replace(/\s+/g, " ")
+      .trim();
+  }
+
+  function stripMarkdown(text) {
+    return normalize(text)
+      .replace(/^#{1,6}\s*/, "")
+      .replace(/^[-*+]\s+/, "")
+      .replace(/`([^`]+)`/g, "$1")
+      .replace(/\*\*([^*]+)\*\*/g, "$1")
+      .replace(/__([^_]+)__/g, "$1")
+      .replace(/\[([^\]]+)\]\([^)]*\)/g, "$1");
+  }
+
+  function isNoiseSentence(sentence) {
+    const clean = normalize(sentence);
+    if (!clean) return true;
+    if (clean.length < 18) return true;
+    if (clean.length > 420) return true;
+    if (NOISE_PATTERNS.some((pattern) => pattern.test(clean))) return true;
+    if (/^#{1,6}\s/.test(clean)) return true;
+    const lower = clean.toLowerCase();
+    const badStarts = ["questo documento è stato", "questo documento e stato", "può essere inserito", "puo essere inserito", "rag di test"];
+    if (badStarts.some((start) => lower.startsWith(start))) return true;
+    return false;
   }
 
   function splitParagraphs(text) {
     return String(text || "")
       .split(/\n{2,}/)
-      .map(normalize)
-      .filter((paragraph) => paragraph.length > 0);
+      .map(stripMarkdown)
+      .filter((paragraph) => paragraph.length > 0 && !isNoiseSentence(paragraph));
   }
 
   function splitSentences(text) {
-    const protectedText = String(text || "").replace(/\b(es|dr|sig|prof)\./gi, (match) => match.replace(".", "§"));
+    const lines = String(text || "")
+      .split(/\n+/)
+      .map(stripMarkdown)
+      .filter((line) => line && !/^#{1,6}\s*documento/i.test(line));
+
+    const protectedText = lines.join(". ").replace(/\b(es|dr|sig|prof|ing|avv)\./gi, (match) => match.replace(".", "§"));
     return protectedText
-      .split(/(?<=[.!?])\s+|\n+/)
-      .map((sentence) => normalize(sentence.replace(/§/g, ".")))
-      .filter((sentence) => sentence.length >= 20);
+      .split(/(?<=[.!?])\s+|[•;]+/)
+      .map((sentence) => stripMarkdown(sentence.replace(/§/g, ".")))
+      .filter((sentence) => !isNoiseSentence(sentence));
   }
 
   function words(text) {
@@ -70,6 +115,34 @@
     return map;
   }
 
+  function titleCasePhrase(phrase) {
+    const clean = stripMarkdown(phrase).toLowerCase();
+    if (!clean) return "";
+    return clean.charAt(0).toUpperCase() + clean.slice(1);
+  }
+
+  function simplifyPhrase(phrase) {
+    let clean = stripMarkdown(phrase)
+      .replace(/^(il|lo|la|i|gli|le|un|uno|una)\s+/i, "")
+      .replace(/^(deve|devono|può|possono|serve|richiede|significa che)\s+/i, "")
+      .replace(/\s+(deve|devono|può|possono|serve|richiede)$/i, "")
+      .replace(/[.,:;!?]+$/g, "")
+      .trim();
+
+    if (clean.length > 58) clean = clean.slice(0, 58).replace(/\s+\S*$/, "");
+    return titleCasePhrase(clean);
+  }
+
+  function badConceptLabel(label) {
+    const clean = normalize(label).toLowerCase();
+    if (!clean || clean.length < 4 || clean.length > 65) return true;
+    if (/^#/.test(clean)) return true;
+    if (/\b(documento|questo documento|secondo il documento|fonte|prova|motore rag|progetto quiz|cartella)\b/.test(clean)) return true;
+    if (/\b(deve|devono|può essere|puo essere|afferma|richiede che|significa che)\b/.test(clean)) return true;
+    if (clean.split(/\s+/).length > 6) return true;
+    return false;
+  }
+
   function topKeywords(text, limit) {
     const freq = frequencyMap(words(text));
     return Array.from(freq.entries())
@@ -78,38 +151,28 @@
       .map(([term, count]) => ({ term, count }));
   }
 
-  function titleCasePhrase(phrase) {
-    const clean = normalize(phrase).toLowerCase();
-    return clean.charAt(0).toUpperCase() + clean.slice(1);
-  }
-
   function extractCandidatePhrases(text) {
     const candidates = [];
     const sentenceList = splitSentences(text);
 
     sentenceList.forEach((sentence) => {
+      const explicitTerms = sentence.match(/\b(?:autenticazione a due fattori|password manager|aggiornamenti software|sicurezza informatica|e-mail sospette|email sospette|dati riservati|comportamenti corretti|attacco ransomware|cancellazione accidentale|utenti autorizzati|informazioni riservate|sistemi digitali|password sicura|responsabile della sicurezza|reparto it)\b/gi) || [];
+      explicitTerms.forEach((term) => candidates.push(simplifyPhrase(term)));
+
       const chunks = sentence
         .split(/[,;:.()\[\]{}]/)
-        .map(normalize)
-        .filter((chunk) => chunk.length >= 8 && chunk.length <= 90);
+        .map(stripMarkdown)
+        .filter((chunk) => chunk.length >= 8 && chunk.length <= 110);
 
       chunks.forEach((chunk) => {
         const chunkWords = words(chunk);
-        if (chunkWords.length >= 2 && chunkWords.length <= 7) {
-          candidates.push(chunkWords.join(" "));
-        }
-      });
-
-      const phraseMatches = sentence.match(/\b([A-Za-zÀ-ÖØ-öø-ÿ0-9]+(?:\s+(?:di|dei|delle|del|della|e|o|per|con|senza|su|in|a|da)?\s*[A-Za-zÀ-ÖØ-öø-ÿ0-9]+){1,5})\b/g) || [];
-      phraseMatches.forEach((phrase) => {
-        const cleanWords = words(phrase);
-        if (cleanWords.length >= 2 && cleanWords.length <= 6) {
-          candidates.push(cleanWords.join(" "));
+        if (chunkWords.length >= 2 && chunkWords.length <= 5) {
+          candidates.push(simplifyPhrase(chunkWords.join(" ")));
         }
       });
     });
 
-    return candidates;
+    return candidates.filter((candidate) => candidate && !badConceptLabel(candidate));
   }
 
   function categoryForText(text) {
@@ -127,15 +190,19 @@
   }
 
   function evidenceForTerm(sentences, term) {
-    return sentences.find((sentence) => sentenceContains(sentence, term)) || "";
+    const lowerTerm = normalize(term).toLowerCase();
+    if (!lowerTerm) return "";
+    return sentences.find((sentence) => sentenceContains(sentence, lowerTerm)) ||
+      sentences.find((sentence) => words(lowerTerm).some((word) => sentenceContains(sentence, word))) || "";
   }
 
   function confidenceFromEvidence(term, count, evidence) {
-    let score = 0.45;
-    if (count >= 2) score += 0.15;
-    if (count >= 4) score += 0.15;
-    if (evidence.length >= 60) score += 0.1;
+    let score = 0.48;
+    if (count >= 2) score += 0.14;
+    if (count >= 4) score += 0.1;
+    if (evidence.length >= 55) score += 0.12;
     if (term.split(/\s+/).length >= 2) score += 0.1;
+    if (badConceptLabel(term)) score -= 0.2;
     return Math.max(0.1, Math.min(0.95, Number(score.toFixed(2))));
   }
 
@@ -151,21 +218,22 @@
       patterns.forEach((pattern) => {
         const match = sentence.match(pattern);
         if (!match) return;
-        const term = normalize(match[1]);
-        const description = normalize(match[2]);
-        if (term.length >= 3 && description.length >= 8) {
-          definitions.push({ term: titleCasePhrase(term), description, evidence: sentence, confidence: 0.82 });
+        const term = simplifyPhrase(match[1]);
+        const description = stripMarkdown(match[2]);
+        if (!badConceptLabel(term) && description.length >= 8) {
+          definitions.push({ term, description, evidence: sentence, confidence: 0.82 });
         }
       });
     });
 
-    return definitions;
+    return definitions.slice(0, 12);
   }
 
   function extractExamples(sentences) {
     return sentences
       .filter((sentence) => /\bad esempio\b|\besempio\b|\bcome\b|\btipo\b/i.test(sentence))
-      .slice(0, 12)
+      .filter((sentence) => !isNoiseSentence(sentence))
+      .slice(0, 10)
       .map((sentence) => ({ text: sentence, confidence: 0.7 }));
   }
 
@@ -174,78 +242,92 @@
     const text = textOf(documentInputOrText);
     const sentences = splitSentences(text);
     const phraseFreq = frequencyMap(extractCandidatePhrases(text));
-    const keywordList = topKeywords(text, 30);
+    const keywordList = topKeywords(text, 40);
+    const concepts = [];
+    const seen = new Set();
 
-    const phraseConcepts = Array.from(phraseFreq.entries())
-      .filter(([phrase]) => phrase.length >= 6)
-      .sort((a, b) => b[1] - a[1] || b[0].length - a[0].length)
-      .slice(0, settings.limit)
-      .map(([phrase, count], index) => {
-        const evidence = evidenceForTerm(sentences, phrase) || evidenceForTerm(sentences, phrase.split(" ")[0]);
-        const category = categoryForText(`${phrase} ${evidence}`);
-        return {
-          id: `concept_${index + 1}`,
-          label: titleCasePhrase(phrase),
-          category: category.label,
-          categoryId: category.id,
-          importance: Math.max(1, Math.min(5, Math.ceil(count + (evidence.length > 80 ? 1 : 0)))),
-          evidence,
-          confidence: confidenceFromEvidence(phrase, count, evidence)
-        };
-      });
-
-    const existing = new Set(phraseConcepts.map((concept) => concept.label.toLowerCase()));
-    keywordList.forEach((item) => {
-      if (phraseConcepts.length >= settings.limit) return;
-      if (existing.has(item.term)) return;
-      const evidence = evidenceForTerm(sentences, item.term);
+    function addConcept(label, count) {
+      const cleanLabel = simplifyPhrase(label);
+      const key = cleanLabel.toLowerCase();
+      if (concepts.length >= settings.limit) return;
+      if (seen.has(key) || badConceptLabel(cleanLabel)) return;
+      const evidence = evidenceForTerm(sentences, cleanLabel) || evidenceForTerm(sentences, words(cleanLabel)[0]);
       if (!evidence) return;
-      const category = categoryForText(`${item.term} ${evidence}`);
-      phraseConcepts.push({
-        id: `concept_${phraseConcepts.length + 1}`,
-        label: titleCasePhrase(item.term),
+      const category = categoryForText(`${cleanLabel} ${evidence}`);
+      concepts.push({
+        id: `concept_${concepts.length + 1}`,
+        label: cleanLabel,
         category: category.label,
         categoryId: category.id,
-        importance: Math.max(1, Math.min(5, item.count)),
+        importance: Math.max(1, Math.min(5, Math.ceil((count || 1) + (evidence.length > 80 ? 1 : 0)))),
         evidence,
-        confidence: confidenceFromEvidence(item.term, item.count, evidence)
+        confidence: confidenceFromEvidence(cleanLabel, count || 1, evidence)
       });
-      existing.add(item.term);
-    });
+      seen.add(key);
+    }
 
-    return phraseConcepts;
+    Array.from(phraseFreq.entries())
+      .sort((a, b) => b[1] - a[1] || b[0].length - a[0].length)
+      .forEach(([phrase, count]) => addConcept(phrase, count));
+
+    keywordList.forEach((item) => addConcept(item.term, item.count));
+
+    return concepts;
+  }
+
+  function cleanSubjectOrObject(value) {
+    return stripMarkdown(value)
+      .replace(/^(il documento|questo documento|la sezione|secondo il documento)\s*/i, "")
+      .replace(/^che\s+/i, "")
+      .replace(/\s+/g, " ")
+      .replace(/[.;:]+$/g, "")
+      .trim();
+  }
+
+  function isBadFactPart(value) {
+    const clean = normalize(value).toLowerCase();
+    if (!clean || clean.length < 3) return true;
+    if (/^#/.test(clean)) return true;
+    if (/\b(fonte di prova|motore rag|progetto quiz|cartella|questo documento è stato|può essere inserito)\b/.test(clean)) return true;
+    return false;
   }
 
   function parseFactFromSentence(sentence, index) {
-    const clean = normalize(sentence);
+    const clean = stripMarkdown(sentence);
+    if (isNoiseSentence(clean)) return null;
+
     const patterns = [
-      /^(.{3,70}?)\s+(deve|devono|può|possono|protegge|comprende|include|richiede|evita|riduce|aumenta|migliora|controlla|segnala|usa|utilizza|serve)\s+(.{5,180})$/i,
-      /^(.{3,70}?)\s+(è|sono|rappresenta|indica)\s+(.{5,180})$/i
+      /^(.{3,90}?)\s+(deve|devono|può|possono|protegge|comprende|include|richiede|evita|riduce|aumenta|migliora|corregge|controlla|segnala|usa|utilizza|serve)\s+(.{5,190})$/i,
+      /^(.{3,90}?)\s+(è|sono|rappresenta|indica|significa)\s+(.{5,190})$/i
     ];
 
     for (const pattern of patterns) {
       const match = clean.match(pattern);
-      if (match) {
-        return {
-          id: `fact_${index + 1}`,
-          subject: normalize(match[1]),
-          predicate: normalize(match[2]),
-          object: normalize(match[3]),
-          evidence: clean,
-          confidence: clean.length > 45 ? 0.78 : 0.62
-        };
-      }
-    }
-
-    const parts = clean.split(/\s+/);
-    if (parts.length >= 7) {
+      if (!match) continue;
+      const subject = cleanSubjectOrObject(match[1]);
+      const predicate = normalize(match[2]).toLowerCase();
+      const object = cleanSubjectOrObject(match[3]);
+      if (isBadFactPart(subject) || isBadFactPart(object)) continue;
+      if (subject.length > 90 || object.length > 190) continue;
       return {
         id: `fact_${index + 1}`,
-        subject: parts.slice(0, Math.min(4, Math.ceil(parts.length / 4))).join(" "),
-        predicate: "afferma",
-        object: parts.slice(Math.min(4, Math.ceil(parts.length / 4))).join(" "),
+        subject,
+        predicate,
+        object,
         evidence: clean,
-        confidence: 0.52
+        confidence: predicate === "è" || predicate === "sono" ? 0.7 : 0.76
+      };
+    }
+
+    const parts = clean.split(/[,;:]/).map(cleanSubjectOrObject).filter(Boolean);
+    if (parts.length >= 2 && parts[0].length <= 70 && parts[1].length <= 170 && !isBadFactPart(parts[0]) && !isBadFactPart(parts[1])) {
+      return {
+        id: `fact_${index + 1}`,
+        subject: parts[0],
+        predicate: "afferma",
+        object: parts.slice(1).join("; "),
+        evidence: clean,
+        confidence: 0.55
       };
     }
 
@@ -256,11 +338,15 @@
     const settings = Object.assign({ limit: 24 }, options || {});
     const sentences = splitSentences(textOf(documentInputOrText));
     const facts = [];
+    const seen = new Set();
 
     sentences.forEach((sentence, index) => {
       if (facts.length >= settings.limit) return;
       const fact = parseFactFromSentence(sentence, index);
       if (!fact) return;
+      const key = `${fact.subject}|${fact.predicate}|${fact.object}`.toLowerCase();
+      if (seen.has(key)) return;
+      seen.add(key);
       facts.push(fact);
     });
 
@@ -276,50 +362,100 @@
     return null;
   }
 
+  function makeFriendlyRelation(type, from, to, evidence) {
+    const cleanFrom = cleanSubjectOrObject(from);
+    const cleanTo = cleanSubjectOrObject(to);
+    const templates = {
+      causa: {
+        question: `Quale causa o conseguenza collega ${cleanFrom} al resto del documento?`,
+        answer: `${cleanFrom} è collegato a ${cleanTo}.`
+      },
+      richiede: {
+        question: `Che cosa richiede ${cleanFrom} secondo il documento?`,
+        answer: `${cleanFrom} richiede ${cleanTo}.`
+      },
+      evita: {
+        question: `Che cosa aiuta a evitare ${cleanFrom}?`,
+        answer: `${cleanFrom} aiuta a evitare ${cleanTo}.`
+      },
+      protegge: {
+        question: `Che cosa protegge ${cleanFrom}?`,
+        answer: `${cleanFrom} protegge ${cleanTo}.`
+      },
+      appartiene_a: {
+        question: `A quale insieme appartiene ${cleanFrom}?`,
+        answer: `${cleanFrom} appartiene a ${cleanTo}.`
+      },
+      prima_dopo: {
+        question: `Quale ordine temporale emerge su ${cleanFrom}?`,
+        answer: `${cleanFrom} è collegato in ordine temporale a ${cleanTo}.`
+      },
+      problema_soluzione: {
+        question: `Quale problema o soluzione riguarda ${cleanFrom}?`,
+        answer: `${cleanFrom} riguarda ${cleanTo}.`
+      }
+    };
+    const item = templates[type] || { question: `Quale relazione emerge su ${cleanFrom}?`, answer: `${cleanFrom} è collegato a ${cleanTo}.` };
+    return {
+      questionHint: item.question,
+      answerText: item.answer,
+      evidence
+    };
+  }
+
   function extractRelations(documentInputOrText, concepts, facts, options) {
     const settings = Object.assign({ limit: 24 }, options || {});
     const sentences = splitSentences(textOf(documentInputOrText));
     const conceptList = Array.isArray(concepts) ? concepts : [];
     const relations = [];
+    const seen = new Set();
 
-    sentences.forEach((sentence, index) => {
+    function addRelation(type, from, to, evidence, confidence) {
+      const cleanFrom = cleanSubjectOrObject(from);
+      const cleanTo = cleanSubjectOrObject(to);
+      if (!cleanFrom || !cleanTo || isBadFactPart(cleanFrom) || isBadFactPart(cleanTo)) return;
+      if (cleanFrom.length > 90 || cleanTo.length > 170) return;
+      const key = `${type}|${cleanFrom}|${cleanTo}`.toLowerCase();
+      if (seen.has(key) || relations.length >= settings.limit) return;
+      seen.add(key);
+      const friendly = makeFriendlyRelation(type, cleanFrom, cleanTo, evidence);
+      relations.push({
+        id: `relation_${relations.length + 1}`,
+        type,
+        typeLabel: (RELATION_PATTERNS.find((r) => r.type === type) || {}).label || type,
+        from: cleanFrom,
+        to: cleanTo,
+        questionHint: friendly.questionHint,
+        answerText: friendly.answerText,
+        evidence,
+        confidence: confidence || 0.62
+      });
+    }
+
+    sentences.forEach((sentence) => {
       if (relations.length >= settings.limit) return;
       const type = relationTypeForSentence(sentence);
       if (!type) return;
-
       const mentioned = conceptList.filter((concept) => sentenceContains(sentence, concept.label)).slice(0, 2);
-      const from = mentioned[0] ? mentioned[0].label : normalize(sentence).split(/\s+/).slice(0, 4).join(" ");
-      const to = mentioned[1] ? mentioned[1].label : normalize(sentence).split(/\s+/).slice(-6).join(" ");
-
-      relations.push({
-        id: `relation_${index + 1}`,
-        type,
-        from,
-        to,
-        evidence: sentence,
-        confidence: mentioned.length >= 1 ? 0.76 : 0.58
-      });
+      if (mentioned.length >= 2) {
+        addRelation(type, mentioned[0].label, mentioned[1].label, sentence, 0.78);
+      } else {
+        const fact = parseFactFromSentence(sentence, relations.length);
+        if (fact) addRelation(type, fact.subject, fact.object, sentence, 0.72);
+      }
     });
 
-    const factList = Array.isArray(facts) ? facts : [];
-    factList.forEach((fact) => {
+    (Array.isArray(facts) ? facts : []).forEach((fact) => {
       if (relations.length >= settings.limit) return;
-      if (!/protegge|richiede|evita|riduce|include|comprende/i.test(fact.predicate)) return;
+      if (!/protegge|richiede|evita|riduce|include|comprende|serve|deve|devono/i.test(fact.predicate)) return;
       const type = /protegge/i.test(fact.predicate)
         ? "protegge"
-        : /richiede/i.test(fact.predicate)
+        : /richiede|serve|deve|devono/i.test(fact.predicate)
           ? "richiede"
           : /evita|riduce/i.test(fact.predicate)
             ? "evita"
             : "appartiene_a";
-      relations.push({
-        id: `relation_from_${fact.id}`,
-        type,
-        from: fact.subject,
-        to: fact.object,
-        evidence: fact.evidence,
-        confidence: Math.max(0.55, fact.confidence - 0.05)
-      });
+      addRelation(type, fact.subject, fact.object, fact.evidence, Math.max(0.58, (fact.confidence || 0.65) - 0.04));
     });
 
     return relations;
@@ -348,9 +484,11 @@
       ? (window.RagDocumentInputUnicoV1 ? window.RagDocumentInputUnicoV1.fromText(documentInputOrText) : { text: { clean: documentInputOrText }, title: "Documento" })
       : documentInputOrText;
 
+    const sourceText = textOf(documentInput);
+    const sentences = splitSentences(sourceText);
     const concepts = extractConcepts(documentInput, options);
-    const definitions = extractDefinitions(splitSentences(textOf(documentInput)));
-    const examples = extractExamples(splitSentences(textOf(documentInput)));
+    const definitions = extractDefinitions(sentences);
+    const examples = extractExamples(sentences);
     const facts = extractFacts(documentInput, options);
     const relations = extractRelations(documentInput, concepts, facts, options);
     const topics = extractMainTopics(concepts, facts);

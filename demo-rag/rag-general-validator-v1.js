@@ -1,7 +1,7 @@
 (function () {
   "use strict";
 
-  const VERSION = "rag-general-validator-v1";
+  const VERSION = "rag-general-validator-v2-quality";
 
   function clean(text) {
     return String(text || "").replace(/\s+/g, " ").trim();
@@ -14,7 +14,7 @@
   function hasDuplicateKeys(items, keyFn) {
     const seen = new Set();
     const duplicates = [];
-    items.forEach((item) => {
+    (items || []).forEach((item) => {
       const key = normalizeKey(keyFn(item));
       if (!key) return;
       if (seen.has(key)) duplicates.push(key);
@@ -32,7 +32,28 @@
     const evWords = ev.toLowerCase().split(/\s+/).filter((word) => word.length >= 4);
     if (!evWords.length) return false;
     const matches = evWords.filter((word) => doc.toLowerCase().includes(word)).length;
-    return matches / evWords.length >= 0.65;
+    return matches / evWords.length >= 0.62;
+  }
+
+  function containsRawTechnicalText(text) {
+    const value = clean(text).toLowerCase();
+    return /#\s*documento|problema_soluzione|prima_dopo|appartiene_a|relation_|concept_|fact_|→|\s->\s|che cosa afferma #|secondo il documento, che cosa afferma #/.test(value);
+  }
+
+  function looksLikeDemoCensorship(text) {
+    const value = clean(text).toLowerCase();
+  }
+
+  function tooLongOption(text) {
+    return clean(text).length > 100;
+  }
+
+  function weakQuestion(text) {
+    const value = clean(text).toLowerCase();
+    if (!value.endsWith("?")) return true;
+    if (/che cosa afferma\s*(#|documento|può essere|puo essere|-)\b/.test(value)) return true;
+    if (/secondo il documento, che cosa afferma/.test(value)) return true;
+    return false;
   }
 
   function validateKnowledgeBase(kb, documentText) {
@@ -51,6 +72,21 @@
     const duplicateConcepts = hasDuplicateKeys(kb.concepts || [], (concept) => concept.label);
     if (duplicateConcepts.length) warnings.push(`concetti_duplicati:${duplicateConcepts.slice(0, 5).join(",")}`);
 
+    (kb.concepts || []).forEach((concept) => {
+      if (containsRawTechnicalText(concept.label)) warnings.push(`concetto_sporco:${concept.id || "senza_id"}`);
+      if (clean(concept.label).length > 70) warnings.push(`concetto_troppo_lungo:${concept.id || "senza_id"}`);
+    });
+
+    (kb.facts || []).forEach((fact) => {
+      if (containsRawTechnicalText(fact.subject) || containsRawTechnicalText(fact.object)) warnings.push(`fatto_sporco:${fact.id || "senza_id"}`);
+      if (clean(fact.subject).length > 100 || clean(fact.object).length > 210) warnings.push(`fatto_troppo_lungo:${fact.id || "senza_id"}`);
+    });
+
+    (kb.relations || []).forEach((relation) => {
+      if (!relation.questionHint || !relation.answerText) warnings.push(`relazione_senza_testo_utente:${relation.id || "senza_id"}`);
+      if (containsRawTechnicalText(relation.questionHint) || containsRawTechnicalText(relation.answerText)) warnings.push(`relazione_testo_sporco:${relation.id || "senza_id"}`);
+    });
+
     const allEvidenceItems = []
       .concat(kb.concepts || [])
       .concat(kb.facts || [])
@@ -68,7 +104,7 @@
       }
     });
 
-    const score = Math.max(0, 100 - errors.length * 35 - warnings.length * 3);
+    const score = Math.max(0, 100 - errors.length * 35 - warnings.length * 2);
     return { valid: errors.length === 0, errors, warnings, score };
   }
 
@@ -96,12 +132,15 @@
 
     cards.forEach((card) => {
       if (!card.title || !card.body) errors.push(`card_incompleta:${card.id || "senza_id"}`);
+      if (containsRawTechnicalText(card.title) || containsRawTechnicalText(card.body)) warnings.push(`card_testo_sporco:${card.id || "senza_id"}`);
       if (card.evidence && !evidenceExistsInDocument(card.evidence, documentText)) warnings.push(`card_non_dimostrata:${card.id || "senza_id"}`);
       if (typeof card.confidence === "number" && card.confidence < 0.45) warnings.push(`card_fiducia_bassa:${card.id || "senza_id"}`);
     });
 
     studyQuestions.forEach((question) => {
       if (!question.question || !question.answer) errors.push(`domanda_studio_incompleta:${question.id || "senza_id"}`);
+      if (weakQuestion(question.question)) warnings.push(`domanda_studio_debole:${question.id || "senza_id"}`);
+      if (containsRawTechnicalText(question.question) || containsRawTechnicalText(question.answer)) warnings.push(`domanda_studio_testo_sporco:${question.id || "senza_id"}`);
       if (question.evidence && !evidenceExistsInDocument(question.evidence, documentText)) warnings.push(`domanda_studio_non_dimostrata:${question.id || "senza_id"}`);
     });
 
@@ -110,9 +149,15 @@
         errors.push(`test_incompleto:${question.id || "senza_id"}`);
         return;
       }
+      if (weakQuestion(question.question)) warnings.push(`domanda_test_debole:${question.id || "senza_id"}`);
+      if (containsRawTechnicalText(question.question)) warnings.push(`domanda_test_sporca:${question.id || "senza_id"}`);
       if (question.options.length !== 4) warnings.push(`opzioni_non_quattro:${question.id || "senza_id"}`);
       if (!question.options.includes(question.correctAnswer)) errors.push(`risposta_corretta_fuori_opzioni:${question.id || "senza_id"}`);
       if (hasDuplicateKeys(question.options, (option) => option).length) warnings.push(`opzioni_duplicate:${question.id || "senza_id"}`);
+      question.options.forEach((option) => {
+        if (containsRawTechnicalText(option)) warnings.push(`opzione_sporca:${question.id || "senza_id"}`);
+        if (tooLongOption(option)) warnings.push(`opzione_troppo_lunga:${question.id || "senza_id"}`);
+      });
       if (question.evidence && !evidenceExistsInDocument(question.evidence, documentText)) warnings.push(`test_non_dimostrato:${question.id || "senza_id"}`);
     });
 
@@ -142,6 +187,7 @@
     validateKnowledgeBase,
     validateGeneratedOutput,
     validateAll,
-    evidenceExistsInDocument
+    evidenceExistsInDocument,
+    containsRawTechnicalText
   };
 })();
