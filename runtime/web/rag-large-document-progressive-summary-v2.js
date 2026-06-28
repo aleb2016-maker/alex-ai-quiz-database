@@ -95,6 +95,285 @@
     }
   ];
 
+
+  const DOCUMENT_PROFILES = [
+    {
+      id: "business",
+      label: "Documento aziendale",
+      words: [
+        "azienda", "aziendale", "procedure", "policy", "audit", "workflow",
+        "fornitori", "responsabilità", "responsabilita", "controlli", "registro",
+        "onboarding", "formazione", "continuità", "continuita", "operativa"
+      ],
+      keywords: [
+        "procedure aziendali",
+        "responsabilità operative",
+        "workflow e responsabilità",
+        "audit e controlli",
+        "documentazione tecnica",
+        "fornitori e terze parti",
+        "continuità operativa",
+        "onboarding e formazione"
+      ]
+    },
+    {
+      id: "cybersecurity",
+      label: "Cybersecurity",
+      words: [
+        "sicurezza", "firewall", "phishing", "password", "backup", "privacy",
+        "incidenti", "malware", "accessi", "credenziali", "vulnerabilità",
+        "vulnerabilita", "autenticazione", "dati", "ripristino"
+      ],
+      keywords: [
+        "sicurezza informatica",
+        "accessi e password",
+        "phishing e consapevolezza",
+        "backup e recupero",
+        "privacy e dati",
+        "incidenti e risposta",
+        "vulnerabilità e protezione",
+        "autenticazione e credenziali"
+      ]
+    },
+    {
+      id: "curriculum",
+      label: "Curriculum vitae",
+      words: [
+        "curriculum", "cv", "esperienza", "esperienze", "competenze", "profilo",
+        "formazione", "lavoro", "candidato", "obiettivo", "professionale",
+        "mansioni", "ruolo", "skills"
+      ],
+      keywords: [
+        "profilo professionale",
+        "esperienze lavorative",
+        "competenze tecniche",
+        "competenze trasversali",
+        "formazione",
+        "obiettivo professionale",
+        "ruoli e mansioni"
+      ]
+    },
+    {
+      id: "sport",
+      label: "Sport e allenamento",
+      words: [
+        "allenamento", "sport", "esercizio", "esercizi", "serie", "ripetizioni",
+        "recupero", "scheda", "muscoli", "forza", "resistenza", "corsa",
+        "mobilità", "mobilita", "riscaldamento"
+      ],
+      keywords: [
+        "programma di allenamento",
+        "esercizi principali",
+        "serie e ripetizioni",
+        "recupero",
+        "forza e resistenza",
+        "mobilità",
+        "riscaldamento",
+        "progressione"
+      ]
+    },
+    {
+      id: "poetry",
+      label: "Poesia",
+      words: [
+        "poesia", "verso", "versi", "strofa", "rima", "metafora", "immagine",
+        "simbolo", "ritmo", "voce", "sentimento", "natura", "amore"
+      ],
+      keywords: [
+        "tema poetico",
+        "immagini e simboli",
+        "metafore",
+        "ritmo e versi",
+        "voce poetica",
+        "sentimenti",
+        "natura e immaginazione"
+      ]
+    },
+    {
+      id: "story",
+      label: "Storia o racconto",
+      words: [
+        "racconto", "storia", "personaggio", "personaggi", "trama", "capitolo",
+        "scena", "dialogo", "viaggio", "conflitto", "finale", "ambientazione",
+        "narratore"
+      ],
+      keywords: [
+        "trama",
+        "personaggi",
+        "ambientazione",
+        "conflitto narrativo",
+        "scene principali",
+        "dialoghi",
+        "sviluppo della storia",
+        "finale"
+      ]
+    },
+    {
+      id: "personal",
+      label: "Documento personale",
+      words: [
+        "documento", "identità", "identita", "codice", "fiscale", "residenza",
+        "indirizzo", "domanda", "certificato", "modulo", "richiesta",
+        "anagrafica", "firma"
+      ],
+      keywords: [
+        "dati personali",
+        "identificazione",
+        "richiesta o modulo",
+        "certificazioni",
+        "informazioni anagrafiche",
+        "firma e validazione",
+        "documenti allegati"
+      ]
+    },
+    {
+      id: "hobby",
+      label: "Hobby o progetto",
+      words: [
+        "progetto", "hobby", "idea", "creativo", "creativa", "tempo libero",
+        "app", "gioco", "musica", "disegno", "fotografia", "piano",
+        "realizzare", "costruire"
+      ],
+      keywords: [
+        "idea principale",
+        "obiettivo del progetto",
+        "attività creative",
+        "strumenti necessari",
+        "fasi di realizzazione",
+        "risultato atteso",
+        "miglioramenti futuri"
+      ]
+    },
+    {
+      id: "generic",
+      label: "Documento generico",
+      words: [],
+      keywords: [
+        "tema principale",
+        "concetti chiave",
+        "punti importanti",
+        "struttura del documento",
+        "informazioni utili",
+        "azioni richieste",
+        "conclusioni"
+      ]
+    }
+  ];
+
+  function detectDocumentProfile(text) {
+    const normalized = normalizeForCompare(text);
+    const scores = DOCUMENT_PROFILES.map(function (profile) {
+      let score = 0;
+
+      (profile.words || []).forEach(function (word) {
+        const cleanWord = normalizeForCompare(word);
+        if (!cleanWord) return;
+
+        const escaped = cleanWord.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+        const re = new RegExp("\\b" + escaped + "\\b", "g");
+        const matches = normalized.match(re);
+
+        if (matches) {
+          score += matches.length;
+        }
+      });
+
+      return {
+        id: profile.id,
+        label: profile.label,
+        score: score,
+        keywords: profile.keywords
+      };
+    }).sort(function (a, b) {
+      return b.score - a.score;
+    });
+
+    const best = scores[0];
+
+    if (!best || best.score <= 0) {
+      return DOCUMENT_PROFILES.find(function (profile) {
+        return profile.id === "generic";
+      });
+    }
+
+    return best;
+  }
+
+  function buildProfileAwareKeywords(profileInfo, topicStats, allKeywords) {
+    const output = [];
+    const used = new Set();
+
+    function addKeyword(value) {
+      const label = String(value || "").trim();
+      const clean = normalizeForCompare(label);
+
+      if (!label || !clean) return;
+      if (used.has(clean)) return;
+
+      if (!label.includes(" ") && typeof isWeakKeyword === "function" && isWeakKeyword(clean)) {
+        return;
+      }
+
+      used.add(clean);
+      output.push(label);
+    }
+
+    const profile = profileInfo || DOCUMENT_PROFILES.find(function (item) {
+      return item.id === "generic";
+    });
+
+    (profile.keywords || []).forEach(addKeyword);
+
+    if (profile.id === "business" || profile.id === "cybersecurity") {
+      Array.from(topicStats.values())
+        .sort(function (a, b) {
+          return b.score - a.score;
+        })
+        .forEach(function (topic) {
+          addKeyword(topic.label);
+        });
+    }
+
+    Array.from(allKeywords.entries())
+      .sort(function (a, b) {
+        return b[1] - a[1];
+      })
+      .forEach(function (entry) {
+        addKeyword(entry[0]);
+      });
+
+    const filtered = output.filter(function (label, index, array) {
+      const clean = normalizeForCompare(label);
+
+      if (!clean) return false;
+
+      const isSingleWord = !String(label).includes(" ");
+
+      if (isSingleWord && typeof isWeakKeyword === "function" && isWeakKeyword(clean)) {
+        return false;
+      }
+
+      if (isSingleWord) {
+        const containedInBetterKeyword = array.some(function (other, otherIndex) {
+          if (otherIndex === index) return false;
+
+          const otherClean = normalizeForCompare(other);
+          const otherIsLonger = otherClean.length > clean.length;
+          const otherHasMoreWords = String(other).trim().includes(" ");
+
+          return otherIsLonger && otherHasMoreWords && otherClean.includes(clean);
+        });
+
+        if (containedInBetterKeyword) return false;
+      }
+
+      return true;
+    });
+
+    return filtered.slice(0, 14);
+  }
+
+
   function normalizeText(value) {
     return String(value || "")
       .replace(/\r/g, "\n")
@@ -111,6 +390,27 @@
       .replace(/[^\w\s]/g, " ")
       .replace(/\s+/g, " ")
       .trim();
+  }
+
+
+  const WEAK_KEYWORDS = new Set([
+    "quali", "quale", "aprire", "entro", "stati", "state", "passaggi", "passaggio",
+    "riferimento", "riferimenti", "controllo", "controlli", "operativo", "operative",
+    "responsabile", "responsabili", "team", "registro", "registri", "informazioni",
+    "materiale", "parti", "tema", "temi", "attivita", "attività", "azione",
+    "scelta", "evidenze", "sistemi", "coinvolti", "aperti",
+    "evita", "informali", "rende"
+  ]);
+
+  function isWeakKeyword(word) {
+    const clean = normalizeForCompare(word);
+
+    if (!clean || clean.length < 5) return true;
+    if (/^\d+$/.test(clean)) return true;
+    if (STOPWORDS.has(clean)) return true;
+    if (WEAK_KEYWORDS.has(clean)) return true;
+
+    return false;
   }
 
   function splitSentences(text) {
@@ -205,7 +505,7 @@
     const freq = new Map();
 
     getWords(text).forEach(function (word) {
-      if (STOPWORDS.has(word)) return;
+      if (isWeakKeyword(word)) return;
       freq.set(word, (freq.get(word) || 0) + 1);
     });
 
@@ -401,6 +701,96 @@
     return dedupeSentences(sentences, 14);
   }
 
+
+  function buildFinalKeywords(topicStats, allKeywords) {
+    const output = [];
+    const used = new Set();
+
+    function addKeyword(value) {
+      const label = String(value || "").trim();
+      const clean = normalizeForCompare(label);
+
+      if (!label || !clean) return;
+      if (used.has(clean)) return;
+      if (isWeakKeyword(clean) && !label.includes(" ")) return;
+
+      used.add(clean);
+      output.push(label);
+    }
+
+    Array.from(topicStats.values())
+      .sort(function (a, b) {
+        return b.score - a.score;
+      })
+      .forEach(function (topic) {
+        addKeyword(topic.label);
+      });
+
+    const priority = [
+      "sicurezza informatica",
+      "accessi e password",
+      "phishing",
+      "backup e recupero",
+      "privacy e dati",
+      "incidenti e risposta",
+      "audit e controlli",
+      "continuità operativa",
+      "onboarding e formazione",
+      "fornitori e terze parti",
+      "documentazione tecnica",
+      "workflow e responsabilità"
+    ];
+
+    priority.forEach(function (label) {
+      const cleanLabel = normalizeForCompare(label);
+
+      const found = Array.from(allKeywords.keys()).some(function (keyword) {
+        return cleanLabel.includes(normalizeForCompare(keyword)) || normalizeForCompare(keyword).includes(cleanLabel.split(" ")[0]);
+      });
+
+      if (found) addKeyword(label);
+    });
+
+    Array.from(allKeywords.entries())
+      .sort(function (a, b) {
+        return b[1] - a[1];
+      })
+      .forEach(function (entry) {
+        const keyword = entry[0];
+        if (!isWeakKeyword(keyword)) addKeyword(keyword);
+      });
+
+    const filtered = output.filter(function (label, index, array) {
+      const clean = normalizeForCompare(label);
+
+      if (!clean) return false;
+
+      const isSingleWord = !String(label).includes(" ");
+
+      if (isSingleWord && isWeakKeyword(clean)) {
+        return false;
+      }
+
+      if (isSingleWord) {
+        const containedInBetterKeyword = array.some(function (other, otherIndex) {
+          if (otherIndex === index) return false;
+
+          const otherClean = normalizeForCompare(other);
+          const otherIsLonger = otherClean.length > clean.length;
+          const otherHasMoreWords = String(other).trim().includes(" ");
+
+          return otherIsLonger && otherHasMoreWords && otherClean.includes(clean);
+        });
+
+        if (containedInBetterKeyword) return false;
+      }
+
+      return true;
+    });
+
+    return filtered.slice(0, 14);
+  }
+
   function mergeProgressiveSummaries(partials, options) {
     const opts = Object.assign({
       finalSentences: 12,
@@ -444,19 +834,15 @@
     const finalSentences = dedupeSentences(synthesis.concat(extracted), opts.finalSentences)
       .slice(0, opts.finalSentences);
 
-    const keywords = Array.from(allKeywords.entries())
-      .sort(function (a, b) {
-        return b[1] - a[1];
-      })
-      .slice(0, 16)
-      .map(function (entry) {
-        return entry[0];
-      });
+    const profileInfo = detectDocumentProfile(combinedText + "\n" + Array.from(allKeywords.keys()).join(" "));
+    const keywords = buildProfileAwareKeywords(profileInfo, topicStats, allKeywords);
 
     return {
       title: "Riassunto progressivo finale",
       summary: finalSentences.join(" "),
       keywords: keywords,
+      profile: profileInfo.id,
+      profileLabel: profileInfo.label,
       partialCount: partials.length,
       totalSummaryChars: partials.reduce(function (sum, part) {
         return sum + part.summaryChars;
@@ -518,6 +904,9 @@
     splitSentences: splitSentences,
     extractKeywords: extractKeywords,
     detectTopics: detectTopics,
+    detectDocumentProfile: detectDocumentProfile,
+    buildProfileAwareKeywords: buildProfileAwareKeywords,
+    buildFinalKeywords: buildFinalKeywords,
     pickBestSentences: pickBestSentences,
     dedupeSentences: dedupeSentences,
     areSentencesTooSimilar: areSentencesTooSimilar,

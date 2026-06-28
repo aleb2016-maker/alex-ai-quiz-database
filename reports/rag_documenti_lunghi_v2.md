@@ -6,6 +6,7 @@
 - Usa il manager V1 per pagine, chunk e batch.
 - Genera riassunti parziali batch per batch.
 - Genera un riassunto finale progressivo.
+- Riconosce il profilo del documento e usa keyword adatte al tema.
 - Non collega la demo ufficiale.
 - Non tocca PDF export.
 - Non tocca TXT/HTML/JSON export.
@@ -18,7 +19,8 @@
 - Batch: 30
 - Riassunti parziali: 30
 - Caratteri riassunto finale: 2264
-- Keyword finali: controllo, quali, operativo, evidenze, fornitori, aprire, responsabile, team
+- Profilo riconosciuto: Documento aziendale (business)
+- Keyword finali: procedure aziendali, responsabilità operative, workflow e responsabilità, audit e controlli, documentazione tecnica, fornitori e terze parti, continuità operativa, onboarding e formazione, sicurezza informatica, backup e recupero, incidenti e risposta, privacy e dati
 
 ## Prossimo passo
 
