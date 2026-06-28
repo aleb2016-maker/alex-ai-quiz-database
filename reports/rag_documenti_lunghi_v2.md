@@ -7,6 +7,7 @@
 - Genera riassunti parziali batch per batch.
 - Genera un riassunto finale progressivo.
 - Riconosce il profilo del documento e usa keyword adatte al tema.
+- Le keyword finali devono essere micro-concetti di 2 o 3 parole, non parole singole isolate.
 - Non collega la demo ufficiale.
 - Non tocca PDF export.
 - Non tocca TXT/HTML/JSON export.

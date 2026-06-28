@@ -299,18 +299,49 @@
     return best;
   }
 
+
+  const KEYWORD_CONNECTORS = new Set([
+    "e", "o", "di", "del", "della", "dei", "degli", "delle",
+    "da", "dal", "dallo", "dalla", "dai", "dagli", "dalle",
+    "a", "al", "allo", "alla", "ai", "agli", "alle",
+    "con", "per", "tra", "fra", "su", "sul", "sulla"
+  ]);
+
+  function getKeywordConceptWords(label) {
+    return getWords(label).filter(function (word) {
+      return word && !KEYWORD_CONNECTORS.has(word);
+    });
+  }
+
+  function isConceptKeyword(label) {
+    const words = getKeywordConceptWords(label);
+
+    if (words.length < 2) return false;
+    if (words.length > 3) return false;
+
+    return true;
+  }
+
+  function normalizeConceptKeywordLabel(label) {
+    return String(label || "")
+      .replace(/\s+/g, " ")
+      .trim();
+  }
+
   function buildProfileAwareKeywords(profileInfo, topicStats, allKeywords) {
     const output = [];
     const used = new Set();
 
     function addKeyword(value) {
-      const label = String(value || "").trim();
+      const label = normalizeConceptKeywordLabel(value);
       const clean = normalizeForCompare(label);
 
       if (!label || !clean) return;
       if (used.has(clean)) return;
 
-      if (!label.includes(" ") && typeof isWeakKeyword === "function" && isWeakKeyword(clean)) {
+      // Regola universale:
+      // una keyword finale deve essere un micro-concetto di 2 o 3 parole significative.
+      if (!isConceptKeyword(label)) {
         return;
       }
 
@@ -322,7 +353,9 @@
       return item.id === "generic";
     });
 
-    (profile.keywords || []).forEach(addKeyword);
+    (profile.keywords || []).forEach(function (keyword) {
+      addKeyword(keyword);
+    });
 
     if (profile.id === "business" || profile.id === "cybersecurity") {
       Array.from(topicStats.values())
@@ -334,13 +367,8 @@
         });
     }
 
-    Array.from(allKeywords.entries())
-      .sort(function (a, b) {
-        return b[1] - a[1];
-      })
-      .forEach(function (entry) {
-        addKeyword(entry[0]);
-      });
+    // Le keyword grezze sono parole singole: non entrano nella lista finale.
+
 
     const filtered = output.filter(function (label, index, array) {
       const clean = normalizeForCompare(label);
@@ -370,7 +398,9 @@
       return true;
     });
 
-    return filtered.slice(0, 14);
+    const conceptKeywords = output.filter(isConceptKeyword);
+
+    return conceptKeywords.slice(0, 14);
   }
 
 
@@ -394,12 +424,13 @@
 
 
   const WEAK_KEYWORDS = new Set([
-    "quali", "quale", "aprire", "entro", "stati", "state", "passaggi", "passaggio",
-    "riferimento", "riferimenti", "controllo", "controlli", "operativo", "operative",
-    "responsabile", "responsabili", "team", "registro", "registri", "informazioni",
-    "materiale", "parti", "tema", "temi", "attivita", "attività", "azione",
-    "scelta", "evidenze", "sistemi", "coinvolti", "aperti",
-    "evita", "informali", "rende"
+    "quali", "quale", "aprire", "entro", "stati", "state",
+    "passaggi", "passaggio", "riferimento", "riferimenti", "controllo", "controlli",
+    "operativo", "operative", "responsabile", "responsabili", "team", "registro",
+    "registri", "informazioni", "materiale", "parti", "tema", "temi",
+    "attivita", "attività", "azione", "scelta", "evidenze", "sistemi",
+    "coinvolti", "aperti", "evita", "informali", "rende", "risultati",
+    "reparti", "produce", "confrontabili", "sufficienti"
   ]);
 
   function isWeakKeyword(word) {
@@ -788,7 +819,9 @@
       return true;
     });
 
-    return filtered.slice(0, 14);
+    const conceptKeywords = output.filter(isConceptKeyword);
+
+    return conceptKeywords.slice(0, 14);
   }
 
   function mergeProgressiveSummaries(partials, options) {
@@ -906,6 +939,8 @@
     detectTopics: detectTopics,
     detectDocumentProfile: detectDocumentProfile,
     buildProfileAwareKeywords: buildProfileAwareKeywords,
+    getKeywordConceptWords: getKeywordConceptWords,
+    isConceptKeyword: isConceptKeyword,
     buildFinalKeywords: buildFinalKeywords,
     pickBestSentences: pickBestSentences,
     dedupeSentences: dedupeSentences,

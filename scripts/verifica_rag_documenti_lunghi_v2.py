@@ -30,6 +30,8 @@ required_js = [
     "DOCUMENT_PROFILES",
     "detectDocumentProfile",
     "buildProfileAwareKeywords",
+    "isConceptKeyword",
+    "getKeywordConceptWords",
     "dedupeSentences",
     "areSentencesTooSimilar"
 ]
@@ -191,8 +193,9 @@ const summarizer = require('./runtime/web/rag-large-document-progressive-summary
 
   const weakKeywords = new Set([
     'quali', 'aprire', 'entro', 'stati', 'passaggi', 'riferimento',
-    'controllo', 'operativo', 'responsabile', 'team', 'registro',
-    'evita', 'informali', 'rende', 'fornitori'
+    'controllo', 'operativo', 'responsabile', 'team', 'registro', 'evita',
+    'informali', 'rende', 'fornitori', 'risultati', 'reparti', 'produce',
+    'confrontabili', 'sufficienti'
   ]);
 
   const badKeywords = progressive.finalSummary.keywords.filter(keyword =>
@@ -201,6 +204,23 @@ const summarizer = require('./runtime/web/rag-large-document-progressive-summary
 
   if (badKeywords.length) {
     throw new Error('keyword finali troppo generiche: ' + badKeywords.join(', '));
+  }
+
+
+  const invalidConceptKeywords = progressive.finalSummary.keywords.filter(keyword => {
+    if (typeof summarizer.isConceptKeyword !== 'function') {
+      throw new Error('funzione isConceptKeyword mancante');
+    }
+
+    return !summarizer.isConceptKeyword(keyword);
+  });
+
+  if (invalidConceptKeywords.length) {
+    throw new Error('keyword non sono micro-concetti validi: ' + invalidConceptKeywords.join(', '));
+  }
+
+  if (progressive.finalSummary.keywords.length < 8) {
+    throw new Error('keyword concettuali troppo poche: ' + progressive.finalSummary.keywords.length);
   }
 
   const joinedKeywords = progressive.finalSummary.keywords.join(' ').toLowerCase();
@@ -271,6 +291,7 @@ report.write_text(
         "- Genera riassunti parziali batch per batch.",
         "- Genera un riassunto finale progressivo.",
         "- Riconosce il profilo del documento e usa keyword adatte al tema.",
+        "- Le keyword finali devono essere micro-concetti di 2 o 3 parole, non parole singole isolate.",
         "- Non collega la demo ufficiale.",
         "- Non tocca PDF export.",
         "- Non tocca TXT/HTML/JSON export.",
