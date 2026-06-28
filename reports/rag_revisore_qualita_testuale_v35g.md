@@ -1,6 +1,6 @@
 # Report RAG Revisore Qualità Testuale V3.5G
 
-Verifica del controllo finale su grammatica, accenti, apostrofi, spiegazioni, categorie e sottocategorie.
+Verifica del controllo finale su grammatica, accenti, apostrofi, frasi complete, duplicati, categorie e sottocategorie.
 
 ## Risultati
 - OK: precheck selezionatore V3.5F

@@ -90,11 +90,20 @@ def main() -> int:
         "grammatica_italiana",
         "accenti",
         "apostrofi",
+        "punteggiatura",
+        "frasi_complete",
+        "assenza_frasi_spezzate",
+        "assenza_frasi_non_terminate",
+        "assenza_frasi_riempitive",
+        "assenza_testi_generici",
+        "assenza_duplicati_visibili",
+        "assenza_quasi_duplicati",
+        "card_concetti_distinti",
         "domande_naturali",
         "spiegazioni_test",
+        "fonti_visibili",
         "categorie",
         "sottocategorie",
-        "qualita_testuale_v35g",
     ]
 
     for marker in required_markers:
@@ -106,7 +115,7 @@ def main() -> int:
     lines = [
         "# Report RAG Revisore Qualità Testuale V3.5G",
         "",
-        "Verifica del controllo finale su grammatica, accenti, apostrofi, spiegazioni, categorie e sottocategorie.",
+        "Verifica del controllo finale su grammatica, accenti, apostrofi, frasi complete, duplicati, categorie e sottocategorie.",
         "",
         "## Risultati",
     ]
