@@ -319,7 +319,7 @@
 </head>
 <body>
   <header>
-    <div class="badge">🧠 RAG V3.5H · Test completo selezionatore + output revisionati</div>
+    <div class="badge">🧠 RAG V3.5H · Test completo selezionatore + output V3.5I</div>
     <h1>Test selezionatore motori e output generati</h1>
     <p class="subtitle">
       Questa pagina carica gli output già revisionati dal controllo qualità V3.5G.
@@ -354,31 +354,31 @@
         id: "riassunto",
         label: "Solo riassunto",
         sub: "didattico",
-        output: "../dist/generated/rag_output_revisionato_qualita_v35g/solo_riassunto/sicurezza_reale/output_revisionato_qualita_v35g.json"
+        output: "../dist/generated/rag_output_naturalezza_antikeyword_v35i/solo_riassunto/sicurezza_reale/output_naturalezza_antikeyword_v35i.json"
       },
       {
         id: "card",
         label: "Solo card",
         sub: "card distinte",
-        output: "../dist/generated/rag_output_revisionato_qualita_v35g/solo_card/sicurezza_reale/output_revisionato_qualita_v35g.json"
+        output: "../dist/generated/rag_output_naturalezza_antikeyword_v35i/solo_card/sicurezza_reale/output_naturalezza_antikeyword_v35i.json"
       },
       {
         id: "studio",
         label: "Domande studio",
         sub: "ripasso",
-        output: "../dist/generated/rag_output_revisionato_qualita_v35g/solo_domande_studio/sicurezza_reale/output_revisionato_qualita_v35g.json"
+        output: "../dist/generated/rag_output_naturalezza_antikeyword_v35i/solo_domande_studio/sicurezza_reale/output_naturalezza_antikeyword_v35i.json"
       },
       {
         id: "test",
         label: "Test interattivo",
         sub: "opzioni visibili",
-        output: "../dist/generated/rag_output_revisionato_qualita_v35g/solo_test/sicurezza_reale/output_revisionato_qualita_v35g.json"
+        output: "../dist/generated/rag_output_naturalezza_antikeyword_v35i/solo_test/sicurezza_reale/output_naturalezza_antikeyword_v35i.json"
       },
       {
         id: "completo",
         label: "Completo",
         sub: "PDF/app/web",
-        output: "../dist/generated/rag_output_revisionato_qualita_v35g/output_completo/sicurezza_reale/output_revisionato_qualita_v35g.json"
+        output: "../dist/generated/rag_output_naturalezza_antikeyword_v35i/output_completo/sicurezza_reale/output_naturalezza_antikeyword_v35i.json"
       }
     ];
 
@@ -500,7 +500,7 @@
         ` : `
           <div class="box">
             <h3>Nessun errore qualità</h3>
-            <p>Il materiale caricato è revisionato V3.5G.</p>
+            <p>Il materiale caricato è revisionato V3.5G + naturalezza V3.5I.</p>
           </div>
         `}
       `;
@@ -682,7 +682,7 @@
         renderOutput(data);
 
         statusBox.className = "status ok";
-        statusBox.textContent = `✅ Caricato: ${task.label} · output revisionato V3.5G`;
+        statusBox.textContent = `✅ Caricato: ${task.label} · output naturalezza V3.5I`;
       } catch (error) {
         statusBox.className = "status err";
         statusBox.textContent = `Errore caricamento: ${error.message}`;

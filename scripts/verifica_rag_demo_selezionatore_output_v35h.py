@@ -15,11 +15,11 @@ PAGE = ROOT / "demo-rag/test-selezionatore-output-v35h.html"
 REPORT = ROOT / "reports/rag_demo_selezionatore_output_v35h.md"
 
 OUTPUTS = [
-    ROOT / "dist/generated/rag_output_revisionato_qualita_v35g/solo_riassunto/sicurezza_reale/output_revisionato_qualita_v35g.json",
-    ROOT / "dist/generated/rag_output_revisionato_qualita_v35g/solo_card/sicurezza_reale/output_revisionato_qualita_v35g.json",
-    ROOT / "dist/generated/rag_output_revisionato_qualita_v35g/solo_domande_studio/sicurezza_reale/output_revisionato_qualita_v35g.json",
-    ROOT / "dist/generated/rag_output_revisionato_qualita_v35g/solo_test/sicurezza_reale/output_revisionato_qualita_v35g.json",
-    ROOT / "dist/generated/rag_output_revisionato_qualita_v35g/output_completo/sicurezza_reale/output_revisionato_qualita_v35g.json",
+    ROOT / "dist/generated/rag_output_naturalezza_antikeyword_v35i/solo_riassunto/sicurezza_reale/output_naturalezza_antikeyword_v35i.json",
+    ROOT / "dist/generated/rag_output_naturalezza_antikeyword_v35i/solo_card/sicurezza_reale/output_naturalezza_antikeyword_v35i.json",
+    ROOT / "dist/generated/rag_output_naturalezza_antikeyword_v35i/solo_domande_studio/sicurezza_reale/output_naturalezza_antikeyword_v35i.json",
+    ROOT / "dist/generated/rag_output_naturalezza_antikeyword_v35i/solo_test/sicurezza_reale/output_naturalezza_antikeyword_v35i.json",
+    ROOT / "dist/generated/rag_output_naturalezza_antikeyword_v35i/output_completo/sicurezza_reale/output_naturalezza_antikeyword_v35i.json",
 ]
 
 
@@ -32,13 +32,13 @@ def main() -> int:
     risultati = []
     errori = []
 
-    code, log = run(["python3", "scripts/verifica_rag_revisore_qualita_testuale_v35g.py"])
+    code, log = run(["python3", "scripts/verifica_rag_revisore_naturalezza_antikeyword_v35i.py"])
 
     if code != 0:
-        errori.append("precheck revisore qualità V3.5G fallito")
+        errori.append("precheck naturalezza anti-keyword V3.5I fallito")
         errori.append(log)
     else:
-        risultati.append("OK: precheck revisore qualità V3.5G")
+        risultati.append("OK: precheck naturalezza anti-keyword V3.5I")
 
     if not PAGE.exists():
         errori.append("pagina V3.5H mancante")
@@ -55,8 +55,8 @@ def main() -> int:
             "Domande studio",
             "Test interattivo",
             "Completo",
-            "rag_output_revisionato_qualita_v35g",
-            "qualita_testuale_v35g",
+            "rag_output_naturalezza_antikeyword_v35i",
+            "naturalezza_antikeyword_v35i",
             "piano_motori_v35f",
             "opzioni_visibili",
             "risposta_corretta_visibile",
@@ -85,17 +85,17 @@ def main() -> int:
 
     for output in OUTPUTS:
         if not output.exists():
-            errori.append(f"output revisionato mancante: {output.relative_to(ROOT)}")
+            errori.append(f"output naturalezza mancante: {output.relative_to(ROOT)}")
             continue
 
         data = json.loads(output.read_text(encoding="utf-8"))
-        q = data.get("controlli_qualita", {}).get("qualita_testuale_v35g", {})
+        q = data.get("controlli_qualita", {}).get("naturalezza_antikeyword_v35i", {})
 
         if not q.get("ok"):
-            errori.append(f"output non revisionato OK: {output.relative_to(ROOT)}")
+            errori.append(f"output naturalezza non OK: {output.relative_to(ROOT)}")
         else:
             risultati.append(
-                f"OK: output revisionato {output.relative_to(ROOT)} "
+                f"OK: output naturalezza {output.relative_to(ROOT)} "
                 f"({q.get('testi_controllati')} testi)"
             )
 
@@ -107,7 +107,7 @@ def main() -> int:
     lines = [
         "# Report Demo Selezionatore Output RAG V3.5H",
         "",
-        "Verifica della pagina test completa per selezionatore motori e output revisionati V3.5G.",
+        "Verifica della pagina test completa per selezionatore motori e output V3.5I con naturalezza anti-keyword.",
         "",
         "## Risultati",
     ]
