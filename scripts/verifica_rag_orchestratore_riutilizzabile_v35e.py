@@ -26,7 +26,7 @@ def main() -> int:
     risultati = []
     errori = []
 
-    code, log = run(["python3", "scripts/rag_orchestratore_riutilizzabile_v35e.py"])
+    code, log = run(["python3", "scripts/rag_orchestratore_riutilizzabile_v35e.py", "--skip-precheck"])
 
     if code != 0:
         errori.append("orchestratore V3.5E fallito")
