@@ -1,0 +1,729 @@
+{
+  "versione": "rag_output_selezionato_v35f",
+  "output_richiesti": [
+    "riassunto",
+    "card",
+    "test",
+    "domande_studio",
+    "ui_layout"
+  ],
+  "controlli_qualita": {
+    "ok": true,
+    "errori": [],
+    "avvisi": [],
+    "riassunto": true,
+    "card": 5,
+    "test": 5,
+    "domande_studio": 5,
+    "motore_didattico_v35c": {
+      "ok": true,
+      "errori": [],
+      "avvisi": [],
+      "testi_visibili": 93
+    },
+    "motore_test_v35d": {
+      "ok": true,
+      "errori": [],
+      "avvisi": [],
+      "domande_test": 5,
+      "opzioni_visibili": 20
+    },
+    "orchestratore_v35e": {
+      "ok": true,
+      "pipeline_completa": true,
+      "output_finale_presente": true
+    },
+    "qualita_testuale_v35g": {
+      "ok": true,
+      "errori": [],
+      "avvisi": [],
+      "testi_controllati": 93,
+      "categorie": 5
+    },
+    "naturalezza_antikeyword_v35i": {
+      "ok": true,
+      "errori": [],
+      "testi_controllati": 48,
+      "nome_controllo": "Controllo di naturalezza linguistica anti-keyword"
+    },
+    "accordo_pronomi_v35j": {
+      "ok": true,
+      "errori": [],
+      "testi_controllati": 48,
+      "nome_controllo": "Controllo accordo grammaticale e pronomi",
+      "riallineato_da": "cleaner_finale_universale_v35k"
+    },
+    "cleaner_finale_universale_v35k": {
+      "ok": true,
+      "errori": [],
+      "testi_controllati": 93,
+      "campi_puliti": {
+        "riassunto.titolo": 1,
+        "riassunto.testo_breve": 1,
+        "riassunto.conclusione": 1,
+        "riassunto.punti_chiave[].titolo": 5,
+        "riassunto.punti_chiave[].testo": 5,
+        "card[].titolo": 5,
+        "card[].testo": 5,
+        "card[].messaggio_chiave": 5,
+        "domande_studio[].domanda": 5,
+        "domande_studio[].risposta_guida": 5,
+        "test[].domanda_visibile": 5,
+        "test[].spiegazione": 5,
+        "test[].opzioni_visibili[]": 20,
+        "test[].risposta_corretta_visibile": 5,
+        "test[].mappa_opzioni_v35d[].opzione_visibile": 20
+      },
+      "nome_controllo": "Controllo finale universale testi visibili"
+    }
+  },
+  "motori_riutilizzabili": {
+    "didattico": "rag_motore_didattico_riutilizzabile_v35c",
+    "copre": [
+      "naturalezza_domande_studio",
+      "stile_card",
+      "fonti_visibili",
+      "rimozione_frasi_riempitive",
+      "tono_didattico_finale",
+      "layout_grafico"
+    ],
+    "test": "rag_motore_test_riutilizzabile_v35d",
+    "orchestratore": "rag_orchestratore_riutilizzabile_v35e",
+    "revisore_qualita_testuale": "rag_revisore_qualita_testuale_v35g",
+    "revisore_naturalezza_antikeyword": "rag_revisore_naturalezza_antikeyword_v35i",
+    "revisore_accordo_pronomi": "rag_revisore_accordo_pronomi_v35j"
+  },
+  "riassunto": {
+    "titolo": "Riassunto - Sicurezza informatica aziendale.",
+    "tipo_documento": "documento_tecnico_formativo",
+    "testo_breve": "Il documento presenta 5 punti principali e li organizza in contenuti utili per studio, ripasso e verifica. La sicurezza informatica è l'insieme di pratiche, strumenti e comportamenti usati per proteggere dati, dispositivi, account e sistemi digitali.",
+    "punti_chiave": [
+      {
+        "titolo": "Sicurezza informatica.",
+        "testo": "Nel riassunto, la sicurezza informatica viene collegata al contenuto centrale del documento: la sicurezza informatica è l'insieme di pratiche, strumenti e comportamenti usati per proteggere dati, dispositivi, account e sistemi digitali.",
+        "fonte_visibile": "Fonte: sezione “Sicurezza informatica”.",
+        "categoria_v35g": {
+          "categoria": "Comprensione generale",
+          "sottocategoria": "Sicurezza informatica"
+        }
+      },
+      {
+        "titolo": "Rischio e conseguenza.",
+        "testo": "Il punto dedicato a «Rischio e conseguenza» aiuta a capire il quadro generale: usare la stessa password su più siti è rischioso: se un servizio viene violato, un attaccante può provare la stessa password anche su altri account.",
+        "fonte_visibile": "Fonte: sezione “Rischio e conseguenza”.",
+        "categoria_v35g": {
+          "categoria": "Comprensione generale",
+          "sottocategoria": "Rischio e conseguenza"
+        }
+      },
+      {
+        "titolo": "Regola operativa.",
+        "testo": "Per studiare il documento, «Regola operativa» va letto come passaggio autonomo: una buona regola aziendale è attivare la 2FA almeno su email, strumenti cloud, account amministrativi, sistemi di pagamento e piattaforme che contengono.",
+        "fonte_visibile": "Fonte: sezione “Regola operativa”.",
+        "categoria_v35g": {
+          "categoria": "Comprensione generale",
+          "sottocategoria": "Regola operativa"
+        }
+      },
+      {
+        "titolo": "Azione consigliata.",
+        "testo": "Il riassunto usa «Azione consigliata» per fissare un'informazione importante: bisogna mantenere aggiornati anche browser, app, plugin, software aziendali, strumenti di sicurezza e dispositivi di rete.",
+        "fonte_visibile": "Fonte: sezione “Azione consigliata”.",
+        "categoria_v35g": {
+          "categoria": "Comprensione generale",
+          "sottocategoria": "Azione consigliata"
+        }
+      },
+      {
+        "titolo": "Obiettivi principali.",
+        "testo": "Il passaggio su «Obiettivi principali» chiarisce un aspetto specifico del documento: la sicurezza informatica ha tre obiettivi principali: proteggere la riservatezza dei dati; garantire l'integrità delle informazioni.",
+        "fonte_visibile": "Fonte: sezione “Obiettivi principali”.",
+        "categoria_v35g": {
+          "categoria": "Comprensione generale",
+          "sottocategoria": "Obiettivi principali"
+        }
+      }
+    ],
+    "conclusione": "Il materiale generato mette in evidenza i concetti centrali, separando le etichette didattiche dal contenuto completo.",
+    "categoria_v35g": {
+      "categoria": "Comprensione generale",
+      "sottocategoria": "sintesi del documento"
+    }
+  },
+  "card": [
+    {
+      "id": "card-clean-v34e-1",
+      "titolo": "Sicurezza informatica.",
+      "testo": "La scheda dedicata a «Sicurezza informatica» spiega questo tema in modo concreto: la sicurezza informatica è l'insieme di pratiche, strumenti e comportamenti usati per proteggere dati, dispositivi, account e sistemi digitali.",
+      "messaggio_chiave": "Da ricordare: spiega la sicurezza informatica con parole tue e collegala al documento.",
+      "fonte_visibile": "Fonte: sezione “Sicurezza informatica”.",
+      "stile_card": {
+        "layout": "card-studio-bilanciata",
+        "icona": "🛡️",
+        "densita": "media",
+        "titolo_breve": "Sicurezza informatica",
+        "mostra_fonte": true,
+        "mostra_punto_chiave": true
+      },
+      "categoria_v35g": {
+        "categoria": "Memorizzazione visuale",
+        "sottocategoria": "Sicurezza informatica"
+      }
+    },
+    {
+      "id": "card-clean-v34e-2",
+      "titolo": "Rischio e conseguenza.",
+      "testo": "Questa card chiarisce il rischio e la sua conseguenza usando un riferimento pratico del documento: usare la stessa password su più siti è rischioso: se un servizio viene violato, un attaccante può provare la stessa password anche su altri account.",
+      "messaggio_chiave": "Punto chiave: riconosci il ruolo del rischio e la sua conseguenza nel materiale di studio.",
+      "fonte_visibile": "Fonte: sezione “Rischio e conseguenza”.",
+      "stile_card": {
+        "layout": "card-studio-bilanciata",
+        "icona": "⚠️",
+        "densita": "media",
+        "titolo_breve": "Rischio e conseguenza",
+        "mostra_fonte": true,
+        "mostra_punto_chiave": true
+      },
+      "categoria_v35g": {
+        "categoria": "Memorizzazione visuale",
+        "sottocategoria": "Rischio e conseguenza"
+      }
+    },
+    {
+      "id": "card-clean-v34e-3",
+      "titolo": "Regola operativa.",
+      "testo": "Il contenuto della card distingue questa regola dagli altri punti: una buona regola aziendale è attivare la 2FA almeno su email, strumenti cloud, account amministrativi, sistemi di pagamento e piattaforme che contengono dati sensibili.",
+      "messaggio_chiave": "Focus studio: usa questo punto operativo per ricostruire il passaggio principale.",
+      "fonte_visibile": "Fonte: sezione “Regola operativa”.",
+      "stile_card": {
+        "layout": "card-studio-bilanciata",
+        "icona": "✅",
+        "densita": "media",
+        "titolo_breve": "Regola operativa",
+        "mostra_fonte": true,
+        "mostra_punto_chiave": true
+      },
+      "categoria_v35g": {
+        "categoria": "Memorizzazione visuale",
+        "sottocategoria": "Regola operativa"
+      }
+    },
+    {
+      "id": "card-clean-v34e-4",
+      "titolo": "Azione consigliata.",
+      "testo": "Per ripassare «Azione consigliata», parti da questa idea: bisogna mantenere aggiornati anche browser, app, plugin, software aziendali, strumenti di sicurezza e dispositivi di rete.",
+      "messaggio_chiave": "Memoria rapida: chiediti quale problema o vantaggio chiarisce questa azione.",
+      "fonte_visibile": "Fonte: sezione “Azione consigliata”.",
+      "stile_card": {
+        "layout": "card-studio-bilanciata",
+        "icona": "🔧",
+        "densita": "media",
+        "titolo_breve": "Azione consigliata",
+        "mostra_fonte": true,
+        "mostra_punto_chiave": true
+      },
+      "categoria_v35g": {
+        "categoria": "Memorizzazione visuale",
+        "sottocategoria": "Azione consigliata"
+      }
+    },
+    {
+      "id": "card-clean-v34e-5",
+      "titolo": "Obiettivi principali.",
+      "testo": "La card su «Obiettivi principali» serve a fissare un concetto specifico: la sicurezza informatica ha tre obiettivi principali: proteggere la riservatezza dei dati; garantire l'integrità delle informazioni.",
+      "messaggio_chiave": "Controllo studio: verifica di saper spiegare gli obiettivi principali senza copiare il testo.",
+      "fonte_visibile": "Fonte: sezione “Obiettivi principali”.",
+      "stile_card": {
+        "layout": "card-studio-bilanciata",
+        "icona": "🎯",
+        "densita": "media",
+        "titolo_breve": "Obiettivi principali",
+        "mostra_fonte": true,
+        "mostra_punto_chiave": true
+      },
+      "categoria_v35g": {
+        "categoria": "Memorizzazione visuale",
+        "sottocategoria": "Obiettivi principali"
+      }
+    }
+  ],
+  "test": [
+    {
+      "id": "test-clean-v34e-1",
+      "domanda": "Quale affermazione descrive meglio «Sicurezza informatica»?",
+      "opzioni": [
+        "Concetto: Obiettivi principali. La sicurezza informatica ha tre obiettivi principali: proteggere la riservatezza dei dati.",
+        "Concetto: Sicurezza informatica. La sicurezza informatica è l'insieme di pratiche, strumenti e comportamenti usati per proteggere dati, dispositivi, account e sistemi digitali.",
+        "Concetto: Azione consigliata. Bisogna mantenere aggiornati anche browser, app, plugin, software aziendali, strumenti di sicurezza e dispositivi di rete.",
+        "Concetto: Regola operativa. Una buona regola aziendale è attivare la 2FA almeno su email, strumenti cloud, account amministrativi, sistemi di pagamento e piattaforme che contengono dati sensibili."
+      ],
+      "risposta_corretta": "Concetto: Sicurezza informatica. La sicurezza informatica è l'insieme di pratiche, strumenti e comportamenti usati per proteggere dati, dispositivi, account e sistemi digitali.",
+      "spiegazione": "La risposta è corretta perché chiarisce la sicurezza informatica e mantiene il significato indicato dal documento.",
+      "fonte_visibile": "Fonte: sezione “Sicurezza informatica”.",
+      "opzioni_visibili": [
+        "Obiettivi principali. La sicurezza informatica ha tre obiettivi principali: proteggere la riservatezza dei dati.",
+        "Sicurezza informatica. La sicurezza informatica è l'insieme di pratiche, strumenti e comportamenti usati per proteggere dati, dispositivi, account e sistemi digitali.",
+        "Azione consigliata. Bisogna mantenere aggiornati anche browser, app, plugin, software aziendali, strumenti di sicurezza e dispositivi di rete.",
+        "Regola operativa. Una buona regola aziendale è attivare la 2FA almeno su email, strumenti cloud, account amministrativi, sistemi di pagamento e piattaforme che contengono dati sensibili."
+      ],
+      "risposta_corretta_visibile": "Sicurezza informatica. La sicurezza informatica è l'insieme di pratiche, strumenti e comportamenti usati per proteggere dati, dispositivi, account e sistemi digitali.",
+      "domanda_visibile": "Quale risposta spiega meglio «Sicurezza informatica»?",
+      "mappa_opzioni_v35d": [
+        {
+          "indice": 1,
+          "opzione_interna": "Concetto: Obiettivi principali. La sicurezza informatica ha tre obiettivi principali: proteggere la riservatezza dei dati.",
+          "opzione_visibile": "Obiettivi principali. La sicurezza informatica ha tre obiettivi principali: proteggere la riservatezza dei dati.",
+          "corretta": false
+        },
+        {
+          "indice": 2,
+          "opzione_interna": "Concetto: Sicurezza informatica. La sicurezza informatica è l'insieme di pratiche, strumenti e comportamenti usati per proteggere dati, dispositivi, account e sistemi digitali.",
+          "opzione_visibile": "Sicurezza informatica. La sicurezza informatica è l'insieme di pratiche, strumenti e comportamenti usati per proteggere dati, dispositivi, account e sistemi digitali.",
+          "corretta": true
+        },
+        {
+          "indice": 3,
+          "opzione_interna": "Concetto: Azione consigliata. Bisogna mantenere aggiornati anche browser, app, plugin, software aziendali, strumenti di sicurezza e dispositivi di rete.",
+          "opzione_visibile": "Azione consigliata. Bisogna mantenere aggiornati anche browser, app, plugin, software aziendali, strumenti di sicurezza e dispositivi di rete.",
+          "corretta": false
+        },
+        {
+          "indice": 4,
+          "opzione_interna": "Concetto: Regola operativa. Una buona regola aziendale è attivare la 2FA almeno su email, strumenti cloud, account amministrativi, sistemi di pagamento e piattaforme che contengono dati sensibili.",
+          "opzione_visibile": "Regola operativa. Una buona regola aziendale è attivare la 2FA almeno su email, strumenti cloud, account amministrativi, sistemi di pagamento e piattaforme che contengono dati sensibili.",
+          "corretta": false
+        }
+      ],
+      "ramo_output": "test_rag_v35d",
+      "categoria_v35g": {
+        "categoria": "Verifica interattiva",
+        "sottocategoria": "Sicurezza informatica"
+      }
+    },
+    {
+      "id": "test-clean-v34e-2",
+      "domanda": "Quale frase è più coerente con «Rischio e conseguenza»?",
+      "opzioni": [
+        "Aspetto: Sicurezza informatica. La sicurezza informatica è l'insieme di pratiche, strumenti e comportamenti usati per proteggere dati, dispositivi, account e sistemi digitali.",
+        "Aspetto: Riduzione del rischio. La 2FA riduce il rischio che un account venga violato solo perché la password è stata rubata.",
+        "Aspetto: Azione consigliata. Bisogna mantenere aggiornati anche browser, app, plugin, software aziendali, strumenti di sicurezza e dispositivi di rete.",
+        "Aspetto: Rischio e conseguenza. Usare la stessa password su più siti è rischioso: se un servizio viene violato, un attaccante può provare la stessa password anche su altri account."
+      ],
+      "risposta_corretta": "Aspetto: Rischio e conseguenza. Usare la stessa password su più siti è rischioso: se un servizio viene violato, un attaccante può provare la stessa password anche su altri account.",
+      "spiegazione": "La scelta giusta distingue questo collegamento dai distrattori e risponde alla domanda senza aggiungere elementi estranei.",
+      "fonte_visibile": "Fonte: sezione “Rischio e conseguenza”.",
+      "opzioni_visibili": [
+        "Nel contesto di «Rischio e conseguenza», sicurezza informatica. La sicurezza informatica è l'insieme di pratiche, strumenti e comportamenti usati per proteggere dati, dispositivi, account e sistemi digitali.",
+        "Riduzione del rischio. La 2FA riduce il rischio che un account venga violato solo perché la password è stata rubata.",
+        "Nel contesto di «Rischio e conseguenza», azione consigliata. Bisogna mantenere aggiornati anche browser, app, plugin, software aziendali, strumenti di sicurezza e dispositivi di rete.",
+        "Rischio e conseguenza. Usare la stessa password su più siti è rischioso: se un servizio viene violato, un attaccante può provare la stessa password anche su altri account."
+      ],
+      "risposta_corretta_visibile": "Rischio e conseguenza. Usare la stessa password su più siti è rischioso: se un servizio viene violato, un attaccante può provare la stessa password anche su altri account.",
+      "domanda_visibile": "Quale opzione è più coerente con «Rischio e conseguenza»?",
+      "mappa_opzioni_v35d": [
+        {
+          "indice": 1,
+          "opzione_interna": "Aspetto: Sicurezza informatica. La sicurezza informatica è l'insieme di pratiche, strumenti e comportamenti usati per proteggere dati, dispositivi, account e sistemi digitali.",
+          "opzione_visibile": "Nel contesto di «Rischio e conseguenza», sicurezza informatica. La sicurezza informatica è l'insieme di pratiche, strumenti e comportamenti usati per proteggere dati, dispositivi, account e sistemi digitali.",
+          "corretta": false
+        },
+        {
+          "indice": 2,
+          "opzione_interna": "Aspetto: Riduzione del rischio. La 2FA riduce il rischio che un account venga violato solo perché la password è stata rubata.",
+          "opzione_visibile": "Riduzione del rischio. La 2FA riduce il rischio che un account venga violato solo perché la password è stata rubata.",
+          "corretta": false
+        },
+        {
+          "indice": 3,
+          "opzione_interna": "Aspetto: Azione consigliata. Bisogna mantenere aggiornati anche browser, app, plugin, software aziendali, strumenti di sicurezza e dispositivi di rete.",
+          "opzione_visibile": "Nel contesto di «Rischio e conseguenza», azione consigliata. Bisogna mantenere aggiornati anche browser, app, plugin, software aziendali, strumenti di sicurezza e dispositivi di rete.",
+          "corretta": false
+        },
+        {
+          "indice": 4,
+          "opzione_interna": "Aspetto: Rischio e conseguenza. Usare la stessa password su più siti è rischioso: se un servizio viene violato, un attaccante può provare la stessa password anche su altri account.",
+          "opzione_visibile": "Rischio e conseguenza. Usare la stessa password su più siti è rischioso: se un servizio viene violato, un attaccante può provare la stessa password anche su altri account.",
+          "corretta": true
+        }
+      ],
+      "ramo_output": "test_rag_v35d",
+      "categoria_v35g": {
+        "categoria": "Verifica interattiva",
+        "sottocategoria": "Rischio e conseguenza"
+      }
+    },
+    {
+      "id": "test-clean-v34e-3",
+      "domanda": "Quale opzione riprende correttamente «Regola operativa»?",
+      "opzioni": [
+        "Focus: Obiettivi principali. La sicurezza informatica ha tre obiettivi principali: proteggere la riservatezza dei dati.",
+        "Focus: Regola operativa. Una buona regola aziendale è attivare la 2FA almeno su email, strumenti cloud, account amministrativi, sistemi di pagamento e piattaforme che contengono dati sensibili.",
+        "Focus: Sicurezza informatica. La sicurezza informatica è l'insieme di pratiche, strumenti e comportamenti usati per proteggere dati, dispositivi, account e sistemi digitali.",
+        "Focus: Situazione da valutare. Quando si usa una rete pubblica è meglio evitare operazioni sensibili, come accesso a conti bancari, sistemi aziendali o pannelli amministrativi."
+      ],
+      "risposta_corretta": "Focus: Regola operativa. Una buona regola aziendale è attivare la 2FA almeno su email, strumenti cloud, account amministrativi, sistemi di pagamento e piattaforme che contengono dati sensibili.",
+      "spiegazione": "Questa opzione funziona perché collega questo punto operativo al contenuto essenziale del documento.",
+      "fonte_visibile": "Fonte: sezione “Regola operativa”.",
+      "opzioni_visibili": [
+        "Nel contesto di «Regola operativa», obiettivi principali. La sicurezza informatica ha tre obiettivi principali: proteggere la riservatezza dei dati.",
+        "Nel contesto di «Regola operativa», regola operativa. Una buona regola aziendale è attivare la 2FA almeno su email, strumenti cloud, account amministrativi, sistemi di pagamento e piattaforme che contengono dati sensibili.",
+        "Nel contesto di «Regola operativa», sicurezza informatica. La sicurezza informatica è l'insieme di pratiche, strumenti e comportamenti usati per proteggere dati, dispositivi, account e sistemi digitali.",
+        "Situazione da valutare. Quando si usa una rete pubblica è meglio evitare operazioni sensibili, come accesso a conti bancari, sistemi aziendali o pannelli amministrativi."
+      ],
+      "risposta_corretta_visibile": "Nel contesto di «Regola operativa», regola operativa. Una buona regola aziendale è attivare la 2FA almeno su email, strumenti cloud, account amministrativi, sistemi di pagamento e piattaforme che contengono dati sensibili.",
+      "domanda_visibile": "Che cosa devi riconoscere su «Regola operativa»?",
+      "mappa_opzioni_v35d": [
+        {
+          "indice": 1,
+          "opzione_interna": "Focus: Obiettivi principali. La sicurezza informatica ha tre obiettivi principali: proteggere la riservatezza dei dati.",
+          "opzione_visibile": "Nel contesto di «Regola operativa», obiettivi principali. La sicurezza informatica ha tre obiettivi principali: proteggere la riservatezza dei dati.",
+          "corretta": false
+        },
+        {
+          "indice": 2,
+          "opzione_interna": "Focus: Regola operativa. Una buona regola aziendale è attivare la 2FA almeno su email, strumenti cloud, account amministrativi, sistemi di pagamento e piattaforme che contengono dati sensibili.",
+          "opzione_visibile": "Nel contesto di «Regola operativa», regola operativa. Una buona regola aziendale è attivare la 2FA almeno su email, strumenti cloud, account amministrativi, sistemi di pagamento e piattaforme che contengono dati sensibili.",
+          "corretta": true
+        },
+        {
+          "indice": 3,
+          "opzione_interna": "Focus: Sicurezza informatica. La sicurezza informatica è l'insieme di pratiche, strumenti e comportamenti usati per proteggere dati, dispositivi, account e sistemi digitali.",
+          "opzione_visibile": "Nel contesto di «Regola operativa», sicurezza informatica. La sicurezza informatica è l'insieme di pratiche, strumenti e comportamenti usati per proteggere dati, dispositivi, account e sistemi digitali.",
+          "corretta": false
+        },
+        {
+          "indice": 4,
+          "opzione_interna": "Focus: Situazione da valutare. Quando si usa una rete pubblica è meglio evitare operazioni sensibili, come accesso a conti bancari, sistemi aziendali o pannelli amministrativi.",
+          "opzione_visibile": "Situazione da valutare. Quando si usa una rete pubblica è meglio evitare operazioni sensibili, come accesso a conti bancari, sistemi aziendali o pannelli amministrativi.",
+          "corretta": false
+        }
+      ],
+      "ramo_output": "test_rag_v35d",
+      "categoria_v35g": {
+        "categoria": "Verifica interattiva",
+        "sottocategoria": "Regola operativa"
+      }
+    },
+    {
+      "id": "test-clean-v34e-4",
+      "domanda": "Quale risposta rappresenta meglio «Azione consigliata»?",
+      "opzioni": [
+        "Punto del documento: Sicurezza informatica. La sicurezza informatica è l'insieme di pratiche, strumenti e comportamenti usati per proteggere dati, dispositivi, account e sistemi digitali.",
+        "Punto del documento: Azione consigliata. Bisogna mantenere aggiornati anche browser, app, plugin, software aziendali, strumenti di sicurezza e dispositivi di rete.",
+        "Punto del documento: Situazione da valutare. Quando si usa una rete pubblica è meglio evitare operazioni sensibili, come accesso a conti bancari, sistemi aziendali o pannelli amministrativi.",
+        "Punto del documento: Obiettivi principali. La sicurezza informatica ha tre obiettivi principali: proteggere la riservatezza dei dati."
+      ],
+      "risposta_corretta": "Punto del documento: Azione consigliata. Bisogna mantenere aggiornati anche browser, app, plugin, software aziendali, strumenti di sicurezza e dispositivi di rete.",
+      "spiegazione": "È l'opzione più coerente perché interpreta questa azione nel modo richiesto dalla domanda.",
+      "fonte_visibile": "Fonte: sezione “Azione consigliata”.",
+      "opzioni_visibili": [
+        "Nel contesto di «Azione consigliata», sicurezza informatica. La sicurezza informatica è l'insieme di pratiche, strumenti e comportamenti usati per proteggere dati, dispositivi, account e sistemi digitali.",
+        "Nel contesto di «Azione consigliata», azione consigliata. Bisogna mantenere aggiornati anche browser, app, plugin, software aziendali, strumenti di sicurezza e dispositivi di rete.",
+        "Nel contesto di «Azione consigliata», situazione da valutare. Quando si usa una rete pubblica è meglio evitare operazioni sensibili, come accesso a conti bancari, sistemi aziendali o pannelli amministrativi.",
+        "Nel contesto di «Azione consigliata», obiettivi principali. La sicurezza informatica ha tre obiettivi principali: proteggere la riservatezza dei dati."
+      ],
+      "risposta_corretta_visibile": "Nel contesto di «Azione consigliata», azione consigliata. Bisogna mantenere aggiornati anche browser, app, plugin, software aziendali, strumenti di sicurezza e dispositivi di rete.",
+      "domanda_visibile": "Quale scelta interpreta correttamente «Azione consigliata»?",
+      "mappa_opzioni_v35d": [
+        {
+          "indice": 1,
+          "opzione_interna": "Punto del documento: Sicurezza informatica. La sicurezza informatica è l'insieme di pratiche, strumenti e comportamenti usati per proteggere dati, dispositivi, account e sistemi digitali.",
+          "opzione_visibile": "Nel contesto di «Azione consigliata», sicurezza informatica. La sicurezza informatica è l'insieme di pratiche, strumenti e comportamenti usati per proteggere dati, dispositivi, account e sistemi digitali.",
+          "corretta": false
+        },
+        {
+          "indice": 2,
+          "opzione_interna": "Punto del documento: Azione consigliata. Bisogna mantenere aggiornati anche browser, app, plugin, software aziendali, strumenti di sicurezza e dispositivi di rete.",
+          "opzione_visibile": "Nel contesto di «Azione consigliata», azione consigliata. Bisogna mantenere aggiornati anche browser, app, plugin, software aziendali, strumenti di sicurezza e dispositivi di rete.",
+          "corretta": true
+        },
+        {
+          "indice": 3,
+          "opzione_interna": "Punto del documento: Situazione da valutare. Quando si usa una rete pubblica è meglio evitare operazioni sensibili, come accesso a conti bancari, sistemi aziendali o pannelli amministrativi.",
+          "opzione_visibile": "Nel contesto di «Azione consigliata», situazione da valutare. Quando si usa una rete pubblica è meglio evitare operazioni sensibili, come accesso a conti bancari, sistemi aziendali o pannelli amministrativi.",
+          "corretta": false
+        },
+        {
+          "indice": 4,
+          "opzione_interna": "Punto del documento: Obiettivi principali. La sicurezza informatica ha tre obiettivi principali: proteggere la riservatezza dei dati.",
+          "opzione_visibile": "Nel contesto di «Azione consigliata», obiettivi principali. La sicurezza informatica ha tre obiettivi principali: proteggere la riservatezza dei dati.",
+          "corretta": false
+        }
+      ],
+      "ramo_output": "test_rag_v35d",
+      "categoria_v35g": {
+        "categoria": "Verifica interattiva",
+        "sottocategoria": "Azione consigliata"
+      }
+    },
+    {
+      "id": "test-clean-v34e-5",
+      "domanda": "Quale affermazione descrive meglio «Obiettivi principali»?",
+      "opzioni": [
+        "Informazione: Sicurezza informatica. La sicurezza informatica è l'insieme di pratiche, strumenti e comportamenti usati per proteggere dati, dispositivi, account e sistemi digitali.",
+        "Informazione: Regola operativa. Una buona regola aziendale è attivare la 2FA almeno su email, strumenti cloud, account amministrativi, sistemi di pagamento e piattaforme che contengono dati sensibili.",
+        "Informazione: Azione consigliata. Bisogna mantenere aggiornati anche browser, app, plugin, software aziendali, strumenti di sicurezza e dispositivi di rete.",
+        "Informazione: Obiettivi principali. La sicurezza informatica ha tre obiettivi principali: proteggere la riservatezza dei dati."
+      ],
+      "risposta_corretta": "Informazione: Obiettivi principali. La sicurezza informatica ha tre obiettivi principali: proteggere la riservatezza dei dati.",
+      "spiegazione": "La spiegazione corretta mostra perché gli obiettivi principali sono il riferimento adatto per questa domanda.",
+      "fonte_visibile": "Fonte: sezione “Obiettivi principali”.",
+      "opzioni_visibili": [
+        "Nel contesto di «Obiettivi principali», sicurezza informatica. La sicurezza informatica è l'insieme di pratiche, strumenti e comportamenti usati per proteggere dati, dispositivi, account e sistemi digitali.",
+        "Nel contesto di «Obiettivi principali», regola operativa. Una buona regola aziendale è attivare la 2FA almeno su email, strumenti cloud, account amministrativi, sistemi di pagamento e piattaforme che contengono dati sensibili.",
+        "Nel contesto di «Obiettivi principali», azione consigliata. Bisogna mantenere aggiornati anche browser, app, plugin, software aziendali, strumenti di sicurezza e dispositivi di rete.",
+        "Nel contesto di «Obiettivi principali», obiettivi principali. La sicurezza informatica ha tre obiettivi principali: proteggere la riservatezza dei dati."
+      ],
+      "risposta_corretta_visibile": "Nel contesto di «Obiettivi principali», obiettivi principali. La sicurezza informatica ha tre obiettivi principali: proteggere la riservatezza dei dati.",
+      "domanda_visibile": "Quale affermazione riassume meglio «Obiettivi principali»?",
+      "mappa_opzioni_v35d": [
+        {
+          "indice": 1,
+          "opzione_interna": "Informazione: Sicurezza informatica. La sicurezza informatica è l'insieme di pratiche, strumenti e comportamenti usati per proteggere dati, dispositivi, account e sistemi digitali.",
+          "opzione_visibile": "Nel contesto di «Obiettivi principali», sicurezza informatica. La sicurezza informatica è l'insieme di pratiche, strumenti e comportamenti usati per proteggere dati, dispositivi, account e sistemi digitali.",
+          "corretta": false
+        },
+        {
+          "indice": 2,
+          "opzione_interna": "Informazione: Regola operativa. Una buona regola aziendale è attivare la 2FA almeno su email, strumenti cloud, account amministrativi, sistemi di pagamento e piattaforme che contengono dati sensibili.",
+          "opzione_visibile": "Nel contesto di «Obiettivi principali», regola operativa. Una buona regola aziendale è attivare la 2FA almeno su email, strumenti cloud, account amministrativi, sistemi di pagamento e piattaforme che contengono dati sensibili.",
+          "corretta": false
+        },
+        {
+          "indice": 3,
+          "opzione_interna": "Informazione: Azione consigliata. Bisogna mantenere aggiornati anche browser, app, plugin, software aziendali, strumenti di sicurezza e dispositivi di rete.",
+          "opzione_visibile": "Nel contesto di «Obiettivi principali», azione consigliata. Bisogna mantenere aggiornati anche browser, app, plugin, software aziendali, strumenti di sicurezza e dispositivi di rete.",
+          "corretta": false
+        },
+        {
+          "indice": 4,
+          "opzione_interna": "Informazione: Obiettivi principali. La sicurezza informatica ha tre obiettivi principali: proteggere la riservatezza dei dati.",
+          "opzione_visibile": "Nel contesto di «Obiettivi principali», obiettivi principali. La sicurezza informatica ha tre obiettivi principali: proteggere la riservatezza dei dati.",
+          "corretta": true
+        }
+      ],
+      "ramo_output": "test_rag_v35d",
+      "categoria_v35g": {
+        "categoria": "Verifica interattiva",
+        "sottocategoria": "Obiettivi principali"
+      }
+    }
+  ],
+  "domande_studio": [
+    {
+      "id": "studio-clean-v34e-1",
+      "domanda": "Che cosa devi saper spiegare su «Sicurezza informatica»?",
+      "risposta_guida": "Per rispondere bene, chiarisci la sicurezza informatica e collega il concetto al documento: la sicurezza informatica è l'insieme di pratiche, strumenti e comportamenti usati per proteggere dati, dispositivi, account e sistemi digitali.",
+      "fonte_visibile": "Fonte: sezione “Sicurezza informatica”.",
+      "categoria_v35g": {
+        "categoria": "Ripasso guidato",
+        "sottocategoria": "Sicurezza informatica"
+      }
+    },
+    {
+      "id": "studio-clean-v34e-2",
+      "domanda": "Perché «Rischio e conseguenza» è utile per capire il documento?",
+      "risposta_guida": "Durante il ripasso, usa questo passaggio per ricostruire il contenuto con parole tue: usare la stessa password su più siti è rischioso: se un servizio viene violato, un attaccante può provare la stessa password anche su altri account.",
+      "fonte_visibile": "Fonte: sezione “Rischio e conseguenza”.",
+      "categoria_v35g": {
+        "categoria": "Ripasso guidato",
+        "sottocategoria": "Rischio e conseguenza"
+      }
+    },
+    {
+      "id": "studio-clean-v34e-3",
+      "domanda": "Quale collegamento principale devi ricordare su «Regola operativa»?",
+      "risposta_guida": "Su «Regola operativa» devi riconoscere quale problema, vantaggio o funzione viene spiegata: una buona regola aziendale è attivare la 2FA almeno su email, strumenti cloud, account amministrativi, sistemi di pagamento e piattaforme.",
+      "fonte_visibile": "Fonte: sezione “Regola operativa”.",
+      "categoria_v35g": {
+        "categoria": "Ripasso guidato",
+        "sottocategoria": "Regola operativa"
+      }
+    },
+    {
+      "id": "studio-clean-v34e-4",
+      "domanda": "Come spiegheresti «Azione consigliata» senza copiare il testo?",
+      "risposta_guida": "Una buona risposta spiega questa azione senza copiare la formulazione della card: chiarisce «Azione consigliata» e poi collega il concetto al contenuto: bisogna mantenere aggiornati anche browser, app, plugin, software aziendali, strumenti di sicurezza e dispositivi di rete.",
+      "fonte_visibile": "Fonte: sezione “Azione consigliata”.",
+      "categoria_v35g": {
+        "categoria": "Ripasso guidato",
+        "sottocategoria": "Azione consigliata"
+      }
+    },
+    {
+      "id": "studio-clean-v34e-5",
+      "domanda": "Quale ruolo ha «Obiettivi principali» nel materiale di studio?",
+      "risposta_guida": "Per verificare di aver capito, descrivi gli obiettivi principali e il ruolo che ha nello studio: Per verificare di aver capito «Obiettivi principali», prova a spiegare perché questo punto è utile nello studio: la sicurezza informatica ha tre obiettivi principali: proteggere la riservatezza dei dati.",
+      "fonte_visibile": "Fonte: sezione “Obiettivi principali”.",
+      "categoria_v35g": {
+        "categoria": "Ripasso guidato",
+        "sottocategoria": "Obiettivi principali"
+      }
+    }
+  ],
+  "ui_layout": {
+    "versione": "rag-layout-didattico-v35c",
+    "pagina": {
+      "max_width": 1180,
+      "tema": "studio-professionale",
+      "densita": "leggibile"
+    },
+    "card": {
+      "layout": "griglia-responsive",
+      "min_width": 260,
+      "max_per_row": 3,
+      "equal_height": false,
+      "evita_testo_compresso": true
+    },
+    "test": {
+      "layout": "lista-interattiva",
+      "opzioni": "bottoni-larghi",
+      "feedback": "immediato",
+      "numero_domande": 5
+    },
+    "domande_studio": {
+      "layout": "schede-lunghe",
+      "tono": "ripasso-guidato",
+      "numero_domande": 5
+    }
+  },
+  "orchestratore_v35e": {
+    "ok": true,
+    "documento": "sicurezza_reale",
+    "versione": "rag_orchestratore_riutilizzabile_v35e",
+    "creato_il": "2026-06-28T17:43:56",
+    "pipeline": [
+      "rag_output_kb_clean_v34e",
+      "rag_bridge_motori_qualita_esistenti_v35b",
+      "rag_motore_didattico_riutilizzabile_v35c",
+      "rag_motore_test_riutilizzabile_v35d",
+      "rag_output_finale_orchestrato_v35e"
+    ],
+    "output_finale": "ui_pdf_app",
+    "nota_architetturale": "Card, riassunti e domande studio passano dal motore didattico; i test passano dal motore test separato con campi interni e campi visibili."
+  },
+  "piano_motori_v35f": {
+    "ok": true,
+    "versione": "rag_selezionatore_motori_riutilizzabile_v35f",
+    "creato_il": "2026-06-28T17:43:56",
+    "documento": "sicurezza_reale",
+    "compito": "prepara tutto il materiale completo per PDF app e pagina web",
+    "decisione": {
+      "tipo": "output_completo",
+      "output_richiesti": [
+        "riassunto",
+        "card",
+        "test",
+        "domande_studio",
+        "ui_layout"
+      ],
+      "motori": [
+        "orchestratore_v35e"
+      ],
+      "perche": "serve un output finale completo e già pronto per UI/PDF/app"
+    },
+    "motori_da_usare": [
+      {
+        "id": "orchestratore_v35e",
+        "script": "scripts/rag_orchestratore_riutilizzabile_v35e.py",
+        "ruolo": "esegue pipeline completa e produce output finale UI/PDF/app"
+      }
+    ],
+    "regole_architetturali": {
+      "card_riassunti_domande_studio": "motore didattico V3.5C",
+      "test": "motore test V3.5D con bridge quiz V3.5B",
+      "output_completo": "orchestratore V3.5E"
+    }
+  },
+  "categorie_didattiche_v35g": [
+    {
+      "categoria": "Comprensione generale",
+      "sottocategoria": "sintesi"
+    },
+    {
+      "categoria": "Memorizzazione visuale",
+      "sottocategoria": "schede visuali"
+    },
+    {
+      "categoria": "Ripasso guidato",
+      "sottocategoria": "ripasso guidato"
+    },
+    {
+      "categoria": "Verifica interattiva",
+      "sottocategoria": "risposte multiple"
+    },
+    {
+      "categoria": "Presentazione grafica",
+      "sottocategoria": "layout output"
+    }
+  ],
+  "revisione_qualita_testuale_v35g": {
+    "ok": true,
+    "copre": [
+      "grammatica_italiana",
+      "accenti",
+      "apostrofi",
+      "punteggiatura",
+      "frasi_complete",
+      "assenza_frasi_spezzate",
+      "assenza_frasi_non_terminate",
+      "assenza_frasi_riempitive",
+      "assenza_testi_generici",
+      "assenza_duplicati_visibili",
+      "assenza_quasi_duplicati",
+      "card_concetti_distinti",
+      "domande_naturali",
+      "spiegazioni_test",
+      "fonti_visibili",
+      "categorie",
+      "sottocategorie"
+    ]
+  },
+  "revisione_naturalezza_antikeyword_v35i": {
+    "ok": true,
+    "nome": "Controllo di naturalezza linguistica anti-keyword",
+    "copre": [
+      "niente_liste_grezze_keyword",
+      "niente_frasi_robotiche",
+      "card_con_spiegazioni_naturali",
+      "messaggi_chiave_utili",
+      "riassunto_piu_studiabile",
+      "domande_studio_umane",
+      "spiegazioni_test_non_meccaniche"
+    ]
+  },
+  "revisione_accordo_pronomi_v35j": {
+    "ok": false,
+    "nome": "Controllo accordo grammaticale e pronomi",
+    "copre": [
+      "genere",
+      "numero",
+      "articoli",
+      "participi",
+      "pronomi",
+      "accordo_titoli_contenuti",
+      "niente_viene_presentato_errato",
+      "niente_senza_copiarlo_errato",
+      "niente_frasi_tagliate",
+      "risposte_guida_meno_meccaniche"
+    ]
+  },
+  "revisione_cleaner_finale_universale_v35k": {
+    "ok": true,
+    "nome": "Controllo finale universale testi visibili",
+    "copre": [
+      "tutti_i_campi_visibili",
+      "punteggiatura_sporca",
+      "domande_chiuse_bene",
+      "frasi_tagliate",
+      "finali_sospetti",
+      "contrazioni_italiane",
+      "pronomi_fragili",
+      "accordi_plurali_generali",
+      "opzioni_quiz_visibili",
+      "risposta_corretta_visibile_allineata",
+      "mappa_opzioni_visibile_allineata",
+      "riutilizzabile_per_web_pdf_app"
+    ]
+  }
+}

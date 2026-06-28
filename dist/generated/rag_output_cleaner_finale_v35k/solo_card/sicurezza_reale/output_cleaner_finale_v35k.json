@@ -1,0 +1,299 @@
+{
+  "versione": "rag_output_selezionato_v35f",
+  "output_richiesti": [
+    "card",
+    "ui_layout"
+  ],
+  "controlli_qualita": {
+    "ok": true,
+    "errori": [],
+    "avvisi": [],
+    "riassunto": true,
+    "card": 5,
+    "test": 5,
+    "domande_studio": 5,
+    "motore_didattico_v35c": {
+      "ok": true,
+      "errori": [],
+      "avvisi": [],
+      "testi_visibili": 93
+    },
+    "qualita_testuale_v35g": {
+      "ok": true,
+      "errori": [],
+      "avvisi": [],
+      "testi_controllati": 20,
+      "categorie": 2
+    },
+    "naturalezza_antikeyword_v35i": {
+      "ok": true,
+      "errori": [],
+      "testi_controllati": 15,
+      "nome_controllo": "Controllo di naturalezza linguistica anti-keyword"
+    },
+    "accordo_pronomi_v35j": {
+      "ok": true,
+      "errori": [],
+      "testi_controllati": 15,
+      "nome_controllo": "Controllo accordo grammaticale e pronomi",
+      "riallineato_da": "cleaner_finale_universale_v35k"
+    },
+    "cleaner_finale_universale_v35k": {
+      "ok": true,
+      "errori": [],
+      "testi_controllati": 15,
+      "campi_puliti": {
+        "card[].titolo": 5,
+        "card[].testo": 5,
+        "card[].messaggio_chiave": 5
+      },
+      "nome_controllo": "Controllo finale universale testi visibili"
+    }
+  },
+  "motori_riutilizzabili": {
+    "didattico": "rag_motore_didattico_riutilizzabile_v35c",
+    "copre": [
+      "naturalezza_domande_studio",
+      "stile_card",
+      "fonti_visibili",
+      "rimozione_frasi_riempitive",
+      "tono_didattico_finale",
+      "layout_grafico"
+    ],
+    "revisore_qualita_testuale": "rag_revisore_qualita_testuale_v35g",
+    "revisore_naturalezza_antikeyword": "rag_revisore_naturalezza_antikeyword_v35i",
+    "revisore_accordo_pronomi": "rag_revisore_accordo_pronomi_v35j"
+  },
+  "card": [
+    {
+      "id": "card-clean-v34e-1",
+      "titolo": "Sicurezza informatica.",
+      "testo": "La scheda dedicata a «Sicurezza informatica» spiega questo tema in modo concreto: la sicurezza informatica è l'insieme di pratiche, strumenti e comportamenti usati per proteggere dati, dispositivi, account e sistemi digitali.",
+      "messaggio_chiave": "Da ricordare: spiega la sicurezza informatica con parole tue e collegala al documento.",
+      "fonte_visibile": "Fonte: sezione “Sicurezza informatica”.",
+      "stile_card": {
+        "layout": "card-studio-bilanciata",
+        "icona": "🛡️",
+        "densita": "media",
+        "titolo_breve": "Sicurezza informatica",
+        "mostra_fonte": true,
+        "mostra_punto_chiave": true
+      },
+      "categoria_v35g": {
+        "categoria": "Memorizzazione visuale",
+        "sottocategoria": "Sicurezza informatica"
+      }
+    },
+    {
+      "id": "card-clean-v34e-2",
+      "titolo": "Rischio e conseguenza.",
+      "testo": "Questa card chiarisce il rischio e la sua conseguenza usando un riferimento pratico del documento: usare la stessa password su più siti è rischioso: se un servizio viene violato, un attaccante può provare la stessa password anche su altri account.",
+      "messaggio_chiave": "Punto chiave: riconosci il ruolo del rischio e la sua conseguenza nel materiale di studio.",
+      "fonte_visibile": "Fonte: sezione “Rischio e conseguenza”.",
+      "stile_card": {
+        "layout": "card-studio-bilanciata",
+        "icona": "⚠️",
+        "densita": "media",
+        "titolo_breve": "Rischio e conseguenza",
+        "mostra_fonte": true,
+        "mostra_punto_chiave": true
+      },
+      "categoria_v35g": {
+        "categoria": "Memorizzazione visuale",
+        "sottocategoria": "Rischio e conseguenza"
+      }
+    },
+    {
+      "id": "card-clean-v34e-3",
+      "titolo": "Regola operativa.",
+      "testo": "Il contenuto della card distingue questa regola dagli altri punti: una buona regola aziendale è attivare la 2FA almeno su email, strumenti cloud, account amministrativi, sistemi di pagamento e piattaforme che contengono dati sensibili.",
+      "messaggio_chiave": "Focus studio: usa questo punto operativo per ricostruire il passaggio principale.",
+      "fonte_visibile": "Fonte: sezione “Regola operativa”.",
+      "stile_card": {
+        "layout": "card-studio-bilanciata",
+        "icona": "✅",
+        "densita": "media",
+        "titolo_breve": "Regola operativa",
+        "mostra_fonte": true,
+        "mostra_punto_chiave": true
+      },
+      "categoria_v35g": {
+        "categoria": "Memorizzazione visuale",
+        "sottocategoria": "Regola operativa"
+      }
+    },
+    {
+      "id": "card-clean-v34e-4",
+      "titolo": "Azione consigliata.",
+      "testo": "Per ripassare «Azione consigliata», parti da questa idea: bisogna mantenere aggiornati anche browser, app, plugin, software aziendali, strumenti di sicurezza e dispositivi di rete.",
+      "messaggio_chiave": "Memoria rapida: chiediti quale problema o vantaggio chiarisce questa azione.",
+      "fonte_visibile": "Fonte: sezione “Azione consigliata”.",
+      "stile_card": {
+        "layout": "card-studio-bilanciata",
+        "icona": "🔧",
+        "densita": "media",
+        "titolo_breve": "Azione consigliata",
+        "mostra_fonte": true,
+        "mostra_punto_chiave": true
+      },
+      "categoria_v35g": {
+        "categoria": "Memorizzazione visuale",
+        "sottocategoria": "Azione consigliata"
+      }
+    },
+    {
+      "id": "card-clean-v34e-5",
+      "titolo": "Obiettivi principali.",
+      "testo": "La card su «Obiettivi principali» serve a fissare un concetto specifico: la sicurezza informatica ha tre obiettivi principali: proteggere la riservatezza dei dati; garantire l'integrità delle informazioni.",
+      "messaggio_chiave": "Controllo studio: verifica di saper spiegare gli obiettivi principali senza copiare il testo.",
+      "fonte_visibile": "Fonte: sezione “Obiettivi principali”.",
+      "stile_card": {
+        "layout": "card-studio-bilanciata",
+        "icona": "🎯",
+        "densita": "media",
+        "titolo_breve": "Obiettivi principali",
+        "mostra_fonte": true,
+        "mostra_punto_chiave": true
+      },
+      "categoria_v35g": {
+        "categoria": "Memorizzazione visuale",
+        "sottocategoria": "Obiettivi principali"
+      }
+    }
+  ],
+  "ui_layout": {
+    "versione": "rag-layout-didattico-v35c",
+    "pagina": {
+      "max_width": 1180,
+      "tema": "studio-professionale",
+      "densita": "leggibile"
+    },
+    "card": {
+      "layout": "griglia-responsive",
+      "min_width": 260,
+      "max_per_row": 3,
+      "equal_height": false,
+      "evita_testo_compresso": true
+    },
+    "test": {
+      "layout": "lista-interattiva",
+      "opzioni": "bottoni-larghi",
+      "feedback": "immediato",
+      "numero_domande": 5
+    },
+    "domande_studio": {
+      "layout": "schede-lunghe",
+      "tono": "ripasso-guidato",
+      "numero_domande": 5
+    }
+  },
+  "piano_motori_v35f": {
+    "ok": true,
+    "versione": "rag_selezionatore_motori_riutilizzabile_v35f",
+    "creato_il": "2026-06-28T17:43:56",
+    "documento": "sicurezza_reale",
+    "compito": "crea card grafiche con fonti visibili",
+    "decisione": {
+      "tipo": "solo_card",
+      "output_richiesti": [
+        "card",
+        "ui_layout"
+      ],
+      "motori": [
+        "didattico_v35c"
+      ],
+      "perche": "le card richiedono stile, fonti visibili e layout, non il motore test"
+    },
+    "motori_da_usare": [
+      {
+        "id": "didattico_v35c",
+        "script": "scripts/rag_motore_didattico_riutilizzabile_v35c.py",
+        "ruolo": "migliora card, riassunti, domande studio, fonti, tono e layout"
+      }
+    ],
+    "regole_architetturali": {
+      "card_riassunti_domande_studio": "motore didattico V3.5C",
+      "test": "motore test V3.5D con bridge quiz V3.5B",
+      "output_completo": "orchestratore V3.5E"
+    }
+  },
+  "categorie_didattiche_v35g": [
+    {
+      "categoria": "Memorizzazione visuale",
+      "sottocategoria": "schede visuali"
+    },
+    {
+      "categoria": "Presentazione grafica",
+      "sottocategoria": "layout output"
+    }
+  ],
+  "revisione_qualita_testuale_v35g": {
+    "ok": true,
+    "copre": [
+      "grammatica_italiana",
+      "accenti",
+      "apostrofi",
+      "punteggiatura",
+      "frasi_complete",
+      "assenza_frasi_spezzate",
+      "assenza_frasi_non_terminate",
+      "assenza_frasi_riempitive",
+      "assenza_testi_generici",
+      "assenza_duplicati_visibili",
+      "assenza_quasi_duplicati",
+      "card_concetti_distinti",
+      "domande_naturali",
+      "spiegazioni_test",
+      "fonti_visibili",
+      "categorie",
+      "sottocategorie"
+    ]
+  },
+  "revisione_naturalezza_antikeyword_v35i": {
+    "ok": true,
+    "nome": "Controllo di naturalezza linguistica anti-keyword",
+    "copre": [
+      "niente_liste_grezze_keyword",
+      "niente_frasi_robotiche",
+      "card_con_spiegazioni_naturali",
+      "messaggi_chiave_utili",
+      "riassunto_piu_studiabile",
+      "domande_studio_umane",
+      "spiegazioni_test_non_meccaniche"
+    ]
+  },
+  "revisione_accordo_pronomi_v35j": {
+    "ok": true,
+    "nome": "Controllo accordo grammaticale e pronomi",
+    "copre": [
+      "genere",
+      "numero",
+      "articoli",
+      "participi",
+      "pronomi",
+      "accordo_titoli_contenuti",
+      "niente_viene_presentato_errato",
+      "niente_senza_copiarlo_errato",
+      "niente_frasi_tagliate",
+      "risposte_guida_meno_meccaniche"
+    ]
+  },
+  "revisione_cleaner_finale_universale_v35k": {
+    "ok": true,
+    "nome": "Controllo finale universale testi visibili",
+    "copre": [
+      "tutti_i_campi_visibili",
+      "punteggiatura_sporca",
+      "domande_chiuse_bene",
+      "frasi_tagliate",
+      "finali_sospetti",
+      "contrazioni_italiane",
+      "pronomi_fragili",
+      "accordi_plurali_generali",
+      "opzioni_quiz_visibili",
+      "risposta_corretta_visibile_allineata",
+      "mappa_opzioni_visibile_allineata",
+      "riutilizzabile_per_web_pdf_app"
+    ]
+  }
+}

@@ -1,15 +1,14 @@
 # Report Demo Selezionatore Output RAG V3.5H
 
-Verifica della pagina test completa per selezionatore motori e output V3.5I con naturalezza anti-keyword.
+Verifica pagina su output finali V3.5K universali.
 
 ## Risultati
-- OK: precheck naturalezza anti-keyword V3.5I
-- OK: pagina V3.5H presente
-- OK: output naturalezza dist/generated/rag_output_naturalezza_antikeyword_v35i/solo_riassunto/sicurezza_reale/output_naturalezza_antikeyword_v35i.json (13 testi)
-- OK: output naturalezza dist/generated/rag_output_naturalezza_antikeyword_v35i/solo_card/sicurezza_reale/output_naturalezza_antikeyword_v35i.json (15 testi)
-- OK: output naturalezza dist/generated/rag_output_naturalezza_antikeyword_v35i/solo_domande_studio/sicurezza_reale/output_naturalezza_antikeyword_v35i.json (10 testi)
-- OK: output naturalezza dist/generated/rag_output_naturalezza_antikeyword_v35i/solo_test/sicurezza_reale/output_naturalezza_antikeyword_v35i.json (10 testi)
-- OK: output naturalezza dist/generated/rag_output_naturalezza_antikeyword_v35i/output_completo/sicurezza_reale/output_naturalezza_antikeyword_v35i.json (48 testi)
+- OK: pagina V3.5H carica solo V3.5K
+- OK: output V3.5K dist/generated/rag_output_cleaner_finale_v35k/solo_riassunto/sicurezza_reale/output_cleaner_finale_v35k.json
+- OK: output V3.5K dist/generated/rag_output_cleaner_finale_v35k/solo_card/sicurezza_reale/output_cleaner_finale_v35k.json
+- OK: output V3.5K dist/generated/rag_output_cleaner_finale_v35k/solo_domande_studio/sicurezza_reale/output_cleaner_finale_v35k.json
+- OK: output V3.5K dist/generated/rag_output_cleaner_finale_v35k/solo_test/sicurezza_reale/output_cleaner_finale_v35k.json
+- OK: output V3.5K dist/generated/rag_output_cleaner_finale_v35k/output_completo/sicurezza_reale/output_cleaner_finale_v35k.json
 
 Errori totali: 0
 

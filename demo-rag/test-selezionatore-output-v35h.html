@@ -337,7 +337,7 @@
         <h2>Piano selezionatore</h2>
         <div id="planBox" class="small">Nessun piano caricato.</div>
 
-        <h2 style="margin-top:24px;">Qualità V3.5G</h2>
+        <h2 style="margin-top:24px;">Qualità V3.5G + V3.5I + V3.5K</h2>
         <div id="qualityBox" class="small">Nessun controllo caricato.</div>
       </aside>
 
@@ -349,39 +349,6 @@
   </main>
 
   <script>
-    const TASKS = [
-      {
-        id: "riassunto",
-        label: "Solo riassunto",
-        sub: "didattico",
-        output: "../dist/generated/rag_output_naturalezza_antikeyword_v35i/solo_riassunto/sicurezza_reale/output_naturalezza_antikeyword_v35i.json"
-      },
-      {
-        id: "card",
-        label: "Solo card",
-        sub: "card distinte",
-        output: "../dist/generated/rag_output_naturalezza_antikeyword_v35i/solo_card/sicurezza_reale/output_naturalezza_antikeyword_v35i.json"
-      },
-      {
-        id: "studio",
-        label: "Domande studio",
-        sub: "ripasso",
-        output: "../dist/generated/rag_output_naturalezza_antikeyword_v35i/solo_domande_studio/sicurezza_reale/output_naturalezza_antikeyword_v35i.json"
-      },
-      {
-        id: "test",
-        label: "Test interattivo",
-        sub: "opzioni visibili",
-        output: "../dist/generated/rag_output_naturalezza_antikeyword_v35i/solo_test/sicurezza_reale/output_naturalezza_antikeyword_v35i.json"
-      },
-      {
-        id: "completo",
-        label: "Completo",
-        sub: "PDF/app/web",
-        output: "../dist/generated/rag_output_naturalezza_antikeyword_v35i/output_completo/sicurezza_reale/output_naturalezza_antikeyword_v35i.json"
-      }
-    ];
-
     const taskBar = document.getElementById("taskBar");
     const statusBox = document.getElementById("status");
     const planBox = document.getElementById("planBox");
@@ -390,20 +357,54 @@
 
     function escapeHtml(value) {
       return String(value ?? "")
-        .replaceAll("&", "&amp;")
-        .replaceAll("<", "&lt;")
-        .replaceAll(">", "&gt;")
-        .replaceAll('"', "&quot;")
-        .replaceAll("'", "&#039;");
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
     }
 
     async function loadJson(path) {
-      const res = await fetch(path, { cache: "no-store" });
-      if (!res.ok) {
-        throw new Error(`Impossibile caricare ${path} (${res.status})`);
+      const response = await fetch(path);
+      if (!response.ok) {
+        throw new Error(`${response.status} ${response.statusText}: ${path}`);
       }
-      return await res.json();
+      const parseJson = response.json.bind(response);
+      return parseJson();
     }
+
+    const TASKS = [
+      {
+        id: "riassunto",
+        label: "Solo riassunto",
+        sub: "didattico",
+        output: "../dist/generated/rag_output_cleaner_finale_v35k/solo_riassunto/sicurezza_reale/output_cleaner_finale_v35k.json"
+      },
+      {
+        id: "card",
+        label: "Solo card",
+        sub: "card distinte",
+        output: "../dist/generated/rag_output_cleaner_finale_v35k/solo_card/sicurezza_reale/output_cleaner_finale_v35k.json"
+      },
+      {
+        id: "studio",
+        label: "Domande studio",
+        sub: "ripasso",
+        output: "../dist/generated/rag_output_cleaner_finale_v35k/solo_domande_studio/sicurezza_reale/output_cleaner_finale_v35k.json"
+      },
+      {
+        id: "test",
+        label: "Test interattivo",
+        sub: "opzioni visibili",
+        output: "../dist/generated/rag_output_cleaner_finale_v35k/solo_test/sicurezza_reale/output_cleaner_finale_v35k.json"
+      },
+      {
+        id: "completo",
+        label: "Completo",
+        sub: "PDF/app/web",
+        output: "../dist/generated/rag_output_cleaner_finale_v35k/output_completo/sicurezza_reale/output_cleaner_finale_v35k.json"
+      }
+    ];
 
     function categoryHtml(cat) {
       if (!cat) return "";
@@ -469,40 +470,38 @@
 
     function renderQuality(data) {
       const quality = data.controlli_qualita?.qualita_testuale_v35g || {};
+      const naturalness = data.controlli_qualita?.naturalezza_antikeyword_v35i || {};
+      const agreement = data.controlli_qualita?.cleaner_finale_universale_v35k || {};
+      const finalCleaner = data.controlli_qualita?.cleaner_finale_visibile_v35k || {};
+
       const revision = data.revisione_qualita_testuale_v35g || {};
+      const naturalRevision = data.revisione_naturalezza_antikeyword_v35i || {};
+      const agreementRevision = data.revisione_cleaner_finale_universale_v35k || {};
+      const cleanerRevision = data.revisione_cleaner_finale_visibile_v35k || {};
+
+      const hasFinalCleaner = Object.keys(finalCleaner).length > 0;
+      const overallOk = Boolean(quality.ok) && Boolean(naturalness.ok) && Boolean(agreement.ok) && (!hasFinalCleaner || Boolean(finalCleaner.ok));
+
+      const allErrors = [
+        ...(quality.errori || []).map(e => `V3.5G: ${e}`),
+        ...(naturalness.errori || []).map(e => `V3.5I: ${e}`),
+        ...(agreement.errori || []).map(e => `V3.5K: ${e}`),
+        ...(finalCleaner.errori || []).map(e => `V3.5K: ${e}`)
+      ];
 
       qualityBox.innerHTML = `
         <div class="quality">
-          <div class="metric">
-            <b>${quality.ok ? "OK" : "NO"}</b>
-            <span>Esito qualità</span>
-          </div>
-          <div class="metric">
-            <b>${escapeHtml(quality.testi_controllati ?? "-")}</b>
-            <span>Testi controllati</span>
-          </div>
-          <div class="metric">
-            <b>${escapeHtml(quality.categorie ?? "-")}</b>
-            <span>Categorie</span>
-          </div>
+          <div class="metric"><b>${overallOk ? "OK" : "NO"}</b><span>Esito qualità finale</span></div>
+          <div class="metric"><b>${escapeHtml(quality.testi_controllati ?? "-")}</b><span>Testi V3.5G</span></div>
+          <div class="metric"><b>${escapeHtml(naturalness.testi_controllati ?? "-")}</b><span>Testi V3.5I</span></div>
+          <div class="metric"><b>${escapeHtml(agreement.testi_controllati ?? "-")}</b><span>Testi V3.5K</span></div>
+          <div class="metric"><b>${escapeHtml(finalCleaner.testi_controllati ?? "-")}</b><span>Testi V3.5K</span></div>
         </div>
-
-        <div class="box">
-          <h3>Copertura controllo</h3>
-          ${(revision.copre || []).map(item => `<div>✅ ${escapeHtml(item)}</div>`).join("")}
-        </div>
-
-        ${quality.errori && quality.errori.length ? `
-          <div class="box">
-            <h3>Errori qualità</h3>
-            ${quality.errori.map(e => `<div>❌ ${escapeHtml(e)}</div>`).join("")}
-          </div>
-        ` : `
-          <div class="box">
-            <h3>Nessun errore qualità</h3>
-            <p>Il materiale caricato è revisionato V3.5G + naturalezza V3.5I.</p>
-          </div>
-        `}
+        <div class="box"><h3>Controllo V3.5G · qualità testuale</h3>${(revision.copre || []).map(item => `<div>✅ ${escapeHtml(item)}</div>`).join("")}</div>
+        <div class="box"><h3>Controllo V3.5I · naturalezza anti-keyword</h3>${(naturalRevision.copre || []).map(item => `<div>✅ ${escapeHtml(item)}</div>`).join("")}</div>
+        <div class="box"><h3>Controllo V3.5K · cleaner finale universale</h3>${((agreementRevision.copre || []).length ? agreementRevision.copre : ["ricalcolato dopo cleaner finale V3.5K"]).map(item => `<div>✅ ${escapeHtml(item)}</div>`).join("")}</div>
+        <div class="box"><h3>Controllo V3.5K · cleaner finale visibile</h3>${(cleanerRevision.copre || finalCleaner.campi_puliti || []).map(item => `<div>✅ ${escapeHtml(item)}</div>`).join("")}</div>
+        ${allErrors.length ? `<div class="box"><h3>Errori qualità</h3>${allErrors.map(e => `<div>❌ ${escapeHtml(e)}</div>`).join("")}</div>` : `<div class="box"><h3>Nessun errore qualità</h3><p>Il materiale caricato ha superato V3.5G, V3.5I, V3.5K ricalcolato e V3.5K finale.</p></div>`}
       `;
     }
 
@@ -682,7 +681,7 @@
         renderOutput(data);
 
         statusBox.className = "status ok";
-        statusBox.textContent = `✅ Caricato: ${task.label} · output naturalezza V3.5I`;
+        statusBox.textContent = `✅ Caricato: ${task.label} · output cleaner finale V3.5K`;
       } catch (error) {
         statusBox.className = "status err";
         statusBox.textContent = `Errore caricamento: ${error.message}`;
