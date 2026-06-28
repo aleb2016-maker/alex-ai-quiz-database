@@ -1,7 +1,7 @@
 (function () {
   "use strict";
 
-  const VERSION = "rag-general-validator-v33-final-polish";
+  const VERSION = "rag-general-validator-v34-final-clean";
 
   function clean(text) {
     return String(text || "").replace(/\s+/g, " ").trim();
@@ -9,6 +9,64 @@
 
   function normalizeKey(text) {
     return clean(text).toLowerCase();
+  }
+
+  function canonical(text) {
+    return clean(text)
+      .toLowerCase()
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .replace(/[^a-z0-9à-öø-ÿ\s]/gi, " ")
+      .replace(/\b(a|ad|di|del|della|dei|degli|le|la|il|lo|gli|i|un|una|uno|che|per|con|come|sono|essere|documento|secondo)\b/g, " ")
+      .replace(/\s+/g, " ")
+      .trim();
+  }
+
+  function infoWords(text) {
+    return canonical(text).split(/\s+/).filter((word) => word.length >= 4);
+  }
+
+  function similarity(a, b) {
+    const aWords = new Set(infoWords(a));
+    const bWords = new Set(infoWords(b));
+    if (!aWords.size || !bWords.size) return 0;
+    let overlap = 0;
+    aWords.forEach((word) => {
+      if (bWords.has(word)) overlap += 1;
+    });
+    return overlap / Math.min(aWords.size, bWords.size);
+  }
+
+  function hasUsefulVerb(text) {
+    return /\b(è|sono|può|possono|deve|devono|serve|servono|richiede|richiedono|protegge|proteggono|riduce|riducono|evita|evitano|permette|permettono|aggiunge|aggiungono|corregge|correggono|garantisce|garantiscono|significa|indica|include|comprende|gestisce|segnala|recupera|blocca|impedisce|consente)\b/i.test(clean(text));
+  }
+
+  function hasDidacticSignal(text) {
+    return /\b(perché|quindi|serve|richiede|protegge|riduce|evita|permette|aggiunge|corregge|significa|include|comprende|rischio|causa|conseguenza|procedura|controllo|protezione|accesso|dati|password|backup|software|vulnerabil|attacco|phishing|malware|ransomware|autenticazione|account)\b/i.test(clean(text));
+  }
+
+  function hasBrokenGrammar(text) {
+    return /\bdovrebbero gestiti\b|\bse essere\b|\bricordare ricordare\b|\busati per proteggere\.?$|\bse gli utenti\.?$|\bche\.?$|\.\.|Sicurezza informatica protegge l'insieme/i.test(clean(text));
+  }
+
+  function weakCardBody(card) {
+    const title = clean(card && card.title);
+    const body = clean(card && card.body);
+    if (!body || body.length < 90) return true;
+    if (hasBrokenGrammar(body)) return true;
+    if (infoWords(body).length < 10) return true;
+    if (canonical(body) === canonical(title)) return true;
+    if (!hasUsefulVerb(body)) return true;
+    if (!hasDidacticSignal(body)) return true;
+    if (/^(aggiornamenti software|autenticazione a due fattori|sicurezza informatica|password manager)\.?$/i.test(body)) return true;
+    return false;
+  }
+
+  function titleBodyMismatch(card) {
+    const title = clean(card && card.title);
+    const body = clean(card && card.body);
+    if (!title || !body || infoWords(title).length === 0) return false;
+    return similarity(title, body) < 0.12;
   }
 
   function hasDuplicateKeys(items, keyFn) {
@@ -57,6 +115,10 @@
   function weakQuestion(text) {
     const value = clean(text).toLowerCase();
     if (!value.endsWith("?")) return true;
+    if (/secondo il documento\?$/.test(value)) return true;
+    if (/che cosa protegge sicurezza informatica\?/i.test(value)) return true;
+    if (/^che cosa bisogna ricordare su\b/.test(value)) return true;
+    if (/^quale collegamento emerge tra\b/.test(value)) return true;
     if (/che cosa afferma\s*(#|documento|può essere|puo essere|-)\b/.test(value)) return true;
     if (/secondo il documento, che cosa afferma/.test(value)) return true;
     if (/che cosa dice il documento su (non|l\'obiettivo|obiettivo|esempio debole|esempio più forte|esempio piu forte|metodo migliore)\b/.test(value)) return true;
@@ -128,47 +190,78 @@
     const cards = output.cards || [];
     const test = output.test || [];
     const studyQuestions = output.studyQuestions || [];
+    const summary = output.summary || null;
 
     if (!cards.length) warnings.push("nessuna_card_generata");
     if (!studyQuestions.length) warnings.push("nessuna_domanda_studio_generata");
     if (!test.length) warnings.push("nessun_test_generato");
 
+    if (summary) {
+      const summaryText = clean([
+        summary.intro || "",
+        (summary.keyPoints || []).map((point) => `${point.title || ""} ${point.text || ""}`).join(" ")
+      ].join(" "));
+      if (hasBrokenGrammar(summaryText)) errors.push("riassunto_sgrammaticato");
+      if (/Concetti principali:/i.test(summaryText)) errors.push("riassunto_label_grezze");
+    }
+
     const duplicateCards = hasDuplicateKeys(cards, (card) => card.title);
     if (duplicateCards.length) warnings.push(`card_duplicate:${duplicateCards.slice(0, 5).join(",")}`);
+
+    cards.forEach((card, index) => {
+      cards.slice(index + 1).forEach((other) => {
+        if (similarity(card.body, other.body) >= 0.68 || similarity(card.evidence, other.evidence) >= 0.75) {
+          warnings.push(`card_quasi_duplicata:${card.id || "senza_id"}:${other.id || "senza_id"}`);
+        }
+      });
+    });
 
     const duplicateQuestions = hasDuplicateKeys(test, (question) => question.question);
     if (duplicateQuestions.length) warnings.push(`domande_test_duplicate:${duplicateQuestions.slice(0, 5).join(",")}`);
 
     cards.forEach((card) => {
       if (!card.title || !card.body) errors.push(`card_incompleta:${card.id || "senza_id"}`);
+      if (hasBrokenGrammar(`${card.title} ${card.body}`)) errors.push(`card_sgrammaticata:${card.id || "senza_id"}`);
       if (containsRawTechnicalText(card.title) || containsRawTechnicalText(card.body)) warnings.push(`card_testo_sporco:${card.id || "senza_id"}`);
+      if (weakCardBody(card)) warnings.push(`card_body_debole:${card.id || "senza_id"}`);
+      if (titleBodyMismatch(card)) warnings.push(`card_titolo_body_mismatch:${card.id || "senza_id"}`);
+      if (!card.iconSvg && !card.iconHint) warnings.push(`card_senza_icona:${card.id || "senza_id"}`);
       if (card.evidence && !evidenceExistsInDocument(card.evidence, documentText)) warnings.push(`card_non_dimostrata:${card.id || "senza_id"}`);
       if (typeof card.confidence === "number" && card.confidence < 0.45) warnings.push(`card_fiducia_bassa:${card.id || "senza_id"}`);
     });
 
     studyQuestions.forEach((question) => {
       if (!question.question || !question.answer) errors.push(`domanda_studio_incompleta:${question.id || "senza_id"}`);
+      if (hasBrokenGrammar(`${question.question} ${question.answer}`)) errors.push(`domanda_studio_sgrammaticata:${question.id || "senza_id"}`);
       if (weakQuestion(question.question)) warnings.push(`domanda_studio_debole:${question.id || "senza_id"}`);
       if (containsRawTechnicalText(question.question) || containsRawTechnicalText(question.answer)) warnings.push(`domanda_studio_testo_sporco:${question.id || "senza_id"}`);
       if (question.evidence && !evidenceExistsInDocument(question.evidence, documentText)) warnings.push(`domanda_studio_non_dimostrata:${question.id || "senza_id"}`);
     });
 
+    const usedOptions = new Map();
     test.forEach((question) => {
       if (!question.question || !Array.isArray(question.options) || !question.correctAnswer) {
         errors.push(`test_incompleto:${question.id || "senza_id"}`);
         return;
       }
       if (weakQuestion(question.question)) warnings.push(`domanda_test_debole:${question.id || "senza_id"}`);
+      if (hasBrokenGrammar(`${question.question} ${question.correctAnswer} ${(question.options || []).join(" ")}`)) errors.push(`test_sgrammaticato:${question.id || "senza_id"}`);
       if (containsRawTechnicalText(question.question)) warnings.push(`domanda_test_sporca:${question.id || "senza_id"}`);
       if (question.options.length !== 4) warnings.push(`opzioni_non_quattro:${question.id || "senza_id"}`);
       if (!question.options.includes(question.correctAnswer)) errors.push(`risposta_corretta_fuori_opzioni:${question.id || "senza_id"}`);
       if (hasDuplicateKeys(question.options, (option) => option).length) warnings.push(`opzioni_duplicate:${question.id || "senza_id"}`);
       question.options.forEach((option) => {
+        const optionKey = canonical(option);
+        if (optionKey) usedOptions.set(optionKey, (usedOptions.get(optionKey) || 0) + 1);
         if (containsRawTechnicalText(option)) warnings.push(`opzione_sporca:${question.id || "senza_id"}`);
         if (tooLongOption(option)) warnings.push(`opzione_troppo_lunga:${question.id || "senza_id"}`);
         if (weakOption(option)) warnings.push(`opzione_debole:${question.id || "senza_id"}`);
       });
       if (question.evidence && !evidenceExistsInDocument(question.evidence, documentText)) warnings.push(`test_non_dimostrato:${question.id || "senza_id"}`);
+    });
+
+    Array.from(usedOptions.entries()).forEach(([option, count]) => {
+      if (count >= 3) warnings.push(`opzione_ripetuta:${option}`);
     });
 
     const score = Math.max(0, 100 - errors.length * 30 - warnings.length * 2);
@@ -199,6 +292,8 @@
     validateAll,
     evidenceExistsInDocument,
     containsRawTechnicalText,
-    weakOption
+    weakOption,
+    weakCardBody,
+    similarity
   };
 })();

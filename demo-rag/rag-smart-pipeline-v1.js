@@ -107,6 +107,7 @@
     const safeCards = Array.isArray(cards) ? cards : [];
     target.innerHTML = safeCards.map((card) => `
       <article class="rag-smart-card" data-confidence="${card.confidence || 0}">
+        ${safeSvg(card.iconSvg) ? `<div class="rag-smart-card-icon">${safeSvg(card.iconSvg)}</div>` : ""}
         <div class="rag-smart-card-badge">${escapeHtml(card.badge || "concetto")}</div>
         <h3>${escapeHtml(card.title || "Card")}</h3>
         <p>${escapeHtml(card.body || "")}</p>
@@ -175,6 +176,13 @@
       .replace(/'/g, "&#039;");
   }
 
+  function safeSvg(value) {
+    const svg = String(value || "").trim();
+    if (!/^<svg\b/i.test(svg) || !/<\/svg>$/i.test(svg)) return "";
+    if (/<script\b|on\w+=|javascript:/i.test(svg)) return "";
+    return svg;
+  }
+
   window.RagSmartPipelineV1 = {
     VERSION,
     runFromText,
@@ -189,6 +197,7 @@
     renderSummary,
     renderStudyQuestions,
     renderTest,
-    escapeHtml
+    escapeHtml,
+    safeSvg
   };
 })();

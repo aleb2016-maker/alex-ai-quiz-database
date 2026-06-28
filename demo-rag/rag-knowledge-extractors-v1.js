@@ -1,7 +1,7 @@
 (function () {
   "use strict";
 
-  const VERSION = "rag-knowledge-extractors-v33-final-polish";
+  const VERSION = "rag-knowledge-extractors-v34-final-clean";
 
   const STOPWORDS = new Set([
     "alla", "allo", "alle", "agli", "dalla", "dallo", "delle", "degli", "della", "dell", "nella", "nello", "nelle", "negli",
@@ -115,6 +115,30 @@
       .filter((word) => word.length >= 3 && !STOPWORDS.has(word));
   }
 
+  function hasUsefulVerb(text) {
+    return /\b(è|sono|può|possono|deve|devono|serve|servono|richiede|richiedono|protegge|proteggono|riduce|riducono|evita|evitano|permette|permettono|aggiunge|aggiungono|corregge|correggono|garantisce|garantiscono|significa|indica|include|comprende|gestisce|segnala|recupera|blocca|impedisce|consente)\b/i.test(normalize(text));
+  }
+
+  function hasDidacticSignal(text) {
+    return /\b(perché|quindi|serve|richiede|protegge|riduce|evita|permette|aggiunge|corregge|significa|include|comprende|rischio|causa|conseguenza|procedura|controllo|protezione|accesso|dati|password|backup|software|vulnerabil|attacco|phishing|malware|ransomware|autenticazione|account)\b/i.test(normalize(text));
+  }
+
+  function didacticStrength(sentence, term) {
+    const clean = normalize(sentence);
+    if (!clean || clean.length < 70) return 0;
+    let score = 0;
+    if (hasUsefulVerb(clean)) score += 2;
+    if (hasDidacticSignal(clean)) score += 2;
+    if (words(clean).length >= 12) score += 1;
+    const termWords = words(term);
+    if (termWords.length) {
+      const matches = termWords.filter((word) => sentenceContains(clean, word)).length;
+      score += matches / termWords.length >= 0.6 ? 2 : 0;
+    }
+    if (/^(aggiornamenti software|autenticazione a due fattori|sicurezza informatica|password manager)\.?$/i.test(clean)) score -= 3;
+    return score;
+  }
+
   function frequencyMap(items) {
     const map = new Map();
     items.forEach((item) => map.set(item, (map.get(item) || 0) + 1));
@@ -175,7 +199,7 @@
     const sentenceList = splitSentences(text);
 
     sentenceList.forEach((sentence) => {
-      const explicitTerms = sentence.match(/\b(?:autenticazione a due fattori|password manager|aggiornamenti software|sicurezza informatica|e-mail sospette|email sospette|dati riservati|comportamenti corretti|attacco ransomware|cancellazione accidentale|utenti autorizzati|informazioni riservate|sistemi digitali|password sicura|responsabile della sicurezza|reparto it|integrità|integrita|disponibilità|disponibilita|password sicura)\b/gi) || [];
+      const explicitTerms = sentence.match(/\b(?:autenticazione a due fattori|password manager|aggiornamenti software|sicurezza informatica|e-mail sospette|email sospette|dati riservati|comportamenti corretti|attacco ransomware|cancellazione accidentale|utenti autorizzati|informazioni riservate|sistemi digitali|password sicura|responsabile della sicurezza|incidente di sicurezza|incidenti di sicurezza|reparto it|integrità|integrita|disponibilità|disponibilita|backup|malware|phishing|ransomware|password sicura)\b/gi) || [];
       explicitTerms.forEach((term) => candidates.push(simplifyPhrase(term)));
 
       const chunks = sentence
@@ -211,8 +235,19 @@
   function evidenceForTerm(sentences, term) {
     const lowerTerm = normalize(term).toLowerCase();
     if (!lowerTerm) return "";
-    return sentences.find((sentence) => sentenceContains(sentence, lowerTerm)) ||
-      sentences.find((sentence) => words(lowerTerm).some((word) => sentenceContains(sentence, word))) || "";
+    const exact = sentences
+      .filter((sentence) => sentenceContains(sentence, lowerTerm))
+      .sort((a, b) => didacticStrength(b, lowerTerm) - didacticStrength(a, lowerTerm))[0];
+    if (exact && didacticStrength(exact, lowerTerm) >= 4) return exact;
+
+    const termWords = words(lowerTerm);
+    if (!termWords.length) return "";
+    return sentences
+      .filter((sentence) => {
+        const matches = termWords.filter((word) => sentenceContains(sentence, word)).length;
+        return matches / termWords.length >= 0.6 && didacticStrength(sentence, lowerTerm) >= 4;
+      })
+      .sort((a, b) => didacticStrength(b, lowerTerm) - didacticStrength(a, lowerTerm))[0] || "";
   }
 
   function confidenceFromEvidence(term, count, evidence) {
@@ -222,6 +257,7 @@
     if (evidence.length >= 55) score += 0.12;
     if (term.split(/\s+/).length >= 2) score += 0.1;
     if (badConceptLabel(term)) score -= 0.2;
+    if (didacticStrength(evidence, term) < 4) score -= 0.28;
     return Math.max(0.1, Math.min(0.95, Number(score.toFixed(2))));
   }
 
@@ -272,6 +308,7 @@
       if (seen.has(key) || badConceptLabel(cleanLabel)) return;
       const evidence = evidenceForTerm(sentences, cleanLabel) || evidenceForTerm(sentences, words(cleanLabel)[0]);
       if (!evidence) return;
+      const strength = didacticStrength(evidence, cleanLabel);
       const category = categoryForText(`${cleanLabel} ${evidence}`);
       concepts.push({
         id: `concept_${concepts.length + 1}`,
@@ -280,6 +317,8 @@
         categoryId: category.id,
         importance: Math.max(1, Math.min(5, Math.ceil((count || 1) + (evidence.length > 80 ? 1 : 0)))),
         evidence,
+        didacticStrength: strength,
+        cardEligible: strength >= 4,
         confidence: confidenceFromEvidence(cleanLabel, count || 1, evidence)
       });
       seen.add(key);
@@ -666,4 +705,3 @@
     cleanKnowledgeObjectV33
   };
 })();
-
