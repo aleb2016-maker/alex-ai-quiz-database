@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <!-- test-rag-documenti-lunghi-v2 -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>RAG documenti lunghi V2 - Riassunto progressivo</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: linear-gradient(135deg, #dbeafe, #ede9fe, #dcfce7);
+      color: #0f172a;
+    }
+
+    main {
+      width: min(1180px, calc(100% - 28px));
+      margin: 0 auto;
+      padding: 32px 0 64px;
+    }
+
+    .hero, .panel, .result, .summary-card {
+      background: rgba(255,255,255,.82);
+      border: 1px solid rgba(148,163,184,.35);
+      border-radius: 28px;
+      box-shadow: 0 18px 48px rgba(15,23,42,.12);
+      padding: 22px;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      margin: 0 0 8px;
+      font-size: clamp(34px, 5vw, 58px);
+      letter-spacing: -.06em;
+      line-height: .95;
+    }
+
+    p {
+      line-height: 1.55;
+      font-weight: 650;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 14px;
+    }
+
+    label {
+      display: block;
+      font-weight: 900;
+      margin-bottom: 6px;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px;
+      border-radius: 14px;
+      border: 1px solid rgba(100,116,139,.35);
+      font: inherit;
+      box-sizing: border-box;
+    }
+
+    button {
+      border: 0;
+      border-radius: 999px;
+      padding: 14px 20px;
+      font-weight: 950;
+      color: white;
+      background: linear-gradient(135deg, #1d4ed8, #7c3aed);
+      cursor: pointer;
+      box-shadow: 0 14px 32px rgba(37,99,235,.22);
+      margin-top: 14px;
+    }
+
+    progress {
+      width: 100%;
+      height: 22px;
+      margin-top: 12px;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 12px;
+      margin: 16px 0;
+    }
+
+    .stat {
+      background: white;
+      border-radius: 18px;
+      padding: 14px;
+      border: 1px solid rgba(148,163,184,.28);
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 26px;
+    }
+
+    .warning {
+      background: #fffbeb;
+      border: 1px solid #f59e0b;
+      color: #78350f;
+      border-radius: 18px;
+      padding: 14px;
+      font-weight: 850;
+    }
+
+    .final-summary {
+      background: linear-gradient(135deg, #eff6ff, #f5f3ff);
+      border: 1px solid rgba(99,102,241,.28);
+      border-radius: 24px;
+      padding: 20px;
+      font-size: 17px;
+    }
+
+    .keywords {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 14px;
+    }
+
+    .keywords span {
+      background: #e0f2fe;
+      border: 1px solid rgba(14,165,233,.28);
+      border-radius: 999px;
+      padding: 6px 10px;
+      font-weight: 850;
+      color: #075985;
+    }
+
+    details {
+      margin-top: 14px;
+      background: rgba(255,255,255,.76);
+      border: 1px solid rgba(148,163,184,.28);
+      border-radius: 18px;
+      padding: 12px 14px;
+    }
+
+    summary {
+      font-weight: 950;
+      cursor: pointer;
+    }
+
+    pre {
+      white-space: pre-wrap;
+      overflow: auto;
+      background: #0f172a;
+      color: #e2e8f0;
+      border-radius: 18px;
+      padding: 16px;
+      max-height: 420px;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="hero">
+      <h1>RAG documenti lunghi V2</h1>
+      <p>
+        V2A separata: usa il motore V1 per pagine, chunk e batch, poi genera un riassunto progressivo
+        batch per batch e una fusione finale. Non tocca demo ufficiale, export, PDF o grafica.
+      </p>
+    </section>
+
+    <section class="panel">
+      <div class="grid">
+        <div>
+          <label for="fileInputLarge">File PDF/TXT/MD</label>
+          <input id="fileInputLarge" type="file" accept=".pdf,.txt,.md">
+        </div>
+
+        <div>
+          <label for="pageSelection">Pagine da elaborare</label>
+          <input id="pageSelection" value="tutto" placeholder="tutto oppure 1-20 oppure 1,4,8">
+        </div>
+
+        <div>
+          <label for="maxCharsPerChunk">Max caratteri per chunk</label>
+          <input id="maxCharsPerChunk" type="number" value="4000">
+        </div>
+
+        <div>
+          <label for="chunkOverlap">Overlap chunk</label>
+          <input id="chunkOverlap" type="number" value="400">
+        </div>
+
+        <div>
+          <label for="maxPagesPerBatch">Max pagine per batch</label>
+          <input id="maxPagesPerBatch" type="number" value="5">
+        </div>
+
+        <div>
+          <label for="maxChunksPerBatch">Max chunk per batch</label>
+          <input id="maxChunksPerBatch" type="number" value="8">
+        </div>
+
+        <div>
+          <label for="maxCharsPerBatch">Max caratteri per batch</label>
+          <input id="maxCharsPerBatch" type="number" value="28000">
+        </div>
+
+        <div>
+          <label for="sentencesPerBatch">Frasi per riassunto batch</label>
+          <input id="sentencesPerBatch" type="number" value="5">
+        </div>
+      </div>
+
+      <p class="warning">
+        Pagina test separata. Questa V2 genera solo riassunti progressivi. Non genera card, test, domande, PDF o export.
+      </p>
+
+      <button id="runButton" type="button">Analizza e genera riassunto progressivo</button>
+
+      <progress id="progress" value="0" max="100"></progress>
+      <p id="status">In attesa del file.</p>
+    </section>
+
+    <section id="result" class="result" hidden>
+      <h2>Risultato V2A</h2>
+      <div id="stats" class="stats"></div>
+
+      <article class="summary-card">
+        <h3>Riassunto finale progressivo</h3>
+        <div id="finalSummary" class="final-summary"></div>
+        <div id="keywords" class="keywords"></div>
+      </article>
+
+      <article class="summary-card">
+        <h3>Riassunti parziali per batch</h3>
+        <div id="partials"></div>
+      </article>
+
+      <details>
+        <summary>Debug JSON ultimo risultato</summary>
+        <pre id="debugJson"></pre>
+      </details>
+    </section>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+  <script>
+    if (window.pdfjsLib) {
+      pdfjsLib.GlobalWorkerOptions.workerSrc = "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js";
+    }
+  </script>
+  <script src="../runtime/web/rag-large-document-manager-v1.js"></script>
+  <script src="../runtime/web/rag-large-document-progressive-summary-v2.js?v=dedup-v2a-finale"></script>
+  <script>
+    const manager = window.RagLargeDocumentManagerV1;
+    const summarizer = window.RagLargeDocumentProgressiveSummaryV2;
+
+    const fileInput = document.getElementById("fileInputLarge");
+    const runButton = document.getElementById("runButton");
+    const progress = document.getElementById("progress");
+    const status = document.getElementById("status");
+    const result = document.getElementById("result");
+    const stats = document.getElementById("stats");
+    const finalSummary = document.getElementById("finalSummary");
+    const keywords = document.getElementById("keywords");
+    const partials = document.getElementById("partials");
+    const debugJson = document.getElementById("debugJson");
+
+    function numberValue(id) {
+      return Number(document.getElementById(id).value || 0);
+    }
+
+    function escapeHtml(value) {
+      return String(value || "")
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;");
+    }
+
+    function stat(label, value) {
+      return '<div class="stat"><span>' + escapeHtml(label) + '</span><strong>' + escapeHtml(value) + '</strong></div>';
+    }
+
+    runButton.addEventListener("click", async function () {
+      const file = fileInput.files && fileInput.files[0];
+
+      if (!file) {
+        alert("Carica prima un file PDF/TXT/MD.");
+        return;
+      }
+
+      result.hidden = true;
+      progress.value = 0;
+      status.textContent = "Avvio analisi documento...";
+
+      try {
+        const report = await manager.analyzeFile(file, {
+          pageSelection: document.getElementById("pageSelection").value,
+          maxCharsPerChunk: numberValue("maxCharsPerChunk"),
+          chunkOverlap: numberValue("chunkOverlap"),
+          maxPagesPerBatch: numberValue("maxPagesPerBatch"),
+          maxChunksPerBatch: numberValue("maxChunksPerBatch"),
+          maxCharsPerBatch: numberValue("maxCharsPerBatch"),
+          onProgress(info) {
+            progress.value = Math.round((info.current / info.total) * 35);
+            status.textContent = info.message;
+          }
+        });
+
+        const progressive = await summarizer.createProgressiveSummary(report, {
+          sentencesPerBatch: numberValue("sentencesPerBatch"),
+          maxCharsPerBatchSummary: 1500,
+          finalSentences: 14,
+          maxFinalChars: 4500,
+          onProgress(info) {
+            const base = 35;
+            const extra = Math.round((info.current / info.total) * 65);
+            progress.value = base + extra;
+            status.textContent = info.message;
+          }
+        });
+
+        stats.innerHTML = [
+          stat("Pagine totali", progressive.totalPages),
+          stat("Pagine estratte", progressive.extractedPages),
+          stat("Caratteri", progressive.totalChars),
+          stat("Chunk", progressive.chunkCount),
+          stat("Batch", progressive.batchCount),
+          stat("Parziali", progressive.partials.length)
+        ].join("");
+
+        finalSummary.textContent = progressive.finalSummary.summary || "Nessun riassunto finale prodotto.";
+
+        keywords.innerHTML = progressive.finalSummary.keywords.map(function (keyword) {
+          return "<span>" + escapeHtml(keyword) + "</span>";
+        }).join("");
+
+        partials.innerHTML = progressive.partials.map(function (part) {
+          return [
+            '<details>',
+            '<summary>Batch ' + escapeHtml(part.batchIndex) + ' · pagine ' + escapeHtml(part.pageStart) + '-' + escapeHtml(part.pageEnd) + ' · ' + escapeHtml(part.summaryChars) + ' caratteri</summary>',
+            '<p>' + escapeHtml(part.summary) + '</p>',
+            '<div class="keywords">' + part.keywords.slice(0, 8).map(function (keyword) {
+              return '<span>' + escapeHtml(keyword) + '</span>';
+            }).join("") + '</div>',
+            '</details>'
+          ].join("");
+        }).join("");
+
+        debugJson.textContent = JSON.stringify({
+          version: progressive.version,
+          fileName: progressive.fileName,
+          totalPages: progressive.totalPages,
+          extractedPages: progressive.extractedPages,
+          totalChars: progressive.totalChars,
+          chunkCount: progressive.chunkCount,
+          batchCount: progressive.batchCount,
+          memoryPolicy: progressive.memoryPolicy
+        }, null, 2);
+
+        window.__RAG_LARGE_DOCUMENT_PROGRESSIVE_SUMMARY_V2__ = progressive;
+
+        progress.value = 100;
+        status.textContent = "Riassunto progressivo completato.";
+        result.hidden = false;
+      } catch (error) {
+        console.error(error);
+        status.textContent = "Errore: " + error.message;
+        alert(error.message);
+      }
+    });
+  </script>
+</body>
+</html>
