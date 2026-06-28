@@ -700,5 +700,79 @@
     renderButtons();
     loadTask("completo");
   </script>
+<script id="rag-v35l-badge-dedup">
+(function () {
+  "use strict";
+
+  function normalizzaBadgeParte(value) {
+    return String(value || "")
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .replace(/\s+/g, " ")
+      .trim()
+      .toLowerCase();
+  }
+
+  function deduplicaBadgeTesto(testo) {
+    var originale = String(testo || "").replace(/\s+/g, " ").trim();
+    if (!originale || originale.indexOf(" · ") === -1) return originale;
+
+    var parti = originale.split(" · ").map(function (p) { return p.trim(); }).filter(Boolean);
+    if (parti.length !== 2) return originale;
+
+    if (normalizzaBadgeParte(parti[0]) === normalizzaBadgeParte(parti[1])) {
+      return parti[0];
+    }
+    return originale;
+  }
+
+  function nodoBadgePossibile(el) {
+    if (!el || !el.textContent) return false;
+    var testo = el.textContent.replace(/\s+/g, " ").trim();
+    if (testo.indexOf(" · ") === -1) return false;
+    if (testo.length > 120) return false;
+
+    var tag = (el.tagName || "").toLowerCase();
+    var cls = String(el.className || "").toLowerCase();
+
+    return tag === "span" || tag === "button" || tag === "a" ||
+      cls.indexOf("badge") >= 0 || cls.indexOf("pill") >= 0 ||
+      cls.indexOf("tag") >= 0 || cls.indexOf("chip") >= 0 ||
+      cls.indexOf("categoria") >= 0 || cls.indexOf("category") >= 0;
+  }
+
+  function applicaDeduplicaBadge() {
+    var selettore = [
+      "span", "button", "a",
+      "[class*='badge']", "[class*='Badge']",
+      "[class*='pill']", "[class*='Pill']",
+      "[class*='tag']", "[class*='Tag']",
+      "[class*='chip']", "[class*='Chip']",
+      "[class*='categoria']", "[class*='Categoria']",
+      "[class*='category']", "[class*='Category']"
+    ].join(",");
+
+    document.querySelectorAll(selettore).forEach(function (el) {
+      if (!nodoBadgePossibile(el)) return;
+      var pulito = deduplicaBadgeTesto(el.textContent);
+      if (pulito && pulito !== el.textContent.replace(/\s+/g, " ").trim()) {
+        el.textContent = pulito;
+        el.setAttribute("data-v35l-badge-dedup", "ok");
+      }
+    });
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", applicaDeduplicaBadge);
+  } else {
+    applicaDeduplicaBadge();
+  }
+
+  var observer = new MutationObserver(function () {
+    applicaDeduplicaBadge();
+  });
+  observer.observe(document.documentElement, { childList: true, subtree: true, characterData: true });
+})();
+</script>
 </body>
 </html>
