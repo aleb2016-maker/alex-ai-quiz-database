@@ -1,0 +1,948 @@
+/*
+  RAG Quality Summary + Cards V3.4A
+
+  Scopo:
+  - accetta qualsiasi input
+  - migliora SOLO riassunto e card
+  - non tocca test
+  - non tocca domande studio
+  - non modifica la grafica principale
+  - rende i testi più naturali, completi e leggibili
+*/
+
+(function () {
+  'use strict';
+
+  const STOPWORDS = new Set([
+    'che','con','per','del','della','dello','dei','degli','delle','una','uno','gli','le','il','lo','la',
+    'in','su','da','di','a','e','o','ma','anche','come','più','meno','sono','essere','viene','vengono',
+    'questo','questa','questi','queste','molto','poi','dove','quando','quindi','tra','fra','nel','nella',
+    'nelle','negli','sul','sulla','agli','alle','ai','al','alla','un','uno','una','ed','ad','ha','hanno',
+    'deve','devono','può','possono','serve','servono','usato','usati','modo','cosa','cose','parte',
+    'documento','testo','materiale','contenuto','informazioni','indicazioni'
+  ]);
+
+  function cleanText(text) {
+    return String(text || '')
+      .replace(/\r/g, '\n')
+      .replace(/[ \t]+/g, ' ')
+      .replace(/\n{3,}/g, '\n\n')
+      .trim();
+  }
+
+  function getSourceText() {
+    const candidates = [];
+
+    const windowVars = [
+      '__RAG_DOCUMENT_TEXT__',
+      '__RAG_SOURCE_TEXT__',
+      'ragDocumentText',
+      'documentText',
+      'ocrText',
+      'testoDocumento',
+      'testoEstratto'
+    ];
+
+    for (const key of windowVars) {
+      if (window[key]) candidates.push(String(window[key]));
+    }
+
+    document.querySelectorAll('textarea, [contenteditable="true"]').forEach(el => {
+      const value = el.value || el.textContent || '';
+      if (value.trim()) candidates.push(value);
+    });
+
+    const possibleInputSelectors = [
+      '#ragInputText',
+      '#documentText',
+      '#ocrText',
+      '#inputText',
+      '#testoDocumento',
+      '#testoEstratto',
+      '#contenutoDocumento'
+    ];
+
+    possibleInputSelectors.forEach(selector => {
+      const el = document.querySelector(selector);
+      if (!el) return;
+      const value = el.value || el.textContent || '';
+      if (value.trim()) candidates.push(value);
+    });
+
+    const best = candidates
+      .map(cleanText)
+      .filter(Boolean)
+      .sort((a, b) => b.length - a.length)[0];
+
+    if (best) return best;
+
+    const output = findOutputArea();
+    return output ? cleanText(output.textContent || '') : '';
+  }
+
+  function splitSentences(text) {
+    const cleaned = cleanText(text);
+
+    let pieces = cleaned
+      .split(/(?<=[.!?])\s+|\n+/)
+      .map(s => s.trim())
+      .filter(Boolean);
+
+    if (pieces.length < 4) {
+      pieces = cleaned
+        .split(/[,;•\-]+/)
+        .map(s => s.trim())
+        .filter(Boolean);
+    }
+
+    return pieces
+      .map(s => s.replace(/^\d+[\).\s-]+/, '').trim())
+      .filter(s => s.length >= 18);
+  }
+
+  function words(text) {
+    return cleanText(text)
+      .toLowerCase()
+      .normalize('NFC')
+      .replace(/[^\p{L}\p{N}\s]/gu, ' ')
+      .split(/\s+/)
+      .filter(Boolean);
+  }
+
+  function extractKeywords(text, limit = 12) {
+    const freq = new Map();
+
+    for (const word of words(text)) {
+      if (word.length < 4) continue;
+      if (STOPWORDS.has(word)) continue;
+      freq.set(word, (freq.get(word) || 0) + 1);
+    }
+
+    return [...freq.entries()]
+      .sort((a, b) => b[1] - a[1])
+      .slice(0, limit)
+      .map(([word]) => word);
+  }
+
+  function sentenceScore(sentence, keywords) {
+    const s = sentence.toLowerCase();
+    let score = 0;
+
+    for (const key of keywords) {
+      if (s.includes(key)) score += 3;
+    }
+
+    if (sentence.length >= 60 && sentence.length <= 260) score += 3;
+    if (/[0-9]/.test(sentence)) score += 1;
+    if (sentence.includes(':')) score += 1;
+
+    const bad = [
+      'scarica txt',
+      'scarica html',
+      'scarica pdf',
+      'scarica json',
+      'materiale generato',
+      'dopo aver generato'
+    ];
+
+    for (const b of bad) {
+      if (s.includes(b)) score -= 10;
+    }
+
+    return score;
+  }
+
+  function bestSentences(text, count = 6) {
+    const sentences = splitSentences(text);
+    const keywords = extractKeywords(text, 16);
+
+    const selected = sentences
+      .map(sentence => ({ sentence, score: sentenceScore(sentence, keywords) }))
+      .sort((a, b) => b.score - a.score)
+      .map(x => x.sentence);
+
+    const unique = [];
+    const seen = new Set();
+
+    for (const s of selected) {
+      const key = s.toLowerCase().slice(0, 80);
+      if (seen.has(key)) continue;
+      seen.add(key);
+      unique.push(s);
+      if (unique.length >= count) break;
+    }
+
+    return unique;
+  }
+
+  function polish(sentence) {
+    let s = cleanText(sentence)
+      .replace(/\s+([,.!?;:])/g, '$1')
+      .replace(/([,.!?;:])([^\s])/g, '$1 $2')
+      .replace(/\bUn'e-mail\b/g, "Un’e-mail")
+      .replace(/\bl'e-mail\b/g, "l’e-mail")
+      .replace(/\bpassword manager\b/gi, 'password manager')
+      .trim();
+
+    if (!s) return '';
+
+    s = s.charAt(0).toUpperCase() + s.slice(1);
+
+    if (!/[.!?]$/.test(s)) s += '.';
+
+    return s;
+  }
+
+  function titleFromKeyword(keyword) {
+    const k = String(keyword || '').toLowerCase();
+
+    const map = [
+      [/sicurezza|informatica|cyber|sistemi|dati/, 'Sicurezza informatica aziendale'],
+      [/email|mail|e-mail|phishing|sospette|sospetta/, 'E-mail sospette'],
+      [/password|credenziali|account|manager/, 'Password manager'],
+      [/aggiornamenti|update|patch|versioni/, 'Aggiornamenti controllati'],
+      [/rischi|controlli|errori|prevenzione/, 'Rischi e controlli'],
+      [/curriculum|esperienze|competenze|profilo/, 'Profilo e competenze'],
+      [/allenamento|sport|esercizi|forza|recupero/, 'Allenamento e progressione'],
+      [/poesia|versi|strofa|immagini/, 'Immagini e significato'],
+      [/racconto|storia|personaggio|scena/, 'Sviluppo della storia']
+    ];
+
+    for (const [regex, title] of map) {
+      if (regex.test(k)) return title;
+    }
+
+    return keyword
+      ? keyword.charAt(0).toUpperCase() + keyword.slice(1)
+      : 'Punto chiave';
+  }
+
+  function detectDomain(text) {
+    const t = text.toLowerCase();
+
+    if (/sicurezza|password|phishing|account|credenziali|aggiornamenti|sistemi|dati/.test(t)) {
+      return 'security';
+    }
+
+    if (/allenamento|esercizi|scheda|forza|recupero|serie|ripetizioni/.test(t)) {
+      return 'sport';
+    }
+
+    if (/curriculum|esperienza|competenze|profilo|candidato/.test(t)) {
+      return 'cv';
+    }
+
+    if (/poesia|versi|strofa|rima|metafora/.test(t)) {
+      return 'poetry';
+    }
+
+    if (/racconto|storia|personaggio|scena|capitolo/.test(t)) {
+      return 'story';
+    }
+
+    return 'general';
+  }
+
+  function enrichByContext(title, fact, sourceText) {
+    const domain = detectDomain(sourceText);
+    const t = title.toLowerCase();
+    const cleanFact = polish(fact).replace(/\.$/, '');
+
+    if (domain === 'security') {
+      if (/sicurezza/.test(t)) {
+        return `${cleanFact}. In azienda questo significa proteggere dati, dispositivi, account e sistemi digitali con comportamenti chiari e procedure applicabili da tutti.`;
+      }
+
+      if (/e-mail|mail|phishing|sospette/.test(t)) {
+        return `${cleanFact}. La segnalazione rapida permette al reparto IT o al responsabile della sicurezza di intervenire prima che il messaggio causi accessi non autorizzati, furti di dati o altri problemi.`;
+      }
+
+      if (/password|credenziali/.test(t)) {
+        return `${cleanFact}. Il password manager aiuta a usare credenziali robuste senza riutilizzarle o conservarle in modo insicuro, riducendo il rischio di accessi non autorizzati.`;
+      }
+
+      if (/aggiornamenti/.test(t)) {
+        return `${cleanFact}. Una gestione pianificata degli aggiornamenti riduce vulnerabilità, errori tecnici e blocchi improvvisi dei dispositivi o dei servizi aziendali.`;
+      }
+
+      if (/rischi|controlli/.test(t)) {
+        return `${cleanFact}. I controlli servono a trasformare le regole di sicurezza in comportamenti concreti, riducendo errori umani e rischi per dati e sistemi.`;
+      }
+    }
+
+    if (domain === 'sport') {
+      return `${cleanFact}. Questo punto è utile perché collega esercizi, progressione e recupero, evitando un allenamento casuale e rendendo più chiaro l’obiettivo del programma.`;
+    }
+
+    if (domain === 'cv') {
+      return `${cleanFact}. Nella lettura del profilo è importante collegare esperienze, competenze e obiettivo professionale, così il contenuto risulta più chiaro e valutabile.`;
+    }
+
+    if (domain === 'poetry') {
+      return `${cleanFact}. Il valore del passaggio sta nel rapporto tra parole, immagini e significato: non va letto solo come frase isolata, ma come parte dell’effetto complessivo del testo.`;
+    }
+
+    if (domain === 'story') {
+      return `${cleanFact}. Questo elemento aiuta a capire come progredisce la scena e quale ruolo hanno personaggi, azioni e conseguenze nello sviluppo narrativo.`;
+    }
+
+    return `${cleanFact}. `;
+  }
+
+
+
+  function conceptFromSentence(sentence) {
+    const s = String(sentence || '').toLowerCase();
+
+    if (/sms|secondo fattore|codice.*telefono|messaggio.*verifica/.test(s)) {
+      return {
+        id: 'sms-second-factor',
+        title: 'Secondo fattore via SMS',
+        badge: 'autenticazione aggiuntiva',
+        icon: '📲'
+      };
+    }
+
+    if (/2fa|due fattori|autenticazione/.test(s)) {
+      return {
+        id: '2fa',
+        title: 'Autenticazione a due fattori',
+        badge: 'protezione degli account',
+        icon: '🔐'
+      };
+    }
+
+    if (/password manager|credenziali|password robuste|stessa password|riutilizz/.test(s)) {
+      return {
+        id: 'password-manager',
+        title: 'Password manager',
+        badge: 'gestione sicura delle credenziali',
+        icon: '🗝️'
+      };
+    }
+
+    if (/cliccano link|link sospetti|messaggi sospetti|condividono dati riservati|password deboli|senza controllo/.test(s)) {
+      return {
+        id: 'link-messaggi-sospetti',
+        title: 'Link e messaggi sospetti',
+        badge: 'segnalazione e prevenzione',
+        icon: '📩'
+      };
+    }
+
+    if (/e-mail|email|mail|phishing|messaggio sospetto|sospett/.test(s)) {
+      return {
+        id: 'email-sospette',
+        title: 'E-mail sospette',
+        badge: 'segnalazione e prevenzione',
+        icon: '📩'
+      };
+    }
+
+    if (/aggiornament|patch|version|sistema operativo|software/.test(s)) {
+      return {
+        id: 'aggiornamenti',
+        title: 'Aggiornamenti controllati',
+        badge: 'gestione dei sistemi',
+        icon: '🔄'
+      };
+    }
+
+    if (/backup|copia di sicurezza|ripristin|recupero dati/.test(s)) {
+      return {
+        id: 'backup',
+        title: 'Backup',
+        badge: 'protezione e recupero dati',
+        icon: '💾'
+      };
+    }
+
+    if (/sicurezza informatica|proteggere dati|sistemi digitali|dispositivi|account online|rete aziendale/.test(s)) {
+      return {
+        id: 'sicurezza-generale',
+        title: 'Sicurezza informatica aziendale',
+        badge: 'protezione dati e sistemi',
+        icon: '🛡️'
+      };
+    }
+
+    if (/rischi|controlli|errore|prevenzione|comportamenti corretti/.test(s)) {
+      return {
+        id: 'rischi-controlli',
+        title: 'Rischi e controlli',
+        badge: 'riduzione degli errori',
+        icon: '⚠️'
+      };
+    }
+
+    const keyword = extractKeywords(sentence, 1)[0] || 'Punto chiave';
+
+    return {
+      id: 'altro-' + Math.abs(hashText(s)),
+      title: titleFromKeyword(keyword),
+      badge: 'punto chiave',
+      icon: '💡'
+    };
+  }
+
+  function hashText(value) {
+    let h = 0;
+    for (let i = 0; i < value.length; i++) {
+      h = ((h << 5) - h) + value.charCodeAt(i);
+      h |= 0;
+    }
+    return h;
+  }
+
+  function uniqueConceptFacts(sourceText, count = 5) {
+    const facts = bestSentences(sourceText, 18);
+    const selected = [];
+    const seen = new Set();
+
+    for (const fact of facts) {
+      const concept = conceptFromSentence(fact);
+
+      if (seen.has(concept.id)) continue;
+
+      seen.add(concept.id);
+      selected.push({ fact, concept });
+
+      if (selected.length >= count) break;
+    }
+
+    return selected;
+  }
+
+
+  function stripWeakOpening(sentence) {
+    return String(sentence || '')
+      .replace(/^(tuttavia|però|inoltre|quindi|comunque|invece),?\s+/i, '')
+      .replace(/^ma\s+/i, '')
+      .trim();
+  }
+
+  function enrichConceptFact(concept, fact, sourceText) {
+    const cleanFact = stripWeakOpening(polish(fact).replace(/\.$/, ''));
+
+    if (concept.id === 'sms-second-factor') {
+      return 'L’SMS può essere usato come secondo fattore quando non sono disponibili metodi più forti. Anche se non è la soluzione più sicura, resta comunque migliore della sola password perché aggiunge un passaggio di verifica prima dell’accesso.';
+    }
+
+    if (concept.id === '2fa') {
+      return `${cleanFact}. La 2FA aggiunge un controllo ulteriore oltre alla password: anche se una credenziale viene rubata, l’accesso resta più difficile senza il secondo fattore di verifica.`;
+    }
+
+    if (concept.id === 'password-manager') {
+      return `${cleanFact}. Il password manager aiuta a creare e conservare credenziali robuste, evitando password deboli, riutilizzate o salvate in luoghi non sicuri.`;
+    }
+
+    if (concept.id === 'link-messaggi-sospetti') {
+      return `${cleanFact}. La segnalazione tempestiva di link o messaggi sospetti permette al reparto IT o al responsabile della sicurezza di intervenire prima che ci siano furti di dati, accessi non autorizzati o infezioni dei sistemi.`;
+    }
+
+    if (concept.id === 'email-sospette') {
+      return `${cleanFact}. Segnalare subito questi messaggi permette al reparto IT o al responsabile della sicurezza di intervenire prima che ci siano furti di dati, accessi non autorizzati o infezioni dei sistemi.`;
+    }
+
+    if (concept.id === 'aggiornamenti') {
+      return `${cleanFact}. Una gestione controllata degli aggiornamenti riduce vulnerabilità, errori tecnici e blocchi improvvisi dei dispositivi o dei servizi aziendali.`;
+    }
+
+    if (concept.id === 'backup') {
+      return `${cleanFact}. Il backup serve a recuperare dati e continuità operativa in caso di errore, guasto, cancellazione accidentale o attacco informatico.`;
+    }
+
+    if (concept.id === 'sicurezza-generale') {
+      return `${cleanFact}. In azienda questo significa trasformare la sicurezza in comportamenti quotidiani chiari, applicabili da tutti e collegati alla protezione di dati, dispositivi, account e sistemi.`;
+    }
+
+    if (concept.id === 'rischi-controlli') {
+      return `${cleanFact}. I controlli aiutano a prevenire errori umani, comportamenti rischiosi e situazioni che potrebbero compromettere dati, account o sistemi aziendali.`;
+    }
+
+    return polish(cleanFact);
+  }
+
+
+  function normalizeAcronyms(text) {
+    return String(text || '')
+      .replace(/\b2fa\b/gi, '2FA')
+      .replace(/\bsms\b/gi, 'SMS')
+      .replace(/\bit\b/g, 'IT');
+  }
+
+  function joinItalianList(items) {
+    const clean = items
+      .map(x => normalizeAcronyms(String(x || '').trim()))
+      .filter(Boolean);
+
+    if (clean.length === 0) return '';
+    if (clean.length === 1) return clean[0];
+    if (clean.length === 2) return `${clean[0]} e ${clean[1]}`;
+
+    return `${clean.slice(0, -1).join(', ')} e ${clean[clean.length - 1]}`;
+  }
+
+  function introPhraseFromConcept(concept) {
+    if (!concept || !concept.id) return '';
+
+    const map = {
+      '2fa': 'l’uso della 2FA',
+      'sms-second-factor': 'l’uso del secondo fattore via SMS',
+      'password-manager': 'la gestione corretta delle password',
+      'link-messaggi-sospetti': 'l’attenzione ai link e ai messaggi sospetti',
+      'email-sospette': 'la segnalazione delle e-mail sospette',
+      'sicurezza-generale': 'la protezione dei dati, dei dispositivi, degli account e dei sistemi',
+      'aggiornamenti': 'la gestione controllata degli aggiornamenti',
+      'backup': 'la protezione e il recupero dei dati tramite backup',
+      'rischi-controlli': 'la riduzione dei rischi tramite controlli e comportamenti corretti'
+    };
+
+    if (map[concept.id]) return map[concept.id];
+
+    const fallbackTitle = normalizeAcronyms(concept.title || '').trim();
+    if (!fallbackTitle) return '';
+
+    return `il tema ${fallbackTitle.toLowerCase()}`;
+  }
+
+  function buildSmartIntro(domain, items, sourceText) {
+    const phrases = [];
+    const seen = new Set();
+
+    for (const item of items || []) {
+      const phrase = introPhraseFromConcept(item.concept);
+      const key = phrase.toLowerCase();
+
+      if (!phrase || seen.has(key)) continue;
+
+      seen.add(key);
+      phrases.push(phrase);
+    }
+
+    const joined = joinItalianList(phrases);
+
+    if (domain === 'security') {
+      if (joined) {
+        return `Il materiale spiega come migliorare la sicurezza informatica aziendale attraverso ${joined}.`;
+      }
+
+      return 'Il materiale spiega come migliorare la sicurezza informatica aziendale attraverso comportamenti corretti, procedure chiare e protezione di dati, account, dispositivi e sistemi.';
+    }
+
+    if (joined) {
+      return `Il materiale organizza i punti principali attraverso ${joined}, rendendo il contenuto più chiaro e facile da studiare.`;
+    }
+
+    const keywords = extractKeywords(sourceText, 3).map(titleFromKeyword);
+    const fallback = joinItalianList(keywords.map(k => k.toLowerCase()));
+
+    return fallback
+      ? `Il materiale mette in evidenza ${fallback}, organizzando le informazioni principali in modo più chiaro e leggibile.`
+      : 'Il materiale è stato riorganizzato in modo più chiaro, evidenziando i passaggi principali e i collegamenti utili.';
+  }
+
+
+  function buildSummaryData(sourceText) {
+    const source = cleanText(sourceText);
+    const domain = detectDomain(source);
+    const items = uniqueConceptFacts(source, 5);
+
+    let title = 'Riassunto';
+
+    if (domain === 'security') {
+      title = 'Riassunto: sicurezza informatica aziendale';
+    } else {
+      const labels = items
+        .map(({ concept }) => concept.title)
+        .filter(Boolean);
+
+      const main = labels.length
+        ? joinItalianList(labels)
+        : joinItalianList(extractKeywords(source, 3).map(titleFromKeyword));
+
+      title = main ? `Riassunto: ${main}` : 'Riassunto';
+    }
+
+    const intro = buildSmartIntro(domain, items, source);
+
+    const points = items.map(({ fact, concept }) => {
+      return {
+        label: normalizeAcronyms(concept.title),
+        text: normalizeAcronyms(enrichConceptFact(concept, fact, source))
+      };
+    });
+
+    return {
+      title: normalizeAcronyms(title),
+      intro: normalizeAcronyms(intro),
+      points
+    };
+  }
+
+  function buildCardsData(sourceText) {
+    const source = cleanText(sourceText);
+    const items = uniqueConceptFacts(source, 5);
+
+    return items.map(({ fact, concept }, index) => {
+      return {
+        badge: concept.badge,
+        icon: concept.icon,
+        title: `${index + 1}. ${concept.title}`,
+        text: enrichConceptFact(concept, fact, source)
+      };
+    });
+  }
+
+  function makeBadge(title) {
+    const t = title.toLowerCase();
+
+    if (/sicurezza/.test(t)) return 'protezione dati e sistemi';
+    if (/e-mail|mail/.test(t)) return 'segnalazione e prevenzione';
+    if (/password|credenziali/.test(t)) return 'gestione sicura delle credenziali';
+    if (/aggiornamenti/.test(t)) return 'gestione dei sistemi';
+    if (/rischi|controlli/.test(t)) return 'riduzione degli errori';
+    if (/allenamento/.test(t)) return 'progressione e metodo';
+    if (/profilo|competenze/.test(t)) return 'lettura del profilo';
+    if (/poesia/.test(t)) return 'immagini e significato';
+    if (/storia/.test(t)) return 'sviluppo narrativo';
+
+    return 'punto chiave';
+  }
+
+  function makeIcon(title) {
+    const t = title.toLowerCase();
+
+    if (/sicurezza/.test(t)) return '🛡️';
+    if (/e-mail|mail/.test(t)) return '📩';
+    if (/password|credenziali/.test(t)) return '🔐';
+    if (/aggiornamenti/.test(t)) return '🔄';
+    if (/rischi|controlli/.test(t)) return '⚠️';
+    if (/allenamento/.test(t)) return '🏋️';
+    if (/profilo|competenze/.test(t)) return '👤';
+    if (/poesia/.test(t)) return '✒️';
+    if (/storia/.test(t)) return '📖';
+
+    return '💡';
+  }
+
+  function findOutputArea() {
+    const selectors = [
+      '#output',
+      '#ragOutput',
+      '#risultato',
+      '#risultati',
+      '#materialeGenerato',
+      '#generatedOutput',
+      '.output',
+      '.rag-output',
+      'main'
+    ];
+
+    for (const selector of selectors) {
+      const el = document.querySelector(selector);
+      if (el) return el;
+    }
+
+    return document.body;
+  }
+
+  function renderSummary() {
+    const source = getSourceText();
+    if (!source) return false;
+
+    const data = buildSummaryData(source);
+    const output = findOutputArea();
+
+    let box = document.querySelector('#rag-quality-summary-v34a');
+
+    if (!box) {
+      box = document.createElement('section');
+      box.id = 'rag-quality-summary-v34a';
+      box.className = 'rag-quality-summary-v34a';
+
+      const downloadBox = findDownloadBox(output);
+      if (downloadBox && downloadBox.parentElement) {
+        downloadBox.insertAdjacentElement('afterend', box);
+      } else {
+        output.prepend(box);
+      }
+    }
+
+    box.innerHTML = `
+      <div class="rag-quality-summary-inner-v34a">
+        <p class="rag-quality-summary-intro-v34a">${escapeHtml(data.intro)}</p>
+        <ol class="rag-quality-summary-list-v34a">
+          ${data.points.map(point => `
+            <li>
+              <strong>${escapeHtml(point.label)}:</strong>
+              <span>${escapeHtml(point.text)}</span>
+            </li>
+          `).join('')}
+        </ol>
+      </div>
+    `;
+
+    const heading = findSummaryHeading(output);
+    if (heading) heading.textContent = data.title;
+
+    hideOldSummaryText(output, box);
+
+    return true;
+  }
+
+  function renderCards() {
+    const source = getSourceText();
+    if (!source) return false;
+
+    const cards = buildCardsData(source);
+    const output = findOutputArea();
+
+    let grid = document.querySelector('#rag-quality-cards-v34a');
+
+    if (!grid) {
+      grid = document.createElement('section');
+      grid.id = 'rag-quality-cards-v34a';
+      grid.className = 'rag-quality-cards-grid-v34a';
+      output.appendChild(grid);
+    }
+
+    grid.innerHTML = cards.map(card => `
+      <article class="rag-quality-card-v34a">
+        <div class="rag-quality-icon-v34a">${escapeHtml(card.icon)}</div>
+        <div class="rag-quality-badge-v34a">${escapeHtml(card.badge)}</div>
+        <h3>${escapeHtml(card.title)}</h3>
+        <p>${escapeHtml(card.text)}</p>
+      </article>
+    `).join('');
+
+    hideOldCardGrid(output, grid);
+
+    return true;
+  }
+
+  function findDownloadBox(output) {
+    const candidates = output.querySelectorAll('section, div, article');
+    for (const el of candidates) {
+      const t = (el.textContent || '').toLowerCase();
+      if (
+        t.includes('scarica materiale generato') ||
+        (t.includes('scarica txt') && t.includes('scarica pdf') && t.includes('scarica json'))
+      ) {
+        return el;
+      }
+    }
+    return null;
+  }
+
+  function findSummaryHeading(output) {
+    const headings = output.querySelectorAll('h1, h2, h3');
+    for (const h of headings) {
+      const t = (h.textContent || '').toLowerCase();
+      if (t.includes('riassunto')) return h;
+    }
+    return null;
+  }
+
+  function hideOldSummaryText(output, keepBox) {
+    const downloadBox = findDownloadBox(output);
+
+    output.querySelectorAll('p, ol, ul').forEach(el => {
+      if (keepBox.contains(el)) return;
+      if (downloadBox && downloadBox.contains(el)) return;
+
+      const text = (el.textContent || '').toLowerCase();
+
+      if (
+        text.includes('il documento riguarda') ||
+        text.includes('il materiale riguarda') ||
+        text.includes('sicurezza informatica aziendale') ||
+        text.includes('e-mail sospette') ||
+        text.includes('password manager') ||
+        text.includes('aggiornamenti controllati') ||
+        text.includes('rischi e controlli')
+      ) {
+        el.style.display = 'none';
+        el.setAttribute('data-hidden-by-v34a', 'summary');
+      }
+    });
+  }
+
+  function hideOldCardGrid(output, keepGrid) {
+    const candidates = output.querySelectorAll('article, section, div');
+
+    candidates.forEach(el => {
+      if (el === keepGrid || keepGrid.contains(el)) return;
+      if (el.id === 'rag-quality-summary-v34a') return;
+
+      const text = (el.textContent || '').toLowerCase();
+
+      const looksLikeOldCard =
+        text.includes('1. sicurezza informatica') ||
+        text.includes('2. e-mail sospette') ||
+        text.includes('3. password manager') ||
+        text.includes('4. aggiornamenti controllati') ||
+        text.includes('5. rischi e controlli');
+
+      const hasButtons =
+        text.includes('scarica txt') ||
+        text.includes('scarica html') ||
+        text.includes('scarica pdf') ||
+        text.includes('scarica json');
+
+      if (looksLikeOldCard && !hasButtons) {
+        el.style.display = 'none';
+        el.setAttribute('data-hidden-by-v34a', 'cards');
+      }
+    });
+  }
+
+  function injectStyle() {
+    if (document.querySelector('#rag-quality-summary-cards-style-v34a')) return;
+
+    const style = document.createElement('style');
+    style.id = 'rag-quality-summary-cards-style-v34a';
+    style.textContent = `
+      .rag-quality-summary-v34a {
+        margin: 26px 0;
+      }
+
+      .rag-quality-summary-inner-v34a {
+        color: #f8fafc;
+        font-size: 20px;
+        line-height: 1.55;
+      }
+
+      .rag-quality-summary-intro-v34a {
+        margin: 0 0 20px;
+        color: #e2e8f0;
+        font-weight: 650;
+      }
+
+      .rag-quality-summary-list-v34a {
+        margin: 0;
+        padding-left: 28px;
+      }
+
+      .rag-quality-summary-list-v34a li {
+        margin: 10px 0;
+        color: #f8fafc;
+      }
+
+      .rag-quality-summary-list-v34a strong {
+        font-weight: 900;
+      }
+
+      .rag-quality-cards-grid-v34a {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+        gap: 24px;
+        margin: 30px 0;
+      }
+
+      .rag-quality-card-v34a {
+        min-height: 330px;
+        border-radius: 28px;
+        padding: 34px 30px;
+        background: linear-gradient(145deg, rgba(88, 110, 160, 0.82), rgba(61, 40, 113, 0.96));
+        border: 1px solid rgba(148, 163, 184, 0.25);
+        box-shadow: 0 18px 40px rgba(0, 0, 0, 0.22);
+        color: #f8fafc;
+      }
+
+      .rag-quality-icon-v34a {
+        width: 76px;
+        height: 76px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 26px;
+        background: rgba(255, 255, 255, 0.12);
+        font-size: 34px;
+        margin-bottom: 22px;
+      }
+
+      .rag-quality-badge-v34a {
+        display: inline-block;
+        padding: 8px 18px;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.13);
+        color: #f8fafc;
+        font-weight: 850;
+        font-size: 17px;
+        margin-bottom: 18px;
+      }
+
+      .rag-quality-card-v34a h3 {
+        margin: 0 0 20px;
+        font-size: 30px;
+        line-height: 1.12;
+        color: #ffffff;
+      }
+
+      .rag-quality-card-v34a p {
+        margin: 0;
+        font-size: 20px;
+        line-height: 1.45;
+        color: #e5edf8;
+      }
+    `;
+    document.head.appendChild(style);
+  }
+
+  function escapeHtml(value) {
+    return String(value || '')
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#039;');
+  }
+
+  function runAfterGeneration(mode) {
+    injectStyle();
+
+    const delays = [120, 450, 900];
+
+    delays.forEach(delay => {
+      setTimeout(() => {
+        if (mode === 'summary') renderSummary();
+        if (mode === 'cards') renderCards();
+      }, delay);
+    });
+  }
+
+  function attach() {
+    injectStyle();
+
+    document.addEventListener('click', function (event) {
+      const btn = event.target.closest('button, a');
+      if (!btn) return;
+
+      const label = cleanText(btn.textContent || btn.getAttribute('aria-label') || '').toLowerCase();
+
+      if (label.includes('riassunto')) {
+        runAfterGeneration('summary');
+      }
+
+      if (label.includes('card')) {
+        runAfterGeneration('cards');
+      }
+    }, true);
+  }
+
+  window.RAGQualitySummaryCardsV34A = {
+    cleanText,
+    getSourceText,
+    extractKeywords,
+    bestSentences,
+    buildSummaryData,
+    buildCardsData,
+    renderSummary,
+    renderCards
+  };
+
+  document.addEventListener('DOMContentLoaded', attach);
+
+  console.log('[RAG V3.4A] Motore qualità Riassunto + Card attivo');
+})();
