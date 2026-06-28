@@ -233,8 +233,25 @@ def concetti_puliti(kb: dict[str, Any]) -> list[dict[str, Any]]:
     return result
 
 
+
+def pulisci_titolo_documento_visibile(value: str) -> str:
+    title = normalizza_spazi(value or "Documento analizzato")
+    title = title.strip(" -:.")
+
+    import re
+    title = re.sub(r"^Documento\s+RAG\s+di\s+test\s*:\s*", "", title, flags=re.IGNORECASE)
+    title = re.sub(r"^Documento\s+di\s+test\s*:\s*", "", title, flags=re.IGNORECASE)
+    title = re.sub(r"^Test\s*:\s*", "", title, flags=re.IGNORECASE)
+
+    title = title.strip(" -:.")
+    if not title:
+        title = "Documento analizzato"
+
+    return title[:1].upper() + title[1:]
+
+
 def crea_riassunto(kb: dict[str, Any], concepts: list[dict[str, Any]]) -> dict[str, Any]:
-    titolo_doc = normalizza_spazi(kb.get("titolo_documento", "Documento"))
+    titolo_doc = pulisci_titolo_documento_visibile(kb.get("titolo_documento", "Documento analizzato"))
     tipo_doc = normalizza_spazi(kb.get("tipo_documento", "documento"))
 
     top = concepts[:5]
@@ -261,23 +278,93 @@ def crea_riassunto(kb: dict[str, Any], concepts: list[dict[str, Any]]) -> dict[s
     }
 
 
+FINALI_DEBOLI_OUTPUT = {
+    "e", "di", "da", "con", "per", "su", "tra", "fra",
+    "della", "delle", "degli", "dello", "alla", "alle", "agli",
+    "nella", "nelle", "negli", "sulla", "sulle", "dei", "del",
+    "nel", "nei", "al", "ai",
+}
+
+
+def finisce_male_output(value: str) -> bool:
+    text = normalizza_spazi(value).strip(" .!?;:,")
+    if not text:
+        return True
+
+    last = text.split()[-1].lower().strip(" .!?;:,")
+    return last in FINALI_DEBOLI_OUTPUT
+
+
+def testo_completo_breve(value: str, max_chars: int = 220) -> str:
+    text = ripara_punteggiatura(value).strip()
+
+    if len(text) <= max_chars and not finisce_male_output(text):
+        return frase(text, max_chars + 20)
+
+    # Prima prova: frase o segmento completo.
+    import re
+    parts = re.split(r"(?<=[.!?])\s+|;\s+", text)
+
+    for part in parts:
+        candidate = normalizza_spazi(part).strip(" ;")
+        if len(candidate) >= 24 and len(candidate) <= max_chars and not finisce_male_output(candidate):
+            return frase(candidate, max_chars + 20)
+
+    # Seconda prova: taglio a parole, ma mai su preposizioni/connettivi.
+    words = text.split()
+    selected = []
+
+    for word in words:
+        candidate = " ".join(selected + [word])
+        if len(candidate) > max_chars:
+            break
+        selected.append(word)
+
+    while selected and selected[-1].lower().strip(" .!?;:,") in FINALI_DEBOLI_OUTPUT:
+        selected.pop()
+
+    candidate = " ".join(selected).strip(" .!?;:,")
+
+    if len(candidate) < 24:
+        candidate = " ".join(words[: min(len(words), 12)]).strip(" .!?;:,")
+
+    return frase(candidate, max_chars + 20)
+
+
+def opzione_da_concetto(concept: dict[str, Any], variante: int) -> str:
+    titolo = normalizza_spazi(concept.get("titolo_utente") or concept.get("titolo") or "Punto")
+    testo = testo_completo_breve(concept.get("testo_utente") or concept.get("descrizione") or "", 175)
+
+    templates = [
+        "Concetto: {titolo}. {testo}",
+        "Aspetto: {titolo}. {testo}",
+        "Focus: {titolo}. {testo}",
+        "Punto del documento: {titolo}. {testo}",
+        "Informazione: {titolo}. {testo}",
+        "Riepilogo: {titolo}. {testo}",
+    ]
+
+    template = templates[variante % len(templates)]
+    return frase(template.format(titolo=titolo, testo=testo), 260)
+
+
 def crea_card(concepts: list[dict[str, Any]], numero: int) -> list[dict[str, Any]]:
     cards = []
 
     for index, c in enumerate(concepts[:numero], start=1):
         titolo = c["titolo_utente"]
         testo = c["testo_utente"]
+        chiave = testo_completo_breve(testo, 220)
 
         cards.append({
             "id": f"card-clean-v34e-{index}",
             "titolo": titolo,
             "testo": testo,
-            "messaggio_chiave": f"Punto chiave: {senza_punto(testo, 130)}.",
-            "fonte_visibile": "Documento analizzato.",
+            "messaggio_chiave": f"Punto chiave: {chiave}",
+            "fonte_visibile": "Fonte: sezione del documento.",
         })
 
     return cards
-
 
 def similarita(a: str, b: str) -> float:
     wa = set(re.findall(r"[A-Za-zÀ-ÿ0-9'’]{4,}", a.lower()))
@@ -289,8 +376,8 @@ def similarita(a: str, b: str) -> float:
     return len(wa & wb) / len(wa | wb)
 
 
-def scegli_distrattori(target: dict[str, Any], concepts: list[dict[str, Any]]) -> list[str]:
-    corretta = target["testo_utente"]
+
+def scegli_distrattori(target: dict[str, Any], concepts: list[dict[str, Any]]) -> list[dict[str, Any]]:
     target_text = target["titolo_utente"] + " " + target["testo_utente"]
 
     candidates = []
@@ -299,28 +386,25 @@ def scegli_distrattori(target: dict[str, Any], concepts: list[dict[str, Any]]) -
         if c.get("id") == target.get("id"):
             continue
 
-        opt = c["testo_utente"]
-        sim = similarita(target_text, c["titolo_utente"] + " " + opt)
-
-        if opt.lower() == corretta.lower():
-            continue
+        sim = similarita(target_text, c["titolo_utente"] + " " + c["testo_utente"])
 
         if sim >= 0.92:
             continue
 
-        candidates.append((sim, opt))
+        candidates.append((sim, c))
 
     candidates.sort(key=lambda x: x[0], reverse=True)
 
     result = []
-    seen = {corretta.lower()}
+    seen = set()
 
-    for _, opt in candidates:
-        if opt.lower() in seen:
+    for _, concept in candidates:
+        key = (concept.get("titolo_utente", "") + concept.get("testo_utente", "")).lower()
+        if key in seen:
             continue
 
-        seen.add(opt.lower())
-        result.append(opt)
+        seen.add(key)
+        result.append(concept)
 
         if len(result) == 3:
             break
@@ -340,28 +424,45 @@ def crea_test(concepts: list[dict[str, Any]], numero: int) -> list[dict[str, Any
 
     for index, c in enumerate(concepts[:numero], start=1):
         titolo = c["titolo_utente"]
-        corretta = c["testo_utente"]
         distrattori = scegli_distrattori(c, concepts)
 
         if len(distrattori) < 3:
             continue
 
-        opzioni = [corretta] + distrattori
-        random.Random(7300 + index).shuffle(opzioni)
+        # Variante diversa per ogni domanda:
+        # così lo stesso concetto non ricompare identico come opzione in più domande.
+        variante = index - 1
+
+        corretta = opzione_da_concetto(c, variante)
+        opzioni = [corretta] + [opzione_da_concetto(d, variante) for d in distrattori]
+
+        # Mantiene opzioni distinte nella singola domanda.
+        opzioni_uniche = []
+        viste = set()
+        for opt in opzioni:
+            key = normalizza_spazi(opt).lower()
+            if key in viste:
+                continue
+            viste.add(key)
+            opzioni_uniche.append(opt)
+
+        if len(opzioni_uniche) != 4:
+            continue
+
+        random.Random(7300 + index).shuffle(opzioni_uniche)
 
         domanda = templates[(index - 1) % len(templates)].format(titolo=titolo)
 
         tests.append({
             "id": f"test-clean-v34e-{index}",
             "domanda": domanda,
-            "opzioni": opzioni,
+            "opzioni": opzioni_uniche,
             "risposta_corretta": corretta,
-            "spiegazione": f"Il contenuto collegato a «{titolo}» dice: {corretta}",
-            "fonte_visibile": "Documento analizzato.",
+            "spiegazione": f"Il contenuto collegato a «{titolo}» dice: {c['testo_utente']}",
+            "fonte_visibile": "Fonte: sezione del documento.",
         })
 
     return tests
-
 
 def crea_domande_studio(concepts: list[dict[str, Any]], numero: int) -> list[dict[str, Any]]:
     result = []
