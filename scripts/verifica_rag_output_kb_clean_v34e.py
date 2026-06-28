@@ -168,10 +168,27 @@ def controlla_output(path: Path) -> list[str]:
     if len(data.get("domande_studio", [])) < 3:
         problemi.append("domande studio insufficienti")
 
-    titles = titoli_visibili(data)
+    # Lo stesso titolo può comparire correttamente in card, test e domande studio.
+    # Il duplicato è un problema solo se si ripete dentro la stessa sezione.
+    card_titles = [str(c.get("titolo", "")).lower() for c in data.get("card", [])]
+    if len(card_titles) != len(set(card_titles)):
+        problemi.append("titoli card duplicati")
 
-    if len(titles) != len(set(titles)):
-        problemi.append("titoli visibili duplicati")
+    test_titles = []
+    for test in data.get("test", []):
+        test_titles.extend(re.findall(r"«([^»]+)»", str(test.get("domanda", ""))))
+    test_titles = [t.lower() for t in test_titles]
+    if len(test_titles) != len(set(test_titles)):
+        problemi.append("titoli test duplicati")
+
+    studio_titles = []
+    for studio in data.get("domande_studio", []):
+        studio_titles.extend(re.findall(r"«([^»]+)»", str(studio.get("domanda", ""))))
+    studio_titles = [t.lower() for t in studio_titles]
+    if len(studio_titles) != len(set(studio_titles)):
+        problemi.append("titoli domande studio duplicati")
+
+    titles = titoli_visibili(data)
 
     for title in titles:
         low_title = title.lower()
