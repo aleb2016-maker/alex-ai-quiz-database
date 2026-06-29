@@ -597,84 +597,16 @@
 
   completaProfiliAvanzati();
 
-  const esempiDocumentiUniversali = {
-    sport: `Scheda allenamento settimanale
-10 minuti di riscaldamento articolare
-25 minuti di camminata veloce o bicicletta
-3 serie di squat e plank
-5 minuti di equilibrio su una gamba
-10 minuti di stretching
-5 minuti di defaticamento e relax`,
+  const esempiTema = {};
 
-    curriculum: `Mario Rossi
-Sviluppatore junior con interesse per web app, intelligenza artificiale e strumenti digitali.
-Esperienze: piccoli progetti HTML, CSS e JavaScript pubblicati su GitHub.
-Competenze tecniche: JavaScript, Python base, GitHub, problem solving.
-Competenze trasversali: organizzazione, autonomia e voglia di imparare.
-Formazione: diploma tecnico e corso di aggiornamento in sviluppo software.
-Obiettivo: entrare in un team dove crescere come full stack developer.`,
-
-    personale: `Documento personale
-Nome: Mario Rossi
-Codice fiscale: RSSMRA80A01H501Z
-Residenza: Roma, Via delle Rose 10
-Numero documento: AX1234567
-Scadenza: 12/09/2028
-Azione da fare: controllare la validità prima della prenotazione.`,
-
-    aziendale: `Procedura aziendale sicurezza dati
-Obiettivo: ridurre errori nella gestione dei file dei clienti.
-Contesto: il reparto amministrativo lavora ogni giorno con documenti sensibili.
-Processo: salvare i file nella cartella condivisa corretta e nominare i documenti secondo lo standard.
-Responsabilità: ogni operatore controlla i propri file prima dell’invio.
-Rischi: invio errato, perdita dati o accesso non autorizzato.
-Metriche: numero di errori mensili e tempi di correzione.
-Prossimi passi: formazione interna e controllo settimanale.`,
-
-    storia: `Storia breve
-Nel piccolo villaggio vicino al bosco viveva una ragazza curiosa.
-Un giorno trovò una mappa nascosta sotto una pietra.
-Il problema era attraversare il sentiero prima del tramonto.
-All’improvviso capì che i simboli sulla mappa indicavano gli alberi più antichi.
-Decise di seguirli e trovò l’ingresso di una vecchia biblioteca.
-Alla fine tornò al villaggio con un libro che raccontava la memoria del luogo.`,
-
-    poesia: `Poesia
-Nel silenzio della notte
-il vento sfiora il cuore.
-Una luce piccola resiste
-tra ombra e ricordo.
-Il mare sembra una strada
-che porta lontano la paura.
-Resta una speranza sottile
-come rima nascosta nel tempo.`,
-
-    hobby: `Progetto tempo libero
-Attività: creare un piccolo diario illustrato.
-Materiali: quaderno, matite colorate, colla e fotografie.
-Passaggi: scegliere un tema, disegnare le pagine, aggiungere brevi testi.
-Tecnica: usare colori diversi per separare ricordi, idee e obiettivi.
-Obiettivo: costruire un oggetto personale e creativo.
-Risultato finale: un diario ordinato, colorato e facile da sfogliare.`
-  };
 
   function caricaEsempioTema(tema) {
-    const input = document.getElementById("documentoInput");
-
-    if (!input || !esempiDocumentiUniversali[tema]) {
-      return;
-    }
-
-    input.value = esempiDocumentiUniversali[tema];
-
-    const output = document.getElementById("output");
-    if (output) {
-      output.innerHTML = "";
-    }
+    console.warn("Esempi precaricati disattivati definitivamente:", tema);
+    mostraErrore(
+      "Demo precaricate disattivate",
+      "Gli esempi precaricati sono stati rimossi. Incolla o carica un documento reale."
+    );
   }
-
-  // === BLOCCO 3: PROFILI AVANZATI END ===
-
 
   function correggiOcrTabellaAllenamento(testo) {
     let t = String(testo || "");
@@ -907,6 +839,7 @@ Risultato finale: un diario ordinato, colorato e facile da sfogliare.`
   }
 
   function costruisciCardDaSezioni(testo, profilo) {
+
     const righe = righePulite(testo);
     const usate = new Set();
     const cards = [];
@@ -952,6 +885,7 @@ Risultato finale: un diario ordinato, colorato e facile da sfogliare.`
   }
 
   function creaCards(testo) {
+
     const profilo = riconosciTema(testo);
     let cards = costruisciCardDaSezioni(testo, profilo);
 
@@ -979,7 +913,132 @@ Risultato finale: un diario ordinato, colorato e facile da sfogliare.`
     };
   }
 
+  function frasiRiassuntoEsteso(testo) {
+    return String(testo || "")
+      .replace(/\r/g, "\n")
+      .split(/(?<=[.!?])\s+|\n+/)
+      .map(function (riga) {
+        return riga.replace(/\s+/g, " ").trim();
+      })
+      .filter(function (riga) {
+        return riga.length >= 20;
+      });
+  }
+
+  function prendiFrasi(frasi, parole, usate, massimo) {
+    const prese = [];
+
+    frasi.forEach(function (frase, indice) {
+      if (prese.length >= massimo || usate.has(indice)) {
+        return;
+      }
+
+      const minuscola = frase.toLowerCase();
+      const trovata = parole.some(function (parola) {
+        return minuscola.includes(String(parola).toLowerCase());
+      });
+
+      if (trovata) {
+        usate.add(indice);
+        prese.push(frase);
+      }
+    });
+
+    return prese;
+  }
+
+  function prendiExtra(frasi, usate, massimo) {
+    const prese = [];
+
+    frasi.forEach(function (frase, indice) {
+      if (prese.length >= massimo || usate.has(indice)) {
+        return;
+      }
+
+      usate.add(indice);
+      prese.push(frase);
+    });
+
+    return prese;
+  }
+
+  function parolePerSezioneRiassunto(profilo, sezione) {
+    const nome = String(profilo.nome || "").toLowerCase();
+    const ramo = String(sezione.ramo || "").toLowerCase();
+    const base = sezione.parole || [];
+
+    if (nome.includes("poesia")) {
+      return base.concat(["tema", "silenzio", "notte", "vento", "cuore", "luna", "mare", "ricordo", "paura", "speranza", "emozione", "immagine", "verso", "rima"]);
+    }
+
+    if (nome.includes("storia") || nome.includes("racconto")) {
+      return base.concat(["personaggio", "protagonista", "villaggio", "giorno", "poi", "dopo", "problema", "scelta", "decise", "alla fine", "finale"]);
+    }
+
+    if (nome.includes("curriculum")) {
+      return base.concat(["profilo", "esperienza", "competenze", "formazione", "obiettivo", "progetti", "lavoro", "stage", "github", "javascript", "python"]);
+    }
+
+    if (nome.includes("azienda") || nome.includes("aziendale") || nome.includes("tecnico")) {
+      return base.concat(["obiettivo", "procedura", "processo", "responsabile", "rischio", "controllo", "sistema", "cliente", "sicurezza", "attività", "strumento"]);
+    }
+
+    if (nome.includes("sport") || nome.includes("allenamento")) {
+      return base.concat(["obiettivo", "esercizio", "serie", "ripetizioni", "recupero", "progressione", "carico", "allenamento", "stretching"]);
+    }
+
+    return base.concat(["obiettivo", "attività", "fase", "risultato", "strumenti", "materiali", "progetto"]);
+  }
+
+  function creaParagrafiRiassunto(testo, profilo) {
+    const frasi = frasiRiassuntoEsteso(testo);
+    const usate = new Set();
+    const sezioni = profilo.sezioni || [];
+    const paragrafi = [];
+
+    sezioni.forEach(function (sezione) {
+      const parole = parolePerSezioneRiassunto(profilo, sezione);
+      let blocco = prendiFrasi(frasi, parole, usate, 7);
+
+      if (blocco.length < 3) {
+        blocco = blocco.concat(prendiExtra(frasi, usate, 4 - blocco.length));
+      }
+
+      if (blocco.length) {
+        paragrafi.push({
+          titolo: sezione.titolo || "Sezione",
+          testo: blocco.join(" ")
+        });
+      }
+    });
+
+    while (paragrafi.map(function (p) { return p.testo; }).join(" ").length < 2500) {
+      const extra = prendiExtra(frasi, usate, 6);
+
+      if (!extra.length) {
+        break;
+      }
+
+      paragrafi.push({
+        titolo: "Approfondimento",
+        testo: extra.join(" ")
+      });
+    }
+
+    if (!paragrafi.length) {
+      paragrafi.push({
+        titolo: "Sintesi generale",
+        testo: frasi.slice(0, 12).join(" ") || "Il documento non contiene abbastanza testo per generare un riassunto esteso."
+      });
+    }
+
+    return paragrafi;
+  }
+
   function generaRiassunto() {
+  verificaMotoriObbligatoriV2A16("riassunto");
+  var auditMotoriV2A16 = registraUsoMotoriV2A16("riassunto");
+
     const testo = leggiTesto();
 
     if (!textExists(testo)) {
@@ -987,32 +1046,30 @@ Risultato finale: un diario ordinato, colorato e facile da sfogliare.`
       return;
     }
 
-    const risultato = creaCards(testo);
-    const profilo = risultato.profilo;
-    const cards = risultato.cards;
+    const profilo = riconosciTema(testo);
+    const paragrafi = creaParagrafiRiassunto(testo, profilo);
 
     areaOutput().innerHTML = `
-      <section class="output-card ${profilo.classe}">
+      <section class="output-card ${profilo.classe}" data-rag-export="riassunto-esteso-reale">
         <span class="pill">${profilo.icona} ${escapeHtml(profilo.nome)}</span>
+
         <h2>Riassunto documento</h2>
+
         <p>
           Il testo è stato riconosciuto come <strong>${escapeHtml(profilo.nome)}</strong>.
-          Sono state isolate <strong>${cards.length}</strong> parti realmente utili.
+          Il riassunto qui sotto usa il documento reale caricato o incollato, senza testi demo precaricati.
         </p>
 
-        <h3>Parti principali</h3>
-        <ol>
-          ${cards.map(function (card) {
-            return `
-              <li>
-                <strong>${escapeHtml(card.titolo)}:</strong>
-                ${escapeHtml(card.descrizione)}
-                <br>
-                <em>Riferimento:</em> ${escapeHtml(card.originale)}
-              </li>
-            `;
-          }).join("")}
-        </ol>
+        <h3>Riassunto esteso</h3>
+
+        ${paragrafi.map(function (paragrafo) {
+          return `
+            <article class="rag-summary-section" style="margin-top:24px">
+              <h4>${escapeHtml(paragrafo.titolo)}</h4>
+              <p>${escapeHtml(paragrafo.testo)}</p>
+            </article>
+          `;
+        }).join("")}
       </section>
     `;
   }
@@ -1311,6 +1368,9 @@ Risultato finale: un diario ordinato, colorato e facile da sfogliare.`
   }
 
   function generaCardVisive() {
+  verificaMotoriObbligatoriV2A16("card");
+  var auditMotoriV2A16 = registraUsoMotoriV2A16("card");
+
     const testo = leggiTesto();
 
     if (!textExists(testo)) {
@@ -1421,6 +1481,9 @@ Risultato finale: un diario ordinato, colorato e facile da sfogliare.`
   }
 
   function generaTest() {
+  verificaMotoriObbligatoriV2A16("test");
+  var auditMotoriV2A16 = registraUsoMotoriV2A16("test");
+
     const quiz = creaQuiz();
 
     if (!quiz) {
@@ -1564,6 +1627,9 @@ Risultato finale: un diario ordinato, colorato e facile da sfogliare.`
   }
 
   function generaDomandeStudio() {
+  verificaMotoriObbligatoriV2A16("domande");
+  var auditMotoriV2A16 = registraUsoMotoriV2A16("domande");
+
     const testo = leggiTesto();
 
     if (!textExists(testo)) {
@@ -2175,12 +2241,6 @@ body {
   function avvia() {
     collegaPulsanteRipulisciOcrTabella();
     collegaPulsantiDownload();
-    Array.from(document.querySelectorAll("[data-esempio-tema]")).forEach(function (bottone) {
-      bottone.addEventListener("click", function () {
-        caricaEsempioTema(bottone.dataset.esempioTema);
-      });
-    });
-
     document.getElementById("btnFile").addEventListener("click", function () {
       document.getElementById("fileInput").click();
     });
@@ -2203,3 +2263,113 @@ body {
     generaDomandeStudio
   };
 })();
+
+
+
+/* ============================================================
+   V2A.16 - Guardia obbligatoria aggancio pulsanti ai motori reali
+   Questa sezione NON crea classificatori nuovi.
+   Blocca i pulsanti se non sono collegati ai motori già creati.
+   ============================================================ */
+
+function verificaMotoriObbligatoriV2A16(azione) {
+  const problemi = [];
+
+  function esiste(nome) {
+    try {
+      if (typeof eval(nome) !== "undefined") return true;
+    } catch (_) {}
+    try {
+      if (typeof window !== "undefined" && typeof window[nome] !== "undefined") return true;
+    } catch (_) {}
+    return false;
+  }
+
+  const comuni = [
+    ["profiliDocumento", "profili documento: poesia, storia, curriculum, aziendale, personale, hobby, sport"],
+    ["riconosciTema", "motore riconoscimento tema/documento"],
+    ["creaCards", "motore card/concetti/sezioni"],
+  ];
+
+  const perAzione = {
+    riassunto: [
+      ["generaRiassunto", "funzione riassunto principale"],
+      ["creaCards", "riassunto agganciato a card, profilo e sezioni"],
+      ["riconosciTema", "riassunto agganciato al riconoscimento tema"],
+    ],
+    card: [
+      ["creaCards", "generatore card ufficiale"],
+      ["riconosciTema", "card agganciate al profilo documento"],
+    ],
+    test: [
+      ["creaCards", "test agganciato a concetti/card ufficiali"],
+      ["riconosciTema", "test agganciato al profilo documento"],
+    ],
+    domande: [
+      ["creaCards", "domande studio agganciate a concetti/card ufficiali"],
+      ["riconosciTema", "domande studio agganciate al profilo documento"],
+    ],
+  };
+
+  const richiesti = comuni.concat(perAzione[azione] || []);
+
+  richiesti.forEach(function (item) {
+    const nome = item[0];
+    const descrizione = item[1];
+
+    if (!esiste(nome)) {
+      problemi.push(nome + " → " + descrizione);
+    }
+  });
+
+  if (problemi.length) {
+    const messaggio =
+      "Blocco V2A.16: pulsante non agganciato ai motori obbligatori.\n\n" +
+      "Azione: " + azione + "\n\n" +
+      "Motori mancanti:\n- " + problemi.join("\n- ") +
+      "\n\nNessun fallback/demo viene eseguito.";
+
+    if (typeof mostraErrore === "function") {
+      mostraErrore(messaggio);
+    } else {
+      alert(messaggio);
+      console.error(messaggio);
+    }
+
+    throw new Error(messaggio);
+  }
+
+  return true;
+}
+
+function registraUsoMotoriV2A16(azione, extra) {
+  const motori = [
+    "profiliDocumento",
+    "riconosciTema",
+    "creaCards",
+    "RagTextCleanerOCRV1",
+    "correttore parole/refusi se presente",
+    "completatore frasi incomplete se presente",
+    "qualità V3.5G se presente",
+    "naturalezza V3.5I se presente",
+    "cleaner finale V3.5K se presente"
+  ];
+
+  return {
+    versione: "V2A.16",
+    azione: azione,
+    motori_obbligatori: motori,
+    extra: extra || {}
+  };
+}
+
+function esponiGuardiaMotoriV2A16() {
+  if (typeof window === "undefined") return;
+
+  window.verificaMotoriObbligatoriV2A16 = verificaMotoriObbligatoriV2A16;
+  window.registraUsoMotoriV2A16 = registraUsoMotoriV2A16;
+}
+
+esponiGuardiaMotoriV2A16();
+
+

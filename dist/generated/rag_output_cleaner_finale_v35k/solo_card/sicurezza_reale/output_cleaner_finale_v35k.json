@@ -1,0 +1,597 @@
+{
+  "versione": "rag_output_selezionato_v35f",
+  "output_richiesti": [
+    "card",
+    "ui_layout"
+  ],
+  "controlli_qualita": {
+    "ok": true,
+    "errori": [],
+    "avvisi": [],
+    "riassunto": true,
+    "card": 5,
+    "test": 5,
+    "domande_studio": 5,
+    "motore_didattico_v35c": {
+      "ok": true,
+      "errori": [],
+      "avvisi": [],
+      "testi_visibili": 93
+    },
+    "qualita_testuale_v35g": {
+      "ok": true,
+      "errori": [],
+      "avvisi": [],
+      "testi_controllati": 20,
+      "categorie": 2
+    },
+    "naturalezza_antikeyword_v35i": {
+      "ok": true,
+      "errori": [],
+      "testi_controllati": 15,
+      "nome_controllo": "Controllo di naturalezza linguistica anti-keyword"
+    },
+    "accordo_pronomi_v35j": {
+      "ok": true,
+      "errori": [],
+      "testi_controllati": 15,
+      "nome_controllo": "Controllo accordo grammaticale e pronomi",
+      "riallineato_da": "cleaner_finale_universale_v35k"
+    },
+    "cleaner_finale_universale_v35k": {
+      "ok": true,
+      "errori": [],
+      "testi_controllati": 15,
+      "campi_puliti": {
+        "card[].titolo": 5,
+        "card[].testo": 5,
+        "card[].messaggio_chiave": 5
+      },
+      "nome_controllo": "Controllo finale universale testi visibili"
+    },
+    "lucidatore_linguistico_universale_v35m": {
+      "ok": true,
+      "nome": "Lucidatore linguistico universale V35M",
+      "file": "dist/generated/rag_output_cleaner_finale_v35k/solo_card/sicurezza_reale/output_cleaner_finale_v35k.json",
+      "testi_controllati": 41,
+      "modifiche_visibili": 1,
+      "controlli": [
+        "spazi",
+        "punteggiatura",
+        "accenti_comuni",
+        "apostrofi",
+        "contrazioni_italiane",
+        "parole_duplicate",
+        "frasi_duplicate_consecutive",
+        "punto_finale",
+        "punto_interrogativo_domande"
+      ]
+    },
+    "contesto_semantico_universale_v35o": {
+      "ok": true,
+      "nome": "Contesto semantico universale V35O",
+      "tema_documento": "sicurezza informatica",
+      "sottotema_documento": "protezione dati e sistemi",
+      "nodi_con_contesto": 20,
+      "nota": "Aggiunge tema, sottotema, categoria, sottocategoria, micro-concetti e oggetto probabile ai blocchi testuali."
+    },
+    "completatore_linguistico_probabile_v35n": {
+      "ok": true,
+      "nome": "Completatore linguistico probabile V35N",
+      "testi_controllati": 41,
+      "parole_corrette": 3,
+      "frasi_completate": 0,
+      "modifiche_visibili": 16,
+      "usa_contesto_v35o": true
+    }
+  },
+  "motori_riutilizzabili": {
+    "didattico": "rag_motore_didattico_riutilizzabile_v35c",
+    "copre": [
+      "naturalezza_domande_studio",
+      "stile_card",
+      "fonti_visibili",
+      "rimozione_frasi_riempitive",
+      "tono_didattico_finale",
+      "layout_grafico"
+    ],
+    "revisore_qualita_testuale": "rag_revisore_qualita_testuale_v35g",
+    "revisore_naturalezza_antikeyword": "rag_revisore_naturalezza_antikeyword_v35i",
+    "revisore_accordo_pronomi": "rag_revisore_accordo_pronomi_v35j",
+    "lucidatore_linguistico": "rag_lucidatore_linguistico_universale_v35m",
+    "contesto_semantico": "rag_contesto_semantico_universale_v35o",
+    "completatore_linguistico_probabile": "rag_completatore_linguistico_probabile_v35n"
+  },
+  "card": [
+    {
+      "id": "card-clean-v34e-1",
+      "titolo": "Sicurezza informatica.",
+      "testo": "La scheda dedicata a «Sicurezza informatica» spiega questo tema in modo concreto: la sicurezza informatica è l'insieme di pratiche, strumenti e comportamenti usati per proteggere dati, dispositivi, account e sistemi digitali.",
+      "messaggio_chiave": "Da ricordare: spiega la sicurezza informatica con parole tue e collegala al documento.",
+      "fonte_visibile": "Fonte: sezione “Sicurezza informatica”.",
+      "stile_card": {
+        "layout": "card-studio-bilanciata",
+        "icona": "🛡️",
+        "densita": "media",
+        "titolo_breve": "Sicurezza informatica.",
+        "mostra_fonte": true,
+        "mostra_punto_chiave": true,
+        "contesto_semantico_v35o": {
+          "tema": "sicurezza informatica",
+          "sottotema": "protezione dati e sistemi",
+          "categoria": "contenuto informativo",
+          "sottocategoria": "informazione principale",
+          "micro_concetti": [
+            "sicurezza informatica"
+          ],
+          "oggetto_probabile": "sicurezza informatica"
+        }
+      },
+      "categoria_v35g": {
+        "categoria": "Memorizzazione visuale",
+        "sottocategoria": "Sicurezza informatica.",
+        "contesto_semantico_v35o": {
+          "tema": "sicurezza informatica",
+          "sottotema": "protezione dati e sistemi",
+          "categoria": "contenuto informativo",
+          "sottocategoria": "informazione principale",
+          "micro_concetti": [
+            "memorizzazione visuale sicurezza",
+            "visuale sicurezza informatica"
+          ],
+          "oggetto_probabile": "memorizzazione visuale sicurezza"
+        }
+      },
+      "contesto_semantico_v35o": {
+        "tema": "sicurezza informatica",
+        "sottotema": "protezione dati e sistemi",
+        "categoria": "spiegazione",
+        "sottocategoria": "motivo o conseguenza",
+        "micro_concetti": [
+          "sicurezza informatica",
+          "informatica memorizzazione visuale",
+          "memorizzazione visuale sicurezza",
+          "pratiche strumenti comportamenti",
+          "comportamenti usati proteggere",
+          "informatica l'insieme pratiche"
+        ],
+        "oggetto_probabile": "sicurezza informatica"
+      }
+    },
+    {
+      "id": "card-clean-v34e-2",
+      "titolo": "Rischio e conseguenza.",
+      "testo": "Questa card chiarisce il rischio e la sua conseguenza usando un riferimento pratico del documento: usare la stessa password su più siti è rischio: se un servizio viene violato, un attaccante può provare la stessa password anche su altri account.",
+      "messaggio_chiave": "Punto chiave: riconosci il ruolo del rischio e la sua conseguenza nel materiale di studio.",
+      "fonte_visibile": "Fonte: sezione “Rischio e conseguenza”.",
+      "stile_card": {
+        "layout": "card-studio-bilanciata",
+        "icona": "⚠️",
+        "densita": "media",
+        "titolo_breve": "Rischio e conseguenza.",
+        "mostra_fonte": true,
+        "mostra_punto_chiave": true,
+        "contesto_semantico_v35o": {
+          "tema": "sicurezza informatica",
+          "sottotema": "protezione dati e sistemi",
+          "categoria": "rischio",
+          "sottocategoria": "prevenzione o riduzione del rischio",
+          "micro_concetti": [
+            "rischio conseguenza"
+          ],
+          "oggetto_probabile": "rischio conseguenza"
+        }
+      },
+      "categoria_v35g": {
+        "categoria": "Memorizzazione visuale",
+        "sottocategoria": "Rischio e conseguenza.",
+        "contesto_semantico_v35o": {
+          "tema": "sicurezza informatica",
+          "sottotema": "protezione dati e sistemi",
+          "categoria": "rischio",
+          "sottocategoria": "prevenzione o riduzione del rischio",
+          "micro_concetti": [
+            "memorizzazione visuale rischio",
+            "visuale rischio conseguenza"
+          ],
+          "oggetto_probabile": "memorizzazione visuale rischio"
+        }
+      },
+      "contesto_semantico_v35o": {
+        "tema": "sicurezza informatica",
+        "sottotema": "protezione dati e sistemi",
+        "categoria": "rischio",
+        "sottocategoria": "prevenzione o riduzione del rischio",
+        "micro_concetti": [
+          "rischio conseguenza",
+          "stessa password",
+          "conseguenza memorizzazione visuale",
+          "conseguenza usando riferimento",
+          "memorizzazione visuale rischio",
+          "riferimento pratico documento"
+        ],
+        "oggetto_probabile": "accessi non autorizzati agli account"
+      }
+    },
+    {
+      "id": "card-clean-v34e-3",
+      "titolo": "Regola operativa.",
+      "testo": "Il contesto della card distingue questa regola dagli altri punti: una buona regola aziendale è attivare la 2FA almeno su email, strumenti cloud, account amministrativi, sistemi di pagamento e piattaforme che contengono dati sensibili.",
+      "messaggio_chiave": "Focus studio: usa questo punto operativo per ricostruire il passaggio principale.",
+      "fonte_visibile": "Fonte: sezione “Regola operativa”.",
+      "stile_card": {
+        "layout": "card-studio-bilanciata",
+        "icona": "✅",
+        "densita": "media",
+        "titolo_breve": "Regola operativa.",
+        "mostra_fonte": true,
+        "mostra_punto_chiave": true,
+        "contesto_semantico_v35o": {
+          "tema": "sicurezza informatica",
+          "sottotema": "protezione dati e sistemi",
+          "categoria": "regola",
+          "sottocategoria": "indicazione da rispettare",
+          "micro_concetti": [
+            "regola operativa"
+          ],
+          "oggetto_probabile": "regola operativa"
+        }
+      },
+      "categoria_v35g": {
+        "categoria": "Memorizzazione visuale",
+        "sottocategoria": "Regola operativa.",
+        "contesto_semantico_v35o": {
+          "tema": "sicurezza informatica",
+          "sottotema": "protezione dati e sistemi",
+          "categoria": "regola",
+          "sottocategoria": "indicazione da rispettare",
+          "micro_concetti": [
+            "memorizzazione visuale regola",
+            "visuale regola operativa"
+          ],
+          "oggetto_probabile": "memorizzazione visuale regola"
+        }
+      },
+      "contesto_semantico_v35o": {
+        "tema": "sicurezza informatica",
+        "sottotema": "protezione dati e sistemi",
+        "categoria": "regola",
+        "sottocategoria": "indicazione da rispettare",
+        "micro_concetti": [
+          "regola operativa",
+          "amministrativi sistemi pagamento",
+          "operativa memorizzazione visuale",
+          "pagamento piattaforme contengono",
+          "ricostruire passaggio principale",
+          "operativo ricostruire passaggio"
+        ],
+        "oggetto_probabile": "regola operativa"
+      }
+    },
+    {
+      "id": "card-clean-v34e-4",
+      "titolo": "Azione consigliata.",
+      "testo": "Per ripassare «Azione consigliata», parti da questa idea: bisogna mantenere aggiornati anche browser, app, plugin, software aziendali, strumenti di sicurezza e dispositivi di rete.",
+      "messaggio_chiave": "Memoria rapida: chiediti quale problema o vantaggio chiarisce questa azione.",
+      "fonte_visibile": "Fonte: sezione “Azione consigliata”.",
+      "stile_card": {
+        "layout": "card-studio-bilanciata",
+        "icona": "🔧",
+        "densita": "media",
+        "titolo_breve": "Azione consigliata.",
+        "mostra_fonte": true,
+        "mostra_punto_chiave": true,
+        "contesto_semantico_v35o": {
+          "tema": "sicurezza informatica",
+          "sottotema": "protezione dati e sistemi",
+          "categoria": "contenuto informativo",
+          "sottocategoria": "informazione principale",
+          "micro_concetti": [
+            "azione consigliata"
+          ],
+          "oggetto_probabile": "azione consigliata"
+        }
+      },
+      "categoria_v35g": {
+        "categoria": "Memorizzazione visuale",
+        "sottocategoria": "Azione consigliata.",
+        "contesto_semantico_v35o": {
+          "tema": "sicurezza informatica",
+          "sottotema": "protezione dati e sistemi",
+          "categoria": "contenuto informativo",
+          "sottocategoria": "informazione principale",
+          "micro_concetti": [
+            "memorizzazione visuale azione",
+            "visuale azione consigliata"
+          ],
+          "oggetto_probabile": "memorizzazione visuale azione"
+        }
+      },
+      "contesto_semantico_v35o": {
+        "tema": "sicurezza informatica",
+        "sottotema": "protezione dati e sistemi",
+        "categoria": "rischio",
+        "sottocategoria": "prevenzione o riduzione del rischio",
+        "micro_concetti": [
+          "azione consigliata",
+          "consigliata memorizzazione visuale",
+          "strumenti sicurezza dispositivi",
+          "aziendali strumenti sicurezza",
+          "memorizzazione visuale azione",
+          "bisogna mantenere aggiornati"
+        ],
+        "oggetto_probabile": "azione consigliata"
+      }
+    },
+    {
+      "id": "card-clean-v34e-5",
+      "titolo": "Obiettivi principali.",
+      "testo": "La card su «Obiettivi principali» serve a fissare un concetti specifico: la sicurezza informatica ha tre obiettivi principali: proteggere la riservatezza dei dati; garantire l'integrità delle informazioni.",
+      "messaggio_chiave": "Controllo studio: verifica di saper spiegare gli obiettivi principali senza copiare il testo.",
+      "fonte_visibile": "Fonte: sezione “Obiettivi principali”.",
+      "stile_card": {
+        "layout": "card-studio-bilanciata",
+        "icona": "🎯",
+        "densita": "media",
+        "titolo_breve": "Obiettivi principali.",
+        "mostra_fonte": true,
+        "mostra_punto_chiave": true,
+        "contesto_semantico_v35o": {
+          "tema": "sicurezza informatica",
+          "sottotema": "protezione dati e sistemi",
+          "categoria": "contenuto informativo",
+          "sottocategoria": "informazione principale",
+          "micro_concetti": [
+            "obiettivi principali"
+          ],
+          "oggetto_probabile": "obiettivi principali"
+        }
+      },
+      "categoria_v35g": {
+        "categoria": "Memorizzazione visuale",
+        "sottocategoria": "Obiettivi principali.",
+        "contesto_semantico_v35o": {
+          "tema": "sicurezza informatica",
+          "sottotema": "protezione dati e sistemi",
+          "categoria": "contenuto informativo",
+          "sottocategoria": "informazione principale",
+          "micro_concetti": [
+            "memorizzazione visuale obiettivi",
+            "visuale obiettivi principali"
+          ],
+          "oggetto_probabile": "memorizzazione visuale obiettivi"
+        }
+      },
+      "contesto_semantico_v35o": {
+        "tema": "sicurezza informatica",
+        "sottotema": "protezione dati e sistemi",
+        "categoria": "azione operativa",
+        "sottocategoria": "comportamento da applicare",
+        "micro_concetti": [
+          "obiettivi principali",
+          "garantire l'integrità informazioni",
+          "l'integrità informazioni controllo",
+          "principali proteggere riservatezza",
+          "principali memorizzazione visuale",
+          "memorizzazione visuale obiettivi"
+        ],
+        "oggetto_probabile": "obiettivi principali"
+      }
+    }
+  ],
+  "ui_layout": {
+    "versione": "rag-layout-didattico-v35c",
+    "pagina": {
+      "max_width": 1180,
+      "tema": "studio-professionale",
+      "densita": "leggibile"
+    },
+    "card": {
+      "layout": "griglia-responsive",
+      "min_width": 260,
+      "max_per_row": 3,
+      "equal_height": false,
+      "evita_testo_compresso": true
+    },
+    "test": {
+      "layout": "lista-interattiva",
+      "opzioni": "bottoni-larghi.",
+      "feedback": "immediato.",
+      "numero_domande": 5,
+      "contesto_semantico_v35o": {
+        "tema": "sicurezza informatica",
+        "sottotema": "protezione dati e sistemi",
+        "categoria": "contenuto informativo",
+        "sottocategoria": "informazione principale",
+        "micro_concetti": [
+          "bottoni larghi immediato"
+        ],
+        "oggetto_probabile": "bottoni larghi immediato"
+      }
+    },
+    "domande_studio": {
+      "layout": "schede-lunghe",
+      "tono": "ripasso-guidato",
+      "numero_domande": 5
+    },
+    "contesto_semantico_v35o": {
+      "tema": "sicurezza informatica",
+      "sottotema": "protezione dati e sistemi",
+      "categoria": "contenuto informativo",
+      "sottocategoria": "informazione principale",
+      "micro_concetti": [
+        "bottoni larghi immediato"
+      ],
+      "oggetto_probabile": "bottoni larghi immediato"
+    }
+  },
+  "piano_motori_v35f": {
+    "ok": true,
+    "versione": "rag_selezionatore_motori_riutilizzabile_v35f",
+    "creato_il": "2026-06-28T17:43:56",
+    "documento": "sicurezza_reale",
+    "compito": "crea card grafiche con fonti visibili",
+    "decisione": {
+      "tipo": "solo_card",
+      "output_richiesti": [
+        "card",
+        "ui_layout"
+      ],
+      "motori": [
+        "didattico_v35c"
+      ],
+      "perche": "le card richiedono stile, fonti visibili e layout, non il motore test"
+    },
+    "motori_da_usare": [
+      {
+        "id": "didattico_v35c",
+        "script": "scripts/rag_motore_didattico_riutilizzabile_v35c.py",
+        "ruolo": "migliora card, riassunti, domande studio, fonti, tono e layout"
+      }
+    ],
+    "regole_architetturali": {
+      "card_riassunti_domande_studio": "motore didattico V3.5C",
+      "test": "motore test V3.5D con bridge quiz V3.5B",
+      "output_completo": "orchestratore V3.5E"
+    }
+  },
+  "categorie_didattiche_v35g": [
+    {
+      "categoria": "Memorizzazione visuale",
+      "sottocategoria": "schede visuali.",
+      "contesto_semantico_v35o": {
+        "tema": "sicurezza informatica",
+        "sottotema": "protezione dati e sistemi",
+        "categoria": "contenuto informativo",
+        "sottocategoria": "informazione principale",
+        "micro_concetti": [
+          "memorizzazione visuale schede",
+          "visuale schede visuali"
+        ],
+        "oggetto_probabile": "memorizzazione visuale schede"
+      }
+    },
+    {
+      "categoria": "Presentazione grafica",
+      "sottocategoria": "layout output.",
+      "contesto_semantico_v35o": {
+        "tema": "sicurezza informatica",
+        "sottotema": "protezione dati e sistemi",
+        "categoria": "contenuto informativo",
+        "sottocategoria": "informazione principale",
+        "micro_concetti": [
+          "presentazione grafica layout",
+          "grafica layout output"
+        ],
+        "oggetto_probabile": "presentazione grafica layout"
+      }
+    }
+  ],
+  "revisione_qualita_testuale_v35g": {
+    "ok": true,
+    "copre": [
+      "grammatica_italiana",
+      "accenti",
+      "apostrofi",
+      "punteggiatura",
+      "frasi_complete",
+      "assenza_frasi_spezzate",
+      "assenza_frasi_non_terminate",
+      "assenza_frasi_riempitive",
+      "assenza_testi_generici",
+      "assenza_duplicati_visibili",
+      "assenza_quasi_duplicati",
+      "card_concetti_distinti",
+      "domande_naturali",
+      "spiegazioni_test",
+      "fonti_visibili",
+      "categorie",
+      "sottocategorie"
+    ]
+  },
+  "revisione_naturalezza_antikeyword_v35i": {
+    "ok": true,
+    "nome": "Controllo di naturalezza linguistica anti-keyword",
+    "copre": [
+      "niente_liste_grezze_keyword",
+      "niente_frasi_robotiche",
+      "card_con_spiegazioni_naturali",
+      "messaggi_chiave_utili",
+      "riassunto_piu_studiabile",
+      "domande_studio_umane",
+      "spiegazioni_test_non_meccaniche"
+    ]
+  },
+  "revisione_accordo_pronomi_v35j": {
+    "ok": true,
+    "nome": "Controllo accordo grammaticale e pronomi",
+    "copre": [
+      "genere",
+      "numero",
+      "articoli",
+      "participi",
+      "pronomi",
+      "accordo_titoli_contenuti",
+      "niente_viene_presentato_errato",
+      "niente_senza_copiarlo_errato",
+      "niente_frasi_tagliate",
+      "risposte_guida_meno_meccaniche"
+    ]
+  },
+  "revisione_cleaner_finale_universale_v35k": {
+    "ok": true,
+    "nome": "Controllo finale universale testi visibili",
+    "copre": [
+      "tutti_i_campi_visibili",
+      "punteggiatura_sporca",
+      "domande_chiuse_bene",
+      "frasi_tagliate",
+      "finali_sospetti",
+      "contrazioni_italiane",
+      "pronomi_fragili",
+      "accordi_plurali_generali",
+      "opzioni_quiz_visibili",
+      "risposta_corretta_visibile_allineata",
+      "mappa_opzioni_visibile_allineata",
+      "riutilizzabile_per_web_pdf_app"
+    ]
+  },
+  "revisione_linguistica_universale_v35m": {
+    "ok": true,
+    "nome": "Lucidatore linguistico universale V35M",
+    "versione": "rag_lucidatore_linguistico_universale_v35m",
+    "creato_il": "2026-06-29T17:37:33",
+    "testi_controllati": 41,
+    "modifiche_visibili": 1
+  },
+  "contesto_semantico_v35o": {
+    "tema": "sicurezza informatica",
+    "sottotema": "protezione dati e sistemi",
+    "categoria": "rischio",
+    "sottocategoria": "prevenzione o riduzione del rischio",
+    "micro_concetti": [
+      "sicurezza informatica",
+      "obiettivi principali",
+      "memorizzazione visuale",
+      "rischio conseguenza",
+      "azione consigliata",
+      "fonte sezione"
+    ],
+    "oggetto_probabile": "sicurezza informatica"
+  },
+  "contesto_documento_v35o": {
+    "ok": true,
+    "tema": "sicurezza informatica",
+    "sottotema": "protezione dati e sistemi",
+    "creato_il": "2026-06-29T17:37:33"
+  },
+  "revisione_completamento_linguistico_v35n": {
+    "ok": true,
+    "nome": "Completatore linguistico probabile V35N",
+    "creato_il": "2026-06-29T17:37:33",
+    "checked": 41,
+    "typos": 3,
+    "completed": 0,
+    "changed": 16
+  }
+}

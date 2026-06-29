@@ -1,0 +1,518 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Test Output RAG KB Clean V3.4F</title>
+  <style>
+    :root {
+      --bg: #0f172a;
+      --panel: #111827;
+      --card: #ffffff;
+      --soft: #f8fafc;
+      --text: #111827;
+      --muted: #64748b;
+      --ok: #16a34a;
+      --bad: #dc2626;
+      --blue: #1d4ed8;
+      --cyan: #0891b2;
+      --border: #e5e7eb;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: linear-gradient(135deg, #020617, #0f172a 55%, #1e293b);
+      color: var(--text);
+      min-height: 100vh;
+    }
+
+    header {
+      color: white;
+      padding: 34px 18px 24px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0 0 10px;
+      font-size: clamp(28px, 4vw, 46px);
+      line-height: 1.05;
+    }
+
+    header p {
+      margin: 0 auto;
+      max-width: 900px;
+      color: #cbd5e1;
+      font-size: 17px;
+    }
+
+    main {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 0 16px 60px;
+    }
+
+    .toolbar {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.16);
+      border-radius: 22px;
+      padding: 16px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: center;
+      margin-bottom: 18px;
+      backdrop-filter: blur(10px);
+    }
+
+    button,
+    .file-label {
+      border: 0;
+      border-radius: 999px;
+      padding: 12px 18px;
+      font-weight: 800;
+      cursor: pointer;
+      color: white;
+      background: linear-gradient(135deg, var(--blue), var(--cyan));
+      box-shadow: 0 12px 26px rgba(0,0,0,0.22);
+      transition: transform 0.15s ease, filter 0.15s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    button:hover,
+    .file-label:hover {
+      transform: translateY(-2px);
+      filter: brightness(1.08);
+    }
+
+    input[type="file"] {
+      display: none;
+    }
+
+    .status {
+      background: white;
+      border-radius: 20px;
+      padding: 16px;
+      margin-bottom: 18px;
+      box-shadow: 0 16px 36px rgba(0,0,0,0.24);
+      border-left: 8px solid var(--blue);
+    }
+
+    .status.ok {
+      border-left-color: var(--ok);
+    }
+
+    .status.bad {
+      border-left-color: var(--bad);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 16px;
+    }
+
+    section {
+      grid-column: 1 / -1;
+      background: white;
+      border-radius: 24px;
+      padding: 22px;
+      box-shadow: 0 16px 36px rgba(0,0,0,0.24);
+    }
+
+    section h2 {
+      margin: 0 0 14px;
+      font-size: 26px;
+    }
+
+    .summary-text {
+      font-size: 18px;
+      line-height: 1.6;
+      background: var(--soft);
+      padding: 18px;
+      border-radius: 18px;
+      border: 1px solid var(--border);
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 14px;
+    }
+
+    .study-card {
+      background: var(--soft);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 18px;
+      min-height: 180px;
+    }
+
+    .study-card h3 {
+      margin: 0 0 10px;
+      color: #0f172a;
+      font-size: 20px;
+    }
+
+    .study-card p {
+      line-height: 1.5;
+      margin: 0 0 10px;
+    }
+
+    .key {
+      color: var(--blue);
+      font-weight: 800;
+      margin-top: 12px;
+    }
+
+    .quiz-item,
+    .study-item {
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 18px;
+      margin-bottom: 16px;
+      background: var(--soft);
+    }
+
+    .quiz-question {
+      font-size: 18px;
+      font-weight: 900;
+      margin-bottom: 12px;
+    }
+
+    .options {
+      display: grid;
+      gap: 10px;
+    }
+
+    .option {
+      width: 100%;
+      text-align: left;
+      background: white;
+      color: var(--text);
+      border: 2px solid var(--border);
+      box-shadow: none;
+      border-radius: 14px;
+      padding: 12px 14px;
+      font-weight: 700;
+    }
+
+    .option.correct {
+      border-color: var(--ok);
+      background: #dcfce7;
+    }
+
+    .option.wrong {
+      border-color: var(--bad);
+      background: #fee2e2;
+    }
+
+    .feedback {
+      margin-top: 12px;
+      padding: 12px;
+      border-radius: 14px;
+      display: none;
+      line-height: 1.5;
+    }
+
+    .feedback.show {
+      display: block;
+    }
+
+    .feedback.ok {
+      background: #dcfce7;
+      border: 1px solid #86efac;
+    }
+
+    .feedback.bad {
+      background: #fee2e2;
+      border: 1px solid #fecaca;
+    }
+
+    .meta {
+      color: var(--muted);
+      font-size: 14px;
+      margin-top: 8px;
+    }
+
+    .quality-list {
+      display: grid;
+      gap: 8px;
+      margin-top: 10px;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      width: fit-content;
+      border-radius: 999px;
+      padding: 6px 10px;
+      background: #e0f2fe;
+      color: #075985;
+      font-weight: 800;
+      font-size: 13px;
+      margin-right: 6px;
+      margin-bottom: 6px;
+    }
+
+    pre {
+      white-space: pre-wrap;
+      background: #020617;
+      color: #e2e8f0;
+      border-radius: 16px;
+      padding: 14px;
+      overflow: auto;
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Output RAG da KB pulita V3.4F</h1>
+    <p>Pagina separata per controllare nel browser riassunto, card, test e domande studio generati da V3.4E.</p>
+  </header>
+
+  <main>
+    <div class="toolbar">
+      <button id="loadDefaultBtn">Carica output V3.4E locale</button>
+      <label class="file-label" for="jsonFile">Carica JSON manuale</label>
+      <input id="jsonFile" type="file" accept="application/json,.json">
+      <button id="clearBtn">Pulisci vista</button>
+    </div>
+
+    <div id="status" class="status">
+      Premi “Carica output V3.4E locale”. Se il file non è presente, rigenera prima l’output con lo script V3.4E.
+    </div>
+
+    <div id="output" class="grid hidden">
+      <section id="qualitySection"></section>
+      <section id="summarySection"></section>
+      <section id="cardsSection"></section>
+      <section id="quizSection"></section>
+      <section id="studySection"></section>
+    </div>
+  </main>
+
+  <script>
+    const DEFAULT_PATHS = [
+      "../dist/generated/rag_output_finale_orchestrato_v35e/sicurezza_reale/rag_output_finale_v35e.json",
+      "../dist/generated/rag_output_test_riutilizzabile_v35d/sicurezza_reale/rag_output_test_v35d.json",
+      "../dist/generated/rag_output_didattico_riutilizzabile_v35c/sicurezza_reale/rag_output_didactic_v35c.json",
+      "../dist/generated/rag_output_kb_clean_v34e/outputs/sicurezza_reale/rag_output_kb_clean_v34e.json",
+      "../dist/generated/rag_output_kb_clean_v34e/sicurezza_reale/rag_output_kb_clean_v34e.json"
+    ];
+
+    const statusBox = document.getElementById("status");
+    const outputBox = document.getElementById("output");
+
+    document.getElementById("loadDefaultBtn").addEventListener("click", loadDefaultJson);
+    document.getElementById("jsonFile").addEventListener("change", loadUploadedJson);
+    document.getElementById("clearBtn").addEventListener("click", clearView);
+
+    function escapeHtml(value) {
+      return String(value ?? "")
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        .replaceAll('"', "&quot;")
+        .replaceAll("'", "&#039;");
+    }
+
+    function setStatus(message, kind = "") {
+      statusBox.className = "status " + kind;
+      statusBox.innerHTML = message;
+    }
+
+    async function loadDefaultJson() {
+      let lastError = null;
+
+      for (const path of DEFAULT_PATHS) {
+        try {
+          const res = await fetch(path, { cache: "no-store" });
+          if (!res.ok) throw new Error("HTTP " + res.status + " su " + path);
+
+          const data = await res.json();
+          renderOutput(data, path);
+          return;
+        } catch (err) {
+          lastError = err;
+        }
+      }
+
+      setStatus(
+        "<strong>File JSON non trovato.</strong><br>Rigenera prima V3.4E oppure carica manualmente il JSON. Dettaglio: " +
+        escapeHtml(lastError && lastError.message ? lastError.message : "errore sconosciuto"),
+        "bad"
+      );
+    }
+
+    function loadUploadedJson(event) {
+      const file = event.target.files && event.target.files[0];
+      if (!file) return;
+
+      const reader = new FileReader();
+      reader.onload = () => {
+        try {
+          const data = JSON.parse(reader.result);
+          renderOutput(data, file.name);
+        } catch (err) {
+          setStatus("<strong>JSON non valido.</strong> " + escapeHtml(err.message), "bad");
+        }
+      };
+      reader.readAsText(file);
+    }
+
+    function clearView() {
+      outputBox.classList.add("hidden");
+      outputBox.querySelectorAll("section").forEach(section => section.innerHTML = "");
+      setStatus("Vista pulita. Carica un output V3.4E per ricontrollare.", "");
+    }
+
+    function renderOutput(data, sourceLabel) {
+      const quality = data.controlli_qualita || {};
+      const ok = quality.ok === true;
+
+      setStatus(
+        `<strong>Caricato:</strong> ${escapeHtml(sourceLabel)}<br>` +
+        `<strong>Versione:</strong> ${escapeHtml(data.versione || "non indicata")}<br>` +
+        `<strong>Qualità:</strong> ${ok ? "OK" : "DA RIVEDERE"}`,
+        ok ? "ok" : "bad"
+      );
+
+      renderQuality(data);
+      renderSummary(data.riassunto || {});
+      renderCards(data.card || []);
+      renderQuiz(data.test || []);
+      renderStudy(data.domande_studio || []);
+
+      outputBox.classList.remove("hidden");
+      window.scrollTo({ top: outputBox.offsetTop - 20, behavior: "smooth" });
+    }
+
+    function renderQuality(data) {
+      const q = data.controlli_qualita || {};
+      const gate = data.quality_gate_v34d || {};
+      const errors = q.errori || [];
+      const warnings = q.avvisi || [];
+
+      document.getElementById("qualitySection").innerHTML = `
+        <h2>Controlli qualità</h2>
+        <span class="pill">Output: ${q.ok ? "OK" : "DA RIVEDERE"}</span>
+        <span class="pill">Riassunto: ${q.riassunto ? "presente" : "assente"}</span>
+        <span class="pill">Card: ${escapeHtml(q.card ?? 0)}</span>
+        <span class="pill">Test: ${escapeHtml(q.test ?? 0)}</span>
+        <span class="pill">Domande studio: ${escapeHtml(q.domande_studio ?? 0)}</span>
+        <span class="pill">KB gate: ${gate.ok ? "OK" : "non indicato"}</span>
+        <div class="quality-list">
+          ${errors.length ? `<pre>ERRORI\n${escapeHtml(errors.join("\n"))}</pre>` : ""}
+          ${warnings.length ? `<pre>AVVISI\n${escapeHtml(warnings.join("\n"))}</pre>` : ""}
+        </div>
+      `;
+    }
+
+    function renderSummary(summary) {
+      const points = summary.punti_chiave || [];
+
+      document.getElementById("summarySection").innerHTML = `
+        <h2>${escapeHtml(summary.titolo || "Riassunto")}</h2>
+        <div class="summary-text">${escapeHtml(summary.testo_breve || "Nessun riassunto disponibile.")}</div>
+        <h3>Punti chiave</h3>
+        <div class="cards">
+          ${points.map(p => `
+            <article class="study-card">
+              <h3>${escapeHtml(p.titolo)}</h3>
+              <p>${escapeHtml(p.testo)}</p>
+            </article>
+          `).join("")}
+        </div>
+      `;
+    }
+
+    function renderCards(cards) {
+      document.getElementById("cardsSection").innerHTML = `
+        <h2>Card studio</h2>
+        <div class="cards">
+          ${cards.map(card => `
+            <article class="study-card">
+              <h3>${escapeHtml(card.titolo)}</h3>
+              <p>${escapeHtml(card.testo)}</p>
+              <p class="key">${escapeHtml(card.messaggio_chiave || "")}</p>
+              <div class="meta">${escapeHtml(card.fonte_visibile || "")}</div>
+            </article>
+          `).join("")}
+        </div>
+      `;
+    }
+
+    function renderQuiz(items) {
+      document.getElementById("quizSection").innerHTML = `
+        <h2>Test interattivo</h2>
+        ${items.map((item, index) => {
+          const visibleOptions = item.opzioni_visibili || item.opzioni || [];
+          const visibleCorrect = item.risposta_corretta_visibile || item.risposta_corretta || "";
+          return `
+          <article class="quiz-item" data-correct="${escapeHtml(visibleCorrect)}">
+            <div class="quiz-question">${index + 1}. ${escapeHtml(item.domanda_visibile || item.domanda)}</div>
+            <div class="options">
+              ${visibleOptions.map(option => `
+                <button class="option" type="button" data-option="${escapeHtml(option)}">
+                  ${escapeHtml(option)}
+                </button>
+              `).join("")}
+            </div>
+            <div class="feedback"></div>
+            <div class="meta">${escapeHtml(item.fonte_visibile || "")}</div>
+            <div class="meta">${escapeHtml(item.spiegazione || "")}</div>
+          </article>
+        `}).join("")}
+      `;
+
+      document.querySelectorAll(".quiz-item").forEach(item => {
+        const correct = item.dataset.correct;
+        const feedback = item.querySelector(".feedback");
+
+        item.querySelectorAll(".option").forEach(button => {
+          button.addEventListener("click", () => {
+            const chosen = button.dataset.option;
+            const isCorrect = chosen === correct;
+
+            item.querySelectorAll(".option").forEach(opt => {
+              opt.disabled = true;
+              if (opt.dataset.option === correct) opt.classList.add("correct");
+            });
+
+            if (!isCorrect) button.classList.add("wrong");
+
+            feedback.className = "feedback show " + (isCorrect ? "ok" : "bad");
+            feedback.innerHTML = isCorrect
+              ? "<strong>Corretto.</strong>"
+              : "<strong>Sbagliato.</strong> La risposta corretta è evidenziata in verde.";
+          });
+        });
+      });
+    }
+
+    function renderStudy(items) {
+      document.getElementById("studySection").innerHTML = `
+        <h2>Domande studio</h2>
+        ${items.map((item, index) => `
+          <article class="study-item">
+            <h3>${index + 1}. ${escapeHtml(item.domanda)}</h3>
+            <p>${escapeHtml(item.risposta_guida)}</p>
+            <div class="meta">${escapeHtml(item.fonte_visibile || "")}</div>
+          </article>
+        `).join("")}
+      `;
+    }
+  </script>
+</body>
+</html>

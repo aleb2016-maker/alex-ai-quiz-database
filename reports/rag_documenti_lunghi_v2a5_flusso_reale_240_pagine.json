@@ -1,0 +1,42 @@
+{
+  "versione": "RAG documenti lunghi V2A.5 flusso reale",
+  "file_reale": "rag/documenti/test_documento_lungo_reale_v2a5_240_pagine.md",
+  "pagine_attese": 240,
+  "pagine_riconosciute": 240,
+  "caratteri_input": 1368646,
+  "chunk": 480,
+  "batch": 60,
+  "parziali": 60,
+  "caratteri_riassunto_finale": 2394,
+  "profilo": "business",
+  "profilo_label": "Documento aziendale",
+  "keyword": [
+    "procedure aziendali",
+    "responsabilità operative",
+    "workflow e responsabilità",
+    "audit e controlli",
+    "documentazione tecnica",
+    "fornitori e terze parti",
+    "continuità operativa",
+    "onboarding e formazione",
+    "sicurezza informatica",
+    "backup e recupero",
+    "privacy e dati"
+  ],
+  "keyword_non_micro_concetti": [],
+  "fallback_vecchi": [],
+  "domain_hits": [
+    "sicurezza",
+    "backup",
+    "privacy",
+    "audit",
+    "continuita",
+    "fornitori",
+    "workflow",
+    "documentazione",
+    "procedure"
+  ],
+  "memoria_heap_mb": 24.452,
+  "memoria_rss_mb": 172.141,
+  "ok": true
+}

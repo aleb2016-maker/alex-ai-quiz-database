@@ -1,0 +1,778 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Test completo selezionatore RAG V3.5H</title>
+  <style>
+    :root {
+      --bg: #07111f;
+      --panel: rgba(255,255,255,.085);
+      --panel2: rgba(255,255,255,.13);
+      --text: #eef6ff;
+      --muted: #a9bdd6;
+      --accent: #38d39f;
+      --accent2: #5aa9ff;
+      --warn: #ffd166;
+      --bad: #ff6b6b;
+      --ok: #52e0a3;
+      --border: rgba(255,255,255,.16);
+      --shadow: 0 18px 60px rgba(0,0,0,.35);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 20% 0%, rgba(90,169,255,.24), transparent 34%),
+        radial-gradient(circle at 82% 12%, rgba(56,211,159,.18), transparent 32%),
+        linear-gradient(145deg, #07111f, #0b1728 55%, #07111f);
+    }
+
+    header {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 34px 20px 16px;
+    }
+
+    .badge {
+      display: inline-flex;
+      gap: 8px;
+      align-items: center;
+      padding: 8px 13px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      background: rgba(255,255,255,.08);
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    h1 {
+      margin: 16px 0 8px;
+      font-size: clamp(30px, 4vw, 54px);
+      line-height: 1.03;
+      letter-spacing: -.04em;
+    }
+
+    .subtitle {
+      max-width: 930px;
+      margin: 0;
+      color: var(--muted);
+      font-size: 18px;
+      line-height: 1.55;
+    }
+
+    main {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 18px 20px 56px;
+    }
+
+    .task-bar {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(150px, 1fr));
+      gap: 12px;
+      margin: 22px 0;
+    }
+
+    .task {
+      min-height: 86px;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      background: linear-gradient(145deg, rgba(90,169,255,.23), rgba(56,211,159,.14));
+      color: var(--text);
+      font-weight: 950;
+      cursor: pointer;
+      padding: 16px 14px;
+      box-shadow: 0 12px 34px rgba(0,0,0,.24);
+      transition: transform .18s ease, border-color .18s ease, background .18s ease;
+    }
+
+    .task span {
+      display: block;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 750;
+      margin-top: 5px;
+    }
+
+    .task:hover,
+    .task.active {
+      transform: translateY(-3px);
+      border-color: rgba(56,211,159,.78);
+      background: linear-gradient(145deg, rgba(56,211,159,.29), rgba(90,169,255,.21));
+    }
+
+    .status {
+      margin: 16px 0;
+      padding: 14px 16px;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      background: rgba(255,255,255,.08);
+      font-weight: 850;
+    }
+
+    .status.ok { color: var(--ok); }
+    .status.err { color: var(--bad); }
+
+    .grid {
+      display: grid;
+      grid-template-columns: .92fr 1.5fr;
+      gap: 18px;
+      align-items: start;
+    }
+
+    .panel {
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      background: var(--panel);
+      padding: 20px;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(16px);
+    }
+
+    .panel h2 {
+      margin: 0 0 14px;
+      font-size: 22px;
+    }
+
+    .small {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.45;
+    }
+
+    .box {
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      background: rgba(255,255,255,.075);
+      padding: 15px;
+      margin: 12px 0;
+    }
+
+    .box h3 {
+      margin: 0 0 8px;
+      font-size: 18px;
+    }
+
+    .motor {
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,.075);
+      border-radius: 16px;
+      padding: 12px;
+      margin: 10px 0;
+    }
+
+    .motor strong {
+      display: block;
+      color: var(--accent);
+      margin-bottom: 4px;
+    }
+
+    .quality {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin: 12px 0;
+    }
+
+    .quality .metric {
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      background: rgba(255,255,255,.075);
+      padding: 12px;
+    }
+
+    .metric b {
+      display: block;
+      font-size: 24px;
+      color: var(--ok);
+    }
+
+    .section-title {
+      margin: 24px 0 10px;
+      font-size: 24px;
+    }
+
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 12px;
+    }
+
+    .visual-card {
+      min-height: 210px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background: linear-gradient(145deg, rgba(90,169,255,.20), rgba(56,211,159,.13));
+    }
+
+    .icon {
+      font-size: 30px;
+      margin-bottom: 8px;
+    }
+
+    .source {
+      color: var(--accent2);
+      font-size: 13px;
+      font-weight: 850;
+      margin-top: 10px;
+    }
+
+    .category {
+      display: inline-flex;
+      gap: 6px;
+      align-items: center;
+      padding: 6px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(56,211,159,.35);
+      color: var(--accent);
+      background: rgba(56,211,159,.09);
+      font-size: 12px;
+      font-weight: 850;
+      margin-top: 8px;
+    }
+
+    .quiz-item {
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,.075);
+      border-radius: 20px;
+      padding: 16px;
+      margin: 14px 0;
+    }
+
+    .question {
+      font-weight: 950;
+      margin-bottom: 12px;
+      font-size: 17px;
+    }
+
+    .options {
+      display: grid;
+      gap: 10px;
+    }
+
+    .option {
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,.08);
+      color: var(--text);
+      border-radius: 14px;
+      padding: 12px;
+      text-align: left;
+      cursor: pointer;
+      font-weight: 750;
+    }
+
+    .option:hover {
+      border-color: rgba(90,169,255,.8);
+    }
+
+    .option.correct {
+      border-color: rgba(82,224,163,.95);
+      background: rgba(82,224,163,.18);
+    }
+
+    .option.wrong {
+      border-color: rgba(255,107,107,.95);
+      background: rgba(255,107,107,.16);
+    }
+
+    .feedback {
+      margin-top: 10px;
+      font-weight: 950;
+    }
+
+    details {
+      margin-top: 14px;
+    }
+
+    summary {
+      cursor: pointer;
+      color: var(--accent2);
+      font-weight: 850;
+    }
+
+    pre {
+      white-space: pre-wrap;
+      word-break: break-word;
+      background: rgba(0,0,0,.28);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 14px;
+      color: #dbeafe;
+      max-height: 380px;
+      overflow: auto;
+    }
+
+    @media (max-width: 960px) {
+      .task-bar { grid-template-columns: 1fr; }
+      .grid { grid-template-columns: 1fr; }
+      .quality { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="badge">🧠 RAG V3.5H · Test completo selezionatore + output V3.5I</div>
+    <h1>Test selezionatore motori e output generati</h1>
+    <p class="subtitle">
+      Questa pagina carica gli output già revisionati dal controllo qualità V3.5G.
+      Qui puoi verificare motori scelti, qualità testuale, categorie, card, riassunto, domande studio e test interattivo.
+    </p>
+  </header>
+
+  <main>
+    <section class="task-bar" id="taskBar"></section>
+
+    <div id="status" class="status">Carico il test completo...</div>
+
+    <section class="grid">
+      <aside class="panel">
+        <h2>Piano selezionatore</h2>
+        <div id="planBox" class="small">Nessun piano caricato.</div>
+
+        <h2 style="margin-top:24px;">Qualità V3.5G + V3.5I + V3.5K</h2>
+        <div id="qualityBox" class="small">Nessun controllo caricato.</div>
+      </aside>
+
+      <section class="panel">
+        <h2>Output generato</h2>
+        <div id="outputBox" class="small">Nessun output caricato.</div>
+      </section>
+    </section>
+  </main>
+
+  <script>
+    const taskBar = document.getElementById("taskBar");
+    const statusBox = document.getElementById("status");
+    const planBox = document.getElementById("planBox");
+    const qualityBox = document.getElementById("qualityBox");
+    const outputBox = document.getElementById("outputBox");
+
+    function escapeHtml(value) {
+      return String(value ?? "")
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+    }
+
+    async function loadJson(path) {
+      const response = await fetch(path);
+      if (!response.ok) {
+        throw new Error(`${response.status} ${response.statusText}: ${path}`);
+      }
+      const parseJson = response.json.bind(response);
+      return parseJson();
+    }
+
+    const TASKS = [
+      {
+        id: "riassunto",
+        label: "Solo riassunto",
+        sub: "didattico",
+        output: "../dist/generated/rag_output_cleaner_finale_v35k/solo_riassunto/sicurezza_reale/output_cleaner_finale_v35k.json"
+      },
+      {
+        id: "card",
+        label: "Solo card",
+        sub: "card distinte",
+        output: "../dist/generated/rag_output_cleaner_finale_v35k/solo_card/sicurezza_reale/output_cleaner_finale_v35k.json"
+      },
+      {
+        id: "studio",
+        label: "Domande studio",
+        sub: "ripasso",
+        output: "../dist/generated/rag_output_cleaner_finale_v35k/solo_domande_studio/sicurezza_reale/output_cleaner_finale_v35k.json"
+      },
+      {
+        id: "test",
+        label: "Test interattivo",
+        sub: "opzioni visibili",
+        output: "../dist/generated/rag_output_cleaner_finale_v35k/solo_test/sicurezza_reale/output_cleaner_finale_v35k.json"
+      },
+      {
+        id: "completo",
+        label: "Completo",
+        sub: "PDF/app/web",
+        output: "../dist/generated/rag_output_cleaner_finale_v35k/output_completo/sicurezza_reale/output_cleaner_finale_v35k.json"
+      }
+    ];
+
+    function categoryHtml(cat) {
+      if (!cat) return "";
+      return `
+        <div class="category">
+          ${escapeHtml(cat.categoria || "")}
+          ${cat.sottocategoria ? " · " + escapeHtml(cat.sottocategoria) : ""}
+        </div>
+      `;
+    }
+
+    function renderButtons() {
+      taskBar.innerHTML = TASKS.map(task => `
+        <button class="task" type="button" data-task="${task.id}">
+          ${escapeHtml(task.label)}
+          <span>${escapeHtml(task.sub)}</span>
+        </button>
+      `).join("");
+
+      taskBar.querySelectorAll(".task").forEach(button => {
+        button.addEventListener("click", () => loadTask(button.dataset.task));
+      });
+    }
+
+    function renderPlan(data) {
+      const plan = data.piano_motori_v35f || {};
+      const decision = plan.decisione || {};
+      const motors = plan.motori_da_usare || [];
+
+      if (!plan.versione) {
+        planBox.innerHTML = `
+          <div class="box">
+            <h3>Piano non disponibile</h3>
+            <p>Questo output non contiene il piano motori V3.5F incorporato.</p>
+          </div>
+        `;
+        return;
+      }
+
+      planBox.innerHTML = `
+        <div class="box">
+          <h3>${escapeHtml(decision.tipo || "tipo non disponibile")}</h3>
+          <p><strong>Compito:</strong> ${escapeHtml(plan.compito || "")}</p>
+          <p><strong>Perché:</strong> ${escapeHtml(decision.perche || "")}</p>
+          <p><strong>Output richiesti:</strong> ${escapeHtml((decision.output_richiesti || []).join(", "))}</p>
+        </div>
+
+        <h3>Motori selezionati</h3>
+        ${motors.map(motor => `
+          <div class="motor">
+            <strong>${escapeHtml(motor.id)}</strong>
+            <div>${escapeHtml(motor.script)}</div>
+            <div class="small">${escapeHtml(motor.ruolo || motor.ruolo === "" ? motor.ruolo : motor.ruolo)}</div>
+          </div>
+        `).join("")}
+
+        <details>
+          <summary>JSON piano motori</summary>
+          <pre>${escapeHtml(JSON.stringify(plan, null, 2))}</pre>
+        </details>
+      `;
+    }
+
+    function renderQuality(data) {
+      const quality = data.controlli_qualita?.qualita_testuale_v35g || {};
+      const naturalness = data.controlli_qualita?.naturalezza_antikeyword_v35i || {};
+      const agreement = data.controlli_qualita?.cleaner_finale_universale_v35k || {};
+      const finalCleaner = data.controlli_qualita?.cleaner_finale_visibile_v35k || {};
+
+      const revision = data.revisione_qualita_testuale_v35g || {};
+      const naturalRevision = data.revisione_naturalezza_antikeyword_v35i || {};
+      const agreementRevision = data.revisione_cleaner_finale_universale_v35k || {};
+      const cleanerRevision = data.revisione_cleaner_finale_visibile_v35k || {};
+
+      const hasFinalCleaner = Object.keys(finalCleaner).length > 0;
+      const overallOk = Boolean(quality.ok) && Boolean(naturalness.ok) && Boolean(agreement.ok) && (!hasFinalCleaner || Boolean(finalCleaner.ok));
+
+      const allErrors = [
+        ...(quality.errori || []).map(e => `V3.5G: ${e}`),
+        ...(naturalness.errori || []).map(e => `V3.5I: ${e}`),
+        ...(agreement.errori || []).map(e => `V3.5K: ${e}`),
+        ...(finalCleaner.errori || []).map(e => `V3.5K: ${e}`)
+      ];
+
+      qualityBox.innerHTML = `
+        <div class="quality">
+          <div class="metric"><b>${overallOk ? "OK" : "NO"}</b><span>Esito qualità finale</span></div>
+          <div class="metric"><b>${escapeHtml(quality.testi_controllati ?? "-")}</b><span>Testi V3.5G</span></div>
+          <div class="metric"><b>${escapeHtml(naturalness.testi_controllati ?? "-")}</b><span>Testi V3.5I</span></div>
+          <div class="metric"><b>${escapeHtml(agreement.testi_controllati ?? "-")}</b><span>Testi V3.5K</span></div>
+          <div class="metric"><b>${escapeHtml(finalCleaner.testi_controllati ?? "-")}</b><span>Testi V3.5K</span></div>
+        </div>
+        <div class="box"><h3>Controllo V3.5G · qualità testuale</h3>${(revision.copre || []).map(item => `<div>✅ ${escapeHtml(item)}</div>`).join("")}</div>
+        <div class="box"><h3>Controllo V3.5I · naturalezza anti-keyword</h3>${(naturalRevision.copre || []).map(item => `<div>✅ ${escapeHtml(item)}</div>`).join("")}</div>
+        <div class="box"><h3>Controllo V3.5K · cleaner finale universale</h3>${((agreementRevision.copre || []).length ? agreementRevision.copre : ["ricalcolato dopo cleaner finale V3.5K"]).map(item => `<div>✅ ${escapeHtml(item)}</div>`).join("")}</div>
+        <div class="box"><h3>Controllo V3.5K · cleaner finale visibile</h3>${(cleanerRevision.copre || finalCleaner.campi_puliti || []).map(item => `<div>✅ ${escapeHtml(item)}</div>`).join("")}</div>
+        ${allErrors.length ? `<div class="box"><h3>Errori qualità</h3>${allErrors.map(e => `<div>❌ ${escapeHtml(e)}</div>`).join("")}</div>` : `<div class="box"><h3>Nessun errore qualità</h3><p>Il materiale caricato ha superato V3.5G, V3.5I, V3.5K ricalcolato e V3.5K finale.</p></div>`}
+      `;
+    }
+
+    function renderSummary(data) {
+      const r = data.riassunto;
+      if (!r) return "";
+
+      return `
+        <h2 class="section-title">Riassunto</h2>
+        <div class="box">
+          <h3>${escapeHtml(r.titolo || "Riassunto")}</h3>
+          <p>${escapeHtml(r.testo_breve || "")}</p>
+          ${(r.punti_chiave || []).map(p => `
+            <div class="box">
+              <h3>${escapeHtml(p.titolo || "")}</h3>
+              <p>${escapeHtml(p.testo || "")}</p>
+              <div class="source">${escapeHtml(p.fonte_visibile || "")}</div>
+              ${categoryHtml(p.categoria_v35g)}
+            </div>
+          `).join("")}
+          <p>${escapeHtml(r.conclusione || "")}</p>
+          ${categoryHtml(r.categoria_v35g)}
+        </div>
+      `;
+    }
+
+    function renderCards(data) {
+      const cards = data.card || [];
+      if (!cards.length) return "";
+
+      return `
+        <h2 class="section-title">Card studio</h2>
+        <div class="cards-grid">
+          ${cards.map(card => `
+            <article class="box visual-card">
+              <div>
+                <div class="icon">${escapeHtml(card.stile_card?.icona || "📌")}</div>
+                <h3>${escapeHtml(card.titolo || "")}</h3>
+                <p>${escapeHtml(card.testo || "")}</p>
+                ${card.messaggio_chiave ? `<p><strong>${escapeHtml(card.messaggio_chiave)}</strong></p>` : ""}
+              </div>
+              <div>
+                <div class="source">${escapeHtml(card.fonte_visibile || "")}</div>
+                ${categoryHtml(card.categoria_v35g)}
+              </div>
+            </article>
+          `).join("")}
+        </div>
+      `;
+    }
+
+    function renderStudy(data) {
+      const items = data.domande_studio || [];
+      if (!items.length) return "";
+
+      return `
+        <h2 class="section-title">Domande studio</h2>
+        ${items.map(item => `
+          <div class="box">
+            <h3>${escapeHtml(item.domanda || "")}</h3>
+            <p>${escapeHtml(item.risposta_guida || "")}</p>
+            <div class="source">${escapeHtml(item.fonte_visibile || "")}</div>
+            ${categoryHtml(item.categoria_v35g)}
+          </div>
+        `).join("")}
+      `;
+    }
+
+    function renderQuiz(data) {
+      const tests = data.test || [];
+      if (!tests.length) return "";
+
+      return `
+        <h2 class="section-title">Test interattivo</h2>
+        ${tests.map((item, index) => {
+          const options = item.opzioni_visibili || item.opzioni || [];
+          const correct = item.risposta_corretta_visibile || item.risposta_corretta || "";
+          return `
+            <article class="quiz-item" data-correct="${escapeHtml(correct)}">
+              <div class="question">${index + 1}. ${escapeHtml(item.domanda_visibile || item.domanda || "")}</div>
+              <div class="options">
+                ${options.map(option => `
+                  <button class="option" type="button" data-option="${escapeHtml(option)}">
+                    ${escapeHtml(option)}
+                  </button>
+                `).join("")}
+              </div>
+              <div class="feedback"></div>
+              ${item.spiegazione ? `<div class="box small"><strong>Spiegazione:</strong> ${escapeHtml(item.spiegazione)}</div>` : ""}
+              <div class="source">${escapeHtml(item.fonte_visibile || "")}</div>
+              ${categoryHtml(item.categoria_v35g)}
+            </article>
+          `;
+        }).join("")}
+      `;
+    }
+
+    function renderCategories(data) {
+      const cats = data.categorie_didattiche_v35g || [];
+      if (!cats.length) return "";
+
+      return `
+        <h2 class="section-title">Categorie didattiche</h2>
+        <div class="box">
+          ${cats.map(cat => categoryHtml(cat)).join("")}
+        </div>
+      `;
+    }
+
+    function renderOutput(data) {
+      outputBox.innerHTML = `
+        <div class="box">
+          <h3>Output richiesti</h3>
+          <p>${escapeHtml((data.output_richiesti || []).join(", "))}</p>
+        </div>
+
+        ${renderCategories(data)}
+        ${renderSummary(data)}
+        ${renderCards(data)}
+        ${renderStudy(data)}
+        ${renderQuiz(data)}
+
+        <details>
+          <summary>JSON output revisionato</summary>
+          <pre>${escapeHtml(JSON.stringify(data, null, 2))}</pre>
+        </details>
+      `;
+
+      activateQuiz();
+    }
+
+    function activateQuiz() {
+      outputBox.querySelectorAll(".quiz-item").forEach(item => {
+        const correct = item.dataset.correct;
+        const feedback = item.querySelector(".feedback");
+
+        item.querySelectorAll(".option").forEach(button => {
+          button.addEventListener("click", () => {
+            item.querySelectorAll(".option").forEach(b => {
+              b.classList.remove("correct", "wrong");
+            });
+
+            if (button.dataset.option === correct) {
+              button.classList.add("correct");
+              feedback.textContent = "✅ Corretto";
+              feedback.style.color = "var(--ok)";
+            } else {
+              button.classList.add("wrong");
+              feedback.textContent = "❌ Riprova. La risposta corretta viene evidenziata.";
+              feedback.style.color = "var(--bad)";
+
+              item.querySelectorAll(".option").forEach(b => {
+                if (b.dataset.option === correct) b.classList.add("correct");
+              });
+            }
+          });
+        });
+      });
+    }
+
+    async function loadTask(taskId) {
+      const task = TASKS.find(item => item.id === taskId);
+      if (!task) return;
+
+      document.querySelectorAll(".task").forEach(button => {
+        button.classList.toggle("active", button.dataset.task === taskId);
+      });
+
+      statusBox.className = "status";
+      statusBox.textContent = `Carico output revisionato: ${task.label}...`;
+
+      try {
+        const data = await loadJson(task.output);
+
+        renderPlan(data);
+        renderQuality(data);
+        renderOutput(data);
+
+        statusBox.className = "status ok";
+        statusBox.textContent = `✅ Caricato: ${task.label} · output cleaner finale V3.5K`;
+      } catch (error) {
+        statusBox.className = "status err";
+        statusBox.textContent = `Errore caricamento: ${error.message}`;
+        planBox.innerHTML = `
+          <div class="box">
+            <h3>Output non trovato</h3>
+            <p>Rigenera prima gli output revisionati:</p>
+            <pre>python3 scripts/verifica_rag_revisore_qualita_testuale_v35g.py</pre>
+          </div>
+        `;
+        qualityBox.innerHTML = `<pre>${escapeHtml(String(error.stack || error.message || error))}</pre>`;
+        outputBox.innerHTML = "";
+      }
+    }
+
+    renderButtons();
+    loadTask("completo");
+  </script>
+<script id="rag-v35l-badge-dedup">
+(function () {
+  "use strict";
+
+  function normalizzaBadgeParte(value) {
+    return String(value || "")
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .replace(/\s+/g, " ")
+      .trim()
+      .toLowerCase();
+  }
+
+  function deduplicaBadgeTesto(testo) {
+    var originale = String(testo || "").replace(/\s+/g, " ").trim();
+    if (!originale || originale.indexOf(" · ") === -1) return originale;
+
+    var parti = originale.split(" · ").map(function (p) { return p.trim(); }).filter(Boolean);
+    if (parti.length !== 2) return originale;
+
+    if (normalizzaBadgeParte(parti[0]) === normalizzaBadgeParte(parti[1])) {
+      return parti[0];
+    }
+    return originale;
+  }
+
+  function nodoBadgePossibile(el) {
+    if (!el || !el.textContent) return false;
+    var testo = el.textContent.replace(/\s+/g, " ").trim();
+    if (testo.indexOf(" · ") === -1) return false;
+    if (testo.length > 120) return false;
+
+    var tag = (el.tagName || "").toLowerCase();
+    var cls = String(el.className || "").toLowerCase();
+
+    return tag === "span" || tag === "button" || tag === "a" ||
+      cls.indexOf("badge") >= 0 || cls.indexOf("pill") >= 0 ||
+      cls.indexOf("tag") >= 0 || cls.indexOf("chip") >= 0 ||
+      cls.indexOf("categoria") >= 0 || cls.indexOf("category") >= 0;
+  }
+
+  function applicaDeduplicaBadge() {
+    var selettore = [
+      "span", "button", "a",
+      "[class*='badge']", "[class*='Badge']",
+      "[class*='pill']", "[class*='Pill']",
+      "[class*='tag']", "[class*='Tag']",
+      "[class*='chip']", "[class*='Chip']",
+      "[class*='categoria']", "[class*='Categoria']",
+      "[class*='category']", "[class*='Category']"
+    ].join(",");
+
+    document.querySelectorAll(selettore).forEach(function (el) {
+      if (!nodoBadgePossibile(el)) return;
+      var pulito = deduplicaBadgeTesto(el.textContent);
+      if (pulito && pulito !== el.textContent.replace(/\s+/g, " ").trim()) {
+        el.textContent = pulito;
+        el.setAttribute("data-v35l-badge-dedup", "ok");
+      }
+    });
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", applicaDeduplicaBadge);
+  } else {
+    applicaDeduplicaBadge();
+  }
+
+  var observer = new MutationObserver(function () {
+    applicaDeduplicaBadge();
+  });
+  observer.observe(document.documentElement, { childList: true, subtree: true, characterData: true });
+})();
+</script>
+</body>
+</html>

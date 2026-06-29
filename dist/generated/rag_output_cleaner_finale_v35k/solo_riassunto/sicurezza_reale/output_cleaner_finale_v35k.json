@@ -1,0 +1,471 @@
+{
+  "versione": "rag_output_selezionato_v35f",
+  "output_richiesti": [
+    "riassunto"
+  ],
+  "controlli_qualita": {
+    "ok": true,
+    "errori": [],
+    "avvisi": [],
+    "riassunto": true,
+    "card": 5,
+    "test": 5,
+    "domande_studio": 5,
+    "motore_didattico_v35c": {
+      "ok": true,
+      "errori": [],
+      "avvisi": [],
+      "testi_visibili": 93
+    },
+    "qualita_testuale_v35g": {
+      "ok": true,
+      "errori": [],
+      "avvisi": [],
+      "testi_controllati": 18,
+      "categorie": 1
+    },
+    "naturalezza_antikeyword_v35i": {
+      "ok": true,
+      "errori": [],
+      "testi_controllati": 13,
+      "nome_controllo": "Controllo di naturalezza linguistica anti-keyword"
+    },
+    "accordo_pronomi_v35j": {
+      "ok": true,
+      "errori": [],
+      "testi_controllati": 13,
+      "nome_controllo": "Controllo accordo grammaticale e pronomi",
+      "riallineato_da": "cleaner_finale_universale_v35k"
+    },
+    "cleaner_finale_universale_v35k": {
+      "ok": true,
+      "errori": [],
+      "testi_controllati": 13,
+      "campi_puliti": {
+        "riassunto.titolo": 1,
+        "riassunto.testo_breve": 1,
+        "riassunto.conclusione": 1,
+        "riassunto.punti_chiave[].titolo": 5,
+        "riassunto.punti_chiave[].testo": 5
+      },
+      "nome_controllo": "Controllo finale universale testi visibili"
+    },
+    "lucidatore_linguistico_universale_v35m": {
+      "ok": true,
+      "nome": "Lucidatore linguistico universale V35M",
+      "file": "dist/generated/rag_output_cleaner_finale_v35k/solo_riassunto/sicurezza_reale/output_cleaner_finale_v35k.json",
+      "testi_controllati": 32,
+      "modifiche_visibili": 0,
+      "controlli": [
+        "spazi",
+        "punteggiatura",
+        "accenti_comuni",
+        "apostrofi",
+        "contrazioni_italiane",
+        "parole_duplicate",
+        "frasi_duplicate_consecutive",
+        "punto_finale",
+        "punto_interrogativo_domande"
+      ]
+    },
+    "contesto_semantico_universale_v35o": {
+      "ok": true,
+      "nome": "Contesto semantico universale V35O",
+      "tema_documento": "sicurezza informatica",
+      "sottotema_documento": "protezione dati e sistemi",
+      "nodi_con_contesto": 14,
+      "nota": "Aggiunge tema, sottotema, categoria, sottocategoria, micro-concetti e oggetto probabile ai blocchi testuali."
+    },
+    "completatore_linguistico_probabile_v35n": {
+      "ok": true,
+      "nome": "Completatore linguistico probabile V35N",
+      "testi_controllati": 32,
+      "parole_corrette": 4,
+      "frasi_completate": 0,
+      "modifiche_visibili": 10,
+      "usa_contesto_v35o": true
+    }
+  },
+  "motori_riutilizzabili": {
+    "didattico": "rag_motore_didattico_riutilizzabile_v35c",
+    "copre": [
+      "naturalezza_domande_studio",
+      "stile_card",
+      "fonti_visibili",
+      "rimozione_frasi_riempitive",
+      "tono_didattico_finale",
+      "layout_grafico"
+    ],
+    "revisore_qualita_testuale": "rag_revisore_qualita_testuale_v35g",
+    "revisore_naturalezza_antikeyword": "rag_revisore_naturalezza_antikeyword_v35i",
+    "revisore_accordo_pronomi": "rag_revisore_accordo_pronomi_v35j",
+    "lucidatore_linguistico": "rag_lucidatore_linguistico_universale_v35m",
+    "contesto_semantico": "rag_contesto_semantico_universale_v35o",
+    "completatore_linguistico_probabile": "rag_completatore_linguistico_probabile_v35n"
+  },
+  "riassunto": {
+    "titolo": "Riassunto - Sicurezza informatica aziendale.",
+    "tipo_documento": "documento_tecnico_formativo",
+    "testo_breve": "Il documento presenta 5 punti principali e li organizza in contenuti utili per studio, ripasso e verifica. La sicurezza informatica è l'insieme di pratiche, strumenti e comportamenti usati per proteggere dati, dispositivi, account e sistemi digitali.",
+    "punti_chiave": [
+      {
+        "titolo": "Sicurezza informatica.",
+        "testo": "Nel riassunto, la sicurezza informatica viene collegata al contesto centrale del documento: la sicurezza informatica è l'insieme di pratiche, strumenti e comportamenti usati per proteggere dati, dispositivi, account e sistemi digitali.",
+        "fonte_visibile": "Fonte: sezione “Sicurezza informatica”.",
+        "categoria_v35g": {
+          "categoria": "Comprensione generale",
+          "sottocategoria": "Sicurezza informatica.",
+          "contesto_semantico_v35o": {
+            "tema": "sicurezza informatica",
+            "sottotema": "protezione dati e sistemi",
+            "categoria": "contenuto informativo",
+            "sottocategoria": "informazione principale",
+            "micro_concetti": [
+              "comprensione generale sicurezza",
+              "generale sicurezza informatica"
+            ],
+            "oggetto_probabile": "comprensione generale sicurezza"
+          }
+        },
+        "contesto_semantico_v35o": {
+          "tema": "sicurezza informatica",
+          "sottotema": "protezione dati e sistemi",
+          "categoria": "azione operativa",
+          "sottocategoria": "comportamento da applicare",
+          "micro_concetti": [
+            "sicurezza informatica",
+            "informatica comprensione generale",
+            "pratiche strumenti comportamenti",
+            "comprensione generale sicurezza",
+            "informatica collegata contenuto",
+            "informatica riassunto sicurezza"
+          ],
+          "oggetto_probabile": "sicurezza informatica"
+        }
+      },
+      {
+        "titolo": "Rischio e conseguenza.",
+        "testo": "Il punto dedicato a «Rischio e conseguenza» aiuta a capire il quadro generale: usare la stessa password su più siti è rischio: se un servizio viene violato, un attaccante può provare la stessa password anche su altri account.",
+        "fonte_visibile": "Fonte: sezione “Rischio e conseguenza”.",
+        "categoria_v35g": {
+          "categoria": "Comprensione generale",
+          "sottocategoria": "Rischio e conseguenza.",
+          "contesto_semantico_v35o": {
+            "tema": "sicurezza informatica",
+            "sottotema": "protezione dati e sistemi",
+            "categoria": "rischio",
+            "sottocategoria": "prevenzione o riduzione del rischio",
+            "micro_concetti": [
+              "comprensione generale rischio",
+              "generale rischio conseguenza"
+            ],
+            "oggetto_probabile": "comprensione generale rischio"
+          }
+        },
+        "contesto_semantico_v35o": {
+          "tema": "sicurezza informatica",
+          "sottotema": "protezione dati e sistemi",
+          "categoria": "rischio",
+          "sottocategoria": "prevenzione o riduzione del rischio",
+          "micro_concetti": [
+            "rischio conseguenza",
+            "stessa password",
+            "conseguenza comprensione generale",
+            "comprensione generale rischio",
+            "servizio violato attaccante",
+            "conseguenza punto dedicato"
+          ],
+          "oggetto_probabile": "accessi non autorizzati agli account"
+        }
+      },
+      {
+        "titolo": "Regola operativa.",
+        "testo": "Per studiare il documento, «Regola operativa» va letto come passaggio autonomo: una buona regola aziendale è attivare la 2FA almeno su email, strumenti cloud, account amministrativi, sistemi di pagamento e piattaforme che contengono.",
+        "fonte_visibile": "Fonte: sezione “Regola operativa”.",
+        "categoria_v35g": {
+          "categoria": "Comprensione generale",
+          "sottocategoria": "Regola operativa.",
+          "contesto_semantico_v35o": {
+            "tema": "sicurezza informatica",
+            "sottotema": "protezione dati e sistemi",
+            "categoria": "regola",
+            "sottocategoria": "indicazione da rispettare",
+            "micro_concetti": [
+              "comprensione generale regola",
+              "generale regola operativa"
+            ],
+            "oggetto_probabile": "comprensione generale regola"
+          }
+        },
+        "contesto_semantico_v35o": {
+          "tema": "sicurezza informatica",
+          "sottotema": "protezione dati e sistemi",
+          "categoria": "regola",
+          "sottocategoria": "indicazione da rispettare",
+          "micro_concetti": [
+            "regola operativa",
+            "amministrativi sistemi pagamento",
+            "pagamento piattaforme contengono",
+            "operativa comprensione generale",
+            "account amministrativi sistemi",
+            "sistemi pagamento piattaforme"
+          ],
+          "oggetto_probabile": "accessi non autorizzati agli account"
+        }
+      },
+      {
+        "titolo": "Azione consigliata.",
+        "testo": "Il riassunto usa «Azione consigliata» per fissare un'informazione importante: bisogna mantenere aggiornati anche browser, app, plugin, software aziendali, strumenti di sicurezza e dispositivi di rete.",
+        "fonte_visibile": "Fonte: sezione “Azione consigliata”.",
+        "categoria_v35g": {
+          "categoria": "Comprensione generale",
+          "sottocategoria": "Azione consigliata.",
+          "contesto_semantico_v35o": {
+            "tema": "sicurezza informatica",
+            "sottotema": "protezione dati e sistemi",
+            "categoria": "contenuto informativo",
+            "sottocategoria": "informazione principale",
+            "micro_concetti": [
+              "comprensione generale azione",
+              "generale azione consigliata"
+            ],
+            "oggetto_probabile": "comprensione generale azione"
+          }
+        },
+        "contesto_semantico_v35o": {
+          "tema": "sicurezza informatica",
+          "sottotema": "protezione dati e sistemi",
+          "categoria": "regola",
+          "sottocategoria": "indicazione da rispettare",
+          "micro_concetti": [
+            "azione consigliata",
+            "consigliata fissare un'informazione",
+            "consigliata comprensione generale",
+            "un'informazione bisogna mantenere",
+            "fissare un'informazione bisogna",
+            "strumenti sicurezza dispositivi"
+          ],
+          "oggetto_probabile": "azione consigliata"
+        }
+      },
+      {
+        "titolo": "Obiettivi principali.",
+        "testo": "Il passaggio su «Obiettivi principali» chiarisce un aspetto specifico del documento: la sicurezza informatica ha tre obiettivi principali: proteggere la riservatezza dei dati; garantire l'integrità delle informazioni.",
+        "fonte_visibile": "Fonte: sezione “Obiettivi principali”.",
+        "categoria_v35g": {
+          "categoria": "Comprensione generale",
+          "sottocategoria": "Obiettivi principali.",
+          "contesto_semantico_v35o": {
+            "tema": "sicurezza informatica",
+            "sottotema": "protezione dati e sistemi",
+            "categoria": "contenuto informativo",
+            "sottocategoria": "informazione principale",
+            "micro_concetti": [
+              "comprensione generale obiettivi",
+              "generale obiettivi principali"
+            ],
+            "oggetto_probabile": "comprensione generale obiettivi"
+          }
+        },
+        "contesto_semantico_v35o": {
+          "tema": "sicurezza informatica",
+          "sottotema": "protezione dati e sistemi",
+          "categoria": "azione operativa",
+          "sottocategoria": "comportamento da applicare",
+          "micro_concetti": [
+            "obiettivi principali",
+            "garantire l'integrità informazioni",
+            "principali proteggere riservatezza",
+            "principali comprensione generale",
+            "comprensione generale obiettivi",
+            "documento sicurezza informatica"
+          ],
+          "oggetto_probabile": "obiettivi principali"
+        }
+      }
+    ],
+    "conclusione": "Il materiale generatore mette in evidenza i concetti centrali, separando le etichette didattiche dal contesto completo.",
+    "categoria_v35g": {
+      "categoria": "Comprensione generale",
+      "sottocategoria": "sintesi del documento.",
+      "contesto_semantico_v35o": {
+        "tema": "sicurezza informatica",
+        "sottotema": "protezione dati e sistemi",
+        "categoria": "contenuto informativo",
+        "sottocategoria": "informazione principale",
+        "micro_concetti": [
+          "comprensione generale sintesi",
+          "generale sintesi documento"
+        ],
+        "oggetto_probabile": "comprensione generale sintesi"
+      }
+    },
+    "contesto_semantico_v35o": {
+      "tema": "sicurezza informatica",
+      "sottotema": "protezione dati e sistemi",
+      "categoria": "regola",
+      "sottocategoria": "indicazione da rispettare",
+      "micro_concetti": [
+        "sicurezza informatica",
+        "comprensione generale",
+        "obiettivi principali",
+        "fonte sezione",
+        "rischio conseguenza",
+        "azione consigliata"
+      ],
+      "oggetto_probabile": "sicurezza informatica"
+    }
+  },
+  "piano_motori_v35f": {
+    "ok": true,
+    "versione": "rag_selezionatore_motori_riutilizzabile_v35f",
+    "creato_il": "2026-06-28T17:43:56",
+    "documento": "sicurezza_reale",
+    "compito": "fammi solo un riassunto chiaro del documento",
+    "decisione": {
+      "tipo": "solo_riassunto",
+      "output_richiesti": [
+        "riassunto"
+      ],
+      "motori": [
+        "didattico_v35c"
+      ],
+      "perche": "il riassunto richiede tono didattico e pulizia, non opzioni test"
+    },
+    "motori_da_usare": [
+      {
+        "id": "didattico_v35c",
+        "script": "scripts/rag_motore_didattico_riutilizzabile_v35c.py",
+        "ruolo": "migliora card, riassunti, domande studio, fonti, tono e layout"
+      }
+    ],
+    "regole_architetturali": {
+      "card_riassunti_domande_studio": "motore didattico V3.5C",
+      "test": "motore test V3.5D con bridge quiz V3.5B",
+      "output_completo": "orchestratore V3.5E"
+    }
+  },
+  "categorie_didattiche_v35g": [
+    {
+      "categoria": "Comprensione generale",
+      "sottocategoria": "sintesi.",
+      "contesto_semantico_v35o": {
+        "tema": "sicurezza informatica",
+        "sottotema": "protezione dati e sistemi",
+        "categoria": "contenuto informativo",
+        "sottocategoria": "informazione principale",
+        "micro_concetti": [
+          "comprensione generale sintesi"
+        ],
+        "oggetto_probabile": "comprensione generale sintesi"
+      }
+    }
+  ],
+  "revisione_qualita_testuale_v35g": {
+    "ok": true,
+    "copre": [
+      "grammatica_italiana",
+      "accenti",
+      "apostrofi",
+      "punteggiatura",
+      "frasi_complete",
+      "assenza_frasi_spezzate",
+      "assenza_frasi_non_terminate",
+      "assenza_frasi_riempitive",
+      "assenza_testi_generici",
+      "assenza_duplicati_visibili",
+      "assenza_quasi_duplicati",
+      "card_concetti_distinti",
+      "domande_naturali",
+      "spiegazioni_test",
+      "fonti_visibili",
+      "categorie",
+      "sottocategorie"
+    ]
+  },
+  "revisione_naturalezza_antikeyword_v35i": {
+    "ok": true,
+    "nome": "Controllo di naturalezza linguistica anti-keyword",
+    "copre": [
+      "niente_liste_grezze_keyword",
+      "niente_frasi_robotiche",
+      "card_con_spiegazioni_naturali",
+      "messaggi_chiave_utili",
+      "riassunto_piu_studiabile",
+      "domande_studio_umane",
+      "spiegazioni_test_non_meccaniche"
+    ]
+  },
+  "revisione_accordo_pronomi_v35j": {
+    "ok": true,
+    "nome": "Controllo accordo grammaticale e pronomi",
+    "copre": [
+      "genere",
+      "numero",
+      "articoli",
+      "participi",
+      "pronomi",
+      "accordo_titoli_contenuti",
+      "niente_viene_presentato_errato",
+      "niente_senza_copiarlo_errato",
+      "niente_frasi_tagliate",
+      "risposte_guida_meno_meccaniche"
+    ]
+  },
+  "revisione_cleaner_finale_universale_v35k": {
+    "ok": true,
+    "nome": "Controllo finale universale testi visibili",
+    "copre": [
+      "tutti_i_campi_visibili",
+      "punteggiatura_sporca",
+      "domande_chiuse_bene",
+      "frasi_tagliate",
+      "finali_sospetti",
+      "contrazioni_italiane",
+      "pronomi_fragili",
+      "accordi_plurali_generali",
+      "opzioni_quiz_visibili",
+      "risposta_corretta_visibile_allineata",
+      "mappa_opzioni_visibile_allineata",
+      "riutilizzabile_per_web_pdf_app"
+    ]
+  },
+  "revisione_linguistica_universale_v35m": {
+    "ok": true,
+    "nome": "Lucidatore linguistico universale V35M",
+    "versione": "rag_lucidatore_linguistico_universale_v35m",
+    "creato_il": "2026-06-29T17:37:33",
+    "testi_controllati": 32,
+    "modifiche_visibili": 0
+  },
+  "contesto_semantico_v35o": {
+    "tema": "sicurezza informatica",
+    "sottotema": "protezione dati e sistemi",
+    "categoria": "regola",
+    "sottocategoria": "indicazione da rispettare",
+    "micro_concetti": [
+      "sicurezza informatica",
+      "comprensione generale",
+      "obiettivi principali",
+      "fonte sezione",
+      "rischio conseguenza",
+      "azione consigliata"
+    ],
+    "oggetto_probabile": "sicurezza informatica"
+  },
+  "contesto_documento_v35o": {
+    "ok": true,
+    "tema": "sicurezza informatica",
+    "sottotema": "protezione dati e sistemi",
+    "creato_il": "2026-06-29T17:37:33"
+  },
+  "revisione_completamento_linguistico_v35n": {
+    "ok": true,
+    "nome": "Completatore linguistico probabile V35N",
+    "creato_il": "2026-06-29T17:37:33",
+    "checked": 32,
+    "typos": 4,
+    "completed": 0,
+    "changed": 10
+  }
+}
