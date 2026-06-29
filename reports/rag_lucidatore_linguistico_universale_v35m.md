@@ -1,9 +1,9 @@
 # RAG Lucidatore Linguistico Universale V35M
 
-- Creato il: 2026-06-29T17:13:54
+- Creato il: 2026-06-29T17:37:33
 - File controllati: 6
 - Testi controllati: 548
-- Modifiche visibili: 3
+- Modifiche visibili: 2
 
 ## Controlli eseguiti
 
@@ -25,6 +25,6 @@
 - `dist/generated/rag_output_cleaner_finale_v35k/solo_domande_studio/sicurezza_reale/output_cleaner_finale_v35k.json`: testi 27, modifiche 0
 - `dist/generated/rag_output_cleaner_finale_v35k/solo_riassunto/sicurezza_reale/output_cleaner_finale_v35k.json`: testi 32, modifiche 0
 - `dist/generated/rag_output_cleaner_finale_v35k/solo_test/sicurezza_reale/output_cleaner_finale_v35k.json`: testi 82, modifiche 0
-- `dist/generated/rag_pipeline_unica_ufficiale/sicurezza_reale_pacchetto_unico/output_finale_rag_pipeline_unica.json`: testi 183, modifiche 1
+- `dist/generated/rag_pipeline_unica_ufficiale/sicurezza_reale_pacchetto_unico/output_finale_rag_pipeline_unica.json`: testi 183, modifiche 0
 
 ESITO: OK

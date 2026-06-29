@@ -93,6 +93,23 @@
         "punto_finale",
         "punto_interrogativo_domande"
       ]
+    },
+    "contesto_semantico_universale_v35o": {
+      "ok": true,
+      "nome": "Contesto semantico universale V35O",
+      "tema_documento": "sicurezza informatica",
+      "sottotema_documento": "protezione dati e sistemi",
+      "nodi_con_contesto": 56,
+      "nota": "Aggiunge tema, sottotema, categoria, sottocategoria, micro-concetti e oggetto probabile ai blocchi testuali."
+    },
+    "completatore_linguistico_probabile_v35n": {
+      "ok": true,
+      "nome": "Completatore linguistico probabile V35N",
+      "testi_controllati": 183,
+      "parole_corrette": 33,
+      "frasi_completate": 0,
+      "modifiche_visibili": 74,
+      "usa_contesto_v35o": true
     }
   },
   "motori_riutilizzabili": {
@@ -110,7 +127,9 @@
     "revisore_qualita_testuale": "rag_revisore_qualita_testuale_v35g",
     "revisore_naturalezza_antikeyword": "rag_revisore_naturalezza_antikeyword_v35i",
     "revisore_accordo_pronomi": "rag_revisore_accordo_pronomi_v35j",
-    "lucidatore_linguistico": "rag_lucidatore_linguistico_universale_v35m"
+    "lucidatore_linguistico": "rag_lucidatore_linguistico_universale_v35m",
+    "contesto_semantico": "rag_contesto_semantico_universale_v35o",
+    "completatore_linguistico_probabile": "rag_completatore_linguistico_probabile_v35n"
   },
   "riassunto": {
     "titolo": "Riassunto - Sicurezza informatica aziendale.",
@@ -119,20 +138,72 @@
     "punti_chiave": [
       {
         "titolo": "Sicurezza informatica.",
-        "testo": "Nel riassunto, la sicurezza informatica viene collegata al contenuto centrale del documento: la sicurezza informatica è l'insieme di pratiche, strumenti e comportamenti usati per proteggere dati, dispositivi, account e sistemi digitali.",
+        "testo": "Nel riassunto, la sicurezza informatica viene collegata al contesto centrale del documento: la sicurezza informatica è l'insieme di pratiche, strumenti e comportamenti usati per proteggere dati, dispositivi, account e sistemi digitali.",
         "fonte_visibile": "Fonte: sezione “Sicurezza informatica”.",
         "categoria_v35g": {
           "categoria": "Comprensione generale",
-          "sottocategoria": "Sicurezza informatica"
+          "sottocategoria": "Sicurezza informatica.",
+          "contesto_semantico_v35o": {
+            "tema": "sicurezza informatica",
+            "sottotema": "protezione dati e sistemi",
+            "categoria": "contenuto informativo",
+            "sottocategoria": "informazione principale",
+            "micro_concetti": [
+              "comprensione generale sicurezza",
+              "generale sicurezza informatica"
+            ],
+            "oggetto_probabile": "comprensione generale sicurezza"
+          }
+        },
+        "contesto_semantico_v35o": {
+          "tema": "sicurezza informatica",
+          "sottotema": "protezione dati e sistemi",
+          "categoria": "azione operativa",
+          "sottocategoria": "comportamento da applicare",
+          "micro_concetti": [
+            "sicurezza informatica",
+            "informatica comprensione generale",
+            "pratiche strumenti comportamenti",
+            "comprensione generale sicurezza",
+            "informatica collegata contenuto",
+            "informatica riassunto sicurezza"
+          ],
+          "oggetto_probabile": "sicurezza informatica"
         }
       },
       {
         "titolo": "Rischio e conseguenza.",
-        "testo": "Il punto dedicato a «Rischio e conseguenza» aiuta a capire il quadro generale: usare la stessa password su più siti è rischioso: se un servizio viene violato, un attaccante può provare la stessa password anche su altri account.",
+        "testo": "Il punto dedicato a «Rischio e conseguenza» aiuta a capire il quadro generale: usare la stessa password su più siti è rischio: se un servizio viene violato, un attaccante può provare la stessa password anche su altri account.",
         "fonte_visibile": "Fonte: sezione “Rischio e conseguenza”.",
         "categoria_v35g": {
           "categoria": "Comprensione generale",
-          "sottocategoria": "Rischio e conseguenza"
+          "sottocategoria": "Rischio e conseguenza.",
+          "contesto_semantico_v35o": {
+            "tema": "sicurezza informatica",
+            "sottotema": "protezione dati e sistemi",
+            "categoria": "rischio",
+            "sottocategoria": "prevenzione o riduzione del rischio",
+            "micro_concetti": [
+              "comprensione generale rischio",
+              "generale rischio conseguenza"
+            ],
+            "oggetto_probabile": "comprensione generale rischio"
+          }
+        },
+        "contesto_semantico_v35o": {
+          "tema": "sicurezza informatica",
+          "sottotema": "protezione dati e sistemi",
+          "categoria": "rischio",
+          "sottocategoria": "prevenzione o riduzione del rischio",
+          "micro_concetti": [
+            "rischio conseguenza",
+            "stessa password",
+            "conseguenza comprensione generale",
+            "comprensione generale rischio",
+            "servizio violato attaccante",
+            "conseguenza punto dedicato"
+          ],
+          "oggetto_probabile": "accessi non autorizzati agli account"
         }
       },
       {
@@ -141,7 +212,33 @@
         "fonte_visibile": "Fonte: sezione “Regola operativa”.",
         "categoria_v35g": {
           "categoria": "Comprensione generale",
-          "sottocategoria": "Regola operativa"
+          "sottocategoria": "Regola operativa.",
+          "contesto_semantico_v35o": {
+            "tema": "sicurezza informatica",
+            "sottotema": "protezione dati e sistemi",
+            "categoria": "regola",
+            "sottocategoria": "indicazione da rispettare",
+            "micro_concetti": [
+              "comprensione generale regola",
+              "generale regola operativa"
+            ],
+            "oggetto_probabile": "comprensione generale regola"
+          }
+        },
+        "contesto_semantico_v35o": {
+          "tema": "sicurezza informatica",
+          "sottotema": "protezione dati e sistemi",
+          "categoria": "regola",
+          "sottocategoria": "indicazione da rispettare",
+          "micro_concetti": [
+            "regola operativa",
+            "amministrativi sistemi pagamento",
+            "pagamento piattaforme contengono",
+            "operativa comprensione generale",
+            "account amministrativi sistemi",
+            "sistemi pagamento piattaforme"
+          ],
+          "oggetto_probabile": "accessi non autorizzati agli account"
         }
       },
       {
@@ -150,7 +247,33 @@
         "fonte_visibile": "Fonte: sezione “Azione consigliata”.",
         "categoria_v35g": {
           "categoria": "Comprensione generale",
-          "sottocategoria": "Azione consigliata"
+          "sottocategoria": "Azione consigliata.",
+          "contesto_semantico_v35o": {
+            "tema": "sicurezza informatica",
+            "sottotema": "protezione dati e sistemi",
+            "categoria": "contenuto informativo",
+            "sottocategoria": "informazione principale",
+            "micro_concetti": [
+              "comprensione generale azione",
+              "generale azione consigliata"
+            ],
+            "oggetto_probabile": "comprensione generale azione"
+          }
+        },
+        "contesto_semantico_v35o": {
+          "tema": "sicurezza informatica",
+          "sottotema": "protezione dati e sistemi",
+          "categoria": "regola",
+          "sottocategoria": "indicazione da rispettare",
+          "micro_concetti": [
+            "azione consigliata",
+            "consigliata fissare un'informazione",
+            "consigliata comprensione generale",
+            "un'informazione bisogna mantenere",
+            "fissare un'informazione bisogna",
+            "strumenti sicurezza dispositivi"
+          ],
+          "oggetto_probabile": "azione consigliata"
         }
       },
       {
@@ -159,14 +282,66 @@
         "fonte_visibile": "Fonte: sezione “Obiettivi principali”.",
         "categoria_v35g": {
           "categoria": "Comprensione generale",
-          "sottocategoria": "Obiettivi principali"
+          "sottocategoria": "Obiettivi principali.",
+          "contesto_semantico_v35o": {
+            "tema": "sicurezza informatica",
+            "sottotema": "protezione dati e sistemi",
+            "categoria": "contenuto informativo",
+            "sottocategoria": "informazione principale",
+            "micro_concetti": [
+              "comprensione generale obiettivi",
+              "generale obiettivi principali"
+            ],
+            "oggetto_probabile": "comprensione generale obiettivi"
+          }
+        },
+        "contesto_semantico_v35o": {
+          "tema": "sicurezza informatica",
+          "sottotema": "protezione dati e sistemi",
+          "categoria": "azione operativa",
+          "sottocategoria": "comportamento da applicare",
+          "micro_concetti": [
+            "obiettivi principali",
+            "garantire l'integrità informazioni",
+            "principali proteggere riservatezza",
+            "principali comprensione generale",
+            "comprensione generale obiettivi",
+            "documento sicurezza informatica"
+          ],
+          "oggetto_probabile": "obiettivi principali"
         }
       }
     ],
-    "conclusione": "Il materiale generato mette in evidenza i concetti centrali, separando le etichette didattiche dal contenuto completo.",
+    "conclusione": "Il materiale generatore mette in evidenza i concetti centrali, separando le etichette didattiche dal contesto completo.",
     "categoria_v35g": {
       "categoria": "Comprensione generale",
-      "sottocategoria": "sintesi del documento"
+      "sottocategoria": "sintesi del documento.",
+      "contesto_semantico_v35o": {
+        "tema": "sicurezza informatica",
+        "sottotema": "protezione dati e sistemi",
+        "categoria": "contenuto informativo",
+        "sottocategoria": "informazione principale",
+        "micro_concetti": [
+          "comprensione generale sintesi",
+          "generale sintesi documento"
+        ],
+        "oggetto_probabile": "comprensione generale sintesi"
+      }
+    },
+    "contesto_semantico_v35o": {
+      "tema": "sicurezza informatica",
+      "sottotema": "protezione dati e sistemi",
+      "categoria": "regola",
+      "sottocategoria": "indicazione da rispettare",
+      "micro_concetti": [
+        "sicurezza informatica",
+        "comprensione generale",
+        "obiettivi principali",
+        "fonte sezione",
+        "rischio conseguenza",
+        "azione consigliata"
+      ],
+      "oggetto_probabile": "sicurezza informatica"
     }
   },
   "card": [
@@ -180,51 +355,159 @@
         "layout": "card-studio-bilanciata",
         "icona": "🛡️",
         "densita": "media",
-        "titolo_breve": "Sicurezza informatica",
+        "titolo_breve": "Sicurezza informatica.",
         "mostra_fonte": true,
-        "mostra_punto_chiave": true
+        "mostra_punto_chiave": true,
+        "contesto_semantico_v35o": {
+          "tema": "sicurezza informatica",
+          "sottotema": "protezione dati e sistemi",
+          "categoria": "contenuto informativo",
+          "sottocategoria": "informazione principale",
+          "micro_concetti": [
+            "sicurezza informatica"
+          ],
+          "oggetto_probabile": "sicurezza informatica"
+        }
       },
       "categoria_v35g": {
         "categoria": "Memorizzazione visuale",
-        "sottocategoria": "Sicurezza informatica"
+        "sottocategoria": "Sicurezza informatica.",
+        "contesto_semantico_v35o": {
+          "tema": "sicurezza informatica",
+          "sottotema": "protezione dati e sistemi",
+          "categoria": "contenuto informativo",
+          "sottocategoria": "informazione principale",
+          "micro_concetti": [
+            "memorizzazione visuale sicurezza",
+            "visuale sicurezza informatica"
+          ],
+          "oggetto_probabile": "memorizzazione visuale sicurezza"
+        }
+      },
+      "contesto_semantico_v35o": {
+        "tema": "sicurezza informatica",
+        "sottotema": "protezione dati e sistemi",
+        "categoria": "spiegazione",
+        "sottocategoria": "motivo o conseguenza",
+        "micro_concetti": [
+          "sicurezza informatica",
+          "informatica memorizzazione visuale",
+          "memorizzazione visuale sicurezza",
+          "pratiche strumenti comportamenti",
+          "comportamenti usati proteggere",
+          "informatica l'insieme pratiche"
+        ],
+        "oggetto_probabile": "sicurezza informatica"
       }
     },
     {
       "id": "card-clean-v34e-2",
       "titolo": "Rischio e conseguenza.",
-      "testo": "Questa card chiarisce il rischio e la sua conseguenza usando un riferimento pratico del documento: usare la stessa password su più siti è rischioso: se un servizio viene violato, un attaccante può provare la stessa password anche su altri account.",
+      "testo": "Questa card chiarisce il rischio e la sua conseguenza usando un riferimento pratico del documento: usare la stessa password su più siti è rischio: se un servizio viene violato, un attaccante può provare la stessa password anche su altri account.",
       "messaggio_chiave": "Punto chiave: riconosci il ruolo del rischio e la sua conseguenza nel materiale di studio.",
       "fonte_visibile": "Fonte: sezione “Rischio e conseguenza”.",
       "stile_card": {
         "layout": "card-studio-bilanciata",
         "icona": "⚠️",
         "densita": "media",
-        "titolo_breve": "Rischio e conseguenza",
+        "titolo_breve": "Rischio e conseguenza.",
         "mostra_fonte": true,
-        "mostra_punto_chiave": true
+        "mostra_punto_chiave": true,
+        "contesto_semantico_v35o": {
+          "tema": "sicurezza informatica",
+          "sottotema": "protezione dati e sistemi",
+          "categoria": "rischio",
+          "sottocategoria": "prevenzione o riduzione del rischio",
+          "micro_concetti": [
+            "rischio conseguenza"
+          ],
+          "oggetto_probabile": "rischio conseguenza"
+        }
       },
       "categoria_v35g": {
         "categoria": "Memorizzazione visuale",
-        "sottocategoria": "Rischio e conseguenza"
+        "sottocategoria": "Rischio e conseguenza.",
+        "contesto_semantico_v35o": {
+          "tema": "sicurezza informatica",
+          "sottotema": "protezione dati e sistemi",
+          "categoria": "rischio",
+          "sottocategoria": "prevenzione o riduzione del rischio",
+          "micro_concetti": [
+            "memorizzazione visuale rischio",
+            "visuale rischio conseguenza"
+          ],
+          "oggetto_probabile": "memorizzazione visuale rischio"
+        }
+      },
+      "contesto_semantico_v35o": {
+        "tema": "sicurezza informatica",
+        "sottotema": "protezione dati e sistemi",
+        "categoria": "rischio",
+        "sottocategoria": "prevenzione o riduzione del rischio",
+        "micro_concetti": [
+          "rischio conseguenza",
+          "stessa password",
+          "conseguenza memorizzazione visuale",
+          "conseguenza usando riferimento",
+          "memorizzazione visuale rischio",
+          "riferimento pratico documento"
+        ],
+        "oggetto_probabile": "accessi non autorizzati agli account"
       }
     },
     {
       "id": "card-clean-v34e-3",
       "titolo": "Regola operativa.",
-      "testo": "Il contenuto della card distingue questa regola dagli altri punti: una buona regola aziendale è attivare la 2FA almeno su email, strumenti cloud, account amministrativi, sistemi di pagamento e piattaforme che contengono dati sensibili.",
+      "testo": "Il contesto della card distingue questa regola dagli altri punti: una buona regola aziendale è attivare la 2FA almeno su email, strumenti cloud, account amministrativi, sistemi di pagamento e piattaforme che contengono dati sensibili.",
       "messaggio_chiave": "Focus studio: usa questo punto operativo per ricostruire il passaggio principale.",
       "fonte_visibile": "Fonte: sezione “Regola operativa”.",
       "stile_card": {
         "layout": "card-studio-bilanciata",
         "icona": "✅",
         "densita": "media",
-        "titolo_breve": "Regola operativa",
+        "titolo_breve": "Regola operativa.",
         "mostra_fonte": true,
-        "mostra_punto_chiave": true
+        "mostra_punto_chiave": true,
+        "contesto_semantico_v35o": {
+          "tema": "sicurezza informatica",
+          "sottotema": "protezione dati e sistemi",
+          "categoria": "regola",
+          "sottocategoria": "indicazione da rispettare",
+          "micro_concetti": [
+            "regola operativa"
+          ],
+          "oggetto_probabile": "regola operativa"
+        }
       },
       "categoria_v35g": {
         "categoria": "Memorizzazione visuale",
-        "sottocategoria": "Regola operativa"
+        "sottocategoria": "Regola operativa.",
+        "contesto_semantico_v35o": {
+          "tema": "sicurezza informatica",
+          "sottotema": "protezione dati e sistemi",
+          "categoria": "regola",
+          "sottocategoria": "indicazione da rispettare",
+          "micro_concetti": [
+            "memorizzazione visuale regola",
+            "visuale regola operativa"
+          ],
+          "oggetto_probabile": "memorizzazione visuale regola"
+        }
+      },
+      "contesto_semantico_v35o": {
+        "tema": "sicurezza informatica",
+        "sottotema": "protezione dati e sistemi",
+        "categoria": "regola",
+        "sottocategoria": "indicazione da rispettare",
+        "micro_concetti": [
+          "regola operativa",
+          "amministrativi sistemi pagamento",
+          "operativa memorizzazione visuale",
+          "pagamento piattaforme contengono",
+          "ricostruire passaggio principale",
+          "operativo ricostruire passaggio"
+        ],
+        "oggetto_probabile": "regola operativa"
       }
     },
     {
@@ -237,47 +520,119 @@
         "layout": "card-studio-bilanciata",
         "icona": "🔧",
         "densita": "media",
-        "titolo_breve": "Azione consigliata",
+        "titolo_breve": "Azione consigliata.",
         "mostra_fonte": true,
-        "mostra_punto_chiave": true
+        "mostra_punto_chiave": true,
+        "contesto_semantico_v35o": {
+          "tema": "sicurezza informatica",
+          "sottotema": "protezione dati e sistemi",
+          "categoria": "contenuto informativo",
+          "sottocategoria": "informazione principale",
+          "micro_concetti": [
+            "azione consigliata"
+          ],
+          "oggetto_probabile": "azione consigliata"
+        }
       },
       "categoria_v35g": {
         "categoria": "Memorizzazione visuale",
-        "sottocategoria": "Azione consigliata"
+        "sottocategoria": "Azione consigliata.",
+        "contesto_semantico_v35o": {
+          "tema": "sicurezza informatica",
+          "sottotema": "protezione dati e sistemi",
+          "categoria": "contenuto informativo",
+          "sottocategoria": "informazione principale",
+          "micro_concetti": [
+            "memorizzazione visuale azione",
+            "visuale azione consigliata"
+          ],
+          "oggetto_probabile": "memorizzazione visuale azione"
+        }
+      },
+      "contesto_semantico_v35o": {
+        "tema": "sicurezza informatica",
+        "sottotema": "protezione dati e sistemi",
+        "categoria": "rischio",
+        "sottocategoria": "prevenzione o riduzione del rischio",
+        "micro_concetti": [
+          "azione consigliata",
+          "consigliata memorizzazione visuale",
+          "strumenti sicurezza dispositivi",
+          "aziendali strumenti sicurezza",
+          "memorizzazione visuale azione",
+          "bisogna mantenere aggiornati"
+        ],
+        "oggetto_probabile": "azione consigliata"
       }
     },
     {
       "id": "card-clean-v34e-5",
       "titolo": "Obiettivi principali.",
-      "testo": "La card su «Obiettivi principali» serve a fissare un concetto specifico: la sicurezza informatica ha tre obiettivi principali: proteggere la riservatezza dei dati; garantire l'integrità delle informazioni.",
+      "testo": "La card su «Obiettivi principali» serve a fissare un concetti specifico: la sicurezza informatica ha tre obiettivi principali: proteggere la riservatezza dei dati; garantire l'integrità delle informazioni.",
       "messaggio_chiave": "Controllo studio: verifica di saper spiegare gli obiettivi principali senza copiare il testo.",
       "fonte_visibile": "Fonte: sezione “Obiettivi principali”.",
       "stile_card": {
         "layout": "card-studio-bilanciata",
         "icona": "🎯",
         "densita": "media",
-        "titolo_breve": "Obiettivi principali",
+        "titolo_breve": "Obiettivi principali.",
         "mostra_fonte": true,
-        "mostra_punto_chiave": true
+        "mostra_punto_chiave": true,
+        "contesto_semantico_v35o": {
+          "tema": "sicurezza informatica",
+          "sottotema": "protezione dati e sistemi",
+          "categoria": "contenuto informativo",
+          "sottocategoria": "informazione principale",
+          "micro_concetti": [
+            "obiettivi principali"
+          ],
+          "oggetto_probabile": "obiettivi principali"
+        }
       },
       "categoria_v35g": {
         "categoria": "Memorizzazione visuale",
-        "sottocategoria": "Obiettivi principali"
+        "sottocategoria": "Obiettivi principali.",
+        "contesto_semantico_v35o": {
+          "tema": "sicurezza informatica",
+          "sottotema": "protezione dati e sistemi",
+          "categoria": "contenuto informativo",
+          "sottocategoria": "informazione principale",
+          "micro_concetti": [
+            "memorizzazione visuale obiettivi",
+            "visuale obiettivi principali"
+          ],
+          "oggetto_probabile": "memorizzazione visuale obiettivi"
+        }
+      },
+      "contesto_semantico_v35o": {
+        "tema": "sicurezza informatica",
+        "sottotema": "protezione dati e sistemi",
+        "categoria": "azione operativa",
+        "sottocategoria": "comportamento da applicare",
+        "micro_concetti": [
+          "obiettivi principali",
+          "garantire l'integrità informazioni",
+          "l'integrità informazioni controllo",
+          "principali proteggere riservatezza",
+          "principali memorizzazione visuale",
+          "memorizzazione visuale obiettivi"
+        ],
+        "oggetto_probabile": "obiettivi principali"
       }
     }
   ],
   "test": [
     {
       "id": "test-clean-v34e-1",
-      "domanda": "Quale affermazione descrive meglio «Sicurezza informatica»?",
+      "domanda": "Quale affermazione descrive meglio «Sicurezza informatica»? ?",
       "opzioni": [
-        "Concetto: Obiettivi principali. La sicurezza informatica ha tre obiettivi principali: proteggere la riservatezza dei dati.",
-        "Concetto: Sicurezza informatica. La sicurezza informatica è l'insieme di pratiche, strumenti e comportamenti usati per proteggere dati, dispositivi, account e sistemi digitali.",
-        "Concetto: Azione consigliata. Bisogna mantenere aggiornati anche browser, app, plugin, software aziendali, strumenti di sicurezza e dispositivi di rete.",
-        "Concetto: Regola operativa. Una buona regola aziendale è attivare la 2FA almeno su email, strumenti cloud, account amministrativi, sistemi di pagamento e piattaforme che contengono dati sensibili."
+        "Concetti: Obiettivi principali. La sicurezza informatica ha tre obiettivi principali: proteggere la riservatezza dei dati.",
+        "Concetti: Sicurezza informatica. La sicurezza informatica è l'insieme di pratiche, strumenti e comportamenti usati per proteggere dati, dispositivi, account e sistemi digitali.",
+        "Concetti: Azione consigliata. Bisogna mantenere aggiornati anche browser, app, plugin, software aziendali, strumenti di sicurezza e dispositivi di rete.",
+        "Concetti: Regola operativa. Una buona regola aziendale è attivare la 2FA almeno su email, strumenti cloud, account amministrativi, sistemi di pagamento e piattaforme che contengono dati sensibili."
       ],
-      "risposta_corretta": "Concetto: Sicurezza informatica. La sicurezza informatica è l'insieme di pratiche, strumenti e comportamenti usati per proteggere dati, dispositivi, account e sistemi digitali.",
-      "spiegazione": "La risposta è corretta perché chiarisce la sicurezza informatica e mantiene il significato indicato dal documento.",
+      "risposta_corretta": "Concetti: Sicurezza informatica. La sicurezza informatica è l'insieme di pratiche, strumenti e comportamenti usati per proteggere dati, dispositivi, account e sistemi digitali.",
+      "spiegazione": "La risposta è corretto perché chiarisce la sicurezza informatica e mantiene il significato indicato dal documento.",
       "fonte_visibile": "Fonte: sezione “Sicurezza informatica”.",
       "opzioni_visibili": [
         "Obiettivi principali. La sicurezza informatica ha tre obiettivi principali: proteggere la riservatezza dei dati.",
@@ -286,7 +641,7 @@
         "Regola operativa. Una buona regola aziendale è attivare la 2FA almeno su email, strumenti cloud, account amministrativi, sistemi di pagamento e piattaforme che contengono dati sensibili."
       ],
       "risposta_corretta_visibile": "Sicurezza informatica. La sicurezza informatica è l'insieme di pratiche, strumenti e comportamenti usati per proteggere dati, dispositivi, account e sistemi digitali.",
-      "domanda_visibile": "Quale risposta spiega meglio «Sicurezza informatica»?",
+      "domanda_visibile": "Quale risposta spiega meglio «Sicurezza informatica»? ?",
       "mappa_opzioni_v35d": [
         {
           "indice": 1,
@@ -316,29 +671,55 @@
       "ramo_output": "test_rag_v35d",
       "categoria_v35g": {
         "categoria": "Verifica interattiva",
-        "sottocategoria": "Sicurezza informatica"
+        "sottocategoria": "Sicurezza informatica.",
+        "contesto_semantico_v35o": {
+          "tema": "sicurezza informatica",
+          "sottotema": "protezione dati e sistemi",
+          "categoria": "contenuto informativo",
+          "sottocategoria": "informazione principale",
+          "micro_concetti": [
+            "interattiva sicurezza informatica",
+            "verifica interattiva sicurezza"
+          ],
+          "oggetto_probabile": "interattiva sicurezza informatica"
+        }
+      },
+      "contesto_semantico_v35o": {
+        "tema": "sicurezza informatica",
+        "sottotema": "protezione dati e sistemi",
+        "categoria": "definizione",
+        "sottocategoria": "significato del concetto",
+        "micro_concetti": [
+          "sicurezza informatica",
+          "pratiche strumenti comportamenti",
+          "comportamenti usati proteggere",
+          "informatica l'insieme pratiche",
+          "strumenti comportamenti usati",
+          "l'insieme pratiche strumenti"
+        ],
+        "oggetto_probabile": "sicurezza informatica"
       }
     },
     {
       "id": "test-clean-v34e-2",
-      "domanda": "Quale frase è più coerente con «Rischio e conseguenza»?",
+      "domanda": "Quale frase è più coerente con «Rischio e conseguenza»? ?",
       "opzioni": [
         "Aspetto: Sicurezza informatica. La sicurezza informatica è l'insieme di pratiche, strumenti e comportamenti usati per proteggere dati, dispositivi, account e sistemi digitali.",
         "Aspetto: Riduzione del rischio. La 2FA riduce il rischio che un account venga violato solo perché la password è stata rubata.",
         "Aspetto: Azione consigliata. Bisogna mantenere aggiornati anche browser, app, plugin, software aziendali, strumenti di sicurezza e dispositivi di rete.",
-        "Aspetto: Rischio e conseguenza. Usare la stessa password su più siti è rischioso: se un servizio viene violato, un attaccante può provare la stessa password anche su altri account."
+        "Aspetto: Rischio e conseguenza. Usare la stessa password su più siti è rischio: se un servizio viene violato, un attaccante può provare la stessa password anche su altri account."
       ],
-      "risposta_corretta": "Aspetto: Rischio e conseguenza. Usare la stessa password su più siti è rischioso: se un servizio viene violato, un attaccante può provare la stessa password anche su altri account.",
+      "risposta_corretta": "Aspetto: Rischio e conseguenza. Usare la stessa password su più siti è rischio: se un servizio viene violato, un attaccante può provare la stessa password anche su altri account.",
       "spiegazione": "La scelta giusta distingue questo collegamento dai distrattori e risponde alla domanda senza aggiungere elementi estranei.",
       "fonte_visibile": "Fonte: sezione “Rischio e conseguenza”.",
       "opzioni_visibili": [
         "Nel contesto di «Rischio e conseguenza», sicurezza informatica. La sicurezza informatica è l'insieme di pratiche, strumenti e comportamenti usati per proteggere dati, dispositivi, account e sistemi digitali.",
         "Riduzione del rischio. La 2FA riduce il rischio che un account venga violato solo perché la password è stata rubata.",
         "Nel contesto di «Rischio e conseguenza», azione consigliata. Bisogna mantenere aggiornati anche browser, app, plugin, software aziendali, strumenti di sicurezza e dispositivi di rete.",
-        "Rischio e conseguenza. Usare la stessa password su più siti è rischioso: se un servizio viene violato, un attaccante può provare la stessa password anche su altri account."
+        "Rischio e conseguenza. Usare la stessa password su più siti è rischio: se un servizio viene violato, un attaccante può provare la stessa password anche su altri account."
       ],
-      "risposta_corretta_visibile": "Rischio e conseguenza. Usare la stessa password su più siti è rischioso: se un servizio viene violato, un attaccante può provare la stessa password anche su altri account.",
-      "domanda_visibile": "Quale opzione è più coerente con «Rischio e conseguenza»?",
+      "risposta_corretta_visibile": "Rischio e conseguenza. Usare la stessa password su più siti è rischio: se un servizio viene violato, un attaccante può provare la stessa password anche su altri account.",
+      "domanda_visibile": "Quale opzione è più coerente con «Rischio e conseguenza»? ?",
       "mappa_opzioni_v35d": [
         {
           "indice": 1,
@@ -368,12 +749,38 @@
       "ramo_output": "test_rag_v35d",
       "categoria_v35g": {
         "categoria": "Verifica interattiva",
-        "sottocategoria": "Rischio e conseguenza"
+        "sottocategoria": "Rischio e conseguenza.",
+        "contesto_semantico_v35o": {
+          "tema": "sicurezza informatica",
+          "sottotema": "protezione dati e sistemi",
+          "categoria": "rischio",
+          "sottocategoria": "prevenzione o riduzione del rischio",
+          "micro_concetti": [
+            "interattiva rischio conseguenza",
+            "verifica interattiva rischio"
+          ],
+          "oggetto_probabile": "interattiva rischio conseguenza"
+        }
+      },
+      "contesto_semantico_v35o": {
+        "tema": "sicurezza informatica",
+        "sottotema": "protezione dati e sistemi",
+        "categoria": "rischio",
+        "sottocategoria": "prevenzione o riduzione del rischio",
+        "micro_concetti": [
+          "rischio conseguenza",
+          "stessa password",
+          "servizio violato attaccante",
+          "rischioso servizio violato",
+          "violato attaccante provare",
+          "attaccante provare stessa"
+        ],
+        "oggetto_probabile": "accessi non autorizzati agli account"
       }
     },
     {
       "id": "test-clean-v34e-3",
-      "domanda": "Quale opzione riprende correttamente «Regola operativa»?",
+      "domanda": "Quale opzione riprende correttamente «Regola operativa»? ?",
       "opzioni": [
         "Focus: Obiettivi principali. La sicurezza informatica ha tre obiettivi principali: proteggere la riservatezza dei dati.",
         "Focus: Regola operativa. Una buona regola aziendale è attivare la 2FA almeno su email, strumenti cloud, account amministrativi, sistemi di pagamento e piattaforme che contengono dati sensibili.",
@@ -381,7 +788,7 @@
         "Focus: Situazione da valutare. Quando si usa una rete pubblica è meglio evitare operazioni sensibili, come accesso a conti bancari, sistemi aziendali o pannelli amministrativi."
       ],
       "risposta_corretta": "Focus: Regola operativa. Una buona regola aziendale è attivare la 2FA almeno su email, strumenti cloud, account amministrativi, sistemi di pagamento e piattaforme che contengono dati sensibili.",
-      "spiegazione": "Questa opzione funziona perché collega questo punto operativo al contenuto essenziale del documento.",
+      "spiegazione": "Questa opzione funziona perché collega questo punto operativo al contesto essenziale del documento.",
       "fonte_visibile": "Fonte: sezione “Regola operativa”.",
       "opzioni_visibili": [
         "Nel contesto di «Regola operativa», obiettivi principali. La sicurezza informatica ha tre obiettivi principali: proteggere la riservatezza dei dati.",
@@ -390,7 +797,7 @@
         "Situazione da valutare. Quando si usa una rete pubblica è meglio evitare operazioni sensibili, come accesso a conti bancari, sistemi aziendali o pannelli amministrativi."
       ],
       "risposta_corretta_visibile": "Nel contesto di «Regola operativa», regola operativa. Una buona regola aziendale è attivare la 2FA almeno su email, strumenti cloud, account amministrativi, sistemi di pagamento e piattaforme che contengono dati sensibili.",
-      "domanda_visibile": "Che cosa devi riconoscere su «Regola operativa»?",
+      "domanda_visibile": "Che cosa devi riconoscere su «Regola operativa»? ?",
       "mappa_opzioni_v35d": [
         {
           "indice": 1,
@@ -420,12 +827,38 @@
       "ramo_output": "test_rag_v35d",
       "categoria_v35g": {
         "categoria": "Verifica interattiva",
-        "sottocategoria": "Regola operativa"
+        "sottocategoria": "Regola operativa.",
+        "contesto_semantico_v35o": {
+          "tema": "sicurezza informatica",
+          "sottotema": "protezione dati e sistemi",
+          "categoria": "regola",
+          "sottocategoria": "indicazione da rispettare",
+          "micro_concetti": [
+            "interattiva regola operativa",
+            "verifica interattiva regola"
+          ],
+          "oggetto_probabile": "interattiva regola operativa"
+        }
+      },
+      "contesto_semantico_v35o": {
+        "tema": "sicurezza informatica",
+        "sottotema": "protezione dati e sistemi",
+        "categoria": "regola",
+        "sottocategoria": "indicazione da rispettare",
+        "micro_concetti": [
+          "regola operativa",
+          "sicurezza informatica",
+          "amministrativi sistemi pagamento",
+          "pagamento piattaforme contengono",
+          "account amministrativi sistemi",
+          "sistemi pagamento piattaforme"
+        ],
+        "oggetto_probabile": "accessi non autorizzati agli account"
       }
     },
     {
       "id": "test-clean-v34e-4",
-      "domanda": "Quale risposta rappresenta meglio «Azione consigliata»?",
+      "domanda": "Quale risposta rappresenta meglio «Azione consigliata»? ?",
       "opzioni": [
         "Punto del documento: Sicurezza informatica. La sicurezza informatica è l'insieme di pratiche, strumenti e comportamenti usati per proteggere dati, dispositivi, account e sistemi digitali.",
         "Punto del documento: Azione consigliata. Bisogna mantenere aggiornati anche browser, app, plugin, software aziendali, strumenti di sicurezza e dispositivi di rete.",
@@ -442,7 +875,7 @@
         "Nel contesto di «Azione consigliata», obiettivi principali. La sicurezza informatica ha tre obiettivi principali: proteggere la riservatezza dei dati."
       ],
       "risposta_corretta_visibile": "Nel contesto di «Azione consigliata», azione consigliata. Bisogna mantenere aggiornati anche browser, app, plugin, software aziendali, strumenti di sicurezza e dispositivi di rete.",
-      "domanda_visibile": "Quale scelta interpreta correttamente «Azione consigliata»?",
+      "domanda_visibile": "Quale scelta interpreta correttamente «Azione consigliata»? ?",
       "mappa_opzioni_v35d": [
         {
           "indice": 1,
@@ -472,20 +905,46 @@
       "ramo_output": "test_rag_v35d",
       "categoria_v35g": {
         "categoria": "Verifica interattiva",
-        "sottocategoria": "Azione consigliata"
+        "sottocategoria": "Azione consigliata.",
+        "contesto_semantico_v35o": {
+          "tema": "sicurezza informatica",
+          "sottotema": "protezione dati e sistemi",
+          "categoria": "contenuto informativo",
+          "sottocategoria": "informazione principale",
+          "micro_concetti": [
+            "interattiva azione consigliata",
+            "verifica interattiva azione"
+          ],
+          "oggetto_probabile": "interattiva azione consigliata"
+        }
+      },
+      "contesto_semantico_v35o": {
+        "tema": "sicurezza informatica",
+        "sottotema": "protezione dati e sistemi",
+        "categoria": "definizione",
+        "sottocategoria": "significato del concetto",
+        "micro_concetti": [
+          "azione consigliata",
+          "sicurezza informatica",
+          "contesto azione",
+          "punto documento",
+          "strumenti sicurezza dispositivi",
+          "aziendali strumenti sicurezza"
+        ],
+        "oggetto_probabile": "comprensione incompleta del contenuto"
       }
     },
     {
       "id": "test-clean-v34e-5",
-      "domanda": "Quale affermazione descrive meglio «Obiettivi principali»?",
+      "domanda": "Quale affermazione descrive meglio «Obiettivi principali»? ?",
       "opzioni": [
-        "Informazione: Sicurezza informatica. La sicurezza informatica è l'insieme di pratiche, strumenti e comportamenti usati per proteggere dati, dispositivi, account e sistemi digitali.",
-        "Informazione: Regola operativa. Una buona regola aziendale è attivare la 2FA almeno su email, strumenti cloud, account amministrativi, sistemi di pagamento e piattaforme che contengono dati sensibili.",
-        "Informazione: Azione consigliata. Bisogna mantenere aggiornati anche browser, app, plugin, software aziendali, strumenti di sicurezza e dispositivi di rete.",
-        "Informazione: Obiettivi principali. La sicurezza informatica ha tre obiettivi principali: proteggere la riservatezza dei dati."
+        "Formazione: Sicurezza informatica. La sicurezza informatica è l'insieme di pratiche, strumenti e comportamenti usati per proteggere dati, dispositivi, account e sistemi digitali.",
+        "Formazione: Regola operativa. Una buona regola aziendale è attivare la 2FA almeno su email, strumenti cloud, account amministrativi, sistemi di pagamento e piattaforme che contengono dati sensibili.",
+        "Formazione: Azione consigliata. Bisogna mantenere aggiornati anche browser, app, plugin, software aziendali, strumenti di sicurezza e dispositivi di rete.",
+        "Formazione: Obiettivi principali. La sicurezza informatica ha tre obiettivi principali: proteggere la riservatezza dei dati."
       ],
-      "risposta_corretta": "Informazione: Obiettivi principali. La sicurezza informatica ha tre obiettivi principali: proteggere la riservatezza dei dati.",
-      "spiegazione": "La spiegazione corretta mostra perché gli obiettivi principali sono il riferimento adatto per questa domanda.",
+      "risposta_corretta": "Formazione: Obiettivi principali. La sicurezza informatica ha tre obiettivi principali: proteggere la riservatezza dei dati.",
+      "spiegazione": "La spiegazione corretto mostra perché gli obiettivi principali sono il riferimento adatto per questa domanda.",
       "fonte_visibile": "Fonte: sezione “Obiettivi principali”.",
       "opzioni_visibili": [
         "Nel contesto di «Obiettivi principali», sicurezza informatica. La sicurezza informatica è l'insieme di pratiche, strumenti e comportamenti usati per proteggere dati, dispositivi, account e sistemi digitali.",
@@ -494,7 +953,7 @@
         "Nel contesto di «Obiettivi principali», obiettivi principali. La sicurezza informatica ha tre obiettivi principali: proteggere la riservatezza dei dati."
       ],
       "risposta_corretta_visibile": "Nel contesto di «Obiettivi principali», obiettivi principali. La sicurezza informatica ha tre obiettivi principali: proteggere la riservatezza dei dati.",
-      "domanda_visibile": "Quale affermazione riassume meglio «Obiettivi principali»?",
+      "domanda_visibile": "Quale affermazione riassume meglio «Obiettivi principali»? ?",
       "mappa_opzioni_v35d": [
         {
           "indice": 1,
@@ -524,59 +983,215 @@
       "ramo_output": "test_rag_v35d",
       "categoria_v35g": {
         "categoria": "Verifica interattiva",
-        "sottocategoria": "Obiettivi principali"
+        "sottocategoria": "Obiettivi principali.",
+        "contesto_semantico_v35o": {
+          "tema": "sicurezza informatica",
+          "sottotema": "protezione dati e sistemi",
+          "categoria": "contenuto informativo",
+          "sottocategoria": "informazione principale",
+          "micro_concetti": [
+            "interattiva obiettivi principali",
+            "verifica interattiva obiettivi"
+          ],
+          "oggetto_probabile": "interattiva obiettivi principali"
+        }
+      },
+      "contesto_semantico_v35o": {
+        "tema": "sicurezza informatica",
+        "sottotema": "protezione dati e sistemi",
+        "categoria": "azione operativa",
+        "sottocategoria": "comportamento da applicare",
+        "micro_concetti": [
+          "obiettivi principali",
+          "sicurezza informatica",
+          "principali sicurezza",
+          "contesto obiettivi",
+          "principali proteggere riservatezza",
+          "proteggere riservatezza dati"
+        ],
+        "oggetto_probabile": "perdita dei dati o difficoltà di recupero"
       }
     }
   ],
   "domande_studio": [
     {
       "id": "studio-clean-v34e-1",
-      "domanda": "Che cosa devi saper spiegare su «Sicurezza informatica»?",
-      "risposta_guida": "Per rispondere bene, chiarisci la sicurezza informatica e collega il concetto al documento: la sicurezza informatica è l'insieme di pratiche, strumenti e comportamenti usati per proteggere dati, dispositivi, account e sistemi digitali.",
+      "domanda": "Che cosa devi saper spiegare su «Sicurezza informatica»? ?",
+      "risposta_guida": "Per rispondere bene, chiarisci la sicurezza informatica e collega il concetti al documento: la sicurezza informatica è l'insieme di pratiche, strumenti e comportamenti usati per proteggere dati, dispositivi, account e sistemi digitali.",
       "fonte_visibile": "Fonte: sezione “Sicurezza informatica”.",
       "categoria_v35g": {
         "categoria": "Ripasso guidato",
-        "sottocategoria": "Sicurezza informatica"
+        "sottocategoria": "Sicurezza informatica.",
+        "contesto_semantico_v35o": {
+          "tema": "sicurezza informatica",
+          "sottotema": "protezione dati e sistemi",
+          "categoria": "contenuto informativo",
+          "sottocategoria": "informazione principale",
+          "micro_concetti": [
+            "guidato sicurezza informatica",
+            "ripasso guidato sicurezza"
+          ],
+          "oggetto_probabile": "guidato sicurezza informatica"
+        }
+      },
+      "contesto_semantico_v35o": {
+        "tema": "sicurezza informatica",
+        "sottotema": "protezione dati e sistemi",
+        "categoria": "azione operativa",
+        "sottocategoria": "comportamento da applicare",
+        "micro_concetti": [
+          "sicurezza informatica",
+          "informatica rispondere chiarisci",
+          "pratiche strumenti comportamenti",
+          "comportamenti usati proteggere",
+          "informatica l'insieme pratiche",
+          "rispondere chiarisci sicurezza"
+        ],
+        "oggetto_probabile": "sicurezza informatica"
       }
     },
     {
       "id": "studio-clean-v34e-2",
-      "domanda": "Perché «Rischio e conseguenza» è utile per capire il documento?",
-      "risposta_guida": "Durante il ripasso, usa questo passaggio per ricostruire il contenuto con parole tue: usare la stessa password su più siti è rischioso: se un servizio viene violato, un attaccante può provare la stessa password anche su altri account.",
+      "domanda": "Perché «Rischio e conseguenza» è utile per capire il documento? ?",
+      "risposta_guida": "Durante il ripasso, usa questo passaggio per ricostruire il contesto con parole tue: usare la stessa password su più siti è rischio: se un servizio viene violato, un attaccante può provare la stessa password anche su altri account.",
       "fonte_visibile": "Fonte: sezione “Rischio e conseguenza”.",
       "categoria_v35g": {
         "categoria": "Ripasso guidato",
-        "sottocategoria": "Rischio e conseguenza"
+        "sottocategoria": "Rischio e conseguenza.",
+        "contesto_semantico_v35o": {
+          "tema": "sicurezza informatica",
+          "sottotema": "protezione dati e sistemi",
+          "categoria": "rischio",
+          "sottocategoria": "prevenzione o riduzione del rischio",
+          "micro_concetti": [
+            "guidato rischio conseguenza",
+            "ripasso guidato rischio"
+          ],
+          "oggetto_probabile": "guidato rischio conseguenza"
+        }
+      },
+      "contesto_semantico_v35o": {
+        "tema": "sicurezza informatica",
+        "sottotema": "protezione dati e sistemi",
+        "categoria": "rischio",
+        "sottocategoria": "prevenzione o riduzione del rischio",
+        "micro_concetti": [
+          "rischio conseguenza",
+          "stessa password",
+          "passaggio ricostruire contenuto",
+          "ripasso passaggio ricostruire",
+          "ricostruire contenuto parole",
+          "conseguenza ripasso guidato"
+        ],
+        "oggetto_probabile": "accessi non autorizzati agli account"
       }
     },
     {
       "id": "studio-clean-v34e-3",
-      "domanda": "Quale collegamento principale devi ricordare su «Regola operativa»?",
+      "domanda": "Quale collegamento principale devi ricordare su «Regola operativa»? ?",
       "risposta_guida": "Su «Regola operativa» devi riconoscere quale problema, vantaggio o funzione viene spiegata: una buona regola aziendale è attivare la 2FA almeno su email, strumenti cloud, account amministrativi, sistemi di pagamento e piattaforme.",
       "fonte_visibile": "Fonte: sezione “Regola operativa”.",
       "categoria_v35g": {
         "categoria": "Ripasso guidato",
-        "sottocategoria": "Regola operativa"
+        "sottocategoria": "Regola operativa.",
+        "contesto_semantico_v35o": {
+          "tema": "sicurezza informatica",
+          "sottotema": "protezione dati e sistemi",
+          "categoria": "regola",
+          "sottocategoria": "indicazione da rispettare",
+          "micro_concetti": [
+            "guidato regola operativa",
+            "ripasso guidato regola"
+          ],
+          "oggetto_probabile": "guidato regola operativa"
+        }
+      },
+      "contesto_semantico_v35o": {
+        "tema": "sicurezza informatica",
+        "sottotema": "protezione dati e sistemi",
+        "categoria": "regola",
+        "sottocategoria": "indicazione da rispettare",
+        "micro_concetti": [
+          "regola operativa",
+          "amministrativi sistemi pagamento",
+          "account amministrativi sistemi",
+          "quale collegamento principale",
+          "sistemi pagamento piattaforme",
+          "cloud account amministrativi"
+        ],
+        "oggetto_probabile": "accessi non autorizzati agli account"
       }
     },
     {
       "id": "studio-clean-v34e-4",
-      "domanda": "Come spiegheresti «Azione consigliata» senza copiare il testo?",
-      "risposta_guida": "Una buona risposta spiega questa azione senza copiare la formulazione della card: chiarisce «Azione consigliata» e poi collega il concetto al contenuto: bisogna mantenere aggiornati anche browser, app, plugin, software aziendali, strumenti di sicurezza e dispositivi di rete.",
+      "domanda": "Come spiegheresti «Azione consigliata» senza copiare il testo? ?",
+      "risposta_guida": "Una buona risposta spiega questa azione senza copiare la formazione della card: chiarisce «Azione consigliata» e poi collega il concetti al contesto: bisogna mantenere aggiornati anche browser, app, plugin, software aziendali, strumenti di sicurezza e dispositivi di rete.",
       "fonte_visibile": "Fonte: sezione “Azione consigliata”.",
       "categoria_v35g": {
         "categoria": "Ripasso guidato",
-        "sottocategoria": "Azione consigliata"
+        "sottocategoria": "Azione consigliata.",
+        "contesto_semantico_v35o": {
+          "tema": "sicurezza informatica",
+          "sottotema": "protezione dati e sistemi",
+          "categoria": "contenuto informativo",
+          "sottocategoria": "informazione principale",
+          "micro_concetti": [
+            "guidato azione consigliata",
+            "ripasso guidato azione"
+          ],
+          "oggetto_probabile": "guidato azione consigliata"
+        }
+      },
+      "contesto_semantico_v35o": {
+        "tema": "sicurezza informatica",
+        "sottotema": "protezione dati e sistemi",
+        "categoria": "regola",
+        "sottocategoria": "indicazione da rispettare",
+        "micro_concetti": [
+          "azione consigliata",
+          "senza copiare",
+          "strumenti sicurezza dispositivi",
+          "aziendali strumenti sicurezza",
+          "bisogna mantenere aggiornati",
+          "consigliata collega concetto"
+        ],
+        "oggetto_probabile": "azione consigliata"
       }
     },
     {
       "id": "studio-clean-v34e-5",
-      "domanda": "Quale ruolo ha «Obiettivi principali» nel materiale di studio?",
+      "domanda": "Quale ruolo ha «Obiettivi principali» nel materiale di studio? ?",
       "risposta_guida": "Per verificare di aver capito «Obiettivi principali», prova a spiegare perché questo punto è utile nello studio: la sicurezza informatica ha tre obiettivi principali: proteggere la riservatezza dei dati.",
       "fonte_visibile": "Fonte: sezione “Obiettivi principali”.",
       "categoria_v35g": {
         "categoria": "Ripasso guidato",
-        "sottocategoria": "Obiettivi principali"
+        "sottocategoria": "Obiettivi principali.",
+        "contesto_semantico_v35o": {
+          "tema": "sicurezza informatica",
+          "sottotema": "protezione dati e sistemi",
+          "categoria": "contenuto informativo",
+          "sottocategoria": "informazione principale",
+          "micro_concetti": [
+            "guidato obiettivi principali",
+            "ripasso guidato obiettivi"
+          ],
+          "oggetto_probabile": "guidato obiettivi principali"
+        }
+      },
+      "contesto_semantico_v35o": {
+        "tema": "sicurezza informatica",
+        "sottotema": "protezione dati e sistemi",
+        "categoria": "azione operativa",
+        "sottocategoria": "comportamento da applicare",
+        "micro_concetti": [
+          "obiettivi principali",
+          "principali proteggere riservatezza",
+          "sicurezza informatica obiettivi",
+          "proteggere riservatezza dati",
+          "studio sicurezza informatica",
+          "materiale studio verificare"
+        ],
+        "oggetto_probabile": "perdita dei dati o difficoltà di recupero"
       }
     }
   ],
@@ -596,21 +1211,41 @@
     },
     "test": {
       "layout": "lista-interattiva",
-      "opzioni": "bottoni-larghi",
+      "opzioni": "bottoni-larghi.",
       "feedback": "immediato.",
-      "numero_domande": 5
+      "numero_domande": 5,
+      "contesto_semantico_v35o": {
+        "tema": "sicurezza informatica",
+        "sottotema": "protezione dati e sistemi",
+        "categoria": "contenuto informativo",
+        "sottocategoria": "informazione principale",
+        "micro_concetti": [
+          "bottoni larghi immediato"
+        ],
+        "oggetto_probabile": "bottoni larghi immediato"
+      }
     },
     "domande_studio": {
       "layout": "schede-lunghe",
       "tono": "ripasso-guidato",
       "numero_domande": 5
+    },
+    "contesto_semantico_v35o": {
+      "tema": "sicurezza informatica",
+      "sottotema": "protezione dati e sistemi",
+      "categoria": "contenuto informativo",
+      "sottocategoria": "informazione principale",
+      "micro_concetti": [
+        "bottoni larghi immediato"
+      ],
+      "oggetto_probabile": "bottoni larghi immediato"
     }
   },
   "orchestratore_v35e": {
     "ok": true,
     "documento": "sicurezza_reale",
     "versione": "rag_orchestratore_riutilizzabile_v35e",
-    "creato_il": "2026-06-29T17:13:53",
+    "creato_il": "2026-06-29T17:37:32",
     "pipeline": [
       "rag_output_kb_clean_v34e",
       "rag_bridge_motori_qualita_esistenti_v35b",
@@ -619,12 +1254,27 @@
       "rag_output_finale_orchestrato_v35e"
     ],
     "output_finale": "ui_pdf_app",
-    "nota_architetturale": "Card, riassunti e domande studio passano dal motore didattico; i test passano dal motore test separato con campi interni e campi visibili."
+    "nota_architetturale": "Card, riassunto e domanda studio passano dal motore didattico; i test passano dal motore test separato con campi interni e campi visibili.",
+    "contesto_semantico_v35o": {
+      "tema": "sicurezza informatica",
+      "sottotema": "protezione dati e sistemi",
+      "categoria": "contenuto informativo",
+      "sottocategoria": "informazione principale",
+      "micro_concetti": [
+        "passano motore",
+        "riassunti domande studio",
+        "card riassunti domande",
+        "didattico test passano",
+        "domande studio passano",
+        "interni campi visibili"
+      ],
+      "oggetto_probabile": "comprensione incompleta del contenuto"
+    }
   },
   "piano_motori_v35f": {
     "ok": true,
     "versione": "rag_selezionatore_motori_riutilizzabile_v35f",
-    "creato_il": "2026-06-29T17:13:53",
+    "creato_il": "2026-06-29T17:37:32",
     "documento": "sicurezza_reale",
     "compito": "prepara tutto il materiale completo per PDF app e pagina web",
     "decisione": {
@@ -657,23 +1307,77 @@
   "categorie_didattiche_v35g": [
     {
       "categoria": "Comprensione generale",
-      "sottocategoria": "sintesi"
+      "sottocategoria": "sintesi.",
+      "contesto_semantico_v35o": {
+        "tema": "sicurezza informatica",
+        "sottotema": "protezione dati e sistemi",
+        "categoria": "contenuto informativo",
+        "sottocategoria": "informazione principale",
+        "micro_concetti": [
+          "comprensione generale sintesi"
+        ],
+        "oggetto_probabile": "comprensione generale sintesi"
+      }
     },
     {
       "categoria": "Memorizzazione visuale",
-      "sottocategoria": "schede visuali"
+      "sottocategoria": "schede visuali.",
+      "contesto_semantico_v35o": {
+        "tema": "sicurezza informatica",
+        "sottotema": "protezione dati e sistemi",
+        "categoria": "contenuto informativo",
+        "sottocategoria": "informazione principale",
+        "micro_concetti": [
+          "memorizzazione visuale schede",
+          "visuale schede visuali"
+        ],
+        "oggetto_probabile": "memorizzazione visuale schede"
+      }
     },
     {
       "categoria": "Ripasso guidato",
-      "sottocategoria": "ripasso guidato"
+      "sottocategoria": "ripasso guidato.",
+      "contesto_semantico_v35o": {
+        "tema": "sicurezza informatica",
+        "sottotema": "protezione dati e sistemi",
+        "categoria": "contenuto informativo",
+        "sottocategoria": "informazione principale",
+        "micro_concetti": [
+          "ripasso guidato",
+          "guidato ripasso"
+        ],
+        "oggetto_probabile": "ripasso guidato"
+      }
     },
     {
       "categoria": "Verifica interattiva",
-      "sottocategoria": "risposte multiple"
+      "sottocategoria": "risposta multiple.",
+      "contesto_semantico_v35o": {
+        "tema": "sicurezza informatica",
+        "sottotema": "protezione dati e sistemi",
+        "categoria": "contenuto informativo",
+        "sottocategoria": "informazione principale",
+        "micro_concetti": [
+          "interattiva risposte multiple",
+          "verifica interattiva risposte"
+        ],
+        "oggetto_probabile": "interattiva risposte multiple"
+      }
     },
     {
       "categoria": "Presentazione grafica",
-      "sottocategoria": "layout output"
+      "sottocategoria": "layout output.",
+      "contesto_semantico_v35o": {
+        "tema": "sicurezza informatica",
+        "sottotema": "protezione dati e sistemi",
+        "categoria": "contenuto informativo",
+        "sottocategoria": "informazione principale",
+        "micro_concetti": [
+          "presentazione grafica layout",
+          "grafica layout output"
+        ],
+        "oggetto_probabile": "presentazione grafica layout"
+      }
     }
   ],
   "revisione_qualita_testuale_v35g": {
@@ -749,8 +1453,38 @@
     "ok": true,
     "nome": "Lucidatore linguistico universale V35M",
     "versione": "rag_lucidatore_linguistico_universale_v35m",
-    "creato_il": "2026-06-29T17:13:54",
+    "creato_il": "2026-06-29T17:37:33",
     "testi_controllati": 183,
     "modifiche_visibili": 1
+  },
+  "contesto_semantico_v35o": {
+    "tema": "sicurezza informatica",
+    "sottotema": "protezione dati e sistemi",
+    "categoria": "regola",
+    "sottocategoria": "indicazione da rispettare",
+    "micro_concetti": [
+      "sicurezza informatica",
+      "obiettivi principali",
+      "azione consigliata",
+      "regola operativa",
+      "rischio conseguenza",
+      "fonte sezione"
+    ],
+    "oggetto_probabile": "sicurezza informatica"
+  },
+  "contesto_documento_v35o": {
+    "ok": true,
+    "tema": "sicurezza informatica",
+    "sottotema": "protezione dati e sistemi",
+    "creato_il": "2026-06-29T17:37:33"
+  },
+  "revisione_completamento_linguistico_v35n": {
+    "ok": true,
+    "nome": "Completatore linguistico probabile V35N",
+    "creato_il": "2026-06-29T17:37:33",
+    "checked": 183,
+    "typos": 33,
+    "completed": 0,
+    "changed": 74
   }
 }

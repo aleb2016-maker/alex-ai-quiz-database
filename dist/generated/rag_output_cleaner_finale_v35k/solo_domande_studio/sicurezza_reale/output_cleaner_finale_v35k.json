@@ -64,6 +64,23 @@
         "punto_finale",
         "punto_interrogativo_domande"
       ]
+    },
+    "contesto_semantico_universale_v35o": {
+      "ok": true,
+      "nome": "Contesto semantico universale V35O",
+      "tema_documento": "sicurezza informatica",
+      "sottotema_documento": "protezione dati e sistemi",
+      "nodi_con_contesto": 12,
+      "nota": "Aggiunge tema, sottotema, categoria, sottocategoria, micro-concetti e oggetto probabile ai blocchi testuali."
+    },
+    "completatore_linguistico_probabile_v35n": {
+      "ok": true,
+      "nome": "Completatore linguistico probabile V35N",
+      "testi_controllati": 27,
+      "parole_corrette": 6,
+      "frasi_completate": 0,
+      "modifiche_visibili": 14,
+      "usa_contesto_v35o": true
     }
   },
   "motori_riutilizzabili": {
@@ -79,57 +96,189 @@
     "revisore_qualita_testuale": "rag_revisore_qualita_testuale_v35g",
     "revisore_naturalezza_antikeyword": "rag_revisore_naturalezza_antikeyword_v35i",
     "revisore_accordo_pronomi": "rag_revisore_accordo_pronomi_v35j",
-    "lucidatore_linguistico": "rag_lucidatore_linguistico_universale_v35m"
+    "lucidatore_linguistico": "rag_lucidatore_linguistico_universale_v35m",
+    "contesto_semantico": "rag_contesto_semantico_universale_v35o",
+    "completatore_linguistico_probabile": "rag_completatore_linguistico_probabile_v35n"
   },
   "domande_studio": [
     {
       "id": "studio-clean-v34e-1",
-      "domanda": "Che cosa devi saper spiegare su «Sicurezza informatica»?",
-      "risposta_guida": "Per rispondere bene, chiarisci la sicurezza informatica e collega il concetto al documento: la sicurezza informatica è l'insieme di pratiche, strumenti e comportamenti usati per proteggere dati, dispositivi, account e sistemi digitali.",
+      "domanda": "Che cosa devi saper spiegare su «Sicurezza informatica»? ?",
+      "risposta_guida": "Per rispondere bene, chiarisci la sicurezza informatica e collega il concetti al documento: la sicurezza informatica è l'insieme di pratiche, strumenti e comportamenti usati per proteggere dati, dispositivi, account e sistemi digitali.",
       "fonte_visibile": "Fonte: sezione “Sicurezza informatica”.",
       "categoria_v35g": {
         "categoria": "Ripasso guidato",
-        "sottocategoria": "Sicurezza informatica"
+        "sottocategoria": "Sicurezza informatica.",
+        "contesto_semantico_v35o": {
+          "tema": "sicurezza informatica",
+          "sottotema": "protezione dati e sistemi",
+          "categoria": "contenuto informativo",
+          "sottocategoria": "informazione principale",
+          "micro_concetti": [
+            "guidato sicurezza informatica",
+            "ripasso guidato sicurezza"
+          ],
+          "oggetto_probabile": "guidato sicurezza informatica"
+        }
+      },
+      "contesto_semantico_v35o": {
+        "tema": "sicurezza informatica",
+        "sottotema": "protezione dati e sistemi",
+        "categoria": "azione operativa",
+        "sottocategoria": "comportamento da applicare",
+        "micro_concetti": [
+          "sicurezza informatica",
+          "informatica rispondere chiarisci",
+          "pratiche strumenti comportamenti",
+          "comportamenti usati proteggere",
+          "informatica l'insieme pratiche",
+          "rispondere chiarisci sicurezza"
+        ],
+        "oggetto_probabile": "sicurezza informatica"
       }
     },
     {
       "id": "studio-clean-v34e-2",
-      "domanda": "Perché «Rischio e conseguenza» è utile per capire il documento?",
-      "risposta_guida": "Durante il ripasso, usa questo passaggio per ricostruire il contenuto con parole tue: usare la stessa password su più siti è rischioso: se un servizio viene violato, un attaccante può provare la stessa password anche su altri account.",
+      "domanda": "Perché «Rischio e conseguenza» è utile per capire il documento? ?",
+      "risposta_guida": "Durante il ripasso, usa questo passaggio per ricostruire il contesto con parole tue: usare la stessa password su più siti è rischio: se un servizio viene violato, un attaccante può provare la stessa password anche su altri account.",
       "fonte_visibile": "Fonte: sezione “Rischio e conseguenza”.",
       "categoria_v35g": {
         "categoria": "Ripasso guidato",
-        "sottocategoria": "Rischio e conseguenza"
+        "sottocategoria": "Rischio e conseguenza.",
+        "contesto_semantico_v35o": {
+          "tema": "sicurezza informatica",
+          "sottotema": "protezione dati e sistemi",
+          "categoria": "rischio",
+          "sottocategoria": "prevenzione o riduzione del rischio",
+          "micro_concetti": [
+            "guidato rischio conseguenza",
+            "ripasso guidato rischio"
+          ],
+          "oggetto_probabile": "guidato rischio conseguenza"
+        }
+      },
+      "contesto_semantico_v35o": {
+        "tema": "sicurezza informatica",
+        "sottotema": "protezione dati e sistemi",
+        "categoria": "rischio",
+        "sottocategoria": "prevenzione o riduzione del rischio",
+        "micro_concetti": [
+          "rischio conseguenza",
+          "stessa password",
+          "passaggio ricostruire contenuto",
+          "ripasso passaggio ricostruire",
+          "ricostruire contenuto parole",
+          "conseguenza ripasso guidato"
+        ],
+        "oggetto_probabile": "accessi non autorizzati agli account"
       }
     },
     {
       "id": "studio-clean-v34e-3",
-      "domanda": "Quale collegamento principale devi ricordare su «Regola operativa»?",
+      "domanda": "Quale collegamento principale devi ricordare su «Regola operativa»? ?",
       "risposta_guida": "Su «Regola operativa» devi riconoscere quale problema, vantaggio o funzione viene spiegata: una buona regola aziendale è attivare la 2FA almeno su email, strumenti cloud, account amministrativi, sistemi di pagamento e piattaforme.",
       "fonte_visibile": "Fonte: sezione “Regola operativa”.",
       "categoria_v35g": {
         "categoria": "Ripasso guidato",
-        "sottocategoria": "Regola operativa"
+        "sottocategoria": "Regola operativa.",
+        "contesto_semantico_v35o": {
+          "tema": "sicurezza informatica",
+          "sottotema": "protezione dati e sistemi",
+          "categoria": "regola",
+          "sottocategoria": "indicazione da rispettare",
+          "micro_concetti": [
+            "guidato regola operativa",
+            "ripasso guidato regola"
+          ],
+          "oggetto_probabile": "guidato regola operativa"
+        }
+      },
+      "contesto_semantico_v35o": {
+        "tema": "sicurezza informatica",
+        "sottotema": "protezione dati e sistemi",
+        "categoria": "regola",
+        "sottocategoria": "indicazione da rispettare",
+        "micro_concetti": [
+          "regola operativa",
+          "amministrativi sistemi pagamento",
+          "account amministrativi sistemi",
+          "quale collegamento principale",
+          "sistemi pagamento piattaforme",
+          "cloud account amministrativi"
+        ],
+        "oggetto_probabile": "accessi non autorizzati agli account"
       }
     },
     {
       "id": "studio-clean-v34e-4",
-      "domanda": "Come spiegheresti «Azione consigliata» senza copiare il testo?",
-      "risposta_guida": "Una buona risposta spiega questa azione senza copiare la formulazione della card: chiarisce «Azione consigliata» e poi collega il concetto al contenuto: bisogna mantenere aggiornati anche browser, app, plugin, software aziendali, strumenti di sicurezza e dispositivi di rete.",
+      "domanda": "Come spiegheresti «Azione consigliata» senza copiare il testo? ?",
+      "risposta_guida": "Una buona risposta spiega questa azione senza copiare la formazione della card: chiarisce «Azione consigliata» e poi collega il concetti al contesto: bisogna mantenere aggiornati anche browser, app, plugin, software aziendali, strumenti di sicurezza e dispositivi di rete.",
       "fonte_visibile": "Fonte: sezione “Azione consigliata”.",
       "categoria_v35g": {
         "categoria": "Ripasso guidato",
-        "sottocategoria": "Azione consigliata"
+        "sottocategoria": "Azione consigliata.",
+        "contesto_semantico_v35o": {
+          "tema": "sicurezza informatica",
+          "sottotema": "protezione dati e sistemi",
+          "categoria": "contenuto informativo",
+          "sottocategoria": "informazione principale",
+          "micro_concetti": [
+            "guidato azione consigliata",
+            "ripasso guidato azione"
+          ],
+          "oggetto_probabile": "guidato azione consigliata"
+        }
+      },
+      "contesto_semantico_v35o": {
+        "tema": "sicurezza informatica",
+        "sottotema": "protezione dati e sistemi",
+        "categoria": "regola",
+        "sottocategoria": "indicazione da rispettare",
+        "micro_concetti": [
+          "azione consigliata",
+          "senza copiare",
+          "strumenti sicurezza dispositivi",
+          "aziendali strumenti sicurezza",
+          "bisogna mantenere aggiornati",
+          "consigliata collega concetto"
+        ],
+        "oggetto_probabile": "azione consigliata"
       }
     },
     {
       "id": "studio-clean-v34e-5",
-      "domanda": "Quale ruolo ha «Obiettivi principali» nel materiale di studio?",
+      "domanda": "Quale ruolo ha «Obiettivi principali» nel materiale di studio? ?",
       "risposta_guida": "Per verificare di aver capito «Obiettivi principali», prova a spiegare perché questo punto è utile nello studio: la sicurezza informatica ha tre obiettivi principali: proteggere la riservatezza dei dati.",
       "fonte_visibile": "Fonte: sezione “Obiettivi principali”.",
       "categoria_v35g": {
         "categoria": "Ripasso guidato",
-        "sottocategoria": "Obiettivi principali"
+        "sottocategoria": "Obiettivi principali.",
+        "contesto_semantico_v35o": {
+          "tema": "sicurezza informatica",
+          "sottotema": "protezione dati e sistemi",
+          "categoria": "contenuto informativo",
+          "sottocategoria": "informazione principale",
+          "micro_concetti": [
+            "guidato obiettivi principali",
+            "ripasso guidato obiettivi"
+          ],
+          "oggetto_probabile": "guidato obiettivi principali"
+        }
+      },
+      "contesto_semantico_v35o": {
+        "tema": "sicurezza informatica",
+        "sottotema": "protezione dati e sistemi",
+        "categoria": "azione operativa",
+        "sottocategoria": "comportamento da applicare",
+        "micro_concetti": [
+          "obiettivi principali",
+          "principali proteggere riservatezza",
+          "sicurezza informatica obiettivi",
+          "proteggere riservatezza dati",
+          "studio sicurezza informatica",
+          "materiale studio verificare"
+        ],
+        "oggetto_probabile": "perdita dei dati o difficoltà di recupero"
       }
     }
   ],
@@ -165,7 +314,18 @@
   "categorie_didattiche_v35g": [
     {
       "categoria": "Ripasso guidato",
-      "sottocategoria": "ripasso guidato"
+      "sottocategoria": "ripasso guidato.",
+      "contesto_semantico_v35o": {
+        "tema": "sicurezza informatica",
+        "sottotema": "protezione dati e sistemi",
+        "categoria": "contenuto informativo",
+        "sottocategoria": "informazione principale",
+        "micro_concetti": [
+          "ripasso guidato",
+          "guidato ripasso"
+        ],
+        "oggetto_probabile": "ripasso guidato"
+      }
     }
   ],
   "revisione_qualita_testuale_v35g": {
@@ -241,8 +401,38 @@
     "ok": true,
     "nome": "Lucidatore linguistico universale V35M",
     "versione": "rag_lucidatore_linguistico_universale_v35m",
-    "creato_il": "2026-06-29T17:13:54",
+    "creato_il": "2026-06-29T17:37:33",
     "testi_controllati": 27,
     "modifiche_visibili": 0
+  },
+  "contesto_semantico_v35o": {
+    "tema": "sicurezza informatica",
+    "sottotema": "protezione dati e sistemi",
+    "categoria": "regola",
+    "sottocategoria": "indicazione da rispettare",
+    "micro_concetti": [
+      "ripasso guidato",
+      "sicurezza informatica",
+      "obiettivi principali",
+      "fonte sezione",
+      "azione consigliata",
+      "regola operativa"
+    ],
+    "oggetto_probabile": "ripasso guidato"
+  },
+  "contesto_documento_v35o": {
+    "ok": true,
+    "tema": "sicurezza informatica",
+    "sottotema": "protezione dati e sistemi",
+    "creato_il": "2026-06-29T17:37:33"
+  },
+  "revisione_completamento_linguistico_v35n": {
+    "ok": true,
+    "nome": "Completatore linguistico probabile V35N",
+    "creato_il": "2026-06-29T17:37:33",
+    "checked": 27,
+    "typos": 6,
+    "completed": 0,
+    "changed": 14
   }
 }

@@ -46,6 +46,8 @@ PIPELINE = [
     "applica_v35k_universale.py",
     "rag_micro_rifinitura_universale_v35l.py",
     "rag_lucidatore_linguistico_universale_v35m.py",
+    "rag_contesto_semantico_universale_v35o.py",
+    "rag_completatore_linguistico_probabile_v35n.py",
 ]
 
 
@@ -164,6 +166,13 @@ def command_for(script_name: str, input_file: Path) -> tuple[list[str], bool]:
         return [sys.executable, script], False
 
     if script_name == "rag_lucidatore_linguistico_universale_v35m.py":
+        return [sys.executable, script], False
+
+
+    if script_name == "rag_contesto_semantico_universale_v35o.py":
+        return [sys.executable, script], False
+
+    if script_name == "rag_completatore_linguistico_probabile_v35n.py":
         return [sys.executable, script], False
 
     raise SystemExit(f"ERRORE: script non gestito: {script_name}")

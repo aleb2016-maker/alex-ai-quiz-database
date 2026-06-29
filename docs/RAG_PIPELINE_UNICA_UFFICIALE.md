@@ -76,3 +76,28 @@ Controlla e corregge:
 - punto interrogativo nelle domande
 
 Il motore V35M e riutilizzabile in qualsiasi app che lavora con testi, parole e frasi.
+
+## Contesto semantico universale V35O
+
+La pipeline unica ufficiale include anche il motore di contesto semantico universale V35O.
+
+Questo motore passa dopo V35M e prima di V35N.
+
+Serve a dare al completatore linguistico una base di significato.
+
+Riconosce:
+
+- tema
+- sottotema
+- categoria
+- sottocategoria
+- micro-concetti
+- oggetto probabile della frase
+
+Il processo e simile a un inverso del generatore di keyword:
+
+- dal testo ricava micro-concetti
+- dai micro-concetti ricava contesto
+- dal contesto aiuta V35N a completare frasi incomplete
+
+Questo motore sara utile anche per il futuro pulitore OCR, perche l'OCR spesso produce testi tagliati o sporchi che hanno bisogno di un contesto per essere ricostruiti.
