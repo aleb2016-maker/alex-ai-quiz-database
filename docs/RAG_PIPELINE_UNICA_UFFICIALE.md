@@ -54,3 +54,25 @@ Il JSON contiene:
 Il lane interno sicurezza_reale resta per ora una compatibilita tecnica con la catena V35 gia esistente.
 
 L'obiettivo successivo sara eliminare anche questa dipendenza nominale e rendere il lane completamente dinamico per ogni documento.
+
+## Motore linguistico finale V35M
+
+La pipeline unica ufficiale include anche il lucidatore linguistico universale V35M.
+
+Questo motore passa dopo V35L e rifinisce tutti i testi visibili.
+
+Controlla e corregge:
+
+- spazi doppi
+- spazi mancanti dopo punteggiatura
+- casi tipo Fonte:Il
+- punteggiatura sporca
+- accenti comuni
+- apostrofi comuni
+- contrazioni italiane
+- parole duplicate consecutive
+- frasi duplicate consecutive
+- punto finale nei testi
+- punto interrogativo nelle domande
+
+Il motore V35M e riutilizzabile in qualsiasi app che lavora con testi, parole e frasi.

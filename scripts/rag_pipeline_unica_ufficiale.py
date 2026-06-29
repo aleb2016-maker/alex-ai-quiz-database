@@ -45,6 +45,7 @@ PIPELINE = [
     "rag_revisore_accordo_pronomi_v35j.py",
     "applica_v35k_universale.py",
     "rag_micro_rifinitura_universale_v35l.py",
+    "rag_lucidatore_linguistico_universale_v35m.py",
 ]
 
 
@@ -160,6 +161,9 @@ def command_for(script_name: str, input_file: Path) -> tuple[list[str], bool]:
         return [sys.executable, script], False
 
     if script_name == "rag_micro_rifinitura_universale_v35l.py":
+        return [sys.executable, script], False
+
+    if script_name == "rag_lucidatore_linguistico_universale_v35m.py":
         return [sys.executable, script], False
 
     raise SystemExit(f"ERRORE: script non gestito: {script_name}")

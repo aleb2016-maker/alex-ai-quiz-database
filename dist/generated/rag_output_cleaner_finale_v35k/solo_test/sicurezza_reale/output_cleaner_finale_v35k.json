@@ -56,6 +56,24 @@
         "test[].mappa_opzioni_v35d[].opzione_visibile": 20
       },
       "nome_controllo": "Controllo finale universale testi visibili"
+    },
+    "lucidatore_linguistico_universale_v35m": {
+      "ok": true,
+      "nome": "Lucidatore linguistico universale V35M",
+      "file": "dist/generated/rag_output_cleaner_finale_v35k/solo_test/sicurezza_reale/output_cleaner_finale_v35k.json",
+      "testi_controllati": 82,
+      "modifiche_visibili": 0,
+      "controlli": [
+        "spazi",
+        "punteggiatura",
+        "accenti_comuni",
+        "apostrofi",
+        "contrazioni_italiane",
+        "parole_duplicate",
+        "frasi_duplicate_consecutive",
+        "punto_finale",
+        "punto_interrogativo_domande"
+      ]
     }
   },
   "motori_riutilizzabili": {
@@ -71,7 +89,8 @@
     "test": "rag_motore_test_riutilizzabile_v35d",
     "revisore_qualita_testuale": "rag_revisore_qualita_testuale_v35g",
     "revisore_naturalezza_antikeyword": "rag_revisore_naturalezza_antikeyword_v35i",
-    "revisore_accordo_pronomi": "rag_revisore_accordo_pronomi_v35j"
+    "revisore_accordo_pronomi": "rag_revisore_accordo_pronomi_v35j",
+    "lucidatore_linguistico": "rag_lucidatore_linguistico_universale_v35m"
   },
   "test": [
     {
@@ -456,5 +475,13 @@
       "mappa_opzioni_visibile_allineata",
       "riutilizzabile_per_web_pdf_app"
     ]
+  },
+  "revisione_linguistica_universale_v35m": {
+    "ok": true,
+    "nome": "Lucidatore linguistico universale V35M",
+    "versione": "rag_lucidatore_linguistico_universale_v35m",
+    "creato_il": "2026-06-29T17:13:54",
+    "testi_controllati": 82,
+    "modifiche_visibili": 0
   }
 }

@@ -1,6 +1,6 @@
 # RAG Pipeline Unica Ufficiale
 
-- Creato il: 2026-06-29T17:01:51
+- Creato il: 2026-06-29T17:13:54
 - Input: `/Users/alessandrobarbarossa/alex-ai-workspace/rag/documenti/documento_rag_sicurezza_informatica_aziendale.md`
 - Output finale interno V35K: `dist/generated/rag_output_cleaner_finale_v35k/output_completo/sicurezza_reale/output_cleaner_finale_v35k.json`
 - Output pubblico pacchetto unico: `dist/generated/rag_pipeline_unica_ufficiale/sicurezza_reale_pacchetto_unico/output_finale_rag_pipeline_unica.json`
@@ -20,6 +20,7 @@
 - `rag_revisore_accordo_pronomi_v35j.py`
 - `applica_v35k_universale.py`
 - `rag_micro_rifinitura_universale_v35l.py`
+- `rag_lucidatore_linguistico_universale_v35m.py`
 
 ## Esito finale
 
