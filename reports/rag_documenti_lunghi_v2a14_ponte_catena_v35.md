@@ -1,0 +1,25 @@
+# Report RAG documenti lunghi V2A.14 — ponte catena V35
+
+- Eseguito il: 2026-06-29T16:54:32
+- Scopo: usare la catena buona già esistente, senza riscrivere generatori.
+- Catena usata:
+  - `scripts/rag_build_knowledge_base_v34b.py`
+  - `scripts/rag_quality_gate_kb_v34d.py`
+  - `scripts/rag_genera_output_da_kb_clean_v34e.py`
+  - `scripts/rag_bridge_motori_qualita_esistenti_v35b.py`
+  - `scripts/rag_motore_didattico_riutilizzabile_v35c.py`
+  - `scripts/rag_motore_test_riutilizzabile_v35d.py`
+  - `scripts/rag_orchestratore_riutilizzabile_v35e.py`
+  - `scripts/rag_selezionatore_motori_riutilizzabile_v35f.py`
+  - `scripts/rag_revisore_qualita_testuale_v35g.py`
+  - `scripts/rag_revisore_naturalezza_antikeyword_v35i.py`
+  - `scripts/rag_revisore_accordo_pronomi_v35j.py`
+  - `scripts/applica_v35k_universale.py`
+  - `scripts/rag_micro_rifinitura_universale_v35l.py`
+- Output finale: `dist/generated/rag_output_cleaner_finale_v35k/output_completo/sicurezza_reale/output_cleaner_finale_v35k.json`
+- Card: 5
+- Domande studio: 5
+- Test: 5
+- Cleaner finale V35K: OK
+- Micro-rifinitura V35L: eseguita
+- Esito: OK
