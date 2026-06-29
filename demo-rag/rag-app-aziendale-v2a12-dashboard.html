@@ -1,0 +1,713 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <!-- rag-app-aziendale-v2a12-dashboard -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>RAG App Aziendale V2A.12 - Mini dashboard</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: linear-gradient(135deg, #dbeafe, #ede9fe, #dcfce7);
+      color: #0f172a;
+    }
+
+    main {
+      width: min(1180px, calc(100% - 28px));
+      margin: 0 auto;
+      padding: 32px 0 64px;
+    }
+
+    .hero, .panel, .result, .summary-card {
+      background: rgba(255,255,255,.82);
+      border: 1px solid rgba(148,163,184,.35);
+      border-radius: 28px;
+      box-shadow: 0 18px 48px rgba(15,23,42,.12);
+      padding: 22px;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      margin: 0 0 8px;
+      font-size: clamp(34px, 5vw, 58px);
+      letter-spacing: -.06em;
+      line-height: .95;
+    }
+
+    p {
+      line-height: 1.55;
+      font-weight: 650;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 14px;
+    }
+
+    label {
+      display: block;
+      font-weight: 900;
+      margin-bottom: 6px;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px;
+      border-radius: 14px;
+      border: 1px solid rgba(100,116,139,.35);
+      font: inherit;
+      box-sizing: border-box;
+    }
+
+    button {
+      border: 0;
+      border-radius: 999px;
+      padding: 14px 20px;
+      font-weight: 950;
+      color: white;
+      background: linear-gradient(135deg, #1d4ed8, #7c3aed);
+      cursor: pointer;
+      box-shadow: 0 14px 32px rgba(37,99,235,.22);
+      margin-top: 14px;
+    }
+
+    progress {
+      width: 100%;
+      height: 22px;
+      margin-top: 12px;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 12px;
+      margin: 16px 0;
+    }
+
+    .stat {
+      background: white;
+      border-radius: 18px;
+      padding: 14px;
+      border: 1px solid rgba(148,163,184,.28);
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 26px;
+    }
+
+    .warning {
+      background: #fffbeb;
+      border: 1px solid #f59e0b;
+      color: #78350f;
+      border-radius: 18px;
+      padding: 14px;
+      font-weight: 850;
+    }
+
+    .final-summary {
+      background: linear-gradient(135deg, #eff6ff, #f5f3ff);
+      border: 1px solid rgba(99,102,241,.28);
+      border-radius: 24px;
+      padding: 20px;
+      font-size: 17px;
+    }
+
+    .keywords {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 14px;
+    }
+
+    .keywords span {
+      background: #e0f2fe;
+      border: 1px solid rgba(14,165,233,.28);
+      border-radius: 999px;
+      padding: 6px 10px;
+      font-weight: 850;
+      color: #075985;
+    }
+
+    details {
+      margin-top: 14px;
+      background: rgba(255,255,255,.76);
+      border: 1px solid rgba(148,163,184,.28);
+      border-radius: 18px;
+      padding: 12px 14px;
+    }
+
+    summary {
+      font-weight: 950;
+      cursor: pointer;
+    }
+
+
+
+
+
+    .product-dashboard {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 14px;
+      margin-top: 20px;
+    }
+
+    .product-tile {
+      border-radius: 22px;
+      border: 1px solid rgba(59,130,246,.22);
+      background: linear-gradient(135deg, #ffffff, #f8fafc);
+      padding: 18px;
+      box-shadow: 0 12px 30px rgba(15,23,42,.08);
+    }
+
+    .product-tile strong {
+      display: block;
+      color: #1d4ed8;
+      font-size: 18px;
+      margin-bottom: 8px;
+    }
+
+    .product-tile span {
+      display: block;
+      font-weight: 800;
+      line-height: 1.4;
+      color: #0f172a;
+    }
+
+    .product-positioning {
+      margin-top: 18px;
+      padding: 18px;
+      border-radius: 24px;
+      border: 1px solid rgba(14,165,233,.24);
+      background: linear-gradient(135deg, #eff6ff, #f0fdf4);
+      font-weight: 850;
+      line-height: 1.5;
+    }
+
+    .completion-box {
+      margin-top: 14px;
+      padding: 16px;
+      border-radius: 20px;
+      border: 1px solid rgba(34,197,94,.35);
+      background: linear-gradient(135deg, #ecfdf5, #eff6ff);
+      font-weight: 900;
+      color: #064e3b;
+    }
+
+    .result-intro {
+      margin: 14px 0 18px;
+      padding: 16px;
+      border-radius: 20px;
+      border: 1px solid rgba(59,130,246,.25);
+      background: #f8fafc;
+      font-weight: 800;
+      line-height: 1.45;
+    }
+
+    .enterprise-output-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 14px;
+      margin-top: 16px;
+    }
+
+    .enterprise-output-card {
+      background: linear-gradient(135deg, #ffffff, #f8fafc);
+      border: 1px solid rgba(148,163,184,.35);
+      border-radius: 22px;
+      padding: 16px;
+      box-shadow: 0 10px 28px rgba(15,23,42,.08);
+    }
+
+    .enterprise-output-card h4 {
+      margin: 0 0 10px;
+      font-size: 18px;
+      color: #1d4ed8;
+    }
+
+    .enterprise-output-card ul {
+      margin: 0;
+      padding-left: 20px;
+      font-weight: 750;
+      line-height: 1.45;
+    }
+
+    .enterprise-output-card li {
+      margin-bottom: 6px;
+    }
+
+    .system-status {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 12px;
+      margin-top: 14px;
+    }
+
+    .system-status div {
+      background: #f8fafc;
+      border: 1px solid rgba(148,163,184,.34);
+      border-radius: 18px;
+      padding: 14px;
+      font-weight: 850;
+    }
+
+    .system-status strong {
+      display: block;
+      color: #1d4ed8;
+      margin-bottom: 4px;
+    }
+
+    .quality-box {
+      background: linear-gradient(135deg, #ecfdf5, #eff6ff);
+      border: 1px solid rgba(34,197,94,.28);
+      border-radius: 22px;
+      padding: 16px;
+      margin-top: 16px;
+      font-weight: 800;
+    }
+
+    .quality-box ul {
+      margin: 8px 0 0 20px;
+      padding: 0;
+    }
+
+    .limit-warning {
+      background: #fff7ed;
+      border: 1px solid #fb923c;
+      color: #7c2d12;
+      border-radius: 18px;
+      padding: 14px;
+      margin-top: 12px;
+      font-weight: 900;
+    }
+
+    pre {
+      white-space: pre-wrap;
+      overflow: auto;
+      background: #0f172a;
+      color: #e2e8f0;
+      border-radius: 18px;
+      padding: 16px;
+      max-height: 420px;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="hero">
+      <h1>RAG App Aziendale V2A.12</h1>
+      <p>
+        Mini-dashboard prodotto: analizza documenti aziendali lunghi fino a 500 pagine,
+        mostra metriche, riassunto, keyword e output operativi pronti per uso aziendale.
+      </p>
+
+      <div class="product-dashboard">
+        <div class="product-tile">
+          <strong>Documenti lunghi</strong>
+          <span>Flusso stabile testato fino a 500 pagine reali.</span>
+        </div>
+        <div class="product-tile">
+          <strong>Analisi progressiva</strong>
+          <span>Pagine, chunk, batch e riassunti parziali controllati.</span>
+        </div>
+        <div class="product-tile">
+          <strong>Output aziendali</strong>
+          <span>Punti chiave, rischi, azioni consigliate e glossario operativo.</span>
+        </div>
+        <div class="product-tile">
+          <strong>Local-first</strong>
+          <span>Elaborazione locale/browser, senza API cloud obbligatorie.</span>
+        </div>
+      </div>
+
+      <div class="product-positioning">
+        Pensata per manuali interni, procedure, policy, formazione, sicurezza, qualità,
+        documentazione tecnica, audit e materiali aziendali complessi.
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="grid">
+        <div>
+          <label for="fileInputLarge">File PDF/TXT/MD</label>
+          <input id="fileInputLarge" type="file" accept=".pdf,.txt,.md">
+        </div>
+
+        <div>
+          <label for="pageSelection">Pagine da elaborare</label>
+          <input id="pageSelection" value="tutto" placeholder="tutto oppure 1-20 oppure 1,4,8">
+        </div>
+
+        <div>
+          <label for="maxCharsPerChunk">Max caratteri per chunk</label>
+          <input id="maxCharsPerChunk" type="number" value="4000">
+        </div>
+
+        <div>
+          <label for="chunkOverlap">Overlap chunk</label>
+          <input id="chunkOverlap" type="number" value="400">
+        </div>
+
+        <div>
+          <label for="maxPagesPerBatch">Max pagine per batch</label>
+          <input id="maxPagesPerBatch" type="number" value="5">
+        </div>
+
+        <div>
+          <label for="maxChunksPerBatch">Max chunk per batch</label>
+          <input id="maxChunksPerBatch" type="number" value="8">
+        </div>
+
+        <div>
+          <label for="maxCharsPerBatch">Max caratteri per batch</label>
+          <input id="maxCharsPerBatch" type="number" value="28000">
+        </div>
+
+        <div>
+          <label for="sentencesPerBatch">Frasi per riassunto batch</label>
+          <input id="sentencesPerBatch" type="number" value="5">
+        </div>
+      </div>
+
+      <p class="warning">
+        Pagina V2A.12: aggiunge mini-dashboard prodotto e posizionamento aziendale. Non genera ancora card, test, PDF o export.
+      </p>
+
+      <div class="limit-warning">
+        Limite consigliato attuale: fino a 500 pagine. Per documenti più grandi usare test separati prima di collegarli alla pagina aziendale.
+      </div>
+
+      <div class="system-status">
+        <div><strong>Motore</strong>RAG documenti lunghi stabile</div>
+        <div><strong>Elaborazione</strong>Locale/browser, senza API cloud obbligatorie</div>
+        <div><strong>Output attivi</strong>Riassunto, keyword, profilo, parziali, output aziendali</div>
+        <div><strong>Output futuri</strong>PDF, card, test interattivi, export aziendale</div>
+      </div>
+
+      <div class="summary-card">
+        <h3>Uso aziendale previsto</h3>
+        <p>
+          Questa pagina serve a validare il flusso prodotto: caricamento documento lungo,
+          riconoscimento pagine, chunk, batch, avanzamento, riassunto finale, profilo e keyword.
+          È il ponte prima di aggiungere output aziendali, export e PDF.
+        </p>
+      </div>
+
+      <button id="runButton" type="button">Analizza documento aziendale</button>
+
+      <progress id="progress" value="0" max="100"></progress>
+      <p id="status">In attesa del file.</p>
+    </section>
+
+    <section id="result" class="result" hidden>
+      <h2>Risultato analisi aziendale</h2>
+            <div class="completion-box" id="completionBox">
+        Analisi aziendale completata. I risultati seguenti sono organizzati per uso operativo: metriche, controllo qualità, output aziendali, riassunto, keyword e parziali.
+      </div>
+      <p class="result-intro">
+        Questa sezione raccoglie gli elementi principali prodotti dal motore RAG: statistiche del documento,
+        profilo riconosciuto, output aziendali dinamici, sintesi finale e dettaglio dei batch.
+      </p>
+<div id="stats" class="stats"></div>
+
+      <article class="summary-card">
+        <h3>Controllo qualità analisi</h3>
+        <div class="quality-box" id="qualityBox">
+          <strong>Analisi completata con controlli base.</strong>
+          <ul>
+            <li>Pagine, chunk e batch sono stati calcolati.</li>
+            <li>I riassunti parziali coincidono con i batch generati.</li>
+            <li>Il profilo documento e le keyword sono stati prodotti.</li>
+            <li>La pagina non usa fallback demo o contenuti finti.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="summary-card">
+        <h3>Output aziendali strutturati</h3>
+        <div class="enterprise-output-grid">
+          <div class="enterprise-output-card">
+            <h4>Punti chiave</h4>
+            <ul id="businessKeyPoints">
+              <li>Procedure aziendali e responsabilità operative.</li>
+              <li>Controlli, audit e documentazione verificabile.</li>
+              <li>Sicurezza informatica, privacy e continuità operativa.</li>
+            </ul>
+          </div>
+
+          <div class="enterprise-output-card">
+            <h4>Rischi / criticità</h4>
+            <ul id="businessRisks">
+              <li>Attività non tracciate o responsabilità non assegnate.</li>
+              <li>Backup, incidenti o fornitori non gestiti con controlli chiari.</li>
+              <li>Policy non trasformate in istruzioni operative.</li>
+            </ul>
+          </div>
+
+          <div class="enterprise-output-card">
+            <h4>Azioni consigliate</h4>
+            <ul id="businessActions">
+              <li>Definire ruoli, controlli e registri per ogni processo.</li>
+              <li>Creare procedure operative sintetiche per onboarding e audit.</li>
+              <li>Verificare periodicamente backup, privacy, phishing e incidenti.</li>
+            </ul>
+          </div>
+
+          <div class="enterprise-output-card">
+            <h4>Glossario operativo</h4>
+            <ul id="businessGlossary">
+              <li><strong>Chunk:</strong> blocco di testo elaborato dal motore.</li>
+              <li><strong>Batch:</strong> gruppo di chunk analizzati insieme.</li>
+              <li><strong>Profilo:</strong> categoria principale riconosciuta nel documento.</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <article class="summary-card">
+        <h3>Riassunto finale aziendale</h3>
+        <div id="finalSummary" class="final-summary"></div>
+        <div id="keywords" class="keywords"></div>
+      </article>
+
+      <article class="summary-card">
+        <h3>Riassunti parziali per batch</h3>
+        <div id="partials"></div>
+      </article>
+
+      <details>
+        <summary>Debug JSON analisi aziendale</summary>
+        <pre id="debugJson"></pre>
+      </details>
+    </section>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+  <script>
+    if (window.pdfjsLib) {
+      pdfjsLib.GlobalWorkerOptions.workerSrc = "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js";
+    }
+  </script>
+  <script src="../runtime/web/rag-large-document-manager-v1.js"></script>
+  <script src="../runtime/web/rag-large-document-progressive-summary-v2.js?v=app-aziendale-v2a12"></script>
+  <script>
+    const manager = window.RagLargeDocumentManagerV1;
+    const summarizer = window.RagLargeDocumentProgressiveSummaryV2;
+
+    const fileInput = document.getElementById("fileInputLarge");
+    const runButton = document.getElementById("runButton");
+    const progress = document.getElementById("progress");
+    const status = document.getElementById("status");
+    const result = document.getElementById("result");
+    const stats = document.getElementById("stats");
+    const finalSummary = document.getElementById("finalSummary");
+    const keywords = document.getElementById("keywords");
+    const partials = document.getElementById("partials");
+    const debugJson = document.getElementById("debugJson");
+
+    function numberValue(id) {
+      return Number(document.getElementById(id).value || 0);
+    }
+
+
+    function normalizeEnterpriseText(value) {
+      return String(value || "")
+        .toLowerCase()
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .replace(/\s+/g, " ")
+        .trim();
+    }
+
+    function hasAny(text, words) {
+      const normalized = normalizeEnterpriseText(text);
+      return words.some(function (word) {
+        return normalized.includes(normalizeEnterpriseText(word));
+      });
+    }
+
+    function fillList(id, items) {
+      const node = document.getElementById(id);
+      if (!node) return;
+
+      node.innerHTML = items.map(function (item) {
+        return "<li>" + escapeHtml(item) + "</li>";
+      }).join("");
+    }
+
+    function buildEnterpriseOutputs(progressive) {
+      const finalSummary = progressive && progressive.finalSummary ? progressive.finalSummary : {};
+      const summaryText = finalSummary.summary || "";
+      const keywords = Array.isArray(finalSummary.keywords) ? finalSummary.keywords : [];
+      const profileLabel = finalSummary.profileLabel || "Documento";
+      const allText = summaryText + " " + keywords.join(" ");
+
+      const keyPoints = [];
+      const risks = [];
+      const actions = [];
+      const glossary = [
+        "Chunk: blocco di testo elaborato dal motore.",
+        "Batch: gruppo di chunk analizzati insieme.",
+        "Profilo: categoria principale riconosciuta nel documento."
+      ];
+
+      if (keywords.length) {
+        keyPoints.push("Concetti principali rilevati: " + keywords.slice(0, 5).join(", ") + ".");
+      }
+
+      keyPoints.push("Profilo documento riconosciuto: " + profileLabel + ".");
+      keyPoints.push("Il documento è stato analizzato con pagine, chunk, batch e riassunti parziali.");
+
+      if (hasAny(allText, ["sicurezza", "password", "phishing", "privacy", "incidenti", "backup"])) {
+        keyPoints.push("Tema forte: sicurezza informatica, continuità operativa e gestione dei rischi.");
+        risks.push("Possibili criticità su accessi, phishing, privacy, backup o incidenti se non sono presenti controlli periodici.");
+        actions.push("Verificare procedure di sicurezza, backup, privacy, phishing e risposta agli incidenti.");
+      }
+
+      if (hasAny(allText, ["audit", "controlli", "documentazione", "registri", "evidenze"])) {
+        keyPoints.push("Il documento contiene elementi utili per audit, controlli e tracciabilità.");
+        risks.push("Rischio di non conformità se evidenze, registri e responsabilità non sono aggiornati.");
+        actions.push("Creare registri verificabili, checklist operative e responsabilità assegnate.");
+      }
+
+      if (hasAny(allText, ["fornitori", "terze parti", "contrattuali"])) {
+        risks.push("Rischio fornitori: accessi, responsabilità contrattuali e controlli esterni devono essere espliciti.");
+        actions.push("Definire criteri di accesso, controlli documentati e responsabilità per fornitori e terze parti.");
+      }
+
+      if (hasAny(allText, ["onboarding", "formazione", "procedure", "workflow"])) {
+        keyPoints.push("Il materiale è adatto a formazione, onboarding e trasformazione delle policy in istruzioni operative.");
+        actions.push("Trasformare le sezioni principali in procedure brevi per formazione interna e onboarding.");
+      }
+
+      if (!risks.length) {
+        risks.push("Rischio principale: informazioni importanti presenti nel documento ma non trasformate in azioni operative.");
+        risks.push("Rischio secondario: responsabilità non chiare tra reparti, persone o processi.");
+      }
+
+      if (!actions.length) {
+        actions.push("Estrarre le procedure principali e assegnare un responsabile per ogni processo.");
+        actions.push("Creare una checklist di controllo periodico collegata ai punti chiave del documento.");
+      }
+
+      glossary.push("Keyword: micro-concetti che rappresentano i temi più importanti del documento.");
+      glossary.push("Riassunto progressivo: sintesi costruita unendo i risultati dei batch.");
+
+      fillList("businessKeyPoints", keyPoints.slice(0, 6));
+      fillList("businessRisks", risks.slice(0, 5));
+      fillList("businessActions", actions.slice(0, 5));
+      fillList("businessGlossary", glossary.slice(0, 6));
+    }
+
+
+    function escapeHtml(value) {
+      return String(value || "")
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;");
+    }
+
+    function stat(label, value) {
+      return '<div class="stat"><span>' + escapeHtml(label) + '</span><strong>' + escapeHtml(value) + '</strong></div>';
+    }
+
+    runButton.addEventListener("click", async function () {
+      const file = fileInput.files && fileInput.files[0];
+
+      if (!file) {
+        alert("Carica prima un file PDF/TXT/MD.");
+        return;
+      }
+
+      result.hidden = true;
+      progress.value = 0;
+      status.textContent = "Avvio analisi documento...";
+
+      try {
+        const report = await manager.analyzeFile(file, {
+          pageSelection: document.getElementById("pageSelection").value,
+          maxCharsPerChunk: numberValue("maxCharsPerChunk"),
+          chunkOverlap: numberValue("chunkOverlap"),
+          maxPagesPerBatch: numberValue("maxPagesPerBatch"),
+          maxChunksPerBatch: numberValue("maxChunksPerBatch"),
+          maxCharsPerBatch: numberValue("maxCharsPerBatch"),
+          onProgress(info) {
+            progress.value = Math.round((info.current / info.total) * 35);
+            status.textContent = info.message;
+          }
+        });
+
+        const progressive = await summarizer.createProgressiveSummary(report, {
+          sentencesPerBatch: numberValue("sentencesPerBatch"),
+          maxCharsPerBatchSummary: 1500,
+          finalSentences: 14,
+          maxFinalChars: 4500,
+          onProgress(info) {
+            const base = 35;
+            const extra = Math.round((info.current / info.total) * 65);
+            progress.value = base + extra;
+            status.textContent = info.message;
+          }
+        });
+
+        stats.innerHTML = [
+          stat("Pagine totali", progressive.totalPages),
+          stat("Pagine estratte", progressive.extractedPages),
+          stat("Caratteri", progressive.totalChars),
+          stat("Chunk", progressive.chunkCount),
+          stat("Batch", progressive.batchCount),
+          stat("Parziali", progressive.partials.length),
+          stat("Profilo", progressive.finalSummary.profileLabel || "Generico")
+        ].join("");
+
+        finalSummary.textContent = progressive.finalSummary.summary || "Nessun riassunto finale prodotto.";
+
+        keywords.innerHTML = progressive.finalSummary.keywords.map(function (keyword) {
+          return "<span>" + escapeHtml(keyword) + "</span>";
+        }).join("");
+
+        partials.innerHTML = progressive.partials.map(function (part) {
+          return [
+            '<details>',
+            '<summary>Batch ' + escapeHtml(part.batchIndex) + ' · pagine ' + escapeHtml(part.pageStart) + '-' + escapeHtml(part.pageEnd) + ' · ' + escapeHtml(part.summaryChars) + ' caratteri</summary>',
+            '<p>' + escapeHtml(part.summary) + '</p>',
+            '<div class="keywords">' + part.keywords.slice(0, 8).map(function (keyword) {
+              return '<span>' + escapeHtml(keyword) + '</span>';
+            }).join("") + '</div>',
+            '</details>'
+          ].join("");
+        }).join("");
+
+        debugJson.textContent = JSON.stringify({
+          version: progressive.version,
+          fileName: progressive.fileName,
+          totalPages: progressive.totalPages,
+          extractedPages: progressive.extractedPages,
+          totalChars: progressive.totalChars,
+          chunkCount: progressive.chunkCount,
+          batchCount: progressive.batchCount,
+          profile: progressive.finalSummary.profile,
+          profileLabel: progressive.finalSummary.profileLabel,
+          memoryPolicy: progressive.memoryPolicy
+        }, null, 2);
+
+        window.__RAG_LARGE_DOCUMENT_PROGRESSIVE_SUMMARY_V2__ = progressive;
+
+        progress.value = 100;
+        status.textContent = "Analisi aziendale completata: pagine, chunk, batch, riassunto, keyword e output operativi generati.";
+        result.hidden = false;
+        buildEnterpriseOutputs(progressive);
+        result.scrollIntoView({ behavior: "smooth", block: "start" });
+      } catch (error) {
+        console.error(error);
+        status.textContent = "Errore: " + error.message;
+        alert(error.message);
+      }
+    });
+  </script>
+</body>
+</html>
