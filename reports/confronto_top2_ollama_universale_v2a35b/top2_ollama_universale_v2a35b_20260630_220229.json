@@ -1,0 +1,175 @@
+{
+  "riepilogo": {
+    "llama3.1:8b": {
+      "score": 485,
+      "tempo": 40.06,
+      "test": 5,
+      "errori": 0,
+      "score_medio": 97.0,
+      "tempo_medio": 8.01
+    },
+    "qwen2.5:7b": {
+      "score": 417,
+      "tempo": 22.75,
+      "test": 5,
+      "errori": 0,
+      "score_medio": 83.4,
+      "tempo_medio": 4.55
+    }
+  },
+  "risultati": [
+    {
+      "modello": "llama3.1:8b",
+      "categoria": "aziendale",
+      "ok": true,
+      "score": 100,
+      "note": [],
+      "risposta": "Il documento in questione descrive procedure operative aziendali ripetute in più reparti con l'obiettivo di standardizzare le pratiche e migliorare la gestione dei processi interni. Le sezioni trattano aspetti fondamentali come controlli, verifiche periodiche, tracciabilità delle attività e registri operativi per garantire trasparenza e responsabilità. La documentazione enfatizza l'importanza di attribuire responsabilità ai team coinvolti e di utilizzare sistemi coerenti in tutta l'azienda. Inoltre, il documento affronta anche i rischi residui e la produzione di evidenze per supportare le decisioni aziendali. L'obiettivo principale è quello di evitare passaggi informali e rendere confrontabili i risultati tra sedi diverse, reparti e fornitori, garantendo così una gestione più efficace e omogenea dell'azienda. Questo approccio mira a migliorare la collaborazione e l'efficienza all'interno dell'organizzazione.",
+      "frasi_stimate": 6,
+      "caratteri": 921,
+      "secondi_reali": 12.15,
+      "total_duration_sec": 12.14,
+      "eval_count": 243,
+      "prompt_eval_count": 272
+    },
+    {
+      "modello": "llama3.1:8b",
+      "categoria": "scientifico",
+      "ok": true,
+      "score": 100,
+      "note": [],
+      "risposta": "Uno studio recente ha esaminato l'impatto della qualità del sonno sulla memoria a breve termine. I partecipanti sono stati suddivisi in gruppi con diverse ore di riposo, per poi essere sottoposti a test di attenzione e velocità di risposta. I risultati hanno mostrato che una riduzione significativa delle ore di sonno peggiora la precisione delle risposte e aumenta gli errori. In particolare, i partecipanti con meno ore di riposo hanno avuto difficoltà a ricordare le parole e a rispondere in modo veloce e preciso. Questo suggerisce che una buona qualità del sonno sia essenziale per il funzionamento della memoria a breve termine.",
+      "frasi_stimate": 5,
+      "caratteri": 635,
+      "secondi_reali": 7.01,
+      "total_duration_sec": 7.01,
+      "eval_count": 171,
+      "prompt_eval_count": 265
+    },
+    {
+      "modello": "llama3.1:8b",
+      "categoria": "tecnico",
+      "ok": true,
+      "score": 100,
+      "note": [],
+      "risposta": "Il sistema in questione è progettato per raccogliere e elaborare dati attraverso un modulo dedicato, che li invia a un database locale dove vengono archiviati. Un servizio di elaborazione si occupa della gestione dei dati, mentre una dashboard web fornisce un'interfaccia utente per visualizzare i risultati. Il flusso principale del sistema prevede la ricezione degli input da parte dell'utente, che vengono poi validati e salvati nel database. Inoltre, il sistema è in grado di generare report periodici con dati rilevanti. Gli errori che si verificano durante l'esecuzione del sistema sono registrati con messaggi chiari e codici diagnostici per facilitarne la risoluzione.",
+      "frasi_stimate": 5,
+      "caratteri": 676,
+      "secondi_reali": 7.18,
+      "total_duration_sec": 7.17,
+      "eval_count": 177,
+      "prompt_eval_count": 259
+    },
+    {
+      "modello": "llama3.1:8b",
+      "categoria": "narrativo_artistico",
+      "ok": true,
+      "score": 100,
+      "note": [],
+      "risposta": "La giovane restauratrice entra nel teatro abbandonato con l'intento di recuperare un antico fondale dipinto. Mentre esplora le figure rovinate dal tempo, scopre lettere nascoste dietro la tela che raccontano la storia di una compagnia scomparsa. La sua curiosità è suscitata da queste rivelazioni e decide di ricostruire la storia della compagnia attraverso i documenti trovati. Man mano che procede, l'atmosfera del teatro si alterna tra mistero, nostalgia e meraviglia. La restauratrice scopre che il fondale dipinto è un pezzo d'arte raro e prezioso. Il suo lavoro diventa una caccia al tesoro per recuperare la storia della compagnia scomparsa.",
+      "frasi_stimate": 6,
+      "caratteri": 648,
+      "secondi_reali": 7.25,
+      "total_duration_sec": 7.24,
+      "eval_count": 179,
+      "prompt_eval_count": 260
+    },
+    {
+      "modello": "llama3.1:8b",
+      "categoria": "sportivo",
+      "ok": true,
+      "score": 85,
+      "note": [
+        "Troppo corto"
+      ],
+      "risposta": "Il piano di allenamento prevede tre sessioni settimanali dedicate a diversi obiettivi: resistenza, forza e recupero. Ogni seduta inizia con un riscaldamento per preparare il corpo all'attività fisica, segue con gli esercizi principali progettati per raggiungere l'obiettivo specifico di quella giornata e si conclude con un controllo della fatica per evitare sovrallenamenti. Il programma prevede anche uno stretching finale per favorire il recupero muscolare. È richiesto di annotare i progressi, eventuali dolori e tempi di recupero per monitorare l'evoluzione fisica.",
+      "frasi_stimate": 4,
+      "caratteri": 570,
+      "secondi_reali": 6.47,
+      "total_duration_sec": 6.47,
+      "eval_count": 159,
+      "prompt_eval_count": 253
+    },
+    {
+      "modello": "qwen2.5:7b",
+      "categoria": "aziendale",
+      "ok": true,
+      "score": 85,
+      "note": [
+        "Troppo corto"
+      ],
+      "risposta": "Il documento esamina procedure operative ripetute in diversi reparti dell'azienda, coprendo controlli, verifiche periodiche, tracciabilità delle attività e registri operativi. Viene anche trattata la responsabilità dei team e i sistemi coinvolti, insieme ai rischi residui e alla produzione di evidenze. Lo scopo principale è migliorare l'accuratezza e la confrontabilità dei risultati tra le diverse sedi, reparti e fornitori, evitando passaggi informali.",
+      "frasi_stimate": 3,
+      "caratteri": 456,
+      "secondi_reali": 6.84,
+      "total_duration_sec": 6.83,
+      "eval_count": 122,
+      "prompt_eval_count": 290
+    },
+    {
+      "modello": "qwen2.5:7b",
+      "categoria": "scientifico",
+      "ok": true,
+      "score": 85,
+      "note": [
+        "Troppo corto"
+      ],
+      "risposta": "Lo studio esplora come la qualità del sonno influisca sulla memoria a breve termine, suddividendo i partecipanti in gruppi con diverse ore di riposo. Sottoposti a test di attenzione, richiamo di parole e velocità di risposta, i risultati evidenziano che una diminuzione notevole del sonno compromette la precisione delle risposte e incrementa l'errore.",
+      "frasi_stimate": 2,
+      "caratteri": 352,
+      "secondi_reali": 3.77,
+      "total_duration_sec": 3.75,
+      "eval_count": 96,
+      "prompt_eval_count": 282
+    },
+    {
+      "modello": "qwen2.5:7b",
+      "categoria": "tecnico",
+      "ok": true,
+      "score": 85,
+      "note": [
+        "Troppo corto"
+      ],
+      "risposta": "Il sistema opera attraverso un modulo di acquisizione dati che riceve input, seguito dalla validazione dei campi per assicurare l'integrità delle informazioni. I dati validi vengono salvati in un database locale, mentre quelli non conformi generano errori registrati con messaggi chiari e codici diagnostici. Un servizio di elaborazione processa i dati memorizzati per la generazione di report periodici. Infine, una dashboard web visualizza questi report in modo intuitivo, permettendo un controllo facile e rapido delle informazioni raccolte.",
+      "frasi_stimate": 4,
+      "caratteri": 544,
+      "secondi_reali": 5.06,
+      "total_duration_sec": 5.06,
+      "eval_count": 132,
+      "prompt_eval_count": 277
+    },
+    {
+      "modello": "qwen2.5:7b",
+      "categoria": "narrativo_artistico",
+      "ok": true,
+      "score": 77,
+      "note": [
+        "Troppo corto",
+        "Un po' corto"
+      ],
+      "risposta": "La giovane restauratrice esplora un teatro abbandonato, trovando un antico fondale dipinto in rovina. Scopre lettere nascoste che raccontano la storia di una compagnia scomparsa, creando un'atmosfera mista a mistero, nostalgia e meraviglia.",
+      "frasi_stimate": 2,
+      "caratteri": 240,
+      "secondi_reali": 2.98,
+      "total_duration_sec": 2.97,
+      "eval_count": 75,
+      "prompt_eval_count": 279
+    },
+    {
+      "modello": "qwen2.5:7b",
+      "categoria": "sportivo",
+      "ok": true,
+      "score": 85,
+      "note": [
+        "Troppo corto"
+      ],
+      "risposta": "Il programma di allenamento prevede tre sessioni settimanali focalizzate su resistenza, forza e recupero. Ogni seduta inizia con un riscaldamento, segue una serie di esercizi principali, include il controllo della fatica e termina con stretching. Il carico aumenta gradualmente e richiede la registrazione dei progressi, dei dolori e del tempo di recupero per ottimizzare l'efficacia dell'esercizio.",
+      "frasi_stimate": 3,
+      "caratteri": 399,
+      "secondi_reali": 4.1,
+      "total_duration_sec": 4.1,
+      "eval_count": 106,
+      "prompt_eval_count": 271
+    }
+  ]
+}

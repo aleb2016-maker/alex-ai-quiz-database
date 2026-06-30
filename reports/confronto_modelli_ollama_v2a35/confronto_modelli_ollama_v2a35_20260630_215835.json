@@ -1,0 +1,67 @@
+[
+  {
+    "modello": "llama3.1:8b",
+    "ok": true,
+    "score": 100,
+    "note": [],
+    "risposta": "Il documento in questione descrive le procedure operative aziendali che sono ripetute in più reparti, con l'obiettivo di standardizzare e rendere omogenee le attività all'interno dell'organizzazione. Le sezioni del documento trattano aspetti fondamentali come i controlli, le verifiche periodiche, la tracciabilità delle attività svolte, i registri operativi e la responsabilità dei team coinvolti. Inoltre, il documento affronta anche l'importanza di identificare e gestire i rischi residui e la produzione di evidenze a supporto delle attività svolte. Il problema principale che si vuole affrontare è quello di evitare passaggi informali nelle procedure operative e rendere confrontabili i risultati tra le diverse sedi, reparti e fornitori dell'azienda. Questo obiettivo è fondamentale per garantire la coerenza e l'efficienza delle attività aziendali. Il documento rappresenta un passo importante verso la standardizzazione e la trasparenza delle procedure operative all'interno dell'organizzazione.",
+    "frasi_stimate": 6,
+    "caratteri": 1003,
+    "secondi_reali": 13.02,
+    "total_duration_sec": 13.0,
+    "eval_count": 258,
+    "prompt_eval_count": 240
+  },
+  {
+    "modello": "mistral:7b",
+    "ok": true,
+    "score": 90,
+    "note": [
+      "Troppo lungo"
+    ],
+    "risposta": "1. Il documento descrive procedure operative aziendali ripetute in diversi dipartimenti, che coprono controlli, verifiche periodiche, tracciabilità delle attività, registri operativi, responsabilità dei team, sistemi coinvolti e rischi residui.\n\n2. Le procedure aziendali sono state implementate per garantire una produzione di evidenze e un controllo uniforme su tutte le sedi, reparti e fornitori.\n\n3. La tracciabilità delle attività è fondamentale per rendere confrontabili i risultati tra diverse aree operative e garantire una produzione di alta qualità.\n\n4. I registri operativi sono utilizzati per documentare le attività svolte e fornire un'evidenza dei controlli eseguiti.\n\n5. La responsabilità dei team è chiara e ben definita, con ogni membro del team responsabile di una parte specifica delle procedure operative.\n\n6. I sistemi coinvolti sono stati selezionati per garantire un controllo efficace su tutte le attività aziendali e ridurre i rischi residui.",
+    "frasi_stimate": 12,
+    "caratteri": 967,
+    "secondi_reali": 12.95,
+    "total_duration_sec": 12.94,
+    "eval_count": 299,
+    "prompt_eval_count": 256
+  },
+  {
+    "modello": "qwen2.5:7b",
+    "ok": true,
+    "score": 85,
+    "note": [
+      "Troppo corto"
+    ],
+    "risposta": "Il documento esamina procedure operative ripetute in diversi reparti, focalizzandosi su controlli, verifiche periodiche e tracciabilità delle attività. Le sezioni comprendono registri operativi, responsabilità dei team, sistemi coinvolti, rischi residui e la produzione di evidenze. Lo scopo principale è migliorare la confrontabilità dei risultati tra le diverse sedi, reparti e fornitori, evitando passaggi informali.",
+    "frasi_stimate": 3,
+    "caratteri": 419,
+    "secondi_reali": 6.6,
+    "total_duration_sec": 6.59,
+    "eval_count": 109,
+    "prompt_eval_count": 258
+  },
+  {
+    "modello": "llama3.2:3b",
+    "ok": true,
+    "score": 80,
+    "note": [
+      "Troppo lungo",
+      "Risposta troppo prolissa"
+    ],
+    "risposta": "Il documento fornisce una serie di procedure operative standardizzate per garantire la continuità e l'efficienza nelle attività aziendali. Le sezioni dedicate ai controlli e alle verifiche periodiche consentono di identificare potenziali problemi e prevenirne il diffondersi, riducendo al minimo i rischi residui.\n\nLa tracciabilità delle attività è fondamentale per garantire la trasparenza e la responsabilità dei team coinvolti. I registri operativi forniti consentono di tenere traccia delle prestazioni e dei risultati, permettendo una comparazione più precisa tra sedi, reparti e fornitori.\n\nTuttavia, il documento evidenzia l'importanza di evitare passaggi informali che potrebbero compromettere la qualità dei risultati. Per questo motivo, è stato sviluppato un sistema di tracciabilità che consente di monitorare e valutare regolarmente le prestazioni.\n\nLa produzione di evidenze è un'altra chiave per garantire l'efficienza delle procedure operative. Il documento fornisce indicazioni su come raccogliere, analizzare e condividere i dati in modo da poter prendere decisioni informate.\n\nInoltre, il documento sottolinea l'importanza di identificare e gestire i rischi residui che possono derivare dalle procedure operative. Questo include la necessità di implementare misure di mitigazione per ridurre al minimo gli impatti negativi.\n\nInfine, il documento fornisce indicazioni su come garantire la responsabilità dei team coinvolti nelle procedure operative. Ciò include la necessità di definire ruoli e responsabilità chiari, nonché di implementare un sistema di feedback per garantire che i risultati siano condivisi e valutati regolarmente.",
+    "frasi_stimate": 12,
+    "caratteri": 1651,
+    "secondi_reali": 16.06,
+    "total_duration_sec": 16.06,
+    "eval_count": 419,
+    "prompt_eval_count": 255
+  },
+  {
+    "modello": "phi3:mini",
+    "ok": false,
+    "errore": "HTTP Error 404: Not Found",
+    "secondi_reali": 0.02
+  }
+]
