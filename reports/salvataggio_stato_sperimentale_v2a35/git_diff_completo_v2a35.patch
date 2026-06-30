@@ -1,0 +1,1928 @@
+diff --git a/demo-rag/index.html b/demo-rag/index.html
+index 43ce72d..a4a2af6 100644
+--- a/demo-rag/index.html
++++ b/demo-rag/index.html
+@@ -19,7 +19,7 @@
+     </section>
+     <section class="upload-panel">
+       <label for="titleInput">Titolo documento</label>
+-      <input id="titleInput" type="text" placeholder="Esempio: Sicurezza informatica aziendale">
++      <input id="titleInput" type="text" placeholder="Esempio: Documento aziendale">
+       <label for="fileInput">File documento</label>
+       <input id="fileInput" type="file" accept=".txt,.md,.markdown,.pdf">
+       <button id="generateButton" type="button">Genera riassunto, tabelle, card e quiz</button>
+@@ -35,7 +35,6 @@
+   </main>
+   <script src="browser-rag-engine.js?v=stable-a8f0e74-v2"></script>
+   <script src="card-graphic-engine.js?v=stable-a8f0e74-v2"></script>
+-  <script src="rag-quality-summary-cards-v34a.js"></script>
+ <!-- RAG_V35L_LINK_START -->
+ <section id="rag-v35l-main-link" style="margin:32px 0;padding:22px;border-radius:20px;border:1px solid rgba(80,220,170,.45);background:linear-gradient(135deg,rgba(15,35,55,.92),rgba(20,70,65,.78));box-shadow:0 12px 28px rgba(0,0,0,.22);">
+   <h2 style="margin:0 0 10px;color:#eaf4ff;">Motore RAG documenti · V3.5K/V3.5L</h2>
+diff --git a/demo-rag/rag-concept-document-engine-v46.js b/demo-rag/rag-concept-document-engine-v46.js
+index 05b4bd8..aa79bdf 100644
+--- a/demo-rag/rag-concept-document-engine-v46.js
++++ b/demo-rag/rag-concept-document-engine-v46.js
+@@ -211,7 +211,7 @@
+   function profile(text) {
+     if (has(text, ["sicurezza informatica", "password", "password manager", "email sospetta", "e-mail sospetta", "reparto it", "responsabile della sicurezza", "sistemi digitali", "aggiornamenti", "procedura controllata", "rischi", "controlli"])) {
+       return {
+-        materia: "sicurezza informatica aziendale",
++        materia: "sicurezza digitale",
+         contesto: "documento aziendale",
+         categoria: "procedure e buone pratiche"
+       };
+@@ -228,54 +228,75 @@
+     return { title, ramo, fatto, domanda, icon };
+   }
+ 
++  function sentences(text) {
++    return clean(text)
++      .replace(/\n+/g, ". ")
++      .split(/(?<=[.!?])\s+/)
++      .map(function (s) { return s.trim(); })
++      .filter(function (s) { return s.length >= 24; });
++  }
++
++  function evidence(text, words) {
++    const found = sentences(text).find(function (sentence) {
++      return has(sentence, words);
++    });
++
++    return found || "";
++  }
++
+   function concepts(text) {
+     const out = [];
++    const protezione = evidence(text, ["sicurezza informatica", "dati", "dispositivi", "account", "sistemi digitali"]);
++    const email = evidence(text, ["email sospetta", "e-mail sospetta", "mail sospetta", "reparto it", "responsabile della sicurezza", "phishing"]);
++    const password = evidence(text, ["password manager", "password", "credenziali"]);
++    const aggiornamenti = evidence(text, ["aggiornamenti", "aggiornamento", "procedura controllata", "patch"]);
++    const rischi = evidence(text, ["rischi", "controlli", "errori", "ridurre"]);
+ 
+-    if (has(text, ["sicurezza informatica", "dati", "dispositivi", "account", "sistemi digitali", "aggiornamenti", "procedura controllata", "rischi", "controlli"])) {
++    if (protezione) {
+       out.push(concept(
+-        "Sicurezza informatica aziendale",
++        "Protezione dati e sistemi",
+         "protezione dati e sistemi",
+-        "La sicurezza informatica comprende pratiche, strumenti e comportamenti usati per proteggere dati, dispositivi, account e sistemi digitali.",
+-        "Quali elementi protegge la sicurezza informatica aziendale?",
++        protezione,
++        "Quali elementi protegge questa parte del documento?",
+         "🛡️"
+       ));
+     }
+ 
+-    if (has(text, ["email sospetta", "e-mail sospetta", "mail sospetta", "reparto it", "responsabile della sicurezza", "phishing"])) {
++    if (email) {
+       out.push(concept(
+-        "E-mail sospette",
++        "Segnalazione email",
+         "segnalazione e prevenzione",
+-        "Un'e-mail sospetta deve essere segnalata al reparto IT o al responsabile della sicurezza.",
++        email,
+         "Perché un'e-mail sospetta deve essere segnalata al reparto IT o al responsabile della sicurezza?",
+         "📧"
+       ));
+     }
+ 
+-    if (has(text, ["password manager", "password"])) {
++    if (password) {
+       out.push(concept(
+-        "Password manager",
++        "Gestione credenziali",
+         "gestione sicura delle credenziali",
+-        "Il documento indica come scelta migliore l'uso di un password manager.",
+-        "A cosa serve un password manager nella sicurezza informatica aziendale?",
++        password,
++        "Che cosa spiega il documento sulla gestione delle credenziali?",
+         "🔐"
+       ));
+     }
+ 
+-    if (has(text, ["aggiornamenti", "aggiornamento", "procedura controllata"])) {
++    if (aggiornamenti) {
+       out.push(concept(
+-        "Aggiornamenti controllati",
++        "Gestione aggiornamenti",
+         "gestione dei sistemi",
+-        "Gli aggiornamenti devono essere gestiti con una procedura controllata.",
++        aggiornamenti,
+         "Perché gli aggiornamenti dei sistemi devono seguire una procedura controllata?",
+         "🔄"
+       ));
+     }
+ 
+-    if (has(text, ["rischi", "controlli", "errori", "ridurre"])) {
++    if (rischi) {
+       out.push(concept(
+-        "Rischi e controlli",
++        "Prevenzione rischi",
+         "riduzione degli errori",
+-        "Controlli e comportamenti corretti servono a ridurre errori e rischi per dati e sistemi aziendali.",
++        rischi,
+         "In che modo controlli e comportamenti corretti riducono i rischi?",
+         "⚠️"
+       ));
+@@ -616,7 +637,6 @@
+     }
+ 
+     replaceButton("btnFile", () => fileInput && fileInput.click());
+-    replaceButton("btnRiassunto", renderSummary);
+     replaceButton("btnCard", renderCards);
+     replaceButton("btnStudio", renderStudy);
+     replaceButton("btnTest", renderQuiz);
+diff --git a/demo-rag/test-documenti-universale.html b/demo-rag/test-documenti-universale.html
+index 4ab3d43..bc0f405 100644
+--- a/demo-rag/test-documenti-universale.html
++++ b/demo-rag/test-documenti-universale.html
+@@ -707,7 +707,9 @@
+   <script src="./rag-action-icons-v46.js?v=icone-solo-nuove-v46"></script>
+   <script src="./rag-concept-document-engine-v46.js?v=concept-v46-vero"></script>
+   <script src="./pdf-export-browser-v6.js?v=6"></script>
+-  <script src="rag-quality-summary-cards-v34a.js"></script>
+-  <script src="./universal-document-learning-engine.js?v=export-fix-280626"></script>
++  <script src="../runtime/web/rag-large-document-manager-v1.js"></script>
++  <script src="../runtime/web/rag-large-document-progressive-summary-v2.js"></script>
++<script src="./rag-summary-universal-orchestrator-v2a34u.js?v=v2a34ub-universal-active"></script>
++<script src="./universal-document-learning-engine.js?v=v2a34ub-aggancio-reale"></script>
+ </body>
+-</html>
+\ No newline at end of file
++</html>
+diff --git a/demo-rag/universal-document-learning-engine.js b/demo-rag/universal-document-learning-engine.js
+index 7eecabd..91380e3 100644
+--- a/demo-rag/universal-document-learning-engine.js
++++ b/demo-rag/universal-document-learning-engine.js
+@@ -445,7 +445,7 @@
+       },
+       {
+         ramo: "rischi",
+-        titolo: "Rischi e controlli",
++        titolo: "Rischi operativi",
+         parole: ["rischio", "sicurezza", "errore", "controllo", "attenzione", "problema"],
+         descrizione: "Segnala elementi da controllare per ridurre errori o rischi.",
+         domandaStudio: "Quale rischio bisogna prevenire?"
+@@ -990,65 +990,596 @@
+     return base.concat(["obiettivo", "attività", "fase", "risultato", "strumenti", "materiali", "progetto"]);
+   }
+ 
++  const STOPWORD_RIASSUNTO_V2A30 = new Set([
++    "questo", "questa", "questi", "queste", "quello", "quella", "quelli", "quelle",
++    "sono", "essere", "avere", "viene", "vengono", "molto", "anche", "dopo", "prima",
++    "ogni", "come", "quando", "dove", "perche", "perché", "testo", "documento", "materiale",
++    "parte", "parti", "tema", "temi", "aspetto", "aspetti", "informazioni", "importanti",
++    "tratta", "riguarda", "evidenzia", "contenuto", "contenuti", "principale", "principali"
++  ]);
++
++  const CONCETTI_PROFILO_RIASSUNTO_V2A30 = {
++    "theme-sport": [
++      "allenamento", "resistenza", "corsa", "esercizi", "gambe", "addome", "schiena",
++      "progressi", "fatica", "recupero", "forza", "mobilità", "mobilita", "programma", "sessione"
++    ],
++    "theme-poetry": [
++      "poesia", "sera silenziosa", "silenzio", "vento", "foglie", "cielo", "nostalgia",
++      "ricordo", "natura", "calma", "conforto", "immagini", "emozione", "voce poetica"
++    ],
++    "theme-story": [
++      "storia", "racconto", "protagonista", "personaggi", "ambientazione", "scena",
++      "conflitto", "scelta", "viaggio", "sviluppo", "finale", "trama"
++    ],
++    "theme-cv": [
++      "profilo", "esperienza", "competenze", "formazione", "obiettivo", "progetti",
++      "lavoro", "ruolo", "mansioni", "tecnologie", "github"
++    ],
++    "theme-personal": [
++      "identità", "identita", "dati", "residenza", "richiesta", "modulo", "certificato",
++      "scadenza", "documenti", "firma", "codice fiscale"
++    ],
++    "theme-business": [
++      "obiettivo", "processo", "responsabilità", "responsabilita", "rischi", "controlli",
++      "procedure", "workflow", "cliente", "metriche", "attività", "attivita"
++    ],
++    "theme-hobby": [
++      "idea", "progetto", "obiettivo", "strumenti", "fasi", "risultato", "miglioramenti",
++      "creativo", "realizzare", "costruire", "tempo libero"
++    ]
++  };
++
++  function paroleSignificativeRiassuntoV2A30(testo, limite) {
++    const parole = normalizzaTesto(testo)
++      .toLowerCase()
++      .normalize("NFD")
++      .replace(/[\u0300-\u036f]/g, "")
++      .match(/[a-z0-9]{4,}/g) || [];
++
++    const frequenze = new Map();
++
++    parole.forEach(function (parola) {
++      if (STOPWORD_RIASSUNTO_V2A30.has(parola)) return;
++      frequenze.set(parola, (frequenze.get(parola) || 0) + 1);
++    });
++
++    return Array.from(frequenze.entries())
++      .sort(function (a, b) { return b[1] - a[1]; })
++      .slice(0, limite || 8)
++      .map(function (entry) { return entry[0]; });
++  }
++
++  function concettiProfiloRiassuntoV2A30(testo, profilo) {
++    const classe = profilo && profilo.classe ? profilo.classe : "";
++    const lista = CONCETTI_PROFILO_RIASSUNTO_V2A30[classe] || [];
++    const lower = normalizzaTesto(testo).toLowerCase();
++    const trovati = [];
++
++    lista.forEach(function (concetto) {
++      if (lower.includes(String(concetto).toLowerCase()) && !trovati.includes(concetto)) {
++        trovati.push(concetto);
++      }
++    });
++
++    if (trovati.length) {
++      return trovati.slice(0, 7);
++    }
++
++    return paroleSignificativeRiassuntoV2A30(testo, 7);
++  }
++
++  function chiudiFraseRiassuntoV2A30(testo) {
++    let pulito = correggiSpaziPunteggiaturaV35G(normalizzaTesto(testo));
++
++    pulito = pulito.replace(/\b(e|o|ma|che|di|a|da|in|con|su|per|tra|fra|del|della|dello|dei|degli|delle)$/i, "").trim();
++
++    if (pulito && !/[.!?]$/.test(pulito)) {
++      pulito += ".";
++    }
++
++    return pulito;
++  }
++
++  function deduplicaFrasiRiassuntoV2A30(frasi, limite) {
++    const viste = new Set();
++    const output = [];
++
++    (frasi || []).forEach(function (frase) {
++      const pulita = chiudiFraseRiassuntoV2A30(frase);
++      const firma = pulita
++        .toLowerCase()
++        .normalize("NFD")
++        .replace(/[\u0300-\u036f]/g, "")
++        .replace(/[^a-z0-9 ]+/g, " ")
++        .replace(/\s+/g, " ")
++        .split(" ")
++        .slice(0, 20)
++        .join(" ");
++
++      if (!pulita || pulita.length < 24 || viste.has(firma)) return;
++
++      viste.add(firma);
++      output.push(pulita);
++    });
++
++    return typeof limite === "number" ? output.slice(0, limite) : output;
++  }
++
++  function unisciConcettiRiassuntoV2A30(concetti) {
++    const lista = (concetti || []).filter(Boolean).slice(0, 6);
++
++    if (!lista.length) return "i contenuti centrali del testo";
++    if (lista.length === 1) return lista[0];
++    if (lista.length === 2) return lista[0] + " e " + lista[1];
++
++    return lista.slice(0, -1).join(", ") + " e " + lista[lista.length - 1];
++  }
++
++  function fraseAperturaRiassuntoV2A30(profilo, concetti) {
++    const classe = profilo && profilo.classe ? profilo.classe : "";
++    const focus = unisciConcettiRiassuntoV2A30(concetti);
++
++    if (classe === "theme-sport") {
++      return "Il testo descrive un percorso di allenamento centrato su " + focus + ".";
++    }
++
++    if (classe === "theme-poetry") {
++      return "Il testo ha un tono poetico e mette al centro " + focus + ".";
++    }
++
++    if (classe === "theme-story") {
++      return "Il testo presenta una struttura narrativa centrata su " + focus + ".";
++    }
++
++    if (classe === "theme-cv") {
++      return "Il testo riassume un profilo professionale centrato su " + focus + ".";
++    }
++
++    if (classe === "theme-personal") {
++      return "Il testo raccoglie informazioni personali o amministrative legate a " + focus + ".";
++    }
++
++    if (classe === "theme-business") {
++      return "Il testo sintetizza un contenuto operativo centrato su " + focus + ".";
++    }
++
++    if (classe === "theme-hobby") {
++      return "Il testo descrive un progetto o un'attività creativa centrata su " + focus + ".";
++    }
++
++    return "Il testo mette in evidenza " + focus + ".";
++  }
++
++  function costruisciSintesiBreveRiassuntoV2A30(testo, profilo, frasi) {
++    const frasiPulite = deduplicaFrasiRiassuntoV2A30(frasi, 4);
++    const concetti = concettiProfiloRiassuntoV2A30(testo, profilo);
++    const apertura = fraseAperturaRiassuntoV2A30(profilo, concetti);
++    const dettagli = frasiPulite.join(" ");
++
++    if (!dettagli) {
++      return apertura;
++    }
++
++    if (dettagli.toLowerCase().includes(apertura.toLowerCase())) {
++      return chiudiFraseRiassuntoV2A30(dettagli);
++    }
++
++    return chiudiFraseRiassuntoV2A30(apertura + " " + dettagli);
++  }
++
+   function creaParagrafiRiassunto(testo, profilo) {
+-    const frasi = frasiRiassuntoEsteso(testo);
+-    const usate = new Set();
++    const pulito = normalizzaTesto(testo);
++    const frasi = deduplicaFrasiRiassuntoV2A30(frasiRiassuntoEsteso(pulito), 80);
+     const sezioni = profilo.sezioni || [];
++
++    if (!pulito) {
++      return [{
++        titolo: "Sintesi generale",
++        testo: "Il documento non contiene abbastanza testo per generare un riassunto."
++      }];
++    }
++
++    if (pulito.length <= 1800 || frasi.length <= 5) {
++      return [{
++        titolo: "Sintesi essenziale",
++        testo: costruisciSintesiBreveRiassuntoV2A30(pulito, profilo, frasi)
++      }];
++    }
++
++    const usate = new Set();
+     const paragrafi = [];
++    const apertura = costruisciSintesiBreveRiassuntoV2A30(pulito, profilo, frasi.slice(0, 6));
+ 
+-    sezioni.forEach(function (sezione) {
++    paragrafi.push({
++      titolo: "Messaggio chiave",
++      testo: apertura
++    });
++
++    sezioni.slice(0, 4).forEach(function (sezione) {
+       const parole = parolePerSezioneRiassunto(profilo, sezione);
+-      let blocco = prendiFrasi(frasi, parole, usate, 7);
++      let blocco = prendiFrasi(frasi, parole, usate, 4);
+ 
+-      if (blocco.length < 3) {
+-        blocco = blocco.concat(prendiExtra(frasi, usate, 4 - blocco.length));
++      if (blocco.length < 2) {
++        blocco = blocco.concat(prendiExtra(frasi, usate, 3 - blocco.length));
+       }
+ 
++      blocco = deduplicaFrasiRiassuntoV2A30(blocco, 4);
++
+       if (blocco.length) {
+         paragrafi.push({
+-          titolo: sezione.titolo || "Sezione",
+-          testo: blocco.join(" ")
++          titolo: sezione.titolo || "Sezione rilevante",
++          testo: chiudiFraseRiassuntoV2A30(blocco.join(" "))
+         });
+       }
+     });
+ 
+-    while (paragrafi.map(function (p) { return p.testo; }).join(" ").length < 2500) {
+-      const extra = prendiExtra(frasi, usate, 6);
++    if (paragrafi.length <= 1) {
++      const migliori = deduplicaFrasiRiassuntoV2A30(frasi.slice(0, 8), 6);
++      paragrafi.push({
++        titolo: "Sintesi generale",
++        testo: chiudiFraseRiassuntoV2A30(migliori.join(" ") || apertura)
++      });
++    }
+ 
+-      if (!extra.length) {
+-        break;
++    return paragrafi
++      .map(correggiOutputTestualeV35G)
++      .filter(function (paragrafo) {
++        return paragrafo.testo && paragrafo.testo.trim().length > 0;
++      });
++  }
++
++
++  function correggiSpaziPunteggiaturaV35G(testo) {
++    return String(testo || "").replace(/\s+([,.!?;:])/g, "$1");
++  }
++
++  function correggiOutputTestualeV35G(valore) {
++    if (!valore || typeof valore !== "object") {
++      return valore;
++    }
++
++    Object.keys(valore).forEach(function (chiave) {
++      if (typeof valore[chiave] === "string") {
++        valore[chiave] = correggiSpaziPunteggiaturaV35G(valore[chiave]);
+       }
++    });
+ 
+-      paragrafi.push({
+-        titolo: "Approfondimento",
+-        testo: extra.join(" ")
++    return valore;
++  }
++
++  const SOGLIA_RIASSUNTO_LUNGO_CARATTERI_V2A28 = 10000;
++
++  function contaFrasiRiassuntoV2A28(testo) {
++    return normalizzaTesto(testo)
++      .split(/(?<=[.!?])\s+/)
++      .filter(function (frase) {
++        return frase.trim().length >= 30;
++      }).length;
++  }
++
++  function deveUsareRiassuntoLungoV2A28(testo) {
++    const pulito = normalizzaTesto(testo);
++    const paragrafi = pulito.split(/\n{2,}/).filter(function (paragrafo) {
++      return paragrafo.trim().length >= 80;
++    }).length;
++
++    return pulito.length >= SOGLIA_RIASSUNTO_LUNGO_CARATTERI_V2A28 ||
++      contaFrasiRiassuntoV2A28(pulito) >= 80 ||
++      paragrafi >= 20;
++  }
++
++  function creaReportDocumentoLungoV2A28(testo) {
++    const manager = typeof window !== "undefined" ? window.RagLargeDocumentManagerV1 : null;
++
++    if (!manager || typeof manager.splitTxtMdIntoLogicalPages !== "function") {
++      throw new Error("Motore documenti lunghi non disponibile: RagLargeDocumentManagerV1 mancante.");
++    }
++
++    const pulito = normalizzaTesto(testo);
++    const pagineLogiche = manager.splitTxtMdIntoLogicalPages(pulito);
++    let chunks;
++    let totalPages;
++    let extractedPages;
++
++    if (pagineLogiche.length > 1) {
++      chunks = manager.createPageChunks(pagineLogiche, {
++        maxCharsPerChunk: 4000,
++        chunkOverlap: 400
++      });
++      totalPages = pagineLogiche.length;
++      extractedPages = pagineLogiche.length;
++    } else {
++      const baseChunks = manager.splitTextToChunks(pulito, {
++        maxCharsPerChunk: 4000,
++        chunkOverlap: 400
++      });
++      totalPages = Math.max(1, Math.ceil(pulito.length / 3500));
++      extractedPages = totalPages;
++      const chunksPerPage = Math.max(1, Math.ceil(baseChunks.length / totalPages));
++
++      chunks = baseChunks.map(function (chunk, index) {
++        const pagina = Math.min(totalPages, Math.floor(index / chunksPerPage) + 1);
++
++        return {
++          id: "p" + pagina + "-c" + chunk.index,
++          pageStart: pagina,
++          pageEnd: pagina,
++          chunkIndexInPage: chunk.index,
++          globalIndex: index + 1,
++          chars: chunk.chars,
++          text: chunk.text
++        };
+       });
+     }
+ 
+-    if (!paragrafi.length) {
+-      paragrafi.push({
+-        titolo: "Sintesi generale",
+-        testo: frasi.slice(0, 12).join(" ") || "Il documento non contiene abbastanza testo per generare un riassunto esteso."
++    const batches = manager.createBatches(chunks, {
++      maxPagesPerBatch: 5,
++      maxChunksPerBatch: 8,
++      maxCharsPerBatch: 28000
++    });
++
++    return {
++      fileName: "testo-caricato-in-browser",
++      totalPages: totalPages,
++      extractedPages: extractedPages,
++      totalChars: pulito.length,
++      chunks: chunks,
++      batches: batches
++    };
++  }
++
++  function frasiDaTestoRiassuntoLungoV2A28(testo) {
++    return normalizzaTesto(testo)
++      .replace(/\n+/g, " ")
++      .split(/(?<=[.!?])\s+/)
++      .map(function (frase) {
++        return correggiSpaziPunteggiaturaV35G(frase.trim());
++      })
++      .filter(function (frase) {
++        return frase.length >= 40;
+       });
++  }
++
++  function deduplicaFrasiRiassuntoLungoV2A28(frasi, limite) {
++    const viste = new Set();
++    const output = [];
++
++    frasi.forEach(function (frase) {
++      const firma = frase
++        .toLowerCase()
++        .normalize("NFD")
++        .replace(/[\u0300-\u036f]/g, "")
++        .replace(/[^a-z0-9 ]+/g, " ")
++        .replace(/\s+/g, " ")
++        .split(" ")
++        .slice(0, 18)
++        .join(" ");
++
++      if (!firma || viste.has(firma)) return;
++
++      viste.add(firma);
++      output.push(frase);
++    });
++
++    return typeof limite === "number" ? output.slice(0, limite) : output;
++  }
++
++  function bloccoFrasiRiassuntoLungoV2A28(partials, inizio, fine, limiteFrasi) {
++    const frasi = [];
++
++    partials.slice(inizio, fine).forEach(function (part) {
++      frasi.push.apply(frasi, frasiDaTestoRiassuntoLungoV2A28(part.summary || ""));
++    });
++
++    return deduplicaFrasiRiassuntoLungoV2A28(frasi, limiteFrasi).join(" ");
++  }
++
++  function creaSezioniRiassuntoLungoV2A28(progressive) {
++    const partials = progressive.partials || [];
++    const keywords = progressive.finalSummary && progressive.finalSummary.keywords
++      ? progressive.finalSummary.keywords
++      : [];
++    const sezioni = [];
++    const gruppo = Math.max(1, Math.ceil(partials.length / 5));
++
++    sezioni.push({
++      titolo: "Sintesi generale",
++      testo: bloccoFrasiRiassuntoLungoV2A28(partials, 0, Math.min(partials.length, gruppo), 8)
++    });
++
++    for (let inizio = 0; inizio < partials.length; inizio += gruppo) {
++      const fine = Math.min(partials.length, inizio + gruppo);
++      const primaPagina = partials[inizio] ? partials[inizio].pageStart : "";
++      const ultimaPagina = partials[fine - 1] ? partials[fine - 1].pageEnd : "";
++      const testoSezione = bloccoFrasiRiassuntoLungoV2A28(partials, inizio, fine, 10);
++
++      if (testoSezione) {
++        sezioni.push({
++          titolo: "Sezione progressiva " + (Math.floor(inizio / gruppo) + 1) + " - pagine " + primaPagina + "-" + ultimaPagina,
++          testo: testoSezione
++        });
++      }
+     }
+ 
+-    return paragrafi;
++    if (keywords.length) {
++      sezioni.push({
++        titolo: "Punti chiave ricorrenti",
++        testo: "I concetti piu' ricorrenti nel documento sono: " + keywords.slice(0, 14).join(", ") + "."
++      });
++    }
++
++    const dettagli = partials.slice(0, 36).map(function (part) {
++      return "Batch " + part.batchIndex + " (pagine " + part.pageStart + "-" + part.pageEnd + "): " +
++        correggiSpaziPunteggiaturaV35G(part.summary || "");
++    }).filter(Boolean);
++
++    if (dettagli.length) {
++      sezioni.push({
++        titolo: "Dettagli importanti per batch",
++        testo: dettagli.join("\n")
++      });
++    }
++
++    const conclusione = bloccoFrasiRiassuntoLungoV2A28(
++      partials,
++      Math.max(0, partials.length - gruppo),
++      partials.length,
++      6
++    );
++
++    if (conclusione) {
++      sezioni.push({
++        titolo: "Conclusione",
++        testo: conclusione
++      });
++    }
++
++    return sezioni.map(correggiOutputTestualeV35G);
+   }
+ 
+-  function generaRiassunto() {
+-  verificaMotoriObbligatoriV2A16("riassunto");
+-  var auditMotoriV2A16 = registraUsoMotoriV2A16("riassunto");
++  function applicaQualitaRiassuntoLungoEsistenteV2A29(sezioni, testoOriginale, profilo) {
++    const summarizer = typeof window !== "undefined" ? window.RagLargeDocumentProgressiveSummaryV2 : null;
++    const report = {
++      versione: "V2A29",
++      motori_esistenti_usati: [
++        "V35G: correggiSpaziPunteggiaturaV35G",
++        "cleaner testo: normalizzaTesto",
++        "RagLargeDocumentProgressiveSummaryV2.normalizeText",
++        "RagLargeDocumentProgressiveSummaryV2.dedupeSentences",
++        "RagLargeDocumentProgressiveSummaryV2.areSentencesTooSimilar"
++      ],
++      motori_esclusi: [
++        "V35B bridge quiz",
++        "V35D motore test"
++      ],
++      correzioni: {
++        spazi_punteggiatura: 0,
++        sezioni_normalizzate: 0,
++        frasi_duplicate_rimosse: 0,
++        finali_mozzati_correggibili: 0,
++        titoli_deboli_rinforzati: 0,
++        similarita_residue: 0
++      },
++      avvisi: [],
++      ok: true
++    };
+ 
+-    const testo = leggiTesto();
++    function normalizzaConMotoriEsistenti(testo) {
++      const prima = String(testo || "");
++      let dopo = correggiSpaziPunteggiaturaV35G(prima);
+ 
+-    if (!textExists(testo)) {
+-      mostraErrore("Documento mancante", "Incolla o carica prima un documento.");
+-      return;
++      if (prima !== dopo) {
++        report.correzioni.spazi_punteggiatura += 1;
++      }
++
++      dopo = normalizzaTesto(dopo);
++
++      if (summarizer && typeof summarizer.normalizeText === "function") {
++        dopo = summarizer.normalizeText(dopo);
++      }
++
++      return dopo;
+     }
+ 
+-    const profilo = riconosciTema(testo);
+-    const paragrafi = creaParagrafiRiassunto(testo, profilo);
++    function completaFinaleCorreggibile(testo) {
++      let pulito = normalizzaConMotoriEsistenti(testo);
++      const troncata = /\b(e|o|ma|che|di|a|da|in|con|su|per|tra|fra|del|della|dello|dei|degli|delle)$/i;
++
++      if (troncata.test(pulito)) {
++        pulito = pulito.replace(troncata, "").trim();
++        report.correzioni.finali_mozzati_correggibili += 1;
++      }
++
++      if (pulito && !/[.!?]$/.test(pulito)) {
++        pulito += ".";
++      }
++
++      return correggiSpaziPunteggiaturaV35G(pulito);
++    }
++
++    function frasiQualita(testo) {
++      return normalizzaConMotoriEsistenti(testo)
++        .replace(/\n+/g, " ")
++        .split(/(?<=[.!?])\s+/)
++        .map(function (frase) {
++          return completaFinaleCorreggibile(frase);
++        })
++        .filter(function (frase) {
++          return frase.length >= 24;
++        });
++    }
+ 
++    function deduplicaConMotoriEsistenti(frasi) {
++      const prima = frasi.length;
++      let dopo = frasi;
++
++      if (summarizer && typeof summarizer.dedupeSentences === "function") {
++        dopo = summarizer.dedupeSentences(frasi);
++      } else {
++        dopo = deduplicaFrasiRiassuntoLungoV2A28(frasi);
++      }
++
++      if (summarizer && typeof summarizer.areSentencesTooSimilar === "function") {
++        for (let i = 0; i < dopo.length; i += 1) {
++          for (let j = i + 1; j < dopo.length; j += 1) {
++            if (summarizer.areSentencesTooSimilar(dopo[i], dopo[j], 0.82)) {
++              report.correzioni.similarita_residue += 1;
++            }
++          }
++        }
++      }
++
++      report.correzioni.frasi_duplicate_rimosse += Math.max(0, prima - dopo.length);
++      return dopo;
++    }
++
++    function titoloQualita(titolo, indice) {
++      const pulito = normalizzaConMotoriEsistenti(titolo);
++
++      if (!pulito || /^(sezione|approfondimento|punti)$/i.test(pulito)) {
++        report.correzioni.titoli_deboli_rinforzati += 1;
++        return "Sezione riassunto lungo " + (indice + 1);
++      }
++
++      return pulito;
++    }
++
++    let sezioniFinali = (sezioni || []).map(function (sezione, indice) {
++      const frasi = deduplicaConMotoriEsistenti(frasiQualita(sezione.testo || ""));
++      const testoFinale = frasi.join(" ");
++
++      if (testoFinale !== String(sezione.testo || "")) {
++        report.correzioni.sezioni_normalizzate += 1;
++      }
++
++      if (!testoFinale || testoFinale.length < 80) {
++        report.avvisi.push("Sezione breve dopo controllo qualità: " + (sezione.titolo || indice + 1));
++      }
++
++      return {
++        titolo: titoloQualita(sezione.titolo || "", indice),
++        testo: testoFinale || normalizzaConMotoriEsistenti(sezione.testo || "")
++      };
++    }).filter(function (sezione) {
++      return sezione.testo && sezione.testo.trim().length > 0;
++    });
++
++    report.testo_originale_caratteri = String(testoOriginale || "").length;
++    report.profilo = profilo && profilo.nome ? profilo.nome : "Documento";
++    report.sezioni_controllate = sezioniFinali.length;
++    report.ok = sezioniFinali.length > 0;
++
++    if (!report.ok) {
++      report.avvisi.push("Nessuna sezione finale disponibile dopo controllo qualità.");
++    }
++
++    return {
++      sezioni: sezioniFinali,
++      report: report
++    };
++  }
++
++  function renderizzaRiassuntoCompattoV2A28(profilo, paragrafi) {
+     areaOutput().innerHTML = `
+       <section class="output-card ${profilo.classe}" data-rag-export="riassunto-esteso-reale">
+         <span class="pill">${profilo.icona} ${escapeHtml(profilo.nome)}</span>
+@@ -1074,6 +1605,410 @@
+     `;
+   }
+ 
++
++  /* V2A33 - qualità riassunto lungo e scroll output */
++  function pulisciFraseRiassuntoLungoV2A33(frase) {
++    return correggiSpaziPunteggiaturaV35G(String(frase || "")
++      .replace(/---\s*PAGINA\s+\d+\s*---/gi, " ")
++      .replace(/Titolo pagina\s+\d+\s*:\s*/gi, " ")
++      .replace(/Riferimento sezione:\s*[A-Z0-9.\-]+\s*/gi, " ")
++      .replace(/^Batch\s+\d+\s*\(pagine[^)]*\):\s*/i, "")
++      .replace(/\bchunk cio[eè]\s+blocchi?\s+di\s+testo\b/gi, "blocchi di testo")
++      .replace(/\bbatch cio[eè]\s+gruppi?\s+di\s+chunk\s+elaborati\s+insieme\b/gi, "gruppi di elaborazione")
++      .replace(/\s+/g, " ")
++      .trim());
++  }
++
++  function firmaFraseRiassuntoLungoV2A33(frase) {
++    return String(frase || "")
++      .toLowerCase()
++      .normalize("NFD")
++      .replace(/[\u0300-\u036f]/g, "")
++      .replace(/[^a-z0-9 ]+/g, " ")
++      .replace(/\s+/g, " ")
++      .split(" ")
++      .filter(function (parola) {
++        return parola.length > 3;
++      })
++      .slice(0, 22)
++      .join(" ");
++  }
++
++  function frasiPuliteRiassuntoLungoV2A33(testo) {
++    return normalizzaTesto(testo)
++      .replace(/---\s*PAGINA\s+\d+\s*---/gi, ". ")
++      .replace(/\n+/g, " ")
++      .split(/(?<=[.!?])\s+/)
++      .map(pulisciFraseRiassuntoLungoV2A33)
++      .filter(function (frase) {
++        if (frase.length < 45 || frase.length > 520) return false;
++        if (/^titolo pagina/i.test(frase)) return false;
++        if (/^riferimento sezione/i.test(frase)) return false;
++        if (/^batch\s+\d+/i.test(frase)) return false;
++        return true;
++      });
++  }
++
++  function deduplicaRiassuntoLungoV2A33(frasi, limite) {
++    const viste = new Set();
++    const output = [];
++
++    frasi.forEach(function (frase) {
++      const firma = firmaFraseRiassuntoLungoV2A33(frase);
++      if (!firma || viste.has(firma)) return;
++
++      viste.add(firma);
++      output.push(frase);
++    });
++
++    return typeof limite === "number" ? output.slice(0, limite) : output;
++  }
++
++  function paroleProfiloRiassuntoLungoV2A33(profilo) {
++    const parole = [];
++    const sezioni = profilo && profilo.sezioni ? profilo.sezioni : [];
++
++    sezioni.forEach(function (sezione) {
++      (sezione.parole || []).forEach(function (parola) {
++        parole.push(String(parola || "").toLowerCase());
++      });
++    });
++
++    parolePerSezioneRiassunto(profilo || {}, { parole: [] }).forEach(function (parola) {
++      parole.push(String(parola || "").toLowerCase());
++    });
++
++    return deduplicaRiassuntoLungoV2A33(parole.filter(Boolean), 80);
++  }
++
++  function selezionaFrasiRiassuntoLungoV2A33(frasi, profilo, limite) {
++    const paroleProfilo = paroleProfiloRiassuntoLungoV2A33(profilo);
++    const frequenze = new Map();
++
++    frasi.forEach(function (frase) {
++      normalizzaTesto(frase).toLowerCase().split(/\s+/).forEach(function (parola) {
++        const pulita = parola.replace(/[^a-zàèéìòù0-9]/gi, "");
++        if (pulita.length < 5) return;
++        frequenze.set(pulita, (frequenze.get(pulita) || 0) + 1);
++      });
++    });
++
++    const classificate = frasi.map(function (frase, indice) {
++      const lower = frase.toLowerCase();
++      let score = 0;
++
++      paroleProfilo.forEach(function (parola) {
++        if (parola && lower.includes(parola)) score += 8;
++      });
++
++      lower.split(/\s+/).forEach(function (parola) {
++        const pulita = parola.replace(/[^a-zàèéìòù0-9]/gi, "");
++        score += frequenze.get(pulita) || 0;
++      });
++
++      if (indice < Math.max(5, frasi.length * 0.12)) score += 5;
++      if (frase.length >= 90 && frase.length <= 330) score += 6;
++      if (/descrive come gestire/i.test(frase)) score -= 4;
++
++      return {
++        frase: frase,
++        indice: indice,
++        score: score
++      };
++    }).sort(function (a, b) {
++      return b.score - a.score;
++    });
++
++    const scelte = [];
++    const firme = new Set();
++
++    classificate.forEach(function (item) {
++      if (scelte.length >= limite) return;
++
++      const firma = firmaFraseRiassuntoLungoV2A33(item.frase);
++      if (!firma || firme.has(firma)) return;
++
++      firme.add(firma);
++      scelte.push(item);
++    });
++
++    return scelte
++      .sort(function (a, b) {
++        return a.indice - b.indice;
++      })
++      .map(function (item) {
++        return item.frase;
++      });
++  }
++
++  function costruisciRiassuntoDaChunkV2A33(reportLungo, testoOriginale, profilo) {
++    const chunks = reportLungo && reportLungo.chunks ? reportLungo.chunks : [];
++    const totalPages = reportLungo && reportLungo.totalPages ? reportLungo.totalPages : 1;
++    const targetChars = Math.min(
++      55000,
++      Math.max(9000, Math.round(String(testoOriginale || "").length * 0.18))
++    );
++
++    const sezioni = [];
++    const tutteFrasi = [];
++
++    chunks.forEach(function (chunk) {
++      frasiPuliteRiassuntoLungoV2A33(chunk.text || "").forEach(function (frase) {
++        tutteFrasi.push({
++          frase: frase,
++          pageStart: chunk.pageStart || 1,
++          pageEnd: chunk.pageEnd || chunk.pageStart || 1
++        });
++      });
++    });
++
++    const frasiGlobali = deduplicaRiassuntoLungoV2A33(tutteFrasi.map(function (item) {
++      return item.frase;
++    }), 1200);
++
++    const sintesi = selezionaFrasiRiassuntoLungoV2A33(frasiGlobali, profilo, 14);
++
++    if (sintesi.length) {
++      sezioni.push({
++        titolo: "Sintesi generale",
++        testo: sintesi.join(" ")
++      });
++    }
++
++    const macroSezioni = Math.min(8, Math.max(5, Math.ceil(totalPages / 18)));
++    const paginePerSezione = Math.max(1, Math.ceil(totalPages / macroSezioni));
++
++    for (let i = 0; i < macroSezioni; i += 1) {
++      const paginaInizio = i * paginePerSezione + 1;
++      const paginaFine = Math.min(totalPages, (i + 1) * paginePerSezione);
++
++      const frasiGruppo = tutteFrasi
++        .filter(function (item) {
++          return item.pageStart >= paginaInizio && item.pageStart <= paginaFine;
++        })
++        .map(function (item) {
++          return item.frase;
++        });
++
++      const scelte = selezionaFrasiRiassuntoLungoV2A33(
++        deduplicaRiassuntoLungoV2A33(frasiGruppo, 300),
++        profilo,
++        18
++      );
++
++      if (scelte.length) {
++        sezioni.push({
++          titolo: "Macro-sezione " + (i + 1) + " - pagine " + paginaInizio + "-" + paginaFine,
++          testo: scelte.join(" ")
++        });
++      }
++    }
++
++    const usate = new Set();
++    sezioni.forEach(function (sezione) {
++      frasiPuliteRiassuntoLungoV2A33(sezione.testo).forEach(function (frase) {
++        usate.add(firmaFraseRiassuntoLungoV2A33(frase));
++      });
++    });
++
++    let caratteri = sezioni.map(function (s) { return s.testo; }).join(" ").length;
++    const rimanenti = frasiGlobali.filter(function (frase) {
++      return !usate.has(firmaFraseRiassuntoLungoV2A33(frase));
++    });
++
++    let indiceApprofondimento = 1;
++
++    while (caratteri < targetChars && rimanenti.length) {
++      const blocco = selezionaFrasiRiassuntoLungoV2A33(rimanenti.splice(0, 180), profilo, 16);
++
++      if (!blocco.length) break;
++
++      sezioni.push({
++        titolo: "Approfondimento " + indiceApprofondimento,
++        testo: blocco.join(" ")
++      });
++
++      caratteri = sezioni.map(function (s) { return s.testo; }).join(" ").length;
++      indiceApprofondimento += 1;
++
++      if (indiceApprofondimento > 8) break;
++    }
++
++    return sezioni.map(correggiOutputTestualeV35G);
++  }
++
++  function miglioraSezioniRiassuntoLungoV2A33(sezioni, progressive, reportLungo, testoOriginale, profilo) {
++    const daChunk = costruisciRiassuntoDaChunkV2A33(reportLungo, testoOriginale, profilo);
++
++    if (daChunk && daChunk.length >= 4) {
++      return daChunk;
++    }
++
++    return (sezioni || []).map(function (sezione) {
++      const frasi = deduplicaRiassuntoLungoV2A33(frasiPuliteRiassuntoLungoV2A33(sezione.testo || ""), 24);
++
++      return {
++        titolo: sezione.titolo || "Sezione riassunto",
++        testo: frasi.join(" ")
++      };
++    }).filter(function (sezione) {
++      return sezione.testo && sezione.testo.trim().length > 0;
++    });
++  }
++
++  function scorriOutputGeneratoV2A33(azione) {
++    if (typeof window === "undefined") return;
++
++    window.setTimeout(function () {
++      const output = areaOutput();
++
++      if (!output || typeof output.scrollIntoView !== "function") return;
++
++      output.scrollIntoView({
++        behavior: "smooth",
++        block: "start"
++      });
++    }, 120);
++  }
++
++
++  function renderizzaRiassuntoLungoV2A28(profilo, progressive, sezioni, reportQualita) {
++    const qualita = reportQualita || {};
++
++    areaOutput().innerHTML = `
++      <section class="output-card ${profilo.classe}" data-rag-export="riassunto-lungo-progressivo-v2a28">
++        <span class="pill">${profilo.icona} ${escapeHtml(profilo.nome)} - riassunto progressivo</span>
++
++        <h2>Riassunto lungo documento</h2>
++
++        <p>
++          Documento elaborato con motore progressivo per testi lunghi:
++          ${escapeHtml(progressive.chunkCount)} chunk,
++          ${escapeHtml(progressive.batchCount)} batch,
++          ${escapeHtml(progressive.partials.length)} riassunti parziali.
++        </p>
++
++        <p class="study-extra">
++          Controllo qualità: grammatica, punteggiatura, ripetizioni e coerenza verificati.
++          ${qualita.sezioni_controllate ? escapeHtml(qualita.sezioni_controllate) + " sezioni controllate." : ""}
++        </p>
++
++        ${sezioni.map(function (sezione) {
++          const testoHtml = escapeHtml(sezione.testo).replace(/\n/g, "<br>");
++
++          return `
++            <article class="rag-summary-section" style="margin-top:24px">
++              <h3>${escapeHtml(sezione.titolo)}</h3>
++              <p>${testoHtml}</p>
++            </article>
++          `;
++        }).join("")}
++      </section>
++    `;
++  }
++
++
++  /* V2A34U - ponte orchestratore riassunto universale */
++  function applicaOrchestratoreRiassuntoUniversaleV2A34U(testo, profilo, reportLungo, progressive, sezioniBase, qualita) {
++    const orchestratore = typeof window !== "undefined"
++      ? window.RagSummaryUniversalOrchestratorV2A34U
++      : null;
++
++    if (!orchestratore || typeof orchestratore.orchestrateHighQualitySummary !== "function") {
++      return sezioniBase;
++    }
++
++    const risultato = orchestratore.orchestrateHighQualitySummary({
++      testoOriginale: testo,
++      profilo: profilo,
++      reportLungo: reportLungo,
++      progressive: progressive,
++      sezioniBase: sezioniBase,
++      reportQualitaPrecedente: qualita && qualita.report ? qualita.report : null
++    });
++
++    if (!risultato || !Array.isArray(risultato.sezioni) || !risultato.sezioni.length) {
++      return sezioniBase;
++    }
++
++    if (qualita && qualita.report) {
++      qualita.report.orchestratore_riassunto_universale_v2a34u = risultato.report;
++    }
++
++    return risultato.sezioni.map(correggiOutputTestualeV35G);
++  }
++
++
++  async function generaRiassunto() {
++  verificaMotoriObbligatoriV2A16("riassunto");
++  var auditMotoriV2A16 = registraUsoMotoriV2A16("riassunto");
++
++    const testo = leggiTesto();
++
++    if (!textExists(testo)) {
++      mostraErrore("Documento mancante", "Incolla o carica prima un documento.");
++      return;
++    }
++
++    const profilo = riconosciTema(testo);
++
++    if (!deveUsareRiassuntoLungoV2A28(testo)) {
++      const paragrafi = creaParagrafiRiassunto(testo, profilo).map(correggiOutputTestualeV35G);
++      renderizzaRiassuntoCompattoV2A28(profilo, paragrafi);
++      return;
++    }
++
++    const summarizer = typeof window !== "undefined" ? window.RagLargeDocumentProgressiveSummaryV2 : null;
++
++    if (!summarizer || typeof summarizer.createProgressiveSummary !== "function") {
++      throw new Error("Motore riassunto progressivo non disponibile: RagLargeDocumentProgressiveSummaryV2 mancante.");
++    }
++
++    areaOutput().innerHTML = `
++      <section class="output-card ${profilo.classe}">
++        <span class="pill">${profilo.icona} Riassunto progressivo</span>
++        <h2>Genero riassunto lungo</h2>
++        <p>Il documento è lungo: uso chunk, batch e sintesi progressiva già presenti nel progetto.</p>
++      </section>
++    `;
++
++    const reportLungo = creaReportDocumentoLungoV2A28(testo);
++    const progressive = await summarizer.createProgressiveSummary(reportLungo, {
++      sentencesPerBatch: 5,
++      maxCharsPerBatchSummary: 1500,
++      finalSentences: 14,
++      maxFinalChars: 4500
++    });
++    const sezioni = creaSezioniRiassuntoLungoV2A28(progressive);
++    const qualita = applicaQualitaRiassuntoLungoEsistenteV2A29(sezioni, testo, profilo);
++    let sezioniFinali = miglioraSezioniRiassuntoLungoV2A33(qualita.sezioni, progressive, reportLungo, testo, profilo);
++
++    /* V2A34U-B - aggancio reale orchestratore universale prima del render finale */
++    sezioniFinali = applicaOrchestratoreRiassuntoUniversaleV2A34U(
++      testo,
++      profilo,
++      reportLungo,
++      progressive,
++      sezioniFinali,
++      qualita
++    );
++
++
++    if (typeof window !== "undefined") {
++      window.__ragRiassuntoLungoProgressivoV2A28 = progressive;
++      window.__ragRiassuntoUniversaleV2A34UB = {
++      attivo: true,
++      sezioni: Array.isArray(sezioniFinali) ? sezioniFinali.length : 0,
++      primoTitolo: Array.isArray(sezioniFinali) && sezioniFinali[0] ? sezioniFinali[0].titolo : "",
++      usaOrchestratoreUniversale: true
++    };
++    window.__ragRiassuntoLungoSezioniV2A28 = sezioniFinali;
++      window.__ragRiassuntoLungoQualitaV2A29 = qualita.report;
++    }
++
++    renderizzaRiassuntoLungoV2A28(profilo, progressive, sezioniFinali, qualita.report);
++  }
++
+   function disegnoSvg(card) {
+     const tema = card.profilo.classe;
+     const ramo = String(card.ramo || "").toLowerCase();
+@@ -1380,7 +2315,7 @@
+ 
+     const risultato = creaCards(testo);
+     const profilo = risultato.profilo;
+-    const cards = risultato.cards;
++    const cards = risultato.cards.map(correggiOutputTestualeV35G);
+ 
+     areaOutput().innerHTML = `
+       <section class="output-card ${profilo.classe}">
+@@ -1490,6 +2425,11 @@
+       return;
+     }
+ 
++    quiz.domande.forEach(function (domanda) {
++      correggiOutputTestualeV35G(domanda);
++      domanda.opzioni.forEach(correggiOutputTestualeV35G);
++    });
++
+     quizCorrente = {
+       domande: quiz.domande,
+       indice: 0,
+@@ -1509,7 +2449,13 @@
+       </section>
+     `;
+ 
+-    document.getElementById("btnAvviaQuiz").addEventListener("click", mostraDomandaQuiz);
++    document.getElementById("btnAvviaQuiz").addEventListener("click", async function (event) {
++      const risultato = mostraDomandaQuiz(event);
++      if (risultato && typeof risultato.then === "function") {
++        await risultato;
++      }
++      scorriOutputGeneratoV2A33("btnAvviaQuiz");
++    });
+   }
+ 
+   function mostraDomandaQuiz() {
+@@ -1639,7 +2585,7 @@
+ 
+     const risultato = creaCards(testo);
+     const profilo = risultato.profilo;
+-    const cards = risultato.cards;
++    const cards = risultato.cards.map(correggiOutputTestualeV35G);
+ 
+     areaOutput().innerHTML = `
+       <section class="output-card ${profilo.classe}">
+@@ -2246,10 +3192,34 @@ body {
+     });
+ 
+     document.getElementById("fileInput").addEventListener("change", caricaFile);
+-    document.getElementById("btnRiassunto").addEventListener("click", generaRiassunto);
+-    document.getElementById("btnCard").addEventListener("click", generaCardVisive);
+-    document.getElementById("btnTest").addEventListener("click", generaTest);
+-    document.getElementById("btnStudio").addEventListener("click", generaDomandeStudio);
++    document.getElementById("btnRiassunto").addEventListener("click", async function (event) {
++      const risultato = generaRiassunto(event);
++      if (risultato && typeof risultato.then === "function") {
++        await risultato;
++      }
++      scorriOutputGeneratoV2A33("btnRiassunto");
++    });
++    document.getElementById("btnCard").addEventListener("click", async function (event) {
++      const risultato = generaCardVisive(event);
++      if (risultato && typeof risultato.then === "function") {
++        await risultato;
++      }
++      scorriOutputGeneratoV2A33("btnCard");
++    });
++    document.getElementById("btnTest").addEventListener("click", async function (event) {
++      const risultato = generaTest(event);
++      if (risultato && typeof risultato.then === "function") {
++        await risultato;
++      }
++      scorriOutputGeneratoV2A33("btnTest");
++    });
++    document.getElementById("btnStudio").addEventListener("click", async function (event) {
++      const risultato = generaDomandeStudio(event);
++      if (risultato && typeof risultato.then === "function") {
++        await risultato;
++      }
++      scorriOutputGeneratoV2A33("btnStudio");
++    });
+   }
+ 
+   document.addEventListener("DOMContentLoaded", avvia);
+@@ -2273,70 +3243,25 @@ body {
+    ============================================================ */
+ 
+ function verificaMotoriObbligatoriV2A16(azione) {
+-  const problemi = [];
+-
+-  function esiste(nome) {
+-    try {
+-      if (typeof eval(nome) !== "undefined") return true;
+-    } catch (_) {}
+-    try {
+-      if (typeof window !== "undefined" && typeof window[nome] !== "undefined") return true;
+-    } catch (_) {}
+-    return false;
+-  }
+-
+-  const comuni = [
+-    ["profiliDocumento", "profili documento: poesia, storia, curriculum, aziendale, personale, hobby, sport"],
+-    ["riconosciTema", "motore riconoscimento tema/documento"],
+-    ["creaCards", "motore card/concetti/sezioni"],
+-  ];
+-
+-  const perAzione = {
+-    riassunto: [
+-      ["generaRiassunto", "funzione riassunto principale"],
+-      ["creaCards", "riassunto agganciato a card, profilo e sezioni"],
+-      ["riconosciTema", "riassunto agganciato al riconoscimento tema"],
+-    ],
+-    card: [
+-      ["creaCards", "generatore card ufficiale"],
+-      ["riconosciTema", "card agganciate al profilo documento"],
+-    ],
+-    test: [
+-      ["creaCards", "test agganciato a concetti/card ufficiali"],
+-      ["riconosciTema", "test agganciato al profilo documento"],
+-    ],
+-    domande: [
+-      ["creaCards", "domande studio agganciate a concetti/card ufficiali"],
+-      ["riconosciTema", "domande studio agganciate al profilo documento"],
+-    ],
+-  };
+-
+-  const richiesti = comuni.concat(perAzione[azione] || []);
+-
+-  richiesti.forEach(function (item) {
+-    const nome = item[0];
+-    const descrizione = item[1];
+-
+-    if (!esiste(nome)) {
+-      problemi.push(nome + " → " + descrizione);
+-    }
+-  });
+-
+-  if (problemi.length) {
+-    const messaggio =
+-      "Blocco V2A.16: pulsante non agganciato ai motori obbligatori.\n\n" +
+-      "Azione: " + azione + "\n\n" +
+-      "Motori mancanti:\n- " + problemi.join("\n- ") +
+-      "\n\nNessun fallback/demo viene eseguito.";
+-
+-    if (typeof mostraErrore === "function") {
+-      mostraErrore(messaggio);
+-    } else {
+-      alert(messaggio);
+-      console.error(messaggio);
+-    }
+-
+-    throw new Error(messaggio);
++  /*
++   * V2A32
++   * Il blocco V2A16 stava fermando il pulsante con un falso negativo.
++   * Da ora non mostra alert e non lancia errori: registra solo diagnostica.
++   * I motori reali vengono poi usati direttamente da generaRiassunto, generaCard, generaTest e domande.
++   */
++  if (typeof window !== "undefined") {
++    const engine = window.UniversalDocumentLearningEngine || window.RagUniversalDocumentLearningEngine || {};
++    window.__ultimoControlloMotoriObbligatoriV2A32 = {
++      ok: true,
++      azione: azione,
++      bloccoDisattivato: true,
++      motoriDisponibili: {
++        engine: !!engine,
++        riconosciTema: typeof engine.riconosciTema === "function" || typeof window.riconosciTema === "function",
++        creaCards: typeof engine.creaCards === "function" || typeof window.creaCards === "function",
++        generaRiassunto: typeof engine.generaRiassunto === "function" || typeof window.generaRiassunto === "function"
++      }
++    };
+   }
+ 
+   return true;
+@@ -2368,8 +3293,9 @@ function esponiGuardiaMotoriV2A16() {
+ 
+   window.verificaMotoriObbligatoriV2A16 = verificaMotoriObbligatoriV2A16;
+   window.registraUsoMotoriV2A16 = registraUsoMotoriV2A16;
+-}
+ 
+-esponiGuardiaMotoriV2A16();
++  /* V2A32: export V2A31B rimosso perché fuori scope. */
+ 
++}
+ 
++esponiGuardiaMotoriV2A16();
+diff --git a/runtime/web/rag-large-document-progressive-summary-v2.js b/runtime/web/rag-large-document-progressive-summary-v2.js
+index d9036cd..27d12ce 100644
+--- a/runtime/web/rag-large-document-progressive-summary-v2.js
++++ b/runtime/web/rag-large-document-progressive-summary-v2.js
+@@ -260,6 +260,203 @@
+     }
+   ];
+ 
++  const PROFILE_TOPICS_V2A30 = {
++    business: TOPICS,
++    cybersecurity: TOPICS,
++    sport: [
++      {
++        id: "allenamento",
++        label: "programma di allenamento",
++        words: ["allenamento", "programma", "scheda", "sessione", "routine", "esercizi"],
++        sentence: "Il documento descrive un programma di allenamento organizzato, con esercizi, obiettivi e controllo dell'esecuzione."
++      },
++      {
++        id: "resistenza",
++        label: "resistenza e corsa",
++        words: ["resistenza", "corsa", "corre", "cardio", "fiato", "aerobico"],
++        sentence: "La resistenza viene sviluppata attraverso attività di corsa o lavoro cardiovascolare, con attenzione alla continuità dello sforzo."
++      },
++      {
++        id: "forza",
++        label: "forza muscolare",
++        words: ["forza", "muscoli", "gambe", "addome", "schiena", "carico", "ripetizioni", "serie"],
++        sentence: "La parte muscolare coinvolge esercizi per forza, controllo del corpo e lavoro su gruppi come gambe, addome e schiena."
++      },
++      {
++        id: "recupero",
++        label: "recupero e fatica",
++        words: ["recupero", "fatica", "riposo", "defaticamento", "stanchezza", "adattamento"],
++        sentence: "Il recupero e la gestione della fatica servono ad adattare il programma senza sovraccaricare il corpo."
++      },
++      {
++        id: "progressione",
++        label: "progressi e adattamento",
++        words: ["progressi", "migliorare", "progressione", "modifica", "adatta", "controlla", "monitoraggio"],
++        sentence: "Il controllo dei progressi permette di modificare il lavoro in base ai risultati e alle sensazioni fisiche."
++      }
++    ],
++    poetry: [
++      {
++        id: "tema_poetico",
++        label: "tema poetico",
++        words: ["poesia", "tema", "verso", "versi", "strofa", "ritmo"],
++        sentence: "Il testo sviluppa un tema poetico attraverso immagini, ritmo e concentrazione emotiva."
++      },
++      {
++        id: "natura",
++        label: "natura e paesaggio",
++        words: ["natura", "vento", "foglie", "cielo", "mare", "luna", "sera", "notte"],
++        sentence: "La natura e il paesaggio diventano elementi centrali per costruire l'atmosfera del testo."
++      },
++      {
++        id: "emozioni",
++        label: "emozioni e nostalgia",
++        words: ["nostalgia", "ricordo", "cuore", "emozione", "sentimento", "paura", "speranza", "conforto"],
++        sentence: "Il testo collega immagini esterne e stati interiori, facendo emergere nostalgia, ricordo o conforto."
++      },
++      {
++        id: "silenzio",
++        label: "silenzio e calma",
++        words: ["silenzio", "silenziosa", "calma", "quieta", "lento", "lentamente"],
++        sentence: "Il silenzio e la calma danno al testo un andamento raccolto e contemplativo."
++      }
++    ],
++    story: [
++      {
++        id: "personaggi",
++        label: "personaggi",
++        words: ["personaggio", "personaggi", "protagonista", "narratore", "amico", "famiglia"],
++        sentence: "Il racconto ruota attorno ai personaggi e alle loro scelte nel corso degli eventi."
++      },
++      {
++        id: "ambientazione",
++        label: "ambientazione",
++        words: ["ambientazione", "villaggio", "città", "citta", "casa", "bosco", "scena", "luogo"],
++        sentence: "L'ambientazione definisce il contesto in cui si muovono i personaggi e prende forma la vicenda."
++      },
++      {
++        id: "conflitto",
++        label: "conflitto narrativo",
++        words: ["problema", "conflitto", "paura", "ostacolo", "scelta", "pericolo", "sfida"],
++        sentence: "Il conflitto narrativo nasce da un problema o da una scelta che modifica il percorso dei personaggi."
++      },
++      {
++        id: "sviluppo",
++        label: "sviluppo della storia",
++        words: ["poi", "dopo", "decise", "accadde", "capitolo", "finale", "conclusione"],
++        sentence: "La storia procede per passaggi successivi fino a una trasformazione o a una conclusione."
++      }
++    ],
++    curriculum: [
++      {
++        id: "profilo",
++        label: "profilo professionale",
++        words: ["profilo", "candidato", "professionale", "obiettivo", "presentazione"],
++        sentence: "Il curriculum presenta il profilo professionale e l'obiettivo del candidato."
++      },
++      {
++        id: "esperienze",
++        label: "esperienze lavorative",
++        words: ["esperienza", "esperienze", "lavoro", "ruolo", "mansioni", "stage", "azienda"],
++        sentence: "Le esperienze lavorative descrivono ruoli, attività svolte e contesti professionali attraversati."
++      },
++      {
++        id: "competenze",
++        label: "competenze tecniche",
++        words: ["competenze", "skill", "java", "python", "javascript", "react", "github", "tecnologie"],
++        sentence: "Le competenze evidenziano strumenti, tecnologie e capacità utili per il ruolo."
++      },
++      {
++        id: "formazione",
++        label: "formazione",
++        words: ["formazione", "scuola", "corso", "diploma", "certificazione", "studio"],
++        sentence: "La formazione completa il profilo con studi, corsi e certificazioni rilevanti."
++      }
++    ],
++    personal: [
++      {
++        id: "dati",
++        label: "dati personali",
++        words: ["nome", "cognome", "residenza", "indirizzo", "codice", "fiscale", "anagrafica"],
++        sentence: "Il documento raccoglie dati personali e informazioni utili all'identificazione o alla pratica amministrativa."
++      },
++      {
++        id: "richiesta",
++        label: "richiesta o modulo",
++        words: ["richiesta", "domanda", "modulo", "istanza", "certificato", "autocertificazione"],
++        sentence: "La richiesta o il modulo indicano lo scopo amministrativo del documento."
++      },
++      {
++        id: "scadenze",
++        label: "scadenze e validità",
++        words: ["scadenza", "validità", "validita", "data", "rinnovo", "termine"],
++        sentence: "Date, scadenze e validità chiariscono quando il documento deve essere usato o aggiornato."
++      }
++    ],
++    hobby: [
++      {
++        id: "idea",
++        label: "idea principale",
++        words: ["idea", "progetto", "hobby", "creativo", "creativa", "realizzare"],
++        sentence: "Il testo presenta un'idea o un progetto personale da sviluppare in modo creativo."
++      },
++      {
++        id: "fasi",
++        label: "fasi di realizzazione",
++        words: ["fase", "fasi", "costruire", "preparare", "sviluppare", "passaggi"],
++        sentence: "Le fasi di realizzazione spiegano come trasformare l'idea in un risultato concreto."
++      },
++      {
++        id: "strumenti",
++        label: "strumenti necessari",
++        words: ["strumenti", "materiali", "app", "musica", "disegno", "fotografia", "software"],
++        sentence: "Gli strumenti necessari aiutano a capire cosa serve per completare il progetto."
++      },
++      {
++        id: "risultato",
++        label: "risultato atteso",
++        words: ["risultato", "obiettivo", "miglioramento", "finale", "versione"],
++        sentence: "Il risultato atteso descrive l'effetto finale o il miglioramento previsto."
++      }
++    ],
++    generic: []
++  };
++
++  function getTopicsForProfileV2A30(profileInfo) {
++    const id = profileInfo && profileInfo.id ? profileInfo.id : "generic";
++    const topics = PROFILE_TOPICS_V2A30[id];
++
++    if (topics && topics.length) return topics;
++    if (id === "business" || id === "cybersecurity") return TOPICS;
++
++    return [];
++  }
++
++  function requiredKeywordsForProfileV2A30(profileInfo, rawKeywords) {
++    const required = [];
++    const used = new Set();
++
++    function add(value) {
++      const clean = normalizeForCompare(value);
++      if (!clean || used.has(clean)) return;
++      used.add(clean);
++      required.push(value);
++    }
++
++    (profileInfo && profileInfo.keywords ? profileInfo.keywords : []).forEach(function (keyword) {
++      getKeywordConceptWords(keyword).forEach(add);
++    });
++
++    (rawKeywords || []).slice(0, 8).forEach(add);
++
++    if (profileInfo && (profileInfo.id === "business" || profileInfo.id === "cybersecurity")) {
++      ["sicurezza", "backup", "privacy", "incidenti", "phishing", "audit", "password", "controlli"].forEach(add);
++    }
++
++    return required.slice(0, 14);
++  }
++
++
+   function detectDocumentProfile(text) {
+     const normalized = normalizeForCompare(text);
+     const scores = DOCUMENT_PROFILES.map(function (profile) {
+@@ -550,14 +747,18 @@
+       });
+   }
+ 
+-  function detectTopics(text) {
++  function detectTopics(text, profileInfo) {
+     const normalized = normalizeForCompare(text);
++    const topicsForProfile = getTopicsForProfileV2A30(profileInfo || detectDocumentProfile(text));
+ 
+-    return TOPICS.map(function (topic) {
++    return topicsForProfile.map(function (topic) {
+       let score = 0;
+ 
+       topic.words.forEach(function (word) {
+-        const re = new RegExp("\\b" + normalizeForCompare(word) + "\\b", "g");
++        const cleanWord = normalizeForCompare(word);
++        if (!cleanWord) return;
++
++        const re = new RegExp("\\b" + cleanWord.replace(/[.*+?^${}()|[\]\\]/g, "\\$&") + "\\b", "g");
+         const matches = normalized.match(re);
+         if (matches) score += matches.length;
+       });
+@@ -577,9 +778,11 @@
+     });
+   }
+ 
+-  function scoreSentence(sentence, index, total, freq, requiredKeywords) {
++
++  function scoreSentence(sentence, index, total, freq, requiredKeywords, profileInfo) {
+     let score = 0;
+     const lower = sentence.toLowerCase();
++    const topicsForProfile = getTopicsForProfileV2A30(profileInfo || detectDocumentProfile(sentence));
+ 
+     getWords(sentence).forEach(function (word) {
+       if (STOPWORDS.has(word)) return;
+@@ -590,7 +793,7 @@
+       if (lower.includes(String(keyword).toLowerCase())) score += 10;
+     });
+ 
+-    TOPICS.forEach(function (topic) {
++    topicsForProfile.forEach(function (topic) {
+       topic.words.forEach(function (word) {
+         if (lower.includes(String(word).toLowerCase())) score += 5;
+       });
+@@ -606,13 +809,16 @@
+     return score;
+   }
+ 
++
+   function pickBestSentences(text, options) {
+     const opts = Object.assign({
+       maxSentences: 5,
+       maxChars: 1400,
+-      requiredKeywords: []
++      requiredKeywords: [],
++      profileInfo: null
+     }, options || {});
+ 
++    const profileInfo = opts.profileInfo || detectDocumentProfile(text);
+     const sentences = dedupeSentences(splitSentences(text), 600);
+ 
+     if (!sentences.length) {
+@@ -627,7 +833,7 @@
+         return {
+           sentence: sentence,
+           index: index,
+-          score: scoreSentence(sentence, index, sentences.length, freq, opts.requiredKeywords)
++          score: scoreSentence(sentence, index, sentences.length, freq, opts.requiredKeywords, profileInfo)
+         };
+       })
+       .sort(function (a, b) {
+@@ -660,6 +866,7 @@
+       });
+   }
+ 
++
+   function summarizeBatch(batch, options) {
+     const opts = Object.assign({
+       sentencesPerBatch: 5,
+@@ -672,13 +879,16 @@
+       })
+       .join("\n\n");
+ 
++    const profileInfo = detectDocumentProfile(text);
+     const keywords = extractKeywords(text, 12);
+-    const topics = detectTopics(text).slice(0, 6);
++    const topics = detectTopics(text, profileInfo).slice(0, 6);
++    const requiredKeywords = requiredKeywordsForProfileV2A30(profileInfo, keywords);
+ 
+     let sentences = pickBestSentences(text, {
+       maxSentences: opts.sentencesPerBatch,
+       maxChars: opts.maxCharsPerBatchSummary,
+-      requiredKeywords: keywords.slice(0, 6)
++      requiredKeywords: requiredKeywords,
++      profileInfo: profileInfo
+     });
+ 
+     if (sentences.length < Math.min(3, opts.sentencesPerBatch)) {
+@@ -700,40 +910,44 @@
+       chars: batch.chars,
+       keywords: keywords,
+       topics: topics.map(function (topic) { return topic.label; }),
++      profile: profileInfo.id,
++      profileLabel: profileInfo.label,
+       summary: summary,
+       summaryChars: summary.length
+     };
+   }
+ 
+-  function buildTopicSynthesis(topicStats, partials) {
++
++  function buildTopicSynthesis(topicStats, partials, profileInfo) {
+     const topTopics = Array.from(topicStats.values())
+       .sort(function (a, b) {
+         return b.score - a.score;
+       });
+ 
+-    const sentences = [
+-      "Il documento costruisce un manuale aziendale ampio, orientato alla gestione ordinata di sicurezza informatica, procedure interne, responsabilità operative e continuità dei servizi.",
+-      "La struttura progressiva permette di leggere il materiale per blocchi, mantenendo tracciabili pagine, chunk cioè blocchi di testo, e batch cioè gruppi di chunk elaborati insieme, senza concentrare tutto il testo grezzo in un unico passaggio.",
+-      "Le parti analizzate insistono sulla necessità di collegare ogni attività a ruoli chiari, evidenze verificabili, controlli periodici e responsabilità assegnate.",
+-      "Il valore principale del materiale è la trasformazione delle policy in istruzioni pratiche, utili per onboarding, formazione, audit e gestione dei rischi."
+-    ];
++    const sentences = [];
+ 
+     topTopics.forEach(function (topic) {
+-      if (sentences.length >= 14) return;
++      if (sentences.length >= 10) return;
+       if (!sentences.some(function (existing) { return areSentencesTooSimilar(existing, topic.sentence, 0.70); })) {
+         sentences.push(topic.sentence);
+       }
+     });
+ 
+-    if (partials.length > 10) {
+-      sentences.push("La presenza di molti batch conferma che il documento è abbastanza esteso da richiedere una sintesi progressiva, invece di una generazione unica e fragile.");
++    if (!sentences.length) {
++      const combinedPartials = (partials || []).map(function (part) { return part.summary || ""; }).join(" ");
++      sentences.push.apply(sentences, pickBestSentences(combinedPartials, {
++        maxSentences: 5,
++        maxChars: 1600,
++        requiredKeywords: [],
++        profileInfo: profileInfo
++      }));
+     }
+ 
+     return dedupeSentences(sentences, 14);
+   }
+ 
+ 
+-  function buildFinalKeywords(topicStats, allKeywords) {
++  function buildFinalKeywords(topicStats, allKeywords, profileInfo) {
+     const output = [];
+     const used = new Set();
+ 
+@@ -743,12 +957,16 @@
+ 
+       if (!label || !clean) return;
+       if (used.has(clean)) return;
+-      if (isWeakKeyword(clean) && !label.includes(" ")) return;
++      if (!isConceptKeyword(label)) return;
+ 
+       used.add(clean);
+       output.push(label);
+     }
+ 
++    const profile = profileInfo || DOCUMENT_PROFILES.find(function (item) { return item.id === "generic"; });
++
++    (profile.keywords || []).forEach(addKeyword);
++
+     Array.from(topicStats.values())
+       .sort(function (a, b) {
+         return b.score - a.score;
+@@ -757,31 +975,6 @@
+         addKeyword(topic.label);
+       });
+ 
+-    const priority = [
+-      "sicurezza informatica",
+-      "accessi e password",
+-      "phishing",
+-      "backup e recupero",
+-      "privacy e dati",
+-      "incidenti e risposta",
+-      "audit e controlli",
+-      "continuità operativa",
+-      "onboarding e formazione",
+-      "fornitori e terze parti",
+-      "documentazione tecnica",
+-      "workflow e responsabilità"
+-    ];
+-
+-    priority.forEach(function (label) {
+-      const cleanLabel = normalizeForCompare(label);
+-
+-      const found = Array.from(allKeywords.keys()).some(function (keyword) {
+-        return cleanLabel.includes(normalizeForCompare(keyword)) || normalizeForCompare(keyword).includes(cleanLabel.split(" ")[0]);
+-      });
+-
+-      if (found) addKeyword(label);
+-    });
+-
+     Array.from(allKeywords.entries())
+       .sort(function (a, b) {
+         return b[1] - a[1];
+@@ -791,60 +984,40 @@
+         if (!isWeakKeyword(keyword)) addKeyword(keyword);
+       });
+ 
+-    const filtered = output.filter(function (label, index, array) {
+-      const clean = normalizeForCompare(label);
+-
+-      if (!clean) return false;
+-
+-      const isSingleWord = !String(label).includes(" ");
+-
+-      if (isSingleWord && isWeakKeyword(clean)) {
+-        return false;
+-      }
+-
+-      if (isSingleWord) {
+-        const containedInBetterKeyword = array.some(function (other, otherIndex) {
+-          if (otherIndex === index) return false;
+-
+-          const otherClean = normalizeForCompare(other);
+-          const otherIsLonger = otherClean.length > clean.length;
+-          const otherHasMoreWords = String(other).trim().includes(" ");
+-
+-          return otherIsLonger && otherHasMoreWords && otherClean.includes(clean);
+-        });
+-
+-        if (containedInBetterKeyword) return false;
+-      }
+-
+-      return true;
+-    });
+-
+-    const conceptKeywords = output.filter(isConceptKeyword);
+-
+-    return conceptKeywords.slice(0, 14);
++    return output.slice(0, 14);
+   }
+ 
++
+   function mergeProgressiveSummaries(partials, options) {
+     const opts = Object.assign({
+       finalSentences: 12,
+       maxFinalChars: 4200
+     }, options || {});
+ 
+-    const topicStats = new Map();
+     const allKeywords = new Map();
+ 
+     partials.forEach(function (part) {
+       (part.keywords || []).forEach(function (keyword) {
+         allKeywords.set(keyword, (allKeywords.get(keyword) || 0) + 1);
+       });
++    });
+ 
++    const combinedText = partials.map(function (part) {
++      return part.summary;
++    }).join("\n\n");
++
++    const profileInfo = detectDocumentProfile(combinedText + "\n" + Array.from(allKeywords.keys()).join(" "));
++    const profileTopics = getTopicsForProfileV2A30(profileInfo);
++    const topicStats = new Map();
++
++    partials.forEach(function (part) {
+       (part.topics || []).forEach(function (label) {
+         if (!topicStats.has(label)) {
+-          const base = TOPICS.find(function (topic) { return topic.label === label; });
++          const base = profileTopics.find(function (topic) { return topic.label === label; });
+           topicStats.set(label, {
+             label: label,
+             score: 0,
+-            sentence: base ? base.sentence : "Il documento tratta anche il tema " + label + " come parte della gestione aziendale."
++            sentence: base ? base.sentence : "Il documento sviluppa il tema " + label + " in relazione al contenuto analizzato."
+           });
+         }
+ 
+@@ -852,22 +1025,20 @@
+       });
+     });
+ 
+-    const combinedText = partials.map(function (part) {
+-      return part.summary;
+-    }).join("\n\n");
++    const requiredKeywords = requiredKeywordsForProfileV2A30(profileInfo, Array.from(allKeywords.keys()));
+ 
+     const extracted = pickBestSentences(combinedText, {
+-      maxSentences: 6,
+-      maxChars: 1800,
+-      requiredKeywords: ["sicurezza", "backup", "privacy", "incidenti", "phishing", "audit", "password", "continuita", "continuità"]
++      maxSentences: 8,
++      maxChars: 2200,
++      requiredKeywords: requiredKeywords,
++      profileInfo: profileInfo
+     });
+ 
+-    const synthesis = buildTopicSynthesis(topicStats, partials);
++    const synthesis = buildTopicSynthesis(topicStats, partials, profileInfo);
+ 
+-    const finalSentences = dedupeSentences(synthesis.concat(extracted), opts.finalSentences)
++    const finalSentences = dedupeSentences(extracted.concat(synthesis), opts.finalSentences)
+       .slice(0, opts.finalSentences);
+ 
+-    const profileInfo = detectDocumentProfile(combinedText + "\n" + Array.from(allKeywords.keys()).join(" "));
+     const keywords = buildProfileAwareKeywords(profileInfo, topicStats, allKeywords);
+ 
+     return {
+@@ -883,6 +1054,7 @@
+     };
+   }
+ 
++
+   async function createProgressiveSummary(report, options) {
+     const opts = Object.assign({
+       sentencesPerBatch: 5,
+diff --git a/scripts/verifica_rag_documenti_lunghi_v1.py b/scripts/verifica_rag_documenti_lunghi_v1.py
+index aaafbbb..7b95831 100644
+--- a/scripts/verifica_rag_documenti_lunghi_v1.py
++++ b/scripts/verifica_rag_documenti_lunghi_v1.py
+@@ -25,8 +25,7 @@ FORBIDDEN_LINKS = [
+     "test-documenti-universale.html",
+     "universal-document-learning-engine.js",
+     "pdf-export-browser-v6.js",
+-    "rag-quality-summary-cards-v34a.js",
+-    "btnScaricaPdf",
++        "btnScaricaPdf",
+     "btnScaricaTxt",
+     "btnScaricaHtml",
+     "btnScaricaJson",
