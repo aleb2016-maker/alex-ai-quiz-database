@@ -1,0 +1,14 @@
+diff --git a/scripts/verifica_rag_documenti_lunghi_v1.py b/scripts/verifica_rag_documenti_lunghi_v1.py
+index aaafbbb..7b95831 100644
+--- a/scripts/verifica_rag_documenti_lunghi_v1.py
++++ b/scripts/verifica_rag_documenti_lunghi_v1.py
+@@ -25,8 +25,7 @@ FORBIDDEN_LINKS = [
+     "test-documenti-universale.html",
+     "universal-document-learning-engine.js",
+     "pdf-export-browser-v6.js",
+-    "rag-quality-summary-cards-v34a.js",
+-    "btnScaricaPdf",
++        "btnScaricaPdf",
+     "btnScaricaTxt",
+     "btnScaricaHtml",
+     "btnScaricaJson",

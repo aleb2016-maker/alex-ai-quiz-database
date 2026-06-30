@@ -1,0 +1,1687 @@
+diff --git a/demo-rag/index.html b/demo-rag/index.html
+index 43ce72d..0c1d1c0 100644
+--- a/demo-rag/index.html
++++ b/demo-rag/index.html
+@@ -35,7 +35,6 @@
+   </main>
+   <script src="browser-rag-engine.js?v=stable-a8f0e74-v2"></script>
+   <script src="card-graphic-engine.js?v=stable-a8f0e74-v2"></script>
+-  <script src="rag-quality-summary-cards-v34a.js"></script>
+ <!-- RAG_V35L_LINK_START -->
+ <section id="rag-v35l-main-link" style="margin:32px 0;padding:22px;border-radius:20px;border:1px solid rgba(80,220,170,.45);background:linear-gradient(135deg,rgba(15,35,55,.92),rgba(20,70,65,.78));box-shadow:0 12px 28px rgba(0,0,0,.22);">
+   <h2 style="margin:0 0 10px;color:#eaf4ff;">Motore RAG documenti · V3.5K/V3.5L</h2>
+@@ -43,5 +42,6 @@
+   <a href="test-selezionatore-output-v35h.html" style="display:inline-block;padding:13px 18px;border-radius:14px;background:#0b7f6f;color:#ffffff;text-decoration:none;font-weight:800;border:1px solid rgba(255,255,255,.22);">Apri selezionatore RAG completo</a>
+ </section>
+ <!-- RAG_V35L_LINK_END -->
++  <script src="rag-motori-intelligenti-browser-v2a19.js"></script>
+ </body>
+ </html>
+diff --git a/demo-rag/test-documenti-universale.html b/demo-rag/test-documenti-universale.html
+index 4ab3d43..de61c0c 100644
+--- a/demo-rag/test-documenti-universale.html
++++ b/demo-rag/test-documenti-universale.html
+@@ -707,7 +707,7 @@
+   <script src="./rag-action-icons-v46.js?v=icone-solo-nuove-v46"></script>
+   <script src="./rag-concept-document-engine-v46.js?v=concept-v46-vero"></script>
+   <script src="./pdf-export-browser-v6.js?v=6"></script>
+-  <script src="rag-quality-summary-cards-v34a.js"></script>
+-  <script src="./universal-document-learning-engine.js?v=export-fix-280626"></script>
++<script src="./rag-motori-intelligenti-browser-v2a19.js?v=v2a22-lettura-differita"></script>
++<script src="./universal-document-learning-engine.js?v=v2a22-lettura-differita"></script>
+ </body>
+ </html>
+\ No newline at end of file
+diff --git a/demo-rag/universal-document-learning-engine.js b/demo-rag/universal-document-learning-engine.js
+index 7eecabd..35654be 100644
+--- a/demo-rag/universal-document-learning-engine.js
++++ b/demo-rag/universal-document-learning-engine.js
+@@ -1035,44 +1035,456 @@
+     return paragrafi;
+   }
+ 
+-  function generaRiassunto() {
+-  verificaMotoriObbligatoriV2A16("riassunto");
+-  var auditMotoriV2A16 = registraUsoMotoriV2A16("riassunto");
++  
+ 
+-    const testo = leggiTesto();
++/* ============================================================
++   V2A.17 - BLOCCO DURO OUTPUT RIASSUNTO DEMO
++   Se compare il vecchio riassunto da 5 righe, viene bloccato.
++   ============================================================ */
+ 
+-    if (!textExists(testo)) {
+-      mostraErrore("Documento mancante", "Incolla o carica prima un documento.");
+-      return;
++function bloccaRiassuntoDemoVisibileV2A17(html) {
++  const testo = String(html || "");
++
++  const firme = [
++    "Riassunto: sicurezza informatica aziendale",
++    "E-mail sospette",
++    "Password manager",
++    "Aggiornamenti controllati",
++    "Rischi e controlli",
++    "Il documento riguarda sicurezza informatica aziendale"
++  ];
++
++  const trovate = firme.filter(function (f) {
++    return testo.indexOf(f) !== -1;
++  });
++
++  if (trovate.length >= 2) {
++    throw new Error(
++      "BLOCCO V2A.17: vecchio riassunto demo intercettato. " +
++      "Il pulsante Riassunto non deve generare output da 5 righe. " +
++      "Firme trovate: " + trovate.join(", ")
++    );
++  }
++
++  return html;
++}
++
++function attivaBloccoDomRiassuntoDemoV2A17() {
++  if (typeof document === "undefined") return;
++  if (window.__bloccoDomRiassuntoDemoV2A17) return;
++  window.__bloccoDomRiassuntoDemoV2A17 = true;
++
++  function controlla() {
++    const testoPagina = document.body ? document.body.innerText || "" : "";
++
++    const firme = [
++      "Riassunto: sicurezza informatica aziendale",
++      "E-mail sospette",
++      "Password manager",
++      "Aggiornamenti controllati",
++      "Rischi e controlli"
++    ];
++
++    const trovate = firme.filter(function (f) {
++      return testoPagina.indexOf(f) !== -1;
++    });
++
++    if (trovate.length >= 2) {
++      const box =
++        document.getElementById("output") ||
++        document.getElementById("risultato") ||
++        document.getElementById("outputRag") ||
++        document.querySelector("[data-rag-output]") ||
++        document.querySelector(".output-area") ||
++        document.querySelector(".output-card");
++
++      if (box) {
++        box.innerHTML = `
++          <section class="output-card">
++            <h2>BLOCCO V2A.17</h2>
++            <p><strong>Vecchio riassunto demo intercettato.</strong></p>
++            <p>Il pulsante Riassunto non può generare il riassunto da 5 righe.</p>
++            <p>Serve il generatore reale lungo, circa 15%-25% del testo caricato.</p>
++          </section>
++        `;
++      }
++
++      console.error("BLOCCO V2A.17: vecchio riassunto demo intercettato", trovate);
+     }
++  }
+ 
+-    const profilo = riconosciTema(testo);
+-    const paragrafi = creaParagrafiRiassunto(testo, profilo);
++  const observer = new MutationObserver(controlla);
++  observer.observe(document.body, { childList: true, subtree: true, characterData: true });
+ 
+-    areaOutput().innerHTML = `
+-      <section class="output-card ${profilo.classe}" data-rag-export="riassunto-esteso-reale">
+-        <span class="pill">${profilo.icona} ${escapeHtml(profilo.nome)}</span>
+-
+-        <h2>Riassunto documento</h2>
+-
+-        <p>
+-          Il testo è stato riconosciuto come <strong>${escapeHtml(profilo.nome)}</strong>.
+-          Il riassunto qui sotto usa il documento reale caricato o incollato, senza testi demo precaricati.
+-        </p>
+-
+-        <h3>Riassunto esteso</h3>
+-
+-        ${paragrafi.map(function (paragrafo) {
+-          return `
+-            <article class="rag-summary-section" style="margin-top:24px">
+-              <h4>${escapeHtml(paragrafo.titolo)}</h4>
+-              <p>${escapeHtml(paragrafo.testo)}</p>
+-            </article>
+-          `;
+-        }).join("")}
+-      </section>
+-    `;
++  setTimeout(controlla, 100);
++  setTimeout(controlla, 500);
++  setTimeout(controlla, 1000);
++}
++
++if (typeof document !== "undefined") {
++  if (document.readyState === "loading") {
++    document.addEventListener("DOMContentLoaded", attivaBloccoDomRiassuntoDemoV2A17);
++  } else {
++    attivaBloccoDomRiassuntoDemoV2A17();
++  }
++}
++
++
++
++
++/* ============================================================
++   V2A.19 - ERRORE VISIBILE IN PAGINA
++   Evita che i pulsanti sembrino morti quando un blocco JS ferma
++   la generazione.
++   ============================================================ */
++
++function mostraErroreRagV2A19(titolo, errore) {
++  const messaggio = errore && errore.message ? errore.message : String(errore || "Errore sconosciuto");
++
++  const html = `
++    <section class="output-card rag-output-v2a19 rag-error-v2a19" style="border:2px solid #b91c1c;padding:1rem;border-radius:14px;background:#fff5f5;color:#111;">
++      <h2>${titolo || "Errore RAG V2A.19"}</h2>
++      <p><strong>La generazione è stata bloccata.</strong></p>
++      <pre style="white-space:pre-wrap;background:#fee2e2;padding:1rem;border-radius:10px;">${String(messaggio)
++        .replace(/&/g, "&amp;")
++        .replace(/</g, "&lt;")
++        .replace(/>/g, "&gt;")}</pre>
++      <p>Apri la Console Chrome per vedere anche il dettaglio tecnico.</p>
++    </section>
++  `;
++
++  const box =
++    document.getElementById("output") ||
++    document.getElementById("risultato") ||
++    document.getElementById("outputRag") ||
++    document.querySelector("[data-rag-output]") ||
++    document.querySelector(".output-area") ||
++    document.querySelector("main");
++
++  if (box) {
++    box.innerHTML = html;
++    if (typeof box.scrollIntoView === "function") {
++      box.scrollIntoView({ behavior: "smooth", block: "start" });
++    }
++  } else {
++    alert(messaggio);
++  }
++
++  console.error(titolo || "Errore RAG V2A.19", errore);
++}
++
++
++
++
++/* ============================================================
++   V2A.20 - RIASSUNTO LUNGO NON BLOCCANTE
++   Per documenti grandi: 120 pagine, tanti chunk, target 20%.
++   Il browser non deve congelarsi durante il click.
++   ============================================================ */
++
++function escapeHtmlV2A20(testo) {
++  return String(testo || "")
++    .replace(/&/g, "&amp;")
++    .replace(/</g, "&lt;")
++    .replace(/>/g, "&gt;")
++    .replace(/"/g, "&quot;")
++    .replace(/'/g, "&#39;");
++}
++
++function trovaOCreaBoxOutputV2A20() {
++  let box =
++    document.getElementById("output") ||
++    document.getElementById("risultato") ||
++    document.getElementById("outputRag") ||
++    document.querySelector("[data-rag-output]") ||
++    document.querySelector(".output-area") ||
++    document.querySelector(".rag-output-container");
++
++  if (!box) {
++    box = document.createElement("section");
++    box.id = "outputRag";
++    box.setAttribute("data-rag-output", "true");
++    box.style.margin = "2rem auto";
++    box.style.maxWidth = "1100px";
++    box.style.padding = "1rem";
++
++    const main = document.querySelector("main") || document.body;
++    main.appendChild(box);
++  }
++
++  return box;
++}
++
++function mostraStatoRiassuntoV2A20(messaggio, dettaglio) {
++  const box = trovaOCreaBoxOutputV2A20();
++
++  box.innerHTML = `
++    <section class="output-card rag-output-v2a20" style="padding:1.2rem;border-radius:16px;background:#f8fafc;border:1px solid #cbd5e1;">
++      <h2>Generazione riassunto in corso</h2>
++      <p><strong>${escapeHtmlV2A20(messaggio)}</strong></p>
++      <p>${escapeHtmlV2A20(dettaglio || "")}</p>
++    </section>
++  `;
++
++  if (typeof box.scrollIntoView === "function") {
++    box.scrollIntoView({ behavior: "smooth", block: "start" });
++  }
++}
++
++function normalizzaTestoV2A20(testo) {
++  return String(testo || "")
++    .replace(/\r/g, "\n")
++    .replace(/[ \t]+/g, " ")
++    .replace(/\n{3,}/g, "\n\n")
++    .trim();
++}
++
++function paroleV2A20(testo) {
++  return normalizzaTestoV2A20(testo)
++    .toLowerCase()
++    .normalize("NFD")
++    .replace(/[\u0300-\u036f]/g, "")
++    .split(/[^a-z0-9àèéìòù]+/i)
++    .map(function (p) { return p.trim(); })
++    .filter(function (p) { return p.length >= 3; });
++}
++
++function contaParoleV2A20(testo) {
++  return paroleV2A20(testo).length;
++}
++
++function dividiFrasiV2A20(testo) {
++  return normalizzaTestoV2A20(testo)
++    .replace(/\n+/g, ". ")
++    .split(/(?<=[.!?])\s+/)
++    .map(function (s) { return s.trim(); })
++    .filter(function (s) { return s.length >= 25; });
++}
++
++function pausaBrowserV2A20() {
++  return new Promise(function (resolve) {
++    setTimeout(resolve, 0);
++  });
++}
++
++function keywordV2A20(testo, limite) {
++  const stop = new Set([
++    "che","con","per","del","della","delle","degli","dei","alla","allo","agli","alle",
++    "nel","nella","nelle","sono","come","non","una","uno","gli","tra","fra","piu","puo",
++    "può","essere","viene","vengono","questo","questa","quelli","quelle","anche","dove",
++    "quando","quindi","dopo","prima","ogni","tutti","tutte","fare","deve","devono"
++  ]);
++
++  const freq = {};
++  paroleV2A20(testo).forEach(function (p) {
++    if (!stop.has(p)) freq[p] = (freq[p] || 0) + 1;
++  });
++
++  return Object.keys(freq)
++    .sort(function (a, b) { return freq[b] - freq[a]; })
++    .slice(0, limite || 40);
++}
++
++function riconosciTemaV2A20(testo) {
++  const low = normalizzaTestoV2A20(testo).toLowerCase();
++
++  if (/sicurezza|phishing|password|credenzial|firewall|account|backup|malware|email|e-mail|rischio|controllo/.test(low)) {
++    return "Sicurezza informatica";
++  }
++
++  if (/allenamento|scheda|serie|ripetizioni|muscoli|corsa|palestra|sport/.test(low)) {
++    return "Sport e allenamento";
++  }
++
++  if (/curriculum|esperienza|competenze|formazione|profilo professionale/.test(low)) {
++    return "Curriculum vitae";
++  }
++
++  if (/racconto|personaggio|storia|capitolo|narrativa/.test(low)) {
++    return "Storia o racconto";
++  }
++
++  if (/poesia|verso|strofa|rima|lirica/.test(low)) {
++    return "Poesia";
++  }
++
++  return "Documento generale";
++}
++
++async 
++
++/* ============================================================
++   V2A.22 - LETTURA TESTO NON BLOCCANTE
++   Il click deve mostrare subito lo stato PRIMA di leggere testi
++   enormi. leggiTesto() viene chiamato solo dopo setTimeout.
++   ============================================================ */
++
++function leggiTestoSicuroV2A22() {
++  const sorgentiWindow = [
++    "__testoRagCorrente",
++    "__ultimoTestoCaricato",
++    "__testoDocumentoCorrente",
++    "__ultimoTestoEstratto",
++    "__ragTestoEstratto",
++    "__ocrText",
++    "__testoOCRPulito"
++  ];
++
++  for (const nome of sorgentiWindow) {
++    if (typeof window !== "undefined" && typeof window[nome] === "string" && window[nome].trim().length > 30) {
++      return window[nome].trim();
++    }
++  }
++
++  const selettori = [
++    "#testo",
++    "#inputText",
++    "#textInput",
++    "#documentText",
++    "#testoDocumento",
++    "#testoEstratto",
++    "#ocrText",
++    "#outputOcr",
++    "textarea"
++  ];
++
++  for (const sel of selettori) {
++    const el = document.querySelector(sel);
++    if (!el) continue;
++
++    const valore = typeof el.value === "string" ? el.value : (el.innerText || el.textContent || "");
++    if (valore && valore.trim().length > 30) {
++      return valore.trim();
++    }
++  }
++
++  if (typeof leggiTesto === "function") {
++    const testo = leggiTesto();
++    if (testo && String(testo).trim().length > 30) {
++      return String(testo).trim();
++    }
++  }
++
++  throw new Error("Nessun testo valido trovato. Carica o incolla un documento prima di generare.");
++}
++
++function aggiornaCacheBusterV2A22() {
++  if (typeof window !== "undefined") {
++    window.__ragVersioneRuntime = "V2A.22";
++  }
++}
++
++aggiornaCacheBusterV2A22();
++
++
++function generaRiassunto() {
++  try {
++    mostraStatoRiassuntoV2A20(
++      "Avvio generazione non bloccante",
++      "Il browser sta preparando il riassunto esteso reale. La lettura del testo parte dopo questo messaggio."
++    );
++
++    setTimeout(async function () {
++      try {
++        const testo = leggiTestoSicuroV2A22();
++
++        mostraStatoRiassuntoV2A20(
++          "Documento letto correttamente",
++          "Ora genero il riassunto esteso reale senza usare API a pagamento."
++        );
++
++        await pausaBrowserV2A20();
++
++        verificaMotoriObbligatoriV2A16("riassunto");
++
++        const reportV2A20 = await generaRiassuntoLungoNonBloccanteV2A20(testo);
++
++        verificaContrattoLinguisticoUniversaleV2A17("riassunto", {
++          output: reportV2A20.testoFinaleControllato || ""
++        });
++
++        if (!reportV2A20.output || !reportV2A20.output.testo) {
++          throw new Error("Riassunto V2A.20 non prodotto.");
++        }
++
++        if (reportV2A20.output.rapporto < 10) {
++          throw new Error("Riassunto troppo corto: " + reportV2A20.output.rapporto + "%.");
++        }
++
++        if (/riassunto:\s*sicurezza informatica aziendale/i.test(reportV2A20.output.testo)) {
++          throw new Error("Vecchio riassunto demo intercettato.");
++        }
++
++        if (typeof window !== "undefined") {
++          window.__ragMotoriEseguitiV2A18 = window.__ragMotoriEseguitiV2A18 || {};
++          window.__ragMotoriEseguitiV2A18.riassunto = reportV2A20;
++        }
++
++        mostraRiassuntoLungoV2A20(reportV2A20);
++      } catch (erroreInterno) {
++        mostraErroreRagV2A19("Errore Genera Riassunto", erroreInterno);
++      }
++    }, 80);
++
++    return null;
++  } catch (errore) {
++    mostraErroreRagV2A19("Errore Genera Riassunto", errore);
++    return null;
++  }
++}
++
++
++
++
++
++
++
++function mostraRiassuntoLungoV2A20(report) {
++  const box = trovaOCreaBoxOutputV2A20();
++  const r = report.output || {};
++
++  box.innerHTML = `
++    <section class="output-card rag-output-v2a20" data-rag-export="riassunto-esteso-reale" style="padding:1.2rem;border-radius:16px;background:#ffffff;border:1px solid #d1d5db;">
++      <h2>Riassunto esteso reale</h2>
++      <p><strong>Tema:</strong> ${escapeHtmlV2A20(report.contesto.tema)}</p>
++      <p><strong>Rapporto riassunto:</strong> ${escapeHtmlV2A20(r.rapporto)}% — target 20% — intervallo accettato 15%-25%</p>
++      <p><strong>Parole documento:</strong> ${escapeHtmlV2A20(r.paroleOriginali)} | <strong>Parole riassunto:</strong> ${escapeHtmlV2A20(r.paroleRiassunto)}</p>
++      <div class="rag-summary-text" style="line-height:1.7;font-size:1rem;">
++        <p>${escapeHtmlV2A20(r.testo).replace(/\n/g, "</p><p>")}</p>
++      </div>
++    </section>
++  `;
++
++  if (typeof box.scrollIntoView === "function") {
++    box.scrollIntoView({ behavior: "smooth", block: "start" });
++  }
++
++  return report;
++}
++
++
++function generaRiassunto() {
++  try {
++    const testo = leggiTesto();
++
++    verificaMotoriObbligatoriV2A16("riassunto");
++
++    const reportV2A19 = eseguiMotoriIntelligentiUniversaliV35V2A18("riassunto", { testo: testo });
++
++    verificaContrattoLinguisticoUniversaleV2A17("riassunto", {
++      output: reportV2A19.testoFinaleControllato || ""
++    });
++
++    return window.mostraOutputMotoriBrowserV2A19("riassunto", reportV2A19);
++  } catch (errore) {
++    mostraErroreRagV2A19("Errore Genera Riassunto", errore);
++    return null;
+   }
++}
++
++
++
++
+ 
+   function disegnoSvg(card) {
+     const tema = card.profilo.classe;
+@@ -1367,45 +1779,142 @@
+     `);
+   }
+ 
+-  function generaCardVisive() {
+-  verificaMotoriObbligatoriV2A16("card");
+-  var auditMotoriV2A16 = registraUsoMotoriV2A16("card");
++  
+ 
+-    const testo = leggiTesto();
++/* ============================================================
++   V2A.20 - GENERATORI NON BLOCCANTI CARD / TEST / DOMANDE
++   Anche gli altri 3 pulsanti devono mostrare subito stato,
++   non congelare la pagina e poi generare output reale V2A.19.
++   ============================================================ */
+ 
+-    if (!textExists(testo)) {
+-      mostraErrore("Documento mancante", "Incolla o carica prima un documento.");
+-      return;
++function mostraStatoGeneratoreV2A20(titolo, dettaglio) {
++  const box = trovaOCreaBoxOutputV2A20();
++
++  box.innerHTML = `
++    <section class="output-card rag-output-v2a20" style="padding:1.2rem;border-radius:16px;background:#f8fafc;border:1px solid #cbd5e1;">
++      <h2>${escapeHtmlV2A20(titolo || "Generazione in corso")}</h2>
++      <p>${escapeHtmlV2A20(dettaglio || "Il browser sta elaborando il documento senza API a pagamento.")}</p>
++    </section>
++  `;
++
++  if (typeof box.scrollIntoView === "function") {
++    box.scrollIntoView({ behavior: "smooth", block: "start" });
++  }
++}
++
++function etichettaAzioneV2A20(azione) {
++  if (azione === "card") return "Generazione card";
++  if (azione === "test") return "Generazione test interattivo";
++  if (azione === "domande") return "Generazione domande studio";
++  if (azione === "riassunto") return "Generazione riassunto";
++  return "Generazione RAG";
++}
++
++function dettagliAzioneV2A20(azione, testo) {
++  const parole = contaParoleV2A20(testo);
++
++  if (azione === "card") {
++    return "Sto creando card didattiche dal documento reale. Parole lette: " + parole + ".";
++  }
++
++  if (azione === "test") {
++    return "Sto creando un test interattivo con opzioni, risposta corretta e spiegazioni. Parole lette: " + parole + ".";
++  }
++
++  if (azione === "domande") {
++    return "Sto creando domande studio naturali con risposta guida. Parole lette: " + parole + ".";
++  }
++
++  return "Sto elaborando il documento. Parole lette: " + parole + ".";
++}
++
++function avviaGeneratoreNonBloccanteV2A20(azione, testo, titoloErrore) {
++  mostraStatoGeneratoreV2A20(
++    etichettaAzioneV2A20(azione),
++    dettagliAzioneV2A20(azione, testo)
++  );
++
++  setTimeout(function () {
++    try {
++      verificaMotoriObbligatoriV2A16(azione);
++
++      const reportV2A19 = eseguiMotoriIntelligentiUniversaliV35V2A18(azione, { testo: testo });
++
++      const payloadContratto = {
++        output: reportV2A19.testoFinaleControllato || ""
++      };
++
++      if (azione === "test") {
++        payloadContratto.quiz = reportV2A19.output || [];
++      }
++
++      verificaContrattoLinguisticoUniversaleV2A17(azione, payloadContratto);
++
++      if (!reportV2A19 || reportV2A19.ok !== true) {
++        throw new Error("Generatore " + azione + " non completato correttamente.");
++      }
++
++      if (typeof window.mostraOutputMotoriBrowserV2A19 !== "function") {
++        throw new Error("Renderer V2A.19 non disponibile: mostraOutputMotoriBrowserV2A19 mancante.");
++      }
++
++      return window.mostraOutputMotoriBrowserV2A19(azione, reportV2A19);
++    } catch (erroreInterno) {
++      mostraErroreRagV2A19(titoloErrore || ("Errore Genera " + azione), erroreInterno);
++      return null;
+     }
++  }, 50);
+ 
+-    const risultato = creaCards(testo);
+-    const profilo = risultato.profilo;
+-    const cards = risultato.cards;
++  return null;
++}
+ 
+-    areaOutput().innerHTML = `
+-      <section class="output-card ${profilo.classe}">
+-        <span class="pill">${profilo.icona} ${escapeHtml(profilo.nome)}</span>
+-        <h2>Card generate: ${cards.length}</h2>
+-        <p>Ogni card rappresenta una parte diversa del documento, senza ripetere la stessa frase generica.</p>
+ 
+-        <div class="cards-grid">
+-          ${cards.map(function (card) {
+-            return `
+-              <article class="universal-card ${profilo.classe}">
+-                <div class="card-hero">
+-                  ${disegnoSvg(card)}
+-                </div>
+-                <span class="badge">${escapeHtml(card.ramo)}</span>
+-                <h3>${card.numero}. ${escapeHtml(card.titolo)}</h3>
+-                <p>${escapeHtml(card.descrizione)}</p>
+-                <div class="originale">Dal testo: ${escapeHtml(card.originale)}</div>
+-              </article>
+-            `;
+-          }).join("")}
+-        </div>
+-      </section>
+-    `;
++function generaCardVisive() {
++  try {
++    mostraStatoGeneratoreV2A20(
++      "Generazione card",
++      "Preparo la generazione card. La lettura del testo parte dopo questo messaggio."
++    );
++
++    setTimeout(function () {
++      try {
++        const testo = leggiTestoSicuroV2A22();
++
++        verificaMotoriObbligatoriV2A16("card");
++
++        const reportV2A19 = eseguiMotoriIntelligentiUniversaliV35V2A18("card", { testo: testo });
++
++        verificaContrattoLinguisticoUniversaleV2A17("card", {
++          output: reportV2A19.testoFinaleControllato || ""
++        });
++
++        if (!reportV2A19 || reportV2A19.ok !== true) {
++          throw new Error("Generatore card non completato correttamente.");
++        }
++
++        return window.mostraOutputMotoriBrowserV2A19("card", reportV2A19);
++      } catch (erroreInterno) {
++        mostraErroreRagV2A19("Errore Genera Card", erroreInterno);
++        return null;
++      }
++    }, 80);
++
++    return null;
++  } catch (errore) {
++    mostraErroreRagV2A19("Errore Genera Card", errore);
++    return null;
+   }
++}
++
++
++
++
++
++
++
++
++
++
+ 
+   function mescola(array) {
+     const copia = array.slice();
+@@ -1481,48 +1990,64 @@
+   }
+ 
+   function generaTest() {
+-  verificaMotoriObbligatoriV2A16("test");
+-  var auditMotoriV2A16 = registraUsoMotoriV2A16("test");
++  try {
++    mostraStatoGeneratoreV2A20(
++      "Generazione test interattivo",
++      "Preparo il test. La lettura del testo parte dopo questo messaggio."
++    );
+ 
+-    const quiz = creaQuiz();
++    setTimeout(function () {
++      try {
++        const testo = leggiTestoSicuroV2A22();
+ 
+-    if (!quiz) {
+-      return;
+-    }
++        verificaMotoriObbligatoriV2A16("test");
+ 
+-    quizCorrente = {
+-      domande: quiz.domande,
+-      indice: 0,
+-      punteggio: 0,
+-      risposto: false,
+-      profilo: quiz.profilo
+-    };
++        const reportV2A19 = eseguiMotoriIntelligentiUniversaliV35V2A18("test", { testo: testo });
+ 
+-    areaOutput().innerHTML = `
+-      <section class="output-card ${quiz.profilo.classe}">
+-        <span class="pill">${quiz.profilo.icona} Test interattivo</span>
+-        <h2>Test generato dal documento</h2>
+-        <p>Le risposte corrette non sono visibili. Scegli una risposta e poi vai avanti.</p>
++        verificaContrattoLinguisticoUniversaleV2A17("test", {
++          output: reportV2A19.testoFinaleControllato || "",
++          quiz: reportV2A19.output || []
++        });
+ 
+-        <button id="btnAvviaQuiz" class="quiz-start-button" type="button">Inizia test</button>
+-        <div id="quizBox"></div>
+-      </section>
+-    `;
++        if (!reportV2A19 || reportV2A19.ok !== true) {
++          throw new Error("Generatore test non completato correttamente.");
++        }
+ 
+-    document.getElementById("btnAvviaQuiz").addEventListener("click", mostraDomandaQuiz);
++        return window.mostraOutputMotoriBrowserV2A19("test", reportV2A19);
++      } catch (erroreInterno) {
++        mostraErroreRagV2A19("Errore Genera Test", erroreInterno);
++        return null;
++      }
++    }, 80);
++
++    return null;
++  } catch (errore) {
++    mostraErroreRagV2A19("Errore Genera Test", errore);
++    return null;
+   }
++}
+ 
+-  function mostraDomandaQuiz() {
+-    const quizBox = document.getElementById("quizBox");
+-    const domanda = quizCorrente.domande[quizCorrente.indice];
+-    const totale = quizCorrente.domande.length;
+ 
+-    quizCorrente.risposto = false;
+ 
+-    quizBox.innerHTML = `
+-      <div class="quiz-panel">
+-        <div class="quiz-progress">
+-          Domanda ${quizCorrente.indice + 1} di ${totale}
++
++
++
++
++
++
++
++
++  function mostraDomandaQuiz() {
++    const quizBox = document.getElementById("quizBox");
++    const domanda = quizCorrente.domande[quizCorrente.indice];
++    const totale = quizCorrente.domande.length;
++
++    quizCorrente.risposto = false;
++
++    quizBox.innerHTML = `
++      <div class="quiz-panel">
++        <div class="quiz-progress">
++          Domanda ${quizCorrente.indice + 1} di ${totale}
+           · Punteggio: ${quizCorrente.punteggio}/${totale}
+         </div>
+ 
+@@ -1627,42 +2152,51 @@
+   }
+ 
+   function generaDomandeStudio() {
+-  verificaMotoriObbligatoriV2A16("domande");
+-  var auditMotoriV2A16 = registraUsoMotoriV2A16("domande");
++  try {
++    mostraStatoGeneratoreV2A20(
++      "Generazione domande studio",
++      "Preparo le domande studio. La lettura del testo parte dopo questo messaggio."
++    );
+ 
+-    const testo = leggiTesto();
++    setTimeout(function () {
++      try {
++        const testo = leggiTestoSicuroV2A22();
+ 
+-    if (!textExists(testo)) {
+-      mostraErrore("Documento mancante", "Incolla o carica prima un documento.");
+-      return;
+-    }
++        verificaMotoriObbligatoriV2A16("domande");
+ 
+-    const risultato = creaCards(testo);
+-    const profilo = risultato.profilo;
+-    const cards = risultato.cards;
++        const reportV2A19 = eseguiMotoriIntelligentiUniversaliV35V2A18("domande", { testo: testo });
+ 
+-    areaOutput().innerHTML = `
+-      <section class="output-card ${profilo.classe}">
+-        <span class="pill">${profilo.icona} Domande studio</span>
+-        <h2>Domande di studio generate</h2>
+-        <p>Domande mirate, una per ogni parte davvero utile del documento.</p>
++        verificaContrattoLinguisticoUniversaleV2A17("domande", {
++          output: reportV2A19.testoFinaleControllato || ""
++        });
+ 
+-        <div class="study-grid">
+-          ${cards.map(function (card) {
+-            return `
+-              <article class="study-card">
+-                <span class="badge">${escapeHtml(card.ramo)}</span>
+-                <h3>${escapeHtml(card.titolo)}</h3>
+-                <p class="study-question">${escapeHtml(card.domandaStudio)}</p>
+-                <p class="study-answer">${escapeHtml(card.descrizione)}</p>
+-                <div class="originale">Dal testo: ${escapeHtml(card.originale)}</div>
+-              </article>
+-            `;
+-          }).join("")}
+-        </div>
+-      </section>
+-    `;
++        if (!reportV2A19 || reportV2A19.ok !== true) {
++          throw new Error("Generatore domande studio non completato correttamente.");
++        }
++
++        return window.mostraOutputMotoriBrowserV2A19("domande", reportV2A19);
++      } catch (erroreInterno) {
++        mostraErroreRagV2A19("Errore Genera Domande studio", erroreInterno);
++        return null;
++      }
++    }, 80);
++
++    return null;
++  } catch (errore) {
++    mostraErroreRagV2A19("Errore Genera Domande studio", errore);
++    return null;
+   }
++}
++
++
++
++
++
++
++
++
++
++
+ 
+   function pulisciTestoEstrattoDaPdf(testo) {
+     return String(testo || "")
+@@ -2272,6 +2806,636 @@ body {
+    Blocca i pulsanti se non sono collegati ai motori già creati.
+    ============================================================ */
+ 
++
++
++/* ============================================================
++   V2A.17 - Contratto motori linguistici universali
++   Non crea classificatori nuovi.
++   Serve a obbligare i pulsanti RAG a passare dalla lista completa
++   dei controlli qualità richiesti.
++   ============================================================ */
++
++const CONTRATTO_LINGUISTICO_UNIVERSALE_V2A17 = {
++  versione: "V2A.17",
++
++  qualita_testuale: [
++    "grammatica italiana corretta",
++    "accenti corretti",
++    "apostrofi corretti",
++    "punteggiatura corretta",
++    "spazi corretti prima e dopo punteggiatura",
++    "frasi complete",
++    "assenza frasi spezzate",
++    "assenza frasi non terminate",
++    "assenza finali sospetti",
++    "assenza frasi riempitive",
++    "assenza testo generico",
++    "assenza vecchi fallback demo test"
++  ],
++
++  qualita_didattica: [
++    "domande studio naturali",
++    "domande studio utili per ripassare",
++    "risposte guida specifiche",
++    "spiegazioni test chiare",
++    "spiegazioni non troppo corte",
++    "tono didattico finale",
++    "categorie presenti",
++    "sottocategorie presenti",
++    "coerenza domanda risposta contenuto",
++    "niente risposte vaghe"
++  ],
++
++  card_riassunto_fonti: [
++    "card scritte bene",
++    "card non troppo corte",
++    "card non troppo compresse",
++    "messaggio chiave completo",
++    "riassunto chiaro",
++    "punti chiave leggibili",
++    "fonti visibili belle",
++    "fonti coerenti",
++    "niente fonti brute",
++    "layout grafico controllato"
++  ],
++
++  test_separati: [
++    "test separato da card riassunto domande studio",
++    "opzioni interne validate",
++    "opzioni visibili pulite",
++    "risposta corretta interna",
++    "risposta corretta visibile",
++    "mappa sicura risposta interna visibile",
++    "quattro opzioni per domanda",
++    "risposta corretta presente tra opzioni",
++    "distrattori forti",
++    "niente opzioni duplicate nella stessa domanda",
++    "niente ripetizioni globali eccessive",
++    "compatibilita bridge quiz V3.5B"
++  ],
++
++  duplicati_ripetizioni: [
++    "duplicati esatti per tipo output",
++    "quasi duplicati per tipo output",
++    "ripetizioni inutili",
++    "ripetizioni meccaniche tra domande",
++    "frasi troppo simili",
++    "stesso contenuto ripetuto senza motivo",
++    "ripetizioni legittime consentite tra card test domande fonti"
++  ],
++
++  selezionatore_orchestratore: [
++    "compito richiesto seleziona motori giusti",
++    "riassunto usa motore didattico",
++    "card usa motore didattico e layout",
++    "domande studio usano motore didattico",
++    "test usa bridge quiz e motore test",
++    "completo pdf app web usano orchestratore",
++    "niente motori inutili",
++    "niente output non richiesto",
++    "output finale pronto per UI PDF app",
++    "report qualita leggibile"
++  ],
++
++  naturalezza_linguistica: [
++    "naturalezza anti-keyword V3.5I",
++    "niente frasi robotiche",
++    "niente liste grezze di parole chiave",
++    "niente testi meccanici",
++    "valore didattico umano"
++  ],
++
++  accordo_grammaticale: [
++    "accordo genere",
++    "accordo numero",
++    "articoli corretti",
++    "participi corretti",
++    "pronomi coerenti con titolo e contenuto"
++  ],
++
++  completamento_frasi: [
++    "correzione frasi non finite",
++    "uso contesto tema",
++    "uso contesto sottotema",
++    "uso categorie",
++    "uso sottocategorie",
++    "uso genere documento"
++  ],
++
++  correzione_refusi: [
++    "correzione parole scritte male",
++    "correzione lettere invertite",
++    "correzione refusi comuni",
++    "normalizzazione leggibile"
++  ]
++};
++
++function normalizzaTestoV2A17(testo) {
++  return String(testo || "")
++    .toLowerCase()
++    .normalize("NFD")
++    .replace(/[\u0300-\u036f]/g, "");
++}
++
++function verificaQualitaTestualeBaseV2A17(testo, tipoOutput) {
++  const problemi = [];
++  const clean = String(testo || "");
++  const low = normalizzaTestoV2A17(clean);
++
++  if (!clean.trim()) {
++    problemi.push("testo vuoto");
++    return problemi;
++  }
++
++  const frasi = clean
++    .split(/[.!?]+/)
++    .map(function (s) { return s.trim(); })
++    .filter(Boolean);
++
++  const finaliSospetti = /\b(e|di|con|per|che|del|della|delle|dei|da|in|su|tra|fra)$/i;
++
++  frasi.forEach(function (frase) {
++    if (finaliSospetti.test(frase)) {
++      problemi.push("frase con finale sospetto: " + frase.slice(0, 120));
++    }
++  });
++
++  const vietati = [
++    "documento analizzato",
++    "contenuti generati",
++    "punto centrale",
++    "knowledge_base_json",
++    "testo di esempio",
++    "documento di esempio",
++    "fallback",
++    "demo rag",
++  ];
++
++  vietati.forEach(function (v) {
++    if (low.indexOf(normalizzaTestoV2A17(v)) >= 0) {
++      problemi.push("testo generico/fallback vietato: " + v);
++    }
++  });
++
++  if (/\s+[,.!?;:]/.test(clean)) {
++    problemi.push("spazio errato prima della punteggiatura");
++  }
++
++  if (/[,.!?;:][^\s\n"'’”)\]]/.test(clean)) {
++    problemi.push("spazio mancante dopo punteggiatura");
++  }
++
++  return problemi;
++}
++
++function verificaDuplicatiPerContestoV2A17(items, tipoOutput) {
++  const problemi = [];
++  const visti = new Map();
++
++  (items || []).forEach(function (item, index) {
++    const testo = normalizzaTestoV2A17(
++      typeof item === "string"
++        ? item
++        : item.testo || item.domanda || item.titolo || item.descrizione || item.originale || ""
++    )
++      .replace(/[^a-z0-9 ]+/g, " ")
++      .replace(/\s+/g, " ")
++      .trim();
++
++    if (!testo || testo.length < 30) return;
++
++    const chiave = tipoOutput + "::" + testo.slice(0, 180);
++
++    if (visti.has(chiave)) {
++      problemi.push("duplicato esatto nello stesso output " + tipoOutput + " tra elementi " + visti.get(chiave) + " e " + index);
++    } else {
++      visti.set(chiave, index);
++    }
++  });
++
++  return problemi;
++}
++
++function verificaTestSeparatoV2A17(quiz) {
++  const problemi = [];
++
++  if (!quiz) return problemi;
++
++  const domande = quiz.domande || quiz.questions || [];
++  if (!Array.isArray(domande)) return problemi;
++
++  domande.forEach(function (q, index) {
++    const opzioni = q.opzioni || q.options || [];
++    const corretta = q.risposta_corretta || q.correctAnswer || q.corretta || "";
++
++    if (opzioni.length !== 4) {
++      problemi.push("domanda " + (index + 1) + ": non ha 4 opzioni");
++    }
++
++    const normalizzate = opzioni.map(normalizzaTestoV2A17);
++    const set = new Set(normalizzate);
++
++    if (set.size !== normalizzate.length) {
++      problemi.push("domanda " + (index + 1) + ": opzioni duplicate");
++    }
++
++    if (corretta && normalizzate.indexOf(normalizzaTestoV2A17(corretta)) < 0) {
++      problemi.push("domanda " + (index + 1) + ": risposta corretta non presente tra le opzioni");
++    }
++  });
++
++  return problemi;
++}
++
++
++
++/* ============================================================
++   V2A.17 - BLOCCO DURO ANTI RIASSUNTO DEMO/VECCHIO
++   Se generaRiassunto non è il generatore reale lungo, il pulsante
++   deve fermarsi PRIMA di generare output.
++   ============================================================ */
++
++function verificaGeneratoreRiassuntoRealeLungoV2A17() {
++  const problemi = [];
++
++  if (typeof generaRiassunto !== "function") {
++    problemi.push("generaRiassunto non esiste");
++  } else {
++    const sorgente = String(generaRiassunto);
++
++    const marcatoriObbligatori = [
++      "riassunto-esteso-reale",
++      "Rapporto riassunto",
++      "paroleRiassunto",
++      "paroleMinime",
++      "paroleTarget",
++      "paroleMassime",
++      "0.15",
++      "0.20",
++      "0.25",
++      "riassunto sospetto da demo",
++      "__ultimoRiassuntoRealeV2A17",
++      "creaCards(testo)",
++      "riconosciTema(testo)"
++    ];
++
++    marcatoriObbligatori.forEach(function (m) {
++      if (sorgente.indexOf(m) === -1) {
++        problemi.push("generatore riassunto reale lungo mancante: " + m);
++      }
++    });
++
++    if (sorgente.indexOf("slice(0, 5)") !== -1 || sorgente.indexOf("slice(0,5)") !== -1) {
++      problemi.push("generatore riassunto sospetto: limita a 5 elementi/frasi");
++    }
++
++    if (sorgente.indexOf("paragrafi.length <= 2") === -1) {
++      problemi.push("manca blocco anti-riassunto corto/demo");
++    }
++  }
++
++  return {
++    ok: problemi.length === 0,
++    problemi: problemi
++  };
++}
++
++
++
++
++/* ============================================================
++   V2A.18 - REGISTRO RUNTIME MOTORI INTELLIGENTI UNIVERSALI V35
++   Questo ponte collega i 4 pulsanti ai motori intelligenti
++   obbligatori. Non basta più dichiarare qualità: ogni pulsante
++   deve passare da eseguiMotoriIntelligentiUniversaliV35V2A18().
++   ============================================================ */
++
++const REGISTRO_MOTORI_INTELLIGENTI_UNIVERSALI_V2A18 = {
++  versione: "V2A.18",
++
++  motori: {
++    V35B: "bridge motori quiz / qualità esistenti",
++    V35C: "motore didattico riutilizzabile",
++    V35D: "motore test riutilizzabile",
++    V35E: "orchestratore riutilizzabile",
++    V35F: "selezionatore motori riutilizzabile",
++    V35G: "revisore qualità testuale",
++    V35I: "revisore naturalezza anti-keyword",
++    V35J: "revisore accordo grammaticale e pronomi",
++    V35K: "cleaner finale universale",
++    V35M: "lucidatore linguistico universale",
++    V35N: "completatore linguistico probabile",
++    V35O: "contesto semantico universale"
++  },
++
++  azioni: {
++    riassunto: ["V35E", "V35F", "V35C", "V35G", "V35I", "V35J", "V35K", "V35M", "V35N", "V35O"],
++    card: ["V35E", "V35F", "V35C", "V35G", "V35I", "V35J", "V35K", "V35M", "V35N", "V35O"],
++    test: ["V35E", "V35F", "V35B", "V35C", "V35D", "V35G", "V35I", "V35J", "V35K", "V35M"],
++    domande: ["V35E", "V35F", "V35C", "V35G", "V35I", "V35J", "V35K", "V35M", "V35N", "V35O"]
++  }
++};
++
++function creaReportMotoriV35V2A18(azione) {
++  return {
++    versione: "V2A.18",
++    azione: azione,
++    richiesti: REGISTRO_MOTORI_INTELLIGENTI_UNIVERSALI_V2A18.azioni[azione] || [],
++    eseguiti: [],
++    problemi: [],
++    ok: false
++  };
++}
++
++function registraMotoreEseguitoV35V2A18(report, codice, esito) {
++  report.eseguiti.push({
++    codice: codice,
++    nome: REGISTRO_MOTORI_INTELLIGENTI_UNIVERSALI_V2A18.motori[codice] || codice,
++    ok: !esito || esito.ok !== false,
++    note: esito && esito.note ? esito.note : ""
++  });
++}
++
++function normalizzaV35V2A18(testo) {
++  return String(testo || "")
++    .toLowerCase()
++    .normalize("NFD")
++    .replace(/[\u0300-\u036f]/g, "")
++    .replace(/\s+/g, " ")
++    .trim();
++}
++
++function eseguiSingoloMotoreV35V2A18(codice, azione, payload) {
++  const dati = payload || {};
++  const testo = String(dati.testo || dati.output || dati.html || "");
++  const low = normalizzaV35V2A18(testo);
++  const problemi = [];
++
++  if (codice === "V35E") {
++    if (!azione) problemi.push("orchestratore senza azione");
++  }
++
++  if (codice === "V35F") {
++    if (!["riassunto", "card", "test", "domande"].includes(azione)) {
++      problemi.push("selezionatore: azione non riconosciuta");
++    }
++  }
++
++  if (codice === "V35C") {
++    if (!testo.trim()) problemi.push("motore didattico: testo vuoto");
++  }
++
++  if (codice === "V35G") {
++    const finaliSospetti = /\b(e|di|con|per|che|del|della|delle|dei|da|in|su|tra|fra)$/i;
++    const frasi = testo.split(/[.!?]+/).map(function (s) { return s.trim(); }).filter(Boolean);
++    frasi.forEach(function (frase) {
++      if (finaliSospetti.test(frase)) {
++        problemi.push("qualità testuale: frase con finale sospetto");
++      }
++    });
++    if (/\s+[,.!?;:]/.test(testo)) problemi.push("qualità testuale: spazio prima della punteggiatura");
++  }
++
++  if (codice === "V35I") {
++    if (/(keyword|parole chiave|lista grezza|contenuti generati|documento analizzato|punto centrale)/i.test(testo)) {
++      problemi.push("naturalezza anti-keyword: testo generico o meccanico");
++    }
++  }
++
++  if (codice === "V35J") {
++    if (/(viene presentato|senza copiarlo|obiettivi principali senza)/i.test(testo)) {
++      problemi.push("accordo/pronomi: frase sospetta");
++    }
++  }
++
++  if (codice === "V35K") {
++    if (/fallback|demo|testo di esempio|knowledge_base_json/i.test(testo)) {
++      problemi.push("cleaner finale: fallback/demo vietato");
++    }
++  }
++
++  if (codice === "V35M") {
++    if (testo.length < 40) problemi.push("lucidatore: testo troppo corto");
++  }
++
++  if (codice === "V35N") {
++    const frasiRotte = /\b(e|di|con|per|che|del|della|delle|dei|da|in|su|tra|fra)$/i;
++    if (frasiRotte.test(testo.trim())) {
++      problemi.push("completatore: frase non terminata");
++    }
++  }
++
++  if (codice === "V35O") {
++    const haContesto =
++      typeof riconosciTema === "function" &&
++      typeof profiliDocumento !== "undefined" &&
++      typeof creaCards === "function";
++
++    if (!haContesto) {
++      problemi.push("contesto semantico: tema/profili/cards non disponibili");
++    }
++  }
++
++  if (codice === "V35B" || codice === "V35D") {
++    if (azione !== "test") {
++      problemi.push(codice + ": motore quiz/test chiamato fuori dal Test");
++    }
++  }
++
++  return {
++    ok: problemi.length === 0,
++    problemi: problemi,
++    note: problemi.join("; ")
++  };
++}
++
++function eseguiMotoriIntelligentiUniversaliV35V2A18(azione, payload) {
++  if (typeof window !== "undefined") {
++    if (typeof window.eseguiPipelineMotoriBrowserV2A19 !== "function") {
++      throw new Error(
++        "BLOCCO V2A.19: motore browser reale non caricato. " +
++        "Il browser deve eseguire rag-motori-intelligenti-browser-v2a19.js prima dei pulsanti."
++      );
++    }
++
++    const reportBrowserV2A19 = window.eseguiPipelineMotoriBrowserV2A19(azione, payload || {});
++
++    window.__ragMotoriEseguitiV2A18 = window.__ragMotoriEseguitiV2A18 || {};
++    window.__ragMotoriEseguitiV2A18[azione] = reportBrowserV2A19;
++
++    if (!reportBrowserV2A19.ok) {
++      throw new Error(
++        "BLOCCO V2A.19: motori browser non superati per " +
++        azione +
++        "\n" +
++        (reportBrowserV2A19.problemi || []).slice(0, 12).map(function (p) {
++          return "- " + p;
++        }).join("\n")
++      );
++    }
++
++    return reportBrowserV2A19;
++  }
++
++  const report = creaReportMotoriV35V2A18(azione);
++  const richiesti = report.richiesti;
++
++  if (!richiesti.length) {
++    report.problemi.push("nessun motore richiesto per azione: " + azione);
++  }
++
++  richiesti.forEach(function (codice) {
++    const esito = eseguiSingoloMotoreV35V2A18(codice, azione, payload || {});
++    registraMotoreEseguitoV35V2A18(report, codice, esito);
++
++    if (!esito.ok) {
++      esito.problemi.forEach(function (p) {
++        report.problemi.push(codice + ": " + p);
++      });
++    }
++  });
++
++  const eseguiti = report.eseguiti.map(function (m) { return m.codice; });
++
++  richiesti.forEach(function (codice) {
++    if (!eseguiti.includes(codice)) {
++      report.problemi.push("motore obbligatorio non eseguito: " + codice);
++    }
++  });
++
++  report.ok = report.problemi.length === 0;
++
++  if (typeof window !== "undefined") {
++    window.__ragMotoriEseguitiV2A18 = window.__ragMotoriEseguitiV2A18 || {};
++    window.__ragMotoriEseguitiV2A18[azione] = report;
++  }
++
++  if (!report.ok) {
++    throw new Error(
++      "BLOCCO V2A.18: motori intelligenti universali non superati per " +
++      azione +
++      "\\n" +
++      report.problemi.slice(0, 12).map(function (p) { return "- " + p; }).join("\\n")
++    );
++  }
++
++  return report;
++}
++
++function esponiRegistroMotoriIntelligentiV35V2A18() {
++  if (typeof window === "undefined") return;
++
++  window.REGISTRO_MOTORI_INTELLIGENTI_UNIVERSALI_V2A18 = REGISTRO_MOTORI_INTELLIGENTI_UNIVERSALI_V2A18;
++  window.eseguiMotoriIntelligentiUniversaliV35V2A18 = eseguiMotoriIntelligentiUniversaliV35V2A18;
++  window.eseguiSingoloMotoreV35V2A18 = eseguiSingoloMotoreV35V2A18;
++}
++
++esponiRegistroMotoriIntelligentiV35V2A18();
++
++
++function verificaContrattoLinguisticoUniversaleV2A17(azione, payload) {
++  const problemi = [];
++
++  if (azione === "riassunto") {
++    const controlloRiassuntoReale = verificaGeneratoreRiassuntoRealeLungoV2A17();
++    if (!controlloRiassuntoReale.ok) {
++      problemi.push.apply(
++        problemi,
++        controlloRiassuntoReale.problemi.map(function (p) {
++          return "BLOCCO RIASSUNTO V2A17: " + p;
++        })
++      );
++    }
++  }
++  const dati = payload || {};
++  const testo = dati.testo || dati.output || dati.html || "";
++
++  const blocchiObbligatori = [
++    "qualita_testuale",
++    "qualita_didattica",
++    "card_riassunto_fonti",
++    "duplicati_ripetizioni",
++    "selezionatore_orchestratore",
++    "naturalezza_linguistica",
++    "accordo_grammaticale",
++    "completamento_frasi",
++    "correzione_refusi"
++  ];
++
++  if (azione === "test") {
++    blocchiObbligatori.push("test_separati");
++  }
++
++  blocchiObbligatori.forEach(function (nome) {
++    if (!CONTRATTO_LINGUISTICO_UNIVERSALE_V2A17[nome] || !CONTRATTO_LINGUISTICO_UNIVERSALE_V2A17[nome].length) {
++      problemi.push("manca blocco contratto linguistico: " + nome);
++    }
++  });
++
++  problemi.push.apply(
++    problemi,
++    verificaQualitaTestualeBaseV2A17(testo, azione)
++  );
++
++  if (Array.isArray(dati.cards)) {
++    problemi.push.apply(
++      problemi,
++      verificaDuplicatiPerContestoV2A17(dati.cards, "card")
++    );
++  }
++
++  if (Array.isArray(dati.domandeStudio)) {
++    problemi.push.apply(
++      problemi,
++      verificaDuplicatiPerContestoV2A17(dati.domandeStudio, "domande_studio")
++    );
++  }
++
++  if (azione === "test" && dati.quiz) {
++    problemi.push.apply(
++      problemi,
++      verificaTestSeparatoV2A17(dati.quiz)
++    );
++  }
++
++  const report = {
++    versione: "V2A.17",
++    azione: azione,
++    contratto: CONTRATTO_LINGUISTICO_UNIVERSALE_V2A17,
++    problemi: problemi,
++    ok: problemi.length === 0
++  };
++
++  if (typeof window !== "undefined") {
++    window.__ragContrattoLinguisticoUltimoReportV2A17 = report;
++  }
++
++  if (problemi.length) {
++    const messaggio =
++      "Blocco V2A.17: contratto linguistico universale non superato.\n\n" +
++      "Azione: " + azione + "\n\n" +
++      problemi.slice(0, 12).map(function (p) { return "- " + p; }).join("\n");
++
++    console.warn(messaggio, report);
++    throw new Error(messaggio);
++  }
++
++  return report;
++}
++
++function esponiContrattoLinguisticoV2A17() {
++  if (typeof window === "undefined") return;
++
++  window.CONTRATTO_LINGUISTICO_UNIVERSALE_V2A17 = CONTRATTO_LINGUISTICO_UNIVERSALE_V2A17;
++  window.verificaContrattoLinguisticoUniversaleV2A17 = verificaContrattoLinguisticoUniversaleV2A17;
++  window.verificaQualitaTestualeBaseV2A17 = verificaQualitaTestualeBaseV2A17;
++  window.verificaDuplicatiPerContestoV2A17 = verificaDuplicatiPerContestoV2A17;
++  window.verificaTestSeparatoV2A17 = verificaTestSeparatoV2A17;
++}
++
++esponiContrattoLinguisticoV2A17();
++
++
+ function verificaMotoriObbligatoriV2A16(azione) {
+   const problemi = [];
+ 
+@@ -2373,3 +3537,154 @@ function esponiGuardiaMotoriV2A16() {
+ esponiGuardiaMotoriV2A16();
+ 
+ 
++
++
++
++/* ============================================================
++   V2A.21 - BINDING FORZATO PULSANTI RAG
++   Intercetta i click PRIMA dei vecchi listener.
++   Serve quando la pagina resta bloccata perché un handler vecchio
++   intercetta ancora Genera Riassunto/Card/Test/Domande.
++   ============================================================ */
++
++function normalizzaEtichettaPulsanteV2A21(testo) {
++  return String(testo || "")
++    .toLowerCase()
++    .normalize("NFD")
++    .replace(/[\u0300-\u036f]/g, "")
++    .replace(/\s+/g, " ")
++    .trim();
++}
++
++function riconosciAzionePulsanteV2A21(elemento) {
++  if (!elemento) return null;
++
++  const testo = normalizzaEtichettaPulsanteV2A21(
++    (elemento.innerText || elemento.textContent || elemento.value || elemento.getAttribute("aria-label") || "")
++  );
++
++  const idClass = normalizzaEtichettaPulsanteV2A21(
++    (elemento.id || "") + " " + (elemento.className || "") + " " + (elemento.getAttribute("data-action") || "")
++  );
++
++  const firma = testo + " " + idClass;
++
++  if (/genera riassunto|riassunto|summary/.test(firma)) return "riassunto";
++  if (/genera card|card/.test(firma)) return "card";
++  if (/genera test|test|quiz/.test(firma)) return "test";
++  if (/genera domande|domande studio|studio|questions/.test(firma)) return "domande";
++
++  return null;
++}
++
++function eseguiAzioneForzataPulsanteV2A21(azione) {
++  if (azione === "riassunto") return generaRiassunto();
++  if (azione === "card") return generaCardVisive();
++  if (azione === "test") return generaTest();
++  if (azione === "domande") return generaDomandeStudio();
++
++  throw new Error("Azione pulsante V2A.21 non riconosciuta: " + azione);
++}
++
++function mostraClickIntercettatoV2A21(azione) {
++  try {
++    const titolo =
++      azione === "riassunto" ? "Generazione riassunto in corso" :
++      azione === "card" ? "Generazione card in corso" :
++      azione === "test" ? "Generazione test interattivo in corso" :
++      azione === "domande" ? "Generazione domande studio in corso" :
++      "Generazione RAG in corso";
++
++    if (typeof mostraStatoGeneratoreV2A20 === "function") {
++      mostraStatoGeneratoreV2A20(
++        titolo,
++        "Click intercettato da V2A.21. I vecchi listener sono stati bloccati."
++      );
++    }
++  } catch (e) {
++    console.warn("V2A.21: impossibile mostrare stato iniziale", e);
++  }
++}
++
++function disattivaOnclickVecchiPulsantiV2A21() {
++  if (typeof document === "undefined") return;
++
++  const candidati = Array.from(document.querySelectorAll("button, a, [role='button'], input[type='button'], input[type='submit']"));
++
++  candidati.forEach(function (el) {
++    const azione = riconosciAzionePulsanteV2A21(el);
++    if (!azione) return;
++
++    el.setAttribute("data-rag-v2a21", azione);
++    el.onclick = null;
++
++    if (el.tagName === "A") {
++      el.setAttribute("href", "javascript:void(0)");
++    }
++  });
++
++  console.log("V2A.21 binding pulsanti applicato:", candidati.filter(function (el) {
++    return el.getAttribute("data-rag-v2a21");
++  }).map(function (el) {
++    return {
++      azione: el.getAttribute("data-rag-v2a21"),
++      testo: el.innerText || el.textContent || el.value || el.id || el.className
++    };
++  }));
++}
++
++function attivaBindingForzatoPulsantiV2A21() {
++  if (typeof window === "undefined" || typeof document === "undefined") return;
++  if (window.__bindingForzatoPulsantiV2A21) return;
++
++  window.__bindingForzatoPulsantiV2A21 = true;
++
++  function intercettaClick(evento) {
++    const target = evento.target;
++    const el = target && target.closest
++      ? target.closest("button, a, [role='button'], input[type='button'], input[type='submit']")
++      : null;
++
++    const azione = riconosciAzionePulsanteV2A21(el);
++    if (!azione) return;
++
++    evento.preventDefault();
++    evento.stopPropagation();
++    evento.stopImmediatePropagation();
++
++    console.log("V2A.21: click intercettato prima dei vecchi listener:", azione);
++
++    mostraClickIntercettatoV2A21(azione);
++
++    setTimeout(function () {
++      try {
++        eseguiAzioneForzataPulsanteV2A21(azione);
++      } catch (errore) {
++        if (typeof mostraErroreRagV2A19 === "function") {
++          mostraErroreRagV2A19("Errore binding forzato V2A.21", errore);
++        } else {
++          console.error("Errore binding forzato V2A.21", errore);
++          alert(errore.message || String(errore));
++        }
++      }
++    }, 30);
++
++    return false;
++  }
++
++  window.addEventListener("click", intercettaClick, true);
++  document.addEventListener("click", intercettaClick, true);
++
++  if (document.readyState === "loading") {
++    document.addEventListener("DOMContentLoaded", disattivaOnclickVecchiPulsantiV2A21);
++  } else {
++    disattivaOnclickVecchiPulsantiV2A21();
++  }
++
++  setTimeout(disattivaOnclickVecchiPulsantiV2A21, 300);
++  setTimeout(disattivaOnclickVecchiPulsantiV2A21, 1000);
++}
++
++attivaBindingForzatoPulsantiV2A21();
++
++
+diff --git a/scripts/verifica_rag_documenti_lunghi_v1.py b/scripts/verifica_rag_documenti_lunghi_v1.py
+index aaafbbb..7b95831 100644
+--- a/scripts/verifica_rag_documenti_lunghi_v1.py
++++ b/scripts/verifica_rag_documenti_lunghi_v1.py
+@@ -25,8 +25,7 @@ FORBIDDEN_LINKS = [
+     "test-documenti-universale.html",
+     "universal-document-learning-engine.js",
+     "pdf-export-browser-v6.js",
+-    "rag-quality-summary-cards-v34a.js",
+-    "btnScaricaPdf",
++        "btnScaricaPdf",
+     "btnScaricaTxt",
+     "btnScaricaHtml",
+     "btnScaricaJson",

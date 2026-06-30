@@ -1,0 +1,423 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <title>RAG pulito V2A.24 - Upload file reale</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style>
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #0f172a;
+      color: #111827;
+      margin: 0;
+      padding: 24px;
+    }
+
+    main {
+      max-width: 1150px;
+      margin: 0 auto;
+      background: #ffffff;
+      border-radius: 22px;
+      padding: 24px;
+      box-shadow: 0 18px 40px rgba(0,0,0,.25);
+    }
+
+    h1 { margin-top: 0; }
+
+    .upload-box {
+      border: 2px dashed #64748b;
+      background: #f8fafc;
+      padding: 18px;
+      border-radius: 18px;
+      margin-bottom: 16px;
+    }
+
+    input[type="file"] {
+      width: 100%;
+      padding: 14px;
+      border-radius: 12px;
+      border: 1px solid #cbd5e1;
+      background: white;
+      font-size: 15px;
+    }
+
+    textarea {
+      width: 100%;
+      min-height: 260px;
+      padding: 16px;
+      border: 1px solid #cbd5e1;
+      border-radius: 14px;
+      font-size: 15px;
+      line-height: 1.6;
+      box-sizing: border-box;
+      margin-top: 14px;
+    }
+
+    .buttons {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(160px, 1fr));
+      gap: 12px;
+      margin: 18px 0;
+    }
+
+    button {
+      border: 0;
+      border-radius: 14px;
+      padding: 16px;
+      font-weight: 800;
+      cursor: pointer;
+      background: linear-gradient(135deg, #0f172a, #047857);
+      color: white;
+      font-size: 15px;
+    }
+
+    button:disabled {
+      opacity: .55;
+      cursor: wait;
+    }
+
+    #status, #output {
+      margin-top: 18px;
+      padding: 18px;
+      border-radius: 18px;
+      background: #f8fafc;
+      border: 1px solid #cbd5e1;
+      min-height: 80px;
+    }
+
+    .status {
+      background: #eff6ff;
+      border: 1px solid #93c5fd;
+      padding: 16px;
+      border-radius: 14px;
+    }
+
+    .error {
+      background: #fef2f2;
+      border: 1px solid #ef4444;
+      padding: 16px;
+      border-radius: 14px;
+      white-space: pre-wrap;
+    }
+
+    .result-card {
+      background: white;
+      border: 1px solid #d1d5db;
+      border-radius: 16px;
+      padding: 16px;
+      margin: 12px 0;
+      line-height: 1.65;
+    }
+
+    .meta {
+      color: #475569;
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+
+    @media (max-width: 850px) {
+      .buttons { grid-template-columns: 1fr; }
+    }
+  </style>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+</head>
+
+<body>
+<main>
+  <h1>RAG pulito V2A.24 - Upload file reale</h1>
+  <p>Questa pagina serve a testare il flusso reale: carichi un PDF/TXT/MD e poi generi riassunto, card, test o domande studio.</p>
+
+  <section class="upload-box">
+    <strong>Carica documento reale</strong>
+    <p>Supporta TXT, MD e PDF. Il PDF viene letto pagina per pagina nel browser.</p>
+    <input id="fileDocumento" type="file" accept=".txt,.md,.pdf,text/plain,text/markdown,application/pdf">
+    <textarea id="testoDocumento" placeholder="Qui comparirà il testo estratto dal file. Puoi anche incollare testo manualmente."></textarea>
+  </section>
+
+  <div class="buttons">
+    <button type="button" data-action="riassunto">Genera Riassunto</button>
+    <button type="button" data-action="card">Genera Card</button>
+    <button type="button" data-action="test">Genera Test</button>
+    <button type="button" data-action="domande">Genera Domande studio</button>
+  </div>
+
+  <section id="status">
+    <div class="status">Carica un file reale. Nessun testo demo precaricato.</div>
+  </section>
+
+  <section id="output">
+    <div class="status">Output pronto.</div>
+  </section>
+</main>
+
+<script src="./rag-motori-intelligenti-browser-v2a19.js?v=v2a25b-fix-v35g-riassunto-card"></script>
+
+<script>
+(function () {
+  window.__ragPaginaPulitaV2A24 = true;
+  window.__ragUploadFileRealeV2A24 = true;
+
+  const fileInput = document.getElementById("fileDocumento");
+  const textarea = document.getElementById("testoDocumento");
+  const statusBox = document.getElementById("status");
+  const outputBox = document.getElementById("output");
+
+  function escapeHtml(testo) {
+    return String(testo || "")
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;");
+  }
+
+  function setBusy(busy) {
+    document.querySelectorAll("[data-action]").forEach(function (btn) {
+      btn.disabled = !!busy;
+    });
+  }
+
+  function stato(titolo, dettaglio) {
+    statusBox.innerHTML =
+      '<div class="status"><h2>' + escapeHtml(titolo) + '</h2><p>' + escapeHtml(dettaglio || '') + '</p></div>';
+  }
+
+  function errore(titolo, err) {
+    const msg = err && err.message ? err.message : String(err || "Errore sconosciuto");
+    statusBox.innerHTML =
+      '<div class="error"><h2>' + escapeHtml(titolo) + '</h2>' + escapeHtml(msg) + '</div>';
+    console.error(titolo, err);
+  }
+
+  function pausa() {
+    return new Promise(function (resolve) {
+      setTimeout(resolve, 0);
+    });
+  }
+
+  async function leggiTxtMd(file) {
+    const testo = await file.text();
+    return testo.trim();
+  }
+
+  async function leggiPdf(file) {
+    if (typeof window.pdfjsLib === "undefined") {
+      throw new Error("PDF.js non è caricato. Impossibile leggere PDF nel browser.");
+    }
+
+    pdfjsLib.GlobalWorkerOptions.workerSrc =
+      "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js";
+
+    const buffer = await file.arrayBuffer();
+
+    stato("Apertura PDF", "Sto aprendo il PDF nel browser...");
+    await pausa();
+
+    const pdf = await pdfjsLib.getDocument({ data: buffer }).promise;
+    const parti = [];
+
+    for (let n = 1; n <= pdf.numPages; n++) {
+      stato("Estrazione PDF", "Sto leggendo pagina " + n + " di " + pdf.numPages + "...");
+      await pausa();
+
+      const page = await pdf.getPage(n);
+      const content = await page.getTextContent();
+
+      const testoPagina = content.items
+        .map(function (item) { return item.str || ""; })
+        .join(" ")
+        .replace(/\s+/g, " ")
+        .trim();
+
+      if (testoPagina) {
+        parti.push("Pagina " + n + "\n" + testoPagina);
+      }
+    }
+
+    const testo = parti.join("\n\n").trim();
+
+    if (!testo || testo.length < 80) {
+      throw new Error("PDF letto, ma testo estratto troppo corto. Il PDF potrebbe essere scannerizzato/immagine e richiedere OCR.");
+    }
+
+    return testo;
+  }
+
+  async function caricaFile(file) {
+    if (!file) return;
+
+    setBusy(true);
+    outputBox.innerHTML = '<div class="status">File in caricamento...</div>';
+
+    try {
+      stato("Caricamento file", file.name + " - " + Math.round(file.size / 1024) + " KB");
+
+      const nome = file.name.toLowerCase();
+      const tipo = file.type || "";
+
+      let testo = "";
+
+      if (nome.endsWith(".pdf") || tipo.includes("pdf")) {
+        testo = await leggiPdf(file);
+      } else {
+        testo = await leggiTxtMd(file);
+      }
+
+      textarea.value = testo;
+      window.__testoFileCaricatoV2A24 = testo;
+
+      const parole = testo.split(/\s+/).filter(Boolean).length;
+
+      stato("File caricato correttamente", "Testo estratto: circa " + parole + " parole.");
+      outputBox.innerHTML = '<div class="status">Ora puoi premere Riassunto, Card, Test o Domande studio.</div>';
+    } catch (err) {
+      errore("Errore caricamento file", err);
+    } finally {
+      setBusy(false);
+    }
+  }
+
+  function leggiTestoReale() {
+    const testo = (textarea.value || window.__testoFileCaricatoV2A24 || "").trim();
+
+    if (!testo || testo.length < 80) {
+      throw new Error("Carica un file reale o incolla un testo più lungo prima di generare.");
+    }
+
+    return testo;
+  }
+
+  function renderRiassunto(report) {
+    const out = report.output || {};
+    const testo = out.testo || report.testoFinaleControllato || JSON.stringify(out, null, 2);
+
+    outputBox.innerHTML =
+      '<div class="result-card">' +
+      '<h2>Riassunto esteso reale</h2>' +
+      '<div class="meta">Parole documento: ' + escapeHtml(out.paroleOriginali || '') +
+      ' | Parole riassunto: ' + escapeHtml(out.paroleRiassunto || '') +
+      ' | Rapporto: ' + escapeHtml(out.rapporto || '') + '%</div>' +
+      '<p>' + escapeHtml(testo).replace(/\n/g, '</p><p>') + '</p>' +
+      '</div>';
+  }
+
+  function renderArray(titolo, elementi) {
+    let html = '<h2>' + escapeHtml(titolo) + '</h2>';
+
+    elementi.forEach(function (item, idx) {
+      const domanda = item.domanda || item.titolo || item.testo || item.contenuto || ("Elemento " + (idx + 1));
+      const risposta = item.risposta || item.rispostaGuida || item.risposta_guida || item.spiegazione || item.descrizione || "";
+      const opzioni = item.opzioni || item.options || [];
+
+      html += '<div class="result-card">';
+      html += '<h3>' + (idx + 1) + '. ' + escapeHtml(domanda) + '</h3>';
+
+      if (Array.isArray(opzioni) && opzioni.length) {
+        html += '<ol>';
+        opzioni.forEach(function (op) {
+          html += '<li>' + escapeHtml(op) + '</li>';
+        });
+        html += '</ol>';
+      }
+
+      if (item.rispostaCorretta || item.risposta_corretta) {
+        html += '<p><strong>Risposta corretta:</strong> ' + escapeHtml(item.rispostaCorretta || item.risposta_corretta) + '</p>';
+      }
+
+      if (risposta) {
+        html += '<p>' + escapeHtml(risposta) + '</p>';
+      }
+
+      html += '</div>';
+    });
+
+    outputBox.innerHTML = html;
+  }
+
+  function renderGenerico(azione, report) {
+    const out = report.output;
+
+    if (azione === "riassunto") {
+      renderRiassunto(report);
+      return;
+    }
+
+    if (Array.isArray(out)) {
+      const titolo =
+        azione === "card" ? "Card generate" :
+        azione === "test" ? "Test generato" :
+        azione === "domande" ? "Domande studio generate" :
+        "Output generato";
+
+      renderArray(titolo, out);
+      return;
+    }
+
+    outputBox.innerHTML =
+      '<div class="result-card"><h2>Output ' + escapeHtml(azione) + '</h2><pre>' +
+      escapeHtml(JSON.stringify(report, null, 2)) +
+      '</pre></div>';
+  }
+
+  async function genera(azione) {
+    setBusy(true);
+    outputBox.innerHTML = '<div class="status">Generazione ' + escapeHtml(azione) + ' in corso...</div>';
+
+    try {
+      stato("Generazione " + azione, "Uso il testo del file caricato. Nessun contenuto demo.");
+
+      await pausa();
+
+      if (typeof window.eseguiPipelineMotoriBrowserV2A19 !== "function") {
+        throw new Error("Motore browser V2A.19 non caricato.");
+      }
+
+      const testo = leggiTestoReale();
+      const parole = testo.split(/\s+/).filter(Boolean).length;
+
+      stato("Documento pronto", "Parole lette: " + parole + ". Generazione " + azione + " in corso...");
+
+      await pausa();
+
+      let report = window.eseguiPipelineMotoriBrowserV2A19(azione, { testo: testo });
+
+      if (typeof window.correggiReportV35GRiassuntoCardV2A25B === "function") {
+        report = window.correggiReportV35GRiassuntoCardV2A25B(report, azione);
+      }
+
+      if (!report || report.ok !== true) {
+        throw new Error("Generazione non completata: " + JSON.stringify(report && report.problemi ? report.problemi : report));
+      }
+
+      window.__ragPulitoUltimoReportV2A24 = report;
+
+      renderGenerico(azione, report);
+
+      stato("Generazione completata", "Output " + azione + " creato dal file caricato.");
+    } catch (err) {
+      errore("Errore generazione " + azione, err);
+      outputBox.innerHTML =
+        '<div class="error"><h2>Errore output</h2>' + escapeHtml(err && err.message ? err.message : err) + '</div>';
+    } finally {
+      setBusy(false);
+    }
+  }
+
+  fileInput.addEventListener("change", function () {
+    const file = fileInput.files && fileInput.files[0];
+    caricaFile(file);
+  });
+
+  document.querySelectorAll("[data-action]").forEach(function (btn) {
+    btn.addEventListener("click", function (evento) {
+      evento.preventDefault();
+      evento.stopPropagation();
+      genera(btn.getAttribute("data-action"));
+    });
+  });
+
+  console.log("V2A.24 upload file reale caricato");
+})();
+</script>
+</body>
+</html>

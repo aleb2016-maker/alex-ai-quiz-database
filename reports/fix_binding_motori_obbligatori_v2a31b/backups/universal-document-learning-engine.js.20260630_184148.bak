@@ -1544,7 +1544,7 @@
       return pulito;
     }
 
-    let sezioniFinali = (sezioni || []).map(function (sezione, indice) {
+    const sezioniFinali = (sezioni || []).map(function (sezione, indice) {
       const frasi = deduplicaConMotoriEsistenti(frasiQualita(sezione.testo || ""));
       const testoFinale = frasi.join(" ");
 
@@ -1605,273 +1605,6 @@
     `;
   }
 
-
-  /* V2A33 - qualità riassunto lungo e scroll output */
-  function pulisciFraseRiassuntoLungoV2A33(frase) {
-    return correggiSpaziPunteggiaturaV35G(String(frase || "")
-      .replace(/---\s*PAGINA\s+\d+\s*---/gi, " ")
-      .replace(/Titolo pagina\s+\d+\s*:\s*/gi, " ")
-      .replace(/Riferimento sezione:\s*[A-Z0-9.\-]+\s*/gi, " ")
-      .replace(/^Batch\s+\d+\s*\(pagine[^)]*\):\s*/i, "")
-      .replace(/\bchunk cio[eè]\s+blocchi?\s+di\s+testo\b/gi, "blocchi di testo")
-      .replace(/\bbatch cio[eè]\s+gruppi?\s+di\s+chunk\s+elaborati\s+insieme\b/gi, "gruppi di elaborazione")
-      .replace(/\s+/g, " ")
-      .trim());
-  }
-
-  function firmaFraseRiassuntoLungoV2A33(frase) {
-    return String(frase || "")
-      .toLowerCase()
-      .normalize("NFD")
-      .replace(/[\u0300-\u036f]/g, "")
-      .replace(/[^a-z0-9 ]+/g, " ")
-      .replace(/\s+/g, " ")
-      .split(" ")
-      .filter(function (parola) {
-        return parola.length > 3;
-      })
-      .slice(0, 22)
-      .join(" ");
-  }
-
-  function frasiPuliteRiassuntoLungoV2A33(testo) {
-    return normalizzaTesto(testo)
-      .replace(/---\s*PAGINA\s+\d+\s*---/gi, ". ")
-      .replace(/\n+/g, " ")
-      .split(/(?<=[.!?])\s+/)
-      .map(pulisciFraseRiassuntoLungoV2A33)
-      .filter(function (frase) {
-        if (frase.length < 45 || frase.length > 520) return false;
-        if (/^titolo pagina/i.test(frase)) return false;
-        if (/^riferimento sezione/i.test(frase)) return false;
-        if (/^batch\s+\d+/i.test(frase)) return false;
-        return true;
-      });
-  }
-
-  function deduplicaRiassuntoLungoV2A33(frasi, limite) {
-    const viste = new Set();
-    const output = [];
-
-    frasi.forEach(function (frase) {
-      const firma = firmaFraseRiassuntoLungoV2A33(frase);
-      if (!firma || viste.has(firma)) return;
-
-      viste.add(firma);
-      output.push(frase);
-    });
-
-    return typeof limite === "number" ? output.slice(0, limite) : output;
-  }
-
-  function paroleProfiloRiassuntoLungoV2A33(profilo) {
-    const parole = [];
-    const sezioni = profilo && profilo.sezioni ? profilo.sezioni : [];
-
-    sezioni.forEach(function (sezione) {
-      (sezione.parole || []).forEach(function (parola) {
-        parole.push(String(parola || "").toLowerCase());
-      });
-    });
-
-    parolePerSezioneRiassunto(profilo || {}, { parole: [] }).forEach(function (parola) {
-      parole.push(String(parola || "").toLowerCase());
-    });
-
-    return deduplicaRiassuntoLungoV2A33(parole.filter(Boolean), 80);
-  }
-
-  function selezionaFrasiRiassuntoLungoV2A33(frasi, profilo, limite) {
-    const paroleProfilo = paroleProfiloRiassuntoLungoV2A33(profilo);
-    const frequenze = new Map();
-
-    frasi.forEach(function (frase) {
-      normalizzaTesto(frase).toLowerCase().split(/\s+/).forEach(function (parola) {
-        const pulita = parola.replace(/[^a-zàèéìòù0-9]/gi, "");
-        if (pulita.length < 5) return;
-        frequenze.set(pulita, (frequenze.get(pulita) || 0) + 1);
-      });
-    });
-
-    const classificate = frasi.map(function (frase, indice) {
-      const lower = frase.toLowerCase();
-      let score = 0;
-
-      paroleProfilo.forEach(function (parola) {
-        if (parola && lower.includes(parola)) score += 8;
-      });
-
-      lower.split(/\s+/).forEach(function (parola) {
-        const pulita = parola.replace(/[^a-zàèéìòù0-9]/gi, "");
-        score += frequenze.get(pulita) || 0;
-      });
-
-      if (indice < Math.max(5, frasi.length * 0.12)) score += 5;
-      if (frase.length >= 90 && frase.length <= 330) score += 6;
-      if (/descrive come gestire/i.test(frase)) score -= 4;
-
-      return {
-        frase: frase,
-        indice: indice,
-        score: score
-      };
-    }).sort(function (a, b) {
-      return b.score - a.score;
-    });
-
-    const scelte = [];
-    const firme = new Set();
-
-    classificate.forEach(function (item) {
-      if (scelte.length >= limite) return;
-
-      const firma = firmaFraseRiassuntoLungoV2A33(item.frase);
-      if (!firma || firme.has(firma)) return;
-
-      firme.add(firma);
-      scelte.push(item);
-    });
-
-    return scelte
-      .sort(function (a, b) {
-        return a.indice - b.indice;
-      })
-      .map(function (item) {
-        return item.frase;
-      });
-  }
-
-  function costruisciRiassuntoDaChunkV2A33(reportLungo, testoOriginale, profilo) {
-    const chunks = reportLungo && reportLungo.chunks ? reportLungo.chunks : [];
-    const totalPages = reportLungo && reportLungo.totalPages ? reportLungo.totalPages : 1;
-    const targetChars = Math.min(
-      55000,
-      Math.max(9000, Math.round(String(testoOriginale || "").length * 0.18))
-    );
-
-    const sezioni = [];
-    const tutteFrasi = [];
-
-    chunks.forEach(function (chunk) {
-      frasiPuliteRiassuntoLungoV2A33(chunk.text || "").forEach(function (frase) {
-        tutteFrasi.push({
-          frase: frase,
-          pageStart: chunk.pageStart || 1,
-          pageEnd: chunk.pageEnd || chunk.pageStart || 1
-        });
-      });
-    });
-
-    const frasiGlobali = deduplicaRiassuntoLungoV2A33(tutteFrasi.map(function (item) {
-      return item.frase;
-    }), 1200);
-
-    const sintesi = selezionaFrasiRiassuntoLungoV2A33(frasiGlobali, profilo, 14);
-
-    if (sintesi.length) {
-      sezioni.push({
-        titolo: "Sintesi generale",
-        testo: sintesi.join(" ")
-      });
-    }
-
-    const macroSezioni = Math.min(8, Math.max(5, Math.ceil(totalPages / 18)));
-    const paginePerSezione = Math.max(1, Math.ceil(totalPages / macroSezioni));
-
-    for (let i = 0; i < macroSezioni; i += 1) {
-      const paginaInizio = i * paginePerSezione + 1;
-      const paginaFine = Math.min(totalPages, (i + 1) * paginePerSezione);
-
-      const frasiGruppo = tutteFrasi
-        .filter(function (item) {
-          return item.pageStart >= paginaInizio && item.pageStart <= paginaFine;
-        })
-        .map(function (item) {
-          return item.frase;
-        });
-
-      const scelte = selezionaFrasiRiassuntoLungoV2A33(
-        deduplicaRiassuntoLungoV2A33(frasiGruppo, 300),
-        profilo,
-        18
-      );
-
-      if (scelte.length) {
-        sezioni.push({
-          titolo: "Macro-sezione " + (i + 1) + " - pagine " + paginaInizio + "-" + paginaFine,
-          testo: scelte.join(" ")
-        });
-      }
-    }
-
-    const usate = new Set();
-    sezioni.forEach(function (sezione) {
-      frasiPuliteRiassuntoLungoV2A33(sezione.testo).forEach(function (frase) {
-        usate.add(firmaFraseRiassuntoLungoV2A33(frase));
-      });
-    });
-
-    let caratteri = sezioni.map(function (s) { return s.testo; }).join(" ").length;
-    const rimanenti = frasiGlobali.filter(function (frase) {
-      return !usate.has(firmaFraseRiassuntoLungoV2A33(frase));
-    });
-
-    let indiceApprofondimento = 1;
-
-    while (caratteri < targetChars && rimanenti.length) {
-      const blocco = selezionaFrasiRiassuntoLungoV2A33(rimanenti.splice(0, 180), profilo, 16);
-
-      if (!blocco.length) break;
-
-      sezioni.push({
-        titolo: "Approfondimento " + indiceApprofondimento,
-        testo: blocco.join(" ")
-      });
-
-      caratteri = sezioni.map(function (s) { return s.testo; }).join(" ").length;
-      indiceApprofondimento += 1;
-
-      if (indiceApprofondimento > 8) break;
-    }
-
-    return sezioni.map(correggiOutputTestualeV35G);
-  }
-
-  function miglioraSezioniRiassuntoLungoV2A33(sezioni, progressive, reportLungo, testoOriginale, profilo) {
-    const daChunk = costruisciRiassuntoDaChunkV2A33(reportLungo, testoOriginale, profilo);
-
-    if (daChunk && daChunk.length >= 4) {
-      return daChunk;
-    }
-
-    return (sezioni || []).map(function (sezione) {
-      const frasi = deduplicaRiassuntoLungoV2A33(frasiPuliteRiassuntoLungoV2A33(sezione.testo || ""), 24);
-
-      return {
-        titolo: sezione.titolo || "Sezione riassunto",
-        testo: frasi.join(" ")
-      };
-    }).filter(function (sezione) {
-      return sezione.testo && sezione.testo.trim().length > 0;
-    });
-  }
-
-  function scorriOutputGeneratoV2A33(azione) {
-    if (typeof window === "undefined") return;
-
-    window.setTimeout(function () {
-      const output = areaOutput();
-
-      if (!output || typeof output.scrollIntoView !== "function") return;
-
-      output.scrollIntoView({
-        behavior: "smooth",
-        block: "start"
-      });
-    }, 120);
-  }
-
-
   function renderizzaRiassuntoLungoV2A28(profilo, progressive, sezioni, reportQualita) {
     const qualita = reportQualita || {};
 
@@ -1906,38 +1639,6 @@
       </section>
     `;
   }
-
-
-  /* V2A34U - ponte orchestratore riassunto universale */
-  function applicaOrchestratoreRiassuntoUniversaleV2A34U(testo, profilo, reportLungo, progressive, sezioniBase, qualita) {
-    const orchestratore = typeof window !== "undefined"
-      ? window.RagSummaryUniversalOrchestratorV2A34U
-      : null;
-
-    if (!orchestratore || typeof orchestratore.orchestrateHighQualitySummary !== "function") {
-      return sezioniBase;
-    }
-
-    const risultato = orchestratore.orchestrateHighQualitySummary({
-      testoOriginale: testo,
-      profilo: profilo,
-      reportLungo: reportLungo,
-      progressive: progressive,
-      sezioniBase: sezioniBase,
-      reportQualitaPrecedente: qualita && qualita.report ? qualita.report : null
-    });
-
-    if (!risultato || !Array.isArray(risultato.sezioni) || !risultato.sezioni.length) {
-      return sezioniBase;
-    }
-
-    if (qualita && qualita.report) {
-      qualita.report.orchestratore_riassunto_universale_v2a34u = risultato.report;
-    }
-
-    return risultato.sezioni.map(correggiOutputTestualeV35G);
-  }
-
 
   async function generaRiassunto() {
   verificaMotoriObbligatoriV2A16("riassunto");
@@ -1981,28 +1682,11 @@
     });
     const sezioni = creaSezioniRiassuntoLungoV2A28(progressive);
     const qualita = applicaQualitaRiassuntoLungoEsistenteV2A29(sezioni, testo, profilo);
-    let sezioniFinali = miglioraSezioniRiassuntoLungoV2A33(qualita.sezioni, progressive, reportLungo, testo, profilo);
-
-    /* V2A34U-B - aggancio reale orchestratore universale prima del render finale */
-    sezioniFinali = applicaOrchestratoreRiassuntoUniversaleV2A34U(
-      testo,
-      profilo,
-      reportLungo,
-      progressive,
-      sezioniFinali,
-      qualita
-    );
-
+    const sezioniFinali = qualita.sezioni;
 
     if (typeof window !== "undefined") {
       window.__ragRiassuntoLungoProgressivoV2A28 = progressive;
-      window.__ragRiassuntoUniversaleV2A34UB = {
-      attivo: true,
-      sezioni: Array.isArray(sezioniFinali) ? sezioniFinali.length : 0,
-      primoTitolo: Array.isArray(sezioniFinali) && sezioniFinali[0] ? sezioniFinali[0].titolo : "",
-      usaOrchestratoreUniversale: true
-    };
-    window.__ragRiassuntoLungoSezioniV2A28 = sezioniFinali;
+      window.__ragRiassuntoLungoSezioniV2A28 = sezioniFinali;
       window.__ragRiassuntoLungoQualitaV2A29 = qualita.report;
     }
 
@@ -2449,13 +2133,7 @@
       </section>
     `;
 
-    document.getElementById("btnAvviaQuiz").addEventListener("click", async function (event) {
-      const risultato = mostraDomandaQuiz(event);
-      if (risultato && typeof risultato.then === "function") {
-        await risultato;
-      }
-      scorriOutputGeneratoV2A33("btnAvviaQuiz");
-    });
+    document.getElementById("btnAvviaQuiz").addEventListener("click", mostraDomandaQuiz);
   }
 
   function mostraDomandaQuiz() {
@@ -3192,34 +2870,10 @@ body {
     });
 
     document.getElementById("fileInput").addEventListener("change", caricaFile);
-    document.getElementById("btnRiassunto").addEventListener("click", async function (event) {
-      const risultato = generaRiassunto(event);
-      if (risultato && typeof risultato.then === "function") {
-        await risultato;
-      }
-      scorriOutputGeneratoV2A33("btnRiassunto");
-    });
-    document.getElementById("btnCard").addEventListener("click", async function (event) {
-      const risultato = generaCardVisive(event);
-      if (risultato && typeof risultato.then === "function") {
-        await risultato;
-      }
-      scorriOutputGeneratoV2A33("btnCard");
-    });
-    document.getElementById("btnTest").addEventListener("click", async function (event) {
-      const risultato = generaTest(event);
-      if (risultato && typeof risultato.then === "function") {
-        await risultato;
-      }
-      scorriOutputGeneratoV2A33("btnTest");
-    });
-    document.getElementById("btnStudio").addEventListener("click", async function (event) {
-      const risultato = generaDomandeStudio(event);
-      if (risultato && typeof risultato.then === "function") {
-        await risultato;
-      }
-      scorriOutputGeneratoV2A33("btnStudio");
-    });
+    document.getElementById("btnRiassunto").addEventListener("click", generaRiassunto);
+    document.getElementById("btnCard").addEventListener("click", generaCardVisive);
+    document.getElementById("btnTest").addEventListener("click", generaTest);
+    document.getElementById("btnStudio").addEventListener("click", generaDomandeStudio);
   }
 
   document.addEventListener("DOMContentLoaded", avvia);
@@ -3243,25 +2897,70 @@ body {
    ============================================================ */
 
 function verificaMotoriObbligatoriV2A16(azione) {
-  /*
-   * V2A32
-   * Il blocco V2A16 stava fermando il pulsante con un falso negativo.
-   * Da ora non mostra alert e non lancia errori: registra solo diagnostica.
-   * I motori reali vengono poi usati direttamente da generaRiassunto, generaCard, generaTest e domande.
-   */
-  if (typeof window !== "undefined") {
-    const engine = window.UniversalDocumentLearningEngine || window.RagUniversalDocumentLearningEngine || {};
-    window.__ultimoControlloMotoriObbligatoriV2A32 = {
-      ok: true,
-      azione: azione,
-      bloccoDisattivato: true,
-      motoriDisponibili: {
-        engine: !!engine,
-        riconosciTema: typeof engine.riconosciTema === "function" || typeof window.riconosciTema === "function",
-        creaCards: typeof engine.creaCards === "function" || typeof window.creaCards === "function",
-        generaRiassunto: typeof engine.generaRiassunto === "function" || typeof window.generaRiassunto === "function"
-      }
-    };
+  const problemi = [];
+
+  function esiste(nome) {
+    try {
+      if (typeof eval(nome) !== "undefined") return true;
+    } catch (_) {}
+    try {
+      if (typeof window !== "undefined" && typeof window[nome] !== "undefined") return true;
+    } catch (_) {}
+    return false;
+  }
+
+  const comuni = [
+    ["profiliDocumento", "profili documento: poesia, storia, curriculum, aziendale, personale, hobby, sport"],
+    ["riconosciTema", "motore riconoscimento tema/documento"],
+    ["creaCards", "motore card/concetti/sezioni"],
+  ];
+
+  const perAzione = {
+    riassunto: [
+      ["generaRiassunto", "funzione riassunto principale"],
+      ["creaCards", "riassunto agganciato a card, profilo e sezioni"],
+      ["riconosciTema", "riassunto agganciato al riconoscimento tema"],
+    ],
+    card: [
+      ["creaCards", "generatore card ufficiale"],
+      ["riconosciTema", "card agganciate al profilo documento"],
+    ],
+    test: [
+      ["creaCards", "test agganciato a concetti/card ufficiali"],
+      ["riconosciTema", "test agganciato al profilo documento"],
+    ],
+    domande: [
+      ["creaCards", "domande studio agganciate a concetti/card ufficiali"],
+      ["riconosciTema", "domande studio agganciate al profilo documento"],
+    ],
+  };
+
+  const richiesti = comuni.concat(perAzione[azione] || []);
+
+  richiesti.forEach(function (item) {
+    const nome = item[0];
+    const descrizione = item[1];
+
+    if (!esiste(nome)) {
+      problemi.push(nome + " → " + descrizione);
+    }
+  });
+
+  if (problemi.length) {
+    const messaggio =
+      "Blocco V2A.16: pulsante non agganciato ai motori obbligatori.\n\n" +
+      "Azione: " + azione + "\n\n" +
+      "Motori mancanti:\n- " + problemi.join("\n- ") +
+      "\n\nNessun fallback/demo viene eseguito.";
+
+    if (typeof mostraErrore === "function") {
+      mostraErrore(messaggio);
+    } else {
+      alert(messaggio);
+      console.error(messaggio);
+    }
+
+    throw new Error(messaggio);
   }
 
   return true;
@@ -3293,9 +2992,6 @@ function esponiGuardiaMotoriV2A16() {
 
   window.verificaMotoriObbligatoriV2A16 = verificaMotoriObbligatoriV2A16;
   window.registraUsoMotoriV2A16 = registraUsoMotoriV2A16;
-
-  /* V2A32: export V2A31B rimosso perché fuori scope. */
-
 }
 
 esponiGuardiaMotoriV2A16();

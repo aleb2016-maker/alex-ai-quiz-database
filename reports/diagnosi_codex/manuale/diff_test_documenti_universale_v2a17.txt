@@ -1,0 +1,17 @@
+diff --git a/demo-rag/test-documenti-universale.html b/demo-rag/test-documenti-universale.html
+index 4ab3d43..d5f9f50 100644
+--- a/demo-rag/test-documenti-universale.html
++++ b/demo-rag/test-documenti-universale.html
+@@ -707,7 +707,8 @@
+   <script src="./rag-action-icons-v46.js?v=icone-solo-nuove-v46"></script>
+   <script src="./rag-concept-document-engine-v46.js?v=concept-v46-vero"></script>
+   <script src="./pdf-export-browser-v6.js?v=6"></script>
+-  <script src="rag-quality-summary-cards-v34a.js"></script>
+-  <script src="./universal-document-learning-engine.js?v=export-fix-280626"></script>
++  <script src="../runtime/web/rag-large-document-manager-v1.js"></script>
++  <script src="../runtime/web/rag-large-document-progressive-summary-v2.js"></script>
++<script src="./universal-document-learning-engine.js?v=export-fix-280626"></script>
+ </body>
+-</html>
+\ No newline at end of file
++</html>

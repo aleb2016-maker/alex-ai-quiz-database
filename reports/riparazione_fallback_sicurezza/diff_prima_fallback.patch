@@ -1,0 +1,114 @@
+diff --git a/demo-rag/index.html b/demo-rag/index.html
+index 43ce72d..0bb9f0c 100644
+--- a/demo-rag/index.html
++++ b/demo-rag/index.html
+@@ -35,7 +35,6 @@
+   </main>
+   <script src="browser-rag-engine.js?v=stable-a8f0e74-v2"></script>
+   <script src="card-graphic-engine.js?v=stable-a8f0e74-v2"></script>
+-  <script src="rag-quality-summary-cards-v34a.js"></script>
+ <!-- RAG_V35L_LINK_START -->
+ <section id="rag-v35l-main-link" style="margin:32px 0;padding:22px;border-radius:20px;border:1px solid rgba(80,220,170,.45);background:linear-gradient(135deg,rgba(15,35,55,.92),rgba(20,70,65,.78));box-shadow:0 12px 28px rgba(0,0,0,.22);">
+   <h2 style="margin:0 0 10px;color:#eaf4ff;">Motore RAG documenti · V3.5K/V3.5L</h2>
+diff --git a/demo-rag/test-documenti-universale.html b/demo-rag/test-documenti-universale.html
+index 4ab3d43..ff658b0 100644
+--- a/demo-rag/test-documenti-universale.html
++++ b/demo-rag/test-documenti-universale.html
+@@ -707,7 +707,6 @@
+   <script src="./rag-action-icons-v46.js?v=icone-solo-nuove-v46"></script>
+   <script src="./rag-concept-document-engine-v46.js?v=concept-v46-vero"></script>
+   <script src="./pdf-export-browser-v6.js?v=6"></script>
+-  <script src="rag-quality-summary-cards-v34a.js"></script>
+-  <script src="./universal-document-learning-engine.js?v=export-fix-280626"></script>
++<script src="./universal-document-learning-engine.js?v=export-fix-280626"></script>
+ </body>
+-</html>
+\ No newline at end of file
++</html>
+diff --git a/demo-rag/universal-document-learning-engine.js b/demo-rag/universal-document-learning-engine.js
+index 7eecabd..8fc8531 100644
+--- a/demo-rag/universal-document-learning-engine.js
++++ b/demo-rag/universal-document-learning-engine.js
+@@ -1035,6 +1035,24 @@
+     return paragrafi;
+   }
+ 
++  function correggiSpaziPunteggiaturaV35G(testo) {
++    return String(testo || "").replace(/\s+([,.!?;:])/g, "$1");
++  }
++
++  function correggiOutputTestualeV35G(valore) {
++    if (!valore || typeof valore !== "object") {
++      return valore;
++    }
++
++    Object.keys(valore).forEach(function (chiave) {
++      if (typeof valore[chiave] === "string") {
++        valore[chiave] = correggiSpaziPunteggiaturaV35G(valore[chiave]);
++      }
++    });
++
++    return valore;
++  }
++
+   function generaRiassunto() {
+   verificaMotoriObbligatoriV2A16("riassunto");
+   var auditMotoriV2A16 = registraUsoMotoriV2A16("riassunto");
+@@ -1047,7 +1065,7 @@
+     }
+ 
+     const profilo = riconosciTema(testo);
+-    const paragrafi = creaParagrafiRiassunto(testo, profilo);
++    const paragrafi = creaParagrafiRiassunto(testo, profilo).map(correggiOutputTestualeV35G);
+ 
+     areaOutput().innerHTML = `
+       <section class="output-card ${profilo.classe}" data-rag-export="riassunto-esteso-reale">
+@@ -1380,7 +1398,7 @@
+ 
+     const risultato = creaCards(testo);
+     const profilo = risultato.profilo;
+-    const cards = risultato.cards;
++    const cards = risultato.cards.map(correggiOutputTestualeV35G);
+ 
+     areaOutput().innerHTML = `
+       <section class="output-card ${profilo.classe}">
+@@ -1490,6 +1508,11 @@
+       return;
+     }
+ 
++    quiz.domande.forEach(function (domanda) {
++      correggiOutputTestualeV35G(domanda);
++      domanda.opzioni.forEach(correggiOutputTestualeV35G);
++    });
++
+     quizCorrente = {
+       domande: quiz.domande,
+       indice: 0,
+@@ -1639,7 +1662,7 @@
+ 
+     const risultato = creaCards(testo);
+     const profilo = risultato.profilo;
+-    const cards = risultato.cards;
++    const cards = risultato.cards.map(correggiOutputTestualeV35G);
+ 
+     areaOutput().innerHTML = `
+       <section class="output-card ${profilo.classe}">
+@@ -2372,4 +2395,3 @@ function esponiGuardiaMotoriV2A16() {
+ 
+ esponiGuardiaMotoriV2A16();
+ 
+-
+diff --git a/scripts/verifica_rag_documenti_lunghi_v1.py b/scripts/verifica_rag_documenti_lunghi_v1.py
+index aaafbbb..7b95831 100644
+--- a/scripts/verifica_rag_documenti_lunghi_v1.py
++++ b/scripts/verifica_rag_documenti_lunghi_v1.py
+@@ -25,8 +25,7 @@ FORBIDDEN_LINKS = [
+     "test-documenti-universale.html",
+     "universal-document-learning-engine.js",
+     "pdf-export-browser-v6.js",
+-    "rag-quality-summary-cards-v34a.js",
+-    "btnScaricaPdf",
++        "btnScaricaPdf",
+     "btnScaricaTxt",
+     "btnScaricaHtml",
+     "btnScaricaJson",

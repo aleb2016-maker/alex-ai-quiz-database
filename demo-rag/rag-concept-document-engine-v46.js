@@ -211,7 +211,7 @@
   function profile(text) {
     if (has(text, ["sicurezza informatica", "password", "password manager", "email sospetta", "e-mail sospetta", "reparto it", "responsabile della sicurezza", "sistemi digitali", "aggiornamenti", "procedura controllata", "rischi", "controlli"])) {
       return {
-        materia: "sicurezza informatica aziendale",
+        materia: "sicurezza digitale",
         contesto: "documento aziendale",
         categoria: "procedure e buone pratiche"
       };
@@ -228,54 +228,75 @@
     return { title, ramo, fatto, domanda, icon };
   }
 
+  function sentences(text) {
+    return clean(text)
+      .replace(/\n+/g, ". ")
+      .split(/(?<=[.!?])\s+/)
+      .map(function (s) { return s.trim(); })
+      .filter(function (s) { return s.length >= 24; });
+  }
+
+  function evidence(text, words) {
+    const found = sentences(text).find(function (sentence) {
+      return has(sentence, words);
+    });
+
+    return found || "";
+  }
+
   function concepts(text) {
     const out = [];
+    const protezione = evidence(text, ["sicurezza informatica", "dati", "dispositivi", "account", "sistemi digitali"]);
+    const email = evidence(text, ["email sospetta", "e-mail sospetta", "mail sospetta", "reparto it", "responsabile della sicurezza", "phishing"]);
+    const password = evidence(text, ["password manager", "password", "credenziali"]);
+    const aggiornamenti = evidence(text, ["aggiornamenti", "aggiornamento", "procedura controllata", "patch"]);
+    const rischi = evidence(text, ["rischi", "controlli", "errori", "ridurre"]);
 
-    if (has(text, ["sicurezza informatica", "dati", "dispositivi", "account", "sistemi digitali", "aggiornamenti", "procedura controllata", "rischi", "controlli"])) {
+    if (protezione) {
       out.push(concept(
-        "Sicurezza informatica aziendale",
+        "Protezione dati e sistemi",
         "protezione dati e sistemi",
-        "La sicurezza informatica comprende pratiche, strumenti e comportamenti usati per proteggere dati, dispositivi, account e sistemi digitali.",
-        "Quali elementi protegge la sicurezza informatica aziendale?",
+        protezione,
+        "Quali elementi protegge questa parte del documento?",
         "🛡️"
       ));
     }
 
-    if (has(text, ["email sospetta", "e-mail sospetta", "mail sospetta", "reparto it", "responsabile della sicurezza", "phishing"])) {
+    if (email) {
       out.push(concept(
-        "E-mail sospette",
+        "Segnalazione email",
         "segnalazione e prevenzione",
-        "Un'e-mail sospetta deve essere segnalata al reparto IT o al responsabile della sicurezza.",
+        email,
         "Perché un'e-mail sospetta deve essere segnalata al reparto IT o al responsabile della sicurezza?",
         "📧"
       ));
     }
 
-    if (has(text, ["password manager", "password"])) {
+    if (password) {
       out.push(concept(
-        "Password manager",
+        "Gestione credenziali",
         "gestione sicura delle credenziali",
-        "Il documento indica come scelta migliore l'uso di un password manager.",
-        "A cosa serve un password manager nella sicurezza informatica aziendale?",
+        password,
+        "Che cosa spiega il documento sulla gestione delle credenziali?",
         "🔐"
       ));
     }
 
-    if (has(text, ["aggiornamenti", "aggiornamento", "procedura controllata"])) {
+    if (aggiornamenti) {
       out.push(concept(
-        "Aggiornamenti controllati",
+        "Gestione aggiornamenti",
         "gestione dei sistemi",
-        "Gli aggiornamenti devono essere gestiti con una procedura controllata.",
+        aggiornamenti,
         "Perché gli aggiornamenti dei sistemi devono seguire una procedura controllata?",
         "🔄"
       ));
     }
 
-    if (has(text, ["rischi", "controlli", "errori", "ridurre"])) {
+    if (rischi) {
       out.push(concept(
-        "Rischi e controlli",
+        "Prevenzione rischi",
         "riduzione degli errori",
-        "Controlli e comportamenti corretti servono a ridurre errori e rischi per dati e sistemi aziendali.",
+        rischi,
         "In che modo controlli e comportamenti corretti riducono i rischi?",
         "⚠️"
       ));
@@ -616,7 +637,6 @@
     }
 
     replaceButton("btnFile", () => fileInput && fileInput.click());
-    replaceButton("btnRiassunto", renderSummary);
     replaceButton("btnCard", renderCards);
     replaceButton("btnStudio", renderStudy);
     replaceButton("btnTest", renderQuiz);

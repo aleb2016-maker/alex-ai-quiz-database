@@ -1,0 +1,525 @@
+diff --git a/demo-rag/index.html b/demo-rag/index.html
+index 43ce72d..a4a2af6 100644
+--- a/demo-rag/index.html
++++ b/demo-rag/index.html
+@@ -19,7 +19,7 @@
+     </section>
+     <section class="upload-panel">
+       <label for="titleInput">Titolo documento</label>
+-      <input id="titleInput" type="text" placeholder="Esempio: Sicurezza informatica aziendale">
++      <input id="titleInput" type="text" placeholder="Esempio: Documento aziendale">
+       <label for="fileInput">File documento</label>
+       <input id="fileInput" type="file" accept=".txt,.md,.markdown,.pdf">
+       <button id="generateButton" type="button">Genera riassunto, tabelle, card e quiz</button>
+@@ -35,7 +35,6 @@
+   </main>
+   <script src="browser-rag-engine.js?v=stable-a8f0e74-v2"></script>
+   <script src="card-graphic-engine.js?v=stable-a8f0e74-v2"></script>
+-  <script src="rag-quality-summary-cards-v34a.js"></script>
+ <!-- RAG_V35L_LINK_START -->
+ <section id="rag-v35l-main-link" style="margin:32px 0;padding:22px;border-radius:20px;border:1px solid rgba(80,220,170,.45);background:linear-gradient(135deg,rgba(15,35,55,.92),rgba(20,70,65,.78));box-shadow:0 12px 28px rgba(0,0,0,.22);">
+   <h2 style="margin:0 0 10px;color:#eaf4ff;">Motore RAG documenti · V3.5K/V3.5L</h2>
+diff --git a/demo-rag/rag-concept-document-engine-v46.js b/demo-rag/rag-concept-document-engine-v46.js
+index 05b4bd8..aa79bdf 100644
+--- a/demo-rag/rag-concept-document-engine-v46.js
++++ b/demo-rag/rag-concept-document-engine-v46.js
+@@ -211,7 +211,7 @@
+   function profile(text) {
+     if (has(text, ["sicurezza informatica", "password", "password manager", "email sospetta", "e-mail sospetta", "reparto it", "responsabile della sicurezza", "sistemi digitali", "aggiornamenti", "procedura controllata", "rischi", "controlli"])) {
+       return {
+-        materia: "sicurezza informatica aziendale",
++        materia: "sicurezza digitale",
+         contesto: "documento aziendale",
+         categoria: "procedure e buone pratiche"
+       };
+@@ -228,54 +228,75 @@
+     return { title, ramo, fatto, domanda, icon };
+   }
+ 
++  function sentences(text) {
++    return clean(text)
++      .replace(/\n+/g, ". ")
++      .split(/(?<=[.!?])\s+/)
++      .map(function (s) { return s.trim(); })
++      .filter(function (s) { return s.length >= 24; });
++  }
++
++  function evidence(text, words) {
++    const found = sentences(text).find(function (sentence) {
++      return has(sentence, words);
++    });
++
++    return found || "";
++  }
++
+   function concepts(text) {
+     const out = [];
++    const protezione = evidence(text, ["sicurezza informatica", "dati", "dispositivi", "account", "sistemi digitali"]);
++    const email = evidence(text, ["email sospetta", "e-mail sospetta", "mail sospetta", "reparto it", "responsabile della sicurezza", "phishing"]);
++    const password = evidence(text, ["password manager", "password", "credenziali"]);
++    const aggiornamenti = evidence(text, ["aggiornamenti", "aggiornamento", "procedura controllata", "patch"]);
++    const rischi = evidence(text, ["rischi", "controlli", "errori", "ridurre"]);
+ 
+-    if (has(text, ["sicurezza informatica", "dati", "dispositivi", "account", "sistemi digitali", "aggiornamenti", "procedura controllata", "rischi", "controlli"])) {
++    if (protezione) {
+       out.push(concept(
+-        "Sicurezza informatica aziendale",
++        "Protezione dati e sistemi",
+         "protezione dati e sistemi",
+-        "La sicurezza informatica comprende pratiche, strumenti e comportamenti usati per proteggere dati, dispositivi, account e sistemi digitali.",
+-        "Quali elementi protegge la sicurezza informatica aziendale?",
++        protezione,
++        "Quali elementi protegge questa parte del documento?",
+         "🛡️"
+       ));
+     }
+ 
+-    if (has(text, ["email sospetta", "e-mail sospetta", "mail sospetta", "reparto it", "responsabile della sicurezza", "phishing"])) {
++    if (email) {
+       out.push(concept(
+-        "E-mail sospette",
++        "Segnalazione email",
+         "segnalazione e prevenzione",
+-        "Un'e-mail sospetta deve essere segnalata al reparto IT o al responsabile della sicurezza.",
++        email,
+         "Perché un'e-mail sospetta deve essere segnalata al reparto IT o al responsabile della sicurezza?",
+         "📧"
+       ));
+     }
+ 
+-    if (has(text, ["password manager", "password"])) {
++    if (password) {
+       out.push(concept(
+-        "Password manager",
++        "Gestione credenziali",
+         "gestione sicura delle credenziali",
+-        "Il documento indica come scelta migliore l'uso di un password manager.",
+-        "A cosa serve un password manager nella sicurezza informatica aziendale?",
++        password,
++        "Che cosa spiega il documento sulla gestione delle credenziali?",
+         "🔐"
+       ));
+     }
+ 
+-    if (has(text, ["aggiornamenti", "aggiornamento", "procedura controllata"])) {
++    if (aggiornamenti) {
+       out.push(concept(
+-        "Aggiornamenti controllati",
++        "Gestione aggiornamenti",
+         "gestione dei sistemi",
+-        "Gli aggiornamenti devono essere gestiti con una procedura controllata.",
++        aggiornamenti,
+         "Perché gli aggiornamenti dei sistemi devono seguire una procedura controllata?",
+         "🔄"
+       ));
+     }
+ 
+-    if (has(text, ["rischi", "controlli", "errori", "ridurre"])) {
++    if (rischi) {
+       out.push(concept(
+-        "Rischi e controlli",
++        "Prevenzione rischi",
+         "riduzione degli errori",
+-        "Controlli e comportamenti corretti servono a ridurre errori e rischi per dati e sistemi aziendali.",
++        rischi,
+         "In che modo controlli e comportamenti corretti riducono i rischi?",
+         "⚠️"
+       ));
+@@ -616,7 +637,6 @@
+     }
+ 
+     replaceButton("btnFile", () => fileInput && fileInput.click());
+-    replaceButton("btnRiassunto", renderSummary);
+     replaceButton("btnCard", renderCards);
+     replaceButton("btnStudio", renderStudy);
+     replaceButton("btnTest", renderQuiz);
+diff --git a/demo-rag/test-documenti-universale.html b/demo-rag/test-documenti-universale.html
+index 4ab3d43..d5f9f50 100644
+--- a/demo-rag/test-documenti-universale.html
++++ b/demo-rag/test-documenti-universale.html
+@@ -707,7 +707,8 @@
+   <script src="./rag-action-icons-v46.js?v=icone-solo-nuove-v46"></script>
+   <script src="./rag-concept-document-engine-v46.js?v=concept-v46-vero"></script>
+   <script src="./pdf-export-browser-v6.js?v=6"></script>
+-  <script src="rag-quality-summary-cards-v34a.js"></script>
+-  <script src="./universal-document-learning-engine.js?v=export-fix-280626"></script>
++  <script src="../runtime/web/rag-large-document-manager-v1.js"></script>
++  <script src="../runtime/web/rag-large-document-progressive-summary-v2.js"></script>
++<script src="./universal-document-learning-engine.js?v=export-fix-280626"></script>
+ </body>
+-</html>
+\ No newline at end of file
++</html>
+diff --git a/demo-rag/universal-document-learning-engine.js b/demo-rag/universal-document-learning-engine.js
+index 7eecabd..00318cd 100644
+--- a/demo-rag/universal-document-learning-engine.js
++++ b/demo-rag/universal-document-learning-engine.js
+@@ -445,7 +445,7 @@
+       },
+       {
+         ramo: "rischi",
+-        titolo: "Rischi e controlli",
++        titolo: "Rischi operativi",
+         parole: ["rischio", "sicurezza", "errore", "controllo", "attenzione", "problema"],
+         descrizione: "Segnala elementi da controllare per ridurre errori o rischi.",
+         domandaStudio: "Quale rischio bisogna prevenire?"
+@@ -1035,20 +1035,215 @@
+     return paragrafi;
+   }
+ 
+-  function generaRiassunto() {
+-  verificaMotoriObbligatoriV2A16("riassunto");
+-  var auditMotoriV2A16 = registraUsoMotoriV2A16("riassunto");
++  function correggiSpaziPunteggiaturaV35G(testo) {
++    return String(testo || "").replace(/\s+([,.!?;:])/g, "$1");
++  }
+ 
+-    const testo = leggiTesto();
++  function correggiOutputTestualeV35G(valore) {
++    if (!valore || typeof valore !== "object") {
++      return valore;
++    }
+ 
+-    if (!textExists(testo)) {
+-      mostraErrore("Documento mancante", "Incolla o carica prima un documento.");
+-      return;
++    Object.keys(valore).forEach(function (chiave) {
++      if (typeof valore[chiave] === "string") {
++        valore[chiave] = correggiSpaziPunteggiaturaV35G(valore[chiave]);
++      }
++    });
++
++    return valore;
++  }
++
++  const SOGLIA_RIASSUNTO_LUNGO_CARATTERI_V2A28 = 10000;
++
++  function contaFrasiRiassuntoV2A28(testo) {
++    return normalizzaTesto(testo)
++      .split(/(?<=[.!?])\s+/)
++      .filter(function (frase) {
++        return frase.trim().length >= 30;
++      }).length;
++  }
++
++  function deveUsareRiassuntoLungoV2A28(testo) {
++    const pulito = normalizzaTesto(testo);
++    const paragrafi = pulito.split(/\n{2,}/).filter(function (paragrafo) {
++      return paragrafo.trim().length >= 80;
++    }).length;
++
++    return pulito.length >= SOGLIA_RIASSUNTO_LUNGO_CARATTERI_V2A28 ||
++      contaFrasiRiassuntoV2A28(pulito) >= 80 ||
++      paragrafi >= 20;
++  }
++
++  function creaReportDocumentoLungoV2A28(testo) {
++    const manager = typeof window !== "undefined" ? window.RagLargeDocumentManagerV1 : null;
++
++    if (!manager || typeof manager.splitTxtMdIntoLogicalPages !== "function") {
++      throw new Error("Motore documenti lunghi non disponibile: RagLargeDocumentManagerV1 mancante.");
+     }
+ 
+-    const profilo = riconosciTema(testo);
+-    const paragrafi = creaParagrafiRiassunto(testo, profilo);
++    const pulito = normalizzaTesto(testo);
++    const pagineLogiche = manager.splitTxtMdIntoLogicalPages(pulito);
++    let chunks;
++    let totalPages;
++    let extractedPages;
++
++    if (pagineLogiche.length > 1) {
++      chunks = manager.createPageChunks(pagineLogiche, {
++        maxCharsPerChunk: 4000,
++        chunkOverlap: 400
++      });
++      totalPages = pagineLogiche.length;
++      extractedPages = pagineLogiche.length;
++    } else {
++      const baseChunks = manager.splitTextToChunks(pulito, {
++        maxCharsPerChunk: 4000,
++        chunkOverlap: 400
++      });
++      totalPages = Math.max(1, Math.ceil(pulito.length / 3500));
++      extractedPages = totalPages;
++      const chunksPerPage = Math.max(1, Math.ceil(baseChunks.length / totalPages));
++
++      chunks = baseChunks.map(function (chunk, index) {
++        const pagina = Math.min(totalPages, Math.floor(index / chunksPerPage) + 1);
++
++        return {
++          id: "p" + pagina + "-c" + chunk.index,
++          pageStart: pagina,
++          pageEnd: pagina,
++          chunkIndexInPage: chunk.index,
++          globalIndex: index + 1,
++          chars: chunk.chars,
++          text: chunk.text
++        };
++      });
++    }
++
++    const batches = manager.createBatches(chunks, {
++      maxPagesPerBatch: 5,
++      maxChunksPerBatch: 8,
++      maxCharsPerBatch: 28000
++    });
++
++    return {
++      fileName: "testo-caricato-in-browser",
++      totalPages: totalPages,
++      extractedPages: extractedPages,
++      totalChars: pulito.length,
++      chunks: chunks,
++      batches: batches
++    };
++  }
++
++  function frasiDaTestoRiassuntoLungoV2A28(testo) {
++    return normalizzaTesto(testo)
++      .replace(/\n+/g, " ")
++      .split(/(?<=[.!?])\s+/)
++      .map(function (frase) {
++        return correggiSpaziPunteggiaturaV35G(frase.trim());
++      })
++      .filter(function (frase) {
++        return frase.length >= 40;
++      });
++  }
++
++  function deduplicaFrasiRiassuntoLungoV2A28(frasi, limite) {
++    const viste = new Set();
++    const output = [];
++
++    frasi.forEach(function (frase) {
++      const firma = frase
++        .toLowerCase()
++        .normalize("NFD")
++        .replace(/[\u0300-\u036f]/g, "")
++        .replace(/[^a-z0-9 ]+/g, " ")
++        .replace(/\s+/g, " ")
++        .split(" ")
++        .slice(0, 18)
++        .join(" ");
++
++      if (!firma || viste.has(firma)) return;
++
++      viste.add(firma);
++      output.push(frase);
++    });
++
++    return typeof limite === "number" ? output.slice(0, limite) : output;
++  }
++
++  function bloccoFrasiRiassuntoLungoV2A28(partials, inizio, fine, limiteFrasi) {
++    const frasi = [];
++
++    partials.slice(inizio, fine).forEach(function (part) {
++      frasi.push.apply(frasi, frasiDaTestoRiassuntoLungoV2A28(part.summary || ""));
++    });
++
++    return deduplicaFrasiRiassuntoLungoV2A28(frasi, limiteFrasi).join(" ");
++  }
++
++  function creaSezioniRiassuntoLungoV2A28(progressive) {
++    const partials = progressive.partials || [];
++    const keywords = progressive.finalSummary && progressive.finalSummary.keywords
++      ? progressive.finalSummary.keywords
++      : [];
++    const sezioni = [];
++    const gruppo = Math.max(1, Math.ceil(partials.length / 5));
++
++    sezioni.push({
++      titolo: "Sintesi generale",
++      testo: bloccoFrasiRiassuntoLungoV2A28(partials, 0, Math.min(partials.length, gruppo), 8)
++    });
++
++    for (let inizio = 0; inizio < partials.length; inizio += gruppo) {
++      const fine = Math.min(partials.length, inizio + gruppo);
++      const primaPagina = partials[inizio] ? partials[inizio].pageStart : "";
++      const ultimaPagina = partials[fine - 1] ? partials[fine - 1].pageEnd : "";
++      const testoSezione = bloccoFrasiRiassuntoLungoV2A28(partials, inizio, fine, 10);
++
++      if (testoSezione) {
++        sezioni.push({
++          titolo: "Sezione progressiva " + (Math.floor(inizio / gruppo) + 1) + " - pagine " + primaPagina + "-" + ultimaPagina,
++          testo: testoSezione
++        });
++      }
++    }
++
++    if (keywords.length) {
++      sezioni.push({
++        titolo: "Punti chiave ricorrenti",
++        testo: "I concetti piu' ricorrenti nel documento sono: " + keywords.slice(0, 14).join(", ") + "."
++      });
++    }
++
++    const dettagli = partials.slice(0, 36).map(function (part) {
++      return "Batch " + part.batchIndex + " (pagine " + part.pageStart + "-" + part.pageEnd + "): " +
++        correggiSpaziPunteggiaturaV35G(part.summary || "");
++    }).filter(Boolean);
++
++    if (dettagli.length) {
++      sezioni.push({
++        titolo: "Dettagli importanti per batch",
++        testo: dettagli.join("\n")
++      });
++    }
++
++    const conclusione = bloccoFrasiRiassuntoLungoV2A28(
++      partials,
++      Math.max(0, partials.length - gruppo),
++      partials.length,
++      6
++    );
++
++    if (conclusione) {
++      sezioni.push({
++        titolo: "Conclusione",
++        testo: conclusione
++      });
++    }
++
++    return sezioni.map(correggiOutputTestualeV35G);
++  }
+ 
++  function renderizzaRiassuntoCompattoV2A28(profilo, paragrafi) {
+     areaOutput().innerHTML = `
+       <section class="output-card ${profilo.classe}" data-rag-export="riassunto-esteso-reale">
+         <span class="pill">${profilo.icona} ${escapeHtml(profilo.nome)}</span>
+@@ -1074,6 +1269,84 @@
+     `;
+   }
+ 
++  function renderizzaRiassuntoLungoV2A28(profilo, progressive, sezioni) {
++    areaOutput().innerHTML = `
++      <section class="output-card ${profilo.classe}" data-rag-export="riassunto-lungo-progressivo-v2a28">
++        <span class="pill">${profilo.icona} ${escapeHtml(profilo.nome)} - riassunto progressivo</span>
++
++        <h2>Riassunto lungo documento</h2>
++
++        <p>
++          Documento elaborato con motore progressivo per testi lunghi:
++          ${escapeHtml(progressive.chunkCount)} chunk,
++          ${escapeHtml(progressive.batchCount)} batch,
++          ${escapeHtml(progressive.partials.length)} riassunti parziali.
++        </p>
++
++        ${sezioni.map(function (sezione) {
++          const testoHtml = escapeHtml(sezione.testo).replace(/\n/g, "<br>");
++
++          return `
++            <article class="rag-summary-section" style="margin-top:24px">
++              <h3>${escapeHtml(sezione.titolo)}</h3>
++              <p>${testoHtml}</p>
++            </article>
++          `;
++        }).join("")}
++      </section>
++    `;
++  }
++
++  async function generaRiassunto() {
++  verificaMotoriObbligatoriV2A16("riassunto");
++  var auditMotoriV2A16 = registraUsoMotoriV2A16("riassunto");
++
++    const testo = leggiTesto();
++
++    if (!textExists(testo)) {
++      mostraErrore("Documento mancante", "Incolla o carica prima un documento.");
++      return;
++    }
++
++    const profilo = riconosciTema(testo);
++
++    if (!deveUsareRiassuntoLungoV2A28(testo)) {
++      const paragrafi = creaParagrafiRiassunto(testo, profilo).map(correggiOutputTestualeV35G);
++      renderizzaRiassuntoCompattoV2A28(profilo, paragrafi);
++      return;
++    }
++
++    const summarizer = typeof window !== "undefined" ? window.RagLargeDocumentProgressiveSummaryV2 : null;
++
++    if (!summarizer || typeof summarizer.createProgressiveSummary !== "function") {
++      throw new Error("Motore riassunto progressivo non disponibile: RagLargeDocumentProgressiveSummaryV2 mancante.");
++    }
++
++    areaOutput().innerHTML = `
++      <section class="output-card ${profilo.classe}">
++        <span class="pill">${profilo.icona} Riassunto progressivo</span>
++        <h2>Genero riassunto lungo</h2>
++        <p>Il documento è lungo: uso chunk, batch e sintesi progressiva già presenti nel progetto.</p>
++      </section>
++    `;
++
++    const reportLungo = creaReportDocumentoLungoV2A28(testo);
++    const progressive = await summarizer.createProgressiveSummary(reportLungo, {
++      sentencesPerBatch: 5,
++      maxCharsPerBatchSummary: 1500,
++      finalSentences: 14,
++      maxFinalChars: 4500
++    });
++    const sezioni = creaSezioniRiassuntoLungoV2A28(progressive);
++
++    if (typeof window !== "undefined") {
++      window.__ragRiassuntoLungoProgressivoV2A28 = progressive;
++      window.__ragRiassuntoLungoSezioniV2A28 = sezioni;
++    }
++
++    renderizzaRiassuntoLungoV2A28(profilo, progressive, sezioni);
++  }
++
+   function disegnoSvg(card) {
+     const tema = card.profilo.classe;
+     const ramo = String(card.ramo || "").toLowerCase();
+@@ -1380,7 +1653,7 @@
+ 
+     const risultato = creaCards(testo);
+     const profilo = risultato.profilo;
+-    const cards = risultato.cards;
++    const cards = risultato.cards.map(correggiOutputTestualeV35G);
+ 
+     areaOutput().innerHTML = `
+       <section class="output-card ${profilo.classe}">
+@@ -1490,6 +1763,11 @@
+       return;
+     }
+ 
++    quiz.domande.forEach(function (domanda) {
++      correggiOutputTestualeV35G(domanda);
++      domanda.opzioni.forEach(correggiOutputTestualeV35G);
++    });
++
+     quizCorrente = {
+       domande: quiz.domande,
+       indice: 0,
+@@ -1639,7 +1917,7 @@
+ 
+     const risultato = creaCards(testo);
+     const profilo = risultato.profilo;
+-    const cards = risultato.cards;
++    const cards = risultato.cards.map(correggiOutputTestualeV35G);
+ 
+     areaOutput().innerHTML = `
+       <section class="output-card ${profilo.classe}">
+@@ -2371,5 +2649,3 @@ function esponiGuardiaMotoriV2A16() {
+ }
+ 
+ esponiGuardiaMotoriV2A16();
+-
+-
+diff --git a/scripts/verifica_rag_documenti_lunghi_v1.py b/scripts/verifica_rag_documenti_lunghi_v1.py
+index aaafbbb..7b95831 100644
+--- a/scripts/verifica_rag_documenti_lunghi_v1.py
++++ b/scripts/verifica_rag_documenti_lunghi_v1.py
+@@ -25,8 +25,7 @@ FORBIDDEN_LINKS = [
+     "test-documenti-universale.html",
+     "universal-document-learning-engine.js",
+     "pdf-export-browser-v6.js",
+-    "rag-quality-summary-cards-v34a.js",
+-    "btnScaricaPdf",
++        "btnScaricaPdf",
+     "btnScaricaTxt",
+     "btnScaricaHtml",
+     "btnScaricaJson",

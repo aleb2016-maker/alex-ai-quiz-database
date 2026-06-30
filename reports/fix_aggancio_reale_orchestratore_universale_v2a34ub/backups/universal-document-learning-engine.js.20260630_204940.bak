@@ -1981,28 +1981,11 @@
     });
     const sezioni = creaSezioniRiassuntoLungoV2A28(progressive);
     const qualita = applicaQualitaRiassuntoLungoEsistenteV2A29(sezioni, testo, profilo);
-    let sezioniFinali = miglioraSezioniRiassuntoLungoV2A33(qualita.sezioni, progressive, reportLungo, testo, profilo);
-
-    /* V2A34U-B - aggancio reale orchestratore universale prima del render finale */
-    sezioniFinali = applicaOrchestratoreRiassuntoUniversaleV2A34U(
-      testo,
-      profilo,
-      reportLungo,
-      progressive,
-      sezioniFinali,
-      qualita
-    );
-
+    const sezioniFinali = miglioraSezioniRiassuntoLungoV2A33(qualita.sezioni, progressive, reportLungo, testo, profilo);
 
     if (typeof window !== "undefined") {
       window.__ragRiassuntoLungoProgressivoV2A28 = progressive;
-      window.__ragRiassuntoUniversaleV2A34UB = {
-      attivo: true,
-      sezioni: Array.isArray(sezioniFinali) ? sezioniFinali.length : 0,
-      primoTitolo: Array.isArray(sezioniFinali) && sezioniFinali[0] ? sezioniFinali[0].titolo : "",
-      usaOrchestratoreUniversale: true
-    };
-    window.__ragRiassuntoLungoSezioniV2A28 = sezioniFinali;
+      window.__ragRiassuntoLungoSezioniV2A28 = sezioniFinali;
       window.__ragRiassuntoLungoQualitaV2A29 = qualita.report;
     }
 

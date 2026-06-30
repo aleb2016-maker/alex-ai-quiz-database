@@ -260,203 +260,6 @@
     }
   ];
 
-  const PROFILE_TOPICS_V2A30 = {
-    business: TOPICS,
-    cybersecurity: TOPICS,
-    sport: [
-      {
-        id: "allenamento",
-        label: "programma di allenamento",
-        words: ["allenamento", "programma", "scheda", "sessione", "routine", "esercizi"],
-        sentence: "Il documento descrive un programma di allenamento organizzato, con esercizi, obiettivi e controllo dell'esecuzione."
-      },
-      {
-        id: "resistenza",
-        label: "resistenza e corsa",
-        words: ["resistenza", "corsa", "corre", "cardio", "fiato", "aerobico"],
-        sentence: "La resistenza viene sviluppata attraverso attività di corsa o lavoro cardiovascolare, con attenzione alla continuità dello sforzo."
-      },
-      {
-        id: "forza",
-        label: "forza muscolare",
-        words: ["forza", "muscoli", "gambe", "addome", "schiena", "carico", "ripetizioni", "serie"],
-        sentence: "La parte muscolare coinvolge esercizi per forza, controllo del corpo e lavoro su gruppi come gambe, addome e schiena."
-      },
-      {
-        id: "recupero",
-        label: "recupero e fatica",
-        words: ["recupero", "fatica", "riposo", "defaticamento", "stanchezza", "adattamento"],
-        sentence: "Il recupero e la gestione della fatica servono ad adattare il programma senza sovraccaricare il corpo."
-      },
-      {
-        id: "progressione",
-        label: "progressi e adattamento",
-        words: ["progressi", "migliorare", "progressione", "modifica", "adatta", "controlla", "monitoraggio"],
-        sentence: "Il controllo dei progressi permette di modificare il lavoro in base ai risultati e alle sensazioni fisiche."
-      }
-    ],
-    poetry: [
-      {
-        id: "tema_poetico",
-        label: "tema poetico",
-        words: ["poesia", "tema", "verso", "versi", "strofa", "ritmo"],
-        sentence: "Il testo sviluppa un tema poetico attraverso immagini, ritmo e concentrazione emotiva."
-      },
-      {
-        id: "natura",
-        label: "natura e paesaggio",
-        words: ["natura", "vento", "foglie", "cielo", "mare", "luna", "sera", "notte"],
-        sentence: "La natura e il paesaggio diventano elementi centrali per costruire l'atmosfera del testo."
-      },
-      {
-        id: "emozioni",
-        label: "emozioni e nostalgia",
-        words: ["nostalgia", "ricordo", "cuore", "emozione", "sentimento", "paura", "speranza", "conforto"],
-        sentence: "Il testo collega immagini esterne e stati interiori, facendo emergere nostalgia, ricordo o conforto."
-      },
-      {
-        id: "silenzio",
-        label: "silenzio e calma",
-        words: ["silenzio", "silenziosa", "calma", "quieta", "lento", "lentamente"],
-        sentence: "Il silenzio e la calma danno al testo un andamento raccolto e contemplativo."
-      }
-    ],
-    story: [
-      {
-        id: "personaggi",
-        label: "personaggi",
-        words: ["personaggio", "personaggi", "protagonista", "narratore", "amico", "famiglia"],
-        sentence: "Il racconto ruota attorno ai personaggi e alle loro scelte nel corso degli eventi."
-      },
-      {
-        id: "ambientazione",
-        label: "ambientazione",
-        words: ["ambientazione", "villaggio", "città", "citta", "casa", "bosco", "scena", "luogo"],
-        sentence: "L'ambientazione definisce il contesto in cui si muovono i personaggi e prende forma la vicenda."
-      },
-      {
-        id: "conflitto",
-        label: "conflitto narrativo",
-        words: ["problema", "conflitto", "paura", "ostacolo", "scelta", "pericolo", "sfida"],
-        sentence: "Il conflitto narrativo nasce da un problema o da una scelta che modifica il percorso dei personaggi."
-      },
-      {
-        id: "sviluppo",
-        label: "sviluppo della storia",
-        words: ["poi", "dopo", "decise", "accadde", "capitolo", "finale", "conclusione"],
-        sentence: "La storia procede per passaggi successivi fino a una trasformazione o a una conclusione."
-      }
-    ],
-    curriculum: [
-      {
-        id: "profilo",
-        label: "profilo professionale",
-        words: ["profilo", "candidato", "professionale", "obiettivo", "presentazione"],
-        sentence: "Il curriculum presenta il profilo professionale e l'obiettivo del candidato."
-      },
-      {
-        id: "esperienze",
-        label: "esperienze lavorative",
-        words: ["esperienza", "esperienze", "lavoro", "ruolo", "mansioni", "stage", "azienda"],
-        sentence: "Le esperienze lavorative descrivono ruoli, attività svolte e contesti professionali attraversati."
-      },
-      {
-        id: "competenze",
-        label: "competenze tecniche",
-        words: ["competenze", "skill", "java", "python", "javascript", "react", "github", "tecnologie"],
-        sentence: "Le competenze evidenziano strumenti, tecnologie e capacità utili per il ruolo."
-      },
-      {
-        id: "formazione",
-        label: "formazione",
-        words: ["formazione", "scuola", "corso", "diploma", "certificazione", "studio"],
-        sentence: "La formazione completa il profilo con studi, corsi e certificazioni rilevanti."
-      }
-    ],
-    personal: [
-      {
-        id: "dati",
-        label: "dati personali",
-        words: ["nome", "cognome", "residenza", "indirizzo", "codice", "fiscale", "anagrafica"],
-        sentence: "Il documento raccoglie dati personali e informazioni utili all'identificazione o alla pratica amministrativa."
-      },
-      {
-        id: "richiesta",
-        label: "richiesta o modulo",
-        words: ["richiesta", "domanda", "modulo", "istanza", "certificato", "autocertificazione"],
-        sentence: "La richiesta o il modulo indicano lo scopo amministrativo del documento."
-      },
-      {
-        id: "scadenze",
-        label: "scadenze e validità",
-        words: ["scadenza", "validità", "validita", "data", "rinnovo", "termine"],
-        sentence: "Date, scadenze e validità chiariscono quando il documento deve essere usato o aggiornato."
-      }
-    ],
-    hobby: [
-      {
-        id: "idea",
-        label: "idea principale",
-        words: ["idea", "progetto", "hobby", "creativo", "creativa", "realizzare"],
-        sentence: "Il testo presenta un'idea o un progetto personale da sviluppare in modo creativo."
-      },
-      {
-        id: "fasi",
-        label: "fasi di realizzazione",
-        words: ["fase", "fasi", "costruire", "preparare", "sviluppare", "passaggi"],
-        sentence: "Le fasi di realizzazione spiegano come trasformare l'idea in un risultato concreto."
-      },
-      {
-        id: "strumenti",
-        label: "strumenti necessari",
-        words: ["strumenti", "materiali", "app", "musica", "disegno", "fotografia", "software"],
-        sentence: "Gli strumenti necessari aiutano a capire cosa serve per completare il progetto."
-      },
-      {
-        id: "risultato",
-        label: "risultato atteso",
-        words: ["risultato", "obiettivo", "miglioramento", "finale", "versione"],
-        sentence: "Il risultato atteso descrive l'effetto finale o il miglioramento previsto."
-      }
-    ],
-    generic: []
-  };
-
-  function getTopicsForProfileV2A30(profileInfo) {
-    const id = profileInfo && profileInfo.id ? profileInfo.id : "generic";
-    const topics = PROFILE_TOPICS_V2A30[id];
-
-    if (topics && topics.length) return topics;
-    if (id === "business" || id === "cybersecurity") return TOPICS;
-
-    return [];
-  }
-
-  function requiredKeywordsForProfileV2A30(profileInfo, rawKeywords) {
-    const required = [];
-    const used = new Set();
-
-    function add(value) {
-      const clean = normalizeForCompare(value);
-      if (!clean || used.has(clean)) return;
-      used.add(clean);
-      required.push(value);
-    }
-
-    (profileInfo && profileInfo.keywords ? profileInfo.keywords : []).forEach(function (keyword) {
-      getKeywordConceptWords(keyword).forEach(add);
-    });
-
-    (rawKeywords || []).slice(0, 8).forEach(add);
-
-    if (profileInfo && (profileInfo.id === "business" || profileInfo.id === "cybersecurity")) {
-      ["sicurezza", "backup", "privacy", "incidenti", "phishing", "audit", "password", "controlli"].forEach(add);
-    }
-
-    return required.slice(0, 14);
-  }
-
-
   function detectDocumentProfile(text) {
     const normalized = normalizeForCompare(text);
     const scores = DOCUMENT_PROFILES.map(function (profile) {
@@ -747,18 +550,14 @@
       });
   }
 
-  function detectTopics(text, profileInfo) {
+  function detectTopics(text) {
     const normalized = normalizeForCompare(text);
-    const topicsForProfile = getTopicsForProfileV2A30(profileInfo || detectDocumentProfile(text));
 
-    return topicsForProfile.map(function (topic) {
+    return TOPICS.map(function (topic) {
       let score = 0;
 
       topic.words.forEach(function (word) {
-        const cleanWord = normalizeForCompare(word);
-        if (!cleanWord) return;
-
-        const re = new RegExp("\\b" + cleanWord.replace(/[.*+?^${}()|[\]\\]/g, "\\$&") + "\\b", "g");
+        const re = new RegExp("\\b" + normalizeForCompare(word) + "\\b", "g");
         const matches = normalized.match(re);
         if (matches) score += matches.length;
       });
@@ -778,11 +577,9 @@
     });
   }
 
-
-  function scoreSentence(sentence, index, total, freq, requiredKeywords, profileInfo) {
+  function scoreSentence(sentence, index, total, freq, requiredKeywords) {
     let score = 0;
     const lower = sentence.toLowerCase();
-    const topicsForProfile = getTopicsForProfileV2A30(profileInfo || detectDocumentProfile(sentence));
 
     getWords(sentence).forEach(function (word) {
       if (STOPWORDS.has(word)) return;
@@ -793,7 +590,7 @@
       if (lower.includes(String(keyword).toLowerCase())) score += 10;
     });
 
-    topicsForProfile.forEach(function (topic) {
+    TOPICS.forEach(function (topic) {
       topic.words.forEach(function (word) {
         if (lower.includes(String(word).toLowerCase())) score += 5;
       });
@@ -809,16 +606,13 @@
     return score;
   }
 
-
   function pickBestSentences(text, options) {
     const opts = Object.assign({
       maxSentences: 5,
       maxChars: 1400,
-      requiredKeywords: [],
-      profileInfo: null
+      requiredKeywords: []
     }, options || {});
 
-    const profileInfo = opts.profileInfo || detectDocumentProfile(text);
     const sentences = dedupeSentences(splitSentences(text), 600);
 
     if (!sentences.length) {
@@ -833,7 +627,7 @@
         return {
           sentence: sentence,
           index: index,
-          score: scoreSentence(sentence, index, sentences.length, freq, opts.requiredKeywords, profileInfo)
+          score: scoreSentence(sentence, index, sentences.length, freq, opts.requiredKeywords)
         };
       })
       .sort(function (a, b) {
@@ -866,7 +660,6 @@
       });
   }
 
-
   function summarizeBatch(batch, options) {
     const opts = Object.assign({
       sentencesPerBatch: 5,
@@ -879,16 +672,13 @@
       })
       .join("\n\n");
 
-    const profileInfo = detectDocumentProfile(text);
     const keywords = extractKeywords(text, 12);
-    const topics = detectTopics(text, profileInfo).slice(0, 6);
-    const requiredKeywords = requiredKeywordsForProfileV2A30(profileInfo, keywords);
+    const topics = detectTopics(text).slice(0, 6);
 
     let sentences = pickBestSentences(text, {
       maxSentences: opts.sentencesPerBatch,
       maxChars: opts.maxCharsPerBatchSummary,
-      requiredKeywords: requiredKeywords,
-      profileInfo: profileInfo
+      requiredKeywords: keywords.slice(0, 6)
     });
 
     if (sentences.length < Math.min(3, opts.sentencesPerBatch)) {
@@ -910,44 +700,40 @@
       chars: batch.chars,
       keywords: keywords,
       topics: topics.map(function (topic) { return topic.label; }),
-      profile: profileInfo.id,
-      profileLabel: profileInfo.label,
       summary: summary,
       summaryChars: summary.length
     };
   }
 
-
-  function buildTopicSynthesis(topicStats, partials, profileInfo) {
+  function buildTopicSynthesis(topicStats, partials) {
     const topTopics = Array.from(topicStats.values())
       .sort(function (a, b) {
         return b.score - a.score;
       });
 
-    const sentences = [];
+    const sentences = [
+      "Il documento costruisce un manuale aziendale ampio, orientato alla gestione ordinata di sicurezza informatica, procedure interne, responsabilità operative e continuità dei servizi.",
+      "La struttura progressiva permette di leggere il materiale per blocchi, mantenendo tracciabili pagine, chunk cioè blocchi di testo, e batch cioè gruppi di chunk elaborati insieme, senza concentrare tutto il testo grezzo in un unico passaggio.",
+      "Le parti analizzate insistono sulla necessità di collegare ogni attività a ruoli chiari, evidenze verificabili, controlli periodici e responsabilità assegnate.",
+      "Il valore principale del materiale è la trasformazione delle policy in istruzioni pratiche, utili per onboarding, formazione, audit e gestione dei rischi."
+    ];
 
     topTopics.forEach(function (topic) {
-      if (sentences.length >= 10) return;
+      if (sentences.length >= 14) return;
       if (!sentences.some(function (existing) { return areSentencesTooSimilar(existing, topic.sentence, 0.70); })) {
         sentences.push(topic.sentence);
       }
     });
 
-    if (!sentences.length) {
-      const combinedPartials = (partials || []).map(function (part) { return part.summary || ""; }).join(" ");
-      sentences.push.apply(sentences, pickBestSentences(combinedPartials, {
-        maxSentences: 5,
-        maxChars: 1600,
-        requiredKeywords: [],
-        profileInfo: profileInfo
-      }));
+    if (partials.length > 10) {
+      sentences.push("La presenza di molti batch conferma che il documento è abbastanza esteso da richiedere una sintesi progressiva, invece di una generazione unica e fragile.");
     }
 
     return dedupeSentences(sentences, 14);
   }
 
 
-  function buildFinalKeywords(topicStats, allKeywords, profileInfo) {
+  function buildFinalKeywords(topicStats, allKeywords) {
     const output = [];
     const used = new Set();
 
@@ -957,15 +743,11 @@
 
       if (!label || !clean) return;
       if (used.has(clean)) return;
-      if (!isConceptKeyword(label)) return;
+      if (isWeakKeyword(clean) && !label.includes(" ")) return;
 
       used.add(clean);
       output.push(label);
     }
-
-    const profile = profileInfo || DOCUMENT_PROFILES.find(function (item) { return item.id === "generic"; });
-
-    (profile.keywords || []).forEach(addKeyword);
 
     Array.from(topicStats.values())
       .sort(function (a, b) {
@@ -974,6 +756,31 @@
       .forEach(function (topic) {
         addKeyword(topic.label);
       });
+
+    const priority = [
+      "sicurezza informatica",
+      "accessi e password",
+      "phishing",
+      "backup e recupero",
+      "privacy e dati",
+      "incidenti e risposta",
+      "audit e controlli",
+      "continuità operativa",
+      "onboarding e formazione",
+      "fornitori e terze parti",
+      "documentazione tecnica",
+      "workflow e responsabilità"
+    ];
+
+    priority.forEach(function (label) {
+      const cleanLabel = normalizeForCompare(label);
+
+      const found = Array.from(allKeywords.keys()).some(function (keyword) {
+        return cleanLabel.includes(normalizeForCompare(keyword)) || normalizeForCompare(keyword).includes(cleanLabel.split(" ")[0]);
+      });
+
+      if (found) addKeyword(label);
+    });
 
     Array.from(allKeywords.entries())
       .sort(function (a, b) {
@@ -984,9 +791,38 @@
         if (!isWeakKeyword(keyword)) addKeyword(keyword);
       });
 
-    return output.slice(0, 14);
-  }
+    const filtered = output.filter(function (label, index, array) {
+      const clean = normalizeForCompare(label);
 
+      if (!clean) return false;
+
+      const isSingleWord = !String(label).includes(" ");
+
+      if (isSingleWord && isWeakKeyword(clean)) {
+        return false;
+      }
+
+      if (isSingleWord) {
+        const containedInBetterKeyword = array.some(function (other, otherIndex) {
+          if (otherIndex === index) return false;
+
+          const otherClean = normalizeForCompare(other);
+          const otherIsLonger = otherClean.length > clean.length;
+          const otherHasMoreWords = String(other).trim().includes(" ");
+
+          return otherIsLonger && otherHasMoreWords && otherClean.includes(clean);
+        });
+
+        if (containedInBetterKeyword) return false;
+      }
+
+      return true;
+    });
+
+    const conceptKeywords = output.filter(isConceptKeyword);
+
+    return conceptKeywords.slice(0, 14);
+  }
 
   function mergeProgressiveSummaries(partials, options) {
     const opts = Object.assign({
@@ -994,30 +830,21 @@
       maxFinalChars: 4200
     }, options || {});
 
+    const topicStats = new Map();
     const allKeywords = new Map();
 
     partials.forEach(function (part) {
       (part.keywords || []).forEach(function (keyword) {
         allKeywords.set(keyword, (allKeywords.get(keyword) || 0) + 1);
       });
-    });
 
-    const combinedText = partials.map(function (part) {
-      return part.summary;
-    }).join("\n\n");
-
-    const profileInfo = detectDocumentProfile(combinedText + "\n" + Array.from(allKeywords.keys()).join(" "));
-    const profileTopics = getTopicsForProfileV2A30(profileInfo);
-    const topicStats = new Map();
-
-    partials.forEach(function (part) {
       (part.topics || []).forEach(function (label) {
         if (!topicStats.has(label)) {
-          const base = profileTopics.find(function (topic) { return topic.label === label; });
+          const base = TOPICS.find(function (topic) { return topic.label === label; });
           topicStats.set(label, {
             label: label,
             score: 0,
-            sentence: base ? base.sentence : "Il documento sviluppa il tema " + label + " in relazione al contenuto analizzato."
+            sentence: base ? base.sentence : "Il documento tratta anche il tema " + label + " come parte della gestione aziendale."
           });
         }
 
@@ -1025,20 +852,22 @@
       });
     });
 
-    const requiredKeywords = requiredKeywordsForProfileV2A30(profileInfo, Array.from(allKeywords.keys()));
+    const combinedText = partials.map(function (part) {
+      return part.summary;
+    }).join("\n\n");
 
     const extracted = pickBestSentences(combinedText, {
-      maxSentences: 8,
-      maxChars: 2200,
-      requiredKeywords: requiredKeywords,
-      profileInfo: profileInfo
+      maxSentences: 6,
+      maxChars: 1800,
+      requiredKeywords: ["sicurezza", "backup", "privacy", "incidenti", "phishing", "audit", "password", "continuita", "continuità"]
     });
 
-    const synthesis = buildTopicSynthesis(topicStats, partials, profileInfo);
+    const synthesis = buildTopicSynthesis(topicStats, partials);
 
-    const finalSentences = dedupeSentences(extracted.concat(synthesis), opts.finalSentences)
+    const finalSentences = dedupeSentences(synthesis.concat(extracted), opts.finalSentences)
       .slice(0, opts.finalSentences);
 
+    const profileInfo = detectDocumentProfile(combinedText + "\n" + Array.from(allKeywords.keys()).join(" "));
     const keywords = buildProfileAwareKeywords(profileInfo, topicStats, allKeywords);
 
     return {
@@ -1053,7 +882,6 @@
       }, 0)
     };
   }
-
 
   async function createProgressiveSummary(report, options) {
     const opts = Object.assign({
