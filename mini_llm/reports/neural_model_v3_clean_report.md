@@ -1,0 +1,596 @@
+# Report Neural Model V3 Clean
+
+## Stato
+trained
+
+## Obiettivo
+Addestrare il primo modello neurale sulla catena pulita V2.
+
+## Input
+```json
+{
+  "vocab": "/Users/alessandrobarbarossa/alex-ai-workspace/mini_llm/data/vectorized_v2/token_vocab_v2_clean.json",
+  "embeddings": "/Users/alessandrobarbarossa/alex-ai-workspace/mini_llm/data/vectorized_v2/token_embeddings_v2_clean.json",
+  "train_sequences": "/Users/alessandrobarbarossa/alex-ai-workspace/mini_llm/data/vectorized_v2/token_sequences_v2_clean_train.jsonl",
+  "val_sequences": "/Users/alessandrobarbarossa/alex-ai-workspace/mini_llm/data/vectorized_v2/token_sequences_v2_clean_val.jsonl",
+  "test_sequences": "/Users/alessandrobarbarossa/alex-ai-workspace/mini_llm/data/vectorized_v2/token_sequences_v2_clean_test.jsonl"
+}
+```
+
+## Output
+```json
+{
+  "weights": "/Users/alessandrobarbarossa/alex-ai-workspace/mini_llm/data/model_v3_clean/neural_model_v3_clean_weights.json",
+  "manifest": "/Users/alessandrobarbarossa/alex-ai-workspace/mini_llm/data/model_v3_clean/neural_model_v3_clean_manifest.json",
+  "sample_predictions": "/Users/alessandrobarbarossa/alex-ai-workspace/mini_llm/data/model_v3_clean/neural_model_v3_clean_sample_predictions.json",
+  "report": "/Users/alessandrobarbarossa/alex-ai-workspace/mini_llm/reports/neural_model_v3_clean_report.md"
+}
+```
+
+## Impostazioni
+```json
+{
+  "context_size": 8,
+  "epochs": 8,
+  "learning_rate": 0.045,
+  "negative_samples": 18,
+  "seed": 42,
+  "max_train_examples": 0,
+  "uses_vectorizer_v2_clean": true
+}
+```
+
+## Modello
+```json
+{
+  "vocab_size": 430,
+  "vector_dim": 96,
+  "trainable_output_embeddings": true,
+  "trainable_output_bias": true,
+  "input_embeddings_trainable": false,
+  "architecture": "weighted_context_negative_sampling"
+}
+```
+
+## Esempi
+```json
+{
+  "train": 5839,
+  "val": 1061,
+  "test": 738
+}
+```
+
+## Loss
+```json
+{
+  "train_sampled_final": 0.165407,
+  "val_full_softmax_final": 6.058829,
+  "test_full_softmax_final": 5.878214,
+  "epoch_history": [
+    {
+      "epoch": 1,
+      "learning_rate": 0.045,
+      "train_sampled_loss": 0.299302,
+      "val_full_softmax_loss": 6.971388
+    },
+    {
+      "epoch": 2,
+      "learning_rate": 0.0414,
+      "train_sampled_loss": 0.208184,
+      "val_full_softmax_loss": 6.689928
+    },
+    {
+      "epoch": 3,
+      "learning_rate": 0.038088,
+      "train_sampled_loss": 0.190268,
+      "val_full_softmax_loss": 6.505036
+    },
+    {
+      "epoch": 4,
+      "learning_rate": 0.03504096,
+      "train_sampled_loss": 0.181035,
+      "val_full_softmax_loss": 6.376298
+    },
+    {
+      "epoch": 5,
+      "learning_rate": 0.03223768,
+      "train_sampled_loss": 0.175045,
+      "val_full_softmax_loss": 6.274996
+    },
+    {
+      "epoch": 6,
+      "learning_rate": 0.02965867,
+      "train_sampled_loss": 0.170669,
+      "val_full_softmax_loss": 6.189711
+    },
+    {
+      "epoch": 7,
+      "learning_rate": 0.02728598,
+      "train_sampled_loss": 0.167019,
+      "val_full_softmax_loss": 6.135941
+    },
+    {
+      "epoch": 8,
+      "learning_rate": 0.0251031,
+      "train_sampled_loss": 0.164563,
+      "val_full_softmax_loss": 6.058829
+    }
+  ]
+}
+```
+
+## Qualità
+```json
+{
+  "sample_predictions": 8,
+  "empty_predictions": 0,
+  "dirty_prediction_tokens": []
+}
+```
+
+## Predizioni campione
+```json
+[
+  {
+    "prompt": "password",
+    "context_tokens": [
+      "password"
+    ],
+    "top_predictions": [
+      {
+        "token_id": 363,
+        "token": "00084",
+        "score": 0.242316,
+        "probability_topk": 0.141063
+      },
+      {
+        "token_id": 391,
+        "token": "00112",
+        "score": 0.171691,
+        "probability_topk": 0.131444
+      },
+      {
+        "token_id": 272,
+        "token": "crea",
+        "score": 0.135874,
+        "probability_topk": 0.12682
+      },
+      {
+        "token_id": 308,
+        "token": "00029",
+        "score": 0.118603,
+        "probability_topk": 0.124648
+      },
+      {
+        "token_id": 355,
+        "token": "00076",
+        "score": 0.08025,
+        "probability_topk": 0.119958
+      },
+      {
+        "token_id": 349,
+        "token": "00070",
+        "score": 0.073607,
+        "probability_topk": 0.119164
+      },
+      {
+        "token_id": 333,
+        "token": "00054",
+        "score": 0.072991,
+        "probability_topk": 0.119091
+      },
+      {
+        "token_id": 409,
+        "token": "00130",
+        "score": 0.06219,
+        "probability_topk": 0.117811
+      }
+    ]
+  },
+  {
+    "prompt": "password sicure",
+    "context_tokens": [
+      "password",
+      "sicure"
+    ],
+    "top_predictions": [
+      {
+        "token_id": 355,
+        "token": "00076",
+        "score": 0.112178,
+        "probability_topk": 0.128062
+      },
+      {
+        "token_id": 371,
+        "token": "00092",
+        "score": 0.106841,
+        "probability_topk": 0.12738
+      },
+      {
+        "token_id": 272,
+        "token": "crea",
+        "score": 0.106321,
+        "probability_topk": 0.127314
+      },
+      {
+        "token_id": 363,
+        "token": "00084",
+        "score": 0.092944,
+        "probability_topk": 0.125622
+      },
+      {
+        "token_id": 302,
+        "token": "00023",
+        "score": 0.0766,
+        "probability_topk": 0.123586
+      },
+      {
+        "token_id": 391,
+        "token": "00112",
+        "score": 0.071946,
+        "probability_topk": 0.123012
+      },
+      {
+        "token_id": 349,
+        "token": "00070",
+        "score": 0.068562,
+        "probability_topk": 0.122596
+      },
+      {
+        "token_id": 333,
+        "token": "00054",
+        "score": 0.06719,
+        "probability_topk": 0.122428
+      }
+    ]
+  },
+  {
+    "prompt": "sicurezza informatica",
+    "context_tokens": [
+      "sicurezza",
+      "informatica"
+    ],
+    "top_predictions": [
+      {
+        "token_id": 306,
+        "token": "00027",
+        "score": 0.138278,
+        "probability_topk": 0.130309
+      },
+      {
+        "token_id": 388,
+        "token": "00109",
+        "score": 0.125116,
+        "probability_topk": 0.128606
+      },
+      {
+        "token_id": 302,
+        "token": "00023",
+        "score": 0.114997,
+        "probability_topk": 0.127311
+      },
+      {
+        "token_id": 422,
+        "token": "00143",
+        "score": 0.103316,
+        "probability_topk": 0.125832
+      },
+      {
+        "token_id": 271,
+        "token": "breve",
+        "score": 0.100834,
+        "probability_topk": 0.12552
+      },
+      {
+        "token_id": 288,
+        "token": "00009",
+        "score": 0.0657,
+        "probability_topk": 0.121187
+      },
+      {
+        "token_id": 363,
+        "token": "00084",
+        "score": 0.061181,
+        "probability_topk": 0.120641
+      },
+      {
+        "token_id": 339,
+        "token": "00060",
+        "score": 0.060796,
+        "probability_topk": 0.120594
+      }
+    ]
+  },
+  {
+    "prompt": "backup regolari",
+    "context_tokens": [
+      "backup",
+      "regolari"
+    ],
+    "top_predictions": [
+      {
+        "token_id": 391,
+        "token": "00112",
+        "score": 0.156009,
+        "probability_topk": 0.134027
+      },
+      {
+        "token_id": 388,
+        "token": "00109",
+        "score": 0.1179,
+        "probability_topk": 0.129016
+      },
+      {
+        "token_id": 418,
+        "token": "00139",
+        "score": 0.104855,
+        "probability_topk": 0.127343
+      },
+      {
+        "token_id": 333,
+        "token": "00054",
+        "score": 0.080773,
+        "probability_topk": 0.124313
+      },
+      {
+        "token_id": 271,
+        "token": "breve",
+        "score": 0.062224,
+        "probability_topk": 0.122029
+      },
+      {
+        "token_id": 419,
+        "token": "00140",
+        "score": 0.055186,
+        "probability_topk": 0.121173
+      },
+      {
+        "token_id": 306,
+        "token": "00027",
+        "score": 0.054204,
+        "probability_topk": 0.121054
+      },
+      {
+        "token_id": 315,
+        "token": "00036",
+        "score": 0.054128,
+        "probability_topk": 0.121045
+      }
+    ]
+  },
+  {
+    "prompt": "phishing",
+    "context_tokens": [
+      "phishing"
+    ],
+    "top_predictions": [
+      {
+        "token_id": 288,
+        "token": "00009",
+        "score": 0.201666,
+        "probability_topk": 0.134856
+      },
+      {
+        "token_id": 308,
+        "token": "00029",
+        "score": 0.184459,
+        "probability_topk": 0.132555
+      },
+      {
+        "token_id": 333,
+        "token": "00054",
+        "score": 0.162238,
+        "probability_topk": 0.129642
+      },
+      {
+        "token_id": 337,
+        "token": "00058",
+        "score": 0.160436,
+        "probability_topk": 0.129409
+      },
+      {
+        "token_id": 303,
+        "token": "00024",
+        "score": 0.134306,
+        "probability_topk": 0.126071
+      },
+      {
+        "token_id": 422,
+        "token": "00143",
+        "score": 0.060825,
+        "probability_topk": 0.11714
+      },
+      {
+        "token_id": 423,
+        "token": "00144",
+        "score": 0.06062,
+        "probability_topk": 0.117116
+      },
+      {
+        "token_id": 277,
+        "token": "sintesi",
+        "score": 0.026709,
+        "probability_topk": 0.113211
+      }
+    ]
+  },
+  {
+    "prompt": "dati sensibili",
+    "context_tokens": [
+      "dati",
+      "sensibili"
+    ],
+    "top_predictions": [
+      {
+        "token_id": 350,
+        "token": "00071",
+        "score": 0.114251,
+        "probability_topk": 0.129956
+      },
+      {
+        "token_id": 288,
+        "token": "00009",
+        "score": 0.093241,
+        "probability_topk": 0.127254
+      },
+      {
+        "token_id": 286,
+        "token": "00007",
+        "score": 0.089677,
+        "probability_topk": 0.126802
+      },
+      {
+        "token_id": 315,
+        "token": "00036",
+        "score": 0.084383,
+        "probability_topk": 0.126132
+      },
+      {
+        "token_id": 418,
+        "token": "00139",
+        "score": 0.062009,
+        "probability_topk": 0.123341
+      },
+      {
+        "token_id": 330,
+        "token": "00051",
+        "score": 0.061144,
+        "probability_topk": 0.123235
+      },
+      {
+        "token_id": 335,
+        "token": "00056",
+        "score": 0.049742,
+        "probability_topk": 0.121838
+      },
+      {
+        "token_id": 277,
+        "token": "sintesi",
+        "score": 0.046482,
+        "probability_topk": 0.121441
+      }
+    ]
+  },
+  {
+    "prompt": "autenticazione a due fattori",
+    "context_tokens": [
+      "autenticazione",
+      "a",
+      "due",
+      "fattori"
+    ],
+    "top_predictions": [
+      {
+        "token_id": 422,
+        "token": "00143",
+        "score": 0.151739,
+        "probability_topk": 0.132797
+      },
+      {
+        "token_id": 371,
+        "token": "00092",
+        "score": 0.105056,
+        "probability_topk": 0.12674
+      },
+      {
+        "token_id": 409,
+        "token": "00130",
+        "score": 0.100532,
+        "probability_topk": 0.126168
+      },
+      {
+        "token_id": 286,
+        "token": "00007",
+        "score": 0.086317,
+        "probability_topk": 0.124388
+      },
+      {
+        "token_id": 277,
+        "token": "sintesi",
+        "score": 0.083957,
+        "probability_topk": 0.124094
+      },
+      {
+        "token_id": 369,
+        "token": "00090",
+        "score": 0.080218,
+        "probability_topk": 0.123631
+      },
+      {
+        "token_id": 271,
+        "token": "breve",
+        "score": 0.063451,
+        "probability_topk": 0.121576
+      },
+      {
+        "token_id": 419,
+        "token": "00140",
+        "score": 0.055436,
+        "probability_topk": 0.120605
+      }
+    ]
+  },
+  {
+    "prompt": "attacco ransomware",
+    "context_tokens": [
+      "attacco",
+      "ransomware"
+    ],
+    "top_predictions": [
+      {
+        "token_id": 287,
+        "token": "00008",
+        "score": 0.085096,
+        "probability_topk": 0.128614
+      },
+      {
+        "token_id": 350,
+        "token": "00071",
+        "score": 0.072167,
+        "probability_topk": 0.126962
+      },
+      {
+        "token_id": 272,
+        "token": "crea",
+        "score": 0.062075,
+        "probability_topk": 0.125687
+      },
+      {
+        "token_id": 355,
+        "token": "00076",
+        "score": 0.053612,
+        "probability_topk": 0.124628
+      },
+      {
+        "token_id": 337,
+        "token": "00058",
+        "score": 0.052207,
+        "probability_topk": 0.124453
+      },
+      {
+        "token_id": 286,
+        "token": "00007",
+        "score": 0.046275,
+        "probability_topk": 0.123717
+      },
+      {
+        "token_id": 369,
+        "token": "00090",
+        "score": 0.044243,
+        "probability_topk": 0.123466
+      },
+      {
+        "token_id": 308,
+        "token": "00029",
+        "score": 0.036148,
+        "probability_topk": 0.122471
+      }
+    ]
+  }
+]
+```
+
+## Nota
+Questo è un modello neurale pratico iniziale, non ancora un Transformer.
+Serve come passaggio controllato verso Inference Engine V3 Clean.

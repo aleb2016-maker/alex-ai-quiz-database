@@ -1,0 +1,100 @@
+{
+  "versione": "neural_model_v3_clean",
+  "status": "trained",
+  "description": "Primo modello neurale addestrato sulla catena V2 Clean.",
+  "input_files": {
+    "vocab": "/Users/alessandrobarbarossa/alex-ai-workspace/mini_llm/data/vectorized_v2/token_vocab_v2_clean.json",
+    "embeddings": "/Users/alessandrobarbarossa/alex-ai-workspace/mini_llm/data/vectorized_v2/token_embeddings_v2_clean.json",
+    "train_sequences": "/Users/alessandrobarbarossa/alex-ai-workspace/mini_llm/data/vectorized_v2/token_sequences_v2_clean_train.jsonl",
+    "val_sequences": "/Users/alessandrobarbarossa/alex-ai-workspace/mini_llm/data/vectorized_v2/token_sequences_v2_clean_val.jsonl",
+    "test_sequences": "/Users/alessandrobarbarossa/alex-ai-workspace/mini_llm/data/vectorized_v2/token_sequences_v2_clean_test.jsonl"
+  },
+  "output_files": {
+    "weights": "/Users/alessandrobarbarossa/alex-ai-workspace/mini_llm/data/model_v3_clean/neural_model_v3_clean_weights.json",
+    "manifest": "/Users/alessandrobarbarossa/alex-ai-workspace/mini_llm/data/model_v3_clean/neural_model_v3_clean_manifest.json",
+    "sample_predictions": "/Users/alessandrobarbarossa/alex-ai-workspace/mini_llm/data/model_v3_clean/neural_model_v3_clean_sample_predictions.json",
+    "report": "/Users/alessandrobarbarossa/alex-ai-workspace/mini_llm/reports/neural_model_v3_clean_report.md"
+  },
+  "settings": {
+    "context_size": 8,
+    "epochs": 8,
+    "learning_rate": 0.045,
+    "negative_samples": 18,
+    "seed": 42,
+    "max_train_examples": 0,
+    "uses_vectorizer_v2_clean": true
+  },
+  "model": {
+    "vocab_size": 430,
+    "vector_dim": 96,
+    "trainable_output_embeddings": true,
+    "trainable_output_bias": true,
+    "input_embeddings_trainable": false,
+    "architecture": "weighted_context_negative_sampling"
+  },
+  "examples": {
+    "train": 5839,
+    "val": 1061,
+    "test": 738
+  },
+  "loss": {
+    "train_sampled_final": 0.165407,
+    "val_full_softmax_final": 6.058829,
+    "test_full_softmax_final": 5.878214,
+    "epoch_history": [
+      {
+        "epoch": 1,
+        "learning_rate": 0.045,
+        "train_sampled_loss": 0.299302,
+        "val_full_softmax_loss": 6.971388
+      },
+      {
+        "epoch": 2,
+        "learning_rate": 0.0414,
+        "train_sampled_loss": 0.208184,
+        "val_full_softmax_loss": 6.689928
+      },
+      {
+        "epoch": 3,
+        "learning_rate": 0.038088,
+        "train_sampled_loss": 0.190268,
+        "val_full_softmax_loss": 6.505036
+      },
+      {
+        "epoch": 4,
+        "learning_rate": 0.03504096,
+        "train_sampled_loss": 0.181035,
+        "val_full_softmax_loss": 6.376298
+      },
+      {
+        "epoch": 5,
+        "learning_rate": 0.03223768,
+        "train_sampled_loss": 0.175045,
+        "val_full_softmax_loss": 6.274996
+      },
+      {
+        "epoch": 6,
+        "learning_rate": 0.02965867,
+        "train_sampled_loss": 0.170669,
+        "val_full_softmax_loss": 6.189711
+      },
+      {
+        "epoch": 7,
+        "learning_rate": 0.02728598,
+        "train_sampled_loss": 0.167019,
+        "val_full_softmax_loss": 6.135941
+      },
+      {
+        "epoch": 8,
+        "learning_rate": 0.0251031,
+        "train_sampled_loss": 0.164563,
+        "val_full_softmax_loss": 6.058829
+      }
+    ]
+  },
+  "quality": {
+    "sample_predictions": 8,
+    "empty_predictions": 0,
+    "dirty_prediction_tokens": []
+  }
+}
