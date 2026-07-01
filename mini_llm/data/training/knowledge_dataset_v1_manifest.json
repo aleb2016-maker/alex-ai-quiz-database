@@ -1,0 +1,33 @@
+{
+  "versione": "knowledge_dataset_builder_v1",
+  "source_path": "/Users/alessandrobarbarossa/alex-ai-workspace/mini_llm/data/output/knowledge_engine_v14_semantic_output.json",
+  "outputs": {
+    "full": "/Users/alessandrobarbarossa/alex-ai-workspace/mini_llm/data/training/knowledge_dataset_v1.jsonl",
+    "train": "/Users/alessandrobarbarossa/alex-ai-workspace/mini_llm/data/training/knowledge_dataset_v1_train.jsonl",
+    "val": "/Users/alessandrobarbarossa/alex-ai-workspace/mini_llm/data/training/knowledge_dataset_v1_val.jsonl",
+    "test": "/Users/alessandrobarbarossa/alex-ai-workspace/mini_llm/data/training/knowledge_dataset_v1_test.jsonl"
+  },
+  "counts": {
+    "total_records": 144,
+    "train_records": 116,
+    "val_records": 14,
+    "test_records": 14
+  },
+  "tasks": {
+    "classificazione_documento": 1,
+    "estrazione_aree_operative": 1,
+    "normalizzazione_area_operativa": 14,
+    "domanda_su_area_operativa": 14,
+    "micro_informazione_operativa": 24,
+    "riscrittura_per_riassunto": 24,
+    "qa_micro_informazione": 24,
+    "frase_rilevante": 10,
+    "domanda_risposta_operativa": 10,
+    "riassunto_frase_rilevante": 10,
+    "relazione_operativa": 3,
+    "training_item_originale_v14": 9
+  },
+  "format": "jsonl",
+  "language": "it",
+  "status": "generated"
+}
