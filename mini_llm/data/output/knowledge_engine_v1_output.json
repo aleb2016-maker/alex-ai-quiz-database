@@ -1,0 +1,187 @@
+{
+  "categoria_documento": "documento_aziendale",
+  "aree_principali": [
+    "password",
+    "dati",
+    "sicurezza",
+    "account",
+    "backup",
+    "usare",
+    "utente",
+    "software",
+    "sistema",
+    "sistemi",
+    "solo",
+    "informazioni",
+    "rischio",
+    "permessi"
+  ],
+  "micro_informazioni": [
+    "utenti usano password deboli",
+    "password sicure",
+    "password sicura deve essere",
+    "stessa password",
+    "stessa password anche",
+    "buona password dovrebbe contenere parole",
+    "password manager",
+    "password manager permette",
+    "salvare password lunghe",
+    "password principale",
+    "password",
+    "password viene comunicata",
+    "oltre alla password",
+    "come password",
+    "password forte",
+    "password inserita",
+    "password uguale impedisce sempre",
+    "password uguali",
+    "password usata",
+    "proteggere dati",
+    "condividono dati riservati senza controllo",
+    "dati",
+    "contengono dati sensibili",
+    "fornire dati sensibili",
+    "dati bancari",
+    "dati importanti",
+    "decidere quali dati salvare",
+    "dati sensibili",
+    "dati sensibili sono informazioni",
+    "possono includere dati personali"
+  ],
+  "frasi_rilevanti": [
+    "Per ridurre il rischio malware è importante:\n\n- evitare software non autorizzato;\n- non aprire allegati inattesi;\n- aggiornare sistema operativo e applicazioni;\n- usare strumenti antivirus o sistemi di protezione endpoint;\n- fare backup regolari;\n- limitare i privilegi amministrativi.",
+    "La 2FA riduce il rischio che un account venga violato solo perché la password è stata rubata.",
+    "Uso del documento per quiz e mini-corsi\n\nQuesto documento può essere usato dal motore RAG per generare domande su:\n\n- password sicure;\n- autenticazione a due fattori;\n- phishing;\n- malware;\n- ransomware;\n- backup;\n- aggiornamenti software;\n- protezione dei dati;\n- permessi utente;\n- reti Wi-Fi pubbliche;\n- comportamenti corretti in azienda.",
+    "Cos'è la sicurezza informatica\n\nLa sicurezza informatica è l'insieme di pratiche, strumenti e comportamenti usati per proteggere dati, dispositivi, account e sistemi digitali.",
+    "La sicurezza informatica ha tre obiettivi principali:\n\n- proteggere la riservatezza dei dati;\n- garantire l'integrità delle informazioni;\n- mantenere disponibili servizi e strumenti quando servono.",
+    "Usare la stessa password su più siti è rischioso: se un servizio viene violato, un attaccante può provare la stessa password anche su altri account.",
+    "Alcuni segnali di rischio sono:\n\n- indirizzo del mittente strano o leggermente diverso da quello ufficiale;\n- link che non portano al dominio reale;\n- errori grammaticali o frasi insolite;\n- richiesta di password, codici o dati bancari;\n- tono minaccioso o eccessivamente urgente;\n- allegati inattesi.",
+    "Non riguarda solo gli esperti informatici: ogni persona che usa un computer, uno smartphone, una rete aziendale o un account online contribuisce alla sicurezza generale.",
+    "Un sistema informatico può essere tecnicamente avanzato, ma rimanere vulnerabile se gli utenti usano password deboli, cliccano link sospetti o condividono dati riservati senza controllo.",
+    "Malware e allegati pericolosi\n\nIl malware è un software dannoso progettato per danneggiare sistemi, rubare informazioni, spiare attività o bloccare l'accesso ai dati."
+  ],
+  "relazioni_operative": [
+    {
+      "area": "password",
+      "elemento_collegato": "utenti usano password deboli",
+      "tipo": "area_operativa_collegata_a_micro_informazione"
+    },
+    {
+      "area": "password",
+      "elemento_collegato": "password sicure",
+      "tipo": "area_operativa_collegata_a_micro_informazione"
+    },
+    {
+      "area": "password",
+      "elemento_collegato": "password sicura deve essere",
+      "tipo": "area_operativa_collegata_a_micro_informazione"
+    },
+    {
+      "area": "dati",
+      "elemento_collegato": "proteggere dati",
+      "tipo": "area_operativa_collegata_a_micro_informazione"
+    },
+    {
+      "area": "dati",
+      "elemento_collegato": "condividono dati riservati senza controllo",
+      "tipo": "area_operativa_collegata_a_micro_informazione"
+    },
+    {
+      "area": "dati",
+      "elemento_collegato": "dati",
+      "tipo": "area_operativa_collegata_a_micro_informazione"
+    },
+    {
+      "area": "informazioni",
+      "elemento_collegato": "dati sensibili sono informazioni",
+      "tipo": "area_operativa_collegata_a_micro_informazione"
+    },
+    {
+      "area": "utenti usano password deboli",
+      "elemento_collegato": "password sicure",
+      "tipo": "vicinanza_operativa"
+    },
+    {
+      "area": "password sicure",
+      "elemento_collegato": "password sicura deve essere",
+      "tipo": "vicinanza_operativa"
+    },
+    {
+      "area": "password sicura deve essere",
+      "elemento_collegato": "stessa password",
+      "tipo": "vicinanza_operativa"
+    },
+    {
+      "area": "stessa password",
+      "elemento_collegato": "stessa password anche",
+      "tipo": "vicinanza_operativa"
+    },
+    {
+      "area": "stessa password anche",
+      "elemento_collegato": "buona password dovrebbe contenere parole",
+      "tipo": "vicinanza_operativa"
+    },
+    {
+      "area": "buona password dovrebbe contenere parole",
+      "elemento_collegato": "password manager",
+      "tipo": "vicinanza_operativa"
+    },
+    {
+      "area": "password manager",
+      "elemento_collegato": "password manager permette",
+      "tipo": "vicinanza_operativa"
+    }
+  ],
+  "dataset_training": [
+    {
+      "input": "Riconosci la categoria operativa del documento.",
+      "output": "documento_aziendale"
+    },
+    {
+      "input": "Elenca le aree principali del documento.",
+      "output": "password, dati, sicurezza, account, backup, usare, utente, software, sistema, sistemi, solo, informazioni, rischio, permessi"
+    },
+    {
+      "input": "Elenca le micro-informazioni operative del documento.",
+      "output": "utenti usano password deboli, password sicure, password sicura deve essere, stessa password, stessa password anche, buona password dovrebbe contenere parole, password manager, password manager permette, salvare password lunghe, password principale, password, password viene comunicata, oltre alla password, come password, password forte, password inserita, password uguale impedisce sempre, password uguali, password usata, proteggere dati, condividono dati riservati senza controllo, dati, contengono dati sensibili, fornire dati sensibili, dati bancari, dati importanti, decidere quali dati salvare, dati sensibili, dati sensibili sono informazioni, possono includere dati personali"
+    },
+    {
+      "input": "Trasforma questa informazione in una frase chiara per un riassunto.",
+      "output": "Per ridurre il rischio malware è importante:\n\n- evitare software non autorizzato;\n- non aprire allegati inattesi;\n- aggiornare sistema operativo e applicazioni;\n- usare strumenti antivirus o sistemi di protezione endpoint;\n- fare backup regolari;\n- limitare i privilegi amministrativi."
+    },
+    {
+      "input": "Trasforma questa informazione in una frase chiara per un riassunto.",
+      "output": "La 2FA riduce il rischio che un account venga violato solo perché la password è stata rubata."
+    },
+    {
+      "input": "Trasforma questa informazione in una frase chiara per un riassunto.",
+      "output": "Uso del documento per quiz e mini-corsi\n\nQuesto documento può essere usato dal motore RAG per generare domande su:\n\n- password sicure;\n- autenticazione a due fattori;\n- phishing;\n- malware;\n- ransomware;\n- backup;\n- aggiornamenti software;\n- protezione dei dati;\n- permessi utente;\n- reti Wi-Fi pubbliche;\n- comportamenti corretti in azienda."
+    },
+    {
+      "input": "Trasforma questa informazione in una frase chiara per un riassunto.",
+      "output": "Cos'è la sicurezza informatica\n\nLa sicurezza informatica è l'insieme di pratiche, strumenti e comportamenti usati per proteggere dati, dispositivi, account e sistemi digitali."
+    },
+    {
+      "input": "Trasforma questa informazione in una frase chiara per un riassunto.",
+      "output": "La sicurezza informatica ha tre obiettivi principali:\n\n- proteggere la riservatezza dei dati;\n- garantire l'integrità delle informazioni;\n- mantenere disponibili servizi e strumenti quando servono."
+    },
+    {
+      "input": "Trasforma questa informazione in una frase chiara per un riassunto.",
+      "output": "Usare la stessa password su più siti è rischioso: se un servizio viene violato, un attaccante può provare la stessa password anche su altri account."
+    },
+    {
+      "input": "Crea una sintesi breve delle informazioni più importanti.",
+      "output": "Per ridurre il rischio malware è importante:\n\n- evitare software non autorizzato;\n- non aprire allegati inattesi;\n- aggiornare sistema operativo e applicazioni;\n- usare strumenti antivirus o sistemi di protezione endpoint;\n- fare backup regolari;\n- limitare i privilegi amministrativi. La 2FA riduce il rischio che un account venga violato solo perché la password è stata rubata. Uso del documento per quiz e mini-corsi\n\nQuesto documento può essere usato dal motore RAG per generare domande su:\n\n- password sicure;\n- autenticazione a due fattori;\n- phishing;\n- malware;\n- ransomware;\n- backup;\n- aggiornamenti software;\n- protezione dei dati;\n- permessi utente;\n- reti Wi-Fi pubbliche;\n- comportamenti corretti in azienda."
+    }
+  ],
+  "statistiche": {
+    "caratteri_testo": 11545,
+    "numero_frasi": 103,
+    "numero_parole_utili": 977,
+    "numero_aree_principali": 14,
+    "numero_micro_informazioni": 30,
+    "numero_frasi_rilevanti": 10,
+    "numero_relazioni_operative": 14,
+    "numero_training_items": 10
+  }
+}
