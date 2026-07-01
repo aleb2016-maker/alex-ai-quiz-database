@@ -1,0 +1,205 @@
+# Report Knowledge Dataset Builder V2 Clean
+
+## Stato
+built
+
+## Obiettivo
+Creare un dataset naturale più pulito prima del training del mini LLM.
+
+## Input
+```json
+{
+  "full": "/Users/alessandrobarbarossa/alex-ai-workspace/mini_llm/data/training/knowledge_dataset_v1.jsonl",
+  "train": "/Users/alessandrobarbarossa/alex-ai-workspace/mini_llm/data/training/knowledge_dataset_v1_train.jsonl",
+  "val": "/Users/alessandrobarbarossa/alex-ai-workspace/mini_llm/data/training/knowledge_dataset_v1_val.jsonl",
+  "test": "/Users/alessandrobarbarossa/alex-ai-workspace/mini_llm/data/training/knowledge_dataset_v1_test.jsonl"
+}
+```
+
+## Output
+```json
+{
+  "full": "/Users/alessandrobarbarossa/alex-ai-workspace/mini_llm/data/training/knowledge_dataset_v2_clean.jsonl",
+  "train": "/Users/alessandrobarbarossa/alex-ai-workspace/mini_llm/data/training/knowledge_dataset_v2_clean_train.jsonl",
+  "val": "/Users/alessandrobarbarossa/alex-ai-workspace/mini_llm/data/training/knowledge_dataset_v2_clean_val.jsonl",
+  "test": "/Users/alessandrobarbarossa/alex-ai-workspace/mini_llm/data/training/knowledge_dataset_v2_clean_test.jsonl",
+  "manifest": "/Users/alessandrobarbarossa/alex-ai-workspace/mini_llm/data/training/knowledge_dataset_v2_clean_manifest.json",
+  "report": "/Users/alessandrobarbarossa/alex-ai-workspace/mini_llm/reports/knowledge_dataset_builder_v2_clean_report.md"
+}
+```
+
+## Record generati
+```json
+{
+  "full": 476,
+  "train": 353,
+  "val": 65,
+  "test": 58
+}
+```
+
+## Pulizia applicata
+```json
+{
+  "dirty_tokens": [
+    "#",
+    "analizzato",
+    "answer",
+    "area",
+    "collegate",
+    "completa",
+    "complete",
+    "completion",
+    "domanda",
+    "forma",
+    "input",
+    "instruction",
+    "istruzione",
+    "json",
+    "micro",
+    "operativa",
+    "output",
+    "prompt",
+    "pulita",
+    "pulite",
+    "question",
+    "record",
+    "richiesta",
+    "richiesto",
+    "riscrivi",
+    "risposta",
+    "source_record",
+    "source_task",
+    "trasforma"
+  ],
+  "dirty_phrases": [
+    "area operativa",
+    "domanda studio",
+    "frase chiara",
+    "frase utile",
+    "in forma chiara",
+    "informazione operativa richiesta",
+    "micro forma",
+    "per un riassunto",
+    "quale informazione",
+    "riscrivi usando",
+    "risposta guida",
+    "testo analizzato",
+    "trasforma usando"
+  ],
+  "min_chars": 18,
+  "max_chars": 420,
+  "stats": {
+    "source_records_total": 144,
+    "candidate_texts_total": 1742,
+    "accepted_texts_total": 476,
+    "discarded_empty": 0,
+    "discarded_short": 445,
+    "discarded_dirty": 0,
+    "discarded_duplicate": 821,
+    "dirty_removed": 1316,
+    "phrases_removed": 348,
+    "punctuation_repairs": 213
+  }
+}
+```
+
+## Qualità
+```json
+{
+  "records": 476,
+  "dirty_token_hits": 0,
+  "immediate_duplicates": 0,
+  "punctuation_start": 0,
+  "avg_token_count": 15.05,
+  "avg_char_count": 82.03,
+  "min_char_count": 18,
+  "max_char_count": 399,
+  "top_tokens": [
+    [
+      "v1",
+      155
+    ],
+    [
+      "ke",
+      144
+    ],
+    [
+      "dataset",
+      144
+    ],
+    [
+      "dati",
+      121
+    ],
+    [
+      "un",
+      114
+    ],
+    [
+      "una",
+      101
+    ],
+    [
+      "la",
+      100
+    ],
+    [
+      "password",
+      96
+    ],
+    [
+      "account",
+      94
+    ],
+    [
+      "informazione",
+      86
+    ],
+    [
+      "il",
+      83
+    ],
+    [
+      "sensibili",
+      82
+    ],
+    [
+      "di",
+      80
+    ],
+    [
+      "ransomware",
+      74
+    ],
+    [
+      "per",
+      73
+    ],
+    [
+      "alla",
+      67
+    ],
+    [
+      "in",
+      64
+    ],
+    [
+      "questa",
+      59
+    ],
+    [
+      "rispondi",
+      55
+    ],
+    [
+      "sicurezza",
+      53
+    ]
+  ]
+}
+```
+
+## Nota
+Questo dataset V2 Clean non sostituisce il Dataset V1.
+Serve come nuova base più naturale per Token Vectorizer V2 e Neural Model V3.
