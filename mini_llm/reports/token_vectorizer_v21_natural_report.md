@@ -1,0 +1,209 @@
+# Report Token Vectorizer V2.1 Natural
+
+## Stato
+built
+
+## Obiettivo
+Vectorizzare il Dataset V2.1 Natural senza sovrascrivere i vectorizer precedenti.
+
+## Input
+```json
+{
+  "train": "/Users/alessandrobarbarossa/alex-ai-workspace/mini_llm/data/training/knowledge_dataset_v21_natural_train.jsonl",
+  "val": "/Users/alessandrobarbarossa/alex-ai-workspace/mini_llm/data/training/knowledge_dataset_v21_natural_val.jsonl",
+  "test": "/Users/alessandrobarbarossa/alex-ai-workspace/mini_llm/data/training/knowledge_dataset_v21_natural_test.jsonl"
+}
+```
+
+## Output
+```json
+{
+  "vocab": "/Users/alessandrobarbarossa/alex-ai-workspace/mini_llm/data/vectorized_v21_natural/token_vocab_v21_natural.json",
+  "embeddings": "/Users/alessandrobarbarossa/alex-ai-workspace/mini_llm/data/vectorized_v21_natural/token_embeddings_v21_natural.json",
+  "train_sequences": "/Users/alessandrobarbarossa/alex-ai-workspace/mini_llm/data/vectorized_v21_natural/token_sequences_v21_natural_train.jsonl",
+  "val_sequences": "/Users/alessandrobarbarossa/alex-ai-workspace/mini_llm/data/vectorized_v21_natural/token_sequences_v21_natural_val.jsonl",
+  "test_sequences": "/Users/alessandrobarbarossa/alex-ai-workspace/mini_llm/data/vectorized_v21_natural/token_sequences_v21_natural_test.jsonl",
+  "manifest": "/Users/alessandrobarbarossa/alex-ai-workspace/mini_llm/data/vectorized_v21_natural/token_vectorizer_v21_natural_manifest.json",
+  "report": "/Users/alessandrobarbarossa/alex-ai-workspace/mini_llm/reports/token_vectorizer_v21_natural_report.md"
+}
+```
+
+## Impostazioni
+```json
+{
+  "max_length": 96,
+  "vector_dim": 96,
+  "min_frequency": 1,
+  "special_tokens": [
+    "<PAD>",
+    "<UNK>",
+    "<BOS>",
+    "<EOS>"
+  ],
+  "uses_dataset_v21_natural": true
+}
+```
+
+## Record
+```json
+{
+  "train": 80,
+  "val": 9,
+  "test": 9,
+  "total": 98
+}
+```
+
+## Vocabolario
+```json
+{
+  "vocab_size": 252,
+  "dirty_tokens_in_vocab": [],
+  "numeric_code_tokens_in_vocab": [],
+  "metadata_shape_tokens_in_vocab": [],
+  "top_tokens": [
+    [
+      ".",
+      163
+    ],
+    [
+      ",",
+      103
+    ],
+    [
+      "e",
+      61
+    ],
+    [
+      "un",
+      44
+    ],
+    [
+      "dati",
+      43
+    ],
+    [
+      "una",
+      41
+    ],
+    [
+      "password",
+      41
+    ],
+    [
+      "il",
+      35
+    ],
+    [
+      "l",
+      35
+    ],
+    [
+      "'",
+      35
+    ],
+    [
+      "di",
+      33
+    ],
+    [
+      "in",
+      33
+    ],
+    [
+      "è",
+      32
+    ],
+    [
+      "a",
+      28
+    ],
+    [
+      "o",
+      28
+    ],
+    [
+      "ransomware",
+      28
+    ],
+    [
+      "account",
+      27
+    ],
+    [
+      "la",
+      26
+    ],
+    [
+      "per",
+      26
+    ],
+    [
+      "sensibili",
+      23
+    ],
+    [
+      "voce",
+      22
+    ],
+    [
+      "sicurezza",
+      21
+    ],
+    [
+      "malware",
+      18
+    ],
+    [
+      "software",
+      18
+    ],
+    [
+      "questa",
+      18
+    ],
+    [
+      "informazione",
+      18
+    ],
+    [
+      "frase",
+      16
+    ],
+    [
+      "rilevante",
+      16
+    ],
+    [
+      "autenticazione",
+      15
+    ],
+    [
+      "informatica",
+      15
+    ]
+  ]
+}
+```
+
+## Qualità
+```json
+{
+  "sequences_total": 98,
+  "dirty_token_hits": 0,
+  "numeric_code_hits": 0,
+  "metadata_shape_hits": 0,
+  "immediate_duplicates": 0,
+  "repeated_bigrams": 0,
+  "truncated_sequences": 0,
+  "unk_count": 0,
+  "unk_ratio": 0.0,
+  "avg_original_length": 22.05,
+  "max_original_length": 52,
+  "avg_token_count": 20.05,
+  "vocab_unique_raw_tokens": 248
+}
+```
+
+## Nota
+Questo blocco prepara la base numerica per Neural Model V3.1 Natural.
