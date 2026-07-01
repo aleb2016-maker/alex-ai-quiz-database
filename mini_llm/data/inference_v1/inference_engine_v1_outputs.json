@@ -1,0 +1,3941 @@
+[
+  {
+    "prompt": "password",
+    "prompt_tokens": [
+      "password"
+    ],
+    "prompt_token_ids": [
+      22
+    ],
+    "generated_tokens": [
+      "sicure",
+      ",",
+      "strumenti",
+      "e",
+      "chiede",
+      "con",
+      "protette",
+      "con",
+      "per",
+      "un",
+      "riassunto",
+      "."
+    ],
+    "generated_token_ids": [
+      95,
+      6,
+      77,
+      16,
+      136,
+      275,
+      276,
+      275,
+      15,
+      10,
+      40,
+      5
+    ],
+    "generated_text": "sicure, strumenti e chiede con protette con per un riassunto.",
+    "full_text": "password sicure, strumenti e chiede con protette con per un riassunto.",
+    "steps": [
+      {
+        "step": 1,
+        "current_token": "password",
+        "selected_token": "sicure",
+        "selected_id": 95,
+        "selected_score": 1.152189,
+        "top_candidates": [
+          {
+            "token": "manager",
+            "token_id": 70,
+            "score": 1.593149,
+            "probability_sigmoid": 0.831059
+          },
+          {
+            "token": "sicure",
+            "token_id": 95,
+            "score": 1.152189,
+            "probability_sigmoid": 0.759911
+          },
+          {
+            "token": ".",
+            "token_id": 5,
+            "score": 0.282675,
+            "probability_sigmoid": 0.570202
+          },
+          {
+            "token": "sicura",
+            "token_id": 226,
+            "score": -0.447139,
+            "probability_sigmoid": 0.390041
+          },
+          {
+            "token": "principale",
+            "token_id": 218,
+            "score": -0.466017,
+            "probability_sigmoid": 0.385559
+          }
+        ]
+      },
+      {
+        "step": 2,
+        "current_token": "sicure",
+        "selected_token": ",",
+        "selected_id": 6,
+        "selected_score": 0.551629,
+        "top_candidates": [
+          {
+            "token": ",",
+            "token_id": 6,
+            "score": 0.551629,
+            "probability_sigmoid": 0.634513
+          },
+          {
+            "token": "è",
+            "token_id": 14,
+            "score": -0.193874,
+            "probability_sigmoid": 0.451683
+          },
+          {
+            "token": "?",
+            "token_id": 36,
+            "score": -1.118711,
+            "probability_sigmoid": 0.24625
+          },
+          {
+            "token": "attenzione",
+            "token_id": 273,
+            "score": -1.36911,
+            "probability_sigmoid": 0.202764
+          },
+          {
+            "token": "con",
+            "token_id": 275,
+            "score": -1.370788,
+            "probability_sigmoid": 0.202493
+          }
+        ]
+      },
+      {
+        "step": 3,
+        "current_token": ",",
+        "selected_token": "strumenti",
+        "selected_id": 77,
+        "selected_score": 1.049117,
+        "top_candidates": [
+          {
+            "token": "account",
+            "token_id": 21,
+            "score": 1.202044,
+            "probability_sigmoid": 0.768888
+          },
+          {
+            "token": "strumenti",
+            "token_id": 77,
+            "score": 1.049117,
+            "probability_sigmoid": 0.740605
+          },
+          {
+            "token": "aggiunge",
+            "token_id": 112,
+            "score": 0.935963,
+            "probability_sigmoid": 0.718283
+          },
+          {
+            "token": "migliorano",
+            "token_id": 122,
+            "score": 0.591445,
+            "probability_sigmoid": 0.643697
+          },
+          {
+            "token": "uno",
+            "token_id": 183,
+            "score": 0.466292,
+            "probability_sigmoid": 0.614506
+          }
+        ]
+      },
+      {
+        "step": 4,
+        "current_token": "strumenti",
+        "selected_token": "e",
+        "selected_id": 16,
+        "selected_score": 0.569269,
+        "top_candidates": [
+          {
+            "token": "e",
+            "token_id": 16,
+            "score": 0.569269,
+            "probability_sigmoid": 0.638594
+          },
+          {
+            "token": "cloud",
+            "token_id": 138,
+            "score": -0.238367,
+            "probability_sigmoid": 0.440689
+          },
+          {
+            "token": "pulite",
+            "token_id": 277,
+            "score": -1.369423,
+            "probability_sigmoid": 0.202713
+          },
+          {
+            "token": "con",
+            "token_id": 275,
+            "score": -1.372161,
+            "probability_sigmoid": 0.202271
+          },
+          {
+            "token": "attenzione",
+            "token_id": 273,
+            "score": -1.381406,
+            "probability_sigmoid": 0.200783
+          }
+        ]
+      },
+      {
+        "step": 5,
+        "current_token": "e",
+        "selected_token": "chiede",
+        "selected_id": 136,
+        "selected_score": 0.401106,
+        "top_candidates": [
+          {
+            "token": "riutilizzabile",
+            "token_id": 110,
+            "score": 0.822713,
+            "probability_sigmoid": 0.694812
+          },
+          {
+            "token": "piattaforme",
+            "token_id": 150,
+            "score": 0.541018,
+            "probability_sigmoid": 0.632049
+          },
+          {
+            "token": "sistemi",
+            "token_id": 64,
+            "score": 0.530335,
+            "probability_sigmoid": 0.629561
+          },
+          {
+            "token": "comportamenti",
+            "token_id": 86,
+            "score": 0.450937,
+            "probability_sigmoid": 0.610862
+          },
+          {
+            "token": "chiudono",
+            "token_id": 113,
+            "score": 0.443009,
+            "probability_sigmoid": 0.608976
+          }
+        ]
+      },
+      {
+        "step": 6,
+        "current_token": "chiede",
+        "selected_token": "con",
+        "selected_id": 275,
+        "selected_score": -1.253355,
+        "top_candidates": [
+          {
+            "token": "un",
+            "token_id": 10,
+            "score": 0.941241,
+            "probability_sigmoid": 0.71935
+          },
+          {
+            "token": "con",
+            "token_id": 275,
+            "score": -1.253355,
+            "probability_sigmoid": 0.22212
+          },
+          {
+            "token": "pulite",
+            "token_id": 277,
+            "score": -1.2708,
+            "probability_sigmoid": 0.21912
+          },
+          {
+            "token": "attenzione",
+            "token_id": 273,
+            "score": -1.286279,
+            "probability_sigmoid": 0.216483
+          },
+          {
+            "token": ",",
+            "token_id": 6,
+            "score": -1.310362,
+            "probability_sigmoid": 0.212426
+          }
+        ]
+      },
+      {
+        "step": 7,
+        "current_token": "con",
+        "selected_token": "protette",
+        "selected_id": 276,
+        "selected_score": -1.403612,
+        "top_candidates": [
+          {
+            "token": ",",
+            "token_id": 6,
+            "score": -0.727781,
+            "probability_sigmoid": 0.325682
+          },
+          {
+            "token": "con",
+            "token_id": 275,
+            "score": -1.204594,
+            "probability_sigmoid": 0.230659
+          },
+          {
+            "token": "per",
+            "token_id": 15,
+            "score": -1.207445,
+            "probability_sigmoid": 0.230153
+          },
+          {
+            "token": "pulite",
+            "token_id": 277,
+            "score": -1.268074,
+            "probability_sigmoid": 0.219587
+          },
+          {
+            "token": "complete",
+            "token_id": 274,
+            "score": -1.349061,
+            "probability_sigmoid": 0.206024
+          }
+        ]
+      },
+      {
+        "step": 8,
+        "current_token": "protette",
+        "selected_token": "con",
+        "selected_id": 275,
+        "selected_score": -1.211517,
+        "top_candidates": [
+          {
+            "token": "con",
+            "token_id": 275,
+            "score": -1.211517,
+            "probability_sigmoid": 0.229433
+          },
+          {
+            "token": "pulite",
+            "token_id": 277,
+            "score": -1.428658,
+            "probability_sigmoid": 0.193308
+          },
+          {
+            "token": "complete",
+            "token_id": 274,
+            "score": -1.519637,
+            "probability_sigmoid": 0.179515
+          },
+          {
+            "token": "attenzione",
+            "token_id": 273,
+            "score": -1.544088,
+            "probability_sigmoid": 0.175942
+          },
+          {
+            "token": "tra",
+            "token_id": 258,
+            "score": -1.628195,
+            "probability_sigmoid": 0.164078
+          }
+        ]
+      },
+      {
+        "step": 9,
+        "current_token": "con",
+        "selected_token": "per",
+        "selected_id": 15,
+        "selected_score": -1.207445,
+        "top_candidates": [
+          {
+            "token": ",",
+            "token_id": 6,
+            "score": -0.727781,
+            "probability_sigmoid": 0.325682
+          },
+          {
+            "token": "con",
+            "token_id": 275,
+            "score": -1.204594,
+            "probability_sigmoid": 0.230659
+          },
+          {
+            "token": "per",
+            "token_id": 15,
+            "score": -1.207445,
+            "probability_sigmoid": 0.230153
+          },
+          {
+            "token": "pulite",
+            "token_id": 277,
+            "score": -1.268074,
+            "probability_sigmoid": 0.219587
+          },
+          {
+            "token": "complete",
+            "token_id": 274,
+            "score": -1.349061,
+            "probability_sigmoid": 0.206024
+          }
+        ]
+      },
+      {
+        "step": 10,
+        "current_token": "per",
+        "selected_token": "un",
+        "selected_id": 10,
+        "selected_score": 2.507771,
+        "top_candidates": [
+          {
+            "token": "un",
+            "token_id": 10,
+            "score": 2.507771,
+            "probability_sigmoid": 0.924685
+          },
+          {
+            "token": "proteggere",
+            "token_id": 125,
+            "score": 0.379927,
+            "probability_sigmoid": 0.593856
+          },
+          {
+            "token": "ingannare",
+            "token_id": 147,
+            "score": 0.196805,
+            "probability_sigmoid": 0.549043
+          },
+          {
+            "token": "ripristinarli",
+            "token_id": 154,
+            "score": 0.137083,
+            "probability_sigmoid": 0.534217
+          },
+          {
+            "token": ":",
+            "token_id": 12,
+            "score": -0.013446,
+            "probability_sigmoid": 0.496639
+          }
+        ]
+      },
+      {
+        "step": 11,
+        "current_token": "un",
+        "selected_token": "riassunto",
+        "selected_id": 40,
+        "selected_score": 1.466353,
+        "top_candidates": [
+          {
+            "token": "riassunto",
+            "token_id": 40,
+            "score": 1.466353,
+            "probability_sigmoid": 0.812502
+          },
+          {
+            "token": "tipo",
+            "token_id": 100,
+            "score": 0.580833,
+            "probability_sigmoid": 0.641259
+          },
+          {
+            "token": "account",
+            "token_id": 21,
+            "score": 0.514341,
+            "probability_sigmoid": 0.625824
+          },
+          {
+            "token": "secondo",
+            "token_id": 127,
+            "score": 0.466113,
+            "probability_sigmoid": 0.614463
+          },
+          {
+            "token": "ransomware",
+            "token_id": 31,
+            "score": 0.243089,
+            "probability_sigmoid": 0.560475
+          }
+        ]
+      },
+      {
+        "step": 12,
+        "current_token": "riassunto",
+        "selected_token": ".",
+        "selected_id": 5,
+        "selected_score": 2.389636,
+        "top_candidates": [
+          {
+            "token": ".",
+            "token_id": 5,
+            "score": 2.389636,
+            "probability_sigmoid": 0.916034
+          },
+          {
+            "token": "operativo",
+            "token_id": 102,
+            "score": 0.127909,
+            "probability_sigmoid": 0.531934
+          },
+          {
+            "token": "con",
+            "token_id": 275,
+            "score": -1.479796,
+            "probability_sigmoid": 0.185458
+          },
+          {
+            "token": "pulite",
+            "token_id": 277,
+            "score": -1.526035,
+            "probability_sigmoid": 0.178575
+          },
+          {
+            "token": "complete",
+            "token_id": 274,
+            "score": -1.550495,
+            "probability_sigmoid": 0.175015
+          }
+        ]
+      },
+      {
+        "step": 13,
+        "current_token": ".",
+        "selected_token": "<EOS>",
+        "selected_id": 3,
+        "selected_score": 0.861852,
+        "top_candidates": [
+          {
+            "token": "<EOS>",
+            "token_id": 3,
+            "score": 0.861852,
+            "probability_sigmoid": 0.703048
+          },
+          {
+            "token": ";",
+            "token_id": 105,
+            "score": 0.206874,
+            "probability_sigmoid": 0.551535
+          },
+          {
+            "token": "4",
+            "token_id": 186,
+            "score": -0.639619,
+            "probability_sigmoid": 0.345333
+          },
+          {
+            "token": "#",
+            "token_id": 4,
+            "score": -0.876918,
+            "probability_sigmoid": 0.293817
+          },
+          {
+            "token": "tipo",
+            "token_id": 100,
+            "score": -1.889623,
+            "probability_sigmoid": 0.131287
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "prompt": "sicurezza",
+    "prompt_tokens": [
+      "sicurezza"
+    ],
+    "prompt_token_ids": [
+      39
+    ],
+    "generated_tokens": [
+      "informatica"
+    ],
+    "generated_token_ids": [
+      51
+    ],
+    "generated_text": "informatica",
+    "full_text": "sicurezza informatica",
+    "steps": [
+      {
+        "step": 1,
+        "current_token": "sicurezza",
+        "selected_token": "informatica",
+        "selected_id": 51,
+        "selected_score": 1.788637,
+        "top_candidates": [
+          {
+            "token": "informatica",
+            "token_id": 51,
+            "score": 1.788637,
+            "probability_sigmoid": 0.85676
+          },
+          {
+            "token": ".",
+            "token_id": 5,
+            "score": 0.027491,
+            "probability_sigmoid": 0.506872
+          },
+          {
+            "token": "generale",
+            "token_id": 76,
+            "score": -0.29229,
+            "probability_sigmoid": 0.427443
+          },
+          {
+            "token": "o",
+            "token_id": 32,
+            "score": -1.084079,
+            "probability_sigmoid": 0.252735
+          },
+          {
+            "token": "operativo",
+            "token_id": 102,
+            "score": -1.250638,
+            "probability_sigmoid": 0.22259
+          }
+        ]
+      },
+      {
+        "step": 2,
+        "current_token": "informatica",
+        "selected_token": "<EOS>",
+        "selected_id": 3,
+        "selected_score": -0.696321,
+        "top_candidates": [
+          {
+            "token": "è",
+            "token_id": 14,
+            "score": 0.615647,
+            "probability_sigmoid": 0.649228
+          },
+          {
+            "token": "?",
+            "token_id": 36,
+            "score": -0.12826,
+            "probability_sigmoid": 0.467979
+          },
+          {
+            "token": "<EOS>",
+            "token_id": 3,
+            "score": -0.696321,
+            "probability_sigmoid": 0.332628
+          },
+          {
+            "token": "dipende",
+            "token_id": 200,
+            "score": -0.841587,
+            "probability_sigmoid": 0.301201
+          },
+          {
+            "token": ",",
+            "token_id": 6,
+            "score": -1.061149,
+            "probability_sigmoid": 0.25709
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "prompt": "backup",
+    "prompt_tokens": [
+      "backup"
+    ],
+    "prompt_token_ids": [
+      82
+    ],
+    "generated_tokens": [
+      "regolari",
+      ",",
+      "migliorano",
+      "riconosci",
+      "la",
+      "frase",
+      "chiara",
+      "per",
+      "un",
+      "computer",
+      ",",
+      "account",
+      "amministrativi",
+      "?",
+      "#",
+      "risposta",
+      "l",
+      "'",
+      "pulite",
+      "pulite",
+      "complete",
+      "protette",
+      "tra",
+      "due"
+    ],
+    "generated_token_ids": [
+      223,
+      6,
+      122,
+      268,
+      19,
+      46,
+      41,
+      15,
+      10,
+      87,
+      6,
+      21,
+      65,
+      36,
+      4,
+      9,
+      28,
+      27,
+      277,
+      277,
+      274,
+      276,
+      258,
+      58
+    ],
+    "generated_text": "regolari, migliorano riconosci la frase chiara per un computer, account amministrativi? # risposta l'pulite pulite complete protette tra due",
+    "full_text": "backup regolari, migliorano riconosci la frase chiara per un computer, account amministrativi? # risposta l'pulite pulite complete protette tra due",
+    "steps": [
+      {
+        "step": 1,
+        "current_token": "backup",
+        "selected_token": "regolari",
+        "selected_id": 223,
+        "selected_score": -1.111174,
+        "top_candidates": [
+          {
+            "token": "è",
+            "token_id": 14,
+            "score": -0.061457,
+            "probability_sigmoid": 0.484641
+          },
+          {
+            "token": ",",
+            "token_id": 6,
+            "score": -1.024352,
+            "probability_sigmoid": 0.264181
+          },
+          {
+            "token": "regolari",
+            "token_id": 223,
+            "score": -1.111174,
+            "probability_sigmoid": 0.247652
+          },
+          {
+            "token": "serve",
+            "token_id": 256,
+            "score": -1.191503,
+            "probability_sigmoid": 0.23299
+          },
+          {
+            "token": "?",
+            "token_id": 36,
+            "score": -1.258451,
+            "probability_sigmoid": 0.221241
+          }
+        ]
+      },
+      {
+        "step": 2,
+        "current_token": "regolari",
+        "selected_token": ",",
+        "selected_id": 6,
+        "selected_score": 0.647998,
+        "top_candidates": [
+          {
+            "token": ",",
+            "token_id": 6,
+            "score": 0.647998,
+            "probability_sigmoid": 0.656559
+          },
+          {
+            "token": "?",
+            "token_id": 36,
+            "score": -0.658016,
+            "probability_sigmoid": 0.341185
+          },
+          {
+            "token": "di",
+            "token_id": 23,
+            "score": -1.054833,
+            "probability_sigmoid": 0.258298
+          },
+          {
+            "token": "attenzione",
+            "token_id": 273,
+            "score": -1.297133,
+            "probability_sigmoid": 0.214648
+          },
+          {
+            "token": "pulite",
+            "token_id": 277,
+            "score": -1.316527,
+            "probability_sigmoid": 0.211397
+          }
+        ]
+      },
+      {
+        "step": 3,
+        "current_token": ",",
+        "selected_token": "migliorano",
+        "selected_id": 122,
+        "selected_score": 0.591445,
+        "top_candidates": [
+          {
+            "token": "account",
+            "token_id": 21,
+            "score": 1.202044,
+            "probability_sigmoid": 0.768888
+          },
+          {
+            "token": "strumenti",
+            "token_id": 77,
+            "score": 1.049117,
+            "probability_sigmoid": 0.740605
+          },
+          {
+            "token": "aggiunge",
+            "token_id": 112,
+            "score": 0.935963,
+            "probability_sigmoid": 0.718283
+          },
+          {
+            "token": "migliorano",
+            "token_id": 122,
+            "score": 0.591445,
+            "probability_sigmoid": 0.643697
+          },
+          {
+            "token": "uno",
+            "token_id": 183,
+            "score": 0.466292,
+            "probability_sigmoid": 0.614506
+          }
+        ]
+      },
+      {
+        "step": 4,
+        "current_token": "migliorano",
+        "selected_token": "riconosci",
+        "selected_id": 268,
+        "selected_score": -1.35695,
+        "top_candidates": [
+          {
+            "token": "le",
+            "token_id": 72,
+            "score": 0.032637,
+            "probability_sigmoid": 0.508159
+          },
+          {
+            "token": "con",
+            "token_id": 275,
+            "score": -1.218566,
+            "probability_sigmoid": 0.228189
+          },
+          {
+            "token": "pulite",
+            "token_id": 277,
+            "score": -1.244738,
+            "probability_sigmoid": 0.223612
+          },
+          {
+            "token": "complete",
+            "token_id": 274,
+            "score": -1.300021,
+            "probability_sigmoid": 0.214162
+          },
+          {
+            "token": "attenzione",
+            "token_id": 273,
+            "score": -1.304305,
+            "probability_sigmoid": 0.213441
+          }
+        ]
+      },
+      {
+        "step": 5,
+        "current_token": "riconosci",
+        "selected_token": "la",
+        "selected_id": 19,
+        "selected_score": -0.643085,
+        "top_candidates": [
+          {
+            "token": "la",
+            "token_id": 19,
+            "score": -0.643085,
+            "probability_sigmoid": 0.344549
+          },
+          {
+            "token": "e",
+            "token_id": 16,
+            "score": -0.671513,
+            "probability_sigmoid": 0.338158
+          },
+          {
+            "token": ",",
+            "token_id": 6,
+            "score": -1.207803,
+            "probability_sigmoid": 0.23009
+          },
+          {
+            "token": "con",
+            "token_id": 275,
+            "score": -1.215989,
+            "probability_sigmoid": 0.228643
+          },
+          {
+            "token": "pulite",
+            "token_id": 277,
+            "score": -1.22314,
+            "probability_sigmoid": 0.227384
+          }
+        ]
+      },
+      {
+        "step": 6,
+        "current_token": "la",
+        "selected_token": "frase",
+        "selected_id": 46,
+        "selected_score": 1.005078,
+        "top_candidates": [
+          {
+            "token": "micro",
+            "token_id": 35,
+            "score": 1.781735,
+            "probability_sigmoid": 0.855911
+          },
+          {
+            "token": "sicurezza",
+            "token_id": 39,
+            "score": 1.23893,
+            "probability_sigmoid": 0.775378
+          },
+          {
+            "token": "2fa",
+            "token_id": 69,
+            "score": 1.220289,
+            "probability_sigmoid": 0.772114
+          },
+          {
+            "token": "frase",
+            "token_id": 46,
+            "score": 1.005078,
+            "probability_sigmoid": 0.732056
+          },
+          {
+            "token": "password",
+            "token_id": 22,
+            "score": 0.41653,
+            "probability_sigmoid": 0.602653
+          }
+        ]
+      },
+      {
+        "step": 7,
+        "current_token": "frase",
+        "selected_token": "chiara",
+        "selected_id": 41,
+        "selected_score": 0.469257,
+        "top_candidates": [
+          {
+            "token": "rilevante",
+            "token_id": 74,
+            "score": 1.309623,
+            "probability_sigmoid": 0.78745
+          },
+          {
+            "token": "chiara",
+            "token_id": 41,
+            "score": 0.469257,
+            "probability_sigmoid": 0.615208
+          },
+          {
+            "token": "pulite",
+            "token_id": 277,
+            "score": -1.307502,
+            "probability_sigmoid": 0.212905
+          },
+          {
+            "token": "con",
+            "token_id": 275,
+            "score": -1.310046,
+            "probability_sigmoid": 0.212479
+          },
+          {
+            "token": "attenzione",
+            "token_id": 273,
+            "score": -1.364361,
+            "probability_sigmoid": 0.203532
+          }
+        ]
+      },
+      {
+        "step": 8,
+        "current_token": "chiara",
+        "selected_token": "per",
+        "selected_id": 15,
+        "selected_score": 1.845899,
+        "top_candidates": [
+          {
+            "token": "per",
+            "token_id": 15,
+            "score": 1.845899,
+            "probability_sigmoid": 0.863645
+          },
+          {
+            "token": "del",
+            "token_id": 50,
+            "score": 0.552521,
+            "probability_sigmoid": 0.63472
+          },
+          {
+            "token": "di",
+            "token_id": 23,
+            "score": -0.876014,
+            "probability_sigmoid": 0.294004
+          },
+          {
+            "token": "a",
+            "token_id": 25,
+            "score": -1.231571,
+            "probability_sigmoid": 0.225907
+          },
+          {
+            "token": "con",
+            "token_id": 275,
+            "score": -1.332468,
+            "probability_sigmoid": 0.208751
+          }
+        ]
+      },
+      {
+        "step": 9,
+        "current_token": "per",
+        "selected_token": "un",
+        "selected_id": 10,
+        "selected_score": 2.507771,
+        "top_candidates": [
+          {
+            "token": "un",
+            "token_id": 10,
+            "score": 2.507771,
+            "probability_sigmoid": 0.924685
+          },
+          {
+            "token": "proteggere",
+            "token_id": 125,
+            "score": 0.379927,
+            "probability_sigmoid": 0.593856
+          },
+          {
+            "token": "ingannare",
+            "token_id": 147,
+            "score": 0.196805,
+            "probability_sigmoid": 0.549043
+          },
+          {
+            "token": "ripristinarli",
+            "token_id": 154,
+            "score": 0.137083,
+            "probability_sigmoid": 0.534217
+          },
+          {
+            "token": ":",
+            "token_id": 12,
+            "score": -0.013446,
+            "probability_sigmoid": 0.496639
+          }
+        ]
+      },
+      {
+        "step": 10,
+        "current_token": "un",
+        "selected_token": "computer",
+        "selected_id": 87,
+        "selected_score": -0.091829,
+        "top_candidates": [
+          {
+            "token": "riassunto",
+            "token_id": 40,
+            "score": 1.466353,
+            "probability_sigmoid": 0.812502
+          },
+          {
+            "token": "tipo",
+            "token_id": 100,
+            "score": 0.580833,
+            "probability_sigmoid": 0.641259
+          },
+          {
+            "token": "account",
+            "token_id": 21,
+            "score": 0.514341,
+            "probability_sigmoid": 0.625824
+          },
+          {
+            "token": "secondo",
+            "token_id": 127,
+            "score": 0.466113,
+            "probability_sigmoid": 0.614463
+          },
+          {
+            "token": "ransomware",
+            "token_id": 31,
+            "score": 0.243089,
+            "probability_sigmoid": 0.560475
+          }
+        ]
+      },
+      {
+        "step": 11,
+        "current_token": "computer",
+        "selected_token": ",",
+        "selected_id": 6,
+        "selected_score": 0.94389,
+        "top_candidates": [
+          {
+            "token": ",",
+            "token_id": 6,
+            "score": 0.94389,
+            "probability_sigmoid": 0.719885
+          },
+          {
+            "token": "o",
+            "token_id": 32,
+            "score": 0.418643,
+            "probability_sigmoid": 0.603159
+          },
+          {
+            "token": "a",
+            "token_id": 25,
+            "score": -1.074158,
+            "probability_sigmoid": 0.254613
+          },
+          {
+            "token": "e",
+            "token_id": 16,
+            "score": -1.236715,
+            "probability_sigmoid": 0.225008
+          },
+          {
+            "token": "con",
+            "token_id": 275,
+            "score": -1.246715,
+            "probability_sigmoid": 0.223269
+          }
+        ]
+      },
+      {
+        "step": 12,
+        "current_token": ",",
+        "selected_token": "account",
+        "selected_id": 21,
+        "selected_score": 1.202044,
+        "top_candidates": [
+          {
+            "token": "account",
+            "token_id": 21,
+            "score": 1.202044,
+            "probability_sigmoid": 0.768888
+          },
+          {
+            "token": "strumenti",
+            "token_id": 77,
+            "score": 1.049117,
+            "probability_sigmoid": 0.740605
+          },
+          {
+            "token": "aggiunge",
+            "token_id": 112,
+            "score": 0.935963,
+            "probability_sigmoid": 0.718283
+          },
+          {
+            "token": "migliorano",
+            "token_id": 122,
+            "score": 0.591445,
+            "probability_sigmoid": 0.643697
+          },
+          {
+            "token": "uno",
+            "token_id": 183,
+            "score": 0.466292,
+            "probability_sigmoid": 0.614506
+          }
+        ]
+      },
+      {
+        "step": 13,
+        "current_token": "account",
+        "selected_token": "amministrativi",
+        "selected_id": 65,
+        "selected_score": 1.530724,
+        "top_candidates": [
+          {
+            "token": "amministrativi",
+            "token_id": 65,
+            "score": 1.530724,
+            "probability_sigmoid": 0.822112
+          },
+          {
+            "token": "e",
+            "token_id": 16,
+            "score": 1.29553,
+            "probability_sigmoid": 0.785082
+          },
+          {
+            "token": "online",
+            "token_id": 73,
+            "score": 1.27737,
+            "probability_sigmoid": 0.782002
+          },
+          {
+            "token": ".",
+            "token_id": 5,
+            "score": -0.501521,
+            "probability_sigmoid": 0.377183
+          },
+          {
+            "token": "venga",
+            "token_id": 263,
+            "score": -0.626936,
+            "probability_sigmoid": 0.348206
+          }
+        ]
+      },
+      {
+        "step": 14,
+        "current_token": "amministrativi",
+        "selected_token": "?",
+        "selected_id": 36,
+        "selected_score": -0.274323,
+        "top_candidates": [
+          {
+            "token": ",",
+            "token_id": 6,
+            "score": 1.682498,
+            "probability_sigmoid": 0.843235
+          },
+          {
+            "token": "?",
+            "token_id": 36,
+            "score": -0.274323,
+            "probability_sigmoid": 0.431846
+          },
+          {
+            "token": "<EOS>",
+            "token_id": 3,
+            "score": -0.870256,
+            "probability_sigmoid": 0.295201
+          },
+          {
+            "token": "#",
+            "token_id": 4,
+            "score": -1.266343,
+            "probability_sigmoid": 0.219884
+          },
+          {
+            "token": "con",
+            "token_id": 275,
+            "score": -1.460527,
+            "probability_sigmoid": 0.188387
+          }
+        ]
+      },
+      {
+        "step": 15,
+        "current_token": "?",
+        "selected_token": "#",
+        "selected_id": 4,
+        "selected_score": 2.985317,
+        "top_candidates": [
+          {
+            "token": "#",
+            "token_id": 4,
+            "score": 2.985317,
+            "probability_sigmoid": 0.951906
+          },
+          {
+            "token": "?",
+            "token_id": 36,
+            "score": -1.261412,
+            "probability_sigmoid": 0.220731
+          },
+          {
+            "token": "complete",
+            "token_id": 274,
+            "score": -1.827827,
+            "probability_sigmoid": 0.138497
+          },
+          {
+            "token": "pulite",
+            "token_id": 277,
+            "score": -1.834848,
+            "probability_sigmoid": 0.137662
+          },
+          {
+            "token": "attenzione",
+            "token_id": 273,
+            "score": -1.844088,
+            "probability_sigmoid": 0.136569
+          }
+        ]
+      },
+      {
+        "step": 16,
+        "current_token": "#",
+        "selected_token": "risposta",
+        "selected_id": 9,
+        "selected_score": -0.173424,
+        "top_candidates": [
+          {
+            "token": "istruzione",
+            "token_id": 8,
+            "score": 0.816825,
+            "probability_sigmoid": 0.693562
+          },
+          {
+            "token": "#",
+            "token_id": 4,
+            "score": -0.031509,
+            "probability_sigmoid": 0.492123
+          },
+          {
+            "token": "risposta",
+            "token_id": 9,
+            "score": -0.173424,
+            "probability_sigmoid": 0.456752
+          },
+          {
+            "token": "input",
+            "token_id": 7,
+            "score": -0.260748,
+            "probability_sigmoid": 0.43518
+          },
+          {
+            "token": "4",
+            "token_id": 186,
+            "score": -2.99837,
+            "probability_sigmoid": 0.0475
+          }
+        ]
+      },
+      {
+        "step": 17,
+        "current_token": "risposta",
+        "selected_token": "l",
+        "selected_id": 28,
+        "selected_score": 0.176809,
+        "top_candidates": [
+          {
+            "token": "il",
+            "token_id": 24,
+            "score": 1.443492,
+            "probability_sigmoid": 0.808995
+          },
+          {
+            "token": "una",
+            "token_id": 20,
+            "score": 0.662403,
+            "probability_sigmoid": 0.6598
+          },
+          {
+            "token": "la",
+            "token_id": 19,
+            "score": 0.268177,
+            "probability_sigmoid": 0.566645
+          },
+          {
+            "token": "l",
+            "token_id": 28,
+            "score": 0.176809,
+            "probability_sigmoid": 0.544088
+          },
+          {
+            "token": "non",
+            "token_id": 79,
+            "score": 0.019628,
+            "probability_sigmoid": 0.504907
+          }
+        ]
+      },
+      {
+        "step": 18,
+        "current_token": "l",
+        "selected_token": "'",
+        "selected_id": 27,
+        "selected_score": 2.79896,
+        "top_candidates": [
+          {
+            "token": "'",
+            "token_id": 27,
+            "score": 2.79896,
+            "probability_sigmoid": 0.94262
+          },
+          {
+            "token": "pulite",
+            "token_id": 277,
+            "score": -1.516657,
+            "probability_sigmoid": 0.179954
+          },
+          {
+            "token": "con",
+            "token_id": 275,
+            "score": -1.560846,
+            "probability_sigmoid": 0.173525
+          },
+          {
+            "token": "complete",
+            "token_id": 274,
+            "score": -1.572658,
+            "probability_sigmoid": 0.171838
+          },
+          {
+            "token": "protette",
+            "token_id": 276,
+            "score": -1.729677,
+            "probability_sigmoid": 0.150629
+          }
+        ]
+      },
+      {
+        "step": 19,
+        "current_token": "'",
+        "selected_token": "pulite",
+        "selected_id": 277,
+        "selected_score": -1.389327,
+        "top_candidates": [
+          {
+            "token": "area",
+            "token_id": 26,
+            "score": 1.791748,
+            "probability_sigmoid": 0.857141
+          },
+          {
+            "token": "autenticazione",
+            "token_id": 53,
+            "score": 0.447458,
+            "probability_sigmoid": 0.610035
+          },
+          {
+            "token": "insieme",
+            "token_id": 121,
+            "score": 0.250525,
+            "probability_sigmoid": 0.562306
+          },
+          {
+            "token": "accesso",
+            "token_id": 158,
+            "score": -0.101889,
+            "probability_sigmoid": 0.47455
+          },
+          {
+            "token": "utente",
+            "token_id": 230,
+            "score": -0.49402,
+            "probability_sigmoid": 0.378947
+          }
+        ]
+      },
+      {
+        "step": 20,
+        "current_token": "pulite",
+        "selected_token": "pulite",
+        "selected_id": 277,
+        "selected_score": -1.404502,
+        "top_candidates": [
+          {
+            "token": "e",
+            "token_id": 16,
+            "score": -0.944663,
+            "probability_sigmoid": 0.279959
+          },
+          {
+            "token": "con",
+            "token_id": 275,
+            "score": -1.332387,
+            "probability_sigmoid": 0.208765
+          },
+          {
+            "token": "pulite",
+            "token_id": 277,
+            "score": -1.404502,
+            "probability_sigmoid": 0.197103
+          },
+          {
+            "token": "complete",
+            "token_id": 274,
+            "score": -1.424364,
+            "probability_sigmoid": 0.193978
+          },
+          {
+            "token": "attenzione",
+            "token_id": 273,
+            "score": -1.441408,
+            "probability_sigmoid": 0.191327
+          }
+        ]
+      },
+      {
+        "step": 21,
+        "current_token": "pulite",
+        "selected_token": "complete",
+        "selected_id": 274,
+        "selected_score": -1.424364,
+        "top_candidates": [
+          {
+            "token": "e",
+            "token_id": 16,
+            "score": -0.944663,
+            "probability_sigmoid": 0.279959
+          },
+          {
+            "token": "con",
+            "token_id": 275,
+            "score": -1.332387,
+            "probability_sigmoid": 0.208765
+          },
+          {
+            "token": "pulite",
+            "token_id": 277,
+            "score": -1.404502,
+            "probability_sigmoid": 0.197103
+          },
+          {
+            "token": "complete",
+            "token_id": 274,
+            "score": -1.424364,
+            "probability_sigmoid": 0.193978
+          },
+          {
+            "token": "attenzione",
+            "token_id": 273,
+            "score": -1.441408,
+            "probability_sigmoid": 0.191327
+          }
+        ]
+      },
+      {
+        "step": 22,
+        "current_token": "complete",
+        "selected_token": "protette",
+        "selected_id": 276,
+        "selected_score": -1.46197,
+        "top_candidates": [
+          {
+            "token": "pulite",
+            "token_id": 277,
+            "score": -1.238494,
+            "probability_sigmoid": 0.224698
+          },
+          {
+            "token": "con",
+            "token_id": 275,
+            "score": -1.260103,
+            "probability_sigmoid": 0.220956
+          },
+          {
+            "token": "complete",
+            "token_id": 274,
+            "score": -1.290432,
+            "probability_sigmoid": 0.21578
+          },
+          {
+            "token": "attenzione",
+            "token_id": 273,
+            "score": -1.300751,
+            "probability_sigmoid": 0.214039
+          },
+          {
+            "token": "e",
+            "token_id": 16,
+            "score": -1.351571,
+            "probability_sigmoid": 0.205614
+          }
+        ]
+      },
+      {
+        "step": 23,
+        "current_token": "protette",
+        "selected_token": "tra",
+        "selected_id": 258,
+        "selected_score": -1.628195,
+        "top_candidates": [
+          {
+            "token": "con",
+            "token_id": 275,
+            "score": -1.211517,
+            "probability_sigmoid": 0.229433
+          },
+          {
+            "token": "pulite",
+            "token_id": 277,
+            "score": -1.428658,
+            "probability_sigmoid": 0.193308
+          },
+          {
+            "token": "complete",
+            "token_id": 274,
+            "score": -1.519637,
+            "probability_sigmoid": 0.179515
+          },
+          {
+            "token": "attenzione",
+            "token_id": 273,
+            "score": -1.544088,
+            "probability_sigmoid": 0.175942
+          },
+          {
+            "token": "tra",
+            "token_id": 258,
+            "score": -1.628195,
+            "probability_sigmoid": 0.164078
+          }
+        ]
+      },
+      {
+        "step": 24,
+        "current_token": "tra",
+        "selected_token": "due",
+        "selected_id": 58,
+        "selected_score": -1.526843,
+        "top_candidates": [
+          {
+            "token": "dati",
+            "token_id": 18,
+            "score": -1.036102,
+            "probability_sigmoid": 0.261903
+          },
+          {
+            "token": "con",
+            "token_id": 275,
+            "score": -1.239937,
+            "probability_sigmoid": 0.224447
+          },
+          {
+            "token": "complete",
+            "token_id": 274,
+            "score": -1.341771,
+            "probability_sigmoid": 0.207219
+          },
+          {
+            "token": "pulite",
+            "token_id": 277,
+            "score": -1.347054,
+            "probability_sigmoid": 0.206352
+          },
+          {
+            "token": "attenzione",
+            "token_id": 273,
+            "score": -1.410982,
+            "probability_sigmoid": 0.196079
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "prompt": "phishing",
+    "prompt_tokens": [
+      "phishing"
+    ],
+    "prompt_token_ids": [
+      55
+    ],
+    "generated_tokens": [
+      "è",
+      "l",
+      "'",
+      "area",
+      "operativa",
+      "richiesta",
+      "."
+    ],
+    "generated_token_ids": [
+      14,
+      28,
+      27,
+      26,
+      11,
+      94,
+      5
+    ],
+    "generated_text": "è l'area operativa richiesta.",
+    "full_text": "phishing è l'area operativa richiesta.",
+    "steps": [
+      {
+        "step": 1,
+        "current_token": "phishing",
+        "selected_token": "è",
+        "selected_id": 14,
+        "selected_score": 1.109618,
+        "top_candidates": [
+          {
+            "token": "è",
+            "token_id": 14,
+            "score": 1.109618,
+            "probability_sigmoid": 0.752058
+          },
+          {
+            "token": ",",
+            "token_id": 6,
+            "score": -0.260353,
+            "probability_sigmoid": 0.435277
+          },
+          {
+            "token": "?",
+            "token_id": 36,
+            "score": -0.378655,
+            "probability_sigmoid": 0.406451
+          },
+          {
+            "token": "<EOS>",
+            "token_id": 3,
+            "score": -1.003366,
+            "probability_sigmoid": 0.26828
+          },
+          {
+            "token": "#",
+            "token_id": 4,
+            "score": -1.021903,
+            "probability_sigmoid": 0.264657
+          }
+        ]
+      },
+      {
+        "step": 2,
+        "current_token": "è",
+        "selected_token": "l",
+        "selected_id": 28,
+        "selected_score": 0.328711,
+        "top_candidates": [
+          {
+            "token": "collegata",
+            "token_id": 85,
+            "score": 1.175315,
+            "probability_sigmoid": 0.764104
+          },
+          {
+            "token": "importante",
+            "token_id": 108,
+            "score": 0.755462,
+            "probability_sigmoid": 0.680368
+          },
+          {
+            "token": "il",
+            "token_id": 24,
+            "score": 0.49534,
+            "probability_sigmoid": 0.621364
+          },
+          {
+            "token": "attivare",
+            "token_id": 132,
+            "score": 0.391956,
+            "probability_sigmoid": 0.596753
+          },
+          {
+            "token": "l",
+            "token_id": 28,
+            "score": 0.328711,
+            "probability_sigmoid": 0.581446
+          }
+        ]
+      },
+      {
+        "step": 3,
+        "current_token": "l",
+        "selected_token": "'",
+        "selected_id": 27,
+        "selected_score": 2.79896,
+        "top_candidates": [
+          {
+            "token": "'",
+            "token_id": 27,
+            "score": 2.79896,
+            "probability_sigmoid": 0.94262
+          },
+          {
+            "token": "pulite",
+            "token_id": 277,
+            "score": -1.516657,
+            "probability_sigmoid": 0.179954
+          },
+          {
+            "token": "con",
+            "token_id": 275,
+            "score": -1.560846,
+            "probability_sigmoid": 0.173525
+          },
+          {
+            "token": "complete",
+            "token_id": 274,
+            "score": -1.572658,
+            "probability_sigmoid": 0.171838
+          },
+          {
+            "token": "protette",
+            "token_id": 276,
+            "score": -1.729677,
+            "probability_sigmoid": 0.150629
+          }
+        ]
+      },
+      {
+        "step": 4,
+        "current_token": "'",
+        "selected_token": "area",
+        "selected_id": 26,
+        "selected_score": 1.791748,
+        "top_candidates": [
+          {
+            "token": "area",
+            "token_id": 26,
+            "score": 1.791748,
+            "probability_sigmoid": 0.857141
+          },
+          {
+            "token": "autenticazione",
+            "token_id": 53,
+            "score": 0.447458,
+            "probability_sigmoid": 0.610035
+          },
+          {
+            "token": "insieme",
+            "token_id": 121,
+            "score": 0.250525,
+            "probability_sigmoid": 0.562306
+          },
+          {
+            "token": "accesso",
+            "token_id": 158,
+            "score": -0.101889,
+            "probability_sigmoid": 0.47455
+          },
+          {
+            "token": "utente",
+            "token_id": 230,
+            "score": -0.49402,
+            "probability_sigmoid": 0.378947
+          }
+        ]
+      },
+      {
+        "step": 5,
+        "current_token": "area",
+        "selected_token": "operativa",
+        "selected_id": 11,
+        "selected_score": 3.47056,
+        "top_candidates": [
+          {
+            "token": "operativa",
+            "token_id": 11,
+            "score": 3.47056,
+            "probability_sigmoid": 0.969838
+          },
+          {
+            "token": "con",
+            "token_id": 275,
+            "score": -1.454178,
+            "probability_sigmoid": 0.189359
+          },
+          {
+            "token": "pulite",
+            "token_id": 277,
+            "score": -1.599486,
+            "probability_sigmoid": 0.168053
+          },
+          {
+            "token": "attenzione",
+            "token_id": 273,
+            "score": -1.637878,
+            "probability_sigmoid": 0.162754
+          },
+          {
+            "token": "protette",
+            "token_id": 276,
+            "score": -1.690016,
+            "probability_sigmoid": 0.155774
+          }
+        ]
+      },
+      {
+        "step": 6,
+        "current_token": "operativa",
+        "selected_token": "richiesta",
+        "selected_id": 94,
+        "selected_score": 1.101502,
+        "top_candidates": [
+          {
+            "token": "richiesta",
+            "token_id": 94,
+            "score": 1.101502,
+            "probability_sigmoid": 0.750541
+          },
+          {
+            "token": "è",
+            "token_id": 14,
+            "score": 0.805593,
+            "probability_sigmoid": 0.69117
+          },
+          {
+            "token": ":",
+            "token_id": 12,
+            "score": 0.497524,
+            "probability_sigmoid": 0.621877
+          },
+          {
+            "token": "pulita",
+            "token_id": 42,
+            "score": 0.220607,
+            "probability_sigmoid": 0.554929
+          },
+          {
+            "token": "in",
+            "token_id": 17,
+            "score": 0.078027,
+            "probability_sigmoid": 0.519497
+          }
+        ]
+      },
+      {
+        "step": 7,
+        "current_token": "richiesta",
+        "selected_token": ".",
+        "selected_id": 5,
+        "selected_score": 2.099561,
+        "top_candidates": [
+          {
+            "token": ".",
+            "token_id": 5,
+            "score": 2.099561,
+            "probability_sigmoid": 0.890861
+          },
+          {
+            "token": "e",
+            "token_id": 16,
+            "score": -0.641835,
+            "probability_sigmoid": 0.344832
+          },
+          {
+            "token": "con",
+            "token_id": 275,
+            "score": -1.256305,
+            "probability_sigmoid": 0.221611
+          },
+          {
+            "token": ",",
+            "token_id": 6,
+            "score": -1.278237,
+            "probability_sigmoid": 0.21785
+          },
+          {
+            "token": "pulite",
+            "token_id": 277,
+            "score": -1.320316,
+            "probability_sigmoid": 0.210766
+          }
+        ]
+      },
+      {
+        "step": 8,
+        "current_token": ".",
+        "selected_token": "<EOS>",
+        "selected_id": 3,
+        "selected_score": 0.861852,
+        "top_candidates": [
+          {
+            "token": "<EOS>",
+            "token_id": 3,
+            "score": 0.861852,
+            "probability_sigmoid": 0.703048
+          },
+          {
+            "token": ";",
+            "token_id": 105,
+            "score": 0.206874,
+            "probability_sigmoid": 0.551535
+          },
+          {
+            "token": "4",
+            "token_id": 186,
+            "score": -0.639619,
+            "probability_sigmoid": 0.345333
+          },
+          {
+            "token": "#",
+            "token_id": 4,
+            "score": -0.876918,
+            "probability_sigmoid": 0.293817
+          },
+          {
+            "token": "tipo",
+            "token_id": 100,
+            "score": -1.889623,
+            "probability_sigmoid": 0.131287
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "prompt": "dati sensibili",
+    "prompt_tokens": [
+      "dati",
+      "sensibili"
+    ],
+    "prompt_token_ids": [
+      18,
+      33
+    ],
+    "generated_tokens": [
+      ",",
+      "migliorano",
+      "le",
+      "persone",
+      "e",
+      "piattaforme",
+      "siti",
+      "pulite",
+      "attenzione",
+      ".",
+      ";",
+      "il",
+      "ransomware",
+      "con",
+      "complete",
+      "e",
+      "chiudono",
+      "protette",
+      "analizzato",
+      ",",
+      "account",
+      "amministrativi",
+      ",",
+      "account"
+    ],
+    "generated_token_ids": [
+      6,
+      122,
+      72,
+      149,
+      16,
+      150,
+      270,
+      277,
+      273,
+      5,
+      105,
+      24,
+      31,
+      275,
+      274,
+      16,
+      113,
+      276,
+      272,
+      6,
+      21,
+      65,
+      6,
+      21
+    ],
+    "generated_text": ", migliorano le persone e piattaforme siti pulite attenzione.; il ransomware con complete e chiudono protette analizzato, account amministrativi, account",
+    "full_text": "dati sensibili , migliorano le persone e piattaforme siti pulite attenzione.; il ransomware con complete e chiudono protette analizzato, account amministrativi, account",
+    "steps": [
+      {
+        "step": 1,
+        "current_token": "sensibili",
+        "selected_token": ",",
+        "selected_id": 6,
+        "selected_score": 1.968375,
+        "top_candidates": [
+          {
+            "token": ",",
+            "token_id": 6,
+            "score": 1.968375,
+            "probability_sigmoid": 0.877437
+          },
+          {
+            "token": ".",
+            "token_id": 5,
+            "score": -0.123954,
+            "probability_sigmoid": 0.469051
+          },
+          {
+            "token": "?",
+            "token_id": 36,
+            "score": -0.30157,
+            "probability_sigmoid": 0.425174
+          },
+          {
+            "token": "è",
+            "token_id": 14,
+            "score": -0.733331,
+            "probability_sigmoid": 0.324464
+          },
+          {
+            "token": "o",
+            "token_id": 32,
+            "score": -1.172006,
+            "probability_sigmoid": 0.236493
+          }
+        ]
+      },
+      {
+        "step": 2,
+        "current_token": ",",
+        "selected_token": "migliorano",
+        "selected_id": 122,
+        "selected_score": 0.591445,
+        "top_candidates": [
+          {
+            "token": "account",
+            "token_id": 21,
+            "score": 1.202044,
+            "probability_sigmoid": 0.768888
+          },
+          {
+            "token": "strumenti",
+            "token_id": 77,
+            "score": 1.049117,
+            "probability_sigmoid": 0.740605
+          },
+          {
+            "token": "aggiunge",
+            "token_id": 112,
+            "score": 0.935963,
+            "probability_sigmoid": 0.718283
+          },
+          {
+            "token": "migliorano",
+            "token_id": 122,
+            "score": 0.591445,
+            "probability_sigmoid": 0.643697
+          },
+          {
+            "token": "uno",
+            "token_id": 183,
+            "score": 0.466292,
+            "probability_sigmoid": 0.614506
+          }
+        ]
+      },
+      {
+        "step": 3,
+        "current_token": "migliorano",
+        "selected_token": "le",
+        "selected_id": 72,
+        "selected_score": 0.032637,
+        "top_candidates": [
+          {
+            "token": "le",
+            "token_id": 72,
+            "score": 0.032637,
+            "probability_sigmoid": 0.508159
+          },
+          {
+            "token": "con",
+            "token_id": 275,
+            "score": -1.218566,
+            "probability_sigmoid": 0.228189
+          },
+          {
+            "token": "pulite",
+            "token_id": 277,
+            "score": -1.244738,
+            "probability_sigmoid": 0.223612
+          },
+          {
+            "token": "complete",
+            "token_id": 274,
+            "score": -1.300021,
+            "probability_sigmoid": 0.214162
+          },
+          {
+            "token": "attenzione",
+            "token_id": 273,
+            "score": -1.304305,
+            "probability_sigmoid": 0.213441
+          }
+        ]
+      },
+      {
+        "step": 4,
+        "current_token": "le",
+        "selected_token": "persone",
+        "selected_id": 149,
+        "selected_score": -0.402077,
+        "top_candidates": [
+          {
+            "token": "funzioni",
+            "token_id": 120,
+            "score": -0.289341,
+            "probability_sigmoid": 0.428165
+          },
+          {
+            "token": "persone",
+            "token_id": 149,
+            "score": -0.402077,
+            "probability_sigmoid": 0.400813
+          },
+          {
+            "token": "pulite",
+            "token_id": 277,
+            "score": -1.458007,
+            "probability_sigmoid": 0.188772
+          },
+          {
+            "token": "con",
+            "token_id": 275,
+            "score": -1.471862,
+            "probability_sigmoid": 0.18666
+          },
+          {
+            "token": "attenzione",
+            "token_id": 273,
+            "score": -1.493988,
+            "probability_sigmoid": 0.183324
+          }
+        ]
+      },
+      {
+        "step": 5,
+        "current_token": "persone",
+        "selected_token": "e",
+        "selected_id": 16,
+        "selected_score": 0.078905,
+        "top_candidates": [
+          {
+            "token": "e",
+            "token_id": 16,
+            "score": 0.078905,
+            "probability_sigmoid": 0.519716
+          },
+          {
+            "token": ",",
+            "token_id": 6,
+            "score": -1.225786,
+            "probability_sigmoid": 0.22692
+          },
+          {
+            "token": "con",
+            "token_id": 275,
+            "score": -1.243878,
+            "probability_sigmoid": 0.223762
+          },
+          {
+            "token": "pulite",
+            "token_id": 277,
+            "score": -1.287632,
+            "probability_sigmoid": 0.216254
+          },
+          {
+            "token": "complete",
+            "token_id": 274,
+            "score": -1.306281,
+            "probability_sigmoid": 0.21311
+          }
+        ]
+      },
+      {
+        "step": 6,
+        "current_token": "e",
+        "selected_token": "piattaforme",
+        "selected_id": 150,
+        "selected_score": 0.541018,
+        "top_candidates": [
+          {
+            "token": "riutilizzabile",
+            "token_id": 110,
+            "score": 0.822713,
+            "probability_sigmoid": 0.694812
+          },
+          {
+            "token": "piattaforme",
+            "token_id": 150,
+            "score": 0.541018,
+            "probability_sigmoid": 0.632049
+          },
+          {
+            "token": "sistemi",
+            "token_id": 64,
+            "score": 0.530335,
+            "probability_sigmoid": 0.629561
+          },
+          {
+            "token": "comportamenti",
+            "token_id": 86,
+            "score": 0.450937,
+            "probability_sigmoid": 0.610862
+          },
+          {
+            "token": "chiudono",
+            "token_id": 113,
+            "score": 0.443009,
+            "probability_sigmoid": 0.608976
+          }
+        ]
+      },
+      {
+        "step": 7,
+        "current_token": "piattaforme",
+        "selected_token": "siti",
+        "selected_id": 270,
+        "selected_score": -1.618586,
+        "top_candidates": [
+          {
+            "token": "che",
+            "token_id": 59,
+            "score": -0.3633,
+            "probability_sigmoid": 0.410161
+          },
+          {
+            "token": "pulite",
+            "token_id": 277,
+            "score": -1.371352,
+            "probability_sigmoid": 0.202401
+          },
+          {
+            "token": "con",
+            "token_id": 275,
+            "score": -1.378284,
+            "probability_sigmoid": 0.201285
+          },
+          {
+            "token": "attenzione",
+            "token_id": 273,
+            "score": -1.480939,
+            "probability_sigmoid": 0.185286
+          },
+          {
+            "token": "complete",
+            "token_id": 274,
+            "score": -1.481926,
+            "probability_sigmoid": 0.185137
+          }
+        ]
+      },
+      {
+        "step": 8,
+        "current_token": "siti",
+        "selected_token": "pulite",
+        "selected_id": 277,
+        "selected_score": -1.230287,
+        "top_candidates": [
+          {
+            "token": ",",
+            "token_id": 6,
+            "score": -1.139416,
+            "probability_sigmoid": 0.242428
+          },
+          {
+            "token": "o",
+            "token_id": 32,
+            "score": -1.152326,
+            "probability_sigmoid": 0.240064
+          },
+          {
+            "token": "e",
+            "token_id": 16,
+            "score": -1.204128,
+            "probability_sigmoid": 0.230742
+          },
+          {
+            "token": "è",
+            "token_id": 14,
+            "score": -1.213889,
+            "probability_sigmoid": 0.229014
+          },
+          {
+            "token": "pulite",
+            "token_id": 277,
+            "score": -1.230287,
+            "probability_sigmoid": 0.226131
+          }
+        ]
+      },
+      {
+        "step": 9,
+        "current_token": "pulite",
+        "selected_token": "attenzione",
+        "selected_id": 273,
+        "selected_score": -1.441408,
+        "top_candidates": [
+          {
+            "token": "e",
+            "token_id": 16,
+            "score": -0.944663,
+            "probability_sigmoid": 0.279959
+          },
+          {
+            "token": "con",
+            "token_id": 275,
+            "score": -1.332387,
+            "probability_sigmoid": 0.208765
+          },
+          {
+            "token": "pulite",
+            "token_id": 277,
+            "score": -1.404502,
+            "probability_sigmoid": 0.197103
+          },
+          {
+            "token": "complete",
+            "token_id": 274,
+            "score": -1.424364,
+            "probability_sigmoid": 0.193978
+          },
+          {
+            "token": "attenzione",
+            "token_id": 273,
+            "score": -1.441408,
+            "probability_sigmoid": 0.191327
+          }
+        ]
+      },
+      {
+        "step": 10,
+        "current_token": "attenzione",
+        "selected_token": ".",
+        "selected_id": 5,
+        "selected_score": -0.541091,
+        "top_candidates": [
+          {
+            "token": ".",
+            "token_id": 5,
+            "score": -0.541091,
+            "probability_sigmoid": 0.367934
+          },
+          {
+            "token": "con",
+            "token_id": 275,
+            "score": -1.19102,
+            "probability_sigmoid": 0.233076
+          },
+          {
+            "token": "pulite",
+            "token_id": 277,
+            "score": -1.26844,
+            "probability_sigmoid": 0.219524
+          },
+          {
+            "token": "e",
+            "token_id": 16,
+            "score": -1.278424,
+            "probability_sigmoid": 0.217819
+          },
+          {
+            "token": "complete",
+            "token_id": 274,
+            "score": -1.333464,
+            "probability_sigmoid": 0.208587
+          }
+        ]
+      },
+      {
+        "step": 11,
+        "current_token": ".",
+        "selected_token": ";",
+        "selected_id": 105,
+        "selected_score": 0.206874,
+        "top_candidates": [
+          {
+            "token": "<EOS>",
+            "token_id": 3,
+            "score": 0.861852,
+            "probability_sigmoid": 0.703048
+          },
+          {
+            "token": ";",
+            "token_id": 105,
+            "score": 0.206874,
+            "probability_sigmoid": 0.551535
+          },
+          {
+            "token": "4",
+            "token_id": 186,
+            "score": -0.639619,
+            "probability_sigmoid": 0.345333
+          },
+          {
+            "token": "#",
+            "token_id": 4,
+            "score": -0.876918,
+            "probability_sigmoid": 0.293817
+          },
+          {
+            "token": "tipo",
+            "token_id": 100,
+            "score": -1.889623,
+            "probability_sigmoid": 0.131287
+          }
+        ]
+      },
+      {
+        "step": 12,
+        "current_token": ";",
+        "selected_token": "il",
+        "selected_id": 24,
+        "selected_score": -0.142631,
+        "top_candidates": [
+          {
+            "token": "il",
+            "token_id": 24,
+            "score": -0.142631,
+            "probability_sigmoid": 0.464402
+          },
+          {
+            "token": "un",
+            "token_id": 10,
+            "score": -0.978686,
+            "probability_sigmoid": 0.273152
+          },
+          {
+            "token": "una",
+            "token_id": 20,
+            "score": -1.222882,
+            "probability_sigmoid": 0.22743
+          },
+          {
+            "token": "pulite",
+            "token_id": 277,
+            "score": -1.379757,
+            "probability_sigmoid": 0.201048
+          },
+          {
+            "token": "attenzione",
+            "token_id": 273,
+            "score": -1.386612,
+            "probability_sigmoid": 0.199949
+          }
+        ]
+      },
+      {
+        "step": 13,
+        "current_token": "il",
+        "selected_token": "ransomware",
+        "selected_id": 31,
+        "selected_score": 1.316616,
+        "top_candidates": [
+          {
+            "token": "ransomware",
+            "token_id": 31,
+            "score": 1.316616,
+            "probability_sigmoid": 0.788618
+          },
+          {
+            "token": "backup",
+            "token_id": 82,
+            "score": 0.666665,
+            "probability_sigmoid": 0.660756
+          },
+          {
+            "token": "phishing",
+            "token_id": 55,
+            "score": 0.239992,
+            "probability_sigmoid": 0.559712
+          },
+          {
+            "token": "malware",
+            "token_id": 49,
+            "score": 0.036664,
+            "probability_sigmoid": 0.509165
+          },
+          {
+            "token": "danno",
+            "token_id": 198,
+            "score": -0.519379,
+            "probability_sigmoid": 0.372997
+          }
+        ]
+      },
+      {
+        "step": 14,
+        "current_token": "ransomware",
+        "selected_token": "con",
+        "selected_id": 275,
+        "selected_score": -1.528965,
+        "top_candidates": [
+          {
+            "token": ".",
+            "token_id": 5,
+            "score": 0.636832,
+            "probability_sigmoid": 0.654037
+          },
+          {
+            "token": "?",
+            "token_id": 36,
+            "score": 0.198989,
+            "probability_sigmoid": 0.549584
+          },
+          {
+            "token": "blocca",
+            "token_id": 133,
+            "score": -0.291806,
+            "probability_sigmoid": 0.427562
+          },
+          {
+            "token": "potrebbe",
+            "token_id": 173,
+            "score": -0.479693,
+            "probability_sigmoid": 0.382325
+          },
+          {
+            "token": "<EOS>",
+            "token_id": 3,
+            "score": -1.3052,
+            "probability_sigmoid": 0.213291
+          }
+        ]
+      },
+      {
+        "step": 15,
+        "current_token": "con",
+        "selected_token": "complete",
+        "selected_id": 274,
+        "selected_score": -1.349061,
+        "top_candidates": [
+          {
+            "token": ",",
+            "token_id": 6,
+            "score": -0.727781,
+            "probability_sigmoid": 0.325682
+          },
+          {
+            "token": "con",
+            "token_id": 275,
+            "score": -1.204594,
+            "probability_sigmoid": 0.230659
+          },
+          {
+            "token": "per",
+            "token_id": 15,
+            "score": -1.207445,
+            "probability_sigmoid": 0.230153
+          },
+          {
+            "token": "pulite",
+            "token_id": 277,
+            "score": -1.268074,
+            "probability_sigmoid": 0.219587
+          },
+          {
+            "token": "complete",
+            "token_id": 274,
+            "score": -1.349061,
+            "probability_sigmoid": 0.206024
+          }
+        ]
+      },
+      {
+        "step": 16,
+        "current_token": "complete",
+        "selected_token": "e",
+        "selected_id": 16,
+        "selected_score": -1.351571,
+        "top_candidates": [
+          {
+            "token": "pulite",
+            "token_id": 277,
+            "score": -1.238494,
+            "probability_sigmoid": 0.224698
+          },
+          {
+            "token": "con",
+            "token_id": 275,
+            "score": -1.260103,
+            "probability_sigmoid": 0.220956
+          },
+          {
+            "token": "complete",
+            "token_id": 274,
+            "score": -1.290432,
+            "probability_sigmoid": 0.21578
+          },
+          {
+            "token": "attenzione",
+            "token_id": 273,
+            "score": -1.300751,
+            "probability_sigmoid": 0.214039
+          },
+          {
+            "token": "e",
+            "token_id": 16,
+            "score": -1.351571,
+            "probability_sigmoid": 0.205614
+          }
+        ]
+      },
+      {
+        "step": 17,
+        "current_token": "e",
+        "selected_token": "chiudono",
+        "selected_id": 113,
+        "selected_score": 0.443009,
+        "top_candidates": [
+          {
+            "token": "riutilizzabile",
+            "token_id": 110,
+            "score": 0.822713,
+            "probability_sigmoid": 0.694812
+          },
+          {
+            "token": "piattaforme",
+            "token_id": 150,
+            "score": 0.541018,
+            "probability_sigmoid": 0.632049
+          },
+          {
+            "token": "sistemi",
+            "token_id": 64,
+            "score": 0.530335,
+            "probability_sigmoid": 0.629561
+          },
+          {
+            "token": "comportamenti",
+            "token_id": 86,
+            "score": 0.450937,
+            "probability_sigmoid": 0.610862
+          },
+          {
+            "token": "chiudono",
+            "token_id": 113,
+            "score": 0.443009,
+            "probability_sigmoid": 0.608976
+          }
+        ]
+      },
+      {
+        "step": 18,
+        "current_token": "chiudono",
+        "selected_token": "protette",
+        "selected_id": 276,
+        "selected_score": -1.575026,
+        "top_candidates": [
+          {
+            "token": "vulnerabilità",
+            "token_id": 130,
+            "score": -0.40189,
+            "probability_sigmoid": 0.400858
+          },
+          {
+            "token": "con",
+            "token_id": 275,
+            "score": -1.346534,
+            "probability_sigmoid": 0.206438
+          },
+          {
+            "token": "attenzione",
+            "token_id": 273,
+            "score": -1.361297,
+            "probability_sigmoid": 0.20403
+          },
+          {
+            "token": "complete",
+            "token_id": 274,
+            "score": -1.396598,
+            "probability_sigmoid": 0.198357
+          },
+          {
+            "token": "pulite",
+            "token_id": 277,
+            "score": -1.417546,
+            "probability_sigmoid": 0.195047
+          }
+        ]
+      },
+      {
+        "step": 19,
+        "current_token": "protette",
+        "selected_token": "analizzato",
+        "selected_id": 272,
+        "selected_score": -1.641027,
+        "top_candidates": [
+          {
+            "token": "con",
+            "token_id": 275,
+            "score": -1.211517,
+            "probability_sigmoid": 0.229433
+          },
+          {
+            "token": "pulite",
+            "token_id": 277,
+            "score": -1.428658,
+            "probability_sigmoid": 0.193308
+          },
+          {
+            "token": "complete",
+            "token_id": 274,
+            "score": -1.519637,
+            "probability_sigmoid": 0.179515
+          },
+          {
+            "token": "attenzione",
+            "token_id": 273,
+            "score": -1.544088,
+            "probability_sigmoid": 0.175942
+          },
+          {
+            "token": "tra",
+            "token_id": 258,
+            "score": -1.628195,
+            "probability_sigmoid": 0.164078
+          }
+        ]
+      },
+      {
+        "step": 20,
+        "current_token": "analizzato",
+        "selected_token": ",",
+        "selected_id": 6,
+        "selected_score": -0.589568,
+        "top_candidates": [
+          {
+            "token": ",",
+            "token_id": 6,
+            "score": -0.589568,
+            "probability_sigmoid": 0.356734
+          },
+          {
+            "token": "con",
+            "token_id": 275,
+            "score": -1.150822,
+            "probability_sigmoid": 0.240339
+          },
+          {
+            "token": "attenzione",
+            "token_id": 273,
+            "score": -1.232018,
+            "probability_sigmoid": 0.225828
+          },
+          {
+            "token": "pulite",
+            "token_id": 277,
+            "score": -1.244957,
+            "probability_sigmoid": 0.223574
+          },
+          {
+            "token": "o",
+            "token_id": 32,
+            "score": -1.323732,
+            "probability_sigmoid": 0.210198
+          }
+        ]
+      },
+      {
+        "step": 21,
+        "current_token": ",",
+        "selected_token": "account",
+        "selected_id": 21,
+        "selected_score": 1.202044,
+        "top_candidates": [
+          {
+            "token": "account",
+            "token_id": 21,
+            "score": 1.202044,
+            "probability_sigmoid": 0.768888
+          },
+          {
+            "token": "strumenti",
+            "token_id": 77,
+            "score": 1.049117,
+            "probability_sigmoid": 0.740605
+          },
+          {
+            "token": "aggiunge",
+            "token_id": 112,
+            "score": 0.935963,
+            "probability_sigmoid": 0.718283
+          },
+          {
+            "token": "migliorano",
+            "token_id": 122,
+            "score": 0.591445,
+            "probability_sigmoid": 0.643697
+          },
+          {
+            "token": "uno",
+            "token_id": 183,
+            "score": 0.466292,
+            "probability_sigmoid": 0.614506
+          }
+        ]
+      },
+      {
+        "step": 22,
+        "current_token": "account",
+        "selected_token": "amministrativi",
+        "selected_id": 65,
+        "selected_score": 1.530724,
+        "top_candidates": [
+          {
+            "token": "amministrativi",
+            "token_id": 65,
+            "score": 1.530724,
+            "probability_sigmoid": 0.822112
+          },
+          {
+            "token": "e",
+            "token_id": 16,
+            "score": 1.29553,
+            "probability_sigmoid": 0.785082
+          },
+          {
+            "token": "online",
+            "token_id": 73,
+            "score": 1.27737,
+            "probability_sigmoid": 0.782002
+          },
+          {
+            "token": ".",
+            "token_id": 5,
+            "score": -0.501521,
+            "probability_sigmoid": 0.377183
+          },
+          {
+            "token": "venga",
+            "token_id": 263,
+            "score": -0.626936,
+            "probability_sigmoid": 0.348206
+          }
+        ]
+      },
+      {
+        "step": 23,
+        "current_token": "amministrativi",
+        "selected_token": ",",
+        "selected_id": 6,
+        "selected_score": 1.682498,
+        "top_candidates": [
+          {
+            "token": ",",
+            "token_id": 6,
+            "score": 1.682498,
+            "probability_sigmoid": 0.843235
+          },
+          {
+            "token": "?",
+            "token_id": 36,
+            "score": -0.274323,
+            "probability_sigmoid": 0.431846
+          },
+          {
+            "token": "<EOS>",
+            "token_id": 3,
+            "score": -0.870256,
+            "probability_sigmoid": 0.295201
+          },
+          {
+            "token": "#",
+            "token_id": 4,
+            "score": -1.266343,
+            "probability_sigmoid": 0.219884
+          },
+          {
+            "token": "con",
+            "token_id": 275,
+            "score": -1.460527,
+            "probability_sigmoid": 0.188387
+          }
+        ]
+      },
+      {
+        "step": 24,
+        "current_token": ",",
+        "selected_token": "account",
+        "selected_id": 21,
+        "selected_score": 1.202044,
+        "top_candidates": [
+          {
+            "token": "account",
+            "token_id": 21,
+            "score": 1.202044,
+            "probability_sigmoid": 0.768888
+          },
+          {
+            "token": "strumenti",
+            "token_id": 77,
+            "score": 1.049117,
+            "probability_sigmoid": 0.740605
+          },
+          {
+            "token": "aggiunge",
+            "token_id": 112,
+            "score": 0.935963,
+            "probability_sigmoid": 0.718283
+          },
+          {
+            "token": "migliorano",
+            "token_id": 122,
+            "score": 0.591445,
+            "probability_sigmoid": 0.643697
+          },
+          {
+            "token": "uno",
+            "token_id": 183,
+            "score": 0.466292,
+            "probability_sigmoid": 0.614506
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "prompt": "ransomware",
+    "prompt_tokens": [
+      "ransomware"
+    ],
+    "prompt_token_ids": [
+      31
+    ],
+    "generated_tokens": [
+      "#",
+      "input",
+      "quale",
+      "informazione",
+      "operativa",
+      "."
+    ],
+    "generated_token_ids": [
+      4,
+      7,
+      37,
+      13,
+      11,
+      5
+    ],
+    "generated_text": "# input quale informazione operativa.",
+    "full_text": "ransomware # input quale informazione operativa.",
+    "steps": [
+      {
+        "step": 1,
+        "current_token": "ransomware",
+        "selected_token": "#",
+        "selected_id": 4,
+        "selected_score": -1.468731,
+        "top_candidates": [
+          {
+            "token": ".",
+            "token_id": 5,
+            "score": 0.636832,
+            "probability_sigmoid": 0.654037
+          },
+          {
+            "token": "?",
+            "token_id": 36,
+            "score": 0.198989,
+            "probability_sigmoid": 0.549584
+          },
+          {
+            "token": "blocca",
+            "token_id": 133,
+            "score": -0.291806,
+            "probability_sigmoid": 0.427562
+          },
+          {
+            "token": "potrebbe",
+            "token_id": 173,
+            "score": -0.479693,
+            "probability_sigmoid": 0.382325
+          },
+          {
+            "token": "<EOS>",
+            "token_id": 3,
+            "score": -1.3052,
+            "probability_sigmoid": 0.213291
+          }
+        ]
+      },
+      {
+        "step": 2,
+        "current_token": "#",
+        "selected_token": "input",
+        "selected_id": 7,
+        "selected_score": -0.260748,
+        "top_candidates": [
+          {
+            "token": "istruzione",
+            "token_id": 8,
+            "score": 0.816825,
+            "probability_sigmoid": 0.693562
+          },
+          {
+            "token": "#",
+            "token_id": 4,
+            "score": -0.031509,
+            "probability_sigmoid": 0.492123
+          },
+          {
+            "token": "risposta",
+            "token_id": 9,
+            "score": -0.173424,
+            "probability_sigmoid": 0.456752
+          },
+          {
+            "token": "input",
+            "token_id": 7,
+            "score": -0.260748,
+            "probability_sigmoid": 0.43518
+          },
+          {
+            "token": "4",
+            "token_id": 186,
+            "score": -2.99837,
+            "probability_sigmoid": 0.0475
+          }
+        ]
+      },
+      {
+        "step": 3,
+        "current_token": "input",
+        "selected_token": "quale",
+        "selected_id": 37,
+        "selected_score": 1.822907,
+        "top_candidates": [
+          {
+            "token": "quale",
+            "token_id": 37,
+            "score": 1.822907,
+            "probability_sigmoid": 0.860915
+          },
+          {
+            "token": "aree",
+            "token_id": 52,
+            "score": 1.375101,
+            "probability_sigmoid": 0.798203
+          },
+          {
+            "token": "area",
+            "token_id": 26,
+            "score": 1.22216,
+            "probability_sigmoid": 0.772443
+          },
+          {
+            "token": "output",
+            "token_id": 188,
+            "score": 0.003489,
+            "probability_sigmoid": 0.500872
+          },
+          {
+            "token": "il",
+            "token_id": 24,
+            "score": -0.096197,
+            "probability_sigmoid": 0.475969
+          }
+        ]
+      },
+      {
+        "step": 4,
+        "current_token": "quale",
+        "selected_token": "informazione",
+        "selected_id": 13,
+        "selected_score": 2.494375,
+        "top_candidates": [
+          {
+            "token": "informazione",
+            "token_id": 13,
+            "score": 2.494375,
+            "probability_sigmoid": 0.923747
+          },
+          {
+            "token": "area",
+            "token_id": 26,
+            "score": 0.758186,
+            "probability_sigmoid": 0.68096
+          },
+          {
+            "token": "micro",
+            "token_id": 35,
+            "score": -1.399499,
+            "probability_sigmoid": 0.197896
+          },
+          {
+            "token": "con",
+            "token_id": 275,
+            "score": -1.483021,
+            "probability_sigmoid": 0.184972
+          },
+          {
+            "token": "pulite",
+            "token_id": 277,
+            "score": -1.504232,
+            "probability_sigmoid": 0.181795
+          }
+        ]
+      },
+      {
+        "step": 5,
+        "current_token": "informazione",
+        "selected_token": "operativa",
+        "selected_id": 11,
+        "selected_score": 1.807991,
+        "top_candidates": [
+          {
+            "token": "come",
+            "token_id": 61,
+            "score": 1.820608,
+            "probability_sigmoid": 0.860639
+          },
+          {
+            "token": "operativa",
+            "token_id": 11,
+            "score": 1.807991,
+            "probability_sigmoid": 0.859119
+          },
+          {
+            "token": "in",
+            "token_id": 17,
+            "score": 1.508431,
+            "probability_sigmoid": 0.818829
+          },
+          {
+            "token": "utile",
+            "token_id": 44,
+            "score": 1.154496,
+            "probability_sigmoid": 0.760331
+          },
+          {
+            "token": "attenzione",
+            "token_id": 273,
+            "score": -1.63282,
+            "probability_sigmoid": 0.163444
+          }
+        ]
+      },
+      {
+        "step": 6,
+        "current_token": "operativa",
+        "selected_token": ".",
+        "selected_id": 5,
+        "selected_score": -0.62118,
+        "top_candidates": [
+          {
+            "token": "richiesta",
+            "token_id": 94,
+            "score": 1.101502,
+            "probability_sigmoid": 0.750541
+          },
+          {
+            "token": "è",
+            "token_id": 14,
+            "score": 0.805593,
+            "probability_sigmoid": 0.69117
+          },
+          {
+            "token": ":",
+            "token_id": 12,
+            "score": 0.497524,
+            "probability_sigmoid": 0.621877
+          },
+          {
+            "token": "pulita",
+            "token_id": 42,
+            "score": 0.220607,
+            "probability_sigmoid": 0.554929
+          },
+          {
+            "token": "in",
+            "token_id": 17,
+            "score": 0.078027,
+            "probability_sigmoid": 0.519497
+          }
+        ]
+      },
+      {
+        "step": 7,
+        "current_token": ".",
+        "selected_token": "<EOS>",
+        "selected_id": 3,
+        "selected_score": 0.861852,
+        "top_candidates": [
+          {
+            "token": "<EOS>",
+            "token_id": 3,
+            "score": 0.861852,
+            "probability_sigmoid": 0.703048
+          },
+          {
+            "token": ";",
+            "token_id": 105,
+            "score": 0.206874,
+            "probability_sigmoid": 0.551535
+          },
+          {
+            "token": "4",
+            "token_id": 186,
+            "score": -0.639619,
+            "probability_sigmoid": 0.345333
+          },
+          {
+            "token": "#",
+            "token_id": 4,
+            "score": -0.876918,
+            "probability_sigmoid": 0.293817
+          },
+          {
+            "token": "tipo",
+            "token_id": 100,
+            "score": -1.889623,
+            "probability_sigmoid": 0.131287
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "prompt": "autenticazione",
+    "prompt_tokens": [
+      "autenticazione"
+    ],
+    "prompt_token_ids": [
+      53
+    ],
+    "generated_tokens": [
+      "a",
+      "due",
+      "fattori",
+      ",",
+      "migliorano",
+      "elenca",
+      ",",
+      "strumenti",
+      "viene",
+      "il",
+      "ransomware",
+      "."
+    ],
+    "generated_token_ids": [
+      25,
+      58,
+      66,
+      6,
+      122,
+      242,
+      6,
+      77,
+      271,
+      24,
+      31,
+      5
+    ],
+    "generated_text": "a due fattori, migliorano elenca, strumenti viene il ransomware.",
+    "full_text": "autenticazione a due fattori, migliorano elenca, strumenti viene il ransomware.",
+    "steps": [
+      {
+        "step": 1,
+        "current_token": "autenticazione",
+        "selected_token": "a",
+        "selected_id": 25,
+        "selected_score": 2.179407,
+        "top_candidates": [
+          {
+            "token": "a",
+            "token_id": 25,
+            "score": 2.179407,
+            "probability_sigmoid": 0.898385
+          },
+          {
+            "token": "sono",
+            "token_id": 190,
+            "score": -0.820083,
+            "probability_sigmoid": 0.305746
+          },
+          {
+            "token": "dati",
+            "token_id": 18,
+            "score": -1.063756,
+            "probability_sigmoid": 0.256592
+          },
+          {
+            "token": "per",
+            "token_id": 15,
+            "score": -1.173033,
+            "probability_sigmoid": 0.236307
+          },
+          {
+            "token": "con",
+            "token_id": 275,
+            "score": -1.302313,
+            "probability_sigmoid": 0.213776
+          }
+        ]
+      },
+      {
+        "step": 2,
+        "current_token": "a",
+        "selected_token": "due",
+        "selected_id": 58,
+        "selected_score": 1.799746,
+        "top_candidates": [
+          {
+            "token": "due",
+            "token_id": 58,
+            "score": 1.799746,
+            "probability_sigmoid": 0.858118
+          },
+          {
+            "token": ":",
+            "token_id": 12,
+            "score": 1.35048,
+            "probability_sigmoid": 0.794208
+          },
+          {
+            "token": "fornire",
+            "token_id": 146,
+            "score": 0.212964,
+            "probability_sigmoid": 0.553041
+          },
+          {
+            "token": "dati",
+            "token_id": 18,
+            "score": -0.738679,
+            "probability_sigmoid": 0.323293
+          },
+          {
+            "token": "recuperare",
+            "token_id": 250,
+            "score": -0.83645,
+            "probability_sigmoid": 0.302283
+          }
+        ]
+      },
+      {
+        "step": 3,
+        "current_token": "due",
+        "selected_token": "fattori",
+        "selected_id": 66,
+        "selected_score": 1.326453,
+        "top_candidates": [
+          {
+            "token": "fattori",
+            "token_id": 66,
+            "score": 1.326453,
+            "probability_sigmoid": 0.790253
+          },
+          {
+            "token": "elementi",
+            "token_id": 241,
+            "score": -0.901788,
+            "probability_sigmoid": 0.288683
+          },
+          {
+            "token": "password",
+            "token_id": 22,
+            "score": -1.213232,
+            "probability_sigmoid": 0.22913
+          },
+          {
+            "token": "con",
+            "token_id": 275,
+            "score": -1.292402,
+            "probability_sigmoid": 0.215447
+          },
+          {
+            "token": "pulite",
+            "token_id": 277,
+            "score": -1.34627,
+            "probability_sigmoid": 0.206481
+          }
+        ]
+      },
+      {
+        "step": 4,
+        "current_token": "fattori",
+        "selected_token": ",",
+        "selected_id": 6,
+        "selected_score": 1.686543,
+        "top_candidates": [
+          {
+            "token": ",",
+            "token_id": 6,
+            "score": 1.686543,
+            "probability_sigmoid": 0.843769
+          },
+          {
+            "token": "?",
+            "token_id": 36,
+            "score": -0.500605,
+            "probability_sigmoid": 0.377398
+          },
+          {
+            "token": "<EOS>",
+            "token_id": 3,
+            "score": -1.007355,
+            "probability_sigmoid": 0.267498
+          },
+          {
+            "token": "#",
+            "token_id": 4,
+            "score": -1.470255,
+            "probability_sigmoid": 0.186904
+          },
+          {
+            "token": "complete",
+            "token_id": 274,
+            "score": -1.47507,
+            "probability_sigmoid": 0.186173
+          }
+        ]
+      },
+      {
+        "step": 5,
+        "current_token": ",",
+        "selected_token": "migliorano",
+        "selected_id": 122,
+        "selected_score": 0.591445,
+        "top_candidates": [
+          {
+            "token": "account",
+            "token_id": 21,
+            "score": 1.202044,
+            "probability_sigmoid": 0.768888
+          },
+          {
+            "token": "strumenti",
+            "token_id": 77,
+            "score": 1.049117,
+            "probability_sigmoid": 0.740605
+          },
+          {
+            "token": "aggiunge",
+            "token_id": 112,
+            "score": 0.935963,
+            "probability_sigmoid": 0.718283
+          },
+          {
+            "token": "migliorano",
+            "token_id": 122,
+            "score": 0.591445,
+            "probability_sigmoid": 0.643697
+          },
+          {
+            "token": "uno",
+            "token_id": 183,
+            "score": 0.466292,
+            "probability_sigmoid": 0.614506
+          }
+        ]
+      },
+      {
+        "step": 6,
+        "current_token": "migliorano",
+        "selected_token": "elenca",
+        "selected_id": 242,
+        "selected_score": -1.4077,
+        "top_candidates": [
+          {
+            "token": "le",
+            "token_id": 72,
+            "score": 0.032637,
+            "probability_sigmoid": 0.508159
+          },
+          {
+            "token": "con",
+            "token_id": 275,
+            "score": -1.218566,
+            "probability_sigmoid": 0.228189
+          },
+          {
+            "token": "pulite",
+            "token_id": 277,
+            "score": -1.244738,
+            "probability_sigmoid": 0.223612
+          },
+          {
+            "token": "complete",
+            "token_id": 274,
+            "score": -1.300021,
+            "probability_sigmoid": 0.214162
+          },
+          {
+            "token": "attenzione",
+            "token_id": 273,
+            "score": -1.304305,
+            "probability_sigmoid": 0.213441
+          }
+        ]
+      },
+      {
+        "step": 7,
+        "current_token": "elenca",
+        "selected_token": ",",
+        "selected_id": 6,
+        "selected_score": -1.348412,
+        "top_candidates": [
+          {
+            "token": "con",
+            "token_id": 275,
+            "score": -1.297433,
+            "probability_sigmoid": 0.214597
+          },
+          {
+            "token": "pulite",
+            "token_id": 277,
+            "score": -1.336911,
+            "probability_sigmoid": 0.208018
+          },
+          {
+            "token": ",",
+            "token_id": 6,
+            "score": -1.348412,
+            "probability_sigmoid": 0.20613
+          },
+          {
+            "token": "attenzione",
+            "token_id": 273,
+            "score": -1.379383,
+            "probability_sigmoid": 0.201108
+          },
+          {
+            "token": "complete",
+            "token_id": 274,
+            "score": -1.452614,
+            "probability_sigmoid": 0.1896
+          }
+        ]
+      },
+      {
+        "step": 8,
+        "current_token": ",",
+        "selected_token": "strumenti",
+        "selected_id": 77,
+        "selected_score": 1.049117,
+        "top_candidates": [
+          {
+            "token": "account",
+            "token_id": 21,
+            "score": 1.202044,
+            "probability_sigmoid": 0.768888
+          },
+          {
+            "token": "strumenti",
+            "token_id": 77,
+            "score": 1.049117,
+            "probability_sigmoid": 0.740605
+          },
+          {
+            "token": "aggiunge",
+            "token_id": 112,
+            "score": 0.935963,
+            "probability_sigmoid": 0.718283
+          },
+          {
+            "token": "migliorano",
+            "token_id": 122,
+            "score": 0.591445,
+            "probability_sigmoid": 0.643697
+          },
+          {
+            "token": "uno",
+            "token_id": 183,
+            "score": 0.466292,
+            "probability_sigmoid": 0.614506
+          }
+        ]
+      },
+      {
+        "step": 9,
+        "current_token": "strumenti",
+        "selected_token": "viene",
+        "selected_id": 271,
+        "selected_score": -1.579521,
+        "top_candidates": [
+          {
+            "token": "e",
+            "token_id": 16,
+            "score": 0.569269,
+            "probability_sigmoid": 0.638594
+          },
+          {
+            "token": "cloud",
+            "token_id": 138,
+            "score": -0.238367,
+            "probability_sigmoid": 0.440689
+          },
+          {
+            "token": "pulite",
+            "token_id": 277,
+            "score": -1.369423,
+            "probability_sigmoid": 0.202713
+          },
+          {
+            "token": "con",
+            "token_id": 275,
+            "score": -1.372161,
+            "probability_sigmoid": 0.202271
+          },
+          {
+            "token": "attenzione",
+            "token_id": 273,
+            "score": -1.381406,
+            "probability_sigmoid": 0.200783
+          }
+        ]
+      },
+      {
+        "step": 10,
+        "current_token": "viene",
+        "selected_token": "il",
+        "selected_id": 24,
+        "selected_score": -1.457705,
+        "top_candidates": [
+          {
+            "token": "con",
+            "token_id": 275,
+            "score": -1.266639,
+            "probability_sigmoid": 0.219833
+          },
+          {
+            "token": "pulite",
+            "token_id": 277,
+            "score": -1.346575,
+            "probability_sigmoid": 0.206431
+          },
+          {
+            "token": "attenzione",
+            "token_id": 273,
+            "score": -1.362736,
+            "probability_sigmoid": 0.203796
+          },
+          {
+            "token": "il",
+            "token_id": 24,
+            "score": -1.457705,
+            "probability_sigmoid": 0.188819
+          },
+          {
+            "token": "siti",
+            "token_id": 270,
+            "score": -1.459086,
+            "probability_sigmoid": 0.188607
+          }
+        ]
+      },
+      {
+        "step": 11,
+        "current_token": "il",
+        "selected_token": "ransomware",
+        "selected_id": 31,
+        "selected_score": 1.316616,
+        "top_candidates": [
+          {
+            "token": "ransomware",
+            "token_id": 31,
+            "score": 1.316616,
+            "probability_sigmoid": 0.788618
+          },
+          {
+            "token": "backup",
+            "token_id": 82,
+            "score": 0.666665,
+            "probability_sigmoid": 0.660756
+          },
+          {
+            "token": "phishing",
+            "token_id": 55,
+            "score": 0.239992,
+            "probability_sigmoid": 0.559712
+          },
+          {
+            "token": "malware",
+            "token_id": 49,
+            "score": 0.036664,
+            "probability_sigmoid": 0.509165
+          },
+          {
+            "token": "danno",
+            "token_id": 198,
+            "score": -0.519379,
+            "probability_sigmoid": 0.372997
+          }
+        ]
+      },
+      {
+        "step": 12,
+        "current_token": "ransomware",
+        "selected_token": ".",
+        "selected_id": 5,
+        "selected_score": 0.636832,
+        "top_candidates": [
+          {
+            "token": ".",
+            "token_id": 5,
+            "score": 0.636832,
+            "probability_sigmoid": 0.654037
+          },
+          {
+            "token": "?",
+            "token_id": 36,
+            "score": 0.198989,
+            "probability_sigmoid": 0.549584
+          },
+          {
+            "token": "blocca",
+            "token_id": 133,
+            "score": -0.291806,
+            "probability_sigmoid": 0.427562
+          },
+          {
+            "token": "potrebbe",
+            "token_id": 173,
+            "score": -0.479693,
+            "probability_sigmoid": 0.382325
+          },
+          {
+            "token": "<EOS>",
+            "token_id": 3,
+            "score": -1.3052,
+            "probability_sigmoid": 0.213291
+          }
+        ]
+      },
+      {
+        "step": 13,
+        "current_token": ".",
+        "selected_token": "<EOS>",
+        "selected_id": 3,
+        "selected_score": 0.861852,
+        "top_candidates": [
+          {
+            "token": "<EOS>",
+            "token_id": 3,
+            "score": 0.861852,
+            "probability_sigmoid": 0.703048
+          },
+          {
+            "token": ";",
+            "token_id": 105,
+            "score": 0.206874,
+            "probability_sigmoid": 0.551535
+          },
+          {
+            "token": "4",
+            "token_id": 186,
+            "score": -0.639619,
+            "probability_sigmoid": 0.345333
+          },
+          {
+            "token": "#",
+            "token_id": 4,
+            "score": -0.876918,
+            "probability_sigmoid": 0.293817
+          },
+          {
+            "token": "tipo",
+            "token_id": 100,
+            "score": -1.889623,
+            "probability_sigmoid": 0.131287
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "prompt": "aggiornamenti",
+    "prompt_tokens": [
+      "aggiornamenti"
+    ],
+    "prompt_token_ids": [
+      71
+    ],
+    "generated_tokens": [
+      "software"
+    ],
+    "generated_token_ids": [
+      43
+    ],
+    "generated_text": "software",
+    "full_text": "aggiornamenti software",
+    "steps": [
+      {
+        "step": 1,
+        "current_token": "aggiornamenti",
+        "selected_token": "software",
+        "selected_id": 43,
+        "selected_score": 1.013246,
+        "top_candidates": [
+          {
+            "token": "software",
+            "token_id": 43,
+            "score": 1.013246,
+            "probability_sigmoid": 0.733655
+          },
+          {
+            "token": "con",
+            "token_id": 275,
+            "score": -1.474528,
+            "probability_sigmoid": 0.186255
+          },
+          {
+            "token": "pulite",
+            "token_id": 277,
+            "score": -1.595386,
+            "probability_sigmoid": 0.168627
+          },
+          {
+            "token": "complete",
+            "token_id": 274,
+            "score": -1.659981,
+            "probability_sigmoid": 0.159765
+          },
+          {
+            "token": "protette",
+            "token_id": 276,
+            "score": -1.691562,
+            "probability_sigmoid": 0.15557
+          }
+        ]
+      },
+      {
+        "step": 2,
+        "current_token": "software",
+        "selected_token": "<EOS>",
+        "selected_id": 3,
+        "selected_score": -1.165586,
+        "top_candidates": [
+          {
+            "token": ".",
+            "token_id": 5,
+            "score": -0.150481,
+            "probability_sigmoid": 0.462451
+          },
+          {
+            "token": "correggono",
+            "token_id": 115,
+            "score": -0.177041,
+            "probability_sigmoid": 0.455855
+          },
+          {
+            "token": "?",
+            "token_id": 36,
+            "score": -0.302687,
+            "probability_sigmoid": 0.424901
+          },
+          {
+            "token": "dannoso",
+            "token_id": 166,
+            "score": -0.593587,
+            "probability_sigmoid": 0.355812
+          },
+          {
+            "token": "<EOS>",
+            "token_id": 3,
+            "score": -1.165586,
+            "probability_sigmoid": 0.237654
+          }
+        ]
+      }
+    ]
+  }
+]
