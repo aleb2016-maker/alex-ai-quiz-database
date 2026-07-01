@@ -1,0 +1,54 @@
+{
+  "versione": "inference_raw_diagnostics_v1",
+  "status": "diagnosed",
+  "description": "Diagnostica raw del modello: nessun fallback, nessuna frase pronta, nessun recupero da sentence bank.",
+  "input_files": {
+    "weights": "/Users/alessandrobarbarossa/alex-ai-workspace/mini_llm/data/model_v31_natural/neural_model_v31_natural_weights.json",
+    "embeddings": "/Users/alessandrobarbarossa/alex-ai-workspace/mini_llm/data/vectorized_v21_natural/token_embeddings_v21_natural.json"
+  },
+  "output_files": {
+    "outputs": "/Users/alessandrobarbarossa/alex-ai-workspace/mini_llm/data/diagnostics/inference_raw_diagnostics_v1/inference_raw_diagnostics_v1_outputs.json",
+    "manifest": "/Users/alessandrobarbarossa/alex-ai-workspace/mini_llm/data/diagnostics/inference_raw_diagnostics_v1/inference_raw_diagnostics_v1_manifest.json",
+    "report": "/Users/alessandrobarbarossa/alex-ai-workspace/mini_llm/reports/inference_raw_diagnostics_v1_report.md"
+  },
+  "settings": {
+    "generation_mode": "raw_model_only",
+    "fallback_enabled": false,
+    "hardcoded_sentences_enabled": false,
+    "sentence_bank_enabled": false,
+    "anchor_retrieval_enabled": false,
+    "filters_enabled": false,
+    "max_new_tokens": 20,
+    "top_k_trace": 10,
+    "temperature": 1.0
+  },
+  "model": {
+    "source_weights_version": "neural_model_v31_natural_weights",
+    "vocab_size": 252,
+    "vector_dim": 96,
+    "context_size": 8
+  },
+  "summary": {
+    "prompts_total": 8,
+    "empty_generations": 0,
+    "generations_with_repetition": 8,
+    "generations_with_dirty_tokens": 0,
+    "generations_with_numeric_tokens": 0,
+    "generations_with_metadata_tokens": 0,
+    "generations_without_domain_tokens": 8,
+    "avg_generated_tokens": 20.0
+  },
+  "diagnostics": {
+    "empty_generations": 0,
+    "generations_with_repetition": 8,
+    "generations_with_dirty_tokens": 0,
+    "generations_with_numeric_tokens": 0,
+    "generations_with_metadata_tokens": 0,
+    "generations_without_domain_tokens": 8,
+    "avg_generated_tokens": 20.0,
+    "probable_causes_summary": {
+      "La generazione non contiene concetti di dominio.": 8,
+      "Il modello tende a ripetere token o gruppi di token.": 8
+    }
+  }
+}

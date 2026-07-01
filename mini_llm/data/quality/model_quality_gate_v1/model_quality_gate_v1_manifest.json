@@ -1,0 +1,656 @@
+{
+  "versione": "model_quality_gate_v1",
+  "status": "failed",
+  "label": "raw_diagnostics_v1",
+  "description": "Quality gate reale: fallisce se il modello usa pezze o collassa.",
+  "input_files": {
+    "outputs": "/Users/alessandrobarbarossa/alex-ai-workspace/mini_llm/data/diagnostics/inference_raw_diagnostics_v1/inference_raw_diagnostics_v1_outputs.json",
+    "manifest": "/Users/alessandrobarbarossa/alex-ai-workspace/mini_llm/data/diagnostics/inference_raw_diagnostics_v1/inference_raw_diagnostics_v1_manifest.json"
+  },
+  "output_files": {
+    "results": "/Users/alessandrobarbarossa/alex-ai-workspace/mini_llm/data/quality/model_quality_gate_v1/model_quality_gate_v1_results.json",
+    "manifest": "/Users/alessandrobarbarossa/alex-ai-workspace/mini_llm/data/quality/model_quality_gate_v1/model_quality_gate_v1_manifest.json",
+    "report": "/Users/alessandrobarbarossa/alex-ai-workspace/mini_llm/reports/model_quality_gate_v1_report.md"
+  },
+  "rules": {
+    "min_words": 6,
+    "max_same_token_ratio": 0.35,
+    "max_single_token_count": 3,
+    "require_domain": true,
+    "forbid_sentence_bank": true,
+    "forbid_anchor_retrieval": true,
+    "forbid_fallback": true,
+    "forbid_hardcoded": true,
+    "forbid_special_tokens": [
+      "<BOS>",
+      "<PAD>",
+      "<UNK>",
+      "<bos>",
+      "<pad>",
+      "<unk>"
+    ]
+  },
+  "summary": {
+    "outputs_total": 8,
+    "failed_outputs": 8,
+    "passed_outputs": 0,
+    "manifest_errors": 0,
+    "errors_total": 41,
+    "warnings_total": 0
+  },
+  "checks": [
+    {
+      "index": 1,
+      "prompt": "password",
+      "passed": false,
+      "text": "stata stata stata stata stata stata stata stata stata stata stata stata stata stata stata stata stata stata stata stata",
+      "tokens": [
+        "stata",
+        "stata",
+        "stata",
+        "stata",
+        "stata",
+        "stata",
+        "stata",
+        "stata",
+        "stata",
+        "stata",
+        "stata",
+        "stata",
+        "stata",
+        "stata",
+        "stata",
+        "stata",
+        "stata",
+        "stata",
+        "stata",
+        "stata"
+      ],
+      "word_tokens": [
+        "stata",
+        "stata",
+        "stata",
+        "stata",
+        "stata",
+        "stata",
+        "stata",
+        "stata",
+        "stata",
+        "stata",
+        "stata",
+        "stata",
+        "stata",
+        "stata",
+        "stata",
+        "stata",
+        "stata",
+        "stata",
+        "stata",
+        "stata"
+      ],
+      "domain_tokens": [],
+      "repetition": {
+        "most_common_token": "stata",
+        "max_single_token_count": 20,
+        "max_same_token_ratio": 1.0,
+        "immediate_duplicates": [
+          "stata"
+        ],
+        "repeated_bigrams": [
+          "stata stata"
+        ]
+      },
+      "errors": [
+        "Output senza concetti di dominio.",
+        "Collasso token: token 'stata' ripetuto 20 volte.",
+        "Collasso ratio: token 'stata' occupa 1.00 dell'output.",
+        "Duplicati immediati vietati: ['stata'].",
+        "Bigrammi ripetuti vietati: ['stata stata']."
+      ],
+      "warnings": []
+    },
+    {
+      "index": 2,
+      "prompt": "password sicure",
+      "passed": false,
+      "text": "venga venga venga venga venga venga venga venga venga venga venga venga venga venga venga venga venga venga venga venga",
+      "tokens": [
+        "venga",
+        "venga",
+        "venga",
+        "venga",
+        "venga",
+        "venga",
+        "venga",
+        "venga",
+        "venga",
+        "venga",
+        "venga",
+        "venga",
+        "venga",
+        "venga",
+        "venga",
+        "venga",
+        "venga",
+        "venga",
+        "venga",
+        "venga"
+      ],
+      "word_tokens": [
+        "venga",
+        "venga",
+        "venga",
+        "venga",
+        "venga",
+        "venga",
+        "venga",
+        "venga",
+        "venga",
+        "venga",
+        "venga",
+        "venga",
+        "venga",
+        "venga",
+        "venga",
+        "venga",
+        "venga",
+        "venga",
+        "venga",
+        "venga"
+      ],
+      "domain_tokens": [],
+      "repetition": {
+        "most_common_token": "venga",
+        "max_single_token_count": 20,
+        "max_same_token_ratio": 1.0,
+        "immediate_duplicates": [
+          "venga"
+        ],
+        "repeated_bigrams": [
+          "venga venga"
+        ]
+      },
+      "errors": [
+        "Output senza concetti di dominio.",
+        "Collasso token: token 'venga' ripetuto 20 volte.",
+        "Collasso ratio: token 'venga' occupa 1.00 dell'output.",
+        "Duplicati immediati vietati: ['venga'].",
+        "Bigrammi ripetuti vietati: ['venga venga']."
+      ],
+      "warnings": []
+    },
+    {
+      "index": 3,
+      "prompt": "sicurezza informatica",
+      "passed": false,
+      "text": "privilegi privilegi privilegi privilegi privilegi privilegi privilegi privilegi privilegi privilegi privilegi privilegi privilegi privilegi privilegi privilegi privilegi privilegi privilegi privilegi",
+      "tokens": [
+        "privilegi",
+        "privilegi",
+        "privilegi",
+        "privilegi",
+        "privilegi",
+        "privilegi",
+        "privilegi",
+        "privilegi",
+        "privilegi",
+        "privilegi",
+        "privilegi",
+        "privilegi",
+        "privilegi",
+        "privilegi",
+        "privilegi",
+        "privilegi",
+        "privilegi",
+        "privilegi",
+        "privilegi",
+        "privilegi"
+      ],
+      "word_tokens": [
+        "privilegi",
+        "privilegi",
+        "privilegi",
+        "privilegi",
+        "privilegi",
+        "privilegi",
+        "privilegi",
+        "privilegi",
+        "privilegi",
+        "privilegi",
+        "privilegi",
+        "privilegi",
+        "privilegi",
+        "privilegi",
+        "privilegi",
+        "privilegi",
+        "privilegi",
+        "privilegi",
+        "privilegi",
+        "privilegi"
+      ],
+      "domain_tokens": [],
+      "repetition": {
+        "most_common_token": "privilegi",
+        "max_single_token_count": 20,
+        "max_same_token_ratio": 1.0,
+        "immediate_duplicates": [
+          "privilegi"
+        ],
+        "repeated_bigrams": [
+          "privilegi privilegi"
+        ]
+      },
+      "errors": [
+        "Output senza concetti di dominio.",
+        "Collasso token: token 'privilegi' ripetuto 20 volte.",
+        "Collasso ratio: token 'privilegi' occupa 1.00 dell'output.",
+        "Duplicati immediati vietati: ['privilegi'].",
+        "Bigrammi ripetuti vietati: ['privilegi privilegi']."
+      ],
+      "warnings": []
+    },
+    {
+      "index": 4,
+      "prompt": "backup regolari",
+      "passed": false,
+      "text": "rubata rubata rubata rubata rubata rubata rubata rubata rubata rubata rubata rubata rubata rubata rubata rubata rubata rubata rubata rubata",
+      "tokens": [
+        "rubata",
+        "rubata",
+        "rubata",
+        "rubata",
+        "rubata",
+        "rubata",
+        "rubata",
+        "rubata",
+        "rubata",
+        "rubata",
+        "rubata",
+        "rubata",
+        "rubata",
+        "rubata",
+        "rubata",
+        "rubata",
+        "rubata",
+        "rubata",
+        "rubata",
+        "rubata"
+      ],
+      "word_tokens": [
+        "rubata",
+        "rubata",
+        "rubata",
+        "rubata",
+        "rubata",
+        "rubata",
+        "rubata",
+        "rubata",
+        "rubata",
+        "rubata",
+        "rubata",
+        "rubata",
+        "rubata",
+        "rubata",
+        "rubata",
+        "rubata",
+        "rubata",
+        "rubata",
+        "rubata",
+        "rubata"
+      ],
+      "domain_tokens": [],
+      "repetition": {
+        "most_common_token": "rubata",
+        "max_single_token_count": 20,
+        "max_same_token_ratio": 1.0,
+        "immediate_duplicates": [
+          "rubata"
+        ],
+        "repeated_bigrams": [
+          "rubata rubata"
+        ]
+      },
+      "errors": [
+        "Output senza concetti di dominio.",
+        "Collasso token: token 'rubata' ripetuto 20 volte.",
+        "Collasso ratio: token 'rubata' occupa 1.00 dell'output.",
+        "Duplicati immediati vietati: ['rubata'].",
+        "Bigrammi ripetuti vietati: ['rubata rubata']."
+      ],
+      "warnings": []
+    },
+    {
+      "index": 5,
+      "prompt": "phishing",
+      "passed": false,
+      "text": "<BOS> <BOS> <BOS> <BOS> <BOS> <BOS> <BOS> <BOS> <BOS> <BOS> <BOS> <BOS> <BOS> <BOS> <BOS> <BOS> <BOS> <BOS> <BOS> <BOS>",
+      "tokens": [
+        "<BOS>",
+        "<BOS>",
+        "<BOS>",
+        "<BOS>",
+        "<BOS>",
+        "<BOS>",
+        "<BOS>",
+        "<BOS>",
+        "<BOS>",
+        "<BOS>",
+        "<BOS>",
+        "<BOS>",
+        "<BOS>",
+        "<BOS>",
+        "<BOS>",
+        "<BOS>",
+        "<BOS>",
+        "<BOS>",
+        "<BOS>",
+        "<BOS>"
+      ],
+      "word_tokens": [
+        "<BOS>",
+        "<BOS>",
+        "<BOS>",
+        "<BOS>",
+        "<BOS>",
+        "<BOS>",
+        "<BOS>",
+        "<BOS>",
+        "<BOS>",
+        "<BOS>",
+        "<BOS>",
+        "<BOS>",
+        "<BOS>",
+        "<BOS>",
+        "<BOS>",
+        "<BOS>",
+        "<BOS>",
+        "<BOS>",
+        "<BOS>",
+        "<BOS>"
+      ],
+      "domain_tokens": [],
+      "repetition": {
+        "most_common_token": "<bos>",
+        "max_single_token_count": 20,
+        "max_same_token_ratio": 1.0,
+        "immediate_duplicates": [
+          "<bos>"
+        ],
+        "repeated_bigrams": [
+          "<bos> <bos>"
+        ]
+      },
+      "errors": [
+        "Token speciali vietati in output: ['<BOS>', '<BOS>', '<BOS>', '<BOS>', '<BOS>', '<BOS>', '<BOS>', '<BOS>', '<BOS>', '<BOS>', '<BOS>', '<BOS>', '<BOS>', '<BOS>', '<BOS>', '<BOS>', '<BOS>', '<BOS>', '<BOS>', '<BOS>'].",
+        "Output senza concetti di dominio.",
+        "Collasso token: token '<bos>' ripetuto 20 volte.",
+        "Collasso ratio: token '<bos>' occupa 1.00 dell'output.",
+        "Duplicati immediati vietati: ['<bos>'].",
+        "Bigrammi ripetuti vietati: ['<bos> <bos>']."
+      ],
+      "warnings": []
+    },
+    {
+      "index": 6,
+      "prompt": "dati sensibili",
+      "passed": false,
+      "text": "questo questo questo questo questo questo questo questo questo questo questo questo questo questo questo questo questo questo questo questo",
+      "tokens": [
+        "questo",
+        "questo",
+        "questo",
+        "questo",
+        "questo",
+        "questo",
+        "questo",
+        "questo",
+        "questo",
+        "questo",
+        "questo",
+        "questo",
+        "questo",
+        "questo",
+        "questo",
+        "questo",
+        "questo",
+        "questo",
+        "questo",
+        "questo"
+      ],
+      "word_tokens": [
+        "questo",
+        "questo",
+        "questo",
+        "questo",
+        "questo",
+        "questo",
+        "questo",
+        "questo",
+        "questo",
+        "questo",
+        "questo",
+        "questo",
+        "questo",
+        "questo",
+        "questo",
+        "questo",
+        "questo",
+        "questo",
+        "questo",
+        "questo"
+      ],
+      "domain_tokens": [],
+      "repetition": {
+        "most_common_token": "questo",
+        "max_single_token_count": 20,
+        "max_same_token_ratio": 1.0,
+        "immediate_duplicates": [
+          "questo"
+        ],
+        "repeated_bigrams": [
+          "questo questo"
+        ]
+      },
+      "errors": [
+        "Output senza concetti di dominio.",
+        "Collasso token: token 'questo' ripetuto 20 volte.",
+        "Collasso ratio: token 'questo' occupa 1.00 dell'output.",
+        "Duplicati immediati vietati: ['questo'].",
+        "Bigrammi ripetuti vietati: ['questo questo']."
+      ],
+      "warnings": []
+    },
+    {
+      "index": 7,
+      "prompt": "autenticazione a due fattori",
+      "passed": false,
+      "text": "violato violato violato violato violato violato violato violato violato violato violato violato violato violato violato violato violato violato violato violato",
+      "tokens": [
+        "violato",
+        "violato",
+        "violato",
+        "violato",
+        "violato",
+        "violato",
+        "violato",
+        "violato",
+        "violato",
+        "violato",
+        "violato",
+        "violato",
+        "violato",
+        "violato",
+        "violato",
+        "violato",
+        "violato",
+        "violato",
+        "violato",
+        "violato"
+      ],
+      "word_tokens": [
+        "violato",
+        "violato",
+        "violato",
+        "violato",
+        "violato",
+        "violato",
+        "violato",
+        "violato",
+        "violato",
+        "violato",
+        "violato",
+        "violato",
+        "violato",
+        "violato",
+        "violato",
+        "violato",
+        "violato",
+        "violato",
+        "violato",
+        "violato"
+      ],
+      "domain_tokens": [],
+      "repetition": {
+        "most_common_token": "violato",
+        "max_single_token_count": 20,
+        "max_same_token_ratio": 1.0,
+        "immediate_duplicates": [
+          "violato"
+        ],
+        "repeated_bigrams": [
+          "violato violato"
+        ]
+      },
+      "errors": [
+        "Output senza concetti di dominio.",
+        "Collasso token: token 'violato' ripetuto 20 volte.",
+        "Collasso ratio: token 'violato' occupa 1.00 dell'output.",
+        "Duplicati immediati vietati: ['violato'].",
+        "Bigrammi ripetuti vietati: ['violato violato']."
+      ],
+      "warnings": []
+    },
+    {
+      "index": 8,
+      "prompt": "attacco ransomware",
+      "passed": false,
+      "text": "perché perché perché perché perché perché perché perché perché perché perché perché perché perché perché perché perché perché perché perché",
+      "tokens": [
+        "perché",
+        "perché",
+        "perché",
+        "perché",
+        "perché",
+        "perché",
+        "perché",
+        "perché",
+        "perché",
+        "perché",
+        "perché",
+        "perché",
+        "perché",
+        "perché",
+        "perché",
+        "perché",
+        "perché",
+        "perché",
+        "perché",
+        "perché"
+      ],
+      "word_tokens": [
+        "perché",
+        "perché",
+        "perché",
+        "perché",
+        "perché",
+        "perché",
+        "perché",
+        "perché",
+        "perché",
+        "perché",
+        "perché",
+        "perché",
+        "perché",
+        "perché",
+        "perché",
+        "perché",
+        "perché",
+        "perché",
+        "perché",
+        "perché"
+      ],
+      "domain_tokens": [],
+      "repetition": {
+        "most_common_token": "perché",
+        "max_single_token_count": 20,
+        "max_same_token_ratio": 1.0,
+        "immediate_duplicates": [
+          "perché"
+        ],
+        "repeated_bigrams": [
+          "perché perché"
+        ]
+      },
+      "errors": [
+        "Output senza concetti di dominio.",
+        "Collasso token: token 'perché' ripetuto 20 volte.",
+        "Collasso ratio: token 'perché' occupa 1.00 dell'output.",
+        "Duplicati immediati vietati: ['perché'].",
+        "Bigrammi ripetuti vietati: ['perché perché']."
+      ],
+      "warnings": []
+    }
+  ],
+  "manifest_checks": [
+    {
+      "scope": "manifest",
+      "rule": "manifest_quality_flags",
+      "errors": [],
+      "warnings": []
+    }
+  ],
+  "errors": [
+    "Output senza concetti di dominio.",
+    "Collasso token: token 'stata' ripetuto 20 volte.",
+    "Collasso ratio: token 'stata' occupa 1.00 dell'output.",
+    "Duplicati immediati vietati: ['stata'].",
+    "Bigrammi ripetuti vietati: ['stata stata'].",
+    "Output senza concetti di dominio.",
+    "Collasso token: token 'venga' ripetuto 20 volte.",
+    "Collasso ratio: token 'venga' occupa 1.00 dell'output.",
+    "Duplicati immediati vietati: ['venga'].",
+    "Bigrammi ripetuti vietati: ['venga venga'].",
+    "Output senza concetti di dominio.",
+    "Collasso token: token 'privilegi' ripetuto 20 volte.",
+    "Collasso ratio: token 'privilegi' occupa 1.00 dell'output.",
+    "Duplicati immediati vietati: ['privilegi'].",
+    "Bigrammi ripetuti vietati: ['privilegi privilegi'].",
+    "Output senza concetti di dominio.",
+    "Collasso token: token 'rubata' ripetuto 20 volte.",
+    "Collasso ratio: token 'rubata' occupa 1.00 dell'output.",
+    "Duplicati immediati vietati: ['rubata'].",
+    "Bigrammi ripetuti vietati: ['rubata rubata'].",
+    "Token speciali vietati in output: ['<BOS>', '<BOS>', '<BOS>', '<BOS>', '<BOS>', '<BOS>', '<BOS>', '<BOS>', '<BOS>', '<BOS>', '<BOS>', '<BOS>', '<BOS>', '<BOS>', '<BOS>', '<BOS>', '<BOS>', '<BOS>', '<BOS>', '<BOS>'].",
+    "Output senza concetti di dominio.",
+    "Collasso token: token '<bos>' ripetuto 20 volte.",
+    "Collasso ratio: token '<bos>' occupa 1.00 dell'output.",
+    "Duplicati immediati vietati: ['<bos>'].",
+    "Bigrammi ripetuti vietati: ['<bos> <bos>'].",
+    "Output senza concetti di dominio.",
+    "Collasso token: token 'questo' ripetuto 20 volte.",
+    "Collasso ratio: token 'questo' occupa 1.00 dell'output.",
+    "Duplicati immediati vietati: ['questo'].",
+    "Bigrammi ripetuti vietati: ['questo questo'].",
+    "Output senza concetti di dominio.",
+    "Collasso token: token 'violato' ripetuto 20 volte.",
+    "Collasso ratio: token 'violato' occupa 1.00 dell'output.",
+    "Duplicati immediati vietati: ['violato'].",
+    "Bigrammi ripetuti vietati: ['violato violato'].",
+    "Output senza concetti di dominio.",
+    "Collasso token: token 'perché' ripetuto 20 volte.",
+    "Collasso ratio: token 'perché' occupa 1.00 dell'output.",
+    "Duplicati immediati vietati: ['perché'].",
+    "Bigrammi ripetuti vietati: ['perché perché']."
+  ],
+  "warnings": []
+}
