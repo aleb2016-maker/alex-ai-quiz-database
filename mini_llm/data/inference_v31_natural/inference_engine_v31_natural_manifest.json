@@ -1,0 +1,50 @@
+{
+  "versione": "inference_engine_v31_natural",
+  "status": "completed",
+  "description": "Inferenza V3.1 Natural basata su Neural Model V3.1 Natural e Vectorizer V2.1 Natural.",
+  "input_files": {
+    "weights": "/Users/alessandrobarbarossa/alex-ai-workspace/mini_llm/data/model_v31_natural/neural_model_v31_natural_weights.json",
+    "embeddings": "/Users/alessandrobarbarossa/alex-ai-workspace/mini_llm/data/vectorized_v21_natural/token_embeddings_v21_natural.json"
+  },
+  "output_files": {
+    "outputs": "/Users/alessandrobarbarossa/alex-ai-workspace/mini_llm/data/inference_v31_natural/inference_engine_v31_natural_outputs.json",
+    "manifest": "/Users/alessandrobarbarossa/alex-ai-workspace/mini_llm/data/inference_v31_natural/inference_engine_v31_natural_manifest.json",
+    "report": "/Users/alessandrobarbarossa/alex-ai-workspace/mini_llm/reports/inference_engine_v31_natural_report.md"
+  },
+  "settings": {
+    "context_size": 8,
+    "max_new_tokens": 18,
+    "min_new_tokens": 6,
+    "top_k": 45,
+    "temperature": 0.65,
+    "repetition_limit": 2,
+    "uses_neural_model_v31_natural": true,
+    "uses_vectorizer_v21_natural": true,
+    "uses_dataset_v21_natural": true,
+    "quality_fallback_enabled": true
+  },
+  "model": {
+    "vocab_size": 252,
+    "vector_dim": 96
+  },
+  "summary": {
+    "generations_total": 8,
+    "non_empty_generations": 8,
+    "avg_generated_tokens": 14.38
+  },
+  "quality": {
+    "dirty_tokens_found": [],
+    "dirty_tokens_count": 0,
+    "numeric_tokens_found": [],
+    "numeric_tokens_count": 0,
+    "metadata_tokens_found": [],
+    "metadata_tokens_count": 0,
+    "immediate_duplicate_generations": 0,
+    "repeated_bigram_generations": 0,
+    "punctuation_start": 0,
+    "empty_generations": 0,
+    "too_short_generations": 0,
+    "no_domain_generations": 0,
+    "fallback_used": 8
+  }
+}
