@@ -1,0 +1,3228 @@
+[
+  {
+    "prompt": "password",
+    "prompt_tokens": [
+      "password"
+    ],
+    "prompt_token_ids": [
+      22
+    ],
+    "context_size": 6,
+    "generated_tokens": [
+      "manager",
+      ",",
+      "strumenti",
+      "account",
+      "amministrativi",
+      "sistemi"
+    ],
+    "generated_token_ids": [
+      70,
+      6,
+      77,
+      21,
+      65,
+      64
+    ],
+    "generated_text": "manager, strumenti account amministrativi sistemi",
+    "full_text": "password manager, strumenti account amministrativi sistemi",
+    "cleaning_stats": {
+      "removed_candidates": 36,
+      "blocked_dirty": 23,
+      "blocked_repetition": 6,
+      "blocked_punctuation": 7,
+      "blocked_weak_sequence": 0,
+      "early_stop": true,
+      "fallback_used": false,
+      "semantic_fallback_used": false
+    },
+    "steps": [
+      {
+        "step": 1,
+        "context_tokens": [
+          "password"
+        ],
+        "context_ids": [
+          22
+        ],
+        "selected_token": "manager",
+        "selected_id": 70,
+        "selected_score": -0.137832,
+        "top_candidates": [
+          {
+            "token": "manager",
+            "token_id": 70,
+            "score": -0.137832,
+            "probability_sigmoid": 0.465596,
+            "context_weighted": true,
+            "context_length": 1
+          },
+          {
+            "token": ",",
+            "token_id": 6,
+            "score": -0.583793,
+            "probability_sigmoid": 0.35806,
+            "context_weighted": true,
+            "context_length": 1
+          },
+          {
+            "token": "<EOS>",
+            "token_id": 3,
+            "score": -1.00368,
+            "probability_sigmoid": 0.268218,
+            "context_weighted": true,
+            "context_length": 1
+          },
+          {
+            "token": ".",
+            "token_id": 5,
+            "score": -1.099854,
+            "probability_sigmoid": 0.249767,
+            "context_weighted": true,
+            "context_length": 1
+          },
+          {
+            "token": "password",
+            "token_id": 22,
+            "score": -1.154401,
+            "probability_sigmoid": 0.239686,
+            "context_weighted": true,
+            "context_length": 1
+          },
+          {
+            "token": "sicure",
+            "token_id": 95,
+            "score": -1.303822,
+            "probability_sigmoid": 0.213522,
+            "context_weighted": true,
+            "context_length": 1
+          },
+          {
+            "token": "di",
+            "token_id": 23,
+            "score": -1.398828,
+            "probability_sigmoid": 0.198002,
+            "context_weighted": true,
+            "context_length": 1
+          },
+          {
+            "token": "?",
+            "token_id": 36,
+            "score": -1.4984,
+            "probability_sigmoid": 0.182664,
+            "context_weighted": true,
+            "context_length": 1
+          }
+        ],
+        "clean_candidate": true
+      },
+      {
+        "step": 2,
+        "context_tokens": [
+          "password",
+          "manager"
+        ],
+        "context_ids": [
+          22,
+          70
+        ],
+        "selected_token": ",",
+        "selected_id": 6,
+        "selected_score": -0.815345,
+        "top_candidates": [
+          {
+            "token": ".",
+            "token_id": 5,
+            "score": -0.015301,
+            "probability_sigmoid": 0.496175,
+            "context_weighted": true,
+            "context_length": 2
+          },
+          {
+            "token": "#",
+            "token_id": 4,
+            "score": -0.551912,
+            "probability_sigmoid": 0.365421,
+            "context_weighted": true,
+            "context_length": 2
+          },
+          {
+            "token": ",",
+            "token_id": 6,
+            "score": -0.565345,
+            "probability_sigmoid": 0.362312,
+            "context_weighted": true,
+            "context_length": 2
+          },
+          {
+            "token": "manager",
+            "token_id": 70,
+            "score": -1.175449,
+            "probability_sigmoid": 0.235872,
+            "context_weighted": true,
+            "context_length": 2
+          },
+          {
+            "token": "di",
+            "token_id": 23,
+            "score": -1.271823,
+            "probability_sigmoid": 0.218945,
+            "context_weighted": true,
+            "context_length": 2
+          },
+          {
+            "token": "?",
+            "token_id": 36,
+            "score": -1.324211,
+            "probability_sigmoid": 0.210119,
+            "context_weighted": true,
+            "context_length": 2
+          },
+          {
+            "token": "complete",
+            "token_id": 274,
+            "score": -1.419402,
+            "probability_sigmoid": 0.194755,
+            "context_weighted": true,
+            "context_length": 2
+          },
+          {
+            "token": "pulite",
+            "token_id": 277,
+            "score": -1.511567,
+            "probability_sigmoid": 0.180707,
+            "context_weighted": true,
+            "context_length": 2
+          }
+        ],
+        "clean_candidate": true
+      },
+      {
+        "step": 3,
+        "context_tokens": [
+          "password",
+          "manager",
+          ","
+        ],
+        "context_ids": [
+          22,
+          70,
+          6
+        ],
+        "selected_token": "strumenti",
+        "selected_id": 77,
+        "selected_score": -1.180748,
+        "top_candidates": [
+          {
+            "token": ",",
+            "token_id": 6,
+            "score": 0.068634,
+            "probability_sigmoid": 0.517152,
+            "context_weighted": true,
+            "context_length": 3
+          },
+          {
+            "token": "account",
+            "token_id": 21,
+            "score": -0.510309,
+            "probability_sigmoid": 0.375121,
+            "context_weighted": true,
+            "context_length": 3
+          },
+          {
+            "token": "e",
+            "token_id": 16,
+            "score": -0.951796,
+            "probability_sigmoid": 0.278524,
+            "context_weighted": true,
+            "context_length": 3
+          },
+          {
+            "token": "sistemi",
+            "token_id": 64,
+            "score": -1.109051,
+            "probability_sigmoid": 0.248048,
+            "context_weighted": true,
+            "context_length": 3
+          },
+          {
+            "token": "strumenti",
+            "token_id": 77,
+            "score": -1.180748,
+            "probability_sigmoid": 0.234918,
+            "context_weighted": true,
+            "context_length": 3
+          },
+          {
+            "token": "un",
+            "token_id": 10,
+            "score": -1.244391,
+            "probability_sigmoid": 0.223673,
+            "context_weighted": true,
+            "context_length": 3
+          },
+          {
+            "token": "amministrativi",
+            "token_id": 65,
+            "score": -1.370056,
+            "probability_sigmoid": 0.202611,
+            "context_weighted": true,
+            "context_length": 3
+          },
+          {
+            "token": "ransomware",
+            "token_id": 31,
+            "score": -1.457517,
+            "probability_sigmoid": 0.188847,
+            "context_weighted": true,
+            "context_length": 3
+          }
+        ],
+        "clean_candidate": true
+      },
+      {
+        "step": 4,
+        "context_tokens": [
+          "password",
+          "manager",
+          ",",
+          "strumenti"
+        ],
+        "context_ids": [
+          22,
+          70,
+          6,
+          77
+        ],
+        "selected_token": "account",
+        "selected_id": 21,
+        "selected_score": -1.032605,
+        "top_candidates": [
+          {
+            "token": ",",
+            "token_id": 6,
+            "score": -0.425342,
+            "probability_sigmoid": 0.395239,
+            "context_weighted": true,
+            "context_length": 4
+          },
+          {
+            "token": "e",
+            "token_id": 16,
+            "score": -0.980237,
+            "probability_sigmoid": 0.272845,
+            "context_weighted": true,
+            "context_length": 4
+          },
+          {
+            "token": "account",
+            "token_id": 21,
+            "score": -1.032605,
+            "probability_sigmoid": 0.262579,
+            "context_weighted": true,
+            "context_length": 4
+          },
+          {
+            "token": "un",
+            "token_id": 10,
+            "score": -1.218266,
+            "probability_sigmoid": 0.228242,
+            "context_weighted": true,
+            "context_length": 4
+          },
+          {
+            "token": "sistemi",
+            "token_id": 64,
+            "score": -1.443377,
+            "probability_sigmoid": 0.191023,
+            "context_weighted": true,
+            "context_length": 4
+          },
+          {
+            "token": "amministrativi",
+            "token_id": 65,
+            "score": -1.48953,
+            "probability_sigmoid": 0.183992,
+            "context_weighted": true,
+            "context_length": 4
+          },
+          {
+            "token": "di",
+            "token_id": 23,
+            "score": -1.500373,
+            "probability_sigmoid": 0.18237,
+            "context_weighted": true,
+            "context_length": 4
+          },
+          {
+            "token": "complete",
+            "token_id": 274,
+            "score": -1.562685,
+            "probability_sigmoid": 0.173262,
+            "context_weighted": true,
+            "context_length": 4
+          }
+        ],
+        "clean_candidate": true
+      },
+      {
+        "step": 5,
+        "context_tokens": [
+          "password",
+          "manager",
+          ",",
+          "strumenti",
+          "account"
+        ],
+        "context_ids": [
+          22,
+          70,
+          6,
+          77,
+          21
+        ],
+        "selected_token": "amministrativi",
+        "selected_id": 65,
+        "selected_score": -1.180948,
+        "top_candidates": [
+          {
+            "token": ",",
+            "token_id": 6,
+            "score": -0.663898,
+            "probability_sigmoid": 0.339865,
+            "context_weighted": true,
+            "context_length": 5
+          },
+          {
+            "token": "amministrativi",
+            "token_id": 65,
+            "score": -1.180948,
+            "probability_sigmoid": 0.234882,
+            "context_weighted": true,
+            "context_length": 5
+          },
+          {
+            "token": "e",
+            "token_id": 16,
+            "score": -1.194797,
+            "probability_sigmoid": 0.232402,
+            "context_weighted": true,
+            "context_length": 5
+          },
+          {
+            "token": "sistemi",
+            "token_id": 64,
+            "score": -1.359853,
+            "probability_sigmoid": 0.204264,
+            "context_weighted": true,
+            "context_length": 5
+          },
+          {
+            "token": "account",
+            "token_id": 21,
+            "score": -1.362781,
+            "probability_sigmoid": 0.203789,
+            "context_weighted": true,
+            "context_length": 5
+          },
+          {
+            "token": "un",
+            "token_id": 10,
+            "score": -1.552052,
+            "probability_sigmoid": 0.17479,
+            "context_weighted": true,
+            "context_length": 5
+          },
+          {
+            "token": "complete",
+            "token_id": 274,
+            "score": -1.581903,
+            "probability_sigmoid": 0.170526,
+            "context_weighted": true,
+            "context_length": 5
+          },
+          {
+            "token": "pulite",
+            "token_id": 277,
+            "score": -1.625553,
+            "probability_sigmoid": 0.16444,
+            "context_weighted": true,
+            "context_length": 5
+          }
+        ],
+        "clean_candidate": true
+      },
+      {
+        "step": 6,
+        "context_tokens": [
+          "password",
+          "manager",
+          ",",
+          "strumenti",
+          "account",
+          "amministrativi"
+        ],
+        "context_ids": [
+          22,
+          70,
+          6,
+          77,
+          21,
+          65
+        ],
+        "selected_token": "sistemi",
+        "selected_id": 64,
+        "selected_score": -1.436758,
+        "top_candidates": [
+          {
+            "token": ",",
+            "token_id": 6,
+            "score": -0.576651,
+            "probability_sigmoid": 0.359704,
+            "context_weighted": true,
+            "context_length": 6
+          },
+          {
+            "token": "e",
+            "token_id": 16,
+            "score": -1.383141,
+            "probability_sigmoid": 0.200505,
+            "context_weighted": true,
+            "context_length": 6
+          },
+          {
+            "token": "sistemi",
+            "token_id": 64,
+            "score": -1.436758,
+            "probability_sigmoid": 0.192048,
+            "context_weighted": true,
+            "context_length": 6
+          },
+          {
+            "token": "amministrativi",
+            "token_id": 65,
+            "score": -1.446183,
+            "probability_sigmoid": 0.19059,
+            "context_weighted": true,
+            "context_length": 6
+          },
+          {
+            "token": "complete",
+            "token_id": 274,
+            "score": -1.55584,
+            "probability_sigmoid": 0.174244,
+            "context_weighted": true,
+            "context_length": 6
+          },
+          {
+            "token": "pulite",
+            "token_id": 277,
+            "score": -1.607962,
+            "probability_sigmoid": 0.166872,
+            "context_weighted": true,
+            "context_length": 6
+          },
+          {
+            "token": ".",
+            "token_id": 5,
+            "score": -1.638929,
+            "probability_sigmoid": 0.162611,
+            "context_weighted": true,
+            "context_length": 6
+          },
+          {
+            "token": "attenzione",
+            "token_id": 273,
+            "score": -1.649426,
+            "probability_sigmoid": 0.161187,
+            "context_weighted": true,
+            "context_length": 6
+          }
+        ],
+        "clean_candidate": true
+      },
+      {
+        "step": 7,
+        "context_tokens": [
+          "manager",
+          ",",
+          "strumenti",
+          "account",
+          "amministrativi",
+          "sistemi"
+        ],
+        "context_ids": [
+          70,
+          6,
+          77,
+          21,
+          65,
+          64
+        ],
+        "selected_token": "<EOS>",
+        "selected_id": 3,
+        "selected_score": -1.605249,
+        "top_candidates": [
+          {
+            "token": ",",
+            "token_id": 6,
+            "score": -0.539157,
+            "probability_sigmoid": 0.368384,
+            "context_weighted": true,
+            "context_length": 6
+          },
+          {
+            "token": "e",
+            "token_id": 16,
+            "score": -1.206196,
+            "probability_sigmoid": 0.230375,
+            "context_weighted": true,
+            "context_length": 6
+          },
+          {
+            "token": ".",
+            "token_id": 5,
+            "score": -1.326695,
+            "probability_sigmoid": 0.209707,
+            "context_weighted": true,
+            "context_length": 6
+          },
+          {
+            "token": "sistemi",
+            "token_id": 64,
+            "score": -1.488302,
+            "probability_sigmoid": 0.184177,
+            "context_weighted": true,
+            "context_length": 6
+          },
+          {
+            "token": "complete",
+            "token_id": 274,
+            "score": -1.518651,
+            "probability_sigmoid": 0.17966,
+            "context_weighted": true,
+            "context_length": 6
+          },
+          {
+            "token": "amministrativi",
+            "token_id": 65,
+            "score": -1.544323,
+            "probability_sigmoid": 0.175908,
+            "context_weighted": true,
+            "context_length": 6
+          },
+          {
+            "token": "pulite",
+            "token_id": 277,
+            "score": -1.573384,
+            "probability_sigmoid": 0.171734,
+            "context_weighted": true,
+            "context_length": 6
+          },
+          {
+            "token": "di",
+            "token_id": 23,
+            "score": -1.577138,
+            "probability_sigmoid": 0.171201,
+            "context_weighted": true,
+            "context_length": 6
+          }
+        ],
+        "clean_candidate": true
+      }
+    ]
+  },
+  {
+    "prompt": "password sicure",
+    "prompt_tokens": [
+      "password",
+      "sicure"
+    ],
+    "prompt_token_ids": [
+      22,
+      95
+    ],
+    "context_size": 6,
+    "generated_tokens": [
+      "manager",
+      ",",
+      "strumenti",
+      "un",
+      "account",
+      "online",
+      "."
+    ],
+    "generated_token_ids": [
+      70,
+      6,
+      77,
+      10,
+      21,
+      73,
+      5
+    ],
+    "generated_text": "manager, strumenti un account online.",
+    "full_text": "password sicure manager, strumenti un account online.",
+    "cleaning_stats": {
+      "removed_candidates": 34,
+      "blocked_dirty": 22,
+      "blocked_repetition": 6,
+      "blocked_punctuation": 6,
+      "blocked_weak_sequence": 0,
+      "early_stop": true,
+      "fallback_used": false,
+      "semantic_fallback_used": false
+    },
+    "steps": [
+      {
+        "step": 1,
+        "context_tokens": [
+          "password",
+          "sicure"
+        ],
+        "context_ids": [
+          22,
+          95
+        ],
+        "selected_token": "manager",
+        "selected_id": 70,
+        "selected_score": -1.297828,
+        "top_candidates": [
+          {
+            "token": ".",
+            "token_id": 5,
+            "score": -1.1311,
+            "probability_sigmoid": 0.243958,
+            "context_weighted": true,
+            "context_length": 2
+          },
+          {
+            "token": "manager",
+            "token_id": 70,
+            "score": -1.297828,
+            "probability_sigmoid": 0.214531,
+            "context_weighted": true,
+            "context_length": 2
+          },
+          {
+            "token": "password",
+            "token_id": 22,
+            "score": -1.463301,
+            "probability_sigmoid": 0.187963,
+            "context_weighted": true,
+            "context_length": 2
+          },
+          {
+            "token": "complete",
+            "token_id": 274,
+            "score": -1.534091,
+            "probability_sigmoid": 0.177396,
+            "context_weighted": true,
+            "context_length": 2
+          },
+          {
+            "token": "pulite",
+            "token_id": 277,
+            "score": -1.554715,
+            "probability_sigmoid": 0.174406,
+            "context_weighted": true,
+            "context_length": 2
+          },
+          {
+            "token": ",",
+            "token_id": 6,
+            "score": -1.567688,
+            "probability_sigmoid": 0.172546,
+            "context_weighted": true,
+            "context_length": 2
+          },
+          {
+            "token": "con",
+            "token_id": 275,
+            "score": -1.591983,
+            "probability_sigmoid": 0.169105,
+            "context_weighted": true,
+            "context_length": 2
+          },
+          {
+            "token": "?",
+            "token_id": 36,
+            "score": -1.615652,
+            "probability_sigmoid": 0.165805,
+            "context_weighted": true,
+            "context_length": 2
+          }
+        ],
+        "clean_candidate": true
+      },
+      {
+        "step": 2,
+        "context_tokens": [
+          "password",
+          "sicure",
+          "manager"
+        ],
+        "context_ids": [
+          22,
+          95,
+          70
+        ],
+        "selected_token": ",",
+        "selected_id": 6,
+        "selected_score": -1.311904,
+        "top_candidates": [
+          {
+            "token": ".",
+            "token_id": 5,
+            "score": -0.302062,
+            "probability_sigmoid": 0.425053,
+            "context_weighted": true,
+            "context_length": 3
+          },
+          {
+            "token": "#",
+            "token_id": 4,
+            "score": -1.054922,
+            "probability_sigmoid": 0.258281,
+            "context_weighted": true,
+            "context_length": 3
+          },
+          {
+            "token": ",",
+            "token_id": 6,
+            "score": -1.061904,
+            "probability_sigmoid": 0.256946,
+            "context_weighted": true,
+            "context_length": 3
+          },
+          {
+            "token": "?",
+            "token_id": 36,
+            "score": -1.426384,
+            "probability_sigmoid": 0.193663,
+            "context_weighted": true,
+            "context_length": 3
+          },
+          {
+            "token": "complete",
+            "token_id": 274,
+            "score": -1.456473,
+            "probability_sigmoid": 0.189007,
+            "context_weighted": true,
+            "context_length": 3
+          },
+          {
+            "token": "manager",
+            "token_id": 70,
+            "score": -1.496042,
+            "probability_sigmoid": 0.183017,
+            "context_weighted": true,
+            "context_length": 3
+          },
+          {
+            "token": "pulite",
+            "token_id": 277,
+            "score": -1.526265,
+            "probability_sigmoid": 0.178541,
+            "context_weighted": true,
+            "context_length": 3
+          },
+          {
+            "token": "con",
+            "token_id": 275,
+            "score": -1.559023,
+            "probability_sigmoid": 0.173787,
+            "context_weighted": true,
+            "context_length": 3
+          }
+        ],
+        "clean_candidate": true
+      },
+      {
+        "step": 3,
+        "context_tokens": [
+          "password",
+          "sicure",
+          "manager",
+          ","
+        ],
+        "context_ids": [
+          22,
+          95,
+          70,
+          6
+        ],
+        "selected_token": "strumenti",
+        "selected_id": 77,
+        "selected_score": -1.432375,
+        "top_candidates": [
+          {
+            "token": ",",
+            "token_id": 6,
+            "score": -0.356098,
+            "probability_sigmoid": 0.411905,
+            "context_weighted": true,
+            "context_length": 4
+          },
+          {
+            "token": "account",
+            "token_id": 21,
+            "score": -0.869312,
+            "probability_sigmoid": 0.295397,
+            "context_weighted": true,
+            "context_length": 4
+          },
+          {
+            "token": "e",
+            "token_id": 16,
+            "score": -1.163863,
+            "probability_sigmoid": 0.237966,
+            "context_weighted": true,
+            "context_length": 4
+          },
+          {
+            "token": "sistemi",
+            "token_id": 64,
+            "score": -1.325907,
+            "probability_sigmoid": 0.209837,
+            "context_weighted": true,
+            "context_length": 4
+          },
+          {
+            "token": "un",
+            "token_id": 10,
+            "score": -1.358863,
+            "probability_sigmoid": 0.204425,
+            "context_weighted": true,
+            "context_length": 4
+          },
+          {
+            "token": "strumenti",
+            "token_id": 77,
+            "score": -1.432375,
+            "probability_sigmoid": 0.192729,
+            "context_weighted": true,
+            "context_length": 4
+          },
+          {
+            "token": "amministrativi",
+            "token_id": 65,
+            "score": -1.533963,
+            "probability_sigmoid": 0.177415,
+            "context_weighted": true,
+            "context_length": 4
+          },
+          {
+            "token": "ransomware",
+            "token_id": 31,
+            "score": -1.551086,
+            "probability_sigmoid": 0.174929,
+            "context_weighted": true,
+            "context_length": 4
+          }
+        ],
+        "clean_candidate": true
+      },
+      {
+        "step": 4,
+        "context_tokens": [
+          "password",
+          "sicure",
+          "manager",
+          ",",
+          "strumenti"
+        ],
+        "context_ids": [
+          22,
+          95,
+          70,
+          6,
+          77
+        ],
+        "selected_token": "un",
+        "selected_id": 10,
+        "selected_score": -1.6489349999999998,
+        "top_candidates": [
+          {
+            "token": ",",
+            "token_id": 6,
+            "score": -0.626167,
+            "probability_sigmoid": 0.34838,
+            "context_weighted": true,
+            "context_length": 5
+          },
+          {
+            "token": "e",
+            "token_id": 16,
+            "score": -1.116875,
+            "probability_sigmoid": 0.246591,
+            "context_weighted": true,
+            "context_length": 5
+          },
+          {
+            "token": "account",
+            "token_id": 21,
+            "score": -1.184892,
+            "probability_sigmoid": 0.234174,
+            "context_weighted": true,
+            "context_length": 5
+          },
+          {
+            "token": "un",
+            "token_id": 10,
+            "score": -1.298935,
+            "probability_sigmoid": 0.214344,
+            "context_weighted": true,
+            "context_length": 5
+          },
+          {
+            "token": "sistemi",
+            "token_id": 64,
+            "score": -1.532227,
+            "probability_sigmoid": 0.177668,
+            "context_weighted": true,
+            "context_length": 5
+          },
+          {
+            "token": "complete",
+            "token_id": 274,
+            "score": -1.560769,
+            "probability_sigmoid": 0.173536,
+            "context_weighted": true,
+            "context_length": 5
+          },
+          {
+            "token": "amministrativi",
+            "token_id": 65,
+            "score": -1.578889,
+            "probability_sigmoid": 0.170953,
+            "context_weighted": true,
+            "context_length": 5
+          },
+          {
+            "token": "pulite",
+            "token_id": 277,
+            "score": -1.581614,
+            "probability_sigmoid": 0.170567,
+            "context_weighted": true,
+            "context_length": 5
+          }
+        ],
+        "clean_candidate": true
+      },
+      {
+        "step": 5,
+        "context_tokens": [
+          "password",
+          "sicure",
+          "manager",
+          ",",
+          "strumenti",
+          "un"
+        ],
+        "context_ids": [
+          22,
+          95,
+          70,
+          6,
+          77,
+          10
+        ],
+        "selected_token": "account",
+        "selected_id": 21,
+        "selected_score": -1.276702,
+        "top_candidates": [
+          {
+            "token": ",",
+            "token_id": 6,
+            "score": -1.208054,
+            "probability_sigmoid": 0.230046,
+            "context_weighted": true,
+            "context_length": 6
+          },
+          {
+            "token": "account",
+            "token_id": 21,
+            "score": -1.276702,
+            "probability_sigmoid": 0.218112,
+            "context_weighted": true,
+            "context_length": 6
+          },
+          {
+            "token": "e",
+            "token_id": 16,
+            "score": -1.534699,
+            "probability_sigmoid": 0.177307,
+            "context_weighted": true,
+            "context_length": 6
+          },
+          {
+            "token": "complete",
+            "token_id": 274,
+            "score": -1.588998,
+            "probability_sigmoid": 0.169525,
+            "context_weighted": true,
+            "context_length": 6
+          },
+          {
+            "token": "password",
+            "token_id": 22,
+            "score": -1.601794,
+            "probability_sigmoid": 0.167731,
+            "context_weighted": true,
+            "context_length": 6
+          },
+          {
+            "token": "pulite",
+            "token_id": 277,
+            "score": -1.620134,
+            "probability_sigmoid": 0.165186,
+            "context_weighted": true,
+            "context_length": 6
+          },
+          {
+            "token": "riassunto",
+            "token_id": 40,
+            "score": -1.633612,
+            "probability_sigmoid": 0.163336,
+            "context_weighted": true,
+            "context_length": 6
+          },
+          {
+            "token": "con",
+            "token_id": 275,
+            "score": -1.658684,
+            "probability_sigmoid": 0.159939,
+            "context_weighted": true,
+            "context_length": 6
+          }
+        ],
+        "clean_candidate": true
+      },
+      {
+        "step": 6,
+        "context_tokens": [
+          "sicure",
+          "manager",
+          ",",
+          "strumenti",
+          "un",
+          "account"
+        ],
+        "context_ids": [
+          95,
+          70,
+          6,
+          77,
+          10,
+          21
+        ],
+        "selected_token": "online",
+        "selected_id": 73,
+        "selected_score": -1.662963,
+        "top_candidates": [
+          {
+            "token": ",",
+            "token_id": 6,
+            "score": -1.232818,
+            "probability_sigmoid": 0.225689,
+            "context_weighted": true,
+            "context_length": 6
+          },
+          {
+            "token": "account",
+            "token_id": 21,
+            "score": -1.425496,
+            "probability_sigmoid": 0.193801,
+            "context_weighted": true,
+            "context_length": 6
+          },
+          {
+            "token": "amministrativi",
+            "token_id": 65,
+            "score": -1.472995,
+            "probability_sigmoid": 0.186488,
+            "context_weighted": true,
+            "context_length": 6
+          },
+          {
+            "token": "e",
+            "token_id": 16,
+            "score": -1.547051,
+            "probability_sigmoid": 0.175513,
+            "context_weighted": true,
+            "context_length": 6
+          },
+          {
+            "token": "sistemi",
+            "token_id": 64,
+            "score": -1.601248,
+            "probability_sigmoid": 0.167807,
+            "context_weighted": true,
+            "context_length": 6
+          },
+          {
+            "token": "complete",
+            "token_id": 274,
+            "score": -1.604625,
+            "probability_sigmoid": 0.167336,
+            "context_weighted": true,
+            "context_length": 6
+          },
+          {
+            "token": ".",
+            "token_id": 5,
+            "score": -1.606116,
+            "probability_sigmoid": 0.167129,
+            "context_weighted": true,
+            "context_length": 6
+          },
+          {
+            "token": "pulite",
+            "token_id": 277,
+            "score": -1.652363,
+            "probability_sigmoid": 0.16079,
+            "context_weighted": true,
+            "context_length": 6
+          }
+        ],
+        "clean_candidate": true
+      },
+      {
+        "step": 7,
+        "context_tokens": [
+          "manager",
+          ",",
+          "strumenti",
+          "un",
+          "account",
+          "online"
+        ],
+        "context_ids": [
+          70,
+          6,
+          77,
+          10,
+          21,
+          73
+        ],
+        "selected_token": ".",
+        "selected_id": 5,
+        "selected_score": -1.469387,
+        "top_candidates": [
+          {
+            "token": ".",
+            "token_id": 5,
+            "score": -1.219387,
+            "probability_sigmoid": 0.228044,
+            "context_weighted": true,
+            "context_length": 6
+          },
+          {
+            "token": ",",
+            "token_id": 6,
+            "score": -1.358383,
+            "probability_sigmoid": 0.204503,
+            "context_weighted": true,
+            "context_length": 6
+          },
+          {
+            "token": "e",
+            "token_id": 16,
+            "score": -1.469248,
+            "probability_sigmoid": 0.187057,
+            "context_weighted": true,
+            "context_length": 6
+          },
+          {
+            "token": "complete",
+            "token_id": 274,
+            "score": -1.546939,
+            "probability_sigmoid": 0.175529,
+            "context_weighted": true,
+            "context_length": 6
+          },
+          {
+            "token": "pulite",
+            "token_id": 277,
+            "score": -1.588367,
+            "probability_sigmoid": 0.169614,
+            "context_weighted": true,
+            "context_length": 6
+          },
+          {
+            "token": "con",
+            "token_id": 275,
+            "score": -1.618196,
+            "probability_sigmoid": 0.165454,
+            "context_weighted": true,
+            "context_length": 6
+          },
+          {
+            "token": "attenzione",
+            "token_id": 273,
+            "score": -1.640036,
+            "probability_sigmoid": 0.16246,
+            "context_weighted": true,
+            "context_length": 6
+          },
+          {
+            "token": "amministrativi",
+            "token_id": 65,
+            "score": -1.645793,
+            "probability_sigmoid": 0.161678,
+            "context_weighted": true,
+            "context_length": 6
+          }
+        ],
+        "clean_candidate": true
+      }
+    ]
+  },
+  {
+    "prompt": "sicurezza informatica",
+    "prompt_tokens": [
+      "sicurezza",
+      "informatica"
+    ],
+    "prompt_token_ids": [
+      39,
+      51
+    ],
+    "context_size": 6,
+    "generated_tokens": [
+      "sicurezza",
+      "informatica",
+      "dati",
+      "account"
+    ],
+    "generated_token_ids": [
+      39,
+      51,
+      18,
+      21
+    ],
+    "generated_text": "sicurezza informatica dati account",
+    "full_text": "sicurezza informatica sicurezza informatica dati account",
+    "cleaning_stats": {
+      "removed_candidates": 9,
+      "blocked_dirty": 5,
+      "blocked_repetition": 0,
+      "blocked_punctuation": 4,
+      "blocked_weak_sequence": 0,
+      "early_stop": true,
+      "fallback_used": true,
+      "semantic_fallback_used": true
+    },
+    "steps": [
+      {
+        "step": 1,
+        "context_tokens": [
+          "sicurezza",
+          "informatica"
+        ],
+        "context_ids": [
+          39,
+          51
+        ],
+        "selected_token": "<EOS>",
+        "selected_id": 3,
+        "selected_score": -1.107675,
+        "top_candidates": [
+          {
+            "token": "#",
+            "token_id": 4,
+            "score": -0.486951,
+            "probability_sigmoid": 0.380612,
+            "context_weighted": true,
+            "context_length": 2
+          },
+          {
+            "token": ".",
+            "token_id": 5,
+            "score": -0.93384,
+            "probability_sigmoid": 0.282146,
+            "context_weighted": true,
+            "context_length": 2
+          },
+          {
+            "token": "<EOS>",
+            "token_id": 3,
+            "score": -1.107675,
+            "probability_sigmoid": 0.248305,
+            "context_weighted": true,
+            "context_length": 2
+          },
+          {
+            "token": "complete",
+            "token_id": 274,
+            "score": -1.514012,
+            "probability_sigmoid": 0.180345,
+            "context_weighted": true,
+            "context_length": 2
+          },
+          {
+            "token": "pulite",
+            "token_id": 277,
+            "score": -1.575491,
+            "probability_sigmoid": 0.171435,
+            "context_weighted": true,
+            "context_length": 2
+          },
+          {
+            "token": "?",
+            "token_id": 36,
+            "score": -1.582967,
+            "probability_sigmoid": 0.170376,
+            "context_weighted": true,
+            "context_length": 2
+          },
+          {
+            "token": "attenzione",
+            "token_id": 273,
+            "score": -1.597125,
+            "probability_sigmoid": 0.168384,
+            "context_weighted": true,
+            "context_length": 2
+          },
+          {
+            "token": "con",
+            "token_id": 275,
+            "score": -1.607222,
+            "probability_sigmoid": 0.166975,
+            "context_weighted": true,
+            "context_length": 2
+          }
+        ],
+        "clean_candidate": true
+      }
+    ]
+  },
+  {
+    "prompt": "backup regolari",
+    "prompt_tokens": [
+      "backup",
+      "regolari"
+    ],
+    "prompt_token_ids": [
+      82,
+      223
+    ],
+    "context_size": 6,
+    "generated_tokens": [
+      "è",
+      "un",
+      "password",
+      "attenzione",
+      "manager",
+      "."
+    ],
+    "generated_token_ids": [
+      14,
+      10,
+      22,
+      273,
+      70,
+      5
+    ],
+    "generated_text": "è un password attenzione manager.",
+    "full_text": "backup regolari è un password attenzione manager.",
+    "cleaning_stats": {
+      "removed_candidates": 30,
+      "blocked_dirty": 19,
+      "blocked_repetition": 4,
+      "blocked_punctuation": 7,
+      "blocked_weak_sequence": 0,
+      "early_stop": true,
+      "fallback_used": false,
+      "semantic_fallback_used": false
+    },
+    "steps": [
+      {
+        "step": 1,
+        "context_tokens": [
+          "backup",
+          "regolari"
+        ],
+        "context_ids": [
+          82,
+          223
+        ],
+        "selected_token": "è",
+        "selected_id": 14,
+        "selected_score": -1.521897,
+        "top_candidates": [
+          {
+            "token": ",",
+            "token_id": 6,
+            "score": -1.300348,
+            "probability_sigmoid": 0.214106,
+            "context_weighted": true,
+            "context_length": 2
+          },
+          {
+            "token": ".",
+            "token_id": 5,
+            "score": -1.368399,
+            "probability_sigmoid": 0.202879,
+            "context_weighted": true,
+            "context_length": 2
+          },
+          {
+            "token": ":",
+            "token_id": 12,
+            "score": -1.50527,
+            "probability_sigmoid": 0.181641,
+            "context_weighted": true,
+            "context_length": 2
+          },
+          {
+            "token": "complete",
+            "token_id": 274,
+            "score": -1.50531,
+            "probability_sigmoid": 0.181635,
+            "context_weighted": true,
+            "context_length": 2
+          },
+          {
+            "token": "un",
+            "token_id": 10,
+            "score": -1.519075,
+            "probability_sigmoid": 0.179598,
+            "context_weighted": true,
+            "context_length": 2
+          },
+          {
+            "token": "è",
+            "token_id": 14,
+            "score": -1.521897,
+            "probability_sigmoid": 0.179182,
+            "context_weighted": true,
+            "context_length": 2
+          },
+          {
+            "token": "pulite",
+            "token_id": 277,
+            "score": -1.538586,
+            "probability_sigmoid": 0.176741,
+            "context_weighted": true,
+            "context_length": 2
+          },
+          {
+            "token": "attenzione",
+            "token_id": 273,
+            "score": -1.565011,
+            "probability_sigmoid": 0.172929,
+            "context_weighted": true,
+            "context_length": 2
+          }
+        ],
+        "clean_candidate": true
+      },
+      {
+        "step": 2,
+        "context_tokens": [
+          "backup",
+          "regolari",
+          "è"
+        ],
+        "context_ids": [
+          82,
+          223,
+          14
+        ],
+        "selected_token": "un",
+        "selected_id": 10,
+        "selected_score": -1.3771309999999999,
+        "top_candidates": [
+          {
+            "token": "un",
+            "token_id": 10,
+            "score": -1.027131,
+            "probability_sigmoid": 0.263641,
+            "context_weighted": true,
+            "context_length": 3
+          },
+          {
+            "token": "a",
+            "token_id": 25,
+            "score": -1.427299,
+            "probability_sigmoid": 0.19352,
+            "context_weighted": true,
+            "context_length": 3
+          },
+          {
+            "token": ":",
+            "token_id": 12,
+            "score": -1.457543,
+            "probability_sigmoid": 0.188843,
+            "context_weighted": true,
+            "context_length": 3
+          },
+          {
+            "token": ",",
+            "token_id": 6,
+            "score": -1.459892,
+            "probability_sigmoid": 0.188484,
+            "context_weighted": true,
+            "context_length": 3
+          },
+          {
+            "token": "password",
+            "token_id": 22,
+            "score": -1.541146,
+            "probability_sigmoid": 0.176369,
+            "context_weighted": true,
+            "context_length": 3
+          },
+          {
+            "token": "o",
+            "token_id": 32,
+            "score": -1.54684,
+            "probability_sigmoid": 0.175543,
+            "context_weighted": true,
+            "context_length": 3
+          },
+          {
+            "token": "complete",
+            "token_id": 274,
+            "score": -1.549754,
+            "probability_sigmoid": 0.175122,
+            "context_weighted": true,
+            "context_length": 3
+          },
+          {
+            "token": "pulite",
+            "token_id": 277,
+            "score": -1.552244,
+            "probability_sigmoid": 0.174762,
+            "context_weighted": true,
+            "context_length": 3
+          }
+        ],
+        "clean_candidate": true
+      },
+      {
+        "step": 3,
+        "context_tokens": [
+          "backup",
+          "regolari",
+          "è",
+          "un"
+        ],
+        "context_ids": [
+          82,
+          223,
+          14,
+          10
+        ],
+        "selected_token": "password",
+        "selected_id": 22,
+        "selected_score": -1.365748,
+        "top_candidates": [
+          {
+            "token": "password",
+            "token_id": 22,
+            "score": -1.365748,
+            "probability_sigmoid": 0.203308,
+            "context_weighted": true,
+            "context_length": 4
+          },
+          {
+            "token": "riassunto",
+            "token_id": 40,
+            "score": -1.465368,
+            "probability_sigmoid": 0.187648,
+            "context_weighted": true,
+            "context_length": 4
+          },
+          {
+            "token": "complete",
+            "token_id": 274,
+            "score": -1.593681,
+            "probability_sigmoid": 0.168867,
+            "context_weighted": true,
+            "context_length": 4
+          },
+          {
+            "token": "manager",
+            "token_id": 70,
+            "score": -1.597476,
+            "probability_sigmoid": 0.168335,
+            "context_weighted": true,
+            "context_length": 4
+          },
+          {
+            "token": ".",
+            "token_id": 5,
+            "score": -1.61762,
+            "probability_sigmoid": 0.165533,
+            "context_weighted": true,
+            "context_length": 4
+          },
+          {
+            "token": "pulite",
+            "token_id": 277,
+            "score": -1.617919,
+            "probability_sigmoid": 0.165492,
+            "context_weighted": true,
+            "context_length": 4
+          },
+          {
+            "token": "account",
+            "token_id": 21,
+            "score": -1.618841,
+            "probability_sigmoid": 0.165365,
+            "context_weighted": true,
+            "context_length": 4
+          },
+          {
+            "token": "con",
+            "token_id": 275,
+            "score": -1.637328,
+            "probability_sigmoid": 0.162829,
+            "context_weighted": true,
+            "context_length": 4
+          }
+        ],
+        "clean_candidate": true
+      },
+      {
+        "step": 4,
+        "context_tokens": [
+          "backup",
+          "regolari",
+          "è",
+          "un",
+          "password"
+        ],
+        "context_ids": [
+          82,
+          223,
+          14,
+          10,
+          22
+        ],
+        "selected_token": "attenzione",
+        "selected_id": 273,
+        "selected_score": -1.643665,
+        "top_candidates": [
+          {
+            "token": "manager",
+            "token_id": 70,
+            "score": -1.110928,
+            "probability_sigmoid": 0.247698,
+            "context_weighted": true,
+            "context_length": 5
+          },
+          {
+            "token": "password",
+            "token_id": 22,
+            "score": -1.295299,
+            "probability_sigmoid": 0.214957,
+            "context_weighted": true,
+            "context_length": 5
+          },
+          {
+            "token": ".",
+            "token_id": 5,
+            "score": -1.445031,
+            "probability_sigmoid": 0.190767,
+            "context_weighted": true,
+            "context_length": 5
+          },
+          {
+            "token": ",",
+            "token_id": 6,
+            "score": -1.488627,
+            "probability_sigmoid": 0.184128,
+            "context_weighted": true,
+            "context_length": 5
+          },
+          {
+            "token": "complete",
+            "token_id": 274,
+            "score": -1.562619,
+            "probability_sigmoid": 0.173271,
+            "context_weighted": true,
+            "context_length": 5
+          },
+          {
+            "token": "pulite",
+            "token_id": 277,
+            "score": -1.591637,
+            "probability_sigmoid": 0.169154,
+            "context_weighted": true,
+            "context_length": 5
+          },
+          {
+            "token": "con",
+            "token_id": 275,
+            "score": -1.599504,
+            "probability_sigmoid": 0.168051,
+            "context_weighted": true,
+            "context_length": 5
+          },
+          {
+            "token": "di",
+            "token_id": 23,
+            "score": -1.620697,
+            "probability_sigmoid": 0.165109,
+            "context_weighted": true,
+            "context_length": 5
+          }
+        ],
+        "clean_candidate": true
+      },
+      {
+        "step": 5,
+        "context_tokens": [
+          "backup",
+          "regolari",
+          "è",
+          "un",
+          "password",
+          "attenzione"
+        ],
+        "context_ids": [
+          82,
+          223,
+          14,
+          10,
+          22,
+          273
+        ],
+        "selected_token": "manager",
+        "selected_id": 70,
+        "selected_score": -1.412026,
+        "top_candidates": [
+          {
+            "token": ".",
+            "token_id": 5,
+            "score": -1.265395,
+            "probability_sigmoid": 0.220047,
+            "context_weighted": true,
+            "context_length": 6
+          },
+          {
+            "token": ",",
+            "token_id": 6,
+            "score": -1.349002,
+            "probability_sigmoid": 0.206034,
+            "context_weighted": true,
+            "context_length": 6
+          },
+          {
+            "token": "manager",
+            "token_id": 70,
+            "score": -1.412026,
+            "probability_sigmoid": 0.195915,
+            "context_weighted": true,
+            "context_length": 6
+          },
+          {
+            "token": "complete",
+            "token_id": 274,
+            "score": -1.512629,
+            "probability_sigmoid": 0.18055,
+            "context_weighted": true,
+            "context_length": 6
+          },
+          {
+            "token": "pulite",
+            "token_id": 277,
+            "score": -1.55358,
+            "probability_sigmoid": 0.17457,
+            "context_weighted": true,
+            "context_length": 6
+          },
+          {
+            "token": "con",
+            "token_id": 275,
+            "score": -1.564987,
+            "probability_sigmoid": 0.172932,
+            "context_weighted": true,
+            "context_length": 6
+          },
+          {
+            "token": "attenzione",
+            "token_id": 273,
+            "score": -1.601821,
+            "probability_sigmoid": 0.167727,
+            "context_weighted": true,
+            "context_length": 6
+          },
+          {
+            "token": "password",
+            "token_id": 22,
+            "score": -1.611812,
+            "probability_sigmoid": 0.166337,
+            "context_weighted": true,
+            "context_length": 6
+          }
+        ],
+        "clean_candidate": true
+      },
+      {
+        "step": 6,
+        "context_tokens": [
+          "regolari",
+          "è",
+          "un",
+          "password",
+          "attenzione",
+          "manager"
+        ],
+        "context_ids": [
+          223,
+          14,
+          10,
+          22,
+          273,
+          70
+        ],
+        "selected_token": ".",
+        "selected_id": 5,
+        "selected_score": -0.970123,
+        "top_candidates": [
+          {
+            "token": ".",
+            "token_id": 5,
+            "score": -0.720123,
+            "probability_sigmoid": 0.327366,
+            "context_weighted": true,
+            "context_length": 6
+          },
+          {
+            "token": ",",
+            "token_id": 6,
+            "score": -1.109633,
+            "probability_sigmoid": 0.247939,
+            "context_weighted": true,
+            "context_length": 6
+          },
+          {
+            "token": "manager",
+            "token_id": 70,
+            "score": -1.454956,
+            "probability_sigmoid": 0.18924,
+            "context_weighted": true,
+            "context_length": 6
+          },
+          {
+            "token": "complete",
+            "token_id": 274,
+            "score": -1.471424,
+            "probability_sigmoid": 0.186726,
+            "context_weighted": true,
+            "context_length": 6
+          },
+          {
+            "token": "di",
+            "token_id": 23,
+            "score": -1.489862,
+            "probability_sigmoid": 0.183943,
+            "context_weighted": true,
+            "context_length": 6
+          },
+          {
+            "token": "pulite",
+            "token_id": 277,
+            "score": -1.535662,
+            "probability_sigmoid": 0.177167,
+            "context_weighted": true,
+            "context_length": 6
+          },
+          {
+            "token": "con",
+            "token_id": 275,
+            "score": -1.550108,
+            "probability_sigmoid": 0.175071,
+            "context_weighted": true,
+            "context_length": 6
+          },
+          {
+            "token": "?",
+            "token_id": 36,
+            "score": -1.577996,
+            "probability_sigmoid": 0.17108,
+            "context_weighted": true,
+            "context_length": 6
+          }
+        ],
+        "clean_candidate": true
+      }
+    ]
+  },
+  {
+    "prompt": "phishing",
+    "prompt_tokens": [
+      "phishing"
+    ],
+    "prompt_token_ids": [
+      55
+    ],
+    "context_size": 6,
+    "generated_tokens": [
+      "phishing",
+      "dati",
+      "sensibili",
+      "credenziali"
+    ],
+    "generated_token_ids": [
+      55,
+      18,
+      33,
+      142
+    ],
+    "generated_text": "phishing dati sensibili credenziali",
+    "full_text": "phishing phishing dati sensibili credenziali",
+    "cleaning_stats": {
+      "removed_candidates": 10,
+      "blocked_dirty": 5,
+      "blocked_repetition": 0,
+      "blocked_punctuation": 5,
+      "blocked_weak_sequence": 0,
+      "early_stop": true,
+      "fallback_used": true,
+      "semantic_fallback_used": true
+    },
+    "steps": [
+      {
+        "step": 1,
+        "context_tokens": [
+          "phishing"
+        ],
+        "context_ids": [
+          55
+        ],
+        "selected_token": "<EOS>",
+        "selected_id": 3,
+        "selected_score": -1.234205,
+        "top_candidates": [
+          {
+            "token": "#",
+            "token_id": 4,
+            "score": 2.791743,
+            "probability_sigmoid": 0.942228,
+            "context_weighted": true,
+            "context_length": 1
+          },
+          {
+            "token": ".",
+            "token_id": 5,
+            "score": -0.475394,
+            "probability_sigmoid": 0.38334,
+            "context_weighted": true,
+            "context_length": 1
+          },
+          {
+            "token": "?",
+            "token_id": 36,
+            "score": -0.767013,
+            "probability_sigmoid": 0.317126,
+            "context_weighted": true,
+            "context_length": 1
+          },
+          {
+            "token": ",",
+            "token_id": 6,
+            "score": -1.073018,
+            "probability_sigmoid": 0.25483,
+            "context_weighted": true,
+            "context_length": 1
+          },
+          {
+            "token": "<EOS>",
+            "token_id": 3,
+            "score": -1.234205,
+            "probability_sigmoid": 0.225446,
+            "context_weighted": true,
+            "context_length": 1
+          },
+          {
+            "token": "complete",
+            "token_id": 274,
+            "score": -1.390855,
+            "probability_sigmoid": 0.199271,
+            "context_weighted": true,
+            "context_length": 1
+          },
+          {
+            "token": "pulite",
+            "token_id": 277,
+            "score": -1.44505,
+            "probability_sigmoid": 0.190765,
+            "context_weighted": true,
+            "context_length": 1
+          },
+          {
+            "token": "è",
+            "token_id": 14,
+            "score": -1.461561,
+            "probability_sigmoid": 0.188229,
+            "context_weighted": true,
+            "context_length": 1
+          }
+        ],
+        "clean_candidate": true
+      }
+    ]
+  },
+  {
+    "prompt": "dati sensibili",
+    "prompt_tokens": [
+      "dati",
+      "sensibili"
+    ],
+    "prompt_token_ids": [
+      18,
+      33
+    ],
+    "context_size": 6,
+    "generated_tokens": [
+      "sensibili",
+      ",",
+      "sistemi",
+      ",",
+      "account",
+      "strumenti",
+      "attenzione",
+      "e",
+      "."
+    ],
+    "generated_token_ids": [
+      33,
+      6,
+      64,
+      6,
+      21,
+      77,
+      273,
+      16,
+      5
+    ],
+    "generated_text": "sensibili, sistemi, account strumenti attenzione e.",
+    "full_text": "dati sensibili sensibili, sistemi, account strumenti attenzione e.",
+    "cleaning_stats": {
+      "removed_candidates": 50,
+      "blocked_dirty": 30,
+      "blocked_repetition": 12,
+      "blocked_punctuation": 8,
+      "blocked_weak_sequence": 0,
+      "early_stop": true,
+      "fallback_used": false,
+      "semantic_fallback_used": false
+    },
+    "steps": [
+      {
+        "step": 1,
+        "context_tokens": [
+          "dati",
+          "sensibili"
+        ],
+        "context_ids": [
+          18,
+          33
+        ],
+        "selected_token": "sensibili",
+        "selected_id": 33,
+        "selected_score": -0.653308,
+        "top_candidates": [
+          {
+            "token": ".",
+            "token_id": 5,
+            "score": -0.231522,
+            "probability_sigmoid": 0.442377,
+            "context_weighted": true,
+            "context_length": 2
+          },
+          {
+            "token": ",",
+            "token_id": 6,
+            "score": -0.288503,
+            "probability_sigmoid": 0.42837,
+            "context_weighted": true,
+            "context_length": 2
+          },
+          {
+            "token": "sensibili",
+            "token_id": 33,
+            "score": -0.653308,
+            "probability_sigmoid": 0.342244,
+            "context_weighted": true,
+            "context_length": 2
+          },
+          {
+            "token": "?",
+            "token_id": 36,
+            "score": -0.924688,
+            "probability_sigmoid": 0.284004,
+            "context_weighted": true,
+            "context_length": 2
+          },
+          {
+            "token": "#",
+            "token_id": 4,
+            "score": -1.404418,
+            "probability_sigmoid": 0.197116,
+            "context_weighted": true,
+            "context_length": 2
+          },
+          {
+            "token": "complete",
+            "token_id": 274,
+            "score": -1.500722,
+            "probability_sigmoid": 0.182318,
+            "context_weighted": true,
+            "context_length": 2
+          },
+          {
+            "token": "o",
+            "token_id": 32,
+            "score": -1.55634,
+            "probability_sigmoid": 0.174172,
+            "context_weighted": true,
+            "context_length": 2
+          },
+          {
+            "token": "con",
+            "token_id": 275,
+            "score": -1.600225,
+            "probability_sigmoid": 0.16795,
+            "context_weighted": true,
+            "context_length": 2
+          }
+        ],
+        "clean_candidate": true
+      },
+      {
+        "step": 2,
+        "context_tokens": [
+          "dati",
+          "sensibili",
+          "sensibili"
+        ],
+        "context_ids": [
+          18,
+          33,
+          33
+        ],
+        "selected_token": ",",
+        "selected_id": 6,
+        "selected_score": -0.603998,
+        "top_candidates": [
+          {
+            "token": ".",
+            "token_id": 5,
+            "score": -0.025866,
+            "probability_sigmoid": 0.493534,
+            "context_weighted": true,
+            "context_length": 3
+          },
+          {
+            "token": "#",
+            "token_id": 4,
+            "score": -0.317467,
+            "probability_sigmoid": 0.421293,
+            "context_weighted": true,
+            "context_length": 3
+          },
+          {
+            "token": ",",
+            "token_id": 6,
+            "score": -0.353998,
+            "probability_sigmoid": 0.412413,
+            "context_weighted": true,
+            "context_length": 3
+          },
+          {
+            "token": "?",
+            "token_id": 36,
+            "score": -0.764156,
+            "probability_sigmoid": 0.317745,
+            "context_weighted": true,
+            "context_length": 3
+          },
+          {
+            "token": "sensibili",
+            "token_id": 33,
+            "score": -1.225803,
+            "probability_sigmoid": 0.226917,
+            "context_weighted": true,
+            "context_length": 3
+          },
+          {
+            "token": "complete",
+            "token_id": 274,
+            "score": -1.497506,
+            "probability_sigmoid": 0.182798,
+            "context_weighted": true,
+            "context_length": 3
+          },
+          {
+            "token": "con",
+            "token_id": 275,
+            "score": -1.595164,
+            "probability_sigmoid": 0.168659,
+            "context_weighted": true,
+            "context_length": 3
+          },
+          {
+            "token": "attenzione",
+            "token_id": 273,
+            "score": -1.610748,
+            "probability_sigmoid": 0.166485,
+            "context_weighted": true,
+            "context_length": 3
+          }
+        ],
+        "clean_candidate": true
+      },
+      {
+        "step": 3,
+        "context_tokens": [
+          "dati",
+          "sensibili",
+          "sensibili",
+          ","
+        ],
+        "context_ids": [
+          18,
+          33,
+          33,
+          6
+        ],
+        "selected_token": "sistemi",
+        "selected_id": 64,
+        "selected_score": -1.319704,
+        "top_candidates": [
+          {
+            "token": ",",
+            "token_id": 6,
+            "score": 0.068646,
+            "probability_sigmoid": 0.517155,
+            "context_weighted": true,
+            "context_length": 4
+          },
+          {
+            "token": "account",
+            "token_id": 21,
+            "score": -0.758241,
+            "probability_sigmoid": 0.319028,
+            "context_weighted": true,
+            "context_length": 4
+          },
+          {
+            "token": "o",
+            "token_id": 32,
+            "score": -1.269567,
+            "probability_sigmoid": 0.219331,
+            "context_weighted": true,
+            "context_length": 4
+          },
+          {
+            "token": "amministrativi",
+            "token_id": 65,
+            "score": -1.302137,
+            "probability_sigmoid": 0.213806,
+            "context_weighted": true,
+            "context_length": 4
+          },
+          {
+            "token": "sistemi",
+            "token_id": 64,
+            "score": -1.319704,
+            "probability_sigmoid": 0.210868,
+            "context_weighted": true,
+            "context_length": 4
+          },
+          {
+            "token": "e",
+            "token_id": 16,
+            "score": -1.328458,
+            "probability_sigmoid": 0.209415,
+            "context_weighted": true,
+            "context_length": 4
+          },
+          {
+            "token": "?",
+            "token_id": 36,
+            "score": -1.512036,
+            "probability_sigmoid": 0.180637,
+            "context_weighted": true,
+            "context_length": 4
+          },
+          {
+            "token": "sensibili",
+            "token_id": 33,
+            "score": -1.547594,
+            "probability_sigmoid": 0.175434,
+            "context_weighted": true,
+            "context_length": 4
+          }
+        ],
+        "clean_candidate": true
+      },
+      {
+        "step": 4,
+        "context_tokens": [
+          "dati",
+          "sensibili",
+          "sensibili",
+          ",",
+          "sistemi"
+        ],
+        "context_ids": [
+          18,
+          33,
+          33,
+          6,
+          64
+        ],
+        "selected_token": ",",
+        "selected_id": 6,
+        "selected_score": -1.232891,
+        "top_candidates": [
+          {
+            "token": ",",
+            "token_id": 6,
+            "score": -0.082891,
+            "probability_sigmoid": 0.479289,
+            "context_weighted": true,
+            "context_length": 5
+          },
+          {
+            "token": "account",
+            "token_id": 21,
+            "score": -0.987269,
+            "probability_sigmoid": 0.271452,
+            "context_weighted": true,
+            "context_length": 5
+          },
+          {
+            "token": "e",
+            "token_id": 16,
+            "score": -1.138788,
+            "probability_sigmoid": 0.242543,
+            "context_weighted": true,
+            "context_length": 5
+          },
+          {
+            "token": "sistemi",
+            "token_id": 64,
+            "score": -1.448161,
+            "probability_sigmoid": 0.190285,
+            "context_weighted": true,
+            "context_length": 5
+          },
+          {
+            "token": "o",
+            "token_id": 32,
+            "score": -1.452533,
+            "probability_sigmoid": 0.189612,
+            "context_weighted": true,
+            "context_length": 5
+          },
+          {
+            "token": "amministrativi",
+            "token_id": 65,
+            "score": -1.501468,
+            "probability_sigmoid": 0.182207,
+            "context_weighted": true,
+            "context_length": 5
+          },
+          {
+            "token": "un",
+            "token_id": 10,
+            "score": -1.532337,
+            "probability_sigmoid": 0.177652,
+            "context_weighted": true,
+            "context_length": 5
+          },
+          {
+            "token": "?",
+            "token_id": 36,
+            "score": -1.55552,
+            "probability_sigmoid": 0.17429,
+            "context_weighted": true,
+            "context_length": 5
+          }
+        ],
+        "clean_candidate": true
+      },
+      {
+        "step": 5,
+        "context_tokens": [
+          "dati",
+          "sensibili",
+          "sensibili",
+          ",",
+          "sistemi",
+          ","
+        ],
+        "context_ids": [
+          18,
+          33,
+          33,
+          6,
+          64,
+          6
+        ],
+        "selected_token": "account",
+        "selected_id": 21,
+        "selected_score": -0.341994,
+        "top_candidates": [
+          {
+            "token": ",",
+            "token_id": 6,
+            "score": 0.141539,
+            "probability_sigmoid": 0.535326,
+            "context_weighted": true,
+            "context_length": 6
+          },
+          {
+            "token": "account",
+            "token_id": 21,
+            "score": -0.341994,
+            "probability_sigmoid": 0.415325,
+            "context_weighted": true,
+            "context_length": 6
+          },
+          {
+            "token": "e",
+            "token_id": 16,
+            "score": -0.879617,
+            "probability_sigmoid": 0.293257,
+            "context_weighted": true,
+            "context_length": 6
+          },
+          {
+            "token": "sistemi",
+            "token_id": 64,
+            "score": -1.10562,
+            "probability_sigmoid": 0.248688,
+            "context_weighted": true,
+            "context_length": 6
+          },
+          {
+            "token": "strumenti",
+            "token_id": 77,
+            "score": -1.227523,
+            "probability_sigmoid": 0.226615,
+            "context_weighted": true,
+            "context_length": 6
+          },
+          {
+            "token": "amministrativi",
+            "token_id": 65,
+            "score": -1.244532,
+            "probability_sigmoid": 0.223648,
+            "context_weighted": true,
+            "context_length": 6
+          },
+          {
+            "token": "un",
+            "token_id": 10,
+            "score": -1.2451,
+            "probability_sigmoid": 0.223549,
+            "context_weighted": true,
+            "context_length": 6
+          },
+          {
+            "token": "o",
+            "token_id": 32,
+            "score": -1.246546,
+            "probability_sigmoid": 0.223299,
+            "context_weighted": true,
+            "context_length": 6
+          }
+        ],
+        "clean_candidate": true
+      },
+      {
+        "step": 6,
+        "context_tokens": [
+          "sensibili",
+          "sensibili",
+          ",",
+          "sistemi",
+          ",",
+          "account"
+        ],
+        "context_ids": [
+          33,
+          33,
+          6,
+          64,
+          6,
+          21
+        ],
+        "selected_token": "strumenti",
+        "selected_id": 77,
+        "selected_score": -1.487671,
+        "top_candidates": [
+          {
+            "token": ",",
+            "token_id": 6,
+            "score": -0.191785,
+            "probability_sigmoid": 0.4522,
+            "context_weighted": true,
+            "context_length": 6
+          },
+          {
+            "token": "account",
+            "token_id": 21,
+            "score": -0.689515,
+            "probability_sigmoid": 0.334141,
+            "context_weighted": true,
+            "context_length": 6
+          },
+          {
+            "token": "amministrativi",
+            "token_id": 65,
+            "score": -1.002154,
+            "probability_sigmoid": 0.268518,
+            "context_weighted": true,
+            "context_length": 6
+          },
+          {
+            "token": "e",
+            "token_id": 16,
+            "score": -1.013504,
+            "probability_sigmoid": 0.266295,
+            "context_weighted": true,
+            "context_length": 6
+          },
+          {
+            "token": "sistemi",
+            "token_id": 64,
+            "score": -1.058729,
+            "probability_sigmoid": 0.257552,
+            "context_weighted": true,
+            "context_length": 6
+          },
+          {
+            "token": "un",
+            "token_id": 10,
+            "score": -1.441026,
+            "probability_sigmoid": 0.191387,
+            "context_weighted": true,
+            "context_length": 6
+          },
+          {
+            "token": "strumenti",
+            "token_id": 77,
+            "score": -1.487671,
+            "probability_sigmoid": 0.184272,
+            "context_weighted": true,
+            "context_length": 6
+          },
+          {
+            "token": "o",
+            "token_id": 32,
+            "score": -1.517496,
+            "probability_sigmoid": 0.179831,
+            "context_weighted": true,
+            "context_length": 6
+          }
+        ],
+        "clean_candidate": true
+      },
+      {
+        "step": 7,
+        "context_tokens": [
+          "sensibili",
+          ",",
+          "sistemi",
+          ",",
+          "account",
+          "strumenti"
+        ],
+        "context_ids": [
+          33,
+          6,
+          64,
+          6,
+          21,
+          77
+        ],
+        "selected_token": "attenzione",
+        "selected_id": 273,
+        "selected_score": -1.68761,
+        "top_candidates": [
+          {
+            "token": ",",
+            "token_id": 6,
+            "score": -0.479266,
+            "probability_sigmoid": 0.382425,
+            "context_weighted": true,
+            "context_length": 6
+          },
+          {
+            "token": "account",
+            "token_id": 21,
+            "score": -0.95066,
+            "probability_sigmoid": 0.278752,
+            "context_weighted": true,
+            "context_length": 6
+          },
+          {
+            "token": "e",
+            "token_id": 16,
+            "score": -0.959129,
+            "probability_sigmoid": 0.277053,
+            "context_weighted": true,
+            "context_length": 6
+          },
+          {
+            "token": "amministrativi",
+            "token_id": 65,
+            "score": -1.137765,
+            "probability_sigmoid": 0.242731,
+            "context_weighted": true,
+            "context_length": 6
+          },
+          {
+            "token": "sistemi",
+            "token_id": 64,
+            "score": -1.253876,
+            "probability_sigmoid": 0.22203,
+            "context_weighted": true,
+            "context_length": 6
+          },
+          {
+            "token": "un",
+            "token_id": 10,
+            "score": -1.330568,
+            "probability_sigmoid": 0.209065,
+            "context_weighted": true,
+            "context_length": 6
+          },
+          {
+            "token": "o",
+            "token_id": 32,
+            "score": -1.596225,
+            "probability_sigmoid": 0.16851,
+            "context_weighted": true,
+            "context_length": 6
+          },
+          {
+            "token": "complete",
+            "token_id": 274,
+            "score": -1.603665,
+            "probability_sigmoid": 0.16747,
+            "context_weighted": true,
+            "context_length": 6
+          }
+        ],
+        "clean_candidate": true
+      },
+      {
+        "step": 8,
+        "context_tokens": [
+          ",",
+          "sistemi",
+          ",",
+          "account",
+          "strumenti",
+          "attenzione"
+        ],
+        "context_ids": [
+          6,
+          64,
+          6,
+          21,
+          77,
+          273
+        ],
+        "selected_token": "e",
+        "selected_id": 16,
+        "selected_score": -1.2684959999999998,
+        "top_candidates": [
+          {
+            "token": ",",
+            "token_id": 6,
+            "score": -0.683651,
+            "probability_sigmoid": 0.335447,
+            "context_weighted": true,
+            "context_length": 6
+          },
+          {
+            "token": "e",
+            "token_id": 16,
+            "score": -0.918496,
+            "probability_sigmoid": 0.285265,
+            "context_weighted": true,
+            "context_length": 6
+          },
+          {
+            "token": "amministrativi",
+            "token_id": 65,
+            "score": -1.324812,
+            "probability_sigmoid": 0.210019,
+            "context_weighted": true,
+            "context_length": 6
+          },
+          {
+            "token": "un",
+            "token_id": 10,
+            "score": -1.357733,
+            "probability_sigmoid": 0.204609,
+            "context_weighted": true,
+            "context_length": 6
+          },
+          {
+            "token": "account",
+            "token_id": 21,
+            "score": -1.43781,
+            "probability_sigmoid": 0.191885,
+            "context_weighted": true,
+            "context_length": 6
+          },
+          {
+            "token": "sistemi",
+            "token_id": 64,
+            "score": -1.447157,
+            "probability_sigmoid": 0.190439,
+            "context_weighted": true,
+            "context_length": 6
+          },
+          {
+            "token": "dati",
+            "token_id": 18,
+            "score": -1.478003,
+            "probability_sigmoid": 0.185729,
+            "context_weighted": true,
+            "context_length": 6
+          },
+          {
+            "token": "complete",
+            "token_id": 274,
+            "score": -1.538942,
+            "probability_sigmoid": 0.176689,
+            "context_weighted": true,
+            "context_length": 6
+          }
+        ],
+        "clean_candidate": true
+      },
+      {
+        "step": 9,
+        "context_tokens": [
+          "sistemi",
+          ",",
+          "account",
+          "strumenti",
+          "attenzione",
+          "e"
+        ],
+        "context_ids": [
+          64,
+          6,
+          21,
+          77,
+          273,
+          16
+        ],
+        "selected_token": ".",
+        "selected_id": 5,
+        "selected_score": -1.75965,
+        "top_candidates": [
+          {
+            "token": "e",
+            "token_id": 16,
+            "score": -1.330124,
+            "probability_sigmoid": 0.209139,
+            "context_weighted": true,
+            "context_length": 6
+          },
+          {
+            "token": ",",
+            "token_id": 6,
+            "score": -1.367294,
+            "probability_sigmoid": 0.203057,
+            "context_weighted": true,
+            "context_length": 6
+          },
+          {
+            "token": "un",
+            "token_id": 10,
+            "score": -1.444201,
+            "probability_sigmoid": 0.190896,
+            "context_weighted": true,
+            "context_length": 6
+          },
+          {
+            "token": "dati",
+            "token_id": 18,
+            "score": -1.445508,
+            "probability_sigmoid": 0.190694,
+            "context_weighted": true,
+            "context_length": 6
+          },
+          {
+            "token": "per",
+            "token_id": 15,
+            "score": -1.500687,
+            "probability_sigmoid": 0.182323,
+            "context_weighted": true,
+            "context_length": 6
+          },
+          {
+            "token": ".",
+            "token_id": 5,
+            "score": -1.50965,
+            "probability_sigmoid": 0.180991,
+            "context_weighted": true,
+            "context_length": 6
+          },
+          {
+            "token": "complete",
+            "token_id": 274,
+            "score": -1.538754,
+            "probability_sigmoid": 0.176717,
+            "context_weighted": true,
+            "context_length": 6
+          },
+          {
+            "token": "pulite",
+            "token_id": 277,
+            "score": -1.589774,
+            "probability_sigmoid": 0.169416,
+            "context_weighted": true,
+            "context_length": 6
+          }
+        ],
+        "clean_candidate": true
+      }
+    ]
+  },
+  {
+    "prompt": "autenticazione a due fattori",
+    "prompt_tokens": [
+      "autenticazione",
+      "a",
+      "due",
+      "fattori"
+    ],
+    "prompt_token_ids": [
+      53,
+      25,
+      58,
+      66
+    ],
+    "context_size": 6,
+    "generated_tokens": [
+      "fattori"
+    ],
+    "generated_token_ids": [
+      66
+    ],
+    "generated_text": "fattori",
+    "full_text": "autenticazione a due fattori fattori",
+    "cleaning_stats": {
+      "removed_candidates": 16,
+      "blocked_dirty": 8,
+      "blocked_repetition": 1,
+      "blocked_punctuation": 7,
+      "blocked_weak_sequence": 0,
+      "early_stop": true,
+      "fallback_used": false,
+      "semantic_fallback_used": false
+    },
+    "steps": [
+      {
+        "step": 1,
+        "context_tokens": [
+          "autenticazione",
+          "a",
+          "due",
+          "fattori"
+        ],
+        "context_ids": [
+          53,
+          25,
+          58,
+          66
+        ],
+        "selected_token": "fattori",
+        "selected_id": 66,
+        "selected_score": -1.452392,
+        "top_candidates": [
+          {
+            "token": "#",
+            "token_id": 4,
+            "score": -1.211721,
+            "probability_sigmoid": 0.229397,
+            "context_weighted": true,
+            "context_length": 4
+          },
+          {
+            "token": ",",
+            "token_id": 6,
+            "score": -1.359042,
+            "probability_sigmoid": 0.204396,
+            "context_weighted": true,
+            "context_length": 4
+          },
+          {
+            "token": "?",
+            "token_id": 36,
+            "score": -1.397185,
+            "probability_sigmoid": 0.198263,
+            "context_weighted": true,
+            "context_length": 4
+          },
+          {
+            "token": "fattori",
+            "token_id": 66,
+            "score": -1.452392,
+            "probability_sigmoid": 0.189634,
+            "context_weighted": true,
+            "context_length": 4
+          },
+          {
+            "token": "<EOS>",
+            "token_id": 3,
+            "score": -1.458839,
+            "probability_sigmoid": 0.188645,
+            "context_weighted": true,
+            "context_length": 4
+          },
+          {
+            "token": "complete",
+            "token_id": 274,
+            "score": -1.554987,
+            "probability_sigmoid": 0.174367,
+            "context_weighted": true,
+            "context_length": 4
+          },
+          {
+            "token": "dati",
+            "token_id": 18,
+            "score": -1.588641,
+            "probability_sigmoid": 0.169575,
+            "context_weighted": true,
+            "context_length": 4
+          },
+          {
+            "token": "pulite",
+            "token_id": 277,
+            "score": -1.623147,
+            "probability_sigmoid": 0.164771,
+            "context_weighted": true,
+            "context_length": 4
+          }
+        ],
+        "clean_candidate": true
+      },
+      {
+        "step": 2,
+        "context_tokens": [
+          "autenticazione",
+          "a",
+          "due",
+          "fattori",
+          "fattori"
+        ],
+        "context_ids": [
+          53,
+          25,
+          58,
+          66,
+          66
+        ],
+        "selected_token": "<EOS>",
+        "selected_id": 3,
+        "selected_score": -1.215761,
+        "top_candidates": [
+          {
+            "token": "#",
+            "token_id": 4,
+            "score": -0.124855,
+            "probability_sigmoid": 0.468827,
+            "context_weighted": true,
+            "context_length": 5
+          },
+          {
+            "token": "<EOS>",
+            "token_id": 3,
+            "score": -1.215761,
+            "probability_sigmoid": 0.228683,
+            "context_weighted": true,
+            "context_length": 5
+          },
+          {
+            "token": "?",
+            "token_id": 36,
+            "score": -1.355751,
+            "probability_sigmoid": 0.204932,
+            "context_weighted": true,
+            "context_length": 5
+          },
+          {
+            "token": ",",
+            "token_id": 6,
+            "score": -1.44915,
+            "probability_sigmoid": 0.190132,
+            "context_weighted": true,
+            "context_length": 5
+          },
+          {
+            "token": "complete",
+            "token_id": 274,
+            "score": -1.58769,
+            "probability_sigmoid": 0.169709,
+            "context_weighted": true,
+            "context_length": 5
+          },
+          {
+            "token": "pulite",
+            "token_id": 277,
+            "score": -1.647904,
+            "probability_sigmoid": 0.161392,
+            "context_weighted": true,
+            "context_length": 5
+          },
+          {
+            "token": "con",
+            "token_id": 275,
+            "score": -1.669885,
+            "probability_sigmoid": 0.158439,
+            "context_weighted": true,
+            "context_length": 5
+          },
+          {
+            "token": "attenzione",
+            "token_id": 273,
+            "score": -1.679481,
+            "probability_sigmoid": 0.157164,
+            "context_weighted": true,
+            "context_length": 5
+          }
+        ],
+        "clean_candidate": true
+      }
+    ]
+  },
+  {
+    "prompt": "attacco ransomware",
+    "prompt_tokens": [
+      "attacco",
+      "ransomware"
+    ],
+    "prompt_token_ids": [
+      233,
+      31
+    ],
+    "context_size": 6,
+    "generated_tokens": [
+      "ransomware",
+      "malware",
+      "dati",
+      "backup"
+    ],
+    "generated_token_ids": [
+      31,
+      49,
+      18,
+      82
+    ],
+    "generated_text": "ransomware malware dati backup",
+    "full_text": "attacco ransomware ransomware malware dati backup",
+    "cleaning_stats": {
+      "removed_candidates": 11,
+      "blocked_dirty": 6,
+      "blocked_repetition": 0,
+      "blocked_punctuation": 5,
+      "blocked_weak_sequence": 0,
+      "early_stop": true,
+      "fallback_used": true,
+      "semantic_fallback_used": true
+    },
+    "steps": [
+      {
+        "step": 1,
+        "context_tokens": [
+          "attacco",
+          "ransomware"
+        ],
+        "context_ids": [
+          233,
+          31
+        ],
+        "selected_token": "<EOS>",
+        "selected_id": 3,
+        "selected_score": -1.324961,
+        "top_candidates": [
+          {
+            "token": "#",
+            "token_id": 4,
+            "score": 0.407592,
+            "probability_sigmoid": 0.60051,
+            "context_weighted": true,
+            "context_length": 2
+          },
+          {
+            "token": ".",
+            "token_id": 5,
+            "score": -0.245361,
+            "probability_sigmoid": 0.438966,
+            "context_weighted": true,
+            "context_length": 2
+          },
+          {
+            "token": "?",
+            "token_id": 36,
+            "score": -0.694595,
+            "probability_sigmoid": 0.333012,
+            "context_weighted": true,
+            "context_length": 2
+          },
+          {
+            "token": "<EOS>",
+            "token_id": 3,
+            "score": -1.324961,
+            "probability_sigmoid": 0.209994,
+            "context_weighted": true,
+            "context_length": 2
+          },
+          {
+            "token": "complete",
+            "token_id": 274,
+            "score": -1.474884,
+            "probability_sigmoid": 0.186201,
+            "context_weighted": true,
+            "context_length": 2
+          },
+          {
+            "token": "per",
+            "token_id": 15,
+            "score": -1.57402,
+            "probability_sigmoid": 0.171644,
+            "context_weighted": true,
+            "context_length": 2
+          },
+          {
+            "token": "con",
+            "token_id": 275,
+            "score": -1.574814,
+            "probability_sigmoid": 0.171531,
+            "context_weighted": true,
+            "context_length": 2
+          },
+          {
+            "token": "pulite",
+            "token_id": 277,
+            "score": -1.584667,
+            "probability_sigmoid": 0.170135,
+            "context_weighted": true,
+            "context_length": 2
+          }
+        ],
+        "clean_candidate": true
+      }
+    ]
+  }
+]
