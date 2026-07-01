@@ -1,0 +1,99 @@
+# Report Token Vectorizer V1
+
+## Stato
+generated
+
+## Record
+- Train: 116
+- Validation: 14
+- Test: 14
+- Totale: 144
+
+## Tokenizer
+- Tipo: regex_word_punctuation_v1
+- Vocabolario: 278
+- Max length: 256
+
+## Vettori
+- Dimensione vettore: 64
+- Inizializzazione: deterministica SHA256
+- Nota: questi vettori non sono ancora embedding addestrati.
+
+## Statistiche lunghezza
+```json
+{
+  "min_original_tokens": 28,
+  "max_original_tokens": 243,
+  "avg_original_tokens": 50.02,
+  "truncated_records": 0
+}
+```
+
+## Manifest completo
+```json
+{
+  "versione": "token_vectorizer_v1",
+  "status": "generated",
+  "language": "it",
+  "input_files": {
+    "train": "/Users/alessandrobarbarossa/alex-ai-workspace/mini_llm/data/training/knowledge_dataset_v1_train.jsonl",
+    "val": "/Users/alessandrobarbarossa/alex-ai-workspace/mini_llm/data/training/knowledge_dataset_v1_val.jsonl",
+    "test": "/Users/alessandrobarbarossa/alex-ai-workspace/mini_llm/data/training/knowledge_dataset_v1_test.jsonl"
+  },
+  "output_files": {
+    "vocab": "/Users/alessandrobarbarossa/alex-ai-workspace/mini_llm/data/vectorized/token_vocab_v1.json",
+    "embeddings": "/Users/alessandrobarbarossa/alex-ai-workspace/mini_llm/data/vectorized/token_embeddings_v1.json",
+    "train_sequences": "/Users/alessandrobarbarossa/alex-ai-workspace/mini_llm/data/vectorized/token_sequences_v1_train.jsonl",
+    "val_sequences": "/Users/alessandrobarbarossa/alex-ai-workspace/mini_llm/data/vectorized/token_sequences_v1_val.jsonl",
+    "test_sequences": "/Users/alessandrobarbarossa/alex-ai-workspace/mini_llm/data/vectorized/token_sequences_v1_test.jsonl"
+  },
+  "tokenizer": {
+    "type": "regex_word_punctuation_v1",
+    "lowercase": true,
+    "max_vocab_size": 8000,
+    "min_frequency": 1,
+    "vocab_size": 278,
+    "special_tokens": {
+      "<PAD>": 0,
+      "<UNK>": 1,
+      "<BOS>": 2,
+      "<EOS>": 3
+    }
+  },
+  "vectorization": {
+    "max_length": 256,
+    "vector_dim": 64,
+    "labels": "next_token_prediction",
+    "pad_label_value": -100
+  },
+  "counts": {
+    "train_records": 116,
+    "val_records": 14,
+    "test_records": 14,
+    "total_records": 144,
+    "vectorized_train_records": 116,
+    "vectorized_val_records": 14,
+    "vectorized_test_records": 14
+  },
+  "length_stats": {
+    "min_original_tokens": 28,
+    "max_original_tokens": 243,
+    "avg_original_tokens": 50.02,
+    "truncated_records": 0
+  },
+  "source_task_counts": {
+    "qa_micro_informazione": 24,
+    "relazione_operativa": 3,
+    "micro_informazione_operativa": 24,
+    "training_item_originale_v14": 9,
+    "riscrittura_per_riassunto": 24,
+    "domanda_risposta_operativa": 10,
+    "riassunto_frase_rilevante": 10,
+    "estrazione_aree_operative": 1,
+    "frase_rilevante": 10,
+    "normalizzazione_area_operativa": 14,
+    "domanda_su_area_operativa": 14,
+    "classificazione_documento": 1
+  }
+}
+```
