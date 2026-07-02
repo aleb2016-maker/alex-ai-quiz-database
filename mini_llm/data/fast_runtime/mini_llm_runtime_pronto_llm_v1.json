@@ -17,35 +17,35 @@
     "build": {
       "command": "build",
       "status": "OK",
-      "file": "/private/var/folders/s3/q53ggzhn0dj5v3mm46w3bgrr0000gn/T/mini_llm_ready_llm_yl1ngegr/documento_chiusura_runtime.md",
+      "file": "/private/var/folders/s3/q53ggzhn0dj5v3mm46w3bgrr0000gn/T/mini_llm_ready_llm_qv1bqb23/documento_chiusura_runtime.md",
       "document_chars": 666,
       "chunks": 2,
       "cache": {
         "cache_status": "MISS_BUILT",
         "cache_key": "b618bdd8a2a4db91ecba49e1",
         "cache_path": "/Users/alessandrobarbarossa/alex-ai-workspace/mini_llm/data/fast_runtime/cache_v2_user_docs/b618bdd8a2a4db91ecba49e1.json",
-        "elapsed_ms": 0.4535419999999978,
+        "elapsed_ms": 0.4618329999999983,
         "chunks": 2
       },
-      "total_ms": 0.5672089999999991
+      "total_ms": 0.5777079999999997
     },
     "ask": {
       "command": "ask",
       "status": "OK",
-      "file": "/private/var/folders/s3/q53ggzhn0dj5v3mm46w3bgrr0000gn/T/mini_llm_ready_llm_yl1ngegr/documento_chiusura_runtime.md",
+      "file": "/private/var/folders/s3/q53ggzhn0dj5v3mm46w3bgrr0000gn/T/mini_llm_ready_llm_qv1bqb23/documento_chiusura_runtime.md",
       "document_chars": 666,
       "chunks": 2,
       "cache": {
         "cache_status": "HIT",
         "cache_key": "b618bdd8a2a4db91ecba49e1",
         "cache_path": "/Users/alessandrobarbarossa/alex-ai-workspace/mini_llm/data/fast_runtime/cache_v2_user_docs/b618bdd8a2a4db91ecba49e1.json",
-        "elapsed_ms": 0.08450000000000124,
+        "elapsed_ms": 0.12483399999999728,
         "chunks": 2
       },
-      "build_or_load_ms": 0.15629099999999937,
+      "build_or_load_ms": 0.18787500000000054,
       "question": "Che cosa fa il phishing?",
       "answer": "Il phishing usa l'inganno per convincere le persone a fornire dati sensibili, credenziali o pagamenti.",
-      "answer_ms": 0.12641599999999725,
+      "answer_ms": 0.15249999999999986,
       "matches": [
         {
           "score": 1.7555,
@@ -57,19 +57,19 @@
     "summary": {
       "command": "summary",
       "status": "OK",
-      "file": "/private/var/folders/s3/q53ggzhn0dj5v3mm46w3bgrr0000gn/T/mini_llm_ready_llm_yl1ngegr/documento_chiusura_runtime.md",
+      "file": "/private/var/folders/s3/q53ggzhn0dj5v3mm46w3bgrr0000gn/T/mini_llm_ready_llm_qv1bqb23/documento_chiusura_runtime.md",
       "document_chars": 666,
       "chunks": 2,
       "cache": {
         "cache_status": "HIT",
         "cache_key": "b618bdd8a2a4db91ecba49e1",
         "cache_path": "/Users/alessandrobarbarossa/alex-ai-workspace/mini_llm/data/fast_runtime/cache_v2_user_docs/b618bdd8a2a4db91ecba49e1.json",
-        "elapsed_ms": 0.10833299999999518,
+        "elapsed_ms": 0.0981669999999997,
         "chunks": 2
       },
-      "build_or_load_ms": 0.20012499999999891,
+      "build_or_load_ms": 0.161917000000001,
       "summary": "La sicurezza informatica protegge dati, dispositivi, account e sistemi attraverso pratiche, strumenti e comportamenti corretti. I backup regolari servono a recuperare informazioni in caso di errore umano, guasto, furto o cancellazione accidentale. Il phishing usa l'inganno per convincere le persone a fornire dati sensibili, credenziali o pagamenti. L'autenticazione a due fattori rafforza l'accesso aggiungendo un secondo controllo oltre alla password. Il ransomware è un malware che blocca o cifra i dati e chiede un pagamento per ripristinarli.",
-      "summary_ms": 0.18787499999999707,
+      "summary_ms": 0.15883400000000006,
       "sentences_used": 5
     }
   },
