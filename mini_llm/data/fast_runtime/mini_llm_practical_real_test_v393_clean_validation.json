@@ -1,0 +1,67 @@
+{
+  "validator": "valida_mini_llm_practical_real_test_v393_clean",
+  "version": "V3.9.3.1",
+  "status": "PASS",
+  "errors": [],
+  "tested_document": "/Users/alessandrobarbarossa/alex-ai-workspace/rag/documenti/documento_rag_sicurezza_informatica_aziendale.md",
+  "real_report": "/Users/alessandrobarbarossa/alex-ai-workspace/mini_llm/data/real_tests/test_sicurezza_v393_clean/practical_real_test_v393_clean_report.json",
+  "report_status": "PASS",
+  "gate_status": "PASS",
+  "cleaner": {
+    "cleaner": "mini_llm_real_output_cleaner_v3931",
+    "raw_lines": 242,
+    "cleaned_lines": 76,
+    "raw_words": 1702,
+    "cleaned_words": 1039,
+    "removed_words": 663,
+    "status": "OK",
+    "limits": [
+      "Cleaner strutturale.",
+      "Rimuove metadati, frammenti e frasi pericolose.",
+      "Non genera contenuto nuovo inventato."
+    ]
+  },
+  "diagnostics": {
+    "engine": "mini_llm_long_document_rag_v391_semantic_repair",
+    "lineage": {
+      "semantic_quality_line": "V3.8/V3.8.6",
+      "current_engine": "V3.15 stable current",
+      "study_pack_current": "Study Pack Current V3 Quality Gate",
+      "output_modes": "Output Modes V1",
+      "long_document_rag": "V3.9.1 Semantic Repair Gate"
+    },
+    "status": "OK",
+    "pages": 4,
+    "words": 1039,
+    "sentences": 71,
+    "chunks": 7,
+    "build_ms": 1.8412920000000013,
+    "words_per_page": 320,
+    "max_words_per_chunk": 180,
+    "overlap_sentences": 1,
+    "compression_targets": {
+      "source_pages": 4,
+      "quality_summary_pages_10_percent": 1,
+      "brief_summary_pages_1_percent": 1
+    },
+    "limits": [
+      "V3.9.1 RAG lungo structured/extractive.",
+      "Sentence-safe chunking.",
+      "Semantic Repair Gate.",
+      "Non ancora LLM neurale generativo.",
+      "Non ancora OCR."
+    ]
+  },
+  "counts": {
+    "summary_sentences": 8,
+    "cards": 6,
+    "qas": 8,
+    "test_questions": 6,
+    "student_test_questions": 6
+  },
+  "limits": [
+    "Valida documento reale nel repo.",
+    "Richiede gate V3.9.2 PASS.",
+    "Output reale resta ignorato da git."
+  ]
+}
