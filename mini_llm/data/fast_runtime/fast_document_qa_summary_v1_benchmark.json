@@ -1,0 +1,310 @@
+{
+  "benchmark": "fast_document_qa_summary_v1",
+  "status": "PASS",
+  "document_chars": 62209,
+  "chunks": 100,
+  "questions_total": 10,
+  "answers_ok": 10,
+  "build_index_ms": 3.6047920000000024,
+  "qa_avg_ms": 0.4098748999999999,
+  "qa_median_ms": 0.36600000000000177,
+  "qa_p95_ms": 0.5387910000000002,
+  "qa_max_ms": 0.5387910000000002,
+  "summary_internal_ms": 3.261833000000002,
+  "summary_total_ms": 3.2703339999999996,
+  "summary_sentences_used": 10,
+  "qa_results": [
+    {
+      "status": "OK",
+      "question": "Che cosa fa il phishing?",
+      "answer": "Il phishing usa l'inganno per convincere le persone a fornire dati sensibili, credenziali o pagamenti.",
+      "elapsed_ms": 0.3111249999999989,
+      "matches": [
+        {
+          "score": 1.8542,
+          "chunk_id": 0,
+          "text": "Sezione 1. La sicurezza informatica protegge dati, dispositivi, account e sistemi attraverso pratiche, strumenti e comportamenti corretti. Il phishing usa l'inganno per convincere le persone a fornire dati sensibili, credenziali o pagamenti. I backup regolari servono a recuperare informazioni in caso di errore umano, guasto, furto o cancellazione accidentale. L'autenticazione a due fattori rafforza l'accesso aggiungendo un secondo controllo oltre alla password. Il ransomware è un malware che blocca o cifra i dati e chiede un pagamento per ripristinarli. Gli aggiornamenti software correggono errori e chiudono vulnerabilità di sicurezza."
+        },
+        {
+          "score": 1.8542,
+          "chunk_id": 1,
+          "text": "Un password manager aiuta a conservare password lunghe e uniche senza doverle ricordare tutte. Le credenziali rubate possono consentire accessi non autorizzati ad account o sistemi. Gli account amministrativi hanno privilegi elevati e devono essere protetti con controlli aggiuntivi. I documenti aziendali possono contenere informazioni operative, contratti, credenziali o dati riservati. \\nSezione 2. La sicurezza informatica protegge dati, dispositivi, account e sistemi attraverso pratiche, strumenti e comportamenti corretti. Il phishing usa l'inganno per convincere le persone a fornire dati sensibili, credenziali o pagamenti."
+        },
+        {
+          "score": 1.8542,
+          "chunk_id": 3,
+          "text": "Gli account amministrativi hanno privilegi elevati e devono essere protetti con controlli aggiuntivi. I documenti aziendali possono contenere informazioni operative, contratti, credenziali o dati riservati. \\nSezione 3. La sicurezza informatica protegge dati, dispositivi, account e sistemi attraverso pratiche, strumenti e comportamenti corretti. Il phishing usa l'inganno per convincere le persone a fornire dati sensibili, credenziali o pagamenti. I backup regolari servono a recuperare informazioni in caso di errore umano, guasto, furto o cancellazione accidentale. L'autenticazione a due fattori rafforza l'accesso aggiungendo un secondo controllo oltre alla password."
+        },
+        {
+          "score": 1.8542,
+          "chunk_id": 5,
+          "text": "La sicurezza informatica protegge dati, dispositivi, account e sistemi attraverso pratiche, strumenti e comportamenti corretti. Il phishing usa l'inganno per convincere le persone a fornire dati sensibili, credenziali o pagamenti. I backup regolari servono a recuperare informazioni in caso di errore umano, guasto, furto o cancellazione accidentale. L'autenticazione a due fattori rafforza l'accesso aggiungendo un secondo controllo oltre alla password. Il ransomware è un malware che blocca o cifra i dati e chiede un pagamento per ripristinarli. Gli aggiornamenti software correggono errori e chiudono vulnerabilità di sicurezza."
+        }
+      ]
+    },
+    {
+      "status": "OK",
+      "question": "A cosa servono i backup regolari?",
+      "answer": "I backup regolari servono a recuperare informazioni in caso di errore umano, guasto, furto o cancellazione accidentale.",
+      "elapsed_ms": 0.3268749999999973,
+      "matches": [
+        {
+          "score": 3.7085,
+          "chunk_id": 0,
+          "text": "Sezione 1. La sicurezza informatica protegge dati, dispositivi, account e sistemi attraverso pratiche, strumenti e comportamenti corretti. Il phishing usa l'inganno per convincere le persone a fornire dati sensibili, credenziali o pagamenti. I backup regolari servono a recuperare informazioni in caso di errore umano, guasto, furto o cancellazione accidentale. L'autenticazione a due fattori rafforza l'accesso aggiungendo un secondo controllo oltre alla password. Il ransomware è un malware che blocca o cifra i dati e chiede un pagamento per ripristinarli. Gli aggiornamenti software correggono errori e chiudono vulnerabilità di sicurezza."
+        },
+        {
+          "score": 3.7085,
+          "chunk_id": 2,
+          "text": "I backup regolari servono a recuperare informazioni in caso di errore umano, guasto, furto o cancellazione accidentale. L'autenticazione a due fattori rafforza l'accesso aggiungendo un secondo controllo oltre alla password. Il ransomware è un malware che blocca o cifra i dati e chiede un pagamento per ripristinarli. Gli aggiornamenti software correggono errori e chiudono vulnerabilità di sicurezza. Un password manager aiuta a conservare password lunghe e uniche senza doverle ricordare tutte. Le credenziali rubate possono consentire accessi non autorizzati ad account o sistemi."
+        },
+        {
+          "score": 3.7085,
+          "chunk_id": 3,
+          "text": "Gli account amministrativi hanno privilegi elevati e devono essere protetti con controlli aggiuntivi. I documenti aziendali possono contenere informazioni operative, contratti, credenziali o dati riservati. \\nSezione 3. La sicurezza informatica protegge dati, dispositivi, account e sistemi attraverso pratiche, strumenti e comportamenti corretti. Il phishing usa l'inganno per convincere le persone a fornire dati sensibili, credenziali o pagamenti. I backup regolari servono a recuperare informazioni in caso di errore umano, guasto, furto o cancellazione accidentale. L'autenticazione a due fattori rafforza l'accesso aggiungendo un secondo controllo oltre alla password."
+        },
+        {
+          "score": 3.7085,
+          "chunk_id": 5,
+          "text": "La sicurezza informatica protegge dati, dispositivi, account e sistemi attraverso pratiche, strumenti e comportamenti corretti. Il phishing usa l'inganno per convincere le persone a fornire dati sensibili, credenziali o pagamenti. I backup regolari servono a recuperare informazioni in caso di errore umano, guasto, furto o cancellazione accidentale. L'autenticazione a due fattori rafforza l'accesso aggiungendo un secondo controllo oltre alla password. Il ransomware è un malware che blocca o cifra i dati e chiede un pagamento per ripristinarli. Gli aggiornamenti software correggono errori e chiudono vulnerabilità di sicurezza."
+        }
+      ]
+    },
+    {
+      "status": "OK",
+      "question": "Come funziona l'autenticazione a due fattori?",
+      "answer": "L'autenticazione a due fattori rafforza l'accesso aggiungendo un secondo controllo oltre alla password.",
+      "elapsed_ms": 0.3604590000000005,
+      "matches": [
+        {
+          "score": 5.5627,
+          "chunk_id": 0,
+          "text": "Sezione 1. La sicurezza informatica protegge dati, dispositivi, account e sistemi attraverso pratiche, strumenti e comportamenti corretti. Il phishing usa l'inganno per convincere le persone a fornire dati sensibili, credenziali o pagamenti. I backup regolari servono a recuperare informazioni in caso di errore umano, guasto, furto o cancellazione accidentale. L'autenticazione a due fattori rafforza l'accesso aggiungendo un secondo controllo oltre alla password. Il ransomware è un malware che blocca o cifra i dati e chiede un pagamento per ripristinarli. Gli aggiornamenti software correggono errori e chiudono vulnerabilità di sicurezza."
+        },
+        {
+          "score": 5.5627,
+          "chunk_id": 2,
+          "text": "I backup regolari servono a recuperare informazioni in caso di errore umano, guasto, furto o cancellazione accidentale. L'autenticazione a due fattori rafforza l'accesso aggiungendo un secondo controllo oltre alla password. Il ransomware è un malware che blocca o cifra i dati e chiede un pagamento per ripristinarli. Gli aggiornamenti software correggono errori e chiudono vulnerabilità di sicurezza. Un password manager aiuta a conservare password lunghe e uniche senza doverle ricordare tutte. Le credenziali rubate possono consentire accessi non autorizzati ad account o sistemi."
+        },
+        {
+          "score": 5.5627,
+          "chunk_id": 3,
+          "text": "Gli account amministrativi hanno privilegi elevati e devono essere protetti con controlli aggiuntivi. I documenti aziendali possono contenere informazioni operative, contratti, credenziali o dati riservati. \\nSezione 3. La sicurezza informatica protegge dati, dispositivi, account e sistemi attraverso pratiche, strumenti e comportamenti corretti. Il phishing usa l'inganno per convincere le persone a fornire dati sensibili, credenziali o pagamenti. I backup regolari servono a recuperare informazioni in caso di errore umano, guasto, furto o cancellazione accidentale. L'autenticazione a due fattori rafforza l'accesso aggiungendo un secondo controllo oltre alla password."
+        },
+        {
+          "score": 5.5627,
+          "chunk_id": 5,
+          "text": "La sicurezza informatica protegge dati, dispositivi, account e sistemi attraverso pratiche, strumenti e comportamenti corretti. Il phishing usa l'inganno per convincere le persone a fornire dati sensibili, credenziali o pagamenti. I backup regolari servono a recuperare informazioni in caso di errore umano, guasto, furto o cancellazione accidentale. L'autenticazione a due fattori rafforza l'accesso aggiungendo un secondo controllo oltre alla password. Il ransomware è un malware che blocca o cifra i dati e chiede un pagamento per ripristinarli. Gli aggiornamenti software correggono errori e chiudono vulnerabilità di sicurezza."
+        }
+      ]
+    },
+    {
+      "status": "OK",
+      "question": "Che cos'è il ransomware?",
+      "answer": "Il ransomware è un malware che blocca o cifra i dati e chiede un pagamento per ripristinarli.",
+      "elapsed_ms": 0.3639170000000018,
+      "matches": [
+        {
+          "score": 1.8542,
+          "chunk_id": 0,
+          "text": "Sezione 1. La sicurezza informatica protegge dati, dispositivi, account e sistemi attraverso pratiche, strumenti e comportamenti corretti. Il phishing usa l'inganno per convincere le persone a fornire dati sensibili, credenziali o pagamenti. I backup regolari servono a recuperare informazioni in caso di errore umano, guasto, furto o cancellazione accidentale. L'autenticazione a due fattori rafforza l'accesso aggiungendo un secondo controllo oltre alla password. Il ransomware è un malware che blocca o cifra i dati e chiede un pagamento per ripristinarli. Gli aggiornamenti software correggono errori e chiudono vulnerabilità di sicurezza."
+        },
+        {
+          "score": 1.8542,
+          "chunk_id": 2,
+          "text": "I backup regolari servono a recuperare informazioni in caso di errore umano, guasto, furto o cancellazione accidentale. L'autenticazione a due fattori rafforza l'accesso aggiungendo un secondo controllo oltre alla password. Il ransomware è un malware che blocca o cifra i dati e chiede un pagamento per ripristinarli. Gli aggiornamenti software correggono errori e chiudono vulnerabilità di sicurezza. Un password manager aiuta a conservare password lunghe e uniche senza doverle ricordare tutte. Le credenziali rubate possono consentire accessi non autorizzati ad account o sistemi."
+        },
+        {
+          "score": 1.8542,
+          "chunk_id": 4,
+          "text": "Il ransomware è un malware che blocca o cifra i dati e chiede un pagamento per ripristinarli. Gli aggiornamenti software correggono errori e chiudono vulnerabilità di sicurezza. Un password manager aiuta a conservare password lunghe e uniche senza doverle ricordare tutte. Le credenziali rubate possono consentire accessi non autorizzati ad account o sistemi. Gli account amministrativi hanno privilegi elevati e devono essere protetti con controlli aggiuntivi. I documenti aziendali possono contenere informazioni operative, contratti, credenziali o dati riservati. \\nSezione 4."
+        },
+        {
+          "score": 1.8542,
+          "chunk_id": 5,
+          "text": "La sicurezza informatica protegge dati, dispositivi, account e sistemi attraverso pratiche, strumenti e comportamenti corretti. Il phishing usa l'inganno per convincere le persone a fornire dati sensibili, credenziali o pagamenti. I backup regolari servono a recuperare informazioni in caso di errore umano, guasto, furto o cancellazione accidentale. L'autenticazione a due fattori rafforza l'accesso aggiungendo un secondo controllo oltre alla password. Il ransomware è un malware che blocca o cifra i dati e chiede un pagamento per ripristinarli. Gli aggiornamenti software correggono errori e chiudono vulnerabilità di sicurezza."
+        }
+      ]
+    },
+    {
+      "status": "OK",
+      "question": "Perché sono importanti gli aggiornamenti software?",
+      "answer": "Gli aggiornamenti software correggono errori e chiudono vulnerabilità di sicurezza.",
+      "elapsed_ms": 0.3680830000000017,
+      "matches": [
+        {
+          "score": 3.7085,
+          "chunk_id": 0,
+          "text": "Sezione 1. La sicurezza informatica protegge dati, dispositivi, account e sistemi attraverso pratiche, strumenti e comportamenti corretti. Il phishing usa l'inganno per convincere le persone a fornire dati sensibili, credenziali o pagamenti. I backup regolari servono a recuperare informazioni in caso di errore umano, guasto, furto o cancellazione accidentale. L'autenticazione a due fattori rafforza l'accesso aggiungendo un secondo controllo oltre alla password. Il ransomware è un malware che blocca o cifra i dati e chiede un pagamento per ripristinarli. Gli aggiornamenti software correggono errori e chiudono vulnerabilità di sicurezza."
+        },
+        {
+          "score": 3.7085,
+          "chunk_id": 2,
+          "text": "I backup regolari servono a recuperare informazioni in caso di errore umano, guasto, furto o cancellazione accidentale. L'autenticazione a due fattori rafforza l'accesso aggiungendo un secondo controllo oltre alla password. Il ransomware è un malware che blocca o cifra i dati e chiede un pagamento per ripristinarli. Gli aggiornamenti software correggono errori e chiudono vulnerabilità di sicurezza. Un password manager aiuta a conservare password lunghe e uniche senza doverle ricordare tutte. Le credenziali rubate possono consentire accessi non autorizzati ad account o sistemi."
+        },
+        {
+          "score": 3.7085,
+          "chunk_id": 4,
+          "text": "Il ransomware è un malware che blocca o cifra i dati e chiede un pagamento per ripristinarli. Gli aggiornamenti software correggono errori e chiudono vulnerabilità di sicurezza. Un password manager aiuta a conservare password lunghe e uniche senza doverle ricordare tutte. Le credenziali rubate possono consentire accessi non autorizzati ad account o sistemi. Gli account amministrativi hanno privilegi elevati e devono essere protetti con controlli aggiuntivi. I documenti aziendali possono contenere informazioni operative, contratti, credenziali o dati riservati. \\nSezione 4."
+        },
+        {
+          "score": 3.7085,
+          "chunk_id": 5,
+          "text": "La sicurezza informatica protegge dati, dispositivi, account e sistemi attraverso pratiche, strumenti e comportamenti corretti. Il phishing usa l'inganno per convincere le persone a fornire dati sensibili, credenziali o pagamenti. I backup regolari servono a recuperare informazioni in caso di errore umano, guasto, furto o cancellazione accidentale. L'autenticazione a due fattori rafforza l'accesso aggiungendo un secondo controllo oltre alla password. Il ransomware è un malware che blocca o cifra i dati e chiede un pagamento per ripristinarli. Gli aggiornamenti software correggono errori e chiudono vulnerabilità di sicurezza."
+        }
+      ]
+    },
+    {
+      "status": "OK",
+      "question": "Che cosa fa un password manager?",
+      "answer": "Un password manager aiuta a conservare password lunghe e uniche senza doverle ricordare tutte.",
+      "elapsed_ms": 0.47141599999999884,
+      "matches": [
+        {
+          "score": 3.2042,
+          "chunk_id": 1,
+          "text": "Un password manager aiuta a conservare password lunghe e uniche senza doverle ricordare tutte. Le credenziali rubate possono consentire accessi non autorizzati ad account o sistemi. Gli account amministrativi hanno privilegi elevati e devono essere protetti con controlli aggiuntivi. I documenti aziendali possono contenere informazioni operative, contratti, credenziali o dati riservati. \\nSezione 2. La sicurezza informatica protegge dati, dispositivi, account e sistemi attraverso pratiche, strumenti e comportamenti corretti. Il phishing usa l'inganno per convincere le persone a fornire dati sensibili, credenziali o pagamenti."
+        },
+        {
+          "score": 3.2042,
+          "chunk_id": 2,
+          "text": "I backup regolari servono a recuperare informazioni in caso di errore umano, guasto, furto o cancellazione accidentale. L'autenticazione a due fattori rafforza l'accesso aggiungendo un secondo controllo oltre alla password. Il ransomware è un malware che blocca o cifra i dati e chiede un pagamento per ripristinarli. Gli aggiornamenti software correggono errori e chiudono vulnerabilità di sicurezza. Un password manager aiuta a conservare password lunghe e uniche senza doverle ricordare tutte. Le credenziali rubate possono consentire accessi non autorizzati ad account o sistemi."
+        },
+        {
+          "score": 3.2042,
+          "chunk_id": 4,
+          "text": "Il ransomware è un malware che blocca o cifra i dati e chiede un pagamento per ripristinarli. Gli aggiornamenti software correggono errori e chiudono vulnerabilità di sicurezza. Un password manager aiuta a conservare password lunghe e uniche senza doverle ricordare tutte. Le credenziali rubate possono consentire accessi non autorizzati ad account o sistemi. Gli account amministrativi hanno privilegi elevati e devono essere protetti con controlli aggiuntivi. I documenti aziendali possono contenere informazioni operative, contratti, credenziali o dati riservati. \\nSezione 4."
+        },
+        {
+          "score": 3.2042,
+          "chunk_id": 6,
+          "text": "Un password manager aiuta a conservare password lunghe e uniche senza doverle ricordare tutte. Le credenziali rubate possono consentire accessi non autorizzati ad account o sistemi. Gli account amministrativi hanno privilegi elevati e devono essere protetti con controlli aggiuntivi. I documenti aziendali possono contenere informazioni operative, contratti, credenziali o dati riservati. \\nSezione 5. La sicurezza informatica protegge dati, dispositivi, account e sistemi attraverso pratiche, strumenti e comportamenti corretti. Il phishing usa l'inganno per convincere le persone a fornire dati sensibili, credenziali o pagamenti."
+        }
+      ]
+    },
+    {
+      "status": "OK",
+      "question": "Cosa possono causare le credenziali rubate?",
+      "answer": "Le credenziali rubate possono consentire accessi non autorizzati ad account o sistemi.",
+      "elapsed_ms": 0.508999999999999,
+      "matches": [
+        {
+          "score": 3.2042,
+          "chunk_id": 1,
+          "text": "Un password manager aiuta a conservare password lunghe e uniche senza doverle ricordare tutte. Le credenziali rubate possono consentire accessi non autorizzati ad account o sistemi. Gli account amministrativi hanno privilegi elevati e devono essere protetti con controlli aggiuntivi. I documenti aziendali possono contenere informazioni operative, contratti, credenziali o dati riservati. \\nSezione 2. La sicurezza informatica protegge dati, dispositivi, account e sistemi attraverso pratiche, strumenti e comportamenti corretti. Il phishing usa l'inganno per convincere le persone a fornire dati sensibili, credenziali o pagamenti."
+        },
+        {
+          "score": 3.2042,
+          "chunk_id": 2,
+          "text": "I backup regolari servono a recuperare informazioni in caso di errore umano, guasto, furto o cancellazione accidentale. L'autenticazione a due fattori rafforza l'accesso aggiungendo un secondo controllo oltre alla password. Il ransomware è un malware che blocca o cifra i dati e chiede un pagamento per ripristinarli. Gli aggiornamenti software correggono errori e chiudono vulnerabilità di sicurezza. Un password manager aiuta a conservare password lunghe e uniche senza doverle ricordare tutte. Le credenziali rubate possono consentire accessi non autorizzati ad account o sistemi."
+        },
+        {
+          "score": 3.2042,
+          "chunk_id": 4,
+          "text": "Il ransomware è un malware che blocca o cifra i dati e chiede un pagamento per ripristinarli. Gli aggiornamenti software correggono errori e chiudono vulnerabilità di sicurezza. Un password manager aiuta a conservare password lunghe e uniche senza doverle ricordare tutte. Le credenziali rubate possono consentire accessi non autorizzati ad account o sistemi. Gli account amministrativi hanno privilegi elevati e devono essere protetti con controlli aggiuntivi. I documenti aziendali possono contenere informazioni operative, contratti, credenziali o dati riservati. \\nSezione 4."
+        },
+        {
+          "score": 3.2042,
+          "chunk_id": 6,
+          "text": "Un password manager aiuta a conservare password lunghe e uniche senza doverle ricordare tutte. Le credenziali rubate possono consentire accessi non autorizzati ad account o sistemi. Gli account amministrativi hanno privilegi elevati e devono essere protetti con controlli aggiuntivi. I documenti aziendali possono contenere informazioni operative, contratti, credenziali o dati riservati. \\nSezione 5. La sicurezza informatica protegge dati, dispositivi, account e sistemi attraverso pratiche, strumenti e comportamenti corretti. Il phishing usa l'inganno per convincere le persone a fornire dati sensibili, credenziali o pagamenti."
+        }
+      ]
+    },
+    {
+      "status": "OK",
+      "question": "Che cosa sono gli account amministrativi?",
+      "answer": "Gli account amministrativi hanno privilegi elevati e devono essere protetti con controlli aggiuntivi.",
+      "elapsed_ms": 0.5387910000000002,
+      "matches": [
+        {
+          "score": 3.2042,
+          "chunk_id": 1,
+          "text": "Un password manager aiuta a conservare password lunghe e uniche senza doverle ricordare tutte. Le credenziali rubate possono consentire accessi non autorizzati ad account o sistemi. Gli account amministrativi hanno privilegi elevati e devono essere protetti con controlli aggiuntivi. I documenti aziendali possono contenere informazioni operative, contratti, credenziali o dati riservati. \\nSezione 2. La sicurezza informatica protegge dati, dispositivi, account e sistemi attraverso pratiche, strumenti e comportamenti corretti. Il phishing usa l'inganno per convincere le persone a fornire dati sensibili, credenziali o pagamenti."
+        },
+        {
+          "score": 3.2042,
+          "chunk_id": 3,
+          "text": "Gli account amministrativi hanno privilegi elevati e devono essere protetti con controlli aggiuntivi. I documenti aziendali possono contenere informazioni operative, contratti, credenziali o dati riservati. \\nSezione 3. La sicurezza informatica protegge dati, dispositivi, account e sistemi attraverso pratiche, strumenti e comportamenti corretti. Il phishing usa l'inganno per convincere le persone a fornire dati sensibili, credenziali o pagamenti. I backup regolari servono a recuperare informazioni in caso di errore umano, guasto, furto o cancellazione accidentale. L'autenticazione a due fattori rafforza l'accesso aggiungendo un secondo controllo oltre alla password."
+        },
+        {
+          "score": 3.2042,
+          "chunk_id": 4,
+          "text": "Il ransomware è un malware che blocca o cifra i dati e chiede un pagamento per ripristinarli. Gli aggiornamenti software correggono errori e chiudono vulnerabilità di sicurezza. Un password manager aiuta a conservare password lunghe e uniche senza doverle ricordare tutte. Le credenziali rubate possono consentire accessi non autorizzati ad account o sistemi. Gli account amministrativi hanno privilegi elevati e devono essere protetti con controlli aggiuntivi. I documenti aziendali possono contenere informazioni operative, contratti, credenziali o dati riservati. \\nSezione 4."
+        },
+        {
+          "score": 3.2042,
+          "chunk_id": 6,
+          "text": "Un password manager aiuta a conservare password lunghe e uniche senza doverle ricordare tutte. Le credenziali rubate possono consentire accessi non autorizzati ad account o sistemi. Gli account amministrativi hanno privilegi elevati e devono essere protetti con controlli aggiuntivi. I documenti aziendali possono contenere informazioni operative, contratti, credenziali o dati riservati. \\nSezione 5. La sicurezza informatica protegge dati, dispositivi, account e sistemi attraverso pratiche, strumenti e comportamenti corretti. Il phishing usa l'inganno per convincere le persone a fornire dati sensibili, credenziali o pagamenti."
+        }
+      ]
+    },
+    {
+      "status": "OK",
+      "question": "Che cosa possono contenere i documenti aziendali?",
+      "answer": "I documenti aziendali possono contenere informazioni operative, contratti, credenziali o dati riservati.",
+      "elapsed_ms": 0.3327499999999997,
+      "matches": [
+        {
+          "score": 5.5627,
+          "chunk_id": 1,
+          "text": "Un password manager aiuta a conservare password lunghe e uniche senza doverle ricordare tutte. Le credenziali rubate possono consentire accessi non autorizzati ad account o sistemi. Gli account amministrativi hanno privilegi elevati e devono essere protetti con controlli aggiuntivi. I documenti aziendali possono contenere informazioni operative, contratti, credenziali o dati riservati. \\nSezione 2. La sicurezza informatica protegge dati, dispositivi, account e sistemi attraverso pratiche, strumenti e comportamenti corretti. Il phishing usa l'inganno per convincere le persone a fornire dati sensibili, credenziali o pagamenti."
+        },
+        {
+          "score": 5.5627,
+          "chunk_id": 3,
+          "text": "Gli account amministrativi hanno privilegi elevati e devono essere protetti con controlli aggiuntivi. I documenti aziendali possono contenere informazioni operative, contratti, credenziali o dati riservati. \\nSezione 3. La sicurezza informatica protegge dati, dispositivi, account e sistemi attraverso pratiche, strumenti e comportamenti corretti. Il phishing usa l'inganno per convincere le persone a fornire dati sensibili, credenziali o pagamenti. I backup regolari servono a recuperare informazioni in caso di errore umano, guasto, furto o cancellazione accidentale. L'autenticazione a due fattori rafforza l'accesso aggiungendo un secondo controllo oltre alla password."
+        },
+        {
+          "score": 5.5627,
+          "chunk_id": 4,
+          "text": "Il ransomware è un malware che blocca o cifra i dati e chiede un pagamento per ripristinarli. Gli aggiornamenti software correggono errori e chiudono vulnerabilità di sicurezza. Un password manager aiuta a conservare password lunghe e uniche senza doverle ricordare tutte. Le credenziali rubate possono consentire accessi non autorizzati ad account o sistemi. Gli account amministrativi hanno privilegi elevati e devono essere protetti con controlli aggiuntivi. I documenti aziendali possono contenere informazioni operative, contratti, credenziali o dati riservati. \\nSezione 4."
+        },
+        {
+          "score": 5.5627,
+          "chunk_id": 6,
+          "text": "Un password manager aiuta a conservare password lunghe e uniche senza doverle ricordare tutte. Le credenziali rubate possono consentire accessi non autorizzati ad account o sistemi. Gli account amministrativi hanno privilegi elevati e devono essere protetti con controlli aggiuntivi. I documenti aziendali possono contenere informazioni operative, contratti, credenziali o dati riservati. \\nSezione 5. La sicurezza informatica protegge dati, dispositivi, account e sistemi attraverso pratiche, strumenti e comportamenti corretti. Il phishing usa l'inganno per convincere le persone a fornire dati sensibili, credenziali o pagamenti."
+        }
+      ]
+    },
+    {
+      "status": "OK",
+      "question": "Che cosa protegge la sicurezza informatica?",
+      "answer": "La sicurezza informatica protegge dati, dispositivi, account e sistemi attraverso pratiche, strumenti e comportamenti corretti.",
+      "elapsed_ms": 0.5163330000000008,
+      "matches": [
+        {
+          "score": 5.0585,
+          "chunk_id": 0,
+          "text": "Sezione 1. La sicurezza informatica protegge dati, dispositivi, account e sistemi attraverso pratiche, strumenti e comportamenti corretti. Il phishing usa l'inganno per convincere le persone a fornire dati sensibili, credenziali o pagamenti. I backup regolari servono a recuperare informazioni in caso di errore umano, guasto, furto o cancellazione accidentale. L'autenticazione a due fattori rafforza l'accesso aggiungendo un secondo controllo oltre alla password. Il ransomware è un malware che blocca o cifra i dati e chiede un pagamento per ripristinarli. Gli aggiornamenti software correggono errori e chiudono vulnerabilità di sicurezza."
+        },
+        {
+          "score": 5.0585,
+          "chunk_id": 1,
+          "text": "Un password manager aiuta a conservare password lunghe e uniche senza doverle ricordare tutte. Le credenziali rubate possono consentire accessi non autorizzati ad account o sistemi. Gli account amministrativi hanno privilegi elevati e devono essere protetti con controlli aggiuntivi. I documenti aziendali possono contenere informazioni operative, contratti, credenziali o dati riservati. \\nSezione 2. La sicurezza informatica protegge dati, dispositivi, account e sistemi attraverso pratiche, strumenti e comportamenti corretti. Il phishing usa l'inganno per convincere le persone a fornire dati sensibili, credenziali o pagamenti."
+        },
+        {
+          "score": 5.0585,
+          "chunk_id": 3,
+          "text": "Gli account amministrativi hanno privilegi elevati e devono essere protetti con controlli aggiuntivi. I documenti aziendali possono contenere informazioni operative, contratti, credenziali o dati riservati. \\nSezione 3. La sicurezza informatica protegge dati, dispositivi, account e sistemi attraverso pratiche, strumenti e comportamenti corretti. Il phishing usa l'inganno per convincere le persone a fornire dati sensibili, credenziali o pagamenti. I backup regolari servono a recuperare informazioni in caso di errore umano, guasto, furto o cancellazione accidentale. L'autenticazione a due fattori rafforza l'accesso aggiungendo un secondo controllo oltre alla password."
+        },
+        {
+          "score": 5.0585,
+          "chunk_id": 5,
+          "text": "La sicurezza informatica protegge dati, dispositivi, account e sistemi attraverso pratiche, strumenti e comportamenti corretti. Il phishing usa l'inganno per convincere le persone a fornire dati sensibili, credenziali o pagamenti. I backup regolari servono a recuperare informazioni in caso di errore umano, guasto, furto o cancellazione accidentale. L'autenticazione a due fattori rafforza l'accesso aggiungendo un secondo controllo oltre alla password. Il ransomware è un malware che blocca o cifra i dati e chiede un pagamento per ripristinarli. Gli aggiornamenti software correggono errori e chiudono vulnerabilità di sicurezza."
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "status": "OK",
+    "summary": "I backup regolari servono a recuperare informazioni in caso di errore umano, guasto, furto o cancellazione accidentale. La sicurezza informatica protegge dati, dispositivi, account e sistemi attraverso pratiche, strumenti e comportamenti corretti. L'autenticazione a due fattori rafforza l'accesso aggiungendo un secondo controllo oltre alla password. Un password manager aiuta a conservare password lunghe e uniche senza doverle ricordare tutte. Il phishing usa l'inganno per convincere le persone a fornire dati sensibili, credenziali o pagamenti. I documenti aziendali possono contenere informazioni operative, contratti, credenziali o dati riservati. Il ransomware è un malware che blocca o cifra i dati e chiede un pagamento per ripristinarli. Gli account amministrativi hanno privilegi elevati e devono essere protetti con controlli aggiuntivi. Le credenziali rubate possono consentire accessi non autorizzati ad account o sistemi. Gli aggiornamenti software correggono errori e chiudono vulnerabilità di sicurezza.",
+    "sentences_used": 10,
+    "elapsed_ms": 3.261833000000002
+  },
+  "limits": [
+    "Documento testuale simulato, non PDF reale.",
+    "Q&A extractive, non generazione libera.",
+    "Summary extractive, non ancora compressione progressiva 10%/1%.",
+    "Indice in memoria, non ancora cache persistente per file utente."
+  ]
+}
