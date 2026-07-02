@@ -1,0 +1,36 @@
+{
+  "validator": "valida_mini_llm_real_quality_gate_v392",
+  "status": "PASS",
+  "errors": [],
+  "bad_report_status": "FAIL",
+  "bad_report_errors_sample": [
+    "answer_1:bad_fragment:# Documento",
+    "answer_1:bad_fragment:## Scopo",
+    "answer_1:bad_fragment:Documento RAG di test",
+    "answer_1:bad_fragment:fonte di prova",
+    "quality_summary:bad_fragment:al dominio reale",
+    "quality_summary:bad_start:al dominio reale; - errori grammaticali o frasi insolite; - richiesta di password, codici o dati bancari.",
+    "brief_summary:bad_fragment:da cui.",
+    "brief_summary:bad_fragment:documento non è pensato come",
+    "brief_summary:bad_ending:Il documento non è pensato come manuale tecnico avanzato, ma come materiale formativo chiaro da cui.",
+    "study_pack_summary:bad_fragment:Documento RAG di test",
+    "card_1_title:bad_fragment:al dominio reale",
+    "card_1_title:bad_title_start:Al dominio reale - errori",
+    "card_1_message:bad_fragment:al dominio reale",
+    "card_1_message:bad_fragment:codici o dati.",
+    "card_1_message:bad_start:al dominio reale; - errori grammaticali o frasi insolite; - richiesta di password, codici o dati.",
+    "qa_1_question:bad_question_pattern:^Che cosa usa non riguarda:Che cosa usa non riguarda solo gli esperti informatici: ogni persona che?",
+    "test_1_question:question_too_long:Che cosa può fare il documento non è pensato come manuale tecnico avanzato, ma come materiale formativo chiaro da cui un sistema RAG?",
+    "test_1_question:bad_question_pattern:^Che cosa può fare il documento non:Che cosa può fare il documento non è pensato come manuale tecnico avanzato, ma come materiale formativo chiaro da cui un sistema RAG?",
+    "test_1_question:bad_fragment:documento non è pensato come",
+    "test_1_option_1:bad_fragment:al dominio reale"
+  ],
+  "good_report_status": "PASS",
+  "good_report_errors": [],
+  "limits": [
+    "Valida il gate su report costruiti.",
+    "Non modifica il motore generativo.",
+    "Serve a impedire falsi PASS sui test reali.",
+    "Titoli card validati come titoli, non come frasi."
+  ]
+}
