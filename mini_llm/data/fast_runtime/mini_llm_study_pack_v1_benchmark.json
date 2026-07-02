@@ -1,0 +1,203 @@
+{
+  "benchmark": "mini_llm_study_pack_v1",
+  "status": "PASS",
+  "errors": [],
+  "total_ms": 2.8392920000000004,
+  "pack_elapsed_ms": 0.8069999999999987,
+  "counts": {
+    "summary_sentences": 8,
+    "cards": 6,
+    "qas": 8,
+    "test_questions": 6
+  },
+  "summary": {
+    "status": "OK",
+    "summary": "I backup regolari servono a recuperare informazioni in caso di errore umano, guasto, furto o cancellazione accidentale. La sicurezza informatica protegge dati, dispositivi, account e sistemi attraverso pratiche, strumenti e comportamenti corretti. L'autenticazione a due fattori rafforza l'accesso aggiungendo un secondo controllo oltre alla password. Il phishing usa l'inganno per convincere le persone a fornire dati sensibili, credenziali o pagamenti. Un password manager aiuta a conservare password lunghe e uniche senza doverle ricordare tutte. La formazione del personale riduce errori, distrazioni e comportamenti rischiosi durante il lavoro quotidiano. Le procedure di sicurezza aiutano a gestire incidenti, accessi, backup, dispositivi e comunicazioni interne. I documenti aziendali possono contenere informazioni operative, contratti, credenziali o dati riservati.",
+    "sentences_used": 8,
+    "elapsed_ms": 0.1417080000000008
+  },
+  "cards": [
+    {
+      "type": "study_card",
+      "title": "Backup regolari recuperare informazioni",
+      "message": "I backup regolari servono a recuperare informazioni in caso di errore umano, guasto, furto o cancellazione accidentale.",
+      "bullets": [
+        "Concetto: Backup regolari recuperare informazioni",
+        "Dettaglio chiave: I backup regolari servono a recuperare informazioni in caso di errore umano, guasto, furto o cancellazione accidentale.",
+        "Parole guida: accidentale, backup, cancellazione, caso, errore, furto"
+      ]
+    },
+    {
+      "type": "study_card",
+      "title": "Sicurezza informatica protegge dati",
+      "message": "La sicurezza informatica protegge dati, dispositivi, account e sistemi attraverso pratiche, strumenti e comportamenti corretti.",
+      "bullets": [
+        "Concetto: Sicurezza informatica protegge dati",
+        "Dettaglio chiave: La sicurezza informatica protegge dati, dispositivi, account e sistemi attraverso pratiche, strumenti e comportamenti corretti.",
+        "Parole guida: account, attraverso, comportamenti, corretti, dati, dispositivi"
+      ]
+    },
+    {
+      "type": "study_card",
+      "title": "L'autenticazione fattori rafforza l'accesso",
+      "message": "L'autenticazione a due fattori rafforza l'accesso aggiungendo un secondo controllo oltre alla password.",
+      "bullets": [
+        "Concetto: L'autenticazione fattori rafforza l'accesso",
+        "Dettaglio chiave: L'autenticazione a due fattori rafforza l'accesso aggiungendo un secondo controllo oltre alla password.",
+        "Parole guida: aggiungendo, controllo, due, fattori, l'accesso, l'autenticazione"
+      ]
+    },
+    {
+      "type": "study_card",
+      "title": "Phishing l'inganno convincere persone",
+      "message": "Il phishing usa l'inganno per convincere le persone a fornire dati sensibili, credenziali o pagamenti.",
+      "bullets": [
+        "Concetto: Phishing l'inganno convincere persone",
+        "Dettaglio chiave: Il phishing usa l'inganno per convincere le persone a fornire dati sensibili, credenziali o pagamenti.",
+        "Parole guida: convincere, credenziali, dati, fornire, l'inganno, pagamenti"
+      ]
+    },
+    {
+      "type": "study_card",
+      "title": "Password manager aiuta conservare",
+      "message": "Un password manager aiuta a conservare password lunghe e uniche senza doverle ricordare tutte.",
+      "bullets": [
+        "Concetto: Password manager aiuta conservare",
+        "Dettaglio chiave: Un password manager aiuta a conservare password lunghe e uniche senza doverle ricordare tutte.",
+        "Parole guida: aiuta, conservare, doverle, lunghe, manager, password"
+      ]
+    },
+    {
+      "type": "study_card",
+      "title": "Formazione personale riduce errori",
+      "message": "La formazione del personale riduce errori, distrazioni e comportamenti rischiosi durante il lavoro quotidiano.",
+      "bullets": [
+        "Concetto: Formazione personale riduce errori",
+        "Dettaglio chiave: La formazione del personale riduce errori, distrazioni e comportamenti rischiosi durante il lavoro quotidiano.",
+        "Parole guida: comportamenti, distrazioni, durante, errori, formazione, lavoro"
+      ]
+    }
+  ],
+  "qas": [
+    {
+      "question": "A cosa servono backup regolari?",
+      "answer": "I backup regolari servono a recuperare informazioni in caso di errore umano, guasto, furto o cancellazione accidentale.",
+      "source_sentence": "I backup regolari servono a recuperare informazioni in caso di errore umano, guasto, furto o cancellazione accidentale."
+    },
+    {
+      "question": "Che cosa protegge sicurezza informatica?",
+      "answer": "La sicurezza informatica protegge dati, dispositivi, account e sistemi attraverso pratiche, strumenti e comportamenti corretti.",
+      "source_sentence": "La sicurezza informatica protegge dati, dispositivi, account e sistemi attraverso pratiche, strumenti e comportamenti corretti."
+    },
+    {
+      "question": "Che cosa rafforza L'autenticazione a due fattori?",
+      "answer": "L'autenticazione a due fattori rafforza l'accesso aggiungendo un secondo controllo oltre alla password.",
+      "source_sentence": "L'autenticazione a due fattori rafforza l'accesso aggiungendo un secondo controllo oltre alla password."
+    },
+    {
+      "question": "Che cosa usa phishing?",
+      "answer": "Il phishing usa l'inganno per convincere le persone a fornire dati sensibili, credenziali o pagamenti.",
+      "source_sentence": "Il phishing usa l'inganno per convincere le persone a fornire dati sensibili, credenziali o pagamenti."
+    },
+    {
+      "question": "Qual è il punto chiave su password manager aiuta conservare?",
+      "answer": "Un password manager aiuta a conservare password lunghe e uniche senza doverle ricordare tutte.",
+      "source_sentence": "Un password manager aiuta a conservare password lunghe e uniche senza doverle ricordare tutte."
+    },
+    {
+      "question": "Qual è il punto chiave su formazione personale riduce errori?",
+      "answer": "La formazione del personale riduce errori, distrazioni e comportamenti rischiosi durante il lavoro quotidiano.",
+      "source_sentence": "La formazione del personale riduce errori, distrazioni e comportamenti rischiosi durante il lavoro quotidiano."
+    },
+    {
+      "question": "Qual è il punto chiave su procedure sicurezza aiutano gestire?",
+      "answer": "Le procedure di sicurezza aiutano a gestire incidenti, accessi, backup, dispositivi e comunicazioni interne.",
+      "source_sentence": "Le procedure di sicurezza aiutano a gestire incidenti, accessi, backup, dispositivi e comunicazioni interne."
+    },
+    {
+      "question": "Che cosa possono causare documenti aziendali?",
+      "answer": "I documenti aziendali possono contenere informazioni operative, contratti, credenziali o dati riservati.",
+      "source_sentence": "I documenti aziendali possono contenere informazioni operative, contratti, credenziali o dati riservati."
+    }
+  ],
+  "test": [
+    {
+      "question": "A cosa servono backup regolari?",
+      "options": [
+        "I backup regolari servono a recuperare informazioni in caso di errore umano, guasto, furto o cancellazione accidentale.",
+        "La sicurezza informatica protegge dati, dispositivi, account e sistemi attraverso pratiche, strumenti e comportamenti corretti.",
+        "L'autenticazione a due fattori rafforza l'accesso aggiungendo un secondo controllo oltre alla password.",
+        "Il phishing usa l'inganno per convincere le persone a fornire dati sensibili, credenziali o pagamenti."
+      ],
+      "correct_index": 0,
+      "answer": "I backup regolari servono a recuperare informazioni in caso di errore umano, guasto, furto o cancellazione accidentale.",
+      "explanation": "La risposta corretta deriva dal documento: I backup regolari servono a recuperare informazioni in caso di errore umano, guasto, furto o cancellazione accidentale."
+    },
+    {
+      "question": "Che cosa protegge sicurezza informatica?",
+      "options": [
+        "La sicurezza informatica protegge dati, dispositivi, account e sistemi attraverso pratiche, strumenti e comportamenti corretti.",
+        "I backup regolari servono a recuperare informazioni in caso di errore umano, guasto, furto o cancellazione accidentale.",
+        "L'autenticazione a due fattori rafforza l'accesso aggiungendo un secondo controllo oltre alla password.",
+        "Il phishing usa l'inganno per convincere le persone a fornire dati sensibili, credenziali o pagamenti."
+      ],
+      "correct_index": 0,
+      "answer": "La sicurezza informatica protegge dati, dispositivi, account e sistemi attraverso pratiche, strumenti e comportamenti corretti.",
+      "explanation": "La risposta corretta deriva dal documento: La sicurezza informatica protegge dati, dispositivi, account e sistemi attraverso pratiche, strumenti e comportamenti corretti."
+    },
+    {
+      "question": "Che cosa rafforza L'autenticazione a due fattori?",
+      "options": [
+        "L'autenticazione a due fattori rafforza l'accesso aggiungendo un secondo controllo oltre alla password.",
+        "I backup regolari servono a recuperare informazioni in caso di errore umano, guasto, furto o cancellazione accidentale.",
+        "La sicurezza informatica protegge dati, dispositivi, account e sistemi attraverso pratiche, strumenti e comportamenti corretti.",
+        "Il phishing usa l'inganno per convincere le persone a fornire dati sensibili, credenziali o pagamenti."
+      ],
+      "correct_index": 0,
+      "answer": "L'autenticazione a due fattori rafforza l'accesso aggiungendo un secondo controllo oltre alla password.",
+      "explanation": "La risposta corretta deriva dal documento: L'autenticazione a due fattori rafforza l'accesso aggiungendo un secondo controllo oltre alla password."
+    },
+    {
+      "question": "Che cosa usa phishing?",
+      "options": [
+        "Il phishing usa l'inganno per convincere le persone a fornire dati sensibili, credenziali o pagamenti.",
+        "I backup regolari servono a recuperare informazioni in caso di errore umano, guasto, furto o cancellazione accidentale.",
+        "La sicurezza informatica protegge dati, dispositivi, account e sistemi attraverso pratiche, strumenti e comportamenti corretti.",
+        "L'autenticazione a due fattori rafforza l'accesso aggiungendo un secondo controllo oltre alla password."
+      ],
+      "correct_index": 0,
+      "answer": "Il phishing usa l'inganno per convincere le persone a fornire dati sensibili, credenziali o pagamenti.",
+      "explanation": "La risposta corretta deriva dal documento: Il phishing usa l'inganno per convincere le persone a fornire dati sensibili, credenziali o pagamenti."
+    },
+    {
+      "question": "Qual è il punto chiave su password manager aiuta conservare?",
+      "options": [
+        "Un password manager aiuta a conservare password lunghe e uniche senza doverle ricordare tutte.",
+        "I backup regolari servono a recuperare informazioni in caso di errore umano, guasto, furto o cancellazione accidentale.",
+        "La sicurezza informatica protegge dati, dispositivi, account e sistemi attraverso pratiche, strumenti e comportamenti corretti.",
+        "L'autenticazione a due fattori rafforza l'accesso aggiungendo un secondo controllo oltre alla password."
+      ],
+      "correct_index": 0,
+      "answer": "Un password manager aiuta a conservare password lunghe e uniche senza doverle ricordare tutte.",
+      "explanation": "La risposta corretta deriva dal documento: Un password manager aiuta a conservare password lunghe e uniche senza doverle ricordare tutte."
+    },
+    {
+      "question": "Qual è il punto chiave su formazione personale riduce errori?",
+      "options": [
+        "La formazione del personale riduce errori, distrazioni e comportamenti rischiosi durante il lavoro quotidiano.",
+        "I backup regolari servono a recuperare informazioni in caso di errore umano, guasto, furto o cancellazione accidentale.",
+        "La sicurezza informatica protegge dati, dispositivi, account e sistemi attraverso pratiche, strumenti e comportamenti corretti.",
+        "L'autenticazione a due fattori rafforza l'accesso aggiungendo un secondo controllo oltre alla password."
+      ],
+      "correct_index": 0,
+      "answer": "La formazione del personale riduce errori, distrazioni e comportamenti rischiosi durante il lavoro quotidiano.",
+      "explanation": "La risposta corretta deriva dal documento: La formazione del personale riduce errori, distrazioni e comportamenti rischiosi durante il lavoro quotidiano."
+    }
+  ],
+  "limits": [
+    "Study Pack V1 strutturato/extractive.",
+    "Non è ancora LLM neurale generativo.",
+    "Pensato per essere ultra rapido sopra il runtime documentale.",
+    "Il prossimo step collegherà CLI e poi livello LLM generativo controllato."
+  ]
+}
