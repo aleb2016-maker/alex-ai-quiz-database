@@ -1,0 +1,232 @@
+{
+  "benchmark": "mini_llm_study_pack_v2_quality",
+  "status": "PASS",
+  "errors": [],
+  "total_ms": 6.749417,
+  "pack_elapsed_ms": 0.7552500000000024,
+  "counts": {
+    "summary_sentences": 8,
+    "cards": 6,
+    "qas": 8,
+    "test_questions": 6
+  },
+  "summary": {
+    "status": "OK",
+    "summary": "I backup regolari servono a recuperare informazioni in caso di errore umano, guasto, furto o cancellazione accidentale. La sicurezza informatica protegge dati, dispositivi, account e sistemi attraverso pratiche, strumenti e comportamenti corretti. L'autenticazione a due fattori rafforza l'accesso aggiungendo un secondo controllo oltre alla password. Il phishing usa l'inganno per convincere le persone a fornire dati sensibili, credenziali o pagamenti. Un password manager aiuta a conservare password lunghe e uniche senza doverle ricordare tutte. La formazione del personale riduce errori, distrazioni e comportamenti rischiosi durante il lavoro quotidiano. Le procedure di sicurezza aiutano a gestire incidenti, accessi, backup, dispositivi e comunicazioni interne. I documenti aziendali possono contenere informazioni operative, contratti, credenziali o dati riservati.",
+    "sentences_used": 8,
+    "elapsed_ms": 0.1408750000000021
+  },
+  "cards": [
+    {
+      "type": "study_card",
+      "title": "Backup regolari",
+      "message": "I backup regolari servono a recuperare informazioni in caso di errore umano, guasto, furto o cancellazione accidentale.",
+      "bullets": [
+        "Da ricordare: I backup regolari servono a recuperare informazioni in caso di errore umano, guasto, furto o cancellazione accidentale.",
+        "Perché conta: Backup regolari è un punto centrale del documento.",
+        "Parole guida: backup, regolari, recuperare, informazioni, caso"
+      ],
+      "source_sentence": "I backup regolari servono a recuperare informazioni in caso di errore umano, guasto, furto o cancellazione accidentale."
+    },
+    {
+      "type": "study_card",
+      "title": "Sicurezza informatica",
+      "message": "La sicurezza informatica protegge dati, dispositivi, account e sistemi attraverso pratiche, strumenti e comportamenti corretti.",
+      "bullets": [
+        "Da ricordare: La sicurezza informatica protegge dati, dispositivi, account e sistemi attraverso pratiche, strumenti e comportamenti corretti.",
+        "Perché conta: Sicurezza informatica è un punto centrale del documento.",
+        "Parole guida: sicurezza, informatica, protegge, dati, dispositivi"
+      ],
+      "source_sentence": "La sicurezza informatica protegge dati, dispositivi, account e sistemi attraverso pratiche, strumenti e comportamenti corretti."
+    },
+    {
+      "type": "study_card",
+      "title": "Autenticazione a due fattori",
+      "message": "L'autenticazione a due fattori rafforza l'accesso aggiungendo un secondo controllo oltre alla password.",
+      "bullets": [
+        "Da ricordare: L'autenticazione a due fattori rafforza l'accesso aggiungendo un secondo controllo oltre alla password.",
+        "Perché conta: Autenticazione a due fattori è un punto centrale del documento.",
+        "Parole guida: l'autenticazione, fattori, rafforza, l'accesso, aggiungendo"
+      ],
+      "source_sentence": "L'autenticazione a due fattori rafforza l'accesso aggiungendo un secondo controllo oltre alla password."
+    },
+    {
+      "type": "study_card",
+      "title": "Phishing",
+      "message": "Il phishing usa l'inganno per convincere le persone a fornire dati sensibili, credenziali o pagamenti.",
+      "bullets": [
+        "Da ricordare: Il phishing usa l'inganno per convincere le persone a fornire dati sensibili, credenziali o pagamenti.",
+        "Perché conta: Phishing è un punto centrale del documento.",
+        "Parole guida: phishing, l'inganno, convincere, persone, fornire"
+      ],
+      "source_sentence": "Il phishing usa l'inganno per convincere le persone a fornire dati sensibili, credenziali o pagamenti."
+    },
+    {
+      "type": "study_card",
+      "title": "Password manager",
+      "message": "Un password manager aiuta a conservare password lunghe e uniche senza doverle ricordare tutte.",
+      "bullets": [
+        "Da ricordare: Un password manager aiuta a conservare password lunghe e uniche senza doverle ricordare tutte.",
+        "Perché conta: Password manager è un punto centrale del documento.",
+        "Parole guida: password, manager, aiuta, conservare, lunghe"
+      ],
+      "source_sentence": "Un password manager aiuta a conservare password lunghe e uniche senza doverle ricordare tutte."
+    },
+    {
+      "type": "study_card",
+      "title": "Formazione del personale",
+      "message": "La formazione del personale riduce errori, distrazioni e comportamenti rischiosi durante il lavoro quotidiano.",
+      "bullets": [
+        "Da ricordare: La formazione del personale riduce errori, distrazioni e comportamenti rischiosi durante il lavoro quotidiano.",
+        "Perché conta: Formazione del personale è un punto centrale del documento.",
+        "Parole guida: formazione, personale, riduce, errori, distrazioni"
+      ],
+      "source_sentence": "La formazione del personale riduce errori, distrazioni e comportamenti rischiosi durante il lavoro quotidiano."
+    }
+  ],
+  "qas": [
+    {
+      "question": "A cosa servono i backup regolari?",
+      "answer": "I backup regolari servono a recuperare informazioni in caso di errore umano, guasto, furto o cancellazione accidentale.",
+      "source_sentence": "I backup regolari servono a recuperare informazioni in caso di errore umano, guasto, furto o cancellazione accidentale."
+    },
+    {
+      "question": "Che cosa protegge la sicurezza informatica?",
+      "answer": "La sicurezza informatica protegge dati, dispositivi, account e sistemi attraverso pratiche, strumenti e comportamenti corretti.",
+      "source_sentence": "La sicurezza informatica protegge dati, dispositivi, account e sistemi attraverso pratiche, strumenti e comportamenti corretti."
+    },
+    {
+      "question": "Che cosa usa il phishing?",
+      "answer": "Il phishing usa l'inganno per convincere le persone a fornire dati sensibili, credenziali o pagamenti.",
+      "source_sentence": "Il phishing usa l'inganno per convincere le persone a fornire dati sensibili, credenziali o pagamenti."
+    },
+    {
+      "question": "A cosa aiuta un password manager?",
+      "answer": "Un password manager aiuta a conservare password lunghe e uniche senza doverle ricordare tutte.",
+      "source_sentence": "Un password manager aiuta a conservare password lunghe e uniche senza doverle ricordare tutte."
+    },
+    {
+      "question": "Che cosa riduce la formazione del personale?",
+      "answer": "La formazione del personale riduce errori, distrazioni e comportamenti rischiosi durante il lavoro quotidiano.",
+      "source_sentence": "La formazione del personale riduce errori, distrazioni e comportamenti rischiosi durante il lavoro quotidiano."
+    },
+    {
+      "question": "A cosa aiutano le procedure di sicurezza?",
+      "answer": "Le procedure di sicurezza aiutano a gestire incidenti, accessi, backup, dispositivi e comunicazioni interne.",
+      "source_sentence": "Le procedure di sicurezza aiutano a gestire incidenti, accessi, backup, dispositivi e comunicazioni interne."
+    },
+    {
+      "question": "Che cosa possono contenere i documenti aziendali?",
+      "answer": "I documenti aziendali possono contenere informazioni operative, contratti, credenziali o dati riservati.",
+      "source_sentence": "I documenti aziendali possono contenere informazioni operative, contratti, credenziali o dati riservati."
+    },
+    {
+      "question": "Quale informazione importante viene data su account amministrativi hanno privilegi?",
+      "answer": "Gli account amministrativi hanno privilegi elevati e devono essere protetti con controlli aggiuntivi.",
+      "source_sentence": "Gli account amministrativi hanno privilegi elevati e devono essere protetti con controlli aggiuntivi."
+    }
+  ],
+  "test": [
+    {
+      "question": "A cosa servono i backup regolari?",
+      "options": [
+        "I backup regolari servono a recuperare informazioni in caso di errore umano, guasto, furto o cancellazione accidentale.",
+        "La sicurezza informatica protegge dati, dispositivi, account e sistemi attraverso pratiche, strumenti e comportamenti corretti.",
+        "Il phishing usa l'inganno per convincere le persone a fornire dati sensibili, credenziali o pagamenti.",
+        "Un password manager aiuta a conservare password lunghe e uniche senza doverle ricordare tutte."
+      ],
+      "correct_index": 0,
+      "answer": "I backup regolari servono a recuperare informazioni in caso di errore umano, guasto, furto o cancellazione accidentale.",
+      "explanation": "La risposta corretta è: I backup regolari servono a recuperare informazioni in caso di errore umano, guasto, furto o cancellazione accidentale.",
+      "source_sentence": "I backup regolari servono a recuperare informazioni in caso di errore umano, guasto, furto o cancellazione accidentale."
+    },
+    {
+      "question": "Che cosa protegge la sicurezza informatica?",
+      "options": [
+        "I backup regolari servono a recuperare informazioni in caso di errore umano, guasto, furto o cancellazione accidentale.",
+        "La sicurezza informatica protegge dati, dispositivi, account e sistemi attraverso pratiche, strumenti e comportamenti corretti.",
+        "Il phishing usa l'inganno per convincere le persone a fornire dati sensibili, credenziali o pagamenti.",
+        "Un password manager aiuta a conservare password lunghe e uniche senza doverle ricordare tutte."
+      ],
+      "correct_index": 1,
+      "answer": "La sicurezza informatica protegge dati, dispositivi, account e sistemi attraverso pratiche, strumenti e comportamenti corretti.",
+      "explanation": "La risposta corretta è: La sicurezza informatica protegge dati, dispositivi, account e sistemi attraverso pratiche, strumenti e comportamenti corretti.",
+      "source_sentence": "La sicurezza informatica protegge dati, dispositivi, account e sistemi attraverso pratiche, strumenti e comportamenti corretti."
+    },
+    {
+      "question": "Che cosa usa il phishing?",
+      "options": [
+        "I backup regolari servono a recuperare informazioni in caso di errore umano, guasto, furto o cancellazione accidentale.",
+        "La sicurezza informatica protegge dati, dispositivi, account e sistemi attraverso pratiche, strumenti e comportamenti corretti.",
+        "Il phishing usa l'inganno per convincere le persone a fornire dati sensibili, credenziali o pagamenti.",
+        "Un password manager aiuta a conservare password lunghe e uniche senza doverle ricordare tutte."
+      ],
+      "correct_index": 2,
+      "answer": "Il phishing usa l'inganno per convincere le persone a fornire dati sensibili, credenziali o pagamenti.",
+      "explanation": "La risposta corretta è: Il phishing usa l'inganno per convincere le persone a fornire dati sensibili, credenziali o pagamenti.",
+      "source_sentence": "Il phishing usa l'inganno per convincere le persone a fornire dati sensibili, credenziali o pagamenti."
+    },
+    {
+      "question": "A cosa aiuta un password manager?",
+      "options": [
+        "I backup regolari servono a recuperare informazioni in caso di errore umano, guasto, furto o cancellazione accidentale.",
+        "La sicurezza informatica protegge dati, dispositivi, account e sistemi attraverso pratiche, strumenti e comportamenti corretti.",
+        "Il phishing usa l'inganno per convincere le persone a fornire dati sensibili, credenziali o pagamenti.",
+        "Un password manager aiuta a conservare password lunghe e uniche senza doverle ricordare tutte."
+      ],
+      "correct_index": 3,
+      "answer": "Un password manager aiuta a conservare password lunghe e uniche senza doverle ricordare tutte.",
+      "explanation": "La risposta corretta è: Un password manager aiuta a conservare password lunghe e uniche senza doverle ricordare tutte.",
+      "source_sentence": "Un password manager aiuta a conservare password lunghe e uniche senza doverle ricordare tutte."
+    },
+    {
+      "question": "Che cosa riduce la formazione del personale?",
+      "options": [
+        "La formazione del personale riduce errori, distrazioni e comportamenti rischiosi durante il lavoro quotidiano.",
+        "I backup regolari servono a recuperare informazioni in caso di errore umano, guasto, furto o cancellazione accidentale.",
+        "La sicurezza informatica protegge dati, dispositivi, account e sistemi attraverso pratiche, strumenti e comportamenti corretti.",
+        "Il phishing usa l'inganno per convincere le persone a fornire dati sensibili, credenziali o pagamenti."
+      ],
+      "correct_index": 0,
+      "answer": "La formazione del personale riduce errori, distrazioni e comportamenti rischiosi durante il lavoro quotidiano.",
+      "explanation": "La risposta corretta è: La formazione del personale riduce errori, distrazioni e comportamenti rischiosi durante il lavoro quotidiano.",
+      "source_sentence": "La formazione del personale riduce errori, distrazioni e comportamenti rischiosi durante il lavoro quotidiano."
+    },
+    {
+      "question": "A cosa aiutano le procedure di sicurezza?",
+      "options": [
+        "I backup regolari servono a recuperare informazioni in caso di errore umano, guasto, furto o cancellazione accidentale.",
+        "Le procedure di sicurezza aiutano a gestire incidenti, accessi, backup, dispositivi e comunicazioni interne.",
+        "La sicurezza informatica protegge dati, dispositivi, account e sistemi attraverso pratiche, strumenti e comportamenti corretti.",
+        "Il phishing usa l'inganno per convincere le persone a fornire dati sensibili, credenziali o pagamenti."
+      ],
+      "correct_index": 1,
+      "answer": "Le procedure di sicurezza aiutano a gestire incidenti, accessi, backup, dispositivi e comunicazioni interne.",
+      "explanation": "La risposta corretta è: Le procedure di sicurezza aiutano a gestire incidenti, accessi, backup, dispositivi e comunicazioni interne.",
+      "source_sentence": "Le procedure di sicurezza aiutano a gestire incidenti, accessi, backup, dispositivi e comunicazioni interne."
+    }
+  ],
+  "quality_checks": {
+    "bad_question_fragments_blocked": [
+      "Che cosa protegge sicurezza",
+      "Che cosa usa phishing",
+      "Che cosa rafforza L'autenticazione",
+      "Qual è il punto chiave su",
+      "possono causare documenti"
+    ],
+    "bad_title_words_blocked": [
+      "recuperare",
+      "protegge",
+      "rafforza",
+      "convincere",
+      "fornire"
+    ],
+    "correct_index_mixed": true
+  },
+  "limits": [
+    "Study Pack V2 structured/extractive.",
+    "Non è ancora LLM neurale generativo.",
+    "Migliora qualità linguistica rispetto a V1.",
+    "Mantiene generazione ultra rapida."
+  ]
+}
