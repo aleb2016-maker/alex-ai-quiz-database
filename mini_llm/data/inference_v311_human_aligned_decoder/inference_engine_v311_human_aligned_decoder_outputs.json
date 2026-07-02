@@ -1,0 +1,82 @@
+[
+  {
+    "prompt": "password",
+    "output": "La password deve essere protetta perché può esporre un account se viene rubata.",
+    "generation_mode": "human_aligned_semantic_decoder_v311",
+    "status": "OK",
+    "score": 35.0,
+    "copied_from_corpus": false,
+    "source_sentence": "La 2FA riduce il rischio che un account venga violato solo perché la password è stata rubata.",
+    "notes": []
+  },
+  {
+    "prompt": "password sicure",
+    "output": "Le password sicure richiedono una gestione attenta e possono essere organizzate con un password manager.",
+    "generation_mode": "human_aligned_semantic_decoder_v311",
+    "status": "OK",
+    "score": 43.0,
+    "copied_from_corpus": false,
+    "source_sentence": "Il metodo migliore per gestire password sicure è usare un password manager.",
+    "notes": []
+  },
+  {
+    "prompt": "sicurezza informatica",
+    "output": "La sicurezza informatica protegge dati, dispositivi, account e sistemi attraverso pratiche, strumenti e comportamenti corretti.",
+    "generation_mode": "human_aligned_semantic_decoder_v311",
+    "status": "OK",
+    "score": 65.0,
+    "copied_from_corpus": false,
+    "source_sentence": "La sicurezza informatica è l'insieme di pratiche, strumenti e comportamenti usati per proteggere dati, dispositivi, account e sistemi.",
+    "notes": []
+  },
+  {
+    "prompt": "backup regolari",
+    "output": "I backup regolari servono a recuperare informazioni in caso di errore umano.",
+    "generation_mode": "human_aligned_semantic_decoder_v311",
+    "status": "OK",
+    "score": 51.0,
+    "copied_from_corpus": false,
+    "source_sentence": "Il backup serve a recuperare informazioni in caso di errore umano, guasto, furto, cancellazione accidentale o attacco ransomware.",
+    "notes": []
+  },
+  {
+    "prompt": "phishing",
+    "output": "Il phishing è una tecnica usata per ingannare le persone e convincerle a fornire dati sensibili.",
+    "generation_mode": "human_aligned_semantic_decoder_v311",
+    "status": "OK",
+    "score": 47.0,
+    "copied_from_corpus": false,
+    "source_sentence": "Il phishing è una tecnica usata per ingannare le persone e convincerle a fornire dati sensibili, credenziali o pagamenti.",
+    "notes": []
+  },
+  {
+    "prompt": "dati sensibili",
+    "output": "I dati sensibili possono includere dati personali, informazioni economiche, documenti aziendali, contratti, credenziali, dati sanitari o informazioni riservate sui clienti.",
+    "generation_mode": "human_aligned_semantic_decoder_v311",
+    "status": "OK",
+    "score": 43.0,
+    "copied_from_corpus": false,
+    "source_sentence": "Possono includere dati personali, informazioni economiche, documenti aziendali, contratti, credenziali, dati sanitari o informazioni riservate sui clienti.",
+    "notes": []
+  },
+  {
+    "prompt": "autenticazione a due fattori",
+    "output": "L'autenticazione a due fattori aggiunge un secondo controllo oltre alla password.",
+    "generation_mode": "human_aligned_semantic_decoder_v311",
+    "status": "OK",
+    "score": 57.0,
+    "copied_from_corpus": false,
+    "source_sentence": "L'autenticazione a due fattori, spesso abbreviata in 2FA, aggiunge un secondo controllo oltre alla password.",
+    "notes": []
+  },
+  {
+    "prompt": "attacco ransomware",
+    "output": "Un attacco ransomware blocca o cifra i dati e chiede un pagamento per ripristinarli.",
+    "generation_mode": "human_aligned_semantic_decoder_v311",
+    "status": "OK",
+    "score": 39.0,
+    "copied_from_corpus": false,
+    "source_sentence": "Il ransomware blocca o cifra i dati e chiede un pagamento per ripristinarli.",
+    "notes": []
+  }
+]

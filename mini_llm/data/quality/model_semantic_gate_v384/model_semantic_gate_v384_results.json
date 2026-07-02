@@ -1,0 +1,80 @@
+[
+  {
+    "index": 0,
+    "source_file": "/Users/alessandrobarbarossa/alex-ai-workspace/mini_llm/data/inference_v311_human_aligned_decoder/inference_engine_v311_human_aligned_decoder_outputs.json",
+    "prompt": "password",
+    "output": "La password deve essere protetta perché può esporre un account se viene rubata.",
+    "generation_mode": "human_aligned_semantic_decoder_v311",
+    "passed": true,
+    "issues": [
+      {
+        "severity": "warning",
+        "code": "weak_source_alignment",
+        "message": "La sorgente parla di 2FA: frase accettabile solo se l'output resta semanticamente sensato."
+      }
+    ]
+  },
+  {
+    "index": 1,
+    "source_file": "/Users/alessandrobarbarossa/alex-ai-workspace/mini_llm/data/inference_v311_human_aligned_decoder/inference_engine_v311_human_aligned_decoder_outputs.json",
+    "prompt": "password sicure",
+    "output": "Le password sicure richiedono una gestione attenta e possono essere organizzate con un password manager.",
+    "generation_mode": "human_aligned_semantic_decoder_v311",
+    "passed": true,
+    "issues": []
+  },
+  {
+    "index": 2,
+    "source_file": "/Users/alessandrobarbarossa/alex-ai-workspace/mini_llm/data/inference_v311_human_aligned_decoder/inference_engine_v311_human_aligned_decoder_outputs.json",
+    "prompt": "sicurezza informatica",
+    "output": "La sicurezza informatica protegge dati, dispositivi, account e sistemi attraverso pratiche, strumenti e comportamenti corretti.",
+    "generation_mode": "human_aligned_semantic_decoder_v311",
+    "passed": true,
+    "issues": []
+  },
+  {
+    "index": 3,
+    "source_file": "/Users/alessandrobarbarossa/alex-ai-workspace/mini_llm/data/inference_v311_human_aligned_decoder/inference_engine_v311_human_aligned_decoder_outputs.json",
+    "prompt": "backup regolari",
+    "output": "I backup regolari servono a recuperare informazioni in caso di errore umano.",
+    "generation_mode": "human_aligned_semantic_decoder_v311",
+    "passed": true,
+    "issues": []
+  },
+  {
+    "index": 4,
+    "source_file": "/Users/alessandrobarbarossa/alex-ai-workspace/mini_llm/data/inference_v311_human_aligned_decoder/inference_engine_v311_human_aligned_decoder_outputs.json",
+    "prompt": "phishing",
+    "output": "Il phishing è una tecnica usata per ingannare le persone e convincerle a fornire dati sensibili.",
+    "generation_mode": "human_aligned_semantic_decoder_v311",
+    "passed": true,
+    "issues": []
+  },
+  {
+    "index": 5,
+    "source_file": "/Users/alessandrobarbarossa/alex-ai-workspace/mini_llm/data/inference_v311_human_aligned_decoder/inference_engine_v311_human_aligned_decoder_outputs.json",
+    "prompt": "dati sensibili",
+    "output": "I dati sensibili possono includere dati personali, informazioni economiche, documenti aziendali, contratti, credenziali, dati sanitari o informazioni riservate sui clienti.",
+    "generation_mode": "human_aligned_semantic_decoder_v311",
+    "passed": true,
+    "issues": []
+  },
+  {
+    "index": 6,
+    "source_file": "/Users/alessandrobarbarossa/alex-ai-workspace/mini_llm/data/inference_v311_human_aligned_decoder/inference_engine_v311_human_aligned_decoder_outputs.json",
+    "prompt": "autenticazione a due fattori",
+    "output": "L'autenticazione a due fattori aggiunge un secondo controllo oltre alla password.",
+    "generation_mode": "human_aligned_semantic_decoder_v311",
+    "passed": true,
+    "issues": []
+  },
+  {
+    "index": 7,
+    "source_file": "/Users/alessandrobarbarossa/alex-ai-workspace/mini_llm/data/inference_v311_human_aligned_decoder/inference_engine_v311_human_aligned_decoder_outputs.json",
+    "prompt": "attacco ransomware",
+    "output": "Un attacco ransomware blocca o cifra i dati e chiede un pagamento per ripristinarli.",
+    "generation_mode": "human_aligned_semantic_decoder_v311",
+    "passed": true,
+    "issues": []
+  }
+]

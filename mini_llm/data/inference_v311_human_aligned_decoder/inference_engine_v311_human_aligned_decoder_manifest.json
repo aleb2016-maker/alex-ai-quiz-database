@@ -1,0 +1,13 @@
+{
+  "engine": "inference_engine_v311_human_aligned_decoder",
+  "generation_mode": "human_aligned_semantic_decoder_v311",
+  "total_prompts": 8,
+  "ok": 8,
+  "failed": 0,
+  "corpus_sentences": 1333,
+  "uses_fallback": false,
+  "uses_sentence_bank": false,
+  "uses_anchored_memory": false,
+  "uses_hardcoded_final_sentences": false,
+  "status": "PASS_INTERNAL"
+}
