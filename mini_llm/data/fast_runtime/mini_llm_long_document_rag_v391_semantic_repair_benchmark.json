@@ -1,0 +1,482 @@
+{
+  "benchmark": "mini_llm_long_document_rag_v391_semantic_repair",
+  "status": "PASS",
+  "errors": [],
+  "total_ms": 68.855834,
+  "diagnostics": {
+    "engine": "mini_llm_long_document_rag_v391_semantic_repair",
+    "lineage": {
+      "semantic_quality_line": "V3.8/V3.8.6",
+      "current_engine": "V3.15 stable current",
+      "study_pack_current": "Study Pack Current V3 Quality Gate",
+      "output_modes": "Output Modes V1",
+      "long_document_rag": "V3.9.1 Semantic Repair Gate"
+    },
+    "status": "OK",
+    "pages": 500,
+    "words": 37350,
+    "sentences": 2500,
+    "chunks": 270,
+    "build_ms": 48.95912499999999,
+    "words_per_page": 120,
+    "max_words_per_chunk": 160,
+    "overlap_sentences": 1,
+    "compression_targets": {
+      "source_pages": 500,
+      "quality_summary_pages_10_percent": 50,
+      "brief_summary_pages_1_percent": 5
+    },
+    "limits": [
+      "V3.9.1 RAG lungo structured/extractive.",
+      "Sentence-safe chunking.",
+      "Semantic Repair Gate.",
+      "Non ancora LLM neurale generativo.",
+      "Non ancora OCR."
+    ]
+  },
+  "retrieval_sample": [
+    {
+      "chunk_id": 25,
+      "page_start": 47,
+      "page_end": 49,
+      "score": 26.443194
+    },
+    {
+      "chunk_id": 52,
+      "page_start": 97,
+      "page_end": 99,
+      "score": 26.443194
+    },
+    {
+      "chunk_id": 79,
+      "page_start": 147,
+      "page_end": 149,
+      "score": 26.443194
+    },
+    {
+      "chunk_id": 106,
+      "page_start": 197,
+      "page_end": 199,
+      "score": 26.443194
+    },
+    {
+      "chunk_id": 133,
+      "page_start": 247,
+      "page_end": 249,
+      "score": 26.443194
+    },
+    {
+      "chunk_id": 160,
+      "page_start": 297,
+      "page_end": 299,
+      "score": 26.443194
+    },
+    {
+      "chunk_id": 187,
+      "page_start": 347,
+      "page_end": 349,
+      "score": 26.443194
+    },
+    {
+      "chunk_id": 214,
+      "page_start": 397,
+      "page_end": 399,
+      "score": 26.443194
+    }
+  ],
+  "answer": {
+    "status": "OK",
+    "query": "Che cosa fa il phishing?",
+    "answer": "Il phishing della pagina 1 usa l'inganno per convincere le persone a fornire credenziali, dati sensibili o pagamenti.",
+    "sentences_used": 1,
+    "quality_errors": [],
+    "retrieved_chunks": [
+      {
+        "chunk_id": 0,
+        "page_start": 1,
+        "page_end": 2,
+        "score": 2.142589
+      },
+      {
+        "chunk_id": 4,
+        "page_start": 8,
+        "page_end": 10,
+        "score": 2.142589
+      },
+      {
+        "chunk_id": 5,
+        "page_start": 10,
+        "page_end": 12,
+        "score": 2.142589
+      },
+      {
+        "chunk_id": 6,
+        "page_start": 12,
+        "page_end": 13,
+        "score": 2.142589
+      },
+      {
+        "chunk_id": 10,
+        "page_start": 19,
+        "page_end": 21,
+        "score": 2.142589
+      },
+      {
+        "chunk_id": 11,
+        "page_start": 21,
+        "page_end": 23,
+        "score": 2.142589
+      },
+      {
+        "chunk_id": 15,
+        "page_start": 28,
+        "page_end": 30,
+        "score": 2.142589
+      },
+      {
+        "chunk_id": 16,
+        "page_start": 30,
+        "page_end": 32,
+        "score": 2.142589
+      },
+      {
+        "chunk_id": 21,
+        "page_start": 39,
+        "page_end": 41,
+        "score": 2.142589
+      },
+      {
+        "chunk_id": 22,
+        "page_start": 41,
+        "page_end": 43,
+        "score": 2.142589
+      },
+      {
+        "chunk_id": 26,
+        "page_start": 49,
+        "page_end": 51,
+        "score": 2.142589
+      },
+      {
+        "chunk_id": 27,
+        "page_start": 51,
+        "page_end": 52,
+        "score": 2.142589
+      }
+    ],
+    "elapsed_ms": 1.4684169999999996
+  },
+  "progressive_summary": {
+    "status": "OK",
+    "targets": {
+      "source_pages": 500,
+      "quality_summary_pages_10_percent": 50,
+      "brief_summary_pages_1_percent": 5,
+      "quality_sentence_target_used": 80,
+      "brief_sentence_target_used": 20,
+      "quality_ratio": 0.1,
+      "brief_ratio": 0.01
+    },
+    "quality_sentences": 80,
+    "brief_sentences": 20,
+    "quality_errors": [],
+    "elapsed_ms": 3.7807910000000056,
+    "quality_preview": "La formazione del personale della pagina 107 riduce errori, distrazioni e comportamenti rischiosi durante il lavoro quotidiano. La formazione del personale della pagina 116 riduce errori, distrazioni e comportamenti rischiosi durante il lavoro quotidiano. La formazione del personale della pagina 127 riduce errori, distrazioni e comportamenti rischiosi durante il lavoro quotidiano. La formazione del personale della pagina 146 riduce errori, distrazioni e comportamenti rischiosi durante il lavoro quotidiano. La formazione del personale della pagina 157 riduce errori, distrazioni e comportamenti rischiosi durante il lavoro quotidiano. La formazione del personale della pagina 166 riduce errori, distrazioni e comportamenti rischiosi durante il lavoro quotidiano. La formazione del personale della pagina 177 riduce errori, distrazioni e comportamenti rischiosi durante il lavoro quotidiano. La formazione del personale della pagina 196 riduce errori, distrazioni e comportamenti rischiosi durante il lavoro quotidiano. La formazione del personale della pagina 207 riduce errori, distrazioni e comportamenti rischiosi durante il lavoro quotidiano. La formazione del personale della pagina 216 rid",
+    "brief_preview": "La formazione del personale della pagina 107 riduce errori, distrazioni e comportamenti rischiosi durante il lavoro quotidiano. La formazione del personale della pagina 116 riduce errori, distrazioni e comportamenti rischiosi durante il lavoro quotidiano. La formazione del personale della pagina 127 riduce errori, distrazioni e comportamenti rischiosi durante il lavoro quotidiano. La formazione del personale della pagina 146 riduce errori, distrazioni e comportamenti rischiosi durante il lavoro quotidiano. La formazione del personale della pagina 157 riduce errori, distrazioni e comportamenti rischiosi durante il lavoro quotidiano. La formazione del personale della pagina 166 riduce errori, distrazioni e comportamenti rischiosi durante il lavoro quotidiano. La formazione del personale dell"
+  },
+  "study_pack": {
+    "status": "OK",
+    "elapsed_ms": 13.97208300000001,
+    "context": {
+      "context_chars": 1618,
+      "sentences": 15,
+      "quality_errors": [],
+      "references": [
+        {
+          "chunk_id": 25,
+          "page_start": 47,
+          "page_end": 49,
+          "score": 26.443194
+        },
+        {
+          "chunk_id": 52,
+          "page_start": 97,
+          "page_end": 99,
+          "score": 26.443194
+        },
+        {
+          "chunk_id": 79,
+          "page_start": 147,
+          "page_end": 149,
+          "score": 26.443194
+        },
+        {
+          "chunk_id": 106,
+          "page_start": 197,
+          "page_end": 199,
+          "score": 26.443194
+        },
+        {
+          "chunk_id": 133,
+          "page_start": 247,
+          "page_end": 249,
+          "score": 26.443194
+        },
+        {
+          "chunk_id": 160,
+          "page_start": 297,
+          "page_end": 299,
+          "score": 26.443194
+        },
+        {
+          "chunk_id": 187,
+          "page_start": 347,
+          "page_end": 349,
+          "score": 26.443194
+        },
+        {
+          "chunk_id": 214,
+          "page_start": 397,
+          "page_end": 399,
+          "score": 26.443194
+        },
+        {
+          "chunk_id": 241,
+          "page_start": 447,
+          "page_end": 449,
+          "score": 26.443194
+        },
+        {
+          "chunk_id": 268,
+          "page_start": 497,
+          "page_end": 499,
+          "score": 26.443194
+        },
+        {
+          "chunk_id": 14,
+          "page_start": 26,
+          "page_end": 28,
+          "score": 23.985524
+        },
+        {
+          "chunk_id": 41,
+          "page_start": 76,
+          "page_end": 78,
+          "score": 23.985524
+        },
+        {
+          "chunk_id": 68,
+          "page_start": 126,
+          "page_end": 128,
+          "score": 23.985524
+        },
+        {
+          "chunk_id": 95,
+          "page_start": 176,
+          "page_end": 178,
+          "score": 23.985524
+        },
+        {
+          "chunk_id": 122,
+          "page_start": 226,
+          "page_end": 228,
+          "score": 23.985524
+        },
+        {
+          "chunk_id": 149,
+          "page_start": 276,
+          "page_end": 278,
+          "score": 23.985524
+        },
+        {
+          "chunk_id": 176,
+          "page_start": 326,
+          "page_end": 328,
+          "score": 23.985524
+        },
+        {
+          "chunk_id": 203,
+          "page_start": 376,
+          "page_end": 378,
+          "score": 23.985524
+        },
+        {
+          "chunk_id": 230,
+          "page_start": 426,
+          "page_end": 428,
+          "score": 23.985524
+        },
+        {
+          "chunk_id": 257,
+          "page_start": 476,
+          "page_end": 478,
+          "score": 23.985524
+        },
+        {
+          "chunk_id": 3,
+          "page_start": 6,
+          "page_end": 8,
+          "score": 19.928009
+        },
+        {
+          "chunk_id": 30,
+          "page_start": 56,
+          "page_end": 58,
+          "score": 19.928009
+        },
+        {
+          "chunk_id": 57,
+          "page_start": 106,
+          "page_end": 108,
+          "score": 19.928009
+        },
+        {
+          "chunk_id": 84,
+          "page_start": 156,
+          "page_end": 158,
+          "score": 19.928009
+        },
+        {
+          "chunk_id": 111,
+          "page_start": 206,
+          "page_end": 208,
+          "score": 19.928009
+        },
+        {
+          "chunk_id": 138,
+          "page_start": 256,
+          "page_end": 258,
+          "score": 19.928009
+        },
+        {
+          "chunk_id": 165,
+          "page_start": 306,
+          "page_end": 308,
+          "score": 19.928009
+        },
+        {
+          "chunk_id": 192,
+          "page_start": 356,
+          "page_end": 358,
+          "score": 19.928009
+        },
+        {
+          "chunk_id": 219,
+          "page_start": 406,
+          "page_end": 408,
+          "score": 19.928009
+        },
+        {
+          "chunk_id": 246,
+          "page_start": 456,
+          "page_end": 458,
+          "score": 19.928009
+        },
+        {
+          "chunk_id": 4,
+          "page_start": 8,
+          "page_end": 10,
+          "score": 19.877221
+        },
+        {
+          "chunk_id": 15,
+          "page_start": 28,
+          "page_end": 30,
+          "score": 19.877221
+        },
+        {
+          "chunk_id": 26,
+          "page_start": 49,
+          "page_end": 51,
+          "score": 19.877221
+        },
+        {
+          "chunk_id": 31,
+          "page_start": 58,
+          "page_end": 60,
+          "score": 19.877221
+        },
+        {
+          "chunk_id": 42,
+          "page_start": 78,
+          "page_end": 80,
+          "score": 19.877221
+        },
+        {
+          "chunk_id": 53,
+          "page_start": 99,
+          "page_end": 101,
+          "score": 19.877221
+        },
+        {
+          "chunk_id": 58,
+          "page_start": 108,
+          "page_end": 110,
+          "score": 19.877221
+        },
+        {
+          "chunk_id": 69,
+          "page_start": 128,
+          "page_end": 130,
+          "score": 19.877221
+        },
+        {
+          "chunk_id": 80,
+          "page_start": 149,
+          "page_end": 151,
+          "score": 19.877221
+        },
+        {
+          "chunk_id": 85,
+          "page_start": 158,
+          "page_end": 160,
+          "score": 19.877221
+        }
+      ]
+    },
+    "counts": {
+      "summary_sentences": 8,
+      "cards": 6,
+      "qas": 8,
+      "test_questions": 6,
+      "student_test_questions": 6
+    },
+    "semantic_errors": [],
+    "quality_errors": [],
+    "first_card": {
+      "type": "study_card_v3",
+      "title": "Formazione del personale della pagina",
+      "message": "La formazione del personale della pagina 47 riduce errori, distrazioni e comportamenti rischiosi durante il lavoro quotidiano.",
+      "bullets": [
+        "Idea chiave: Formazione del personale della pagina.",
+        "Cosa ricordare: La formazione del personale della pagina 47 riduce errori, distrazioni e comportamenti rischiosi durante il lavoro quotidiano.",
+        "Parole guida: formazione, personale, pagina, riduce, errori."
+      ],
+      "source_sentence": "La formazione del personale della pagina 47 riduce errori, distrazioni e comportamenti rischiosi durante il lavoro quotidiano."
+    },
+    "first_qa": {
+      "question": "Che cosa riduce la formazione del personale della pagina 47?",
+      "answer": "La formazione del personale della pagina 47 riduce errori, distrazioni e comportamenti rischiosi durante il lavoro quotidiano.",
+      "source_sentence": "La formazione del personale della pagina 47 riduce errori, distrazioni e comportamenti rischiosi durante il lavoro quotidiano."
+    },
+    "first_student_test": {
+      "id": "q01",
+      "question": "Che cosa riduce la formazione del personale della pagina 47?",
+      "options": [
+        "Usare l'inganno per convincere le persone a fornire credenziali, dati sensibili o pagamenti.",
+        "Ridurre errori, distrazioni e comportamenti rischiosi durante il lavoro quotidiano.",
+        "Aiutare a gestire incidenti, accessi, backup, dispositivi e comunicazioni interne.",
+        "Il monitoraggio della pagina 48 osserva eventi, accessi, errori e comportamenti anomali nei sistemi."
+      ]
+    }
+  },
+  "limits": [
+    "V3.9.1 valida 500 pagine simulate.",
+    "Sentence-safe chunking.",
+    "Semantic Repair Gate attivo.",
+    "RAG e summary sono extractive/structured.",
+    "Non ancora LLM neurale generativo.",
+    "Non ancora OCR.",
+    "Il prossimo step sarà test pratico su documento reale."
+  ]
+}
