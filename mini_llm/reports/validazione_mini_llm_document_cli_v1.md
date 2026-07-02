@@ -17,7 +17,7 @@ Il phishing usa l'inganno per convincere le persone a fornire dati sensibili, cr
 
 ## Esempio riassunto
 
-# Documento prova sicurezza informatica La sicurezza informatica protegge dati, dispositivi, account e sistemi attraverso pratiche, strumenti e comportamenti corretti. I backup regolari servono a recuperare informazioni in caso di errore umano, guasto, furto o cancellazione accidentale. Il phishing usa l'inganno per convincere le persone a fornire dati sensibili, credenziali o pagamenti. L'autenticazione a due fattori rafforza l'accesso aggiungendo un secondo controllo oltre alla password. Un password manager aiuta a conservare password lunghe e uniche senza doverle ricordare tutte.
+La sicurezza informatica protegge dati, dispositivi, account e sistemi attraverso pratiche, strumenti e comportamenti corretti. I backup regolari servono a recuperare informazioni in caso di errore umano, guasto, furto o cancellazione accidentale. Il phishing usa l'inganno per convincere le persone a fornire dati sensibili, credenziali o pagamenti. L'autenticazione a due fattori rafforza l'accesso aggiungendo un secondo controllo oltre alla password. Un password manager aiuta a conservare password lunghe e uniche senza doverle ricordare tutte.
 
 ## Limiti
 

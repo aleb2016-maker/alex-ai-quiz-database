@@ -88,6 +88,9 @@ def main() -> int:
     if summary.get("status") != "OK" or not summary.get("summary"):
         errors.append("summary_not_ok")
 
+    if str(summary.get("summary", "")).lstrip().startswith("#"):
+        errors.append("summary_starts_with_markdown_heading")
+
     if ask_second.get("cache", {}).get("cache_status") != "HIT":
         errors.append("cache_hit_missing_on_second_ask")
 

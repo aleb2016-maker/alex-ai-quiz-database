@@ -42,6 +42,47 @@ STOPWORDS = {
 }
 
 
+def clean_document_text(text: str) -> str:
+    """
+    Pulisce il testo documentale prima di chunking/Q&A/summary.
+
+    Rimuove/normalizza:
+    - heading Markdown tipo # Titolo;
+    - marker lista semplici;
+    - righe vuote inutili.
+
+    Non altera il contenuto semantico principale.
+    """
+    cleaned_lines = []
+
+    for raw_line in str(text).splitlines():
+        line = raw_line.strip()
+
+        if not line:
+            continue
+
+        # Heading Markdown: "# Titolo" -> "Titolo."
+        if line.startswith("#"):
+            line = line.lstrip("#").strip()
+            if line and not line.endswith((".", "!", "?")):
+                line += "."
+
+        # Liste Markdown semplici.
+        for prefix in ("- ", "* ", "+ "):
+            if line.startswith(prefix):
+                line = line[len(prefix):].strip()
+                break
+
+        # Liste numerate semplici: "1. testo" -> "testo"
+        import re as _re
+        line = _re.sub(r"^\d+[.)]\s+", "", line)
+
+        if line:
+            cleaned_lines.append(line)
+
+    return "\n".join(cleaned_lines)
+
+
 def normalize(text: str) -> str:
     return " ".join(str(text).replace("\u00a0", " ").strip().split())
 
@@ -74,7 +115,8 @@ def split_sentences(text: str) -> List[str]:
 
 
 def document_hash(text: str, max_words_per_chunk: int) -> str:
-    payload = f"{max_words_per_chunk}\n{normalize(text)}"
+    cleaned = clean_document_text(text)
+    payload = f"{max_words_per_chunk}\n{normalize(cleaned)}"
     return hashlib.sha256(payload.encode("utf-8")).hexdigest()[:24]
 
 
@@ -104,6 +146,7 @@ class FastDocumentQASummaryCache:
 
     @classmethod
     def from_text(cls, text: str, max_words_per_chunk: int = 90) -> "FastDocumentQASummaryCache":
+        text = clean_document_text(text)
         sentences = split_sentences(text)
         chunks: List[DocumentChunk] = []
 
