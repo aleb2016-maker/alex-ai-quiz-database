@@ -1,0 +1,49 @@
+{
+  "validator": "valida_mini_llm_practical_real_test_v391",
+  "status": "PASS",
+  "errors": [],
+  "sample_report_status": "PASS",
+  "diagnostics": {
+    "engine": "mini_llm_long_document_rag_v391_semantic_repair",
+    "lineage": {
+      "semantic_quality_line": "V3.8/V3.8.6",
+      "current_engine": "V3.15 stable current",
+      "study_pack_current": "Study Pack Current V3 Quality Gate",
+      "output_modes": "Output Modes V1",
+      "long_document_rag": "V3.9.1 Semantic Repair Gate"
+    },
+    "status": "OK",
+    "pages": 1,
+    "words": 120,
+    "sentences": 10,
+    "chunks": 1,
+    "build_ms": 0.691166,
+    "words_per_page": 320,
+    "max_words_per_chunk": 180,
+    "overlap_sentences": 1,
+    "compression_targets": {
+      "source_pages": 1,
+      "quality_summary_pages_10_percent": 1,
+      "brief_summary_pages_1_percent": 1
+    },
+    "limits": [
+      "V3.9.1 RAG lungo structured/extractive.",
+      "Sentence-safe chunking.",
+      "Semantic Repair Gate.",
+      "Non ancora LLM neurale generativo.",
+      "Non ancora OCR."
+    ]
+  },
+  "counts": {
+    "summary_sentences": 8,
+    "cards": 6,
+    "qas": 8,
+    "test_questions": 6,
+    "student_test_questions": 6
+  },
+  "limits": [
+    "Valida lo script su documento markdown temporaneo.",
+    "Non usa documenti privati.",
+    "Non salva output reali nel repository."
+  ]
+}
