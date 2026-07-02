@@ -2,42 +2,42 @@
   "validator": "mini_llm_documentale_integrato_v1",
   "status": "PASS",
   "errors": [],
-  "current_validator_ms": 663.788208,
-  "build_total_ms": 35.146583999999926,
-  "ask_total_ms": 35.656042000000056,
-  "summary_total_ms": 32.46333300000004,
+  "current_validator_ms": 654.499583,
+  "build_total_ms": 32.85012499999995,
+  "ask_total_ms": 31.49070899999995,
+  "summary_total_ms": 35.88449999999999,
   "build": {
     "command": "build",
     "status": "OK",
-    "file": "/private/var/folders/s3/q53ggzhn0dj5v3mm46w3bgrr0000gn/T/mini_llm_doc_smoke_95gsoq8p/documento_integrato.md",
+    "file": "/private/var/folders/s3/q53ggzhn0dj5v3mm46w3bgrr0000gn/T/mini_llm_doc_smoke_w8r_rpxq/documento_integrato.md",
     "document_chars": 1053,
     "chunks": 2,
     "cache": {
       "cache_status": "MISS_BUILT",
       "cache_key": "549419bd5760c7f47539291f",
       "cache_path": "/Users/alessandrobarbarossa/alex-ai-workspace/mini_llm/data/fast_runtime/cache_v2_user_docs/549419bd5760c7f47539291f.json",
-      "elapsed_ms": 1.1275419999999987,
+      "elapsed_ms": 0.6094999999999989,
       "chunks": 2
     },
-    "total_ms": 1.3628329999999973
+    "total_ms": 0.687
   },
   "ask": {
     "command": "ask",
     "status": "OK",
-    "file": "/private/var/folders/s3/q53ggzhn0dj5v3mm46w3bgrr0000gn/T/mini_llm_doc_smoke_95gsoq8p/documento_integrato.md",
+    "file": "/private/var/folders/s3/q53ggzhn0dj5v3mm46w3bgrr0000gn/T/mini_llm_doc_smoke_w8r_rpxq/documento_integrato.md",
     "document_chars": 1053,
     "chunks": 2,
     "cache": {
       "cache_status": "HIT",
       "cache_key": "549419bd5760c7f47539291f",
       "cache_path": "/Users/alessandrobarbarossa/alex-ai-workspace/mini_llm/data/fast_runtime/cache_v2_user_docs/549419bd5760c7f47539291f.json",
-      "elapsed_ms": 0.16112500000000154,
+      "elapsed_ms": 0.15429200000000032,
       "chunks": 2
     },
-    "build_or_load_ms": 0.2524580000000005,
+    "build_or_load_ms": 0.22658300000000242,
     "question": "Che cosa fa il phishing?",
     "answer": "Il phishing usa l'inganno per convincere le persone a fornire dati sensibili, credenziali o pagamenti.",
-    "answer_ms": 0.15408399999999878,
+    "answer_ms": 0.13475000000000292,
     "matches": [
       {
         "score": 1.7555,
@@ -49,19 +49,19 @@
   "summary": {
     "command": "summary",
     "status": "OK",
-    "file": "/private/var/folders/s3/q53ggzhn0dj5v3mm46w3bgrr0000gn/T/mini_llm_doc_smoke_95gsoq8p/documento_integrato.md",
+    "file": "/private/var/folders/s3/q53ggzhn0dj5v3mm46w3bgrr0000gn/T/mini_llm_doc_smoke_w8r_rpxq/documento_integrato.md",
     "document_chars": 1053,
     "chunks": 2,
     "cache": {
       "cache_status": "HIT",
       "cache_key": "549419bd5760c7f47539291f",
       "cache_path": "/Users/alessandrobarbarossa/alex-ai-workspace/mini_llm/data/fast_runtime/cache_v2_user_docs/549419bd5760c7f47539291f.json",
-      "elapsed_ms": 0.14475000000000252,
+      "elapsed_ms": 0.15479200000000082,
       "chunks": 2
     },
-    "build_or_load_ms": 0.22729200000000047,
+    "build_or_load_ms": 0.24091600000000074,
     "summary": "La sicurezza informatica protegge dati, dispositivi, account e sistemi attraverso pratiche, strumenti e comportamenti corretti. I backup regolari servono a recuperare informazioni in caso di errore umano, guasto, furto o cancellazione accidentale. L'autenticazione a due fattori rafforza l'accesso aggiungendo un secondo controllo oltre alla password. Un password manager aiuta a conservare password lunghe e uniche senza doverle ricordare tutte. Il phishing usa l'inganno per convincere le persone a fornire dati sensibili, credenziali o pagamenti. I documenti aziendali possono contenere informazioni operative, contratti, credenziali o dati riservati.",
-    "summary_ms": 0.168999999999999,
+    "summary_ms": 0.17608299999999702,
     "sentences_used": 6
   },
   "limits": [

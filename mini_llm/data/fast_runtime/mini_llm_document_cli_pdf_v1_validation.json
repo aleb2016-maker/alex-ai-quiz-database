@@ -33,10 +33,10 @@
       "cache_status": "MISS_BUILT",
       "cache_key": "ab6f3d7ce93cdd2dc70c704f",
       "cache_path": "/Users/alessandrobarbarossa/alex-ai-workspace/mini_llm/data/fast_runtime/cache_v2_user_docs/ab6f3d7ce93cdd2dc70c704f.json",
-      "elapsed_ms": 0.43895900000000265,
+      "elapsed_ms": 0.5325840000000026,
       "chunks": 2
     },
-    "total_ms": 0.5377079999999979
+    "total_ms": 0.6570420000000035
   },
   "ask": {
     "command": "ask",
@@ -48,13 +48,13 @@
       "cache_status": "HIT",
       "cache_key": "ab6f3d7ce93cdd2dc70c704f",
       "cache_path": "/Users/alessandrobarbarossa/alex-ai-workspace/mini_llm/data/fast_runtime/cache_v2_user_docs/ab6f3d7ce93cdd2dc70c704f.json",
-      "elapsed_ms": 0.08725000000000399,
+      "elapsed_ms": 0.09345799999999765,
       "chunks": 2
     },
-    "build_or_load_ms": 0.14804100000000153,
+    "build_or_load_ms": 0.15687499999999382,
     "question": "Che cosa fa il phishing?",
     "answer": "Il phishing usa l'inganno per convincere le persone a fornire dati sensibili, credenziali o pagamenti.",
-    "answer_ms": 0.12733399999999978,
+    "answer_ms": 0.13470799999999727,
     "matches": [
       {
         "score": 1.7555,
@@ -73,12 +73,12 @@
       "cache_status": "HIT",
       "cache_key": "ab6f3d7ce93cdd2dc70c704f",
       "cache_path": "/Users/alessandrobarbarossa/alex-ai-workspace/mini_llm/data/fast_runtime/cache_v2_user_docs/ab6f3d7ce93cdd2dc70c704f.json",
-      "elapsed_ms": 0.08425000000000099,
+      "elapsed_ms": 0.09083399999999797,
       "chunks": 2
     },
-    "build_or_load_ms": 0.14054200000000044,
+    "build_or_load_ms": 0.1487499999999961,
     "summary": "La sicurezza informatica protegge dati, dispositivi, account e sistemi attraverso pratiche, strumenti e comportamenti corretti. I backup regolari servono a recuperare informazioni in caso di errore umano, guasto, furto o cancellazione accidentale. Il phishing usa l'inganno per convincere le persone a fornire dati sensibili, credenziali o pagamenti. L'autenticazione a due fattori rafforza l'accesso aggiungendo un secondo controllo oltre alla password. Il ransomware e' un malware che blocca o cifra i dati e chiede un pagamento per ripristinarli.",
-    "summary_ms": 0.1345840000000001,
+    "summary_ms": 0.13300000000000117,
     "sentences_used": 5
   },
   "limits": [

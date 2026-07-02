@@ -13,10 +13,10 @@
 
 ## Tempi
 
-- Current validator totale: `663.788208` ms
-- Build totale: `35.146584` ms
-- Ask totale: `35.656042` ms
-- Summary totale: `32.463333` ms
+- Current validator totale: `654.499583` ms
+- Build totale: `32.850125` ms
+- Ask totale: `31.490709` ms
+- Summary totale: `35.884500` ms
 
 ## Risposta esempio
 
