@@ -1,0 +1,74 @@
+{
+  "validator": "valida_mini_llm_study_pack_cli_v1",
+  "status": "PASS",
+  "errors": [],
+  "md": {
+    "status": "OK",
+    "total_ms": 7.629208000000002,
+    "counts": {
+      "summary_sentences": 8,
+      "cards": 6,
+      "qas": 8,
+      "test_questions": 6
+    }
+  },
+  "pdf": {
+    "status": "OK",
+    "total_ms": 1.841750000000003,
+    "counts": {
+      "summary_sentences": 8,
+      "cards": 6,
+      "qas": 8,
+      "test_questions": 6
+    }
+  },
+  "markdown_output": {
+    "cli": "mini_llm_study_pack_cli_v1",
+    "status": "OK",
+    "output_file": "/private/var/folders/s3/q53ggzhn0dj5v3mm46w3bgrr0000gn/T/mini_llm_study_cli_yzyc0tlu/study_pack.md",
+    "total_ms": 5.173791999999998,
+    "counts": {
+      "summary_sentences": 8,
+      "cards": 6,
+      "qas": 8,
+      "test_questions": 6
+    }
+  },
+  "examples": {
+    "md_first_card": {
+      "type": "study_card",
+      "title": "Backup regolari",
+      "message": "I backup regolari servono a recuperare informazioni in caso di errore umano, guasto, furto o cancellazione accidentale.",
+      "bullets": [
+        "Da ricordare: I backup regolari servono a recuperare informazioni in caso di errore umano, guasto, furto o cancellazione accidentale.",
+        "Perché conta: Backup regolari è un punto centrale del documento.",
+        "Parole guida: backup, regolari, recuperare, informazioni, caso"
+      ],
+      "source_sentence": "I backup regolari servono a recuperare informazioni in caso di errore umano, guasto, furto o cancellazione accidentale."
+    },
+    "md_first_qa": {
+      "question": "A cosa servono i backup regolari?",
+      "answer": "I backup regolari servono a recuperare informazioni in caso di errore umano, guasto, furto o cancellazione accidentale.",
+      "source_sentence": "I backup regolari servono a recuperare informazioni in caso di errore umano, guasto, furto o cancellazione accidentale."
+    },
+    "md_first_test": {
+      "question": "A cosa servono i backup regolari?",
+      "options": [
+        "I backup regolari servono a recuperare informazioni in caso di errore umano, guasto, furto o cancellazione accidentale.",
+        "La sicurezza informatica protegge dati, dispositivi, account e sistemi attraverso pratiche, strumenti e comportamenti corretti.",
+        "Il phishing usa l'inganno per convincere le persone a fornire dati sensibili, credenziali o pagamenti.",
+        "Un password manager aiuta a conservare password lunghe e uniche senza doverle ricordare tutte."
+      ],
+      "correct_index": 0,
+      "answer": "I backup regolari servono a recuperare informazioni in caso di errore umano, guasto, furto o cancellazione accidentale.",
+      "explanation": "La risposta corretta è: I backup regolari servono a recuperare informazioni in caso di errore umano, guasto, furto o cancellazione accidentale.",
+      "source_sentence": "I backup regolari servono a recuperare informazioni in caso di errore umano, guasto, furto o cancellazione accidentale."
+    }
+  },
+  "limits": [
+    "CLI su TXT/MD/PDF testuali.",
+    "No OCR.",
+    "Structured/extractive.",
+    "Usa Study Pack V2 Quality."
+  ]
+}
