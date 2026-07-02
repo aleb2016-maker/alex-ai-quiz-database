@@ -1,0 +1,2922 @@
+{
+  "validator": "valida_mini_llm_universal_current_engine_v396",
+  "version": "V3.9.6.1",
+  "status": "PASS",
+  "errors": [],
+  "results_count": 6,
+  "results": [
+    {
+      "engine": "mini_llm_universal_current_engine_v396",
+      "version": "V3.9.6.1",
+      "status": "PASS",
+      "errors": [],
+      "source": "/Users/alessandrobarbarossa/alex-ai-workspace/mini_llm/data/real_tests/test_v396_current_engine/informatics.md",
+      "diagnostics": {
+        "engine": "mini_llm_universal_current_engine_v396",
+        "version": "V3.9.6.1",
+        "status": "OK",
+        "source": "/Users/alessandrobarbarossa/alex-ai-workspace/mini_llm/data/real_tests/test_v396_current_engine/informatics.md",
+        "words": 30,
+        "chars": 216,
+        "bridge": {
+          "engine": "mini_llm_universal_llm_bridge_v395",
+          "status": "OK",
+          "words": 30,
+          "chars": 216,
+          "profile_id": "informatics_security_v394u",
+          "domain_name": "sicurezza informatica aziendale",
+          "detection_score": 5,
+          "architecture": {
+            "universal_core": [
+              "linguistic_core",
+              "question_core",
+              "relevance_core"
+            ],
+            "domain_profiles": "separated"
+          },
+          "limits": [
+            "Bridge universale V3.9.5.",
+            "Non è ancora LLM neurale generativo.",
+            "Non contiene vocabolari specialistici nel core.",
+            "Usa profili separati."
+          ]
+        },
+        "architecture": {
+          "current_engine": "V3.9.6.1",
+          "bridge": "V3.9.5",
+          "universal_core": "V3.9.4U",
+          "domain_profiles": "separated",
+          "study_pack": "legacy_quality_gated"
+        },
+        "limits": [
+          "Motore current universale controllato.",
+          "Non è ancora generativo neurale.",
+          "Non contiene vocabolari specialistici.",
+          "Blocca study pack legacy se non supera il gate."
+        ]
+      },
+      "queries": [
+        "Quali sono i punti principali del documento?",
+        "Che cosa devo ricordare?",
+        "Quali rischi o problemi vengono spiegati nel documento?"
+      ],
+      "bridge_result": {
+        "engine": "mini_llm_universal_llm_bridge_v395",
+        "status": "PASS",
+        "errors": [],
+        "diagnostics": {
+          "engine": "mini_llm_universal_llm_bridge_v395",
+          "status": "OK",
+          "words": 30,
+          "chars": 216,
+          "profile_id": "informatics_security_v394u",
+          "domain_name": "sicurezza informatica aziendale",
+          "detection_score": 5,
+          "architecture": {
+            "universal_core": [
+              "linguistic_core",
+              "question_core",
+              "relevance_core"
+            ],
+            "domain_profiles": "separated"
+          },
+          "limits": [
+            "Bridge universale V3.9.5.",
+            "Non è ancora LLM neurale generativo.",
+            "Non contiene vocabolari specialistici nel core.",
+            "Usa profili separati."
+          ]
+        },
+        "profile": {
+          "profile_id": "informatics_security_v394u",
+          "domain_name": "sicurezza informatica aziendale",
+          "detection_terms": [
+            "sicurezza informatica",
+            "cybersecurity",
+            "phishing",
+            "ransomware",
+            "malware",
+            "password",
+            "credenziali",
+            "backup",
+            "2fa",
+            "account",
+            "dati sensibili"
+          ],
+          "core_concepts": [
+            "sicurezza informatica",
+            "dati sensibili",
+            "account",
+            "credenziali",
+            "password",
+            "backup"
+          ],
+          "main_concepts": [
+            "sicurezza informatica",
+            "phishing",
+            "ransomware",
+            "malware",
+            "password",
+            "backup",
+            "protezione dei dati"
+          ],
+          "memory_concepts": [
+            "password sicure",
+            "phishing",
+            "backup",
+            "autenticazione a due fattori",
+            "credenziali",
+            "dati sensibili"
+          ],
+          "risk_concepts": [
+            "phishing",
+            "ransomware",
+            "malware",
+            "password deboli",
+            "furto di credenziali",
+            "perdita di dati",
+            "accessi non autorizzati"
+          ],
+          "procedure_concepts": [
+            "aggiornamenti",
+            "backup",
+            "gestione password",
+            "segnalazione incidenti",
+            "verifica link"
+          ],
+          "detection_score": 5
+        },
+        "query_expansion": {
+          "core": "mini_llm_universal_question_core_v394u",
+          "version": "V3.9.4U.1",
+          "profile_id": "informatics_security_v394u",
+          "document_domain": "sicurezza informatica aziendale",
+          "queries": [
+            {
+              "original_query": "Quali sono i punti principali del documento?",
+              "expanded_query": "Quali sono i punti principali su sicurezza informatica aziendale, in particolare sicurezza informatica, phishing, ransomware, malware, password e backup?",
+              "query_type": "main_points",
+              "changed": true,
+              "document_domain": "sicurezza informatica aziendale",
+              "concepts_used": [
+                "sicurezza informatica",
+                "phishing",
+                "ransomware",
+                "malware",
+                "password",
+                "backup"
+              ],
+              "reason": "Domanda contestualizzata con dominio e concetti specialistici forniti dal profilo."
+            },
+            {
+              "original_query": "Che cosa devo ricordare?",
+              "expanded_query": "Che cosa devo ricordare su sicurezza informatica aziendale, in particolare password sicure, phishing, backup, autenticazione a due fattori, credenziali e dati sensibili?",
+              "query_type": "study_memory",
+              "changed": true,
+              "document_domain": "sicurezza informatica aziendale",
+              "concepts_used": [
+                "password sicure",
+                "phishing",
+                "backup",
+                "autenticazione a due fattori",
+                "credenziali",
+                "dati sensibili"
+              ],
+              "reason": "Domanda contestualizzata con dominio e concetti specialistici forniti dal profilo."
+            },
+            {
+              "original_query": "Quali rischi o problemi vengono spiegati nel documento?",
+              "expanded_query": "Quali rischi o criticità di sicurezza informatica aziendale, legati a phishing, ransomware, malware, password deboli e furto di credenziali, vengono spiegati?",
+              "query_type": "risks",
+              "changed": true,
+              "document_domain": "sicurezza informatica aziendale",
+              "concepts_used": [
+                "phishing",
+                "ransomware",
+                "malware",
+                "password deboli",
+                "furto di credenziali"
+              ],
+              "reason": "Domanda contestualizzata con dominio e concetti specialistici forniti dal profilo."
+            }
+          ],
+          "limits": [
+            "Core universale.",
+            "Non contiene vocabolario specialistico.",
+            "Usa concetti forniti dal profilo di dominio."
+          ]
+        },
+        "answers": [
+          {
+            "status": "OK",
+            "query": "Quali sono i punti principali del documento?",
+            "expanded_query": "Quali sono i punti principali su sicurezza informatica aziendale, in particolare sicurezza informatica, phishing, ransomware, malware, password e backup?",
+            "answer": "I punti principali del documento riguardano sicurezza informatica aziendale, con attenzione a sicurezza informatica, phishing, ransomware, malware, password. La sicurezza informatica protegge dati, account e sistemi digitali. Il ransomware può bloccare dati aziendali. Il phishing usa messaggi ingannevoli.",
+            "sentences_used": 4,
+            "quality_errors": [],
+            "relevance": {
+              "profile_id": "informatics_security_v394u",
+              "domain_name": "sicurezza informatica aziendale",
+              "query_type": "main_points"
+            },
+            "limits": [
+              "Pertinenza universale.",
+              "Concetti specialistici forniti dal profilo.",
+              "Nessun fix su domanda singola."
+            ]
+          },
+          {
+            "status": "OK",
+            "query": "Che cosa devo ricordare?",
+            "expanded_query": "Che cosa devo ricordare su sicurezza informatica aziendale, in particolare password sicure, phishing, backup, autenticazione a due fattori, credenziali e dati sensibili?",
+            "answer": "Su sicurezza informatica aziendale, il documento richiama concetti e comportamenti da ricordare come password sicure, phishing, backup, autenticazione a due fattori, credenziali. La sicurezza informatica protegge dati, account e sistemi digitali. Il phishing usa messaggi ingannevoli. Il ransomware può bloccare dati aziendali.",
+            "sentences_used": 4,
+            "quality_errors": [],
+            "relevance": {
+              "profile_id": "informatics_security_v394u",
+              "domain_name": "sicurezza informatica aziendale",
+              "query_type": "study_memory"
+            },
+            "limits": [
+              "Pertinenza universale.",
+              "Concetti specialistici forniti dal profilo.",
+              "Nessun fix su domanda singola."
+            ]
+          },
+          {
+            "status": "OK",
+            "query": "Quali rischi o problemi vengono spiegati nel documento?",
+            "expanded_query": "Quali rischi o criticità di sicurezza informatica aziendale, legati a phishing, ransomware, malware, password deboli e furto di credenziali, vengono spiegati?",
+            "answer": "I rischi o le criticità di sicurezza informatica aziendale spiegati nel documento riguardano phishing, ransomware, malware, password deboli, furto di credenziali. Le password deboli aumentano il rischio di accessi non autorizzati. La sicurezza informatica protegge dati, account e sistemi digitali. Il ransomware può bloccare dati aziendali.",
+            "sentences_used": 4,
+            "quality_errors": [],
+            "relevance": {
+              "profile_id": "informatics_security_v394u",
+              "domain_name": "sicurezza informatica aziendale",
+              "query_type": "risks"
+            },
+            "limits": [
+              "Pertinenza universale.",
+              "Concetti specialistici forniti dal profilo.",
+              "Nessun fix su domanda singola."
+            ]
+          }
+        ],
+        "gates": {
+          "relevance": {
+            "core": "mini_llm_universal_relevance_core_v394u",
+            "version": "V3.9.4U.1",
+            "status": "PASS",
+            "errors": [],
+            "profile_id": "informatics_security_v394u",
+            "domain_name": "sicurezza informatica aziendale",
+            "limits": [
+              "Gate universale di pertinenza.",
+              "Usa profilo esterno.",
+              "Non contiene dizionari specialistici interni."
+            ]
+          },
+          "linguistic_errors": []
+        },
+        "elapsed_ms": 1.3017500000000009,
+        "limits": [
+          "Bridge tra mini LLM e core universale.",
+          "Domande migliorate dal core universale.",
+          "Risposte validate dal core universale.",
+          "Profili specialistici separati."
+        ]
+      },
+      "answers": [
+        {
+          "status": "OK",
+          "query": "Quali sono i punti principali del documento?",
+          "expanded_query": "Quali sono i punti principali su sicurezza informatica aziendale, in particolare sicurezza informatica, phishing, ransomware, malware, password e backup?",
+          "answer": "I punti principali del documento riguardano sicurezza informatica aziendale, con attenzione a sicurezza informatica, phishing, ransomware, malware, password. La sicurezza informatica protegge dati, account e sistemi digitali. Il ransomware può bloccare dati aziendali. Il phishing usa messaggi ingannevoli.",
+          "sentences_used": 4,
+          "quality_errors": [],
+          "relevance": {
+            "profile_id": "informatics_security_v394u",
+            "domain_name": "sicurezza informatica aziendale",
+            "query_type": "main_points"
+          },
+          "limits": [
+            "Pertinenza universale.",
+            "Concetti specialistici forniti dal profilo.",
+            "Nessun fix su domanda singola."
+          ]
+        },
+        {
+          "status": "OK",
+          "query": "Che cosa devo ricordare?",
+          "expanded_query": "Che cosa devo ricordare su sicurezza informatica aziendale, in particolare password sicure, phishing, backup, autenticazione a due fattori, credenziali e dati sensibili?",
+          "answer": "Su sicurezza informatica aziendale, il documento richiama concetti e comportamenti da ricordare come password sicure, phishing, backup, autenticazione a due fattori, credenziali. La sicurezza informatica protegge dati, account e sistemi digitali. Il phishing usa messaggi ingannevoli. Il ransomware può bloccare dati aziendali.",
+          "sentences_used": 4,
+          "quality_errors": [],
+          "relevance": {
+            "profile_id": "informatics_security_v394u",
+            "domain_name": "sicurezza informatica aziendale",
+            "query_type": "study_memory"
+          },
+          "limits": [
+            "Pertinenza universale.",
+            "Concetti specialistici forniti dal profilo.",
+            "Nessun fix su domanda singola."
+          ]
+        },
+        {
+          "status": "OK",
+          "query": "Quali rischi o problemi vengono spiegati nel documento?",
+          "expanded_query": "Quali rischi o criticità di sicurezza informatica aziendale, legati a phishing, ransomware, malware, password deboli e furto di credenziali, vengono spiegati?",
+          "answer": "I rischi o le criticità di sicurezza informatica aziendale spiegati nel documento riguardano phishing, ransomware, malware, password deboli, furto di credenziali. Le password deboli aumentano il rischio di accessi non autorizzati. La sicurezza informatica protegge dati, account e sistemi digitali. Il ransomware può bloccare dati aziendali.",
+          "sentences_used": 4,
+          "quality_errors": [],
+          "relevance": {
+            "profile_id": "informatics_security_v394u",
+            "domain_name": "sicurezza informatica aziendale",
+            "query_type": "risks"
+          },
+          "limits": [
+            "Pertinenza universale.",
+            "Concetti specialistici forniti dal profilo.",
+            "Nessun fix su domanda singola."
+          ]
+        }
+      ],
+      "query_expansion": {
+        "core": "mini_llm_universal_question_core_v394u",
+        "version": "V3.9.4U.1",
+        "profile_id": "informatics_security_v394u",
+        "document_domain": "sicurezza informatica aziendale",
+        "queries": [
+          {
+            "original_query": "Quali sono i punti principali del documento?",
+            "expanded_query": "Quali sono i punti principali su sicurezza informatica aziendale, in particolare sicurezza informatica, phishing, ransomware, malware, password e backup?",
+            "query_type": "main_points",
+            "changed": true,
+            "document_domain": "sicurezza informatica aziendale",
+            "concepts_used": [
+              "sicurezza informatica",
+              "phishing",
+              "ransomware",
+              "malware",
+              "password",
+              "backup"
+            ],
+            "reason": "Domanda contestualizzata con dominio e concetti specialistici forniti dal profilo."
+          },
+          {
+            "original_query": "Che cosa devo ricordare?",
+            "expanded_query": "Che cosa devo ricordare su sicurezza informatica aziendale, in particolare password sicure, phishing, backup, autenticazione a due fattori, credenziali e dati sensibili?",
+            "query_type": "study_memory",
+            "changed": true,
+            "document_domain": "sicurezza informatica aziendale",
+            "concepts_used": [
+              "password sicure",
+              "phishing",
+              "backup",
+              "autenticazione a due fattori",
+              "credenziali",
+              "dati sensibili"
+            ],
+            "reason": "Domanda contestualizzata con dominio e concetti specialistici forniti dal profilo."
+          },
+          {
+            "original_query": "Quali rischi o problemi vengono spiegati nel documento?",
+            "expanded_query": "Quali rischi o criticità di sicurezza informatica aziendale, legati a phishing, ransomware, malware, password deboli e furto di credenziali, vengono spiegati?",
+            "query_type": "risks",
+            "changed": true,
+            "document_domain": "sicurezza informatica aziendale",
+            "concepts_used": [
+              "phishing",
+              "ransomware",
+              "malware",
+              "password deboli",
+              "furto di credenziali"
+            ],
+            "reason": "Domanda contestualizzata con dominio e concetti specialistici forniti dal profilo."
+          }
+        ],
+        "limits": [
+          "Core universale.",
+          "Non contiene vocabolario specialistico.",
+          "Usa concetti forniti dal profilo di dominio."
+        ]
+      },
+      "profile": {
+        "profile_id": "informatics_security_v394u",
+        "domain_name": "sicurezza informatica aziendale",
+        "detection_terms": [
+          "sicurezza informatica",
+          "cybersecurity",
+          "phishing",
+          "ransomware",
+          "malware",
+          "password",
+          "credenziali",
+          "backup",
+          "2fa",
+          "account",
+          "dati sensibili"
+        ],
+        "core_concepts": [
+          "sicurezza informatica",
+          "dati sensibili",
+          "account",
+          "credenziali",
+          "password",
+          "backup"
+        ],
+        "main_concepts": [
+          "sicurezza informatica",
+          "phishing",
+          "ransomware",
+          "malware",
+          "password",
+          "backup",
+          "protezione dei dati"
+        ],
+        "memory_concepts": [
+          "password sicure",
+          "phishing",
+          "backup",
+          "autenticazione a due fattori",
+          "credenziali",
+          "dati sensibili"
+        ],
+        "risk_concepts": [
+          "phishing",
+          "ransomware",
+          "malware",
+          "password deboli",
+          "furto di credenziali",
+          "perdita di dati",
+          "accessi non autorizzati"
+        ],
+        "procedure_concepts": [
+          "aggiornamenti",
+          "backup",
+          "gestione password",
+          "segnalazione incidenti",
+          "verifica link"
+        ],
+        "detection_score": 5
+      },
+      "gates": {
+        "relevance": {
+          "core": "mini_llm_universal_relevance_core_v394u",
+          "version": "V3.9.4U.1",
+          "status": "PASS",
+          "errors": [],
+          "profile_id": "informatics_security_v394u",
+          "domain_name": "sicurezza informatica aziendale",
+          "limits": [
+            "Gate universale di pertinenza.",
+            "Usa profilo esterno.",
+            "Non contiene dizionari specialistici interni."
+          ]
+        },
+        "linguistic_errors": []
+      },
+      "study_pack": {
+        "status": "SKIPPED",
+        "reason": "include_study_pack=false",
+        "study_pack": null,
+        "errors": []
+      },
+      "elapsed_ms": 2.503000000000002,
+      "limits": [
+        "Current Engine V3.9.6.1.",
+        "Usa bridge universale V3.9.5.",
+        "Core universale separato dai profili.",
+        "Study pack legacy protetto da gate qualità.",
+        "No fix su domanda singola."
+      ],
+      "document_cleaning": {
+        "used_cleaner": false,
+        "reason": "Documento corto: uso testo grezzo per non perdere segnali di dominio.",
+        "raw_words": 30,
+        "cleaned_words": 30
+      }
+    },
+    {
+      "engine": "mini_llm_universal_current_engine_v396",
+      "version": "V3.9.6.1",
+      "status": "PASS",
+      "errors": [],
+      "source": "/Users/alessandrobarbarossa/alex-ai-workspace/mini_llm/data/real_tests/test_v396_current_engine/sport.txt",
+      "diagnostics": {
+        "engine": "mini_llm_universal_current_engine_v396",
+        "version": "V3.9.6.1",
+        "status": "OK",
+        "source": "/Users/alessandrobarbarossa/alex-ai-workspace/mini_llm/data/real_tests/test_v396_current_engine/sport.txt",
+        "words": 26,
+        "chars": 172,
+        "bridge": {
+          "engine": "mini_llm_universal_llm_bridge_v395",
+          "status": "OK",
+          "words": 26,
+          "chars": 172,
+          "profile_id": "sport_training_v394u",
+          "domain_name": "sport e allenamento",
+          "detection_score": 8,
+          "architecture": {
+            "universal_core": [
+              "linguistic_core",
+              "question_core",
+              "relevance_core"
+            ],
+            "domain_profiles": "separated"
+          },
+          "limits": [
+            "Bridge universale V3.9.5.",
+            "Non è ancora LLM neurale generativo.",
+            "Non contiene vocabolari specialistici nel core.",
+            "Usa profili separati."
+          ]
+        },
+        "architecture": {
+          "current_engine": "V3.9.6.1",
+          "bridge": "V3.9.5",
+          "universal_core": "V3.9.4U",
+          "domain_profiles": "separated",
+          "study_pack": "legacy_quality_gated"
+        },
+        "limits": [
+          "Motore current universale controllato.",
+          "Non è ancora generativo neurale.",
+          "Non contiene vocabolari specialistici.",
+          "Blocca study pack legacy se non supera il gate."
+        ]
+      },
+      "queries": [
+        "Quali sono i punti principali del documento?",
+        "Che cosa devo ricordare?",
+        "Quali rischi o problemi vengono spiegati nel documento?"
+      ],
+      "bridge_result": {
+        "engine": "mini_llm_universal_llm_bridge_v395",
+        "status": "PASS",
+        "errors": [],
+        "diagnostics": {
+          "engine": "mini_llm_universal_llm_bridge_v395",
+          "status": "OK",
+          "words": 26,
+          "chars": 172,
+          "profile_id": "sport_training_v394u",
+          "domain_name": "sport e allenamento",
+          "detection_score": 8,
+          "architecture": {
+            "universal_core": [
+              "linguistic_core",
+              "question_core",
+              "relevance_core"
+            ],
+            "domain_profiles": "separated"
+          },
+          "limits": [
+            "Bridge universale V3.9.5.",
+            "Non è ancora LLM neurale generativo.",
+            "Non contiene vocabolari specialistici nel core.",
+            "Usa profili separati."
+          ]
+        },
+        "profile": {
+          "profile_id": "sport_training_v394u",
+          "domain_name": "sport e allenamento",
+          "detection_terms": [
+            "allenamento",
+            "esercizi",
+            "serie",
+            "ripetizioni",
+            "recupero",
+            "forza",
+            "resistenza",
+            "mobilità",
+            "infortunio",
+            "carico"
+          ],
+          "core_concepts": [
+            "allenamento",
+            "esercizi",
+            "recupero",
+            "carico",
+            "progressione",
+            "tecnica"
+          ],
+          "main_concepts": [
+            "obiettivo atletico",
+            "esercizi principali",
+            "serie",
+            "ripetizioni",
+            "recupero",
+            "progressione del carico"
+          ],
+          "memory_concepts": [
+            "tecnica corretta",
+            "riscaldamento",
+            "recupero",
+            "progressione",
+            "ascolto del corpo"
+          ],
+          "risk_concepts": [
+            "sovraccarico",
+            "infortunio",
+            "tecnica scorretta",
+            "recupero insufficiente",
+            "carico eccessivo"
+          ],
+          "procedure_concepts": [
+            "riscaldamento",
+            "serie",
+            "ripetizioni",
+            "recupero",
+            "defaticamento"
+          ],
+          "detection_score": 8
+        },
+        "query_expansion": {
+          "core": "mini_llm_universal_question_core_v394u",
+          "version": "V3.9.4U.1",
+          "profile_id": "sport_training_v394u",
+          "document_domain": "sport e allenamento",
+          "queries": [
+            {
+              "original_query": "Quali sono i punti principali del documento?",
+              "expanded_query": "Quali sono i punti principali su sport e allenamento, in particolare obiettivo atletico, esercizi principali, serie, ripetizioni, recupero e progressione del carico?",
+              "query_type": "main_points",
+              "changed": true,
+              "document_domain": "sport e allenamento",
+              "concepts_used": [
+                "obiettivo atletico",
+                "esercizi principali",
+                "serie",
+                "ripetizioni",
+                "recupero",
+                "progressione del carico"
+              ],
+              "reason": "Domanda contestualizzata con dominio e concetti specialistici forniti dal profilo."
+            },
+            {
+              "original_query": "Che cosa devo ricordare?",
+              "expanded_query": "Che cosa devo ricordare su sport e allenamento, in particolare tecnica corretta, riscaldamento, recupero, progressione e ascolto del corpo?",
+              "query_type": "study_memory",
+              "changed": true,
+              "document_domain": "sport e allenamento",
+              "concepts_used": [
+                "tecnica corretta",
+                "riscaldamento",
+                "recupero",
+                "progressione",
+                "ascolto del corpo"
+              ],
+              "reason": "Domanda contestualizzata con dominio e concetti specialistici forniti dal profilo."
+            },
+            {
+              "original_query": "Quali rischi o problemi vengono spiegati nel documento?",
+              "expanded_query": "Quali rischi o criticità di sport e allenamento, legati a sovraccarico, infortunio, tecnica scorretta, recupero insufficiente e carico eccessivo, vengono spiegati?",
+              "query_type": "risks",
+              "changed": true,
+              "document_domain": "sport e allenamento",
+              "concepts_used": [
+                "sovraccarico",
+                "infortunio",
+                "tecnica scorretta",
+                "recupero insufficiente",
+                "carico eccessivo"
+              ],
+              "reason": "Domanda contestualizzata con dominio e concetti specialistici forniti dal profilo."
+            }
+          ],
+          "limits": [
+            "Core universale.",
+            "Non contiene vocabolario specialistico.",
+            "Usa concetti forniti dal profilo di dominio."
+          ]
+        },
+        "answers": [
+          {
+            "status": "OK",
+            "query": "Quali sono i punti principali del documento?",
+            "expanded_query": "Quali sono i punti principali su sport e allenamento, in particolare obiettivo atletico, esercizi principali, serie, ripetizioni, recupero e progressione del carico?",
+            "answer": "I punti principali del documento riguardano sport e allenamento, con attenzione a obiettivo atletico, esercizi principali, serie, ripetizioni, recupero. Il programma di allenamento prevede esercizi di forza, serie e ripetizioni. Il recupero aiuta ad adattare il carico.",
+            "sentences_used": 3,
+            "quality_errors": [],
+            "relevance": {
+              "profile_id": "sport_training_v394u",
+              "domain_name": "sport e allenamento",
+              "query_type": "main_points"
+            },
+            "limits": [
+              "Pertinenza universale.",
+              "Concetti specialistici forniti dal profilo.",
+              "Nessun fix su domanda singola."
+            ]
+          },
+          {
+            "status": "OK",
+            "query": "Che cosa devo ricordare?",
+            "expanded_query": "Che cosa devo ricordare su sport e allenamento, in particolare tecnica corretta, riscaldamento, recupero, progressione e ascolto del corpo?",
+            "answer": "Su sport e allenamento, il documento richiama concetti e comportamenti da ricordare come tecnica corretta, riscaldamento, recupero, progressione, ascolto del corpo. Il programma di allenamento prevede esercizi di forza, serie e ripetizioni. Il recupero aiuta ad adattare il carico. Una tecnica scorretta aumenta il rischio di infortunio.",
+            "sentences_used": 4,
+            "quality_errors": [],
+            "relevance": {
+              "profile_id": "sport_training_v394u",
+              "domain_name": "sport e allenamento",
+              "query_type": "study_memory"
+            },
+            "limits": [
+              "Pertinenza universale.",
+              "Concetti specialistici forniti dal profilo.",
+              "Nessun fix su domanda singola."
+            ]
+          },
+          {
+            "status": "OK",
+            "query": "Quali rischi o problemi vengono spiegati nel documento?",
+            "expanded_query": "Quali rischi o criticità di sport e allenamento, legati a sovraccarico, infortunio, tecnica scorretta, recupero insufficiente e carico eccessivo, vengono spiegati?",
+            "answer": "I rischi o le criticità di sport e allenamento spiegati nel documento riguardano sovraccarico, infortunio, tecnica scorretta, recupero insufficiente, carico eccessivo. Una tecnica scorretta aumenta il rischio di infortunio. Il recupero aiuta ad adattare il carico. Il programma di allenamento prevede esercizi di forza, serie e ripetizioni.",
+            "sentences_used": 4,
+            "quality_errors": [],
+            "relevance": {
+              "profile_id": "sport_training_v394u",
+              "domain_name": "sport e allenamento",
+              "query_type": "risks"
+            },
+            "limits": [
+              "Pertinenza universale.",
+              "Concetti specialistici forniti dal profilo.",
+              "Nessun fix su domanda singola."
+            ]
+          }
+        ],
+        "gates": {
+          "relevance": {
+            "core": "mini_llm_universal_relevance_core_v394u",
+            "version": "V3.9.4U.1",
+            "status": "PASS",
+            "errors": [],
+            "profile_id": "sport_training_v394u",
+            "domain_name": "sport e allenamento",
+            "limits": [
+              "Gate universale di pertinenza.",
+              "Usa profilo esterno.",
+              "Non contiene dizionari specialistici interni."
+            ]
+          },
+          "linguistic_errors": []
+        },
+        "elapsed_ms": 1.3063329999999997,
+        "limits": [
+          "Bridge tra mini LLM e core universale.",
+          "Domande migliorate dal core universale.",
+          "Risposte validate dal core universale.",
+          "Profili specialistici separati."
+        ]
+      },
+      "answers": [
+        {
+          "status": "OK",
+          "query": "Quali sono i punti principali del documento?",
+          "expanded_query": "Quali sono i punti principali su sport e allenamento, in particolare obiettivo atletico, esercizi principali, serie, ripetizioni, recupero e progressione del carico?",
+          "answer": "I punti principali del documento riguardano sport e allenamento, con attenzione a obiettivo atletico, esercizi principali, serie, ripetizioni, recupero. Il programma di allenamento prevede esercizi di forza, serie e ripetizioni. Il recupero aiuta ad adattare il carico.",
+          "sentences_used": 3,
+          "quality_errors": [],
+          "relevance": {
+            "profile_id": "sport_training_v394u",
+            "domain_name": "sport e allenamento",
+            "query_type": "main_points"
+          },
+          "limits": [
+            "Pertinenza universale.",
+            "Concetti specialistici forniti dal profilo.",
+            "Nessun fix su domanda singola."
+          ]
+        },
+        {
+          "status": "OK",
+          "query": "Che cosa devo ricordare?",
+          "expanded_query": "Che cosa devo ricordare su sport e allenamento, in particolare tecnica corretta, riscaldamento, recupero, progressione e ascolto del corpo?",
+          "answer": "Su sport e allenamento, il documento richiama concetti e comportamenti da ricordare come tecnica corretta, riscaldamento, recupero, progressione, ascolto del corpo. Il programma di allenamento prevede esercizi di forza, serie e ripetizioni. Il recupero aiuta ad adattare il carico. Una tecnica scorretta aumenta il rischio di infortunio.",
+          "sentences_used": 4,
+          "quality_errors": [],
+          "relevance": {
+            "profile_id": "sport_training_v394u",
+            "domain_name": "sport e allenamento",
+            "query_type": "study_memory"
+          },
+          "limits": [
+            "Pertinenza universale.",
+            "Concetti specialistici forniti dal profilo.",
+            "Nessun fix su domanda singola."
+          ]
+        },
+        {
+          "status": "OK",
+          "query": "Quali rischi o problemi vengono spiegati nel documento?",
+          "expanded_query": "Quali rischi o criticità di sport e allenamento, legati a sovraccarico, infortunio, tecnica scorretta, recupero insufficiente e carico eccessivo, vengono spiegati?",
+          "answer": "I rischi o le criticità di sport e allenamento spiegati nel documento riguardano sovraccarico, infortunio, tecnica scorretta, recupero insufficiente, carico eccessivo. Una tecnica scorretta aumenta il rischio di infortunio. Il recupero aiuta ad adattare il carico. Il programma di allenamento prevede esercizi di forza, serie e ripetizioni.",
+          "sentences_used": 4,
+          "quality_errors": [],
+          "relevance": {
+            "profile_id": "sport_training_v394u",
+            "domain_name": "sport e allenamento",
+            "query_type": "risks"
+          },
+          "limits": [
+            "Pertinenza universale.",
+            "Concetti specialistici forniti dal profilo.",
+            "Nessun fix su domanda singola."
+          ]
+        }
+      ],
+      "query_expansion": {
+        "core": "mini_llm_universal_question_core_v394u",
+        "version": "V3.9.4U.1",
+        "profile_id": "sport_training_v394u",
+        "document_domain": "sport e allenamento",
+        "queries": [
+          {
+            "original_query": "Quali sono i punti principali del documento?",
+            "expanded_query": "Quali sono i punti principali su sport e allenamento, in particolare obiettivo atletico, esercizi principali, serie, ripetizioni, recupero e progressione del carico?",
+            "query_type": "main_points",
+            "changed": true,
+            "document_domain": "sport e allenamento",
+            "concepts_used": [
+              "obiettivo atletico",
+              "esercizi principali",
+              "serie",
+              "ripetizioni",
+              "recupero",
+              "progressione del carico"
+            ],
+            "reason": "Domanda contestualizzata con dominio e concetti specialistici forniti dal profilo."
+          },
+          {
+            "original_query": "Che cosa devo ricordare?",
+            "expanded_query": "Che cosa devo ricordare su sport e allenamento, in particolare tecnica corretta, riscaldamento, recupero, progressione e ascolto del corpo?",
+            "query_type": "study_memory",
+            "changed": true,
+            "document_domain": "sport e allenamento",
+            "concepts_used": [
+              "tecnica corretta",
+              "riscaldamento",
+              "recupero",
+              "progressione",
+              "ascolto del corpo"
+            ],
+            "reason": "Domanda contestualizzata con dominio e concetti specialistici forniti dal profilo."
+          },
+          {
+            "original_query": "Quali rischi o problemi vengono spiegati nel documento?",
+            "expanded_query": "Quali rischi o criticità di sport e allenamento, legati a sovraccarico, infortunio, tecnica scorretta, recupero insufficiente e carico eccessivo, vengono spiegati?",
+            "query_type": "risks",
+            "changed": true,
+            "document_domain": "sport e allenamento",
+            "concepts_used": [
+              "sovraccarico",
+              "infortunio",
+              "tecnica scorretta",
+              "recupero insufficiente",
+              "carico eccessivo"
+            ],
+            "reason": "Domanda contestualizzata con dominio e concetti specialistici forniti dal profilo."
+          }
+        ],
+        "limits": [
+          "Core universale.",
+          "Non contiene vocabolario specialistico.",
+          "Usa concetti forniti dal profilo di dominio."
+        ]
+      },
+      "profile": {
+        "profile_id": "sport_training_v394u",
+        "domain_name": "sport e allenamento",
+        "detection_terms": [
+          "allenamento",
+          "esercizi",
+          "serie",
+          "ripetizioni",
+          "recupero",
+          "forza",
+          "resistenza",
+          "mobilità",
+          "infortunio",
+          "carico"
+        ],
+        "core_concepts": [
+          "allenamento",
+          "esercizi",
+          "recupero",
+          "carico",
+          "progressione",
+          "tecnica"
+        ],
+        "main_concepts": [
+          "obiettivo atletico",
+          "esercizi principali",
+          "serie",
+          "ripetizioni",
+          "recupero",
+          "progressione del carico"
+        ],
+        "memory_concepts": [
+          "tecnica corretta",
+          "riscaldamento",
+          "recupero",
+          "progressione",
+          "ascolto del corpo"
+        ],
+        "risk_concepts": [
+          "sovraccarico",
+          "infortunio",
+          "tecnica scorretta",
+          "recupero insufficiente",
+          "carico eccessivo"
+        ],
+        "procedure_concepts": [
+          "riscaldamento",
+          "serie",
+          "ripetizioni",
+          "recupero",
+          "defaticamento"
+        ],
+        "detection_score": 8
+      },
+      "gates": {
+        "relevance": {
+          "core": "mini_llm_universal_relevance_core_v394u",
+          "version": "V3.9.4U.1",
+          "status": "PASS",
+          "errors": [],
+          "profile_id": "sport_training_v394u",
+          "domain_name": "sport e allenamento",
+          "limits": [
+            "Gate universale di pertinenza.",
+            "Usa profilo esterno.",
+            "Non contiene dizionari specialistici interni."
+          ]
+        },
+        "linguistic_errors": []
+      },
+      "study_pack": {
+        "status": "SKIPPED",
+        "reason": "include_study_pack=false",
+        "study_pack": null,
+        "errors": []
+      },
+      "elapsed_ms": 1.917999999999998,
+      "limits": [
+        "Current Engine V3.9.6.1.",
+        "Usa bridge universale V3.9.5.",
+        "Core universale separato dai profili.",
+        "Study pack legacy protetto da gate qualità.",
+        "No fix su domanda singola."
+      ],
+      "document_cleaning": {
+        "used_cleaner": false,
+        "reason": "Documento corto: uso testo grezzo per non perdere segnali di dominio.",
+        "raw_words": 26,
+        "cleaned_words": 26
+      }
+    },
+    {
+      "engine": "mini_llm_universal_current_engine_v396",
+      "version": "V3.9.6.1",
+      "status": "PASS",
+      "errors": [],
+      "source": "/Users/alessandrobarbarossa/alex-ai-workspace/mini_llm/data/real_tests/test_v396_current_engine/curriculum.md",
+      "diagnostics": {
+        "engine": "mini_llm_universal_current_engine_v396",
+        "version": "V3.9.6.1",
+        "status": "OK",
+        "source": "/Users/alessandrobarbarossa/alex-ai-workspace/mini_llm/data/real_tests/test_v396_current_engine/curriculum.md",
+        "words": 25,
+        "chars": 182,
+        "bridge": {
+          "engine": "mini_llm_universal_llm_bridge_v395",
+          "status": "OK",
+          "words": 25,
+          "chars": 182,
+          "profile_id": "curriculum_profile_v394u",
+          "domain_name": "curriculum e profilo professionale",
+          "detection_score": 6,
+          "architecture": {
+            "universal_core": [
+              "linguistic_core",
+              "question_core",
+              "relevance_core"
+            ],
+            "domain_profiles": "separated"
+          },
+          "limits": [
+            "Bridge universale V3.9.5.",
+            "Non è ancora LLM neurale generativo.",
+            "Non contiene vocabolari specialistici nel core.",
+            "Usa profili separati."
+          ]
+        },
+        "architecture": {
+          "current_engine": "V3.9.6.1",
+          "bridge": "V3.9.5",
+          "universal_core": "V3.9.4U",
+          "domain_profiles": "separated",
+          "study_pack": "legacy_quality_gated"
+        },
+        "limits": [
+          "Motore current universale controllato.",
+          "Non è ancora generativo neurale.",
+          "Non contiene vocabolari specialistici.",
+          "Blocca study pack legacy se non supera il gate."
+        ]
+      },
+      "queries": [
+        "Quali sono i punti principali del documento?",
+        "Che cosa devo ricordare?",
+        "Quali rischi o problemi vengono spiegati nel documento?"
+      ],
+      "bridge_result": {
+        "engine": "mini_llm_universal_llm_bridge_v395",
+        "status": "PASS",
+        "errors": [],
+        "diagnostics": {
+          "engine": "mini_llm_universal_llm_bridge_v395",
+          "status": "OK",
+          "words": 25,
+          "chars": 182,
+          "profile_id": "curriculum_profile_v394u",
+          "domain_name": "curriculum e profilo professionale",
+          "detection_score": 6,
+          "architecture": {
+            "universal_core": [
+              "linguistic_core",
+              "question_core",
+              "relevance_core"
+            ],
+            "domain_profiles": "separated"
+          },
+          "limits": [
+            "Bridge universale V3.9.5.",
+            "Non è ancora LLM neurale generativo.",
+            "Non contiene vocabolari specialistici nel core.",
+            "Usa profili separati."
+          ]
+        },
+        "profile": {
+          "profile_id": "curriculum_profile_v394u",
+          "domain_name": "curriculum e profilo professionale",
+          "detection_terms": [
+            "curriculum",
+            "esperienza",
+            "competenze",
+            "formazione",
+            "profilo professionale",
+            "obiettivo",
+            "ruolo",
+            "progetti",
+            "certificazioni"
+          ],
+          "core_concepts": [
+            "profilo professionale",
+            "esperienze",
+            "competenze",
+            "formazione",
+            "obiettivo"
+          ],
+          "main_concepts": [
+            "esperienze lavorative",
+            "competenze tecniche",
+            "formazione",
+            "progetti",
+            "obiettivo professionale"
+          ],
+          "memory_concepts": [
+            "punti di forza",
+            "competenze rilevanti",
+            "esperienze principali",
+            "obiettivo professionale"
+          ],
+          "risk_concepts": [
+            "informazioni poco chiare",
+            "esperienze non contestualizzate",
+            "competenze generiche",
+            "obiettivo non definito"
+          ],
+          "procedure_concepts": [
+            "ordinare esperienze",
+            "selezionare competenze",
+            "scrivere profilo",
+            "adattare il CV al ruolo"
+          ],
+          "detection_score": 6
+        },
+        "query_expansion": {
+          "core": "mini_llm_universal_question_core_v394u",
+          "version": "V3.9.4U.1",
+          "profile_id": "curriculum_profile_v394u",
+          "document_domain": "curriculum e profilo professionale",
+          "queries": [
+            {
+              "original_query": "Quali sono i punti principali del documento?",
+              "expanded_query": "Quali sono i punti principali su curriculum e profilo professionale, in particolare esperienze lavorative, competenze tecniche, formazione, progetti e obiettivo professionale?",
+              "query_type": "main_points",
+              "changed": true,
+              "document_domain": "curriculum e profilo professionale",
+              "concepts_used": [
+                "esperienze lavorative",
+                "competenze tecniche",
+                "formazione",
+                "progetti",
+                "obiettivo professionale"
+              ],
+              "reason": "Domanda contestualizzata con dominio e concetti specialistici forniti dal profilo."
+            },
+            {
+              "original_query": "Che cosa devo ricordare?",
+              "expanded_query": "Che cosa devo ricordare su curriculum e profilo professionale, in particolare punti di forza, competenze rilevanti, esperienze principali e obiettivo professionale?",
+              "query_type": "study_memory",
+              "changed": true,
+              "document_domain": "curriculum e profilo professionale",
+              "concepts_used": [
+                "punti di forza",
+                "competenze rilevanti",
+                "esperienze principali",
+                "obiettivo professionale"
+              ],
+              "reason": "Domanda contestualizzata con dominio e concetti specialistici forniti dal profilo."
+            },
+            {
+              "original_query": "Quali rischi o problemi vengono spiegati nel documento?",
+              "expanded_query": "Quali rischi o criticità di curriculum e profilo professionale, legati a informazioni poco chiare, esperienze non contestualizzate, competenze generiche e obiettivo non definito, vengono spiegati?",
+              "query_type": "risks",
+              "changed": true,
+              "document_domain": "curriculum e profilo professionale",
+              "concepts_used": [
+                "informazioni poco chiare",
+                "esperienze non contestualizzate",
+                "competenze generiche",
+                "obiettivo non definito"
+              ],
+              "reason": "Domanda contestualizzata con dominio e concetti specialistici forniti dal profilo."
+            }
+          ],
+          "limits": [
+            "Core universale.",
+            "Non contiene vocabolario specialistico.",
+            "Usa concetti forniti dal profilo di dominio."
+          ]
+        },
+        "answers": [
+          {
+            "status": "OK",
+            "query": "Quali sono i punti principali del documento?",
+            "expanded_query": "Quali sono i punti principali su curriculum e profilo professionale, in particolare esperienze lavorative, competenze tecniche, formazione, progetti e obiettivo professionale?",
+            "answer": "I punti principali del documento riguardano curriculum e profilo professionale, con attenzione a esperienze lavorative, competenze tecniche, formazione, progetti, obiettivo professionale. Il curriculum presenta esperienze, formazione e competenze tecniche. Il profilo professionale deve chiarire il ruolo desiderato. Un obiettivo poco definito rende il CV meno efficace.",
+            "sentences_used": 4,
+            "quality_errors": [],
+            "relevance": {
+              "profile_id": "curriculum_profile_v394u",
+              "domain_name": "curriculum e profilo professionale",
+              "query_type": "main_points"
+            },
+            "limits": [
+              "Pertinenza universale.",
+              "Concetti specialistici forniti dal profilo.",
+              "Nessun fix su domanda singola."
+            ]
+          },
+          {
+            "status": "OK",
+            "query": "Che cosa devo ricordare?",
+            "expanded_query": "Che cosa devo ricordare su curriculum e profilo professionale, in particolare punti di forza, competenze rilevanti, esperienze principali e obiettivo professionale?",
+            "answer": "Su curriculum e profilo professionale, il documento richiama concetti e comportamenti da ricordare come punti di forza, competenze rilevanti, esperienze principali, obiettivo professionale. Il curriculum presenta esperienze, formazione e competenze tecniche. Il profilo professionale deve chiarire il ruolo desiderato. Un obiettivo poco definito rende il CV meno efficace.",
+            "sentences_used": 4,
+            "quality_errors": [],
+            "relevance": {
+              "profile_id": "curriculum_profile_v394u",
+              "domain_name": "curriculum e profilo professionale",
+              "query_type": "study_memory"
+            },
+            "limits": [
+              "Pertinenza universale.",
+              "Concetti specialistici forniti dal profilo.",
+              "Nessun fix su domanda singola."
+            ]
+          },
+          {
+            "status": "OK",
+            "query": "Quali rischi o problemi vengono spiegati nel documento?",
+            "expanded_query": "Quali rischi o criticità di curriculum e profilo professionale, legati a informazioni poco chiare, esperienze non contestualizzate, competenze generiche e obiettivo non definito, vengono spiegati?",
+            "answer": "I rischi o le criticità di curriculum e profilo professionale spiegati nel documento riguardano informazioni poco chiare, esperienze non contestualizzate, competenze generiche, obiettivo non definito. Il curriculum presenta esperienze, formazione e competenze tecniche. Un obiettivo poco definito rende il CV meno efficace. Il profilo professionale deve chiarire il ruolo desiderato.",
+            "sentences_used": 4,
+            "quality_errors": [],
+            "relevance": {
+              "profile_id": "curriculum_profile_v394u",
+              "domain_name": "curriculum e profilo professionale",
+              "query_type": "risks"
+            },
+            "limits": [
+              "Pertinenza universale.",
+              "Concetti specialistici forniti dal profilo.",
+              "Nessun fix su domanda singola."
+            ]
+          }
+        ],
+        "gates": {
+          "relevance": {
+            "core": "mini_llm_universal_relevance_core_v394u",
+            "version": "V3.9.4U.1",
+            "status": "PASS",
+            "errors": [],
+            "profile_id": "curriculum_profile_v394u",
+            "domain_name": "curriculum e profilo professionale",
+            "limits": [
+              "Gate universale di pertinenza.",
+              "Usa profilo esterno.",
+              "Non contiene dizionari specialistici interni."
+            ]
+          },
+          "linguistic_errors": []
+        },
+        "elapsed_ms": 1.8232079999999997,
+        "limits": [
+          "Bridge tra mini LLM e core universale.",
+          "Domande migliorate dal core universale.",
+          "Risposte validate dal core universale.",
+          "Profili specialistici separati."
+        ]
+      },
+      "answers": [
+        {
+          "status": "OK",
+          "query": "Quali sono i punti principali del documento?",
+          "expanded_query": "Quali sono i punti principali su curriculum e profilo professionale, in particolare esperienze lavorative, competenze tecniche, formazione, progetti e obiettivo professionale?",
+          "answer": "I punti principali del documento riguardano curriculum e profilo professionale, con attenzione a esperienze lavorative, competenze tecniche, formazione, progetti, obiettivo professionale. Il curriculum presenta esperienze, formazione e competenze tecniche. Il profilo professionale deve chiarire il ruolo desiderato. Un obiettivo poco definito rende il CV meno efficace.",
+          "sentences_used": 4,
+          "quality_errors": [],
+          "relevance": {
+            "profile_id": "curriculum_profile_v394u",
+            "domain_name": "curriculum e profilo professionale",
+            "query_type": "main_points"
+          },
+          "limits": [
+            "Pertinenza universale.",
+            "Concetti specialistici forniti dal profilo.",
+            "Nessun fix su domanda singola."
+          ]
+        },
+        {
+          "status": "OK",
+          "query": "Che cosa devo ricordare?",
+          "expanded_query": "Che cosa devo ricordare su curriculum e profilo professionale, in particolare punti di forza, competenze rilevanti, esperienze principali e obiettivo professionale?",
+          "answer": "Su curriculum e profilo professionale, il documento richiama concetti e comportamenti da ricordare come punti di forza, competenze rilevanti, esperienze principali, obiettivo professionale. Il curriculum presenta esperienze, formazione e competenze tecniche. Il profilo professionale deve chiarire il ruolo desiderato. Un obiettivo poco definito rende il CV meno efficace.",
+          "sentences_used": 4,
+          "quality_errors": [],
+          "relevance": {
+            "profile_id": "curriculum_profile_v394u",
+            "domain_name": "curriculum e profilo professionale",
+            "query_type": "study_memory"
+          },
+          "limits": [
+            "Pertinenza universale.",
+            "Concetti specialistici forniti dal profilo.",
+            "Nessun fix su domanda singola."
+          ]
+        },
+        {
+          "status": "OK",
+          "query": "Quali rischi o problemi vengono spiegati nel documento?",
+          "expanded_query": "Quali rischi o criticità di curriculum e profilo professionale, legati a informazioni poco chiare, esperienze non contestualizzate, competenze generiche e obiettivo non definito, vengono spiegati?",
+          "answer": "I rischi o le criticità di curriculum e profilo professionale spiegati nel documento riguardano informazioni poco chiare, esperienze non contestualizzate, competenze generiche, obiettivo non definito. Il curriculum presenta esperienze, formazione e competenze tecniche. Un obiettivo poco definito rende il CV meno efficace. Il profilo professionale deve chiarire il ruolo desiderato.",
+          "sentences_used": 4,
+          "quality_errors": [],
+          "relevance": {
+            "profile_id": "curriculum_profile_v394u",
+            "domain_name": "curriculum e profilo professionale",
+            "query_type": "risks"
+          },
+          "limits": [
+            "Pertinenza universale.",
+            "Concetti specialistici forniti dal profilo.",
+            "Nessun fix su domanda singola."
+          ]
+        }
+      ],
+      "query_expansion": {
+        "core": "mini_llm_universal_question_core_v394u",
+        "version": "V3.9.4U.1",
+        "profile_id": "curriculum_profile_v394u",
+        "document_domain": "curriculum e profilo professionale",
+        "queries": [
+          {
+            "original_query": "Quali sono i punti principali del documento?",
+            "expanded_query": "Quali sono i punti principali su curriculum e profilo professionale, in particolare esperienze lavorative, competenze tecniche, formazione, progetti e obiettivo professionale?",
+            "query_type": "main_points",
+            "changed": true,
+            "document_domain": "curriculum e profilo professionale",
+            "concepts_used": [
+              "esperienze lavorative",
+              "competenze tecniche",
+              "formazione",
+              "progetti",
+              "obiettivo professionale"
+            ],
+            "reason": "Domanda contestualizzata con dominio e concetti specialistici forniti dal profilo."
+          },
+          {
+            "original_query": "Che cosa devo ricordare?",
+            "expanded_query": "Che cosa devo ricordare su curriculum e profilo professionale, in particolare punti di forza, competenze rilevanti, esperienze principali e obiettivo professionale?",
+            "query_type": "study_memory",
+            "changed": true,
+            "document_domain": "curriculum e profilo professionale",
+            "concepts_used": [
+              "punti di forza",
+              "competenze rilevanti",
+              "esperienze principali",
+              "obiettivo professionale"
+            ],
+            "reason": "Domanda contestualizzata con dominio e concetti specialistici forniti dal profilo."
+          },
+          {
+            "original_query": "Quali rischi o problemi vengono spiegati nel documento?",
+            "expanded_query": "Quali rischi o criticità di curriculum e profilo professionale, legati a informazioni poco chiare, esperienze non contestualizzate, competenze generiche e obiettivo non definito, vengono spiegati?",
+            "query_type": "risks",
+            "changed": true,
+            "document_domain": "curriculum e profilo professionale",
+            "concepts_used": [
+              "informazioni poco chiare",
+              "esperienze non contestualizzate",
+              "competenze generiche",
+              "obiettivo non definito"
+            ],
+            "reason": "Domanda contestualizzata con dominio e concetti specialistici forniti dal profilo."
+          }
+        ],
+        "limits": [
+          "Core universale.",
+          "Non contiene vocabolario specialistico.",
+          "Usa concetti forniti dal profilo di dominio."
+        ]
+      },
+      "profile": {
+        "profile_id": "curriculum_profile_v394u",
+        "domain_name": "curriculum e profilo professionale",
+        "detection_terms": [
+          "curriculum",
+          "esperienza",
+          "competenze",
+          "formazione",
+          "profilo professionale",
+          "obiettivo",
+          "ruolo",
+          "progetti",
+          "certificazioni"
+        ],
+        "core_concepts": [
+          "profilo professionale",
+          "esperienze",
+          "competenze",
+          "formazione",
+          "obiettivo"
+        ],
+        "main_concepts": [
+          "esperienze lavorative",
+          "competenze tecniche",
+          "formazione",
+          "progetti",
+          "obiettivo professionale"
+        ],
+        "memory_concepts": [
+          "punti di forza",
+          "competenze rilevanti",
+          "esperienze principali",
+          "obiettivo professionale"
+        ],
+        "risk_concepts": [
+          "informazioni poco chiare",
+          "esperienze non contestualizzate",
+          "competenze generiche",
+          "obiettivo non definito"
+        ],
+        "procedure_concepts": [
+          "ordinare esperienze",
+          "selezionare competenze",
+          "scrivere profilo",
+          "adattare il CV al ruolo"
+        ],
+        "detection_score": 6
+      },
+      "gates": {
+        "relevance": {
+          "core": "mini_llm_universal_relevance_core_v394u",
+          "version": "V3.9.4U.1",
+          "status": "PASS",
+          "errors": [],
+          "profile_id": "curriculum_profile_v394u",
+          "domain_name": "curriculum e profilo professionale",
+          "limits": [
+            "Gate universale di pertinenza.",
+            "Usa profilo esterno.",
+            "Non contiene dizionari specialistici interni."
+          ]
+        },
+        "linguistic_errors": []
+      },
+      "study_pack": {
+        "status": "SKIPPED",
+        "reason": "include_study_pack=false",
+        "study_pack": null,
+        "errors": []
+      },
+      "elapsed_ms": 3.1334580000000005,
+      "limits": [
+        "Current Engine V3.9.6.1.",
+        "Usa bridge universale V3.9.5.",
+        "Core universale separato dai profili.",
+        "Study pack legacy protetto da gate qualità.",
+        "No fix su domanda singola."
+      ],
+      "document_cleaning": {
+        "used_cleaner": false,
+        "reason": "Documento corto: uso testo grezzo per non perdere segnali di dominio.",
+        "raw_words": 25,
+        "cleaned_words": 25
+      }
+    },
+    {
+      "engine": "mini_llm_universal_current_engine_v396",
+      "version": "V3.9.6.1",
+      "status": "PASS",
+      "errors": [],
+      "source": "/Users/alessandrobarbarossa/alex-ai-workspace/mini_llm/data/real_tests/test_v396_current_engine/science.txt",
+      "diagnostics": {
+        "engine": "mini_llm_universal_current_engine_v396",
+        "version": "V3.9.6.1",
+        "status": "OK",
+        "source": "/Users/alessandrobarbarossa/alex-ai-workspace/mini_llm/data/real_tests/test_v396_current_engine/science.txt",
+        "words": 25,
+        "chars": 204,
+        "bridge": {
+          "engine": "mini_llm_universal_llm_bridge_v395",
+          "status": "OK",
+          "words": 25,
+          "chars": 204,
+          "profile_id": "science_document_v394u",
+          "domain_name": "documento scientifico",
+          "detection_score": 5,
+          "architecture": {
+            "universal_core": [
+              "linguistic_core",
+              "question_core",
+              "relevance_core"
+            ],
+            "domain_profiles": "separated"
+          },
+          "limits": [
+            "Bridge universale V3.9.5.",
+            "Non è ancora LLM neurale generativo.",
+            "Non contiene vocabolari specialistici nel core.",
+            "Usa profili separati."
+          ]
+        },
+        "architecture": {
+          "current_engine": "V3.9.6.1",
+          "bridge": "V3.9.5",
+          "universal_core": "V3.9.4U",
+          "domain_profiles": "separated",
+          "study_pack": "legacy_quality_gated"
+        },
+        "limits": [
+          "Motore current universale controllato.",
+          "Non è ancora generativo neurale.",
+          "Non contiene vocabolari specialistici.",
+          "Blocca study pack legacy se non supera il gate."
+        ]
+      },
+      "queries": [
+        "Quali sono i punti principali del documento?",
+        "Che cosa devo ricordare?",
+        "Quali rischi o problemi vengono spiegati nel documento?"
+      ],
+      "bridge_result": {
+        "engine": "mini_llm_universal_llm_bridge_v395",
+        "status": "PASS",
+        "errors": [],
+        "diagnostics": {
+          "engine": "mini_llm_universal_llm_bridge_v395",
+          "status": "OK",
+          "words": 25,
+          "chars": 204,
+          "profile_id": "science_document_v394u",
+          "domain_name": "documento scientifico",
+          "detection_score": 5,
+          "architecture": {
+            "universal_core": [
+              "linguistic_core",
+              "question_core",
+              "relevance_core"
+            ],
+            "domain_profiles": "separated"
+          },
+          "limits": [
+            "Bridge universale V3.9.5.",
+            "Non è ancora LLM neurale generativo.",
+            "Non contiene vocabolari specialistici nel core.",
+            "Usa profili separati."
+          ]
+        },
+        "profile": {
+          "profile_id": "science_document_v394u",
+          "domain_name": "documento scientifico",
+          "detection_terms": [
+            "esperimento",
+            "ipotesi",
+            "metodo",
+            "risultati",
+            "dati",
+            "osservazione",
+            "misura",
+            "campione",
+            "variabile",
+            "conclusione"
+          ],
+          "core_concepts": [
+            "ipotesi",
+            "metodo",
+            "dati",
+            "risultati",
+            "conclusione"
+          ],
+          "main_concepts": [
+            "ipotesi",
+            "metodo sperimentale",
+            "dati raccolti",
+            "risultati",
+            "conclusioni"
+          ],
+          "memory_concepts": [
+            "ipotesi",
+            "variabili",
+            "campione",
+            "metodo",
+            "risultati"
+          ],
+          "risk_concepts": [
+            "errore di misura",
+            "campione limitato",
+            "dati incompleti",
+            "interpretazione errata",
+            "variabili non controllate"
+          ],
+          "procedure_concepts": [
+            "definire ipotesi",
+            "raccogliere dati",
+            "controllare variabili",
+            "analizzare risultati"
+          ],
+          "detection_score": 5
+        },
+        "query_expansion": {
+          "core": "mini_llm_universal_question_core_v394u",
+          "version": "V3.9.4U.1",
+          "profile_id": "science_document_v394u",
+          "document_domain": "documento scientifico",
+          "queries": [
+            {
+              "original_query": "Quali sono i punti principali del documento?",
+              "expanded_query": "Quali sono i punti principali su documento scientifico, in particolare ipotesi, metodo sperimentale, dati raccolti, risultati e conclusioni?",
+              "query_type": "main_points",
+              "changed": true,
+              "document_domain": "documento scientifico",
+              "concepts_used": [
+                "ipotesi",
+                "metodo sperimentale",
+                "dati raccolti",
+                "risultati",
+                "conclusioni"
+              ],
+              "reason": "Domanda contestualizzata con dominio e concetti specialistici forniti dal profilo."
+            },
+            {
+              "original_query": "Che cosa devo ricordare?",
+              "expanded_query": "Che cosa devo ricordare su documento scientifico, in particolare ipotesi, variabili, campione, metodo e risultati?",
+              "query_type": "study_memory",
+              "changed": true,
+              "document_domain": "documento scientifico",
+              "concepts_used": [
+                "ipotesi",
+                "variabili",
+                "campione",
+                "metodo",
+                "risultati"
+              ],
+              "reason": "Domanda contestualizzata con dominio e concetti specialistici forniti dal profilo."
+            },
+            {
+              "original_query": "Quali rischi o problemi vengono spiegati nel documento?",
+              "expanded_query": "Quali rischi o criticità di documento scientifico, legati a errore di misura, campione limitato, dati incompleti, interpretazione errata e variabili non controllate, vengono spiegati?",
+              "query_type": "risks",
+              "changed": true,
+              "document_domain": "documento scientifico",
+              "concepts_used": [
+                "errore di misura",
+                "campione limitato",
+                "dati incompleti",
+                "interpretazione errata",
+                "variabili non controllate"
+              ],
+              "reason": "Domanda contestualizzata con dominio e concetti specialistici forniti dal profilo."
+            }
+          ],
+          "limits": [
+            "Core universale.",
+            "Non contiene vocabolario specialistico.",
+            "Usa concetti forniti dal profilo di dominio."
+          ]
+        },
+        "answers": [
+          {
+            "status": "OK",
+            "query": "Quali sono i punti principali del documento?",
+            "expanded_query": "Quali sono i punti principali su documento scientifico, in particolare ipotesi, metodo sperimentale, dati raccolti, risultati e conclusioni?",
+            "answer": "I punti principali del documento riguardano documento scientifico, con attenzione a ipotesi, metodo sperimentale, dati raccolti, risultati, conclusioni. Il documento scientifico descrive ipotesi, metodo sperimentale e risultati. Le variabili non controllate possono alterare l'interpretazione.",
+            "sentences_used": 3,
+            "quality_errors": [],
+            "relevance": {
+              "profile_id": "science_document_v394u",
+              "domain_name": "documento scientifico",
+              "query_type": "main_points"
+            },
+            "limits": [
+              "Pertinenza universale.",
+              "Concetti specialistici forniti dal profilo.",
+              "Nessun fix su domanda singola."
+            ]
+          },
+          {
+            "status": "OK",
+            "query": "Che cosa devo ricordare?",
+            "expanded_query": "Che cosa devo ricordare su documento scientifico, in particolare ipotesi, variabili, campione, metodo e risultati?",
+            "answer": "Su documento scientifico, il documento richiama concetti e comportamenti da ricordare come ipotesi, variabili, campione, metodo, risultati. Il documento scientifico descrive ipotesi, metodo sperimentale e risultati. Le variabili non controllate possono alterare l'interpretazione. Un campione limitato può ridurre la solidità della conclusione.",
+            "sentences_used": 4,
+            "quality_errors": [],
+            "relevance": {
+              "profile_id": "science_document_v394u",
+              "domain_name": "documento scientifico",
+              "query_type": "study_memory"
+            },
+            "limits": [
+              "Pertinenza universale.",
+              "Concetti specialistici forniti dal profilo.",
+              "Nessun fix su domanda singola."
+            ]
+          },
+          {
+            "status": "OK",
+            "query": "Quali rischi o problemi vengono spiegati nel documento?",
+            "expanded_query": "Quali rischi o criticità di documento scientifico, legati a errore di misura, campione limitato, dati incompleti, interpretazione errata e variabili non controllate, vengono spiegati?",
+            "answer": "I rischi o le criticità di documento scientifico spiegati nel documento riguardano errore di misura, campione limitato, dati incompleti, interpretazione errata, variabili non controllate. Le variabili non controllate possono alterare l'interpretazione. Il documento scientifico descrive ipotesi, metodo sperimentale e risultati. Un campione limitato può ridurre la solidità della conclusione.",
+            "sentences_used": 4,
+            "quality_errors": [],
+            "relevance": {
+              "profile_id": "science_document_v394u",
+              "domain_name": "documento scientifico",
+              "query_type": "risks"
+            },
+            "limits": [
+              "Pertinenza universale.",
+              "Concetti specialistici forniti dal profilo.",
+              "Nessun fix su domanda singola."
+            ]
+          }
+        ],
+        "gates": {
+          "relevance": {
+            "core": "mini_llm_universal_relevance_core_v394u",
+            "version": "V3.9.4U.1",
+            "status": "PASS",
+            "errors": [],
+            "profile_id": "science_document_v394u",
+            "domain_name": "documento scientifico",
+            "limits": [
+              "Gate universale di pertinenza.",
+              "Usa profilo esterno.",
+              "Non contiene dizionari specialistici interni."
+            ]
+          },
+          "linguistic_errors": []
+        },
+        "elapsed_ms": 1.423874999999998,
+        "limits": [
+          "Bridge tra mini LLM e core universale.",
+          "Domande migliorate dal core universale.",
+          "Risposte validate dal core universale.",
+          "Profili specialistici separati."
+        ]
+      },
+      "answers": [
+        {
+          "status": "OK",
+          "query": "Quali sono i punti principali del documento?",
+          "expanded_query": "Quali sono i punti principali su documento scientifico, in particolare ipotesi, metodo sperimentale, dati raccolti, risultati e conclusioni?",
+          "answer": "I punti principali del documento riguardano documento scientifico, con attenzione a ipotesi, metodo sperimentale, dati raccolti, risultati, conclusioni. Il documento scientifico descrive ipotesi, metodo sperimentale e risultati. Le variabili non controllate possono alterare l'interpretazione.",
+          "sentences_used": 3,
+          "quality_errors": [],
+          "relevance": {
+            "profile_id": "science_document_v394u",
+            "domain_name": "documento scientifico",
+            "query_type": "main_points"
+          },
+          "limits": [
+            "Pertinenza universale.",
+            "Concetti specialistici forniti dal profilo.",
+            "Nessun fix su domanda singola."
+          ]
+        },
+        {
+          "status": "OK",
+          "query": "Che cosa devo ricordare?",
+          "expanded_query": "Che cosa devo ricordare su documento scientifico, in particolare ipotesi, variabili, campione, metodo e risultati?",
+          "answer": "Su documento scientifico, il documento richiama concetti e comportamenti da ricordare come ipotesi, variabili, campione, metodo, risultati. Il documento scientifico descrive ipotesi, metodo sperimentale e risultati. Le variabili non controllate possono alterare l'interpretazione. Un campione limitato può ridurre la solidità della conclusione.",
+          "sentences_used": 4,
+          "quality_errors": [],
+          "relevance": {
+            "profile_id": "science_document_v394u",
+            "domain_name": "documento scientifico",
+            "query_type": "study_memory"
+          },
+          "limits": [
+            "Pertinenza universale.",
+            "Concetti specialistici forniti dal profilo.",
+            "Nessun fix su domanda singola."
+          ]
+        },
+        {
+          "status": "OK",
+          "query": "Quali rischi o problemi vengono spiegati nel documento?",
+          "expanded_query": "Quali rischi o criticità di documento scientifico, legati a errore di misura, campione limitato, dati incompleti, interpretazione errata e variabili non controllate, vengono spiegati?",
+          "answer": "I rischi o le criticità di documento scientifico spiegati nel documento riguardano errore di misura, campione limitato, dati incompleti, interpretazione errata, variabili non controllate. Le variabili non controllate possono alterare l'interpretazione. Il documento scientifico descrive ipotesi, metodo sperimentale e risultati. Un campione limitato può ridurre la solidità della conclusione.",
+          "sentences_used": 4,
+          "quality_errors": [],
+          "relevance": {
+            "profile_id": "science_document_v394u",
+            "domain_name": "documento scientifico",
+            "query_type": "risks"
+          },
+          "limits": [
+            "Pertinenza universale.",
+            "Concetti specialistici forniti dal profilo.",
+            "Nessun fix su domanda singola."
+          ]
+        }
+      ],
+      "query_expansion": {
+        "core": "mini_llm_universal_question_core_v394u",
+        "version": "V3.9.4U.1",
+        "profile_id": "science_document_v394u",
+        "document_domain": "documento scientifico",
+        "queries": [
+          {
+            "original_query": "Quali sono i punti principali del documento?",
+            "expanded_query": "Quali sono i punti principali su documento scientifico, in particolare ipotesi, metodo sperimentale, dati raccolti, risultati e conclusioni?",
+            "query_type": "main_points",
+            "changed": true,
+            "document_domain": "documento scientifico",
+            "concepts_used": [
+              "ipotesi",
+              "metodo sperimentale",
+              "dati raccolti",
+              "risultati",
+              "conclusioni"
+            ],
+            "reason": "Domanda contestualizzata con dominio e concetti specialistici forniti dal profilo."
+          },
+          {
+            "original_query": "Che cosa devo ricordare?",
+            "expanded_query": "Che cosa devo ricordare su documento scientifico, in particolare ipotesi, variabili, campione, metodo e risultati?",
+            "query_type": "study_memory",
+            "changed": true,
+            "document_domain": "documento scientifico",
+            "concepts_used": [
+              "ipotesi",
+              "variabili",
+              "campione",
+              "metodo",
+              "risultati"
+            ],
+            "reason": "Domanda contestualizzata con dominio e concetti specialistici forniti dal profilo."
+          },
+          {
+            "original_query": "Quali rischi o problemi vengono spiegati nel documento?",
+            "expanded_query": "Quali rischi o criticità di documento scientifico, legati a errore di misura, campione limitato, dati incompleti, interpretazione errata e variabili non controllate, vengono spiegati?",
+            "query_type": "risks",
+            "changed": true,
+            "document_domain": "documento scientifico",
+            "concepts_used": [
+              "errore di misura",
+              "campione limitato",
+              "dati incompleti",
+              "interpretazione errata",
+              "variabili non controllate"
+            ],
+            "reason": "Domanda contestualizzata con dominio e concetti specialistici forniti dal profilo."
+          }
+        ],
+        "limits": [
+          "Core universale.",
+          "Non contiene vocabolario specialistico.",
+          "Usa concetti forniti dal profilo di dominio."
+        ]
+      },
+      "profile": {
+        "profile_id": "science_document_v394u",
+        "domain_name": "documento scientifico",
+        "detection_terms": [
+          "esperimento",
+          "ipotesi",
+          "metodo",
+          "risultati",
+          "dati",
+          "osservazione",
+          "misura",
+          "campione",
+          "variabile",
+          "conclusione"
+        ],
+        "core_concepts": [
+          "ipotesi",
+          "metodo",
+          "dati",
+          "risultati",
+          "conclusione"
+        ],
+        "main_concepts": [
+          "ipotesi",
+          "metodo sperimentale",
+          "dati raccolti",
+          "risultati",
+          "conclusioni"
+        ],
+        "memory_concepts": [
+          "ipotesi",
+          "variabili",
+          "campione",
+          "metodo",
+          "risultati"
+        ],
+        "risk_concepts": [
+          "errore di misura",
+          "campione limitato",
+          "dati incompleti",
+          "interpretazione errata",
+          "variabili non controllate"
+        ],
+        "procedure_concepts": [
+          "definire ipotesi",
+          "raccogliere dati",
+          "controllare variabili",
+          "analizzare risultati"
+        ],
+        "detection_score": 5
+      },
+      "gates": {
+        "relevance": {
+          "core": "mini_llm_universal_relevance_core_v394u",
+          "version": "V3.9.4U.1",
+          "status": "PASS",
+          "errors": [],
+          "profile_id": "science_document_v394u",
+          "domain_name": "documento scientifico",
+          "limits": [
+            "Gate universale di pertinenza.",
+            "Usa profilo esterno.",
+            "Non contiene dizionari specialistici interni."
+          ]
+        },
+        "linguistic_errors": []
+      },
+      "study_pack": {
+        "status": "SKIPPED",
+        "reason": "include_study_pack=false",
+        "study_pack": null,
+        "errors": []
+      },
+      "elapsed_ms": 2.282625,
+      "limits": [
+        "Current Engine V3.9.6.1.",
+        "Usa bridge universale V3.9.5.",
+        "Core universale separato dai profili.",
+        "Study pack legacy protetto da gate qualità.",
+        "No fix su domanda singola."
+      ],
+      "document_cleaning": {
+        "used_cleaner": false,
+        "reason": "Documento corto: uso testo grezzo per non perdere segnali di dominio.",
+        "raw_words": 25,
+        "cleaned_words": 25
+      }
+    },
+    {
+      "engine": "mini_llm_universal_current_engine_v396",
+      "version": "V3.9.6.1",
+      "status": "PASS",
+      "errors": [],
+      "source": "/Users/alessandrobarbarossa/alex-ai-workspace/mini_llm/data/real_tests/test_v396_current_engine/business.md",
+      "diagnostics": {
+        "engine": "mini_llm_universal_current_engine_v396",
+        "version": "V3.9.6.1",
+        "status": "OK",
+        "source": "/Users/alessandrobarbarossa/alex-ai-workspace/mini_llm/data/real_tests/test_v396_current_engine/business.md",
+        "words": 23,
+        "chars": 185,
+        "bridge": {
+          "engine": "mini_llm_universal_llm_bridge_v395",
+          "status": "OK",
+          "words": 23,
+          "chars": 185,
+          "profile_id": "business_document_v394u",
+          "domain_name": "documento aziendale",
+          "detection_score": 2,
+          "architecture": {
+            "universal_core": [
+              "linguistic_core",
+              "question_core",
+              "relevance_core"
+            ],
+            "domain_profiles": "separated"
+          },
+          "limits": [
+            "Bridge universale V3.9.5.",
+            "Non è ancora LLM neurale generativo.",
+            "Non contiene vocabolari specialistici nel core.",
+            "Usa profili separati."
+          ]
+        },
+        "architecture": {
+          "current_engine": "V3.9.6.1",
+          "bridge": "V3.9.5",
+          "universal_core": "V3.9.4U",
+          "domain_profiles": "separated",
+          "study_pack": "legacy_quality_gated"
+        },
+        "limits": [
+          "Motore current universale controllato.",
+          "Non è ancora generativo neurale.",
+          "Non contiene vocabolari specialistici.",
+          "Blocca study pack legacy se non supera il gate."
+        ]
+      },
+      "queries": [
+        "Quali sono i punti principali del documento?",
+        "Che cosa devo ricordare?",
+        "Quali rischi o problemi vengono spiegati nel documento?"
+      ],
+      "bridge_result": {
+        "engine": "mini_llm_universal_llm_bridge_v395",
+        "status": "PASS",
+        "errors": [],
+        "diagnostics": {
+          "engine": "mini_llm_universal_llm_bridge_v395",
+          "status": "OK",
+          "words": 23,
+          "chars": 185,
+          "profile_id": "business_document_v394u",
+          "domain_name": "documento aziendale",
+          "detection_score": 2,
+          "architecture": {
+            "universal_core": [
+              "linguistic_core",
+              "question_core",
+              "relevance_core"
+            ],
+            "domain_profiles": "separated"
+          },
+          "limits": [
+            "Bridge universale V3.9.5.",
+            "Non è ancora LLM neurale generativo.",
+            "Non contiene vocabolari specialistici nel core.",
+            "Usa profili separati."
+          ]
+        },
+        "profile": {
+          "profile_id": "business_document_v394u",
+          "domain_name": "documento aziendale",
+          "detection_terms": [
+            "azienda",
+            "procedura",
+            "cliente",
+            "processo",
+            "reparto",
+            "budget",
+            "obiettivo",
+            "responsabile",
+            "scadenza",
+            "report"
+          ],
+          "core_concepts": [
+            "processo aziendale",
+            "obiettivi",
+            "responsabilità",
+            "scadenze",
+            "risultati"
+          ],
+          "main_concepts": [
+            "obiettivi aziendali",
+            "processi",
+            "responsabilità",
+            "risorse",
+            "scadenze"
+          ],
+          "memory_concepts": [
+            "responsabilità",
+            "priorità",
+            "scadenze",
+            "procedure",
+            "risultati attesi"
+          ],
+          "risk_concepts": [
+            "ritardi",
+            "errori operativi",
+            "mancanza di responsabilità",
+            "costi non controllati",
+            "comunicazione insufficiente"
+          ],
+          "procedure_concepts": [
+            "assegnare responsabilità",
+            "definire scadenze",
+            "monitorare attività",
+            "verificare risultati"
+          ],
+          "detection_score": 2
+        },
+        "query_expansion": {
+          "core": "mini_llm_universal_question_core_v394u",
+          "version": "V3.9.4U.1",
+          "profile_id": "business_document_v394u",
+          "document_domain": "documento aziendale",
+          "queries": [
+            {
+              "original_query": "Quali sono i punti principali del documento?",
+              "expanded_query": "Quali sono i punti principali su documento aziendale, in particolare obiettivi aziendali, processi, responsabilità, risorse e scadenze?",
+              "query_type": "main_points",
+              "changed": true,
+              "document_domain": "documento aziendale",
+              "concepts_used": [
+                "obiettivi aziendali",
+                "processi",
+                "responsabilità",
+                "risorse",
+                "scadenze"
+              ],
+              "reason": "Domanda contestualizzata con dominio e concetti specialistici forniti dal profilo."
+            },
+            {
+              "original_query": "Che cosa devo ricordare?",
+              "expanded_query": "Che cosa devo ricordare su documento aziendale, in particolare responsabilità, priorità, scadenze, procedure e risultati attesi?",
+              "query_type": "study_memory",
+              "changed": true,
+              "document_domain": "documento aziendale",
+              "concepts_used": [
+                "responsabilità",
+                "priorità",
+                "scadenze",
+                "procedure",
+                "risultati attesi"
+              ],
+              "reason": "Domanda contestualizzata con dominio e concetti specialistici forniti dal profilo."
+            },
+            {
+              "original_query": "Quali rischi o problemi vengono spiegati nel documento?",
+              "expanded_query": "Quali rischi o criticità di documento aziendale, legati a ritardi, errori operativi, mancanza di responsabilità, costi non controllati e comunicazione insufficiente, vengono spiegati?",
+              "query_type": "risks",
+              "changed": true,
+              "document_domain": "documento aziendale",
+              "concepts_used": [
+                "ritardi",
+                "errori operativi",
+                "mancanza di responsabilità",
+                "costi non controllati",
+                "comunicazione insufficiente"
+              ],
+              "reason": "Domanda contestualizzata con dominio e concetti specialistici forniti dal profilo."
+            }
+          ],
+          "limits": [
+            "Core universale.",
+            "Non contiene vocabolario specialistico.",
+            "Usa concetti forniti dal profilo di dominio."
+          ]
+        },
+        "answers": [
+          {
+            "status": "OK",
+            "query": "Quali sono i punti principali del documento?",
+            "expanded_query": "Quali sono i punti principali su documento aziendale, in particolare obiettivi aziendali, processi, responsabilità, risorse e scadenze?",
+            "answer": "I punti principali del documento riguardano documento aziendale, con attenzione a obiettivi aziendali, processi, responsabilità, risorse, scadenze. Il documento aziendale definisce processo, responsabilità e scadenze.",
+            "sentences_used": 2,
+            "quality_errors": [],
+            "relevance": {
+              "profile_id": "business_document_v394u",
+              "domain_name": "documento aziendale",
+              "query_type": "main_points"
+            },
+            "limits": [
+              "Pertinenza universale.",
+              "Concetti specialistici forniti dal profilo.",
+              "Nessun fix su domanda singola."
+            ]
+          },
+          {
+            "status": "OK",
+            "query": "Che cosa devo ricordare?",
+            "expanded_query": "Che cosa devo ricordare su documento aziendale, in particolare responsabilità, priorità, scadenze, procedure e risultati attesi?",
+            "answer": "Su documento aziendale, il documento richiama concetti e comportamenti da ricordare come responsabilità, priorità, scadenze, procedure, risultati attesi. Il documento aziendale definisce processo, responsabilità e scadenze. Le procedure aiutano a controllare tempi e priorità.",
+            "sentences_used": 3,
+            "quality_errors": [],
+            "relevance": {
+              "profile_id": "business_document_v394u",
+              "domain_name": "documento aziendale",
+              "query_type": "study_memory"
+            },
+            "limits": [
+              "Pertinenza universale.",
+              "Concetti specialistici forniti dal profilo.",
+              "Nessun fix su domanda singola."
+            ]
+          },
+          {
+            "status": "OK",
+            "query": "Quali rischi o problemi vengono spiegati nel documento?",
+            "expanded_query": "Quali rischi o criticità di documento aziendale, legati a ritardi, errori operativi, mancanza di responsabilità, costi non controllati e comunicazione insufficiente, vengono spiegati?",
+            "answer": "I rischi o le criticità di documento aziendale spiegati nel documento riguardano ritardi, errori operativi, mancanza di responsabilità, costi non controllati, comunicazione insufficiente. Una comunicazione insufficiente può generare errori operativi. Il documento aziendale definisce processo, responsabilità e scadenze.",
+            "sentences_used": 3,
+            "quality_errors": [],
+            "relevance": {
+              "profile_id": "business_document_v394u",
+              "domain_name": "documento aziendale",
+              "query_type": "risks"
+            },
+            "limits": [
+              "Pertinenza universale.",
+              "Concetti specialistici forniti dal profilo.",
+              "Nessun fix su domanda singola."
+            ]
+          }
+        ],
+        "gates": {
+          "relevance": {
+            "core": "mini_llm_universal_relevance_core_v394u",
+            "version": "V3.9.4U.1",
+            "status": "PASS",
+            "errors": [],
+            "profile_id": "business_document_v394u",
+            "domain_name": "documento aziendale",
+            "limits": [
+              "Gate universale di pertinenza.",
+              "Usa profilo esterno.",
+              "Non contiene dizionari specialistici interni."
+            ]
+          },
+          "linguistic_errors": []
+        },
+        "elapsed_ms": 1.1311250000000002,
+        "limits": [
+          "Bridge tra mini LLM e core universale.",
+          "Domande migliorate dal core universale.",
+          "Risposte validate dal core universale.",
+          "Profili specialistici separati."
+        ]
+      },
+      "answers": [
+        {
+          "status": "OK",
+          "query": "Quali sono i punti principali del documento?",
+          "expanded_query": "Quali sono i punti principali su documento aziendale, in particolare obiettivi aziendali, processi, responsabilità, risorse e scadenze?",
+          "answer": "I punti principali del documento riguardano documento aziendale, con attenzione a obiettivi aziendali, processi, responsabilità, risorse, scadenze. Il documento aziendale definisce processo, responsabilità e scadenze.",
+          "sentences_used": 2,
+          "quality_errors": [],
+          "relevance": {
+            "profile_id": "business_document_v394u",
+            "domain_name": "documento aziendale",
+            "query_type": "main_points"
+          },
+          "limits": [
+            "Pertinenza universale.",
+            "Concetti specialistici forniti dal profilo.",
+            "Nessun fix su domanda singola."
+          ]
+        },
+        {
+          "status": "OK",
+          "query": "Che cosa devo ricordare?",
+          "expanded_query": "Che cosa devo ricordare su documento aziendale, in particolare responsabilità, priorità, scadenze, procedure e risultati attesi?",
+          "answer": "Su documento aziendale, il documento richiama concetti e comportamenti da ricordare come responsabilità, priorità, scadenze, procedure, risultati attesi. Il documento aziendale definisce processo, responsabilità e scadenze. Le procedure aiutano a controllare tempi e priorità.",
+          "sentences_used": 3,
+          "quality_errors": [],
+          "relevance": {
+            "profile_id": "business_document_v394u",
+            "domain_name": "documento aziendale",
+            "query_type": "study_memory"
+          },
+          "limits": [
+            "Pertinenza universale.",
+            "Concetti specialistici forniti dal profilo.",
+            "Nessun fix su domanda singola."
+          ]
+        },
+        {
+          "status": "OK",
+          "query": "Quali rischi o problemi vengono spiegati nel documento?",
+          "expanded_query": "Quali rischi o criticità di documento aziendale, legati a ritardi, errori operativi, mancanza di responsabilità, costi non controllati e comunicazione insufficiente, vengono spiegati?",
+          "answer": "I rischi o le criticità di documento aziendale spiegati nel documento riguardano ritardi, errori operativi, mancanza di responsabilità, costi non controllati, comunicazione insufficiente. Una comunicazione insufficiente può generare errori operativi. Il documento aziendale definisce processo, responsabilità e scadenze.",
+          "sentences_used": 3,
+          "quality_errors": [],
+          "relevance": {
+            "profile_id": "business_document_v394u",
+            "domain_name": "documento aziendale",
+            "query_type": "risks"
+          },
+          "limits": [
+            "Pertinenza universale.",
+            "Concetti specialistici forniti dal profilo.",
+            "Nessun fix su domanda singola."
+          ]
+        }
+      ],
+      "query_expansion": {
+        "core": "mini_llm_universal_question_core_v394u",
+        "version": "V3.9.4U.1",
+        "profile_id": "business_document_v394u",
+        "document_domain": "documento aziendale",
+        "queries": [
+          {
+            "original_query": "Quali sono i punti principali del documento?",
+            "expanded_query": "Quali sono i punti principali su documento aziendale, in particolare obiettivi aziendali, processi, responsabilità, risorse e scadenze?",
+            "query_type": "main_points",
+            "changed": true,
+            "document_domain": "documento aziendale",
+            "concepts_used": [
+              "obiettivi aziendali",
+              "processi",
+              "responsabilità",
+              "risorse",
+              "scadenze"
+            ],
+            "reason": "Domanda contestualizzata con dominio e concetti specialistici forniti dal profilo."
+          },
+          {
+            "original_query": "Che cosa devo ricordare?",
+            "expanded_query": "Che cosa devo ricordare su documento aziendale, in particolare responsabilità, priorità, scadenze, procedure e risultati attesi?",
+            "query_type": "study_memory",
+            "changed": true,
+            "document_domain": "documento aziendale",
+            "concepts_used": [
+              "responsabilità",
+              "priorità",
+              "scadenze",
+              "procedure",
+              "risultati attesi"
+            ],
+            "reason": "Domanda contestualizzata con dominio e concetti specialistici forniti dal profilo."
+          },
+          {
+            "original_query": "Quali rischi o problemi vengono spiegati nel documento?",
+            "expanded_query": "Quali rischi o criticità di documento aziendale, legati a ritardi, errori operativi, mancanza di responsabilità, costi non controllati e comunicazione insufficiente, vengono spiegati?",
+            "query_type": "risks",
+            "changed": true,
+            "document_domain": "documento aziendale",
+            "concepts_used": [
+              "ritardi",
+              "errori operativi",
+              "mancanza di responsabilità",
+              "costi non controllati",
+              "comunicazione insufficiente"
+            ],
+            "reason": "Domanda contestualizzata con dominio e concetti specialistici forniti dal profilo."
+          }
+        ],
+        "limits": [
+          "Core universale.",
+          "Non contiene vocabolario specialistico.",
+          "Usa concetti forniti dal profilo di dominio."
+        ]
+      },
+      "profile": {
+        "profile_id": "business_document_v394u",
+        "domain_name": "documento aziendale",
+        "detection_terms": [
+          "azienda",
+          "procedura",
+          "cliente",
+          "processo",
+          "reparto",
+          "budget",
+          "obiettivo",
+          "responsabile",
+          "scadenza",
+          "report"
+        ],
+        "core_concepts": [
+          "processo aziendale",
+          "obiettivi",
+          "responsabilità",
+          "scadenze",
+          "risultati"
+        ],
+        "main_concepts": [
+          "obiettivi aziendali",
+          "processi",
+          "responsabilità",
+          "risorse",
+          "scadenze"
+        ],
+        "memory_concepts": [
+          "responsabilità",
+          "priorità",
+          "scadenze",
+          "procedure",
+          "risultati attesi"
+        ],
+        "risk_concepts": [
+          "ritardi",
+          "errori operativi",
+          "mancanza di responsabilità",
+          "costi non controllati",
+          "comunicazione insufficiente"
+        ],
+        "procedure_concepts": [
+          "assegnare responsabilità",
+          "definire scadenze",
+          "monitorare attività",
+          "verificare risultati"
+        ],
+        "detection_score": 2
+      },
+      "gates": {
+        "relevance": {
+          "core": "mini_llm_universal_relevance_core_v394u",
+          "version": "V3.9.4U.1",
+          "status": "PASS",
+          "errors": [],
+          "profile_id": "business_document_v394u",
+          "domain_name": "documento aziendale",
+          "limits": [
+            "Gate universale di pertinenza.",
+            "Usa profilo esterno.",
+            "Non contiene dizionari specialistici interni."
+          ]
+        },
+        "linguistic_errors": []
+      },
+      "study_pack": {
+        "status": "SKIPPED",
+        "reason": "include_study_pack=false",
+        "study_pack": null,
+        "errors": []
+      },
+      "elapsed_ms": 1.7779999999999982,
+      "limits": [
+        "Current Engine V3.9.6.1.",
+        "Usa bridge universale V3.9.5.",
+        "Core universale separato dai profili.",
+        "Study pack legacy protetto da gate qualità.",
+        "No fix su domanda singola."
+      ],
+      "document_cleaning": {
+        "used_cleaner": false,
+        "reason": "Documento corto: uso testo grezzo per non perdere segnali di dominio.",
+        "raw_words": 23,
+        "cleaned_words": 23
+      }
+    },
+    {
+      "engine": "mini_llm_universal_current_engine_v396",
+      "version": "V3.9.6.1",
+      "status": "PASS",
+      "errors": [],
+      "source": "/Users/alessandrobarbarossa/alex-ai-workspace/rag/documenti/documento_rag_sicurezza_informatica_aziendale.md",
+      "diagnostics": {
+        "engine": "mini_llm_universal_current_engine_v396",
+        "version": "V3.9.6.1",
+        "status": "OK",
+        "source": "/Users/alessandrobarbarossa/alex-ai-workspace/rag/documenti/documento_rag_sicurezza_informatica_aziendale.md",
+        "words": 1039,
+        "chars": 7088,
+        "bridge": {
+          "engine": "mini_llm_universal_llm_bridge_v395",
+          "status": "OK",
+          "words": 1039,
+          "chars": 7088,
+          "profile_id": "informatics_security_v394u",
+          "domain_name": "sicurezza informatica aziendale",
+          "detection_score": 10,
+          "architecture": {
+            "universal_core": [
+              "linguistic_core",
+              "question_core",
+              "relevance_core"
+            ],
+            "domain_profiles": "separated"
+          },
+          "limits": [
+            "Bridge universale V3.9.5.",
+            "Non è ancora LLM neurale generativo.",
+            "Non contiene vocabolari specialistici nel core.",
+            "Usa profili separati."
+          ]
+        },
+        "architecture": {
+          "current_engine": "V3.9.6.1",
+          "bridge": "V3.9.5",
+          "universal_core": "V3.9.4U",
+          "domain_profiles": "separated",
+          "study_pack": "legacy_quality_gated"
+        },
+        "limits": [
+          "Motore current universale controllato.",
+          "Non è ancora generativo neurale.",
+          "Non contiene vocabolari specialistici.",
+          "Blocca study pack legacy se non supera il gate."
+        ]
+      },
+      "queries": [
+        "Quali sono i punti principali del documento?",
+        "Che cosa devo ricordare?",
+        "Quali rischi o problemi vengono spiegati nel documento?"
+      ],
+      "bridge_result": {
+        "engine": "mini_llm_universal_llm_bridge_v395",
+        "status": "PASS",
+        "errors": [],
+        "diagnostics": {
+          "engine": "mini_llm_universal_llm_bridge_v395",
+          "status": "OK",
+          "words": 1039,
+          "chars": 7088,
+          "profile_id": "informatics_security_v394u",
+          "domain_name": "sicurezza informatica aziendale",
+          "detection_score": 10,
+          "architecture": {
+            "universal_core": [
+              "linguistic_core",
+              "question_core",
+              "relevance_core"
+            ],
+            "domain_profiles": "separated"
+          },
+          "limits": [
+            "Bridge universale V3.9.5.",
+            "Non è ancora LLM neurale generativo.",
+            "Non contiene vocabolari specialistici nel core.",
+            "Usa profili separati."
+          ]
+        },
+        "profile": {
+          "profile_id": "informatics_security_v394u",
+          "domain_name": "sicurezza informatica aziendale",
+          "detection_terms": [
+            "sicurezza informatica",
+            "cybersecurity",
+            "phishing",
+            "ransomware",
+            "malware",
+            "password",
+            "credenziali",
+            "backup",
+            "2fa",
+            "account",
+            "dati sensibili"
+          ],
+          "core_concepts": [
+            "sicurezza informatica",
+            "dati sensibili",
+            "account",
+            "credenziali",
+            "password",
+            "backup"
+          ],
+          "main_concepts": [
+            "sicurezza informatica",
+            "phishing",
+            "ransomware",
+            "malware",
+            "password",
+            "backup",
+            "protezione dei dati"
+          ],
+          "memory_concepts": [
+            "password sicure",
+            "phishing",
+            "backup",
+            "autenticazione a due fattori",
+            "credenziali",
+            "dati sensibili"
+          ],
+          "risk_concepts": [
+            "phishing",
+            "ransomware",
+            "malware",
+            "password deboli",
+            "furto di credenziali",
+            "perdita di dati",
+            "accessi non autorizzati"
+          ],
+          "procedure_concepts": [
+            "aggiornamenti",
+            "backup",
+            "gestione password",
+            "segnalazione incidenti",
+            "verifica link"
+          ],
+          "detection_score": 10
+        },
+        "query_expansion": {
+          "core": "mini_llm_universal_question_core_v394u",
+          "version": "V3.9.4U.1",
+          "profile_id": "informatics_security_v394u",
+          "document_domain": "sicurezza informatica aziendale",
+          "queries": [
+            {
+              "original_query": "Quali sono i punti principali del documento?",
+              "expanded_query": "Quali sono i punti principali su sicurezza informatica aziendale, in particolare sicurezza informatica, phishing, ransomware, malware, password e backup?",
+              "query_type": "main_points",
+              "changed": true,
+              "document_domain": "sicurezza informatica aziendale",
+              "concepts_used": [
+                "sicurezza informatica",
+                "phishing",
+                "ransomware",
+                "malware",
+                "password",
+                "backup"
+              ],
+              "reason": "Domanda contestualizzata con dominio e concetti specialistici forniti dal profilo."
+            },
+            {
+              "original_query": "Che cosa devo ricordare?",
+              "expanded_query": "Che cosa devo ricordare su sicurezza informatica aziendale, in particolare password sicure, phishing, backup, autenticazione a due fattori, credenziali e dati sensibili?",
+              "query_type": "study_memory",
+              "changed": true,
+              "document_domain": "sicurezza informatica aziendale",
+              "concepts_used": [
+                "password sicure",
+                "phishing",
+                "backup",
+                "autenticazione a due fattori",
+                "credenziali",
+                "dati sensibili"
+              ],
+              "reason": "Domanda contestualizzata con dominio e concetti specialistici forniti dal profilo."
+            },
+            {
+              "original_query": "Quali rischi o problemi vengono spiegati nel documento?",
+              "expanded_query": "Quali rischi o criticità di sicurezza informatica aziendale, legati a phishing, ransomware, malware, password deboli e furto di credenziali, vengono spiegati?",
+              "query_type": "risks",
+              "changed": true,
+              "document_domain": "sicurezza informatica aziendale",
+              "concepts_used": [
+                "phishing",
+                "ransomware",
+                "malware",
+                "password deboli",
+                "furto di credenziali"
+              ],
+              "reason": "Domanda contestualizzata con dominio e concetti specialistici forniti dal profilo."
+            }
+          ],
+          "limits": [
+            "Core universale.",
+            "Non contiene vocabolario specialistico.",
+            "Usa concetti forniti dal profilo di dominio."
+          ]
+        },
+        "answers": [
+          {
+            "status": "OK",
+            "query": "Quali sono i punti principali del documento?",
+            "expanded_query": "Quali sono i punti principali su sicurezza informatica aziendale, in particolare sicurezza informatica, phishing, ransomware, malware, password e backup?",
+            "answer": "I punti principali del documento riguardano sicurezza informatica aziendale, con attenzione a sicurezza informatica, phishing, ransomware, malware, password. La sicurezza informatica è l'insieme di pratiche, strumenti e comportamenti usati per proteggere dati, dispositivi, account e sistemi digitali. Un tipo particolare di malware è il ransomware. Se il backup è sempre collegato allo stesso computer o alla stessa rete, un ransomware potrebbe cifrare anche quello.",
+            "sentences_used": 4,
+            "quality_errors": [],
+            "relevance": {
+              "profile_id": "informatics_security_v394u",
+              "domain_name": "sicurezza informatica aziendale",
+              "query_type": "main_points"
+            },
+            "limits": [
+              "Pertinenza universale.",
+              "Concetti specialistici forniti dal profilo.",
+              "Nessun fix su domanda singola."
+            ]
+          },
+          {
+            "status": "OK",
+            "query": "Che cosa devo ricordare?",
+            "expanded_query": "Che cosa devo ricordare su sicurezza informatica aziendale, in particolare password sicure, phishing, backup, autenticazione a due fattori, credenziali e dati sensibili?",
+            "answer": "Su sicurezza informatica aziendale, il documento richiama concetti e comportamenti da ricordare come password sicure, phishing, backup, autenticazione a due fattori, credenziali. Il phishing è una tecnica usata per ingannare le persone e convincerle a fornire dati sensibili, credenziali o pagamenti. La sicurezza informatica è l'insieme di pratiche, strumenti e comportamenti usati per proteggere dati, dispositivi, account e sistemi digitali. L'autenticazione a due fattori, spesso abbreviata in 2FA, aggiunge un secondo controllo oltre alla password.",
+            "sentences_used": 4,
+            "quality_errors": [],
+            "relevance": {
+              "profile_id": "informatics_security_v394u",
+              "domain_name": "sicurezza informatica aziendale",
+              "query_type": "study_memory"
+            },
+            "limits": [
+              "Pertinenza universale.",
+              "Concetti specialistici forniti dal profilo.",
+              "Nessun fix su domanda singola."
+            ]
+          },
+          {
+            "status": "OK",
+            "query": "Quali rischi o problemi vengono spiegati nel documento?",
+            "expanded_query": "Quali rischi o criticità di sicurezza informatica aziendale, legati a phishing, ransomware, malware, password deboli e furto di credenziali, vengono spiegati?",
+            "answer": "I rischi o le criticità di sicurezza informatica aziendale spiegati nel documento riguardano phishing, ransomware, malware, password deboli, furto di credenziali. La sicurezza informatica è l'insieme di pratiche, strumenti e comportamenti usati per proteggere dati, dispositivi, account e sistemi digitali. Il phishing è una tecnica usata per ingannare le persone e convincerle a fornire dati sensibili, credenziali o pagamenti. Un sistema informatico può essere tecnicamente avanzato, ma rimanere vulnerabile se gli utenti usano password deboli, cliccano link sospetti o condividono dati riservati senza controllo.",
+            "sentences_used": 4,
+            "quality_errors": [],
+            "relevance": {
+              "profile_id": "informatics_security_v394u",
+              "domain_name": "sicurezza informatica aziendale",
+              "query_type": "risks"
+            },
+            "limits": [
+              "Pertinenza universale.",
+              "Concetti specialistici forniti dal profilo.",
+              "Nessun fix su domanda singola."
+            ]
+          }
+        ],
+        "gates": {
+          "relevance": {
+            "core": "mini_llm_universal_relevance_core_v394u",
+            "version": "V3.9.4U.1",
+            "status": "PASS",
+            "errors": [],
+            "profile_id": "informatics_security_v394u",
+            "domain_name": "sicurezza informatica aziendale",
+            "limits": [
+              "Gate universale di pertinenza.",
+              "Usa profilo esterno.",
+              "Non contiene dizionari specialistici interni."
+            ]
+          },
+          "linguistic_errors": []
+        },
+        "elapsed_ms": 12.951417,
+        "limits": [
+          "Bridge tra mini LLM e core universale.",
+          "Domande migliorate dal core universale.",
+          "Risposte validate dal core universale.",
+          "Profili specialistici separati."
+        ]
+      },
+      "answers": [
+        {
+          "status": "OK",
+          "query": "Quali sono i punti principali del documento?",
+          "expanded_query": "Quali sono i punti principali su sicurezza informatica aziendale, in particolare sicurezza informatica, phishing, ransomware, malware, password e backup?",
+          "answer": "I punti principali del documento riguardano sicurezza informatica aziendale, con attenzione a sicurezza informatica, phishing, ransomware, malware, password. La sicurezza informatica è l'insieme di pratiche, strumenti e comportamenti usati per proteggere dati, dispositivi, account e sistemi digitali. Un tipo particolare di malware è il ransomware. Se il backup è sempre collegato allo stesso computer o alla stessa rete, un ransomware potrebbe cifrare anche quello.",
+          "sentences_used": 4,
+          "quality_errors": [],
+          "relevance": {
+            "profile_id": "informatics_security_v394u",
+            "domain_name": "sicurezza informatica aziendale",
+            "query_type": "main_points"
+          },
+          "limits": [
+            "Pertinenza universale.",
+            "Concetti specialistici forniti dal profilo.",
+            "Nessun fix su domanda singola."
+          ]
+        },
+        {
+          "status": "OK",
+          "query": "Che cosa devo ricordare?",
+          "expanded_query": "Che cosa devo ricordare su sicurezza informatica aziendale, in particolare password sicure, phishing, backup, autenticazione a due fattori, credenziali e dati sensibili?",
+          "answer": "Su sicurezza informatica aziendale, il documento richiama concetti e comportamenti da ricordare come password sicure, phishing, backup, autenticazione a due fattori, credenziali. Il phishing è una tecnica usata per ingannare le persone e convincerle a fornire dati sensibili, credenziali o pagamenti. La sicurezza informatica è l'insieme di pratiche, strumenti e comportamenti usati per proteggere dati, dispositivi, account e sistemi digitali. L'autenticazione a due fattori, spesso abbreviata in 2FA, aggiunge un secondo controllo oltre alla password.",
+          "sentences_used": 4,
+          "quality_errors": [],
+          "relevance": {
+            "profile_id": "informatics_security_v394u",
+            "domain_name": "sicurezza informatica aziendale",
+            "query_type": "study_memory"
+          },
+          "limits": [
+            "Pertinenza universale.",
+            "Concetti specialistici forniti dal profilo.",
+            "Nessun fix su domanda singola."
+          ]
+        },
+        {
+          "status": "OK",
+          "query": "Quali rischi o problemi vengono spiegati nel documento?",
+          "expanded_query": "Quali rischi o criticità di sicurezza informatica aziendale, legati a phishing, ransomware, malware, password deboli e furto di credenziali, vengono spiegati?",
+          "answer": "I rischi o le criticità di sicurezza informatica aziendale spiegati nel documento riguardano phishing, ransomware, malware, password deboli, furto di credenziali. La sicurezza informatica è l'insieme di pratiche, strumenti e comportamenti usati per proteggere dati, dispositivi, account e sistemi digitali. Il phishing è una tecnica usata per ingannare le persone e convincerle a fornire dati sensibili, credenziali o pagamenti. Un sistema informatico può essere tecnicamente avanzato, ma rimanere vulnerabile se gli utenti usano password deboli, cliccano link sospetti o condividono dati riservati senza controllo.",
+          "sentences_used": 4,
+          "quality_errors": [],
+          "relevance": {
+            "profile_id": "informatics_security_v394u",
+            "domain_name": "sicurezza informatica aziendale",
+            "query_type": "risks"
+          },
+          "limits": [
+            "Pertinenza universale.",
+            "Concetti specialistici forniti dal profilo.",
+            "Nessun fix su domanda singola."
+          ]
+        }
+      ],
+      "query_expansion": {
+        "core": "mini_llm_universal_question_core_v394u",
+        "version": "V3.9.4U.1",
+        "profile_id": "informatics_security_v394u",
+        "document_domain": "sicurezza informatica aziendale",
+        "queries": [
+          {
+            "original_query": "Quali sono i punti principali del documento?",
+            "expanded_query": "Quali sono i punti principali su sicurezza informatica aziendale, in particolare sicurezza informatica, phishing, ransomware, malware, password e backup?",
+            "query_type": "main_points",
+            "changed": true,
+            "document_domain": "sicurezza informatica aziendale",
+            "concepts_used": [
+              "sicurezza informatica",
+              "phishing",
+              "ransomware",
+              "malware",
+              "password",
+              "backup"
+            ],
+            "reason": "Domanda contestualizzata con dominio e concetti specialistici forniti dal profilo."
+          },
+          {
+            "original_query": "Che cosa devo ricordare?",
+            "expanded_query": "Che cosa devo ricordare su sicurezza informatica aziendale, in particolare password sicure, phishing, backup, autenticazione a due fattori, credenziali e dati sensibili?",
+            "query_type": "study_memory",
+            "changed": true,
+            "document_domain": "sicurezza informatica aziendale",
+            "concepts_used": [
+              "password sicure",
+              "phishing",
+              "backup",
+              "autenticazione a due fattori",
+              "credenziali",
+              "dati sensibili"
+            ],
+            "reason": "Domanda contestualizzata con dominio e concetti specialistici forniti dal profilo."
+          },
+          {
+            "original_query": "Quali rischi o problemi vengono spiegati nel documento?",
+            "expanded_query": "Quali rischi o criticità di sicurezza informatica aziendale, legati a phishing, ransomware, malware, password deboli e furto di credenziali, vengono spiegati?",
+            "query_type": "risks",
+            "changed": true,
+            "document_domain": "sicurezza informatica aziendale",
+            "concepts_used": [
+              "phishing",
+              "ransomware",
+              "malware",
+              "password deboli",
+              "furto di credenziali"
+            ],
+            "reason": "Domanda contestualizzata con dominio e concetti specialistici forniti dal profilo."
+          }
+        ],
+        "limits": [
+          "Core universale.",
+          "Non contiene vocabolario specialistico.",
+          "Usa concetti forniti dal profilo di dominio."
+        ]
+      },
+      "profile": {
+        "profile_id": "informatics_security_v394u",
+        "domain_name": "sicurezza informatica aziendale",
+        "detection_terms": [
+          "sicurezza informatica",
+          "cybersecurity",
+          "phishing",
+          "ransomware",
+          "malware",
+          "password",
+          "credenziali",
+          "backup",
+          "2fa",
+          "account",
+          "dati sensibili"
+        ],
+        "core_concepts": [
+          "sicurezza informatica",
+          "dati sensibili",
+          "account",
+          "credenziali",
+          "password",
+          "backup"
+        ],
+        "main_concepts": [
+          "sicurezza informatica",
+          "phishing",
+          "ransomware",
+          "malware",
+          "password",
+          "backup",
+          "protezione dei dati"
+        ],
+        "memory_concepts": [
+          "password sicure",
+          "phishing",
+          "backup",
+          "autenticazione a due fattori",
+          "credenziali",
+          "dati sensibili"
+        ],
+        "risk_concepts": [
+          "phishing",
+          "ransomware",
+          "malware",
+          "password deboli",
+          "furto di credenziali",
+          "perdita di dati",
+          "accessi non autorizzati"
+        ],
+        "procedure_concepts": [
+          "aggiornamenti",
+          "backup",
+          "gestione password",
+          "segnalazione incidenti",
+          "verifica link"
+        ],
+        "detection_score": 10
+      },
+      "gates": {
+        "relevance": {
+          "core": "mini_llm_universal_relevance_core_v394u",
+          "version": "V3.9.4U.1",
+          "status": "PASS",
+          "errors": [],
+          "profile_id": "informatics_security_v394u",
+          "domain_name": "sicurezza informatica aziendale",
+          "limits": [
+            "Gate universale di pertinenza.",
+            "Usa profilo esterno.",
+            "Non contiene dizionari specialistici interni."
+          ]
+        },
+        "linguistic_errors": []
+      },
+      "study_pack": {
+        "status": "QUALITY_BLOCKED",
+        "errors": [
+          "card_2:weak_title_start:Quando si",
+          "card_3:weak_title_start:Possono includere dati personali informazioni",
+          "card_4:weak_title_start:È meglio aprire il sito",
+          "card_6:weak_title_start:Se un account con pochi",
+          "qa_2:weak_question_pattern:Che cosa usa quando si?",
+          "qa_3:weak_question_pattern:Quale informazione importante viene data su possono includere dati personali informazioni?",
+          "qa_3:weak_question_pattern:Quale informazione importante viene data su possono includere dati personali informazioni?",
+          "qa_4:weak_question_pattern:Quale informazione importante viene data su è meglio aprire il sito?",
+          "qa_4:weak_question_pattern:Quale informazione importante viene data su è meglio aprire il sito?",
+          "qa_5:weak_question_pattern:Quale informazione importante viene data su sicurezza informatica è l'insieme?",
+          "qa_6:weak_question_pattern:Quale informazione importante viene data su se un account con pochi?",
+          "qa_6:weak_question_pattern:Quale informazione importante viene data su se un account con pochi?",
+          "qa_7:weak_question_pattern:Quale informazione importante viene data su password non devono essere?",
+          "qa_8:weak_question_pattern:Quale informazione importante viene data su può dire che un account?",
+          "qa_8:weak_question_pattern:Quale informazione importante viene data su può dire che un account?",
+          "test_1:option_3:truncated_or_bad_ending:Possono includere dati personali, informazioni economiche, documenti aziendali, contratti, credenziali, dati sanitari o informazioni riservate sui.",
+          "test_2:option_2:truncated_or_bad_ending:Possono includere dati personali, informazioni economiche, documenti aziendali, contratti, credenziali, dati sanitari o informazioni riservate sui.",
+          "test_3:option_1:truncated_or_bad_ending:Possono includere dati personali, informazioni economiche, documenti aziendali, contratti, credenziali, dati sanitari o informazioni riservate sui.",
+          "test_4:option_4:truncated_or_bad_ending:Possono includere dati personali, informazioni economiche, documenti aziendali, contratti, credenziali, dati sanitari o informazioni riservate sui.",
+          "test_5:option_4:truncated_or_bad_ending:Possono includere dati personali, informazioni economiche, documenti aziendali, contratti, credenziali, dati sanitari o informazioni riservate sui.",
+          "test_6:option_3:truncated_or_bad_ending:Possono includere dati personali, informazioni economiche, documenti aziendali, contratti, credenziali, dati sanitari o informazioni riservate sui."
+        ],
+        "study_pack": null,
+        "legacy_status": "OK",
+        "reason": "Study pack legacy bloccato dal gate universale di qualità."
+      },
+      "elapsed_ms": 28.156125000000003,
+      "limits": [
+        "Current Engine V3.9.6.1.",
+        "Usa bridge universale V3.9.5.",
+        "Core universale separato dai profili.",
+        "Study pack legacy protetto da gate qualità.",
+        "No fix su domanda singola."
+      ],
+      "document_cleaning": {
+        "used_cleaner": true,
+        "reason": "Cleaner accettato.",
+        "raw_words": 1702,
+        "cleaned_words": 1039,
+        "raw_profile": "informatics_security_v394u",
+        "cleaned_profile": "informatics_security_v394u"
+      }
+    }
+  ],
+  "checks": {
+    "current_engine_without_specialist_terms": "PASS",
+    "multi_domain": "PASS",
+    "real_document": "PASS",
+    "study_pack_quality_guard": "PASS"
+  },
+  "limits": [
+    "Valida current engine V3.9.6.1.",
+    "Non sostituisce UI/PDF export/OCR.",
+    "Safe cleaner obbligatorio.",
+    "Study pack legacy non viene esposto se fallisce il gate qualità."
+  ]
+}
