@@ -1,1 +1,93 @@
-# Fast Document Q&A + Summary V1 Benchmark\n\n- Stato: **PASS**\n- Caratteri documento simulato: `62209`\n- Chunk creati: `100`\n\n## Performance\n\n- Build indice: `3.604792` ms\n- Q&A media: `0.409875` ms\n- Q&A mediana: `0.366000` ms\n- Q&A P95: `0.538791` ms\n- Q&A max: `0.538791` ms\n- Summary interno: `3.261833` ms\n- Summary totale: `3.270334` ms\n\n## Qualità Q&A\n\n- Domande testate: `10`\n- Risposte OK: `10`\n\n## Esempi Q&A\n\n### Che cosa fa il phishing?\n\n- Status: `OK`\n- Tempo: `0.311125` ms\n- Risposta: `Il phishing usa l'inganno per convincere le persone a fornire dati sensibili, credenziali o pagamenti.`\n\n### A cosa servono i backup regolari?\n\n- Status: `OK`\n- Tempo: `0.326875` ms\n- Risposta: `I backup regolari servono a recuperare informazioni in caso di errore umano, guasto, furto o cancellazione accidentale.`\n\n### Come funziona l'autenticazione a due fattori?\n\n- Status: `OK`\n- Tempo: `0.360459` ms\n- Risposta: `L'autenticazione a due fattori rafforza l'accesso aggiungendo un secondo controllo oltre alla password.`\n\n### Che cos'è il ransomware?\n\n- Status: `OK`\n- Tempo: `0.363917` ms\n- Risposta: `Il ransomware è un malware che blocca o cifra i dati e chiede un pagamento per ripristinarli.`\n\n### Perché sono importanti gli aggiornamenti software?\n\n- Status: `OK`\n- Tempo: `0.368083` ms\n- Risposta: `Gli aggiornamenti software correggono errori e chiudono vulnerabilità di sicurezza.`\n\n### Che cosa fa un password manager?\n\n- Status: `OK`\n- Tempo: `0.471416` ms\n- Risposta: `Un password manager aiuta a conservare password lunghe e uniche senza doverle ricordare tutte.`\n\n### Cosa possono causare le credenziali rubate?\n\n- Status: `OK`\n- Tempo: `0.509000` ms\n- Risposta: `Le credenziali rubate possono consentire accessi non autorizzati ad account o sistemi.`\n\n### Che cosa sono gli account amministrativi?\n\n- Status: `OK`\n- Tempo: `0.538791` ms\n- Risposta: `Gli account amministrativi hanno privilegi elevati e devono essere protetti con controlli aggiuntivi.`\n\n### Che cosa possono contenere i documenti aziendali?\n\n- Status: `OK`\n- Tempo: `0.332750` ms\n- Risposta: `I documenti aziendali possono contenere informazioni operative, contratti, credenziali o dati riservati.`\n\n### Che cosa protegge la sicurezza informatica?\n\n- Status: `OK`\n- Tempo: `0.516333` ms\n- Risposta: `La sicurezza informatica protegge dati, dispositivi, account e sistemi attraverso pratiche, strumenti e comportamenti corretti.`\n\n## Riassunto generato\n\nI backup regolari servono a recuperare informazioni in caso di errore umano, guasto, furto o cancellazione accidentale. La sicurezza informatica protegge dati, dispositivi, account e sistemi attraverso pratiche, strumenti e comportamenti corretti. L'autenticazione a due fattori rafforza l'accesso aggiungendo un secondo controllo oltre alla password. Un password manager aiuta a conservare password lunghe e uniche senza doverle ricordare tutte. Il phishing usa l'inganno per convincere le persone a fornire dati sensibili, credenziali o pagamenti. I documenti aziendali possono contenere informazioni operative, contratti, credenziali o dati riservati. Il ransomware è un malware che blocca o cifra i dati e chiede un pagamento per ripristinarli. Gli account amministrativi hanno privilegi elevati e devono essere protetti con controlli aggiuntivi. Le credenziali rubate possono consentire accessi non autorizzati ad account o sistemi. Gli aggiornamenti software correggono errori e chiudono vulnerabilità di sicurezza.\n\n## Limiti\n\n- Non legge ancora PDF direttamente.\n- Non fa OCR.\n- Non produce ancora riassunto 10% pagine o sinossi 1%.\n- Non usa ancora cache persistente per documenti caricati.\n
+# Fast Document Q&A + Summary V1 Benchmark
+
+- Stato: **PASS**
+- Caratteri documento simulato: `62209`
+- Chunk creati: `100`
+
+## Performance
+
+- Build indice: `3.604792` ms
+- Q&A media: `0.409875` ms
+- Q&A mediana: `0.366000` ms
+- Q&A P95: `0.538791` ms
+- Q&A max: `0.538791` ms
+- Summary interno: `3.261833` ms
+- Summary totale: `3.270334` ms
+
+## Qualità Q&A
+
+- Domande testate: `10`
+- Risposte OK: `10`
+
+## Esempi Q&A
+
+### Che cosa fa il phishing?
+
+- Status: `OK`
+- Tempo: `0.311125` ms
+- Risposta: `Il phishing usa l'inganno per convincere le persone a fornire dati sensibili, credenziali o pagamenti.`
+
+### A cosa servono i backup regolari?
+
+- Status: `OK`
+- Tempo: `0.326875` ms
+- Risposta: `I backup regolari servono a recuperare informazioni in caso di errore umano, guasto, furto o cancellazione accidentale.`
+
+### Come funziona l'autenticazione a due fattori?
+
+- Status: `OK`
+- Tempo: `0.360459` ms
+- Risposta: `L'autenticazione a due fattori rafforza l'accesso aggiungendo un secondo controllo oltre alla password.`
+
+### Che cos'è il ransomware?
+
+- Status: `OK`
+- Tempo: `0.363917` ms
+- Risposta: `Il ransomware è un malware che blocca o cifra i dati e chiede un pagamento per ripristinarli.`
+
+### Perché sono importanti gli aggiornamenti software?
+
+- Status: `OK`
+- Tempo: `0.368083` ms
+- Risposta: `Gli aggiornamenti software correggono errori e chiudono vulnerabilità di sicurezza.`
+
+### Che cosa fa un password manager?
+
+- Status: `OK`
+- Tempo: `0.471416` ms
+- Risposta: `Un password manager aiuta a conservare password lunghe e uniche senza doverle ricordare tutte.`
+
+### Cosa possono causare le credenziali rubate?
+
+- Status: `OK`
+- Tempo: `0.509000` ms
+- Risposta: `Le credenziali rubate possono consentire accessi non autorizzati ad account o sistemi.`
+
+### Che cosa sono gli account amministrativi?
+
+- Status: `OK`
+- Tempo: `0.538791` ms
+- Risposta: `Gli account amministrativi hanno privilegi elevati e devono essere protetti con controlli aggiuntivi.`
+
+### Che cosa possono contenere i documenti aziendali?
+
+- Status: `OK`
+- Tempo: `0.332750` ms
+- Risposta: `I documenti aziendali possono contenere informazioni operative, contratti, credenziali o dati riservati.`
+
+### Che cosa protegge la sicurezza informatica?
+
+- Status: `OK`
+- Tempo: `0.516333` ms
+- Risposta: `La sicurezza informatica protegge dati, dispositivi, account e sistemi attraverso pratiche, strumenti e comportamenti corretti.`
+
+## Riassunto generato
+
+I backup regolari servono a recuperare informazioni in caso di errore umano, guasto, furto o cancellazione accidentale. La sicurezza informatica protegge dati, dispositivi, account e sistemi attraverso pratiche, strumenti e comportamenti corretti. L'autenticazione a due fattori rafforza l'accesso aggiungendo un secondo controllo oltre alla password. Un password manager aiuta a conservare password lunghe e uniche senza doverle ricordare tutte. Il phishing usa l'inganno per convincere le persone a fornire dati sensibili, credenziali o pagamenti. I documenti aziendali possono contenere informazioni operative, contratti, credenziali o dati riservati. Il ransomware è un malware che blocca o cifra i dati e chiede un pagamento per ripristinarli. Gli account amministrativi hanno privilegi elevati e devono essere protetti con controlli aggiuntivi. Le credenziali rubate possono consentire accessi non autorizzati ad account o sistemi. Gli aggiornamenti software correggono errori e chiudono vulnerabilità di sicurezza.
+
+## Limiti
+
+- Non legge ancora PDF direttamente.
+- Non fa OCR.
+- Non produce ancora riassunto 10% pagine o sinossi 1%.
+- Non usa ancora cache persistente per documenti caricati.
