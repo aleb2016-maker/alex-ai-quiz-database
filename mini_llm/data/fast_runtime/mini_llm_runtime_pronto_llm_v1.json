@@ -1,0 +1,106 @@
+{
+  "validator": "verifica_mini_llm_runtime_pronto_llm_v1",
+  "status": "PASS",
+  "errors": [],
+  "checks": {
+    "missing_files": [],
+    "report_statuses": {
+      "mini_llm/data/fast_runtime/fast_document_qa_summary_v2_cache_benchmark.json": "PASS",
+      "mini_llm/data/fast_runtime/mini_llm_document_cli_v1_validation.json": "PASS",
+      "mini_llm/data/fast_runtime/mini_llm_document_cli_pdf_v1_validation.json": "PASS",
+      "mini_llm/data/fast_runtime/mini_llm_documentale_integrato_v1.json": "PASS"
+    },
+    "pypdf_in_requirements": true,
+    "cli_supports_pdf": true
+  },
+  "live_test": {
+    "build": {
+      "command": "build",
+      "status": "OK",
+      "file": "/private/var/folders/s3/q53ggzhn0dj5v3mm46w3bgrr0000gn/T/mini_llm_ready_llm_yl1ngegr/documento_chiusura_runtime.md",
+      "document_chars": 666,
+      "chunks": 2,
+      "cache": {
+        "cache_status": "MISS_BUILT",
+        "cache_key": "b618bdd8a2a4db91ecba49e1",
+        "cache_path": "/Users/alessandrobarbarossa/alex-ai-workspace/mini_llm/data/fast_runtime/cache_v2_user_docs/b618bdd8a2a4db91ecba49e1.json",
+        "elapsed_ms": 0.4535419999999978,
+        "chunks": 2
+      },
+      "total_ms": 0.5672089999999991
+    },
+    "ask": {
+      "command": "ask",
+      "status": "OK",
+      "file": "/private/var/folders/s3/q53ggzhn0dj5v3mm46w3bgrr0000gn/T/mini_llm_ready_llm_yl1ngegr/documento_chiusura_runtime.md",
+      "document_chars": 666,
+      "chunks": 2,
+      "cache": {
+        "cache_status": "HIT",
+        "cache_key": "b618bdd8a2a4db91ecba49e1",
+        "cache_path": "/Users/alessandrobarbarossa/alex-ai-workspace/mini_llm/data/fast_runtime/cache_v2_user_docs/b618bdd8a2a4db91ecba49e1.json",
+        "elapsed_ms": 0.08450000000000124,
+        "chunks": 2
+      },
+      "build_or_load_ms": 0.15629099999999937,
+      "question": "Che cosa fa il phishing?",
+      "answer": "Il phishing usa l'inganno per convincere le persone a fornire dati sensibili, credenziali o pagamenti.",
+      "answer_ms": 0.12641599999999725,
+      "matches": [
+        {
+          "score": 1.7555,
+          "chunk_id": 0,
+          "text": "Documento chiusura runtime LLM. La sicurezza informatica protegge dati, dispositivi, account e sistemi attraverso pratiche, strumenti e comportamenti corretti. Il phishing usa l'inganno per convincere le persone a fornire dati sensibili, credenziali o pagamenti. I backup regolari servono a recuperare informazioni in caso di errore umano, guasto, furto o cancellazione accidentale. L'autenticazione a due fattori rafforza l'accesso aggiungendo un secondo controllo oltre alla password. Il ransomware è un malware che blocca o cifra i dati e chiede un pagamento per ripristinarli."
+        }
+      ]
+    },
+    "summary": {
+      "command": "summary",
+      "status": "OK",
+      "file": "/private/var/folders/s3/q53ggzhn0dj5v3mm46w3bgrr0000gn/T/mini_llm_ready_llm_yl1ngegr/documento_chiusura_runtime.md",
+      "document_chars": 666,
+      "chunks": 2,
+      "cache": {
+        "cache_status": "HIT",
+        "cache_key": "b618bdd8a2a4db91ecba49e1",
+        "cache_path": "/Users/alessandrobarbarossa/alex-ai-workspace/mini_llm/data/fast_runtime/cache_v2_user_docs/b618bdd8a2a4db91ecba49e1.json",
+        "elapsed_ms": 0.10833299999999518,
+        "chunks": 2
+      },
+      "build_or_load_ms": 0.20012499999999891,
+      "summary": "La sicurezza informatica protegge dati, dispositivi, account e sistemi attraverso pratiche, strumenti e comportamenti corretti. I backup regolari servono a recuperare informazioni in caso di errore umano, guasto, furto o cancellazione accidentale. Il phishing usa l'inganno per convincere le persone a fornire dati sensibili, credenziali o pagamenti. L'autenticazione a due fattori rafforza l'accesso aggiungendo un secondo controllo oltre alla password. Il ransomware è un malware che blocca o cifra i dati e chiede un pagamento per ripristinarli.",
+      "summary_ms": 0.18787499999999707,
+      "sentences_used": 5
+    }
+  },
+  "runtime_contract": {
+    "current_engine": "inference_engine_current -> V3.15 stable",
+    "document_runtime": "fast_document_qa_summary_v2_cache",
+    "cli": "mini_llm_document_cli_v1",
+    "supported_inputs": [
+      "txt",
+      "md",
+      "markdown",
+      "pdf_textual"
+    ],
+    "cache": "cache_v2_user_docs runtime ignored by git",
+    "qa_mode": "extractive",
+    "summary_mode": "extractive",
+    "pdf_mode": "textual/selectable PDF via pypdf",
+    "ready_for_llm_layer": true
+  },
+  "limits_before_llm": [
+    "Non è ancora un LLM generativo.",
+    "Non usa ancora modello neurale per generare testo libero.",
+    "Non gestisce ancora OCR per PDF scannerizzati.",
+    "Q&A e summary sono extractive.",
+    "Il prossimo blocco LLM dovrà usare questo runtime come base documentale/RAG."
+  ],
+  "next_llm_step": [
+    "Definire interfaccia LLM provider.",
+    "Creare adapter locale/API separato.",
+    "Usare retrieve/cache documentale come contesto.",
+    "Aggiungere generazione controllata con qualità gate.",
+    "Mantenere fallback vietati e output tracciabile."
+  ]
+}
