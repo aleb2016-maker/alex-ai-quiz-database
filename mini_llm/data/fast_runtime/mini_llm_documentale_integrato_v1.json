@@ -1,0 +1,73 @@
+{
+  "validator": "mini_llm_documentale_integrato_v1",
+  "status": "PASS",
+  "errors": [],
+  "current_validator_ms": 663.788208,
+  "build_total_ms": 35.146583999999926,
+  "ask_total_ms": 35.656042000000056,
+  "summary_total_ms": 32.46333300000004,
+  "build": {
+    "command": "build",
+    "status": "OK",
+    "file": "/private/var/folders/s3/q53ggzhn0dj5v3mm46w3bgrr0000gn/T/mini_llm_doc_smoke_95gsoq8p/documento_integrato.md",
+    "document_chars": 1053,
+    "chunks": 2,
+    "cache": {
+      "cache_status": "MISS_BUILT",
+      "cache_key": "549419bd5760c7f47539291f",
+      "cache_path": "/Users/alessandrobarbarossa/alex-ai-workspace/mini_llm/data/fast_runtime/cache_v2_user_docs/549419bd5760c7f47539291f.json",
+      "elapsed_ms": 1.1275419999999987,
+      "chunks": 2
+    },
+    "total_ms": 1.3628329999999973
+  },
+  "ask": {
+    "command": "ask",
+    "status": "OK",
+    "file": "/private/var/folders/s3/q53ggzhn0dj5v3mm46w3bgrr0000gn/T/mini_llm_doc_smoke_95gsoq8p/documento_integrato.md",
+    "document_chars": 1053,
+    "chunks": 2,
+    "cache": {
+      "cache_status": "HIT",
+      "cache_key": "549419bd5760c7f47539291f",
+      "cache_path": "/Users/alessandrobarbarossa/alex-ai-workspace/mini_llm/data/fast_runtime/cache_v2_user_docs/549419bd5760c7f47539291f.json",
+      "elapsed_ms": 0.16112500000000154,
+      "chunks": 2
+    },
+    "build_or_load_ms": 0.2524580000000005,
+    "question": "Che cosa fa il phishing?",
+    "answer": "Il phishing usa l'inganno per convincere le persone a fornire dati sensibili, credenziali o pagamenti.",
+    "answer_ms": 0.15408399999999878,
+    "matches": [
+      {
+        "score": 1.7555,
+        "chunk_id": 0,
+        "text": "Documento integrato Mini LLM. La sicurezza informatica protegge dati, dispositivi, account e sistemi attraverso pratiche, strumenti e comportamenti corretti. Il phishing usa l'inganno per convincere le persone a fornire dati sensibili, credenziali o pagamenti. I backup regolari servono a recuperare informazioni in caso di errore umano, guasto, furto o cancellazione accidentale. L'autenticazione a due fattori rafforza l'accesso aggiungendo un secondo controllo oltre alla password. Il ransomware è un malware che blocca o cifra i dati e chiede un pagamento per ripristinarli."
+      }
+    ]
+  },
+  "summary": {
+    "command": "summary",
+    "status": "OK",
+    "file": "/private/var/folders/s3/q53ggzhn0dj5v3mm46w3bgrr0000gn/T/mini_llm_doc_smoke_95gsoq8p/documento_integrato.md",
+    "document_chars": 1053,
+    "chunks": 2,
+    "cache": {
+      "cache_status": "HIT",
+      "cache_key": "549419bd5760c7f47539291f",
+      "cache_path": "/Users/alessandrobarbarossa/alex-ai-workspace/mini_llm/data/fast_runtime/cache_v2_user_docs/549419bd5760c7f47539291f.json",
+      "elapsed_ms": 0.14475000000000252,
+      "chunks": 2
+    },
+    "build_or_load_ms": 0.22729200000000047,
+    "summary": "La sicurezza informatica protegge dati, dispositivi, account e sistemi attraverso pratiche, strumenti e comportamenti corretti. I backup regolari servono a recuperare informazioni in caso di errore umano, guasto, furto o cancellazione accidentale. L'autenticazione a due fattori rafforza l'accesso aggiungendo un secondo controllo oltre alla password. Un password manager aiuta a conservare password lunghe e uniche senza doverle ricordare tutte. Il phishing usa l'inganno per convincere le persone a fornire dati sensibili, credenziali o pagamenti. I documenti aziendali possono contenere informazioni operative, contratti, credenziali o dati riservati.",
+    "summary_ms": 0.168999999999999,
+    "sentences_used": 6
+  },
+  "limits": [
+    "Smoke test integrato, non benchmark completo.",
+    "Usa TXT/MD tramite CLI, non PDF diretto.",
+    "Q&A e summary sono extractive.",
+    "Serve a verificare stabilità end-to-end."
+  ]
+}
