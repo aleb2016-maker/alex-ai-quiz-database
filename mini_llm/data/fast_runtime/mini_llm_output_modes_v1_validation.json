@@ -1,0 +1,151 @@
+{
+  "validator": "valida_mini_llm_output_modes_v1",
+  "status": "PASS",
+  "errors": [],
+  "modes": {
+    "summary": {
+      "status": "OK",
+      "total_ms": 8.474334,
+      "counts": {
+        "summary_sentences": 8,
+        "cards": 6,
+        "qas": 8,
+        "test_questions": 6,
+        "student_test_questions": 6
+      }
+    },
+    "cards": {
+      "status": "OK",
+      "total_ms": 6.811292,
+      "counts": {
+        "summary_sentences": 8,
+        "cards": 6,
+        "qas": 8,
+        "test_questions": 6,
+        "student_test_questions": 6
+      }
+    },
+    "qa": {
+      "status": "OK",
+      "total_ms": 6.624333,
+      "counts": {
+        "summary_sentences": 8,
+        "cards": 6,
+        "qas": 8,
+        "test_questions": 6,
+        "student_test_questions": 6
+      }
+    },
+    "test": {
+      "status": "OK",
+      "total_ms": 6.473332999999999,
+      "counts": {
+        "summary_sentences": 8,
+        "cards": 6,
+        "qas": 8,
+        "test_questions": 6,
+        "student_test_questions": 6
+      }
+    },
+    "full": {
+      "status": "OK",
+      "total_ms": 6.953791999999998,
+      "counts": {
+        "summary_sentences": 8,
+        "cards": 6,
+        "qas": 8,
+        "test_questions": 6,
+        "student_test_questions": 6
+      }
+    }
+  },
+  "pdf_full": {
+    "status": "OK",
+    "total_ms": 2.340083999999992,
+    "counts": {
+      "summary_sentences": 8,
+      "cards": 6,
+      "qas": 8,
+      "test_questions": 6,
+      "student_test_questions": 6
+    }
+  },
+  "markdown_outputs": {
+    "test": {
+      "cli": "mini_llm_output_modes_cli_v1",
+      "mode": "test",
+      "status": "OK",
+      "output_file": "/private/var/folders/s3/q53ggzhn0dj5v3mm46w3bgrr0000gn/T/mini_llm_modes_v1_n00gsi74/test_student.md",
+      "answer_key_file": "/private/var/folders/s3/q53ggzhn0dj5v3mm46w3bgrr0000gn/T/mini_llm_modes_v1_n00gsi74/answers.json",
+      "total_ms": 6.501667000000001,
+      "counts": {
+        "summary_sentences": 8,
+        "cards": 6,
+        "qas": 8,
+        "test_questions": 6,
+        "student_test_questions": 6
+      }
+    },
+    "full": {
+      "cli": "mini_llm_output_modes_cli_v1",
+      "mode": "full",
+      "status": "OK",
+      "output_file": "/private/var/folders/s3/q53ggzhn0dj5v3mm46w3bgrr0000gn/T/mini_llm_modes_v1_n00gsi74/full_student.md",
+      "answer_key_file": "",
+      "total_ms": 6.466541999999999,
+      "counts": {
+        "summary_sentences": 8,
+        "cards": 6,
+        "qas": 8,
+        "test_questions": 6,
+        "student_test_questions": 6
+      }
+    }
+  },
+  "examples": {
+    "summary": {
+      "status": "OK",
+      "summary": "I backup regolari servono a recuperare informazioni in caso di errore umano, guasto, furto o cancellazione accidentale. La sicurezza informatica protegge dati, dispositivi, account e sistemi attraverso pratiche, strumenti e comportamenti corretti. L'autenticazione a due fattori rafforza l'accesso aggiungendo un secondo controllo oltre alla password. Il phishing usa l'inganno per convincere le persone a fornire dati sensibili, credenziali o pagamenti. Un password manager aiuta a conservare password lunghe e uniche senza doverle ricordare tutte. La formazione del personale riduce errori, distrazioni e comportamenti rischiosi durante il lavoro quotidiano. Le procedure di sicurezza aiutano a gestire incidenti, accessi, backup, dispositivi e comunicazioni interne. I documenti aziendali possono contenere informazioni operative, contratti, credenziali o dati riservati.",
+      "sentences_used": 8,
+      "elapsed_ms": 0.1411249999999989
+    },
+    "first_card": {
+      "type": "study_card_v3",
+      "title": "Backup regolari",
+      "message": "I backup regolari servono a recuperare informazioni in caso di errore umano, guasto, furto o cancellazione accidentale.",
+      "bullets": [
+        "Idea chiave: Backup regolari.",
+        "Cosa ricordare: I backup regolari servono a recuperare informazioni in caso di errore umano, guasto, furto o cancellazione accidentale.",
+        "Parole guida: backup, regolari, recuperare, informazioni, caso."
+      ],
+      "source_sentence": "I backup regolari servono a recuperare informazioni in caso di errore umano, guasto, furto o cancellazione accidentale."
+    },
+    "first_qa": {
+      "question": "A cosa servono i backup regolari?",
+      "answer": "I backup regolari servono a recuperare informazioni in caso di errore umano, guasto, furto o cancellazione accidentale.",
+      "source_sentence": "I backup regolari servono a recuperare informazioni in caso di errore umano, guasto, furto o cancellazione accidentale."
+    },
+    "first_test": {
+      "id": "q01",
+      "question": "A cosa servono i backup regolari?",
+      "options": [
+        "Proteggere dati, dispositivi, account e sistemi attraverso pratiche, strumenti e comportamenti corretti.",
+        "Recuperare informazioni in caso di errore umano, guasto, furto o cancellazione accidentale.",
+        "Usare l'inganno per convincere le persone a fornire dati sensibili, credenziali o pagamenti.",
+        "Conservare password lunghe e uniche senza doverle ricordare tutte."
+      ]
+    },
+    "first_answer_key": {
+      "id": "q01",
+      "correct_index": 1,
+      "answer": "Recuperare informazioni in caso di errore umano, guasto, furto o cancellazione accidentale.",
+      "explanation": "Per rispondere correttamente bisogna collegare la domanda alla frase del documento: I backup regolari servono a recuperare informazioni in caso di errore umano, guasto, furto o cancellazione accidentale."
+    }
+  },
+  "limits": [
+    "Output Modes V1 usa Study Pack Current V3.",
+    "Non è ancora RAG lungo 500 pagine.",
+    "Non è ancora LLM neurale generativo.",
+    "No OCR."
+  ]
+}
