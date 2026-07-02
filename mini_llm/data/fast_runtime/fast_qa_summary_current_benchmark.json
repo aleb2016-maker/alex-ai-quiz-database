@@ -1,0 +1,249 @@
+{
+  "benchmark": "fast_qa_summary_current",
+  "status": "PASS",
+  "base_engine": "inference_engine_v315_extended_safe_decoder",
+  "items_loaded": 26,
+  "questions_total": 10,
+  "answers_ok": 10,
+  "load_ms": 0.538832999999999,
+  "qa_avg_ms": 0.014745900000000256,
+  "qa_median_ms": 0.013979000000000769,
+  "qa_p95_ms": 0.030333000000000443,
+  "qa_max_ms": 0.030333000000000443,
+  "summary_ms": 0.0979999999999974,
+  "summary_total_ms": 0.09891700000000045,
+  "summary_items_used": 8,
+  "qa_results": [
+    {
+      "status": "OK",
+      "question": "Che cosa fa il phishing?",
+      "answer": "Il phishing usa l'inganno per convincere le persone a fornire dati sensibili, credenziali o pagamenti.",
+      "matches": [
+        {
+          "score": 9.4095,
+          "prompt": "phishing",
+          "output": "Il phishing usa l'inganno per convincere le persone a fornire dati sensibili, credenziali o pagamenti."
+        },
+        {
+          "score": 3.1595,
+          "prompt": "email sospetta",
+          "output": "Un'email sospetta può essere un segnale di phishing e va controllata prima di aprire link o allegati."
+        },
+        {
+          "score": 2.9095,
+          "prompt": "social engineering",
+          "output": "Il social engineering usa tecniche di inganno per convincere le persone a fornire dati sensibili o credenziali."
+        }
+      ],
+      "elapsed_ms": 0.012124999999998248
+    },
+    {
+      "status": "OK",
+      "question": "A cosa serve un backup?",
+      "answer": "I backup regolari servono a recuperare informazioni in caso di errore umano, guasto, furto o cancellazione accidentale.",
+      "matches": [
+        {
+          "score": 9.4095,
+          "prompt": "backup regolari",
+          "output": "I backup regolari servono a recuperare informazioni in caso di errore umano, guasto, furto o cancellazione accidentale."
+        },
+        {
+          "score": 9.4095,
+          "prompt": "backup offline",
+          "output": "Un backup offline aiuta a proteggere i dati perché resta separato dal computer o dalla rete principale."
+        },
+        {
+          "score": 2.9095,
+          "prompt": "ripristino dati",
+          "output": "Il ripristino dati serve a recuperare informazioni dopo errore umano, guasto o cancellazione accidentale."
+        }
+      ],
+      "elapsed_ms": 0.009333999999999731
+    },
+    {
+      "status": "OK",
+      "question": "Come funziona l'autenticazione a due fattori?",
+      "answer": "L'autenticazione a due fattori rafforza l'accesso aggiungendo un secondo controllo oltre alla password.",
+      "matches": [
+        {
+          "score": 13.6526,
+          "prompt": "autenticazione a due fattori",
+          "output": "L'autenticazione a due fattori rafforza l'accesso aggiungendo un secondo controllo oltre alla password."
+        },
+        {
+          "score": 3.4472,
+          "prompt": "codici temporanei",
+          "output": "I codici temporanei sono controlli usa e getta che rafforzano l'autenticazione."
+        }
+      ],
+      "elapsed_ms": 0.008625000000001687
+    },
+    {
+      "status": "OK",
+      "question": "Che cos'è il ransomware?",
+      "answer": "Un attacco ransomware blocca o cifra i dati e chiede un pagamento per ripristinarli.",
+      "matches": [
+        {
+          "score": 4.0041,
+          "prompt": "attacco ransomware",
+          "output": "Un attacco ransomware blocca o cifra i dati e chiede un pagamento per ripristinarli."
+        },
+        {
+          "score": 4.0041,
+          "prompt": "ransomware",
+          "output": "Il ransomware è un malware che blocca o cifra i dati e chiede un pagamento per ripristinarli."
+        },
+        {
+          "score": 2.5041,
+          "prompt": "backup regolari",
+          "output": "I backup regolari servono a recuperare informazioni in caso di errore umano, guasto, furto o cancellazione accidentale."
+        }
+      ],
+      "elapsed_ms": 0.013041000000001829
+    },
+    {
+      "status": "OK",
+      "question": "Perché sono importanti gli aggiornamenti software?",
+      "answer": "Gli aggiornamenti software correggono errori e chiudono vulnerabilità di sicurezza.",
+      "matches": [
+        {
+          "score": 9.7999,
+          "prompt": "aggiornamenti software",
+          "output": "Gli aggiornamenti software correggono errori e chiudono vulnerabilità di sicurezza."
+        },
+        {
+          "score": 3.4472,
+          "prompt": "malware",
+          "output": "Il malware è un software dannoso che può danneggiare sistemi, rubare informazioni o bloccare l'accesso ai dati."
+        }
+      ],
+      "elapsed_ms": 0.008332999999999258
+    },
+    {
+      "status": "OK",
+      "question": "Che cosa sono i dati sensibili?",
+      "answer": "I dati sensibili possono includere dati personali, informazioni economiche, documenti aziendali, contratti, credenziali, dati sanitari o informazioni riservate sui clienti.",
+      "matches": [
+        {
+          "score": 12.2742,
+          "prompt": "dati sensibili",
+          "output": "I dati sensibili possono includere dati personali, informazioni economiche, documenti aziendali, contratti, credenziali, dati sanitari o informazioni riservate sui clienti."
+        },
+        {
+          "score": 4.7742,
+          "prompt": "phishing",
+          "output": "Il phishing usa l'inganno per convincere le persone a fornire dati sensibili, credenziali o pagamenti."
+        },
+        {
+          "score": 4.7742,
+          "prompt": "social engineering",
+          "output": "Il social engineering usa tecniche di inganno per convincere le persone a fornire dati sensibili o credenziali."
+        }
+      ],
+      "elapsed_ms": 0.030333000000000443
+    },
+    {
+      "status": "OK",
+      "question": "Come si proteggono le credenziali rubate?",
+      "answer": "Le credenziali rubate possono consentire accessi non autorizzati ad account o sistemi.",
+      "matches": [
+        {
+          "score": 8.5959,
+          "prompt": "credenziali rubate",
+          "output": "Le credenziali rubate possono consentire accessi non autorizzati ad account o sistemi."
+        },
+        {
+          "score": 3.4933,
+          "prompt": "furto credenziali",
+          "output": "Il furto di credenziali espone account e sistemi ad accessi non autorizzati."
+        },
+        {
+          "score": 2.2433,
+          "prompt": "phishing",
+          "output": "Il phishing usa l'inganno per convincere le persone a fornire dati sensibili, credenziali o pagamenti."
+        }
+      ],
+      "elapsed_ms": 0.01991700000000124
+    },
+    {
+      "status": "OK",
+      "question": "Che cosa fa un password manager?",
+      "answer": "Un password manager aiuta a conservare password lunghe e uniche senza doverle ricordare tutte.",
+      "matches": [
+        {
+          "score": 13.8191,
+          "prompt": "password manager",
+          "output": "Un password manager aiuta a conservare password lunghe e uniche senza doverle ricordare tutte."
+        },
+        {
+          "score": 3.7164,
+          "prompt": "password",
+          "output": "La password deve essere protetta perché può esporre un account se viene rubata."
+        },
+        {
+          "score": 3.7164,
+          "prompt": "password rubata",
+          "output": "Una password rubata può esporre un account se non viene protetta da controlli aggiuntivi."
+        }
+      ],
+      "elapsed_ms": 0.01591700000000071
+    },
+    {
+      "status": "OK",
+      "question": "Che cosa sono gli account amministrativi?",
+      "answer": "Gli account amministrativi hanno privilegi elevati e devono essere protetti con controlli aggiuntivi.",
+      "matches": [
+        {
+          "score": 13.8191,
+          "prompt": "account amministrativi",
+          "output": "Gli account amministrativi hanno privilegi elevati e devono essere protetti con controlli aggiuntivi."
+        },
+        {
+          "score": 2.4664,
+          "prompt": "password",
+          "output": "La password deve essere protetta perché può esporre un account se viene rubata."
+        },
+        {
+          "score": 2.4664,
+          "prompt": "sicurezza informatica",
+          "output": "La sicurezza informatica protegge dati, dispositivi, account e sistemi attraverso pratiche, strumenti e comportamenti corretti."
+        }
+      ],
+      "elapsed_ms": 0.014916999999999708
+    },
+    {
+      "status": "OK",
+      "question": "Perché è pericolosa una password rubata?",
+      "answer": "Una password rubata può esporre un account se non viene protetta da controlli aggiuntivi.",
+      "matches": [
+        {
+          "score": 8.1259,
+          "prompt": "password rubata",
+          "output": "Una password rubata può esporre un account se non viene protetta da controlli aggiuntivi."
+        },
+        {
+          "score": 6.8759,
+          "prompt": "password",
+          "output": "La password deve essere protetta perché può esporre un account se viene rubata."
+        },
+        {
+          "score": 5.1259,
+          "prompt": "rischio informatico",
+          "output": "Il rischio informatico può esporre dati, account o sistemi a minacce digitali."
+        }
+      ],
+      "elapsed_ms": 0.014916999999999708
+    }
+  ],
+  "summary": {
+    "status": "OK",
+    "summary": "I dati sensibili possono includere dati personali, informazioni economiche, documenti aziendali, contratti, credenziali, dati sanitari o informazioni riservate sui clienti. La sicurezza informatica protegge dati, dispositivi, account e sistemi attraverso pratiche, strumenti e comportamenti corretti. Un backup offline aiuta a proteggere i dati perché resta separato dal computer o dalla rete principale. I backup regolari servono a recuperare informazioni in caso di errore umano, guasto, furto o cancellazione accidentale. Il social engineering usa tecniche di inganno per convincere le persone a fornire dati sensibili o credenziali. Un password manager aiuta a conservare password lunghe e uniche senza doverle ricordare tutte. Il malware è un software dannoso che può danneggiare sistemi, rubare informazioni o bloccare l'accesso ai dati. Il ripristino dati serve a recuperare informazioni dopo errore umano, guasto o cancellazione accidentale.",
+    "items_used": 8,
+    "elapsed_ms": 0.0979999999999974
+  },
+  "limits": [
+    "Indice in memoria su output validati current.",
+    "Domande simulate, non ancora documenti utente lunghi.",
+    "Riassunto extractive breve, non ancora compressione progressiva 10%/1%."
+  ]
+}
