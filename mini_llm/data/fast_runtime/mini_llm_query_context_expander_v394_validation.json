@@ -1,0 +1,150 @@
+{
+  "validator": "valida_mini_llm_query_context_expander_v394",
+  "status": "PASS",
+  "errors": [],
+  "tested_document": "/Users/alessandrobarbarossa/alex-ai-workspace/rag/documenti/documento_rag_sicurezza_informatica_aziendale.md",
+  "real_report": "/Users/alessandrobarbarossa/alex-ai-workspace/mini_llm/data/real_tests/test_sicurezza_v394_context/practical_real_test_v394_context_report.json",
+  "report_status": "PASS",
+  "real_quality_gate": "PASS",
+  "query_context_relevance_gate": "PASS",
+  "query_expansion": {
+    "expander": "mini_llm_query_context_expander_v394",
+    "document_context": {
+      "domain": "sicurezza informatica aziendale",
+      "domain_score": 10,
+      "concepts": [
+        "sicurezza informatica",
+        "phishing",
+        "ransomware",
+        "malware",
+        "password",
+        "password deboli",
+        "credenziali",
+        "backup",
+        "autenticazione a due fattori",
+        "2FA",
+        "account",
+        "dati sensibili"
+      ],
+      "risk_concepts": [
+        "phishing",
+        "ransomware",
+        "malware",
+        "password deboli",
+        "credenziali",
+        "dati sensibili",
+        "furto",
+        "cancellazione accidentale",
+        "guasto"
+      ]
+    },
+    "queries": [
+      {
+        "original_query": "Quali sono i punti principali del documento?",
+        "expanded_query": "Quali sono i punti principali del documento su sicurezza informatica aziendale, in particolare sicurezza informatica, phishing, ransomware, malware, password, password deboli e credenziali?",
+        "query_type": "main_points",
+        "changed": true,
+        "reason": "Domanda contestualizzata con dominio e concetti del documento.",
+        "document_domain": "sicurezza informatica aziendale",
+        "concepts_used": [
+          "sicurezza informatica",
+          "phishing",
+          "ransomware",
+          "malware",
+          "password",
+          "password deboli",
+          "credenziali",
+          "backup",
+          "autenticazione a due fattori",
+          "2FA",
+          "account",
+          "dati sensibili"
+        ]
+      },
+      {
+        "original_query": "Che cosa devo ricordare sulla sicurezza informatica?",
+        "expanded_query": "Che cosa devo ricordare su sicurezza informatica aziendale, in particolare sicurezza informatica, phishing, ransomware, malware, password, password deboli e credenziali?",
+        "query_type": "study_memory",
+        "changed": true,
+        "reason": "Domanda contestualizzata con dominio e concetti del documento.",
+        "document_domain": "sicurezza informatica aziendale",
+        "concepts_used": [
+          "sicurezza informatica",
+          "phishing",
+          "ransomware",
+          "malware",
+          "password",
+          "password deboli",
+          "credenziali",
+          "backup",
+          "autenticazione a due fattori",
+          "2FA",
+          "account",
+          "dati sensibili"
+        ]
+      },
+      {
+        "original_query": "Quali rischi vengono spiegati nel documento?",
+        "expanded_query": "Quali rischi di sicurezza informatica aziendale legati a phishing, ransomware, malware, password deboli, credenziali, dati sensibili e furto vengono spiegati nel documento?",
+        "query_type": "risks",
+        "changed": true,
+        "reason": "Domanda contestualizzata con dominio e concetti del documento.",
+        "document_domain": "sicurezza informatica aziendale",
+        "concepts_used": [
+          "phishing",
+          "ransomware",
+          "malware",
+          "password deboli",
+          "credenziali",
+          "dati sensibili",
+          "furto",
+          "cancellazione accidentale",
+          "guasto"
+        ]
+      }
+    ],
+    "limits": [
+      "Espansione deterministica.",
+      "Non inventa contenuti fuori dal documento.",
+      "Serve a migliorare domanda, retrieval e comprensione umana."
+    ]
+  },
+  "answers": [
+    {
+      "status": "OK",
+      "query": "Quali sono i punti principali del documento?",
+      "expanded_query": "Quali sono i punti principali del documento su sicurezza informatica aziendale, in particolare sicurezza informatica, phishing, ransomware, malware, password, password deboli e credenziali?",
+      "answer": "I punti principali del documento riguardano la sicurezza informatica aziendale, il phishing, le password, i backup, il malware, il ransomware e la protezione dei dati. La sicurezza informatica è l'insieme di pratiche, strumenti e comportamenti usati per proteggere dati, dispositivi, account e sistemi digitali. Il phishing è una tecnica usata per ingannare le persone e convincerle a fornire dati sensibili, credenziali o pagamenti. Un tipo particolare di malware è il ransomware.",
+      "sentences_used": 4,
+      "quality_errors": [],
+      "retrieved_chunks": [],
+      "elapsed_ms": 0.0
+    },
+    {
+      "status": "OK",
+      "query": "Che cosa devo ricordare sulla sicurezza informatica?",
+      "expanded_query": "Che cosa devo ricordare su sicurezza informatica aziendale, in particolare sicurezza informatica, phishing, ransomware, malware, password, password deboli e credenziali?",
+      "answer": "Sulla sicurezza informatica aziendale il documento richiama pratiche, strumenti e comportamenti da ricordare. La sicurezza informatica è l'insieme di pratiche, strumenti e comportamenti usati per proteggere dati, dispositivi, account e sistemi digitali. Il phishing è una tecnica usata per ingannare le persone e convincerle a fornire dati sensibili, credenziali o pagamenti. La 2FA riduce il rischio che un account venga violato solo perché la password è stata rubata.",
+      "sentences_used": 4,
+      "quality_errors": [],
+      "retrieved_chunks": [],
+      "elapsed_ms": 0.0
+    },
+    {
+      "status": "OK",
+      "query": "Quali rischi vengono spiegati nel documento?",
+      "expanded_query": "Quali rischi di sicurezza informatica aziendale legati a phishing, ransomware, malware, password deboli, credenziali, dati sensibili e furto vengono spiegati nel documento?",
+      "answer": "I rischi di sicurezza informatica aziendale spiegati nel documento riguardano phishing, ransomware, password deboli, credenziali, dati sensibili. Serve a recuperare informazioni in caso di errore umano, guasto, furto, cancellazione accidentale o attacco ransomware. Un sistema informatico può essere tecnicamente avanzato, ma rimanere vulnerabile se gli utenti usano password deboli, cliccano link sospetti o condividono dati riservati senza controllo. Il phishing è una tecnica usata per ingannare le persone e convincerle a fornire dati sensibili, credenziali o pagamenti.",
+      "sentences_used": 4,
+      "quality_errors": [],
+      "retrieved_chunks": [],
+      "elapsed_ms": 0.0
+    }
+  ],
+  "limits": [
+    "Valida espansione delle domande.",
+    "Valida dominio documento.",
+    "Valida risposta ancorata.",
+    "Non è LLM neurale generativo."
+  ]
+}
