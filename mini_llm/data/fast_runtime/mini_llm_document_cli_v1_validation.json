@@ -1,0 +1,89 @@
+{
+  "validator": "valida_mini_llm_document_cli_v1",
+  "status": "PASS",
+  "errors": [],
+  "sample_file": "/Users/alessandrobarbarossa/alex-ai-workspace/mini_llm/data/fast_runtime/cli_v1_samples/documento_prova_sicurezza.md",
+  "build": {
+    "command": "build",
+    "status": "OK",
+    "file": "/Users/alessandrobarbarossa/alex-ai-workspace/mini_llm/data/fast_runtime/cli_v1_samples/documento_prova_sicurezza.md",
+    "document_chars": 855,
+    "chunks": 2,
+    "cache": {
+      "cache_status": "MISS_BUILT",
+      "cache_key": "9d39a0294c828dd3df70f763",
+      "cache_path": "/Users/alessandrobarbarossa/alex-ai-workspace/mini_llm/data/fast_runtime/cache_v2_user_docs/9d39a0294c828dd3df70f763.json",
+      "elapsed_ms": 0.49091600000000096,
+      "chunks": 2
+    },
+    "total_ms": 0.5684160000000021
+  },
+  "ask_first": {
+    "command": "ask",
+    "status": "OK",
+    "file": "/Users/alessandrobarbarossa/alex-ai-workspace/mini_llm/data/fast_runtime/cli_v1_samples/documento_prova_sicurezza.md",
+    "document_chars": 855,
+    "chunks": 2,
+    "cache": {
+      "cache_status": "HIT",
+      "cache_key": "9d39a0294c828dd3df70f763",
+      "cache_path": "/Users/alessandrobarbarossa/alex-ai-workspace/mini_llm/data/fast_runtime/cache_v2_user_docs/9d39a0294c828dd3df70f763.json",
+      "elapsed_ms": 0.08866599999999766,
+      "chunks": 2
+    },
+    "build_or_load_ms": 0.111209000000001,
+    "question": "Che cosa fa il phishing?",
+    "answer": "Il phishing usa l'inganno per convincere le persone a fornire dati sensibili, credenziali o pagamenti.",
+    "answer_ms": 0.1559999999999999,
+    "matches": [
+      {
+        "score": 1.7555,
+        "chunk_id": 0,
+        "text": "# Documento prova sicurezza informatica La sicurezza informatica protegge dati, dispositivi, account e sistemi attraverso pratiche, strumenti e comportamenti corretti. Il phishing usa l'inganno per convincere le persone a fornire dati sensibili, credenziali o pagamenti. I backup regolari servono a recuperare informazioni in caso di errore umano, guasto, furto o cancellazione accidentale. L'autenticazione a due fattori rafforza l'accesso aggiungendo un secondo controllo oltre alla password. Il ransomware è un malware che blocca o cifra i dati e chiede un pagamento per ripristinarli."
+      }
+    ]
+  },
+  "ask_second": {
+    "command": "ask",
+    "status": "OK",
+    "file": "/Users/alessandrobarbarossa/alex-ai-workspace/mini_llm/data/fast_runtime/cli_v1_samples/documento_prova_sicurezza.md",
+    "document_chars": 855,
+    "chunks": 2,
+    "cache": {
+      "cache_status": "HIT",
+      "cache_key": "9d39a0294c828dd3df70f763",
+      "cache_path": "/Users/alessandrobarbarossa/alex-ai-workspace/mini_llm/data/fast_runtime/cache_v2_user_docs/9d39a0294c828dd3df70f763.json",
+      "elapsed_ms": 0.09249999999999883,
+      "chunks": 2
+    },
+    "build_or_load_ms": 0.11720900000000006,
+    "question": "A cosa servono i backup regolari?",
+    "answer": "I backup regolari servono a recuperare informazioni in caso di errore umano, guasto, furto o cancellazione accidentale.",
+    "answer_ms": 0.16549999999999898,
+    "matches": [
+      {
+        "score": 3.5109,
+        "chunk_id": 0,
+        "text": "# Documento prova sicurezza informatica La sicurezza informatica protegge dati, dispositivi, account e sistemi attraverso pratiche, strumenti e comportamenti corretti. Il phishing usa l'inganno per convincere le persone a fornire dati sensibili, credenziali o pagamenti. I backup regolari servono a recuperare informazioni in caso di errore umano, guasto, furto o cancellazione accidentale. L'autenticazione a due fattori rafforza l'accesso aggiungendo un secondo controllo oltre alla password. Il ransomware è un malware che blocca o cifra i dati e chiede un pagamento per ripristinarli."
+      }
+    ]
+  },
+  "summary": {
+    "command": "summary",
+    "status": "OK",
+    "file": "/Users/alessandrobarbarossa/alex-ai-workspace/mini_llm/data/fast_runtime/cli_v1_samples/documento_prova_sicurezza.md",
+    "document_chars": 855,
+    "chunks": 2,
+    "cache": {
+      "cache_status": "HIT",
+      "cache_key": "9d39a0294c828dd3df70f763",
+      "cache_path": "/Users/alessandrobarbarossa/alex-ai-workspace/mini_llm/data/fast_runtime/cache_v2_user_docs/9d39a0294c828dd3df70f763.json",
+      "elapsed_ms": 0.08733400000000141,
+      "chunks": 2
+    },
+    "build_or_load_ms": 0.11066700000000179,
+    "summary": "# Documento prova sicurezza informatica La sicurezza informatica protegge dati, dispositivi, account e sistemi attraverso pratiche, strumenti e comportamenti corretti. I backup regolari servono a recuperare informazioni in caso di errore umano, guasto, furto o cancellazione accidentale. Il phishing usa l'inganno per convincere le persone a fornire dati sensibili, credenziali o pagamenti. L'autenticazione a due fattori rafforza l'accesso aggiungendo un secondo controllo oltre alla password. Un password manager aiuta a conservare password lunghe e uniche senza doverle ricordare tutte.",
+    "summary_ms": 0.18208299999999955,
+    "sentences_used": 5
+  }
+}
