@@ -1,0 +1,85 @@
+{
+  "validator": "valida_mini_llm_study_pack_cli_v2",
+  "status": "PASS",
+  "errors": [],
+  "public_json": {
+    "status": "OK",
+    "engine": "mini_llm_study_pack_v3_quality_gate",
+    "total_ms": 6.777708999999998,
+    "counts": {
+      "summary_sentences": 8,
+      "cards": 6,
+      "qas": 8,
+      "test_questions": 6,
+      "student_test_questions": 6
+    }
+  },
+  "pdf_public_json": {
+    "status": "OK",
+    "total_ms": 2.231582999999995,
+    "counts": {
+      "summary_sentences": 8,
+      "cards": 6,
+      "qas": 8,
+      "test_questions": 6,
+      "student_test_questions": 6
+    }
+  },
+  "markdown_result": {
+    "cli": "mini_llm_study_pack_cli_v2",
+    "status": "OK",
+    "output_file": "/private/var/folders/s3/q53ggzhn0dj5v3mm46w3bgrr0000gn/T/mini_llm_study_cli_v2_3g1equmk/study_pack_student.md",
+    "answer_key_file": "/private/var/folders/s3/q53ggzhn0dj5v3mm46w3bgrr0000gn/T/mini_llm_study_cli_v2_3g1equmk/study_pack_answers.json",
+    "total_ms": 11.434708000000002,
+    "counts": {
+      "summary_sentences": 8,
+      "cards": 6,
+      "qas": 8,
+      "test_questions": 6,
+      "student_test_questions": 6
+    }
+  },
+  "answer_key_markdown_result": {
+    "cli": "mini_llm_study_pack_cli_v2",
+    "status": "OK",
+    "output_file": "/private/var/folders/s3/q53ggzhn0dj5v3mm46w3bgrr0000gn/T/mini_llm_study_cli_v2_3g1equmk/study_pack_student_2.md",
+    "answer_key_file": "/private/var/folders/s3/q53ggzhn0dj5v3mm46w3bgrr0000gn/T/mini_llm_study_cli_v2_3g1equmk/study_pack_answers.md",
+    "total_ms": 16.244708,
+    "counts": {
+      "summary_sentences": 8,
+      "cards": 6,
+      "qas": 8,
+      "test_questions": 6,
+      "student_test_questions": 6
+    }
+  },
+  "examples": {
+    "first_student_test": {
+      "id": "q01",
+      "question": "A cosa servono i backup regolari?",
+      "options": [
+        "Proteggere dati, dispositivi, account e sistemi attraverso pratiche, strumenti e comportamenti corretti.",
+        "Recuperare informazioni in caso di errore umano, guasto, furto o cancellazione accidentale.",
+        "Usare l'inganno per convincere le persone a fornire dati sensibili, credenziali o pagamenti.",
+        "Conservare password lunghe e uniche senza doverle ricordare tutte."
+      ]
+    },
+    "first_answer_key": {
+      "id": "q01",
+      "correct_index": 1,
+      "answer": "Recuperare informazioni in caso di errore umano, guasto, furto o cancellazione accidentale.",
+      "explanation": "Per rispondere correttamente bisogna collegare la domanda alla frase del documento: I backup regolari servono a recuperare informazioni in caso di errore umano, guasto, furto o cancellazione accidentale."
+    }
+  },
+  "quality_checks": {
+    "student_markdown_hides_answers": "PASS",
+    "public_json_hides_answer_key": true,
+    "uses_v3": true
+  },
+  "limits": [
+    "CLI V2 su TXT/MD/PDF testuali.",
+    "No OCR.",
+    "Structured/extractive.",
+    "Usa Study Pack V3 Quality Gate."
+  ]
+}
