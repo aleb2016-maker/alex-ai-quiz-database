@@ -7,31 +7,31 @@
     "cache_status": "MISS_BUILT",
     "cache_key": "ed2c223979f0cc1ebf37f8a1",
     "cache_path": "/Users/alessandrobarbarossa/alex-ai-workspace/mini_llm/data/fast_runtime/cache_v2_benchmark/ed2c223979f0cc1ebf37f8a1.json",
-    "elapsed_ms": 9.877417,
+    "elapsed_ms": 9.872417000000002,
     "chunks": 167
   },
   "cache_hit": {
     "cache_status": "HIT",
     "cache_key": "ed2c223979f0cc1ebf37f8a1",
     "cache_path": "/Users/alessandrobarbarossa/alex-ai-workspace/mini_llm/data/fast_runtime/cache_v2_benchmark/ed2c223979f0cc1ebf37f8a1.json",
-    "elapsed_ms": 1.3947500000000002,
+    "elapsed_ms": 1.398792000000003,
     "chunks": 167
   },
   "questions_total": 10,
   "answers_ok": 10,
-  "qa_avg_ms": 0.5965000000000005,
-  "qa_median_ms": 0.536250000000002,
-  "qa_p95_ms": 0.7650420000000004,
-  "qa_max_ms": 0.7650420000000004,
-  "summary_internal_ms": 4.888582999999995,
-  "summary_total_ms": 4.895750000000004,
+  "qa_avg_ms": 0.5932542000000006,
+  "qa_median_ms": 0.5336040000000035,
+  "qa_p95_ms": 0.7547909999999978,
+  "qa_max_ms": 0.7547909999999978,
+  "summary_internal_ms": 4.746333000000005,
+  "summary_total_ms": 4.753458999999995,
   "summary_sentences_used": 10,
   "qa_results": [
     {
       "status": "OK",
       "question": "Che cosa fa il phishing?",
       "answer": "Il phishing usa l'inganno per convincere le persone a fornire dati sensibili, credenziali o pagamenti.",
-      "elapsed_ms": 0.49462499999999854,
+      "elapsed_ms": 0.5012500000000017,
       "matches": [
         {
           "score": 1.8588,
@@ -59,7 +59,7 @@
       "status": "OK",
       "question": "A cosa servono i backup regolari?",
       "answer": "I backup regolari servono a recuperare informazioni in caso di errore umano, guasto, furto o cancellazione accidentale.",
-      "elapsed_ms": 0.49491700000000444,
+      "elapsed_ms": 0.4921670000000017,
       "matches": [
         {
           "score": 3.7177,
@@ -87,7 +87,7 @@
       "status": "OK",
       "question": "Come funziona l'autenticazione a due fattori?",
       "answer": "L'autenticazione a due fattori rafforza l'accesso aggiungendo un secondo controllo oltre alla password.",
-      "elapsed_ms": 0.5361670000000041,
+      "elapsed_ms": 0.5343330000000048,
       "matches": [
         {
           "score": 5.5765,
@@ -115,7 +115,7 @@
       "status": "OK",
       "question": "Che cos'è il ransomware?",
       "answer": "Il ransomware è un malware che blocca o cifra i dati e chiede un pagamento per ripristinarli.",
-      "elapsed_ms": 0.5286669999999966,
+      "elapsed_ms": 0.5237919999999952,
       "matches": [
         {
           "score": 1.8588,
@@ -143,7 +143,7 @@
       "status": "OK",
       "question": "Perché sono importanti gli aggiornamenti software?",
       "answer": "Gli aggiornamenti software correggono errori e chiudono vulnerabilità di sicurezza.",
-      "elapsed_ms": 0.536333,
+      "elapsed_ms": 0.5328750000000021,
       "matches": [
         {
           "score": 3.7177,
@@ -171,7 +171,7 @@
       "status": "OK",
       "question": "Che cosa fa un password manager?",
       "answer": "Un password manager aiuta a conservare password lunghe e uniche senza doverle ricordare tutte.",
-      "elapsed_ms": 0.7463750000000005,
+      "elapsed_ms": 0.7347090000000001,
       "matches": [
         {
           "score": 3.2088,
@@ -199,7 +199,7 @@
       "status": "OK",
       "question": "Cosa possono causare le credenziali rubate?",
       "answer": "Le credenziali rubate possono consentire accessi non autorizzati ad account o sistemi.",
-      "elapsed_ms": 0.7650420000000004,
+      "elapsed_ms": 0.7547909999999978,
       "matches": [
         {
           "score": 3.2088,
@@ -227,7 +227,7 @@
       "status": "OK",
       "question": "Che cosa sono gli account amministrativi?",
       "answer": "Gli account amministrativi hanno privilegi elevati e devono essere protetti con controlli aggiuntivi.",
-      "elapsed_ms": 0.6989579999999995,
+      "elapsed_ms": 0.7055840000000022,
       "matches": [
         {
           "score": 3.2088,
@@ -255,7 +255,7 @@
       "status": "OK",
       "question": "Che cosa possono contenere i documenti aziendali?",
       "answer": "I documenti aziendali possono contenere informazioni operative, contratti, credenziali o dati riservati.",
-      "elapsed_ms": 0.4380410000000001,
+      "elapsed_ms": 0.4356660000000012,
       "matches": [
         {
           "score": 5.5765,
@@ -283,7 +283,7 @@
       "status": "OK",
       "question": "Che cosa protegge la sicurezza informatica?",
       "answer": "La sicurezza informatica protegge dati, dispositivi, account e sistemi attraverso pratiche, strumenti e comportamenti corretti.",
-      "elapsed_ms": 0.7258750000000008,
+      "elapsed_ms": 0.7173749999999992,
       "matches": [
         {
           "score": 5.0737,
@@ -312,7 +312,7 @@
     "status": "OK",
     "summary": "I backup regolari servono a recuperare informazioni in caso di errore umano, guasto, furto o cancellazione accidentale. La sicurezza informatica protegge dati, dispositivi, account e sistemi attraverso pratiche, strumenti e comportamenti corretti. L'autenticazione a due fattori rafforza l'accesso aggiungendo un secondo controllo oltre alla password. Un password manager aiuta a conservare password lunghe e uniche senza doverle ricordare tutte. Il phishing usa l'inganno per convincere le persone a fornire dati sensibili, credenziali o pagamenti. I documenti aziendali possono contenere informazioni operative, contratti, credenziali o dati riservati. Il ransomware è un malware che blocca o cifra i dati e chiede un pagamento per ripristinarli. Gli account amministrativi hanno privilegi elevati e devono essere protetti con controlli aggiuntivi. Le credenziali rubate possono consentire accessi non autorizzati ad account o sistemi. Gli aggiornamenti software correggono errori e chiudono vulnerabilità di sicurezza.",
     "sentences_used": 10,
-    "elapsed_ms": 4.888582999999995
+    "elapsed_ms": 4.746333000000005
   },
   "limits": [
     "Cache persistente su testo, non ancora PDF.",

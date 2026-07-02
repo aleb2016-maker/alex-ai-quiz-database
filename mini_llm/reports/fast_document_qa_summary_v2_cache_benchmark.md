@@ -7,25 +7,25 @@
 ## Cache
 
 - Primo caricamento: `MISS_BUILT`
-- Tempo primo caricamento: `9.877417` ms
+- Tempo primo caricamento: `9.872417` ms
 - Secondo caricamento: `HIT`
-- Tempo cache hit: `1.394750` ms
+- Tempo cache hit: `1.398792` ms
 
 ## Q&A
 
 - Domande testate: `10`
 - Risposte OK: `10`
-- Q&A media: `0.596500` ms
-- Q&A mediana: `0.536250` ms
-- Q&A P95: `0.765042` ms
-- Q&A max: `0.765042` ms
+- Q&A media: `0.593254` ms
+- Q&A mediana: `0.533604` ms
+- Q&A P95: `0.754791` ms
+- Q&A max: `0.754791` ms
 
 ## Summary
 
 - Summary status: `OK`
 - Frasi usate: `10`
-- Summary interno: `4.888583` ms
-- Summary totale: `4.895750` ms
+- Summary interno: `4.746333` ms
+- Summary totale: `4.753459` ms
 
 ## Limiti
 
