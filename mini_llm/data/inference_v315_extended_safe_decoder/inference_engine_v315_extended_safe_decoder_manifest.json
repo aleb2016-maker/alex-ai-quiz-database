@@ -1,0 +1,14 @@
+{
+  "engine": "inference_engine_v315_extended_safe_decoder",
+  "generation_mode": "extended_safe_semantic_decoder_v315",
+  "total_prompts": 28,
+  "ok": 26,
+  "failed": 2,
+  "corpus_sentences": 717,
+  "uses_fallback": false,
+  "uses_sentence_bank": false,
+  "uses_anchored_memory": false,
+  "uses_hardcoded_final_sentences": false,
+  "status": "PASS_INTERNAL",
+  "acceptance_rule": "V3.15 non richiede 28/28; richiede qualità alta, almeno 10 OK, zero copie identiche e zero score negativi."
+}

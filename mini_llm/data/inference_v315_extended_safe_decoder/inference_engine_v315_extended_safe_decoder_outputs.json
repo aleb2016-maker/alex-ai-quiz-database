@@ -1,0 +1,286 @@
+[
+  {
+    "prompt": "password",
+    "output": "La password deve essere protetta perché può esporre un account se viene rubata.",
+    "generation_mode": "extended_safe_semantic_decoder_v315",
+    "status": "OK",
+    "score": 65.0,
+    "copied_from_corpus": false,
+    "source_sentence": "La 2FA riduce il rischio che un account venga violato solo perché la password è stata rubata.",
+    "notes": []
+  },
+  {
+    "prompt": "password sicure",
+    "output": "",
+    "generation_mode": "extended_safe_semantic_decoder_v315",
+    "status": "FAILED_NO_SAFE_SOURCE",
+    "score": -999.0,
+    "copied_from_corpus": false,
+    "source_sentence": "",
+    "notes": [
+      "no_safe_compatible_source"
+    ]
+  },
+  {
+    "prompt": "sicurezza informatica",
+    "output": "La sicurezza informatica protegge dati, dispositivi, account e sistemi attraverso pratiche, strumenti e comportamenti corretti.",
+    "generation_mode": "extended_safe_semantic_decoder_v315",
+    "status": "OK",
+    "score": 90.0,
+    "copied_from_corpus": false,
+    "source_sentence": "La sicurezza informatica è l'insieme di pratiche, strumenti e comportamenti usati per proteggere dati, dispositivi, account e sistemi.",
+    "notes": []
+  },
+  {
+    "prompt": "backup regolari",
+    "output": "I backup regolari servono a recuperare informazioni in caso di errore umano, guasto, furto o cancellazione accidentale.",
+    "generation_mode": "extended_safe_semantic_decoder_v315",
+    "status": "OK",
+    "score": 70.0,
+    "copied_from_corpus": false,
+    "source_sentence": "Il backup serve a recuperare informazioni in caso di errore umano, guasto, furto, cancellazione accidentale o attacco ransomware.",
+    "notes": []
+  },
+  {
+    "prompt": "phishing",
+    "output": "Il phishing usa l'inganno per convincere le persone a fornire dati sensibili, credenziali o pagamenti.",
+    "generation_mode": "extended_safe_semantic_decoder_v315",
+    "status": "OK",
+    "score": 65.0,
+    "copied_from_corpus": false,
+    "source_sentence": "Il phishing è una tecnica usata per ingannare le persone e convincerle a fornire dati sensibili, credenziali o pagamenti.",
+    "notes": []
+  },
+  {
+    "prompt": "dati sensibili",
+    "output": "I dati sensibili possono includere dati personali, informazioni economiche, documenti aziendali, contratti, credenziali, dati sanitari o informazioni riservate sui clienti.",
+    "generation_mode": "extended_safe_semantic_decoder_v315",
+    "status": "OK",
+    "score": 50.0,
+    "copied_from_corpus": false,
+    "source_sentence": "Possono includere dati personali, informazioni economiche, documenti aziendali, contratti, credenziali, dati sanitari o informazioni riservate sui clienti.",
+    "notes": []
+  },
+  {
+    "prompt": "autenticazione a due fattori",
+    "output": "L'autenticazione a due fattori rafforza l'accesso aggiungendo un secondo controllo oltre alla password.",
+    "generation_mode": "extended_safe_semantic_decoder_v315",
+    "status": "OK",
+    "score": 90.0,
+    "copied_from_corpus": false,
+    "source_sentence": "L'autenticazione a due fattori, spesso abbreviata in 2FA, aggiunge un secondo controllo oltre alla password.",
+    "notes": []
+  },
+  {
+    "prompt": "attacco ransomware",
+    "output": "Un attacco ransomware blocca o cifra i dati e chiede un pagamento per ripristinarli.",
+    "generation_mode": "extended_safe_semantic_decoder_v315",
+    "status": "OK",
+    "score": 70.0,
+    "copied_from_corpus": false,
+    "source_sentence": "Il ransomware blocca o cifra i dati e chiede un pagamento per ripristinarli.",
+    "notes": []
+  },
+  {
+    "prompt": "password manager",
+    "output": "Un password manager aiuta a conservare password lunghe e uniche senza doverle ricordare tutte.",
+    "generation_mode": "extended_safe_semantic_decoder_v315",
+    "status": "OK",
+    "score": 50.0,
+    "copied_from_corpus": false,
+    "source_sentence": "Un password manager permette di salvare password lunghe e uniche senza doverle ricordare tutte.",
+    "notes": []
+  },
+  {
+    "prompt": "password rubata",
+    "output": "Una password rubata può esporre un account se non viene protetta da controlli aggiuntivi.",
+    "generation_mode": "extended_safe_semantic_decoder_v315",
+    "status": "OK",
+    "score": 50.0,
+    "copied_from_corpus": false,
+    "source_sentence": "La 2FA riduce il rischio che un account venga violato solo perché la password è stata rubata.",
+    "notes": []
+  },
+  {
+    "prompt": "credenziali rubate",
+    "output": "Le credenziali rubate possono consentire accessi non autorizzati ad account o sistemi.",
+    "generation_mode": "extended_safe_semantic_decoder_v315",
+    "status": "OK",
+    "score": 50.0,
+    "copied_from_corpus": false,
+    "source_sentence": "Ogni dipendente deve proteggere le credenziali personali e non deve condividere password o codici di accesso.",
+    "notes": []
+  },
+  {
+    "prompt": "accesso non autorizzato",
+    "output": "L'accesso non autorizzato è un rischio che può esporre documenti, credenziali o dati riservati.",
+    "generation_mode": "extended_safe_semantic_decoder_v315",
+    "status": "OK",
+    "score": 70.0,
+    "copied_from_corpus": false,
+    "source_sentence": "Non lasciare documenti riservati sulla scrivania riduce il rischio di accesso non autorizzato.",
+    "notes": []
+  },
+  {
+    "prompt": "backup offline",
+    "output": "Un backup offline aiuta a proteggere i dati perché resta separato dal computer o dalla rete principale.",
+    "generation_mode": "extended_safe_semantic_decoder_v315",
+    "status": "OK",
+    "score": 50.0,
+    "copied_from_corpus": false,
+    "source_sentence": "Il backup serve a recuperare informazioni in caso di errore umano, guasto, furto, cancellazione accidentale o attacco ransomware.",
+    "notes": []
+  },
+  {
+    "prompt": "ripristino dati",
+    "output": "Il ripristino dati serve a recuperare informazioni dopo errore umano, guasto o cancellazione accidentale.",
+    "generation_mode": "extended_safe_semantic_decoder_v315",
+    "status": "OK",
+    "score": 50.0,
+    "copied_from_corpus": false,
+    "source_sentence": "Il backup serve a recuperare informazioni in caso di errore umano, guasto, furto, cancellazione accidentale o attacco ransomware.",
+    "notes": []
+  },
+  {
+    "prompt": "malware",
+    "output": "Il malware è un software dannoso che può danneggiare sistemi, rubare informazioni o bloccare l'accesso ai dati.",
+    "generation_mode": "extended_safe_semantic_decoder_v315",
+    "status": "OK",
+    "score": 65.0,
+    "copied_from_corpus": false,
+    "source_sentence": "Il malware è un software dannoso progettato per danneggiare sistemi, rubare informazioni, spiare attività o bloccare l'accesso ai.",
+    "notes": []
+  },
+  {
+    "prompt": "ransomware",
+    "output": "Il ransomware è un malware che blocca o cifra i dati e chiede un pagamento per ripristinarli.",
+    "generation_mode": "extended_safe_semantic_decoder_v315",
+    "status": "OK",
+    "score": 65.0,
+    "copied_from_corpus": false,
+    "source_sentence": "Il ransomware blocca o cifra i dati e chiede un pagamento per ripristinarli.",
+    "notes": []
+  },
+  {
+    "prompt": "email sospetta",
+    "output": "Un'email sospetta può essere un segnale di phishing e va controllata prima di aprire link o allegati.",
+    "generation_mode": "extended_safe_semantic_decoder_v315",
+    "status": "OK",
+    "score": 65.0,
+    "copied_from_corpus": false,
+    "source_sentence": "La lezione appresa viene collegata a phishing, segnalazione email, simulazioni periodiche e al piano di continuità operativa.",
+    "notes": []
+  },
+  {
+    "prompt": "social engineering",
+    "output": "Il social engineering usa tecniche di inganno per convincere le persone a fornire dati sensibili o credenziali.",
+    "generation_mode": "extended_safe_semantic_decoder_v315",
+    "status": "OK",
+    "score": 70.0,
+    "copied_from_corpus": false,
+    "source_sentence": "Il phishing è una tecnica usata per ingannare le persone e convincerle a fornire dati sensibili, credenziali o pagamenti.",
+    "notes": []
+  },
+  {
+    "prompt": "codici temporanei",
+    "output": "I codici temporanei sono controlli usa e getta che rafforzano l'autenticazione.",
+    "generation_mode": "extended_safe_semantic_decoder_v315",
+    "status": "OK",
+    "score": 90.0,
+    "copied_from_corpus": false,
+    "source_sentence": "I codici temporanei generati da app di autenticazione sono generalmente più sicuri dei codici ricevuti via SMS.",
+    "notes": []
+  },
+  {
+    "prompt": "account amministrativi",
+    "output": "Gli account amministrativi hanno privilegi elevati e devono essere protetti con controlli aggiuntivi.",
+    "generation_mode": "extended_safe_semantic_decoder_v315",
+    "status": "OK",
+    "score": 70.0,
+    "copied_from_corpus": false,
+    "source_sentence": "Una buona regola aziendale è attivare la 2FA almeno su email, strumenti cloud, account amministrativi, sistemi di pagamento.",
+    "notes": []
+  },
+  {
+    "prompt": "permessi minimi",
+    "output": "I permessi minimi riducono i danni quando un programma malevolo viene eseguito.",
+    "generation_mode": "extended_safe_semantic_decoder_v315",
+    "status": "OK",
+    "score": 70.0,
+    "copied_from_corpus": false,
+    "source_sentence": "Limitare i permessi riduce i danni nel caso in cui un programma malevolo venga eseguito.",
+    "notes": []
+  },
+  {
+    "prompt": "dati personali",
+    "output": "I dati personali devono essere protetti perché possono identificare persone, clienti o utenti.",
+    "generation_mode": "extended_safe_semantic_decoder_v315",
+    "status": "OK",
+    "score": 50.0,
+    "copied_from_corpus": false,
+    "source_sentence": "Possono includere dati personali, informazioni economiche, documenti aziendali, contratti, credenziali, dati sanitari o informazioni riservate sui clienti.",
+    "notes": []
+  },
+  {
+    "prompt": "protezione endpoint",
+    "output": "",
+    "generation_mode": "extended_safe_semantic_decoder_v315",
+    "status": "FAILED_NO_SAFE_SOURCE",
+    "score": -999.0,
+    "copied_from_corpus": false,
+    "source_sentence": "",
+    "notes": [
+      "no_safe_compatible_source"
+    ]
+  },
+  {
+    "prompt": "aggiornamenti software",
+    "output": "Gli aggiornamenti software correggono errori e chiudono vulnerabilità di sicurezza.",
+    "generation_mode": "extended_safe_semantic_decoder_v315",
+    "status": "OK",
+    "score": 90.0,
+    "copied_from_corpus": false,
+    "source_sentence": "Gli aggiornamenti software correggono errori, migliorano le funzioni e chiudono vulnerabilità di sicurezza.",
+    "notes": []
+  },
+  {
+    "prompt": "rischio informatico",
+    "output": "Il rischio informatico può esporre dati, account o sistemi a minacce digitali.",
+    "generation_mode": "extended_safe_semantic_decoder_v315",
+    "status": "OK",
+    "score": 50.0,
+    "copied_from_corpus": false,
+    "source_sentence": "La 2FA riduce il rischio che un account venga violato solo perché la password è stata rubata.",
+    "notes": []
+  },
+  {
+    "prompt": "furto credenziali",
+    "output": "Il furto di credenziali espone account e sistemi ad accessi non autorizzati.",
+    "generation_mode": "extended_safe_semantic_decoder_v315",
+    "status": "OK",
+    "score": 50.0,
+    "copied_from_corpus": false,
+    "source_sentence": "Ogni dipendente deve proteggere le credenziali personali e non deve condividere password o codici di accesso.",
+    "notes": []
+  },
+  {
+    "prompt": "documenti aziendali",
+    "output": "I documenti aziendali possono contenere informazioni operative, contratti, credenziali o dati riservati.",
+    "generation_mode": "extended_safe_semantic_decoder_v315",
+    "status": "OK",
+    "score": 90.0,
+    "copied_from_corpus": false,
+    "source_sentence": "Possono includere dati personali, informazioni economiche, documenti aziendali, contratti, credenziali, dati sanitari o informazioni riservate sui clienti.",
+    "notes": []
+  },
+  {
+    "prompt": "informazioni riservate",
+    "output": "Le informazioni riservate devono essere protette perché possono riguardare clienti, contratti, credenziali o dati sensibili.",
+    "generation_mode": "extended_safe_semantic_decoder_v315",
+    "status": "OK",
+    "score": 50.0,
+    "copied_from_corpus": false,
+    "source_sentence": "Possono includere dati personali, informazioni economiche, documenti aziendali, contratti, credenziali, dati sanitari o informazioni riservate sui clienti.",
+    "notes": []
+  }
+]

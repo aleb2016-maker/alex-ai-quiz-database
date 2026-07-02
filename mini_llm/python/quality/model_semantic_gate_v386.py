@@ -100,6 +100,8 @@ FINITE_VERBS = {
     "inoltra", "inoltrano",
     "prova", "provano",
     "rafforza",
+    "espone",
+    "espongono",
     "rafforzano",
     "corregge",
     "correggono",

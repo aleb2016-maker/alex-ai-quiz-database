@@ -1,8 +1,8 @@
 # Model Semantic Gate V3.8.6 Report
 
 - Status: **PASS**
-- Output controllati: **18**
-- Passati: **18**
+- Output controllati: **26**
+- Passati: **26**
 - Falliti: **0**
 
 ## Nuove regole V3.8.2
