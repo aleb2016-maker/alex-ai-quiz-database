@@ -12,7 +12,7 @@ Base tecnica:
 - cache persistente per documento testuale
 
 Limiti:
-- supporta testo UTF-8, TXT e MD;
+- supporta testo UTF-8, TXT, MD e PDF testuali;
 - non legge ancora PDF direttamente;
 - non fa OCR;
 - Q&A e summary sono extractive;
@@ -29,7 +29,7 @@ import time
 from pathlib import Path
 
 
-SUPPORTED_SUFFIXES = {".txt", ".md", ".markdown"}
+SUPPORTED_SUFFIXES = {".txt", ".md", ".markdown", ".pdf"}
 
 
 def load_runtime(root: Path):
@@ -53,30 +53,60 @@ def load_runtime(root: Path):
     return module
 
 
-def read_document(path: Path) -> str:
+def read_document(path: Path, root: Path) -> str:
     if not path.exists():
         raise FileNotFoundError(f"Documento non trovato: {path}")
 
     if not path.is_file():
         raise IsADirectoryError(f"Il percorso non è un file: {path}")
 
-    if path.suffix.lower() not in SUPPORTED_SUFFIXES:
+    suffix = path.suffix.lower()
+
+    if suffix not in SUPPORTED_SUFFIXES:
         raise ValueError(
-            "Formato non supportato. Usa TXT, MD o MARKDOWN. "
+            "Formato non supportato. Usa TXT, MD, MARKDOWN o PDF testuale. "
             f"File ricevuto: {path.name}"
         )
 
-    text = path.read_text(encoding="utf-8").strip()
+    if suffix == ".pdf":
+        extractor_path = root / "mini_llm/python/runtime/pdf_text_extractor_v1.py"
+
+        if not extractor_path.exists():
+            raise FileNotFoundError(f"PDF extractor non trovato: {extractor_path}")
+
+        spec = importlib.util.spec_from_file_location(
+            "pdf_text_extractor_v1",
+            extractor_path,
+        )
+
+        if spec is None or spec.loader is None:
+            raise RuntimeError(f"Impossibile caricare PDF extractor: {extractor_path}")
+
+        module = importlib.util.module_from_spec(spec)
+        sys.modules[spec.name] = module
+        spec.loader.exec_module(module)
+
+        result = module.extract_pdf_text(path)
+
+        if result.get("status") != "OK":
+            raise ValueError(
+                "PDF senza testo estraibile. "
+                "Per PDF scannerizzati servirà il modulo OCR."
+            )
+
+        text = str(result.get("text", "")).strip()
+    else:
+        text = path.read_text(encoding="utf-8").strip()
 
     if not text:
-        raise ValueError(f"Documento vuoto: {path}")
+        raise ValueError(f"Documento vuoto o senza testo estraibile: {path}")
 
     return text
 
 
 def build_engine(root: Path, document_path: Path, max_words_per_chunk: int):
     module = load_runtime(root)
-    text = read_document(document_path)
+    text = read_document(document_path, root=root)
 
     cache_dir = root / "mini_llm/data/fast_runtime/cache_v2_user_docs"
 
@@ -178,7 +208,7 @@ def command_summary(args) -> int:
 
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
-        description="Mini LLM Document CLI V1 - Q&A e riassunto veloce su TXT/MD.",
+        description="Mini LLM Document CLI V1 - Q&A e riassunto veloce su TXT/MD/PDF testuali.",
     )
 
     sub = parser.add_subparsers(dest="command", required=True)
@@ -186,19 +216,19 @@ def build_parser() -> argparse.ArgumentParser:
     common_help = "Dimensione chunk in parole. Default: 90."
 
     build = sub.add_parser("build", help="Indicizza documento e crea/usa cache.")
-    build.add_argument("file", help="Percorso file TXT/MD.")
+    build.add_argument("file", help="Percorso file TXT/MD/PDF testuale.")
     build.add_argument("--max-words-per-chunk", type=int, default=90, help=common_help)
     build.set_defaults(func=command_build)
 
     ask = sub.add_parser("ask", help="Risponde a una domanda sul documento.")
-    ask.add_argument("file", help="Percorso file TXT/MD.")
+    ask.add_argument("file", help="Percorso file TXT/MD/PDF testuale.")
     ask.add_argument("question", help="Domanda utente.")
     ask.add_argument("--top-k", type=int, default=4, help="Numero chunk recuperati.")
     ask.add_argument("--max-words-per-chunk", type=int, default=90, help=common_help)
     ask.set_defaults(func=command_ask)
 
     summary = sub.add_parser("summary", help="Genera riassunto extractive.")
-    summary.add_argument("file", help="Percorso file TXT/MD.")
+    summary.add_argument("file", help="Percorso file TXT/MD/PDF testuale.")
     summary.add_argument("--max-sentences", type=int, default=8, help="Numero frasi nel riassunto.")
     summary.add_argument("--max-words-per-chunk", type=int, default=90, help=common_help)
     summary.set_defaults(func=command_summary)
