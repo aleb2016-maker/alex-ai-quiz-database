@@ -1,0 +1,474 @@
+{
+  "benchmark": "mini_llm_long_document_rag_v39",
+  "status": "PASS",
+  "errors": [],
+  "total_ms": 37.575625,
+  "diagnostics": {
+    "engine": "mini_llm_long_document_rag_v39",
+    "lineage": {
+      "semantic_quality_line": "V3.8/V3.8.6",
+      "current_engine": "V3.15 stable current",
+      "study_pack_current": "Study Pack Current V3 Quality Gate",
+      "output_modes": "Output Modes V1",
+      "long_document_rag": "V3.9"
+    },
+    "status": "OK",
+    "pages": 500,
+    "words": 37350,
+    "chunks": 277,
+    "build_ms": 14.492666999999997,
+    "words_per_page": 120,
+    "max_words_per_chunk": 160,
+    "overlap_words": 25,
+    "compression_targets": {
+      "source_pages": 500,
+      "quality_summary_pages_10_percent": 50,
+      "brief_summary_pages_1_percent": 5
+    },
+    "limits": [
+      "V3.9 RAG lungo structured/extractive.",
+      "Non ancora LLM neurale generativo.",
+      "Non ancora OCR.",
+      "Non ancora generazione materiale finale completo da 50 pagine."
+    ]
+  },
+  "retrieval_sample": [
+    {
+      "chunk_id": 20,
+      "page_start": 37,
+      "page_end": 39,
+      "score": 25.600961
+    },
+    {
+      "chunk_id": 31,
+      "page_start": 57,
+      "page_end": 59,
+      "score": 25.600961
+    },
+    {
+      "chunk_id": 42,
+      "page_start": 77,
+      "page_end": 78,
+      "score": 25.600961
+    },
+    {
+      "chunk_id": 103,
+      "page_start": 187,
+      "page_end": 189,
+      "score": 25.600961
+    },
+    {
+      "chunk_id": 114,
+      "page_start": 207,
+      "page_end": 209,
+      "score": 25.600961
+    },
+    {
+      "chunk_id": 125,
+      "page_start": 227,
+      "page_end": 228,
+      "score": 25.600961
+    },
+    {
+      "chunk_id": 186,
+      "page_start": 337,
+      "page_end": 339,
+      "score": 25.600961
+    },
+    {
+      "chunk_id": 197,
+      "page_start": 357,
+      "page_end": 359,
+      "score": 25.600961
+    }
+  ],
+  "answer": {
+    "status": "OK",
+    "query": "Che cosa fa il phishing?",
+    "answer": "Il phishing della pagina 1 usa l'inganno per convincere le persone a fornire credenziali, dati sensibili o pagamenti. Il phishing della pagina 10 usa l'inganno per convincere le persone a fornire credenziali, dati Il phishing della pagina 30 usa",
+    "sentences_used": 3,
+    "retrieved_chunks": [
+      {
+        "chunk_id": 0,
+        "page_start": 1,
+        "page_end": 3,
+        "score": 2.082689
+      },
+      {
+        "chunk_id": 4,
+        "page_start": 8,
+        "page_end": 10,
+        "score": 2.082689
+      },
+      {
+        "chunk_id": 5,
+        "page_start": 10,
+        "page_end": 12,
+        "score": 2.082689
+      },
+      {
+        "chunk_id": 6,
+        "page_start": 12,
+        "page_end": 13,
+        "score": 2.082689
+      },
+      {
+        "chunk_id": 10,
+        "page_start": 19,
+        "page_end": 21,
+        "score": 2.082689
+      },
+      {
+        "chunk_id": 11,
+        "page_start": 21,
+        "page_end": 23,
+        "score": 2.082689
+      },
+      {
+        "chunk_id": 15,
+        "page_start": 28,
+        "page_end": 30,
+        "score": 2.082689
+      },
+      {
+        "chunk_id": 16,
+        "page_start": 30,
+        "page_end": 32,
+        "score": 2.082689
+      },
+      {
+        "chunk_id": 17,
+        "page_start": 32,
+        "page_end": 33,
+        "score": 2.082689
+      },
+      {
+        "chunk_id": 21,
+        "page_start": 39,
+        "page_end": 41,
+        "score": 2.082689
+      },
+      {
+        "chunk_id": 22,
+        "page_start": 41,
+        "page_end": 42,
+        "score": 2.082689
+      },
+      {
+        "chunk_id": 27,
+        "page_start": 50,
+        "page_end": 51,
+        "score": 2.082689
+      }
+    ],
+    "elapsed_ms": 0.9995000000000004
+  },
+  "progressive_summary": {
+    "status": "OK",
+    "targets": {
+      "source_pages": 500,
+      "quality_summary_pages_10_percent": 50,
+      "brief_summary_pages_1_percent": 5,
+      "quality_sentence_target_used": 100,
+      "brief_sentence_target_used": 24,
+      "quality_ratio": 0.1,
+      "brief_ratio": 0.01
+    },
+    "quality_sentences": 100,
+    "brief_sentences": 24,
+    "elapsed_ms": 14.398166000000003,
+    "quality_preview": "della pagina 102 usa l'inganno per convincere le persone a fornire credenziali, dati sensibili o pagamenti. documenti aziendali della pagina 107 possono contenere informazioni operative, contratti, credenziali o dati riservati. della pagina 113 servono a recuperare informazioni dopo errori, guasti, furti o cancellazioni accidentali. L'autenticazione a due fattori della pagina 120 rafforza l'accesso con un secondo controllo oltre alla La formazione del personale della pagina 6 riduce errori, distrazioni e comportamenti rischiosi durante il lavoro quotidiano. pagina 129 aiutano a ricostruire incidenti, tentativi di accesso e modifiche importanti. I backup regolari della pagina 3 servono a recuperare informazioni dopo errori, guasti, furti o cancellazioni accidentali. I backup regolari della pagina 124 servono a recuperare informazioni dopo errori, guasti, La classificazione dei dati della pagina 129 distingue informazioni pubbliche, interne, riservate e I registri di backup della pagina 134 permettono di controllare esito, frequenza e integrità personale della pagina 46 riduce errori, distrazioni e comportamenti rischiosi durante il lavoro quotidiano. Le procedure di ripristino della",
+    "brief_preview": "della pagina 102 usa l'inganno per convincere le persone a fornire credenziali, dati sensibili o pagamenti. documenti aziendali della pagina 107 possono contenere informazioni operative, contratti, credenziali o dati riservati. della pagina 113 servono a recuperare informazioni dopo errori, guasti, furti o cancellazioni accidentali. L'autenticazione a due fattori della pagina 120 rafforza l'accesso con un secondo controllo oltre alla La formazione del personale della pagina 6 riduce errori, distrazioni e comportamenti rischiosi durante il lavoro quotidiano. pagina 129 aiutano a ricostruire incidenti, tentativi di accesso e modifiche importanti. I backup regolari della pagina 3 servono a recuperare informazioni dopo errori, guasti, furti o cancellazioni accidentali. I backup regolari della "
+  },
+  "study_pack": {
+    "status": "OK",
+    "elapsed_ms": 7.036374999999998,
+    "context": {
+      "context_chars": 2676,
+      "sentences": 30,
+      "references": [
+        {
+          "chunk_id": 20,
+          "page_start": 37,
+          "page_end": 39,
+          "score": 25.600961
+        },
+        {
+          "chunk_id": 31,
+          "page_start": 57,
+          "page_end": 59,
+          "score": 25.600961
+        },
+        {
+          "chunk_id": 42,
+          "page_start": 77,
+          "page_end": 78,
+          "score": 25.600961
+        },
+        {
+          "chunk_id": 103,
+          "page_start": 187,
+          "page_end": 189,
+          "score": 25.600961
+        },
+        {
+          "chunk_id": 114,
+          "page_start": 207,
+          "page_end": 209,
+          "score": 25.600961
+        },
+        {
+          "chunk_id": 125,
+          "page_start": 227,
+          "page_end": 228,
+          "score": 25.600961
+        },
+        {
+          "chunk_id": 186,
+          "page_start": 337,
+          "page_end": 339,
+          "score": 25.600961
+        },
+        {
+          "chunk_id": 197,
+          "page_start": 357,
+          "page_end": 359,
+          "score": 25.600961
+        },
+        {
+          "chunk_id": 208,
+          "page_start": 377,
+          "page_end": 378,
+          "score": 25.600961
+        },
+        {
+          "chunk_id": 269,
+          "page_start": 487,
+          "page_end": 489,
+          "score": 25.600961
+        },
+        {
+          "chunk_id": 9,
+          "page_start": 17,
+          "page_end": 19,
+          "score": 23.250676
+        },
+        {
+          "chunk_id": 81,
+          "page_start": 147,
+          "page_end": 149,
+          "score": 23.250676
+        },
+        {
+          "chunk_id": 92,
+          "page_start": 167,
+          "page_end": 169,
+          "score": 23.250676
+        },
+        {
+          "chunk_id": 164,
+          "page_start": 297,
+          "page_end": 299,
+          "score": 23.250676
+        },
+        {
+          "chunk_id": 175,
+          "page_start": 317,
+          "page_end": 319,
+          "score": 23.250676
+        },
+        {
+          "chunk_id": 247,
+          "page_start": 447,
+          "page_end": 449,
+          "score": 23.250676
+        },
+        {
+          "chunk_id": 258,
+          "page_start": 467,
+          "page_end": 469,
+          "score": 23.250676
+        },
+        {
+          "chunk_id": 53,
+          "page_start": 96,
+          "page_end": 98,
+          "score": 23.204156
+        },
+        {
+          "chunk_id": 136,
+          "page_start": 246,
+          "page_end": 248,
+          "score": 23.204156
+        },
+        {
+          "chunk_id": 219,
+          "page_start": 396,
+          "page_end": 398,
+          "score": 23.204156
+        },
+        {
+          "chunk_id": 64,
+          "page_start": 116,
+          "page_end": 118,
+          "score": 21.674853
+        },
+        {
+          "chunk_id": 75,
+          "page_start": 136,
+          "page_end": 138,
+          "score": 21.674853
+        },
+        {
+          "chunk_id": 147,
+          "page_start": 266,
+          "page_end": 268,
+          "score": 21.674853
+        },
+        {
+          "chunk_id": 158,
+          "page_start": 286,
+          "page_end": 288,
+          "score": 21.674853
+        },
+        {
+          "chunk_id": 230,
+          "page_start": 416,
+          "page_end": 418,
+          "score": 21.674853
+        },
+        {
+          "chunk_id": 241,
+          "page_start": 436,
+          "page_end": 438,
+          "score": 21.674853
+        },
+        {
+          "chunk_id": 70,
+          "page_start": 127,
+          "page_end": 129,
+          "score": 20.284876
+        },
+        {
+          "chunk_id": 153,
+          "page_start": 277,
+          "page_end": 279,
+          "score": 20.284876
+        },
+        {
+          "chunk_id": 236,
+          "page_start": 427,
+          "page_end": 429,
+          "score": 20.284876
+        },
+        {
+          "chunk_id": 3,
+          "page_start": 6,
+          "page_end": 8,
+          "score": 19.266072
+        },
+        {
+          "chunk_id": 14,
+          "page_start": 26,
+          "page_end": 28,
+          "score": 19.266072
+        },
+        {
+          "chunk_id": 86,
+          "page_start": 156,
+          "page_end": 158,
+          "score": 19.266072
+        },
+        {
+          "chunk_id": 97,
+          "page_start": 176,
+          "page_end": 178,
+          "score": 19.266072
+        },
+        {
+          "chunk_id": 169,
+          "page_start": 306,
+          "page_end": 308,
+          "score": 19.266072
+        },
+        {
+          "chunk_id": 180,
+          "page_start": 326,
+          "page_end": 328,
+          "score": 19.266072
+        },
+        {
+          "chunk_id": 252,
+          "page_start": 456,
+          "page_end": 458,
+          "score": 19.266072
+        },
+        {
+          "chunk_id": 263,
+          "page_start": 476,
+          "page_end": 478,
+          "score": 19.266072
+        },
+        {
+          "chunk_id": 4,
+          "page_start": 8,
+          "page_end": 10,
+          "score": 19.194948
+        },
+        {
+          "chunk_id": 10,
+          "page_start": 19,
+          "page_end": 21,
+          "score": 19.194948
+        },
+        {
+          "chunk_id": 21,
+          "page_start": 39,
+          "page_end": 41,
+          "score": 19.194948
+        }
+      ]
+    },
+    "counts": {
+      "summary_sentences": 8,
+      "cards": 6,
+      "qas": 8,
+      "test_questions": 6,
+      "student_test_questions": 6
+    },
+    "quality_errors": [],
+    "first_card": {
+      "type": "study_card_v3",
+      "title": "Classificazione dei dati della pagina",
+      "message": "La classificazione dei dati della pagina 129 distingue informazioni pubbliche, interne, riservate e della pagina 6 aiutano a gestire incidenti, accessi, backup, dispositivi e comunicazioni interne.",
+      "bullets": [
+        "Idea chiave: Classificazione dei dati della pagina.",
+        "Cosa ricordare: La classificazione dei dati della pagina 129 distingue informazioni pubbliche, interne, riservate e della pagina 6 aiutano a gestire incidenti, accessi, backup, dispositivi e comunicazioni interne.",
+        "Parole guida: classificazione, dati, pagina, distingue, informazioni."
+      ],
+      "source_sentence": "La classificazione dei dati della pagina 129 distingue informazioni pubbliche, interne, riservate e della pagina 6 aiutano a gestire incidenti, accessi, backup, dispositivi e comunicazioni interne."
+    },
+    "first_qa": {
+      "question": "A cosa aiutano la classificazione dei dati della pagina 129 distingue informazioni pubbliche, interne, riservate e della pagina 6?",
+      "answer": "La classificazione dei dati della pagina 129 distingue informazioni pubbliche, interne, riservate e della pagina 6 aiutano a gestire incidenti, accessi, backup, dispositivi e comunicazioni interne.",
+      "source_sentence": "La classificazione dei dati della pagina 129 distingue informazioni pubbliche, interne, riservate e della pagina 6 aiutano a gestire incidenti, accessi, backup, dispositivi e comunicazioni interne."
+    },
+    "first_student_test": {
+      "id": "q01",
+      "question": "A cosa aiutano la classificazione dei dati della pagina 129 distingue informazioni pubbliche, interne, riservate e della pagina 6?",
+      "options": [
+        "Il monitoraggio della pagina 59 osserva La revisione periodica della pagina 78 migliora processi, controlli errori.",
+        "Aiutare a gestire incidenti, accessi, backup, dispositivi e comunicazioni interne.",
+        "Aiutare a ricostruire incidenti, tentativi 116 possono contenere informazioni operative, contratti, credenziali o dati riservati.",
+        "Usare l'inganno per convincere le persone a fornire credenziali, dati Il phishing della pagina 20 usa."
+      ]
+    }
+  },
+  "limits": [
+    "V3.9 valida 500 pagine simulate.",
+    "RAG e summary sono extractive/structured.",
+    "Non ancora LLM neurale generativo.",
+    "Non ancora OCR.",
+    "Il prossimo step dovrà migliorare riassunto progressivo multi-pass e output lungo reale."
+  ]
+}
