@@ -1,0 +1,170 @@
+[
+  {
+    "index": 0,
+    "source_file": "/Users/alessandrobarbarossa/alex-ai-workspace/mini_llm/data/inference_v314_rewrite_only_safe_decoder/inference_engine_v314_rewrite_only_safe_decoder_gate_input.json",
+    "prompt": "password",
+    "output": "La password deve essere protetta perché può esporre un account se viene rubata.",
+    "generation_mode": "rewrite_only_safe_semantic_decoder_v314",
+    "passed": true,
+    "issues": [
+      {
+        "severity": "warning",
+        "code": "weak_source_alignment",
+        "message": "La sorgente parla di 2FA: frase accettabile solo se l'output resta semanticamente sensato."
+      }
+    ]
+  },
+  {
+    "index": 1,
+    "source_file": "/Users/alessandrobarbarossa/alex-ai-workspace/mini_llm/data/inference_v314_rewrite_only_safe_decoder/inference_engine_v314_rewrite_only_safe_decoder_gate_input.json",
+    "prompt": "sicurezza informatica",
+    "output": "La sicurezza informatica protegge dati, dispositivi, account e sistemi attraverso pratiche, strumenti e comportamenti corretti.",
+    "generation_mode": "rewrite_only_safe_semantic_decoder_v314",
+    "passed": true,
+    "issues": []
+  },
+  {
+    "index": 2,
+    "source_file": "/Users/alessandrobarbarossa/alex-ai-workspace/mini_llm/data/inference_v314_rewrite_only_safe_decoder/inference_engine_v314_rewrite_only_safe_decoder_gate_input.json",
+    "prompt": "backup regolari",
+    "output": "I backup regolari servono a recuperare informazioni in caso di errore umano, guasto, furto o cancellazione accidentale.",
+    "generation_mode": "rewrite_only_safe_semantic_decoder_v314",
+    "passed": true,
+    "issues": []
+  },
+  {
+    "index": 3,
+    "source_file": "/Users/alessandrobarbarossa/alex-ai-workspace/mini_llm/data/inference_v314_rewrite_only_safe_decoder/inference_engine_v314_rewrite_only_safe_decoder_gate_input.json",
+    "prompt": "phishing",
+    "output": "Il phishing usa l'inganno per convincere le persone a fornire dati sensibili, credenziali o pagamenti.",
+    "generation_mode": "rewrite_only_safe_semantic_decoder_v314",
+    "passed": true,
+    "issues": []
+  },
+  {
+    "index": 4,
+    "source_file": "/Users/alessandrobarbarossa/alex-ai-workspace/mini_llm/data/inference_v314_rewrite_only_safe_decoder/inference_engine_v314_rewrite_only_safe_decoder_gate_input.json",
+    "prompt": "dati sensibili",
+    "output": "I dati sensibili possono includere dati personali, informazioni economiche, documenti aziendali, contratti, credenziali, dati sanitari o informazioni riservate sui clienti.",
+    "generation_mode": "rewrite_only_safe_semantic_decoder_v314",
+    "passed": true,
+    "issues": []
+  },
+  {
+    "index": 5,
+    "source_file": "/Users/alessandrobarbarossa/alex-ai-workspace/mini_llm/data/inference_v314_rewrite_only_safe_decoder/inference_engine_v314_rewrite_only_safe_decoder_gate_input.json",
+    "prompt": "autenticazione a due fattori",
+    "output": "L'autenticazione a due fattori rafforza l'accesso aggiungendo un secondo controllo oltre alla password.",
+    "generation_mode": "rewrite_only_safe_semantic_decoder_v314",
+    "passed": true,
+    "issues": []
+  },
+  {
+    "index": 6,
+    "source_file": "/Users/alessandrobarbarossa/alex-ai-workspace/mini_llm/data/inference_v314_rewrite_only_safe_decoder/inference_engine_v314_rewrite_only_safe_decoder_gate_input.json",
+    "prompt": "attacco ransomware",
+    "output": "Un attacco ransomware blocca o cifra i dati e chiede un pagamento per ripristinarli.",
+    "generation_mode": "rewrite_only_safe_semantic_decoder_v314",
+    "passed": true,
+    "issues": []
+  },
+  {
+    "index": 7,
+    "source_file": "/Users/alessandrobarbarossa/alex-ai-workspace/mini_llm/data/inference_v314_rewrite_only_safe_decoder/inference_engine_v314_rewrite_only_safe_decoder_gate_input.json",
+    "prompt": "password manager",
+    "output": "Un password manager aiuta a conservare password lunghe e uniche senza doverle ricordare tutte.",
+    "generation_mode": "rewrite_only_safe_semantic_decoder_v314",
+    "passed": true,
+    "issues": []
+  },
+  {
+    "index": 8,
+    "source_file": "/Users/alessandrobarbarossa/alex-ai-workspace/mini_llm/data/inference_v314_rewrite_only_safe_decoder/inference_engine_v314_rewrite_only_safe_decoder_gate_input.json",
+    "prompt": "accesso non autorizzato",
+    "output": "L'accesso non autorizzato è un rischio che può esporre documenti, credenziali o dati riservati.",
+    "generation_mode": "rewrite_only_safe_semantic_decoder_v314",
+    "passed": true,
+    "issues": []
+  },
+  {
+    "index": 9,
+    "source_file": "/Users/alessandrobarbarossa/alex-ai-workspace/mini_llm/data/inference_v314_rewrite_only_safe_decoder/inference_engine_v314_rewrite_only_safe_decoder_gate_input.json",
+    "prompt": "malware",
+    "output": "Il malware è un software dannoso che può danneggiare sistemi, rubare informazioni o bloccare l'accesso ai dati.",
+    "generation_mode": "rewrite_only_safe_semantic_decoder_v314",
+    "passed": true,
+    "issues": []
+  },
+  {
+    "index": 10,
+    "source_file": "/Users/alessandrobarbarossa/alex-ai-workspace/mini_llm/data/inference_v314_rewrite_only_safe_decoder/inference_engine_v314_rewrite_only_safe_decoder_gate_input.json",
+    "prompt": "ransomware",
+    "output": "Il ransomware è un malware che blocca o cifra i dati e chiede un pagamento per ripristinarli.",
+    "generation_mode": "rewrite_only_safe_semantic_decoder_v314",
+    "passed": true,
+    "issues": []
+  },
+  {
+    "index": 11,
+    "source_file": "/Users/alessandrobarbarossa/alex-ai-workspace/mini_llm/data/inference_v314_rewrite_only_safe_decoder/inference_engine_v314_rewrite_only_safe_decoder_gate_input.json",
+    "prompt": "social engineering",
+    "output": "Il social engineering usa tecniche di inganno per convincere le persone a fornire dati sensibili o credenziali.",
+    "generation_mode": "rewrite_only_safe_semantic_decoder_v314",
+    "passed": true,
+    "issues": []
+  },
+  {
+    "index": 12,
+    "source_file": "/Users/alessandrobarbarossa/alex-ai-workspace/mini_llm/data/inference_v314_rewrite_only_safe_decoder/inference_engine_v314_rewrite_only_safe_decoder_gate_input.json",
+    "prompt": "codici temporanei",
+    "output": "I codici temporanei sono controlli usa e getta che rafforzano l'autenticazione.",
+    "generation_mode": "rewrite_only_safe_semantic_decoder_v314",
+    "passed": true,
+    "issues": []
+  },
+  {
+    "index": 13,
+    "source_file": "/Users/alessandrobarbarossa/alex-ai-workspace/mini_llm/data/inference_v314_rewrite_only_safe_decoder/inference_engine_v314_rewrite_only_safe_decoder_gate_input.json",
+    "prompt": "permessi minimi",
+    "output": "I permessi minimi riducono i danni quando un programma malevolo viene eseguito.",
+    "generation_mode": "rewrite_only_safe_semantic_decoder_v314",
+    "passed": true,
+    "issues": []
+  },
+  {
+    "index": 14,
+    "source_file": "/Users/alessandrobarbarossa/alex-ai-workspace/mini_llm/data/inference_v314_rewrite_only_safe_decoder/inference_engine_v314_rewrite_only_safe_decoder_gate_input.json",
+    "prompt": "dati personali",
+    "output": "I dati personali devono essere protetti perché possono identificare persone, clienti o utenti.",
+    "generation_mode": "rewrite_only_safe_semantic_decoder_v314",
+    "passed": true,
+    "issues": []
+  },
+  {
+    "index": 15,
+    "source_file": "/Users/alessandrobarbarossa/alex-ai-workspace/mini_llm/data/inference_v314_rewrite_only_safe_decoder/inference_engine_v314_rewrite_only_safe_decoder_gate_input.json",
+    "prompt": "aggiornamenti software",
+    "output": "Gli aggiornamenti software correggono errori e chiudono vulnerabilità di sicurezza.",
+    "generation_mode": "rewrite_only_safe_semantic_decoder_v314",
+    "passed": true,
+    "issues": []
+  },
+  {
+    "index": 16,
+    "source_file": "/Users/alessandrobarbarossa/alex-ai-workspace/mini_llm/data/inference_v314_rewrite_only_safe_decoder/inference_engine_v314_rewrite_only_safe_decoder_gate_input.json",
+    "prompt": "documenti aziendali",
+    "output": "I documenti aziendali possono contenere informazioni operative, contratti, credenziali o dati riservati.",
+    "generation_mode": "rewrite_only_safe_semantic_decoder_v314",
+    "passed": true,
+    "issues": []
+  },
+  {
+    "index": 17,
+    "source_file": "/Users/alessandrobarbarossa/alex-ai-workspace/mini_llm/data/inference_v314_rewrite_only_safe_decoder/inference_engine_v314_rewrite_only_safe_decoder_gate_input.json",
+    "prompt": "informazioni riservate",
+    "output": "Le informazioni riservate devono essere protette perché possono riguardare clienti, contratti, credenziali o dati sensibili.",
+    "generation_mode": "rewrite_only_safe_semantic_decoder_v314",
+    "passed": true,
+    "issues": []
+  }
+]

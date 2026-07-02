@@ -1,0 +1,14 @@
+{
+  "engine": "inference_engine_v314_rewrite_only_safe_decoder",
+  "generation_mode": "rewrite_only_safe_semantic_decoder_v314",
+  "total_prompts": 28,
+  "ok": 18,
+  "failed": 10,
+  "corpus_sentences": 717,
+  "uses_fallback": false,
+  "uses_sentence_bank": false,
+  "uses_anchored_memory": false,
+  "uses_hardcoded_final_sentences": false,
+  "status": "PASS_INTERNAL",
+  "acceptance_rule": "V3.14 non richiede 28/28; richiede qualità alta, almeno 10 OK, zero copie identiche e zero score negativi."
+}
