@@ -1,0 +1,61 @@
+{
+  "validator": "valida_mini_llm_study_pack_current",
+  "status": "PASS",
+  "errors": [],
+  "total_ms": 6.4836670000000005,
+  "pack_elapsed_ms": 1.0048749999999989,
+  "current": {
+    "alias": "mini_llm_study_pack_current",
+    "engine": "mini_llm_study_pack_v3_quality_gate",
+    "engine_file": "mini_llm/python/runtime/mini_llm_study_pack_v3_quality_gate.py",
+    "cli_file": "scripts/mini_llm_study_pack_cli_v2.py",
+    "tag": "checkpoint-mini-llm-study-pack-cli-v2"
+  },
+  "counts": {
+    "summary_sentences": 8,
+    "cards": 6,
+    "qas": 8,
+    "test_questions": 6,
+    "student_test_questions": 6
+  },
+  "examples": {
+    "first_card": {
+      "type": "study_card_v3",
+      "title": "Backup regolari",
+      "message": "I backup regolari servono a recuperare informazioni in caso di errore umano, guasto, furto o cancellazione accidentale.",
+      "bullets": [
+        "Idea chiave: Backup regolari.",
+        "Cosa ricordare: I backup regolari servono a recuperare informazioni in caso di errore umano, guasto, furto o cancellazione accidentale.",
+        "Parole guida: backup, regolari, recuperare, informazioni, caso."
+      ],
+      "source_sentence": "I backup regolari servono a recuperare informazioni in caso di errore umano, guasto, furto o cancellazione accidentale."
+    },
+    "first_qa": {
+      "question": "A cosa servono i backup regolari?",
+      "answer": "I backup regolari servono a recuperare informazioni in caso di errore umano, guasto, furto o cancellazione accidentale.",
+      "source_sentence": "I backup regolari servono a recuperare informazioni in caso di errore umano, guasto, furto o cancellazione accidentale."
+    },
+    "first_student_test": {
+      "id": "q01",
+      "question": "A cosa servono i backup regolari?",
+      "options": [
+        "Proteggere dati, dispositivi, account e sistemi attraverso pratiche, strumenti e comportamenti corretti.",
+        "Recuperare informazioni in caso di errore umano, guasto, furto o cancellazione accidentale.",
+        "Usare l'inganno per convincere le persone a fornire dati sensibili, credenziali o pagamenti.",
+        "Conservare password lunghe e uniche senza doverle ricordare tutte."
+      ]
+    },
+    "first_answer_key": {
+      "id": "q01",
+      "correct_index": 1,
+      "answer": "Recuperare informazioni in caso di errore umano, guasto, furto o cancellazione accidentale.",
+      "explanation": "Per rispondere correttamente bisogna collegare la domanda alla frase del documento: I backup regolari servono a recuperare informazioni in caso di errore umano, guasto, furto o cancellazione accidentale."
+    }
+  },
+  "limits": [
+    "Current punta a V3 Quality Gate.",
+    "CLI current consigliata: Study Pack CLI V2.",
+    "Structured/extractive.",
+    "Non ancora LLM neurale generativo."
+  ]
+}
