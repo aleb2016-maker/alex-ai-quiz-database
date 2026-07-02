@@ -1,0 +1,24 @@
+{
+  "benchmark": "mini_llm_current_speed",
+  "status": "PASS",
+  "current_engine": "inference_engine_v315_extended_safe_decoder",
+  "current_checkpoint": "checkpoint-mini-llm-current-v315-stable",
+  "validator_code": 0,
+  "validator_seconds": 0.6720618749999999,
+  "total_outputs": 28,
+  "ok_outputs_loaded": 26,
+  "load_outputs_seconds": 0.00015183299999999011,
+  "hot_path": {
+    "rounds": 2000.0,
+    "avg_ms": 0.00025357850000018445,
+    "median_ms": 0.0002500000000349445,
+    "p95_ms": 0.0002920000000683487,
+    "max_ms": 0.0005409999999095305
+  },
+  "limits": [
+    "Benchmark diagnostico.",
+    "Misura prompt già validati, non domande libere.",
+    "Non misura ancora riassunti lunghi.",
+    "Non sostituisce un motore RAG completo."
+  ]
+}
