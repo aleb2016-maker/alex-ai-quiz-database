@@ -1,0 +1,199 @@
+{
+  "status": "PRODUCED",
+  "version": "V400.4",
+  "input": "mini_llm/data/real_tests/test_v396_current_engine/business.md",
+  "registry": {
+    "loaded": true,
+    "path": "/Users/alessandrobarbarossa/alex-ai-workspace/reports/mini_llm_v400_registry/mini_llm_engine_registry_v400.json",
+    "total_engines": 14,
+    "usable_engines": [
+      "long_document_rag_v39",
+      "long_document_rag_v391_semantic_repair",
+      "real_quality_gate_v392",
+      "real_output_cleaner_v3931",
+      "universal_core_split_v394u",
+      "universal_relevance_core_v394u",
+      "universal_question_core_v394u",
+      "domain_profiles_v394u",
+      "universal_llm_bridge_v395",
+      "universal_current_engine_v396",
+      "study_pack_universal_v397",
+      "study_pack_current",
+      "fast_qa_summary_current"
+    ],
+    "quarantine_engines": [
+      "natural_sentence_v35_family"
+    ]
+  },
+  "profile": {
+    "title": "business",
+    "domain": "documento aziendale",
+    "domain_scores": {
+      "sicurezza informatica": 0,
+      "intelligenza artificiale generativa e RAG": 0,
+      "curriculum vitae": 0,
+      "sport e allenamento": 0,
+      "scientifico": 0,
+      "documento aziendale": 5
+    },
+    "concepts": [
+      "processo aziendale",
+      "responsabilità",
+      "scadenze",
+      "comunicazione",
+      "errori operativi",
+      "chiarezza delle procedure"
+    ],
+    "input_words": 23,
+    "sections": 1,
+    "short_document": true
+  },
+  "summary": {
+    "status": "GENERATED_SHORT",
+    "mode": "summary",
+    "profile": {
+      "title": "business",
+      "domain": "documento aziendale",
+      "domain_scores": {
+        "sicurezza informatica": 0,
+        "intelligenza artificiale generativa e RAG": 0,
+        "curriculum vitae": 0,
+        "sport e allenamento": 0,
+        "scientifico": 0,
+        "documento aziendale": 5
+      },
+      "concepts": [
+        "processo aziendale",
+        "responsabilità",
+        "scadenze",
+        "comunicazione",
+        "errori operativi",
+        "chiarezza delle procedure"
+      ],
+      "input_words": 23,
+      "sections": 1,
+      "short_document": true
+    },
+    "summary": [
+      "Il testo riguarda un documento aziendale legato a processo aziendale, responsabilità, scadenze, comunicazione, errori operativi. Il motore segnala che il contenuto è breve e produce una sintesi prudente senza aggiungere dettagli esterni."
+    ],
+    "quality": {
+      "ok": true,
+      "errors": [],
+      "warnings": [
+        "SHORT_DOCUMENT"
+      ],
+      "metrics": {
+        "source_words": 23,
+        "output_words": 32,
+        "paragraphs": 1,
+        "copy_ratio": 0.0
+      }
+    }
+  },
+  "answer": {
+    "status": "GENERATED_SHORT",
+    "mode": "answer",
+    "profile": {
+      "title": "business",
+      "domain": "documento aziendale",
+      "domain_scores": {
+        "sicurezza informatica": 0,
+        "intelligenza artificiale generativa e RAG": 0,
+        "curriculum vitae": 0,
+        "sport e allenamento": 0,
+        "scientifico": 0,
+        "documento aziendale": 5
+      },
+      "concepts": [
+        "processo aziendale",
+        "responsabilità",
+        "scadenze",
+        "comunicazione",
+        "errori operativi",
+        "chiarezza delle procedure"
+      ],
+      "input_words": 23,
+      "sections": 1,
+      "short_document": true
+    },
+    "question": "Quali sono i punti principali del documento business?",
+    "answer": "Il documento è molto breve, quindi la risposta resta essenziale. In base al testo disponibile, il contenuto riguarda documento aziendale e richiama questi elementi: processo aziendale, responsabilità, scadenze, comunicazione, errori operativi. Il motore non aggiunge dettagli esterni perché il documento non contiene abbastanza materiale per una risposta lunga.",
+    "sources": [
+      {
+        "section": "Panoramica",
+        "evidence": "Il documento aziendale definisce processo, responsabilità e scadenze. Una comunicazione insufficiente può generare errori operativi. Le procedure aiutano a controllare tempi e priorità."
+      }
+    ],
+    "quality": {
+      "ok": true,
+      "errors": [],
+      "warnings": [
+        "SHORT_DOCUMENT"
+      ],
+      "metrics": {
+        "source_words": 23,
+        "output_words": 48,
+        "paragraphs": 1,
+        "copy_ratio": 0.0
+      }
+    }
+  },
+  "cards": {
+    "status": "GENERATED_SHORT",
+    "mode": "cards",
+    "profile": {
+      "title": "business",
+      "domain": "documento aziendale",
+      "domain_scores": {
+        "sicurezza informatica": 0,
+        "intelligenza artificiale generativa e RAG": 0,
+        "curriculum vitae": 0,
+        "sport e allenamento": 0,
+        "scientifico": 0,
+        "documento aziendale": 5
+      },
+      "concepts": [
+        "processo aziendale",
+        "responsabilità",
+        "scadenze",
+        "comunicazione",
+        "errori operativi",
+        "chiarezza delle procedure"
+      ],
+      "input_words": 23,
+      "sections": 1,
+      "short_document": true
+    },
+    "cards": [
+      {
+        "title": "Sintesi breve: documento aziendale",
+        "message": "Il documento è corto e richiama: processo aziendale, responsabilità, scadenze.",
+        "explanation": "La card è volutamente breve: il motore non inventa contenuti oltre il testo disponibile e segnala che la fonte è limitata.",
+        "color_theme": "blue-teal",
+        "source": {
+          "section": "Panoramica",
+          "evidence": "Il documento aziendale definisce processo, responsabilità e scadenze. Una comunicazione insufficiente può generare errori operativi. Le procedure aiutano a controllare tempi e priorità."
+        }
+      }
+    ],
+    "quality": {
+      "ok": true,
+      "errors": [],
+      "warnings": [
+        "SHORT_DOCUMENT"
+      ],
+      "metrics": {
+        "source_words": 23,
+        "output_words": 69,
+        "paragraphs": 1,
+        "copy_ratio": 0.0
+      }
+    }
+  },
+  "speed": {
+    "elapsed_ms": 1,
+    "input_words": 23,
+    "sections": 1
+  }
+}

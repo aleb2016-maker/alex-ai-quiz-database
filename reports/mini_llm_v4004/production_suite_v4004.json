@@ -1,0 +1,388 @@
+[
+  {
+    "id": "ai_generativa",
+    "source": "rag/documenti/documento_ai_generativa_test_rag.md",
+    "question": "Quali rischi o limiti vengono indicati dal documento sull'intelligenza artificiale generativa?",
+    "json": "reports/mini_llm_v4004/ai_generativa.json",
+    "md": "reports/mini_llm_v4004/ai_generativa.md",
+    "status": "PRODUCED",
+    "profile": {
+      "title": "Documento di prova RAG - Intelligenza Artificiale Generativa",
+      "domain": "intelligenza artificiale generativa e RAG",
+      "input_words": 617,
+      "sections": 8,
+      "concepts": [
+        "intelligenza artificiale generativa",
+        "modelli linguistici",
+        "documenti reali",
+        "controlli qualità",
+        "diagnostica chiara",
+        "fallback nascosti",
+        "applicazioni aziendali",
+        "materiali di studio",
+        "rischi principali",
+        "uso del rag"
+      ]
+    },
+    "outputs": {
+      "summary": {
+        "status": "GENERATED",
+        "errors": [],
+        "metrics": {
+          "source_words": 617,
+          "output_words": 251,
+          "paragraphs": 5,
+          "copy_ratio": 0.0
+        }
+      },
+      "answer": {
+        "status": "GENERATED",
+        "errors": [],
+        "metrics": {
+          "source_words": 617,
+          "output_words": 82,
+          "paragraphs": 1,
+          "copy_ratio": 0.0
+        }
+      },
+      "cards": {
+        "status": "GENERATED",
+        "errors": [],
+        "cards_count": 6
+      }
+    },
+    "speed": {
+      "elapsed_ms": 163,
+      "input_words": 617,
+      "sections": 8
+    }
+  },
+  {
+    "id": "informatica_sicurezza_rag",
+    "source": "rag/documenti/documento_rag_sicurezza_informatica_aziendale.md",
+    "question": "Quali sono i rischi principali e le regole operative indicate dal documento?",
+    "json": "reports/mini_llm_v4004/informatica_sicurezza_rag.json",
+    "md": "reports/mini_llm_v4004/informatica_sicurezza_rag.md",
+    "status": "PRODUCED",
+    "profile": {
+      "title": "Documento RAG di test: Sicurezza informatica aziendale",
+      "domain": "sicurezza informatica",
+      "input_words": 1673,
+      "sections": 13,
+      "concepts": [
+        "sicurezza informatica",
+        "password sicure",
+        "autenticazione a due fattori",
+        "phishing",
+        "malware",
+        "ransomware",
+        "backup",
+        "aggiornamenti software",
+        "dati sensibili",
+        "credenziali"
+      ]
+    },
+    "outputs": {
+      "summary": {
+        "status": "QUALITY_BLOCKED",
+        "errors": [
+          "RIASSUNTO_SOTTO_SOGLIA"
+        ],
+        "metrics": {
+          "source_words": 1673,
+          "output_words": 197,
+          "paragraphs": 5,
+          "copy_ratio": 0.0
+        }
+      },
+      "answer": {
+        "status": "GENERATED",
+        "errors": [],
+        "metrics": {
+          "source_words": 1673,
+          "output_words": 62,
+          "paragraphs": 1,
+          "copy_ratio": 0.0
+        }
+      },
+      "cards": {
+        "status": "GENERATED",
+        "errors": [],
+        "cards_count": 5
+      }
+    },
+    "speed": {
+      "elapsed_ms": 184,
+      "input_words": 1673,
+      "sections": 13
+    }
+  },
+  {
+    "id": "business_v396",
+    "source": "mini_llm/data/real_tests/test_v396_current_engine/business.md",
+    "question": "Quali sono i punti principali del documento business?",
+    "json": "reports/mini_llm_v4004/business_v396.json",
+    "md": "reports/mini_llm_v4004/business_v396.md",
+    "status": "PRODUCED",
+    "profile": {
+      "title": "business",
+      "domain": "documento aziendale",
+      "input_words": 23,
+      "sections": 1,
+      "concepts": [
+        "processo aziendale",
+        "responsabilità",
+        "scadenze",
+        "comunicazione",
+        "errori operativi",
+        "chiarezza delle procedure"
+      ]
+    },
+    "outputs": {
+      "summary": {
+        "status": "GENERATED_SHORT",
+        "errors": [],
+        "metrics": {
+          "source_words": 23,
+          "output_words": 32,
+          "paragraphs": 1,
+          "copy_ratio": 0.0
+        }
+      },
+      "answer": {
+        "status": "GENERATED_SHORT",
+        "errors": [],
+        "metrics": {
+          "source_words": 23,
+          "output_words": 48,
+          "paragraphs": 1,
+          "copy_ratio": 0.0
+        }
+      },
+      "cards": {
+        "status": "GENERATED_SHORT",
+        "errors": [],
+        "cards_count": 1
+      }
+    },
+    "speed": {
+      "elapsed_ms": 1,
+      "input_words": 23,
+      "sections": 1
+    }
+  },
+  {
+    "id": "curriculum_v396",
+    "source": "mini_llm/data/real_tests/test_v396_current_engine/curriculum.md",
+    "question": "Quali competenze, esperienze o elementi importanti emergono dal curriculum?",
+    "json": "reports/mini_llm_v4004/curriculum_v396.json",
+    "md": "reports/mini_llm_v4004/curriculum_v396.md",
+    "status": "PRODUCED",
+    "profile": {
+      "title": "curriculum",
+      "domain": "curriculum vitae",
+      "input_words": 25,
+      "sections": 1,
+      "concepts": [
+        "esperienze",
+        "formazione",
+        "competenze tecniche",
+        "profilo professionale",
+        "ruolo",
+        "obiettivo professionale"
+      ]
+    },
+    "outputs": {
+      "summary": {
+        "status": "GENERATED_SHORT",
+        "errors": [],
+        "metrics": {
+          "source_words": 25,
+          "output_words": 34,
+          "paragraphs": 1,
+          "copy_ratio": 0.0
+        }
+      },
+      "answer": {
+        "status": "GENERATED_SHORT",
+        "errors": [],
+        "metrics": {
+          "source_words": 25,
+          "output_words": 48,
+          "paragraphs": 1,
+          "copy_ratio": 0.0
+        }
+      },
+      "cards": {
+        "status": "GENERATED_SHORT",
+        "errors": [],
+        "cards_count": 1
+      }
+    },
+    "speed": {
+      "elapsed_ms": 0,
+      "input_words": 25,
+      "sections": 1
+    }
+  },
+  {
+    "id": "informatics_v396",
+    "source": "mini_llm/data/real_tests/test_v396_current_engine/informatics.md",
+    "question": "Quali rischi o concetti informatici principali vengono descritti?",
+    "json": "reports/mini_llm_v4004/informatics_v396.json",
+    "md": "reports/mini_llm_v4004/informatics_v396.md",
+    "status": "PRODUCED",
+    "profile": {
+      "title": "informatics",
+      "domain": "sicurezza informatica",
+      "input_words": 30,
+      "sections": 1,
+      "concepts": [
+        "sicurezza informatica",
+        "phishing",
+        "ransomware",
+        "account"
+      ]
+    },
+    "outputs": {
+      "summary": {
+        "status": "GENERATED_SHORT",
+        "errors": [],
+        "metrics": {
+          "source_words": 30,
+          "output_words": 36,
+          "paragraphs": 1,
+          "copy_ratio": 0.0
+        }
+      },
+      "answer": {
+        "status": "GENERATED",
+        "errors": [],
+        "metrics": {
+          "source_words": 30,
+          "output_words": 62,
+          "paragraphs": 1,
+          "copy_ratio": 0.0
+        }
+      },
+      "cards": {
+        "status": "GENERATED",
+        "errors": [],
+        "cards_count": 5
+      }
+    },
+    "speed": {
+      "elapsed_ms": 0,
+      "input_words": 30,
+      "sections": 1
+    }
+  },
+  {
+    "id": "science_v396",
+    "source": "mini_llm/data/real_tests/test_v396_current_engine/science.txt",
+    "question": "Quali concetti scientifici principali vengono spiegati?",
+    "json": "reports/mini_llm_v4004/science_v396.json",
+    "md": "reports/mini_llm_v4004/science_v396.md",
+    "status": "PRODUCED",
+    "profile": {
+      "title": "science",
+      "domain": "scientifico",
+      "input_words": 26,
+      "sections": 1,
+      "concepts": [
+        "ipotesi",
+        "metodo sperimentale",
+        "risultati",
+        "campione",
+        "solidità",
+        "limiti dello studio"
+      ]
+    },
+    "outputs": {
+      "summary": {
+        "status": "GENERATED_SHORT",
+        "errors": [],
+        "metrics": {
+          "source_words": 26,
+          "output_words": 30,
+          "paragraphs": 1,
+          "copy_ratio": 0.0
+        }
+      },
+      "answer": {
+        "status": "GENERATED_SHORT",
+        "errors": [],
+        "metrics": {
+          "source_words": 26,
+          "output_words": 46,
+          "paragraphs": 1,
+          "copy_ratio": 0.0
+        }
+      },
+      "cards": {
+        "status": "GENERATED_SHORT",
+        "errors": [],
+        "cards_count": 1
+      }
+    },
+    "speed": {
+      "elapsed_ms": 1,
+      "input_words": 26,
+      "sections": 1
+    }
+  },
+  {
+    "id": "sport_v396",
+    "source": "mini_llm/data/real_tests/test_v396_current_engine/sport.txt",
+    "question": "Quali indicazioni principali emergono dal documento sportivo?",
+    "json": "reports/mini_llm_v4004/sport_v396.json",
+    "md": "reports/mini_llm_v4004/sport_v396.md",
+    "status": "PRODUCED",
+    "profile": {
+      "title": "sport",
+      "domain": "sport e allenamento",
+      "input_words": 26,
+      "sections": 1,
+      "concepts": [
+        "programma di allenamento",
+        "esercizi di forza",
+        "serie",
+        "ripetizioni",
+        "recupero",
+        "adattamento del carico"
+      ]
+    },
+    "outputs": {
+      "summary": {
+        "status": "GENERATED_SHORT",
+        "errors": [],
+        "metrics": {
+          "source_words": 26,
+          "output_words": 29,
+          "paragraphs": 1,
+          "copy_ratio": 0.0
+        }
+      },
+      "answer": {
+        "status": "GENERATED_SHORT",
+        "errors": [],
+        "metrics": {
+          "source_words": 26,
+          "output_words": 51,
+          "paragraphs": 1,
+          "copy_ratio": 0.0
+        }
+      },
+      "cards": {
+        "status": "GENERATED_SHORT",
+        "errors": [],
+        "cards_count": 1
+      }
+    },
+    "speed": {
+      "elapsed_ms": 1,
+      "input_words": 26,
+      "sections": 1
+    }
+  }
+]

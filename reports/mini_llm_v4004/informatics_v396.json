@@ -1,0 +1,222 @@
+{
+  "status": "PRODUCED",
+  "version": "V400.4",
+  "input": "mini_llm/data/real_tests/test_v396_current_engine/informatics.md",
+  "registry": {
+    "loaded": true,
+    "path": "/Users/alessandrobarbarossa/alex-ai-workspace/reports/mini_llm_v400_registry/mini_llm_engine_registry_v400.json",
+    "total_engines": 14,
+    "usable_engines": [
+      "long_document_rag_v39",
+      "long_document_rag_v391_semantic_repair",
+      "real_quality_gate_v392",
+      "real_output_cleaner_v3931",
+      "universal_core_split_v394u",
+      "universal_relevance_core_v394u",
+      "universal_question_core_v394u",
+      "domain_profiles_v394u",
+      "universal_llm_bridge_v395",
+      "universal_current_engine_v396",
+      "study_pack_universal_v397",
+      "study_pack_current",
+      "fast_qa_summary_current"
+    ],
+    "quarantine_engines": [
+      "natural_sentence_v35_family"
+    ]
+  },
+  "profile": {
+    "title": "informatics",
+    "domain": "sicurezza informatica",
+    "domain_scores": {
+      "sicurezza informatica": 5,
+      "intelligenza artificiale generativa e RAG": 0,
+      "curriculum vitae": 0,
+      "sport e allenamento": 0,
+      "scientifico": 0,
+      "documento aziendale": 0
+    },
+    "concepts": [
+      "sicurezza informatica",
+      "phishing",
+      "ransomware",
+      "account"
+    ],
+    "input_words": 30,
+    "sections": 1,
+    "short_document": true
+  },
+  "summary": {
+    "status": "GENERATED_SHORT",
+    "mode": "summary",
+    "profile": {
+      "title": "informatics",
+      "domain": "sicurezza informatica",
+      "domain_scores": {
+        "sicurezza informatica": 5,
+        "intelligenza artificiale generativa e RAG": 0,
+        "curriculum vitae": 0,
+        "sport e allenamento": 0,
+        "scientifico": 0,
+        "documento aziendale": 0
+      },
+      "concepts": [
+        "sicurezza informatica",
+        "phishing",
+        "ransomware",
+        "account"
+      ],
+      "input_words": 30,
+      "sections": 1,
+      "short_document": true
+    },
+    "summary": [
+      "Il testo sintetizza un contenuto di sicurezza informatica. I punti principali riguardano sicurezza informatica, phishing, ransomware, account. Il materiale è breve, quindi il motore produce una sintesi corta e controllata invece di fingere un riassunto lungo."
+    ],
+    "quality": {
+      "ok": true,
+      "errors": [],
+      "warnings": [
+        "SHORT_DOCUMENT"
+      ],
+      "metrics": {
+        "source_words": 30,
+        "output_words": 36,
+        "paragraphs": 1,
+        "copy_ratio": 0.0
+      }
+    }
+  },
+  "answer": {
+    "status": "GENERATED",
+    "mode": "answer",
+    "profile": {
+      "title": "informatics",
+      "domain": "sicurezza informatica",
+      "domain_scores": {
+        "sicurezza informatica": 5,
+        "intelligenza artificiale generativa e RAG": 0,
+        "curriculum vitae": 0,
+        "sport e allenamento": 0,
+        "scientifico": 0,
+        "documento aziendale": 0
+      },
+      "concepts": [
+        "sicurezza informatica",
+        "phishing",
+        "ransomware",
+        "account"
+      ],
+      "input_words": 30,
+      "sections": 1,
+      "short_document": true
+    },
+    "question": "Quali rischi o concetti informatici principali vengono descritti?",
+    "answer": "Il documento indica che i rischi principali sono phishing, password deboli, malware, allegati pericolosi, ransomware, perdita di dati e gestione scorretta delle informazioni sensibili. Le regole operative principali sono usare password robuste, attivare l'autenticazione a due fattori, fare attenzione a link e allegati, mantenere backup affidabili, aggiornare software e sistemi, e condividere dati riservati solo quando necessario e con procedure controllate.",
+    "sources": [],
+    "quality": {
+      "ok": true,
+      "errors": [],
+      "warnings": [],
+      "metrics": {
+        "source_words": 30,
+        "output_words": 62,
+        "paragraphs": 1,
+        "copy_ratio": 0.0
+      }
+    }
+  },
+  "cards": {
+    "status": "GENERATED",
+    "mode": "cards",
+    "profile": {
+      "title": "informatics",
+      "domain": "sicurezza informatica",
+      "domain_scores": {
+        "sicurezza informatica": 5,
+        "intelligenza artificiale generativa e RAG": 0,
+        "curriculum vitae": 0,
+        "sport e allenamento": 0,
+        "scientifico": 0,
+        "documento aziendale": 0
+      },
+      "concepts": [
+        "sicurezza informatica",
+        "phishing",
+        "ransomware",
+        "account"
+      ],
+      "input_words": 30,
+      "sections": 1,
+      "short_document": true
+    },
+    "cards": [
+      {
+        "title": "Password e accessi sicuri",
+        "message": "Password robuste, password manager e autenticazione a due fattori riducono il rischio di accessi non autorizzati.",
+        "explanation": "La card raccoglie le regole principali sulle credenziali. Il punto operativo è proteggere account e servizi con più livelli di controllo.",
+        "color_theme": "blue-teal",
+        "source": {
+          "section": "Password / 2FA",
+          "evidence": ""
+        }
+      },
+      {
+        "title": "Phishing e messaggi sospetti",
+        "message": "Il phishing cerca di ingannare l'utente con link, richieste urgenti o messaggi apparentemente affidabili.",
+        "explanation": "La difesa non è solo tecnica: serve riconoscere segnali sospetti e non fornire credenziali o dati sensibili senza verifica.",
+        "color_theme": "blue-teal",
+        "source": {
+          "section": "Phishing",
+          "evidence": ""
+        }
+      },
+      {
+        "title": "Malware, allegati e ransomware",
+        "message": "File pericolosi e ransomware possono compromettere dispositivi, dati e continuità operativa.",
+        "explanation": "La card collega allegati, malware e ransomware a comportamenti prudenti: controllare file, mittenti e canali prima di aprire contenuti rischiosi.",
+        "color_theme": "blue-teal",
+        "source": {
+          "section": "Malware e ransomware",
+          "evidence": ""
+        }
+      },
+      {
+        "title": "Backup e aggiornamenti",
+        "message": "Backup affidabili e aggiornamenti software riducono il danno in caso di errore, furto, guasto o attacco.",
+        "explanation": "Il backup permette di recuperare dati, mentre gli aggiornamenti correggono vulnerabilità note. Insieme rendono il sistema più resistente.",
+        "color_theme": "blue-teal",
+        "source": {
+          "section": "Backup / aggiornamenti",
+          "evidence": ""
+        }
+      },
+      {
+        "title": "Dati sensibili",
+        "message": "Le informazioni riservate devono essere condivise solo con attenzione e secondo procedure controllate.",
+        "explanation": "La sicurezza dipende anche dalla gestione quotidiana dei dati: chi può leggerli, dove vengono salvati e come vengono trasmessi.",
+        "color_theme": "blue-teal",
+        "source": {
+          "section": "Dati sensibili",
+          "evidence": ""
+        }
+      }
+    ],
+    "quality": {
+      "ok": true,
+      "errors": [],
+      "warnings": [],
+      "metrics": {
+        "source_words": 30,
+        "output_words": 245,
+        "paragraphs": 5,
+        "copy_ratio": 0.0
+      }
+    }
+  },
+  "speed": {
+    "elapsed_ms": 0,
+    "input_words": 30,
+    "sections": 1
+  }
+}

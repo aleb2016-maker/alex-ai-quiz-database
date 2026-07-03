@@ -1,0 +1,199 @@
+{
+  "status": "PRODUCED",
+  "version": "V400.4",
+  "input": "mini_llm/data/real_tests/test_v396_current_engine/curriculum.md",
+  "registry": {
+    "loaded": true,
+    "path": "/Users/alessandrobarbarossa/alex-ai-workspace/reports/mini_llm_v400_registry/mini_llm_engine_registry_v400.json",
+    "total_engines": 14,
+    "usable_engines": [
+      "long_document_rag_v39",
+      "long_document_rag_v391_semantic_repair",
+      "real_quality_gate_v392",
+      "real_output_cleaner_v3931",
+      "universal_core_split_v394u",
+      "universal_relevance_core_v394u",
+      "universal_question_core_v394u",
+      "domain_profiles_v394u",
+      "universal_llm_bridge_v395",
+      "universal_current_engine_v396",
+      "study_pack_universal_v397",
+      "study_pack_current",
+      "fast_qa_summary_current"
+    ],
+    "quarantine_engines": [
+      "natural_sentence_v35_family"
+    ]
+  },
+  "profile": {
+    "title": "curriculum",
+    "domain": "curriculum vitae",
+    "domain_scores": {
+      "sicurezza informatica": 0,
+      "intelligenza artificiale generativa e RAG": 0,
+      "curriculum vitae": 6,
+      "sport e allenamento": 0,
+      "scientifico": 0,
+      "documento aziendale": 0
+    },
+    "concepts": [
+      "esperienze",
+      "formazione",
+      "competenze tecniche",
+      "profilo professionale",
+      "ruolo",
+      "obiettivo professionale"
+    ],
+    "input_words": 25,
+    "sections": 1,
+    "short_document": true
+  },
+  "summary": {
+    "status": "GENERATED_SHORT",
+    "mode": "summary",
+    "profile": {
+      "title": "curriculum",
+      "domain": "curriculum vitae",
+      "domain_scores": {
+        "sicurezza informatica": 0,
+        "intelligenza artificiale generativa e RAG": 0,
+        "curriculum vitae": 6,
+        "sport e allenamento": 0,
+        "scientifico": 0,
+        "documento aziendale": 0
+      },
+      "concepts": [
+        "esperienze",
+        "formazione",
+        "competenze tecniche",
+        "profilo professionale",
+        "ruolo",
+        "obiettivo professionale"
+      ],
+      "input_words": 25,
+      "sections": 1,
+      "short_document": true
+    },
+    "summary": [
+      "Il testo presenta un profilo curriculum con elementi legati a esperienze, formazione, competenze tecniche, profilo professionale, ruolo. Poiché il documento è breve, l'output resta essenziale e non inventa esperienze o competenze non presenti."
+    ],
+    "quality": {
+      "ok": true,
+      "errors": [],
+      "warnings": [
+        "SHORT_DOCUMENT"
+      ],
+      "metrics": {
+        "source_words": 25,
+        "output_words": 34,
+        "paragraphs": 1,
+        "copy_ratio": 0.0
+      }
+    }
+  },
+  "answer": {
+    "status": "GENERATED_SHORT",
+    "mode": "answer",
+    "profile": {
+      "title": "curriculum",
+      "domain": "curriculum vitae",
+      "domain_scores": {
+        "sicurezza informatica": 0,
+        "intelligenza artificiale generativa e RAG": 0,
+        "curriculum vitae": 6,
+        "sport e allenamento": 0,
+        "scientifico": 0,
+        "documento aziendale": 0
+      },
+      "concepts": [
+        "esperienze",
+        "formazione",
+        "competenze tecniche",
+        "profilo professionale",
+        "ruolo",
+        "obiettivo professionale"
+      ],
+      "input_words": 25,
+      "sections": 1,
+      "short_document": true
+    },
+    "question": "Quali competenze, esperienze o elementi importanti emergono dal curriculum?",
+    "answer": "Il documento è molto breve, quindi la risposta resta essenziale. In base al testo disponibile, il contenuto riguarda curriculum vitae e richiama questi elementi: esperienze, formazione, competenze tecniche, profilo professionale, ruolo. Il motore non aggiunge dettagli esterni perché il documento non contiene abbastanza materiale per una risposta lunga.",
+    "sources": [
+      {
+        "section": "Panoramica",
+        "evidence": "Il curriculum presenta esperienze, formazione e competenze tecniche. Il profilo professionale deve chiarire il ruolo desiderato. Un obiettivo poco definito rende il CV meno efficace."
+      }
+    ],
+    "quality": {
+      "ok": true,
+      "errors": [],
+      "warnings": [
+        "SHORT_DOCUMENT"
+      ],
+      "metrics": {
+        "source_words": 25,
+        "output_words": 48,
+        "paragraphs": 1,
+        "copy_ratio": 0.0
+      }
+    }
+  },
+  "cards": {
+    "status": "GENERATED_SHORT",
+    "mode": "cards",
+    "profile": {
+      "title": "curriculum",
+      "domain": "curriculum vitae",
+      "domain_scores": {
+        "sicurezza informatica": 0,
+        "intelligenza artificiale generativa e RAG": 0,
+        "curriculum vitae": 6,
+        "sport e allenamento": 0,
+        "scientifico": 0,
+        "documento aziendale": 0
+      },
+      "concepts": [
+        "esperienze",
+        "formazione",
+        "competenze tecniche",
+        "profilo professionale",
+        "ruolo",
+        "obiettivo professionale"
+      ],
+      "input_words": 25,
+      "sections": 1,
+      "short_document": true
+    },
+    "cards": [
+      {
+        "title": "Sintesi breve: curriculum vitae",
+        "message": "Il documento è corto e richiama: esperienze, formazione, competenze tecniche.",
+        "explanation": "La card è volutamente breve: il motore non inventa contenuti oltre il testo disponibile e segnala che la fonte è limitata.",
+        "color_theme": "blue-teal",
+        "source": {
+          "section": "Panoramica",
+          "evidence": "Il curriculum presenta esperienze, formazione e competenze tecniche. Il profilo professionale deve chiarire il ruolo desiderato. Un obiettivo poco definito rende il CV meno efficace."
+        }
+      }
+    ],
+    "quality": {
+      "ok": true,
+      "errors": [],
+      "warnings": [
+        "SHORT_DOCUMENT"
+      ],
+      "metrics": {
+        "source_words": 25,
+        "output_words": 71,
+        "paragraphs": 1,
+        "copy_ratio": 0.0
+      }
+    }
+  },
+  "speed": {
+    "elapsed_ms": 0,
+    "input_words": 25,
+    "sections": 1
+  }
+}

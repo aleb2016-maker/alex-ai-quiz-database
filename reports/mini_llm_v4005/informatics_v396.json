@@ -1,0 +1,191 @@
+{
+  "status": "PRODUCED",
+  "version": "V400.5",
+  "input": "mini_llm/data/real_tests/test_v396_current_engine/informatics.md",
+  "registry": {
+    "loaded": true,
+    "path": "/Users/alessandrobarbarossa/alex-ai-workspace/reports/mini_llm_v400_registry/mini_llm_engine_registry_v400.json",
+    "total_engines": 14,
+    "usable_engines": [
+      "long_document_rag_v39",
+      "long_document_rag_v391_semantic_repair",
+      "real_quality_gate_v392",
+      "real_output_cleaner_v3931",
+      "universal_core_split_v394u",
+      "universal_relevance_core_v394u",
+      "universal_question_core_v394u",
+      "domain_profiles_v394u",
+      "universal_llm_bridge_v395",
+      "universal_current_engine_v396",
+      "study_pack_universal_v397",
+      "study_pack_current",
+      "fast_qa_summary_current"
+    ],
+    "quarantine_engines": [
+      "natural_sentence_v35_family"
+    ]
+  },
+  "profile": {
+    "title": "informatics",
+    "domain": "sicurezza informatica",
+    "domain_scores": {
+      "sicurezza informatica": 5,
+      "intelligenza artificiale generativa e RAG": 0,
+      "curriculum vitae": 0,
+      "sport e allenamento": 0,
+      "scientifico": 0,
+      "documento aziendale": 0
+    },
+    "concepts": [
+      "sicurezza informatica",
+      "phishing",
+      "ransomware",
+      "account"
+    ],
+    "input_words": 30,
+    "sections": 1,
+    "short_document": true
+  },
+  "summary": {
+    "status": "GENERATED_SHORT",
+    "mode": "summary",
+    "profile": {
+      "title": "informatics",
+      "domain": "sicurezza informatica",
+      "domain_scores": {
+        "sicurezza informatica": 5,
+        "intelligenza artificiale generativa e RAG": 0,
+        "curriculum vitae": 0,
+        "sport e allenamento": 0,
+        "scientifico": 0,
+        "documento aziendale": 0
+      },
+      "concepts": [
+        "sicurezza informatica",
+        "phishing",
+        "ransomware",
+        "account"
+      ],
+      "input_words": 30,
+      "sections": 1,
+      "short_document": true
+    },
+    "summary": [
+      "Il testo sintetizza un contenuto di sicurezza informatica. I punti principali riguardano sicurezza informatica, phishing, ransomware, account. Il materiale è breve, quindi il motore produce una sintesi corta e controllata invece di fingere un riassunto lungo."
+    ],
+    "quality": {
+      "ok": true,
+      "errors": [],
+      "warnings": [
+        "SHORT_DOCUMENT"
+      ],
+      "metrics": {
+        "source_words": 30,
+        "output_words": 36,
+        "paragraphs": 1,
+        "copy_ratio": 0.0
+      }
+    }
+  },
+  "answer": {
+    "status": "GENERATED_SHORT",
+    "mode": "answer",
+    "profile": {
+      "title": "informatics",
+      "domain": "sicurezza informatica",
+      "domain_scores": {
+        "sicurezza informatica": 5,
+        "intelligenza artificiale generativa e RAG": 0,
+        "curriculum vitae": 0,
+        "sport e allenamento": 0,
+        "scientifico": 0,
+        "documento aziendale": 0
+      },
+      "concepts": [
+        "sicurezza informatica",
+        "phishing",
+        "ransomware",
+        "account"
+      ],
+      "input_words": 30,
+      "sections": 1,
+      "short_document": true
+    },
+    "question": "Quali rischi o concetti informatici principali vengono descritti?",
+    "answer": "Il documento è molto breve, quindi la risposta resta essenziale. In base al testo disponibile, il contenuto riguarda sicurezza informatica e richiama questi elementi: sicurezza informatica, phishing, ransomware, account. Il motore non aggiunge dettagli esterni perché il documento non contiene abbastanza materiale per una risposta lunga.",
+    "sources": [
+      {
+        "section": "Panoramica",
+        "evidence": "La sicurezza informatica protegge dati, account e sistemi digitali. Il phishing usa messaggi ingannevoli. Il ransomware può bloccare dati aziendali. Le password deboli aumentano il rischio di accessi non autorizzati."
+      }
+    ],
+    "quality": {
+      "ok": true,
+      "errors": [],
+      "warnings": [
+        "SHORT_DOCUMENT"
+      ],
+      "metrics": {
+        "source_words": 30,
+        "output_words": 46,
+        "paragraphs": 1,
+        "copy_ratio": 0.0
+      }
+    }
+  },
+  "cards": {
+    "status": "GENERATED_SHORT",
+    "mode": "cards",
+    "profile": {
+      "title": "informatics",
+      "domain": "sicurezza informatica",
+      "domain_scores": {
+        "sicurezza informatica": 5,
+        "intelligenza artificiale generativa e RAG": 0,
+        "curriculum vitae": 0,
+        "sport e allenamento": 0,
+        "scientifico": 0,
+        "documento aziendale": 0
+      },
+      "concepts": [
+        "sicurezza informatica",
+        "phishing",
+        "ransomware",
+        "account"
+      ],
+      "input_words": 30,
+      "sections": 1,
+      "short_document": true
+    },
+    "cards": [
+      {
+        "title": "Sintesi breve: sicurezza informatica",
+        "message": "Il documento è corto e richiama: sicurezza informatica, phishing, ransomware.",
+        "explanation": "La card è volutamente breve: il motore non inventa contenuti oltre il testo disponibile e segnala che la fonte è limitata.",
+        "color_theme": "blue-teal",
+        "source": {
+          "section": "Panoramica",
+          "evidence": "La sicurezza informatica protegge dati, account e sistemi digitali. Il phishing usa messaggi ingannevoli. Il ransomware può bloccare dati aziendali. Le password deboli aumentano il rischio di accessi non autorizzati."
+        }
+      }
+    ],
+    "quality": {
+      "ok": true,
+      "errors": [],
+      "warnings": [
+        "SHORT_DOCUMENT"
+      ],
+      "metrics": {
+        "source_words": 30,
+        "output_words": 76,
+        "paragraphs": 1,
+        "copy_ratio": 0.0
+      }
+    }
+  },
+  "speed": {
+    "elapsed_ms": 1,
+    "input_words": 30,
+    "sections": 1
+  }
+}

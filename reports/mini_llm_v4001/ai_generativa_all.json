@@ -1,0 +1,260 @@
+{
+  "status": "PRODUCED",
+  "mode": "all",
+  "input": "rag/documenti/documento_ai_generativa_test_rag.md",
+  "registry": {
+    "loaded": true,
+    "path": "/Users/alessandrobarbarossa/alex-ai-workspace/reports/mini_llm_v400_registry/mini_llm_engine_registry_v400.json",
+    "total_engines": 14,
+    "usable_engines": [
+      "long_document_rag_v39",
+      "long_document_rag_v391_semantic_repair",
+      "real_quality_gate_v392",
+      "real_output_cleaner_v3931",
+      "universal_core_split_v394u",
+      "universal_relevance_core_v394u",
+      "universal_question_core_v394u",
+      "domain_profiles_v394u",
+      "universal_llm_bridge_v395",
+      "universal_current_engine_v396",
+      "study_pack_universal_v397",
+      "study_pack_current",
+      "fast_qa_summary_current"
+    ],
+    "quarantine_engines": [
+      "natural_sentence_v35_family"
+    ]
+  },
+  "profile": {
+    "title": "Documento di prova RAG - Intelligenza Artificiale Generativa",
+    "domain": "intelligenza artificiale generativa e RAG",
+    "concepts": [
+      "intelligenza artificiale generativa",
+      "qualità dell output",
+      "prova intelligenza artificiale",
+      "artificiale generativa introduzione",
+      "generativa introduzione intelligenza",
+      "introduzione intelligenza artificiale",
+      "artificiale generativa tecnologia",
+      "generativa tecnologia permette",
+      "tecnologia permette informatico",
+      "permette informatico produrre",
+      "informatico produrre nuovi",
+      "produrre nuovi partendo",
+      "nuovi partendo dati",
+      "partendo dati istruzioni"
+    ],
+    "input_words": 617,
+    "sections": 8
+  },
+  "summary": {
+    "status": "QUALITY_BLOCKED",
+    "mode": "summary",
+    "profile": {
+      "title": "Documento di prova RAG - Intelligenza Artificiale Generativa",
+      "domain": "intelligenza artificiale generativa e RAG",
+      "concepts": [
+        "intelligenza artificiale generativa",
+        "qualità dell output",
+        "prova intelligenza artificiale",
+        "artificiale generativa introduzione",
+        "generativa introduzione intelligenza",
+        "introduzione intelligenza artificiale",
+        "artificiale generativa tecnologia",
+        "generativa tecnologia permette",
+        "tecnologia permette informatico",
+        "permette informatico produrre",
+        "informatico produrre nuovi",
+        "produrre nuovi partendo",
+        "nuovi partendo dati",
+        "partendo dati istruzioni"
+      ],
+      "input_words": 617,
+      "sections": 8
+    },
+    "quality": {
+      "ok": false,
+      "errors": [
+        "DIAGNOSTICA_MESCOLATA_AL_CONTENUTO"
+      ],
+      "warnings": [
+        "RIASSUNTO_MOLTO_LUNGO"
+      ],
+      "metrics": {
+        "source_words": 617,
+        "output_words": 412,
+        "paragraphs": 10,
+        "copy_ratio": 0.0
+      }
+    },
+    "draft": [
+      "Il documento affronta il tema “intelligenza artificiale generativa e RAG” e lo organizza intorno a concetti operativi, limiti d'uso e controlli sul risultato. L'obiettivo non è produrre testo qualsiasi, ma trasformare un documento reale in materiale comprensibile, proporzionato e verificabile.",
+      "La parte introduttiva presenta il tema intelligenza artificiale generativa e RAG e chiarisce il contesto generale. Il punto centrale è che il sistema può essere utile solo se lavora su dati, istruzioni e contesto, mantenendo attenzione a intelligenza artificiale generativa, artificiale generativa tecnologia, generativa tecnologia permette, tecnologia permette informatico.",
+      "La sezione sui modelli linguistici spiega che la generazione automatica non basta da sola. Il documento collega i modelli a modelli linguistici addestrati, linguistici addestrati grandi, addestrati grandi quantità, grandi quantità ricevono e mette in evidenza la necessità di controlli per evitare risposte deboli, non verificate o scollegate dalle fonti.",
+      "La parte dedicata al RAG descrive un processo in cui recupero e generazione devono lavorare insieme. Prima si cercano passaggi rilevanti nel documento, poi quei passaggi vengono trasformati in riassunti, risposte, card o quiz, con attenzione a significa retrieval augmented, retrieval augmented generation, augmented generation metodo, generation metodo unisce.",
+      "Sul piano applicativo il documento mostra che il motore può servire in contesti aziendali e formativi. Le funzioni utili riguardano amministrazione riassumere regolamenti, riassumere regolamenti procedure, regolamenti procedure comunicazioni, procedure comunicazioni interne, ma il risultato deve restare leggibile, controllabile e collegato al materiale caricato.",
+      "La sezione sui rischi sottolinea che il sistema non deve essere considerato infallibile. Gli errori, le semplificazioni e le risposte non presenti nelle fonti devono essere intercettati con controlli qualità e blocchi espliciti.",
+      "Il blocco sulla qualità stabilisce che l'output non deve essere generico, troppo corto o scollegato dal testo. Riassunti, card e domande devono avere struttura naturale, contenuto utile e proporzione corretta rispetto al documento di partenza.",
+      "La diagnostica viene trattata come parte essenziale del motore. Quando una generazione fallisce, il sistema deve spiegare il motivo, indicare cosa ha letto, quali controlli ha eseguito e quale punto va corretto.",
+      "La conclusione rafforza l'idea di un uso controllato del motore. L'intelligenza artificiale può aiutare, ma deve essere guidata da documenti reali, regole di qualità e verifiche finali sull'output.",
+      "In sintesi, il documento richiede un motore capace di leggere fonti reali, recuperare i passaggi utili, generare contenuti ordinati e bloccare gli output non affidabili. La qualità finale dipende quindi da tre elementi: comprensione del documento, controllo dell'output e diagnostica chiara quando qualcosa non funziona."
+    ]
+  },
+  "answer": {
+    "status": "GENERATED",
+    "mode": "answer",
+    "profile": {
+      "title": "Documento di prova RAG - Intelligenza Artificiale Generativa",
+      "domain": "intelligenza artificiale generativa e RAG",
+      "concepts": [
+        "intelligenza artificiale generativa",
+        "qualità dell output",
+        "prova intelligenza artificiale",
+        "artificiale generativa introduzione",
+        "generativa introduzione intelligenza",
+        "introduzione intelligenza artificiale",
+        "artificiale generativa tecnologia",
+        "generativa tecnologia permette",
+        "tecnologia permette informatico",
+        "permette informatico produrre",
+        "informatico produrre nuovi",
+        "produrre nuovi partendo",
+        "nuovi partendo dati",
+        "partendo dati istruzioni"
+      ],
+      "input_words": 617,
+      "sections": 8
+    },
+    "question": "Quali rischi o limiti vengono indicati dal documento sull'intelligenza artificiale generativa?",
+    "answer": "Nella sezione “Conclusione” il documento collega la domanda a intelligenza artificiale generativa, artificiale generativa molto, generativa molto utile. Il punto utile è che il sistema deve restare fondato sul testo caricato e sui controlli indicati dal documento. Nella sezione “Introduzione” il documento collega la domanda a intelligenza artificiale generativa, artificiale generativa tecnologia, generativa tecnologia permette. Il punto utile è che il sistema deve restare fondato sul testo caricato e sui controlli indicati dal documento. Nella sezione “Qualità dell'output” il documento collega la domanda a riassunto qualità proporzionato, qualità proporzionato ridotto, proporzionato ridotto poche. Il punto utile è che il sistema deve restare fondato sul testo caricato e sui controlli indicati dal documento. La risposta quindi resta limitata al documento: non aggiunge informazioni esterne e non tratta il modello come fonte autonoma.",
+    "sources": [
+      {
+        "section": "Conclusione",
+        "evidence": "L'intelligenza artificiale generativa può essere molto utile, ma deve essere controllata. Un sistema affidabile deve leggere il documento reale, evitare fallback nascosti, produrre materiale coerente e spiegare gli errori."
+      },
+      {
+        "section": "Introduzione",
+        "evidence": "L'intelligenza artificiale generativa è una tecnologia che permette a un sistema informatico di produrre contenuti nuovi partendo da dati, istruzioni e contesto. Può generare testi, riassunti, domande, risposte, codice, tabelle, spiegazioni e materiali di studio."
+      },
+      {
+        "section": "Qualità dell'output",
+        "evidence": "Un riassunto di qualità deve essere proporzionato al documento, non ridotto a poche righe generiche. Deve evidenziare temi principali, rischi, esempi e concetti importanti."
+      }
+    ],
+    "quality": {
+      "ok": true,
+      "errors": [],
+      "warnings": [],
+      "metrics": {
+        "source_words": 617,
+        "output_words": 132,
+        "paragraphs": 1,
+        "copy_ratio": 0.0
+      }
+    }
+  },
+  "cards": {
+    "status": "GENERATED",
+    "mode": "cards",
+    "profile": {
+      "title": "Documento di prova RAG - Intelligenza Artificiale Generativa",
+      "domain": "intelligenza artificiale generativa e RAG",
+      "concepts": [
+        "intelligenza artificiale generativa",
+        "qualità dell output",
+        "prova intelligenza artificiale",
+        "artificiale generativa introduzione",
+        "generativa introduzione intelligenza",
+        "introduzione intelligenza artificiale",
+        "artificiale generativa tecnologia",
+        "generativa tecnologia permette",
+        "tecnologia permette informatico",
+        "permette informatico produrre",
+        "informatico produrre nuovi",
+        "produrre nuovi partendo",
+        "nuovi partendo dati",
+        "partendo dati istruzioni"
+      ],
+      "input_words": 617,
+      "sections": 8
+    },
+    "cards": [
+      {
+        "title": "intelligenza artificiale generativa e RAG",
+        "message": "Il punto chiave riguarda intelligenza artificiale generativa, artificiale generativa tecnologia, generativa tecnologia permette: il contenuto va trasformato in materiale chiaro, utile e controllato.",
+        "explanation": "La sezione “Introduzione” contribuisce al documento perché collega il tema a informazioni operative. La card non copia il testo grezzo, ma isola il concetto principale e lo rende leggibile per studio, ripasso o uso formativo.",
+        "color_theme": "blue-teal",
+        "source": {
+          "section": "Introduzione",
+          "evidence": "L'intelligenza artificiale generativa è una tecnologia che permette a un sistema informatico di produrre contenuti nuovi partendo da dati, istruzioni e contesto."
+        }
+      },
+      {
+        "title": "Modelli linguistici",
+        "message": "Il punto chiave riguarda modelli linguistici addestrati, linguistici addestrati grandi, addestrati grandi quantità: il contenuto va trasformato in materiale chiaro, utile e controllato.",
+        "explanation": "La sezione “Modelli linguistici” contribuisce al documento perché collega il tema a informazioni operative. La card non copia il testo grezzo, ma isola il concetto principale e lo rende leggibile per studio, ripasso o uso formativo.",
+        "color_theme": "blue-teal",
+        "source": {
+          "section": "Modelli linguistici",
+          "evidence": "Per questo motivo un sistema serio deve usare documenti reali, controlli qualità e diagnostica chiara."
+        }
+      },
+      {
+        "title": "Uso del RAG",
+        "message": "Il punto chiave riguarda significa retrieval augmented, retrieval augmented generation, augmented generation metodo: il contenuto va trasformato in materiale chiaro, utile e controllato.",
+        "explanation": "La sezione “Uso del RAG” contribuisce al documento perché collega il tema a informazioni operative. La card non copia il testo grezzo, ma isola il concetto principale e lo rende leggibile per studio, ripasso o uso formativo.",
+        "color_theme": "blue-teal",
+        "source": {
+          "section": "Uso del RAG",
+          "evidence": "Prima il sistema cerca nel documento i passaggi più rilevanti, poi usa quei passaggi per produrre un riassunto, una card, una domanda o un quiz."
+        }
+      },
+      {
+        "title": "Applicazioni aziendali",
+        "message": "Il punto chiave riguarda amministrazione riassumere regolamenti, riassumere regolamenti procedure, regolamenti procedure comunicazioni: il contenuto va trasformato in materiale chiaro, utile e controllato.",
+        "explanation": "La sezione “Applicazioni aziendali” contribuisce al documento perché collega il tema a informazioni operative. La card non copia il testo grezzo, ma isola il concetto principale e lo rende leggibile per studio, ripasso o uso formativo.",
+        "color_theme": "blue-teal",
+        "source": {
+          "section": "Applicazioni aziendali",
+          "evidence": "Nel servizio clienti può suggerire risposte basate su procedure approvate, ma l'utente deve sempre controllare il risultato."
+        }
+      },
+      {
+        "title": "Rischi principali",
+        "message": "Il punto chiave riguarda primo rischio invenzione, rischio invenzione informazioni, invenzione informazioni modello: il contenuto va trasformato in materiale chiaro, utile e controllato.",
+        "explanation": "La sezione “Rischi principali” contribuisce al documento perché collega il tema a informazioni operative. La card non copia il testo grezzo, ma isola il concetto principale e lo rende leggibile per studio, ripasso o uso formativo.",
+        "color_theme": "blue-teal",
+        "source": {
+          "section": "Rischi principali",
+          "evidence": "Il sistema deve lavorare sul documento caricato, non su esempi vecchi o contenuti demo."
+        }
+      },
+      {
+        "title": "Qualità dell'output",
+        "message": "Il punto chiave riguarda riassunto qualità proporzionato, qualità proporzionato ridotto, proporzionato ridotto poche: il contenuto va trasformato in materiale chiaro, utile e controllato.",
+        "explanation": "La sezione “Qualità dell'output” contribuisce al documento perché collega il tema a informazioni operative. La card non copia il testo grezzo, ma isola il concetto principale e lo rende leggibile per studio, ripasso o uso formativo.",
+        "color_theme": "blue-teal",
+        "source": {
+          "section": "Qualità dell'output",
+          "evidence": "Se l'output è troppo corto, generico o non collegato al documento, il sistema deve bloccarlo e spiegare il motivo."
+        }
+      }
+    ],
+    "quality": {
+      "ok": true,
+      "errors": [],
+      "warnings": [],
+      "metrics": {
+        "source_words": 617,
+        "output_words": 372,
+        "paragraphs": 6,
+        "copy_ratio": 0.0
+      }
+    }
+  },
+  "speed": {
+    "elapsed_ms": 273,
+    "input_words": 617,
+    "sections": 8
+  }
+}

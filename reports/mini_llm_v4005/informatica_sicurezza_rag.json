@@ -1,0 +1,291 @@
+{
+  "status": "PRODUCED",
+  "version": "V400.5",
+  "input": "rag/documenti/documento_rag_sicurezza_informatica_aziendale.md",
+  "registry": {
+    "loaded": true,
+    "path": "/Users/alessandrobarbarossa/alex-ai-workspace/reports/mini_llm_v400_registry/mini_llm_engine_registry_v400.json",
+    "total_engines": 14,
+    "usable_engines": [
+      "long_document_rag_v39",
+      "long_document_rag_v391_semantic_repair",
+      "real_quality_gate_v392",
+      "real_output_cleaner_v3931",
+      "universal_core_split_v394u",
+      "universal_relevance_core_v394u",
+      "universal_question_core_v394u",
+      "domain_profiles_v394u",
+      "universal_llm_bridge_v395",
+      "universal_current_engine_v396",
+      "study_pack_universal_v397",
+      "study_pack_current",
+      "fast_qa_summary_current"
+    ],
+    "quarantine_engines": [
+      "natural_sentence_v35_family"
+    ]
+  },
+  "profile": {
+    "title": "Documento RAG di test: Sicurezza informatica aziendale",
+    "domain": "sicurezza informatica",
+    "domain_scores": {
+      "sicurezza informatica": 13,
+      "intelligenza artificiale generativa e RAG": 1,
+      "curriculum vitae": 1,
+      "sport e allenamento": 2,
+      "scientifico": 0,
+      "documento aziendale": 4
+    },
+    "concepts": [
+      "sicurezza informatica",
+      "password sicure",
+      "autenticazione a due fattori",
+      "phishing",
+      "malware",
+      "ransomware",
+      "backup",
+      "aggiornamenti software",
+      "dati sensibili",
+      "credenziali",
+      "account",
+      "comportamenti corretti",
+      "scopo del documento",
+      "cos'è la sicurezza informatica"
+    ],
+    "input_words": 1673,
+    "sections": 13,
+    "short_document": false
+  },
+  "summary": {
+    "status": "GENERATED",
+    "mode": "summary",
+    "profile": {
+      "title": "Documento RAG di test: Sicurezza informatica aziendale",
+      "domain": "sicurezza informatica",
+      "domain_scores": {
+        "sicurezza informatica": 13,
+        "intelligenza artificiale generativa e RAG": 1,
+        "curriculum vitae": 1,
+        "sport e allenamento": 2,
+        "scientifico": 0,
+        "documento aziendale": 4
+      },
+      "concepts": [
+        "sicurezza informatica",
+        "password sicure",
+        "autenticazione a due fattori",
+        "phishing",
+        "malware",
+        "ransomware",
+        "backup",
+        "aggiornamenti software",
+        "dati sensibili",
+        "credenziali",
+        "account",
+        "comportamenti corretti",
+        "scopo del documento",
+        "cos'è la sicurezza informatica"
+      ],
+      "input_words": 1673,
+      "sections": 13,
+      "short_document": false
+    },
+    "summary": [
+      "Il documento tratta la sicurezza informatica aziendale come un insieme di pratiche, strumenti e comportamenti necessari per proteggere dati, dispositivi, account e sistemi digitali. Il contenuto non si limita alla parte tecnica: presenta la sicurezza come responsabilità quotidiana condivisa tra utenti, procedure e strumenti di controllo.",
+      "Una parte centrale riguarda la gestione delle credenziali. Password lunghe, diverse per ogni servizio, password manager e autenticazione a due fattori riducono il rischio di accessi non autorizzati. Il documento collega questi elementi alla protezione di email, servizi cloud, account amministrativi e piattaforme che contengono dati sensibili.",
+      "Il testo richiama poi minacce operative come phishing, malware, allegati pericolosi e ransomware. Il phishing prova a ingannare l’utente con messaggi credibili o urgenti; malware e ransomware possono rubare informazioni, bloccare dati o compromettere dispositivi. Per questo il comportamento dell’utente diventa parte della difesa.",
+      "Un altro blocco importante riguarda backup, aggiornamenti software e gestione dei dati sensibili. Il backup permette di recuperare informazioni dopo errori, guasti, furti o attacchi; gli aggiornamenti riducono vulnerabilità note; la gestione dei dati richiede attenzione su chi può accedere, dove le informazioni vengono salvate e come vengono condivise.",
+      "Il documento insiste anche sulla cultura della sicurezza. Un sistema può essere tecnicamente avanzato, ma resta fragile se le persone usano password deboli, cliccano link sospetti, aprono allegati non verificati o condividono dati riservati senza controllo. La prevenzione dipende quindi da regole chiare e comportamenti coerenti.",
+      "In sintesi, il documento presenta la sicurezza informatica come un percorso pratico: riconoscere i rischi, proteggere gli account, verificare messaggi e allegati, mantenere copie di sicurezza, aggiornare i sistemi e trattare i dati sensibili con cautela. Il motore deve trasformare questi contenuti in output leggibili senza confonderli con temi esterni."
+    ],
+    "draft": [],
+    "quality": {
+      "ok": true,
+      "errors": [],
+      "warnings": [],
+      "metrics": {
+        "source_words": 1673,
+        "output_words": 284,
+        "paragraphs": 6,
+        "copy_ratio": 0.0
+      }
+    }
+  },
+  "answer": {
+    "status": "GENERATED",
+    "mode": "answer",
+    "profile": {
+      "title": "Documento RAG di test: Sicurezza informatica aziendale",
+      "domain": "sicurezza informatica",
+      "domain_scores": {
+        "sicurezza informatica": 13,
+        "intelligenza artificiale generativa e RAG": 1,
+        "curriculum vitae": 1,
+        "sport e allenamento": 2,
+        "scientifico": 0,
+        "documento aziendale": 4
+      },
+      "concepts": [
+        "sicurezza informatica",
+        "password sicure",
+        "autenticazione a due fattori",
+        "phishing",
+        "malware",
+        "ransomware",
+        "backup",
+        "aggiornamenti software",
+        "dati sensibili",
+        "credenziali",
+        "account",
+        "comportamenti corretti",
+        "scopo del documento",
+        "cos'è la sicurezza informatica"
+      ],
+      "input_words": 1673,
+      "sections": 13,
+      "short_document": false
+    },
+    "question": "Quali sono i rischi principali e le regole operative indicate dal documento?",
+    "answer": "Il documento indica che i rischi principali sono phishing, password deboli, malware, allegati pericolosi, ransomware, perdita di dati e gestione scorretta delle informazioni sensibili. Le regole operative principali sono usare password robuste, attivare l'autenticazione a due fattori, fare attenzione a link e allegati, mantenere backup affidabili, aggiornare software e sistemi, e condividere dati riservati solo quando necessario e con procedure controllate.",
+    "sources": [
+      {
+        "section": "2. Password sicure",
+        "evidence": "Una password sicura deve essere lunga, difficile da indovinare e diversa per ogni servizio."
+      },
+      {
+        "section": "3. Autenticazione a due fattori",
+        "evidence": "L'autenticazione a due fattori, spesso abbreviata in 2FA, aggiunge un secondo controllo oltre alla password."
+      },
+      {
+        "section": "4. Phishing",
+        "evidence": "Il phishing è una tecnica usata per ingannare le persone e convincerle a fornire dati sensibili, credenziali o pagamenti."
+      },
+      {
+        "section": "5. Malware e allegati pericolosi",
+        "evidence": "Il malware è un software dannoso progettato per danneggiare sistemi, rubare informazioni, spiare attività o bloccare l'accesso ai dati."
+      },
+      {
+        "section": "6. Backup",
+        "evidence": "Il backup è una copia di sicurezza dei dati."
+      },
+      {
+        "section": "7. Aggiornamenti software",
+        "evidence": "Gli aggiornamenti software correggono errori, migliorano le funzioni e chiudono vulnerabilità di sicurezza."
+      }
+    ],
+    "quality": {
+      "ok": true,
+      "errors": [],
+      "warnings": [],
+      "metrics": {
+        "source_words": 1673,
+        "output_words": 62,
+        "paragraphs": 1,
+        "copy_ratio": 0.0
+      }
+    }
+  },
+  "cards": {
+    "status": "GENERATED",
+    "mode": "cards",
+    "profile": {
+      "title": "Documento RAG di test: Sicurezza informatica aziendale",
+      "domain": "sicurezza informatica",
+      "domain_scores": {
+        "sicurezza informatica": 13,
+        "intelligenza artificiale generativa e RAG": 1,
+        "curriculum vitae": 1,
+        "sport e allenamento": 2,
+        "scientifico": 0,
+        "documento aziendale": 4
+      },
+      "concepts": [
+        "sicurezza informatica",
+        "password sicure",
+        "autenticazione a due fattori",
+        "phishing",
+        "malware",
+        "ransomware",
+        "backup",
+        "aggiornamenti software",
+        "dati sensibili",
+        "credenziali",
+        "account",
+        "comportamenti corretti",
+        "scopo del documento",
+        "cos'è la sicurezza informatica"
+      ],
+      "input_words": 1673,
+      "sections": 13,
+      "short_document": false
+    },
+    "cards": [
+      {
+        "title": "Password e accessi sicuri",
+        "message": "Password robuste, password manager e autenticazione a due fattori riducono il rischio di accessi non autorizzati.",
+        "explanation": "La card raccoglie le regole principali sulle credenziali. Il punto operativo è proteggere account e servizi con più livelli di controllo.",
+        "color_theme": "blue-teal",
+        "source": {
+          "section": "Password / 2FA",
+          "evidence": "Una password sicura deve essere lunga, difficile da indovinare e diversa per ogni servizio."
+        }
+      },
+      {
+        "title": "Phishing e messaggi sospetti",
+        "message": "Il phishing cerca di ingannare l'utente con link, richieste urgenti o messaggi apparentemente affidabili.",
+        "explanation": "La difesa non è solo tecnica: serve riconoscere segnali sospetti e non fornire credenziali o dati sensibili senza verifica.",
+        "color_theme": "blue-teal",
+        "source": {
+          "section": "Phishing",
+          "evidence": "Il phishing è una tecnica usata per ingannare le persone e convincerle a fornire dati sensibili, credenziali o pagamenti."
+        }
+      },
+      {
+        "title": "Malware, allegati e ransomware",
+        "message": "File pericolosi e ransomware possono compromettere dispositivi, dati e continuità operativa.",
+        "explanation": "La card collega allegati, malware e ransomware a comportamenti prudenti: controllare file, mittenti e canali prima di aprire contenuti rischiosi.",
+        "color_theme": "blue-teal",
+        "source": {
+          "section": "Malware e ransomware",
+          "evidence": ""
+        }
+      },
+      {
+        "title": "Backup e aggiornamenti",
+        "message": "Backup affidabili e aggiornamenti software riducono il danno in caso di errore, furto, guasto o attacco.",
+        "explanation": "Il backup permette di recuperare dati, mentre gli aggiornamenti correggono vulnerabilità note. Insieme rendono il sistema più resistente.",
+        "color_theme": "blue-teal",
+        "source": {
+          "section": "Backup / aggiornamenti",
+          "evidence": "Gli aggiornamenti software correggono errori, migliorano le funzioni e chiudono vulnerabilità di sicurezza."
+        }
+      },
+      {
+        "title": "Dati sensibili",
+        "message": "Le informazioni riservate devono essere condivise solo con attenzione e secondo procedure controllate.",
+        "explanation": "La sicurezza dipende anche dalla gestione quotidiana dei dati: chi può leggerli, dove vengono salvati e come vengono trasmessi.",
+        "color_theme": "blue-teal",
+        "source": {
+          "section": "Dati sensibili",
+          "evidence": "I dati sensibili sono informazioni che devono essere protette con particolare attenzione."
+        }
+      }
+    ],
+    "quality": {
+      "ok": true,
+      "errors": [],
+      "warnings": [],
+      "metrics": {
+        "source_words": 1673,
+        "output_words": 303,
+        "paragraphs": 5,
+        "copy_ratio": 0.0
+      }
+    }
+  },
+  "speed": {
+    "elapsed_ms": 197,
+    "input_words": 1673,
+    "sections": 13
+  }
+}

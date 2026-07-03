@@ -1,0 +1,154 @@
+{
+  "status": "PRODUCED",
+  "version": "V400.2",
+  "input": "mini_llm/data/real_tests/test_v396_current_engine/business.md",
+  "registry": {
+    "loaded": true,
+    "path": "/Users/alessandrobarbarossa/alex-ai-workspace/reports/mini_llm_v400_registry/mini_llm_engine_registry_v400.json",
+    "total_engines": 14,
+    "usable_engines": [
+      "long_document_rag_v39",
+      "long_document_rag_v391_semantic_repair",
+      "real_quality_gate_v392",
+      "real_output_cleaner_v3931",
+      "universal_core_split_v394u",
+      "universal_relevance_core_v394u",
+      "universal_question_core_v394u",
+      "domain_profiles_v394u",
+      "universal_llm_bridge_v395",
+      "universal_current_engine_v396",
+      "study_pack_universal_v397",
+      "study_pack_current",
+      "fast_qa_summary_current"
+    ],
+    "quarantine_engines": [
+      "natural_sentence_v35_family"
+    ]
+  },
+  "profile": {
+    "title": "business",
+    "domain": "errori",
+    "concepts": [
+      "errori",
+      "aziendale",
+      "definisce",
+      "processo",
+      "responsabilità",
+      "scadenze",
+      "comunicazione",
+      "insufficiente",
+      "generare",
+      "operativi",
+      "procedure",
+      "aiutano",
+      "controllare",
+      "tempi"
+    ],
+    "input_words": 23,
+    "sections": 1
+  },
+  "summary": {
+    "status": "SOURCE_TOO_SHORT",
+    "mode": "summary",
+    "profile": {
+      "title": "business",
+      "domain": "errori",
+      "concepts": [
+        "errori",
+        "aziendale",
+        "definisce",
+        "processo",
+        "responsabilità",
+        "scadenze",
+        "comunicazione",
+        "insufficiente",
+        "generare",
+        "operativi",
+        "procedure",
+        "aiutano",
+        "controllare",
+        "tempi"
+      ],
+      "input_words": 23,
+      "sections": 1
+    },
+    "summary": []
+  },
+  "answer": {
+    "status": "GENERATED",
+    "mode": "answer",
+    "profile": {
+      "title": "business",
+      "domain": "errori",
+      "concepts": [
+        "errori",
+        "aziendale",
+        "definisce",
+        "processo",
+        "responsabilità",
+        "scadenze",
+        "comunicazione",
+        "insufficiente",
+        "generare",
+        "operativi",
+        "procedure",
+        "aiutano",
+        "controllare",
+        "tempi"
+      ],
+      "input_words": 23,
+      "sections": 1
+    },
+    "question": "Quali sono i punti principali del documento business?",
+    "answer": "Il documento risponde alla domanda collegandola al tema “errori”. Le sezioni più rilevanti indicano che il contenuto deve essere letto, selezionato e trasformato senza perdere il legame con le fonti originali. La risposta resta quindi limitata al documento caricato e non aggiunge informazioni esterne.",
+    "sources": [
+      {
+        "section": "Panoramica",
+        "evidence": "Il documento aziendale definisce processo, responsabilità e scadenze."
+      }
+    ],
+    "quality": {
+      "ok": true,
+      "errors": [],
+      "warnings": [],
+      "metrics": {
+        "source_words": 23,
+        "output_words": 44,
+        "paragraphs": 1,
+        "copy_ratio": 0.0
+      }
+    }
+  },
+  "cards": {
+    "status": "NO_CARD_CONTEXT",
+    "mode": "cards",
+    "profile": {
+      "title": "business",
+      "domain": "errori",
+      "concepts": [
+        "errori",
+        "aziendale",
+        "definisce",
+        "processo",
+        "responsabilità",
+        "scadenze",
+        "comunicazione",
+        "insufficiente",
+        "generare",
+        "operativi",
+        "procedure",
+        "aiutano",
+        "controllare",
+        "tempi"
+      ],
+      "input_words": 23,
+      "sections": 1
+    },
+    "cards": []
+  },
+  "speed": {
+    "elapsed_ms": 2,
+    "input_words": 23,
+    "sections": 1
+  }
+}
