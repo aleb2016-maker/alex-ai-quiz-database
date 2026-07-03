@@ -1,0 +1,280 @@
+{
+  "engine": "mini_llm_universal_study_pack_v4",
+  "version": "3.9.7-sp7",
+  "status": "OK",
+  "source_name": "documento_rag_sicurezza_informatica_aziendale.md",
+  "profile": {
+    "primary": "informatica",
+    "scores": {
+      "informatica": 108,
+      "aziendale": 18,
+      "cv": 3,
+      "narrativa": 2,
+      "sport": 2,
+      "normativo": 1
+    }
+  },
+  "titolo": "Study Pack Universale V4 - Stessa Password · Dati Sensibili · Password Manager",
+  "raw_chars": 11546,
+  "cleaned_chars": 11545,
+  "usable_sentences": 85,
+  "concetti_chiave": [
+    "stessa password",
+    "dati sensibili",
+    "password manager",
+    "dati riservati",
+    "password deboli",
+    "account online",
+    "sicurezza informatica",
+    "utenti autorizzati",
+    "account amministrativi",
+    "rete aziendale"
+  ],
+  "sintesi": [
+    "Un sistema informatico può essere tecnicamente avanzato, ma rimanere vulnerabile se gli utenti usano password deboli, cliccano link sospetti o condividono dati riservati senza controllo.",
+    "Una buona regola aziendale è attivare la 2FA almeno su email, strumenti cloud, account amministrativi, sistemi di pagamento e piattaforme che contengono dati sensibili.",
+    "Non riguarda solo gli esperti informatici: ogni persona che usa un computer, uno smartphone, una rete aziendale o un account online contribuisce alla sicurezza generale.",
+    "La sicurezza informatica è l'insieme di pratiche, strumenti e comportamenti usati per proteggere dati, dispositivi, account e sistemi digitali.",
+    "Il phishing è una tecnica usata per ingannare le persone e convincerle a fornire dati sensibili, credenziali o pagamenti.",
+    "Usare la stessa password su più siti è rischioso: se un servizio viene violato, un attaccante può provare la stessa password anche su altri account."
+  ],
+  "card_studio": [
+    {
+      "titolo": "Stessa Password",
+      "messaggio_chiave": "Usare la stessa password su più siti è rischioso: se un servizio viene violato, un attaccante può provare la stessa password anche su altri account.",
+      "spiegazione": "Il passaggio chiarisce il tema stessa password: Usare la stessa password su più siti è rischioso: se un servizio viene violato, un attaccante può provare la stessa password anche su altri account.",
+      "fonte_testuale": "Usare la stessa password su più siti è rischioso: se un servizio viene violato, un attaccante può provare la stessa password anche su altri account."
+    },
+    {
+      "titolo": "Dati Sensibili",
+      "messaggio_chiave": "Una buona regola aziendale è attivare la 2FA almeno su email, strumenti cloud, account amministrativi, sistemi di pagamento e piattaforme che contengono dati sensibili.",
+      "spiegazione": "Il passaggio chiarisce il tema dati sensibili: Una buona regola aziendale è attivare la 2FA almeno su email, strumenti cloud, account amministrativi, sistemi di pagamento e piattaforme che contengono dati sensibili.",
+      "fonte_testuale": "Una buona regola aziendale è attivare la 2FA almeno su email, strumenti cloud, account amministrativi, sistemi di pagamento e piattaforme che contengono dati sensibili."
+    },
+    {
+      "titolo": "Password Manager",
+      "messaggio_chiave": "Un password manager permette di salvare password lunghe e uniche senza doverle ricordare tutte.",
+      "spiegazione": "Il passaggio chiarisce il tema password manager: Un password manager permette di salvare password lunghe e uniche senza doverle ricordare tutte.",
+      "fonte_testuale": "Un password manager permette di salvare password lunghe e uniche senza doverle ricordare tutte."
+    },
+    {
+      "titolo": "Dati Riservati",
+      "messaggio_chiave": "Un sistema informatico può essere tecnicamente avanzato, ma rimanere vulnerabile se gli utenti usano password deboli, cliccano link sospetti o condividono dati riservati senza controllo.",
+      "spiegazione": "Il passaggio chiarisce il tema dati riservati: Un sistema informatico può essere tecnicamente avanzato, ma rimanere vulnerabile se gli utenti usano password deboli, cliccano link sospetti o condividono dati riservati senza controllo.",
+      "fonte_testuale": "Un sistema informatico può essere tecnicamente avanzato, ma rimanere vulnerabile se gli utenti usano password deboli, cliccano link sospetti o condividono dati riservati senza controllo."
+    },
+    {
+      "titolo": "Password Deboli",
+      "messaggio_chiave": "Un sistema informatico può essere tecnicamente avanzato, ma rimanere vulnerabile se gli utenti usano password deboli, cliccano link sospetti o condividono dati riservati senza controllo.",
+      "spiegazione": "Il passaggio chiarisce il tema password deboli: Un sistema informatico può essere tecnicamente avanzato, ma rimanere vulnerabile se gli utenti usano password deboli, cliccano link sospetti o condividono dati riservati senza controllo.",
+      "fonte_testuale": "Un sistema informatico può essere tecnicamente avanzato, ma rimanere vulnerabile se gli utenti usano password deboli, cliccano link sospetti o condividono dati riservati senza controllo."
+    },
+    {
+      "titolo": "Account Online",
+      "messaggio_chiave": "Non riguarda solo gli esperti informatici: ogni persona che usa un computer, uno smartphone, una rete aziendale o un account online contribuisce alla sicurezza generale.",
+      "spiegazione": "Il passaggio chiarisce il tema account online: Non riguarda solo gli esperti informatici: ogni persona che usa un computer, uno smartphone, una rete aziendale o un account online contribuisce alla sicurezza generale.",
+      "fonte_testuale": "Non riguarda solo gli esperti informatici: ogni persona che usa un computer, uno smartphone, una rete aziendale o un account online contribuisce alla sicurezza generale."
+    },
+    {
+      "titolo": "Sicurezza Informatica",
+      "messaggio_chiave": "La sicurezza informatica è l'insieme di pratiche, strumenti e comportamenti usati per proteggere dati, dispositivi, account e sistemi digitali.",
+      "spiegazione": "Il passaggio chiarisce il tema sicurezza informatica: La sicurezza informatica è l'insieme di pratiche, strumenti e comportamenti usati per proteggere dati, dispositivi, account e sistemi digitali.",
+      "fonte_testuale": "La sicurezza informatica è l'insieme di pratiche, strumenti e comportamenti usati per proteggere dati, dispositivi, account e sistemi digitali."
+    },
+    {
+      "titolo": "Utenti Autorizzati",
+      "messaggio_chiave": "Disponibilità significa che sistemi, documenti e servizi devono rimanere accessibili agli utenti autorizzati.",
+      "spiegazione": "Il passaggio chiarisce il tema utenti autorizzati: Disponibilità significa che sistemi, documenti e servizi devono rimanere accessibili agli utenti autorizzati.",
+      "fonte_testuale": "Disponibilità significa che sistemi, documenti e servizi devono rimanere accessibili agli utenti autorizzati."
+    }
+  ],
+  "domande_guida": [
+    {
+      "domanda": "Quale rischio viene collegato a stessa password?",
+      "risposta_guida": "Usare la stessa password su più siti è rischioso: se un servizio viene violato, un attaccante può provare la stessa password anche su altri account.",
+      "concetto_collegato": "stessa password"
+    },
+    {
+      "domanda": "Quale regola operativa riguarda dati sensibili?",
+      "risposta_guida": "Una buona regola aziendale è attivare la 2FA almeno su email, strumenti cloud, account amministrativi, sistemi di pagamento e piattaforme che contengono dati sensibili.",
+      "concetto_collegato": "dati sensibili"
+    },
+    {
+      "domanda": "A cosa serve il password manager?",
+      "risposta_guida": "Un password manager permette di salvare password lunghe e uniche senza doverle ricordare tutte.",
+      "concetto_collegato": "password manager"
+    },
+    {
+      "domanda": "Quale rischio viene collegato a dati riservati?",
+      "risposta_guida": "Un sistema informatico può essere tecnicamente avanzato, ma rimanere vulnerabile se gli utenti usano password deboli, cliccano link sospetti o condividono dati riservati senza controllo.",
+      "concetto_collegato": "dati riservati"
+    },
+    {
+      "domanda": "Quale rischio viene collegato a password deboli?",
+      "risposta_guida": "Un sistema informatico può essere tecnicamente avanzato, ma rimanere vulnerabile se gli utenti usano password deboli, cliccano link sospetti o condividono dati riservati senza controllo.",
+      "concetto_collegato": "password deboli"
+    },
+    {
+      "domanda": "Che cosa chiarisce il documento su account online?",
+      "risposta_guida": "Non riguarda solo gli esperti informatici: ogni persona che usa un computer, uno smartphone, una rete aziendale o un account online contribuisce alla sicurezza generale.",
+      "concetto_collegato": "account online"
+    },
+    {
+      "domanda": "Come viene definita sicurezza informatica nel documento?",
+      "risposta_guida": "La sicurezza informatica è l'insieme di pratiche, strumenti e comportamenti usati per proteggere dati, dispositivi, account e sistemi digitali.",
+      "concetto_collegato": "sicurezza informatica"
+    },
+    {
+      "domanda": "Quale regola operativa riguarda utenti autorizzati?",
+      "risposta_guida": "Disponibilità significa che sistemi, documenti e servizi devono rimanere accessibili agli utenti autorizzati.",
+      "concetto_collegato": "utenti autorizzati"
+    }
+  ],
+  "quiz": [
+    {
+      "domanda": "Secondo il documento, quale affermazione descrive meglio stessa password?",
+      "opzioni": [
+        "Usare la stessa password su più siti è rischioso: se un servizio viene violato, un attaccante può provare la stessa password anche su altri account.",
+        "Una buona regola aziendale è attivare la 2FA almeno su email, strumenti cloud, account amministrativi, sistemi di pagamento e piattaforme che contengono dati sensibili.",
+        "Un password manager permette di salvare password lunghe e uniche senza doverle ricordare tutte.",
+        "Un sistema informatico può essere tecnicamente avanzato, ma rimanere vulnerabile se gli utenti usano password deboli, cliccano link sospetti o condividono dati riservati."
+      ],
+      "risposta_corretta": "Usare la stessa password su più siti è rischioso: se un servizio viene violato, un attaccante può provare la stessa password anche su altri account.",
+      "spiegazione": "La risposta corretta coincide con il passaggio del documento usato come fonte per stessa password.",
+      "concetto_collegato": "stessa password"
+    },
+    {
+      "domanda": "Secondo il documento, quale affermazione descrive meglio dati sensibili?",
+      "opzioni": [
+        "Usare la stessa password su più siti è rischioso: se un servizio viene violato, un attaccante può provare la stessa password anche su altri account.",
+        "Un password manager permette di salvare password lunghe e uniche senza doverle ricordare tutte.",
+        "Un sistema informatico può essere tecnicamente avanzato, ma rimanere vulnerabile se gli utenti usano password deboli, cliccano link sospetti o condividono dati riservati.",
+        "Una buona regola aziendale è attivare la 2FA almeno su email, strumenti cloud, account amministrativi, sistemi di pagamento e piattaforme che contengono dati sensibili."
+      ],
+      "risposta_corretta": "Una buona regola aziendale è attivare la 2FA almeno su email, strumenti cloud, account amministrativi, sistemi di pagamento e piattaforme che contengono dati sensibili.",
+      "spiegazione": "La risposta corretta coincide con il passaggio del documento usato come fonte per dati sensibili.",
+      "concetto_collegato": "dati sensibili"
+    },
+    {
+      "domanda": "Secondo il documento, quale affermazione descrive meglio password manager?",
+      "opzioni": [
+        "Una buona regola aziendale è attivare la 2FA almeno su email, strumenti cloud, account amministrativi, sistemi di pagamento e piattaforme che contengono dati sensibili.",
+        "Un sistema informatico può essere tecnicamente avanzato, ma rimanere vulnerabile se gli utenti usano password deboli, cliccano link sospetti o condividono dati riservati.",
+        "Un password manager permette di salvare password lunghe e uniche senza doverle ricordare tutte.",
+        "Usare la stessa password su più siti è rischioso: se un servizio viene violato, un attaccante può provare la stessa password anche su altri account."
+      ],
+      "risposta_corretta": "Un password manager permette di salvare password lunghe e uniche senza doverle ricordare tutte.",
+      "spiegazione": "La risposta corretta coincide con il passaggio del documento usato come fonte per password manager.",
+      "concetto_collegato": "password manager"
+    },
+    {
+      "domanda": "Secondo il documento, quale affermazione descrive meglio dati riservati?",
+      "opzioni": [
+        "Un password manager permette di salvare password lunghe e uniche senza doverle ricordare tutte.",
+        "Un sistema informatico può essere tecnicamente avanzato, ma rimanere vulnerabile se gli utenti usano password deboli, cliccano link sospetti o condividono dati riservati.",
+        "Usare la stessa password su più siti è rischioso: se un servizio viene violato, un attaccante può provare la stessa password anche su altri account.",
+        "Una buona regola aziendale è attivare la 2FA almeno su email, strumenti cloud, account amministrativi, sistemi di pagamento e piattaforme che contengono dati sensibili."
+      ],
+      "risposta_corretta": "Un sistema informatico può essere tecnicamente avanzato, ma rimanere vulnerabile se gli utenti usano password deboli, cliccano link sospetti o condividono dati riservati.",
+      "spiegazione": "La risposta corretta coincide con il passaggio del documento usato come fonte per dati riservati.",
+      "concetto_collegato": "dati riservati"
+    },
+    {
+      "domanda": "Secondo il documento, quale affermazione descrive meglio password deboli?",
+      "opzioni": [
+        "Un sistema informatico può essere tecnicamente avanzato, ma rimanere vulnerabile se gli utenti usano password deboli, cliccano link sospetti o condividono dati riservati.",
+        "Usare la stessa password su più siti è rischioso: se un servizio viene violato, un attaccante può provare la stessa password anche su altri account.",
+        "Una buona regola aziendale è attivare la 2FA almeno su email, strumenti cloud, account amministrativi, sistemi di pagamento e piattaforme che contengono dati sensibili.",
+        "Un password manager permette di salvare password lunghe e uniche senza doverle ricordare tutte."
+      ],
+      "risposta_corretta": "Un sistema informatico può essere tecnicamente avanzato, ma rimanere vulnerabile se gli utenti usano password deboli, cliccano link sospetti o condividono dati riservati.",
+      "spiegazione": "La risposta corretta coincide con il passaggio del documento usato come fonte per password deboli.",
+      "concetto_collegato": "password deboli"
+    },
+    {
+      "domanda": "Secondo il documento, quale affermazione descrive meglio account online?",
+      "opzioni": [
+        "Usare la stessa password su più siti è rischioso: se un servizio viene violato, un attaccante può provare la stessa password anche su altri account.",
+        "Una buona regola aziendale è attivare la 2FA almeno su email, strumenti cloud, account amministrativi, sistemi di pagamento e piattaforme che contengono dati sensibili.",
+        "Un password manager permette di salvare password lunghe e uniche senza doverle ricordare tutte.",
+        "Non riguarda solo gli esperti informatici: ogni persona che usa un computer, uno smartphone, una rete aziendale o un account online contribuisce alla sicurezza generale."
+      ],
+      "risposta_corretta": "Non riguarda solo gli esperti informatici: ogni persona che usa un computer, uno smartphone, una rete aziendale o un account online contribuisce alla sicurezza generale.",
+      "spiegazione": "La risposta corretta coincide con il passaggio del documento usato come fonte per account online.",
+      "concetto_collegato": "account online"
+    }
+  ],
+  "glossario": [
+    {
+      "termine": "stessa password",
+      "definizione_operativa": "Usare la stessa password su più siti è rischioso: se un servizio viene violato, un attaccante può provare la stessa password anche su altri account."
+    },
+    {
+      "termine": "dati sensibili",
+      "definizione_operativa": "Una buona regola aziendale è attivare la 2FA almeno su email, strumenti cloud, account amministrativi, sistemi di pagamento e piattaforme che contengono dati sensibili."
+    },
+    {
+      "termine": "password manager",
+      "definizione_operativa": "Un password manager permette di salvare password lunghe e uniche senza doverle ricordare tutte."
+    },
+    {
+      "termine": "dati riservati",
+      "definizione_operativa": "Un sistema informatico può essere tecnicamente avanzato, ma rimanere vulnerabile se gli utenti usano password deboli, cliccano link sospetti o condividono dati riservati senza controllo."
+    },
+    {
+      "termine": "password deboli",
+      "definizione_operativa": "Un sistema informatico può essere tecnicamente avanzato, ma rimanere vulnerabile se gli utenti usano password deboli, cliccano link sospetti o condividono dati riservati senza controllo."
+    },
+    {
+      "termine": "account online",
+      "definizione_operativa": "Non riguarda solo gli esperti informatici: ogni persona che usa un computer, uno smartphone, una rete aziendale o un account online contribuisce alla sicurezza generale."
+    },
+    {
+      "termine": "sicurezza informatica",
+      "definizione_operativa": "La sicurezza informatica è l'insieme di pratiche, strumenti e comportamenti usati per proteggere dati, dispositivi, account e sistemi digitali."
+    },
+    {
+      "termine": "utenti autorizzati",
+      "definizione_operativa": "Disponibilità significa che sistemi, documenti e servizi devono rimanere accessibili agli utenti autorizzati."
+    },
+    {
+      "termine": "account amministrativi",
+      "definizione_operativa": "Una buona regola aziendale è attivare la 2FA almeno su email, strumenti cloud, account amministrativi, sistemi di pagamento e piattaforme che contengono dati sensibili."
+    },
+    {
+      "termine": "rete aziendale",
+      "definizione_operativa": "Non riguarda solo gli esperti informatici: ogni persona che usa un computer, uno smartphone, una rete aziendale o un account online contribuisce alla sicurezza generale."
+    }
+  ],
+  "piano_ripasso": [
+    {
+      "fase": "Giorno 1",
+      "attivita": "Leggi la sintesi e sottolinea i concetti portanti.",
+      "concetti_da_ripassare": "stessa password, dati sensibili, password manager, dati riservati"
+    },
+    {
+      "fase": "Giorno 2",
+      "attivita": "Studia le card e riscrivi a parole tue i messaggi chiave.",
+      "concetti_da_ripassare": "stessa password, dati sensibili, password manager, dati riservati"
+    },
+    {
+      "fase": "Giorno 3",
+      "attivita": "Rispondi alle domande guida senza guardare le risposte.",
+      "concetti_da_ripassare": "password deboli, account online, sicurezza informatica, utenti autorizzati"
+    },
+    {
+      "fase": "Giorno 4",
+      "attivita": "Esegui il quiz e correggi gli errori partendo dalle fonti testuali.",
+      "concetti_da_ripassare": "password deboli, account online, sicurezza informatica, utenti autorizzati"
+    }
+  ],
+  "quality_notes": [
+    "Output generato solo dal testo sorgente.",
+    "Nessun contenuto precotto o memoria fraseologica utilizzati.",
+    "Se la qualità minima non è raggiunta, il motore restituisce blocco qualità.",
+    "SP4: concetti incompleti e frasi meta-tecniche vengono esclusi prima della generazione.",
+    "SP5: righe meta sul progetto RAG/manuale tecnico e concetti verbali vengono scartati.",
+    "SP6: concetti chiave esposti limitati ai migliori 10 e filtro finale su concetti orfani/spuri.",
+    "SP7: il validatore distingue frasi fonte legittime da concetti chiave brutti."
+  ]
+}
