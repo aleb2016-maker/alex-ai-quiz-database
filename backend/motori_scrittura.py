@@ -6156,3 +6156,21 @@ def q52_build_quality_quiz(
 # Fine Fase 5.2.1 — Robust Quiz Distractors Patch
 # =============================================================================
 
+# FASE 5.3 — LIVE QUALITY BRIDGE V1
+# Collegamento controllato dell'output Fase 5 ai motori qualità vivi.
+# Non importa backup. Non riscrive i motori. Non cambia la logica originale.
+try:
+    import functools as _phase5_live_quality_functools
+    from backend.phase5_live_quality_bridge_v1 import (
+        apply_phase5_live_quality_bridge_v1 as _phase5_apply_live_quality_bridge_v1,
+    )
+
+    _phase5_original_build_phase5_quality_study_quiz_v1 = build_phase5_quality_study_quiz
+
+    @_phase5_live_quality_functools.wraps(_phase5_original_build_phase5_quality_study_quiz_v1)
+    def build_phase5_quality_study_quiz(*args, **kwargs):
+        _phase5_raw_output = _phase5_original_build_phase5_quality_study_quiz_v1(*args, **kwargs)
+        return _phase5_apply_live_quality_bridge_v1(_phase5_raw_output)
+
+except Exception as _phase5_live_quality_bridge_error:
+    _phase5_live_quality_bridge_import_error = repr(_phase5_live_quality_bridge_error)

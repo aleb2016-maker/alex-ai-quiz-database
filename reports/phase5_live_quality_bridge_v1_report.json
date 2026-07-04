@@ -1,0 +1,76 @@
+{
+  "document_id": "test_phase5_live_quality_bridge_v1",
+  "phase_name": "QUALITY_STUDY_QUIZ",
+  "approved": true,
+  "status": "APPROVED",
+  "test_quiz": [
+    {
+      "question_id": "phase5_quiz_question_001",
+      "domanda": "Quale affermazione descrive correttamente il divieto su protezione credenziali?",
+      "opzioni": [
+        {
+          "option_id": "A",
+          "testo": "Le credenziali possono essere condivise liberamente tra più operatori.",
+          "is_correct": false
+        },
+        {
+          "option_id": "B",
+          "testo": "Le credenziali non non devono essere necessariamente condivise tra più operatori.",
+          "is_correct": false
+        },
+        {
+          "option_id": "C",
+          "testo": "Le credenziali non devono essere condivise tra più operatori.",
+          "is_correct": true
+        },
+        {
+          "option_id": "D",
+          "testo": "Le credenziali non devono essere condivise tra più utenti anonimi.",
+          "is_correct": false
+        }
+      ],
+      "correct_option_id": "C",
+      "spiegazione": "La risposta corretta riprende il fatto verificato dal documento."
+    }
+  ],
+  "warnings": [],
+  "errors": [],
+  "_phase5_live_quality_bridge_v1": {
+    "phase": "5.3",
+    "status": "ok",
+    "motors": {
+      "backend.main.pulisci_qualita_linguistica_quiz": {
+        "status": "ok",
+        "applied": 1,
+        "changed": 0,
+        "targets": [
+          {
+            "target": "test_quiz",
+            "changed": false,
+            "guarded_rejected": false,
+            "known_text_defects_before": 1,
+            "known_text_defects_after": 1
+          }
+        ]
+      },
+      "scripts.rag_motore_didattico_riutilizzabile_v35c.refine_tests": {
+        "status": "ok",
+        "applied": 1,
+        "changed": 0,
+        "targets": [
+          {
+            "target": "test_quiz",
+            "changed": false,
+            "guarded_rejected": false,
+            "known_text_defects_before": 1,
+            "known_text_defects_after": 1
+          }
+        ]
+      }
+    },
+    "notes": [],
+    "description": "Bridge controllato Fase 5.3 verso motori qualità vivi",
+    "known_text_defects_before": 1,
+    "known_text_defects_after": 1
+  }
+}

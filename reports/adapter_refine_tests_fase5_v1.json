@@ -1,0 +1,329 @@
+{
+  "report_name": "adapter_refine_tests_fase5_v1",
+  "created_at": "2026-07-05T00:36:38",
+  "motor_id": "scripts.rag_motore_didattico_riutilizzabile_v35c.refine_tests",
+  "input_defects": 1,
+  "variants": [
+    {
+      "adapter_name": "current_phase5_italian_list",
+      "status": "unchanged_no_worse",
+      "accepted": true,
+      "did_change": false,
+      "worsened": false,
+      "improved": false,
+      "before_defects": 1,
+      "after_defects": 1,
+      "before_shape": {
+        "shape_ok": true,
+        "question_count": 1,
+        "option_count": 4,
+        "correct_markers": 1
+      },
+      "after_shape": {
+        "shape_ok": true,
+        "question_count": 1,
+        "option_count": 4,
+        "correct_markers": 1
+      },
+      "normalized_preview": [
+        {
+          "question_id": "phase5_quiz_question_001",
+          "domanda": "Quale affermazione descrive correttamente il divieto su protezione credenziali?",
+          "opzioni": [
+            {
+              "option_id": "A",
+              "testo": "Le credenziali possono essere condivise liberamente tra più operatori.",
+              "is_correct": false
+            },
+            {
+              "option_id": "B",
+              "testo": "Le credenziali non non devono essere necessariamente condivise tra più operatori.",
+              "is_correct": false
+            },
+            {
+              "option_id": "C",
+              "testo": "Le credenziali non devono essere condivise tra più operatori.",
+              "is_correct": true
+            },
+            {
+              "option_id": "D",
+              "testo": "Le credenziali non devono essere condivise tra più utenti anonimi.",
+              "is_correct": false
+            }
+          ],
+          "correct_option_id": "C",
+          "spiegazione": "La risposta corretta riprende il fatto verificato dal documento."
+        }
+      ]
+    },
+    {
+      "adapter_name": "legacy_question_options_dict",
+      "status": "unchanged_no_worse",
+      "accepted": true,
+      "did_change": false,
+      "worsened": false,
+      "improved": false,
+      "before_defects": 1,
+      "after_defects": 1,
+      "before_shape": {
+        "shape_ok": true,
+        "question_count": 1,
+        "option_count": 4,
+        "correct_markers": 1
+      },
+      "after_shape": {
+        "shape_ok": true,
+        "question_count": 1,
+        "option_count": 4,
+        "correct_markers": 1
+      },
+      "normalized_preview": [
+        {
+          "question_id": "phase5_quiz_question_001",
+          "domanda": "Quale affermazione descrive correttamente il divieto su protezione credenziali?",
+          "opzioni": [
+            {
+              "option_id": "A",
+              "testo": "Le credenziali possono essere condivise liberamente tra più operatori.",
+              "is_correct": false
+            },
+            {
+              "option_id": "B",
+              "testo": "Le credenziali non non devono essere necessariamente condivise tra più operatori.",
+              "is_correct": false
+            },
+            {
+              "option_id": "C",
+              "testo": "Le credenziali non devono essere condivise tra più operatori.",
+              "is_correct": true
+            },
+            {
+              "option_id": "D",
+              "testo": "Le credenziali non devono essere condivise tra più utenti anonimi.",
+              "is_correct": false
+            }
+          ],
+          "correct_option_id": "C",
+          "spiegazione": "La risposta corretta riprende il fatto verificato dal documento."
+        }
+      ]
+    },
+    {
+      "adapter_name": "legacy_question_options_strings_answer",
+      "status": "unchanged_no_worse",
+      "accepted": true,
+      "did_change": false,
+      "worsened": false,
+      "improved": false,
+      "before_defects": 1,
+      "after_defects": 1,
+      "before_shape": {
+        "shape_ok": true,
+        "question_count": 1,
+        "option_count": 4,
+        "correct_markers": 1
+      },
+      "after_shape": {
+        "shape_ok": true,
+        "question_count": 1,
+        "option_count": 4,
+        "correct_markers": 1
+      },
+      "normalized_preview": [
+        {
+          "question_id": "phase5_quiz_question_001",
+          "domanda": "Quale affermazione descrive correttamente il divieto su protezione credenziali?",
+          "opzioni": [
+            {
+              "option_id": "A",
+              "testo": "Le credenziali possono essere condivise liberamente tra più operatori.",
+              "is_correct": false
+            },
+            {
+              "option_id": "B",
+              "testo": "Le credenziali non non devono essere necessariamente condivise tra più operatori.",
+              "is_correct": false
+            },
+            {
+              "option_id": "C",
+              "testo": "Le credenziali non devono essere condivise tra più operatori.",
+              "is_correct": true
+            },
+            {
+              "option_id": "D",
+              "testo": "Le credenziali non devono essere condivise tra più utenti anonimi.",
+              "is_correct": false
+            }
+          ],
+          "correct_option_id": "C",
+          "spiegazione": "La risposta corretta riprende il fatto verificato dal documento."
+        }
+      ]
+    },
+    {
+      "adapter_name": "legacy_answers_dict",
+      "status": "changed_no_worse",
+      "accepted": true,
+      "did_change": true,
+      "worsened": false,
+      "improved": false,
+      "before_defects": 1,
+      "after_defects": 1,
+      "before_shape": {
+        "shape_ok": true,
+        "question_count": 1,
+        "option_count": 4,
+        "correct_markers": 1
+      },
+      "after_shape": {
+        "shape_ok": true,
+        "question_count": 1,
+        "option_count": 4,
+        "correct_markers": 1
+      },
+      "normalized_preview": [
+        {
+          "question_id": "normalized_001",
+          "domanda": "Quale affermazione descrive correttamente il divieto su protezione credenziali?",
+          "opzioni": [
+            {
+              "option_id": "A",
+              "testo": "Le credenziali possono essere condivise liberamente tra più operatori.",
+              "is_correct": false
+            },
+            {
+              "option_id": "B",
+              "testo": "Le credenziali non non devono essere necessariamente condivise tra più operatori.",
+              "is_correct": false
+            },
+            {
+              "option_id": "C",
+              "testo": "Le credenziali non devono essere condivise tra più operatori.",
+              "is_correct": true
+            },
+            {
+              "option_id": "D",
+              "testo": "Le credenziali non devono essere condivise tra più utenti anonimi.",
+              "is_correct": false
+            }
+          ],
+          "correct_option_id": "C",
+          "spiegazione": "La risposta corretta riprende il fatto verificato dal documento."
+        }
+      ]
+    },
+    {
+      "adapter_name": "legacy_choices_strings_index",
+      "status": "changed_no_worse",
+      "accepted": true,
+      "did_change": true,
+      "worsened": false,
+      "improved": false,
+      "before_defects": 1,
+      "after_defects": 1,
+      "before_shape": {
+        "shape_ok": true,
+        "question_count": 1,
+        "option_count": 4,
+        "correct_markers": 1
+      },
+      "after_shape": {
+        "shape_ok": true,
+        "question_count": 1,
+        "option_count": 4,
+        "correct_markers": 1
+      },
+      "normalized_preview": [
+        {
+          "question_id": "normalized_001",
+          "domanda": "Quale affermazione descrive correttamente il divieto su protezione credenziali?",
+          "opzioni": [
+            {
+              "option_id": "A",
+              "testo": "Le credenziali possono essere condivise liberamente tra più operatori.",
+              "is_correct": false
+            },
+            {
+              "option_id": "B",
+              "testo": "Le credenziali non non devono essere necessariamente condivise tra più operatori.",
+              "is_correct": false
+            },
+            {
+              "option_id": "C",
+              "testo": "Le credenziali non devono essere condivise tra più operatori.",
+              "is_correct": true
+            },
+            {
+              "option_id": "D",
+              "testo": "Le credenziali non devono essere condivise tra più utenti anonimi.",
+              "is_correct": false
+            }
+          ],
+          "correct_option_id": "C",
+          "spiegazione": "La risposta corretta riprende il fatto verificato dal documento."
+        }
+      ]
+    },
+    {
+      "adapter_name": "legacy_question_choices_answer_letter",
+      "status": "changed_no_worse",
+      "accepted": true,
+      "did_change": true,
+      "worsened": false,
+      "improved": false,
+      "before_defects": 1,
+      "after_defects": 1,
+      "before_shape": {
+        "shape_ok": true,
+        "question_count": 1,
+        "option_count": 4,
+        "correct_markers": 1
+      },
+      "after_shape": {
+        "shape_ok": true,
+        "question_count": 1,
+        "option_count": 4,
+        "correct_markers": 1
+      },
+      "normalized_preview": [
+        {
+          "question_id": "normalized_001",
+          "domanda": "Quale affermazione descrive correttamente il divieto su protezione credenziali?",
+          "opzioni": [
+            {
+              "option_id": "A",
+              "testo": "Le credenziali possono essere condivise liberamente tra più operatori.",
+              "is_correct": false
+            },
+            {
+              "option_id": "B",
+              "testo": "Le credenziali non non devono essere necessariamente condivise tra più operatori.",
+              "is_correct": false
+            },
+            {
+              "option_id": "C",
+              "testo": "Le credenziali non devono essere condivise tra più operatori.",
+              "is_correct": true
+            },
+            {
+              "option_id": "D",
+              "testo": "Le credenziali non devono essere condivise tra più utenti anonimi.",
+              "is_correct": false
+            }
+          ],
+          "correct_option_id": "C",
+          "spiegazione": "La risposta corretta riprende il fatto verificato dal documento."
+        }
+      ]
+    }
+  ],
+  "best_adapter": {
+    "adapter_name": "legacy_answers_dict",
+    "status": "changed_no_worse",
+    "before_defects": 1,
+    "after_defects": 1,
+    "did_change": true,
+    "improved": false
+  },
+  "compatibility_status": "compatible_with_adapter"
+}

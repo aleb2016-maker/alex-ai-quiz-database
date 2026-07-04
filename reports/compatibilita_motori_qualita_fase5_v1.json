@@ -1,0 +1,462 @@
+{
+  "report_name": "compatibilita_motori_qualita_fase5_v1",
+  "created_at": "2026-07-05T00:34:37",
+  "root": "/Users/alessandrobarbarossa/alex-ai-workspace",
+  "input_defects": 1,
+  "input_shape": {
+    "is_quiz_list": true,
+    "question_count": 1,
+    "option_count": 4,
+    "correct_markers": 1
+  },
+  "motors": [
+    {
+      "motor_id": "backend.main.pulisci_qualita_linguistica_quiz",
+      "module": "backend.main",
+      "function": "pulisci_qualita_linguistica_quiz",
+      "kind": "legacy_live_quality_motor",
+      "load_status": "ok",
+      "load_error": null,
+      "candidates": [
+        {
+          "adapter_name": "direct_list",
+          "status": "exception",
+          "exception": "AttributeError: 'list' object has no attribute 'get'",
+          "traceback": "Traceback (most recent call last):\n  File \"/Users/alessandrobarbarossa/alex-ai-workspace/scripts/verifica_compatibilita_motori_qualita_fase5_v1.py\", line 322, in _evaluate_candidate\n    raw_output = fn(copy.deepcopy(payload))\n  File \"/Users/alessandrobarbarossa/alex-ai-workspace/backend/main.py\", line 1531, in pulisci_qualita_linguistica_quiz\n    domande = quiz_validato.get(\"quiz\", [])\nAttributeError: 'list' object has no attribute 'get'\n",
+          "accepted": false
+        },
+        {
+          "adapter_name": "dict_test_quiz",
+          "status": "unchanged_no_worse",
+          "accepted": true,
+          "did_change": false,
+          "improved": false,
+          "worsened": false,
+          "before_defects": 1,
+          "after_defects": 1,
+          "before_shape": {
+            "is_quiz_list": true,
+            "question_count": 1,
+            "option_count": 4,
+            "correct_markers": 1
+          },
+          "after_shape": {
+            "is_quiz_list": true,
+            "question_count": 1,
+            "option_count": 4,
+            "correct_markers": 1
+          },
+          "output_preview": [
+            {
+              "question_id": "phase5_quiz_question_001",
+              "domanda": "Quale affermazione descrive correttamente il divieto su protezione credenziali?",
+              "opzioni": [
+                {
+                  "option_id": "A",
+                  "testo": "Le credenziali possono essere condivise liberamente tra più operatori.",
+                  "is_correct": false
+                },
+                {
+                  "option_id": "B",
+                  "testo": "Le credenziali non non devono essere necessariamente condivise tra più operatori.",
+                  "is_correct": false
+                },
+                {
+                  "option_id": "C",
+                  "testo": "Le credenziali non devono essere condivise tra più operatori.",
+                  "is_correct": true
+                },
+                {
+                  "option_id": "D",
+                  "testo": "Le credenziali non devono essere condivise tra più utenti anonimi.",
+                  "is_correct": false
+                }
+              ],
+              "correct_option_id": "C",
+              "spiegazione": "La risposta corretta riprende il fatto verificato dal documento.",
+              "micro_concetti": [
+                "protezione credenziali",
+                "condivisione credenziali",
+                "controllo accessi"
+              ],
+              "fonte_pagine": [
+                1,
+                2
+              ]
+            }
+          ]
+        },
+        {
+          "adapter_name": "dict_quiz",
+          "status": "unchanged_no_worse",
+          "accepted": true,
+          "did_change": false,
+          "improved": false,
+          "worsened": false,
+          "before_defects": 1,
+          "after_defects": 1,
+          "before_shape": {
+            "is_quiz_list": true,
+            "question_count": 1,
+            "option_count": 4,
+            "correct_markers": 1
+          },
+          "after_shape": {
+            "is_quiz_list": true,
+            "question_count": 1,
+            "option_count": 4,
+            "correct_markers": 1
+          },
+          "output_preview": [
+            {
+              "question_id": "phase5_quiz_question_001",
+              "domanda": "Quale affermazione descrive correttamente il divieto su protezione credenziali?",
+              "opzioni": [
+                {
+                  "option_id": "A",
+                  "testo": "Le credenziali possono essere condivise liberamente tra più operatori.",
+                  "is_correct": false
+                },
+                {
+                  "option_id": "B",
+                  "testo": "Le credenziali non non devono essere necessariamente condivise tra più operatori.",
+                  "is_correct": false
+                },
+                {
+                  "option_id": "C",
+                  "testo": "Le credenziali non devono essere condivise tra più operatori.",
+                  "is_correct": true
+                },
+                {
+                  "option_id": "D",
+                  "testo": "Le credenziali non devono essere condivise tra più utenti anonimi.",
+                  "is_correct": false
+                }
+              ],
+              "correct_option_id": "C",
+              "spiegazione": "La risposta corretta riprende il fatto verificato dal documento.",
+              "micro_concetti": [
+                "protezione credenziali",
+                "condivisione credenziali",
+                "controllo accessi"
+              ],
+              "fonte_pagine": [
+                1,
+                2
+              ]
+            }
+          ]
+        },
+        {
+          "adapter_name": "dict_tests",
+          "status": "unchanged_no_worse",
+          "accepted": true,
+          "did_change": false,
+          "improved": false,
+          "worsened": false,
+          "before_defects": 1,
+          "after_defects": 1,
+          "before_shape": {
+            "is_quiz_list": true,
+            "question_count": 1,
+            "option_count": 4,
+            "correct_markers": 1
+          },
+          "after_shape": {
+            "is_quiz_list": true,
+            "question_count": 1,
+            "option_count": 4,
+            "correct_markers": 1
+          },
+          "output_preview": [
+            {
+              "question_id": "phase5_quiz_question_001",
+              "domanda": "Quale affermazione descrive correttamente il divieto su protezione credenziali?",
+              "opzioni": [
+                {
+                  "option_id": "A",
+                  "testo": "Le credenziali possono essere condivise liberamente tra più operatori.",
+                  "is_correct": false
+                },
+                {
+                  "option_id": "B",
+                  "testo": "Le credenziali non non devono essere necessariamente condivise tra più operatori.",
+                  "is_correct": false
+                },
+                {
+                  "option_id": "C",
+                  "testo": "Le credenziali non devono essere condivise tra più operatori.",
+                  "is_correct": true
+                },
+                {
+                  "option_id": "D",
+                  "testo": "Le credenziali non devono essere condivise tra più utenti anonimi.",
+                  "is_correct": false
+                }
+              ],
+              "correct_option_id": "C",
+              "spiegazione": "La risposta corretta riprende il fatto verificato dal documento.",
+              "micro_concetti": [
+                "protezione credenziali",
+                "condivisione credenziali",
+                "controllo accessi"
+              ],
+              "fonte_pagine": [
+                1,
+                2
+              ]
+            }
+          ]
+        },
+        {
+          "adapter_name": "dict_legacy_questions",
+          "status": "unchanged_no_worse",
+          "accepted": true,
+          "did_change": false,
+          "improved": false,
+          "worsened": false,
+          "before_defects": 1,
+          "after_defects": 1,
+          "before_shape": {
+            "is_quiz_list": true,
+            "question_count": 1,
+            "option_count": 4,
+            "correct_markers": 1
+          },
+          "after_shape": {
+            "is_quiz_list": true,
+            "question_count": 1,
+            "option_count": 4,
+            "correct_markers": 1
+          },
+          "output_preview": [
+            {
+              "question_id": "phase5_quiz_question_001",
+              "domanda": "Quale affermazione descrive correttamente il divieto su protezione credenziali?",
+              "opzioni": [
+                {
+                  "option_id": "A",
+                  "testo": "Le credenziali possono essere condivise liberamente tra più operatori.",
+                  "is_correct": false
+                },
+                {
+                  "option_id": "B",
+                  "testo": "Le credenziali non non devono essere necessariamente condivise tra più operatori.",
+                  "is_correct": false
+                },
+                {
+                  "option_id": "C",
+                  "testo": "Le credenziali non devono essere condivise tra più operatori.",
+                  "is_correct": true
+                },
+                {
+                  "option_id": "D",
+                  "testo": "Le credenziali non devono essere condivise tra più utenti anonimi.",
+                  "is_correct": false
+                }
+              ],
+              "correct_option_id": "C",
+              "spiegazione": "La risposta corretta riprende il fatto verificato dal documento.",
+              "micro_concetti": [
+                "protezione credenziali",
+                "condivisione credenziali",
+                "controllo accessi"
+              ],
+              "fonte_pagine": [
+                1,
+                2
+              ]
+            }
+          ]
+        },
+        {
+          "adapter_name": "dict_full_phase5_output",
+          "status": "unchanged_no_worse",
+          "accepted": true,
+          "did_change": false,
+          "improved": false,
+          "worsened": false,
+          "before_defects": 1,
+          "after_defects": 1,
+          "before_shape": {
+            "is_quiz_list": true,
+            "question_count": 1,
+            "option_count": 4,
+            "correct_markers": 1
+          },
+          "after_shape": {
+            "is_quiz_list": true,
+            "question_count": 1,
+            "option_count": 4,
+            "correct_markers": 1
+          },
+          "output_preview": [
+            {
+              "question_id": "phase5_quiz_question_001",
+              "domanda": "Quale affermazione descrive correttamente il divieto su protezione credenziali?",
+              "opzioni": [
+                {
+                  "option_id": "A",
+                  "testo": "Le credenziali possono essere condivise liberamente tra più operatori.",
+                  "is_correct": false
+                },
+                {
+                  "option_id": "B",
+                  "testo": "Le credenziali non non devono essere necessariamente condivise tra più operatori.",
+                  "is_correct": false
+                },
+                {
+                  "option_id": "C",
+                  "testo": "Le credenziali non devono essere condivise tra più operatori.",
+                  "is_correct": true
+                },
+                {
+                  "option_id": "D",
+                  "testo": "Le credenziali non devono essere condivise tra più utenti anonimi.",
+                  "is_correct": false
+                }
+              ],
+              "correct_option_id": "C",
+              "spiegazione": "La risposta corretta riprende il fatto verificato dal documento.",
+              "micro_concetti": [
+                "protezione credenziali",
+                "condivisione credenziali",
+                "controllo accessi"
+              ],
+              "fonte_pagine": [
+                1,
+                2
+              ]
+            }
+          ]
+        }
+      ],
+      "best_adapter": {
+        "adapter_name": "dict_test_quiz",
+        "status": "unchanged_no_worse",
+        "before_defects": 1,
+        "after_defects": 1,
+        "did_change": false,
+        "improved": false
+      },
+      "compatibility_status": "compatible_with_adapter"
+    },
+    {
+      "motor_id": "scripts.rag_motore_didattico_riutilizzabile_v35c.refine_tests",
+      "module": "scripts.rag_motore_didattico_riutilizzabile_v35c",
+      "function": "refine_tests",
+      "kind": "legacy_live_didactic_motor",
+      "load_status": "ok",
+      "load_error": null,
+      "candidates": [
+        {
+          "adapter_name": "direct_list",
+          "status": "worsened",
+          "accepted": false,
+          "did_change": true,
+          "improved": false,
+          "worsened": true,
+          "before_defects": 1,
+          "after_defects": 3,
+          "before_shape": {
+            "is_quiz_list": true,
+            "question_count": 1,
+            "option_count": 4,
+            "correct_markers": 1
+          },
+          "after_shape": {
+            "is_quiz_list": true,
+            "question_count": 1,
+            "option_count": 4,
+            "correct_markers": 1
+          },
+          "output_preview": [
+            {
+              "question_id": "phase5_quiz_question_001",
+              "domanda": "Quale affermazione descrive correttamente il divieto su protezione credenziali?",
+              "opzioni": [
+                {
+                  "option_id": "A",
+                  "testo": "Le credenziali possono essere condivise liberamente tra più operatori.",
+                  "is_correct": false
+                },
+                {
+                  "option_id": "B",
+                  "testo": "Le credenziali non non devono essere necessariamente condivise tra più operatori.",
+                  "is_correct": false
+                },
+                {
+                  "option_id": "C",
+                  "testo": "Le credenziali non devono essere condivise tra più operatori.",
+                  "is_correct": true
+                },
+                {
+                  "option_id": "D",
+                  "testo": "Le credenziali non devono essere condivise tra più utenti anonimi.",
+                  "is_correct": false
+                }
+              ],
+              "correct_option_id": "C",
+              "spiegazione": "La risposta corretta riprende il fatto verificato dal documento.",
+              "micro_concetti": [
+                "protezione credenziali",
+                "condivisione credenziali",
+                "controllo accessi"
+              ],
+              "fonte_pagine": [
+                1,
+                2
+              ],
+              "risposta_corretta": "",
+              "opzioni_visibili": [
+                "{'option_id': 'A', 'testo': 'Le credenziali possono essere condivise liberamente tra più operatori.', 'is_correct': False}.",
+                "{'option_id': 'B', 'testo': 'Le credenziali non non devono essere necessariamente condivise tra più operatori.', 'is_correct': False}.",
+                "{'option_id': 'C', 'testo': 'Le credenziali non devono essere condivise tra più operatori.', 'is_correct': True}.",
+                "{'option_id': 'D', 'testo': 'Le credenziali non devono essere condivise tra più utenti anonimi.', 'is_correct': False}."
+              ],
+              "risposta_corretta_visibile": "{'option_id': 'A', 'testo': 'Le credenziali possono essere condivise liberamente tra più operatori.', 'is_correct': False}.",
+              "fonte_visibile": "Fonte: sezione “test”."
+            }
+          ]
+        },
+        {
+          "adapter_name": "dict_test_quiz",
+          "status": "exception",
+          "exception": "ValueError: dictionary update sequence element #0 has length 1; 2 is required",
+          "traceback": "Traceback (most recent call last):\n  File \"/Users/alessandrobarbarossa/alex-ai-workspace/scripts/verifica_compatibilita_motori_qualita_fase5_v1.py\", line 322, in _evaluate_candidate\n    raw_output = fn(copy.deepcopy(payload))\n  File \"/Users/alessandrobarbarossa/alex-ai-workspace/scripts/rag_motore_didattico_riutilizzabile_v35c.py\", line 166, in refine_tests\n    t = dict(item)\nValueError: dictionary update sequence element #0 has length 1; 2 is required\n",
+          "accepted": false
+        },
+        {
+          "adapter_name": "dict_quiz",
+          "status": "exception",
+          "exception": "ValueError: dictionary update sequence element #0 has length 1; 2 is required",
+          "traceback": "Traceback (most recent call last):\n  File \"/Users/alessandrobarbarossa/alex-ai-workspace/scripts/verifica_compatibilita_motori_qualita_fase5_v1.py\", line 322, in _evaluate_candidate\n    raw_output = fn(copy.deepcopy(payload))\n  File \"/Users/alessandrobarbarossa/alex-ai-workspace/scripts/rag_motore_didattico_riutilizzabile_v35c.py\", line 166, in refine_tests\n    t = dict(item)\nValueError: dictionary update sequence element #0 has length 1; 2 is required\n",
+          "accepted": false
+        },
+        {
+          "adapter_name": "dict_tests",
+          "status": "exception",
+          "exception": "ValueError: dictionary update sequence element #0 has length 1; 2 is required",
+          "traceback": "Traceback (most recent call last):\n  File \"/Users/alessandrobarbarossa/alex-ai-workspace/scripts/verifica_compatibilita_motori_qualita_fase5_v1.py\", line 322, in _evaluate_candidate\n    raw_output = fn(copy.deepcopy(payload))\n  File \"/Users/alessandrobarbarossa/alex-ai-workspace/scripts/rag_motore_didattico_riutilizzabile_v35c.py\", line 166, in refine_tests\n    t = dict(item)\nValueError: dictionary update sequence element #0 has length 1; 2 is required\n",
+          "accepted": false
+        },
+        {
+          "adapter_name": "dict_legacy_questions",
+          "status": "exception",
+          "exception": "ValueError: dictionary update sequence element #0 has length 1; 2 is required",
+          "traceback": "Traceback (most recent call last):\n  File \"/Users/alessandrobarbarossa/alex-ai-workspace/scripts/verifica_compatibilita_motori_qualita_fase5_v1.py\", line 322, in _evaluate_candidate\n    raw_output = fn(copy.deepcopy(payload))\n  File \"/Users/alessandrobarbarossa/alex-ai-workspace/scripts/rag_motore_didattico_riutilizzabile_v35c.py\", line 166, in refine_tests\n    t = dict(item)\nValueError: dictionary update sequence element #0 has length 1; 2 is required\n",
+          "accepted": false
+        },
+        {
+          "adapter_name": "dict_full_phase5_output",
+          "status": "exception",
+          "exception": "ValueError: dictionary update sequence element #0 has length 1; 2 is required",
+          "traceback": "Traceback (most recent call last):\n  File \"/Users/alessandrobarbarossa/alex-ai-workspace/scripts/verifica_compatibilita_motori_qualita_fase5_v1.py\", line 322, in _evaluate_candidate\n    raw_output = fn(copy.deepcopy(payload))\n  File \"/Users/alessandrobarbarossa/alex-ai-workspace/scripts/rag_motore_didattico_riutilizzabile_v35c.py\", line 166, in refine_tests\n    t = dict(item)\nValueError: dictionary update sequence element #0 has length 1; 2 is required\n",
+          "accepted": false
+        }
+      ],
+      "best_adapter": null,
+      "compatibility_status": "not_compatible_yet"
+    }
+  ]
+}
