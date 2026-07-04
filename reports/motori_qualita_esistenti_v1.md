@@ -1,0 +1,167 @@
+# Motori qualità esistenti V1
+
+- Generato: `2026-07-04T23:57:58`
+- Totale candidati: `1337`
+
+## Top candidati
+
+- `file_candidate` `trova_motori_qualita_esistenti_v1.py` in `scripts/trova_motori_qualita_esistenti_v1.py` riga `1` args_required=`-` categorie=`grammatica(20), qualita(18), didattica(11)`
+  - File con parole chiave qualità, ma senza funzioni/classi candidate evidenti.
+- `function` `q5_fix_italian_typography` in `backend/motori_scrittura.py` riga `3936` args_required=`1` categorie=`grammatica(6), qualita(2)`
+  - Funzione con nome/docstring compatibile con motori qualità.
+- `function` `build_phase5_quality_study_quiz` in `backend/motori_scrittura.py` riga `5730` args_required=`1` categorie=`grammatica(1), qualita(2), didattica(5)`
+  - Funzione con nome/docstring compatibile con motori qualità.
+- `syntax_error_file_candidate` `rag_cleaner_finale_visibile_v35k.py` in `scripts/rag_cleaner_finale_visibile_v35k.py` riga `1` args_required=`-` categorie=`grammatica(8), qualita(1), didattica(6)`
+  - Il file contiene parole chiave qualità ma non è parsabile con ast.
+- `file_candidate` `verifica_rag_revisore_qualita_testuale_v35g.py` in `scripts/verifica_rag_revisore_qualita_testuale_v35g.py` riga `1` args_required=`-` categorie=`grammatica(5), qualita(6), didattica(3)`
+  - File con parole chiave qualità, ma senza funzioni/classi candidate evidenti.
+- `function` `pulisci_qualita_linguistica_quiz` in `backend/main_backup_prima_regole_tcp_finali.py` riga `985` args_required=`1` categorie=`grammatica(2), qualita(1), didattica(2)`
+  - Funzione con nome/docstring compatibile con motori qualità.
+- `function` `pulisci_qualita_linguistica_quiz` in `backend/main_backup_fix_informatica_finale_sicura.py` riga `1524` args_required=`1` categorie=`grammatica(2), qualita(1), didattica(2)`
+  - Funzione con nome/docstring compatibile con motori qualità.
+- `function` `pulisci_qualita_linguistica_quiz` in `backend/main_backup_fix_tecnico_informatica.py` riga `1303` args_required=`1` categorie=`grammatica(2), qualita(1), didattica(2)`
+  - Funzione con nome/docstring compatibile con motori qualità.
+- `function` `pulisci_qualita_linguistica_quiz` in `backend/main_backup_prima_filtro_tcp.py` riga `911` args_required=`1` categorie=`grammatica(2), qualita(1), didattica(2)`
+  - Funzione con nome/docstring compatibile con motori qualità.
+- `function` `pulisci_qualita_linguistica_quiz` in `backend/main_backup_fix_tcp_flow_control.py` riga `1434` args_required=`1` categorie=`grammatica(2), qualita(1), didattica(2)`
+  - Funzione con nome/docstring compatibile con motori qualità.
+- `function` `pulisci_qualita_linguistica_quiz` in `backend/main_backup_prima_singola_diretta_batch.py` riga `911` args_required=`1` categorie=`grammatica(2), qualita(1), didattica(2)`
+  - Funzione con nome/docstring compatibile con motori qualità.
+- `function` `pulisci_qualita_linguistica_quiz` in `backend/main_backup_fix_timeout_finale_informatica.py` riga `1524` args_required=`1` categorie=`grammatica(2), qualita(1), didattica(2)`
+  - Funzione con nome/docstring compatibile con motori qualità.
+- `function` `pulisci_qualita_linguistica_quiz` in `backend/main_backup_informatica_safe_topics.py` riga `1487` args_required=`1` categorie=`grammatica(2), qualita(1), didattica(2)`
+  - Funzione con nome/docstring compatibile con motori qualità.
+- `function` `normalize_text` in `backend/motori_scrittura.py` riga `402` args_required=`1` categorie=`grammatica(5)`
+  - Funzione con nome/docstring compatibile con motori qualità.
+- `function` `build_study_questions_draft` in `backend/motori_scrittura.py` riga `2493` args_required=`1` categorie=`qualita(2), didattica(3)`
+  - Funzione con nome/docstring compatibile con motori qualità.
+- `function` `qg_validate_quiz` in `backend/motori_scrittura.py` riga `3296` args_required=`2` categorie=`qualita(3), didattica(2)`
+  - Funzione con nome/docstring compatibile con motori qualità.
+- `function` `pulisci_qualita_linguistica_quiz` in `backend/main_backup_prima_batch_quiz.py` riga `861` args_required=`1` categorie=`grammatica(2), qualita(1), didattica(2)`
+  - Funzione con nome/docstring compatibile con motori qualità.
+- `function` `pulisci_qualita_linguistica_quiz` in `backend/main_backup_endpoint_finale_informatica.py` riga `1524` args_required=`1` categorie=`grammatica(2), qualita(1), didattica(2)`
+  - Funzione con nome/docstring compatibile con motori qualità.
+- `function` `pulisci_qualita_linguistica_quiz` in `backend/main_backup_prima_batch_fallback.py` riga `861` args_required=`1` categorie=`grammatica(2), qualita(1), didattica(2)`
+  - Funzione con nome/docstring compatibile con motori qualità.
+- `function` `pulisci_qualita_linguistica_quiz` in `backend/main_backup_prima_filtro_ambiguita_intelligente.py` riga `861` args_required=`1` categorie=`grammatica(2), qualita(1), didattica(2)`
+  - Funzione con nome/docstring compatibile con motori qualità.
+- `function` `pulisci_qualita_linguistica_quiz` in `backend/main_backup_prima_rotazione_sotto_argomenti.py` riga `861` args_required=`1` categorie=`grammatica(2), qualita(1), didattica(2)`
+  - Funzione con nome/docstring compatibile con motori qualità.
+- `function` `pulisci_qualita_linguistica_quiz` in `backend/main.py` riga `1526` args_required=`1` categorie=`grammatica(2), qualita(1), didattica(2)`
+  - Funzione con nome/docstring compatibile con motori qualità.
+- `function` `pulisci_qualita_linguistica_quiz` in `backend/main_backup_chiusura_informatica.py` riga `999` args_required=`1` categorie=`grammatica(2), qualita(1), didattica(2)`
+  - Funzione con nome/docstring compatibile con motori qualità.
+- `function` `pulisci_qualita_linguistica_quiz` in `backend/main_backup_prima_filtro_tcp_header.py` riga `963` args_required=`1` categorie=`grammatica(2), qualita(1), didattica(2)`
+  - Funzione con nome/docstring compatibile con motori qualità.
+- `function` `refine_tests` in `scripts/rag_motore_didattico_riutilizzabile_v35c.py` riga `150` args_required=`1` categorie=`qualita(2), didattica(3)`
+  - Funzione con nome/docstring compatibile con motori qualità.
+- `file_candidate` `installa_rag_adapter_quiz_ufficiale_v43.py` in `scripts/installa_rag_adapter_quiz_ufficiale_v43.py` riga `1` args_required=`-` categorie=`grammatica(5), qualita(4), didattica(4)`
+  - File con parole chiave qualità, ma senza funzioni/classi candidate evidenti.
+- `file_candidate` `crea_pacchetto_rag_riutilizzabile.py` in `scripts/crea_pacchetto_rag_riutilizzabile.py` riga `1` args_required=`-` categorie=`grammatica(2), qualita(7), didattica(4)`
+  - File con parole chiave qualità, ma senza funzioni/classi candidate evidenti.
+- `function` `safe_list_of_strings` in `backend/motori_scrittura.py` riga `424` args_required=`2` categorie=`qualita(3), didattica(1)`
+  - Funzione con nome/docstring compatibile con motori qualità.
+- `function` `contains_forbidden_signature` in `backend/motori_scrittura.py` riga `570` args_required=`2` categorie=`qualita(4)`
+  - Funzione con nome/docstring compatibile con motori qualità.
+- `function` `validate_map_extraction_light` in `backend/motori_scrittura.py` riga `766` args_required=`2` categorie=`qualita(4)`
+  - Funzione con nome/docstring compatibile con motori qualità.
+- `function` `build_phase5_quality_summary_cards` in `backend/motori_scrittura.py` riga `4684` args_required=`1` categorie=`grammatica(1), qualita(2), didattica(1)`
+  - Funzione con nome/docstring compatibile con motori qualità.
+- `function` `q521_generic_false_distractors` in `backend/motori_scrittura.py` riga `5892` args_required=`1` categorie=`qualita(2), didattica(2)`
+  - Funzione con nome/docstring compatibile con motori qualità.
+- `function` `q52_false_distractors_from_fact` in `backend/motori_scrittura.py` riga `5928` args_required=`1` categorie=`qualita(2), didattica(2)`
+  - Funzione con nome/docstring compatibile con motori qualità.
+- `function` `prepara_testo_per_controllo_punteggiatura` in `scripts/qualita_linguistica.py` riga `84` args_required=`1` categorie=`grammatica(2), qualita(1), didattica(1)`
+  - Funzione con nome/docstring compatibile con motori qualità.
+- `file_candidate` `corregge_linguistica_inglese_quarto_blocco.py` in `scripts/corregge_linguistica_inglese_quarto_blocco.py` riga `1` args_required=`-` categorie=`grammatica(5), qualita(1), didattica(6)`
+  - File con parole chiave qualità, ma senza funzioni/classi candidate evidenti.
+- `function` `normalizza_quiz_generato` in `backend/main_backup_prima_regole_tcp_finali.py` riga `349` args_required=`1` categorie=`grammatica(1), qualita(1), didattica(1)`
+  - Funzione con nome/docstring compatibile con motori qualità.
+- `function` `controlla_domanda_ambigua` in `backend/main_backup_prima_regole_tcp_finali.py` riga `482` args_required=`1` categorie=`qualita(1), didattica(2)`
+  - Funzione con nome/docstring compatibile con motori qualità.
+- `function` `normalizza_quiz_generato` in `backend/main_backup_fix_informatica_finale_sicura.py` riga `469` args_required=`1` categorie=`grammatica(1), qualita(1), didattica(1)`
+  - Funzione con nome/docstring compatibile con motori qualità.
+- `function` `controlla_domanda_ambigua` in `backend/main_backup_fix_informatica_finale_sicura.py` riga `602` args_required=`1` categorie=`qualita(1), didattica(2)`
+  - Funzione con nome/docstring compatibile con motori qualità.
+- `function` `controlla_duplicati_informatica` in `backend/main_backup_fix_informatica_finale_sicura.py` riga `1300` args_required=`1` categorie=`qualita(1), didattica(2)`
+  - Funzione con nome/docstring compatibile con motori qualità.
+- `function` `normalizza_quiz_generato` in `backend/main_backup_prima_pulizia_linguistica.py` riga `349` args_required=`1` categorie=`grammatica(1), qualita(1), didattica(1)`
+  - Funzione con nome/docstring compatibile con motori qualità.
+- `function` `controlla_domanda_ambigua` in `backend/main_backup_prima_pulizia_linguistica.py` riga `481` args_required=`1` categorie=`didattica(3)`
+  - Funzione con nome/docstring compatibile con motori qualità.
+- `function` `normalizza_quiz_generato` in `backend/main_backup_fix_tecnico_informatica.py` riga `469` args_required=`1` categorie=`grammatica(1), qualita(1), didattica(1)`
+  - Funzione con nome/docstring compatibile con motori qualità.
+- `function` `controlla_domanda_ambigua` in `backend/main_backup_fix_tecnico_informatica.py` riga `602` args_required=`1` categorie=`qualita(1), didattica(2)`
+  - Funzione con nome/docstring compatibile con motori qualità.
+- `function` `controlla_duplicati_informatica` in `backend/main_backup_fix_tecnico_informatica.py` riga `1098` args_required=`1` categorie=`qualita(1), didattica(2)`
+  - Funzione con nome/docstring compatibile con motori qualità.
+- `function` `normalizza_quiz_generato` in `backend/main_backup_prima_filtro_tcp.py` riga `349` args_required=`1` categorie=`grammatica(1), qualita(1), didattica(1)`
+  - Funzione con nome/docstring compatibile con motori qualità.
+- `function` `controlla_domanda_ambigua` in `backend/main_backup_prima_filtro_tcp.py` riga `482` args_required=`1` categorie=`qualita(1), didattica(2)`
+  - Funzione con nome/docstring compatibile con motori qualità.
+- `function` `normalizza_quiz_generato` in `backend/main_backup_prima_link_download_risposta.py` riga `349` args_required=`1` categorie=`grammatica(1), qualita(1), didattica(1)`
+  - Funzione con nome/docstring compatibile con motori qualità.
+- `function` `normalizza_quiz_generato` in `backend/main_backup_fix_tcp_flow_control.py` riga `469` args_required=`1` categorie=`grammatica(1), qualita(1), didattica(1)`
+  - Funzione con nome/docstring compatibile con motori qualità.
+- `function` `controlla_domanda_ambigua` in `backend/main_backup_fix_tcp_flow_control.py` riga `602` args_required=`1` categorie=`qualita(1), didattica(2)`
+  - Funzione con nome/docstring compatibile con motori qualità.
+- `function` `controlla_duplicati_informatica` in `backend/main_backup_fix_tcp_flow_control.py` riga `1219` args_required=`1` categorie=`qualita(1), didattica(2)`
+  - Funzione con nome/docstring compatibile con motori qualità.
+- `function` `normalizza_quiz_generato` in `backend/main_backup_prima_prompt_anti_ambiguita.py` riga `349` args_required=`1` categorie=`grammatica(1), qualita(1), didattica(1)`
+  - Funzione con nome/docstring compatibile con motori qualità.
+- `function` `controlla_domanda_ambigua` in `backend/main_backup_prima_prompt_anti_ambiguita.py` riga `481` args_required=`1` categorie=`didattica(3)`
+  - Funzione con nome/docstring compatibile con motori qualità.
+- `function` `normalizza_quiz_generato` in `backend/main_backup_prima_revisore_ai.py` riga `347` args_required=`1` categorie=`grammatica(1), qualita(1), didattica(1)`
+  - Funzione con nome/docstring compatibile con motori qualità.
+- `function` `normalizza_quiz_generato` in `backend/main_backup_prima_singola_diretta_batch.py` riga `349` args_required=`1` categorie=`grammatica(1), qualita(1), didattica(1)`
+  - Funzione con nome/docstring compatibile con motori qualità.
+- `function` `controlla_domanda_ambigua` in `backend/main_backup_prima_singola_diretta_batch.py` riga `482` args_required=`1` categorie=`qualita(1), didattica(2)`
+  - Funzione con nome/docstring compatibile con motori qualità.
+- `function` `normalizza_quiz_generato` in `backend/main_backup_fix_timeout_finale_informatica.py` riga `469` args_required=`1` categorie=`grammatica(1), qualita(1), didattica(1)`
+  - Funzione con nome/docstring compatibile con motori qualità.
+- `function` `controlla_domanda_ambigua` in `backend/main_backup_fix_timeout_finale_informatica.py` riga `602` args_required=`1` categorie=`qualita(1), didattica(2)`
+  - Funzione con nome/docstring compatibile con motori qualità.
+- `function` `controlla_duplicati_informatica` in `backend/main_backup_fix_timeout_finale_informatica.py` riga `1300` args_required=`1` categorie=`qualita(1), didattica(2)`
+  - Funzione con nome/docstring compatibile con motori qualità.
+- `function` `normalizza_quiz_generato` in `backend/main_backup_informatica_safe_topics.py` riga `469` args_required=`1` categorie=`grammatica(1), qualita(1), didattica(1)`
+  - Funzione con nome/docstring compatibile con motori qualità.
+- `function` `controlla_domanda_ambigua` in `backend/main_backup_informatica_safe_topics.py` riga `602` args_required=`1` categorie=`qualita(1), didattica(2)`
+  - Funzione con nome/docstring compatibile con motori qualità.
+- `function` `controlla_duplicati_informatica` in `backend/main_backup_informatica_safe_topics.py` riga `1268` args_required=`1` categorie=`qualita(1), didattica(2)`
+  - Funzione con nome/docstring compatibile con motori qualità.
+- `function` `find_forbidden_signatures` in `backend/motori_scrittura.py` riga `592` args_required=`2` categorie=`qualita(2), didattica(1)`
+  - Funzione con nome/docstring compatibile con motori qualità.
+- `function` `qg_validate_study_questions` in `backend/motori_scrittura.py` riga `3224` args_required=`2` categorie=`qualita(2), didattica(1)`
+  - Funzione con nome/docstring compatibile con motori qualità.
+- `function` `run_super_quality_gate` in `backend/motori_scrittura.py` riga `3637` args_required=`1` categorie=`grammatica(1), qualita(2)`
+  - Funzione con nome/docstring compatibile con motori qualità.
+- `function` `q5_extract_facts_from_gate` in `backend/motori_scrittura.py` riga `4085` args_required=`1` categorie=`grammatica(1), qualita(2)`
+  - Funzione con nome/docstring compatibile con motori qualità.
+- `function` `q5_validate_phase4_for_summary_cards` in `backend/motori_scrittura.py` riga `4623` args_required=`2` categorie=`qualita(2), didattica(1)`
+  - Funzione con nome/docstring compatibile con motori qualità.
+- `function` `q5_find_forbidden_in_final_text` in `backend/motori_scrittura.py` riga `4651` args_required=`1` categorie=`qualita(2), didattica(1)`
+  - Funzione con nome/docstring compatibile con motori qualità.
+- `function` `q52_false_distractors_from_fact` in `backend/motori_scrittura.py` riga `5462` args_required=`1` categorie=`didattica(3)`
+  - Funzione con nome/docstring compatibile con motori qualità.
+- `function` `q52_validate_study_questions` in `backend/motori_scrittura.py` riga `5609` args_required=`1` categorie=`qualita(2), didattica(1)`
+  - Funzione con nome/docstring compatibile con motori qualità.
+- `function` `q52_validate_quiz` in `backend/motori_scrittura.py` riga `5644` args_required=`2` categorie=`qualita(2), didattica(1)`
+  - Funzione con nome/docstring compatibile con motori qualità.
+- `function` `q52_validate_phase4_for_study_quiz` in `backend/motori_scrittura.py` riga `5706` args_required=`2` categorie=`qualita(2), didattica(1)`
+  - Funzione con nome/docstring compatibile con motori qualità.
+- `function` `normalizza_quiz_generato` in `backend/main_backup_prima_batch_quiz.py` riga `349` args_required=`1` categorie=`grammatica(1), qualita(1), didattica(1)`
+  - Funzione con nome/docstring compatibile con motori qualità.
+- `function` `controlla_domanda_ambigua` in `backend/main_backup_prima_batch_quiz.py` riga `481` args_required=`1` categorie=`didattica(3)`
+  - Funzione con nome/docstring compatibile con motori qualità.
+- `function` `normalizza_quiz_generato` in `backend/main_backup_prima_filtro_domande_ambigue.py` riga `349` args_required=`1` categorie=`grammatica(1), qualita(1), didattica(1)`
+  - Funzione con nome/docstring compatibile con motori qualità.
+- `function` `normalizza_quiz_generato` in `backend/main_backup_prima_controllo_qualita.py` riga `347` args_required=`1` categorie=`grammatica(1), qualita(1), didattica(1)`
+  - Funzione con nome/docstring compatibile con motori qualità.
+- `function` `normalizza_quiz_generato` in `backend/main_backup_endpoint_finale_informatica.py` riga `469` args_required=`1` categorie=`grammatica(1), qualita(1), didattica(1)`
+  - Funzione con nome/docstring compatibile con motori qualità.
+- `function` `controlla_domanda_ambigua` in `backend/main_backup_endpoint_finale_informatica.py` riga `602` args_required=`1` categorie=`qualita(1), didattica(2)`
+  - Funzione con nome/docstring compatibile con motori qualità.
+- `function` `controlla_duplicati_informatica` in `backend/main_backup_endpoint_finale_informatica.py` riga `1300` args_required=`1` categorie=`qualita(1), didattica(2)`
+  - Funzione con nome/docstring compatibile con motori qualità.
+- `function` `normalizza_quiz_generato` in `backend/main_backup_prima_batch_fallback.py` riga `349` args_required=`1` categorie=`grammatica(1), qualita(1), didattica(1)`
+  - Funzione con nome/docstring compatibile con motori qualità.
