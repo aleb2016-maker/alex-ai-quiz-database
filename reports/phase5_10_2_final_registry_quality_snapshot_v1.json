@@ -1,0 +1,128 @@
+{
+  "report_name": "phase5_10_2_final_registry_quality_snapshot_v1",
+  "status": "PASS",
+  "registry_motors_count": 11,
+  "raw_defects": {
+    "summary_card_bad_patterns": 10,
+    "study_mechanical_questions": 0,
+    "quiz_mechanical_questions": 0,
+    "quiz_true_fact_distractors": 0,
+    "quiz_duplicate_questions": 0,
+    "quiz_rough_explanations": 1,
+    "micro_concepts_sentence_punctuation": 0,
+    "total": 11
+  },
+  "final_defects": {
+    "summary_card_bad_patterns": 0,
+    "study_mechanical_questions": 0,
+    "quiz_mechanical_questions": 0,
+    "quiz_true_fact_distractors": 0,
+    "quiz_duplicate_questions": 0,
+    "quiz_rough_explanations": 0,
+    "micro_concepts_sentence_punctuation": 0,
+    "total": 0
+  },
+  "improvement_total": 11,
+  "correct_option_map_preserved": true,
+  "registry_motors": [
+    {
+      "index": 1,
+      "motor_id": "backend.phase5_quiz_true_distractor_repair_v1.repair_quiz_target_v1",
+      "module_name": "backend.phase5_quiz_true_distractor_repair_v1",
+      "function_name": "repair_quiz_target_v1",
+      "adapter_name": "quiz_list",
+      "target_kind": "quiz"
+    },
+    {
+      "index": 2,
+      "motor_id": "backend.phase5_universal_quiz_quality_adapter_v1.universal_quiz_quality_target_v1",
+      "module_name": "backend.phase5_universal_quiz_quality_adapter_v1",
+      "function_name": "universal_quiz_quality_target_v1",
+      "adapter_name": "quiz_list",
+      "target_kind": "quiz"
+    },
+    {
+      "index": 3,
+      "motor_id": "scripts.rag_cleaner_finale_universale_v35k.clean_output",
+      "module_name": "scripts.rag_cleaner_finale_universale_v35k",
+      "function_name": "clean_output",
+      "adapter_name": "summary_dict",
+      "target_kind": "summary"
+    },
+    {
+      "index": 4,
+      "motor_id": "scripts.rag_motore_didattico_riutilizzabile_v35c.refine_study_questions",
+      "module_name": "scripts.rag_motore_didattico_riutilizzabile_v35c",
+      "function_name": "refine_study_questions",
+      "adapter_name": "cards_list",
+      "target_kind": "study"
+    },
+    {
+      "index": 5,
+      "motor_id": "scripts.rag_motore_test_riutilizzabile_v35d.refine_output",
+      "module_name": "scripts.rag_motore_test_riutilizzabile_v35d",
+      "function_name": "refine_output",
+      "adapter_name": "summary_dict",
+      "target_kind": "summary"
+    },
+    {
+      "index": 6,
+      "motor_id": "scripts.rag_revisore_accordo_pronomi_v35j.improve_output",
+      "module_name": "scripts.rag_revisore_accordo_pronomi_v35j",
+      "function_name": "improve_output",
+      "adapter_name": "summary_dict",
+      "target_kind": "summary"
+    },
+    {
+      "index": 7,
+      "motor_id": "scripts.rag_revisore_qualita_testuale_v35g.refine_output",
+      "module_name": "scripts.rag_revisore_qualita_testuale_v35g",
+      "function_name": "refine_output",
+      "adapter_name": "summary_dict",
+      "target_kind": "summary"
+    },
+    {
+      "index": 8,
+      "motor_id": "scripts.rag_revisore_qualita_testuale_v35g.refine_study",
+      "module_name": "scripts.rag_revisore_qualita_testuale_v35g",
+      "function_name": "refine_study",
+      "adapter_name": "phase5_full_output",
+      "target_kind": "full_output"
+    },
+    {
+      "index": 9,
+      "motor_id": "backend.main.pulisci_qualita_linguistica_quiz",
+      "module_name": "backend.main",
+      "function_name": "pulisci_qualita_linguistica_quiz",
+      "adapter_name": "dict_test_quiz",
+      "target_kind": "quiz"
+    },
+    {
+      "index": 10,
+      "motor_id": "scripts.rag_motore_didattico_riutilizzabile_v35c.refine_tests",
+      "module_name": "scripts.rag_motore_didattico_riutilizzabile_v35c",
+      "function_name": "refine_tests",
+      "adapter_name": "legacy_answers_dict",
+      "target_kind": "quiz"
+    },
+    {
+      "index": 11,
+      "motor_id": "backend.phase5_universal_text_cleaner_summary_cards_v1.universal_text_cleaner_summary_cards_payload_target_v1",
+      "module_name": "backend.phase5_universal_text_cleaner_summary_cards_v1",
+      "function_name": "universal_text_cleaner_summary_cards_payload_target_v1",
+      "adapter_name": "payload",
+      "target_kind": "full_output"
+    }
+  ],
+  "registry_meta_summary": {
+    "motors_meta_count": 11,
+    "known_text_defects_before": 3,
+    "known_text_defects_after": 3
+  },
+  "errors": [],
+  "notes": [
+    "Snapshot diagnostico finale dopo 5.9.9 e 5.10.1.",
+    "Non modifica motori: misura soltanto l'effetto del registry completo.",
+    "Il payload usato contiene difetti noti in summary/card, study questions e quiz."
+  ]
+}
