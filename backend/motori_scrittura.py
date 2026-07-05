@@ -5783,10 +5783,26 @@ def build_phase5_quality_study_quiz(
         if not result.test_quiz:
             result.errors.append("PHASE5_TEST_QUIZ_EMPTY")
 
+        # FASE 5.13C.1 — STUDY QUESTIONS 51 REAL CONNECTOR LOCAL SCOPE FIXED
+        try:
+            from backend.phase5_study_questions_real_connector_v513c1 import (
+                build_study_questions_real_connection_report,
+            )
+        except ModuleNotFoundError:
+            from phase5_study_questions_real_connector_v513c1 import (
+                build_study_questions_real_connection_report,
+            )
+
+        study_questions_real_connection_v513c1 = build_study_questions_real_connection_report(
+            result.domande_studio,
+            result.errors,
+        )
+
         result.quality_report = {
             "facts_used": len(facts),
             "concepts_used": len(concepts),
             "study_questions_count": len(result.domande_studio),
+            "study_questions_real_connection_v513c1": study_questions_real_connection_v513c1,
             "quiz_questions_count": len(result.test_quiz),
             "source_pages": pages,
             "errors_count": len(result.errors),
