@@ -42,6 +42,52 @@ class LegacyMotorSpec:
 
 
 LEGACY_QUALITY_MOTORS: list[LegacyMotorSpec] = [
+
+    # FASE 5.6 — READY SAFE LEGACY MOTORS V1
+    # Motori emersi dalla diagnostica Fase 5.5 come READY_SAFE.
+    # Sono collegati tramite adapter e restano protetti dalla guardia anti-peggioramento.
+    LegacyMotorSpec(
+        motor_id="scripts.rag_cleaner_finale_universale_v35k.clean_output",
+        module_name="scripts.rag_cleaner_finale_universale_v35k",
+        function_name="clean_output",
+        adapter_name="summary_dict",
+        target_kind="summary",
+    ),
+    LegacyMotorSpec(
+        motor_id="scripts.rag_motore_didattico_riutilizzabile_v35c.refine_study_questions",
+        module_name="scripts.rag_motore_didattico_riutilizzabile_v35c",
+        function_name="refine_study_questions",
+        adapter_name="cards_list",
+        target_kind="study",
+    ),
+    LegacyMotorSpec(
+        motor_id="scripts.rag_motore_test_riutilizzabile_v35d.refine_output",
+        module_name="scripts.rag_motore_test_riutilizzabile_v35d",
+        function_name="refine_output",
+        adapter_name="summary_dict",
+        target_kind="summary",
+    ),
+    LegacyMotorSpec(
+        motor_id="scripts.rag_revisore_accordo_pronomi_v35j.improve_output",
+        module_name="scripts.rag_revisore_accordo_pronomi_v35j",
+        function_name="improve_output",
+        adapter_name="summary_dict",
+        target_kind="summary",
+    ),
+    LegacyMotorSpec(
+        motor_id="scripts.rag_revisore_qualita_testuale_v35g.refine_output",
+        module_name="scripts.rag_revisore_qualita_testuale_v35g",
+        function_name="refine_output",
+        adapter_name="summary_dict",
+        target_kind="summary",
+    ),
+    LegacyMotorSpec(
+        motor_id="scripts.rag_revisore_qualita_testuale_v35g.refine_study",
+        module_name="scripts.rag_revisore_qualita_testuale_v35g",
+        function_name="refine_study",
+        adapter_name="phase5_full_output",
+        target_kind="full_output",
+    ),
     LegacyMotorSpec(
         motor_id="backend.main.pulisci_qualita_linguistica_quiz",
         module_name="backend.main",
@@ -69,6 +115,32 @@ QUIZ_TARGET_KEYS = {
     "quiz_finale",
     "test_finale",
     "domande_quiz",
+}
+
+SUMMARY_TARGET_KEYS = {
+    "riassunto_qualita",
+    "summary",
+    "riassunto",
+    "summary_dict",
+}
+
+CARDS_TARGET_KEYS = {
+    "card_concettuali",
+    "cards",
+    "cards_list",
+    "flashcards",
+}
+
+STUDY_TARGET_KEYS = {
+    "domande_studio",
+    "study_questions",
+    "study",
+    "study_list",
+}
+
+FULL_OUTPUT_TARGET_KEYS = {
+    "phase5_full_output",
+    "full_output",
 }
 
 
@@ -198,6 +270,41 @@ def _candidate_quiz_targets(payload: Any) -> list[tuple[Any, str | None, Any, st
 
     elif isinstance(payload, list) and _looks_like_quiz_list(payload):
         targets.append((None, None, payload, "root_list"))
+
+    return targets
+
+
+def _candidate_targets_for_kind(payload: Any, target_kind: str) -> list[tuple[Any, str | None, Any, str]]:
+    targets: list[tuple[Any, str | None, Any, str]] = []
+
+    if target_kind == "quiz":
+        return _candidate_quiz_targets(payload)
+
+    if target_kind == "full_output":
+        if isinstance(payload, dict):
+            return [(None, None, payload, "phase5_full_output")]
+        return []
+
+    if not isinstance(payload, dict):
+        return []
+
+    if target_kind == "summary":
+        keyset = SUMMARY_TARGET_KEYS
+    elif target_kind == "cards":
+        keyset = CARDS_TARGET_KEYS
+    elif target_kind == "study":
+        keyset = STUDY_TARGET_KEYS | CARDS_TARGET_KEYS
+    else:
+        keyset = set()
+
+    for key, value in payload.items():
+        key_norm = str(key).lower()
+
+        if key_norm.startswith("_"):
+            continue
+
+        if key_norm in keyset and isinstance(value, (list, dict, str)):
+            targets.append((payload, key, value, key))
 
     return targets
 
@@ -456,6 +563,9 @@ def _call_with_adapter(
         legacy_output = fn(copy.deepcopy(legacy_payload))
         return _legacy_output_to_phase5(legacy_output, value)
 
+    if spec.adapter_name in {"summary_dict", "cards_list", "phase5_full_output"}:
+        return fn(copy.deepcopy(value))
+
     return fn(copy.deepcopy(value))
 
 
@@ -505,7 +615,7 @@ def apply_legacy_quality_motors_v1(payload: Any, *, context: str = "generic") ->
             motor_meta["error"] = load_error
             continue
 
-        targets = _candidate_quiz_targets(result)
+        targets = _candidate_targets_for_kind(result, spec.target_kind)
 
         if meta is not None:
             meta["targets_count"] = len(targets)
