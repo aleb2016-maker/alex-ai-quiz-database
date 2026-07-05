@@ -39,6 +39,24 @@
     "version": "legacy_quality_motor_registry_v1",
     "status": "partial",
     "motors": {
+      "backend.phase5_quiz_true_distractor_repair_v1.repair_quiz_target_v1": {
+        "status": "ok",
+        "adapter_name": "quiz_list",
+        "target_kind": "quiz",
+        "applied": 1,
+        "changed": 0,
+        "targets": [
+          {
+            "target": "test_quiz",
+            "changed": false,
+            "guarded_rejected": false,
+            "structural_rejected": false,
+            "structural_reject_reason": "",
+            "known_text_defects_before": 1,
+            "known_text_defects_after": 1
+          }
+        ]
+      },
       "scripts.rag_cleaner_finale_universale_v35k.clean_output": {
         "status": "skipped_no_target",
         "adapter_name": "summary_dict",
@@ -92,8 +110,8 @@
             "guarded_rejected": false,
             "structural_rejected": false,
             "structural_reject_reason": "",
-            "known_text_defects_before": 1,
-            "known_text_defects_after": 1
+            "known_text_defects_before": 2,
+            "known_text_defects_after": 2
           }
         ]
       },

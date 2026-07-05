@@ -369,3 +369,12 @@ def repair_payload_quiz_true_distractors_v1(payload: Any) -> Tuple[Any, Dict[str
         total_meta["warnings"].append("no_quiz_key_found")
 
     return repaired, total_meta
+
+# FASE 5.9.3 — REGISTRY WRAPPER V1
+# Wrapper per il registry: riceve direttamente una lista quiz e restituisce solo
+# la lista riparata, senza metadata tuple. I metadata restano disponibili nei
+# test separati del motore.
+def repair_quiz_target_v1(quiz: Any) -> Any:
+    repaired, _meta = repair_quiz_true_distractors_v1(quiz)
+    return repaired
+

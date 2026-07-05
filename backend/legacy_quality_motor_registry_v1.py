@@ -42,6 +42,16 @@ class LegacyMotorSpec:
 
 
 LEGACY_QUALITY_MOTORS: list[LegacyMotorSpec] = [
+    # FASE 5.9.3 — QUIZ TRUE DISTRACTOR REPAIR REGISTRY V1
+    # Motore quiz-specifico validato separatamente in Fase 5.9.2.
+    # Obiettivo: sostituire distrattori falsi che coincidono con source_facts veri.
+    LegacyMotorSpec(
+        motor_id="backend.phase5_quiz_true_distractor_repair_v1.repair_quiz_target_v1",
+        module_name="backend.phase5_quiz_true_distractor_repair_v1",
+        function_name="repair_quiz_target_v1",
+        adapter_name="quiz_list",
+        target_kind="quiz",
+    ),
 
     # FASE 5.6 — READY SAFE LEGACY MOTORS V1
     # Motori emersi dalla diagnostica Fase 5.5 come READY_SAFE.

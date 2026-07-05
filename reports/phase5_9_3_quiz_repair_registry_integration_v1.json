@@ -1,0 +1,67 @@
+{
+  "report_name": "phase5_9_3_quiz_repair_registry_integration_v1",
+  "status": "PASS",
+  "motor_id": "backend.phase5_quiz_true_distractor_repair_v1.repair_quiz_target_v1",
+  "before_true_fact_distractors": 3,
+  "after_true_fact_distractors": 0,
+  "correct_option_texts_preserved": true,
+  "correct_counts_before": [
+    1
+  ],
+  "correct_counts_after": [
+    1
+  ],
+  "replacements": [
+    {
+      "question_index": 0,
+      "option_index": 1,
+      "option_id": "B",
+      "before": "Il controllo degli accessi limita l'utilizzo dei sistemi interni.",
+      "after": "Le credenziali possono essere condivise liberamente tra più operatori se il sistema è interno."
+    },
+    {
+      "question_index": 0,
+      "option_index": 2,
+      "option_id": "C",
+      "before": "Ogni account deve essere associato a una persona identificabile.",
+      "after": "La revisione periodica degli accessi può essere evitata quando gli account sono già attivi."
+    },
+    {
+      "question_index": 0,
+      "option_index": 3,
+      "option_id": "D",
+      "before": "La revisione periodica degli accessi riduce il rischio che utenti non più autorizzati mantengano permessi attivi.",
+      "after": "Ogni account può restare anonimo se viene usato solo da personale autorizzato."
+    }
+  ],
+  "motor_meta": {
+    "status": "ok",
+    "adapter_name": "quiz_list",
+    "target_kind": "quiz",
+    "applied": 1,
+    "changed": 1,
+    "targets": [
+      {
+        "target": "test_quiz",
+        "changed": true,
+        "guarded_rejected": false,
+        "structural_rejected": false,
+        "structural_reject_reason": "",
+        "known_text_defects_before": 1,
+        "known_text_defects_after": 1
+      }
+    ]
+  },
+  "registry_meta_summary": {
+    "known_text_defects_before": 12,
+    "known_text_defects_after": 12,
+    "motors_count": 9
+  },
+  "errors": [],
+  "notes": [
+    "Verifica integrazione: controlla che il riparatore quiz lavori dentro il registry.",
+    "Obiettivo: rischio distrattori veri 3 -> 0 anche dopo apply_legacy_quality_motors_v1.",
+    "La risposta corretta deve restare invariata.",
+    "La struttura quiz deve restare compatibile."
+  ]
+}
