@@ -1,0 +1,489 @@
+{
+  "phase": "5.13B.0.1",
+  "label": "FASE 5.13B.0.1 — SUMMARY ROUTE MATERIALIZER CANONICAL",
+  "status": "PASS - Fase 5.13B.0.1: SUMMARY_ROUTE_55_MATERIALIZED",
+  "official_qm_motors": 64,
+  "excluded_from_summary_count": 9,
+  "expected_summary_quality_controls": 47,
+  "resolved_summary_quality_controls": 47,
+  "expected_selector_orchestrator": 8,
+  "resolved_selector_orchestrator": 8,
+  "expected_summary_route_total": 55,
+  "resolved_summary_route_total": 55,
+  "summary_excluded_ids": [
+    "qm_013",
+    "qm_014",
+    "qm_015",
+    "qm_016",
+    "qm_021",
+    "qm_022",
+    "qm_036",
+    "qm_037",
+    "qm_041"
+  ],
+  "summary_quality_ids": [
+    "qm_001",
+    "qm_002",
+    "qm_003",
+    "qm_004",
+    "qm_005",
+    "qm_006",
+    "qm_007",
+    "qm_008",
+    "qm_009",
+    "qm_010",
+    "qm_011",
+    "qm_012",
+    "qm_017",
+    "qm_018",
+    "qm_019",
+    "qm_020",
+    "qm_023",
+    "qm_024",
+    "qm_025",
+    "qm_026",
+    "qm_027",
+    "qm_028",
+    "qm_029",
+    "qm_030",
+    "qm_031",
+    "qm_032",
+    "qm_033",
+    "qm_034",
+    "qm_035",
+    "qm_038",
+    "qm_039",
+    "qm_040",
+    "qm_042",
+    "qm_043",
+    "qm_044",
+    "qm_045",
+    "qm_046",
+    "qm_047",
+    "qm_048",
+    "qm_049",
+    "qm_050",
+    "qm_059",
+    "qm_060",
+    "qm_061",
+    "qm_062",
+    "qm_063",
+    "qm_064"
+  ],
+  "selector_orchestrator_ids": [
+    "qm_051",
+    "qm_052",
+    "qm_053",
+    "qm_054",
+    "qm_055",
+    "qm_056",
+    "qm_057",
+    "qm_058"
+  ],
+  "final_route_ids": [
+    "qm_001",
+    "qm_002",
+    "qm_003",
+    "qm_004",
+    "qm_005",
+    "qm_006",
+    "qm_007",
+    "qm_008",
+    "qm_009",
+    "qm_010",
+    "qm_011",
+    "qm_012",
+    "qm_017",
+    "qm_018",
+    "qm_019",
+    "qm_020",
+    "qm_023",
+    "qm_024",
+    "qm_025",
+    "qm_026",
+    "qm_027",
+    "qm_028",
+    "qm_029",
+    "qm_030",
+    "qm_031",
+    "qm_032",
+    "qm_033",
+    "qm_034",
+    "qm_035",
+    "qm_038",
+    "qm_039",
+    "qm_040",
+    "qm_042",
+    "qm_043",
+    "qm_044",
+    "qm_045",
+    "qm_046",
+    "qm_047",
+    "qm_048",
+    "qm_049",
+    "qm_050",
+    "qm_051",
+    "qm_052",
+    "qm_053",
+    "qm_054",
+    "qm_055",
+    "qm_056",
+    "qm_057",
+    "qm_058",
+    "qm_059",
+    "qm_060",
+    "qm_061",
+    "qm_062",
+    "qm_063",
+    "qm_064"
+  ],
+  "materialized_motors": [
+    {
+      "qm_id": "qm_001",
+      "name": "Grammatica italiana corretta",
+      "reason": "summary_canonical_quality",
+      "source": "reports/phase5_12i2_official_quality_motor_catalog_v1.json"
+    },
+    {
+      "qm_id": "qm_002",
+      "name": "Accenti corretti",
+      "reason": "summary_canonical_quality",
+      "source": "reports/phase5_12i2_official_quality_motor_catalog_v1.json"
+    },
+    {
+      "qm_id": "qm_003",
+      "name": "Apostrofi corretti",
+      "reason": "summary_canonical_quality",
+      "source": "reports/phase5_12i2_official_quality_motor_catalog_v1.json"
+    },
+    {
+      "qm_id": "qm_004",
+      "name": "Punteggiatura corretta",
+      "reason": "summary_canonical_quality",
+      "source": "reports/phase5_12i2_official_quality_motor_catalog_v1.json"
+    },
+    {
+      "qm_id": "qm_005",
+      "name": "Spazi corretti prima/dopo punteggiatura",
+      "reason": "summary_canonical_quality",
+      "source": "reports/phase5_12i2_official_quality_motor_catalog_v1.json"
+    },
+    {
+      "qm_id": "qm_006",
+      "name": "Frasi complete",
+      "reason": "summary_canonical_quality",
+      "source": "reports/phase5_12i2_official_quality_motor_catalog_v1.json"
+    },
+    {
+      "qm_id": "qm_007",
+      "name": "Assenza di frasi spezzate",
+      "reason": "summary_canonical_quality",
+      "source": "reports/phase5_12i2_official_quality_motor_catalog_v1.json"
+    },
+    {
+      "qm_id": "qm_008",
+      "name": "Assenza di frasi non terminate",
+      "reason": "summary_canonical_quality",
+      "source": "reports/phase5_12i2_official_quality_motor_catalog_v1.json"
+    },
+    {
+      "qm_id": "qm_009",
+      "name": "Assenza di finali sospetti",
+      "reason": "summary_canonical_quality",
+      "source": "reports/phase5_12i2_official_quality_motor_catalog_v1.json"
+    },
+    {
+      "qm_id": "qm_010",
+      "name": "Assenza di frasi riempitive",
+      "reason": "summary_canonical_quality",
+      "source": "reports/phase5_12i2_official_quality_motor_catalog_v1.json"
+    },
+    {
+      "qm_id": "qm_011",
+      "name": "Assenza di testo generico",
+      "reason": "summary_canonical_quality",
+      "source": "reports/phase5_12i2_official_quality_motor_catalog_v1.json"
+    },
+    {
+      "qm_id": "qm_012",
+      "name": "Assenza di vecchi fallback/demo/test",
+      "reason": "summary_canonical_quality",
+      "source": "reports/phase5_12i2_official_quality_motor_catalog_v1.json"
+    },
+    {
+      "qm_id": "qm_017",
+      "name": "Spiegazioni non troppo corte",
+      "reason": "summary_canonical_quality",
+      "source": "reports/phase5_12i2_official_quality_motor_catalog_v1.json"
+    },
+    {
+      "qm_id": "qm_018",
+      "name": "Tono didattico finale",
+      "reason": "summary_canonical_quality",
+      "source": "reports/phase5_12i2_official_quality_motor_catalog_v1.json"
+    },
+    {
+      "qm_id": "qm_019",
+      "name": "Categorie presenti",
+      "reason": "summary_canonical_quality",
+      "source": "reports/phase5_12i2_official_quality_motor_catalog_v1.json"
+    },
+    {
+      "qm_id": "qm_020",
+      "name": "Sottocategorie presenti",
+      "reason": "summary_canonical_quality",
+      "source": "reports/phase5_12i2_official_quality_motor_catalog_v1.json"
+    },
+    {
+      "qm_id": "qm_023",
+      "name": "Card scritte bene",
+      "reason": "summary_canonical_quality",
+      "source": "reports/phase5_12i2_official_quality_motor_catalog_v1.json"
+    },
+    {
+      "qm_id": "qm_024",
+      "name": "Card non troppo corte",
+      "reason": "summary_canonical_quality",
+      "source": "reports/phase5_12i2_official_quality_motor_catalog_v1.json"
+    },
+    {
+      "qm_id": "qm_025",
+      "name": "Card non troppo compresse",
+      "reason": "summary_canonical_quality",
+      "source": "reports/phase5_12i2_official_quality_motor_catalog_v1.json"
+    },
+    {
+      "qm_id": "qm_026",
+      "name": "Messaggio chiave completo",
+      "reason": "summary_canonical_quality",
+      "source": "reports/phase5_12i2_official_quality_motor_catalog_v1.json"
+    },
+    {
+      "qm_id": "qm_027",
+      "name": "Riassunto chiaro",
+      "reason": "summary_canonical_quality",
+      "source": "reports/phase5_12i2_official_quality_motor_catalog_v1.json"
+    },
+    {
+      "qm_id": "qm_028",
+      "name": "Punti chiave leggibili",
+      "reason": "summary_canonical_quality",
+      "source": "reports/phase5_12i2_official_quality_motor_catalog_v1.json"
+    },
+    {
+      "qm_id": "qm_029",
+      "name": "Fonti visibili belle",
+      "reason": "summary_canonical_quality",
+      "source": "reports/phase5_12i2_official_quality_motor_catalog_v1.json"
+    },
+    {
+      "qm_id": "qm_030",
+      "name": "Fonti coerenti",
+      "reason": "summary_canonical_quality",
+      "source": "reports/phase5_12i2_official_quality_motor_catalog_v1.json"
+    },
+    {
+      "qm_id": "qm_031",
+      "name": "Niente fonti brutte",
+      "reason": "summary_canonical_quality",
+      "source": "reports/phase5_12i2_official_quality_motor_catalog_v1.json"
+    },
+    {
+      "qm_id": "qm_032",
+      "name": "Layout grafico controllato",
+      "reason": "summary_canonical_quality",
+      "source": "reports/phase5_12i2_official_quality_motor_catalog_v1.json"
+    },
+    {
+      "qm_id": "qm_033",
+      "name": "Test separato da card/riassunto/domande studio",
+      "reason": "summary_canonical_quality",
+      "source": "reports/phase5_12i2_official_quality_motor_catalog_v1.json"
+    },
+    {
+      "qm_id": "qm_034",
+      "name": "Opzioni interne validate",
+      "reason": "summary_canonical_quality",
+      "source": "reports/phase5_12i2_official_quality_motor_catalog_v1.json"
+    },
+    {
+      "qm_id": "qm_035",
+      "name": "Opzioni visibili pulite",
+      "reason": "summary_canonical_quality",
+      "source": "reports/phase5_12i2_official_quality_motor_catalog_v1.json"
+    },
+    {
+      "qm_id": "qm_038",
+      "name": "Mappa sicura tra risposta interna e visibile",
+      "reason": "summary_canonical_quality",
+      "source": "reports/phase5_12i2_official_quality_motor_catalog_v1.json"
+    },
+    {
+      "qm_id": "qm_039",
+      "name": "4 opzioni per domanda",
+      "reason": "summary_canonical_quality",
+      "source": "reports/phase5_12i2_official_quality_motor_catalog_v1.json"
+    },
+    {
+      "qm_id": "qm_040",
+      "name": "Risposta corretta presente tra le opzioni",
+      "reason": "summary_canonical_quality",
+      "source": "reports/phase5_12i2_official_quality_motor_catalog_v1.json"
+    },
+    {
+      "qm_id": "qm_042",
+      "name": "Niente opzioni duplicate nella stessa domanda",
+      "reason": "summary_canonical_quality",
+      "source": "reports/phase5_12i2_official_quality_motor_catalog_v1.json"
+    },
+    {
+      "qm_id": "qm_043",
+      "name": "Niente ripetizioni globali eccessive",
+      "reason": "summary_canonical_quality",
+      "source": "reports/phase5_12i2_official_quality_motor_catalog_v1.json"
+    },
+    {
+      "qm_id": "qm_044",
+      "name": "Compatibilità obbligatoria col bridge motori quiz V3.5B",
+      "reason": "summary_canonical_quality",
+      "source": "reports/phase5_12i2_official_quality_motor_catalog_v1.json"
+    },
+    {
+      "qm_id": "qm_045",
+      "name": "Duplicati esatti",
+      "reason": "summary_canonical_quality",
+      "source": "reports/phase5_12i2_official_quality_motor_catalog_v1.json"
+    },
+    {
+      "qm_id": "qm_046",
+      "name": "Quasi duplicati",
+      "reason": "summary_canonical_quality",
+      "source": "reports/phase5_12i2_official_quality_motor_catalog_v1.json"
+    },
+    {
+      "qm_id": "qm_047",
+      "name": "Ripetizioni inutili",
+      "reason": "summary_canonical_quality",
+      "source": "reports/phase5_12i2_official_quality_motor_catalog_v1.json"
+    },
+    {
+      "qm_id": "qm_048",
+      "name": "Ripetizioni meccaniche tra domande",
+      "reason": "summary_canonical_quality",
+      "source": "reports/phase5_12i2_official_quality_motor_catalog_v1.json"
+    },
+    {
+      "qm_id": "qm_049",
+      "name": "Frasi troppo simili",
+      "reason": "summary_canonical_quality",
+      "source": "reports/phase5_12i2_official_quality_motor_catalog_v1.json"
+    },
+    {
+      "qm_id": "qm_050",
+      "name": "Stesso contenuto ripetuto senza motivo",
+      "reason": "summary_canonical_quality",
+      "source": "reports/phase5_12i2_official_quality_motor_catalog_v1.json"
+    },
+    {
+      "qm_id": "qm_051",
+      "name": "Il compito richiesto deve selezionare i motori giusti",
+      "reason": "selector_orchestrator",
+      "source": "reports/phase5_12i2_official_quality_motor_catalog_v1.json"
+    },
+    {
+      "qm_id": "qm_052",
+      "name": "Riassunto → motore didattico",
+      "reason": "selector_orchestrator",
+      "source": "reports/phase5_12i2_official_quality_motor_catalog_v1.json"
+    },
+    {
+      "qm_id": "qm_053",
+      "name": "Card → motore didattico + layout",
+      "reason": "selector_orchestrator",
+      "source": "reports/phase5_12i2_official_quality_motor_catalog_v1.json"
+    },
+    {
+      "qm_id": "qm_054",
+      "name": "Domande studio → motore didattico",
+      "reason": "selector_orchestrator",
+      "source": "reports/phase5_12i2_official_quality_motor_catalog_v1.json"
+    },
+    {
+      "qm_id": "qm_055",
+      "name": "Test → bridge quiz + motore test + bridge quiz",
+      "reason": "selector_orchestrator",
+      "source": "reports/phase5_12i2_official_quality_motor_catalog_v1.json"
+    },
+    {
+      "qm_id": "qm_056",
+      "name": "Completo/PDF/app/web → orchestratore",
+      "reason": "selector_orchestrator",
+      "source": "reports/phase5_12i2_official_quality_motor_catalog_v1.json"
+    },
+    {
+      "qm_id": "qm_057",
+      "name": "Niente motori inutili",
+      "reason": "selector_orchestrator",
+      "source": "reports/phase5_12i2_official_quality_motor_catalog_v1.json"
+    },
+    {
+      "qm_id": "qm_058",
+      "name": "Niente output non richiesto",
+      "reason": "selector_orchestrator",
+      "source": "reports/phase5_12i2_official_quality_motor_catalog_v1.json"
+    },
+    {
+      "qm_id": "qm_059",
+      "name": "Output finale pronto per UI/PDF/app",
+      "reason": "summary_canonical_quality",
+      "source": "reports/phase5_12i2_official_quality_motor_catalog_v1.json"
+    },
+    {
+      "qm_id": "qm_060",
+      "name": "Report qualità sempre leggibile",
+      "reason": "summary_canonical_quality",
+      "source": "reports/phase5_12i2_official_quality_motor_catalog_v1.json"
+    },
+    {
+      "qm_id": "qm_061",
+      "name": "Naturalezza linguistica anti-keyword",
+      "reason": "summary_canonical_quality",
+      "source": "reports/phase5_12i2_official_quality_motor_catalog_v1.json"
+    },
+    {
+      "qm_id": "qm_062",
+      "name": "Accordo grammaticale e pronomi",
+      "reason": "summary_canonical_quality",
+      "source": "reports/phase5_12i2_official_quality_motor_catalog_v1.json"
+    },
+    {
+      "qm_id": "qm_063",
+      "name": "Correzione frasi non finite con contesto",
+      "reason": "summary_canonical_quality",
+      "source": "reports/phase5_12i2_official_quality_motor_catalog_v1.json"
+    },
+    {
+      "qm_id": "qm_064",
+      "name": "Correzione parole scritte male con lettere invertite",
+      "reason": "summary_canonical_quality",
+      "source": "reports/phase5_12i2_official_quality_motor_catalog_v1.json"
+    }
+  ],
+  "h2_summary_total": 0,
+  "h2_summary_quality_controls": 0,
+  "h2_selector_orchestrator": 0,
+  "defects": [],
+  "warnings": [
+    "Conteggi H.2 non letti automaticamente dal JSON; usati conteggi checkpoint 47 + 8 = 55."
+  ],
+  "notes": [
+    "Questa fase materializza la route Riassunto in modo canonico.",
+    "Non usa keyword del documento e non dipende da un singolo caso.",
+    "Parte dai 64 motori ufficiali.",
+    "Esclude solo 9 controlli non applicabili al Riassunto perché specifici di domande studio/test.",
+    "La route finale deve risultare 64 - 9 = 55.",
+    "La base qualità deve risultare 55 - 8 selector/orchestrator = 47.",
+    "I selector/orchestrator qm_051-qm_058 devono essere presenti.",
+    "Nessuna UI/PDF/app viene modificata."
+  ]
+}
