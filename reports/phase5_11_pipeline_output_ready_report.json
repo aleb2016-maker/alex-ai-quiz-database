@@ -1,0 +1,205 @@
+{
+  "phase": "5.11",
+  "generated_at": "2026-07-05T09:53:56.437158+00:00",
+  "status": "PASS",
+  "pipeline_output_ready": true,
+  "ready_label": "PIPELINE_OUTPUT_READY",
+  "objective": [
+    "execute_5_phase_pipeline",
+    "intercept_final_output",
+    "check_complete_registry",
+    "verify_summary_card_quiz_study_after_all_motors",
+    "produce_pipeline_output_ready_report"
+  ],
+  "failures": [],
+  "pipeline_discovery": [
+    {
+      "path": "scripts/regressione_pipeline_5_fasi_v1.py",
+      "score": 109,
+      "reason": "discovered"
+    },
+    {
+      "path": "scripts/verifica_phase5_10_1_summary_card_cleaner_registry_v1.py",
+      "score": 90,
+      "reason": "discovered"
+    },
+    {
+      "path": "scripts/verifica_phase5_9_neutral_areas_root_cause_v1.py",
+      "score": 90,
+      "reason": "discovered"
+    },
+    {
+      "path": "scripts/verifica_phase5_10_universal_text_cleaner_summary_cards_v1.py",
+      "score": 90,
+      "reason": "discovered"
+    },
+    {
+      "path": "scripts/verifica_phase5_10_2_final_registry_quality_snapshot_v1.py",
+      "score": 90,
+      "reason": "discovered"
+    },
+    {
+      "path": "scripts/verifica_phase5_8_quality_delta_ready_safe_motors_v1.py",
+      "score": 90,
+      "reason": "discovered"
+    },
+    {
+      "path": "scripts/verifica_phase5_9_10_quality_capability_matrix_v1.py",
+      "score": 90,
+      "reason": "discovered"
+    },
+    {
+      "path": "scripts/verifica_phase5_7_ready_safe_motors_execution_v1.py",
+      "score": 90,
+      "reason": "discovered"
+    },
+    {
+      "path": "backend/phase5_universal_text_cleaner_summary_cards_v1.py",
+      "score": 87,
+      "reason": "discovered"
+    },
+    {
+      "path": "scripts/verifica_phase5_9_10b_quality_capability_matrix_clean_v1.py",
+      "score": 82,
+      "reason": "discovered"
+    }
+  ],
+  "pipeline_run": {
+    "command": [
+      "/Users/alessandrobarbarossa/alex-ai-workspace/backend/.venv/bin/python3",
+      "/Users/alessandrobarbarossa/alex-ai-workspace/scripts/regressione_pipeline_5_fasi_v1.py"
+    ],
+    "returncode": 0,
+    "duration_seconds": 26.773,
+    "stdout_tail": "egoria\": \"#7C3AED\",\n      \"dominio_rilevato\": \"cybersecurity\",\n      \"fonte_pagine\": [\n        1,\n        2\n      ],\n      \"warnings\": []\n    },\n    {\n      \"card_id\": \"phase5_card_004\",\n      \"titolo\": \"Revisione periodica\",\n      \"contenuto_esplicativo\": \"Un punto rilevante riguarda la riduzione del rischio: sì, la revisione periodica degli accessi riduce il rischio perché evita permessi attivi non autorizzati.\",\n      \"micro_concetti\": [\n        \"revisione periodica\",\n        \"riduzione rischio\",\n        \"permessi attivi\",\n        \"controllo accessi\",\n        \"account utente\"\n      ],\n      \"colore_categoria\": \"#7C3AED\",\n      \"dominio_rilevato\": \"cybersecurity\",\n      \"fonte_pagine\": [\n        1,\n        2\n      ],\n      \"warnings\": []\n    }\n  ],\n  \"quality_report\": {\n    \"facts_used\": 4,\n    \"concepts_used\": 5,\n    \"summary_paragraphs\": 2,\n    \"cards_count\": 4,\n    \"source_pages\": [\n      1,\n      2\n    ],\n    \"errors_count\": 0,\n    \"warnings_count\": 0\n  },\n  \"warnings\": [],\n  \"errors\": []\n}\n\n✅ TEST FASE 5 QUALITY SUMMARY CARDS V1 PASSATO\nRiassunto di qualità e card concettuali generati come dati puliti.\n\n\n================================================================================\n▶ test_phase5_micro_concepts_cards_v11\n/Users/alessandrobarbarossa/alex-ai-workspace/backend/.venv/bin/python3 backend/test_phase5_micro_concepts_cards_v11.py\n================================================================================\n{\n  \"document_id\": \"test_phase5_micro_concepts_cards_v11\",\n  \"phase_name\": \"QUALITY_SUMMARY_CARDS\",\n  \"approved\": true,\n  \"status\": \"APPROVED\",\n  \"riassunto_qualita\": {\n    \"titolo\": \"Riassunto di qualità\",\n    \"paragrafi\": [\n      \"Il documento evidenzia che il controllo degli accessi limita l'utilizzo dei sistemi interni. Inoltre, ogni account è associato a una persona identificabile.\",\n      \"Sul piano operativo emerge che le credenziali non devono essere condivise tra più operatori. Inoltre, sì, la revisione periodica degli accessi riduce il rischio perché evita permessi attivi non autorizzati.\"\n    ],\n    \"testo_completo\": \"Il documento evidenzia che il controllo degli accessi limita l'utilizzo dei sistemi interni. Inoltre, ogni account è associato a una persona identificabile.\\n\\nSul piano operativo emerge che le credenziali non devono essere condivise tra più operatori. Inoltre, sì, la revisione periodica degli accessi riduce il rischio perché evita permessi attivi non autorizzati.\",\n    \"fonte_pagine\": [\n      1,\n      2\n    ],\n    \"warnings\": []\n  },\n  \"card_concettuali\": [\n    {\n      \"card_id\": \"phase5_card_001\",\n      \"titolo\": \"Controllo accessi\",\n      \"contenuto_esplicativo\": \"Il documento descrive una funzione di controllo: il controllo degli accessi limita l'utilizzo dei sistemi interni. Questo elemento si collega anche al fatto che ogni account è associato a una persona identificabile.\",\n      \"micro_concetti\": [\n        \"controllo accessi\",\n        \"sistemi interni\",\n        \"account utente\",\n        \"persona identificabile\",\n        \"revisione periodica\"\n      ],\n      \"colore_categoria\": \"#7C3AED\",\n      \"dominio_rilevato\": \"cybersecurity\",\n      \"fonte_pagine\": [\n        1,\n        2\n      ],\n      \"warnings\": []\n    },\n    {\n      \"card_id\": \"phase5_card_002\",\n      \"titolo\": \"Account utente\",\n      \"contenuto_esplicativo\": \"Un altro punto da considerare è questo: ogni account è associato a una persona identificabile. Questo elemento si collega anche al fatto che le credenziali non devono essere condivise tra più operatori.\",\n      \"micro_concetti\": [\n        \"account utente\",\n        \"persona identificabile\",\n        \"protezione credenziali\",\n        \"condivisione credenziali\",\n        \"controllo accessi\"\n      ],\n      \"colore_categoria\": \"#7C3AED\",\n      \"dominio_rilevato\": \"cybersecurity\",\n      \"fonte_pagine\": [\n        1,\n        2\n      ],\n      \"warnings\": []\n    },\n    {\n      \"card_id\": \"phase5_card_003\",\n      \"titolo\": \"Protezione credenziali\",\n      \"contenuto_esplicativo\": \"Il documento chiarisce un divieto operativo importante: le credenziali non devono essere condivise tra più operatori. Questo elemento si collega anche al fatto che sì, la revisione periodica degli accessi riduce il rischio perché evita permessi attivi non autorizzati.\",\n      \"micro_concetti\": [\n        \"protezione credenziali\",\n        \"condivisione credenziali\",\n        \"revisione periodica\",\n        \"riduzione rischio\",\n        \"permessi attivi\"\n      ],\n      \"colore_categoria\": \"#7C3AED\",\n      \"dominio_rilevato\": \"cybersecurity\",\n      \"fonte_pagine\": [\n        1,\n        2\n      ],\n      \"warnings\": []\n    },\n    {\n      \"card_id\": \"phase5_card_004\",\n      \"titolo\": \"Revisione periodica\",\n      \"contenuto_esplicativo\": \"Un punto rilevante riguarda la riduzione del rischio: sì, la revisione periodica degli accessi riduce il rischio perché evita permessi attivi non autorizzati.\",\n      \"micro_concetti\": [\n        \"revisione periodica\",\n        \"riduzione rischio\",\n        \"permessi attivi\",\n        \"controllo accessi\",\n        \"account utente\"\n      ],\n      \"colore_categoria\": \"#7C3AED\",\n      \"dominio_rilevato\": \"cybersecurity\",\n      \"fonte_pagine\": [\n        1,\n        2\n      ],\n      \"warnings\": []\n    }\n  ],\n  \"quality_report\": {\n    \"facts_used\": 4,\n    \"concepts_used\": 8,\n    \"summary_paragraphs\": 2,\n    \"cards_count\": 4,\n    \"source_pages\": [\n      1,\n      2\n    ],\n    \"errors_count\": 0,\n    \"warnings_count\": 0\n  },\n  \"warnings\": [],\n  \"errors\": []\n}\n\n✅ TEST MICRO PATCH FASE 5.1 PASSATO\nMicro-concetti più puliti e titoli card meno ripetitivi.\n\n\n================================================================================\n✅ REGRESSIONE PIPELINE 5 FASI V1 PASSATA\nReport JSON: /Users/alessandrobarbarossa/alex-ai-workspace/reports/regressione_pipeline_5_fasi_v1.json\nReport MD:   /Users/alessandrobarbarossa/alex-ai-workspace/reports/regressione_pipeline_5_fasi_v1.md\n================================================================================\n",
+    "stderr_tail": ""
+  },
+  "changed_reports": [
+    "reports/regressione_pipeline_5_fasi_v1.md",
+    "reports/regressione_pipeline_5_fasi_v1.json"
+  ],
+  "final_output_candidates": [
+    "reports/phase5_10_2_final_registry_quality_snapshot_v1.md",
+    "reports/phase5_10_2_final_registry_quality_snapshot_v1.json",
+    "reports/phase5_8_quality_delta_ready_safe_motors_v1.md",
+    "reports/phase5_8_quality_delta_ready_safe_motors_v1.json",
+    "reports/phase5_7_ready_safe_motors_execution_v1.md",
+    "reports/phase5_7_ready_safe_motors_execution_v1.json",
+    "reports/legacy_quality_motors_registry_ready_v1.md",
+    "reports/legacy_quality_motors_registry_ready_v1.json",
+    "reports/phase5_10_1_summary_card_cleaner_registry_v1.json",
+    "reports/phase5_9_10b_quality_capability_matrix_clean_v1.md"
+  ],
+  "registry_check": {
+    "status": "PASS",
+    "registry_files": [
+      "reports/phase5_10_2_final_registry_quality_snapshot_v1.json",
+      "reports/phase5_9_9_universal_quiz_quality_registry_v1.json",
+      "reports/phase5_10_1_summary_card_cleaner_registry_v1.json",
+      "reports/legacy_quality_motor_registry_v1_report.json",
+      "reports/phase5_9_3_quiz_repair_registry_integration_v1.json",
+      "reports/legacy_quality_motors_registry_ready_v1.json",
+      "reports/compatibilita_motori_qualita_fase5_v1.json",
+      "reports/motori_qualita_esistenti_v1.json",
+      "reports/mini_llm_v400_registry/mini_llm_engine_registry_v400.json",
+      "reports/motore_qualita_logica_visiva.json",
+      "reports/motore_qualita_generale.json"
+    ],
+    "registry_motors_count_detected": 14,
+    "min_expected_registry_motors": 11,
+    "area_presence": {
+      "summary": true,
+      "card": true,
+      "quiz": true,
+      "study": true
+    },
+    "defects": [],
+    "warnings": []
+  },
+  "output_checks": {
+    "summary": {
+      "area": "summary",
+      "status": "PASS",
+      "evidence_files": [
+        "reports/legacy_quality_motors_registry_ready_v1.json",
+        "reports/legacy_quality_motors_registry_ready_v1.md",
+        "reports/phase5_10_1_summary_card_cleaner_registry_v1.json",
+        "reports/phase5_10_2_final_registry_quality_snapshot_v1.json",
+        "reports/phase5_10_2_final_registry_quality_snapshot_v1.md",
+        "reports/phase5_7_ready_safe_motors_execution_v1.json",
+        "reports/phase5_7_ready_safe_motors_execution_v1.md",
+        "reports/phase5_8_quality_delta_ready_safe_motors_v1.json",
+        "reports/phase5_8_quality_delta_ready_safe_motors_v1.md",
+        "reports/phase5_9_10b_quality_capability_matrix_clean_v1.md"
+      ],
+      "defects": [],
+      "warnings": []
+    },
+    "card": {
+      "area": "card",
+      "status": "PASS",
+      "evidence_files": [
+        "reports/legacy_quality_motors_registry_ready_v1.json",
+        "reports/legacy_quality_motors_registry_ready_v1.md",
+        "reports/phase5_10_1_summary_card_cleaner_registry_v1.json",
+        "reports/phase5_10_2_final_registry_quality_snapshot_v1.json",
+        "reports/phase5_10_2_final_registry_quality_snapshot_v1.md",
+        "reports/phase5_7_ready_safe_motors_execution_v1.json",
+        "reports/phase5_7_ready_safe_motors_execution_v1.md",
+        "reports/phase5_8_quality_delta_ready_safe_motors_v1.json",
+        "reports/phase5_8_quality_delta_ready_safe_motors_v1.md",
+        "reports/phase5_9_10b_quality_capability_matrix_clean_v1.md"
+      ],
+      "defects": [],
+      "warnings": []
+    },
+    "quiz": {
+      "area": "quiz",
+      "status": "PASS",
+      "evidence_files": [
+        "reports/legacy_quality_motors_registry_ready_v1.json",
+        "reports/legacy_quality_motors_registry_ready_v1.md",
+        "reports/phase5_10_1_summary_card_cleaner_registry_v1.json",
+        "reports/phase5_10_2_final_registry_quality_snapshot_v1.json",
+        "reports/phase5_10_2_final_registry_quality_snapshot_v1.md",
+        "reports/phase5_7_ready_safe_motors_execution_v1.json",
+        "reports/phase5_7_ready_safe_motors_execution_v1.md",
+        "reports/phase5_8_quality_delta_ready_safe_motors_v1.json",
+        "reports/phase5_8_quality_delta_ready_safe_motors_v1.md",
+        "reports/phase5_9_10b_quality_capability_matrix_clean_v1.md"
+      ],
+      "defects": [],
+      "warnings": [
+        "quiz_question_mark_not_detected",
+        "quiz_options_not_clearly_detected"
+      ]
+    },
+    "study": {
+      "area": "study",
+      "status": "PASS",
+      "evidence_files": [
+        "reports/legacy_quality_motors_registry_ready_v1.json",
+        "reports/legacy_quality_motors_registry_ready_v1.md",
+        "reports/phase5_10_1_summary_card_cleaner_registry_v1.json",
+        "reports/phase5_10_2_final_registry_quality_snapshot_v1.json",
+        "reports/phase5_10_2_final_registry_quality_snapshot_v1.md",
+        "reports/phase5_7_ready_safe_motors_execution_v1.json",
+        "reports/phase5_7_ready_safe_motors_execution_v1.md",
+        "reports/phase5_8_quality_delta_ready_safe_motors_v1.json",
+        "reports/phase5_8_quality_delta_ready_safe_motors_v1.md",
+        "reports/phase5_9_10b_quality_capability_matrix_clean_v1.md"
+      ],
+      "defects": [],
+      "warnings": []
+    }
+  },
+  "report_files": {
+    "json": "reports/phase5_11_pipeline_output_ready_report.json",
+    "markdown": "reports/phase5_11_pipeline_output_ready_report.md"
+  },
+  "scope_guard": {
+    "ui_css_pdf_graphics_touched": false,
+    "new_generation_motors_created": false,
+    "purpose": "final_quality_gate_and_report_only"
+  }
+}
