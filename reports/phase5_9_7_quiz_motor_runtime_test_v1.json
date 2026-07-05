@@ -1,0 +1,3837 @@
+{
+  "report_name": "phase5_9_7_quiz_motor_runtime_test_v1",
+  "status": "PASS_DIAGNOSTIC",
+  "input_candidates": 35,
+  "counts": {
+    "IMPORT_ERROR": 1,
+    "IMPROVED": 2,
+    "NEUTRAL_USABLE_OUTPUT": 4,
+    "NO_USABLE_OUTPUT": 20,
+    "RUNTIME_ERROR": 6,
+    "SKIPPED_RUNTIME_SIDE_EFFECT_RISK": 1,
+    "SKIPPED_UNSAFE_OR_UNSUPPORTED_ARGS": 1
+  },
+  "improved_candidates": [
+    {
+      "motor_id": "backend.phase5_quiz_true_distractor_repair_v1.repair_quiz_true_distractors_v1",
+      "path": "backend/phase5_quiz_true_distractor_repair_v1.py",
+      "function_name": "repair_quiz_true_distractors_v1",
+      "lineno": 212,
+      "args": [
+        "quiz"
+      ],
+      "before_metrics": {
+        "questions_count": 1,
+        "true_fact_distractors": 3,
+        "mechanical_questions": 1,
+        "duplicate_questions": 0,
+        "rough_explanations": 1,
+        "empty_explanations": 0,
+        "correct_options_errors": 0,
+        "option_count_errors": 0
+      },
+      "status": "IMPROVED",
+      "attempts": [
+        {
+          "adapter_name": "quiz",
+          "status": "OK",
+          "error": null,
+          "evaluation": {
+            "usable_quiz_output": true,
+            "after_metrics": {
+              "questions_count": 1,
+              "true_fact_distractors": 0,
+              "mechanical_questions": 1,
+              "duplicate_questions": 0,
+              "rough_explanations": 1,
+              "empty_explanations": 0,
+              "correct_options_errors": 0,
+              "option_count_errors": 0
+            },
+            "improved": true,
+            "worsened": false,
+            "neutral": false,
+            "bad_total_before": 5,
+            "bad_total_after": 2,
+            "notes": [
+              "Migliora true_fact_distractors: 3 -> 0"
+            ]
+          }
+        }
+      ],
+      "best_result": {
+        "adapter_name": "quiz",
+        "status": "OK",
+        "error": null,
+        "evaluation": {
+          "usable_quiz_output": true,
+          "after_metrics": {
+            "questions_count": 1,
+            "true_fact_distractors": 0,
+            "mechanical_questions": 1,
+            "duplicate_questions": 0,
+            "rough_explanations": 1,
+            "empty_explanations": 0,
+            "correct_options_errors": 0,
+            "option_count_errors": 0
+          },
+          "improved": true,
+          "worsened": false,
+          "neutral": false,
+          "bad_total_before": 5,
+          "bad_total_after": 2,
+          "notes": [
+            "Migliora true_fact_distractors: 3 -> 0"
+          ]
+        }
+      },
+      "runtime_error": null
+    },
+    {
+      "motor_id": "backend.phase5_quiz_true_distractor_repair_v1.repair_payload_quiz_true_distractors_v1",
+      "path": "backend/phase5_quiz_true_distractor_repair_v1.py",
+      "function_name": "repair_payload_quiz_true_distractors_v1",
+      "lineno": 298,
+      "args": [
+        "payload"
+      ],
+      "before_metrics": {
+        "questions_count": 1,
+        "true_fact_distractors": 3,
+        "mechanical_questions": 1,
+        "duplicate_questions": 0,
+        "rough_explanations": 1,
+        "empty_explanations": 0,
+        "correct_options_errors": 0,
+        "option_count_errors": 0
+      },
+      "status": "IMPROVED",
+      "attempts": [
+        {
+          "adapter_name": "payload",
+          "status": "OK",
+          "error": null,
+          "evaluation": {
+            "usable_quiz_output": true,
+            "after_metrics": {
+              "questions_count": 1,
+              "true_fact_distractors": 0,
+              "mechanical_questions": 1,
+              "duplicate_questions": 0,
+              "rough_explanations": 1,
+              "empty_explanations": 0,
+              "correct_options_errors": 0,
+              "option_count_errors": 0
+            },
+            "improved": true,
+            "worsened": false,
+            "neutral": false,
+            "bad_total_before": 5,
+            "bad_total_after": 2,
+            "notes": [
+              "Migliora true_fact_distractors: 3 -> 0"
+            ]
+          }
+        }
+      ],
+      "best_result": {
+        "adapter_name": "payload",
+        "status": "OK",
+        "error": null,
+        "evaluation": {
+          "usable_quiz_output": true,
+          "after_metrics": {
+            "questions_count": 1,
+            "true_fact_distractors": 0,
+            "mechanical_questions": 1,
+            "duplicate_questions": 0,
+            "rough_explanations": 1,
+            "empty_explanations": 0,
+            "correct_options_errors": 0,
+            "option_count_errors": 0
+          },
+          "improved": true,
+          "worsened": false,
+          "neutral": false,
+          "bad_total_before": 5,
+          "bad_total_after": 2,
+          "notes": [
+            "Migliora true_fact_distractors: 3 -> 0"
+          ]
+        }
+      },
+      "runtime_error": null
+    }
+  ],
+  "neutral_usable_candidates": [
+    {
+      "motor_id": "backend.phase5_live_quality_bridge_v1._legacy_refine_output_to_phase5",
+      "path": "backend/phase5_live_quality_bridge_v1.py",
+      "function_name": "_legacy_refine_output_to_phase5",
+      "lineno": 273,
+      "args": [
+        "value",
+        "original_value"
+      ],
+      "before_metrics": {
+        "questions_count": 1,
+        "true_fact_distractors": 3,
+        "mechanical_questions": 1,
+        "duplicate_questions": 0,
+        "rough_explanations": 1,
+        "empty_explanations": 0,
+        "correct_options_errors": 0,
+        "option_count_errors": 0
+      },
+      "status": "NEUTRAL_USABLE_OUTPUT",
+      "attempts": [
+        {
+          "adapter_name": "payload_original",
+          "status": "OK",
+          "error": null,
+          "evaluation": {
+            "usable_quiz_output": true,
+            "after_metrics": {
+              "questions_count": 1,
+              "true_fact_distractors": 3,
+              "mechanical_questions": 1,
+              "duplicate_questions": 0,
+              "rough_explanations": 1,
+              "empty_explanations": 0,
+              "correct_options_errors": 0,
+              "option_count_errors": 0
+            },
+            "improved": false,
+            "worsened": false,
+            "neutral": true,
+            "bad_total_before": 5,
+            "bad_total_after": 5,
+            "notes": [
+              "Nessun delta misurabile sulle metriche quiz."
+            ]
+          }
+        }
+      ],
+      "best_result": {
+        "adapter_name": "payload_original",
+        "status": "OK",
+        "error": null,
+        "evaluation": {
+          "usable_quiz_output": true,
+          "after_metrics": {
+            "questions_count": 1,
+            "true_fact_distractors": 3,
+            "mechanical_questions": 1,
+            "duplicate_questions": 0,
+            "rough_explanations": 1,
+            "empty_explanations": 0,
+            "correct_options_errors": 0,
+            "option_count_errors": 0
+          },
+          "improved": false,
+          "worsened": false,
+          "neutral": true,
+          "bad_total_before": 5,
+          "bad_total_after": 5,
+          "notes": [
+            "Nessun delta misurabile sulle metriche quiz."
+          ]
+        }
+      },
+      "runtime_error": null
+    },
+    {
+      "motor_id": "backend.main.normalizza_quiz_generato",
+      "path": "backend/main.py",
+      "function_name": "normalizza_quiz_generato",
+      "lineno": 469,
+      "args": [
+        "dati_quiz"
+      ],
+      "before_metrics": {
+        "questions_count": 1,
+        "true_fact_distractors": 3,
+        "mechanical_questions": 1,
+        "duplicate_questions": 0,
+        "rough_explanations": 1,
+        "empty_explanations": 0,
+        "correct_options_errors": 0,
+        "option_count_errors": 0
+      },
+      "status": "NEUTRAL_USABLE_OUTPUT",
+      "attempts": [
+        {
+          "adapter_name": "payload",
+          "status": "OK",
+          "error": null,
+          "evaluation": {
+            "usable_quiz_output": true,
+            "after_metrics": {
+              "questions_count": 1,
+              "true_fact_distractors": 3,
+              "mechanical_questions": 1,
+              "duplicate_questions": 0,
+              "rough_explanations": 1,
+              "empty_explanations": 0,
+              "correct_options_errors": 0,
+              "option_count_errors": 0
+            },
+            "improved": false,
+            "worsened": false,
+            "neutral": true,
+            "bad_total_before": 5,
+            "bad_total_after": 5,
+            "notes": [
+              "Nessun delta misurabile sulle metriche quiz."
+            ]
+          }
+        }
+      ],
+      "best_result": {
+        "adapter_name": "payload",
+        "status": "OK",
+        "error": null,
+        "evaluation": {
+          "usable_quiz_output": true,
+          "after_metrics": {
+            "questions_count": 1,
+            "true_fact_distractors": 3,
+            "mechanical_questions": 1,
+            "duplicate_questions": 0,
+            "rough_explanations": 1,
+            "empty_explanations": 0,
+            "correct_options_errors": 0,
+            "option_count_errors": 0
+          },
+          "improved": false,
+          "worsened": false,
+          "neutral": true,
+          "bad_total_before": 5,
+          "bad_total_after": 5,
+          "notes": [
+            "Nessun delta misurabile sulle metriche quiz."
+          ]
+        }
+      },
+      "runtime_error": null
+    },
+    {
+      "motor_id": "scripts.rag_revisore_qualita_testuale_v35g.refine_tests",
+      "path": "scripts/rag_revisore_qualita_testuale_v35g.py",
+      "function_name": "refine_tests",
+      "lineno": 341,
+      "args": [
+        "data"
+      ],
+      "before_metrics": {
+        "questions_count": 1,
+        "true_fact_distractors": 3,
+        "mechanical_questions": 1,
+        "duplicate_questions": 0,
+        "rough_explanations": 1,
+        "empty_explanations": 0,
+        "correct_options_errors": 0,
+        "option_count_errors": 0
+      },
+      "status": "NEUTRAL_USABLE_OUTPUT",
+      "attempts": [
+        {
+          "adapter_name": "payload",
+          "status": "OK",
+          "error": null,
+          "evaluation": {
+            "usable_quiz_output": true,
+            "after_metrics": {
+              "questions_count": 1,
+              "true_fact_distractors": 3,
+              "mechanical_questions": 1,
+              "duplicate_questions": 0,
+              "rough_explanations": 1,
+              "empty_explanations": 0,
+              "correct_options_errors": 0,
+              "option_count_errors": 0
+            },
+            "improved": false,
+            "worsened": false,
+            "neutral": true,
+            "bad_total_before": 5,
+            "bad_total_after": 5,
+            "notes": [
+              "Nessun delta misurabile sulle metriche quiz."
+            ]
+          }
+        }
+      ],
+      "best_result": {
+        "adapter_name": "payload",
+        "status": "OK",
+        "error": null,
+        "evaluation": {
+          "usable_quiz_output": true,
+          "after_metrics": {
+            "questions_count": 1,
+            "true_fact_distractors": 3,
+            "mechanical_questions": 1,
+            "duplicate_questions": 0,
+            "rough_explanations": 1,
+            "empty_explanations": 0,
+            "correct_options_errors": 0,
+            "option_count_errors": 0
+          },
+          "improved": false,
+          "worsened": false,
+          "neutral": true,
+          "bad_total_before": 5,
+          "bad_total_after": 5,
+          "notes": [
+            "Nessun delta misurabile sulle metriche quiz."
+          ]
+        }
+      },
+      "runtime_error": null
+    },
+    {
+      "motor_id": "scripts.applica_v35k_reale.clean_output",
+      "path": "scripts/applica_v35k_reale.py",
+      "function_name": "clean_output",
+      "lineno": 173,
+      "args": [
+        "data"
+      ],
+      "before_metrics": {
+        "questions_count": 1,
+        "true_fact_distractors": 3,
+        "mechanical_questions": 1,
+        "duplicate_questions": 0,
+        "rough_explanations": 1,
+        "empty_explanations": 0,
+        "correct_options_errors": 0,
+        "option_count_errors": 0
+      },
+      "status": "NEUTRAL_USABLE_OUTPUT",
+      "attempts": [
+        {
+          "adapter_name": "payload",
+          "status": "OK",
+          "error": null,
+          "evaluation": {
+            "usable_quiz_output": true,
+            "after_metrics": {
+              "questions_count": 1,
+              "true_fact_distractors": 3,
+              "mechanical_questions": 1,
+              "duplicate_questions": 0,
+              "rough_explanations": 1,
+              "empty_explanations": 0,
+              "correct_options_errors": 0,
+              "option_count_errors": 0
+            },
+            "improved": false,
+            "worsened": false,
+            "neutral": true,
+            "bad_total_before": 5,
+            "bad_total_after": 5,
+            "notes": [
+              "Nessun delta misurabile sulle metriche quiz."
+            ]
+          }
+        }
+      ],
+      "best_result": {
+        "adapter_name": "payload",
+        "status": "OK",
+        "error": null,
+        "evaluation": {
+          "usable_quiz_output": true,
+          "after_metrics": {
+            "questions_count": 1,
+            "true_fact_distractors": 3,
+            "mechanical_questions": 1,
+            "duplicate_questions": 0,
+            "rough_explanations": 1,
+            "empty_explanations": 0,
+            "correct_options_errors": 0,
+            "option_count_errors": 0
+          },
+          "improved": false,
+          "worsened": false,
+          "neutral": true,
+          "bad_total_before": 5,
+          "bad_total_after": 5,
+          "notes": [
+            "Nessun delta misurabile sulle metriche quiz."
+          ]
+        }
+      },
+      "runtime_error": null
+    }
+  ],
+  "no_usable_output_candidates": [
+    {
+      "motor_id": "scripts.motore_qualita_generale.analizza_domanda",
+      "path": "scripts/motore_qualita_generale.py",
+      "function_name": "analizza_domanda",
+      "lineno": 276,
+      "args": [
+        "nome_motore",
+        "indice",
+        "domanda"
+      ],
+      "before_metrics": {
+        "questions_count": 1,
+        "true_fact_distractors": 3,
+        "mechanical_questions": 1,
+        "duplicate_questions": 0,
+        "rough_explanations": 1,
+        "empty_explanations": 0,
+        "correct_options_errors": 0,
+        "option_count_errors": 0
+      },
+      "status": "NO_USABLE_OUTPUT",
+      "attempts": [
+        {
+          "adapter_name": "name_index_question",
+          "status": "OK",
+          "error": null,
+          "evaluation": {
+            "usable_quiz_output": false,
+            "after_metrics": null,
+            "improved": false,
+            "worsened": false,
+            "neutral": true,
+            "bad_total_before": 5,
+            "bad_total_after": null,
+            "notes": [
+              "Output non riconosciuto come quiz riutilizzabile."
+            ]
+          }
+        }
+      ],
+      "best_result": {
+        "adapter_name": "name_index_question",
+        "status": "OK",
+        "error": null,
+        "evaluation": {
+          "usable_quiz_output": false,
+          "after_metrics": null,
+          "improved": false,
+          "worsened": false,
+          "neutral": true,
+          "bad_total_before": 5,
+          "bad_total_after": null,
+          "notes": [
+            "Output non riconosciuto come quiz riutilizzabile."
+          ]
+        }
+      },
+      "runtime_error": null
+    },
+    {
+      "motor_id": "scripts.motore_qualita_logica_visiva_base.analizza_domanda_visiva",
+      "path": "scripts/motore_qualita_logica_visiva_base.py",
+      "function_name": "analizza_domanda_visiva",
+      "lineno": 256,
+      "args": [
+        "indice",
+        "domanda"
+      ],
+      "before_metrics": {
+        "questions_count": 1,
+        "true_fact_distractors": 3,
+        "mechanical_questions": 1,
+        "duplicate_questions": 0,
+        "rough_explanations": 1,
+        "empty_explanations": 0,
+        "correct_options_errors": 0,
+        "option_count_errors": 0
+      },
+      "status": "NO_USABLE_OUTPUT",
+      "attempts": [
+        {
+          "adapter_name": "index_question",
+          "status": "OK",
+          "error": null,
+          "evaluation": {
+            "usable_quiz_output": false,
+            "after_metrics": null,
+            "improved": false,
+            "worsened": false,
+            "neutral": true,
+            "bad_total_before": 5,
+            "bad_total_after": null,
+            "notes": [
+              "Output non riconosciuto come quiz riutilizzabile."
+            ]
+          }
+        }
+      ],
+      "best_result": {
+        "adapter_name": "index_question",
+        "status": "OK",
+        "error": null,
+        "evaluation": {
+          "usable_quiz_output": false,
+          "after_metrics": null,
+          "improved": false,
+          "worsened": false,
+          "neutral": true,
+          "bad_total_before": 5,
+          "bad_total_after": null,
+          "notes": [
+            "Output non riconosciuto come quiz riutilizzabile."
+          ]
+        }
+      },
+      "runtime_error": null
+    },
+    {
+      "motor_id": "scripts.validatore_rag_distrattori_forti_v2.valuta_domanda",
+      "path": "scripts/validatore_rag_distrattori_forti_v2.py",
+      "function_name": "valuta_domanda",
+      "lineno": 52,
+      "args": [
+        "domanda",
+        "indice"
+      ],
+      "before_metrics": {
+        "questions_count": 1,
+        "true_fact_distractors": 3,
+        "mechanical_questions": 1,
+        "duplicate_questions": 0,
+        "rough_explanations": 1,
+        "empty_explanations": 0,
+        "correct_options_errors": 0,
+        "option_count_errors": 0
+      },
+      "status": "NO_USABLE_OUTPUT",
+      "attempts": [
+        {
+          "adapter_name": "question_index",
+          "status": "OK",
+          "error": null,
+          "evaluation": {
+            "usable_quiz_output": false,
+            "after_metrics": null,
+            "improved": false,
+            "worsened": false,
+            "neutral": true,
+            "bad_total_before": 5,
+            "bad_total_after": null,
+            "notes": [
+              "Output non riconosciuto come quiz riutilizzabile."
+            ]
+          }
+        }
+      ],
+      "best_result": {
+        "adapter_name": "question_index",
+        "status": "OK",
+        "error": null,
+        "evaluation": {
+          "usable_quiz_output": false,
+          "after_metrics": null,
+          "improved": false,
+          "worsened": false,
+          "neutral": true,
+          "bad_total_before": 5,
+          "bad_total_after": null,
+          "notes": [
+            "Output non riconosciuto come quiz riutilizzabile."
+          ]
+        }
+      },
+      "runtime_error": null
+    },
+    {
+      "motor_id": "backend.motori_scrittura.qg_clean_output_bundle",
+      "path": "backend/motori_scrittura.py",
+      "function_name": "qg_clean_output_bundle",
+      "lineno": 3510,
+      "args": [
+        "output_result"
+      ],
+      "before_metrics": {
+        "questions_count": 1,
+        "true_fact_distractors": 3,
+        "mechanical_questions": 1,
+        "duplicate_questions": 0,
+        "rough_explanations": 1,
+        "empty_explanations": 0,
+        "correct_options_errors": 0,
+        "option_count_errors": 0
+      },
+      "status": "NO_USABLE_OUTPUT",
+      "attempts": [
+        {
+          "adapter_name": "payload",
+          "status": "OK",
+          "error": null,
+          "evaluation": {
+            "usable_quiz_output": false,
+            "after_metrics": null,
+            "improved": false,
+            "worsened": false,
+            "neutral": true,
+            "bad_total_before": 5,
+            "bad_total_after": null,
+            "notes": [
+              "Output non riconosciuto come quiz riutilizzabile."
+            ]
+          }
+        }
+      ],
+      "best_result": {
+        "adapter_name": "payload",
+        "status": "OK",
+        "error": null,
+        "evaluation": {
+          "usable_quiz_output": false,
+          "after_metrics": null,
+          "improved": false,
+          "worsened": false,
+          "neutral": true,
+          "bad_total_before": 5,
+          "bad_total_after": null,
+          "notes": [
+            "Output non riconosciuto come quiz riutilizzabile."
+          ]
+        }
+      },
+      "runtime_error": null
+    },
+    {
+      "motor_id": "scripts.report_distrattori_scientifici.valuta_qualita_opzioni",
+      "path": "scripts/report_distrattori_scientifici.py",
+      "function_name": "valuta_qualita_opzioni",
+      "lineno": 123,
+      "args": [
+        "opzioni",
+        "risposta"
+      ],
+      "before_metrics": {
+        "questions_count": 1,
+        "true_fact_distractors": 3,
+        "mechanical_questions": 1,
+        "duplicate_questions": 0,
+        "rough_explanations": 1,
+        "empty_explanations": 0,
+        "correct_options_errors": 0,
+        "option_count_errors": 0
+      },
+      "status": "NO_USABLE_OUTPUT",
+      "attempts": [
+        {
+          "adapter_name": "options_correct",
+          "status": "OK",
+          "error": null,
+          "evaluation": {
+            "usable_quiz_output": false,
+            "after_metrics": null,
+            "improved": false,
+            "worsened": false,
+            "neutral": true,
+            "bad_total_before": 5,
+            "bad_total_after": null,
+            "notes": [
+              "Output non riconosciuto come quiz riutilizzabile."
+            ]
+          }
+        }
+      ],
+      "best_result": {
+        "adapter_name": "options_correct",
+        "status": "OK",
+        "error": null,
+        "evaluation": {
+          "usable_quiz_output": false,
+          "after_metrics": null,
+          "improved": false,
+          "worsened": false,
+          "neutral": true,
+          "bad_total_before": 5,
+          "bad_total_after": null,
+          "notes": [
+            "Output non riconosciuto come quiz riutilizzabile."
+          ]
+        }
+      },
+      "runtime_error": null
+    },
+    {
+      "motor_id": "scripts.estrai_biologia_da_migliorare.normalizza_opzioni",
+      "path": "scripts/estrai_biologia_da_migliorare.py",
+      "function_name": "normalizza_opzioni",
+      "lineno": 54,
+      "args": [
+        "opzioni_grezze"
+      ],
+      "before_metrics": {
+        "questions_count": 1,
+        "true_fact_distractors": 3,
+        "mechanical_questions": 1,
+        "duplicate_questions": 0,
+        "rough_explanations": 1,
+        "empty_explanations": 0,
+        "correct_options_errors": 0,
+        "option_count_errors": 0
+      },
+      "status": "NO_USABLE_OUTPUT",
+      "attempts": [
+        {
+          "adapter_name": "options",
+          "status": "OK",
+          "error": null,
+          "evaluation": {
+            "usable_quiz_output": false,
+            "after_metrics": null,
+            "improved": false,
+            "worsened": false,
+            "neutral": true,
+            "bad_total_before": 5,
+            "bad_total_after": null,
+            "notes": [
+              "Output non riconosciuto come quiz riutilizzabile."
+            ]
+          }
+        }
+      ],
+      "best_result": {
+        "adapter_name": "options",
+        "status": "OK",
+        "error": null,
+        "evaluation": {
+          "usable_quiz_output": false,
+          "after_metrics": null,
+          "improved": false,
+          "worsened": false,
+          "neutral": true,
+          "bad_total_before": 5,
+          "bad_total_after": null,
+          "notes": [
+            "Output non riconosciuto come quiz riutilizzabile."
+          ]
+        }
+      },
+      "runtime_error": null
+    },
+    {
+      "motor_id": "scripts.estrai_motore_scientifico_da_migliorare.normalizza_opzioni",
+      "path": "scripts/estrai_motore_scientifico_da_migliorare.py",
+      "function_name": "normalizza_opzioni",
+      "lineno": 79,
+      "args": [
+        "opzioni_grezze"
+      ],
+      "before_metrics": {
+        "questions_count": 1,
+        "true_fact_distractors": 3,
+        "mechanical_questions": 1,
+        "duplicate_questions": 0,
+        "rough_explanations": 1,
+        "empty_explanations": 0,
+        "correct_options_errors": 0,
+        "option_count_errors": 0
+      },
+      "status": "NO_USABLE_OUTPUT",
+      "attempts": [
+        {
+          "adapter_name": "options",
+          "status": "OK",
+          "error": null,
+          "evaluation": {
+            "usable_quiz_output": false,
+            "after_metrics": null,
+            "improved": false,
+            "worsened": false,
+            "neutral": true,
+            "bad_total_before": 5,
+            "bad_total_after": null,
+            "notes": [
+              "Output non riconosciuto come quiz riutilizzabile."
+            ]
+          }
+        }
+      ],
+      "best_result": {
+        "adapter_name": "options",
+        "status": "OK",
+        "error": null,
+        "evaluation": {
+          "usable_quiz_output": false,
+          "after_metrics": null,
+          "improved": false,
+          "worsened": false,
+          "neutral": true,
+          "bad_total_before": 5,
+          "bad_total_after": null,
+          "notes": [
+            "Output non riconosciuto come quiz riutilizzabile."
+          ]
+        }
+      },
+      "runtime_error": null
+    },
+    {
+      "motor_id": "scripts.estrai_biologia_da_migliorare.valuta_problemi_qualita",
+      "path": "scripts/estrai_biologia_da_migliorare.py",
+      "function_name": "valuta_problemi_qualita",
+      "lineno": 127,
+      "args": [
+        "opzioni",
+        "risposta"
+      ],
+      "before_metrics": {
+        "questions_count": 1,
+        "true_fact_distractors": 3,
+        "mechanical_questions": 1,
+        "duplicate_questions": 0,
+        "rough_explanations": 1,
+        "empty_explanations": 0,
+        "correct_options_errors": 0,
+        "option_count_errors": 0
+      },
+      "status": "NO_USABLE_OUTPUT",
+      "attempts": [
+        {
+          "adapter_name": "options_correct",
+          "status": "OK",
+          "error": null,
+          "evaluation": {
+            "usable_quiz_output": false,
+            "after_metrics": null,
+            "improved": false,
+            "worsened": false,
+            "neutral": true,
+            "bad_total_before": 5,
+            "bad_total_after": null,
+            "notes": [
+              "Output non riconosciuto come quiz riutilizzabile."
+            ]
+          }
+        }
+      ],
+      "best_result": {
+        "adapter_name": "options_correct",
+        "status": "OK",
+        "error": null,
+        "evaluation": {
+          "usable_quiz_output": false,
+          "after_metrics": null,
+          "improved": false,
+          "worsened": false,
+          "neutral": true,
+          "bad_total_before": 5,
+          "bad_total_after": null,
+          "notes": [
+            "Output non riconosciuto come quiz riutilizzabile."
+          ]
+        }
+      },
+      "runtime_error": null
+    },
+    {
+      "motor_id": "scripts.estrai_motore_scientifico_da_migliorare.valuta_problemi_qualita",
+      "path": "scripts/estrai_motore_scientifico_da_migliorare.py",
+      "function_name": "valuta_problemi_qualita",
+      "lineno": 152,
+      "args": [
+        "opzioni",
+        "risposta"
+      ],
+      "before_metrics": {
+        "questions_count": 1,
+        "true_fact_distractors": 3,
+        "mechanical_questions": 1,
+        "duplicate_questions": 0,
+        "rough_explanations": 1,
+        "empty_explanations": 0,
+        "correct_options_errors": 0,
+        "option_count_errors": 0
+      },
+      "status": "NO_USABLE_OUTPUT",
+      "attempts": [
+        {
+          "adapter_name": "options_correct",
+          "status": "OK",
+          "error": null,
+          "evaluation": {
+            "usable_quiz_output": false,
+            "after_metrics": null,
+            "improved": false,
+            "worsened": false,
+            "neutral": true,
+            "bad_total_before": 5,
+            "bad_total_after": null,
+            "notes": [
+              "Output non riconosciuto come quiz riutilizzabile."
+            ]
+          }
+        }
+      ],
+      "best_result": {
+        "adapter_name": "options_correct",
+        "status": "OK",
+        "error": null,
+        "evaluation": {
+          "usable_quiz_output": false,
+          "after_metrics": null,
+          "improved": false,
+          "worsened": false,
+          "neutral": true,
+          "bad_total_before": 5,
+          "bad_total_after": null,
+          "notes": [
+            "Output non riconosciuto come quiz riutilizzabile."
+          ]
+        }
+      },
+      "runtime_error": null
+    },
+    {
+      "motor_id": "scripts.report_distrattori_scientifici.normalizza_opzioni",
+      "path": "scripts/report_distrattori_scientifici.py",
+      "function_name": "normalizza_opzioni",
+      "lineno": 61,
+      "args": [
+        "opzioni_grezze"
+      ],
+      "before_metrics": {
+        "questions_count": 1,
+        "true_fact_distractors": 3,
+        "mechanical_questions": 1,
+        "duplicate_questions": 0,
+        "rough_explanations": 1,
+        "empty_explanations": 0,
+        "correct_options_errors": 0,
+        "option_count_errors": 0
+      },
+      "status": "NO_USABLE_OUTPUT",
+      "attempts": [
+        {
+          "adapter_name": "options",
+          "status": "OK",
+          "error": null,
+          "evaluation": {
+            "usable_quiz_output": false,
+            "after_metrics": null,
+            "improved": false,
+            "worsened": false,
+            "neutral": true,
+            "bad_total_before": 5,
+            "bad_total_after": null,
+            "notes": [
+              "Output non riconosciuto come quiz riutilizzabile."
+            ]
+          }
+        }
+      ],
+      "best_result": {
+        "adapter_name": "options",
+        "status": "OK",
+        "error": null,
+        "evaluation": {
+          "usable_quiz_output": false,
+          "after_metrics": null,
+          "improved": false,
+          "worsened": false,
+          "neutral": true,
+          "bad_total_before": 5,
+          "bad_total_after": null,
+          "notes": [
+            "Output non riconosciuto come quiz riutilizzabile."
+          ]
+        }
+      },
+      "runtime_error": null
+    },
+    {
+      "motor_id": "scripts.motore_traduzione_inglese.rimuovi_vecchie_traduzioni",
+      "path": "scripts/motore_traduzione_inglese.py",
+      "function_name": "rimuovi_vecchie_traduzioni",
+      "lineno": 33,
+      "args": [
+        "spiegazione"
+      ],
+      "before_metrics": {
+        "questions_count": 1,
+        "true_fact_distractors": 3,
+        "mechanical_questions": 1,
+        "duplicate_questions": 0,
+        "rough_explanations": 1,
+        "empty_explanations": 0,
+        "correct_options_errors": 0,
+        "option_count_errors": 0
+      },
+      "status": "NO_USABLE_OUTPUT",
+      "attempts": [
+        {
+          "adapter_name": "text",
+          "status": "OK",
+          "error": null,
+          "evaluation": {
+            "usable_quiz_output": false,
+            "after_metrics": null,
+            "improved": false,
+            "worsened": false,
+            "neutral": true,
+            "bad_total_before": 5,
+            "bad_total_after": null,
+            "notes": [
+              "Output non riconosciuto come quiz riutilizzabile."
+            ]
+          }
+        }
+      ],
+      "best_result": {
+        "adapter_name": "text",
+        "status": "OK",
+        "error": null,
+        "evaluation": {
+          "usable_quiz_output": false,
+          "after_metrics": null,
+          "improved": false,
+          "worsened": false,
+          "neutral": true,
+          "bad_total_before": 5,
+          "bad_total_after": null,
+          "notes": [
+            "Output non riconosciuto come quiz riutilizzabile."
+          ]
+        }
+      },
+      "runtime_error": null
+    },
+    {
+      "motor_id": "scripts.rag_adapter_quiz_ufficiale_v43.crea_candidate_sicurezza",
+      "path": "scripts/rag_adapter_quiz_ufficiale_v43.py",
+      "function_name": "crea_candidate_sicurezza",
+      "lineno": 93,
+      "args": [
+        "testo"
+      ],
+      "before_metrics": {
+        "questions_count": 1,
+        "true_fact_distractors": 3,
+        "mechanical_questions": 1,
+        "duplicate_questions": 0,
+        "rough_explanations": 1,
+        "empty_explanations": 0,
+        "correct_options_errors": 0,
+        "option_count_errors": 0
+      },
+      "status": "NO_USABLE_OUTPUT",
+      "attempts": [
+        {
+          "adapter_name": "text",
+          "status": "OK",
+          "error": null,
+          "evaluation": {
+            "usable_quiz_output": false,
+            "after_metrics": null,
+            "improved": false,
+            "worsened": false,
+            "neutral": true,
+            "bad_total_before": 5,
+            "bad_total_after": null,
+            "notes": [
+              "Output non riconosciuto come quiz riutilizzabile."
+            ]
+          }
+        }
+      ],
+      "best_result": {
+        "adapter_name": "text",
+        "status": "OK",
+        "error": null,
+        "evaluation": {
+          "usable_quiz_output": false,
+          "after_metrics": null,
+          "improved": false,
+          "worsened": false,
+          "neutral": true,
+          "bad_total_before": 5,
+          "bad_total_after": null,
+          "notes": [
+            "Output non riconosciuto come quiz riutilizzabile."
+          ]
+        }
+      },
+      "runtime_error": null
+    },
+    {
+      "motor_id": "scripts.validatore_rag_distrattori_forti_v2.estrai_opzioni",
+      "path": "scripts/validatore_rag_distrattori_forti_v2.py",
+      "function_name": "estrai_opzioni",
+      "lineno": 43,
+      "args": [
+        "domanda"
+      ],
+      "before_metrics": {
+        "questions_count": 1,
+        "true_fact_distractors": 3,
+        "mechanical_questions": 1,
+        "duplicate_questions": 0,
+        "rough_explanations": 1,
+        "empty_explanations": 0,
+        "correct_options_errors": 0,
+        "option_count_errors": 0
+      },
+      "status": "NO_USABLE_OUTPUT",
+      "attempts": [
+        {
+          "adapter_name": "question",
+          "status": "OK",
+          "error": null,
+          "evaluation": {
+            "usable_quiz_output": false,
+            "after_metrics": null,
+            "improved": false,
+            "worsened": false,
+            "neutral": true,
+            "bad_total_before": 5,
+            "bad_total_after": null,
+            "notes": [
+              "Output non riconosciuto come quiz riutilizzabile."
+            ]
+          }
+        }
+      ],
+      "best_result": {
+        "adapter_name": "question",
+        "status": "OK",
+        "error": null,
+        "evaluation": {
+          "usable_quiz_output": false,
+          "after_metrics": null,
+          "improved": false,
+          "worsened": false,
+          "neutral": true,
+          "bad_total_before": 5,
+          "bad_total_after": null,
+          "notes": [
+            "Output non riconosciuto come quiz riutilizzabile."
+          ]
+        }
+      },
+      "runtime_error": null
+    },
+    {
+      "motor_id": "scripts.applica_v35k_reale.clean_text",
+      "path": "scripts/applica_v35k_reale.py",
+      "function_name": "clean_text",
+      "lineno": 111,
+      "args": [
+        "value"
+      ],
+      "before_metrics": {
+        "questions_count": 1,
+        "true_fact_distractors": 3,
+        "mechanical_questions": 1,
+        "duplicate_questions": 0,
+        "rough_explanations": 1,
+        "empty_explanations": 0,
+        "correct_options_errors": 0,
+        "option_count_errors": 0
+      },
+      "status": "NO_USABLE_OUTPUT",
+      "attempts": [
+        {
+          "adapter_name": "text",
+          "status": "OK",
+          "error": null,
+          "evaluation": {
+            "usable_quiz_output": false,
+            "after_metrics": null,
+            "improved": false,
+            "worsened": false,
+            "neutral": true,
+            "bad_total_before": 5,
+            "bad_total_after": null,
+            "notes": [
+              "Output non riconosciuto come quiz riutilizzabile."
+            ]
+          }
+        }
+      ],
+      "best_result": {
+        "adapter_name": "text",
+        "status": "OK",
+        "error": null,
+        "evaluation": {
+          "usable_quiz_output": false,
+          "after_metrics": null,
+          "improved": false,
+          "worsened": false,
+          "neutral": true,
+          "bad_total_before": 5,
+          "bad_total_after": null,
+          "notes": [
+            "Output non riconosciuto come quiz riutilizzabile."
+          ]
+        }
+      },
+      "runtime_error": null
+    },
+    {
+      "motor_id": "scripts.rag_revisore_qualita_testuale_v35g.collect_visible_records",
+      "path": "scripts/rag_revisore_qualita_testuale_v35g.py",
+      "function_name": "collect_visible_records",
+      "lineno": 407,
+      "args": [
+        "data"
+      ],
+      "before_metrics": {
+        "questions_count": 1,
+        "true_fact_distractors": 3,
+        "mechanical_questions": 1,
+        "duplicate_questions": 0,
+        "rough_explanations": 1,
+        "empty_explanations": 0,
+        "correct_options_errors": 0,
+        "option_count_errors": 0
+      },
+      "status": "NO_USABLE_OUTPUT",
+      "attempts": [
+        {
+          "adapter_name": "payload",
+          "status": "OK",
+          "error": null,
+          "evaluation": {
+            "usable_quiz_output": false,
+            "after_metrics": null,
+            "improved": false,
+            "worsened": false,
+            "neutral": true,
+            "bad_total_before": 5,
+            "bad_total_after": null,
+            "notes": [
+              "Output non riconosciuto come quiz riutilizzabile."
+            ]
+          }
+        }
+      ],
+      "best_result": {
+        "adapter_name": "payload",
+        "status": "OK",
+        "error": null,
+        "evaluation": {
+          "usable_quiz_output": false,
+          "after_metrics": null,
+          "improved": false,
+          "worsened": false,
+          "neutral": true,
+          "bad_total_before": 5,
+          "bad_total_after": null,
+          "notes": [
+            "Output non riconosciuto come quiz riutilizzabile."
+          ]
+        }
+      },
+      "runtime_error": null
+    },
+    {
+      "motor_id": "scripts.rag_revisore_naturalezza_antikeyword_v35i.natural_test_explanation",
+      "path": "scripts/rag_revisore_naturalezza_antikeyword_v35i.py",
+      "function_name": "natural_test_explanation",
+      "lineno": 238,
+      "args": [
+        "title",
+        "correct",
+        "idx"
+      ],
+      "before_metrics": {
+        "questions_count": 1,
+        "true_fact_distractors": 3,
+        "mechanical_questions": 1,
+        "duplicate_questions": 0,
+        "rough_explanations": 1,
+        "empty_explanations": 0,
+        "correct_options_errors": 0,
+        "option_count_errors": 0
+      },
+      "status": "NO_USABLE_OUTPUT",
+      "attempts": [
+        {
+          "adapter_name": "title_correct_idx",
+          "status": "OK",
+          "error": null,
+          "evaluation": {
+            "usable_quiz_output": false,
+            "after_metrics": null,
+            "improved": false,
+            "worsened": false,
+            "neutral": true,
+            "bad_total_before": 5,
+            "bad_total_after": null,
+            "notes": [
+              "Output non riconosciuto come quiz riutilizzabile."
+            ]
+          }
+        }
+      ],
+      "best_result": {
+        "adapter_name": "title_correct_idx",
+        "status": "OK",
+        "error": null,
+        "evaluation": {
+          "usable_quiz_output": false,
+          "after_metrics": null,
+          "improved": false,
+          "worsened": false,
+          "neutral": true,
+          "bad_total_before": 5,
+          "bad_total_after": null,
+          "notes": [
+            "Output non riconosciuto come quiz riutilizzabile."
+          ]
+        }
+      },
+      "runtime_error": null
+    },
+    {
+      "motor_id": "scripts.rag_motore_didattico_riutilizzabile_v35c.visible_texts",
+      "path": "scripts/rag_motore_didattico_riutilizzabile_v35c.py",
+      "function_name": "visible_texts",
+      "lineno": 266,
+      "args": [
+        "output"
+      ],
+      "before_metrics": {
+        "questions_count": 1,
+        "true_fact_distractors": 3,
+        "mechanical_questions": 1,
+        "duplicate_questions": 0,
+        "rough_explanations": 1,
+        "empty_explanations": 0,
+        "correct_options_errors": 0,
+        "option_count_errors": 0
+      },
+      "status": "NO_USABLE_OUTPUT",
+      "attempts": [
+        {
+          "adapter_name": "payload",
+          "status": "OK",
+          "error": null,
+          "evaluation": {
+            "usable_quiz_output": false,
+            "after_metrics": null,
+            "improved": false,
+            "worsened": false,
+            "neutral": true,
+            "bad_total_before": 5,
+            "bad_total_after": null,
+            "notes": [
+              "Output non riconosciuto come quiz riutilizzabile."
+            ]
+          }
+        }
+      ],
+      "best_result": {
+        "adapter_name": "payload",
+        "status": "OK",
+        "error": null,
+        "evaluation": {
+          "usable_quiz_output": false,
+          "after_metrics": null,
+          "improved": false,
+          "worsened": false,
+          "neutral": true,
+          "bad_total_before": 5,
+          "bad_total_after": null,
+          "notes": [
+            "Output non riconosciuto come quiz riutilizzabile."
+          ]
+        }
+      },
+      "runtime_error": null
+    },
+    {
+      "motor_id": "scripts.report_distrattori_scientifici.normalizza_risposta",
+      "path": "scripts/report_distrattori_scientifici.py",
+      "function_name": "normalizza_risposta",
+      "lineno": 81,
+      "args": [
+        "risposta_grezza",
+        "opzioni"
+      ],
+      "before_metrics": {
+        "questions_count": 1,
+        "true_fact_distractors": 3,
+        "mechanical_questions": 1,
+        "duplicate_questions": 0,
+        "rough_explanations": 1,
+        "empty_explanations": 0,
+        "correct_options_errors": 0,
+        "option_count_errors": 0
+      },
+      "status": "NO_USABLE_OUTPUT",
+      "attempts": [
+        {
+          "adapter_name": "payload_payload",
+          "status": "OK",
+          "error": null,
+          "evaluation": {
+            "usable_quiz_output": false,
+            "after_metrics": null,
+            "improved": false,
+            "worsened": false,
+            "neutral": true,
+            "bad_total_before": 5,
+            "bad_total_after": null,
+            "notes": [
+              "Output non riconosciuto come quiz riutilizzabile."
+            ]
+          }
+        },
+        {
+          "adapter_name": "quiz_index",
+          "status": "ERROR",
+          "error": {
+            "type": "TypeError",
+            "message": "'int' object is not iterable",
+            "traceback_tail": "Traceback (most recent call last):\n  File \"/Users/alessandrobarbarossa/alex-ai-workspace/scripts/verifica_phase5_9_7_quiz_motor_runtime_test_v1.py\", line 445, in test_candidate\n    output = fn(*call_args)\n  File \"/Users/alessandrobarbarossa/alex-ai-workspace/scripts/report_distrattori_scientifici.py\", line 95, in normalizza_risposta\n    for opzione in opzioni:\nTypeError: 'int' object is not iterable\n"
+          },
+          "evaluation": null
+        }
+      ],
+      "best_result": {
+        "adapter_name": "payload_payload",
+        "status": "OK",
+        "error": null,
+        "evaluation": {
+          "usable_quiz_output": false,
+          "after_metrics": null,
+          "improved": false,
+          "worsened": false,
+          "neutral": true,
+          "bad_total_before": 5,
+          "bad_total_after": null,
+          "notes": [
+            "Output non riconosciuto come quiz riutilizzabile."
+          ]
+        }
+      },
+      "runtime_error": null
+    },
+    {
+      "motor_id": "scripts.estrai_biologia_da_migliorare.normalizza_risposta",
+      "path": "scripts/estrai_biologia_da_migliorare.py",
+      "function_name": "normalizza_risposta",
+      "lineno": 85,
+      "args": [
+        "risposta_grezza",
+        "opzioni"
+      ],
+      "before_metrics": {
+        "questions_count": 1,
+        "true_fact_distractors": 3,
+        "mechanical_questions": 1,
+        "duplicate_questions": 0,
+        "rough_explanations": 1,
+        "empty_explanations": 0,
+        "correct_options_errors": 0,
+        "option_count_errors": 0
+      },
+      "status": "NO_USABLE_OUTPUT",
+      "attempts": [
+        {
+          "adapter_name": "payload_payload",
+          "status": "OK",
+          "error": null,
+          "evaluation": {
+            "usable_quiz_output": false,
+            "after_metrics": null,
+            "improved": false,
+            "worsened": false,
+            "neutral": true,
+            "bad_total_before": 5,
+            "bad_total_after": null,
+            "notes": [
+              "Output non riconosciuto come quiz riutilizzabile."
+            ]
+          }
+        },
+        {
+          "adapter_name": "quiz_index",
+          "status": "ERROR",
+          "error": {
+            "type": "TypeError",
+            "message": "'int' object is not iterable",
+            "traceback_tail": "Traceback (most recent call last):\n  File \"/Users/alessandrobarbarossa/alex-ai-workspace/scripts/verifica_phase5_9_7_quiz_motor_runtime_test_v1.py\", line 445, in test_candidate\n    output = fn(*call_args)\n  File \"/Users/alessandrobarbarossa/alex-ai-workspace/scripts/estrai_biologia_da_migliorare.py\", line 99, in normalizza_risposta\n    for opzione in opzioni:\nTypeError: 'int' object is not iterable\n"
+          },
+          "evaluation": null
+        }
+      ],
+      "best_result": {
+        "adapter_name": "payload_payload",
+        "status": "OK",
+        "error": null,
+        "evaluation": {
+          "usable_quiz_output": false,
+          "after_metrics": null,
+          "improved": false,
+          "worsened": false,
+          "neutral": true,
+          "bad_total_before": 5,
+          "bad_total_after": null,
+          "notes": [
+            "Output non riconosciuto come quiz riutilizzabile."
+          ]
+        }
+      },
+      "runtime_error": null
+    },
+    {
+      "motor_id": "scripts.estrai_motore_scientifico_da_migliorare.normalizza_risposta",
+      "path": "scripts/estrai_motore_scientifico_da_migliorare.py",
+      "function_name": "normalizza_risposta",
+      "lineno": 110,
+      "args": [
+        "risposta_grezza",
+        "opzioni"
+      ],
+      "before_metrics": {
+        "questions_count": 1,
+        "true_fact_distractors": 3,
+        "mechanical_questions": 1,
+        "duplicate_questions": 0,
+        "rough_explanations": 1,
+        "empty_explanations": 0,
+        "correct_options_errors": 0,
+        "option_count_errors": 0
+      },
+      "status": "NO_USABLE_OUTPUT",
+      "attempts": [
+        {
+          "adapter_name": "payload_payload",
+          "status": "OK",
+          "error": null,
+          "evaluation": {
+            "usable_quiz_output": false,
+            "after_metrics": null,
+            "improved": false,
+            "worsened": false,
+            "neutral": true,
+            "bad_total_before": 5,
+            "bad_total_after": null,
+            "notes": [
+              "Output non riconosciuto come quiz riutilizzabile."
+            ]
+          }
+        },
+        {
+          "adapter_name": "quiz_index",
+          "status": "ERROR",
+          "error": {
+            "type": "TypeError",
+            "message": "'int' object is not iterable",
+            "traceback_tail": "Traceback (most recent call last):\n  File \"/Users/alessandrobarbarossa/alex-ai-workspace/scripts/verifica_phase5_9_7_quiz_motor_runtime_test_v1.py\", line 445, in test_candidate\n    output = fn(*call_args)\n  File \"/Users/alessandrobarbarossa/alex-ai-workspace/scripts/estrai_motore_scientifico_da_migliorare.py\", line 124, in normalizza_risposta\n    for opzione in opzioni:\nTypeError: 'int' object is not iterable\n"
+          },
+          "evaluation": null
+        }
+      ],
+      "best_result": {
+        "adapter_name": "payload_payload",
+        "status": "OK",
+        "error": null,
+        "evaluation": {
+          "usable_quiz_output": false,
+          "after_metrics": null,
+          "improved": false,
+          "worsened": false,
+          "neutral": true,
+          "bad_total_before": 5,
+          "bad_total_after": null,
+          "notes": [
+            "Output non riconosciuto come quiz riutilizzabile."
+          ]
+        }
+      },
+      "runtime_error": null
+    }
+  ],
+  "worsened_candidates": [],
+  "error_candidates": [
+    {
+      "motor_id": "scripts.rag_adapter_quiz_ufficiale_v43.adatta_domande_esistenti",
+      "path": "scripts/rag_adapter_quiz_ufficiale_v43.py",
+      "function_name": "adatta_domande_esistenti",
+      "lineno": 308,
+      "args": [
+        "domande",
+        "categoria",
+        "sottocategoria"
+      ],
+      "before_metrics": {
+        "questions_count": 1,
+        "true_fact_distractors": 3,
+        "mechanical_questions": 1,
+        "duplicate_questions": 0,
+        "rough_explanations": 1,
+        "empty_explanations": 0,
+        "correct_options_errors": 0,
+        "option_count_errors": 0
+      },
+      "status": "RUNTIME_ERROR",
+      "attempts": [
+        {
+          "adapter_name": "quiz_category_subcategory",
+          "status": "ERROR",
+          "error": {
+            "type": "AttributeError",
+            "message": "'str' object has no attribute 'get'",
+            "traceback_tail": "Traceback (most recent call last):\n  File \"/Users/alessandrobarbarossa/alex-ai-workspace/scripts/verifica_phase5_9_7_quiz_motor_runtime_test_v1.py\", line 446, in test_candidate\n    evaluation = evaluate_output(before_quiz, output)\n  File \"/Users/alessandrobarbarossa/alex-ai-workspace/scripts/verifica_phase5_9_7_quiz_motor_runtime_test_v1.py\", line 351, in evaluate_output\n    after_metrics = quiz_metrics(candidate_quiz)\nAttributeError: 'str' object has no attribute 'get'\n"
+          },
+          "evaluation": null
+        }
+      ],
+      "best_result": null,
+      "runtime_error": null
+    },
+    {
+      "motor_id": "scripts.motore_qualita_generale.trova_duplicati_e_simili",
+      "path": "scripts/motore_qualita_generale.py",
+      "function_name": "trova_duplicati_e_simili",
+      "lineno": 400,
+      "args": [
+        "domande_analizzate",
+        "soglia_similarita"
+      ],
+      "before_metrics": {
+        "questions_count": 1,
+        "true_fact_distractors": 3,
+        "mechanical_questions": 1,
+        "duplicate_questions": 0,
+        "rough_explanations": 1,
+        "empty_explanations": 0,
+        "correct_options_errors": 0,
+        "option_count_errors": 0
+      },
+      "status": "RUNTIME_ERROR",
+      "attempts": [
+        {
+          "adapter_name": "quiz_threshold",
+          "status": "ERROR",
+          "error": {
+            "type": "KeyError",
+            "message": "'id'",
+            "traceback_tail": "Traceback (most recent call last):\n  File \"/Users/alessandrobarbarossa/alex-ai-workspace/scripts/verifica_phase5_9_7_quiz_motor_runtime_test_v1.py\", line 445, in test_candidate\n    output = fn(*call_args)\n  File \"/Users/alessandrobarbarossa/alex-ai-workspace/scripts/motore_qualita_generale.py\", line 406, in trova_duplicati_e_simili\n    domande_per_testo[testo].append(domanda[\"id\"])\nKeyError: 'id'\n"
+          },
+          "evaluation": null
+        }
+      ],
+      "best_result": null,
+      "runtime_error": null
+    },
+    {
+      "motor_id": "scripts.rag_prepara_import_approvati.normalizza_per_database",
+      "path": "scripts/rag_prepara_import_approvati.py",
+      "function_name": "normalizza_per_database",
+      "lineno": 137,
+      "args": [
+        "domanda",
+        "posizione"
+      ],
+      "before_metrics": {
+        "questions_count": 1,
+        "true_fact_distractors": 3,
+        "mechanical_questions": 1,
+        "duplicate_questions": 0,
+        "rough_explanations": 1,
+        "empty_explanations": 0,
+        "correct_options_errors": 0,
+        "option_count_errors": 0
+      },
+      "status": "RUNTIME_ERROR",
+      "attempts": [
+        {
+          "adapter_name": "payload_payload",
+          "status": "ERROR",
+          "error": {
+            "type": "TypeError",
+            "message": "unsupported format string passed to dict.__format__",
+            "traceback_tail": "Traceback (most recent call last):\n  File \"/Users/alessandrobarbarossa/alex-ai-workspace/scripts/verifica_phase5_9_7_quiz_motor_runtime_test_v1.py\", line 445, in test_candidate\n    output = fn(*call_args)\n  File \"/Users/alessandrobarbarossa/alex-ai-workspace/scripts/rag_prepara_import_approvati.py\", line 142, in normalizza_per_database\n    or f\"RAG-IMPORT-{posizione:04d}\"\nTypeError: unsupported format string passed to dict.__format__\n"
+          },
+          "evaluation": null
+        },
+        {
+          "adapter_name": "quiz_index",
+          "status": "ERROR",
+          "error": {
+            "type": "AttributeError",
+            "message": "'list' object has no attribute 'get'",
+            "traceback_tail": "Traceback (most recent call last):\n  File \"/Users/alessandrobarbarossa/alex-ai-workspace/scripts/verifica_phase5_9_7_quiz_motor_runtime_test_v1.py\", line 445, in test_candidate\n    output = fn(*call_args)\n  File \"/Users/alessandrobarbarossa/alex-ai-workspace/scripts/rag_prepara_import_approvati.py\", line 139, in normalizza_per_database\n    str(domanda.get(\"id_finale\", \"\")).strip()\nAttributeError: 'list' object has no attribute 'get'\n"
+          },
+          "evaluation": null
+        }
+      ],
+      "best_result": null,
+      "runtime_error": null
+    },
+    {
+      "motor_id": "backend.quiz_generator.genera_quiz_json",
+      "path": "backend/quiz_generator.py",
+      "function_name": "genera_quiz_json",
+      "lineno": 2,
+      "args": [
+        "categoria",
+        "difficolta",
+        "numero_domande"
+      ],
+      "before_metrics": {
+        "questions_count": 1,
+        "true_fact_distractors": 3,
+        "mechanical_questions": 1,
+        "duplicate_questions": 0,
+        "rough_explanations": 1,
+        "empty_explanations": 0,
+        "correct_options_errors": 0,
+        "option_count_errors": 0
+      },
+      "status": "RUNTIME_ERROR",
+      "attempts": [
+        {
+          "adapter_name": "quiz_category_subcategory_generic",
+          "status": "ERROR",
+          "error": {
+            "type": "TypeError",
+            "message": "can only concatenate str (not \"int\") to str",
+            "traceback_tail": "Traceback (most recent call last):\n  File \"/Users/alessandrobarbarossa/alex-ai-workspace/scripts/verifica_phase5_9_7_quiz_motor_runtime_test_v1.py\", line 445, in test_candidate\n    output = fn(*call_args)\n  File \"/Users/alessandrobarbarossa/alex-ai-workspace/backend/quiz_generator.py\", line 5, in genera_quiz_json\n    for numero_domanda in range(1, numero_domande + 1):\nTypeError: can only concatenate str (not \"int\") to str\n"
+          },
+          "evaluation": null
+        }
+      ],
+      "best_result": null,
+      "runtime_error": null
+    },
+    {
+      "motor_id": "scripts.rag_genera_output_da_kb_clean_v34e.valida_output",
+      "path": "scripts/rag_genera_output_da_kb_clean_v34e.py",
+      "function_name": "valida_output",
+      "lineno": 545,
+      "args": [
+        "output",
+        "numero"
+      ],
+      "before_metrics": {
+        "questions_count": 1,
+        "true_fact_distractors": 3,
+        "mechanical_questions": 1,
+        "duplicate_questions": 0,
+        "rough_explanations": 1,
+        "empty_explanations": 0,
+        "correct_options_errors": 0,
+        "option_count_errors": 0
+      },
+      "status": "RUNTIME_ERROR",
+      "attempts": [
+        {
+          "adapter_name": "payload_original",
+          "status": "ERROR",
+          "error": {
+            "type": "TypeError",
+            "message": "'<' not supported between instances of 'dict' and 'int'",
+            "traceback_tail": "Traceback (most recent call last):\n  File \"/Users/alessandrobarbarossa/alex-ai-workspace/scripts/verifica_phase5_9_7_quiz_motor_runtime_test_v1.py\", line 445, in test_candidate\n    output = fn(*call_args)\n  File \"/Users/alessandrobarbarossa/alex-ai-workspace/scripts/rag_genera_output_da_kb_clean_v34e.py\", line 552, in valida_output\n    if len(output.get(\"card\", [])) < min(3, numero):\nTypeError: '<' not supported between instances of 'dict' and 'int'\n"
+          },
+          "evaluation": null
+        }
+      ],
+      "best_result": null,
+      "runtime_error": null
+    },
+    {
+      "motor_id": "scripts.mini_llm_study_pack_cli_v1.format_markdown",
+      "path": "scripts/mini_llm_study_pack_cli_v1.py",
+      "function_name": "format_markdown",
+      "lineno": 101,
+      "args": [
+        "payload"
+      ],
+      "before_metrics": {
+        "questions_count": 1,
+        "true_fact_distractors": 3,
+        "mechanical_questions": 1,
+        "duplicate_questions": 0,
+        "rough_explanations": 1,
+        "empty_explanations": 0,
+        "correct_options_errors": 0,
+        "option_count_errors": 0
+      },
+      "status": "RUNTIME_ERROR",
+      "attempts": [
+        {
+          "adapter_name": "payload",
+          "status": "ERROR",
+          "error": {
+            "type": "KeyError",
+            "message": "'pack'",
+            "traceback_tail": "Traceback (most recent call last):\n  File \"/Users/alessandrobarbarossa/alex-ai-workspace/scripts/verifica_phase5_9_7_quiz_motor_runtime_test_v1.py\", line 445, in test_candidate\n    output = fn(*call_args)\n  File \"/Users/alessandrobarbarossa/alex-ai-workspace/scripts/mini_llm_study_pack_cli_v1.py\", line 102, in format_markdown\n    pack = payload[\"pack\"]\nKeyError: 'pack'\n"
+          },
+          "evaluation": null
+        }
+      ],
+      "best_result": null,
+      "runtime_error": null
+    },
+    {
+      "motor_id": "scripts.rag_bridge_motori_qualita_esistenti_v35b.analizza_domanda_se_possibile",
+      "path": "scripts/rag_bridge_motori_qualita_esistenti_v35b.py",
+      "function_name": "analizza_domanda_se_possibile",
+      "lineno": 104,
+      "args": [
+        "self",
+        "domanda"
+      ],
+      "before_metrics": {
+        "questions_count": 1,
+        "true_fact_distractors": 3,
+        "mechanical_questions": 1,
+        "duplicate_questions": 0,
+        "rough_explanations": 1,
+        "empty_explanations": 0,
+        "correct_options_errors": 0,
+        "option_count_errors": 0
+      },
+      "status": "IMPORT_ERROR",
+      "attempts": [],
+      "best_result": null,
+      "runtime_error": "AttributeError: module 'scripts.rag_bridge_motori_qualita_esistenti_v35b' has no attribute 'analizza_domanda_se_possibile'"
+    }
+  ],
+  "all_results": [
+    {
+      "motor_id": "scripts.motore_qualita_generale.analizza_domanda",
+      "path": "scripts/motore_qualita_generale.py",
+      "function_name": "analizza_domanda",
+      "lineno": 276,
+      "args": [
+        "nome_motore",
+        "indice",
+        "domanda"
+      ],
+      "before_metrics": {
+        "questions_count": 1,
+        "true_fact_distractors": 3,
+        "mechanical_questions": 1,
+        "duplicate_questions": 0,
+        "rough_explanations": 1,
+        "empty_explanations": 0,
+        "correct_options_errors": 0,
+        "option_count_errors": 0
+      },
+      "status": "NO_USABLE_OUTPUT",
+      "attempts": [
+        {
+          "adapter_name": "name_index_question",
+          "status": "OK",
+          "error": null,
+          "evaluation": {
+            "usable_quiz_output": false,
+            "after_metrics": null,
+            "improved": false,
+            "worsened": false,
+            "neutral": true,
+            "bad_total_before": 5,
+            "bad_total_after": null,
+            "notes": [
+              "Output non riconosciuto come quiz riutilizzabile."
+            ]
+          }
+        }
+      ],
+      "best_result": {
+        "adapter_name": "name_index_question",
+        "status": "OK",
+        "error": null,
+        "evaluation": {
+          "usable_quiz_output": false,
+          "after_metrics": null,
+          "improved": false,
+          "worsened": false,
+          "neutral": true,
+          "bad_total_before": 5,
+          "bad_total_after": null,
+          "notes": [
+            "Output non riconosciuto come quiz riutilizzabile."
+          ]
+        }
+      },
+      "runtime_error": null
+    },
+    {
+      "motor_id": "scripts.rag_adapter_quiz_ufficiale_v43.adatta_domande_esistenti",
+      "path": "scripts/rag_adapter_quiz_ufficiale_v43.py",
+      "function_name": "adatta_domande_esistenti",
+      "lineno": 308,
+      "args": [
+        "domande",
+        "categoria",
+        "sottocategoria"
+      ],
+      "before_metrics": {
+        "questions_count": 1,
+        "true_fact_distractors": 3,
+        "mechanical_questions": 1,
+        "duplicate_questions": 0,
+        "rough_explanations": 1,
+        "empty_explanations": 0,
+        "correct_options_errors": 0,
+        "option_count_errors": 0
+      },
+      "status": "RUNTIME_ERROR",
+      "attempts": [
+        {
+          "adapter_name": "quiz_category_subcategory",
+          "status": "ERROR",
+          "error": {
+            "type": "AttributeError",
+            "message": "'str' object has no attribute 'get'",
+            "traceback_tail": "Traceback (most recent call last):\n  File \"/Users/alessandrobarbarossa/alex-ai-workspace/scripts/verifica_phase5_9_7_quiz_motor_runtime_test_v1.py\", line 446, in test_candidate\n    evaluation = evaluate_output(before_quiz, output)\n  File \"/Users/alessandrobarbarossa/alex-ai-workspace/scripts/verifica_phase5_9_7_quiz_motor_runtime_test_v1.py\", line 351, in evaluate_output\n    after_metrics = quiz_metrics(candidate_quiz)\nAttributeError: 'str' object has no attribute 'get'\n"
+          },
+          "evaluation": null
+        }
+      ],
+      "best_result": null,
+      "runtime_error": null
+    },
+    {
+      "motor_id": "scripts.motore_qualita_logica_visiva_base.analizza_domanda_visiva",
+      "path": "scripts/motore_qualita_logica_visiva_base.py",
+      "function_name": "analizza_domanda_visiva",
+      "lineno": 256,
+      "args": [
+        "indice",
+        "domanda"
+      ],
+      "before_metrics": {
+        "questions_count": 1,
+        "true_fact_distractors": 3,
+        "mechanical_questions": 1,
+        "duplicate_questions": 0,
+        "rough_explanations": 1,
+        "empty_explanations": 0,
+        "correct_options_errors": 0,
+        "option_count_errors": 0
+      },
+      "status": "NO_USABLE_OUTPUT",
+      "attempts": [
+        {
+          "adapter_name": "index_question",
+          "status": "OK",
+          "error": null,
+          "evaluation": {
+            "usable_quiz_output": false,
+            "after_metrics": null,
+            "improved": false,
+            "worsened": false,
+            "neutral": true,
+            "bad_total_before": 5,
+            "bad_total_after": null,
+            "notes": [
+              "Output non riconosciuto come quiz riutilizzabile."
+            ]
+          }
+        }
+      ],
+      "best_result": {
+        "adapter_name": "index_question",
+        "status": "OK",
+        "error": null,
+        "evaluation": {
+          "usable_quiz_output": false,
+          "after_metrics": null,
+          "improved": false,
+          "worsened": false,
+          "neutral": true,
+          "bad_total_before": 5,
+          "bad_total_after": null,
+          "notes": [
+            "Output non riconosciuto come quiz riutilizzabile."
+          ]
+        }
+      },
+      "runtime_error": null
+    },
+    {
+      "motor_id": "scripts.validatore_rag_distrattori_forti_v2.valuta_domanda",
+      "path": "scripts/validatore_rag_distrattori_forti_v2.py",
+      "function_name": "valuta_domanda",
+      "lineno": 52,
+      "args": [
+        "domanda",
+        "indice"
+      ],
+      "before_metrics": {
+        "questions_count": 1,
+        "true_fact_distractors": 3,
+        "mechanical_questions": 1,
+        "duplicate_questions": 0,
+        "rough_explanations": 1,
+        "empty_explanations": 0,
+        "correct_options_errors": 0,
+        "option_count_errors": 0
+      },
+      "status": "NO_USABLE_OUTPUT",
+      "attempts": [
+        {
+          "adapter_name": "question_index",
+          "status": "OK",
+          "error": null,
+          "evaluation": {
+            "usable_quiz_output": false,
+            "after_metrics": null,
+            "improved": false,
+            "worsened": false,
+            "neutral": true,
+            "bad_total_before": 5,
+            "bad_total_after": null,
+            "notes": [
+              "Output non riconosciuto come quiz riutilizzabile."
+            ]
+          }
+        }
+      ],
+      "best_result": {
+        "adapter_name": "question_index",
+        "status": "OK",
+        "error": null,
+        "evaluation": {
+          "usable_quiz_output": false,
+          "after_metrics": null,
+          "improved": false,
+          "worsened": false,
+          "neutral": true,
+          "bad_total_before": 5,
+          "bad_total_after": null,
+          "notes": [
+            "Output non riconosciuto come quiz riutilizzabile."
+          ]
+        }
+      },
+      "runtime_error": null
+    },
+    {
+      "motor_id": "backend.motori_scrittura.qg_clean_output_bundle",
+      "path": "backend/motori_scrittura.py",
+      "function_name": "qg_clean_output_bundle",
+      "lineno": 3510,
+      "args": [
+        "output_result"
+      ],
+      "before_metrics": {
+        "questions_count": 1,
+        "true_fact_distractors": 3,
+        "mechanical_questions": 1,
+        "duplicate_questions": 0,
+        "rough_explanations": 1,
+        "empty_explanations": 0,
+        "correct_options_errors": 0,
+        "option_count_errors": 0
+      },
+      "status": "NO_USABLE_OUTPUT",
+      "attempts": [
+        {
+          "adapter_name": "payload",
+          "status": "OK",
+          "error": null,
+          "evaluation": {
+            "usable_quiz_output": false,
+            "after_metrics": null,
+            "improved": false,
+            "worsened": false,
+            "neutral": true,
+            "bad_total_before": 5,
+            "bad_total_after": null,
+            "notes": [
+              "Output non riconosciuto come quiz riutilizzabile."
+            ]
+          }
+        }
+      ],
+      "best_result": {
+        "adapter_name": "payload",
+        "status": "OK",
+        "error": null,
+        "evaluation": {
+          "usable_quiz_output": false,
+          "after_metrics": null,
+          "improved": false,
+          "worsened": false,
+          "neutral": true,
+          "bad_total_before": 5,
+          "bad_total_after": null,
+          "notes": [
+            "Output non riconosciuto come quiz riutilizzabile."
+          ]
+        }
+      },
+      "runtime_error": null
+    },
+    {
+      "motor_id": "backend.phase5_live_quality_bridge_v1._legacy_refine_output_to_phase5",
+      "path": "backend/phase5_live_quality_bridge_v1.py",
+      "function_name": "_legacy_refine_output_to_phase5",
+      "lineno": 273,
+      "args": [
+        "value",
+        "original_value"
+      ],
+      "before_metrics": {
+        "questions_count": 1,
+        "true_fact_distractors": 3,
+        "mechanical_questions": 1,
+        "duplicate_questions": 0,
+        "rough_explanations": 1,
+        "empty_explanations": 0,
+        "correct_options_errors": 0,
+        "option_count_errors": 0
+      },
+      "status": "NEUTRAL_USABLE_OUTPUT",
+      "attempts": [
+        {
+          "adapter_name": "payload_original",
+          "status": "OK",
+          "error": null,
+          "evaluation": {
+            "usable_quiz_output": true,
+            "after_metrics": {
+              "questions_count": 1,
+              "true_fact_distractors": 3,
+              "mechanical_questions": 1,
+              "duplicate_questions": 0,
+              "rough_explanations": 1,
+              "empty_explanations": 0,
+              "correct_options_errors": 0,
+              "option_count_errors": 0
+            },
+            "improved": false,
+            "worsened": false,
+            "neutral": true,
+            "bad_total_before": 5,
+            "bad_total_after": 5,
+            "notes": [
+              "Nessun delta misurabile sulle metriche quiz."
+            ]
+          }
+        }
+      ],
+      "best_result": {
+        "adapter_name": "payload_original",
+        "status": "OK",
+        "error": null,
+        "evaluation": {
+          "usable_quiz_output": true,
+          "after_metrics": {
+            "questions_count": 1,
+            "true_fact_distractors": 3,
+            "mechanical_questions": 1,
+            "duplicate_questions": 0,
+            "rough_explanations": 1,
+            "empty_explanations": 0,
+            "correct_options_errors": 0,
+            "option_count_errors": 0
+          },
+          "improved": false,
+          "worsened": false,
+          "neutral": true,
+          "bad_total_before": 5,
+          "bad_total_after": 5,
+          "notes": [
+            "Nessun delta misurabile sulle metriche quiz."
+          ]
+        }
+      },
+      "runtime_error": null
+    },
+    {
+      "motor_id": "backend.phase5_quiz_true_distractor_repair_v1.repair_quiz_true_distractors_v1",
+      "path": "backend/phase5_quiz_true_distractor_repair_v1.py",
+      "function_name": "repair_quiz_true_distractors_v1",
+      "lineno": 212,
+      "args": [
+        "quiz"
+      ],
+      "before_metrics": {
+        "questions_count": 1,
+        "true_fact_distractors": 3,
+        "mechanical_questions": 1,
+        "duplicate_questions": 0,
+        "rough_explanations": 1,
+        "empty_explanations": 0,
+        "correct_options_errors": 0,
+        "option_count_errors": 0
+      },
+      "status": "IMPROVED",
+      "attempts": [
+        {
+          "adapter_name": "quiz",
+          "status": "OK",
+          "error": null,
+          "evaluation": {
+            "usable_quiz_output": true,
+            "after_metrics": {
+              "questions_count": 1,
+              "true_fact_distractors": 0,
+              "mechanical_questions": 1,
+              "duplicate_questions": 0,
+              "rough_explanations": 1,
+              "empty_explanations": 0,
+              "correct_options_errors": 0,
+              "option_count_errors": 0
+            },
+            "improved": true,
+            "worsened": false,
+            "neutral": false,
+            "bad_total_before": 5,
+            "bad_total_after": 2,
+            "notes": [
+              "Migliora true_fact_distractors: 3 -> 0"
+            ]
+          }
+        }
+      ],
+      "best_result": {
+        "adapter_name": "quiz",
+        "status": "OK",
+        "error": null,
+        "evaluation": {
+          "usable_quiz_output": true,
+          "after_metrics": {
+            "questions_count": 1,
+            "true_fact_distractors": 0,
+            "mechanical_questions": 1,
+            "duplicate_questions": 0,
+            "rough_explanations": 1,
+            "empty_explanations": 0,
+            "correct_options_errors": 0,
+            "option_count_errors": 0
+          },
+          "improved": true,
+          "worsened": false,
+          "neutral": false,
+          "bad_total_before": 5,
+          "bad_total_after": 2,
+          "notes": [
+            "Migliora true_fact_distractors: 3 -> 0"
+          ]
+        }
+      },
+      "runtime_error": null
+    },
+    {
+      "motor_id": "scripts.motore_qualita_generale.trova_duplicati_e_simili",
+      "path": "scripts/motore_qualita_generale.py",
+      "function_name": "trova_duplicati_e_simili",
+      "lineno": 400,
+      "args": [
+        "domande_analizzate",
+        "soglia_similarita"
+      ],
+      "before_metrics": {
+        "questions_count": 1,
+        "true_fact_distractors": 3,
+        "mechanical_questions": 1,
+        "duplicate_questions": 0,
+        "rough_explanations": 1,
+        "empty_explanations": 0,
+        "correct_options_errors": 0,
+        "option_count_errors": 0
+      },
+      "status": "RUNTIME_ERROR",
+      "attempts": [
+        {
+          "adapter_name": "quiz_threshold",
+          "status": "ERROR",
+          "error": {
+            "type": "KeyError",
+            "message": "'id'",
+            "traceback_tail": "Traceback (most recent call last):\n  File \"/Users/alessandrobarbarossa/alex-ai-workspace/scripts/verifica_phase5_9_7_quiz_motor_runtime_test_v1.py\", line 445, in test_candidate\n    output = fn(*call_args)\n  File \"/Users/alessandrobarbarossa/alex-ai-workspace/scripts/motore_qualita_generale.py\", line 406, in trova_duplicati_e_simili\n    domande_per_testo[testo].append(domanda[\"id\"])\nKeyError: 'id'\n"
+          },
+          "evaluation": null
+        }
+      ],
+      "best_result": null,
+      "runtime_error": null
+    },
+    {
+      "motor_id": "backend.main.normalizza_quiz_generato",
+      "path": "backend/main.py",
+      "function_name": "normalizza_quiz_generato",
+      "lineno": 469,
+      "args": [
+        "dati_quiz"
+      ],
+      "before_metrics": {
+        "questions_count": 1,
+        "true_fact_distractors": 3,
+        "mechanical_questions": 1,
+        "duplicate_questions": 0,
+        "rough_explanations": 1,
+        "empty_explanations": 0,
+        "correct_options_errors": 0,
+        "option_count_errors": 0
+      },
+      "status": "NEUTRAL_USABLE_OUTPUT",
+      "attempts": [
+        {
+          "adapter_name": "payload",
+          "status": "OK",
+          "error": null,
+          "evaluation": {
+            "usable_quiz_output": true,
+            "after_metrics": {
+              "questions_count": 1,
+              "true_fact_distractors": 3,
+              "mechanical_questions": 1,
+              "duplicate_questions": 0,
+              "rough_explanations": 1,
+              "empty_explanations": 0,
+              "correct_options_errors": 0,
+              "option_count_errors": 0
+            },
+            "improved": false,
+            "worsened": false,
+            "neutral": true,
+            "bad_total_before": 5,
+            "bad_total_after": 5,
+            "notes": [
+              "Nessun delta misurabile sulle metriche quiz."
+            ]
+          }
+        }
+      ],
+      "best_result": {
+        "adapter_name": "payload",
+        "status": "OK",
+        "error": null,
+        "evaluation": {
+          "usable_quiz_output": true,
+          "after_metrics": {
+            "questions_count": 1,
+            "true_fact_distractors": 3,
+            "mechanical_questions": 1,
+            "duplicate_questions": 0,
+            "rough_explanations": 1,
+            "empty_explanations": 0,
+            "correct_options_errors": 0,
+            "option_count_errors": 0
+          },
+          "improved": false,
+          "worsened": false,
+          "neutral": true,
+          "bad_total_before": 5,
+          "bad_total_after": 5,
+          "notes": [
+            "Nessun delta misurabile sulle metriche quiz."
+          ]
+        }
+      },
+      "runtime_error": null
+    },
+    {
+      "motor_id": "backend.phase5_quiz_true_distractor_repair_v1.repair_payload_quiz_true_distractors_v1",
+      "path": "backend/phase5_quiz_true_distractor_repair_v1.py",
+      "function_name": "repair_payload_quiz_true_distractors_v1",
+      "lineno": 298,
+      "args": [
+        "payload"
+      ],
+      "before_metrics": {
+        "questions_count": 1,
+        "true_fact_distractors": 3,
+        "mechanical_questions": 1,
+        "duplicate_questions": 0,
+        "rough_explanations": 1,
+        "empty_explanations": 0,
+        "correct_options_errors": 0,
+        "option_count_errors": 0
+      },
+      "status": "IMPROVED",
+      "attempts": [
+        {
+          "adapter_name": "payload",
+          "status": "OK",
+          "error": null,
+          "evaluation": {
+            "usable_quiz_output": true,
+            "after_metrics": {
+              "questions_count": 1,
+              "true_fact_distractors": 0,
+              "mechanical_questions": 1,
+              "duplicate_questions": 0,
+              "rough_explanations": 1,
+              "empty_explanations": 0,
+              "correct_options_errors": 0,
+              "option_count_errors": 0
+            },
+            "improved": true,
+            "worsened": false,
+            "neutral": false,
+            "bad_total_before": 5,
+            "bad_total_after": 2,
+            "notes": [
+              "Migliora true_fact_distractors: 3 -> 0"
+            ]
+          }
+        }
+      ],
+      "best_result": {
+        "adapter_name": "payload",
+        "status": "OK",
+        "error": null,
+        "evaluation": {
+          "usable_quiz_output": true,
+          "after_metrics": {
+            "questions_count": 1,
+            "true_fact_distractors": 0,
+            "mechanical_questions": 1,
+            "duplicate_questions": 0,
+            "rough_explanations": 1,
+            "empty_explanations": 0,
+            "correct_options_errors": 0,
+            "option_count_errors": 0
+          },
+          "improved": true,
+          "worsened": false,
+          "neutral": false,
+          "bad_total_before": 5,
+          "bad_total_after": 2,
+          "notes": [
+            "Migliora true_fact_distractors: 3 -> 0"
+          ]
+        }
+      },
+      "runtime_error": null
+    },
+    {
+      "motor_id": "scripts.rag_revisore_qualita_testuale_v35g.refine_tests",
+      "path": "scripts/rag_revisore_qualita_testuale_v35g.py",
+      "function_name": "refine_tests",
+      "lineno": 341,
+      "args": [
+        "data"
+      ],
+      "before_metrics": {
+        "questions_count": 1,
+        "true_fact_distractors": 3,
+        "mechanical_questions": 1,
+        "duplicate_questions": 0,
+        "rough_explanations": 1,
+        "empty_explanations": 0,
+        "correct_options_errors": 0,
+        "option_count_errors": 0
+      },
+      "status": "NEUTRAL_USABLE_OUTPUT",
+      "attempts": [
+        {
+          "adapter_name": "payload",
+          "status": "OK",
+          "error": null,
+          "evaluation": {
+            "usable_quiz_output": true,
+            "after_metrics": {
+              "questions_count": 1,
+              "true_fact_distractors": 3,
+              "mechanical_questions": 1,
+              "duplicate_questions": 0,
+              "rough_explanations": 1,
+              "empty_explanations": 0,
+              "correct_options_errors": 0,
+              "option_count_errors": 0
+            },
+            "improved": false,
+            "worsened": false,
+            "neutral": true,
+            "bad_total_before": 5,
+            "bad_total_after": 5,
+            "notes": [
+              "Nessun delta misurabile sulle metriche quiz."
+            ]
+          }
+        }
+      ],
+      "best_result": {
+        "adapter_name": "payload",
+        "status": "OK",
+        "error": null,
+        "evaluation": {
+          "usable_quiz_output": true,
+          "after_metrics": {
+            "questions_count": 1,
+            "true_fact_distractors": 3,
+            "mechanical_questions": 1,
+            "duplicate_questions": 0,
+            "rough_explanations": 1,
+            "empty_explanations": 0,
+            "correct_options_errors": 0,
+            "option_count_errors": 0
+          },
+          "improved": false,
+          "worsened": false,
+          "neutral": true,
+          "bad_total_before": 5,
+          "bad_total_after": 5,
+          "notes": [
+            "Nessun delta misurabile sulle metriche quiz."
+          ]
+        }
+      },
+      "runtime_error": null
+    },
+    {
+      "motor_id": "scripts.applica_v35k_reale.clean_output",
+      "path": "scripts/applica_v35k_reale.py",
+      "function_name": "clean_output",
+      "lineno": 173,
+      "args": [
+        "data"
+      ],
+      "before_metrics": {
+        "questions_count": 1,
+        "true_fact_distractors": 3,
+        "mechanical_questions": 1,
+        "duplicate_questions": 0,
+        "rough_explanations": 1,
+        "empty_explanations": 0,
+        "correct_options_errors": 0,
+        "option_count_errors": 0
+      },
+      "status": "NEUTRAL_USABLE_OUTPUT",
+      "attempts": [
+        {
+          "adapter_name": "payload",
+          "status": "OK",
+          "error": null,
+          "evaluation": {
+            "usable_quiz_output": true,
+            "after_metrics": {
+              "questions_count": 1,
+              "true_fact_distractors": 3,
+              "mechanical_questions": 1,
+              "duplicate_questions": 0,
+              "rough_explanations": 1,
+              "empty_explanations": 0,
+              "correct_options_errors": 0,
+              "option_count_errors": 0
+            },
+            "improved": false,
+            "worsened": false,
+            "neutral": true,
+            "bad_total_before": 5,
+            "bad_total_after": 5,
+            "notes": [
+              "Nessun delta misurabile sulle metriche quiz."
+            ]
+          }
+        }
+      ],
+      "best_result": {
+        "adapter_name": "payload",
+        "status": "OK",
+        "error": null,
+        "evaluation": {
+          "usable_quiz_output": true,
+          "after_metrics": {
+            "questions_count": 1,
+            "true_fact_distractors": 3,
+            "mechanical_questions": 1,
+            "duplicate_questions": 0,
+            "rough_explanations": 1,
+            "empty_explanations": 0,
+            "correct_options_errors": 0,
+            "option_count_errors": 0
+          },
+          "improved": false,
+          "worsened": false,
+          "neutral": true,
+          "bad_total_before": 5,
+          "bad_total_after": 5,
+          "notes": [
+            "Nessun delta misurabile sulle metriche quiz."
+          ]
+        }
+      },
+      "runtime_error": null
+    },
+    {
+      "motor_id": "scripts.motore_qualita_logica_visiva_base.analizza_file",
+      "path": "scripts/motore_qualita_logica_visiva_base.py",
+      "function_name": "analizza_file",
+      "lineno": 377,
+      "args": [
+        "percorso"
+      ],
+      "before_metrics": {
+        "questions_count": 1,
+        "true_fact_distractors": 3,
+        "mechanical_questions": 1,
+        "duplicate_questions": 0,
+        "rough_explanations": 1,
+        "empty_explanations": 0,
+        "correct_options_errors": 0,
+        "option_count_errors": 0
+      },
+      "status": "SKIPPED_UNSAFE_OR_UNSUPPORTED_ARGS",
+      "attempts": [],
+      "best_result": null,
+      "runtime_error": null
+    },
+    {
+      "motor_id": "scripts.rag_prepara_import_approvati.normalizza_per_database",
+      "path": "scripts/rag_prepara_import_approvati.py",
+      "function_name": "normalizza_per_database",
+      "lineno": 137,
+      "args": [
+        "domanda",
+        "posizione"
+      ],
+      "before_metrics": {
+        "questions_count": 1,
+        "true_fact_distractors": 3,
+        "mechanical_questions": 1,
+        "duplicate_questions": 0,
+        "rough_explanations": 1,
+        "empty_explanations": 0,
+        "correct_options_errors": 0,
+        "option_count_errors": 0
+      },
+      "status": "RUNTIME_ERROR",
+      "attempts": [
+        {
+          "adapter_name": "payload_payload",
+          "status": "ERROR",
+          "error": {
+            "type": "TypeError",
+            "message": "unsupported format string passed to dict.__format__",
+            "traceback_tail": "Traceback (most recent call last):\n  File \"/Users/alessandrobarbarossa/alex-ai-workspace/scripts/verifica_phase5_9_7_quiz_motor_runtime_test_v1.py\", line 445, in test_candidate\n    output = fn(*call_args)\n  File \"/Users/alessandrobarbarossa/alex-ai-workspace/scripts/rag_prepara_import_approvati.py\", line 142, in normalizza_per_database\n    or f\"RAG-IMPORT-{posizione:04d}\"\nTypeError: unsupported format string passed to dict.__format__\n"
+          },
+          "evaluation": null
+        },
+        {
+          "adapter_name": "quiz_index",
+          "status": "ERROR",
+          "error": {
+            "type": "AttributeError",
+            "message": "'list' object has no attribute 'get'",
+            "traceback_tail": "Traceback (most recent call last):\n  File \"/Users/alessandrobarbarossa/alex-ai-workspace/scripts/verifica_phase5_9_7_quiz_motor_runtime_test_v1.py\", line 445, in test_candidate\n    output = fn(*call_args)\n  File \"/Users/alessandrobarbarossa/alex-ai-workspace/scripts/rag_prepara_import_approvati.py\", line 139, in normalizza_per_database\n    str(domanda.get(\"id_finale\", \"\")).strip()\nAttributeError: 'list' object has no attribute 'get'\n"
+          },
+          "evaluation": null
+        }
+      ],
+      "best_result": null,
+      "runtime_error": null
+    },
+    {
+      "motor_id": "scripts.report_distrattori_scientifici.valuta_qualita_opzioni",
+      "path": "scripts/report_distrattori_scientifici.py",
+      "function_name": "valuta_qualita_opzioni",
+      "lineno": 123,
+      "args": [
+        "opzioni",
+        "risposta"
+      ],
+      "before_metrics": {
+        "questions_count": 1,
+        "true_fact_distractors": 3,
+        "mechanical_questions": 1,
+        "duplicate_questions": 0,
+        "rough_explanations": 1,
+        "empty_explanations": 0,
+        "correct_options_errors": 0,
+        "option_count_errors": 0
+      },
+      "status": "NO_USABLE_OUTPUT",
+      "attempts": [
+        {
+          "adapter_name": "options_correct",
+          "status": "OK",
+          "error": null,
+          "evaluation": {
+            "usable_quiz_output": false,
+            "after_metrics": null,
+            "improved": false,
+            "worsened": false,
+            "neutral": true,
+            "bad_total_before": 5,
+            "bad_total_after": null,
+            "notes": [
+              "Output non riconosciuto come quiz riutilizzabile."
+            ]
+          }
+        }
+      ],
+      "best_result": {
+        "adapter_name": "options_correct",
+        "status": "OK",
+        "error": null,
+        "evaluation": {
+          "usable_quiz_output": false,
+          "after_metrics": null,
+          "improved": false,
+          "worsened": false,
+          "neutral": true,
+          "bad_total_before": 5,
+          "bad_total_after": null,
+          "notes": [
+            "Output non riconosciuto come quiz riutilizzabile."
+          ]
+        }
+      },
+      "runtime_error": null
+    },
+    {
+      "motor_id": "scripts.estrai_biologia_da_migliorare.normalizza_opzioni",
+      "path": "scripts/estrai_biologia_da_migliorare.py",
+      "function_name": "normalizza_opzioni",
+      "lineno": 54,
+      "args": [
+        "opzioni_grezze"
+      ],
+      "before_metrics": {
+        "questions_count": 1,
+        "true_fact_distractors": 3,
+        "mechanical_questions": 1,
+        "duplicate_questions": 0,
+        "rough_explanations": 1,
+        "empty_explanations": 0,
+        "correct_options_errors": 0,
+        "option_count_errors": 0
+      },
+      "status": "NO_USABLE_OUTPUT",
+      "attempts": [
+        {
+          "adapter_name": "options",
+          "status": "OK",
+          "error": null,
+          "evaluation": {
+            "usable_quiz_output": false,
+            "after_metrics": null,
+            "improved": false,
+            "worsened": false,
+            "neutral": true,
+            "bad_total_before": 5,
+            "bad_total_after": null,
+            "notes": [
+              "Output non riconosciuto come quiz riutilizzabile."
+            ]
+          }
+        }
+      ],
+      "best_result": {
+        "adapter_name": "options",
+        "status": "OK",
+        "error": null,
+        "evaluation": {
+          "usable_quiz_output": false,
+          "after_metrics": null,
+          "improved": false,
+          "worsened": false,
+          "neutral": true,
+          "bad_total_before": 5,
+          "bad_total_after": null,
+          "notes": [
+            "Output non riconosciuto come quiz riutilizzabile."
+          ]
+        }
+      },
+      "runtime_error": null
+    },
+    {
+      "motor_id": "scripts.estrai_motore_scientifico_da_migliorare.normalizza_opzioni",
+      "path": "scripts/estrai_motore_scientifico_da_migliorare.py",
+      "function_name": "normalizza_opzioni",
+      "lineno": 79,
+      "args": [
+        "opzioni_grezze"
+      ],
+      "before_metrics": {
+        "questions_count": 1,
+        "true_fact_distractors": 3,
+        "mechanical_questions": 1,
+        "duplicate_questions": 0,
+        "rough_explanations": 1,
+        "empty_explanations": 0,
+        "correct_options_errors": 0,
+        "option_count_errors": 0
+      },
+      "status": "NO_USABLE_OUTPUT",
+      "attempts": [
+        {
+          "adapter_name": "options",
+          "status": "OK",
+          "error": null,
+          "evaluation": {
+            "usable_quiz_output": false,
+            "after_metrics": null,
+            "improved": false,
+            "worsened": false,
+            "neutral": true,
+            "bad_total_before": 5,
+            "bad_total_after": null,
+            "notes": [
+              "Output non riconosciuto come quiz riutilizzabile."
+            ]
+          }
+        }
+      ],
+      "best_result": {
+        "adapter_name": "options",
+        "status": "OK",
+        "error": null,
+        "evaluation": {
+          "usable_quiz_output": false,
+          "after_metrics": null,
+          "improved": false,
+          "worsened": false,
+          "neutral": true,
+          "bad_total_before": 5,
+          "bad_total_after": null,
+          "notes": [
+            "Output non riconosciuto come quiz riutilizzabile."
+          ]
+        }
+      },
+      "runtime_error": null
+    },
+    {
+      "motor_id": "scripts.rag_bridge_motori_qualita_esistenti_v35b.analizza_domanda_se_possibile",
+      "path": "scripts/rag_bridge_motori_qualita_esistenti_v35b.py",
+      "function_name": "analizza_domanda_se_possibile",
+      "lineno": 104,
+      "args": [
+        "self",
+        "domanda"
+      ],
+      "before_metrics": {
+        "questions_count": 1,
+        "true_fact_distractors": 3,
+        "mechanical_questions": 1,
+        "duplicate_questions": 0,
+        "rough_explanations": 1,
+        "empty_explanations": 0,
+        "correct_options_errors": 0,
+        "option_count_errors": 0
+      },
+      "status": "IMPORT_ERROR",
+      "attempts": [],
+      "best_result": null,
+      "runtime_error": "AttributeError: module 'scripts.rag_bridge_motori_qualita_esistenti_v35b' has no attribute 'analizza_domanda_se_possibile'"
+    },
+    {
+      "motor_id": "scripts.improve_answer_options_100.applica_miglioramenti",
+      "path": "scripts/improve_answer_options_100.py",
+      "function_name": "applica_miglioramenti",
+      "lineno": 504,
+      "args": [
+        "domande"
+      ],
+      "before_metrics": {
+        "questions_count": 1,
+        "true_fact_distractors": 3,
+        "mechanical_questions": 1,
+        "duplicate_questions": 0,
+        "rough_explanations": 1,
+        "empty_explanations": 0,
+        "correct_options_errors": 0,
+        "option_count_errors": 0
+      },
+      "status": "SKIPPED_RUNTIME_SIDE_EFFECT_RISK",
+      "attempts": [],
+      "best_result": null,
+      "runtime_error": "Candidato saltato: rischio effetti collaterali su file reali."
+    },
+    {
+      "motor_id": "scripts.estrai_biologia_da_migliorare.valuta_problemi_qualita",
+      "path": "scripts/estrai_biologia_da_migliorare.py",
+      "function_name": "valuta_problemi_qualita",
+      "lineno": 127,
+      "args": [
+        "opzioni",
+        "risposta"
+      ],
+      "before_metrics": {
+        "questions_count": 1,
+        "true_fact_distractors": 3,
+        "mechanical_questions": 1,
+        "duplicate_questions": 0,
+        "rough_explanations": 1,
+        "empty_explanations": 0,
+        "correct_options_errors": 0,
+        "option_count_errors": 0
+      },
+      "status": "NO_USABLE_OUTPUT",
+      "attempts": [
+        {
+          "adapter_name": "options_correct",
+          "status": "OK",
+          "error": null,
+          "evaluation": {
+            "usable_quiz_output": false,
+            "after_metrics": null,
+            "improved": false,
+            "worsened": false,
+            "neutral": true,
+            "bad_total_before": 5,
+            "bad_total_after": null,
+            "notes": [
+              "Output non riconosciuto come quiz riutilizzabile."
+            ]
+          }
+        }
+      ],
+      "best_result": {
+        "adapter_name": "options_correct",
+        "status": "OK",
+        "error": null,
+        "evaluation": {
+          "usable_quiz_output": false,
+          "after_metrics": null,
+          "improved": false,
+          "worsened": false,
+          "neutral": true,
+          "bad_total_before": 5,
+          "bad_total_after": null,
+          "notes": [
+            "Output non riconosciuto come quiz riutilizzabile."
+          ]
+        }
+      },
+      "runtime_error": null
+    },
+    {
+      "motor_id": "scripts.estrai_motore_scientifico_da_migliorare.valuta_problemi_qualita",
+      "path": "scripts/estrai_motore_scientifico_da_migliorare.py",
+      "function_name": "valuta_problemi_qualita",
+      "lineno": 152,
+      "args": [
+        "opzioni",
+        "risposta"
+      ],
+      "before_metrics": {
+        "questions_count": 1,
+        "true_fact_distractors": 3,
+        "mechanical_questions": 1,
+        "duplicate_questions": 0,
+        "rough_explanations": 1,
+        "empty_explanations": 0,
+        "correct_options_errors": 0,
+        "option_count_errors": 0
+      },
+      "status": "NO_USABLE_OUTPUT",
+      "attempts": [
+        {
+          "adapter_name": "options_correct",
+          "status": "OK",
+          "error": null,
+          "evaluation": {
+            "usable_quiz_output": false,
+            "after_metrics": null,
+            "improved": false,
+            "worsened": false,
+            "neutral": true,
+            "bad_total_before": 5,
+            "bad_total_after": null,
+            "notes": [
+              "Output non riconosciuto come quiz riutilizzabile."
+            ]
+          }
+        }
+      ],
+      "best_result": {
+        "adapter_name": "options_correct",
+        "status": "OK",
+        "error": null,
+        "evaluation": {
+          "usable_quiz_output": false,
+          "after_metrics": null,
+          "improved": false,
+          "worsened": false,
+          "neutral": true,
+          "bad_total_before": 5,
+          "bad_total_after": null,
+          "notes": [
+            "Output non riconosciuto come quiz riutilizzabile."
+          ]
+        }
+      },
+      "runtime_error": null
+    },
+    {
+      "motor_id": "scripts.report_distrattori_scientifici.normalizza_opzioni",
+      "path": "scripts/report_distrattori_scientifici.py",
+      "function_name": "normalizza_opzioni",
+      "lineno": 61,
+      "args": [
+        "opzioni_grezze"
+      ],
+      "before_metrics": {
+        "questions_count": 1,
+        "true_fact_distractors": 3,
+        "mechanical_questions": 1,
+        "duplicate_questions": 0,
+        "rough_explanations": 1,
+        "empty_explanations": 0,
+        "correct_options_errors": 0,
+        "option_count_errors": 0
+      },
+      "status": "NO_USABLE_OUTPUT",
+      "attempts": [
+        {
+          "adapter_name": "options",
+          "status": "OK",
+          "error": null,
+          "evaluation": {
+            "usable_quiz_output": false,
+            "after_metrics": null,
+            "improved": false,
+            "worsened": false,
+            "neutral": true,
+            "bad_total_before": 5,
+            "bad_total_after": null,
+            "notes": [
+              "Output non riconosciuto come quiz riutilizzabile."
+            ]
+          }
+        }
+      ],
+      "best_result": {
+        "adapter_name": "options",
+        "status": "OK",
+        "error": null,
+        "evaluation": {
+          "usable_quiz_output": false,
+          "after_metrics": null,
+          "improved": false,
+          "worsened": false,
+          "neutral": true,
+          "bad_total_before": 5,
+          "bad_total_after": null,
+          "notes": [
+            "Output non riconosciuto come quiz riutilizzabile."
+          ]
+        }
+      },
+      "runtime_error": null
+    },
+    {
+      "motor_id": "backend.quiz_generator.genera_quiz_json",
+      "path": "backend/quiz_generator.py",
+      "function_name": "genera_quiz_json",
+      "lineno": 2,
+      "args": [
+        "categoria",
+        "difficolta",
+        "numero_domande"
+      ],
+      "before_metrics": {
+        "questions_count": 1,
+        "true_fact_distractors": 3,
+        "mechanical_questions": 1,
+        "duplicate_questions": 0,
+        "rough_explanations": 1,
+        "empty_explanations": 0,
+        "correct_options_errors": 0,
+        "option_count_errors": 0
+      },
+      "status": "RUNTIME_ERROR",
+      "attempts": [
+        {
+          "adapter_name": "quiz_category_subcategory_generic",
+          "status": "ERROR",
+          "error": {
+            "type": "TypeError",
+            "message": "can only concatenate str (not \"int\") to str",
+            "traceback_tail": "Traceback (most recent call last):\n  File \"/Users/alessandrobarbarossa/alex-ai-workspace/scripts/verifica_phase5_9_7_quiz_motor_runtime_test_v1.py\", line 445, in test_candidate\n    output = fn(*call_args)\n  File \"/Users/alessandrobarbarossa/alex-ai-workspace/backend/quiz_generator.py\", line 5, in genera_quiz_json\n    for numero_domanda in range(1, numero_domande + 1):\nTypeError: can only concatenate str (not \"int\") to str\n"
+          },
+          "evaluation": null
+        }
+      ],
+      "best_result": null,
+      "runtime_error": null
+    },
+    {
+      "motor_id": "scripts.motore_traduzione_inglese.rimuovi_vecchie_traduzioni",
+      "path": "scripts/motore_traduzione_inglese.py",
+      "function_name": "rimuovi_vecchie_traduzioni",
+      "lineno": 33,
+      "args": [
+        "spiegazione"
+      ],
+      "before_metrics": {
+        "questions_count": 1,
+        "true_fact_distractors": 3,
+        "mechanical_questions": 1,
+        "duplicate_questions": 0,
+        "rough_explanations": 1,
+        "empty_explanations": 0,
+        "correct_options_errors": 0,
+        "option_count_errors": 0
+      },
+      "status": "NO_USABLE_OUTPUT",
+      "attempts": [
+        {
+          "adapter_name": "text",
+          "status": "OK",
+          "error": null,
+          "evaluation": {
+            "usable_quiz_output": false,
+            "after_metrics": null,
+            "improved": false,
+            "worsened": false,
+            "neutral": true,
+            "bad_total_before": 5,
+            "bad_total_after": null,
+            "notes": [
+              "Output non riconosciuto come quiz riutilizzabile."
+            ]
+          }
+        }
+      ],
+      "best_result": {
+        "adapter_name": "text",
+        "status": "OK",
+        "error": null,
+        "evaluation": {
+          "usable_quiz_output": false,
+          "after_metrics": null,
+          "improved": false,
+          "worsened": false,
+          "neutral": true,
+          "bad_total_before": 5,
+          "bad_total_after": null,
+          "notes": [
+            "Output non riconosciuto come quiz riutilizzabile."
+          ]
+        }
+      },
+      "runtime_error": null
+    },
+    {
+      "motor_id": "scripts.rag_adapter_quiz_ufficiale_v43.crea_candidate_sicurezza",
+      "path": "scripts/rag_adapter_quiz_ufficiale_v43.py",
+      "function_name": "crea_candidate_sicurezza",
+      "lineno": 93,
+      "args": [
+        "testo"
+      ],
+      "before_metrics": {
+        "questions_count": 1,
+        "true_fact_distractors": 3,
+        "mechanical_questions": 1,
+        "duplicate_questions": 0,
+        "rough_explanations": 1,
+        "empty_explanations": 0,
+        "correct_options_errors": 0,
+        "option_count_errors": 0
+      },
+      "status": "NO_USABLE_OUTPUT",
+      "attempts": [
+        {
+          "adapter_name": "text",
+          "status": "OK",
+          "error": null,
+          "evaluation": {
+            "usable_quiz_output": false,
+            "after_metrics": null,
+            "improved": false,
+            "worsened": false,
+            "neutral": true,
+            "bad_total_before": 5,
+            "bad_total_after": null,
+            "notes": [
+              "Output non riconosciuto come quiz riutilizzabile."
+            ]
+          }
+        }
+      ],
+      "best_result": {
+        "adapter_name": "text",
+        "status": "OK",
+        "error": null,
+        "evaluation": {
+          "usable_quiz_output": false,
+          "after_metrics": null,
+          "improved": false,
+          "worsened": false,
+          "neutral": true,
+          "bad_total_before": 5,
+          "bad_total_after": null,
+          "notes": [
+            "Output non riconosciuto come quiz riutilizzabile."
+          ]
+        }
+      },
+      "runtime_error": null
+    },
+    {
+      "motor_id": "scripts.rag_genera_output_da_kb_clean_v34e.valida_output",
+      "path": "scripts/rag_genera_output_da_kb_clean_v34e.py",
+      "function_name": "valida_output",
+      "lineno": 545,
+      "args": [
+        "output",
+        "numero"
+      ],
+      "before_metrics": {
+        "questions_count": 1,
+        "true_fact_distractors": 3,
+        "mechanical_questions": 1,
+        "duplicate_questions": 0,
+        "rough_explanations": 1,
+        "empty_explanations": 0,
+        "correct_options_errors": 0,
+        "option_count_errors": 0
+      },
+      "status": "RUNTIME_ERROR",
+      "attempts": [
+        {
+          "adapter_name": "payload_original",
+          "status": "ERROR",
+          "error": {
+            "type": "TypeError",
+            "message": "'<' not supported between instances of 'dict' and 'int'",
+            "traceback_tail": "Traceback (most recent call last):\n  File \"/Users/alessandrobarbarossa/alex-ai-workspace/scripts/verifica_phase5_9_7_quiz_motor_runtime_test_v1.py\", line 445, in test_candidate\n    output = fn(*call_args)\n  File \"/Users/alessandrobarbarossa/alex-ai-workspace/scripts/rag_genera_output_da_kb_clean_v34e.py\", line 552, in valida_output\n    if len(output.get(\"card\", [])) < min(3, numero):\nTypeError: '<' not supported between instances of 'dict' and 'int'\n"
+          },
+          "evaluation": null
+        }
+      ],
+      "best_result": null,
+      "runtime_error": null
+    },
+    {
+      "motor_id": "scripts.validatore_rag_distrattori_forti_v2.estrai_opzioni",
+      "path": "scripts/validatore_rag_distrattori_forti_v2.py",
+      "function_name": "estrai_opzioni",
+      "lineno": 43,
+      "args": [
+        "domanda"
+      ],
+      "before_metrics": {
+        "questions_count": 1,
+        "true_fact_distractors": 3,
+        "mechanical_questions": 1,
+        "duplicate_questions": 0,
+        "rough_explanations": 1,
+        "empty_explanations": 0,
+        "correct_options_errors": 0,
+        "option_count_errors": 0
+      },
+      "status": "NO_USABLE_OUTPUT",
+      "attempts": [
+        {
+          "adapter_name": "question",
+          "status": "OK",
+          "error": null,
+          "evaluation": {
+            "usable_quiz_output": false,
+            "after_metrics": null,
+            "improved": false,
+            "worsened": false,
+            "neutral": true,
+            "bad_total_before": 5,
+            "bad_total_after": null,
+            "notes": [
+              "Output non riconosciuto come quiz riutilizzabile."
+            ]
+          }
+        }
+      ],
+      "best_result": {
+        "adapter_name": "question",
+        "status": "OK",
+        "error": null,
+        "evaluation": {
+          "usable_quiz_output": false,
+          "after_metrics": null,
+          "improved": false,
+          "worsened": false,
+          "neutral": true,
+          "bad_total_before": 5,
+          "bad_total_after": null,
+          "notes": [
+            "Output non riconosciuto come quiz riutilizzabile."
+          ]
+        }
+      },
+      "runtime_error": null
+    },
+    {
+      "motor_id": "scripts.mini_llm_study_pack_cli_v1.format_markdown",
+      "path": "scripts/mini_llm_study_pack_cli_v1.py",
+      "function_name": "format_markdown",
+      "lineno": 101,
+      "args": [
+        "payload"
+      ],
+      "before_metrics": {
+        "questions_count": 1,
+        "true_fact_distractors": 3,
+        "mechanical_questions": 1,
+        "duplicate_questions": 0,
+        "rough_explanations": 1,
+        "empty_explanations": 0,
+        "correct_options_errors": 0,
+        "option_count_errors": 0
+      },
+      "status": "RUNTIME_ERROR",
+      "attempts": [
+        {
+          "adapter_name": "payload",
+          "status": "ERROR",
+          "error": {
+            "type": "KeyError",
+            "message": "'pack'",
+            "traceback_tail": "Traceback (most recent call last):\n  File \"/Users/alessandrobarbarossa/alex-ai-workspace/scripts/verifica_phase5_9_7_quiz_motor_runtime_test_v1.py\", line 445, in test_candidate\n    output = fn(*call_args)\n  File \"/Users/alessandrobarbarossa/alex-ai-workspace/scripts/mini_llm_study_pack_cli_v1.py\", line 102, in format_markdown\n    pack = payload[\"pack\"]\nKeyError: 'pack'\n"
+          },
+          "evaluation": null
+        }
+      ],
+      "best_result": null,
+      "runtime_error": null
+    },
+    {
+      "motor_id": "scripts.applica_v35k_reale.clean_text",
+      "path": "scripts/applica_v35k_reale.py",
+      "function_name": "clean_text",
+      "lineno": 111,
+      "args": [
+        "value"
+      ],
+      "before_metrics": {
+        "questions_count": 1,
+        "true_fact_distractors": 3,
+        "mechanical_questions": 1,
+        "duplicate_questions": 0,
+        "rough_explanations": 1,
+        "empty_explanations": 0,
+        "correct_options_errors": 0,
+        "option_count_errors": 0
+      },
+      "status": "NO_USABLE_OUTPUT",
+      "attempts": [
+        {
+          "adapter_name": "text",
+          "status": "OK",
+          "error": null,
+          "evaluation": {
+            "usable_quiz_output": false,
+            "after_metrics": null,
+            "improved": false,
+            "worsened": false,
+            "neutral": true,
+            "bad_total_before": 5,
+            "bad_total_after": null,
+            "notes": [
+              "Output non riconosciuto come quiz riutilizzabile."
+            ]
+          }
+        }
+      ],
+      "best_result": {
+        "adapter_name": "text",
+        "status": "OK",
+        "error": null,
+        "evaluation": {
+          "usable_quiz_output": false,
+          "after_metrics": null,
+          "improved": false,
+          "worsened": false,
+          "neutral": true,
+          "bad_total_before": 5,
+          "bad_total_after": null,
+          "notes": [
+            "Output non riconosciuto come quiz riutilizzabile."
+          ]
+        }
+      },
+      "runtime_error": null
+    },
+    {
+      "motor_id": "scripts.rag_revisore_qualita_testuale_v35g.collect_visible_records",
+      "path": "scripts/rag_revisore_qualita_testuale_v35g.py",
+      "function_name": "collect_visible_records",
+      "lineno": 407,
+      "args": [
+        "data"
+      ],
+      "before_metrics": {
+        "questions_count": 1,
+        "true_fact_distractors": 3,
+        "mechanical_questions": 1,
+        "duplicate_questions": 0,
+        "rough_explanations": 1,
+        "empty_explanations": 0,
+        "correct_options_errors": 0,
+        "option_count_errors": 0
+      },
+      "status": "NO_USABLE_OUTPUT",
+      "attempts": [
+        {
+          "adapter_name": "payload",
+          "status": "OK",
+          "error": null,
+          "evaluation": {
+            "usable_quiz_output": false,
+            "after_metrics": null,
+            "improved": false,
+            "worsened": false,
+            "neutral": true,
+            "bad_total_before": 5,
+            "bad_total_after": null,
+            "notes": [
+              "Output non riconosciuto come quiz riutilizzabile."
+            ]
+          }
+        }
+      ],
+      "best_result": {
+        "adapter_name": "payload",
+        "status": "OK",
+        "error": null,
+        "evaluation": {
+          "usable_quiz_output": false,
+          "after_metrics": null,
+          "improved": false,
+          "worsened": false,
+          "neutral": true,
+          "bad_total_before": 5,
+          "bad_total_after": null,
+          "notes": [
+            "Output non riconosciuto come quiz riutilizzabile."
+          ]
+        }
+      },
+      "runtime_error": null
+    },
+    {
+      "motor_id": "scripts.rag_revisore_naturalezza_antikeyword_v35i.natural_test_explanation",
+      "path": "scripts/rag_revisore_naturalezza_antikeyword_v35i.py",
+      "function_name": "natural_test_explanation",
+      "lineno": 238,
+      "args": [
+        "title",
+        "correct",
+        "idx"
+      ],
+      "before_metrics": {
+        "questions_count": 1,
+        "true_fact_distractors": 3,
+        "mechanical_questions": 1,
+        "duplicate_questions": 0,
+        "rough_explanations": 1,
+        "empty_explanations": 0,
+        "correct_options_errors": 0,
+        "option_count_errors": 0
+      },
+      "status": "NO_USABLE_OUTPUT",
+      "attempts": [
+        {
+          "adapter_name": "title_correct_idx",
+          "status": "OK",
+          "error": null,
+          "evaluation": {
+            "usable_quiz_output": false,
+            "after_metrics": null,
+            "improved": false,
+            "worsened": false,
+            "neutral": true,
+            "bad_total_before": 5,
+            "bad_total_after": null,
+            "notes": [
+              "Output non riconosciuto come quiz riutilizzabile."
+            ]
+          }
+        }
+      ],
+      "best_result": {
+        "adapter_name": "title_correct_idx",
+        "status": "OK",
+        "error": null,
+        "evaluation": {
+          "usable_quiz_output": false,
+          "after_metrics": null,
+          "improved": false,
+          "worsened": false,
+          "neutral": true,
+          "bad_total_before": 5,
+          "bad_total_after": null,
+          "notes": [
+            "Output non riconosciuto come quiz riutilizzabile."
+          ]
+        }
+      },
+      "runtime_error": null
+    },
+    {
+      "motor_id": "scripts.rag_motore_didattico_riutilizzabile_v35c.visible_texts",
+      "path": "scripts/rag_motore_didattico_riutilizzabile_v35c.py",
+      "function_name": "visible_texts",
+      "lineno": 266,
+      "args": [
+        "output"
+      ],
+      "before_metrics": {
+        "questions_count": 1,
+        "true_fact_distractors": 3,
+        "mechanical_questions": 1,
+        "duplicate_questions": 0,
+        "rough_explanations": 1,
+        "empty_explanations": 0,
+        "correct_options_errors": 0,
+        "option_count_errors": 0
+      },
+      "status": "NO_USABLE_OUTPUT",
+      "attempts": [
+        {
+          "adapter_name": "payload",
+          "status": "OK",
+          "error": null,
+          "evaluation": {
+            "usable_quiz_output": false,
+            "after_metrics": null,
+            "improved": false,
+            "worsened": false,
+            "neutral": true,
+            "bad_total_before": 5,
+            "bad_total_after": null,
+            "notes": [
+              "Output non riconosciuto come quiz riutilizzabile."
+            ]
+          }
+        }
+      ],
+      "best_result": {
+        "adapter_name": "payload",
+        "status": "OK",
+        "error": null,
+        "evaluation": {
+          "usable_quiz_output": false,
+          "after_metrics": null,
+          "improved": false,
+          "worsened": false,
+          "neutral": true,
+          "bad_total_before": 5,
+          "bad_total_after": null,
+          "notes": [
+            "Output non riconosciuto come quiz riutilizzabile."
+          ]
+        }
+      },
+      "runtime_error": null
+    },
+    {
+      "motor_id": "scripts.report_distrattori_scientifici.normalizza_risposta",
+      "path": "scripts/report_distrattori_scientifici.py",
+      "function_name": "normalizza_risposta",
+      "lineno": 81,
+      "args": [
+        "risposta_grezza",
+        "opzioni"
+      ],
+      "before_metrics": {
+        "questions_count": 1,
+        "true_fact_distractors": 3,
+        "mechanical_questions": 1,
+        "duplicate_questions": 0,
+        "rough_explanations": 1,
+        "empty_explanations": 0,
+        "correct_options_errors": 0,
+        "option_count_errors": 0
+      },
+      "status": "NO_USABLE_OUTPUT",
+      "attempts": [
+        {
+          "adapter_name": "payload_payload",
+          "status": "OK",
+          "error": null,
+          "evaluation": {
+            "usable_quiz_output": false,
+            "after_metrics": null,
+            "improved": false,
+            "worsened": false,
+            "neutral": true,
+            "bad_total_before": 5,
+            "bad_total_after": null,
+            "notes": [
+              "Output non riconosciuto come quiz riutilizzabile."
+            ]
+          }
+        },
+        {
+          "adapter_name": "quiz_index",
+          "status": "ERROR",
+          "error": {
+            "type": "TypeError",
+            "message": "'int' object is not iterable",
+            "traceback_tail": "Traceback (most recent call last):\n  File \"/Users/alessandrobarbarossa/alex-ai-workspace/scripts/verifica_phase5_9_7_quiz_motor_runtime_test_v1.py\", line 445, in test_candidate\n    output = fn(*call_args)\n  File \"/Users/alessandrobarbarossa/alex-ai-workspace/scripts/report_distrattori_scientifici.py\", line 95, in normalizza_risposta\n    for opzione in opzioni:\nTypeError: 'int' object is not iterable\n"
+          },
+          "evaluation": null
+        }
+      ],
+      "best_result": {
+        "adapter_name": "payload_payload",
+        "status": "OK",
+        "error": null,
+        "evaluation": {
+          "usable_quiz_output": false,
+          "after_metrics": null,
+          "improved": false,
+          "worsened": false,
+          "neutral": true,
+          "bad_total_before": 5,
+          "bad_total_after": null,
+          "notes": [
+            "Output non riconosciuto come quiz riutilizzabile."
+          ]
+        }
+      },
+      "runtime_error": null
+    },
+    {
+      "motor_id": "scripts.estrai_biologia_da_migliorare.normalizza_risposta",
+      "path": "scripts/estrai_biologia_da_migliorare.py",
+      "function_name": "normalizza_risposta",
+      "lineno": 85,
+      "args": [
+        "risposta_grezza",
+        "opzioni"
+      ],
+      "before_metrics": {
+        "questions_count": 1,
+        "true_fact_distractors": 3,
+        "mechanical_questions": 1,
+        "duplicate_questions": 0,
+        "rough_explanations": 1,
+        "empty_explanations": 0,
+        "correct_options_errors": 0,
+        "option_count_errors": 0
+      },
+      "status": "NO_USABLE_OUTPUT",
+      "attempts": [
+        {
+          "adapter_name": "payload_payload",
+          "status": "OK",
+          "error": null,
+          "evaluation": {
+            "usable_quiz_output": false,
+            "after_metrics": null,
+            "improved": false,
+            "worsened": false,
+            "neutral": true,
+            "bad_total_before": 5,
+            "bad_total_after": null,
+            "notes": [
+              "Output non riconosciuto come quiz riutilizzabile."
+            ]
+          }
+        },
+        {
+          "adapter_name": "quiz_index",
+          "status": "ERROR",
+          "error": {
+            "type": "TypeError",
+            "message": "'int' object is not iterable",
+            "traceback_tail": "Traceback (most recent call last):\n  File \"/Users/alessandrobarbarossa/alex-ai-workspace/scripts/verifica_phase5_9_7_quiz_motor_runtime_test_v1.py\", line 445, in test_candidate\n    output = fn(*call_args)\n  File \"/Users/alessandrobarbarossa/alex-ai-workspace/scripts/estrai_biologia_da_migliorare.py\", line 99, in normalizza_risposta\n    for opzione in opzioni:\nTypeError: 'int' object is not iterable\n"
+          },
+          "evaluation": null
+        }
+      ],
+      "best_result": {
+        "adapter_name": "payload_payload",
+        "status": "OK",
+        "error": null,
+        "evaluation": {
+          "usable_quiz_output": false,
+          "after_metrics": null,
+          "improved": false,
+          "worsened": false,
+          "neutral": true,
+          "bad_total_before": 5,
+          "bad_total_after": null,
+          "notes": [
+            "Output non riconosciuto come quiz riutilizzabile."
+          ]
+        }
+      },
+      "runtime_error": null
+    },
+    {
+      "motor_id": "scripts.estrai_motore_scientifico_da_migliorare.normalizza_risposta",
+      "path": "scripts/estrai_motore_scientifico_da_migliorare.py",
+      "function_name": "normalizza_risposta",
+      "lineno": 110,
+      "args": [
+        "risposta_grezza",
+        "opzioni"
+      ],
+      "before_metrics": {
+        "questions_count": 1,
+        "true_fact_distractors": 3,
+        "mechanical_questions": 1,
+        "duplicate_questions": 0,
+        "rough_explanations": 1,
+        "empty_explanations": 0,
+        "correct_options_errors": 0,
+        "option_count_errors": 0
+      },
+      "status": "NO_USABLE_OUTPUT",
+      "attempts": [
+        {
+          "adapter_name": "payload_payload",
+          "status": "OK",
+          "error": null,
+          "evaluation": {
+            "usable_quiz_output": false,
+            "after_metrics": null,
+            "improved": false,
+            "worsened": false,
+            "neutral": true,
+            "bad_total_before": 5,
+            "bad_total_after": null,
+            "notes": [
+              "Output non riconosciuto come quiz riutilizzabile."
+            ]
+          }
+        },
+        {
+          "adapter_name": "quiz_index",
+          "status": "ERROR",
+          "error": {
+            "type": "TypeError",
+            "message": "'int' object is not iterable",
+            "traceback_tail": "Traceback (most recent call last):\n  File \"/Users/alessandrobarbarossa/alex-ai-workspace/scripts/verifica_phase5_9_7_quiz_motor_runtime_test_v1.py\", line 445, in test_candidate\n    output = fn(*call_args)\n  File \"/Users/alessandrobarbarossa/alex-ai-workspace/scripts/estrai_motore_scientifico_da_migliorare.py\", line 124, in normalizza_risposta\n    for opzione in opzioni:\nTypeError: 'int' object is not iterable\n"
+          },
+          "evaluation": null
+        }
+      ],
+      "best_result": {
+        "adapter_name": "payload_payload",
+        "status": "OK",
+        "error": null,
+        "evaluation": {
+          "usable_quiz_output": false,
+          "after_metrics": null,
+          "improved": false,
+          "worsened": false,
+          "neutral": true,
+          "bad_total_before": 5,
+          "bad_total_after": null,
+          "notes": [
+            "Output non riconosciuto come quiz riutilizzabile."
+          ]
+        }
+      },
+      "runtime_error": null
+    }
+  ],
+  "recommended_next_phase": {
+    "phase": "5.9.8",
+    "action": "Portare a compatibilità registry solo candidati IMPROVED e senza peggioramenti."
+  },
+  "notes": [
+    "Runtime test controllato: non collega candidati al registry.",
+    "Ogni candidato viene provato con wrapper basati sulla firma.",
+    "Un candidato utile deve produrre output quiz riutilizzabile e ridurre metriche problematiche.",
+    "I candidati neutri possono essere utili solo con adapter migliore, ma non vanno collegati ora."
+  ]
+}
