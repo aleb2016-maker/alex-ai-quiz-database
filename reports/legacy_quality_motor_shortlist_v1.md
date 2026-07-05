@@ -1,0 +1,89 @@
+# Legacy quality motor shortlist V1
+
+- Creato: `2026-07-05T10:00:14`
+- Candidati sorgente: `1153`
+- Shortlist: `586`
+- Esclusi: `561`
+
+| Priority | Score | Classe | Funzione | File:riga |
+|---:|---:|---|---|---|
+| 70 | 34 | `quality_cleaner_or_refiner` | `scripts.rag_motore_didattico_riutilizzabile_v35c.refine_output` | `scripts/rag_motore_didattico_riutilizzabile_v35c.py:339` |
+| 58 | 22 | `possible_quality_motor` | `scripts.rag_revisore_accordo_pronomi_v35j.improve_output` | `scripts/rag_revisore_accordo_pronomi_v35j.py:349` |
+| 58 | 22 | `possible_quality_motor` | `scripts.rag_revisore_naturalezza_antikeyword_v35i.improve_output` | `scripts/rag_revisore_naturalezza_antikeyword_v35i.py:386` |
+| 52 | 16 | `quality_cleaner_or_refiner` | `scripts.rag_cleaner_finale_universale_v35k.clean_output` | `scripts/rag_cleaner_finale_universale_v35k.py:215` |
+| 48 | 26 | `quality_cleaner_or_refiner` | `scripts.rag_genera_output_da_kb_clean_v34e.genera` | `scripts/rag_genera_output_da_kb_clean_v34e.py:628` |
+| 47 | 17 | `possible_quality_motor` | `scripts.rag_revisore_naturalezza_antikeyword_v35i.improve_summary` | `scripts/rag_revisore_naturalezza_antikeyword_v35i.py:252` |
+| 44 | 14 | `quality_cleaner_or_refiner` | `scripts.rag_motore_didattico_riutilizzabile_v35c.refine_summary` | `scripts/rag_motore_didattico_riutilizzabile_v35c.py:102` |
+| 44 | 14 | `possible_quality_motor` | `scripts.rag_revisore_accordo_pronomi_v35j.improve_summary` | `scripts/rag_revisore_accordo_pronomi_v35j.py:169` |
+| 40 | 10 | `quality_cleaner_or_refiner` | `scripts.rag_motore_didattico_riutilizzabile_v35c.refine_cards` | `scripts/rag_motore_didattico_riutilizzabile_v35c.py:124` |
+| 38 | 16 | `quality_cleaner_or_refiner` | `scripts.rag_cleaner_finale_universale_v35k.visible_texts` | `scripts/rag_cleaner_finale_universale_v35k.py:321` |
+| 38 | 16 | `possible_quality_motor` | `scripts.rag_revisore_naturalezza_antikeyword_v35i.build_raw_maps` | `scripts/rag_revisore_naturalezza_antikeyword_v35i.py:150` |
+| 37 | 13 | `quality_cleaner_or_refiner` | `scripts.applica_v35k_reale.clean_output` | `scripts/applica_v35k_reale.py:173` |
+| 37 | 7 | `quality_cleaner_or_refiner` | `scripts.rag_motore_didattico_riutilizzabile_v35c.refine_study_questions` | `scripts/rag_motore_didattico_riutilizzabile_v35c.py:209` |
+| 36 | 14 | `quality_cleaner_or_refiner` | `scripts.rag_genera_output_da_kb_clean_v34e.crea_riassunto` | `scripts/rag_genera_output_da_kb_clean_v34e.py:253` |
+| 36 | 14 | `quality_cleaner_or_refiner` | `scripts.rag_genera_output_da_kb_clean_v34e.pulisci_titolo_documento_visibile` | `scripts/rag_genera_output_da_kb_clean_v34e.py:237` |
+| 36 | 14 | `quality_cleaner_or_refiner` | `scripts.rag_genera_output_da_kb_clean_v34e.titoli_visibili` | `scripts/rag_genera_output_da_kb_clean_v34e.py:498` |
+| 36 | 14 | `possible_quality_motor` | `scripts.rag_motore_didattico_riutilizzabile_v35c.build_card_style` | `scripts/rag_motore_didattico_riutilizzabile_v35c.py:91` |
+| 35 | 13 | `quality_cleaner_or_refiner` | `scripts.rag_cleaner_finale_universale_v35k.clean_dict_field` | `scripts/rag_cleaner_finale_universale_v35k.py:209` |
+| 35 | 13 | `quality_cleaner_or_refiner` | `scripts.rag_cleaner_finale_universale_v35k.mark` | `scripts/rag_cleaner_finale_universale_v35k.py:205` |
+| 35 | 13 | `quality_cleaner_or_refiner` | `scripts.rag_genera_output_da_kb_clean_v34e.concetti_puliti` | `scripts/rag_genera_output_da_kb_clean_v34e.py:193` |
+| 35 | 13 | `possible_quality_motor` | `scripts.rag_revisore_naturalezza_antikeyword_v35i.improve_cards` | `scripts/rag_revisore_naturalezza_antikeyword_v35i.py:266` |
+| 35 | 13 | `possible_quality_motor` | `scripts.rag_revisore_naturalezza_antikeyword_v35i.natural_summary_point` | `scripts/rag_revisore_naturalezza_antikeyword_v35i.py:210` |
+| 33 | 11 | `quality_cleaner_or_refiner` | `scripts.rag_genera_output_da_kb_clean_v34e.crea_card` | `scripts/rag_genera_output_da_kb_clean_v34e.py:351` |
+| 33 | 11 | `quality_cleaner_or_refiner` | `scripts.rag_genera_output_da_kb_clean_v34e.opzione_da_concetto` | `scripts/rag_genera_output_da_kb_clean_v34e.py:334` |
+| 33 | 11 | `possible_quality_motor` | `scripts.rag_motore_didattico_riutilizzabile_v35c.build_ui_layout` | `scripts/rag_motore_didattico_riutilizzabile_v35c.py:233` |
+| 33 | 11 | `possible_quality_motor` | `scripts.rag_revisore_accordo_pronomi_v35j.collect_texts` | `scripts/rag_revisore_accordo_pronomi_v35j.py:282` |
+| 33 | 11 | `possible_quality_motor` | `scripts.rag_revisore_naturalezza_antikeyword_v35i.collect_texts` | `scripts/rag_revisore_naturalezza_antikeyword_v35i.py:309` |
+| 33 | 11 | `possible_quality_motor` | `scripts.rag_revisore_naturalezza_antikeyword_v35i.looks_like_keyword_list` | `scripts/rag_revisore_naturalezza_antikeyword_v35i.py:330` |
+| 32 | 10 | `quality_cleaner_or_refiner` | `scripts.rag_genera_output_da_kb_clean_v34e.crea_domande_studio` | `scripts/rag_genera_output_da_kb_clean_v34e.py:467` |
+| 32 | 10 | `quality_cleaner_or_refiner` | `scripts.rag_genera_output_da_kb_clean_v34e.testi_visibili` | `scripts/rag_genera_output_da_kb_clean_v34e.py:513` |
+| 32 | 10 | `possible_quality_motor` | `scripts.rag_revisore_accordo_pronomi_v35j.improve_cards` | `scripts/rag_revisore_accordo_pronomi_v35j.py:196` |
+| 32 | 10 | `possible_quality_motor` | `scripts.rag_revisore_naturalezza_antikeyword_v35i.natural_card_key` | `scripts/rag_revisore_naturalezza_antikeyword_v35i.py:199` |
+| 31 | 7 | `quality_cleaner_or_refiner` | `backend.motori_scrittura.qg_clean_output_bundle` | `backend/motori_scrittura.py:3510` |
+| 30 | 8 | `quality_cleaner_or_refiner` | `scripts.rag_genera_output_da_kb_clean_v34e.similarita` | `scripts/rag_genera_output_da_kb_clean_v34e.py:369` |
+| 30 | 8 | `possible_quality_motor` | `scripts.rag_motore_didattico_riutilizzabile_v35c.short_source` | `scripts/rag_motore_didattico_riutilizzabile_v35c.py:84` |
+| 30 | 8 | `possible_quality_motor` | `scripts.rag_revisore_accordo_pronomi_v35j.labels_for` | `scripts/rag_revisore_accordo_pronomi_v35j.py:124` |
+| 30 | 8 | `possible_quality_motor` | `scripts.verifica_rag_revisore_naturalezza_antikeyword_v35i.run` | `scripts/verifica_rag_revisore_naturalezza_antikeyword_v35i.py:29` |
+| 29 | 7 | `quality_cleaner_or_refiner` | `scripts.rag_cleaner_finale_universale_v35k.apply_contractions` | `scripts/rag_cleaner_finale_universale_v35k.py:118` |
+| 29 | 7 | `quality_cleaner_or_refiner` | `scripts.rag_cleaner_finale_universale_v35k.remove_fragile_pronouns` | `scripts/rag_cleaner_finale_universale_v35k.py:125` |
+| 29 | 7 | `quality_cleaner_or_refiner` | `scripts.rag_cleaner_finale_universale_v35k.trim_suspicious_final` | `scripts/rag_cleaner_finale_universale_v35k.py:161` |
+| 29 | 7 | `quality_cleaner_or_refiner` | `scripts.rag_genera_output_da_kb_clean_v34e.finisce_male_output` | `scripts/rag_genera_output_da_kb_clean_v34e.py:289` |
+| 29 | 7 | `quality_cleaner_or_refiner` | `scripts.rag_genera_output_da_kb_clean_v34e.scegli_distrattori` | `scripts/rag_genera_output_da_kb_clean_v34e.py:380` |
+| 29 | 7 | `quality_cleaner_or_refiner` | `scripts.rag_genera_output_da_kb_clean_v34e.testo_completo_breve` | `scripts/rag_genera_output_da_kb_clean_v34e.py:298` |
+| 29 | 7 | `possible_quality_motor` | `scripts.rag_motore_didattico_riutilizzabile_v35c.visible_texts` | `scripts/rag_motore_didattico_riutilizzabile_v35c.py:266` |
+| 29 | 7 | `quality_cleaner_or_refiner` | `scripts.rag_revisore_naturalezza_antikeyword_v35i.clean_source_text` | `scripts/rag_revisore_naturalezza_antikeyword_v35i.py:128` |
+| 28 | 6 | `quality_cleaner_or_refiner` | `scripts.rag_cleaner_finale_universale_v35k.neutralize_fragile_constructs` | `scripts/rag_cleaner_finale_universale_v35k.py:137` |
+| 28 | 6 | `quality_cleaner_or_refiner` | `scripts.rag_revisore_accordo_pronomi_v35j.clean_base` | `scripts/rag_revisore_accordo_pronomi_v35j.py:135` |
+| 27 | 17 | `possible_quality_motor` | `mini_llm.python.runtime.mini_llm_universal_current_engine_v396.last_word` | `mini_llm/python/runtime/mini_llm_universal_current_engine_v396.py:47` |
+| 27 | 17 | `possible_quality_motor` | `mini_llm.python.runtime.mini_llm_universal_current_engine_v396.normalize` | `mini_llm/python/runtime/mini_llm_universal_current_engine_v396.py:43` |
+| 25 | 15 | `possible_quality_motor` | `mini_llm.python.runtime.mini_llm_universal_orchestrator_v4004.short_summary` | `mini_llm/python/runtime/mini_llm_universal_orchestrator_v4004.py:190` |
+| 25 | 13 | `quiz_or_study_motor` | `scripts.rag_revisore_accordo_pronomi_v35j.improve_study` | `scripts/rag_revisore_accordo_pronomi_v35j.py:231` |
+| 24 | 14 | `possible_quality_motor` | `scripts.rag_bridge_motori_qualita_esistenti_v35b.finisce_male` | `scripts/rag_bridge_motori_qualita_esistenti_v35b.py:173` |
+| 24 | 14 | `possible_quality_motor` | `scripts.rag_bridge_motori_qualita_esistenti_v35b.valuta_output` | `scripts/rag_bridge_motori_qualita_esistenti_v35b.py:272` |
+| 24 | 14 | `possible_quality_motor` | `scripts.rag_motore_documenti_completo.analyze_document` | `scripts/rag_motore_documenti_completo.py:889` |
+| 24 | 14 | `possible_quality_motor` | `scripts.rag_ponte_documenti_lunghi_catena_v35_v2a14.find_input_document` | `scripts/rag_ponte_documenti_lunghi_catena_v35_v2a14.py:32` |
+| 24 | 14 | `possible_quality_motor` | `scripts.rag_quality_bridge_v45.render_command` | `scripts/rag_quality_bridge_v45.py:94` |
+| 24 | 14 | `possible_quality_motor` | `scripts.rag_selezionatore_motori_riutilizzabile_v35f.read_json` | `scripts/rag_selezionatore_motori_riutilizzabile_v35f.py:84` |
+| 24 | 14 | `quality_cleaner_or_refiner` | `scripts.verifica_rag_output_kb_clean_v34e.controlla_output` | `scripts/verifica_rag_output_kb_clean_v34e.py:144` |
+| 24 | 14 | `quality_cleaner_or_refiner` | `scripts.verifica_rag_output_kb_clean_v34e.titoli_visibili` | `scripts/verifica_rag_output_kb_clean_v34e.py:97` |
+| 23 | 23 | `quiz_or_study_motor` | `mini_llm.python.runtime.mini_llm_universal_study_pack_v4.make_review_plan` | `mini_llm/python/runtime/mini_llm_universal_study_pack_v4.py:637` |
+| 23 | 13 | `possible_quality_motor` | `backend.motori_scrittura.add_pages` | `backend/motori_scrittura.py:4055` |
+| 23 | 13 | `possible_quality_motor` | `backend.motori_scrittura.q5_build_fluid_summary_paragraphs` | `backend/motori_scrittura.py:4423` |
+| 23 | 13 | `possible_quality_motor` | `backend.motori_scrittura.q5_build_quality_summary` | `backend/motori_scrittura.py:4483` |
+| 23 | 13 | `possible_quality_motor` | `backend.motori_scrittura.qg_collect_source_facts` | `backend/motori_scrittura.py:3049` |
+| 23 | 13 | `possible_quality_motor` | `scripts.applica_v35k_reale.write_verifier` | `scripts/applica_v35k_reale.py:376` |
+| 23 | 13 | `possible_quality_motor` | `scripts.applica_v35k_universale.write_page_verifier` | `scripts/applica_v35k_universale.py:91` |
+| 23 | 13 | `possible_quality_motor` | `scripts.mini_llm_output_modes_cli_v1.build_full_payload` | `scripts/mini_llm_output_modes_cli_v1.py:105` |
+| 23 | 13 | `possible_quality_motor` | `scripts.rag_contesto_semantico_universale_v35o.process_file` | `scripts/rag_contesto_semantico_universale_v35o.py:326` |
+| 23 | 13 | `possible_quality_motor` | `scripts.rag_lucidatore_linguistico_universale_v35m.add_metadata` | `scripts/rag_lucidatore_linguistico_universale_v35m.py:259` |
+| 23 | 13 | `possible_quality_motor` | `scripts.rag_orchestratore_riutilizzabile_v35e.add_orchestrator_metadata` | `scripts/rag_orchestratore_riutilizzabile_v35e.py:66` |
+| 23 | 13 | `possible_quality_motor` | `scripts.rag_selezionatore_motori_riutilizzabile_v35f.classify_task` | `scripts/rag_selezionatore_motori_riutilizzabile_v35f.py:88` |
+| 22 | 12 | `possible_quality_motor` | `mini_llm.python.runtime.mini_llm_universal_orchestrator_v4004.summary_security` | `mini_llm/python/runtime/mini_llm_universal_orchestrator_v4004.py:245` |
+| 22 | 12 | `possible_quality_motor` | `scripts.check_text_quality_ai.crea_prompt_revisione` | `scripts/check_text_quality_ai.py:79` |
+| 22 | 12 | `possible_quality_motor` | `scripts.rag_motore_documenti_completo.process_single_file` | `scripts/rag_motore_documenti_completo.py:1031` |
+| 22 | 10 | `quiz_or_study_motor` | `scripts.rag_revisore_naturalezza_antikeyword_v35i.improve_study` | `scripts/rag_revisore_naturalezza_antikeyword_v35i.py:275` |
+| 22 | 10 | `quiz_or_study_motor` | `scripts.rag_revisore_naturalezza_antikeyword_v35i.natural_study_answer` | `scripts/rag_revisore_naturalezza_antikeyword_v35i.py:224` |
+| 21 | 11 | `possible_quality_motor` | `backend.agent_router.scegli_azione_da_richiesta` | `backend/agent_router.py:9` |
+| 21 | 11 | `possible_quality_motor` | `backend.motori_scrittura.output_get_global_entities` | `backend/motori_scrittura.py:2363` |
+| 21 | 11 | `possible_quality_motor` | `backend.motori_scrittura.phase5_quality_summary_cards_result_to_dict` | `backend/motori_scrittura.py:4782` |
+| 21 | 11 | `possible_quality_motor` | `backend.motori_scrittura.phase5_quality_summary_cards_result_to_json` | `backend/motori_scrittura.py:4801` |

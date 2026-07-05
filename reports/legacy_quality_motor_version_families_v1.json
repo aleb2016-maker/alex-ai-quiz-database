@@ -1,0 +1,3276 @@
+{
+  "report_name": "legacy_quality_motor_version_families_v1",
+  "created_at": "2026-07-05T10:02:53",
+  "families_count": 107,
+  "families": [
+    {
+      "family": "mini_llm_study_pack_cli",
+      "files_count": 2,
+      "versions": [
+        "v1",
+        "v2"
+      ],
+      "files": [
+        {
+          "path": "scripts/mini_llm_study_pack_cli_v1.py",
+          "module": "scripts.mini_llm_study_pack_cli_v1",
+          "stem": "mini_llm_study_pack_cli_v1",
+          "versions": [
+            "v1"
+          ],
+          "quality_functions": [
+            {
+              "name": "load_study_pack_engine",
+              "line": 96
+            }
+          ],
+          "quality_functions_count": 1,
+          "in_shortlist": true
+        },
+        {
+          "path": "scripts/mini_llm_study_pack_cli_v2.py",
+          "module": "scripts.mini_llm_study_pack_cli_v2",
+          "stem": "mini_llm_study_pack_cli_v2",
+          "versions": [
+            "v2"
+          ],
+          "quality_functions": [
+            {
+              "name": "load_study_pack_engine",
+              "line": 98
+            }
+          ],
+          "quality_functions_count": 1,
+          "in_shortlist": true
+        }
+      ],
+      "in_shortlist": true,
+      "quality_functions_count": 2
+    },
+    {
+      "family": "knowledge_engine_quality_filter",
+      "files_count": 1,
+      "versions": [
+        "v12"
+      ],
+      "files": [
+        {
+          "path": "mini_llm/python/knowledge_engine/knowledge_engine_quality_filter_v12.py",
+          "module": "mini_llm.python.knowledge_engine.knowledge_engine_quality_filter_v12",
+          "stem": "knowledge_engine_quality_filter_v12",
+          "versions": [
+            "v12"
+          ],
+          "quality_functions": [
+            {
+              "name": "refine",
+              "line": 106
+            },
+            {
+              "name": "_build_clean_areas",
+              "line": 194
+            },
+            {
+              "name": "_build_clean_micro_info",
+              "line": 219
+            },
+            {
+              "name": "_build_clean_relevant_sentences",
+              "line": 253
+            },
+            {
+              "name": "_build_clean_relations",
+              "line": 287
+            },
+            {
+              "name": "_build_clean_training_items",
+              "line": 355
+            },
+            {
+              "name": "_build_quality_report",
+              "line": 391
+            },
+            {
+              "name": "_clean_item",
+              "line": 434
+            }
+          ],
+          "quality_functions_count": 8,
+          "in_shortlist": true
+        }
+      ],
+      "in_shortlist": true,
+      "quality_functions_count": 8
+    },
+    {
+      "family": "rag_revisore_naturalezza_antikeyword",
+      "files_count": 1,
+      "versions": [
+        "v35i"
+      ],
+      "files": [
+        {
+          "path": "scripts/rag_revisore_naturalezza_antikeyword_v35i.py",
+          "module": "scripts.rag_revisore_naturalezza_antikeyword_v35i",
+          "stem": "rag_revisore_naturalezza_antikeyword_v35i",
+          "versions": [
+            "v35i"
+          ],
+          "quality_functions": [
+            {
+              "name": "pulisci_finale_frase",
+              "line": 55
+            },
+            {
+              "name": "clean_source_text",
+              "line": 128
+            },
+            {
+              "name": "natural_summary_point",
+              "line": 210
+            },
+            {
+              "name": "natural_study_answer",
+              "line": 224
+            },
+            {
+              "name": "improve_summary",
+              "line": 252
+            },
+            {
+              "name": "improve_cards",
+              "line": 266
+            },
+            {
+              "name": "improve_study",
+              "line": 275
+            },
+            {
+              "name": "validate_naturalness",
+              "line": 350
+            }
+          ],
+          "quality_functions_count": 8,
+          "in_shortlist": true
+        }
+      ],
+      "in_shortlist": true,
+      "quality_functions_count": 8
+    },
+    {
+      "family": "mini_llm_universal_study_pack",
+      "files_count": 1,
+      "versions": [
+        "v4"
+      ],
+      "files": [
+        {
+          "path": "mini_llm/python/runtime/mini_llm_universal_study_pack_v4.py",
+          "module": "mini_llm.python.runtime.mini_llm_universal_study_pack_v4",
+          "stem": "mini_llm_universal_study_pack_v4",
+          "versions": [
+            "v4"
+          ],
+          "quality_functions": [
+            {
+              "name": "clean_sentence",
+              "line": 192
+            },
+            {
+              "name": "concept_label_quality",
+              "line": 300
+            },
+            {
+              "name": "sentence_quality",
+              "line": 357
+            },
+            {
+              "name": "select_summary_sentences",
+              "line": 529
+            },
+            {
+              "name": "make_quiz",
+              "line": 597
+            },
+            {
+              "name": "validate_pack",
+              "line": 655
+            },
+            {
+              "name": "build_study_pack",
+              "line": 742
+            }
+          ],
+          "quality_functions_count": 7,
+          "in_shortlist": true
+        }
+      ],
+      "in_shortlist": true,
+      "quality_functions_count": 7
+    },
+    {
+      "family": "rag_motore_didattico_riutilizzabile",
+      "files_count": 1,
+      "versions": [
+        "v35c"
+      ],
+      "files": [
+        {
+          "path": "scripts/rag_motore_didattico_riutilizzabile_v35c.py",
+          "module": "scripts.rag_motore_didattico_riutilizzabile_v35c",
+          "stem": "rag_motore_didattico_riutilizzabile_v35c",
+          "versions": [
+            "v35c"
+          ],
+          "quality_functions": [
+            {
+              "name": "refine_summary",
+              "line": 102
+            },
+            {
+              "name": "refine_cards",
+              "line": 124
+            },
+            {
+              "name": "refine_tests",
+              "line": 150
+            },
+            {
+              "name": "study_question_template",
+              "line": 197
+            },
+            {
+              "name": "refine_study_questions",
+              "line": 209
+            },
+            {
+              "name": "validate_didactic_output",
+              "line": 293
+            },
+            {
+              "name": "refine_output",
+              "line": 339
+            }
+          ],
+          "quality_functions_count": 7,
+          "in_shortlist": true
+        }
+      ],
+      "in_shortlist": true,
+      "quality_functions_count": 7
+    },
+    {
+      "family": "mini_llm_real_output_cleaner",
+      "files_count": 1,
+      "versions": [
+        "v393"
+      ],
+      "files": [
+        {
+          "path": "scripts/mini_llm_real_output_cleaner_v393.py",
+          "module": "scripts.mini_llm_real_output_cleaner_v393",
+          "stem": "mini_llm_real_output_cleaner_v393",
+          "versions": [
+            "v393"
+          ],
+          "quality_functions": [
+            {
+              "name": "clean_bullet",
+              "line": 145
+            },
+            {
+              "name": "clean_plain_line",
+              "line": 171
+            },
+            {
+              "name": "clean_sentence",
+              "line": 259
+            },
+            {
+              "name": "clean_document_text",
+              "line": 269
+            },
+            {
+              "name": "safe_study_context",
+              "line": 301
+            },
+            {
+              "name": "cleaner_diagnostics",
+              "line": 314
+            }
+          ],
+          "quality_functions_count": 6,
+          "in_shortlist": true
+        }
+      ],
+      "in_shortlist": true,
+      "quality_functions_count": 6
+    },
+    {
+      "family": "rag_adapter_quiz_ufficiale",
+      "files_count": 1,
+      "versions": [
+        "v43"
+      ],
+      "files": [
+        {
+          "path": "scripts/rag_adapter_quiz_ufficiale_v43.py",
+          "module": "scripts.rag_adapter_quiz_ufficiale_v43",
+          "stem": "rag_adapter_quiz_ufficiale_v43",
+          "versions": [
+            "v43"
+          ],
+          "quality_functions": [
+            {
+              "name": "pulisci_testo",
+              "line": 49
+            },
+            {
+              "name": "carica_domande_da_json",
+              "line": 296
+            },
+            {
+              "name": "adatta_domande_esistenti",
+              "line": 308
+            },
+            {
+              "name": "valida_struttura_ufficiale",
+              "line": 344
+            },
+            {
+              "name": "valida_linguistica_importata",
+              "line": 368
+            },
+            {
+              "name": "esegui_validatori_esterni",
+              "line": 407
+            }
+          ],
+          "quality_functions_count": 6,
+          "in_shortlist": true
+        }
+      ],
+      "in_shortlist": true,
+      "quality_functions_count": 6
+    },
+    {
+      "family": "inference_engine_clean",
+      "files_count": 1,
+      "versions": [
+        "v21"
+      ],
+      "files": [
+        {
+          "path": "mini_llm/python/inference/inference_engine_v21_clean.py",
+          "module": "mini_llm.python.inference.inference_engine_v21_clean",
+          "stem": "inference_engine_v21_clean",
+          "versions": [
+            "v21"
+          ],
+          "quality_functions": [
+            {
+              "name": "_select_clean_candidate",
+              "line": 386
+            },
+            {
+              "name": "_adjust_score_for_quality",
+              "line": 493
+            },
+            {
+              "name": "_final_token_cleanup",
+              "line": 551
+            },
+            {
+              "name": "_build_quality_summary",
+              "line": 653
+            },
+            {
+              "name": "_clean_text",
+              "line": 762
+            }
+          ],
+          "quality_functions_count": 5,
+          "in_shortlist": true
+        }
+      ],
+      "in_shortlist": true,
+      "quality_functions_count": 5
+    },
+    {
+      "family": "rag_genera_output_da_kb_clean",
+      "files_count": 1,
+      "versions": [
+        "v34e"
+      ],
+      "files": [
+        {
+          "path": "scripts/rag_genera_output_da_kb_clean_v34e.py",
+          "module": "scripts.rag_genera_output_da_kb_clean_v34e",
+          "stem": "rag_genera_output_da_kb_clean_v34e",
+          "versions": [
+            "v34e"
+          ],
+          "quality_functions": [
+            {
+              "name": "titolo_didattico",
+              "line": 158
+            },
+            {
+              "name": "pulisci_titolo_documento_visibile",
+              "line": 237
+            },
+            {
+              "name": "crea_riassunto",
+              "line": 253
+            },
+            {
+              "name": "crea_domande_studio",
+              "line": 467
+            },
+            {
+              "name": "valida_output",
+              "line": 545
+            }
+          ],
+          "quality_functions_count": 5,
+          "in_shortlist": true
+        }
+      ],
+      "in_shortlist": true,
+      "quality_functions_count": 5
+    },
+    {
+      "family": "rag_revisore_accordo_pronomi",
+      "files_count": 1,
+      "versions": [
+        "v35j"
+      ],
+      "files": [
+        {
+          "path": "scripts/rag_revisore_accordo_pronomi_v35j.py",
+          "module": "scripts.rag_revisore_accordo_pronomi_v35j",
+          "stem": "rag_revisore_accordo_pronomi_v35j",
+          "versions": [
+            "v35j"
+          ],
+          "quality_functions": [
+            {
+              "name": "clean_base",
+              "line": 135
+            },
+            {
+              "name": "improve_summary",
+              "line": 169
+            },
+            {
+              "name": "improve_cards",
+              "line": 196
+            },
+            {
+              "name": "improve_study",
+              "line": 231
+            },
+            {
+              "name": "validate_agreement",
+              "line": 303
+            }
+          ],
+          "quality_functions_count": 5,
+          "in_shortlist": true
+        }
+      ],
+      "in_shortlist": true,
+      "quality_functions_count": 5
+    },
+    {
+      "family": "mini_llm_study_pack",
+      "files_count": 1,
+      "versions": [
+        "v1"
+      ],
+      "files": [
+        {
+          "path": "mini_llm/python/runtime/mini_llm_study_pack_v1.py",
+          "module": "mini_llm.python.runtime.mini_llm_study_pack_v1",
+          "stem": "mini_llm_study_pack_v1",
+          "versions": [
+            "v1"
+          ],
+          "quality_functions": [
+            {
+              "name": "clean_sentence",
+              "line": 66
+            },
+            {
+              "name": "generate_summary",
+              "line": 186
+            },
+            {
+              "name": "generate_cards",
+              "line": 205
+            },
+            {
+              "name": "generate_study_pack",
+              "line": 382
+            }
+          ],
+          "quality_functions_count": 4,
+          "in_shortlist": true
+        }
+      ],
+      "in_shortlist": true,
+      "quality_functions_count": 4
+    },
+    {
+      "family": "rag_cleaner_finale_universale",
+      "files_count": 1,
+      "versions": [
+        "v35k"
+      ],
+      "files": [
+        {
+          "path": "scripts/rag_cleaner_finale_universale_v35k.py",
+          "module": "scripts.rag_cleaner_finale_universale_v35k",
+          "stem": "rag_cleaner_finale_universale_v35k",
+          "versions": [
+            "v35k"
+          ],
+          "quality_functions": [
+            {
+              "name": "clean_text",
+              "line": 176
+            },
+            {
+              "name": "clean_dict_field",
+              "line": 209
+            },
+            {
+              "name": "clean_output",
+              "line": 215
+            },
+            {
+              "name": "validate_output",
+              "line": 362
+            }
+          ],
+          "quality_functions_count": 4,
+          "in_shortlist": true
+        }
+      ],
+      "in_shortlist": true,
+      "quality_functions_count": 4
+    },
+    {
+      "family": "mini_llm_study_pack_quality",
+      "files_count": 1,
+      "versions": [
+        "v2"
+      ],
+      "files": [
+        {
+          "path": "mini_llm/python/runtime/mini_llm_study_pack_v2_quality.py",
+          "module": "mini_llm.python.runtime.mini_llm_study_pack_v2_quality",
+          "stem": "mini_llm_study_pack_v2_quality",
+          "versions": [
+            "v2"
+          ],
+          "quality_functions": [
+            {
+              "name": "generate_summary",
+              "line": 338
+            },
+            {
+              "name": "generate_cards",
+              "line": 341
+            },
+            {
+              "name": "generate_study_pack",
+              "line": 503
+            }
+          ],
+          "quality_functions_count": 3,
+          "in_shortlist": true
+        }
+      ],
+      "in_shortlist": true,
+      "quality_functions_count": 3
+    },
+    {
+      "family": "rag_quality_bridge",
+      "files_count": 1,
+      "versions": [
+        "v45"
+      ],
+      "files": [
+        {
+          "path": "scripts/rag_quality_bridge_v45.py",
+          "module": "scripts.rag_quality_bridge_v45",
+          "stem": "rag_quality_bridge_v45",
+          "versions": [
+            "v45"
+          ],
+          "quality_functions": [
+            {
+              "name": "find_quiz_candidate",
+              "line": 80
+            },
+            {
+              "name": "run_validator",
+              "line": 105
+            },
+            {
+              "name": "validate_quiz",
+              "line": 207
+            }
+          ],
+          "quality_functions_count": 3,
+          "in_shortlist": true
+        }
+      ],
+      "in_shortlist": true,
+      "quality_functions_count": 3
+    },
+    {
+      "family": "knowledge_dataset_builder_clean",
+      "files_count": 1,
+      "versions": [
+        "v2"
+      ],
+      "files": [
+        {
+          "path": "mini_llm/python/dataset_builder/knowledge_dataset_builder_v2_clean.py",
+          "module": "mini_llm.python.dataset_builder.knowledge_dataset_builder_v2_clean",
+          "stem": "knowledge_dataset_builder_v2_clean",
+          "versions": [
+            "v2"
+          ],
+          "quality_functions": [
+            {
+              "name": "_clean_text",
+              "line": 403
+            },
+            {
+              "name": "_quality_summary",
+              "line": 518
+            }
+          ],
+          "quality_functions_count": 2,
+          "in_shortlist": true
+        }
+      ],
+      "in_shortlist": true,
+      "quality_functions_count": 2
+    },
+    {
+      "family": "verifica_compatibilita_motori_qualita_fase5",
+      "files_count": 1,
+      "versions": [
+        "v1"
+      ],
+      "files": [
+        {
+          "path": "scripts/verifica_compatibilita_motori_qualita_fase5_v1.py",
+          "module": "scripts.verifica_compatibilita_motori_qualita_fase5_v1",
+          "stem": "verifica_compatibilita_motori_qualita_fase5_v1",
+          "versions": [
+            "v1"
+          ],
+          "quality_functions": [
+            {
+              "name": "_extract_quiz_like_output",
+              "line": 136
+            },
+            {
+              "name": "_quiz_shape_report",
+              "line": 209
+            }
+          ],
+          "quality_functions_count": 2,
+          "in_shortlist": true
+        }
+      ],
+      "in_shortlist": true,
+      "quality_functions_count": 2
+    },
+    {
+      "family": "fast_document_qa_summary_cache",
+      "files_count": 1,
+      "versions": [
+        "v2"
+      ],
+      "files": [
+        {
+          "path": "mini_llm/python/runtime/fast_document_qa_summary_v2_cache.py",
+          "module": "mini_llm.python.runtime.fast_document_qa_summary_v2_cache",
+          "stem": "fast_document_qa_summary_v2_cache",
+          "versions": [
+            "v2"
+          ],
+          "quality_functions": [
+            {
+              "name": "clean_document_text",
+              "line": 45
+            }
+          ],
+          "quality_functions_count": 1,
+          "in_shortlist": true
+        }
+      ],
+      "in_shortlist": true,
+      "quality_functions_count": 1
+    },
+    {
+      "family": "neural_model_clean",
+      "files_count": 1,
+      "versions": [
+        "v3"
+      ],
+      "files": [
+        {
+          "path": "mini_llm/python/models/neural_model_v3_clean.py",
+          "module": "mini_llm.python.models.neural_model_v3_clean",
+          "stem": "neural_model_v3_clean",
+          "versions": [
+            "v3"
+          ],
+          "quality_functions": [
+            {
+              "name": "_quality_summary",
+              "line": 630
+            }
+          ],
+          "quality_functions_count": 1,
+          "in_shortlist": true
+        }
+      ],
+      "in_shortlist": true,
+      "quality_functions_count": 1
+    },
+    {
+      "family": "rag_bridge_motori_qualita_esistenti",
+      "files_count": 1,
+      "versions": [
+        "v35b"
+      ],
+      "files": [
+        {
+          "path": "scripts/rag_bridge_motori_qualita_esistenti_v35b.py",
+          "module": "scripts.rag_bridge_motori_qualita_esistenti_v35b",
+          "stem": "rag_bridge_motori_qualita_esistenti_v35b",
+          "versions": [
+            "v35b"
+          ],
+          "quality_functions": [
+            {
+              "name": "domande_quiz_da_rag",
+              "line": 182
+            }
+          ],
+          "quality_functions_count": 1,
+          "in_shortlist": true
+        }
+      ],
+      "in_shortlist": true,
+      "quality_functions_count": 1
+    },
+    {
+      "family": "token_vectorizer_clean",
+      "files_count": 1,
+      "versions": [
+        "v2"
+      ],
+      "files": [
+        {
+          "path": "mini_llm/python/vectorizer/token_vectorizer_v2_clean.py",
+          "module": "mini_llm.python.vectorizer.token_vectorizer_v2_clean",
+          "stem": "token_vectorizer_v2_clean",
+          "versions": [
+            "v2"
+          ],
+          "quality_functions": [
+            {
+              "name": "_quality_summary",
+              "line": 398
+            }
+          ],
+          "quality_functions_count": 1,
+          "in_shortlist": true
+        }
+      ],
+      "in_shortlist": true,
+      "quality_functions_count": 1
+    },
+    {
+      "family": "model_semantic_gate",
+      "files_count": 2,
+      "versions": [
+        "v384",
+        "v386"
+      ],
+      "files": [
+        {
+          "path": "mini_llm/python/quality/model_semantic_gate_v384.py",
+          "module": "mini_llm.python.quality.model_semantic_gate_v384",
+          "stem": "model_semantic_gate_v384",
+          "versions": [
+            "v384"
+          ],
+          "quality_functions": [
+            {
+              "name": "add_v384_human_quality_rules",
+              "line": 398
+            }
+          ],
+          "quality_functions_count": 1,
+          "in_shortlist": false
+        },
+        {
+          "path": "mini_llm/python/quality/model_semantic_gate_v386.py",
+          "module": "mini_llm.python.quality.model_semantic_gate_v386",
+          "stem": "model_semantic_gate_v386",
+          "versions": [
+            "v386"
+          ],
+          "quality_functions": [
+            {
+              "name": "add_v384_human_quality_rules",
+              "line": 406
+            }
+          ],
+          "quality_functions_count": 1,
+          "in_shortlist": false
+        }
+      ],
+      "in_shortlist": false,
+      "quality_functions_count": 2
+    },
+    {
+      "family": "valida_mini_llm_study_pack_cli",
+      "files_count": 2,
+      "versions": [
+        "v1",
+        "v2"
+      ],
+      "files": [
+        {
+          "path": "scripts/valida_mini_llm_study_pack_cli_v1.py",
+          "module": "scripts.valida_mini_llm_study_pack_cli_v1",
+          "stem": "valida_mini_llm_study_pack_cli_v1",
+          "versions": [
+            "v1"
+          ],
+          "quality_functions": [
+            {
+              "name": "validate_payload",
+              "line": 147
+            }
+          ],
+          "quality_functions_count": 1,
+          "in_shortlist": false
+        },
+        {
+          "path": "scripts/valida_mini_llm_study_pack_cli_v2.py",
+          "module": "scripts.valida_mini_llm_study_pack_cli_v2",
+          "stem": "valida_mini_llm_study_pack_cli_v2",
+          "versions": [
+            "v2"
+          ],
+          "quality_functions": [],
+          "quality_functions_count": 0,
+          "in_shortlist": false
+        }
+      ],
+      "in_shortlist": false,
+      "quality_functions_count": 1
+    },
+    {
+      "family": "valida_knowledge_engine",
+      "files_count": 1,
+      "versions": [
+        "v14"
+      ],
+      "files": [
+        {
+          "path": "scripts/valida_knowledge_engine_v14.py",
+          "module": "scripts.valida_knowledge_engine_v14",
+          "stem": "valida_knowledge_engine_v14",
+          "versions": [
+            "v14"
+          ],
+          "quality_functions": [
+            {
+              "name": "validate",
+              "line": 59
+            },
+            {
+              "name": "_validate_version",
+              "line": 73
+            },
+            {
+              "name": "_validate_category",
+              "line": 79
+            },
+            {
+              "name": "_validate_counts",
+              "line": 88
+            },
+            {
+              "name": "_validate_required_areas",
+              "line": 110
+            },
+            {
+              "name": "_validate_required_repairs",
+              "line": 118
+            },
+            {
+              "name": "_validate_bad_patterns",
+              "line": 125
+            },
+            {
+              "name": "_validate_training_items",
+              "line": 140
+            },
+            {
+              "name": "_validate_quality_counters",
+              "line": 160
+            },
+            {
+              "name": "_split_text_for_validation",
+              "line": 202
+            }
+          ],
+          "quality_functions_count": 10,
+          "in_shortlist": false
+        }
+      ],
+      "in_shortlist": false,
+      "quality_functions_count": 10
+    },
+    {
+      "family": "rag_revisore_qualita_testuale",
+      "files_count": 1,
+      "versions": [
+        "v35g"
+      ],
+      "files": [
+        {
+          "path": "scripts/rag_revisore_qualita_testuale_v35g.py",
+          "module": "scripts.rag_revisore_qualita_testuale_v35g",
+          "stem": "rag_revisore_qualita_testuale_v35g",
+          "versions": [
+            "v35g"
+          ],
+          "quality_functions": [
+            {
+              "name": "pulisci_visibile",
+              "line": 119
+            },
+            {
+              "name": "riformula_riassunto",
+              "line": 191
+            },
+            {
+              "name": "refine_summary",
+              "line": 268
+            },
+            {
+              "name": "refine_cards",
+              "line": 297
+            },
+            {
+              "name": "refine_study",
+              "line": 319
+            },
+            {
+              "name": "refine_tests",
+              "line": 341
+            },
+            {
+              "name": "validate_quality",
+              "line": 599
+            },
+            {
+              "name": "refine_output",
+              "line": 701
+            }
+          ],
+          "quality_functions_count": 8,
+          "in_shortlist": false
+        }
+      ],
+      "in_shortlist": false,
+      "quality_functions_count": 8
+    },
+    {
+      "family": "valida_knowledge_dataset",
+      "files_count": 1,
+      "versions": [
+        "v1"
+      ],
+      "files": [
+        {
+          "path": "scripts/valida_knowledge_dataset_v1.py",
+          "module": "scripts.valida_knowledge_dataset_v1",
+          "stem": "valida_knowledge_dataset_v1",
+          "versions": [
+            "v1"
+          ],
+          "quality_functions": [
+            {
+              "name": "validate",
+              "line": 67
+            },
+            {
+              "name": "_validate_records",
+              "line": 118
+            },
+            {
+              "name": "_validate_splits",
+              "line": 159
+            },
+            {
+              "name": "_validate_tasks",
+              "line": 189
+            },
+            {
+              "name": "_validate_required_sentences",
+              "line": 196
+            },
+            {
+              "name": "_validate_bad_patterns",
+              "line": 203
+            },
+            {
+              "name": "_split_for_validation",
+              "line": 223
+            }
+          ],
+          "quality_functions_count": 7,
+          "in_shortlist": false
+        }
+      ],
+      "in_shortlist": false,
+      "quality_functions_count": 7
+    },
+    {
+      "family": "phase5_live_quality_bridge",
+      "files_count": 1,
+      "versions": [
+        "v1"
+      ],
+      "files": [
+        {
+          "path": "backend/phase5_live_quality_bridge_v1.py",
+          "module": "backend.phase5_live_quality_bridge_v1",
+          "stem": "phase5_live_quality_bridge_v1",
+          "versions": [
+            "v1"
+          ],
+          "quality_functions": [
+            {
+              "name": "_looks_like_quiz_question",
+              "line": 126
+            },
+            {
+              "name": "_looks_like_quiz_list",
+              "line": 147
+            },
+            {
+              "name": "_candidate_quiz_targets",
+              "line": 161
+            },
+            {
+              "name": "_legacy_refine_output_to_phase5",
+              "line": 273
+            },
+            {
+              "name": "_extract_adapted_quiz_value",
+              "line": 380
+            },
+            {
+              "name": "apply_phase5_live_quality_bridge_v1",
+              "line": 545
+            }
+          ],
+          "quality_functions_count": 6,
+          "in_shortlist": false
+        }
+      ],
+      "in_shortlist": false,
+      "quality_functions_count": 6
+    },
+    {
+      "family": "valida_neural_model",
+      "files_count": 1,
+      "versions": [
+        "v1"
+      ],
+      "files": [
+        {
+          "path": "scripts/valida_neural_model_v1.py",
+          "module": "scripts.valida_neural_model_v1",
+          "stem": "valida_neural_model_v1",
+          "versions": [
+            "v1"
+          ],
+          "quality_functions": [
+            {
+              "name": "validate",
+              "line": 22
+            },
+            {
+              "name": "_validate_manifest",
+              "line": 52
+            },
+            {
+              "name": "_validate_weights",
+              "line": 86
+            },
+            {
+              "name": "_validate_history",
+              "line": 119
+            },
+            {
+              "name": "_validate_evaluation",
+              "line": 138
+            },
+            {
+              "name": "_validate_predictions",
+              "line": 154
+            }
+          ],
+          "quality_functions_count": 6,
+          "in_shortlist": false
+        }
+      ],
+      "in_shortlist": false,
+      "quality_functions_count": 6
+    },
+    {
+      "family": "valida_neural_model_context",
+      "files_count": 1,
+      "versions": [
+        "v2"
+      ],
+      "files": [
+        {
+          "path": "scripts/valida_neural_model_v2_context.py",
+          "module": "scripts.valida_neural_model_v2_context",
+          "stem": "valida_neural_model_v2_context",
+          "versions": [
+            "v2"
+          ],
+          "quality_functions": [
+            {
+              "name": "validate",
+              "line": 23
+            },
+            {
+              "name": "_validate_manifest",
+              "line": 53
+            },
+            {
+              "name": "_validate_weights",
+              "line": 90
+            },
+            {
+              "name": "_validate_history",
+              "line": 126
+            },
+            {
+              "name": "_validate_evaluation",
+              "line": 151
+            },
+            {
+              "name": "_validate_predictions",
+              "line": 167
+            }
+          ],
+          "quality_functions_count": 6,
+          "in_shortlist": false
+        }
+      ],
+      "in_shortlist": false,
+      "quality_functions_count": 6
+    },
+    {
+      "family": "legacy_quality_motor_registry",
+      "files_count": 1,
+      "versions": [
+        "v1"
+      ],
+      "files": [
+        {
+          "path": "backend/legacy_quality_motor_registry_v1.py",
+          "module": "backend.legacy_quality_motor_registry_v1",
+          "stem": "legacy_quality_motor_registry_v1",
+          "versions": [
+            "v1"
+          ],
+          "quality_functions": [
+            {
+              "name": "_looks_like_quiz_question",
+              "line": 147
+            },
+            {
+              "name": "_looks_like_quiz_list",
+              "line": 168
+            },
+            {
+              "name": "_candidate_quiz_targets",
+              "line": 182
+            },
+            {
+              "name": "_extract_adapted_quiz_value",
+              "line": 401
+            },
+            {
+              "name": "apply_legacy_quality_motors_v1",
+              "line": 476
+            }
+          ],
+          "quality_functions_count": 5,
+          "in_shortlist": false
+        }
+      ],
+      "in_shortlist": false,
+      "quality_functions_count": 5
+    },
+    {
+      "family": "mini_llm_study_pack_quality_gate",
+      "files_count": 1,
+      "versions": [
+        "v3"
+      ],
+      "files": [
+        {
+          "path": "mini_llm/python/runtime/mini_llm_study_pack_v3_quality_gate.py",
+          "module": "mini_llm.python.runtime.mini_llm_study_pack_v3_quality_gate",
+          "stem": "mini_llm_study_pack_v3_quality_gate",
+          "versions": [
+            "v3"
+          ],
+          "quality_functions": [
+            {
+              "name": "quality_question_ok",
+              "line": 156
+            },
+            {
+              "name": "option_quality_ok",
+              "line": 173
+            },
+            {
+              "name": "generate_summary",
+              "line": 196
+            },
+            {
+              "name": "generate_cards",
+              "line": 199
+            },
+            {
+              "name": "generate_study_pack",
+              "line": 451
+            }
+          ],
+          "quality_functions_count": 5,
+          "in_shortlist": false
+        }
+      ],
+      "in_shortlist": false,
+      "quality_functions_count": 5
+    },
+    {
+      "family": "valida_token_vectorizer",
+      "files_count": 1,
+      "versions": [
+        "v1"
+      ],
+      "files": [
+        {
+          "path": "scripts/valida_token_vectorizer_v1.py",
+          "module": "scripts.valida_token_vectorizer_v1",
+          "stem": "valida_token_vectorizer_v1",
+          "versions": [
+            "v1"
+          ],
+          "quality_functions": [
+            {
+              "name": "validate",
+              "line": 30
+            },
+            {
+              "name": "_validate_vocab",
+              "line": 96
+            },
+            {
+              "name": "_validate_embeddings",
+              "line": 122
+            },
+            {
+              "name": "_validate_manifest",
+              "line": 155
+            },
+            {
+              "name": "_validate_sequences",
+              "line": 180
+            }
+          ],
+          "quality_functions_count": 5,
+          "in_shortlist": false
+        }
+      ],
+      "in_shortlist": false,
+      "quality_functions_count": 5
+    },
+    {
+      "family": "valida_token_vectorizer_clean",
+      "files_count": 1,
+      "versions": [
+        "v2"
+      ],
+      "files": [
+        {
+          "path": "scripts/valida_token_vectorizer_v2_clean.py",
+          "module": "scripts.valida_token_vectorizer_v2_clean",
+          "stem": "valida_token_vectorizer_v2_clean",
+          "versions": [
+            "v2"
+          ],
+          "quality_functions": [
+            {
+              "name": "validate",
+              "line": 64
+            },
+            {
+              "name": "_validate_vocab",
+              "line": 126
+            },
+            {
+              "name": "_validate_embeddings",
+              "line": 158
+            },
+            {
+              "name": "_validate_manifest",
+              "line": 184
+            },
+            {
+              "name": "_validate_sequences",
+              "line": 245
+            }
+          ],
+          "quality_functions_count": 5,
+          "in_shortlist": false
+        }
+      ],
+      "in_shortlist": false,
+      "quality_functions_count": 5
+    },
+    {
+      "family": "valida_token_vectorizer_natural",
+      "files_count": 1,
+      "versions": [
+        "v21"
+      ],
+      "files": [
+        {
+          "path": "scripts/valida_token_vectorizer_v21_natural.py",
+          "module": "scripts.valida_token_vectorizer_v21_natural",
+          "stem": "valida_token_vectorizer_v21_natural",
+          "versions": [
+            "v21"
+          ],
+          "quality_functions": [
+            {
+              "name": "validate",
+              "line": 80
+            },
+            {
+              "name": "_validate_vocab",
+              "line": 142
+            },
+            {
+              "name": "_validate_embeddings",
+              "line": 178
+            },
+            {
+              "name": "_validate_manifest",
+              "line": 201
+            },
+            {
+              "name": "_validate_sequences",
+              "line": 270
+            }
+          ],
+          "quality_functions_count": 5,
+          "in_shortlist": false
+        }
+      ],
+      "in_shortlist": false,
+      "quality_functions_count": 5
+    },
+    {
+      "family": "rag_quality_gate_kb",
+      "files_count": 1,
+      "versions": [
+        "v34d"
+      ],
+      "files": [
+        {
+          "path": "scripts/rag_quality_gate_kb_v34d.py",
+          "module": "scripts.rag_quality_gate_kb_v34d",
+          "stem": "rag_quality_gate_kb_v34d",
+          "versions": [
+            "v34d"
+          ],
+          "quality_functions": [
+            {
+              "name": "pulisci_testo_utente",
+              "line": 159
+            },
+            {
+              "name": "pulisci_concetto",
+              "line": 286
+            },
+            {
+              "name": "pulisci_frasi_importanti",
+              "line": 337
+            },
+            {
+              "name": "applica_quality_gate",
+              "line": 351
+            }
+          ],
+          "quality_functions_count": 4,
+          "in_shortlist": false
+        }
+      ],
+      "in_shortlist": false,
+      "quality_functions_count": 4
+    },
+    {
+      "family": "valida_inference_engine_clean",
+      "files_count": 1,
+      "versions": [
+        "v21"
+      ],
+      "files": [
+        {
+          "path": "scripts/valida_inference_engine_v21_clean.py",
+          "module": "scripts.valida_inference_engine_v21_clean",
+          "stem": "valida_inference_engine_v21_clean",
+          "versions": [
+            "v21"
+          ],
+          "quality_functions": [
+            {
+              "name": "validate",
+              "line": 49
+            },
+            {
+              "name": "_validate_manifest",
+              "line": 75
+            },
+            {
+              "name": "_validate_outputs",
+              "line": 111
+            },
+            {
+              "name": "_validate_quality_summary",
+              "line": 163
+            }
+          ],
+          "quality_functions_count": 4,
+          "in_shortlist": false
+        }
+      ],
+      "in_shortlist": false,
+      "quality_functions_count": 4
+    },
+    {
+      "family": "valida_neural_model_clean",
+      "files_count": 1,
+      "versions": [
+        "v3"
+      ],
+      "files": [
+        {
+          "path": "scripts/valida_neural_model_v3_clean.py",
+          "module": "scripts.valida_neural_model_v3_clean",
+          "stem": "valida_neural_model_v3_clean",
+          "versions": [
+            "v3"
+          ],
+          "quality_functions": [
+            {
+              "name": "validate",
+              "line": 56
+            },
+            {
+              "name": "_validate_manifest",
+              "line": 84
+            },
+            {
+              "name": "_validate_weights",
+              "line": 152
+            },
+            {
+              "name": "_validate_predictions",
+              "line": 203
+            }
+          ],
+          "quality_functions_count": 4,
+          "in_shortlist": false
+        }
+      ],
+      "in_shortlist": false,
+      "quality_functions_count": 4
+    },
+    {
+      "family": "valida_neural_model_natural",
+      "files_count": 1,
+      "versions": [
+        "v31"
+      ],
+      "files": [
+        {
+          "path": "scripts/valida_neural_model_v31_natural.py",
+          "module": "scripts.valida_neural_model_v31_natural",
+          "stem": "valida_neural_model_v31_natural",
+          "versions": [
+            "v31"
+          ],
+          "quality_functions": [
+            {
+              "name": "validate",
+              "line": 74
+            },
+            {
+              "name": "_validate_manifest",
+              "line": 106
+            },
+            {
+              "name": "_validate_weights",
+              "line": 183
+            },
+            {
+              "name": "_validate_predictions",
+              "line": 262
+            }
+          ],
+          "quality_functions_count": 4,
+          "in_shortlist": false
+        }
+      ],
+      "in_shortlist": false,
+      "quality_functions_count": 4
+    },
+    {
+      "family": "fix_gate_universale_pagina",
+      "files_count": 1,
+      "versions": [
+        "v35k"
+      ],
+      "files": [
+        {
+          "path": "scripts/fix_gate_universale_pagina_v35k.py",
+          "module": "scripts.fix_gate_universale_pagina_v35k",
+          "stem": "fix_gate_universale_pagina_v35k",
+          "versions": [
+            "v35k"
+          ],
+          "quality_functions": [
+            {
+              "name": "clean_page",
+              "line": 24
+            },
+            {
+              "name": "validate_output",
+              "line": 107
+            },
+            {
+              "name": "validate_page",
+              "line": 135
+            }
+          ],
+          "quality_functions_count": 3,
+          "in_shortlist": false
+        }
+      ],
+      "in_shortlist": false,
+      "quality_functions_count": 3
+    },
+    {
+      "family": "rag_genera_test_domande_da_kb",
+      "files_count": 1,
+      "versions": [
+        "v34c"
+      ],
+      "files": [
+        {
+          "path": "scripts/rag_genera_test_domande_da_kb_v34c.py",
+          "module": "scripts.rag_genera_test_domande_da_kb_v34c",
+          "stem": "rag_genera_test_domande_da_kb_v34c",
+          "versions": [
+            "v34c"
+          ],
+          "quality_functions": [
+            {
+              "name": "valida_test",
+              "line": 333
+            },
+            {
+              "name": "valida_studio",
+              "line": 364
+            },
+            {
+              "name": "valida_output",
+              "line": 397
+            }
+          ],
+          "quality_functions_count": 3,
+          "in_shortlist": false
+        }
+      ],
+      "in_shortlist": false,
+      "quality_functions_count": 3
+    },
+    {
+      "family": "rag_motore_test_riutilizzabile",
+      "files_count": 1,
+      "versions": [
+        "v35d"
+      ],
+      "files": [
+        {
+          "path": "scripts/rag_motore_test_riutilizzabile_v35d.py",
+          "module": "scripts.rag_motore_test_riutilizzabile_v35d",
+          "stem": "rag_motore_test_riutilizzabile_v35d",
+          "versions": [
+            "v35d"
+          ],
+          "quality_functions": [
+            {
+              "name": "refine_single_test",
+              "line": 98
+            },
+            {
+              "name": "validate_tests",
+              "line": 146
+            },
+            {
+              "name": "refine_output",
+              "line": 214
+            }
+          ],
+          "quality_functions_count": 3,
+          "in_shortlist": false
+        }
+      ],
+      "in_shortlist": false,
+      "quality_functions_count": 3
+    },
+    {
+      "family": "valida_inference_engine",
+      "files_count": 1,
+      "versions": [
+        "v1"
+      ],
+      "files": [
+        {
+          "path": "scripts/valida_inference_engine_v1.py",
+          "module": "scripts.valida_inference_engine_v1",
+          "stem": "valida_inference_engine_v1",
+          "versions": [
+            "v1"
+          ],
+          "quality_functions": [
+            {
+              "name": "validate",
+              "line": 23
+            },
+            {
+              "name": "_validate_manifest",
+              "line": 48
+            },
+            {
+              "name": "_validate_outputs",
+              "line": 79
+            }
+          ],
+          "quality_functions_count": 3,
+          "in_shortlist": false
+        }
+      ],
+      "in_shortlist": false,
+      "quality_functions_count": 3
+    },
+    {
+      "family": "valida_inference_engine_context",
+      "files_count": 1,
+      "versions": [
+        "v2"
+      ],
+      "files": [
+        {
+          "path": "scripts/valida_inference_engine_v2_context.py",
+          "module": "scripts.valida_inference_engine_v2_context",
+          "stem": "valida_inference_engine_v2_context",
+          "versions": [
+            "v2"
+          ],
+          "quality_functions": [
+            {
+              "name": "validate",
+              "line": 23
+            },
+            {
+              "name": "_validate_manifest",
+              "line": 48
+            },
+            {
+              "name": "_validate_outputs",
+              "line": 90
+            }
+          ],
+          "quality_functions_count": 3,
+          "in_shortlist": false
+        }
+      ],
+      "in_shortlist": false,
+      "quality_functions_count": 3
+    },
+    {
+      "family": "valida_inference_engine_natural",
+      "files_count": 1,
+      "versions": [
+        "v31"
+      ],
+      "files": [
+        {
+          "path": "scripts/valida_inference_engine_v31_natural.py",
+          "module": "scripts.valida_inference_engine_v31_natural",
+          "stem": "valida_inference_engine_v31_natural",
+          "versions": [
+            "v31"
+          ],
+          "quality_functions": [
+            {
+              "name": "validate",
+              "line": 103
+            },
+            {
+              "name": "_validate_manifest",
+              "line": 132
+            },
+            {
+              "name": "_validate_outputs",
+              "line": 187
+            }
+          ],
+          "quality_functions_count": 3,
+          "in_shortlist": false
+        }
+      ],
+      "in_shortlist": false,
+      "quality_functions_count": 3
+    },
+    {
+      "family": "valida_inference_raw_diagnostics",
+      "files_count": 1,
+      "versions": [
+        "v1"
+      ],
+      "files": [
+        {
+          "path": "scripts/valida_inference_raw_diagnostics_v1.py",
+          "module": "scripts.valida_inference_raw_diagnostics_v1",
+          "stem": "valida_inference_raw_diagnostics_v1",
+          "versions": [
+            "v1"
+          ],
+          "quality_functions": [
+            {
+              "name": "validate",
+              "line": 16
+            },
+            {
+              "name": "_validate_manifest",
+              "line": 45
+            },
+            {
+              "name": "_validate_outputs",
+              "line": 77
+            }
+          ],
+          "quality_functions_count": 3,
+          "in_shortlist": false
+        }
+      ],
+      "in_shortlist": false,
+      "quality_functions_count": 3
+    },
+    {
+      "family": "valida_knowledge_dataset_clean",
+      "files_count": 1,
+      "versions": [
+        "v2"
+      ],
+      "files": [
+        {
+          "path": "scripts/valida_knowledge_dataset_v2_clean.py",
+          "module": "scripts.valida_knowledge_dataset_v2_clean",
+          "stem": "valida_knowledge_dataset_v2_clean",
+          "versions": [
+            "v2"
+          ],
+          "quality_functions": [
+            {
+              "name": "validate",
+              "line": 72
+            },
+            {
+              "name": "_validate_manifest",
+              "line": 132
+            },
+            {
+              "name": "_validate_records",
+              "line": 184
+            }
+          ],
+          "quality_functions_count": 3,
+          "in_shortlist": false
+        }
+      ],
+      "in_shortlist": false,
+      "quality_functions_count": 3
+    },
+    {
+      "family": "valida_knowledge_dataset_natural",
+      "files_count": 1,
+      "versions": [
+        "v21"
+      ],
+      "files": [
+        {
+          "path": "scripts/valida_knowledge_dataset_v21_natural.py",
+          "module": "scripts.valida_knowledge_dataset_v21_natural",
+          "stem": "valida_knowledge_dataset_v21_natural",
+          "versions": [
+            "v21"
+          ],
+          "quality_functions": [
+            {
+              "name": "validate",
+              "line": 121
+            },
+            {
+              "name": "_validate_manifest",
+              "line": 181
+            },
+            {
+              "name": "_validate_records",
+              "line": 229
+            }
+          ],
+          "quality_functions_count": 3,
+          "in_shortlist": false
+        }
+      ],
+      "in_shortlist": false,
+      "quality_functions_count": 3
+    },
+    {
+      "family": "benchmark_mini_llm_study_pack",
+      "files_count": 1,
+      "versions": [
+        "v1"
+      ],
+      "files": [
+        {
+          "path": "scripts/benchmark_mini_llm_study_pack_v1.py",
+          "module": "scripts.benchmark_mini_llm_study_pack_v1",
+          "stem": "benchmark_mini_llm_study_pack_v1",
+          "versions": [
+            "v1"
+          ],
+          "quality_functions": [
+            {
+              "name": "validate_pack",
+              "line": 57
+            }
+          ],
+          "quality_functions_count": 1,
+          "in_shortlist": false
+        }
+      ],
+      "in_shortlist": false,
+      "quality_functions_count": 1
+    },
+    {
+      "family": "benchmark_mini_llm_study_pack_quality",
+      "files_count": 1,
+      "versions": [
+        "v2"
+      ],
+      "files": [
+        {
+          "path": "scripts/benchmark_mini_llm_study_pack_v2_quality.py",
+          "module": "scripts.benchmark_mini_llm_study_pack_v2_quality",
+          "stem": "benchmark_mini_llm_study_pack_v2_quality",
+          "versions": [
+            "v2"
+          ],
+          "quality_functions": [
+            {
+              "name": "validate_pack",
+              "line": 76
+            }
+          ],
+          "quality_functions_count": 1,
+          "in_shortlist": false
+        }
+      ],
+      "in_shortlist": false,
+      "quality_functions_count": 1
+    },
+    {
+      "family": "benchmark_mini_llm_study_pack_quality_gate",
+      "files_count": 1,
+      "versions": [
+        "v3"
+      ],
+      "files": [
+        {
+          "path": "scripts/benchmark_mini_llm_study_pack_v3_quality_gate.py",
+          "module": "scripts.benchmark_mini_llm_study_pack_v3_quality_gate",
+          "stem": "benchmark_mini_llm_study_pack_v3_quality_gate",
+          "versions": [
+            "v3"
+          ],
+          "quality_functions": [
+            {
+              "name": "validate_pack",
+              "line": 71
+            }
+          ],
+          "quality_functions_count": 1,
+          "in_shortlist": false
+        }
+      ],
+      "in_shortlist": false,
+      "quality_functions_count": 1
+    },
+    {
+      "family": "mini_llm_real_quality_gate",
+      "files_count": 1,
+      "versions": [
+        "v392"
+      ],
+      "files": [
+        {
+          "path": "scripts/mini_llm_real_quality_gate_v392.py",
+          "module": "scripts.mini_llm_real_quality_gate_v392",
+          "stem": "mini_llm_real_quality_gate_v392",
+          "versions": [
+            "v392"
+          ],
+          "quality_functions": [
+            {
+              "name": "validate_report",
+              "line": 253
+            }
+          ],
+          "quality_functions_count": 1,
+          "in_shortlist": false
+        }
+      ],
+      "in_shortlist": false,
+      "quality_functions_count": 1
+    },
+    {
+      "family": "test_rag_quality_large_input",
+      "files_count": 1,
+      "versions": [
+        "v45"
+      ],
+      "files": [
+        {
+          "path": "scripts/test_rag_quality_large_input_v45.py",
+          "module": "scripts.test_rag_quality_large_input_v45",
+          "stem": "test_rag_quality_large_input_v45",
+          "versions": [
+            "v45"
+          ],
+          "quality_functions": [
+            {
+              "name": "create_fake_quiz",
+              "line": 85
+            }
+          ],
+          "quality_functions_count": 1,
+          "in_shortlist": false
+        }
+      ],
+      "in_shortlist": false,
+      "quality_functions_count": 1
+    },
+    {
+      "family": "test_study_pack_universale",
+      "files_count": 1,
+      "versions": [
+        "v397"
+      ],
+      "files": [
+        {
+          "path": "scripts/test_study_pack_universale_v397.py",
+          "module": "scripts.test_study_pack_universale_v397",
+          "stem": "test_study_pack_universale_v397",
+          "versions": [
+            "v397"
+          ],
+          "quality_functions": [
+            {
+              "name": "assert_pack_quality",
+              "line": 84
+            }
+          ],
+          "quality_functions_count": 1,
+          "in_shortlist": false
+        }
+      ],
+      "in_shortlist": false,
+      "quality_functions_count": 1
+    },
+    {
+      "family": "valida_mini_llm_real_quality_gate",
+      "files_count": 1,
+      "versions": [
+        "v392"
+      ],
+      "files": [
+        {
+          "path": "scripts/valida_mini_llm_real_quality_gate_v392.py",
+          "module": "scripts.valida_mini_llm_real_quality_gate_v392",
+          "stem": "valida_mini_llm_real_quality_gate_v392",
+          "versions": [
+            "v392"
+          ],
+          "quality_functions": [
+            {
+              "name": "load_gate",
+              "line": 19
+            }
+          ],
+          "quality_functions_count": 1,
+          "in_shortlist": false
+        }
+      ],
+      "in_shortlist": false,
+      "quality_functions_count": 1
+    },
+    {
+      "family": "valida_model_quality_gate",
+      "files_count": 1,
+      "versions": [
+        "v1"
+      ],
+      "files": [
+        {
+          "path": "scripts/valida_model_quality_gate_v1.py",
+          "module": "scripts.valida_model_quality_gate_v1",
+          "stem": "valida_model_quality_gate_v1",
+          "versions": [
+            "v1"
+          ],
+          "quality_functions": [
+            {
+              "name": "validate",
+              "line": 15
+            }
+          ],
+          "quality_functions_count": 1,
+          "in_shortlist": false
+        }
+      ],
+      "in_shortlist": false,
+      "quality_functions_count": 1
+    },
+    {
+      "family": "validatore_rag_distrattori_forti",
+      "files_count": 1,
+      "versions": [
+        "v2"
+      ],
+      "files": [
+        {
+          "path": "scripts/validatore_rag_distrattori_forti_v2.py",
+          "module": "scripts.validatore_rag_distrattori_forti_v2",
+          "stem": "validatore_rag_distrattori_forti_v2",
+          "versions": [
+            "v2"
+          ],
+          "quality_functions": [
+            {
+              "name": "estrai_domande",
+              "line": 33
+            }
+          ],
+          "quality_functions_count": 1,
+          "in_shortlist": false
+        }
+      ],
+      "in_shortlist": false,
+      "quality_functions_count": 1
+    },
+    {
+      "family": "benchmark_fast_document_qa_summary",
+      "files_count": 1,
+      "versions": [
+        "v1"
+      ],
+      "files": [
+        {
+          "path": "scripts/benchmark_fast_document_qa_summary_v1.py",
+          "module": "scripts.benchmark_fast_document_qa_summary_v1",
+          "stem": "benchmark_fast_document_qa_summary_v1",
+          "versions": [
+            "v1"
+          ],
+          "quality_functions": [],
+          "quality_functions_count": 0,
+          "in_shortlist": false
+        }
+      ],
+      "in_shortlist": false,
+      "quality_functions_count": 0
+    },
+    {
+      "family": "benchmark_fast_document_qa_summary_cache",
+      "files_count": 1,
+      "versions": [
+        "v2"
+      ],
+      "files": [
+        {
+          "path": "scripts/benchmark_fast_document_qa_summary_v2_cache.py",
+          "module": "scripts.benchmark_fast_document_qa_summary_v2_cache",
+          "stem": "benchmark_fast_document_qa_summary_v2_cache",
+          "versions": [
+            "v2"
+          ],
+          "quality_functions": [],
+          "quality_functions_count": 0,
+          "in_shortlist": false
+        }
+      ],
+      "in_shortlist": false,
+      "quality_functions_count": 0
+    },
+    {
+      "family": "fast_document_qa_summary",
+      "files_count": 1,
+      "versions": [
+        "v1"
+      ],
+      "files": [
+        {
+          "path": "mini_llm/python/runtime/fast_document_qa_summary_v1.py",
+          "module": "mini_llm.python.runtime.fast_document_qa_summary_v1",
+          "stem": "fast_document_qa_summary_v1",
+          "versions": [
+            "v1"
+          ],
+          "quality_functions": [],
+          "quality_functions_count": 0,
+          "in_shortlist": false
+        }
+      ],
+      "in_shortlist": false,
+      "quality_functions_count": 0
+    },
+    {
+      "family": "filtra_legacy_quality_motor_candidates",
+      "files_count": 1,
+      "versions": [
+        "v1"
+      ],
+      "files": [
+        {
+          "path": "scripts/filtra_legacy_quality_motor_candidates_v1.py",
+          "module": "scripts.filtra_legacy_quality_motor_candidates_v1",
+          "stem": "filtra_legacy_quality_motor_candidates_v1",
+          "versions": [
+            "v1"
+          ],
+          "quality_functions": [],
+          "quality_functions_count": 0,
+          "in_shortlist": false
+        }
+      ],
+      "in_shortlist": false,
+      "quality_functions_count": 0
+    },
+    {
+      "family": "installa_rag_adapter_quiz_ufficiale",
+      "files_count": 1,
+      "versions": [
+        "v43"
+      ],
+      "files": [
+        {
+          "path": "scripts/installa_rag_adapter_quiz_ufficiale_v43.py",
+          "module": "scripts.installa_rag_adapter_quiz_ufficiale_v43",
+          "stem": "installa_rag_adapter_quiz_ufficiale_v43",
+          "versions": [
+            "v43"
+          ],
+          "quality_functions": [],
+          "quality_functions_count": 0,
+          "in_shortlist": false
+        }
+      ],
+      "in_shortlist": false,
+      "quality_functions_count": 0
+    },
+    {
+      "family": "mini_llm_practical_real_test_clean",
+      "files_count": 1,
+      "versions": [
+        "v393"
+      ],
+      "files": [
+        {
+          "path": "scripts/mini_llm_practical_real_test_v393_clean.py",
+          "module": "scripts.mini_llm_practical_real_test_v393_clean",
+          "stem": "mini_llm_practical_real_test_v393_clean",
+          "versions": [
+            "v393"
+          ],
+          "quality_functions": [],
+          "quality_functions_count": 0,
+          "in_shortlist": false
+        }
+      ],
+      "in_shortlist": false,
+      "quality_functions_count": 0
+    },
+    {
+      "family": "model_quality_gate",
+      "files_count": 1,
+      "versions": [
+        "v1"
+      ],
+      "files": [
+        {
+          "path": "mini_llm/python/quality/model_quality_gate_v1.py",
+          "module": "mini_llm.python.quality.model_quality_gate_v1",
+          "stem": "model_quality_gate_v1",
+          "versions": [
+            "v1"
+          ],
+          "quality_functions": [],
+          "quality_functions_count": 0,
+          "in_shortlist": false
+        }
+      ],
+      "in_shortlist": false,
+      "quality_functions_count": 0
+    },
+    {
+      "family": "patch_phase5_3_live_quality_adapter",
+      "files_count": 1,
+      "versions": [
+        "v1"
+      ],
+      "files": [
+        {
+          "path": "scripts/patch_phase5_3_live_quality_adapter_v1.py",
+          "module": "scripts.patch_phase5_3_live_quality_adapter_v1",
+          "stem": "patch_phase5_3_live_quality_adapter_v1",
+          "versions": [
+            "v1"
+          ],
+          "quality_functions": [],
+          "quality_functions_count": 0,
+          "in_shortlist": false
+        }
+      ],
+      "in_shortlist": false,
+      "quality_functions_count": 0
+    },
+    {
+      "family": "patch_phase5_3_refine_tests_legacy_adapter",
+      "files_count": 1,
+      "versions": [
+        "v1"
+      ],
+      "files": [
+        {
+          "path": "scripts/patch_phase5_3_refine_tests_legacy_adapter_v1.py",
+          "module": "scripts.patch_phase5_3_refine_tests_legacy_adapter_v1",
+          "stem": "patch_phase5_3_refine_tests_legacy_adapter_v1",
+          "versions": [
+            "v1"
+          ],
+          "quality_functions": [],
+          "quality_functions_count": 0,
+          "in_shortlist": false
+        }
+      ],
+      "in_shortlist": false,
+      "quality_functions_count": 0
+    },
+    {
+      "family": "patch_phase5_4_hook_legacy_quality_registry",
+      "files_count": 1,
+      "versions": [
+        "v1"
+      ],
+      "files": [
+        {
+          "path": "scripts/patch_phase5_4_hook_legacy_quality_registry_v1.py",
+          "module": "scripts.patch_phase5_4_hook_legacy_quality_registry_v1",
+          "stem": "patch_phase5_4_hook_legacy_quality_registry_v1",
+          "versions": [
+            "v1"
+          ],
+          "quality_functions": [],
+          "quality_functions_count": 0,
+          "in_shortlist": false
+        }
+      ],
+      "in_shortlist": false,
+      "quality_functions_count": 0
+    },
+    {
+      "family": "patch_phase5_live_quality_bridge",
+      "files_count": 1,
+      "versions": [
+        "v1"
+      ],
+      "files": [
+        {
+          "path": "scripts/patch_phase5_live_quality_bridge_v1.py",
+          "module": "scripts.patch_phase5_live_quality_bridge_v1",
+          "stem": "patch_phase5_live_quality_bridge_v1",
+          "versions": [
+            "v1"
+          ],
+          "quality_functions": [],
+          "quality_functions_count": 0,
+          "in_shortlist": false
+        }
+      ],
+      "in_shortlist": false,
+      "quality_functions_count": 0
+    },
+    {
+      "family": "patch_phase5_micro_concepts_cards",
+      "files_count": 1,
+      "versions": [
+        "v11"
+      ],
+      "files": [
+        {
+          "path": "scripts/patch_phase5_micro_concepts_cards_v11.py",
+          "module": "scripts.patch_phase5_micro_concepts_cards_v11",
+          "stem": "patch_phase5_micro_concepts_cards_v11",
+          "versions": [
+            "v11"
+          ],
+          "quality_functions": [],
+          "quality_functions_count": 0,
+          "in_shortlist": false
+        }
+      ],
+      "in_shortlist": false,
+      "quality_functions_count": 0
+    },
+    {
+      "family": "patch_phase5_quality_summary_cards",
+      "files_count": 1,
+      "versions": [
+        "v1"
+      ],
+      "files": [
+        {
+          "path": "scripts/patch_phase5_quality_summary_cards_v1.py",
+          "module": "scripts.patch_phase5_quality_summary_cards_v1",
+          "stem": "patch_phase5_quality_summary_cards_v1",
+          "versions": [
+            "v1"
+          ],
+          "quality_functions": [],
+          "quality_functions_count": 0,
+          "in_shortlist": false
+        }
+      ],
+      "in_shortlist": false,
+      "quality_functions_count": 0
+    },
+    {
+      "family": "patch_phase5_quiz_distractors",
+      "files_count": 1,
+      "versions": [
+        "v121"
+      ],
+      "files": [
+        {
+          "path": "scripts/patch_phase5_quiz_distractors_v121.py",
+          "module": "scripts.patch_phase5_quiz_distractors_v121",
+          "stem": "patch_phase5_quiz_distractors_v121",
+          "versions": [
+            "v121"
+          ],
+          "quality_functions": [],
+          "quality_functions_count": 0,
+          "in_shortlist": false
+        }
+      ],
+      "in_shortlist": false,
+      "quality_functions_count": 0
+    },
+    {
+      "family": "patch_phase5_study_quiz",
+      "files_count": 1,
+      "versions": [
+        "v1"
+      ],
+      "files": [
+        {
+          "path": "scripts/patch_phase5_study_quiz_v1.py",
+          "module": "scripts.patch_phase5_study_quiz_v1",
+          "stem": "patch_phase5_study_quiz_v1",
+          "versions": [
+            "v1"
+          ],
+          "quality_functions": [],
+          "quality_functions_count": 0,
+          "in_shortlist": false
+        }
+      ],
+      "in_shortlist": false,
+      "quality_functions_count": 0
+    },
+    {
+      "family": "patch_super_quality_gate_phase",
+      "files_count": 1,
+      "versions": [
+        "v1"
+      ],
+      "files": [
+        {
+          "path": "scripts/patch_super_quality_gate_phase_v1.py",
+          "module": "scripts.patch_super_quality_gate_phase_v1",
+          "stem": "patch_super_quality_gate_phase_v1",
+          "versions": [
+            "v1"
+          ],
+          "quality_functions": [],
+          "quality_functions_count": 0,
+          "in_shortlist": false
+        }
+      ],
+      "in_shortlist": false,
+      "quality_functions_count": 0
+    },
+    {
+      "family": "rag_cleaner_finale_visibile",
+      "files_count": 1,
+      "versions": [
+        "v35k"
+      ],
+      "files": [
+        {
+          "path": "scripts/rag_cleaner_finale_visibile_v35k.py",
+          "module": "scripts.rag_cleaner_finale_visibile_v35k",
+          "stem": "rag_cleaner_finale_visibile_v35k",
+          "versions": [
+            "v35k"
+          ],
+          "quality_functions": [],
+          "quality_functions_count": 0,
+          "in_shortlist": false
+        }
+      ],
+      "in_shortlist": false,
+      "quality_functions_count": 0
+    },
+    {
+      "family": "scan_legacy_quality_motors_registry_candidates",
+      "files_count": 1,
+      "versions": [
+        "v1"
+      ],
+      "files": [
+        {
+          "path": "scripts/scan_legacy_quality_motors_registry_candidates_v1.py",
+          "module": "scripts.scan_legacy_quality_motors_registry_candidates_v1",
+          "stem": "scan_legacy_quality_motors_registry_candidates_v1",
+          "versions": [
+            "v1"
+          ],
+          "quality_functions": [],
+          "quality_functions_count": 0,
+          "in_shortlist": false
+        }
+      ],
+      "in_shortlist": false,
+      "quality_functions_count": 0
+    },
+    {
+      "family": "test_legacy_quality_motor_registry",
+      "files_count": 1,
+      "versions": [
+        "v1"
+      ],
+      "files": [
+        {
+          "path": "backend/test_legacy_quality_motor_registry_v1.py",
+          "module": "backend.test_legacy_quality_motor_registry_v1",
+          "stem": "test_legacy_quality_motor_registry_v1",
+          "versions": [
+            "v1"
+          ],
+          "quality_functions": [],
+          "quality_functions_count": 0,
+          "in_shortlist": false
+        }
+      ],
+      "in_shortlist": false,
+      "quality_functions_count": 0
+    },
+    {
+      "family": "test_modelli_ollama_riassunto",
+      "files_count": 1,
+      "versions": [
+        "v2a35"
+      ],
+      "files": [
+        {
+          "path": "scripts/test_modelli_ollama_riassunto_v2a35.py",
+          "module": "scripts.test_modelli_ollama_riassunto_v2a35",
+          "stem": "test_modelli_ollama_riassunto_v2a35",
+          "versions": [
+            "v2a35"
+          ],
+          "quality_functions": [],
+          "quality_functions_count": 0,
+          "in_shortlist": false
+        }
+      ],
+      "in_shortlist": false,
+      "quality_functions_count": 0
+    },
+    {
+      "family": "test_phase5_live_quality_bridge",
+      "files_count": 1,
+      "versions": [
+        "v1"
+      ],
+      "files": [
+        {
+          "path": "backend/test_phase5_live_quality_bridge_v1.py",
+          "module": "backend.test_phase5_live_quality_bridge_v1",
+          "stem": "test_phase5_live_quality_bridge_v1",
+          "versions": [
+            "v1"
+          ],
+          "quality_functions": [],
+          "quality_functions_count": 0,
+          "in_shortlist": false
+        }
+      ],
+      "in_shortlist": false,
+      "quality_functions_count": 0
+    },
+    {
+      "family": "test_phase5_micro_concepts_cards",
+      "files_count": 1,
+      "versions": [
+        "v11"
+      ],
+      "files": [
+        {
+          "path": "backend/test_phase5_micro_concepts_cards_v11.py",
+          "module": "backend.test_phase5_micro_concepts_cards_v11",
+          "stem": "test_phase5_micro_concepts_cards_v11",
+          "versions": [
+            "v11"
+          ],
+          "quality_functions": [],
+          "quality_functions_count": 0,
+          "in_shortlist": false
+        }
+      ],
+      "in_shortlist": false,
+      "quality_functions_count": 0
+    },
+    {
+      "family": "test_phase5_quality_summary_cards",
+      "files_count": 1,
+      "versions": [
+        "v1"
+      ],
+      "files": [
+        {
+          "path": "backend/test_phase5_quality_summary_cards_v1.py",
+          "module": "backend.test_phase5_quality_summary_cards_v1",
+          "stem": "test_phase5_quality_summary_cards_v1",
+          "versions": [
+            "v1"
+          ],
+          "quality_functions": [],
+          "quality_functions_count": 0,
+          "in_shortlist": false
+        }
+      ],
+      "in_shortlist": false,
+      "quality_functions_count": 0
+    },
+    {
+      "family": "test_phase5_study_quiz",
+      "files_count": 1,
+      "versions": [
+        "v1"
+      ],
+      "files": [
+        {
+          "path": "backend/test_phase5_study_quiz_v1.py",
+          "module": "backend.test_phase5_study_quiz_v1",
+          "stem": "test_phase5_study_quiz_v1",
+          "versions": [
+            "v1"
+          ],
+          "quality_functions": [],
+          "quality_functions_count": 0,
+          "in_shortlist": false
+        }
+      ],
+      "in_shortlist": false,
+      "quality_functions_count": 0
+    },
+    {
+      "family": "test_super_quality_gate_phase",
+      "files_count": 1,
+      "versions": [
+        "v1"
+      ],
+      "files": [
+        {
+          "path": "backend/test_super_quality_gate_phase_v1.py",
+          "module": "backend.test_super_quality_gate_phase_v1",
+          "stem": "test_super_quality_gate_phase_v1",
+          "versions": [
+            "v1"
+          ],
+          "quality_functions": [],
+          "quality_functions_count": 0,
+          "in_shortlist": false
+        }
+      ],
+      "in_shortlist": false,
+      "quality_functions_count": 0
+    },
+    {
+      "family": "trova_motori_qualita_esistenti",
+      "files_count": 1,
+      "versions": [
+        "v1"
+      ],
+      "files": [
+        {
+          "path": "scripts/trova_motori_qualita_esistenti_v1.py",
+          "module": "scripts.trova_motori_qualita_esistenti_v1",
+          "stem": "trova_motori_qualita_esistenti_v1",
+          "versions": [
+            "v1"
+          ],
+          "quality_functions": [],
+          "quality_functions_count": 0,
+          "in_shortlist": false
+        }
+      ],
+      "in_shortlist": false,
+      "quality_functions_count": 0
+    },
+    {
+      "family": "valida_inference_engine_extended_safe_decoder",
+      "files_count": 1,
+      "versions": [
+        "v315"
+      ],
+      "files": [
+        {
+          "path": "scripts/valida_inference_engine_v315_extended_safe_decoder.py",
+          "module": "scripts.valida_inference_engine_v315_extended_safe_decoder",
+          "stem": "valida_inference_engine_v315_extended_safe_decoder",
+          "versions": [
+            "v315"
+          ],
+          "quality_functions": [],
+          "quality_functions_count": 0,
+          "in_shortlist": false
+        }
+      ],
+      "in_shortlist": false,
+      "quality_functions_count": 0
+    },
+    {
+      "family": "valida_inference_engine_human_aligned_decoder",
+      "files_count": 1,
+      "versions": [
+        "v311"
+      ],
+      "files": [
+        {
+          "path": "scripts/valida_inference_engine_v311_human_aligned_decoder.py",
+          "module": "scripts.valida_inference_engine_v311_human_aligned_decoder",
+          "stem": "valida_inference_engine_v311_human_aligned_decoder",
+          "versions": [
+            "v311"
+          ],
+          "quality_functions": [],
+          "quality_functions_count": 0,
+          "in_shortlist": false
+        }
+      ],
+      "in_shortlist": false,
+      "quality_functions_count": 0
+    },
+    {
+      "family": "valida_inference_engine_rewrite_only_safe_decoder",
+      "files_count": 1,
+      "versions": [
+        "v314"
+      ],
+      "files": [
+        {
+          "path": "scripts/valida_inference_engine_v314_rewrite_only_safe_decoder.py",
+          "module": "scripts.valida_inference_engine_v314_rewrite_only_safe_decoder",
+          "stem": "valida_inference_engine_v314_rewrite_only_safe_decoder",
+          "versions": [
+            "v314"
+          ],
+          "quality_functions": [],
+          "quality_functions_count": 0,
+          "in_shortlist": false
+        }
+      ],
+      "in_shortlist": false,
+      "quality_functions_count": 0
+    },
+    {
+      "family": "valida_mini_llm_document_cli",
+      "files_count": 1,
+      "versions": [
+        "v1"
+      ],
+      "files": [
+        {
+          "path": "scripts/valida_mini_llm_document_cli_v1.py",
+          "module": "scripts.valida_mini_llm_document_cli_v1",
+          "stem": "valida_mini_llm_document_cli_v1",
+          "versions": [
+            "v1"
+          ],
+          "quality_functions": [],
+          "quality_functions_count": 0,
+          "in_shortlist": false
+        }
+      ],
+      "in_shortlist": false,
+      "quality_functions_count": 0
+    },
+    {
+      "family": "valida_mini_llm_document_cli_pdf",
+      "files_count": 1,
+      "versions": [
+        "v1"
+      ],
+      "files": [
+        {
+          "path": "scripts/valida_mini_llm_document_cli_pdf_v1.py",
+          "module": "scripts.valida_mini_llm_document_cli_pdf_v1",
+          "stem": "valida_mini_llm_document_cli_pdf_v1",
+          "versions": [
+            "v1"
+          ],
+          "quality_functions": [],
+          "quality_functions_count": 0,
+          "in_shortlist": false
+        }
+      ],
+      "in_shortlist": false,
+      "quality_functions_count": 0
+    },
+    {
+      "family": "valida_mini_llm_finale",
+      "files_count": 1,
+      "versions": [
+        "v4005"
+      ],
+      "files": [
+        {
+          "path": "scripts/valida_mini_llm_v4005_finale.py",
+          "module": "scripts.valida_mini_llm_v4005_finale",
+          "stem": "valida_mini_llm_v4005_finale",
+          "versions": [
+            "v4005"
+          ],
+          "quality_functions": [],
+          "quality_functions_count": 0,
+          "in_shortlist": false
+        }
+      ],
+      "in_shortlist": false,
+      "quality_functions_count": 0
+    },
+    {
+      "family": "valida_mini_llm_output_modes",
+      "files_count": 1,
+      "versions": [
+        "v1"
+      ],
+      "files": [
+        {
+          "path": "scripts/valida_mini_llm_output_modes_v1.py",
+          "module": "scripts.valida_mini_llm_output_modes_v1",
+          "stem": "valida_mini_llm_output_modes_v1",
+          "versions": [
+            "v1"
+          ],
+          "quality_functions": [],
+          "quality_functions_count": 0,
+          "in_shortlist": false
+        }
+      ],
+      "in_shortlist": false,
+      "quality_functions_count": 0
+    },
+    {
+      "family": "valida_mini_llm_practical_real_test",
+      "files_count": 1,
+      "versions": [
+        "v391"
+      ],
+      "files": [
+        {
+          "path": "scripts/valida_mini_llm_practical_real_test_v391.py",
+          "module": "scripts.valida_mini_llm_practical_real_test_v391",
+          "stem": "valida_mini_llm_practical_real_test_v391",
+          "versions": [
+            "v391"
+          ],
+          "quality_functions": [],
+          "quality_functions_count": 0,
+          "in_shortlist": false
+        }
+      ],
+      "in_shortlist": false,
+      "quality_functions_count": 0
+    },
+    {
+      "family": "valida_mini_llm_practical_real_test_clean",
+      "files_count": 1,
+      "versions": [
+        "v393"
+      ],
+      "files": [
+        {
+          "path": "scripts/valida_mini_llm_practical_real_test_v393_clean.py",
+          "module": "scripts.valida_mini_llm_practical_real_test_v393_clean",
+          "stem": "valida_mini_llm_practical_real_test_v393_clean",
+          "versions": [
+            "v393"
+          ],
+          "quality_functions": [],
+          "quality_functions_count": 0,
+          "in_shortlist": false
+        }
+      ],
+      "in_shortlist": false,
+      "quality_functions_count": 0
+    },
+    {
+      "family": "valida_mini_llm_query_context_expander",
+      "files_count": 1,
+      "versions": [
+        "v394"
+      ],
+      "files": [
+        {
+          "path": "scripts/valida_mini_llm_query_context_expander_v394.py",
+          "module": "scripts.valida_mini_llm_query_context_expander_v394",
+          "stem": "valida_mini_llm_query_context_expander_v394",
+          "versions": [
+            "v394"
+          ],
+          "quality_functions": [],
+          "quality_functions_count": 0,
+          "in_shortlist": false
+        }
+      ],
+      "in_shortlist": false,
+      "quality_functions_count": 0
+    },
+    {
+      "family": "valida_mini_llm_universal_core_split",
+      "files_count": 1,
+      "versions": [
+        "v394u"
+      ],
+      "files": [
+        {
+          "path": "scripts/valida_mini_llm_universal_core_split_v394u.py",
+          "module": "scripts.valida_mini_llm_universal_core_split_v394u",
+          "stem": "valida_mini_llm_universal_core_split_v394u",
+          "versions": [
+            "v394u"
+          ],
+          "quality_functions": [],
+          "quality_functions_count": 0,
+          "in_shortlist": false
+        }
+      ],
+      "in_shortlist": false,
+      "quality_functions_count": 0
+    },
+    {
+      "family": "valida_mini_llm_universal_current_engine",
+      "files_count": 1,
+      "versions": [
+        "v396"
+      ],
+      "files": [
+        {
+          "path": "scripts/valida_mini_llm_universal_current_engine_v396.py",
+          "module": "scripts.valida_mini_llm_universal_current_engine_v396",
+          "stem": "valida_mini_llm_universal_current_engine_v396",
+          "versions": [
+            "v396"
+          ],
+          "quality_functions": [],
+          "quality_functions_count": 0,
+          "in_shortlist": false
+        }
+      ],
+      "in_shortlist": false,
+      "quality_functions_count": 0
+    },
+    {
+      "family": "valida_mini_llm_universal_llm_bridge",
+      "files_count": 1,
+      "versions": [
+        "v395"
+      ],
+      "files": [
+        {
+          "path": "scripts/valida_mini_llm_universal_llm_bridge_v395.py",
+          "module": "scripts.valida_mini_llm_universal_llm_bridge_v395",
+          "stem": "valida_mini_llm_universal_llm_bridge_v395",
+          "versions": [
+            "v395"
+          ],
+          "quality_functions": [],
+          "quality_functions_count": 0,
+          "in_shortlist": false
+        }
+      ],
+      "in_shortlist": false,
+      "quality_functions_count": 0
+    },
+    {
+      "family": "verifica_adapter_refine_tests_fase5",
+      "files_count": 1,
+      "versions": [
+        "v1"
+      ],
+      "files": [
+        {
+          "path": "scripts/verifica_adapter_refine_tests_fase5_v1.py",
+          "module": "scripts.verifica_adapter_refine_tests_fase5_v1",
+          "stem": "verifica_adapter_refine_tests_fase5_v1",
+          "versions": [
+            "v1"
+          ],
+          "quality_functions": [],
+          "quality_functions_count": 0,
+          "in_shortlist": false
+        }
+      ],
+      "in_shortlist": false,
+      "quality_functions_count": 0
+    },
+    {
+      "family": "verifica_eliminazione_classificatore_interno_riassunto",
+      "files_count": 1,
+      "versions": [
+        "v2a16"
+      ],
+      "files": [
+        {
+          "path": "scripts/verifica_eliminazione_classificatore_interno_riassunto_v2a16.py",
+          "module": "scripts.verifica_eliminazione_classificatore_interno_riassunto_v2a16",
+          "stem": "verifica_eliminazione_classificatore_interno_riassunto_v2a16",
+          "versions": [
+            "v2a16"
+          ],
+          "quality_functions": [],
+          "quality_functions_count": 0,
+          "in_shortlist": false
+        }
+      ],
+      "in_shortlist": false,
+      "quality_functions_count": 0
+    },
+    {
+      "family": "verifica_rag_adapter_quiz_ufficiale",
+      "files_count": 1,
+      "versions": [
+        "v43"
+      ],
+      "files": [
+        {
+          "path": "scripts/verifica_rag_adapter_quiz_ufficiale_v43.py",
+          "module": "scripts.verifica_rag_adapter_quiz_ufficiale_v43",
+          "stem": "verifica_rag_adapter_quiz_ufficiale_v43",
+          "versions": [
+            "v43"
+          ],
+          "quality_functions": [],
+          "quality_functions_count": 0,
+          "in_shortlist": false
+        }
+      ],
+      "in_shortlist": false,
+      "quality_functions_count": 0
+    },
+    {
+      "family": "verifica_rag_bridge_motori_qualita_esistenti",
+      "files_count": 1,
+      "versions": [
+        "v35b"
+      ],
+      "files": [
+        {
+          "path": "scripts/verifica_rag_bridge_motori_qualita_esistenti_v35b.py",
+          "module": "scripts.verifica_rag_bridge_motori_qualita_esistenti_v35b",
+          "stem": "verifica_rag_bridge_motori_qualita_esistenti_v35b",
+          "versions": [
+            "v35b"
+          ],
+          "quality_functions": [],
+          "quality_functions_count": 0,
+          "in_shortlist": false
+        }
+      ],
+      "in_shortlist": false,
+      "quality_functions_count": 0
+    },
+    {
+      "family": "verifica_rag_demo_output_kb_clean",
+      "files_count": 1,
+      "versions": [
+        "v34f"
+      ],
+      "files": [
+        {
+          "path": "scripts/verifica_rag_demo_output_kb_clean_v34f.py",
+          "module": "scripts.verifica_rag_demo_output_kb_clean_v34f",
+          "stem": "verifica_rag_demo_output_kb_clean_v34f",
+          "versions": [
+            "v34f"
+          ],
+          "quality_functions": [],
+          "quality_functions_count": 0,
+          "in_shortlist": false
+        }
+      ],
+      "in_shortlist": false,
+      "quality_functions_count": 0
+    },
+    {
+      "family": "verifica_rag_motore_test_riutilizzabile",
+      "files_count": 1,
+      "versions": [
+        "v35d"
+      ],
+      "files": [
+        {
+          "path": "scripts/verifica_rag_motore_test_riutilizzabile_v35d.py",
+          "module": "scripts.verifica_rag_motore_test_riutilizzabile_v35d",
+          "stem": "verifica_rag_motore_test_riutilizzabile_v35d",
+          "versions": [
+            "v35d"
+          ],
+          "quality_functions": [],
+          "quality_functions_count": 0,
+          "in_shortlist": false
+        }
+      ],
+      "in_shortlist": false,
+      "quality_functions_count": 0
+    },
+    {
+      "family": "verifica_rag_output_kb_clean",
+      "files_count": 1,
+      "versions": [
+        "v34e"
+      ],
+      "files": [
+        {
+          "path": "scripts/verifica_rag_output_kb_clean_v34e.py",
+          "module": "scripts.verifica_rag_output_kb_clean_v34e",
+          "stem": "verifica_rag_output_kb_clean_v34e",
+          "versions": [
+            "v34e"
+          ],
+          "quality_functions": [],
+          "quality_functions_count": 0,
+          "in_shortlist": false
+        }
+      ],
+      "in_shortlist": false,
+      "quality_functions_count": 0
+    },
+    {
+      "family": "verifica_rag_pipeline_qualita",
+      "files_count": 1,
+      "versions": [
+        "v33"
+      ],
+      "files": [
+        {
+          "path": "scripts/verifica_rag_pipeline_qualita_v33.py",
+          "module": "scripts.verifica_rag_pipeline_qualita_v33",
+          "stem": "verifica_rag_pipeline_qualita_v33",
+          "versions": [
+            "v33"
+          ],
+          "quality_functions": [],
+          "quality_functions_count": 0,
+          "in_shortlist": false
+        }
+      ],
+      "in_shortlist": false,
+      "quality_functions_count": 0
+    },
+    {
+      "family": "verifica_rag_quality_gate_kb",
+      "files_count": 1,
+      "versions": [
+        "v34d"
+      ],
+      "files": [
+        {
+          "path": "scripts/verifica_rag_quality_gate_kb_v34d.py",
+          "module": "scripts.verifica_rag_quality_gate_kb_v34d",
+          "stem": "verifica_rag_quality_gate_kb_v34d",
+          "versions": [
+            "v34d"
+          ],
+          "quality_functions": [],
+          "quality_functions_count": 0,
+          "in_shortlist": false
+        }
+      ],
+      "in_shortlist": false,
+      "quality_functions_count": 0
+    },
+    {
+      "family": "verifica_rag_revisore_accordo_pronomi",
+      "files_count": 1,
+      "versions": [
+        "v35j"
+      ],
+      "files": [
+        {
+          "path": "scripts/verifica_rag_revisore_accordo_pronomi_v35j.py",
+          "module": "scripts.verifica_rag_revisore_accordo_pronomi_v35j",
+          "stem": "verifica_rag_revisore_accordo_pronomi_v35j",
+          "versions": [
+            "v35j"
+          ],
+          "quality_functions": [],
+          "quality_functions_count": 0,
+          "in_shortlist": false
+        }
+      ],
+      "in_shortlist": false,
+      "quality_functions_count": 0
+    },
+    {
+      "family": "verifica_rag_revisore_naturalezza_antikeyword",
+      "files_count": 1,
+      "versions": [
+        "v35i"
+      ],
+      "files": [
+        {
+          "path": "scripts/verifica_rag_revisore_naturalezza_antikeyword_v35i.py",
+          "module": "scripts.verifica_rag_revisore_naturalezza_antikeyword_v35i",
+          "stem": "verifica_rag_revisore_naturalezza_antikeyword_v35i",
+          "versions": [
+            "v35i"
+          ],
+          "quality_functions": [],
+          "quality_functions_count": 0,
+          "in_shortlist": false
+        }
+      ],
+      "in_shortlist": false,
+      "quality_functions_count": 0
+    },
+    {
+      "family": "verifica_rag_revisore_qualita_testuale",
+      "files_count": 1,
+      "versions": [
+        "v35g"
+      ],
+      "files": [
+        {
+          "path": "scripts/verifica_rag_revisore_qualita_testuale_v35g.py",
+          "module": "scripts.verifica_rag_revisore_qualita_testuale_v35g",
+          "stem": "verifica_rag_revisore_qualita_testuale_v35g",
+          "versions": [
+            "v35g"
+          ],
+          "quality_functions": [],
+          "quality_functions_count": 0,
+          "in_shortlist": false
+        }
+      ],
+      "in_shortlist": false,
+      "quality_functions_count": 0
+    },
+    {
+      "family": "verifica_rag_summary_cards",
+      "files_count": 1,
+      "versions": [
+        "v34a"
+      ],
+      "files": [
+        {
+          "path": "scripts/verifica_rag_summary_cards_v34a.py",
+          "module": "scripts.verifica_rag_summary_cards_v34a",
+          "stem": "verifica_rag_summary_cards_v34a",
+          "versions": [
+            "v34a"
+          ],
+          "quality_functions": [],
+          "quality_functions_count": 0,
+          "in_shortlist": false
+        }
+      ],
+      "in_shortlist": false,
+      "quality_functions_count": 0
+    }
+  ],
+  "notes": [
+    "Mappa diagnostica: non modifica registry e non collega motori.",
+    "Raggruppa file versionati per famiglia rimuovendo token tipo v3, v34e, v35c, v4004.",
+    "Le famiglie in_shortlist=True hanno almeno una funzione già comparsa nella shortlist qualità.",
+    "Serve a scegliere quale versione testare prima di inserirla nel registry."
+  ]
+}

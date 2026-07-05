@@ -1,0 +1,1018 @@
+{
+  "report_name": "legacy_quality_motors_registry_ready_v1",
+  "created_at": "2026-07-05T10:07:18",
+  "source_report": "reports/compatibilita_batch_motori_legacy_v1.json",
+  "total": 18,
+  "counts": {
+    "READY_SAFE": 6,
+    "GUARDED_ONLY": 1,
+    "NEEDS_ADAPTER": 4,
+    "LOW_PRIORITY": 2,
+    "EXCLUDE_FOR_NOW": 5
+  },
+  "selected": [
+    {
+      "function_id": "scripts.rag_cleaner_finale_universale_v35k.clean_output",
+      "status": "accepted_for_adapter_study",
+      "signature": "(data: 'dict[str, Any]') -> 'tuple[dict[str, Any], dict[str, int]]'",
+      "payload_tests": [
+        {
+          "payload": "plain_text",
+          "status": "exception",
+          "changed": false,
+          "known_text_defects_before": 3,
+          "known_text_defects_after": null,
+          "error": "AttributeError: 'str' object has no attribute 'get'",
+          "output_type": null
+        },
+        {
+          "payload": "summary_dict",
+          "status": "changed_no_worse",
+          "changed": true,
+          "known_text_defects_before": 8,
+          "known_text_defects_after": 0,
+          "error": null,
+          "output_type": "tuple"
+        },
+        {
+          "payload": "cards_list",
+          "status": "exception",
+          "changed": false,
+          "known_text_defects_before": 3,
+          "known_text_defects_after": null,
+          "error": "AttributeError: 'list' object has no attribute 'get'",
+          "output_type": null
+        },
+        {
+          "payload": "study_list",
+          "status": "exception",
+          "changed": false,
+          "known_text_defects_before": 4,
+          "known_text_defects_after": null,
+          "error": "AttributeError: 'list' object has no attribute 'get'",
+          "output_type": null
+        },
+        {
+          "payload": "quiz_list",
+          "status": "exception",
+          "changed": false,
+          "known_text_defects_before": 1,
+          "known_text_defects_after": null,
+          "error": "AttributeError: 'list' object has no attribute 'get'",
+          "output_type": null
+        },
+        {
+          "payload": "phase5_full_output",
+          "status": "changed_no_worse",
+          "changed": true,
+          "known_text_defects_before": 16,
+          "known_text_defects_after": 0,
+          "error": null,
+          "output_type": "tuple"
+        }
+      ],
+      "best_status": "changed_no_worse",
+      "accepted": true,
+      "best_payload": "summary_dict",
+      "has_worsening_case": false,
+      "registry_decision": "READY_SAFE",
+      "decision_reason": "Cambia output senza peggiorare sul payload migliore: summary_dict.",
+      "adapter_hint": "summary_dict_adapter"
+    },
+    {
+      "function_id": "scripts.rag_motore_didattico_riutilizzabile_v35c.refine_study_questions",
+      "status": "accepted_for_adapter_study",
+      "signature": "(items: 'list[dict[str, Any]]') -> 'list[dict[str, Any]]'",
+      "payload_tests": [
+        {
+          "payload": "plain_text",
+          "status": "exception",
+          "changed": false,
+          "known_text_defects_before": 3,
+          "known_text_defects_after": null,
+          "error": "ValueError: dictionary update sequence element #0 has length 1; 2 is required",
+          "output_type": null
+        },
+        {
+          "payload": "summary_dict",
+          "status": "exception",
+          "changed": false,
+          "known_text_defects_before": 8,
+          "known_text_defects_after": null,
+          "error": "ValueError: dictionary update sequence element #0 has length 1; 2 is required",
+          "output_type": null
+        },
+        {
+          "payload": "cards_list",
+          "status": "changed_no_worse",
+          "changed": true,
+          "known_text_defects_before": 3,
+          "known_text_defects_after": 3,
+          "error": null,
+          "output_type": "list"
+        },
+        {
+          "payload": "study_list",
+          "status": "changed_no_worse",
+          "changed": true,
+          "known_text_defects_before": 4,
+          "known_text_defects_after": 1,
+          "error": null,
+          "output_type": "list"
+        },
+        {
+          "payload": "quiz_list",
+          "status": "changed_no_worse",
+          "changed": true,
+          "known_text_defects_before": 1,
+          "known_text_defects_after": 1,
+          "error": null,
+          "output_type": "list"
+        },
+        {
+          "payload": "phase5_full_output",
+          "status": "exception",
+          "changed": false,
+          "known_text_defects_before": 16,
+          "known_text_defects_after": null,
+          "error": "ValueError: dictionary update sequence element #0 has length 1; 2 is required",
+          "output_type": null
+        }
+      ],
+      "best_status": "changed_no_worse",
+      "accepted": true,
+      "best_payload": "cards_list",
+      "has_worsening_case": false,
+      "registry_decision": "READY_SAFE",
+      "decision_reason": "Cambia output senza peggiorare sul payload migliore: cards_list.",
+      "adapter_hint": "cards_list_adapter"
+    },
+    {
+      "function_id": "scripts.rag_motore_test_riutilizzabile_v35d.refine_output",
+      "status": "accepted_for_adapter_study",
+      "signature": "(output: 'dict[str, Any]') -> 'dict[str, Any]'",
+      "payload_tests": [
+        {
+          "payload": "plain_text",
+          "status": "exception",
+          "changed": false,
+          "known_text_defects_before": 3,
+          "known_text_defects_after": null,
+          "error": "ValueError: dictionary update sequence element #0 has length 1; 2 is required",
+          "output_type": null
+        },
+        {
+          "payload": "summary_dict",
+          "status": "changed_no_worse",
+          "changed": true,
+          "known_text_defects_before": 8,
+          "known_text_defects_after": 8,
+          "error": null,
+          "output_type": "dict"
+        },
+        {
+          "payload": "cards_list",
+          "status": "exception",
+          "changed": false,
+          "known_text_defects_before": 3,
+          "known_text_defects_after": null,
+          "error": "ValueError: dictionary update sequence element #0 has length 5; 2 is required",
+          "output_type": null
+        },
+        {
+          "payload": "study_list",
+          "status": "exception",
+          "changed": false,
+          "known_text_defects_before": 4,
+          "known_text_defects_after": null,
+          "error": "ValueError: dictionary update sequence element #0 has length 4; 2 is required",
+          "output_type": null
+        },
+        {
+          "payload": "quiz_list",
+          "status": "exception",
+          "changed": false,
+          "known_text_defects_before": 1,
+          "known_text_defects_after": null,
+          "error": "ValueError: dictionary update sequence element #0 has length 5; 2 is required",
+          "output_type": null
+        },
+        {
+          "payload": "phase5_full_output",
+          "status": "changed_no_worse",
+          "changed": true,
+          "known_text_defects_before": 16,
+          "known_text_defects_after": 16,
+          "error": null,
+          "output_type": "dict"
+        }
+      ],
+      "best_status": "changed_no_worse",
+      "accepted": true,
+      "best_payload": "summary_dict",
+      "has_worsening_case": false,
+      "registry_decision": "READY_SAFE",
+      "decision_reason": "Cambia output senza peggiorare sul payload migliore: summary_dict.",
+      "adapter_hint": "summary_dict_adapter"
+    },
+    {
+      "function_id": "scripts.rag_revisore_accordo_pronomi_v35j.improve_output",
+      "status": "accepted_for_adapter_study",
+      "signature": "(data: 'dict[str, Any]') -> 'dict[str, Any]'",
+      "payload_tests": [
+        {
+          "payload": "plain_text",
+          "status": "exception",
+          "changed": false,
+          "known_text_defects_before": 3,
+          "known_text_defects_after": null,
+          "error": "ValueError: dictionary update sequence element #0 has length 1; 2 is required",
+          "output_type": null
+        },
+        {
+          "payload": "summary_dict",
+          "status": "changed_no_worse",
+          "changed": true,
+          "known_text_defects_before": 8,
+          "known_text_defects_after": 8,
+          "error": null,
+          "output_type": "dict"
+        },
+        {
+          "payload": "cards_list",
+          "status": "exception",
+          "changed": false,
+          "known_text_defects_before": 3,
+          "known_text_defects_after": null,
+          "error": "ValueError: dictionary update sequence element #0 has length 5; 2 is required",
+          "output_type": null
+        },
+        {
+          "payload": "study_list",
+          "status": "exception",
+          "changed": false,
+          "known_text_defects_before": 4,
+          "known_text_defects_after": null,
+          "error": "ValueError: dictionary update sequence element #0 has length 4; 2 is required",
+          "output_type": null
+        },
+        {
+          "payload": "quiz_list",
+          "status": "exception",
+          "changed": false,
+          "known_text_defects_before": 1,
+          "known_text_defects_after": null,
+          "error": "ValueError: dictionary update sequence element #0 has length 5; 2 is required",
+          "output_type": null
+        },
+        {
+          "payload": "phase5_full_output",
+          "status": "changed_no_worse",
+          "changed": true,
+          "known_text_defects_before": 16,
+          "known_text_defects_after": 13,
+          "error": null,
+          "output_type": "dict"
+        }
+      ],
+      "best_status": "changed_no_worse",
+      "accepted": true,
+      "best_payload": "summary_dict",
+      "has_worsening_case": false,
+      "registry_decision": "READY_SAFE",
+      "decision_reason": "Cambia output senza peggiorare sul payload migliore: summary_dict.",
+      "adapter_hint": "summary_dict_adapter"
+    },
+    {
+      "function_id": "scripts.rag_revisore_qualita_testuale_v35g.refine_output",
+      "status": "accepted_for_adapter_study",
+      "signature": "(data: 'dict[str, Any]') -> 'dict[str, Any]'",
+      "payload_tests": [
+        {
+          "payload": "plain_text",
+          "status": "exception",
+          "changed": false,
+          "known_text_defects_before": 3,
+          "known_text_defects_after": null,
+          "error": "ValueError: dictionary update sequence element #0 has length 1; 2 is required",
+          "output_type": null
+        },
+        {
+          "payload": "summary_dict",
+          "status": "changed_no_worse",
+          "changed": true,
+          "known_text_defects_before": 8,
+          "known_text_defects_after": 8,
+          "error": null,
+          "output_type": "dict"
+        },
+        {
+          "payload": "cards_list",
+          "status": "exception",
+          "changed": false,
+          "known_text_defects_before": 3,
+          "known_text_defects_after": null,
+          "error": "ValueError: dictionary update sequence element #0 has length 5; 2 is required",
+          "output_type": null
+        },
+        {
+          "payload": "study_list",
+          "status": "exception",
+          "changed": false,
+          "known_text_defects_before": 4,
+          "known_text_defects_after": null,
+          "error": "ValueError: dictionary update sequence element #0 has length 4; 2 is required",
+          "output_type": null
+        },
+        {
+          "payload": "quiz_list",
+          "status": "exception",
+          "changed": false,
+          "known_text_defects_before": 1,
+          "known_text_defects_after": null,
+          "error": "ValueError: dictionary update sequence element #0 has length 5; 2 is required",
+          "output_type": null
+        },
+        {
+          "payload": "phase5_full_output",
+          "status": "changed_no_worse",
+          "changed": true,
+          "known_text_defects_before": 16,
+          "known_text_defects_after": 12,
+          "error": null,
+          "output_type": "dict"
+        }
+      ],
+      "best_status": "changed_no_worse",
+      "accepted": true,
+      "best_payload": "summary_dict",
+      "has_worsening_case": false,
+      "registry_decision": "READY_SAFE",
+      "decision_reason": "Cambia output senza peggiorare sul payload migliore: summary_dict.",
+      "adapter_hint": "summary_dict_adapter"
+    },
+    {
+      "function_id": "scripts.rag_revisore_qualita_testuale_v35g.refine_study",
+      "status": "accepted_for_adapter_study",
+      "signature": "(data: 'dict[str, Any]') -> 'dict[str, Any]'",
+      "payload_tests": [
+        {
+          "payload": "plain_text",
+          "status": "exception",
+          "changed": false,
+          "known_text_defects_before": 3,
+          "known_text_defects_after": null,
+          "error": "AttributeError: 'str' object has no attribute 'get'",
+          "output_type": null
+        },
+        {
+          "payload": "summary_dict",
+          "status": "unchanged_no_worse",
+          "changed": false,
+          "known_text_defects_before": 8,
+          "known_text_defects_after": 8,
+          "error": null,
+          "output_type": "dict"
+        },
+        {
+          "payload": "cards_list",
+          "status": "exception",
+          "changed": false,
+          "known_text_defects_before": 3,
+          "known_text_defects_after": null,
+          "error": "AttributeError: 'list' object has no attribute 'get'",
+          "output_type": null
+        },
+        {
+          "payload": "study_list",
+          "status": "exception",
+          "changed": false,
+          "known_text_defects_before": 4,
+          "known_text_defects_after": null,
+          "error": "AttributeError: 'list' object has no attribute 'get'",
+          "output_type": null
+        },
+        {
+          "payload": "quiz_list",
+          "status": "exception",
+          "changed": false,
+          "known_text_defects_before": 1,
+          "known_text_defects_after": null,
+          "error": "AttributeError: 'list' object has no attribute 'get'",
+          "output_type": null
+        },
+        {
+          "payload": "phase5_full_output",
+          "status": "changed_no_worse",
+          "changed": true,
+          "known_text_defects_before": 16,
+          "known_text_defects_after": 12,
+          "error": null,
+          "output_type": "dict"
+        }
+      ],
+      "best_status": "changed_no_worse",
+      "accepted": true,
+      "best_payload": "phase5_full_output",
+      "has_worsening_case": false,
+      "registry_decision": "READY_SAFE",
+      "decision_reason": "Cambia output senza peggiorare sul payload migliore: phase5_full_output.",
+      "adapter_hint": "phase5_full_output_adapter"
+    },
+    {
+      "function_id": "scripts.rag_motore_didattico_riutilizzabile_v35c.refine_output",
+      "status": "accepted_for_adapter_study",
+      "signature": "(output: 'dict[str, Any]') -> 'dict[str, Any]'",
+      "payload_tests": [
+        {
+          "payload": "plain_text",
+          "status": "exception",
+          "changed": false,
+          "known_text_defects_before": 3,
+          "known_text_defects_after": null,
+          "error": "ValueError: dictionary update sequence element #0 has length 1; 2 is required",
+          "output_type": null
+        },
+        {
+          "payload": "summary_dict",
+          "status": "worsened",
+          "changed": true,
+          "known_text_defects_before": 8,
+          "known_text_defects_after": 9,
+          "error": null,
+          "output_type": "dict"
+        },
+        {
+          "payload": "cards_list",
+          "status": "exception",
+          "changed": false,
+          "known_text_defects_before": 3,
+          "known_text_defects_after": null,
+          "error": "ValueError: dictionary update sequence element #0 has length 5; 2 is required",
+          "output_type": null
+        },
+        {
+          "payload": "study_list",
+          "status": "exception",
+          "changed": false,
+          "known_text_defects_before": 4,
+          "known_text_defects_after": null,
+          "error": "ValueError: dictionary update sequence element #0 has length 4; 2 is required",
+          "output_type": null
+        },
+        {
+          "payload": "quiz_list",
+          "status": "exception",
+          "changed": false,
+          "known_text_defects_before": 1,
+          "known_text_defects_after": null,
+          "error": "ValueError: dictionary update sequence element #0 has length 5; 2 is required",
+          "output_type": null
+        },
+        {
+          "payload": "phase5_full_output",
+          "status": "changed_no_worse",
+          "changed": true,
+          "known_text_defects_before": 16,
+          "known_text_defects_after": 14,
+          "error": null,
+          "output_type": "dict"
+        }
+      ],
+      "best_status": "changed_no_worse",
+      "accepted": true,
+      "best_payload": "phase5_full_output",
+      "has_worsening_case": true,
+      "registry_decision": "GUARDED_ONLY",
+      "decision_reason": "Ha almeno un caso di peggioramento: collegabile solo con guardia anti-peggioramento stretta.",
+      "adapter_hint": "phase5_full_output_adapter"
+    },
+    {
+      "function_id": "scripts.rag_revisore_naturalezza_antikeyword_v35i.improve_cards",
+      "status": "skipped_signature",
+      "signature": "(data: 'dict[str, Any]', raw_maps: 'dict[str, dict[str, str]]') -> 'None'",
+      "payload_tests": [],
+      "best_status": "none",
+      "accepted": false,
+      "registry_decision": "NEEDS_ADAPTER",
+      "decision_reason": "Firma diversa: motore interessante, ma serve adapter dedicato prima del registry.",
+      "adapter_hint": "custom_signature_adapter_required"
+    },
+    {
+      "function_id": "scripts.rag_revisore_naturalezza_antikeyword_v35i.improve_output",
+      "status": "skipped_signature",
+      "signature": "(data: 'dict[str, Any]', raw: 'dict[str, Any]') -> 'dict[str, Any]'",
+      "payload_tests": [],
+      "best_status": "none",
+      "accepted": false,
+      "registry_decision": "NEEDS_ADAPTER",
+      "decision_reason": "Firma diversa: motore interessante, ma serve adapter dedicato prima del registry.",
+      "adapter_hint": "custom_signature_adapter_required"
+    },
+    {
+      "function_id": "scripts.rag_revisore_naturalezza_antikeyword_v35i.improve_study",
+      "status": "skipped_signature",
+      "signature": "(data: 'dict[str, Any]', raw_maps: 'dict[str, dict[str, str]]') -> 'None'",
+      "payload_tests": [],
+      "best_status": "none",
+      "accepted": false,
+      "registry_decision": "NEEDS_ADAPTER",
+      "decision_reason": "Firma diversa: motore interessante, ma serve adapter dedicato prima del registry.",
+      "adapter_hint": "custom_signature_adapter_required"
+    },
+    {
+      "function_id": "scripts.rag_revisore_naturalezza_antikeyword_v35i.improve_summary",
+      "status": "skipped_signature",
+      "signature": "(data: 'dict[str, Any]', raw_maps: 'dict[str, dict[str, str]]') -> 'None'",
+      "payload_tests": [],
+      "best_status": "none",
+      "accepted": false,
+      "registry_decision": "NEEDS_ADAPTER",
+      "decision_reason": "Firma diversa: motore interessante, ma serve adapter dedicato prima del registry.",
+      "adapter_hint": "custom_signature_adapter_required"
+    },
+    {
+      "function_id": "scripts.rag_revisore_qualita_testuale_v35g.refine_cards",
+      "status": "accepted_for_adapter_study",
+      "signature": "(data: 'dict[str, Any]') -> 'dict[str, Any]'",
+      "payload_tests": [
+        {
+          "payload": "plain_text",
+          "status": "exception",
+          "changed": false,
+          "known_text_defects_before": 3,
+          "known_text_defects_after": null,
+          "error": "AttributeError: 'str' object has no attribute 'get'",
+          "output_type": null
+        },
+        {
+          "payload": "summary_dict",
+          "status": "unchanged_no_worse",
+          "changed": false,
+          "known_text_defects_before": 8,
+          "known_text_defects_after": 8,
+          "error": null,
+          "output_type": "dict"
+        },
+        {
+          "payload": "cards_list",
+          "status": "exception",
+          "changed": false,
+          "known_text_defects_before": 3,
+          "known_text_defects_after": null,
+          "error": "AttributeError: 'list' object has no attribute 'get'",
+          "output_type": null
+        },
+        {
+          "payload": "study_list",
+          "status": "exception",
+          "changed": false,
+          "known_text_defects_before": 4,
+          "known_text_defects_after": null,
+          "error": "AttributeError: 'list' object has no attribute 'get'",
+          "output_type": null
+        },
+        {
+          "payload": "quiz_list",
+          "status": "exception",
+          "changed": false,
+          "known_text_defects_before": 1,
+          "known_text_defects_after": null,
+          "error": "AttributeError: 'list' object has no attribute 'get'",
+          "output_type": null
+        },
+        {
+          "payload": "phase5_full_output",
+          "status": "unchanged_no_worse",
+          "changed": false,
+          "known_text_defects_before": 16,
+          "known_text_defects_after": 16,
+          "error": null,
+          "output_type": "dict"
+        }
+      ],
+      "best_status": "unchanged_no_worse",
+      "accepted": true,
+      "best_payload": "summary_dict",
+      "has_worsening_case": false,
+      "registry_decision": "LOW_PRIORITY",
+      "decision_reason": "Accetta input e non peggiora, ma nel batch non migliora/cambia output.",
+      "adapter_hint": "summary_dict_adapter"
+    },
+    {
+      "function_id": "scripts.rag_revisore_qualita_testuale_v35g.refine_summary",
+      "status": "accepted_for_adapter_study",
+      "signature": "(data: 'dict[str, Any]') -> 'dict[str, Any]'",
+      "payload_tests": [
+        {
+          "payload": "plain_text",
+          "status": "unchanged_no_worse",
+          "changed": false,
+          "known_text_defects_before": 3,
+          "known_text_defects_after": 3,
+          "error": null,
+          "output_type": "str"
+        },
+        {
+          "payload": "summary_dict",
+          "status": "unchanged_no_worse",
+          "changed": false,
+          "known_text_defects_before": 8,
+          "known_text_defects_after": 8,
+          "error": null,
+          "output_type": "dict"
+        },
+        {
+          "payload": "cards_list",
+          "status": "unchanged_no_worse",
+          "changed": false,
+          "known_text_defects_before": 3,
+          "known_text_defects_after": 3,
+          "error": null,
+          "output_type": "list"
+        },
+        {
+          "payload": "study_list",
+          "status": "unchanged_no_worse",
+          "changed": false,
+          "known_text_defects_before": 4,
+          "known_text_defects_after": 4,
+          "error": null,
+          "output_type": "list"
+        },
+        {
+          "payload": "quiz_list",
+          "status": "unchanged_no_worse",
+          "changed": false,
+          "known_text_defects_before": 1,
+          "known_text_defects_after": 1,
+          "error": null,
+          "output_type": "list"
+        },
+        {
+          "payload": "phase5_full_output",
+          "status": "unchanged_no_worse",
+          "changed": false,
+          "known_text_defects_before": 16,
+          "known_text_defects_after": 16,
+          "error": null,
+          "output_type": "dict"
+        }
+      ],
+      "best_status": "unchanged_no_worse",
+      "accepted": true,
+      "best_payload": "plain_text",
+      "has_worsening_case": false,
+      "registry_decision": "LOW_PRIORITY",
+      "decision_reason": "Accetta input e non peggiora, ma nel batch non migliora/cambia output.",
+      "adapter_hint": "unknown_adapter"
+    },
+    {
+      "function_id": "scripts.rag_motore_didattico_riutilizzabile_v35c.refine_cards",
+      "status": "not_accepted",
+      "signature": "(cards: 'list[dict[str, Any]]') -> 'list[dict[str, Any]]'",
+      "payload_tests": [
+        {
+          "payload": "plain_text",
+          "status": "exception",
+          "changed": false,
+          "known_text_defects_before": 3,
+          "known_text_defects_after": null,
+          "error": "ValueError: dictionary update sequence element #0 has length 1; 2 is required",
+          "output_type": null
+        },
+        {
+          "payload": "summary_dict",
+          "status": "exception",
+          "changed": false,
+          "known_text_defects_before": 8,
+          "known_text_defects_after": null,
+          "error": "ValueError: dictionary update sequence element #0 has length 1; 2 is required",
+          "output_type": null
+        },
+        {
+          "payload": "cards_list",
+          "status": "worsened",
+          "changed": true,
+          "known_text_defects_before": 3,
+          "known_text_defects_after": 5,
+          "error": null,
+          "output_type": "list"
+        },
+        {
+          "payload": "study_list",
+          "status": "worsened",
+          "changed": true,
+          "known_text_defects_before": 4,
+          "known_text_defects_after": 6,
+          "error": null,
+          "output_type": "list"
+        },
+        {
+          "payload": "quiz_list",
+          "status": "worsened",
+          "changed": true,
+          "known_text_defects_before": 1,
+          "known_text_defects_after": 2,
+          "error": null,
+          "output_type": "list"
+        },
+        {
+          "payload": "phase5_full_output",
+          "status": "exception",
+          "changed": false,
+          "known_text_defects_before": 16,
+          "known_text_defects_after": null,
+          "error": "ValueError: dictionary update sequence element #0 has length 1; 2 is required",
+          "output_type": null
+        }
+      ],
+      "best_status": "exception",
+      "accepted": false,
+      "best_payload": "plain_text",
+      "has_worsening_case": true,
+      "registry_decision": "EXCLUDE_FOR_NOW",
+      "decision_reason": "Non ha prodotto output utile nel batch standard.",
+      "adapter_hint": "unknown_adapter"
+    },
+    {
+      "function_id": "scripts.rag_motore_didattico_riutilizzabile_v35c.refine_summary",
+      "status": "not_accepted",
+      "signature": "(summary: 'dict[str, Any]') -> 'dict[str, Any]'",
+      "payload_tests": [
+        {
+          "payload": "plain_text",
+          "status": "exception",
+          "changed": false,
+          "known_text_defects_before": 3,
+          "known_text_defects_after": null,
+          "error": "ValueError: dictionary update sequence element #0 has length 1; 2 is required",
+          "output_type": null
+        },
+        {
+          "payload": "summary_dict",
+          "status": "worsened",
+          "changed": true,
+          "known_text_defects_before": 8,
+          "known_text_defects_after": 9,
+          "error": null,
+          "output_type": "dict"
+        },
+        {
+          "payload": "cards_list",
+          "status": "exception",
+          "changed": false,
+          "known_text_defects_before": 3,
+          "known_text_defects_after": null,
+          "error": "ValueError: dictionary update sequence element #0 has length 5; 2 is required",
+          "output_type": null
+        },
+        {
+          "payload": "study_list",
+          "status": "exception",
+          "changed": false,
+          "known_text_defects_before": 4,
+          "known_text_defects_after": null,
+          "error": "ValueError: dictionary update sequence element #0 has length 4; 2 is required",
+          "output_type": null
+        },
+        {
+          "payload": "quiz_list",
+          "status": "exception",
+          "changed": false,
+          "known_text_defects_before": 1,
+          "known_text_defects_after": null,
+          "error": "ValueError: dictionary update sequence element #0 has length 5; 2 is required",
+          "output_type": null
+        },
+        {
+          "payload": "phase5_full_output",
+          "status": "worsened",
+          "changed": true,
+          "known_text_defects_before": 16,
+          "known_text_defects_after": 17,
+          "error": null,
+          "output_type": "dict"
+        }
+      ],
+      "best_status": "exception",
+      "accepted": false,
+      "best_payload": "plain_text",
+      "has_worsening_case": true,
+      "registry_decision": "EXCLUDE_FOR_NOW",
+      "decision_reason": "Non ha prodotto output utile nel batch standard.",
+      "adapter_hint": "unknown_adapter"
+    },
+    {
+      "function_id": "scripts.rag_revisore_accordo_pronomi_v35j.improve_cards",
+      "status": "not_accepted",
+      "signature": "(data: 'dict[str, Any]') -> 'None'",
+      "payload_tests": [
+        {
+          "payload": "plain_text",
+          "status": "exception",
+          "changed": false,
+          "known_text_defects_before": 3,
+          "known_text_defects_after": null,
+          "error": "AttributeError: 'str' object has no attribute 'get'",
+          "output_type": null
+        },
+        {
+          "payload": "summary_dict",
+          "status": "none_output",
+          "changed": false,
+          "known_text_defects_before": 8,
+          "known_text_defects_after": null,
+          "error": null,
+          "output_type": null
+        },
+        {
+          "payload": "cards_list",
+          "status": "exception",
+          "changed": false,
+          "known_text_defects_before": 3,
+          "known_text_defects_after": null,
+          "error": "AttributeError: 'list' object has no attribute 'get'",
+          "output_type": null
+        },
+        {
+          "payload": "study_list",
+          "status": "exception",
+          "changed": false,
+          "known_text_defects_before": 4,
+          "known_text_defects_after": null,
+          "error": "AttributeError: 'list' object has no attribute 'get'",
+          "output_type": null
+        },
+        {
+          "payload": "quiz_list",
+          "status": "exception",
+          "changed": false,
+          "known_text_defects_before": 1,
+          "known_text_defects_after": null,
+          "error": "AttributeError: 'list' object has no attribute 'get'",
+          "output_type": null
+        },
+        {
+          "payload": "phase5_full_output",
+          "status": "none_output",
+          "changed": false,
+          "known_text_defects_before": 16,
+          "known_text_defects_after": null,
+          "error": null,
+          "output_type": null
+        }
+      ],
+      "best_status": "none_output",
+      "accepted": false,
+      "best_payload": "summary_dict",
+      "has_worsening_case": false,
+      "registry_decision": "EXCLUDE_FOR_NOW",
+      "decision_reason": "Non ha prodotto output utile nel batch standard.",
+      "adapter_hint": "summary_dict_adapter"
+    },
+    {
+      "function_id": "scripts.rag_revisore_accordo_pronomi_v35j.improve_study",
+      "status": "not_accepted",
+      "signature": "(data: 'dict[str, Any]') -> 'None'",
+      "payload_tests": [
+        {
+          "payload": "plain_text",
+          "status": "exception",
+          "changed": false,
+          "known_text_defects_before": 3,
+          "known_text_defects_after": null,
+          "error": "AttributeError: 'str' object has no attribute 'get'",
+          "output_type": null
+        },
+        {
+          "payload": "summary_dict",
+          "status": "none_output",
+          "changed": false,
+          "known_text_defects_before": 8,
+          "known_text_defects_after": null,
+          "error": null,
+          "output_type": null
+        },
+        {
+          "payload": "cards_list",
+          "status": "exception",
+          "changed": false,
+          "known_text_defects_before": 3,
+          "known_text_defects_after": null,
+          "error": "AttributeError: 'list' object has no attribute 'get'",
+          "output_type": null
+        },
+        {
+          "payload": "study_list",
+          "status": "exception",
+          "changed": false,
+          "known_text_defects_before": 4,
+          "known_text_defects_after": null,
+          "error": "AttributeError: 'list' object has no attribute 'get'",
+          "output_type": null
+        },
+        {
+          "payload": "quiz_list",
+          "status": "exception",
+          "changed": false,
+          "known_text_defects_before": 1,
+          "known_text_defects_after": null,
+          "error": "AttributeError: 'list' object has no attribute 'get'",
+          "output_type": null
+        },
+        {
+          "payload": "phase5_full_output",
+          "status": "none_output",
+          "changed": false,
+          "known_text_defects_before": 16,
+          "known_text_defects_after": null,
+          "error": null,
+          "output_type": null
+        }
+      ],
+      "best_status": "none_output",
+      "accepted": false,
+      "best_payload": "summary_dict",
+      "has_worsening_case": false,
+      "registry_decision": "EXCLUDE_FOR_NOW",
+      "decision_reason": "Non ha prodotto output utile nel batch standard.",
+      "adapter_hint": "summary_dict_adapter"
+    },
+    {
+      "function_id": "scripts.rag_revisore_accordo_pronomi_v35j.improve_summary",
+      "status": "not_accepted",
+      "signature": "(data: 'dict[str, Any]') -> 'None'",
+      "payload_tests": [
+        {
+          "payload": "plain_text",
+          "status": "exception",
+          "changed": false,
+          "known_text_defects_before": 3,
+          "known_text_defects_after": null,
+          "error": "AttributeError: 'str' object has no attribute 'get'",
+          "output_type": null
+        },
+        {
+          "payload": "summary_dict",
+          "status": "none_output",
+          "changed": false,
+          "known_text_defects_before": 8,
+          "known_text_defects_after": null,
+          "error": null,
+          "output_type": null
+        },
+        {
+          "payload": "cards_list",
+          "status": "exception",
+          "changed": false,
+          "known_text_defects_before": 3,
+          "known_text_defects_after": null,
+          "error": "AttributeError: 'list' object has no attribute 'get'",
+          "output_type": null
+        },
+        {
+          "payload": "study_list",
+          "status": "exception",
+          "changed": false,
+          "known_text_defects_before": 4,
+          "known_text_defects_after": null,
+          "error": "AttributeError: 'list' object has no attribute 'get'",
+          "output_type": null
+        },
+        {
+          "payload": "quiz_list",
+          "status": "exception",
+          "changed": false,
+          "known_text_defects_before": 1,
+          "known_text_defects_after": null,
+          "error": "AttributeError: 'list' object has no attribute 'get'",
+          "output_type": null
+        },
+        {
+          "payload": "phase5_full_output",
+          "status": "none_output",
+          "changed": false,
+          "known_text_defects_before": 16,
+          "known_text_defects_after": null,
+          "error": null,
+          "output_type": null
+        }
+      ],
+      "best_status": "none_output",
+      "accepted": false,
+      "best_payload": "summary_dict",
+      "has_worsening_case": false,
+      "registry_decision": "EXCLUDE_FOR_NOW",
+      "decision_reason": "Non ha prodotto output utile nel batch standard.",
+      "adapter_hint": "summary_dict_adapter"
+    }
+  ],
+  "notes": [
+    "Questo report non collega motori al registry.",
+    "READY_SAFE può entrare nella prossima fase con adapter e guardia standard.",
+    "GUARDED_ONLY richiede guardia anti-peggioramento obbligatoria.",
+    "NEEDS_ADAPTER non è bocciato: serve studio firma/input-output dedicato.",
+    "EXCLUDE_FOR_NOW non va integrato ora."
+  ]
+}
