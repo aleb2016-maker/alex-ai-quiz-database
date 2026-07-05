@@ -1,0 +1,54 @@
+{
+  "phase": "5.13C.2",
+  "status": "PASS - Fase 5.13C.2: STUDY_QUESTIONS_FINAL_QUALITY_GATE_READY",
+  "approved": true,
+  "source_status": "APPROVED",
+  "study_questions_count": 4,
+  "route_total": 51,
+  "study_quality_controls": 43,
+  "selector_orchestrator": 8,
+  "missing_motor_ids": [],
+  "duplicate_pairs": [],
+  "near_duplicate_pairs": [],
+  "items": [
+    {
+      "index": 1,
+      "question_id": "phase5_study_question_001",
+      "domanda_chars": 67,
+      "risposta_guida_chars": 128,
+      "micro_concetti_count": 5,
+      "defects": [],
+      "warnings": []
+    },
+    {
+      "index": 2,
+      "question_id": "phase5_study_question_002",
+      "domanda_chars": 65,
+      "risposta_guida_chars": 134,
+      "micro_concetti_count": 5,
+      "defects": [],
+      "warnings": []
+    },
+    {
+      "index": 3,
+      "question_id": "phase5_study_question_003",
+      "domanda_chars": 74,
+      "risposta_guida_chars": 135,
+      "micro_concetti_count": 5,
+      "defects": [],
+      "warnings": []
+    },
+    {
+      "index": 4,
+      "question_id": "phase5_study_question_004",
+      "domanda_chars": 66,
+      "risposta_guida_chars": 189,
+      "micro_concetti_count": 5,
+      "defects": [],
+      "warnings": []
+    }
+  ],
+  "defects": [],
+  "warnings": [],
+  "source_test_returncode": 0
+}
