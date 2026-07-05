@@ -1,0 +1,426 @@
+{
+  "phase": "5.12E",
+  "generated_at": "2026-07-05T16:07:54.151650+00:00",
+  "status": "PASS",
+  "approved": true,
+  "ready_label": "TEST_QUIZ_QUALITY_MOTORS_V512E_READY",
+  "registry": {
+    "phase": "5.12E",
+    "version": "v1",
+    "ready_label": "TEST_QUIZ_QUALITY_MOTORS_V512E_READY",
+    "total_motors": 12,
+    "motors": [
+      {
+        "id": "qm_033_test_quiz_test_separato_da_card_riassunto_domande_studio",
+        "title": "Test separato da card/riassunto/domande studio",
+        "type": "validator",
+        "severity": "blocking"
+      },
+      {
+        "id": "qm_034_test_quiz_opzioni_interne_validate",
+        "title": "Opzioni interne validate",
+        "type": "validator",
+        "severity": "blocking"
+      },
+      {
+        "id": "qm_035_test_quiz_opzioni_visibili_pulite",
+        "title": "Opzioni visibili pulite",
+        "type": "validator",
+        "severity": "blocking"
+      },
+      {
+        "id": "qm_036_test_quiz_risposta_corretta_interna",
+        "title": "Risposta corretta interna",
+        "type": "validator",
+        "severity": "blocking"
+      },
+      {
+        "id": "qm_037_test_quiz_risposta_corretta_visibile",
+        "title": "Risposta corretta visibile",
+        "type": "validator",
+        "severity": "blocking"
+      },
+      {
+        "id": "qm_038_test_quiz_mappa_sicura_tra_risposta_interna_e_visibile",
+        "title": "Mappa sicura tra risposta interna e visibile",
+        "type": "validator",
+        "severity": "blocking"
+      },
+      {
+        "id": "qm_039_test_quiz_quattro_opzioni_per_domanda",
+        "title": "Quattro opzioni per domanda",
+        "type": "validator",
+        "severity": "blocking"
+      },
+      {
+        "id": "qm_040_test_quiz_risposta_corretta_presente_tra_le_opzioni",
+        "title": "Risposta corretta presente tra le opzioni",
+        "type": "validator",
+        "severity": "blocking"
+      },
+      {
+        "id": "qm_041_test_quiz_distrattori_forti",
+        "title": "Distrattori forti",
+        "type": "validator",
+        "severity": "blocking"
+      },
+      {
+        "id": "qm_042_test_quiz_niente_opzioni_duplicate_nella_stessa_domanda",
+        "title": "Niente opzioni duplicate nella stessa domanda",
+        "type": "validator",
+        "severity": "blocking"
+      },
+      {
+        "id": "qm_043_test_quiz_niente_ripetizioni_globali_eccessive",
+        "title": "Niente ripetizioni globali eccessive",
+        "type": "validator",
+        "severity": "blocking"
+      },
+      {
+        "id": "qm_044_test_quiz_compatibilita_bridge_quiz_v3_5b",
+        "title": "Compatibilità bridge quiz V3.5B",
+        "type": "validator",
+        "severity": "blocking"
+      }
+    ],
+    "scope_guard": {
+      "ui_pdf_css_app_touched": false,
+      "pipeline_5_11_changed": false,
+      "existing_43_motors_changed": false,
+      "standalone_first": true,
+      "no_fallback": true,
+      "no_demo_output": true,
+      "quiz_section_only": true
+    }
+  },
+  "targeted_tests_total": 12,
+  "targeted_tests_passed": 12,
+  "targeted_tests": [
+    {
+      "case_id": "case_033",
+      "motor_id": "qm_033_test_quiz_test_separato_da_card_riassunto_domande_studio",
+      "passed": true,
+      "blocking_hits": 1,
+      "target_status": "FAIL",
+      "issues": [
+        {
+          "motor_id": "qm_033_test_quiz_test_separato_da_card_riassunto_domande_studio",
+          "severity": "blocking",
+          "message": "Il test contiene dati di card, riassunto o domande studio.",
+          "excerpt": "{'quiz': {'questions': [{'question': 'Quale pratica aiuta a recuperare dati dopo un errore o un guasto?', 'options': ['Eseguire backup periodici controllati'...",
+          "suggestion": "Separare il blocco test dagli altri output."
+        }
+      ]
+    },
+    {
+      "case_id": "case_034",
+      "motor_id": "qm_034_test_quiz_opzioni_interne_validate",
+      "passed": true,
+      "blocking_hits": 1,
+      "target_status": "FAIL",
+      "issues": [
+        {
+          "motor_id": "qm_034_test_quiz_opzioni_interne_validate",
+          "severity": "blocking",
+          "message": "Opzione interna troppo povera.",
+          "excerpt": "A",
+          "suggestion": ""
+        }
+      ]
+    },
+    {
+      "case_id": "case_035",
+      "motor_id": "qm_035_test_quiz_opzioni_visibili_pulite",
+      "passed": true,
+      "blocking_hits": 1,
+      "target_status": "FAIL",
+      "issues": [
+        {
+          "motor_id": "qm_035_test_quiz_opzioni_visibili_pulite",
+          "severity": "blocking",
+          "message": "Opzione visibile contiene prefisso tecnico A/B/C/D.",
+          "excerpt": "A) Eseguire backup periodici controllati",
+          "suggestion": "Mostrare solo il testo pulito dell'opzione."
+        }
+      ]
+    },
+    {
+      "case_id": "case_036",
+      "motor_id": "qm_036_test_quiz_risposta_corretta_interna",
+      "passed": true,
+      "blocking_hits": 1,
+      "target_status": "FAIL",
+      "issues": [
+        {
+          "motor_id": "qm_036_test_quiz_risposta_corretta_interna",
+          "severity": "blocking",
+          "message": "Risposta corretta interna mancante.",
+          "excerpt": "{'question': 'Quale pratica aiuta a recuperare dati dopo un errore o un guasto?', 'options': ['Eseguire backup periodici controllati', 'Usare password sempli...",
+          "suggestion": ""
+        }
+      ]
+    },
+    {
+      "case_id": "case_037",
+      "motor_id": "qm_037_test_quiz_risposta_corretta_visibile",
+      "passed": true,
+      "blocking_hits": 1,
+      "target_status": "FAIL",
+      "issues": [
+        {
+          "motor_id": "qm_037_test_quiz_risposta_corretta_visibile",
+          "severity": "blocking",
+          "message": "Risposta corretta visibile mancante.",
+          "excerpt": "{'question': 'Quale pratica aiuta a recuperare dati dopo un errore o un guasto?', 'options': ['Eseguire backup periodici controllati', 'Usare password sempli...",
+          "suggestion": ""
+        }
+      ]
+    },
+    {
+      "case_id": "case_038",
+      "motor_id": "qm_038_test_quiz_mappa_sicura_tra_risposta_interna_e_visibile",
+      "passed": true,
+      "blocking_hits": 1,
+      "target_status": "FAIL",
+      "issues": [
+        {
+          "motor_id": "qm_038_test_quiz_mappa_sicura_tra_risposta_interna_e_visibile",
+          "severity": "blocking",
+          "message": "Risposta interna e visibile non coincidono.",
+          "excerpt": "{'question': 'Quale pratica aiuta a recuperare dati dopo un errore o un guasto?', 'options': ['Eseguire backup periodici controllati', 'Usare password sempli...",
+          "suggestion": "Allineare risposta interna e risposta mostrata."
+        }
+      ]
+    },
+    {
+      "case_id": "case_039",
+      "motor_id": "qm_039_test_quiz_quattro_opzioni_per_domanda",
+      "passed": true,
+      "blocking_hits": 1,
+      "target_status": "FAIL",
+      "issues": [
+        {
+          "motor_id": "qm_039_test_quiz_quattro_opzioni_per_domanda",
+          "severity": "blocking",
+          "message": "Numero opzioni non valido: 3.",
+          "excerpt": "{'question': 'Quale pratica aiuta a recuperare dati dopo un errore o un guasto?', 'options': ['Eseguire backup periodici controllati', 'Usare password sempli...",
+          "suggestion": "Ogni domanda deve avere esattamente 4 opzioni."
+        }
+      ]
+    },
+    {
+      "case_id": "case_040",
+      "motor_id": "qm_040_test_quiz_risposta_corretta_presente_tra_le_opzioni",
+      "passed": true,
+      "blocking_hits": 1,
+      "target_status": "FAIL",
+      "issues": [
+        {
+          "motor_id": "qm_040_test_quiz_risposta_corretta_presente_tra_le_opzioni",
+          "severity": "blocking",
+          "message": "Risposta corretta non presente tra le opzioni.",
+          "excerpt": "{'question': 'Quale pratica aiuta a recuperare dati dopo un errore o un guasto?', 'options': ['Eseguire backup periodici controllati', 'Usare password sempli...",
+          "suggestion": "Aggiungere la risposta corretta tra le 4 opzioni."
+        }
+      ]
+    },
+    {
+      "case_id": "case_041",
+      "motor_id": "qm_041_test_quiz_distrattori_forti",
+      "passed": true,
+      "blocking_hits": 5,
+      "target_status": "FAIL",
+      "issues": [
+        {
+          "motor_id": "qm_041_test_quiz_distrattori_forti",
+          "severity": "blocking",
+          "message": "Distrattore generico o debole.",
+          "excerpt": "Altro",
+          "suggestion": ""
+        },
+        {
+          "motor_id": "qm_041_test_quiz_distrattori_forti",
+          "severity": "blocking",
+          "message": "Distrattore troppo corto.",
+          "excerpt": "Altro",
+          "suggestion": ""
+        },
+        {
+          "motor_id": "qm_041_test_quiz_distrattori_forti",
+          "severity": "blocking",
+          "message": "Distrattore generico o debole.",
+          "excerpt": "Dipende",
+          "suggestion": ""
+        },
+        {
+          "motor_id": "qm_041_test_quiz_distrattori_forti",
+          "severity": "blocking",
+          "message": "Distrattore troppo corto.",
+          "excerpt": "Dipende",
+          "suggestion": ""
+        },
+        {
+          "motor_id": "qm_041_test_quiz_distrattori_forti",
+          "severity": "blocking",
+          "message": "Distrattore generico o debole.",
+          "excerpt": "Non so",
+          "suggestion": ""
+        }
+      ]
+    },
+    {
+      "case_id": "case_042",
+      "motor_id": "qm_042_test_quiz_niente_opzioni_duplicate_nella_stessa_domanda",
+      "passed": true,
+      "blocking_hits": 1,
+      "target_status": "FAIL",
+      "issues": [
+        {
+          "motor_id": "qm_042_test_quiz_niente_opzioni_duplicate_nella_stessa_domanda",
+          "severity": "blocking",
+          "message": "Opzioni duplicate nella stessa domanda.",
+          "excerpt": "{'question': 'Quale pratica aiuta a recuperare dati dopo un errore o un guasto?', 'options': ['Eseguire backup periodici controllati', 'Usare password sempli...",
+          "suggestion": "Rendere le 4 opzioni diverse tra loro."
+        }
+      ]
+    },
+    {
+      "case_id": "case_043",
+      "motor_id": "qm_043_test_quiz_niente_ripetizioni_globali_eccessive",
+      "passed": true,
+      "blocking_hits": 1,
+      "target_status": "FAIL",
+      "issues": [
+        {
+          "motor_id": "qm_043_test_quiz_niente_ripetizioni_globali_eccessive",
+          "severity": "blocking",
+          "message": "Ripetizioni globali eccessive nelle opzioni.",
+          "excerpt": "{'usare sempre la stessa opzione debole': 3}",
+          "suggestion": "Variare i distrattori tra domande diverse."
+        }
+      ]
+    },
+    {
+      "case_id": "case_044",
+      "motor_id": "qm_044_test_quiz_compatibilita_bridge_quiz_v3_5b",
+      "passed": true,
+      "blocking_hits": 1,
+      "target_status": "FAIL",
+      "issues": [
+        {
+          "motor_id": "qm_044_test_quiz_compatibilita_bridge_quiz_v3_5b",
+          "severity": "blocking",
+          "message": "Spiegazione/feedback mancante.",
+          "excerpt": "{'question': 'Quale pratica aiuta a recuperare dati dopo un errore o un guasto?', 'options': ['Eseguire backup periodici controllati', 'Usare password sempli...",
+          "suggestion": ""
+        }
+      ]
+    }
+  ],
+  "good_case": {
+    "passed": true,
+    "blocking_issues": 0,
+    "warning_issues": 0,
+    "status": "PASS",
+    "approved": true,
+    "full_report": {
+      "phase": "5.12E",
+      "ready_label": "TEST_QUIZ_QUALITY_MOTORS_V512E_READY",
+      "approved": true,
+      "status": "PASS",
+      "total_motors": 12,
+      "passed_motors": 12,
+      "failed_motors": 0,
+      "total_issues": 0,
+      "blocking_issues": 0,
+      "warning_issues": 0,
+      "results": [
+        {
+          "motor_id": "qm_033_test_quiz_test_separato_da_card_riassunto_domande_studio",
+          "title": "Test separato da card/riassunto/domande studio",
+          "status": "PASS",
+          "issues": []
+        },
+        {
+          "motor_id": "qm_034_test_quiz_opzioni_interne_validate",
+          "title": "Opzioni interne validate",
+          "status": "PASS",
+          "issues": []
+        },
+        {
+          "motor_id": "qm_035_test_quiz_opzioni_visibili_pulite",
+          "title": "Opzioni visibili pulite",
+          "status": "PASS",
+          "issues": []
+        },
+        {
+          "motor_id": "qm_036_test_quiz_risposta_corretta_interna",
+          "title": "Risposta corretta interna",
+          "status": "PASS",
+          "issues": []
+        },
+        {
+          "motor_id": "qm_037_test_quiz_risposta_corretta_visibile",
+          "title": "Risposta corretta visibile",
+          "status": "PASS",
+          "issues": []
+        },
+        {
+          "motor_id": "qm_038_test_quiz_mappa_sicura_tra_risposta_interna_e_visibile",
+          "title": "Mappa sicura tra risposta interna e visibile",
+          "status": "PASS",
+          "issues": []
+        },
+        {
+          "motor_id": "qm_039_test_quiz_quattro_opzioni_per_domanda",
+          "title": "Quattro opzioni per domanda",
+          "status": "PASS",
+          "issues": []
+        },
+        {
+          "motor_id": "qm_040_test_quiz_risposta_corretta_presente_tra_le_opzioni",
+          "title": "Risposta corretta presente tra le opzioni",
+          "status": "PASS",
+          "issues": []
+        },
+        {
+          "motor_id": "qm_041_test_quiz_distrattori_forti",
+          "title": "Distrattori forti",
+          "status": "PASS",
+          "issues": []
+        },
+        {
+          "motor_id": "qm_042_test_quiz_niente_opzioni_duplicate_nella_stessa_domanda",
+          "title": "Niente opzioni duplicate nella stessa domanda",
+          "status": "PASS",
+          "issues": []
+        },
+        {
+          "motor_id": "qm_043_test_quiz_niente_ripetizioni_globali_eccessive",
+          "title": "Niente ripetizioni globali eccessive",
+          "status": "PASS",
+          "issues": []
+        },
+        {
+          "motor_id": "qm_044_test_quiz_compatibilita_bridge_quiz_v3_5b",
+          "title": "Compatibilità bridge quiz V3.5B",
+          "status": "PASS",
+          "issues": []
+        }
+      ]
+    }
+  },
+  "scope_guard": {
+    "created_test_quiz_quality_motors": true,
+    "connected_to_43_registry": false,
+    "added_to_section_matrix": false,
+    "changed_existing_43_motors": false,
+    "changed_pipeline_5_11": false,
+    "changed_ui_pdf_css_app": false,
+    "deleted_existing_files": false
+  },
+  "report_files": {
+    "json": "reports/phase5_12e_test_quiz_quality_motors_v1.json",
+    "markdown": "reports/phase5_12e_test_quiz_quality_motors_v1.md"
+  }
+}
