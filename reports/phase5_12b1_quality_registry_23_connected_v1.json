@@ -1,0 +1,343 @@
+{
+  "phase": "5.12B.1",
+  "ready_label": "QUALITY_REGISTRY_23_MOTORS_CONNECTED_V512B1",
+  "status": "PASS",
+  "approved": true,
+  "total_ready_connected_motors": 23,
+  "previous_salvable_motors": 11,
+  "new_text_quality_motors": 12,
+  "connected_motors": [
+    {
+      "id": "salvable_phase5_pipeline_5_fasi",
+      "title": "Regressione pipeline 5 fasi",
+      "source_phase": "5.12A.1",
+      "source_report": "reports/phase5_12a1_motori_salvabili_strict_v1.json",
+      "category": "previous_salvable_registry_motor",
+      "status": "READY_CONNECTED",
+      "confidence": "HIGH",
+      "connection_type": "registry_bridge_existing_verified",
+      "areas": [
+        "pipeline",
+        "orchestrator"
+      ]
+    },
+    {
+      "id": "salvable_pipeline_output_ready_gate_v511",
+      "title": "Gate finale Pipeline Output Ready Fase 5.11",
+      "source_phase": "5.12A.1",
+      "source_report": "reports/phase5_12a1_motori_salvabili_strict_v1.json",
+      "category": "previous_salvable_registry_motor",
+      "status": "READY_CONNECTED",
+      "confidence": "HIGH",
+      "connection_type": "registry_bridge_existing_verified",
+      "areas": [
+        "summary",
+        "card",
+        "quiz",
+        "study",
+        "registry"
+      ]
+    },
+    {
+      "id": "salvable_final_registry_quality_snapshot_v5102",
+      "title": "Snapshot qualità registry finale Fase 5.10.2",
+      "source_phase": "5.12A.1",
+      "source_report": "reports/phase5_12a1_motori_salvabili_strict_v1.json",
+      "category": "previous_salvable_registry_motor",
+      "status": "READY_CONNECTED",
+      "confidence": "HIGH",
+      "connection_type": "registry_bridge_existing_verified",
+      "areas": [
+        "registry",
+        "quality_snapshot"
+      ]
+    },
+    {
+      "id": "salvable_summary_card_cleaner_registry_v5101",
+      "title": "Cleaner summary/card collegato al registry Fase 5.10.1",
+      "source_phase": "5.12A.1",
+      "source_report": "reports/phase5_12a1_motori_salvabili_strict_v1.json",
+      "category": "previous_salvable_registry_motor",
+      "status": "READY_CONNECTED",
+      "confidence": "HIGH",
+      "connection_type": "registry_bridge_existing_verified",
+      "areas": [
+        "summary",
+        "card",
+        "cleaner"
+      ]
+    },
+    {
+      "id": "salvable_universal_quiz_quality_registry_v599",
+      "title": "Registry qualità quiz universale Fase 5.9.9",
+      "source_phase": "5.12A.1",
+      "source_report": "reports/phase5_12a1_motori_salvabili_strict_v1.json",
+      "category": "previous_salvable_registry_motor",
+      "status": "READY_CONNECTED",
+      "confidence": "HIGH",
+      "connection_type": "registry_bridge_existing_verified",
+      "areas": [
+        "quiz",
+        "test"
+      ]
+    },
+    {
+      "id": "salvable_quiz_repair_registry_integration_v593",
+      "title": "Integrazione registry riparatore quiz Fase 5.9.3",
+      "source_phase": "5.12A.1",
+      "source_report": "reports/phase5_12a1_motori_salvabili_strict_v1.json",
+      "category": "previous_salvable_registry_motor",
+      "status": "READY_CONNECTED",
+      "confidence": "HIGH",
+      "connection_type": "registry_bridge_existing_verified",
+      "areas": [
+        "quiz",
+        "repair"
+      ]
+    },
+    {
+      "id": "salvable_legacy_quality_motors_registry_ready",
+      "title": "Registry motori qualità legacy ready",
+      "source_phase": "5.12A.1",
+      "source_report": "reports/phase5_12a1_motori_salvabili_strict_v1.json",
+      "category": "previous_salvable_registry_motor",
+      "status": "READY_CONNECTED",
+      "confidence": "HIGH",
+      "connection_type": "registry_bridge_existing_verified",
+      "areas": [
+        "registry",
+        "legacy_quality"
+      ]
+    },
+    {
+      "id": "salvable_phase5_live_quality_bridge",
+      "title": "Bridge qualità live Fase 5",
+      "source_phase": "5.12A.1",
+      "source_report": "reports/phase5_12a1_motori_salvabili_strict_v1.json",
+      "category": "previous_salvable_registry_motor",
+      "status": "READY_CONNECTED",
+      "confidence": "HIGH",
+      "connection_type": "registry_bridge_existing_verified",
+      "areas": [
+        "bridge",
+        "orchestrator"
+      ]
+    },
+    {
+      "id": "salvable_mini_llm_engine_registry_v400",
+      "title": "Mini LLM engine registry V400",
+      "source_phase": "5.12A.1",
+      "source_report": "reports/phase5_12a1_motori_salvabili_strict_v1.json",
+      "category": "previous_salvable_registry_motor",
+      "status": "READY_CONNECTED",
+      "confidence": "HIGH",
+      "connection_type": "registry_bridge_existing_verified",
+      "areas": [
+        "engine_registry"
+      ]
+    },
+    {
+      "id": "salvable_general_quality_motor",
+      "title": "Motore qualità generale",
+      "source_phase": "5.12A.1",
+      "source_report": "reports/phase5_12a1_motori_salvabili_strict_v1.json",
+      "category": "previous_salvable_registry_motor",
+      "status": "READY_CONNECTED",
+      "confidence": "HIGH",
+      "connection_type": "registry_bridge_existing_verified",
+      "areas": [
+        "general_quality"
+      ]
+    },
+    {
+      "id": "salvable_visual_logic_quality_motor",
+      "title": "Motore qualità logica visiva",
+      "source_phase": "5.12A.1",
+      "source_report": "reports/phase5_12a1_motori_salvabili_strict_v1.json",
+      "category": "previous_salvable_registry_motor",
+      "status": "READY_CONNECTED",
+      "confidence": "HIGH",
+      "connection_type": "registry_bridge_existing_verified",
+      "areas": [
+        "visual_logic"
+      ]
+    },
+    {
+      "id": "qm_001_qualita_testuale_grammatica_italiana_corretta",
+      "title": "Grammatica italiana corretta",
+      "source_phase": "5.12B",
+      "source_report": "reports/phase5_12b_text_quality_motors_v1.json",
+      "category": "text_quality_atomic_motor",
+      "status": "READY_CONNECTED",
+      "confidence": "HIGH",
+      "connection_type": "registry_bridge_new_text_quality_motor",
+      "areas": [
+        "qualita_testuale"
+      ]
+    },
+    {
+      "id": "qm_002_qualita_testuale_accenti_corretti",
+      "title": "Accenti corretti",
+      "source_phase": "5.12B",
+      "source_report": "reports/phase5_12b_text_quality_motors_v1.json",
+      "category": "text_quality_atomic_motor",
+      "status": "READY_CONNECTED",
+      "confidence": "HIGH",
+      "connection_type": "registry_bridge_new_text_quality_motor",
+      "areas": [
+        "qualita_testuale"
+      ]
+    },
+    {
+      "id": "qm_003_qualita_testuale_apostrofi_corretti",
+      "title": "Apostrofi corretti",
+      "source_phase": "5.12B",
+      "source_report": "reports/phase5_12b_text_quality_motors_v1.json",
+      "category": "text_quality_atomic_motor",
+      "status": "READY_CONNECTED",
+      "confidence": "HIGH",
+      "connection_type": "registry_bridge_new_text_quality_motor",
+      "areas": [
+        "qualita_testuale"
+      ]
+    },
+    {
+      "id": "qm_004_qualita_testuale_punteggiatura_corretta",
+      "title": "Punteggiatura corretta",
+      "source_phase": "5.12B",
+      "source_report": "reports/phase5_12b_text_quality_motors_v1.json",
+      "category": "text_quality_atomic_motor",
+      "status": "READY_CONNECTED",
+      "confidence": "HIGH",
+      "connection_type": "registry_bridge_new_text_quality_motor",
+      "areas": [
+        "qualita_testuale"
+      ]
+    },
+    {
+      "id": "qm_005_qualita_testuale_spazi_corretti_prima_e_dopo_punteggiatura",
+      "title": "Spazi corretti prima e dopo punteggiatura",
+      "source_phase": "5.12B",
+      "source_report": "reports/phase5_12b_text_quality_motors_v1.json",
+      "category": "text_quality_atomic_motor",
+      "status": "READY_CONNECTED",
+      "confidence": "HIGH",
+      "connection_type": "registry_bridge_new_text_quality_motor",
+      "areas": [
+        "qualita_testuale"
+      ]
+    },
+    {
+      "id": "qm_006_qualita_testuale_frasi_complete",
+      "title": "Frasi complete",
+      "source_phase": "5.12B",
+      "source_report": "reports/phase5_12b_text_quality_motors_v1.json",
+      "category": "text_quality_atomic_motor",
+      "status": "READY_CONNECTED",
+      "confidence": "HIGH",
+      "connection_type": "registry_bridge_new_text_quality_motor",
+      "areas": [
+        "qualita_testuale"
+      ]
+    },
+    {
+      "id": "qm_007_qualita_testuale_assenza_di_frasi_spezzate",
+      "title": "Assenza di frasi spezzate",
+      "source_phase": "5.12B",
+      "source_report": "reports/phase5_12b_text_quality_motors_v1.json",
+      "category": "text_quality_atomic_motor",
+      "status": "READY_CONNECTED",
+      "confidence": "HIGH",
+      "connection_type": "registry_bridge_new_text_quality_motor",
+      "areas": [
+        "qualita_testuale"
+      ]
+    },
+    {
+      "id": "qm_008_qualita_testuale_assenza_di_frasi_non_terminate",
+      "title": "Assenza di frasi non terminate",
+      "source_phase": "5.12B",
+      "source_report": "reports/phase5_12b_text_quality_motors_v1.json",
+      "category": "text_quality_atomic_motor",
+      "status": "READY_CONNECTED",
+      "confidence": "HIGH",
+      "connection_type": "registry_bridge_new_text_quality_motor",
+      "areas": [
+        "qualita_testuale"
+      ]
+    },
+    {
+      "id": "qm_009_qualita_testuale_assenza_di_finali_sospetti",
+      "title": "Assenza di finali sospetti",
+      "source_phase": "5.12B",
+      "source_report": "reports/phase5_12b_text_quality_motors_v1.json",
+      "category": "text_quality_atomic_motor",
+      "status": "READY_CONNECTED",
+      "confidence": "HIGH",
+      "connection_type": "registry_bridge_new_text_quality_motor",
+      "areas": [
+        "qualita_testuale"
+      ]
+    },
+    {
+      "id": "qm_010_qualita_testuale_assenza_di_frasi_riempitive",
+      "title": "Assenza di frasi riempitive",
+      "source_phase": "5.12B",
+      "source_report": "reports/phase5_12b_text_quality_motors_v1.json",
+      "category": "text_quality_atomic_motor",
+      "status": "READY_CONNECTED",
+      "confidence": "HIGH",
+      "connection_type": "registry_bridge_new_text_quality_motor",
+      "areas": [
+        "qualita_testuale"
+      ]
+    },
+    {
+      "id": "qm_011_qualita_testuale_assenza_di_testo_generico",
+      "title": "Assenza di testo generico",
+      "source_phase": "5.12B",
+      "source_report": "reports/phase5_12b_text_quality_motors_v1.json",
+      "category": "text_quality_atomic_motor",
+      "status": "READY_CONNECTED",
+      "confidence": "HIGH",
+      "connection_type": "registry_bridge_new_text_quality_motor",
+      "areas": [
+        "qualita_testuale"
+      ]
+    },
+    {
+      "id": "qm_012_qualita_testuale_assenza_di_vecchi_fallback_demo_test",
+      "title": "Assenza di vecchi fallback demo test",
+      "source_phase": "5.12B",
+      "source_report": "reports/phase5_12b_text_quality_motors_v1.json",
+      "category": "text_quality_atomic_motor",
+      "status": "READY_CONNECTED",
+      "confidence": "HIGH",
+      "connection_type": "registry_bridge_new_text_quality_motor",
+      "areas": [
+        "qualita_testuale"
+      ]
+    }
+  ],
+  "remaining_atomic_controls": {
+    "atomic_controls_total_from_5_12a1": 64,
+    "ready_connected_textual_controls": 12,
+    "still_to_recreate": 51,
+    "still_to_verify": 1
+  },
+  "defects": [],
+  "warnings": [],
+  "scope_guard": {
+    "created_new_motors": false,
+    "connected_existing_5_12b_motors": true,
+    "changed_pipeline_5_11": false,
+    "changed_ui_pdf_css_app": false,
+    "deleted_existing_files": false,
+    "registry_bridge_only": true
+  },
+  "generated_at": "2026-07-05T15:25:39.682913+00:00",
+  "report_files": {
+    "json": "reports/phase5_12b1_quality_registry_23_connected_v1.json",
+    "markdown": "reports/phase5_12b1_quality_registry_23_connected_v1.md"
+  }
+}
