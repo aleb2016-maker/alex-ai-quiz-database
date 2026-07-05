@@ -122,7 +122,17 @@ LEGACY_QUALITY_MOTORS: list[LegacyMotorSpec] = [
         function_name="refine_tests",
         adapter_name="legacy_answers_dict",
         target_kind="quiz",
+    ),    # FASE 5.10.1 — UNIVERSAL TEXT CLEANER SUMMARY/CARDS REGISTRY V1
+    # Motore validato separatamente in Fase 5.10.
+    # Pulisce riassunto e card da pattern brutti residui senza toccare quiz/study.
+    LegacyMotorSpec(
+        motor_id="backend.phase5_universal_text_cleaner_summary_cards_v1.universal_text_cleaner_summary_cards_payload_target_v1",
+        module_name="backend.phase5_universal_text_cleaner_summary_cards_v1",
+        function_name="universal_text_cleaner_summary_cards_payload_target_v1",
+        adapter_name="payload",
+        target_kind="full_output",
     ),
+
 ]
 
 

@@ -168,6 +168,24 @@
             "known_text_defects_after": 0
           }
         ]
+      },
+      "backend.phase5_universal_text_cleaner_summary_cards_v1.universal_text_cleaner_summary_cards_payload_target_v1": {
+        "status": "ok",
+        "adapter_name": "payload",
+        "target_kind": "full_output",
+        "applied": 1,
+        "changed": 0,
+        "targets": [
+          {
+            "target": "phase5_full_output",
+            "changed": false,
+            "guarded_rejected": false,
+            "structural_rejected": false,
+            "structural_reject_reason": "",
+            "known_text_defects_before": 5,
+            "known_text_defects_after": 5
+          }
+        ]
       }
     },
     "targets_count": 1,

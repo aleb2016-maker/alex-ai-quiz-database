@@ -1,0 +1,71 @@
+{
+  "report_name": "phase5_10_1_summary_card_cleaner_registry_v1",
+  "status": "PASS",
+  "motor_id": "backend.phase5_universal_text_cleaner_summary_cards_v1.universal_text_cleaner_summary_cards_payload_target_v1",
+  "raw_bad_patterns": 10,
+  "baseline_bad_patterns_without_cleaner": 10,
+  "final_bad_patterns_with_cleaner": 0,
+  "micro_concept_sentence_punctuation_after": 0,
+  "protected_outputs_same_between_baseline_and_final": true,
+  "motor_meta": {
+    "status": "ok",
+    "adapter_name": "payload",
+    "target_kind": "full_output",
+    "applied": 1,
+    "changed": 1,
+    "targets": [
+      {
+        "target": "phase5_full_output",
+        "changed": true,
+        "guarded_rejected": false,
+        "structural_rejected": false,
+        "structural_reject_reason": "",
+        "known_text_defects_before": 13,
+        "known_text_defects_after": 11
+      }
+    ]
+  },
+  "registry_meta_summary": {
+    "motors_count": 11,
+    "known_text_defects_before": 3,
+    "known_text_defects_after": 3
+  },
+  "changed_rows_baseline_to_final": [
+    {
+      "index": 0,
+      "before": "Riassunto di qualita",
+      "after": "Riassunto di qualità"
+    },
+    {
+      "index": 1,
+      "before": "TESTO DA RIALLINEARE",
+      "after": "Il documento evidenzia che il controllo degli accessi limita l'utilizzo dei sistemi interni.\n\nSul piano operativo emerge che le credenziali non devono essere condivise tra più operatori. La revisione periodica degli accessi riduce il rischio perché evita permessi attivi non autorizzati."
+    },
+    {
+      "index": 2,
+      "before": "Il documento evidenzia che il controllo degli accessi limita l'utilizzo dei sistemi interni .",
+      "after": "Il documento evidenzia che il controllo degli accessi limita l'utilizzo dei sistemi interni."
+    },
+    {
+      "index": 3,
+      "before": "Sul piano operativo emerge che le credenziali non non devono essere condivise tra più operatori. Inoltre, sì, la revisione periodica degli accessi riduce il rischio perchè evita permessi attivi non autorizzati.",
+      "after": "Sul piano operativo emerge che le credenziali non devono essere condivise tra più operatori. La revisione periodica degli accessi riduce il rischio perché evita permessi attivi non autorizzati."
+    },
+    {
+      "index": 5,
+      "before": "Questo elemento si collega anche al fatto che sì, il controllo degli accessi limita l'utilizzo dei sistemi interni .",
+      "after": "Il controllo degli accessi limita l'utilizzo dei sistemi interni."
+    },
+    {
+      "index": 9,
+      "before": "Un punto rilevante riguarda la riduzione del rischio: sì, la revisione periodica degli accessi riduce il rischio perchè evita permessi attivi non autorizzati.",
+      "after": "Un punto rilevante riguarda la riduzione del rischio: la revisione periodica degli accessi riduce il rischio perché evita permessi attivi non autorizzati."
+    }
+  ],
+  "errors": [],
+  "notes": [
+    "Verifica corretta: confronta registry senza cleaner vs registry con cleaner.",
+    "Gli altri motori registry possono modificare quiz/study: per questo il confronto protetto è baseline vs final.",
+    "Il cleaner deve migliorare summary/cards senza cambiare quiz/study rispetto alla baseline registry."
+  ]
+}
