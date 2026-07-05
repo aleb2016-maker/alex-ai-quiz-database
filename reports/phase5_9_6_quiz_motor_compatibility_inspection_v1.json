@@ -1,0 +1,2285 @@
+{
+  "report_name": "phase5_9_6_quiz_motor_compatibility_inspection_v1",
+  "status": "PASS_DIAGNOSTIC",
+  "input_candidates": 60,
+  "counts": {
+    "COMPAT_TEST_READY": 35,
+    "MANUAL_REVIEW_MIXED": 11,
+    "REVIEW_SIDE_EFFECT_RISK": 5,
+    "VALIDATOR_OR_REPORT_ONLY": 3,
+    "LOW_CONFIDENCE": 6,
+    "REJECT": 0
+  },
+  "compat_test_ready": [
+    {
+      "motor_id": "scripts.motore_qualita_generale.analizza_domanda",
+      "path": "scripts/motore_qualita_generale.py",
+      "function_name": "analizza_domanda",
+      "lineno": 276,
+      "original_score": 74,
+      "top_capabilities": [
+        "strong_distractors",
+        "quiz_question_naturalness",
+        "quiz_explanation_quality",
+        "interactive_quiz_frontend"
+      ],
+      "signature": {
+        "exists": true,
+        "syntax_ok": true,
+        "args": [
+          "nome_motore",
+          "indice",
+          "domanda"
+        ],
+        "args_count": 3,
+        "has_return": true,
+        "return_count": 2,
+        "returns_constant_bool_or_none": false,
+        "source_lines_count": 122
+      },
+      "scores": {
+        "side_effect_score": 0,
+        "transform_score": 87,
+        "quiz_target_score": 59,
+        "validator_score": 9,
+        "good_name_score": 0,
+        "bad_name_score": 0
+      },
+      "verdict": "COMPAT_TEST_READY",
+      "reasons": [
+        "Sembra trasformativo, orientato al quiz e con firma adattabile.",
+        "Firma a 2-3 argomenti: adattabile con wrapper controllato."
+      ]
+    },
+    {
+      "motor_id": "scripts.rag_adapter_quiz_ufficiale_v43.adatta_domande_esistenti",
+      "path": "scripts/rag_adapter_quiz_ufficiale_v43.py",
+      "function_name": "adatta_domande_esistenti",
+      "lineno": 308,
+      "original_score": 73,
+      "top_capabilities": [
+        "quiz_question_naturalness",
+        "strong_distractors",
+        "quiz_explanation_quality",
+        "grammar_accents_text_quality"
+      ],
+      "signature": {
+        "exists": true,
+        "syntax_ok": true,
+        "args": [
+          "domande",
+          "categoria",
+          "sottocategoria"
+        ],
+        "args_count": 3,
+        "has_return": true,
+        "return_count": 1,
+        "returns_constant_bool_or_none": false,
+        "source_lines_count": 34
+      },
+      "scores": {
+        "side_effect_score": 0,
+        "transform_score": 59,
+        "quiz_target_score": 57,
+        "validator_score": 1,
+        "good_name_score": 1,
+        "bad_name_score": 0
+      },
+      "verdict": "COMPAT_TEST_READY",
+      "reasons": [
+        "Sembra trasformativo, orientato al quiz e con firma adattabile.",
+        "Firma a 2-3 argomenti: adattabile con wrapper controllato."
+      ]
+    },
+    {
+      "motor_id": "scripts.motore_qualita_logica_visiva_base.analizza_domanda_visiva",
+      "path": "scripts/motore_qualita_logica_visiva_base.py",
+      "function_name": "analizza_domanda_visiva",
+      "lineno": 256,
+      "original_score": 61,
+      "top_capabilities": [
+        "quiz_question_naturalness",
+        "quiz_explanation_quality",
+        "strong_distractors",
+        "interactive_quiz_frontend"
+      ],
+      "signature": {
+        "exists": true,
+        "syntax_ok": true,
+        "args": [
+          "indice",
+          "domanda"
+        ],
+        "args_count": 2,
+        "has_return": true,
+        "return_count": 2,
+        "returns_constant_bool_or_none": false,
+        "source_lines_count": 109
+      },
+      "scores": {
+        "side_effect_score": 0,
+        "transform_score": 76,
+        "quiz_target_score": 50,
+        "validator_score": 12,
+        "good_name_score": 0,
+        "bad_name_score": 0
+      },
+      "verdict": "COMPAT_TEST_READY",
+      "reasons": [
+        "Sembra trasformativo, orientato al quiz e con firma adattabile.",
+        "Firma a 2-3 argomenti: adattabile con wrapper controllato."
+      ]
+    },
+    {
+      "motor_id": "scripts.validatore_rag_distrattori_forti_v2.valuta_domanda",
+      "path": "scripts/validatore_rag_distrattori_forti_v2.py",
+      "function_name": "valuta_domanda",
+      "lineno": 52,
+      "original_score": 56,
+      "top_capabilities": [
+        "quiz_question_naturalness",
+        "strong_distractors",
+        "quiz_explanation_quality",
+        "interactive_quiz_frontend"
+      ],
+      "signature": {
+        "exists": true,
+        "syntax_ok": true,
+        "args": [
+          "domanda",
+          "indice"
+        ],
+        "args_count": 2,
+        "has_return": true,
+        "return_count": 1,
+        "returns_constant_bool_or_none": false,
+        "source_lines_count": 45
+      },
+      "scores": {
+        "side_effect_score": 0,
+        "transform_score": 48,
+        "quiz_target_score": 49,
+        "validator_score": 21,
+        "good_name_score": 0,
+        "bad_name_score": 0
+      },
+      "verdict": "COMPAT_TEST_READY",
+      "reasons": [
+        "Sembra trasformativo, orientato al quiz e con firma adattabile.",
+        "Firma a 2-3 argomenti: adattabile con wrapper controllato."
+      ]
+    },
+    {
+      "motor_id": "backend.motori_scrittura.qg_clean_output_bundle",
+      "path": "backend/motori_scrittura.py",
+      "function_name": "qg_clean_output_bundle",
+      "lineno": 3510,
+      "original_score": 41,
+      "top_capabilities": [
+        "quiz_question_naturalness",
+        "strong_distractors",
+        "quiz_explanation_quality",
+        "interactive_quiz_frontend",
+        "grammar_accents_text_quality"
+      ],
+      "signature": {
+        "exists": true,
+        "syntax_ok": true,
+        "args": [
+          "output_result"
+        ],
+        "args_count": 1,
+        "has_return": true,
+        "return_count": 2,
+        "returns_constant_bool_or_none": false,
+        "source_lines_count": 125
+      },
+      "scores": {
+        "side_effect_score": 0,
+        "transform_score": 39,
+        "quiz_target_score": 47,
+        "validator_score": 1,
+        "good_name_score": 2,
+        "bad_name_score": 0
+      },
+      "verdict": "COMPAT_TEST_READY",
+      "reasons": [
+        "Sembra trasformativo, orientato al quiz e con firma adattabile.",
+        "Firma a 1 argomento: adattabile facilmente a quiz/payload."
+      ]
+    },
+    {
+      "motor_id": "backend.phase5_live_quality_bridge_v1._legacy_refine_output_to_phase5",
+      "path": "backend/phase5_live_quality_bridge_v1.py",
+      "function_name": "_legacy_refine_output_to_phase5",
+      "lineno": 273,
+      "original_score": 54,
+      "top_capabilities": [
+        "strong_distractors",
+        "interactive_quiz_frontend",
+        "quiz_explanation_quality",
+        "quiz_question_naturalness"
+      ],
+      "signature": {
+        "exists": true,
+        "syntax_ok": true,
+        "args": [
+          "value",
+          "original_value"
+        ],
+        "args_count": 2,
+        "has_return": true,
+        "return_count": 6,
+        "returns_constant_bool_or_none": false,
+        "source_lines_count": 105
+      },
+      "scores": {
+        "side_effect_score": 0,
+        "transform_score": 51,
+        "quiz_target_score": 40,
+        "validator_score": 0,
+        "good_name_score": 2,
+        "bad_name_score": 0
+      },
+      "verdict": "COMPAT_TEST_READY",
+      "reasons": [
+        "Sembra trasformativo, orientato al quiz e con firma adattabile.",
+        "Firma a 2-3 argomenti: adattabile con wrapper controllato."
+      ]
+    },
+    {
+      "motor_id": "backend.phase5_quiz_true_distractor_repair_v1.repair_quiz_true_distractors_v1",
+      "path": "backend/phase5_quiz_true_distractor_repair_v1.py",
+      "function_name": "repair_quiz_true_distractors_v1",
+      "lineno": 212,
+      "original_score": 36,
+      "top_capabilities": [
+        "strong_distractors",
+        "quiz_question_naturalness",
+        "interactive_quiz_frontend"
+      ],
+      "signature": {
+        "exists": true,
+        "syntax_ok": true,
+        "args": [
+          "quiz"
+        ],
+        "args_count": 1,
+        "has_return": true,
+        "return_count": 2,
+        "returns_constant_bool_or_none": false,
+        "source_lines_count": 84
+      },
+      "scores": {
+        "side_effect_score": 0,
+        "transform_score": 35,
+        "quiz_target_score": 36,
+        "validator_score": 6,
+        "good_name_score": 1,
+        "bad_name_score": 0
+      },
+      "verdict": "COMPAT_TEST_READY",
+      "reasons": [
+        "Sembra trasformativo, orientato al quiz e con firma adattabile.",
+        "Firma a 1 argomento: adattabile facilmente a quiz/payload."
+      ]
+    },
+    {
+      "motor_id": "scripts.motore_qualita_generale.trova_duplicati_e_simili",
+      "path": "scripts/motore_qualita_generale.py",
+      "function_name": "trova_duplicati_e_simili",
+      "lineno": 400,
+      "original_score": 26,
+      "top_capabilities": [
+        "quiz_question_naturalness"
+      ],
+      "signature": {
+        "exists": true,
+        "syntax_ok": true,
+        "args": [
+          "domande_analizzate",
+          "soglia_similarita"
+        ],
+        "args_count": 2,
+        "has_return": true,
+        "return_count": 1,
+        "returns_constant_bool_or_none": false,
+        "source_lines_count": 39
+      },
+      "scores": {
+        "side_effect_score": 0,
+        "transform_score": 29,
+        "quiz_target_score": 26,
+        "validator_score": 0,
+        "good_name_score": 0,
+        "bad_name_score": 0
+      },
+      "verdict": "COMPAT_TEST_READY",
+      "reasons": [
+        "Sembra trasformativo, orientato al quiz e con firma adattabile.",
+        "Firma a 2-3 argomenti: adattabile con wrapper controllato."
+      ]
+    },
+    {
+      "motor_id": "backend.main.normalizza_quiz_generato",
+      "path": "backend/main.py",
+      "function_name": "normalizza_quiz_generato",
+      "lineno": 469,
+      "original_score": 9,
+      "top_capabilities": [
+        "quiz_question_naturalness",
+        "strong_distractors",
+        "quiz_explanation_quality"
+      ],
+      "signature": {
+        "exists": true,
+        "syntax_ok": true,
+        "args": [
+          "dati_quiz"
+        ],
+        "args_count": 1,
+        "has_return": true,
+        "return_count": 3,
+        "returns_constant_bool_or_none": false,
+        "source_lines_count": 39
+      },
+      "scores": {
+        "side_effect_score": 0,
+        "transform_score": 12,
+        "quiz_target_score": 24,
+        "validator_score": 5,
+        "good_name_score": 1,
+        "bad_name_score": 0
+      },
+      "verdict": "COMPAT_TEST_READY",
+      "reasons": [
+        "Sembra trasformativo, orientato al quiz e con firma adattabile.",
+        "Firma a 1 argomento: adattabile facilmente a quiz/payload."
+      ]
+    },
+    {
+      "motor_id": "backend.phase5_quiz_true_distractor_repair_v1.repair_payload_quiz_true_distractors_v1",
+      "path": "backend/phase5_quiz_true_distractor_repair_v1.py",
+      "function_name": "repair_payload_quiz_true_distractors_v1",
+      "lineno": 298,
+      "original_score": 14,
+      "top_capabilities": [
+        "strong_distractors"
+      ],
+      "signature": {
+        "exists": true,
+        "syntax_ok": true,
+        "args": [
+          "payload"
+        ],
+        "args_count": 1,
+        "has_return": true,
+        "return_count": 2,
+        "returns_constant_bool_or_none": false,
+        "source_lines_count": 74
+      },
+      "scores": {
+        "side_effect_score": 0,
+        "transform_score": 18,
+        "quiz_target_score": 22,
+        "validator_score": 6,
+        "good_name_score": 1,
+        "bad_name_score": 0
+      },
+      "verdict": "COMPAT_TEST_READY",
+      "reasons": [
+        "Sembra trasformativo, orientato al quiz e con firma adattabile.",
+        "Firma a 1 argomento: adattabile facilmente a quiz/payload."
+      ]
+    },
+    {
+      "motor_id": "scripts.rag_revisore_qualita_testuale_v35g.refine_tests",
+      "path": "scripts/rag_revisore_qualita_testuale_v35g.py",
+      "function_name": "refine_tests",
+      "lineno": 341,
+      "original_score": 21,
+      "top_capabilities": [
+        "quiz_question_naturalness",
+        "strong_distractors",
+        "quiz_explanation_quality"
+      ],
+      "signature": {
+        "exists": true,
+        "syntax_ok": true,
+        "args": [
+          "data"
+        ],
+        "args_count": 1,
+        "has_return": true,
+        "return_count": 1,
+        "returns_constant_bool_or_none": false,
+        "source_lines_count": 42
+      },
+      "scores": {
+        "side_effect_score": 0,
+        "transform_score": 23,
+        "quiz_target_score": 18,
+        "validator_score": 0,
+        "good_name_score": 1,
+        "bad_name_score": 1
+      },
+      "verdict": "COMPAT_TEST_READY",
+      "reasons": [
+        "Sembra trasformativo, orientato al quiz e con firma adattabile.",
+        "Firma a 1 argomento: adattabile facilmente a quiz/payload."
+      ]
+    },
+    {
+      "motor_id": "scripts.applica_v35k_reale.clean_output",
+      "path": "scripts/applica_v35k_reale.py",
+      "function_name": "clean_output",
+      "lineno": 173,
+      "original_score": 30,
+      "top_capabilities": [
+        "quiz_explanation_quality",
+        "strong_distractors",
+        "quiz_question_naturalness",
+        "grammar_accents_text_quality",
+        "interactive_quiz_frontend"
+      ],
+      "signature": {
+        "exists": true,
+        "syntax_ok": true,
+        "args": [
+          "data"
+        ],
+        "args_count": 1,
+        "has_return": true,
+        "return_count": 1,
+        "returns_constant_bool_or_none": false,
+        "source_lines_count": 82
+      },
+      "scores": {
+        "side_effect_score": 0,
+        "transform_score": 33,
+        "quiz_target_score": 17,
+        "validator_score": 23,
+        "good_name_score": 2,
+        "bad_name_score": 0
+      },
+      "verdict": "COMPAT_TEST_READY",
+      "reasons": [
+        "Sembra trasformativo, orientato al quiz e con firma adattabile.",
+        "Firma a 1 argomento: adattabile facilmente a quiz/payload."
+      ]
+    },
+    {
+      "motor_id": "scripts.motore_qualita_logica_visiva_base.analizza_file",
+      "path": "scripts/motore_qualita_logica_visiva_base.py",
+      "function_name": "analizza_file",
+      "lineno": 377,
+      "original_score": 17,
+      "top_capabilities": [
+        "quiz_question_naturalness"
+      ],
+      "signature": {
+        "exists": true,
+        "syntax_ok": true,
+        "args": [
+          "percorso"
+        ],
+        "args_count": 1,
+        "has_return": true,
+        "return_count": 2,
+        "returns_constant_bool_or_none": false,
+        "source_lines_count": 53
+      },
+      "scores": {
+        "side_effect_score": 0,
+        "transform_score": 22,
+        "quiz_target_score": 17,
+        "validator_score": 10,
+        "good_name_score": 0,
+        "bad_name_score": 0
+      },
+      "verdict": "COMPAT_TEST_READY",
+      "reasons": [
+        "Sembra trasformativo, orientato al quiz e con firma adattabile.",
+        "Firma a 1 argomento: adattabile facilmente a quiz/payload."
+      ]
+    },
+    {
+      "motor_id": "scripts.rag_prepara_import_approvati.normalizza_per_database",
+      "path": "scripts/rag_prepara_import_approvati.py",
+      "function_name": "normalizza_per_database",
+      "lineno": 137,
+      "original_score": 18,
+      "top_capabilities": [
+        "quiz_question_naturalness",
+        "quiz_explanation_quality",
+        "strong_distractors"
+      ],
+      "signature": {
+        "exists": true,
+        "syntax_ok": true,
+        "args": [
+          "domanda",
+          "posizione"
+        ],
+        "args_count": 2,
+        "has_return": true,
+        "return_count": 1,
+        "returns_constant_bool_or_none": false,
+        "source_lines_count": 20
+      },
+      "scores": {
+        "side_effect_score": 0,
+        "transform_score": 19,
+        "quiz_target_score": 16,
+        "validator_score": 0,
+        "good_name_score": 1,
+        "bad_name_score": 0
+      },
+      "verdict": "COMPAT_TEST_READY",
+      "reasons": [
+        "Sembra trasformativo, orientato al quiz e con firma adattabile.",
+        "Firma a 2-3 argomenti: adattabile con wrapper controllato."
+      ]
+    },
+    {
+      "motor_id": "scripts.report_distrattori_scientifici.valuta_qualita_opzioni",
+      "path": "scripts/report_distrattori_scientifici.py",
+      "function_name": "valuta_qualita_opzioni",
+      "lineno": 123,
+      "original_score": 23,
+      "top_capabilities": [
+        "strong_distractors",
+        "quiz_explanation_quality",
+        "quiz_question_naturalness",
+        "interactive_quiz_frontend"
+      ],
+      "signature": {
+        "exists": true,
+        "syntax_ok": true,
+        "args": [
+          "opzioni",
+          "risposta"
+        ],
+        "args_count": 2,
+        "has_return": true,
+        "return_count": 2,
+        "returns_constant_bool_or_none": false,
+        "source_lines_count": 59
+      },
+      "scores": {
+        "side_effect_score": 0,
+        "transform_score": 28,
+        "quiz_target_score": 15,
+        "validator_score": 1,
+        "good_name_score": 0,
+        "bad_name_score": 0
+      },
+      "verdict": "COMPAT_TEST_READY",
+      "reasons": [
+        "Sembra trasformativo, orientato al quiz e con firma adattabile.",
+        "Firma a 2-3 argomenti: adattabile con wrapper controllato."
+      ]
+    },
+    {
+      "motor_id": "scripts.estrai_biologia_da_migliorare.normalizza_opzioni",
+      "path": "scripts/estrai_biologia_da_migliorare.py",
+      "function_name": "normalizza_opzioni",
+      "lineno": 54,
+      "original_score": 17,
+      "top_capabilities": [
+        "strong_distractors",
+        "quiz_explanation_quality"
+      ],
+      "signature": {
+        "exists": true,
+        "syntax_ok": true,
+        "args": [
+          "opzioni_grezze"
+        ],
+        "args_count": 1,
+        "has_return": true,
+        "return_count": 3,
+        "returns_constant_bool_or_none": false,
+        "source_lines_count": 29
+      },
+      "scores": {
+        "side_effect_score": 0,
+        "transform_score": 23,
+        "quiz_target_score": 15,
+        "validator_score": 1,
+        "good_name_score": 1,
+        "bad_name_score": 0
+      },
+      "verdict": "COMPAT_TEST_READY",
+      "reasons": [
+        "Sembra trasformativo, orientato al quiz e con firma adattabile.",
+        "Firma a 1 argomento: adattabile facilmente a quiz/payload."
+      ]
+    },
+    {
+      "motor_id": "scripts.estrai_motore_scientifico_da_migliorare.normalizza_opzioni",
+      "path": "scripts/estrai_motore_scientifico_da_migliorare.py",
+      "function_name": "normalizza_opzioni",
+      "lineno": 79,
+      "original_score": 17,
+      "top_capabilities": [
+        "strong_distractors",
+        "quiz_explanation_quality"
+      ],
+      "signature": {
+        "exists": true,
+        "syntax_ok": true,
+        "args": [
+          "opzioni_grezze"
+        ],
+        "args_count": 1,
+        "has_return": true,
+        "return_count": 3,
+        "returns_constant_bool_or_none": false,
+        "source_lines_count": 29
+      },
+      "scores": {
+        "side_effect_score": 0,
+        "transform_score": 23,
+        "quiz_target_score": 15,
+        "validator_score": 1,
+        "good_name_score": 1,
+        "bad_name_score": 0
+      },
+      "verdict": "COMPAT_TEST_READY",
+      "reasons": [
+        "Sembra trasformativo, orientato al quiz e con firma adattabile.",
+        "Firma a 1 argomento: adattabile facilmente a quiz/payload."
+      ]
+    },
+    {
+      "motor_id": "scripts.rag_bridge_motori_qualita_esistenti_v35b.analizza_domanda_se_possibile",
+      "path": "scripts/rag_bridge_motori_qualita_esistenti_v35b.py",
+      "function_name": "analizza_domanda_se_possibile",
+      "lineno": 104,
+      "original_score": 15,
+      "top_capabilities": [
+        "quiz_question_naturalness",
+        "strong_distractors"
+      ],
+      "signature": {
+        "exists": true,
+        "syntax_ok": true,
+        "args": [
+          "self",
+          "domanda"
+        ],
+        "args_count": 2,
+        "has_return": true,
+        "return_count": 5,
+        "returns_constant_bool_or_none": false,
+        "source_lines_count": 20
+      },
+      "scores": {
+        "side_effect_score": 0,
+        "transform_score": 18,
+        "quiz_target_score": 15,
+        "validator_score": 4,
+        "good_name_score": 0,
+        "bad_name_score": 0
+      },
+      "verdict": "COMPAT_TEST_READY",
+      "reasons": [
+        "Sembra trasformativo, orientato al quiz e con firma adattabile.",
+        "Firma a 2-3 argomenti: adattabile con wrapper controllato."
+      ]
+    },
+    {
+      "motor_id": "scripts.improve_answer_options_100.applica_miglioramenti",
+      "path": "scripts/improve_answer_options_100.py",
+      "function_name": "applica_miglioramenti",
+      "lineno": 504,
+      "original_score": 14,
+      "top_capabilities": [
+        "quiz_question_naturalness",
+        "quiz_explanation_quality",
+        "strong_distractors"
+      ],
+      "signature": {
+        "exists": true,
+        "syntax_ok": true,
+        "args": [
+          "domande"
+        ],
+        "args_count": 1,
+        "has_return": true,
+        "return_count": 1,
+        "returns_constant_bool_or_none": false,
+        "source_lines_count": 16
+      },
+      "scores": {
+        "side_effect_score": 0,
+        "transform_score": 17,
+        "quiz_target_score": 13,
+        "validator_score": 0,
+        "good_name_score": 1,
+        "bad_name_score": 0
+      },
+      "verdict": "COMPAT_TEST_READY",
+      "reasons": [
+        "Sembra trasformativo, orientato al quiz e con firma adattabile.",
+        "Firma a 1 argomento: adattabile facilmente a quiz/payload."
+      ]
+    },
+    {
+      "motor_id": "scripts.estrai_biologia_da_migliorare.valuta_problemi_qualita",
+      "path": "scripts/estrai_biologia_da_migliorare.py",
+      "function_name": "valuta_problemi_qualita",
+      "lineno": 127,
+      "original_score": 19,
+      "top_capabilities": [
+        "strong_distractors",
+        "quiz_explanation_quality",
+        "quiz_question_naturalness",
+        "interactive_quiz_frontend"
+      ],
+      "signature": {
+        "exists": true,
+        "syntax_ok": true,
+        "args": [
+          "opzioni",
+          "risposta"
+        ],
+        "args_count": 2,
+        "has_return": true,
+        "return_count": 2,
+        "returns_constant_bool_or_none": false,
+        "source_lines_count": 57
+      },
+      "scores": {
+        "side_effect_score": 0,
+        "transform_score": 24,
+        "quiz_target_score": 12,
+        "validator_score": 0,
+        "good_name_score": 0,
+        "bad_name_score": 0
+      },
+      "verdict": "COMPAT_TEST_READY",
+      "reasons": [
+        "Sembra trasformativo, orientato al quiz e con firma adattabile.",
+        "Firma a 2-3 argomenti: adattabile con wrapper controllato."
+      ]
+    },
+    {
+      "motor_id": "scripts.estrai_motore_scientifico_da_migliorare.valuta_problemi_qualita",
+      "path": "scripts/estrai_motore_scientifico_da_migliorare.py",
+      "function_name": "valuta_problemi_qualita",
+      "lineno": 152,
+      "original_score": 19,
+      "top_capabilities": [
+        "strong_distractors",
+        "quiz_explanation_quality",
+        "quiz_question_naturalness",
+        "interactive_quiz_frontend"
+      ],
+      "signature": {
+        "exists": true,
+        "syntax_ok": true,
+        "args": [
+          "opzioni",
+          "risposta"
+        ],
+        "args_count": 2,
+        "has_return": true,
+        "return_count": 2,
+        "returns_constant_bool_or_none": false,
+        "source_lines_count": 57
+      },
+      "scores": {
+        "side_effect_score": 0,
+        "transform_score": 24,
+        "quiz_target_score": 12,
+        "validator_score": 0,
+        "good_name_score": 0,
+        "bad_name_score": 0
+      },
+      "verdict": "COMPAT_TEST_READY",
+      "reasons": [
+        "Sembra trasformativo, orientato al quiz e con firma adattabile.",
+        "Firma a 2-3 argomenti: adattabile con wrapper controllato."
+      ]
+    },
+    {
+      "motor_id": "scripts.report_distrattori_scientifici.normalizza_opzioni",
+      "path": "scripts/report_distrattori_scientifici.py",
+      "function_name": "normalizza_opzioni",
+      "lineno": 61,
+      "original_score": 11,
+      "top_capabilities": [
+        "strong_distractors"
+      ],
+      "signature": {
+        "exists": true,
+        "syntax_ok": true,
+        "args": [
+          "opzioni_grezze"
+        ],
+        "args_count": 1,
+        "has_return": true,
+        "return_count": 3,
+        "returns_constant_bool_or_none": false,
+        "source_lines_count": 18
+      },
+      "scores": {
+        "side_effect_score": 0,
+        "transform_score": 15,
+        "quiz_target_score": 12,
+        "validator_score": 2,
+        "good_name_score": 1,
+        "bad_name_score": 0
+      },
+      "verdict": "COMPAT_TEST_READY",
+      "reasons": [
+        "Sembra trasformativo, orientato al quiz e con firma adattabile.",
+        "Firma a 1 argomento: adattabile facilmente a quiz/payload."
+      ]
+    },
+    {
+      "motor_id": "backend.quiz_generator.genera_quiz_json",
+      "path": "backend/quiz_generator.py",
+      "function_name": "genera_quiz_json",
+      "lineno": 2,
+      "original_score": 14,
+      "top_capabilities": [
+        "quiz_explanation_quality",
+        "quiz_question_naturalness",
+        "interactive_quiz_frontend"
+      ],
+      "signature": {
+        "exists": true,
+        "syntax_ok": true,
+        "args": [
+          "categoria",
+          "difficolta",
+          "numero_domande"
+        ],
+        "args_count": 3,
+        "has_return": true,
+        "return_count": 1,
+        "returns_constant_bool_or_none": false,
+        "source_lines_count": 27
+      },
+      "scores": {
+        "side_effect_score": 0,
+        "transform_score": 15,
+        "quiz_target_score": 11,
+        "validator_score": 0,
+        "good_name_score": 0,
+        "bad_name_score": 0
+      },
+      "verdict": "COMPAT_TEST_READY",
+      "reasons": [
+        "Sembra trasformativo, orientato al quiz e con firma adattabile.",
+        "Firma a 2-3 argomenti: adattabile con wrapper controllato."
+      ]
+    },
+    {
+      "motor_id": "scripts.motore_traduzione_inglese.rimuovi_vecchie_traduzioni",
+      "path": "scripts/motore_traduzione_inglese.py",
+      "function_name": "rimuovi_vecchie_traduzioni",
+      "lineno": 33,
+      "original_score": 14,
+      "top_capabilities": [
+        "quiz_explanation_quality",
+        "quiz_question_naturalness",
+        "interactive_quiz_frontend"
+      ],
+      "signature": {
+        "exists": true,
+        "syntax_ok": true,
+        "args": [
+          "spiegazione"
+        ],
+        "args_count": 1,
+        "has_return": true,
+        "return_count": 1,
+        "returns_constant_bool_or_none": false,
+        "source_lines_count": 22
+      },
+      "scores": {
+        "side_effect_score": 0,
+        "transform_score": 14,
+        "quiz_target_score": 11,
+        "validator_score": 0,
+        "good_name_score": 0,
+        "bad_name_score": 0
+      },
+      "verdict": "COMPAT_TEST_READY",
+      "reasons": [
+        "Sembra trasformativo, orientato al quiz e con firma adattabile.",
+        "Firma a 1 argomento: adattabile facilmente a quiz/payload."
+      ]
+    },
+    {
+      "motor_id": "scripts.rag_adapter_quiz_ufficiale_v43.crea_candidate_sicurezza",
+      "path": "scripts/rag_adapter_quiz_ufficiale_v43.py",
+      "function_name": "crea_candidate_sicurezza",
+      "lineno": 93,
+      "original_score": 23,
+      "top_capabilities": [
+        "grammar_accents_text_quality",
+        "quiz_explanation_quality",
+        "quiz_question_naturalness",
+        "strong_distractors"
+      ],
+      "signature": {
+        "exists": true,
+        "syntax_ok": true,
+        "args": [
+          "testo"
+        ],
+        "args_count": 1,
+        "has_return": true,
+        "return_count": 1,
+        "returns_constant_bool_or_none": false,
+        "source_lines_count": 125
+      },
+      "scores": {
+        "side_effect_score": 0,
+        "transform_score": 8,
+        "quiz_target_score": 10,
+        "validator_score": 2,
+        "good_name_score": 0,
+        "bad_name_score": 0
+      },
+      "verdict": "COMPAT_TEST_READY",
+      "reasons": [
+        "Sembra trasformativo, orientato al quiz e con firma adattabile.",
+        "Firma a 1 argomento: adattabile facilmente a quiz/payload."
+      ]
+    },
+    {
+      "motor_id": "scripts.rag_genera_output_da_kb_clean_v34e.valida_output",
+      "path": "scripts/rag_genera_output_da_kb_clean_v34e.py",
+      "function_name": "valida_output",
+      "lineno": 545,
+      "original_score": 13,
+      "top_capabilities": [
+        "strong_distractors",
+        "quiz_explanation_quality",
+        "grammar_accents_text_quality",
+        "interactive_quiz_frontend"
+      ],
+      "signature": {
+        "exists": true,
+        "syntax_ok": true,
+        "args": [
+          "output",
+          "numero"
+        ],
+        "args_count": 2,
+        "has_return": true,
+        "return_count": 1,
+        "returns_constant_bool_or_none": false,
+        "source_lines_count": 81
+      },
+      "scores": {
+        "side_effect_score": 0,
+        "transform_score": 26,
+        "quiz_target_score": 9,
+        "validator_score": 19,
+        "good_name_score": 1,
+        "bad_name_score": 1
+      },
+      "verdict": "COMPAT_TEST_READY",
+      "reasons": [
+        "Sembra trasformativo, orientato al quiz e con firma adattabile.",
+        "Firma a 2-3 argomenti: adattabile con wrapper controllato."
+      ]
+    },
+    {
+      "motor_id": "scripts.validatore_rag_distrattori_forti_v2.estrai_opzioni",
+      "path": "scripts/validatore_rag_distrattori_forti_v2.py",
+      "function_name": "estrai_opzioni",
+      "lineno": 43,
+      "original_score": 8,
+      "top_capabilities": [
+        "quiz_question_naturalness",
+        "strong_distractors",
+        "quiz_explanation_quality"
+      ],
+      "signature": {
+        "exists": true,
+        "syntax_ok": true,
+        "args": [
+          "domanda"
+        ],
+        "args_count": 1,
+        "has_return": true,
+        "return_count": 3,
+        "returns_constant_bool_or_none": false,
+        "source_lines_count": 7
+      },
+      "scores": {
+        "side_effect_score": 0,
+        "transform_score": 11,
+        "quiz_target_score": 8,
+        "validator_score": 2,
+        "good_name_score": 0,
+        "bad_name_score": 0
+      },
+      "verdict": "COMPAT_TEST_READY",
+      "reasons": [
+        "Sembra trasformativo, orientato al quiz e con firma adattabile.",
+        "Firma a 1 argomento: adattabile facilmente a quiz/payload."
+      ]
+    },
+    {
+      "motor_id": "scripts.mini_llm_study_pack_cli_v1.format_markdown",
+      "path": "scripts/mini_llm_study_pack_cli_v1.py",
+      "function_name": "format_markdown",
+      "lineno": 101,
+      "original_score": 10,
+      "top_capabilities": [
+        "quiz_question_naturalness",
+        "quiz_explanation_quality",
+        "strong_distractors",
+        "interactive_quiz_frontend"
+      ],
+      "signature": {
+        "exists": true,
+        "syntax_ok": true,
+        "args": [
+          "payload"
+        ],
+        "args_count": 1,
+        "has_return": true,
+        "return_count": 1,
+        "returns_constant_bool_or_none": false,
+        "source_lines_count": 68
+      },
+      "scores": {
+        "side_effect_score": 0,
+        "transform_score": 34,
+        "quiz_target_score": 7,
+        "validator_score": 0,
+        "good_name_score": 0,
+        "bad_name_score": 0
+      },
+      "verdict": "COMPAT_TEST_READY",
+      "reasons": [
+        "Sembra trasformativo, orientato al quiz e con firma adattabile.",
+        "Firma a 1 argomento: adattabile facilmente a quiz/payload."
+      ]
+    },
+    {
+      "motor_id": "scripts.applica_v35k_reale.clean_text",
+      "path": "scripts/applica_v35k_reale.py",
+      "function_name": "clean_text",
+      "lineno": 111,
+      "original_score": 18,
+      "top_capabilities": [
+        "quiz_explanation_quality",
+        "grammar_accents_text_quality",
+        "quiz_question_naturalness",
+        "strong_distractors",
+        "interactive_quiz_frontend"
+      ],
+      "signature": {
+        "exists": true,
+        "syntax_ok": true,
+        "args": [
+          "value"
+        ],
+        "args_count": 1,
+        "has_return": true,
+        "return_count": 1,
+        "returns_constant_bool_or_none": false,
+        "source_lines_count": 54
+      },
+      "scores": {
+        "side_effect_score": 0,
+        "transform_score": 13,
+        "quiz_target_score": 7,
+        "validator_score": 1,
+        "good_name_score": 1,
+        "bad_name_score": 0
+      },
+      "verdict": "COMPAT_TEST_READY",
+      "reasons": [
+        "Sembra trasformativo, orientato al quiz e con firma adattabile.",
+        "Firma a 1 argomento: adattabile facilmente a quiz/payload."
+      ]
+    },
+    {
+      "motor_id": "scripts.rag_revisore_qualita_testuale_v35g.collect_visible_records",
+      "path": "scripts/rag_revisore_qualita_testuale_v35g.py",
+      "function_name": "collect_visible_records",
+      "lineno": 407,
+      "original_score": 12,
+      "top_capabilities": [
+        "quiz_explanation_quality",
+        "quiz_question_naturalness",
+        "strong_distractors",
+        "grammar_accents_text_quality"
+      ],
+      "signature": {
+        "exists": true,
+        "syntax_ok": true,
+        "args": [
+          "data"
+        ],
+        "args_count": 1,
+        "has_return": true,
+        "return_count": 1,
+        "returns_constant_bool_or_none": false,
+        "source_lines_count": 46
+      },
+      "scores": {
+        "side_effect_score": 0,
+        "transform_score": 13,
+        "quiz_target_score": 7,
+        "validator_score": 0,
+        "good_name_score": 0,
+        "bad_name_score": 0
+      },
+      "verdict": "COMPAT_TEST_READY",
+      "reasons": [
+        "Sembra trasformativo, orientato al quiz e con firma adattabile.",
+        "Firma a 1 argomento: adattabile facilmente a quiz/payload."
+      ]
+    },
+    {
+      "motor_id": "scripts.rag_revisore_naturalezza_antikeyword_v35i.natural_test_explanation",
+      "path": "scripts/rag_revisore_naturalezza_antikeyword_v35i.py",
+      "function_name": "natural_test_explanation",
+      "lineno": 238,
+      "original_score": 14,
+      "top_capabilities": [
+        "grammar_accents_text_quality",
+        "quiz_explanation_quality",
+        "quiz_question_naturalness",
+        "strong_distractors"
+      ],
+      "signature": {
+        "exists": true,
+        "syntax_ok": true,
+        "args": [
+          "title",
+          "correct",
+          "idx"
+        ],
+        "args_count": 3,
+        "has_return": true,
+        "return_count": 1,
+        "returns_constant_bool_or_none": false,
+        "source_lines_count": 12
+      },
+      "scores": {
+        "side_effect_score": 0,
+        "transform_score": 8,
+        "quiz_target_score": 7,
+        "validator_score": 0,
+        "good_name_score": 2,
+        "bad_name_score": 1
+      },
+      "verdict": "COMPAT_TEST_READY",
+      "reasons": [
+        "Sembra trasformativo, orientato al quiz e con firma adattabile.",
+        "Firma a 2-3 argomenti: adattabile con wrapper controllato."
+      ]
+    },
+    {
+      "motor_id": "scripts.rag_motore_didattico_riutilizzabile_v35c.visible_texts",
+      "path": "scripts/rag_motore_didattico_riutilizzabile_v35c.py",
+      "function_name": "visible_texts",
+      "lineno": 266,
+      "original_score": 11,
+      "top_capabilities": [
+        "quiz_explanation_quality",
+        "quiz_question_naturalness",
+        "strong_distractors",
+        "grammar_accents_text_quality"
+      ],
+      "signature": {
+        "exists": true,
+        "syntax_ok": true,
+        "args": [
+          "output"
+        ],
+        "args_count": 1,
+        "has_return": true,
+        "return_count": 1,
+        "returns_constant_bool_or_none": false,
+        "source_lines_count": 25
+      },
+      "scores": {
+        "side_effect_score": 0,
+        "transform_score": 17,
+        "quiz_target_score": 6,
+        "validator_score": 0,
+        "good_name_score": 0,
+        "bad_name_score": 0
+      },
+      "verdict": "COMPAT_TEST_READY",
+      "reasons": [
+        "Sembra trasformativo, orientato al quiz e con firma adattabile.",
+        "Firma a 1 argomento: adattabile facilmente a quiz/payload."
+      ]
+    },
+    {
+      "motor_id": "scripts.report_distrattori_scientifici.normalizza_risposta",
+      "path": "scripts/report_distrattori_scientifici.py",
+      "function_name": "normalizza_risposta",
+      "lineno": 81,
+      "original_score": 15,
+      "top_capabilities": [
+        "quiz_explanation_quality",
+        "strong_distractors"
+      ],
+      "signature": {
+        "exists": true,
+        "syntax_ok": true,
+        "args": [
+          "risposta_grezza",
+          "opzioni"
+        ],
+        "args_count": 2,
+        "has_return": true,
+        "return_count": 4,
+        "returns_constant_bool_or_none": false,
+        "source_lines_count": 19
+      },
+      "scores": {
+        "side_effect_score": 0,
+        "transform_score": 19,
+        "quiz_target_score": 5,
+        "validator_score": 1,
+        "good_name_score": 1,
+        "bad_name_score": 0
+      },
+      "verdict": "COMPAT_TEST_READY",
+      "reasons": [
+        "Sembra trasformativo, orientato al quiz e con firma adattabile.",
+        "Firma a 2-3 argomenti: adattabile con wrapper controllato."
+      ]
+    },
+    {
+      "motor_id": "scripts.estrai_biologia_da_migliorare.normalizza_risposta",
+      "path": "scripts/estrai_biologia_da_migliorare.py",
+      "function_name": "normalizza_risposta",
+      "lineno": 85,
+      "original_score": 15,
+      "top_capabilities": [
+        "quiz_explanation_quality",
+        "strong_distractors"
+      ],
+      "signature": {
+        "exists": true,
+        "syntax_ok": true,
+        "args": [
+          "risposta_grezza",
+          "opzioni"
+        ],
+        "args_count": 2,
+        "has_return": true,
+        "return_count": 4,
+        "returns_constant_bool_or_none": false,
+        "source_lines_count": 19
+      },
+      "scores": {
+        "side_effect_score": 0,
+        "transform_score": 19,
+        "quiz_target_score": 4,
+        "validator_score": 0,
+        "good_name_score": 1,
+        "bad_name_score": 0
+      },
+      "verdict": "COMPAT_TEST_READY",
+      "reasons": [
+        "Sembra trasformativo, orientato al quiz e con firma adattabile.",
+        "Firma a 2-3 argomenti: adattabile con wrapper controllato."
+      ]
+    },
+    {
+      "motor_id": "scripts.estrai_motore_scientifico_da_migliorare.normalizza_risposta",
+      "path": "scripts/estrai_motore_scientifico_da_migliorare.py",
+      "function_name": "normalizza_risposta",
+      "lineno": 110,
+      "original_score": 15,
+      "top_capabilities": [
+        "quiz_explanation_quality",
+        "strong_distractors"
+      ],
+      "signature": {
+        "exists": true,
+        "syntax_ok": true,
+        "args": [
+          "risposta_grezza",
+          "opzioni"
+        ],
+        "args_count": 2,
+        "has_return": true,
+        "return_count": 4,
+        "returns_constant_bool_or_none": false,
+        "source_lines_count": 19
+      },
+      "scores": {
+        "side_effect_score": 0,
+        "transform_score": 19,
+        "quiz_target_score": 4,
+        "validator_score": 0,
+        "good_name_score": 1,
+        "bad_name_score": 0
+      },
+      "verdict": "COMPAT_TEST_READY",
+      "reasons": [
+        "Sembra trasformativo, orientato al quiz e con firma adattabile.",
+        "Firma a 2-3 argomenti: adattabile con wrapper controllato."
+      ]
+    }
+  ],
+  "manual_review_mixed": [
+    {
+      "motor_id": "backend.motori_scrittura.q52_validate_quiz",
+      "path": "backend/motori_scrittura.py",
+      "function_name": "q52_validate_quiz",
+      "lineno": 5644,
+      "original_score": 71,
+      "top_capabilities": [
+        "quiz_question_naturalness",
+        "strong_distractors",
+        "interactive_quiz_frontend"
+      ],
+      "signature": {
+        "exists": true,
+        "syntax_ok": true,
+        "args": [
+          "quiz",
+          "source_facts",
+          "expected_options"
+        ],
+        "args_count": 3,
+        "has_return": true,
+        "return_count": 2,
+        "returns_constant_bool_or_none": false,
+        "source_lines_count": 60
+      },
+      "scores": {
+        "side_effect_score": 0,
+        "transform_score": 71,
+        "quiz_target_score": 70,
+        "validator_score": 29,
+        "good_name_score": 0,
+        "bad_name_score": 2
+      },
+      "verdict": "MANUAL_REVIEW_MIXED",
+      "reasons": [
+        "Ha segnali trasformativi ma anche segnali da validatore/report.",
+        "Firma a 2-3 argomenti: adattabile con wrapper controllato."
+      ]
+    },
+    {
+      "motor_id": "scripts.rag_bridge_motori_qualita_esistenti_v35b.controlla_test_con_motori",
+      "path": "scripts/rag_bridge_motori_qualita_esistenti_v35b.py",
+      "function_name": "controlla_test_con_motori",
+      "lineno": 196,
+      "original_score": 29,
+      "top_capabilities": [
+        "strong_distractors",
+        "quiz_question_naturalness",
+        "quiz_explanation_quality",
+        "interactive_quiz_frontend"
+      ],
+      "signature": {
+        "exists": true,
+        "syntax_ok": true,
+        "args": [
+          "domande",
+          "motori"
+        ],
+        "args_count": 2,
+        "has_return": true,
+        "return_count": 1,
+        "returns_constant_bool_or_none": false,
+        "source_lines_count": 44
+      },
+      "scores": {
+        "side_effect_score": 0,
+        "transform_score": 36,
+        "quiz_target_score": 26,
+        "validator_score": 10,
+        "good_name_score": 0,
+        "bad_name_score": 2
+      },
+      "verdict": "MANUAL_REVIEW_MIXED",
+      "reasons": [
+        "Ha segnali trasformativi ma anche segnali da validatore/report.",
+        "Firma a 2-3 argomenti: adattabile con wrapper controllato."
+      ]
+    },
+    {
+      "motor_id": "backend.main.controlla_duplicati_informatica",
+      "path": "backend/main.py",
+      "function_name": "controlla_duplicati_informatica",
+      "lineno": 1300,
+      "original_score": 20,
+      "top_capabilities": [
+        "quiz_question_naturalness"
+      ],
+      "signature": {
+        "exists": true,
+        "syntax_ok": true,
+        "args": [
+          "quiz_finale"
+        ],
+        "args_count": 1,
+        "has_return": true,
+        "return_count": 1,
+        "returns_constant_bool_or_none": false,
+        "source_lines_count": 55
+      },
+      "scores": {
+        "side_effect_score": 0,
+        "transform_score": 24,
+        "quiz_target_score": 25,
+        "validator_score": 3,
+        "good_name_score": 0,
+        "bad_name_score": 1
+      },
+      "verdict": "MANUAL_REVIEW_MIXED",
+      "reasons": [
+        "Ha segnali trasformativi ma anche segnali da validatore/report.",
+        "Firma a 1 argomento: adattabile facilmente a quiz/payload."
+      ]
+    },
+    {
+      "motor_id": "backend.main.crea_prompt_quiz_avanzato",
+      "path": "backend/main.py",
+      "function_name": "crea_prompt_quiz_avanzato",
+      "lineno": 849,
+      "original_score": 31,
+      "top_capabilities": [
+        "quiz_explanation_quality",
+        "quiz_question_naturalness",
+        "interactive_quiz_frontend",
+        "strong_distractors",
+        "grammar_accents_text_quality"
+      ],
+      "signature": {
+        "exists": true,
+        "syntax_ok": true,
+        "args": [
+          "richiesta",
+          "problemi_precedenti"
+        ],
+        "args_count": 2,
+        "has_return": true,
+        "return_count": 1,
+        "returns_constant_bool_or_none": false,
+        "source_lines_count": 124
+      },
+      "scores": {
+        "side_effect_score": 0,
+        "transform_score": 21,
+        "quiz_target_score": 23,
+        "validator_score": 4,
+        "good_name_score": 0,
+        "bad_name_score": 1
+      },
+      "verdict": "MANUAL_REVIEW_MIXED",
+      "reasons": [
+        "Ha segnali trasformativi ma anche segnali da validatore/report.",
+        "Firma a 2-3 argomenti: adattabile con wrapper controllato."
+      ]
+    },
+    {
+      "motor_id": "scripts.motore_qualita_generale.analizza_motore",
+      "path": "scripts/motore_qualita_generale.py",
+      "function_name": "analizza_motore",
+      "lineno": 441,
+      "original_score": 25,
+      "top_capabilities": [
+        "quiz_question_naturalness",
+        "quiz_explanation_quality"
+      ],
+      "signature": {
+        "exists": true,
+        "syntax_ok": true,
+        "args": [
+          "nome_motore",
+          "percorso",
+          "soglia_similarita"
+        ],
+        "args_count": 3,
+        "has_return": true,
+        "return_count": 3,
+        "returns_constant_bool_or_none": false,
+        "source_lines_count": 71
+      },
+      "scores": {
+        "side_effect_score": 0,
+        "transform_score": 32,
+        "quiz_target_score": 22,
+        "validator_score": 11,
+        "good_name_score": 0,
+        "bad_name_score": 1
+      },
+      "verdict": "MANUAL_REVIEW_MIXED",
+      "reasons": [
+        "Ha segnali trasformativi ma anche segnali da validatore/report.",
+        "Firma a 2-3 argomenti: adattabile con wrapper controllato."
+      ]
+    },
+    {
+      "motor_id": "scripts.report_distrattori_scientifici.analizza_motore",
+      "path": "scripts/report_distrattori_scientifici.py",
+      "function_name": "analizza_motore",
+      "lineno": 184,
+      "original_score": 26,
+      "top_capabilities": [
+        "quiz_question_naturalness",
+        "strong_distractors",
+        "quiz_explanation_quality"
+      ],
+      "signature": {
+        "exists": true,
+        "syntax_ok": true,
+        "args": [
+          "nome_motore",
+          "percorso"
+        ],
+        "args_count": 2,
+        "has_return": true,
+        "return_count": 1,
+        "returns_constant_bool_or_none": false,
+        "source_lines_count": 34
+      },
+      "scores": {
+        "side_effect_score": 0,
+        "transform_score": 29,
+        "quiz_target_score": 19,
+        "validator_score": 1,
+        "good_name_score": 0,
+        "bad_name_score": 1
+      },
+      "verdict": "MANUAL_REVIEW_MIXED",
+      "reasons": [
+        "Ha segnali trasformativi ma anche segnali da validatore/report.",
+        "Firma a 2-3 argomenti: adattabile con wrapper controllato."
+      ]
+    },
+    {
+      "motor_id": "scripts.rag_genera_output_da_kb_clean_v34e.crea_test",
+      "path": "scripts/rag_genera_output_da_kb_clean_v34e.py",
+      "function_name": "crea_test",
+      "lineno": 415,
+      "original_score": 23,
+      "top_capabilities": [
+        "strong_distractors",
+        "quiz_question_naturalness",
+        "quiz_explanation_quality",
+        "grammar_accents_text_quality"
+      ],
+      "signature": {
+        "exists": true,
+        "syntax_ok": true,
+        "args": [
+          "concepts",
+          "numero"
+        ],
+        "args_count": 2,
+        "has_return": true,
+        "return_count": 1,
+        "returns_constant_bool_or_none": false,
+        "source_lines_count": 51
+      },
+      "scores": {
+        "side_effect_score": 0,
+        "transform_score": 20,
+        "quiz_target_score": 19,
+        "validator_score": 0,
+        "good_name_score": 0,
+        "bad_name_score": 1
+      },
+      "verdict": "MANUAL_REVIEW_MIXED",
+      "reasons": [
+        "Ha segnali trasformativi ma anche segnali da validatore/report.",
+        "Firma a 2-3 argomenti: adattabile con wrapper controllato."
+      ]
+    },
+    {
+      "motor_id": "scripts.motore_qualita_logica_visiva_base.crea_report_markdown",
+      "path": "scripts/motore_qualita_logica_visiva_base.py",
+      "function_name": "crea_report_markdown",
+      "lineno": 432,
+      "original_score": 16,
+      "top_capabilities": [
+        "quiz_question_naturalness"
+      ],
+      "signature": {
+        "exists": true,
+        "syntax_ok": true,
+        "args": [
+          "risultati"
+        ],
+        "args_count": 1,
+        "has_return": true,
+        "return_count": 1,
+        "returns_constant_bool_or_none": false,
+        "source_lines_count": 82
+      },
+      "scores": {
+        "side_effect_score": 0,
+        "transform_score": 61,
+        "quiz_target_score": 16,
+        "validator_score": 17,
+        "good_name_score": 0,
+        "bad_name_score": 1
+      },
+      "verdict": "MANUAL_REVIEW_MIXED",
+      "reasons": [
+        "Ha segnali trasformativi ma anche segnali da validatore/report.",
+        "Firma a 1 argomento: adattabile facilmente a quiz/payload."
+      ]
+    },
+    {
+      "motor_id": "scripts.rag_revisore_qualita_testuale_v35g.controlla_duplicati",
+      "path": "scripts/rag_revisore_qualita_testuale_v35g.py",
+      "function_name": "controlla_duplicati",
+      "lineno": 490,
+      "original_score": 16,
+      "top_capabilities": [
+        "quiz_explanation_quality",
+        "quiz_question_naturalness",
+        "strong_distractors"
+      ],
+      "signature": {
+        "exists": true,
+        "syntax_ok": true,
+        "args": [
+          "records"
+        ],
+        "args_count": 1,
+        "has_return": true,
+        "return_count": 1,
+        "returns_constant_bool_or_none": false,
+        "source_lines_count": 107
+      },
+      "scores": {
+        "side_effect_score": 0,
+        "transform_score": 26,
+        "quiz_target_score": 11,
+        "validator_score": 19,
+        "good_name_score": 0,
+        "bad_name_score": 1
+      },
+      "verdict": "MANUAL_REVIEW_MIXED",
+      "reasons": [
+        "Ha segnali trasformativi ma anche segnali da validatore/report.",
+        "Firma a 1 argomento: adattabile facilmente a quiz/payload."
+      ]
+    },
+    {
+      "motor_id": "scripts.check_text_quality_ai.crea_prompt_revisione",
+      "path": "scripts/check_text_quality_ai.py",
+      "function_name": "crea_prompt_revisione",
+      "lineno": 79,
+      "original_score": 14,
+      "top_capabilities": [
+        "quiz_question_naturalness",
+        "grammar_accents_text_quality",
+        "quiz_explanation_quality",
+        "strong_distractors"
+      ],
+      "signature": {
+        "exists": true,
+        "syntax_ok": true,
+        "args": [
+          "domanda"
+        ],
+        "args_count": 1,
+        "has_return": true,
+        "return_count": 1,
+        "returns_constant_bool_or_none": false,
+        "source_lines_count": 37
+      },
+      "scores": {
+        "side_effect_score": 0,
+        "transform_score": 7,
+        "quiz_target_score": 6,
+        "validator_score": 3,
+        "good_name_score": 0,
+        "bad_name_score": 1
+      },
+      "verdict": "MANUAL_REVIEW_MIXED",
+      "reasons": [
+        "Ha segnali trasformativi ma anche segnali da validatore/report.",
+        "Firma a 1 argomento: adattabile facilmente a quiz/payload."
+      ]
+    },
+    {
+      "motor_id": "scripts.rag_revisore_qualita_testuale_v35g.riformula_spiegazione_test",
+      "path": "scripts/rag_revisore_qualita_testuale_v35g.py",
+      "function_name": "riformula_spiegazione_test",
+      "lineno": 231,
+      "original_score": 12,
+      "top_capabilities": [
+        "quiz_explanation_quality",
+        "grammar_accents_text_quality",
+        "quiz_question_naturalness",
+        "strong_distractors"
+      ],
+      "signature": {
+        "exists": true,
+        "syntax_ok": true,
+        "args": [
+          "title",
+          "correct",
+          "idx"
+        ],
+        "args_count": 3,
+        "has_return": true,
+        "return_count": 1,
+        "returns_constant_bool_or_none": false,
+        "source_lines_count": 13
+      },
+      "scores": {
+        "side_effect_score": 0,
+        "transform_score": 6,
+        "quiz_target_score": 4,
+        "validator_score": 1,
+        "good_name_score": 0,
+        "bad_name_score": 1
+      },
+      "verdict": "MANUAL_REVIEW_MIXED",
+      "reasons": [
+        "Ha segnali trasformativi ma anche segnali da validatore/report.",
+        "Firma a 2-3 argomenti: adattabile con wrapper controllato."
+      ]
+    }
+  ],
+  "side_effect_risk": [
+    {
+      "motor_id": "backend.main.generate_informatica_final_json",
+      "path": "backend/main.py",
+      "function_name": "generate_informatica_final_json",
+      "lineno": 2558,
+      "original_score": 19,
+      "top_capabilities": [
+        "quiz_question_naturalness"
+      ],
+      "signature": {
+        "exists": true,
+        "syntax_ok": true,
+        "args": [
+          "richiesta"
+        ],
+        "args_count": 1,
+        "has_return": true,
+        "return_count": 1,
+        "returns_constant_bool_or_none": false,
+        "source_lines_count": 163
+      },
+      "scores": {
+        "side_effect_score": 3,
+        "transform_score": 26,
+        "quiz_target_score": 54,
+        "validator_score": 14,
+        "good_name_score": 0,
+        "bad_name_score": 0
+      },
+      "verdict": "REVIEW_SIDE_EFFECT_RISK",
+      "reasons": [
+        "Possibili effetti collaterali: file, rete, subprocess, print o input.",
+        "Firma a 1 argomento: adattabile facilmente a quiz/payload."
+      ]
+    },
+    {
+      "motor_id": "scripts.estrai_motore_scientifico_da_migliorare.crea_file_lavoro",
+      "path": "scripts/estrai_motore_scientifico_da_migliorare.py",
+      "function_name": "crea_file_lavoro",
+      "lineno": 211,
+      "original_score": 53,
+      "top_capabilities": [
+        "strong_distractors",
+        "quiz_explanation_quality",
+        "quiz_question_naturalness",
+        "interactive_quiz_frontend"
+      ],
+      "signature": {
+        "exists": true,
+        "syntax_ok": true,
+        "args": [
+          "materia"
+        ],
+        "args_count": 1,
+        "has_return": false,
+        "return_count": 0,
+        "returns_constant_bool_or_none": false,
+        "source_lines_count": 118
+      },
+      "scores": {
+        "side_effect_score": 11,
+        "transform_score": 68,
+        "quiz_target_score": 31,
+        "validator_score": 4,
+        "good_name_score": 0,
+        "bad_name_score": 1
+      },
+      "verdict": "REVIEW_SIDE_EFFECT_RISK",
+      "reasons": [
+        "Possibili effetti collaterali: file, rete, subprocess, print o input.",
+        "Firma a 1 argomento: adattabile facilmente a quiz/payload."
+      ]
+    },
+    {
+      "motor_id": "scripts.mini_llm_v4003_production_suite.run_one",
+      "path": "scripts/mini_llm_v4003_production_suite.py",
+      "function_name": "run_one",
+      "lineno": 75,
+      "original_score": 10,
+      "top_capabilities": [
+        "quiz_explanation_quality",
+        "quiz_question_naturalness"
+      ],
+      "signature": {
+        "exists": true,
+        "syntax_ok": true,
+        "args": [
+          "doc"
+        ],
+        "args_count": 1,
+        "has_return": true,
+        "return_count": 3,
+        "returns_constant_bool_or_none": false,
+        "source_lines_count": 82
+      },
+      "scores": {
+        "side_effect_score": 3,
+        "transform_score": 14,
+        "quiz_target_score": 4,
+        "validator_score": 14,
+        "good_name_score": 0,
+        "bad_name_score": 0
+      },
+      "verdict": "REVIEW_SIDE_EFFECT_RISK",
+      "reasons": [
+        "Possibili effetti collaterali: file, rete, subprocess, print o input.",
+        "Firma a 1 argomento: adattabile facilmente a quiz/payload."
+      ]
+    },
+    {
+      "motor_id": "scripts.mini_llm_v4004_production_suite.run_one",
+      "path": "scripts/mini_llm_v4004_production_suite.py",
+      "function_name": "run_one",
+      "lineno": 75,
+      "original_score": 10,
+      "top_capabilities": [
+        "quiz_explanation_quality",
+        "quiz_question_naturalness"
+      ],
+      "signature": {
+        "exists": true,
+        "syntax_ok": true,
+        "args": [
+          "doc"
+        ],
+        "args_count": 1,
+        "has_return": true,
+        "return_count": 3,
+        "returns_constant_bool_or_none": false,
+        "source_lines_count": 82
+      },
+      "scores": {
+        "side_effect_score": 3,
+        "transform_score": 14,
+        "quiz_target_score": 4,
+        "validator_score": 14,
+        "good_name_score": 0,
+        "bad_name_score": 0
+      },
+      "verdict": "REVIEW_SIDE_EFFECT_RISK",
+      "reasons": [
+        "Possibili effetti collaterali: file, rete, subprocess, print o input.",
+        "Firma a 1 argomento: adattabile facilmente a quiz/payload."
+      ]
+    },
+    {
+      "motor_id": "scripts.mini_llm_v4005_production_suite.run_one",
+      "path": "scripts/mini_llm_v4005_production_suite.py",
+      "function_name": "run_one",
+      "lineno": 75,
+      "original_score": 10,
+      "top_capabilities": [
+        "quiz_explanation_quality",
+        "quiz_question_naturalness"
+      ],
+      "signature": {
+        "exists": true,
+        "syntax_ok": true,
+        "args": [
+          "doc"
+        ],
+        "args_count": 1,
+        "has_return": true,
+        "return_count": 3,
+        "returns_constant_bool_or_none": false,
+        "source_lines_count": 82
+      },
+      "scores": {
+        "side_effect_score": 3,
+        "transform_score": 14,
+        "quiz_target_score": 4,
+        "validator_score": 14,
+        "good_name_score": 0,
+        "bad_name_score": 0
+      },
+      "verdict": "REVIEW_SIDE_EFFECT_RISK",
+      "reasons": [
+        "Possibili effetti collaterali: file, rete, subprocess, print o input.",
+        "Firma a 1 argomento: adattabile facilmente a quiz/payload."
+      ]
+    }
+  ],
+  "validator_or_report_only": [
+    {
+      "motor_id": "scripts.check_duplicates_base.controlla_opzioni_duplicate",
+      "path": "scripts/check_duplicates_base.py",
+      "function_name": "controlla_opzioni_duplicate",
+      "lineno": 90,
+      "original_score": 14,
+      "top_capabilities": [
+        "strong_distractors",
+        "quiz_question_naturalness"
+      ],
+      "signature": {
+        "exists": true,
+        "syntax_ok": true,
+        "args": [
+          "domanda"
+        ],
+        "args_count": 1,
+        "has_return": true,
+        "return_count": 2,
+        "returns_constant_bool_or_none": true,
+        "source_lines_count": 16
+      },
+      "scores": {
+        "side_effect_score": 0,
+        "transform_score": 17,
+        "quiz_target_score": 14,
+        "validator_score": 5,
+        "good_name_score": 0,
+        "bad_name_score": 1
+      },
+      "verdict": "VALIDATOR_OR_REPORT_ONLY",
+      "reasons": [
+        "Sembra più validatore/report che motore trasformativo.",
+        "Firma a 1 argomento: adattabile facilmente a quiz/payload."
+      ]
+    },
+    {
+      "motor_id": "scripts.rag_revisore_naturalezza_antikeyword_v35i.improve_output",
+      "path": "scripts/rag_revisore_naturalezza_antikeyword_v35i.py",
+      "function_name": "improve_output",
+      "lineno": 386,
+      "original_score": 10,
+      "top_capabilities": [
+        "quiz_question_naturalness"
+      ],
+      "signature": {
+        "exists": true,
+        "syntax_ok": true,
+        "args": [
+          "data",
+          "raw"
+        ],
+        "args_count": 2,
+        "has_return": true,
+        "return_count": 1,
+        "returns_constant_bool_or_none": false,
+        "source_lines_count": 35
+      },
+      "scores": {
+        "side_effect_score": 0,
+        "transform_score": 1,
+        "quiz_target_score": 0,
+        "validator_score": 2,
+        "good_name_score": 1,
+        "bad_name_score": 0
+      },
+      "verdict": "VALIDATOR_OR_REPORT_ONLY",
+      "reasons": [
+        "Sembra più validatore/report che motore trasformativo.",
+        "Firma a 2-3 argomenti: adattabile con wrapper controllato."
+      ]
+    },
+    {
+      "motor_id": "scripts.rag_ocr_server_locale.analizza_testo",
+      "path": "scripts/rag_ocr_server_locale.py",
+      "function_name": "analizza_testo",
+      "lineno": 287,
+      "original_score": 8,
+      "top_capabilities": [
+        "grammar_accents_text_quality",
+        "strong_distractors"
+      ],
+      "signature": {
+        "exists": true,
+        "syntax_ok": true,
+        "args": [
+          "testo"
+        ],
+        "args_count": 1,
+        "has_return": true,
+        "return_count": 1,
+        "returns_constant_bool_or_none": false,
+        "source_lines_count": 30
+      },
+      "scores": {
+        "side_effect_score": 0,
+        "transform_score": 1,
+        "quiz_target_score": 0,
+        "validator_score": 0,
+        "good_name_score": 0,
+        "bad_name_score": 1
+      },
+      "verdict": "VALIDATOR_OR_REPORT_ONLY",
+      "reasons": [
+        "Sembra più validatore/report che motore trasformativo.",
+        "Firma a 1 argomento: adattabile facilmente a quiz/payload."
+      ]
+    }
+  ],
+  "low_confidence": [
+    {
+      "motor_id": "scripts.rag_revisore_accordo_pronomi_v35j.improve_study",
+      "path": "scripts/rag_revisore_accordo_pronomi_v35j.py",
+      "function_name": "improve_study",
+      "lineno": 231,
+      "original_score": 13,
+      "top_capabilities": [
+        "quiz_explanation_quality",
+        "quiz_question_naturalness",
+        "grammar_accents_text_quality"
+      ],
+      "signature": {
+        "exists": true,
+        "syntax_ok": true,
+        "args": [
+          "data"
+        ],
+        "args_count": 1,
+        "has_return": false,
+        "return_count": 0,
+        "returns_constant_bool_or_none": false,
+        "source_lines_count": 24
+      },
+      "scores": {
+        "side_effect_score": 0,
+        "transform_score": 11,
+        "quiz_target_score": 5,
+        "validator_score": 0,
+        "good_name_score": 0,
+        "bad_name_score": 0
+      },
+      "verdict": "LOW_CONFIDENCE",
+      "reasons": [
+        "Compatibile solo debolmente: servono ispezione o adapter manuale.",
+        "Firma a 1 argomento: adattabile facilmente a quiz/payload."
+      ]
+    },
+    {
+      "motor_id": "scripts.rag_genera_output_da_kb_clean_v34e.crea_domande_studio",
+      "path": "scripts/rag_genera_output_da_kb_clean_v34e.py",
+      "function_name": "crea_domande_studio",
+      "lineno": 467,
+      "original_score": 8,
+      "top_capabilities": [
+        "quiz_explanation_quality",
+        "quiz_question_naturalness",
+        "grammar_accents_text_quality"
+      ],
+      "signature": {
+        "exists": true,
+        "syntax_ok": true,
+        "args": [
+          "concepts",
+          "numero"
+        ],
+        "args_count": 2,
+        "has_return": true,
+        "return_count": 1,
+        "returns_constant_bool_or_none": false,
+        "source_lines_count": 29
+      },
+      "scores": {
+        "side_effect_score": 0,
+        "transform_score": 8,
+        "quiz_target_score": 3,
+        "validator_score": 0,
+        "good_name_score": 0,
+        "bad_name_score": 0
+      },
+      "verdict": "LOW_CONFIDENCE",
+      "reasons": [
+        "Compatibile solo debolmente: servono ispezione o adapter manuale.",
+        "Firma a 2-3 argomenti: adattabile con wrapper controllato."
+      ]
+    },
+    {
+      "motor_id": "scripts.rag_quality_gate_kb_v34d.rimuovi_prefissi_meta",
+      "path": "scripts/rag_quality_gate_kb_v34d.py",
+      "function_name": "rimuovi_prefissi_meta",
+      "lineno": 101,
+      "original_score": 12,
+      "top_capabilities": [
+        "quiz_explanation_quality",
+        "interactive_quiz_frontend",
+        "strong_distractors",
+        "grammar_accents_text_quality",
+        "quiz_question_naturalness"
+      ],
+      "signature": {
+        "exists": true,
+        "syntax_ok": true,
+        "args": [
+          "value"
+        ],
+        "args_count": 1,
+        "has_return": true,
+        "return_count": 2,
+        "returns_constant_bool_or_none": false,
+        "source_lines_count": 18
+      },
+      "scores": {
+        "side_effect_score": 0,
+        "transform_score": 7,
+        "quiz_target_score": 3,
+        "validator_score": 0,
+        "good_name_score": 0,
+        "bad_name_score": 0
+      },
+      "verdict": "LOW_CONFIDENCE",
+      "reasons": [
+        "Compatibile solo debolmente: servono ispezione o adapter manuale.",
+        "Firma a 1 argomento: adattabile facilmente a quiz/payload."
+      ]
+    },
+    {
+      "motor_id": "scripts.rag_revisore_accordo_pronomi_v35j.clean_base",
+      "path": "scripts/rag_revisore_accordo_pronomi_v35j.py",
+      "function_name": "clean_base",
+      "lineno": 135,
+      "original_score": 10,
+      "top_capabilities": [
+        "grammar_accents_text_quality",
+        "quiz_explanation_quality",
+        "quiz_question_naturalness",
+        "strong_distractors"
+      ],
+      "signature": {
+        "exists": true,
+        "syntax_ok": true,
+        "args": [
+          "value"
+        ],
+        "args_count": 1,
+        "has_return": true,
+        "return_count": 1,
+        "returns_constant_bool_or_none": false,
+        "source_lines_count": 32
+      },
+      "scores": {
+        "side_effect_score": 0,
+        "transform_score": 8,
+        "quiz_target_score": 2,
+        "validator_score": 0,
+        "good_name_score": 1,
+        "bad_name_score": 0
+      },
+      "verdict": "LOW_CONFIDENCE",
+      "reasons": [
+        "Compatibile solo debolmente: servono ispezione o adapter manuale.",
+        "Firma a 1 argomento: adattabile facilmente a quiz/payload."
+      ]
+    },
+    {
+      "motor_id": "backend.motori_scrittura.q52_build_answer_guide",
+      "path": "backend/motori_scrittura.py",
+      "function_name": "q52_build_answer_guide",
+      "lineno": 5381,
+      "original_score": 8,
+      "top_capabilities": [
+        "quiz_explanation_quality"
+      ],
+      "signature": {
+        "exists": true,
+        "syntax_ok": true,
+        "args": [
+          "fact",
+          "fact_type"
+        ],
+        "args_count": 2,
+        "has_return": true,
+        "return_count": 6,
+        "returns_constant_bool_or_none": false,
+        "source_lines_count": 35
+      },
+      "scores": {
+        "side_effect_score": 0,
+        "transform_score": 13,
+        "quiz_target_score": 0,
+        "validator_score": 0,
+        "good_name_score": 0,
+        "bad_name_score": 0
+      },
+      "verdict": "LOW_CONFIDENCE",
+      "reasons": [
+        "Compatibile solo debolmente: servono ispezione o adapter manuale.",
+        "Firma a 2-3 argomenti: adattabile con wrapper controllato."
+      ]
+    },
+    {
+      "motor_id": "scripts.rag_ponte_documenti_lunghi_catena_v35_v2a14.command_for",
+      "path": "scripts/rag_ponte_documenti_lunghi_catena_v35_v2a14.py",
+      "function_name": "command_for",
+      "lineno": 48,
+      "original_score": 10,
+      "top_capabilities": [
+        "quiz_question_naturalness"
+      ],
+      "signature": {
+        "exists": true,
+        "syntax_ok": true,
+        "args": [
+          "script"
+        ],
+        "args_count": 1,
+        "has_return": true,
+        "return_count": 11,
+        "returns_constant_bool_or_none": false,
+        "source_lines_count": 110
+      },
+      "scores": {
+        "side_effect_score": 0,
+        "transform_score": 11,
+        "quiz_target_score": 0,
+        "validator_score": 2,
+        "good_name_score": 0,
+        "bad_name_score": 0
+      },
+      "verdict": "LOW_CONFIDENCE",
+      "reasons": [
+        "Compatibile solo debolmente: servono ispezione o adapter manuale.",
+        "Firma a 1 argomento: adattabile facilmente a quiz/payload."
+      ]
+    }
+  ],
+  "rejected": [],
+  "recommended_next_phase": {
+    "phase": "5.9.7",
+    "action": "Eseguire test runtime solo sui candidati COMPAT_TEST_READY, con wrapper e payload controllato."
+  },
+  "notes": [
+    "Diagnostico statico: non importa né esegue i candidati.",
+    "Serve a evitare di lanciare script con effetti collaterali.",
+    "Solo COMPAT_TEST_READY passa alla fase runtime."
+  ]
+}
