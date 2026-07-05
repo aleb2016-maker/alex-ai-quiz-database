@@ -1,0 +1,6561 @@
+{
+  "report_name": "phase5_9_10_quality_capability_matrix_v1",
+  "status": "PASS_DIAGNOSTIC",
+  "registry_motors_count": 10,
+  "capabilities_count": 32,
+  "counts": {
+    "CONNECTED_IN_REGISTRY": 10,
+    "EXISTS_NEEDS_ADAPTER_OR_REVIEW": 21,
+    "TEST_OR_VALIDATOR_ONLY": 1
+  },
+  "rows": [
+    {
+      "area": "qualita_testuale",
+      "capability": "grammatica_italiana_corretta",
+      "status": "CONNECTED_IN_REGISTRY",
+      "registry_hits": [
+        {
+          "motor_id": "backend.main.pulisci_qualita_linguistica_quiz",
+          "adapter_name": "dict_test_quiz",
+          "target_kind": "quiz",
+          "matched_keywords": [
+            "qualita_linguistica"
+          ]
+        }
+      ],
+      "source_hits": [
+        {
+          "path": "scripts/verifica_phase5_9_10_quality_capability_matrix_v1.py",
+          "kind": "test_or_diagnostic",
+          "matched_keywords": [
+            "controlla_lingua",
+            "frasi complete",
+            "grammatica",
+            "qualita_linguistica"
+          ],
+          "score": 4
+        },
+        {
+          "path": "scripts/verifica_rag_revisore_qualita_testuale_v35g.py",
+          "kind": "test_or_diagnostic",
+          "matched_keywords": [
+            "frasi complete",
+            "grammatica"
+          ],
+          "score": 2
+        },
+        {
+          "path": "scripts/installa_rag_adapter_quiz_ufficiale_v43.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "controlla_lingua",
+            "qualita_linguistica"
+          ],
+          "score": 2
+        },
+        {
+          "path": "scripts/rag_adapter_quiz_ufficiale_v43.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "controlla_lingua",
+            "qualita_linguistica"
+          ],
+          "score": 2
+        },
+        {
+          "path": "scripts/valida_mini_llm_real_quality_gate_v392.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "frasi complete",
+            "grammatica"
+          ],
+          "score": 2
+        },
+        {
+          "path": "scripts/motore_qualita_logica_visiva_base.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "controlla_lingua",
+            "qualita_linguistica"
+          ],
+          "score": 2
+        },
+        {
+          "path": "scripts/motore_qualita_generale.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "controlla_lingua",
+            "qualita_linguistica"
+          ],
+          "score": 2
+        },
+        {
+          "path": "scripts/rag_revisore_qualita_testuale_v35g.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "frasi complete",
+            "grammatica"
+          ],
+          "score": 2
+        },
+        {
+          "path": "backend/main_backup_prima_regole_tcp_finali.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "qualita_linguistica"
+          ],
+          "score": 1
+        },
+        {
+          "path": "backend/test_legacy_quality_motor_registry_v1.py",
+          "kind": "test_or_diagnostic",
+          "matched_keywords": [
+            "qualita_linguistica"
+          ],
+          "score": 1
+        },
+        {
+          "path": "backend/main_backup_fix_informatica_finale_sicura.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "qualita_linguistica"
+          ],
+          "score": 1
+        },
+        {
+          "path": "backend/legacy_quality_motor_registry_v1.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "qualita_linguistica"
+          ],
+          "score": 1
+        },
+        {
+          "path": "backend/main_backup_prima_distrattori_omogenei.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "grammatica"
+          ],
+          "score": 1
+        },
+        {
+          "path": "backend/main_backup_fix_tecnico_informatica.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "qualita_linguistica"
+          ],
+          "score": 1
+        },
+        {
+          "path": "backend/main_backup_prima_filtro_tcp.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "qualita_linguistica"
+          ],
+          "score": 1
+        },
+        {
+          "path": "backend/main_backup_fix_tcp_flow_control.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "qualita_linguistica"
+          ],
+          "score": 1
+        },
+        {
+          "path": "backend/phase5_live_quality_bridge_v1.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "qualita_linguistica"
+          ],
+          "score": 1
+        },
+        {
+          "path": "backend/main_backup_prima_singola_diretta_batch.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "qualita_linguistica"
+          ],
+          "score": 1
+        },
+        {
+          "path": "backend/main_backup_fix_timeout_finale_informatica.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "qualita_linguistica"
+          ],
+          "score": 1
+        },
+        {
+          "path": "backend/main_backup_informatica_safe_topics.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "qualita_linguistica"
+          ],
+          "score": 1
+        }
+      ],
+      "keywords": [
+        "grammatica",
+        "qualita_linguistica",
+        "controlla_lingua",
+        "frasi complete"
+      ]
+    },
+    {
+      "area": "qualita_testuale",
+      "capability": "accenti_corretti",
+      "status": "EXISTS_NEEDS_ADAPTER_OR_REVIEW",
+      "registry_hits": [],
+      "source_hits": [
+        {
+          "path": "scripts/verifica_phase5_9_10_quality_capability_matrix_v1.py",
+          "kind": "test_or_diagnostic",
+          "matched_keywords": [
+            "accent",
+            "cioè",
+            "così",
+            "già",
+            "perchè",
+            "perché",
+            "però",
+            "più",
+            "può",
+            "qual e",
+            "qual è"
+          ],
+          "score": 11
+        },
+        {
+          "path": "scripts/rag_lucidatore_linguistico_universale_v35m.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "accent",
+            "cioè",
+            "così",
+            "già",
+            "perché",
+            "però",
+            "più",
+            "può",
+            "qual e",
+            "qual è"
+          ],
+          "score": 10
+        },
+        {
+          "path": "scripts/rag_revisore_qualita_testuale_v35g.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "accent",
+            "cioè",
+            "così",
+            "già",
+            "perché",
+            "però",
+            "più",
+            "può",
+            "qual e",
+            "qual è"
+          ],
+          "score": 10
+        },
+        {
+          "path": "backend/motori_scrittura.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "accent",
+            "così",
+            "già",
+            "perchè",
+            "perché",
+            "però",
+            "più",
+            "può",
+            "qual è"
+          ],
+          "score": 9
+        },
+        {
+          "path": "demo-rag/long-document-rag-v42-final-fix.js",
+          "kind": "frontend_or_runtime_web",
+          "matched_keywords": [
+            "accent",
+            "cioè",
+            "così",
+            "già",
+            "perché",
+            "però",
+            "più",
+            "può",
+            "qual è"
+          ],
+          "score": 9
+        },
+        {
+          "path": "scripts/create_batch_100.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "cioè",
+            "così",
+            "già",
+            "perché",
+            "più",
+            "può",
+            "qual e",
+            "qual è"
+          ],
+          "score": 8
+        },
+        {
+          "path": "scripts/qualita_linguistica.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "accent",
+            "cioè",
+            "così",
+            "già",
+            "perché",
+            "più",
+            "può",
+            "qual è"
+          ],
+          "score": 8
+        },
+        {
+          "path": "scripts/patch_phase5_quality_summary_cards_v1.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "accent",
+            "così",
+            "già",
+            "perchè",
+            "perché",
+            "però",
+            "più",
+            "può"
+          ],
+          "score": 8
+        },
+        {
+          "path": "scripts/mappa_phase5_9_4_existing_quiz_quality_motors_v1.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "accent",
+            "già",
+            "perchè",
+            "perché",
+            "più",
+            "qual e",
+            "qual è"
+          ],
+          "score": 7
+        },
+        {
+          "path": "demo-rag/universal-document-learning-engine.js",
+          "kind": "frontend_or_runtime_web",
+          "matched_keywords": [
+            "così",
+            "già",
+            "perché",
+            "però",
+            "più",
+            "può",
+            "qual è"
+          ],
+          "score": 7
+        },
+        {
+          "path": "scripts/certify_engine_logica_block_2.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "cioè",
+            "già",
+            "perché",
+            "però",
+            "più",
+            "può"
+          ],
+          "score": 6
+        },
+        {
+          "path": "scripts/migliora_inglese_primo_blocco_distrattori_forti.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "cioè",
+            "già",
+            "perché",
+            "più",
+            "può",
+            "qual è"
+          ],
+          "score": 6
+        },
+        {
+          "path": "backend/phase5_quiz_true_distractor_repair_v1.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "già",
+            "perché",
+            "però",
+            "più",
+            "può"
+          ],
+          "score": 5
+        },
+        {
+          "path": "backend/phase5_universal_quiz_quality_adapter_v1.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "perchè",
+            "perché",
+            "più",
+            "qual e",
+            "qual è"
+          ],
+          "score": 5
+        },
+        {
+          "path": "scripts/fix_informatica_red_cache.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "cioè",
+            "perché",
+            "però",
+            "più",
+            "può"
+          ],
+          "score": 5
+        },
+        {
+          "path": "scripts/migliora_inglese_quarto_blocco_distrattori_forti.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "così",
+            "già",
+            "più",
+            "può",
+            "qual è"
+          ],
+          "score": 5
+        },
+        {
+          "path": "scripts/improve_ai_answer_options.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "così",
+            "già",
+            "perché",
+            "più",
+            "può"
+          ],
+          "score": 5
+        },
+        {
+          "path": "scripts/add_batch_200_logica.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "cioè",
+            "così",
+            "però",
+            "più",
+            "può"
+          ],
+          "score": 5
+        },
+        {
+          "path": "scripts/migliora_ai_secondo_blocco_distrattori_forti.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "così",
+            "già",
+            "perché",
+            "più",
+            "può"
+          ],
+          "score": 5
+        },
+        {
+          "path": "scripts/installa_rag_adapter_quiz_ufficiale_v43.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "così",
+            "già",
+            "perché",
+            "più",
+            "può"
+          ],
+          "score": 5
+        }
+      ],
+      "keywords": [
+        "perché",
+        "perchè",
+        "può",
+        "più",
+        "già",
+        "cioè",
+        "così",
+        "però",
+        "qual è",
+        "qual e",
+        "accent"
+      ]
+    },
+    {
+      "area": "qualita_testuale",
+      "capability": "apostrofi_corretti",
+      "status": "EXISTS_NEEDS_ADAPTER_OR_REVIEW",
+      "registry_hits": [],
+      "source_hits": [
+        {
+          "path": "scripts/verifica_phase5_9_10_quality_capability_matrix_v1.py",
+          "kind": "test_or_diagnostic",
+          "matched_keywords": [
+            "apostrof",
+            "d'accordo",
+            "l’utente",
+            "un'idea",
+            "un’informazione"
+          ],
+          "score": 5
+        },
+        {
+          "path": "scripts/rag_lucidatore_linguistico_universale_v35m.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "apostrof",
+            "d'accordo",
+            "un'idea"
+          ],
+          "score": 3
+        },
+        {
+          "path": "scripts/rag_revisore_qualita_testuale_v35g.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "apostrof",
+            "d'accordo",
+            "un'idea"
+          ],
+          "score": 3
+        },
+        {
+          "path": "backend/motori_scrittura.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "apostrof"
+          ],
+          "score": 1
+        },
+        {
+          "path": "scripts/rag_genera_quiz_json.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "un'idea"
+          ],
+          "score": 1
+        },
+        {
+          "path": "scripts/verifica_rag_revisore_qualita_testuale_v35g.py",
+          "kind": "test_or_diagnostic",
+          "matched_keywords": [
+            "apostrof"
+          ],
+          "score": 1
+        },
+        {
+          "path": "scripts/mappa_phase5_9_4_existing_quiz_quality_motors_v1.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "apostrof"
+          ],
+          "score": 1
+        },
+        {
+          "path": "scripts/qualita_linguistica.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "apostrof"
+          ],
+          "score": 1
+        },
+        {
+          "path": "scripts/patch_phase5_quality_summary_cards_v1.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "apostrof"
+          ],
+          "score": 1
+        },
+        {
+          "path": "scripts/rag_cleaner_finale_visibile_v35k.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "un'idea"
+          ],
+          "score": 1
+        },
+        {
+          "path": "scripts/rag_revisore_naturalezza_antikeyword_v35i.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "un'idea"
+          ],
+          "score": 1
+        },
+        {
+          "path": "scripts/rag_ripara_distrattori.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "l’utente"
+          ],
+          "score": 1
+        },
+        {
+          "path": "scripts/trova_motori_qualita_esistenti_v1.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "apostrof"
+          ],
+          "score": 1
+        },
+        {
+          "path": "scripts/rag_revisore_accordo_pronomi_v35j.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "un'idea"
+          ],
+          "score": 1
+        }
+      ],
+      "keywords": [
+        "apostrof",
+        "un’informazione",
+        "un'idea",
+        "l’utente",
+        "d'accordo"
+      ]
+    },
+    {
+      "area": "qualita_testuale",
+      "capability": "punteggiatura_spazi",
+      "status": "EXISTS_NEEDS_ADAPTER_OR_REVIEW",
+      "registry_hits": [],
+      "source_hits": [
+        {
+          "path": "scripts/verifica_phase5_9_10_quality_capability_matrix_v1.py",
+          "kind": "test_or_diagnostic",
+          "matched_keywords": [
+            "prima/dopo punteggiatura",
+            "punteggiatura",
+            "spazi",
+            "spazi corretti"
+          ],
+          "score": 4
+        },
+        {
+          "path": "backend/motori_scrittura.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "punteggiatura",
+            "spazi"
+          ],
+          "score": 2
+        },
+        {
+          "path": "scripts/rag_micro_rifinitura_universale_v35l.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "punteggiatura",
+            "spazi"
+          ],
+          "score": 2
+        },
+        {
+          "path": "scripts/mappa_phase5_9_4_existing_quiz_quality_motors_v1.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "punteggiatura",
+            "spazi"
+          ],
+          "score": 2
+        },
+        {
+          "path": "scripts/corregge_linguistica_matematica_primo_blocco.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "punteggiatura",
+            "spazi"
+          ],
+          "score": 2
+        },
+        {
+          "path": "scripts/qualita_linguistica.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "punteggiatura",
+            "spazi"
+          ],
+          "score": 2
+        },
+        {
+          "path": "scripts/patch_phase5_quality_summary_cards_v1.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "punteggiatura",
+            "spazi"
+          ],
+          "score": 2
+        },
+        {
+          "path": "scripts/rag_genera_output_da_kb_clean_v34e.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "punteggiatura",
+            "spazi"
+          ],
+          "score": 2
+        },
+        {
+          "path": "scripts/rag_revisore_naturalezza_antikeyword_v35i.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "punteggiatura",
+            "spazi"
+          ],
+          "score": 2
+        },
+        {
+          "path": "scripts/rag_cleaner_finale_universale_v35k.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "punteggiatura",
+            "spazi"
+          ],
+          "score": 2
+        },
+        {
+          "path": "scripts/corregge_linguistica_inglese_quarto_blocco.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "punteggiatura",
+            "spazi"
+          ],
+          "score": 2
+        },
+        {
+          "path": "scripts/rag_lucidatore_linguistico_universale_v35m.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "punteggiatura",
+            "spazi"
+          ],
+          "score": 2
+        },
+        {
+          "path": "scripts/rag_revisore_qualita_testuale_v35g.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "punteggiatura",
+            "spazi"
+          ],
+          "score": 2
+        },
+        {
+          "path": "scripts/trova_motori_qualita_esistenti_v1.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "punteggiatura",
+            "spazi"
+          ],
+          "score": 2
+        },
+        {
+          "path": "scripts/pipeline_formazione_completa.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "punteggiatura",
+            "spazi"
+          ],
+          "score": 2
+        },
+        {
+          "path": "scripts/rag_ocr_server_locale.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "punteggiatura",
+            "spazi"
+          ],
+          "score": 2
+        },
+        {
+          "path": "backend/main_backup_fix_informatica_finale_sicura.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "spazi"
+          ],
+          "score": 1
+        },
+        {
+          "path": "backend/main_backup_fix_tecnico_informatica.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "spazi"
+          ],
+          "score": 1
+        },
+        {
+          "path": "backend/main_backup_fix_tcp_flow_control.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "spazi"
+          ],
+          "score": 1
+        },
+        {
+          "path": "backend/main_backup_fix_timeout_finale_informatica.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "spazi"
+          ],
+          "score": 1
+        }
+      ],
+      "keywords": [
+        "punteggiatura",
+        "spazi",
+        "spazi corretti",
+        "prima/dopo punteggiatura"
+      ]
+    },
+    {
+      "area": "qualita_testuale",
+      "capability": "frasi_complete_non_spezzate",
+      "status": "EXISTS_NEEDS_ADAPTER_OR_REVIEW",
+      "registry_hits": [],
+      "source_hits": [
+        {
+          "path": "scripts/verifica_phase5_9_10_quality_capability_matrix_v1.py",
+          "kind": "test_or_diagnostic",
+          "matched_keywords": [
+            "finali sospetti",
+            "finiscono con",
+            "frasi complete",
+            "frasi spezzate",
+            "non terminate"
+          ],
+          "score": 5
+        },
+        {
+          "path": "scripts/rag_revisore_qualita_testuale_v35g.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "frasi complete",
+            "frasi spezzate",
+            "non terminate"
+          ],
+          "score": 3
+        },
+        {
+          "path": "scripts/verifica_rag_revisore_qualita_testuale_v35g.py",
+          "kind": "test_or_diagnostic",
+          "matched_keywords": [
+            "frasi complete"
+          ],
+          "score": 1
+        },
+        {
+          "path": "scripts/test_modelli_ollama_riassunto_v2a35.py",
+          "kind": "test_or_diagnostic",
+          "matched_keywords": [
+            "frasi complete"
+          ],
+          "score": 1
+        },
+        {
+          "path": "scripts/rag_cleaner_finale_universale_v35k.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "finali sospetti"
+          ],
+          "score": 1
+        },
+        {
+          "path": "scripts/valida_mini_llm_real_quality_gate_v392.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "frasi complete"
+          ],
+          "score": 1
+        },
+        {
+          "path": "scripts/test_top2_ollama_universale_v2a35b.py",
+          "kind": "test_or_diagnostic",
+          "matched_keywords": [
+            "frasi complete"
+          ],
+          "score": 1
+        }
+      ],
+      "keywords": [
+        "frasi complete",
+        "frasi spezzate",
+        "non terminate",
+        "finali sospetti",
+        "finiscono con"
+      ]
+    },
+    {
+      "area": "qualita_testuale",
+      "capability": "no_riempitivi_generico_fallback",
+      "status": "CONNECTED_IN_REGISTRY",
+      "registry_hits": [
+        {
+          "motor_id": "scripts.rag_motore_test_riutilizzabile_v35d.refine_output",
+          "adapter_name": "summary_dict",
+          "target_kind": "summary",
+          "matched_keywords": [
+            "test"
+          ]
+        },
+        {
+          "motor_id": "scripts.rag_revisore_qualita_testuale_v35g.refine_output",
+          "adapter_name": "summary_dict",
+          "target_kind": "summary",
+          "matched_keywords": [
+            "test"
+          ]
+        },
+        {
+          "motor_id": "scripts.rag_revisore_qualita_testuale_v35g.refine_study",
+          "adapter_name": "phase5_full_output",
+          "target_kind": "full_output",
+          "matched_keywords": [
+            "test"
+          ]
+        },
+        {
+          "motor_id": "backend.main.pulisci_qualita_linguistica_quiz",
+          "adapter_name": "dict_test_quiz",
+          "target_kind": "quiz",
+          "matched_keywords": [
+            "test"
+          ]
+        },
+        {
+          "motor_id": "scripts.rag_motore_didattico_riutilizzabile_v35c.refine_tests",
+          "adapter_name": "legacy_answers_dict",
+          "target_kind": "quiz",
+          "matched_keywords": [
+            "test"
+          ]
+        }
+      ],
+      "source_hits": [
+        {
+          "path": "scripts/verifica_phase5_9_10_quality_capability_matrix_v1.py",
+          "kind": "test_or_diagnostic",
+          "matched_keywords": [
+            "contenuti generati",
+            "demo",
+            "documento analizzato",
+            "fallback",
+            "generico",
+            "riempitive",
+            "test"
+          ],
+          "score": 7
+        },
+        {
+          "path": "scripts/rag_revisore_qualita_testuale_v35g.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "contenuti generati",
+            "documento analizzato",
+            "fallback",
+            "riempitive",
+            "test"
+          ],
+          "score": 5
+        },
+        {
+          "path": "backend/motori_scrittura.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "demo",
+            "fallback",
+            "generico",
+            "test"
+          ],
+          "score": 4
+        },
+        {
+          "path": "scripts/rag_motore_didattico_riutilizzabile_v35c.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "contenuti generati",
+            "documento analizzato",
+            "riempitive",
+            "test"
+          ],
+          "score": 4
+        },
+        {
+          "path": "scripts/verifica_rag_documenti_lunghi_v2a5_flusso_reale.py",
+          "kind": "test_or_diagnostic",
+          "matched_keywords": [
+            "demo",
+            "fallback",
+            "generico",
+            "test"
+          ],
+          "score": 4
+        },
+        {
+          "path": "scripts/trova_motori_qualita_esistenti_v1.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "demo",
+            "fallback",
+            "generico",
+            "test"
+          ],
+          "score": 4
+        },
+        {
+          "path": "scripts/verifica_rag_documenti_lunghi_v2a6_500_pagine_stabile.py",
+          "kind": "test_or_diagnostic",
+          "matched_keywords": [
+            "demo",
+            "fallback",
+            "generico",
+            "test"
+          ],
+          "score": 4
+        },
+        {
+          "path": "demo-rag/rag-app-aziendale-v2a8-ux.html",
+          "kind": "frontend_or_runtime_web",
+          "matched_keywords": [
+            "demo",
+            "fallback",
+            "generico",
+            "test"
+          ],
+          "score": 4
+        },
+        {
+          "path": "demo-rag/rag-app-aziendale-v2a12-dashboard.html",
+          "kind": "frontend_or_runtime_web",
+          "matched_keywords": [
+            "demo",
+            "fallback",
+            "generico",
+            "test"
+          ],
+          "score": 4
+        },
+        {
+          "path": "demo-rag/rag-app-aziendale-v2a11-ux-finale.html",
+          "kind": "frontend_or_runtime_web",
+          "matched_keywords": [
+            "demo",
+            "fallback",
+            "generico",
+            "test"
+          ],
+          "score": 4
+        },
+        {
+          "path": "demo-rag/browser-rag-engine.js",
+          "kind": "frontend_or_runtime_web",
+          "matched_keywords": [
+            "demo",
+            "fallback",
+            "generico",
+            "test"
+          ],
+          "score": 4
+        },
+        {
+          "path": "demo-rag/rag-app-aziendale.html",
+          "kind": "frontend_or_runtime_web",
+          "matched_keywords": [
+            "demo",
+            "fallback",
+            "generico",
+            "test"
+          ],
+          "score": 4
+        },
+        {
+          "path": "demo-rag/rag-app-aziendale-v2a9-output.html",
+          "kind": "frontend_or_runtime_web",
+          "matched_keywords": [
+            "demo",
+            "fallback",
+            "generico",
+            "test"
+          ],
+          "score": 4
+        },
+        {
+          "path": "demo-rag/rag-app-aziendale-v2a10-output-dinamici.html",
+          "kind": "frontend_or_runtime_web",
+          "matched_keywords": [
+            "demo",
+            "fallback",
+            "generico",
+            "test"
+          ],
+          "score": 4
+        },
+        {
+          "path": "backend/main_backup_prima_regole_tcp_finali.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "fallback",
+            "generico",
+            "test"
+          ],
+          "score": 3
+        },
+        {
+          "path": "backend/main_backup_fix_informatica_finale_sicura.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "fallback",
+            "generico",
+            "test"
+          ],
+          "score": 3
+        },
+        {
+          "path": "backend/main_backup_fix_tecnico_informatica.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "fallback",
+            "generico",
+            "test"
+          ],
+          "score": 3
+        },
+        {
+          "path": "backend/main_backup_prima_filtro_tcp.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "fallback",
+            "generico",
+            "test"
+          ],
+          "score": 3
+        },
+        {
+          "path": "backend/main_backup_fix_tcp_flow_control.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "fallback",
+            "generico",
+            "test"
+          ],
+          "score": 3
+        },
+        {
+          "path": "backend/main_backup_prima_singola_diretta_batch.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "fallback",
+            "generico",
+            "test"
+          ],
+          "score": 3
+        }
+      ],
+      "keywords": [
+        "riempitive",
+        "generico",
+        "documento analizzato",
+        "contenuti generati",
+        "fallback",
+        "demo",
+        "test"
+      ]
+    },
+    {
+      "area": "qualita_testuale",
+      "capability": "naturalezza_anti_keyword",
+      "status": "EXISTS_NEEDS_ADAPTER_OR_REVIEW",
+      "registry_hits": [],
+      "source_hits": [
+        {
+          "path": "scripts/rag_revisore_naturalezza_antikeyword_v35i.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "anti-keyword",
+            "antikeyword",
+            "frasi robotiche",
+            "keyword",
+            "naturalezza",
+            "valore didattico"
+          ],
+          "score": 6
+        },
+        {
+          "path": "scripts/verifica_phase5_9_10_quality_capability_matrix_v1.py",
+          "kind": "test_or_diagnostic",
+          "matched_keywords": [
+            "anti-keyword",
+            "antikeyword",
+            "frasi robotiche",
+            "keyword",
+            "naturalezza",
+            "valore didattico"
+          ],
+          "score": 6
+        },
+        {
+          "path": "scripts/applica_v35k_reale.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "anti-keyword",
+            "antikeyword",
+            "keyword",
+            "naturalezza"
+          ],
+          "score": 4
+        },
+        {
+          "path": "scripts/verifica_rag_revisore_naturalezza_antikeyword_v35i.py",
+          "kind": "test_or_diagnostic",
+          "matched_keywords": [
+            "anti-keyword",
+            "antikeyword",
+            "keyword",
+            "naturalezza"
+          ],
+          "score": 4
+        },
+        {
+          "path": "scripts/verifica_rag_revisore_accordo_pronomi_v35j.py",
+          "kind": "test_or_diagnostic",
+          "matched_keywords": [
+            "anti-keyword",
+            "antikeyword",
+            "keyword",
+            "naturalezza"
+          ],
+          "score": 4
+        },
+        {
+          "path": "demo-rag/test-selezionatore-output-v35h.html",
+          "kind": "frontend_or_runtime_web",
+          "matched_keywords": [
+            "anti-keyword",
+            "antikeyword",
+            "keyword",
+            "naturalezza"
+          ],
+          "score": 4
+        },
+        {
+          "path": "scripts/applica_v35k_universale.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "antikeyword",
+            "keyword",
+            "naturalezza"
+          ],
+          "score": 3
+        },
+        {
+          "path": "scripts/mappa_famiglie_versioni_motori_legacy_v1.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "antikeyword",
+            "keyword",
+            "naturalezza"
+          ],
+          "score": 3
+        },
+        {
+          "path": "scripts/rag_pipeline_unica_ufficiale.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "antikeyword",
+            "keyword",
+            "naturalezza"
+          ],
+          "score": 3
+        },
+        {
+          "path": "scripts/verifica_compatibilita_batch_motori_legacy_v1.py",
+          "kind": "test_or_diagnostic",
+          "matched_keywords": [
+            "antikeyword",
+            "keyword",
+            "naturalezza"
+          ],
+          "score": 3
+        },
+        {
+          "path": "scripts/rag_cleaner_finale_universale_v35k.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "antikeyword",
+            "keyword",
+            "naturalezza"
+          ],
+          "score": 3
+        },
+        {
+          "path": "scripts/rag_ponte_documenti_lunghi_catena_v35_v2a14.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "antikeyword",
+            "keyword",
+            "naturalezza"
+          ],
+          "score": 3
+        },
+        {
+          "path": "scripts/seleziona_motori_legacy_registry_ready_v1.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "antikeyword",
+            "keyword",
+            "naturalezza"
+          ],
+          "score": 3
+        },
+        {
+          "path": "backend/motori_scrittura.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "keyword",
+            "naturalezza"
+          ],
+          "score": 2
+        },
+        {
+          "path": "scripts/mappa_phase5_9_4_existing_quiz_quality_motors_v1.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "keyword",
+            "naturalezza"
+          ],
+          "score": 2
+        },
+        {
+          "path": "scripts/patch_output_builder_phase_v1.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "naturalezza"
+          ],
+          "score": 1
+        },
+        {
+          "path": "scripts/verifica_rag_documenti_lunghi_v2.py",
+          "kind": "test_or_diagnostic",
+          "matched_keywords": [
+            "keyword"
+          ],
+          "score": 1
+        },
+        {
+          "path": "scripts/motore_card_grafiche.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "keyword"
+          ],
+          "score": 1
+        },
+        {
+          "path": "scripts/filtra_legacy_quality_motor_candidates_v1.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "naturalezza"
+          ],
+          "score": 1
+        },
+        {
+          "path": "scripts/audit_effetti_premi_ai_its.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "keyword"
+          ],
+          "score": 1
+        }
+      ],
+      "keywords": [
+        "naturalezza",
+        "anti-keyword",
+        "antikeyword",
+        "frasi robotiche",
+        "keyword",
+        "valore didattico"
+      ]
+    },
+    {
+      "area": "qualita_testuale",
+      "capability": "accordo_grammaticale_pronomi",
+      "status": "CONNECTED_IN_REGISTRY",
+      "registry_hits": [
+        {
+          "motor_id": "scripts.rag_revisore_accordo_pronomi_v35j.improve_output",
+          "adapter_name": "summary_dict",
+          "target_kind": "summary",
+          "matched_keywords": [
+            "accordo",
+            "pronomi"
+          ]
+        }
+      ],
+      "source_hits": [
+        {
+          "path": "scripts/verifica_rag_revisore_accordo_pronomi_v35j.py",
+          "kind": "test_or_diagnostic",
+          "matched_keywords": [
+            "accordo",
+            "articoli",
+            "genere",
+            "numero",
+            "participi",
+            "pronomi"
+          ],
+          "score": 6
+        },
+        {
+          "path": "scripts/verifica_phase5_9_10_quality_capability_matrix_v1.py",
+          "kind": "test_or_diagnostic",
+          "matched_keywords": [
+            "accordo",
+            "articoli",
+            "genere",
+            "numero",
+            "participi",
+            "pronomi"
+          ],
+          "score": 6
+        },
+        {
+          "path": "scripts/rag_revisore_accordo_pronomi_v35j.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "accordo",
+            "articoli",
+            "genere",
+            "numero",
+            "participi",
+            "pronomi"
+          ],
+          "score": 6
+        },
+        {
+          "path": "scripts/rag_cleaner_finale_universale_v35k.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "accordo",
+            "genere",
+            "numero",
+            "participi",
+            "pronomi"
+          ],
+          "score": 5
+        },
+        {
+          "path": "scripts/create_batch_100.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "articoli",
+            "genere",
+            "numero",
+            "participi"
+          ],
+          "score": 4
+        },
+        {
+          "path": "scripts/rag_pipeline_unica_ufficiale.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "accordo",
+            "numero",
+            "pronomi"
+          ],
+          "score": 3
+        },
+        {
+          "path": "scripts/rag_ponte_documenti_lunghi_catena_v35_v2a14.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "accordo",
+            "numero",
+            "pronomi"
+          ],
+          "score": 3
+        },
+        {
+          "path": "backend/legacy_quality_motor_registry_v1.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "accordo",
+            "pronomi"
+          ],
+          "score": 2
+        },
+        {
+          "path": "scripts/applica_v35k_universale.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "accordo",
+            "pronomi"
+          ],
+          "score": 2
+        },
+        {
+          "path": "scripts/mappa_famiglie_versioni_motori_legacy_v1.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "accordo",
+            "pronomi"
+          ],
+          "score": 2
+        },
+        {
+          "path": "scripts/applica_v35k_reale.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "accordo",
+            "pronomi"
+          ],
+          "score": 2
+        },
+        {
+          "path": "scripts/filtra_legacy_quality_motor_candidates_v1.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "accordo",
+            "pronomi"
+          ],
+          "score": 2
+        },
+        {
+          "path": "scripts/fix_gate_universale_pagina_v35k.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "accordo",
+            "pronomi"
+          ],
+          "score": 2
+        },
+        {
+          "path": "scripts/certify_engine_informatica_block_2.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "genere",
+            "numero"
+          ],
+          "score": 2
+        },
+        {
+          "path": "scripts/add_batch_200_inglese.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "participi",
+            "pronomi"
+          ],
+          "score": 2
+        },
+        {
+          "path": "scripts/fix_batch_200_final_quality.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "numero",
+            "participi"
+          ],
+          "score": 2
+        },
+        {
+          "path": "scripts/verifica_compatibilita_batch_motori_legacy_v1.py",
+          "kind": "test_or_diagnostic",
+          "matched_keywords": [
+            "accordo",
+            "pronomi"
+          ],
+          "score": 2
+        },
+        {
+          "path": "scripts/improve_answer_options_100.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "genere",
+            "numero"
+          ],
+          "score": 2
+        },
+        {
+          "path": "scripts/patch_phase5_6_ready_safe_legacy_motors_v1.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "accordo",
+            "pronomi"
+          ],
+          "score": 2
+        },
+        {
+          "path": "scripts/migliora_ai_quinto_blocco_distrattori_forti.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "genere",
+            "numero"
+          ],
+          "score": 2
+        }
+      ],
+      "keywords": [
+        "accordo",
+        "genere",
+        "numero",
+        "articoli",
+        "participi",
+        "pronomi"
+      ]
+    },
+    {
+      "area": "qualita_testuale",
+      "capability": "correzione_frasi_non_finite_con_contesto",
+      "status": "EXISTS_NEEDS_ADAPTER_OR_REVIEW",
+      "registry_hits": [],
+      "source_hits": [
+        {
+          "path": "scripts/verifica_phase5_9_10_quality_capability_matrix_v1.py",
+          "kind": "test_or_diagnostic",
+          "matched_keywords": [
+            "contesto",
+            "frasi non finite",
+            "lettere invertite",
+            "sottocategorie",
+            "sottotema",
+            "tema"
+          ],
+          "score": 6
+        },
+        {
+          "path": "scripts/rag_completatore_linguistico_probabile_v35n.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "contesto",
+            "sottotema",
+            "tema"
+          ],
+          "score": 3
+        },
+        {
+          "path": "scripts/rag_contesto_semantico_universale_v35o.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "contesto",
+            "sottotema",
+            "tema"
+          ],
+          "score": 3
+        },
+        {
+          "path": "backend/main_backup_prima_regole_tcp_finali.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "contesto",
+            "tema"
+          ],
+          "score": 2
+        },
+        {
+          "path": "backend/main_backup_fix_informatica_finale_sicura.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "contesto",
+            "tema"
+          ],
+          "score": 2
+        },
+        {
+          "path": "backend/main_backup_prima_pulizia_linguistica.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "contesto",
+            "tema"
+          ],
+          "score": 2
+        },
+        {
+          "path": "backend/main_backup_prima_distrattori_omogenei.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "contesto",
+            "tema"
+          ],
+          "score": 2
+        },
+        {
+          "path": "backend/main_backup_fix_tecnico_informatica.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "contesto",
+            "tema"
+          ],
+          "score": 2
+        },
+        {
+          "path": "backend/main_backup_prima_filtro_tcp.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "contesto",
+            "tema"
+          ],
+          "score": 2
+        },
+        {
+          "path": "backend/main_backup_fix_tcp_flow_control.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "contesto",
+            "tema"
+          ],
+          "score": 2
+        },
+        {
+          "path": "backend/main_backup_prima_prompt_anti_ambiguita.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "contesto",
+            "tema"
+          ],
+          "score": 2
+        },
+        {
+          "path": "backend/main_backup_prima_singola_diretta_batch.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "contesto",
+            "tema"
+          ],
+          "score": 2
+        },
+        {
+          "path": "backend/main_backup_fix_timeout_finale_informatica.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "contesto",
+            "tema"
+          ],
+          "score": 2
+        },
+        {
+          "path": "backend/main_backup_informatica_safe_topics.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "contesto",
+            "tema"
+          ],
+          "score": 2
+        },
+        {
+          "path": "backend/motori_scrittura.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "contesto",
+            "tema"
+          ],
+          "score": 2
+        },
+        {
+          "path": "backend/main_backup_prima_batch_quiz.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "contesto",
+            "tema"
+          ],
+          "score": 2
+        },
+        {
+          "path": "backend/main_backup_endpoint_finale_informatica.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "contesto",
+            "tema"
+          ],
+          "score": 2
+        },
+        {
+          "path": "backend/main_backup_prima_batch_fallback.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "contesto",
+            "tema"
+          ],
+          "score": 2
+        },
+        {
+          "path": "backend/main_backup_prima_filtro_coerenza_database.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "contesto",
+            "tema"
+          ],
+          "score": 2
+        },
+        {
+          "path": "backend/main_backup_prima_forza_categoria_livello.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "contesto",
+            "tema"
+          ],
+          "score": 2
+        }
+      ],
+      "keywords": [
+        "frasi non finite",
+        "contesto",
+        "tema",
+        "sottotema",
+        "sottocategorie",
+        "lettere invertite"
+      ]
+    },
+    {
+      "area": "qualita_didattica",
+      "capability": "domande_studio_naturali_utili",
+      "status": "CONNECTED_IN_REGISTRY",
+      "registry_hits": [
+        {
+          "motor_id": "scripts.rag_motore_didattico_riutilizzabile_v35c.refine_study_questions",
+          "adapter_name": "cards_list",
+          "target_kind": "study",
+          "matched_keywords": [
+            "study_questions"
+          ]
+        }
+      ],
+      "source_hits": [
+        {
+          "path": "scripts/verifica_phase5_9_10_quality_capability_matrix_v1.py",
+          "kind": "test_or_diagnostic",
+          "matched_keywords": [
+            "answer_guide",
+            "domande studio",
+            "naturali",
+            "ripassare",
+            "study_questions"
+          ],
+          "score": 5
+        },
+        {
+          "path": "backend/motori_scrittura.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "answer_guide",
+            "domande studio",
+            "naturali",
+            "study_questions"
+          ],
+          "score": 4
+        },
+        {
+          "path": "scripts/patch_phase5_study_quiz_v1.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "answer_guide",
+            "domande studio",
+            "naturali",
+            "study_questions"
+          ],
+          "score": 4
+        },
+        {
+          "path": "scripts/verifica_rag_selezionatore_motori_riutilizzabile_v35f.py",
+          "kind": "test_or_diagnostic",
+          "matched_keywords": [
+            "domande studio",
+            "naturali",
+            "ripassare"
+          ],
+          "score": 3
+        },
+        {
+          "path": "scripts/patch_output_builder_phase_v1.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "answer_guide",
+            "domande studio",
+            "study_questions"
+          ],
+          "score": 3
+        },
+        {
+          "path": "scripts/rag_motore_didattico_riutilizzabile_v35c.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "domande studio",
+            "ripassare",
+            "study_questions"
+          ],
+          "score": 3
+        },
+        {
+          "path": "scripts/patch_super_quality_gate_phase_v1.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "answer_guide",
+            "domande studio",
+            "study_questions"
+          ],
+          "score": 3
+        },
+        {
+          "path": "scripts/rag_revisore_qualita_testuale_v35g.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "domande studio",
+            "naturali",
+            "ripassare"
+          ],
+          "score": 3
+        },
+        {
+          "path": "backend/test_phase5_study_quiz_v1.py",
+          "kind": "test_or_diagnostic",
+          "matched_keywords": [
+            "domande studio",
+            "study_questions"
+          ],
+          "score": 2
+        },
+        {
+          "path": "backend/test_output_builder_phase_v1.py",
+          "kind": "test_or_diagnostic",
+          "matched_keywords": [
+            "answer_guide",
+            "study_questions"
+          ],
+          "score": 2
+        },
+        {
+          "path": "scripts/rag_pipeline_documenti_grandi_v45.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "domande studio",
+            "study_questions"
+          ],
+          "score": 2
+        },
+        {
+          "path": "scripts/rag_genera_output_da_kb_clean_v34e.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "domande studio",
+            "ripassare"
+          ],
+          "score": 2
+        },
+        {
+          "path": "scripts/rag_revisore_accordo_pronomi_v35j.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "naturali",
+            "ripassare"
+          ],
+          "score": 2
+        },
+        {
+          "path": "demo-rag/sport-training-document-engine.js",
+          "kind": "frontend_or_runtime_web",
+          "matched_keywords": [
+            "domande studio",
+            "ripassare"
+          ],
+          "score": 2
+        },
+        {
+          "path": "demo-rag/curriculum-card-engine.js",
+          "kind": "frontend_or_runtime_web",
+          "matched_keywords": [
+            "domande studio",
+            "ripassare"
+          ],
+          "score": 2
+        },
+        {
+          "path": "demo-rag/rag-knowledge-linked-generator-v1.js",
+          "kind": "frontend_or_runtime_web",
+          "matched_keywords": [
+            "domande studio",
+            "naturali"
+          ],
+          "score": 2
+        },
+        {
+          "path": "demo-rag/rag-quality-summary-cards-v34a.js",
+          "kind": "frontend_or_runtime_web",
+          "matched_keywords": [
+            "domande studio",
+            "naturali"
+          ],
+          "score": 2
+        },
+        {
+          "path": "backend/legacy_quality_motor_registry_v1.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "study_questions"
+          ],
+          "score": 1
+        },
+        {
+          "path": "backend/test_super_quality_gate_phase_v1.py",
+          "kind": "test_or_diagnostic",
+          "matched_keywords": [
+            "study_questions"
+          ],
+          "score": 1
+        },
+        {
+          "path": "scripts/rag_micro_rifinitura_universale_v35l.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "ripassare"
+          ],
+          "score": 1
+        }
+      ],
+      "keywords": [
+        "domande studio",
+        "study_questions",
+        "naturali",
+        "ripassare",
+        "answer_guide"
+      ]
+    },
+    {
+      "area": "qualita_didattica",
+      "capability": "risposte_guida_specifiche",
+      "status": "EXISTS_NEEDS_ADAPTER_OR_REVIEW",
+      "registry_hits": [],
+      "source_hits": [
+        {
+          "path": "scripts/verifica_phase5_9_10_quality_capability_matrix_v1.py",
+          "kind": "test_or_diagnostic",
+          "matched_keywords": [
+            "answer_guide",
+            "niente risposte vaghe",
+            "risposte guida",
+            "specifiche"
+          ],
+          "score": 4
+        },
+        {
+          "path": "backend/motori_scrittura.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "answer_guide",
+            "risposte guida"
+          ],
+          "score": 2
+        },
+        {
+          "path": "scripts/patch_phase5_study_quiz_v1.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "answer_guide",
+            "risposte guida"
+          ],
+          "score": 2
+        },
+        {
+          "path": "backend/test_output_builder_phase_v1.py",
+          "kind": "test_or_diagnostic",
+          "matched_keywords": [
+            "answer_guide"
+          ],
+          "score": 1
+        },
+        {
+          "path": "scripts/rag_micro_rifinitura_universale_v35l.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "specifiche"
+          ],
+          "score": 1
+        },
+        {
+          "path": "scripts/create_batch_100.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "specifiche"
+          ],
+          "score": 1
+        },
+        {
+          "path": "scripts/create_quiz_package.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "specifiche"
+          ],
+          "score": 1
+        },
+        {
+          "path": "scripts/patch_output_builder_phase_v1.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "answer_guide"
+          ],
+          "score": 1
+        },
+        {
+          "path": "scripts/certify_engine_informatica_block_2.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "specifiche"
+          ],
+          "score": 1
+        },
+        {
+          "path": "scripts/fix_badge_ui_e_collega_main_v35l.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "specifiche"
+          ],
+          "score": 1
+        },
+        {
+          "path": "scripts/migliora_ai_primo_blocco_distrattori_forti.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "specifiche"
+          ],
+          "score": 1
+        },
+        {
+          "path": "scripts/migliora_logica_secondo_blocco_distrattori_forti.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "specifiche"
+          ],
+          "score": 1
+        },
+        {
+          "path": "scripts/improve_answer_options_100.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "specifiche"
+          ],
+          "score": 1
+        },
+        {
+          "path": "scripts/patch_super_quality_gate_phase_v1.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "answer_guide"
+          ],
+          "score": 1
+        },
+        {
+          "path": "scripts/certify_engine_ai_block_2.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "specifiche"
+          ],
+          "score": 1
+        },
+        {
+          "path": "scripts/fix_remaining_answer_flags.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "specifiche"
+          ],
+          "score": 1
+        },
+        {
+          "path": "scripts/verifica_rag_revisore_accordo_pronomi_v35j.py",
+          "kind": "test_or_diagnostic",
+          "matched_keywords": [
+            "risposte guida"
+          ],
+          "score": 1
+        },
+        {
+          "path": "scripts/add_batch_200_informatica.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "specifiche"
+          ],
+          "score": 1
+        },
+        {
+          "path": "scripts/rag_revisore_qualita_testuale_v35g.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "risposte guida"
+          ],
+          "score": 1
+        },
+        {
+          "path": "scripts/rag_revisore_accordo_pronomi_v35j.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "risposte guida"
+          ],
+          "score": 1
+        }
+      ],
+      "keywords": [
+        "risposte guida",
+        "answer_guide",
+        "specifiche",
+        "niente risposte vaghe"
+      ]
+    },
+    {
+      "area": "qualita_didattica",
+      "capability": "spiegazioni_test_chiare_non_corte",
+      "status": "EXISTS_NEEDS_ADAPTER_OR_REVIEW",
+      "registry_hits": [],
+      "source_hits": [
+        {
+          "path": "scripts/verifica_phase5_9_10_quality_capability_matrix_v1.py",
+          "kind": "test_or_diagnostic",
+          "matched_keywords": [
+            "explanation",
+            "explanation_draft",
+            "feedback",
+            "non troppo corte",
+            "spiegazioni"
+          ],
+          "score": 5
+        },
+        {
+          "path": "backend/phase5_universal_quiz_quality_adapter_v1.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "explanation",
+            "explanation_draft",
+            "spiegazioni"
+          ],
+          "score": 3
+        },
+        {
+          "path": "scripts/mappa_phase5_9_4_existing_quiz_quality_motors_v1.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "explanation",
+            "feedback",
+            "spiegazioni"
+          ],
+          "score": 3
+        },
+        {
+          "path": "scripts/verifica_phase5_9_8_universal_quiz_quality_adapter_v1.py",
+          "kind": "test_or_diagnostic",
+          "matched_keywords": [
+            "explanation",
+            "explanation_draft",
+            "spiegazioni"
+          ],
+          "score": 3
+        },
+        {
+          "path": "scripts/verifica_phase5_9_9_universal_quiz_quality_registry_v1.py",
+          "kind": "test_or_diagnostic",
+          "matched_keywords": [
+            "explanation",
+            "explanation_draft",
+            "spiegazioni"
+          ],
+          "score": 3
+        },
+        {
+          "path": "backend/legacy_quality_motor_registry_v1.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "explanation",
+            "spiegazioni"
+          ],
+          "score": 2
+        },
+        {
+          "path": "backend/motori_scrittura.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "explanation",
+            "explanation_draft"
+          ],
+          "score": 2
+        },
+        {
+          "path": "scripts/rag_micro_rifinitura_universale_v35l.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "explanation",
+            "feedback"
+          ],
+          "score": 2
+        },
+        {
+          "path": "scripts/create_quiz_package.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "explanation",
+            "feedback"
+          ],
+          "score": 2
+        },
+        {
+          "path": "scripts/patch_output_builder_phase_v1.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "explanation",
+            "explanation_draft"
+          ],
+          "score": 2
+        },
+        {
+          "path": "scripts/migliora_inglese_quarto_blocco_distrattori_forti.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "explanation",
+            "spiegazioni"
+          ],
+          "score": 2
+        },
+        {
+          "path": "scripts/rag_completatore_linguistico_probabile_v35n.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "explanation",
+            "feedback"
+          ],
+          "score": 2
+        },
+        {
+          "path": "scripts/visual_logic_validator.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "explanation",
+            "spiegazioni"
+          ],
+          "score": 2
+        },
+        {
+          "path": "scripts/correggi_logica_visiva_0019_0040.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "explanation",
+            "spiegazioni"
+          ],
+          "score": 2
+        },
+        {
+          "path": "scripts/rag_revisore_naturalezza_antikeyword_v35i.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "explanation",
+            "spiegazioni"
+          ],
+          "score": 2
+        },
+        {
+          "path": "scripts/applica_revisione_biologia_batch3.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "feedback",
+            "spiegazioni"
+          ],
+          "score": 2
+        },
+        {
+          "path": "scripts/patch_super_quality_gate_phase_v1.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "explanation",
+            "explanation_draft"
+          ],
+          "score": 2
+        },
+        {
+          "path": "scripts/verifica_phase5_9_7_quiz_motor_runtime_test_v1.py",
+          "kind": "test_or_diagnostic",
+          "matched_keywords": [
+            "explanation",
+            "explanation_draft"
+          ],
+          "score": 2
+        },
+        {
+          "path": "scripts/applica_revisione_scienze_batch2.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "feedback",
+            "spiegazioni"
+          ],
+          "score": 2
+        },
+        {
+          "path": "scripts/rag_lucidatore_linguistico_universale_v35m.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "explanation",
+            "feedback"
+          ],
+          "score": 2
+        }
+      ],
+      "keywords": [
+        "spiegazioni",
+        "explanation",
+        "explanation_draft",
+        "non troppo corte",
+        "feedback"
+      ]
+    },
+    {
+      "area": "qualita_didattica",
+      "capability": "tono_didattico_categorie_sottocategorie",
+      "status": "EXISTS_NEEDS_ADAPTER_OR_REVIEW",
+      "registry_hits": [],
+      "source_hits": [
+        {
+          "path": "scripts/verifica_phase5_9_10_quality_capability_matrix_v1.py",
+          "kind": "test_or_diagnostic",
+          "matched_keywords": [
+            "categoria",
+            "categorie",
+            "sottocategoria",
+            "sottocategorie",
+            "tono didattico"
+          ],
+          "score": 5
+        },
+        {
+          "path": "scripts/rag_micro_rifinitura_universale_v35l.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "categoria",
+            "categorie",
+            "sottocategoria",
+            "sottocategorie"
+          ],
+          "score": 4
+        },
+        {
+          "path": "scripts/rag_revisore_qualita_testuale_v35g.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "categoria",
+            "categorie",
+            "sottocategoria",
+            "sottocategorie"
+          ],
+          "score": 4
+        },
+        {
+          "path": "scripts/create_quiz_package.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "categoria",
+            "categorie",
+            "sottocategoria"
+          ],
+          "score": 3
+        },
+        {
+          "path": "scripts/validate_questions_base.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "categoria",
+            "categorie",
+            "sottocategoria"
+          ],
+          "score": 3
+        },
+        {
+          "path": "scripts/rag_completatore_linguistico_probabile_v35n.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "categoria",
+            "categorie",
+            "sottocategoria"
+          ],
+          "score": 3
+        },
+        {
+          "path": "scripts/connect_demo_logica_visiva_v3.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "categoria",
+            "categorie",
+            "sottocategoria"
+          ],
+          "score": 3
+        },
+        {
+          "path": "scripts/add_batch_200_ai.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "categoria",
+            "categorie",
+            "sottocategoria"
+          ],
+          "score": 3
+        },
+        {
+          "path": "scripts/rag_lucidatore_linguistico_universale_v35m.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "categoria",
+            "categorie",
+            "sottocategoria"
+          ],
+          "score": 3
+        },
+        {
+          "path": "scripts/rag_contesto_semantico_universale_v35o.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "categoria",
+            "categorie",
+            "sottocategoria"
+          ],
+          "score": 3
+        },
+        {
+          "path": "demo-rag/test-selezionatore-output-v35h.html",
+          "kind": "frontend_or_runtime_web",
+          "matched_keywords": [
+            "categoria",
+            "categorie",
+            "sottocategoria"
+          ],
+          "score": 3
+        },
+        {
+          "path": "runtime/web/quiz-engine.js",
+          "kind": "frontend_or_runtime_web",
+          "matched_keywords": [
+            "categoria",
+            "categorie",
+            "sottocategoria"
+          ],
+          "score": 3
+        },
+        {
+          "path": "backend/main_backup_prima_regole_tcp_finali.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "categoria",
+            "categorie"
+          ],
+          "score": 2
+        },
+        {
+          "path": "backend/main_backup_fix_informatica_finale_sicura.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "categoria",
+            "categorie"
+          ],
+          "score": 2
+        },
+        {
+          "path": "backend/main_backup_prima_pulizia_linguistica.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "categoria",
+            "categorie"
+          ],
+          "score": 2
+        },
+        {
+          "path": "backend/main_backup_fix_tecnico_informatica.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "categoria",
+            "categorie"
+          ],
+          "score": 2
+        },
+        {
+          "path": "backend/main_backup_prima_filtro_tcp.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "categoria",
+            "categorie"
+          ],
+          "score": 2
+        },
+        {
+          "path": "backend/main_backup_fix_tcp_flow_control.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "categoria",
+            "categorie"
+          ],
+          "score": 2
+        },
+        {
+          "path": "backend/main_backup_prima_singola_diretta_batch.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "categoria",
+            "categorie"
+          ],
+          "score": 2
+        },
+        {
+          "path": "backend/main_backup_fix_timeout_finale_informatica.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "categoria",
+            "categorie"
+          ],
+          "score": 2
+        }
+      ],
+      "keywords": [
+        "tono didattico",
+        "categorie",
+        "sottocategorie",
+        "categoria",
+        "sottocategoria"
+      ]
+    },
+    {
+      "area": "qualita_didattica",
+      "capability": "coerenza_domanda_risposta_contenuto",
+      "status": "EXISTS_NEEDS_ADAPTER_OR_REVIEW",
+      "registry_hits": [],
+      "source_hits": [
+        {
+          "path": "scripts/verifica_phase5_9_10_quality_capability_matrix_v1.py",
+          "kind": "test_or_diagnostic",
+          "matched_keywords": [
+            "coerenza",
+            "contenuto",
+            "domanda",
+            "risposta",
+            "source_facts"
+          ],
+          "score": 5
+        },
+        {
+          "path": "backend/main_backup_prima_regole_tcp_finali.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "coerenza",
+            "contenuto",
+            "domanda",
+            "risposta"
+          ],
+          "score": 4
+        },
+        {
+          "path": "backend/main_backup_fix_informatica_finale_sicura.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "coerenza",
+            "contenuto",
+            "domanda",
+            "risposta"
+          ],
+          "score": 4
+        },
+        {
+          "path": "backend/main_backup_prima_pulizia_linguistica.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "coerenza",
+            "contenuto",
+            "domanda",
+            "risposta"
+          ],
+          "score": 4
+        },
+        {
+          "path": "backend/main_backup_fix_tecnico_informatica.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "coerenza",
+            "contenuto",
+            "domanda",
+            "risposta"
+          ],
+          "score": 4
+        },
+        {
+          "path": "backend/main_backup_prima_filtro_tcp.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "coerenza",
+            "contenuto",
+            "domanda",
+            "risposta"
+          ],
+          "score": 4
+        },
+        {
+          "path": "backend/main_backup_fix_tcp_flow_control.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "coerenza",
+            "contenuto",
+            "domanda",
+            "risposta"
+          ],
+          "score": 4
+        },
+        {
+          "path": "backend/main_backup_prima_singola_diretta_batch.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "coerenza",
+            "contenuto",
+            "domanda",
+            "risposta"
+          ],
+          "score": 4
+        },
+        {
+          "path": "backend/main_backup_fix_timeout_finale_informatica.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "coerenza",
+            "contenuto",
+            "domanda",
+            "risposta"
+          ],
+          "score": 4
+        },
+        {
+          "path": "backend/main_backup_informatica_safe_topics.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "coerenza",
+            "contenuto",
+            "domanda",
+            "risposta"
+          ],
+          "score": 4
+        },
+        {
+          "path": "backend/motori_scrittura.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "contenuto",
+            "domanda",
+            "risposta",
+            "source_facts"
+          ],
+          "score": 4
+        },
+        {
+          "path": "backend/main_backup_prima_batch_quiz.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "coerenza",
+            "contenuto",
+            "domanda",
+            "risposta"
+          ],
+          "score": 4
+        },
+        {
+          "path": "backend/main_backup_endpoint_finale_informatica.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "coerenza",
+            "contenuto",
+            "domanda",
+            "risposta"
+          ],
+          "score": 4
+        },
+        {
+          "path": "backend/main_backup_prima_batch_fallback.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "coerenza",
+            "contenuto",
+            "domanda",
+            "risposta"
+          ],
+          "score": 4
+        },
+        {
+          "path": "backend/main_backup_prima_forza_categoria_livello.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "coerenza",
+            "contenuto",
+            "domanda",
+            "risposta"
+          ],
+          "score": 4
+        },
+        {
+          "path": "backend/main_backup_prima_filtro_ambiguita_intelligente.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "coerenza",
+            "contenuto",
+            "domanda",
+            "risposta"
+          ],
+          "score": 4
+        },
+        {
+          "path": "backend/main_backup_prima_rotazione_sotto_argomenti.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "coerenza",
+            "contenuto",
+            "domanda",
+            "risposta"
+          ],
+          "score": 4
+        },
+        {
+          "path": "backend/main.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "coerenza",
+            "contenuto",
+            "domanda",
+            "risposta"
+          ],
+          "score": 4
+        },
+        {
+          "path": "backend/main_backup_chiusura_informatica.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "coerenza",
+            "contenuto",
+            "domanda",
+            "risposta"
+          ],
+          "score": 4
+        },
+        {
+          "path": "backend/main_backup_prima_filtro_tcp_header.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "coerenza",
+            "contenuto",
+            "domanda",
+            "risposta"
+          ],
+          "score": 4
+        }
+      ],
+      "keywords": [
+        "coerenza",
+        "domanda",
+        "risposta",
+        "contenuto",
+        "source_facts"
+      ]
+    },
+    {
+      "area": "card_riassunto_fonti",
+      "capability": "card_scritte_bene_non_corte",
+      "status": "CONNECTED_IN_REGISTRY",
+      "registry_hits": [
+        {
+          "motor_id": "scripts.rag_motore_didattico_riutilizzabile_v35c.refine_study_questions",
+          "adapter_name": "cards_list",
+          "target_kind": "study",
+          "matched_keywords": [
+            "card"
+          ]
+        }
+      ],
+      "source_hits": [
+        {
+          "path": "scripts/verifica_phase5_9_10_quality_capability_matrix_v1.py",
+          "kind": "test_or_diagnostic",
+          "matched_keywords": [
+            "card",
+            "compresse",
+            "contenuto_esplicativo",
+            "message_key",
+            "non troppo corte"
+          ],
+          "score": 5
+        },
+        {
+          "path": "backend/motori_scrittura.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "card",
+            "contenuto_esplicativo",
+            "message_key"
+          ],
+          "score": 3
+        },
+        {
+          "path": "backend/test_phase5_quality_summary_cards_v1.py",
+          "kind": "test_or_diagnostic",
+          "matched_keywords": [
+            "card",
+            "contenuto_esplicativo",
+            "message_key"
+          ],
+          "score": 3
+        },
+        {
+          "path": "scripts/patch_phase5_quality_summary_cards_v1.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "card",
+            "contenuto_esplicativo",
+            "message_key"
+          ],
+          "score": 3
+        },
+        {
+          "path": "backend/test_phase5_study_quiz_v1.py",
+          "kind": "test_or_diagnostic",
+          "matched_keywords": [
+            "card",
+            "message_key"
+          ],
+          "score": 2
+        },
+        {
+          "path": "backend/test_phase5_micro_concepts_cards_v11.py",
+          "kind": "test_or_diagnostic",
+          "matched_keywords": [
+            "card",
+            "message_key"
+          ],
+          "score": 2
+        },
+        {
+          "path": "backend/test_output_builder_phase_v1.py",
+          "kind": "test_or_diagnostic",
+          "matched_keywords": [
+            "card",
+            "message_key"
+          ],
+          "score": 2
+        },
+        {
+          "path": "scripts/patch_output_builder_phase_v1.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "card",
+            "message_key"
+          ],
+          "score": 2
+        },
+        {
+          "path": "scripts/verifica_phase5_8_quality_delta_ready_safe_motors_v1.py",
+          "kind": "test_or_diagnostic",
+          "matched_keywords": [
+            "card",
+            "contenuto_esplicativo"
+          ],
+          "score": 2
+        },
+        {
+          "path": "scripts/verifica_compatibilita_batch_motori_legacy_v1.py",
+          "kind": "test_or_diagnostic",
+          "matched_keywords": [
+            "card",
+            "contenuto_esplicativo"
+          ],
+          "score": 2
+        },
+        {
+          "path": "scripts/patch_super_quality_gate_phase_v1.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "card",
+            "message_key"
+          ],
+          "score": 2
+        },
+        {
+          "path": "scripts/patch_phase5_micro_concepts_cards_v11.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "card",
+            "contenuto_esplicativo"
+          ],
+          "score": 2
+        },
+        {
+          "path": "scripts/verifica_phase5_7_ready_safe_motors_execution_v1.py",
+          "kind": "test_or_diagnostic",
+          "matched_keywords": [
+            "card",
+            "contenuto_esplicativo"
+          ],
+          "score": 2
+        },
+        {
+          "path": "backend/legacy_quality_motor_registry_v1.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "card"
+          ],
+          "score": 1
+        },
+        {
+          "path": "backend/test_super_quality_gate_phase_v1.py",
+          "kind": "test_or_diagnostic",
+          "matched_keywords": [
+            "card"
+          ],
+          "score": 1
+        },
+        {
+          "path": "backend/phase5_quiz_true_distractor_repair_v1.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "card"
+          ],
+          "score": 1
+        },
+        {
+          "path": "scripts/benchmark_mini_llm_long_document_rag_v391_semantic_repair.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "card"
+          ],
+          "score": 1
+        },
+        {
+          "path": "scripts/rag_bridge_motori_qualita_esistenti_v35b.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "card"
+          ],
+          "score": 1
+        },
+        {
+          "path": "scripts/rag_micro_rifinitura_universale_v35l.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "card"
+          ],
+          "score": 1
+        },
+        {
+          "path": "scripts/verifica_rag_selezionatore_motori_riutilizzabile_v35f.py",
+          "kind": "test_or_diagnostic",
+          "matched_keywords": [
+            "card"
+          ],
+          "score": 1
+        }
+      ],
+      "keywords": [
+        "card",
+        "contenuto_esplicativo",
+        "message_key",
+        "non troppo corte",
+        "compresse"
+      ]
+    },
+    {
+      "area": "card_riassunto_fonti",
+      "capability": "messaggio_chiave_completo",
+      "status": "EXISTS_NEEDS_ADAPTER_OR_REVIEW",
+      "registry_hits": [],
+      "source_hits": [
+        {
+          "path": "scripts/verifica_phase5_9_10_quality_capability_matrix_v1.py",
+          "kind": "test_or_diagnostic",
+          "matched_keywords": [
+            "completo",
+            "key_points",
+            "message_key",
+            "messaggio chiave"
+          ],
+          "score": 4
+        },
+        {
+          "path": "backend/motori_scrittura.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "completo",
+            "key_points",
+            "message_key"
+          ],
+          "score": 3
+        },
+        {
+          "path": "backend/test_phase5_quality_summary_cards_v1.py",
+          "kind": "test_or_diagnostic",
+          "matched_keywords": [
+            "completo",
+            "key_points",
+            "message_key"
+          ],
+          "score": 3
+        },
+        {
+          "path": "scripts/patch_phase5_quality_summary_cards_v1.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "completo",
+            "key_points",
+            "message_key"
+          ],
+          "score": 3
+        },
+        {
+          "path": "backend/test_phase5_study_quiz_v1.py",
+          "kind": "test_or_diagnostic",
+          "matched_keywords": [
+            "key_points",
+            "message_key"
+          ],
+          "score": 2
+        },
+        {
+          "path": "backend/test_phase5_micro_concepts_cards_v11.py",
+          "kind": "test_or_diagnostic",
+          "matched_keywords": [
+            "key_points",
+            "message_key"
+          ],
+          "score": 2
+        },
+        {
+          "path": "backend/test_output_builder_phase_v1.py",
+          "kind": "test_or_diagnostic",
+          "matched_keywords": [
+            "key_points",
+            "message_key"
+          ],
+          "score": 2
+        },
+        {
+          "path": "scripts/patch_output_builder_phase_v1.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "key_points",
+            "message_key"
+          ],
+          "score": 2
+        },
+        {
+          "path": "scripts/patch_super_quality_gate_phase_v1.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "key_points",
+            "message_key"
+          ],
+          "score": 2
+        },
+        {
+          "path": "backend/main_backup_prima_regole_tcp_finali.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "completo"
+          ],
+          "score": 1
+        },
+        {
+          "path": "backend/main_backup_fix_informatica_finale_sicura.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "completo"
+          ],
+          "score": 1
+        },
+        {
+          "path": "backend/legacy_quality_motor_registry_v1.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "completo"
+          ],
+          "score": 1
+        },
+        {
+          "path": "backend/test_super_quality_gate_phase_v1.py",
+          "kind": "test_or_diagnostic",
+          "matched_keywords": [
+            "key_points"
+          ],
+          "score": 1
+        },
+        {
+          "path": "backend/test_map_phase_coverage_reale_v1.py",
+          "kind": "test_or_diagnostic",
+          "matched_keywords": [
+            "completo"
+          ],
+          "score": 1
+        },
+        {
+          "path": "backend/main_backup_fix_tecnico_informatica.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "completo"
+          ],
+          "score": 1
+        },
+        {
+          "path": "backend/main_backup_fix_tcp_flow_control.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "completo"
+          ],
+          "score": 1
+        },
+        {
+          "path": "backend/main_backup_fix_timeout_finale_informatica.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "completo"
+          ],
+          "score": 1
+        },
+        {
+          "path": "backend/main_backup_informatica_safe_topics.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "completo"
+          ],
+          "score": 1
+        },
+        {
+          "path": "backend/main_backup_endpoint_finale_informatica.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "completo"
+          ],
+          "score": 1
+        },
+        {
+          "path": "backend/main.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "completo"
+          ],
+          "score": 1
+        }
+      ],
+      "keywords": [
+        "messaggio chiave",
+        "message_key",
+        "key_points",
+        "completo"
+      ]
+    },
+    {
+      "area": "card_riassunto_fonti",
+      "capability": "riassunto_chiaro_punti_chiave",
+      "status": "CONNECTED_IN_REGISTRY",
+      "registry_hits": [
+        {
+          "motor_id": "scripts.rag_cleaner_finale_universale_v35k.clean_output",
+          "adapter_name": "summary_dict",
+          "target_kind": "summary",
+          "matched_keywords": [
+            "summary"
+          ]
+        },
+        {
+          "motor_id": "scripts.rag_motore_test_riutilizzabile_v35d.refine_output",
+          "adapter_name": "summary_dict",
+          "target_kind": "summary",
+          "matched_keywords": [
+            "summary"
+          ]
+        },
+        {
+          "motor_id": "scripts.rag_revisore_accordo_pronomi_v35j.improve_output",
+          "adapter_name": "summary_dict",
+          "target_kind": "summary",
+          "matched_keywords": [
+            "summary"
+          ]
+        },
+        {
+          "motor_id": "scripts.rag_revisore_qualita_testuale_v35g.refine_output",
+          "adapter_name": "summary_dict",
+          "target_kind": "summary",
+          "matched_keywords": [
+            "summary"
+          ]
+        }
+      ],
+      "source_hits": [
+        {
+          "path": "backend/motori_scrittura.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "key_points",
+            "paragrafi",
+            "punti chiave",
+            "riassunto",
+            "summary"
+          ],
+          "score": 5
+        },
+        {
+          "path": "scripts/verifica_phase5_9_10_quality_capability_matrix_v1.py",
+          "kind": "test_or_diagnostic",
+          "matched_keywords": [
+            "key_points",
+            "paragrafi",
+            "punti chiave",
+            "riassunto",
+            "summary"
+          ],
+          "score": 5
+        },
+        {
+          "path": "backend/test_phase5_quality_summary_cards_v1.py",
+          "kind": "test_or_diagnostic",
+          "matched_keywords": [
+            "key_points",
+            "paragrafi",
+            "riassunto",
+            "summary"
+          ],
+          "score": 4
+        },
+        {
+          "path": "scripts/patch_output_builder_phase_v1.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "key_points",
+            "punti chiave",
+            "riassunto",
+            "summary"
+          ],
+          "score": 4
+        },
+        {
+          "path": "scripts/patch_phase5_quality_summary_cards_v1.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "key_points",
+            "paragrafi",
+            "riassunto",
+            "summary"
+          ],
+          "score": 4
+        },
+        {
+          "path": "scripts/patch_super_quality_gate_phase_v1.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "key_points",
+            "punti chiave",
+            "riassunto",
+            "summary"
+          ],
+          "score": 4
+        },
+        {
+          "path": "backend/test_phase5_study_quiz_v1.py",
+          "kind": "test_or_diagnostic",
+          "matched_keywords": [
+            "key_points",
+            "riassunto",
+            "summary"
+          ],
+          "score": 3
+        },
+        {
+          "path": "backend/legacy_quality_motor_registry_v1.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "paragrafi",
+            "riassunto",
+            "summary"
+          ],
+          "score": 3
+        },
+        {
+          "path": "backend/test_phase5_micro_concepts_cards_v11.py",
+          "kind": "test_or_diagnostic",
+          "matched_keywords": [
+            "key_points",
+            "riassunto",
+            "summary"
+          ],
+          "score": 3
+        },
+        {
+          "path": "backend/test_output_builder_phase_v1.py",
+          "kind": "test_or_diagnostic",
+          "matched_keywords": [
+            "key_points",
+            "riassunto",
+            "summary"
+          ],
+          "score": 3
+        },
+        {
+          "path": "scripts/patch_phase5_7_registry_target_structure_guard_v1.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "paragrafi",
+            "riassunto",
+            "summary"
+          ],
+          "score": 3
+        },
+        {
+          "path": "scripts/verifica_phase5_8_quality_delta_ready_safe_motors_v1.py",
+          "kind": "test_or_diagnostic",
+          "matched_keywords": [
+            "paragrafi",
+            "riassunto",
+            "summary"
+          ],
+          "score": 3
+        },
+        {
+          "path": "scripts/verifica_rag_documenti_lunghi_v2a9_output_aziendali.py",
+          "kind": "test_or_diagnostic",
+          "matched_keywords": [
+            "punti chiave",
+            "riassunto",
+            "summary"
+          ],
+          "score": 3
+        },
+        {
+          "path": "scripts/verifica_rag_documenti_lunghi_v2a10_output_dinamici.py",
+          "kind": "test_or_diagnostic",
+          "matched_keywords": [
+            "punti chiave",
+            "riassunto",
+            "summary"
+          ],
+          "score": 3
+        },
+        {
+          "path": "scripts/verifica_compatibilita_batch_motori_legacy_v1.py",
+          "kind": "test_or_diagnostic",
+          "matched_keywords": [
+            "paragrafi",
+            "riassunto",
+            "summary"
+          ],
+          "score": 3
+        },
+        {
+          "path": "scripts/rag_motore_documenti_completo.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "paragrafi",
+            "riassunto",
+            "summary"
+          ],
+          "score": 3
+        },
+        {
+          "path": "demo-rag/rag-app-aziendale-v2a12-dashboard.html",
+          "kind": "frontend_or_runtime_web",
+          "matched_keywords": [
+            "punti chiave",
+            "riassunto",
+            "summary"
+          ],
+          "score": 3
+        },
+        {
+          "path": "demo-rag/rag-app-aziendale-v2a11-ux-finale.html",
+          "kind": "frontend_or_runtime_web",
+          "matched_keywords": [
+            "punti chiave",
+            "riassunto",
+            "summary"
+          ],
+          "score": 3
+        },
+        {
+          "path": "demo-rag/test-scarica-pdf-browser-v6.html",
+          "kind": "frontend_or_runtime_web",
+          "matched_keywords": [
+            "punti chiave",
+            "riassunto",
+            "summary"
+          ],
+          "score": 3
+        },
+        {
+          "path": "demo-rag/rag-app-aziendale.html",
+          "kind": "frontend_or_runtime_web",
+          "matched_keywords": [
+            "punti chiave",
+            "riassunto",
+            "summary"
+          ],
+          "score": 3
+        }
+      ],
+      "keywords": [
+        "riassunto",
+        "summary",
+        "punti chiave",
+        "key_points",
+        "paragrafi"
+      ]
+    },
+    {
+      "area": "card_riassunto_fonti",
+      "capability": "fonti_visibili_coerenti_belle",
+      "status": "EXISTS_NEEDS_ADAPTER_OR_REVIEW",
+      "registry_hits": [],
+      "source_hits": [
+        {
+          "path": "scripts/verifica_phase5_9_10_quality_capability_matrix_v1.py",
+          "kind": "test_or_diagnostic",
+          "matched_keywords": [
+            "documento analizzato",
+            "fonte",
+            "fonti",
+            "knowledge_base_json",
+            "source_pages"
+          ],
+          "score": 5
+        },
+        {
+          "path": "scripts/rag_motore_didattico_riutilizzabile_v35c.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "documento analizzato",
+            "fonte",
+            "fonti",
+            "knowledge_base_json"
+          ],
+          "score": 4
+        },
+        {
+          "path": "scripts/rag_revisore_qualita_testuale_v35g.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "documento analizzato",
+            "fonte",
+            "fonti",
+            "knowledge_base_json"
+          ],
+          "score": 4
+        },
+        {
+          "path": "backend/motori_scrittura.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "fonte",
+            "knowledge_base_json",
+            "source_pages"
+          ],
+          "score": 3
+        },
+        {
+          "path": "scripts/patch_phase5_quality_summary_cards_v1.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "fonte",
+            "knowledge_base_json",
+            "source_pages"
+          ],
+          "score": 3
+        },
+        {
+          "path": "scripts/rag_bridge_motori_qualita_esistenti_v35b.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "fonte",
+            "knowledge_base_json"
+          ],
+          "score": 2
+        },
+        {
+          "path": "scripts/rag_micro_rifinitura_universale_v35l.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "fonte",
+            "fonti"
+          ],
+          "score": 2
+        },
+        {
+          "path": "scripts/rag_genera_quiz_json.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "fonte",
+            "fonti"
+          ],
+          "score": 2
+        },
+        {
+          "path": "scripts/rag_genera_test_domande_da_kb_v34c.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "fonte",
+            "knowledge_base_json"
+          ],
+          "score": 2
+        },
+        {
+          "path": "scripts/rag_genera_output_da_kb_clean_v34e.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "documento analizzato",
+            "fonte"
+          ],
+          "score": 2
+        },
+        {
+          "path": "scripts/patch_phase5_study_quiz_v1.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "fonte",
+            "source_pages"
+          ],
+          "score": 2
+        },
+        {
+          "path": "scripts/rag_build_knowledge_base_v34b.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "fonte",
+            "fonti"
+          ],
+          "score": 2
+        },
+        {
+          "path": "scripts/verifica_rag_generatori_da_kb_v34c.py",
+          "kind": "test_or_diagnostic",
+          "matched_keywords": [
+            "fonte",
+            "knowledge_base_json"
+          ],
+          "score": 2
+        },
+        {
+          "path": "scripts/patch_super_quality_gate_phase_v1.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "knowledge_base_json",
+            "source_pages"
+          ],
+          "score": 2
+        },
+        {
+          "path": "scripts/patch_reduce_phase_v1.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "fonti",
+            "source_pages"
+          ],
+          "score": 2
+        },
+        {
+          "path": "scripts/verifica_rag_motori_didattici_riutilizzabili_v35c.py",
+          "kind": "test_or_diagnostic",
+          "matched_keywords": [
+            "fonte",
+            "fonti"
+          ],
+          "score": 2
+        },
+        {
+          "path": "backend/test_phase5_study_quiz_v1.py",
+          "kind": "test_or_diagnostic",
+          "matched_keywords": [
+            "source_pages"
+          ],
+          "score": 1
+        },
+        {
+          "path": "backend/test_super_quality_gate_phase_v1.py",
+          "kind": "test_or_diagnostic",
+          "matched_keywords": [
+            "source_pages"
+          ],
+          "score": 1
+        },
+        {
+          "path": "backend/test_phase5_micro_concepts_cards_v11.py",
+          "kind": "test_or_diagnostic",
+          "matched_keywords": [
+            "source_pages"
+          ],
+          "score": 1
+        },
+        {
+          "path": "backend/test_output_builder_phase_v1.py",
+          "kind": "test_or_diagnostic",
+          "matched_keywords": [
+            "source_pages"
+          ],
+          "score": 1
+        }
+      ],
+      "keywords": [
+        "fonte",
+        "fonti",
+        "source_pages",
+        "knowledge_base_json",
+        "documento analizzato"
+      ]
+    },
+    {
+      "area": "card_riassunto_fonti",
+      "capability": "layout_grafico_controllato",
+      "status": "CONNECTED_IN_REGISTRY",
+      "registry_hits": [
+        {
+          "motor_id": "backend.phase5_quiz_true_distractor_repair_v1.repair_quiz_target_v1",
+          "adapter_name": "quiz_list",
+          "target_kind": "quiz",
+          "matched_keywords": [
+            "ui"
+          ]
+        },
+        {
+          "motor_id": "backend.phase5_universal_quiz_quality_adapter_v1.universal_quiz_quality_target_v1",
+          "adapter_name": "quiz_list",
+          "target_kind": "quiz",
+          "matched_keywords": [
+            "ui"
+          ]
+        },
+        {
+          "motor_id": "backend.main.pulisci_qualita_linguistica_quiz",
+          "adapter_name": "dict_test_quiz",
+          "target_kind": "quiz",
+          "matched_keywords": [
+            "ui"
+          ]
+        },
+        {
+          "motor_id": "scripts.rag_motore_didattico_riutilizzabile_v35c.refine_tests",
+          "adapter_name": "legacy_answers_dict",
+          "target_kind": "quiz",
+          "matched_keywords": [
+            "ui"
+          ]
+        }
+      ],
+      "source_hits": [
+        {
+          "path": "scripts/verifica_phase5_9_10_quality_capability_matrix_v1.py",
+          "kind": "test_or_diagnostic",
+          "matched_keywords": [
+            "card-graphic",
+            "grafico",
+            "layout",
+            "pdf",
+            "ui"
+          ],
+          "score": 5
+        },
+        {
+          "path": "backend/motori_scrittura.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "grafico",
+            "layout",
+            "pdf",
+            "ui"
+          ],
+          "score": 4
+        },
+        {
+          "path": "scripts/rag_motore_didattico_riutilizzabile_v35c.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "grafico",
+            "layout",
+            "pdf",
+            "ui"
+          ],
+          "score": 4
+        },
+        {
+          "path": "scripts/create_batch_100.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "grafico",
+            "layout",
+            "ui"
+          ],
+          "score": 3
+        },
+        {
+          "path": "scripts/applica_migliorie_finali_rag.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "grafico",
+            "pdf",
+            "ui"
+          ],
+          "score": 3
+        },
+        {
+          "path": "scripts/patch_output_builder_phase_v1.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "grafico",
+            "layout",
+            "ui"
+          ],
+          "score": 3
+        },
+        {
+          "path": "scripts/motore_card_grafiche.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "grafico",
+            "layout",
+            "ui"
+          ],
+          "score": 3
+        },
+        {
+          "path": "scripts/patch_phase5_quality_summary_cards_v1.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "grafico",
+            "layout",
+            "ui"
+          ],
+          "score": 3
+        },
+        {
+          "path": "scripts/migliora_informatica_primo_blocco_distrattori_forti.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "grafico",
+            "layout",
+            "ui"
+          ],
+          "score": 3
+        },
+        {
+          "path": "scripts/rag_pipeline_documenti_grandi_v45.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "grafico",
+            "pdf",
+            "ui"
+          ],
+          "score": 3
+        },
+        {
+          "path": "scripts/rag_selezionatore_motori_riutilizzabile_v35f.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "layout",
+            "pdf",
+            "ui"
+          ],
+          "score": 3
+        },
+        {
+          "path": "scripts/improve_answer_options_100.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "grafico",
+            "layout",
+            "ui"
+          ],
+          "score": 3
+        },
+        {
+          "path": "scripts/crea_pacchetto_rag_riutilizzabile.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "grafico",
+            "pdf",
+            "ui"
+          ],
+          "score": 3
+        },
+        {
+          "path": "scripts/rag_documenti_aziendali.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "grafico",
+            "pdf",
+            "ui"
+          ],
+          "score": 3
+        },
+        {
+          "path": "scripts/verifica_rag_motori_didattici_riutilizzabili_v35c.py",
+          "kind": "test_or_diagnostic",
+          "matched_keywords": [
+            "grafico",
+            "layout",
+            "ui"
+          ],
+          "score": 3
+        },
+        {
+          "path": "scripts/rag_motore_documenti_completo.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "grafico",
+            "pdf",
+            "ui"
+          ],
+          "score": 3
+        },
+        {
+          "path": "scripts/rag_orchestratore_riutilizzabile_v35e.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "layout",
+            "pdf",
+            "ui"
+          ],
+          "score": 3
+        },
+        {
+          "path": "demo-rag/index.html",
+          "kind": "frontend_or_runtime_web",
+          "matched_keywords": [
+            "card-graphic",
+            "pdf",
+            "ui"
+          ],
+          "score": 3
+        },
+        {
+          "path": "demo-rag/curriculum-card-engine.js",
+          "kind": "frontend_or_runtime_web",
+          "matched_keywords": [
+            "grafico",
+            "pdf",
+            "ui"
+          ],
+          "score": 3
+        },
+        {
+          "path": "demo-rag/rag-didactic-planner-v1.js",
+          "kind": "frontend_or_runtime_web",
+          "matched_keywords": [
+            "layout",
+            "pdf",
+            "ui"
+          ],
+          "score": 3
+        }
+      ],
+      "keywords": [
+        "layout",
+        "grafico",
+        "card-graphic",
+        "pdf",
+        "ui"
+      ]
+    },
+    {
+      "area": "quiz_test",
+      "capability": "test_separato_da_altri_output",
+      "status": "CONNECTED_IN_REGISTRY",
+      "registry_hits": [
+        {
+          "motor_id": "scripts.rag_motore_didattico_riutilizzabile_v35c.refine_study_questions",
+          "adapter_name": "cards_list",
+          "target_kind": "study",
+          "matched_keywords": [
+            "card",
+            "study_questions"
+          ]
+        },
+        {
+          "motor_id": "backend.main.pulisci_qualita_linguistica_quiz",
+          "adapter_name": "dict_test_quiz",
+          "target_kind": "quiz",
+          "matched_keywords": [
+            "test_quiz"
+          ]
+        }
+      ],
+      "source_hits": [
+        {
+          "path": "scripts/verifica_phase5_9_10_quality_capability_matrix_v1.py",
+          "kind": "test_or_diagnostic",
+          "matched_keywords": [
+            "card",
+            "quiz_draft",
+            "riassunto",
+            "study_questions",
+            "test separato",
+            "test_quiz"
+          ],
+          "score": 6
+        },
+        {
+          "path": "backend/legacy_quality_motor_registry_v1.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "card",
+            "quiz_draft",
+            "riassunto",
+            "study_questions",
+            "test_quiz"
+          ],
+          "score": 5
+        },
+        {
+          "path": "backend/motori_scrittura.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "card",
+            "quiz_draft",
+            "riassunto",
+            "study_questions",
+            "test_quiz"
+          ],
+          "score": 5
+        },
+        {
+          "path": "scripts/patch_phase5_6_ready_safe_legacy_motors_v1.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "card",
+            "quiz_draft",
+            "riassunto",
+            "study_questions",
+            "test_quiz"
+          ],
+          "score": 5
+        },
+        {
+          "path": "backend/test_phase5_study_quiz_v1.py",
+          "kind": "test_or_diagnostic",
+          "matched_keywords": [
+            "card",
+            "riassunto",
+            "study_questions",
+            "test_quiz"
+          ],
+          "score": 4
+        },
+        {
+          "path": "backend/test_output_builder_phase_v1.py",
+          "kind": "test_or_diagnostic",
+          "matched_keywords": [
+            "card",
+            "quiz_draft",
+            "riassunto",
+            "study_questions"
+          ],
+          "score": 4
+        },
+        {
+          "path": "scripts/patch_output_builder_phase_v1.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "card",
+            "quiz_draft",
+            "riassunto",
+            "study_questions"
+          ],
+          "score": 4
+        },
+        {
+          "path": "scripts/patch_phase5_7_registry_target_structure_guard_v1.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "card",
+            "riassunto",
+            "study_questions",
+            "test_quiz"
+          ],
+          "score": 4
+        },
+        {
+          "path": "scripts/verifica_phase5_8_quality_delta_ready_safe_motors_v1.py",
+          "kind": "test_or_diagnostic",
+          "matched_keywords": [
+            "card",
+            "quiz_draft",
+            "riassunto",
+            "test_quiz"
+          ],
+          "score": 4
+        },
+        {
+          "path": "scripts/verifica_compatibilita_batch_motori_legacy_v1.py",
+          "kind": "test_or_diagnostic",
+          "matched_keywords": [
+            "card",
+            "riassunto",
+            "study_questions",
+            "test_quiz"
+          ],
+          "score": 4
+        },
+        {
+          "path": "scripts/patch_super_quality_gate_phase_v1.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "card",
+            "quiz_draft",
+            "riassunto",
+            "study_questions"
+          ],
+          "score": 4
+        },
+        {
+          "path": "scripts/verifica_phase5_7_ready_safe_motors_execution_v1.py",
+          "kind": "test_or_diagnostic",
+          "matched_keywords": [
+            "card",
+            "riassunto",
+            "study_questions",
+            "test_quiz"
+          ],
+          "score": 4
+        },
+        {
+          "path": "backend/phase5_quiz_true_distractor_repair_v1.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "card",
+            "quiz_draft",
+            "test_quiz"
+          ],
+          "score": 3
+        },
+        {
+          "path": "scripts/rag_motore_didattico_riutilizzabile_v35c.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "card",
+            "riassunto",
+            "study_questions"
+          ],
+          "score": 3
+        },
+        {
+          "path": "scripts/rag_pipeline_documenti_grandi_v45.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "card",
+            "riassunto",
+            "study_questions"
+          ],
+          "score": 3
+        },
+        {
+          "path": "scripts/patch_phase5_study_quiz_v1.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "card",
+            "study_questions",
+            "test_quiz"
+          ],
+          "score": 3
+        },
+        {
+          "path": "scripts/rag_selezionatore_motori_riutilizzabile_v35f.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "card",
+            "riassunto",
+            "test separato"
+          ],
+          "score": 3
+        },
+        {
+          "path": "backend/test_super_quality_gate_phase_v1.py",
+          "kind": "test_or_diagnostic",
+          "matched_keywords": [
+            "card",
+            "study_questions"
+          ],
+          "score": 2
+        },
+        {
+          "path": "backend/phase5_live_quality_bridge_v1.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "quiz_draft",
+            "test_quiz"
+          ],
+          "score": 2
+        },
+        {
+          "path": "backend/test_phase5_micro_concepts_cards_v11.py",
+          "kind": "test_or_diagnostic",
+          "matched_keywords": [
+            "card",
+            "riassunto"
+          ],
+          "score": 2
+        }
+      ],
+      "keywords": [
+        "test separato",
+        "quiz_draft",
+        "test_quiz",
+        "card",
+        "riassunto",
+        "study_questions"
+      ]
+    },
+    {
+      "area": "quiz_test",
+      "capability": "opzioni_interne_visibili_validate",
+      "status": "EXISTS_NEEDS_ADAPTER_OR_REVIEW",
+      "registry_hits": [],
+      "source_hits": [
+        {
+          "path": "scripts/rag_motore_test_riutilizzabile_v35d.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "options",
+            "opzioni",
+            "opzioni interne",
+            "opzioni visibili",
+            "validate"
+          ],
+          "score": 5
+        },
+        {
+          "path": "scripts/verifica_phase5_9_10_quality_capability_matrix_v1.py",
+          "kind": "test_or_diagnostic",
+          "matched_keywords": [
+            "options",
+            "opzioni",
+            "opzioni interne",
+            "opzioni visibili",
+            "validate"
+          ],
+          "score": 5
+        },
+        {
+          "path": "scripts/rag_revisore_qualita_testuale_v35g.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "options",
+            "opzioni",
+            "opzioni interne",
+            "opzioni visibili",
+            "validate"
+          ],
+          "score": 5
+        },
+        {
+          "path": "scripts/fix_gate_universale_pagina_v35k.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "options",
+            "opzioni",
+            "opzioni visibili",
+            "validate"
+          ],
+          "score": 4
+        },
+        {
+          "path": "scripts/rag_cleaner_finale_universale_v35k.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "options",
+            "opzioni",
+            "opzioni visibili",
+            "validate"
+          ],
+          "score": 4
+        },
+        {
+          "path": "backend/main_backup_prima_regole_tcp_finali.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "options",
+            "opzioni",
+            "validate"
+          ],
+          "score": 3
+        },
+        {
+          "path": "backend/main_backup_fix_informatica_finale_sicura.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "options",
+            "opzioni",
+            "validate"
+          ],
+          "score": 3
+        },
+        {
+          "path": "backend/main_backup_prima_pulizia_linguistica.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "options",
+            "opzioni",
+            "validate"
+          ],
+          "score": 3
+        },
+        {
+          "path": "backend/main_backup_prima_distrattori_omogenei.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "options",
+            "opzioni",
+            "validate"
+          ],
+          "score": 3
+        },
+        {
+          "path": "backend/main_backup_fix_tecnico_informatica.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "options",
+            "opzioni",
+            "validate"
+          ],
+          "score": 3
+        },
+        {
+          "path": "backend/main_backup_prima_filtro_tcp.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "options",
+            "opzioni",
+            "validate"
+          ],
+          "score": 3
+        },
+        {
+          "path": "backend/main_backup_prima_link_download_risposta.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "options",
+            "opzioni",
+            "validate"
+          ],
+          "score": 3
+        },
+        {
+          "path": "backend/main_backup_fix_tcp_flow_control.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "options",
+            "opzioni",
+            "validate"
+          ],
+          "score": 3
+        },
+        {
+          "path": "backend/main_backup_prima_prompt_anti_ambiguita.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "options",
+            "opzioni",
+            "validate"
+          ],
+          "score": 3
+        },
+        {
+          "path": "backend/main_backup_prima_revisore_ai.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "options",
+            "opzioni",
+            "validate"
+          ],
+          "score": 3
+        },
+        {
+          "path": "backend/main_backup_prima_singola_diretta_batch.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "options",
+            "opzioni",
+            "validate"
+          ],
+          "score": 3
+        },
+        {
+          "path": "backend/main_backup_fix_timeout_finale_informatica.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "options",
+            "opzioni",
+            "validate"
+          ],
+          "score": 3
+        },
+        {
+          "path": "backend/main_backup_informatica_safe_topics.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "options",
+            "opzioni",
+            "validate"
+          ],
+          "score": 3
+        },
+        {
+          "path": "backend/motori_scrittura.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "options",
+            "opzioni",
+            "validate"
+          ],
+          "score": 3
+        },
+        {
+          "path": "backend/main_backup_prima_prompt_difficile.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "options",
+            "opzioni",
+            "validate"
+          ],
+          "score": 3
+        }
+      ],
+      "keywords": [
+        "opzioni",
+        "options",
+        "opzioni visibili",
+        "opzioni interne",
+        "validate"
+      ]
+    },
+    {
+      "area": "quiz_test",
+      "capability": "risposta_corretta_interna_visibile_mappa_sicura",
+      "status": "EXISTS_NEEDS_ADAPTER_OR_REVIEW",
+      "registry_hits": [],
+      "source_hits": [
+        {
+          "path": "scripts/verifica_phase5_9_10_quality_capability_matrix_v1.py",
+          "kind": "test_or_diagnostic",
+          "matched_keywords": [
+            "bridge",
+            "correct_option_id",
+            "is_correct",
+            "mappa sicura",
+            "risposta corretta"
+          ],
+          "score": 5
+        },
+        {
+          "path": "backend/motori_scrittura.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "bridge",
+            "correct_option_id",
+            "is_correct",
+            "risposta corretta"
+          ],
+          "score": 4
+        },
+        {
+          "path": "backend/test_phase5_live_quality_bridge_v1.py",
+          "kind": "test_or_diagnostic",
+          "matched_keywords": [
+            "bridge",
+            "correct_option_id",
+            "is_correct",
+            "risposta corretta"
+          ],
+          "score": 4
+        },
+        {
+          "path": "scripts/patch_phase5_live_quality_bridge_v1.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "bridge",
+            "correct_option_id",
+            "is_correct",
+            "risposta corretta"
+          ],
+          "score": 4
+        },
+        {
+          "path": "backend/test_legacy_quality_motor_registry_v1.py",
+          "kind": "test_or_diagnostic",
+          "matched_keywords": [
+            "correct_option_id",
+            "is_correct",
+            "risposta corretta"
+          ],
+          "score": 3
+        },
+        {
+          "path": "backend/legacy_quality_motor_registry_v1.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "correct_option_id",
+            "is_correct",
+            "risposta corretta"
+          ],
+          "score": 3
+        },
+        {
+          "path": "backend/phase5_quiz_true_distractor_repair_v1.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "correct_option_id",
+            "is_correct",
+            "risposta corretta"
+          ],
+          "score": 3
+        },
+        {
+          "path": "backend/phase5_live_quality_bridge_v1.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "bridge",
+            "correct_option_id",
+            "is_correct"
+          ],
+          "score": 3
+        },
+        {
+          "path": "backend/phase5_universal_quiz_quality_adapter_v1.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "correct_option_id",
+            "is_correct",
+            "risposta corretta"
+          ],
+          "score": 3
+        },
+        {
+          "path": "scripts/rag_motore_test_riutilizzabile_v35d.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "bridge",
+            "is_correct",
+            "risposta corretta"
+          ],
+          "score": 3
+        },
+        {
+          "path": "scripts/verifica_compatibilita_motori_qualita_fase5_v1.py",
+          "kind": "test_or_diagnostic",
+          "matched_keywords": [
+            "correct_option_id",
+            "is_correct",
+            "risposta corretta"
+          ],
+          "score": 3
+        },
+        {
+          "path": "scripts/verifica_phase5_9_3_quiz_repair_registry_integration_v1.py",
+          "kind": "test_or_diagnostic",
+          "matched_keywords": [
+            "correct_option_id",
+            "is_correct",
+            "risposta corretta"
+          ],
+          "score": 3
+        },
+        {
+          "path": "scripts/verifica_phase5_9_2_quiz_true_distractor_repair_v1.py",
+          "kind": "test_or_diagnostic",
+          "matched_keywords": [
+            "correct_option_id",
+            "is_correct",
+            "risposta corretta"
+          ],
+          "score": 3
+        },
+        {
+          "path": "scripts/verifica_phase5_9_8_universal_quiz_quality_adapter_v1.py",
+          "kind": "test_or_diagnostic",
+          "matched_keywords": [
+            "correct_option_id",
+            "is_correct",
+            "risposta corretta"
+          ],
+          "score": 3
+        },
+        {
+          "path": "scripts/patch_phase5_study_quiz_v1.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "correct_option_id",
+            "is_correct",
+            "risposta corretta"
+          ],
+          "score": 3
+        },
+        {
+          "path": "scripts/verifica_phase5_9_9_universal_quiz_quality_registry_v1.py",
+          "kind": "test_or_diagnostic",
+          "matched_keywords": [
+            "correct_option_id",
+            "is_correct",
+            "risposta corretta"
+          ],
+          "score": 3
+        },
+        {
+          "path": "scripts/verifica_adapter_refine_tests_fase5_v1.py",
+          "kind": "test_or_diagnostic",
+          "matched_keywords": [
+            "correct_option_id",
+            "is_correct",
+            "risposta corretta"
+          ],
+          "score": 3
+        },
+        {
+          "path": "scripts/verifica_compatibilita_batch_motori_legacy_v1.py",
+          "kind": "test_or_diagnostic",
+          "matched_keywords": [
+            "correct_option_id",
+            "is_correct",
+            "risposta corretta"
+          ],
+          "score": 3
+        },
+        {
+          "path": "scripts/patch_super_quality_gate_phase_v1.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "correct_option_id",
+            "is_correct",
+            "risposta corretta"
+          ],
+          "score": 3
+        },
+        {
+          "path": "scripts/patch_phase5_3_refine_tests_legacy_adapter_v1.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "bridge",
+            "correct_option_id",
+            "is_correct"
+          ],
+          "score": 3
+        }
+      ],
+      "keywords": [
+        "correct_option_id",
+        "is_correct",
+        "risposta corretta",
+        "mappa sicura",
+        "bridge"
+      ]
+    },
+    {
+      "area": "quiz_test",
+      "capability": "quattro_opzioni_risposta_presente",
+      "status": "EXISTS_NEEDS_ADAPTER_OR_REVIEW",
+      "registry_hits": [],
+      "source_hits": [
+        {
+          "path": "scripts/verifica_phase5_9_10_quality_capability_matrix_v1.py",
+          "kind": "test_or_diagnostic",
+          "matched_keywords": [
+            "4 opzioni",
+            "correct_option_id",
+            "len(options)",
+            "quattro opzioni",
+            "risposta corretta presente"
+          ],
+          "score": 5
+        },
+        {
+          "path": "backend/motori_scrittura.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "4 opzioni",
+            "correct_option_id",
+            "len(options)"
+          ],
+          "score": 3
+        },
+        {
+          "path": "backend/test_phase5_study_quiz_v1.py",
+          "kind": "test_or_diagnostic",
+          "matched_keywords": [
+            "4 opzioni",
+            "correct_option_id"
+          ],
+          "score": 2
+        },
+        {
+          "path": "scripts/patch_output_builder_phase_v1.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "correct_option_id",
+            "len(options)"
+          ],
+          "score": 2
+        },
+        {
+          "path": "scripts/verifica_compatibilita_motori_qualita_fase5_v1.py",
+          "kind": "test_or_diagnostic",
+          "matched_keywords": [
+            "correct_option_id",
+            "len(options)"
+          ],
+          "score": 2
+        },
+        {
+          "path": "scripts/verifica_adapter_refine_tests_fase5_v1.py",
+          "kind": "test_or_diagnostic",
+          "matched_keywords": [
+            "correct_option_id",
+            "len(options)"
+          ],
+          "score": 2
+        },
+        {
+          "path": "scripts/patch_super_quality_gate_phase_v1.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "correct_option_id",
+            "len(options)"
+          ],
+          "score": 2
+        },
+        {
+          "path": "scripts/verifica_phase5_9_7_quiz_motor_runtime_test_v1.py",
+          "kind": "test_or_diagnostic",
+          "matched_keywords": [
+            "correct_option_id",
+            "len(options)"
+          ],
+          "score": 2
+        },
+        {
+          "path": "scripts/benchmark_mini_llm_study_pack_v1.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "4 opzioni",
+            "len(options)"
+          ],
+          "score": 2
+        },
+        {
+          "path": "scripts/patch_phase5_quiz_distractors_v121.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "4 opzioni",
+            "correct_option_id"
+          ],
+          "score": 2
+        },
+        {
+          "path": "scripts/validatore_core_database.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "4 opzioni",
+            "len(options)"
+          ],
+          "score": 2
+        },
+        {
+          "path": "scripts/report_distrattori_scientifici.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "4 opzioni",
+            "quattro opzioni"
+          ],
+          "score": 2
+        },
+        {
+          "path": "backend/main_backup_prima_regole_tcp_finali.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "4 opzioni"
+          ],
+          "score": 1
+        },
+        {
+          "path": "backend/test_legacy_quality_motor_registry_v1.py",
+          "kind": "test_or_diagnostic",
+          "matched_keywords": [
+            "correct_option_id"
+          ],
+          "score": 1
+        },
+        {
+          "path": "backend/main_backup_fix_informatica_finale_sicura.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "4 opzioni"
+          ],
+          "score": 1
+        },
+        {
+          "path": "backend/main_backup_prima_pulizia_linguistica.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "4 opzioni"
+          ],
+          "score": 1
+        },
+        {
+          "path": "backend/legacy_quality_motor_registry_v1.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "correct_option_id"
+          ],
+          "score": 1
+        },
+        {
+          "path": "backend/main_backup_prima_distrattori_omogenei.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "4 opzioni"
+          ],
+          "score": 1
+        },
+        {
+          "path": "backend/main_backup_fix_tecnico_informatica.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "4 opzioni"
+          ],
+          "score": 1
+        },
+        {
+          "path": "backend/phase5_quiz_true_distractor_repair_v1.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "correct_option_id"
+          ],
+          "score": 1
+        }
+      ],
+      "keywords": [
+        "4 opzioni",
+        "quattro opzioni",
+        "len(options)",
+        "correct_option_id",
+        "risposta corretta presente"
+      ]
+    },
+    {
+      "area": "quiz_test",
+      "capability": "distrattori_forti",
+      "status": "EXISTS_NEEDS_ADAPTER_OR_REVIEW",
+      "registry_hits": [],
+      "source_hits": [
+        {
+          "path": "scripts/verifica_phase5_9_10_quality_capability_matrix_v1.py",
+          "kind": "test_or_diagnostic",
+          "matched_keywords": [
+            "distrattor",
+            "distrattori forti",
+            "plausibil",
+            "source_facts",
+            "true_fact"
+          ],
+          "score": 5
+        },
+        {
+          "path": "backend/phase5_quiz_true_distractor_repair_v1.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "distrattor",
+            "plausibil",
+            "source_facts",
+            "true_fact"
+          ],
+          "score": 4
+        },
+        {
+          "path": "backend/motori_scrittura.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "distrattor",
+            "distrattori forti",
+            "plausibil",
+            "source_facts"
+          ],
+          "score": 4
+        },
+        {
+          "path": "scripts/mappa_phase5_9_4_existing_quiz_quality_motors_v1.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "distrattor",
+            "plausibil",
+            "source_facts",
+            "true_fact"
+          ],
+          "score": 4
+        },
+        {
+          "path": "scripts/migliora_matematica_terzo_blocco_distrattori_forti.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "distrattor",
+            "distrattori forti",
+            "plausibil"
+          ],
+          "score": 3
+        },
+        {
+          "path": "scripts/migliora_matematica_quarto_blocco_distrattori_forti.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "distrattor",
+            "distrattori forti",
+            "plausibil"
+          ],
+          "score": 3
+        },
+        {
+          "path": "scripts/rag_genera_quiz_json.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "distrattor",
+            "distrattori forti",
+            "plausibil"
+          ],
+          "score": 3
+        },
+        {
+          "path": "scripts/migliora_matematica_secondo_blocco_distrattori_forti.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "distrattor",
+            "distrattori forti",
+            "plausibil"
+          ],
+          "score": 3
+        },
+        {
+          "path": "scripts/patch_output_builder_phase_v1.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "distrattor",
+            "distrattori forti",
+            "source_facts"
+          ],
+          "score": 3
+        },
+        {
+          "path": "scripts/migliora_logica_primo_blocco_distrattori_forti.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "distrattor",
+            "distrattori forti",
+            "plausibil"
+          ],
+          "score": 3
+        },
+        {
+          "path": "scripts/migliora_inglese_terzo_blocco_distrattori_forti.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "distrattor",
+            "distrattori forti",
+            "plausibil"
+          ],
+          "score": 3
+        },
+        {
+          "path": "scripts/migliora_inglese_quarto_blocco_distrattori_forti.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "distrattor",
+            "distrattori forti",
+            "plausibil"
+          ],
+          "score": 3
+        },
+        {
+          "path": "scripts/verifica_phase5_8_quality_delta_ready_safe_motors_v1.py",
+          "kind": "test_or_diagnostic",
+          "matched_keywords": [
+            "distrattor",
+            "source_facts",
+            "true_fact"
+          ],
+          "score": 3
+        },
+        {
+          "path": "scripts/patch_phase5_study_quiz_v1.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "distrattor",
+            "plausibil",
+            "source_facts"
+          ],
+          "score": 3
+        },
+        {
+          "path": "scripts/migliora_logica_secondo_blocco_distrattori_forti.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "distrattor",
+            "distrattori forti",
+            "plausibil"
+          ],
+          "score": 3
+        },
+        {
+          "path": "scripts/migliora_ai_quinto_blocco_distrattori_forti.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "distrattor",
+            "distrattori forti",
+            "plausibil"
+          ],
+          "score": 3
+        },
+        {
+          "path": "scripts/migliora_ai_terzo_blocco_distrattori_forti.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "distrattor",
+            "distrattori forti",
+            "plausibil"
+          ],
+          "score": 3
+        },
+        {
+          "path": "scripts/migliora_inglese_secondo_blocco_distrattori_forti.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "distrattor",
+            "distrattori forti",
+            "plausibil"
+          ],
+          "score": 3
+        },
+        {
+          "path": "scripts/migliora_matematica_primo_blocco_distrattori_forti.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "distrattor",
+            "distrattori forti",
+            "plausibil"
+          ],
+          "score": 3
+        },
+        {
+          "path": "scripts/patch_phase5_quiz_distractors_v121.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "distrattor",
+            "plausibil",
+            "source_facts"
+          ],
+          "score": 3
+        }
+      ],
+      "keywords": [
+        "distrattori forti",
+        "distrattor",
+        "plausibil",
+        "true_fact",
+        "source_facts"
+      ]
+    },
+    {
+      "area": "quiz_test",
+      "capability": "no_opzioni_duplicate",
+      "status": "EXISTS_NEEDS_ADAPTER_OR_REVIEW",
+      "registry_hits": [],
+      "source_hits": [
+        {
+          "path": "scripts/verifica_phase5_9_10_quality_capability_matrix_v1.py",
+          "kind": "test_or_diagnostic",
+          "matched_keywords": [
+            "duplicate options",
+            "duplicati",
+            "opzioni duplicate",
+            "stessa domanda"
+          ],
+          "score": 4
+        },
+        {
+          "path": "scripts/correggi_duplicati_logica_visiva.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "duplicati",
+            "opzioni duplicate",
+            "stessa domanda"
+          ],
+          "score": 3
+        },
+        {
+          "path": "scripts/check_duplicates_base.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "duplicati",
+            "opzioni duplicate",
+            "stessa domanda"
+          ],
+          "score": 3
+        },
+        {
+          "path": "scripts/rag_revisore_qualita_testuale_v35g.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "duplicati",
+            "opzioni duplicate",
+            "stessa domanda"
+          ],
+          "score": 3
+        },
+        {
+          "path": "scripts/validatore_duplicati_database.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "duplicati",
+            "opzioni duplicate",
+            "stessa domanda"
+          ],
+          "score": 3
+        },
+        {
+          "path": "scripts/review_matematica_quick.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "opzioni duplicate",
+            "stessa domanda"
+          ],
+          "score": 2
+        },
+        {
+          "path": "scripts/audit_motori_scientifici.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "duplicati",
+            "opzioni duplicate"
+          ],
+          "score": 2
+        },
+        {
+          "path": "scripts/review_option_structure.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "duplicati",
+            "opzioni duplicate"
+          ],
+          "score": 2
+        },
+        {
+          "path": "scripts/rag_genera_output_da_kb_clean_v34e.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "duplicati",
+            "opzioni duplicate"
+          ],
+          "score": 2
+        },
+        {
+          "path": "scripts/tune_review_option_structure_v3.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "duplicati",
+            "opzioni duplicate"
+          ],
+          "score": 2
+        },
+        {
+          "path": "scripts/verifica_rag_output_kb_clean_v34e.py",
+          "kind": "test_or_diagnostic",
+          "matched_keywords": [
+            "duplicati",
+            "opzioni duplicate"
+          ],
+          "score": 2
+        },
+        {
+          "path": "scripts/audit_motori_scientifici_sorgenti.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "duplicati",
+            "opzioni duplicate"
+          ],
+          "score": 2
+        },
+        {
+          "path": "scripts/review_inglese_quick.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "opzioni duplicate",
+            "stessa domanda"
+          ],
+          "score": 2
+        },
+        {
+          "path": "scripts/motore_qualita_generale.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "duplicati",
+            "opzioni duplicate"
+          ],
+          "score": 2
+        },
+        {
+          "path": "backend/test_phase5_study_quiz_v1.py",
+          "kind": "test_or_diagnostic",
+          "matched_keywords": [
+            "opzioni duplicate"
+          ],
+          "score": 1
+        },
+        {
+          "path": "backend/main_backup_fix_informatica_finale_sicura.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "duplicati"
+          ],
+          "score": 1
+        },
+        {
+          "path": "backend/main_backup_fix_tecnico_informatica.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "duplicati"
+          ],
+          "score": 1
+        },
+        {
+          "path": "backend/main_backup_fix_tcp_flow_control.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "duplicati"
+          ],
+          "score": 1
+        },
+        {
+          "path": "backend/main_backup_fix_timeout_finale_informatica.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "duplicati"
+          ],
+          "score": 1
+        },
+        {
+          "path": "backend/main_backup_informatica_safe_topics.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "duplicati"
+          ],
+          "score": 1
+        }
+      ],
+      "keywords": [
+        "opzioni duplicate",
+        "duplicate options",
+        "duplicati",
+        "stessa domanda"
+      ]
+    },
+    {
+      "area": "quiz_test",
+      "capability": "compatibilita_bridge_quiz",
+      "status": "CONNECTED_IN_REGISTRY",
+      "registry_hits": [
+        {
+          "motor_id": "backend.phase5_universal_quiz_quality_adapter_v1.universal_quiz_quality_target_v1",
+          "adapter_name": "quiz_list",
+          "target_kind": "quiz",
+          "matched_keywords": [
+            "adapter"
+          ]
+        }
+      ],
+      "source_hits": [
+        {
+          "path": "scripts/verifica_phase5_9_10_quality_capability_matrix_v1.py",
+          "kind": "test_or_diagnostic",
+          "matched_keywords": [
+            "V3.5B",
+            "adapter",
+            "bridge",
+            "quiz bridge",
+            "rag_bridge"
+          ],
+          "score": 5
+        },
+        {
+          "path": "scripts/verifica_rag_motore_test_riutilizzabile_v35d.py",
+          "kind": "test_or_diagnostic",
+          "matched_keywords": [
+            "V3.5B",
+            "bridge",
+            "rag_bridge"
+          ],
+          "score": 3
+        },
+        {
+          "path": "scripts/verifica_rag_bridge_motori_qualita_esistenti_v35b.py",
+          "kind": "test_or_diagnostic",
+          "matched_keywords": [
+            "V3.5B",
+            "bridge",
+            "rag_bridge"
+          ],
+          "score": 3
+        },
+        {
+          "path": "scripts/rag_selezionatore_motori_riutilizzabile_v35f.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "V3.5B",
+            "bridge",
+            "rag_bridge"
+          ],
+          "score": 3
+        },
+        {
+          "path": "scripts/verifica_rag_motori_didattici_riutilizzabili_v35c.py",
+          "kind": "test_or_diagnostic",
+          "matched_keywords": [
+            "V3.5B",
+            "bridge",
+            "rag_bridge"
+          ],
+          "score": 3
+        },
+        {
+          "path": "scripts/rag_orchestratore_riutilizzabile_v35e.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "V3.5B",
+            "bridge",
+            "rag_bridge"
+          ],
+          "score": 3
+        },
+        {
+          "path": "backend/phase5_live_quality_bridge_v1.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "adapter",
+            "bridge"
+          ],
+          "score": 2
+        },
+        {
+          "path": "backend/motori_scrittura.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "adapter",
+            "bridge"
+          ],
+          "score": 2
+        },
+        {
+          "path": "scripts/rag_bridge_motori_qualita_esistenti_v35b.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "V3.5B",
+            "bridge"
+          ],
+          "score": 2
+        },
+        {
+          "path": "scripts/rag_pipeline_unica_ufficiale.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "bridge",
+            "rag_bridge"
+          ],
+          "score": 2
+        },
+        {
+          "path": "scripts/filtra_legacy_quality_motor_candidates_v1.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "adapter",
+            "bridge"
+          ],
+          "score": 2
+        },
+        {
+          "path": "scripts/patch_phase5_3_live_quality_adapter_v1.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "adapter",
+            "bridge"
+          ],
+          "score": 2
+        },
+        {
+          "path": "scripts/installa_rag_adapter_quiz_ufficiale_v43.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "adapter",
+            "bridge"
+          ],
+          "score": 2
+        },
+        {
+          "path": "scripts/patch_phase5_live_quality_bridge_v1.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "adapter",
+            "bridge"
+          ],
+          "score": 2
+        },
+        {
+          "path": "scripts/verifica_rag_adapter_quiz_ufficiale_v43.py",
+          "kind": "test_or_diagnostic",
+          "matched_keywords": [
+            "adapter",
+            "bridge"
+          ],
+          "score": 2
+        },
+        {
+          "path": "scripts/patch_phase5_3_refine_tests_legacy_adapter_v1.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "adapter",
+            "bridge"
+          ],
+          "score": 2
+        },
+        {
+          "path": "scripts/rag_adapter_quiz_ufficiale_v43.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "adapter",
+            "bridge"
+          ],
+          "score": 2
+        },
+        {
+          "path": "scripts/rag_ponte_documenti_lunghi_catena_v35_v2a14.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "bridge",
+            "rag_bridge"
+          ],
+          "score": 2
+        },
+        {
+          "path": "backend/legacy_quality_motor_registry_v1.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "adapter"
+          ],
+          "score": 1
+        },
+        {
+          "path": "backend/test_map_phase_coverage_reale_v1.py",
+          "kind": "test_or_diagnostic",
+          "matched_keywords": [
+            "adapter"
+          ],
+          "score": 1
+        }
+      ],
+      "keywords": [
+        "bridge",
+        "V3.5B",
+        "quiz bridge",
+        "rag_bridge",
+        "adapter"
+      ]
+    },
+    {
+      "area": "duplicati_ripetizioni",
+      "capability": "duplicati_per_tipo_output_e_contesto",
+      "status": "EXISTS_NEEDS_ADAPTER_OR_REVIEW",
+      "registry_hits": [],
+      "source_hits": [
+        {
+          "path": "scripts/verifica_phase5_9_10_quality_capability_matrix_v1.py",
+          "kind": "test_or_diagnostic",
+          "matched_keywords": [
+            "contesto",
+            "duplicati",
+            "quasi duplicati",
+            "ripetizioni",
+            "similar",
+            "soglia_similarita"
+          ],
+          "score": 6
+        },
+        {
+          "path": "backend/main_backup_fix_informatica_finale_sicura.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "contesto",
+            "duplicati",
+            "similar"
+          ],
+          "score": 3
+        },
+        {
+          "path": "backend/main_backup_fix_tecnico_informatica.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "contesto",
+            "duplicati",
+            "similar"
+          ],
+          "score": 3
+        },
+        {
+          "path": "backend/main_backup_fix_tcp_flow_control.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "contesto",
+            "duplicati",
+            "similar"
+          ],
+          "score": 3
+        },
+        {
+          "path": "backend/main_backup_fix_timeout_finale_informatica.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "contesto",
+            "duplicati",
+            "similar"
+          ],
+          "score": 3
+        },
+        {
+          "path": "backend/main_backup_informatica_safe_topics.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "contesto",
+            "duplicati",
+            "similar"
+          ],
+          "score": 3
+        },
+        {
+          "path": "backend/motori_scrittura.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "contesto",
+            "duplicati",
+            "ripetizioni"
+          ],
+          "score": 3
+        },
+        {
+          "path": "backend/main_backup_endpoint_finale_informatica.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "contesto",
+            "duplicati",
+            "similar"
+          ],
+          "score": 3
+        },
+        {
+          "path": "backend/main.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "contesto",
+            "duplicati",
+            "similar"
+          ],
+          "score": 3
+        },
+        {
+          "path": "backend/main_backup_chiusura_informatica.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "contesto",
+            "duplicati",
+            "similar"
+          ],
+          "score": 3
+        },
+        {
+          "path": "scripts/motore_qualita_generale.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "duplicati",
+            "similar",
+            "soglia_similarita"
+          ],
+          "score": 3
+        },
+        {
+          "path": "scripts/rag_revisore_qualita_testuale_v35g.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "duplicati",
+            "quasi duplicati",
+            "similar"
+          ],
+          "score": 3
+        },
+        {
+          "path": "backend/main_backup_prima_regole_tcp_finali.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "contesto",
+            "similar"
+          ],
+          "score": 2
+        },
+        {
+          "path": "backend/main_backup_prima_filtro_tcp.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "contesto",
+            "similar"
+          ],
+          "score": 2
+        },
+        {
+          "path": "backend/main_backup_prima_singola_diretta_batch.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "contesto",
+            "similar"
+          ],
+          "score": 2
+        },
+        {
+          "path": "backend/main_backup_prima_filtro_ambiguita_intelligente.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "contesto",
+            "similar"
+          ],
+          "score": 2
+        },
+        {
+          "path": "backend/main_backup_prima_filtro_tcp_header.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "contesto",
+            "similar"
+          ],
+          "score": 2
+        },
+        {
+          "path": "scripts/create_batch_100.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "contesto",
+            "duplicati"
+          ],
+          "score": 2
+        },
+        {
+          "path": "scripts/verifica_rag_documenti_lunghi_v2.py",
+          "kind": "test_or_diagnostic",
+          "matched_keywords": [
+            "ripetizioni",
+            "similar"
+          ],
+          "score": 2
+        },
+        {
+          "path": "scripts/audit_motori_scientifici.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "duplicati",
+            "similar"
+          ],
+          "score": 2
+        }
+      ],
+      "keywords": [
+        "duplicati",
+        "quasi duplicati",
+        "ripetizioni",
+        "similar",
+        "soglia_similarita",
+        "contesto"
+      ]
+    },
+    {
+      "area": "duplicati_ripetizioni",
+      "capability": "ripetizioni_meccaniche_domande",
+      "status": "EXISTS_NEEDS_ADAPTER_OR_REVIEW",
+      "registry_hits": [],
+      "source_hits": [
+        {
+          "path": "scripts/verifica_phase5_9_10_quality_capability_matrix_v1.py",
+          "kind": "test_or_diagnostic",
+          "matched_keywords": [
+            "domande troppo ripetitive",
+            "duplicate_ratio",
+            "meccaniche",
+            "quale affermazione"
+          ],
+          "score": 4
+        },
+        {
+          "path": "backend/motori_scrittura.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "duplicate_ratio",
+            "meccaniche",
+            "quale affermazione"
+          ],
+          "score": 3
+        },
+        {
+          "path": "scripts/patch_super_quality_gate_phase_v1.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "duplicate_ratio",
+            "meccaniche",
+            "quale affermazione"
+          ],
+          "score": 3
+        },
+        {
+          "path": "backend/phase5_universal_quiz_quality_adapter_v1.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "meccaniche",
+            "quale affermazione"
+          ],
+          "score": 2
+        },
+        {
+          "path": "scripts/patch_phase5_study_quiz_v1.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "meccaniche",
+            "quale affermazione"
+          ],
+          "score": 2
+        },
+        {
+          "path": "scripts/rag_revisore_naturalezza_antikeyword_v35i.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "meccaniche",
+            "quale affermazione"
+          ],
+          "score": 2
+        },
+        {
+          "path": "scripts/rag_revisore_accordo_pronomi_v35j.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "meccaniche",
+            "quale affermazione"
+          ],
+          "score": 2
+        },
+        {
+          "path": "backend/test_phase5_study_quiz_v1.py",
+          "kind": "test_or_diagnostic",
+          "matched_keywords": [
+            "quale affermazione"
+          ],
+          "score": 1
+        },
+        {
+          "path": "backend/test_legacy_quality_motor_registry_v1.py",
+          "kind": "test_or_diagnostic",
+          "matched_keywords": [
+            "quale affermazione"
+          ],
+          "score": 1
+        },
+        {
+          "path": "backend/legacy_quality_motor_registry_v1.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "meccaniche"
+          ],
+          "score": 1
+        },
+        {
+          "path": "backend/test_map_phase_coverage_reale_v1.py",
+          "kind": "test_or_diagnostic",
+          "matched_keywords": [
+            "meccaniche"
+          ],
+          "score": 1
+        },
+        {
+          "path": "backend/test_map_phase_client_reale_v1.py",
+          "kind": "test_or_diagnostic",
+          "matched_keywords": [
+            "meccaniche"
+          ],
+          "score": 1
+        },
+        {
+          "path": "backend/test_phase5_live_quality_bridge_v1.py",
+          "kind": "test_or_diagnostic",
+          "matched_keywords": [
+            "quale affermazione"
+          ],
+          "score": 1
+        },
+        {
+          "path": "scripts/patch_output_builder_phase_v1.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "quale affermazione"
+          ],
+          "score": 1
+        },
+        {
+          "path": "scripts/mappa_phase5_9_4_existing_quiz_quality_motors_v1.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "quale affermazione"
+          ],
+          "score": 1
+        },
+        {
+          "path": "scripts/verifica_compatibilita_motori_qualita_fase5_v1.py",
+          "kind": "test_or_diagnostic",
+          "matched_keywords": [
+            "quale affermazione"
+          ],
+          "score": 1
+        },
+        {
+          "path": "scripts/patch_phase5_quality_summary_cards_v1.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "quale affermazione"
+          ],
+          "score": 1
+        },
+        {
+          "path": "scripts/installa_rag_adapter_quiz_ufficiale_v43.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "quale affermazione"
+          ],
+          "score": 1
+        },
+        {
+          "path": "scripts/verifica_phase5_8_quality_delta_ready_safe_motors_v1.py",
+          "kind": "test_or_diagnostic",
+          "matched_keywords": [
+            "quale affermazione"
+          ],
+          "score": 1
+        },
+        {
+          "path": "scripts/verifica_rag_revisore_naturalezza_antikeyword_v35i.py",
+          "kind": "test_or_diagnostic",
+          "matched_keywords": [
+            "meccaniche"
+          ],
+          "score": 1
+        }
+      ],
+      "keywords": [
+        "domande troppo ripetitive",
+        "duplicate_ratio",
+        "meccaniche",
+        "quale affermazione"
+      ]
+    },
+    {
+      "area": "selezionatore_orchestratore",
+      "capability": "seleziona_motori_giusti_per_compito",
+      "status": "EXISTS_NEEDS_ADAPTER_OR_REVIEW",
+      "registry_hits": [],
+      "source_hits": [
+        {
+          "path": "scripts/verifica_phase5_9_10_quality_capability_matrix_v1.py",
+          "kind": "test_or_diagnostic",
+          "matched_keywords": [
+            "motori giusti",
+            "orchestratore",
+            "output richiesto",
+            "selezionatore",
+            "task"
+          ],
+          "score": 5
+        },
+        {
+          "path": "scripts/rag_selezionatore_motori_riutilizzabile_v35f.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "orchestratore",
+            "selezionatore",
+            "task"
+          ],
+          "score": 3
+        },
+        {
+          "path": "scripts/verifica_rag_selezionatore_motori_riutilizzabile_v35f.py",
+          "kind": "test_or_diagnostic",
+          "matched_keywords": [
+            "orchestratore",
+            "selezionatore"
+          ],
+          "score": 2
+        },
+        {
+          "path": "scripts/rag_pipeline_unica_ufficiale.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "orchestratore",
+            "selezionatore"
+          ],
+          "score": 2
+        },
+        {
+          "path": "scripts/rag_ponte_documenti_lunghi_catena_v35_v2a14.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "orchestratore",
+            "selezionatore"
+          ],
+          "score": 2
+        },
+        {
+          "path": "scripts/rag_orchestratore_riutilizzabile_v35e.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "orchestratore",
+            "selezionatore"
+          ],
+          "score": 2
+        },
+        {
+          "path": "demo-rag/test-selezionatore-output-v35h.html",
+          "kind": "frontend_or_runtime_web",
+          "matched_keywords": [
+            "selezionatore",
+            "task"
+          ],
+          "score": 2
+        },
+        {
+          "path": "backend/motori_scrittura.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "orchestratore"
+          ],
+          "score": 1
+        },
+        {
+          "path": "scripts/applica_v35k_universale.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "selezionatore"
+          ],
+          "score": 1
+        },
+        {
+          "path": "scripts/verifica_rag_revisore_qualita_testuale_v35g.py",
+          "kind": "test_or_diagnostic",
+          "matched_keywords": [
+            "selezionatore"
+          ],
+          "score": 1
+        },
+        {
+          "path": "scripts/valida_token_vectorizer_v21_natural.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "task"
+          ],
+          "score": 1
+        },
+        {
+          "path": "scripts/valida_neural_model_v3_clean.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "task"
+          ],
+          "score": 1
+        },
+        {
+          "path": "scripts/valida_knowledge_dataset_v2_clean.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "task"
+          ],
+          "score": 1
+        },
+        {
+          "path": "scripts/valida_inference_engine_v31_natural.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "task"
+          ],
+          "score": 1
+        },
+        {
+          "path": "scripts/applica_v35k_reale.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "selezionatore"
+          ],
+          "score": 1
+        },
+        {
+          "path": "scripts/verifica_rag_knowledge_base_v34b.py",
+          "kind": "test_or_diagnostic",
+          "matched_keywords": [
+            "selezionatore"
+          ],
+          "score": 1
+        },
+        {
+          "path": "scripts/verifica_rag_orchestratore_riutilizzabile_v35e.py",
+          "kind": "test_or_diagnostic",
+          "matched_keywords": [
+            "orchestratore"
+          ],
+          "score": 1
+        },
+        {
+          "path": "scripts/fix_gate_universale_pagina_v35k.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "selezionatore"
+          ],
+          "score": 1
+        },
+        {
+          "path": "scripts/verifica_rag_revisore_naturalezza_antikeyword_v35i.py",
+          "kind": "test_or_diagnostic",
+          "matched_keywords": [
+            "selezionatore"
+          ],
+          "score": 1
+        },
+        {
+          "path": "scripts/fix_badge_ui_e_collega_main_v35l.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "selezionatore"
+          ],
+          "score": 1
+        }
+      ],
+      "keywords": [
+        "selezionatore",
+        "orchestratore",
+        "motori giusti",
+        "task",
+        "output richiesto"
+      ]
+    },
+    {
+      "area": "selezionatore_orchestratore",
+      "capability": "niente_output_non_richiesto",
+      "status": "TEST_OR_VALIDATOR_ONLY",
+      "registry_hits": [],
+      "source_hits": [
+        {
+          "path": "scripts/verifica_phase5_9_10_quality_capability_matrix_v1.py",
+          "kind": "test_or_diagnostic",
+          "matched_keywords": [
+            "niente motori inutili",
+            "output non richiesto",
+            "solo richiesto"
+          ],
+          "score": 3
+        }
+      ],
+      "keywords": [
+        "output non richiesto",
+        "niente motori inutili",
+        "solo richiesto"
+      ]
+    },
+    {
+      "area": "selezionatore_orchestratore",
+      "capability": "output_pronto_ui_pdf_app",
+      "status": "CONNECTED_IN_REGISTRY",
+      "registry_hits": [
+        {
+          "motor_id": "backend.phase5_quiz_true_distractor_repair_v1.repair_quiz_target_v1",
+          "adapter_name": "quiz_list",
+          "target_kind": "quiz",
+          "matched_keywords": [
+            "ui"
+          ]
+        },
+        {
+          "motor_id": "backend.phase5_universal_quiz_quality_adapter_v1.universal_quiz_quality_target_v1",
+          "adapter_name": "quiz_list",
+          "target_kind": "quiz",
+          "matched_keywords": [
+            "ui"
+          ]
+        },
+        {
+          "motor_id": "backend.main.pulisci_qualita_linguistica_quiz",
+          "adapter_name": "dict_test_quiz",
+          "target_kind": "quiz",
+          "matched_keywords": [
+            "ui"
+          ]
+        },
+        {
+          "motor_id": "scripts.rag_motore_didattico_riutilizzabile_v35c.refine_tests",
+          "adapter_name": "legacy_answers_dict",
+          "target_kind": "quiz",
+          "matched_keywords": [
+            "ui"
+          ]
+        }
+      ],
+      "source_hits": [
+        {
+          "path": "scripts/rag_selezionatore_motori_riutilizzabile_v35f.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "app",
+            "output finale",
+            "pdf",
+            "pronto",
+            "ui",
+            "web"
+          ],
+          "score": 6
+        },
+        {
+          "path": "scripts/verifica_phase5_9_10_quality_capability_matrix_v1.py",
+          "kind": "test_or_diagnostic",
+          "matched_keywords": [
+            "app",
+            "output finale",
+            "pdf",
+            "pronto",
+            "ui",
+            "web"
+          ],
+          "score": 6
+        },
+        {
+          "path": "scripts/sistema_bottone_rag_vicino_pacchetto.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "app",
+            "pdf",
+            "pronto",
+            "ui",
+            "web"
+          ],
+          "score": 5
+        },
+        {
+          "path": "scripts/rag_pipeline_unica_ufficiale.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "app",
+            "output finale",
+            "pdf",
+            "ui",
+            "web"
+          ],
+          "score": 5
+        },
+        {
+          "path": "scripts/rag_ponte_documenti_lunghi_catena_v35_v2a14.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "app",
+            "output finale",
+            "pdf",
+            "ui",
+            "web"
+          ],
+          "score": 5
+        },
+        {
+          "path": "backend/motori_scrittura.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "app",
+            "output finale",
+            "pdf",
+            "ui"
+          ],
+          "score": 4
+        },
+        {
+          "path": "scripts/verifica_rag_selezionatore_motori_riutilizzabile_v35f.py",
+          "kind": "test_or_diagnostic",
+          "matched_keywords": [
+            "app",
+            "pdf",
+            "ui",
+            "web"
+          ],
+          "score": 4
+        },
+        {
+          "path": "scripts/create_quiz_package.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "app",
+            "pronto",
+            "ui",
+            "web"
+          ],
+          "score": 4
+        },
+        {
+          "path": "scripts/applica_migliorie_finali_rag.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "app",
+            "pdf",
+            "ui",
+            "web"
+          ],
+          "score": 4
+        },
+        {
+          "path": "scripts/verifica_rag_documenti_lunghi_v2.py",
+          "kind": "test_or_diagnostic",
+          "matched_keywords": [
+            "app",
+            "pdf",
+            "ui",
+            "web"
+          ],
+          "score": 4
+        },
+        {
+          "path": "scripts/test_rag_documento_lungo_generato_v1.py",
+          "kind": "test_or_diagnostic",
+          "matched_keywords": [
+            "app",
+            "pdf",
+            "ui",
+            "web"
+          ],
+          "score": 4
+        },
+        {
+          "path": "scripts/pdf_engine_playwright.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "pdf",
+            "pronto",
+            "ui",
+            "web"
+          ],
+          "score": 4
+        },
+        {
+          "path": "scripts/rag_pipeline_documenti_grandi_v45.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "app",
+            "pdf",
+            "pronto",
+            "ui"
+          ],
+          "score": 4
+        },
+        {
+          "path": "scripts/rag_pdf_export_server.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "app",
+            "pdf",
+            "ui",
+            "web"
+          ],
+          "score": 4
+        },
+        {
+          "path": "scripts/valida_mini_llm_study_pack_cli_v1.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "app",
+            "pdf",
+            "pronto",
+            "ui"
+          ],
+          "score": 4
+        },
+        {
+          "path": "scripts/rag_cleaner_finale_universale_v35k.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "app",
+            "pdf",
+            "ui",
+            "web"
+          ],
+          "score": 4
+        },
+        {
+          "path": "scripts/clean_package_outputs.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "app",
+            "pronto",
+            "ui",
+            "web"
+          ],
+          "score": 4
+        },
+        {
+          "path": "scripts/genera_pdf_reale_da_card_images.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "app",
+            "pdf",
+            "ui",
+            "web"
+          ],
+          "score": 4
+        },
+        {
+          "path": "scripts/verifica_mini_llm_runtime_pronto_llm_v1.py",
+          "kind": "test_or_diagnostic",
+          "matched_keywords": [
+            "app",
+            "pdf",
+            "pronto",
+            "ui"
+          ],
+          "score": 4
+        },
+        {
+          "path": "scripts/valida_mini_llm_universal_llm_bridge_v395.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "app",
+            "pdf",
+            "pronto",
+            "ui"
+          ],
+          "score": 4
+        }
+      ],
+      "keywords": [
+        "ui",
+        "pdf",
+        "app",
+        "web",
+        "output finale",
+        "pronto"
+      ]
+    },
+    {
+      "area": "selezionatore_orchestratore",
+      "capability": "report_qualita_leggibile",
+      "status": "EXISTS_NEEDS_ADAPTER_OR_REVIEW",
+      "registry_hits": [],
+      "source_hits": [
+        {
+          "path": "scripts/verifica_phase5_9_10_quality_capability_matrix_v1.py",
+          "kind": "test_or_diagnostic",
+          "matched_keywords": [
+            "errors",
+            "quality_report",
+            "report leggibile",
+            "report qualità",
+            "warnings"
+          ],
+          "score": 5
+        },
+        {
+          "path": "backend/motori_scrittura.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "errors",
+            "quality_report",
+            "warnings"
+          ],
+          "score": 3
+        },
+        {
+          "path": "scripts/patch_phase5_quality_summary_cards_v1.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "errors",
+            "quality_report",
+            "warnings"
+          ],
+          "score": 3
+        },
+        {
+          "path": "scripts/patch_phase5_study_quiz_v1.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "errors",
+            "quality_report",
+            "warnings"
+          ],
+          "score": 3
+        },
+        {
+          "path": "scripts/patch_super_quality_gate_phase_v1.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "errors",
+            "quality_report",
+            "warnings"
+          ],
+          "score": 3
+        },
+        {
+          "path": "backend/test_phase5_study_quiz_v1.py",
+          "kind": "test_or_diagnostic",
+          "matched_keywords": [
+            "errors",
+            "quality_report"
+          ],
+          "score": 2
+        },
+        {
+          "path": "backend/test_legacy_quality_motor_registry_v1.py",
+          "kind": "test_or_diagnostic",
+          "matched_keywords": [
+            "errors",
+            "warnings"
+          ],
+          "score": 2
+        },
+        {
+          "path": "backend/test_super_quality_gate_phase_v1.py",
+          "kind": "test_or_diagnostic",
+          "matched_keywords": [
+            "errors",
+            "quality_report"
+          ],
+          "score": 2
+        },
+        {
+          "path": "backend/test_map_phase_coverage_reale_v1.py",
+          "kind": "test_or_diagnostic",
+          "matched_keywords": [
+            "errors",
+            "warnings"
+          ],
+          "score": 2
+        },
+        {
+          "path": "backend/test_map_phase_client_reale_v1.py",
+          "kind": "test_or_diagnostic",
+          "matched_keywords": [
+            "errors",
+            "warnings"
+          ],
+          "score": 2
+        },
+        {
+          "path": "backend/test_phase5_micro_concepts_cards_v11.py",
+          "kind": "test_or_diagnostic",
+          "matched_keywords": [
+            "errors",
+            "quality_report"
+          ],
+          "score": 2
+        },
+        {
+          "path": "backend/test_map_phase_v1.py",
+          "kind": "test_or_diagnostic",
+          "matched_keywords": [
+            "errors",
+            "warnings"
+          ],
+          "score": 2
+        },
+        {
+          "path": "backend/test_map_phase_json_corrotto_v1.py",
+          "kind": "test_or_diagnostic",
+          "matched_keywords": [
+            "errors",
+            "warnings"
+          ],
+          "score": 2
+        },
+        {
+          "path": "backend/test_reduce_phase_v1.py",
+          "kind": "test_or_diagnostic",
+          "matched_keywords": [
+            "errors",
+            "warnings"
+          ],
+          "score": 2
+        },
+        {
+          "path": "backend/test_phase5_quality_summary_cards_v1.py",
+          "kind": "test_or_diagnostic",
+          "matched_keywords": [
+            "errors",
+            "quality_report"
+          ],
+          "score": 2
+        },
+        {
+          "path": "backend/test_phase5_live_quality_bridge_v1.py",
+          "kind": "test_or_diagnostic",
+          "matched_keywords": [
+            "errors",
+            "warnings"
+          ],
+          "score": 2
+        },
+        {
+          "path": "scripts/rag_micro_rifinitura_universale_v35l.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "errors",
+            "warnings"
+          ],
+          "score": 2
+        },
+        {
+          "path": "scripts/valida_mini_llm_v4005_finale.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "errors",
+            "warnings"
+          ],
+          "score": 2
+        },
+        {
+          "path": "scripts/patch_output_builder_phase_v1.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "errors",
+            "warnings"
+          ],
+          "score": 2
+        },
+        {
+          "path": "scripts/rag_motore_test_riutilizzabile_v35d.py",
+          "kind": "backend_or_script",
+          "matched_keywords": [
+            "errors",
+            "warnings"
+          ],
+          "score": 2
+        }
+      ],
+      "keywords": [
+        "report qualità",
+        "quality_report",
+        "report leggibile",
+        "warnings",
+        "errors"
+      ]
+    }
+  ],
+  "notes": [
+    "Diagnostico: non modifica registry, motori o pipeline.",
+    "Distingue capacità collegate, capacità esistenti ma da adattare, validator/test e frontend.",
+    "Serve a non perdere i motori già creati e a decidere le prossime integrazioni."
+  ]
+}
