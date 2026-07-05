@@ -1,0 +1,108 @@
+{
+  "phase": "5.13E",
+  "status": "PASS - Fase 5.13E: FINAL_4_GENERATORS_REGRESSION_READY",
+  "generators": [
+    {
+      "name": "Card",
+      "status": "PASS",
+      "evidence": [
+        "reports/phase5_12g2_section_quality_selection_matrix_with_contextual_duplicates_v1.json",
+        "reports/phase5_12g2_section_quality_selection_matrix_with_contextual_duplicates_v1.md"
+      ],
+      "defects": [],
+      "warnings": []
+    },
+    {
+      "name": "Riassunto",
+      "status": "PASS",
+      "evidence": [
+        "reports/audit_effetti_premi_ai_its.md",
+        "reports/legacy_quality_motor_candidates_v1.json",
+        "reports/legacy_quality_motor_candidates_v1.md",
+        "reports/legacy_quality_motor_shortlist_v1.json",
+        "reports/legacy_quality_motor_shortlist_v1.md",
+        "reports/legacy_quality_motor_version_families_v1.json",
+        "reports/motori_qualita_esistenti_v1.json",
+        "reports/phase5_12a1_motori_salvabili_strict_v1.json"
+      ],
+      "defects": [],
+      "warnings": []
+    },
+    {
+      "name": "Domande studio",
+      "status": "PASS",
+      "evidence": [
+        "reports/phase5_13c2_study_questions_final_quality_gate_v1.json"
+      ],
+      "defects": [],
+      "warnings": []
+    },
+    {
+      "name": "Test/Quiz",
+      "status": "PASS",
+      "evidence": [
+        "reports/phase5_13d2_test_quiz_final_quality_gate_v1.json"
+      ],
+      "defects": [],
+      "warnings": []
+    }
+  ],
+  "commands": [
+    {
+      "label": "5.13C.1 Study Questions 51 connector",
+      "command": [
+        "/Users/alessandrobarbarossa/alex-ai-workspace/backend/.venv/bin/python3",
+        "scripts/run_phase5_13c1_study_questions_real_connector.py"
+      ],
+      "returncode": 0,
+      "stdout_tail": "PASS - Fase 5.13C.1: STUDY_QUESTIONS_51_REAL_CONNECTOR_READY\nRoute Domande studio: 51\nControlli qualità Domande studio: 43\nSelector/orchestrator: 8\nMotori eseguiti/tracciati: 51\nJSON report: /Users/alessandrobarbarossa/alex-ai-workspace/reports/phase5_13c1_study_questions_51_real_connector_v1.json\nMarkdown report: /Users/alessandrobarbarossa/alex-ai-workspace/reports/phase5_13c1_study_questions_51_real_connector_v1.md\n"
+    },
+    {
+      "label": "5.13C.2 Study Questions final quality",
+      "command": [
+        "/Users/alessandrobarbarossa/alex-ai-workspace/backend/.venv/bin/python3",
+        "scripts/run_phase5_13c2_study_questions_final_quality_gate.py"
+      ],
+      "returncode": 0,
+      "stdout_tail": "PASS - Fase 5.13C.2: STUDY_QUESTIONS_FINAL_QUALITY_GATE_READY\nApproved sorgente: True\nStatus sorgente: APPROVED\nDomande studio: 4\nRoute Domande studio: 51\nControlli qualità Domande studio: 43\nSelector/orchestrator: 8\nMotori mancanti: 0\nDefects: 0\nWarnings: 0\nJSON report: /Users/alessandrobarbarossa/alex-ai-workspace/reports/phase5_13c2_study_questions_final_quality_gate_v1.json\nMarkdown report: /Users/alessandrobarbarossa/alex-ai-workspace/reports/phase5_13c2_study_questions_final_quality_gate_v1.md\n"
+    },
+    {
+      "label": "5.13D.0.1 Test/Quiz route 63",
+      "command": [
+        "/Users/alessandrobarbarossa/alex-ai-workspace/backend/.venv/bin/python3",
+        "scripts/run_phase5_13d01_test_quiz_route_materializer.py"
+      ],
+      "returncode": 0,
+      "stdout_tail": "PASS - Fase 5.13D.0.1: TEST_QUIZ_ROUTE_63_MATERIALIZED\nTest/Quiz quality controls: 55\nSelector/orchestrator: 8\nTest/Quiz route total: 63\nSource matrix: reports/phase5_12g2_section_quality_selection_matrix_with_contextual_duplicates_v1.json\n"
+    },
+    {
+      "label": "5.13D.1 Test/Quiz 63 connector",
+      "command": [
+        "/Users/alessandrobarbarossa/alex-ai-workspace/backend/.venv/bin/python3",
+        "scripts/run_phase5_13d1_test_quiz_63_real_connector.py"
+      ],
+      "returncode": 0,
+      "stdout_tail": "PASS - Fase 5.13D.1: TEST_QUIZ_63_REAL_CONNECTOR_READY\nRoute Test/Quiz: 63\nControlli qualità Test/Quiz: 55\nSelector/orchestrator: 8\nQuiz reali: 4\nMotori eseguiti/tracciati: 63\nDefects: 0\nWarnings: 0\nJSON report: /Users/alessandrobarbarossa/alex-ai-workspace/reports/phase5_13d1_test_quiz_63_real_connector_v1.json\nMarkdown report: /Users/alessandrobarbarossa/alex-ai-workspace/reports/phase5_13d1_test_quiz_63_real_connector_v1.md\n"
+    },
+    {
+      "label": "Real study quiz test",
+      "command": [
+        "/Users/alessandrobarbarossa/alex-ai-workspace/backend/.venv/bin/python3",
+        "backend/test_phase5_study_quiz_v1.py"
+      ],
+      "returncode": 0,
+      "stdout_tail": "       {\n          \"option_id\": \"D\",\n          \"testo\": \"La revisione periodica degli accessi riduce il rischio che utenti non più autorizzati mantengano permessi attivi.\",\n          \"is_correct\": true\n        }\n      ],\n      \"correct_option_id\": \"D\",\n      \"spiegazione\": \"La risposta corretta è quella che riprende il fatto verificato dal documento: la revisione periodica degli accessi riduce il rischio che utenti non più autorizzati mantengano permessi attivi.\",\n      \"fatto_origine\": \"La revisione periodica degli accessi riduce il rischio che utenti non più autorizzati mantengano permessi attivi.\",\n      \"micro_concetti\": [\n        \"revisione periodica\",\n        \"riduzione rischio\",\n        \"permessi attivi\",\n        \"utenti autorizzati\",\n        \"controllo accessi\"\n      ],\n      \"fonte_pagine\": [\n        1,\n        2\n      ],\n      \"warnings\": []\n    }\n  ],\n  \"quality_report\": {\n    \"facts_used\": 4,\n    \"concepts_used\": 6,\n    \"study_questions_count\": 4,\n    \"study_questions_real_connection_v513c1\": {\n      \"phase\": \"5.13C.1\",\n      \"status\": \"PASS - Fase 5.13C.1: STUDY_QUESTIONS_51_REAL_CONNECTOR_READY\",\n      \"expected_route_total\": 51,\n      \"resolved_route_total\": 51,\n      \"expected_study_quality_controls\": 43,\n      \"resolved_study_quality_controls\": 43,\n      \"expected_selector_orchestrator\": 8,\n      \"resolved_selector_orchestrator\": 8,\n      \"route_loaded\": true,\n      \"route_attached_to_study_quality_report\": true,\n      \"real_output_study_questions_count\": 4,\n      \"executed_motor_ids\": [\n        \"qm_001\",\n        \"qm_002\",\n        \"qm_003\",\n        \"qm_004\",\n        \"qm_005\",\n        \"qm_006\",\n        \"qm_007\",\n        \"qm_008\",\n        \"qm_009\",\n        \"qm_010\",\n        \"qm_011\",\n        \"qm_012\",\n        \"qm_013\",\n        \"qm_014\",\n        \"qm_015\",\n        \"qm_017\",\n        \"qm_018\",\n        \"qm_019\",\n        \"qm_020\",\n        \"qm_021\",\n        \"qm_022\",\n        \"qm_026\",\n        \"qm_033\",\n        \"qm_034\",\n        \"qm_035\",\n        \"qm_038\",\n        \"qm_039\",\n        \"qm_040\",\n        \"qm_042\",\n        \"qm_043\",\n        \"qm_044\",\n        \"qm_045\",\n        \"qm_046\",\n        \"qm_047\",\n        \"qm_048\",\n        \"qm_049\",\n        \"qm_050\",\n        \"qm_051\",\n        \"qm_052\",\n        \"qm_053\",\n        \"qm_054\",\n        \"qm_055\",\n        \"qm_056\",\n        \"qm_057\",\n        \"qm_058\",\n        \"qm_059\",\n        \"qm_060\",\n        \"qm_061\",\n        \"qm_062\",\n        \"qm_063\",\n        \"qm_064\"\n      ],\n      \"missing_motor_ids\": [],\n      \"defects\": [],\n      \"warnings\": []\n    },\n    \"quiz_questions_count\": 4,\n    \"test_quiz_real_connection_v513d1\": {\n      \"phase\": \"5.13D.1\",\n      \"status\": \"PASS - Fase 5.13D.1: TEST_QUIZ_63_REAL_CONNECTOR_READY\",\n      \"expected_route_total\": 63,\n      \"resolved_route_total\": 63,\n      \"expected_test_quality_controls\": 55,\n      \"resolved_test_quality_controls\": 55,\n      \"expected_selector_orchestrator\": 8,\n      \"resolved_selector_orchestrator\": 8,\n      \"route_loaded\": true,\n      \"route_attached_to_test_quiz_quality_report\": true,\n      \"real_output_quiz_questions_count\": 4,\n      \"executed_motor_ids\": [\n        \"salvable_phase5_pipeline_5_fasi\",\n        \"salvable_pipeline_output_ready_gate_v511\",\n        \"salvable_final_registry_quality_snapshot_v5102\",\n        \"salvable_summary_card_cleaner_registry_v5101\",\n        \"salvable_universal_quiz_quality_registry_v599\",\n        \"salvable_quiz_repair_registry_integration_v593\",\n        \"salvable_legacy_quality_motors_registry_ready\",\n        \"salvable_phase5_live_quality_bridge\",\n        \"salvable_mini_llm_engine_registry_v400\",\n        \"salvable_general_quality_motor\",\n        \"salvable_visual_logic_quality_motor\",\n        \"qm_001_qualita_testuale_grammatica_italiana_corretta\",\n        \"qm_002_qualita_testuale_accenti_corretti\",\n        \"qm_003_qualita_testuale_apostrofi_corretti\",\n        \"qm_004_qualita_testuale_punteggiatura_corretta\",\n        \"qm_005_qualita_testuale_spazi_corretti_prima_e_dopo_punteggiatura\",\n        \"qm_006_qualita_testuale_frasi_complete\",\n        \"qm_007_qualita_testuale_assenza_di_frasi_spezzate\",\n        \"qm_008_qualita_testuale_assenza_di_frasi_non_terminate\",\n        \"qm_009_qualita_testuale_assenza_di_finali_sospetti\",\n        \"qm_010_qualita_testuale_assenza_di_frasi_riempitive\",\n        \"qm_011_qualita_testuale_assenza_di_testo_generico\",\n        \"qm_012_qualita_testuale_assenza_di_vecchi_fallback_demo_test\",\n        \"qm_013_qualita_didattica_domande_studio_naturali\",\n        \"qm_014_qualita_didattica_domande_studio_utili_per_ripassare\",\n        \"qm_015_qualita_didattica_risposte_guida_specifiche\",\n        \"qm_016_qualita_didattica_spiegazioni_test_chiare\",\n        \"qm_017_qualita_didattica_spiegazioni_non_troppo_corte\",\n        \"qm_018_qualita_didattica_tono_didattico_finale\",\n        \"qm_019_qualita_didattica_categorie_presenti\",\n        \"qm_020_qualita_didattica_sottocategorie_presenti\",\n        \"qm_021_qualita_didattica_coerenza_tra_domanda_risposta_e_contenuto\",\n        \"qm_022_qualita_didattica_niente_risposte_vaghe\",\n        \"qm_033_test_quiz_test_separato_da_card_riassunto_domande_studio\",\n        \"qm_034_test_quiz_opzioni_interne_validate\",\n        \"qm_035_test_quiz_opzioni_visibili_pulite\",\n        \"qm_036_test_quiz_risposta_corretta_interna\",\n        \"qm_037_test_quiz_risposta_corretta_visibile\",\n        \"qm_038_test_quiz_mappa_sicura_tra_risposta_interna_e_visibile\",\n        \"qm_039_test_quiz_quattro_opzioni_per_domanda\",\n        \"qm_040_test_quiz_risposta_corretta_presente_tra_le_opzioni\",\n        \"qm_041_test_quiz_distrattori_forti\",\n        \"qm_042_test_quiz_niente_opzioni_duplicate_nella_stessa_domanda\",\n        \"qm_043_test_quiz_niente_ripetizioni_globali_eccessive\",\n        \"qm_044_test_quiz_compatibilita_bridge_quiz_v3_5b\",\n        \"qm_061_naturalezza_linguistica_naturalezza_linguistica_anti_keyword\",\n        \"qm_062_accordo_grammaticale_accordo_grammaticale_e_pronomi\",\n        \"qm_063_repair_contestuale_correzione_frasi_non_finite_usando_contesto_tema_sottotema_categorie_e_\",\n        \"qm_064_repair_ortografico_correzione_parole_con_lettere_invertite\",\n        \"qm_045_duplicati_contestuali_duplicati_esatti\",\n        \"qm_046_duplicati_contestuali_quasi_duplicati\",\n        \"qm_047_duplicati_contestuali_ripetizioni_inutili\",\n        \"qm_049_duplicati_contestuali_frasi_troppo_simili\",\n        \"qm_050_duplicati_contestuali_stesso_contenuto_ripetuto_senza_motivo\",\n        \"qm_048_duplicati_contestuali_ripetizioni_meccaniche_tra_domande\",\n        \"qm_051\",\n        \"qm_052\",\n        \"qm_053\",\n        \"qm_054\",\n        \"qm_055\",\n        \"qm_056\",\n        \"qm_057\",\n        \"qm_058\"\n      ],\n      \"missing_motor_ids\": [],\n      \"defects\": [],\n      \"warnings\": []\n    },\n    \"source_pages\": [\n      1,\n      2\n    ],\n    \"errors_count\": 0,\n    \"warnings_count\": 0\n  },\n  \"warnings\": [],\n  \"errors\": []\n}\n\n✅ TEST FASE 5.2 STUDY QUIZ V1 PASSATO\nDomande studio e test finali generati con motori dedicati e validazione anti-distrattori veri.\n"
+    },
+    {
+      "label": "5.13D.2 Test/Quiz final quality",
+      "command": [
+        "/Users/alessandrobarbarossa/alex-ai-workspace/backend/.venv/bin/python3",
+        "scripts/run_phase5_13d2_test_quiz_final_quality_gate.py"
+      ],
+      "returncode": 0,
+      "stdout_tail": "PASS - Fase 5.13D.2: TEST_QUIZ_FINAL_QUALITY_GATE_READY\nApproved sorgente: True\nStatus sorgente: APPROVED\nQuiz: 4\nRoute Test/Quiz: 63\nControlli qualità Test/Quiz: 55\nSelector/orchestrator: 8\nMotori mancanti: 0\nDefects: 0\nWarnings: 0\nJSON report: /Users/alessandrobarbarossa/alex-ai-workspace/reports/phase5_13d2_test_quiz_final_quality_gate_v1.json\nMarkdown report: /Users/alessandrobarbarossa/alex-ai-workspace/reports/phase5_13d2_test_quiz_final_quality_gate_v1.md\n"
+    }
+  ],
+  "defects": [],
+  "warnings": []
+}
