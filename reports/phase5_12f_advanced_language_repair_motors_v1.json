@@ -1,0 +1,226 @@
+{
+  "phase": "5.12F",
+  "generated_at": "2026-07-05T16:22:06.072212+00:00",
+  "status": "PASS",
+  "approved": true,
+  "ready_label": "ADVANCED_LANGUAGE_REPAIR_MOTORS_V512F_READY",
+  "registry": {
+    "phase": "5.12F",
+    "version": "v1",
+    "ready_label": "ADVANCED_LANGUAGE_REPAIR_MOTORS_V512F_READY",
+    "total_motors": 4,
+    "motors": [
+      {
+        "id": "qm_061_naturalezza_linguistica_naturalezza_linguistica_anti_keyword",
+        "title": "Naturalezza linguistica anti-keyword",
+        "type": "validator_repair_suggester",
+        "severity": "blocking",
+        "areas": [
+          "card",
+          "summary",
+          "study_questions",
+          "test_quiz",
+          "general_text"
+        ]
+      },
+      {
+        "id": "qm_062_accordo_grammaticale_accordo_grammaticale_e_pronomi",
+        "title": "Accordo grammaticale e pronomi",
+        "type": "validator",
+        "severity": "blocking",
+        "areas": [
+          "card",
+          "summary",
+          "study_questions",
+          "test_quiz",
+          "general_text"
+        ]
+      },
+      {
+        "id": "qm_063_repair_contestuale_correzione_frasi_non_finite_usando_contesto_tema_sottotema_categorie_e_",
+        "title": "Repair contestuale frasi non finite usando contesto tema sottotema categorie e sottocategorie",
+        "type": "validator_repair_suggester",
+        "severity": "blocking",
+        "areas": [
+          "card",
+          "summary",
+          "study_questions",
+          "test_quiz",
+          "general_text"
+        ]
+      },
+      {
+        "id": "qm_064_repair_ortografico_correzione_parole_con_lettere_invertite",
+        "title": "Repair ortografico parole con lettere invertite",
+        "type": "validator_repair_suggester",
+        "severity": "blocking",
+        "areas": [
+          "card",
+          "summary",
+          "study_questions",
+          "test_quiz",
+          "general_text"
+        ]
+      }
+    ],
+    "scope_guard": {
+      "ui_pdf_css_app_touched": false,
+      "pipeline_5_11_changed": false,
+      "existing_55_motors_changed": false,
+      "standalone_first": true,
+      "no_fallback": true,
+      "no_demo_output": true,
+      "repair_suggestions_only": true
+    }
+  },
+  "targeted_tests_total": 4,
+  "targeted_tests_passed": 4,
+  "targeted_tests": [
+    {
+      "case_id": "case_061",
+      "motor_id": "qm_061_naturalezza_linguistica_naturalezza_linguistica_anti_keyword",
+      "passed": true,
+      "blocking_hits": 1,
+      "repair_hits": 0,
+      "target_status": "FAIL",
+      "issues": [
+        {
+          "motor_id": "qm_061_naturalezza_linguistica_naturalezza_linguistica_anti_keyword",
+          "severity": "blocking",
+          "message": "Testo simile a lista grezza di keyword, non a frase naturale.",
+          "excerpt": "Backup, password, accesso, dati, sicurezza, autenticazione, rischio, account, ripristino, controllo, procedura, utenti.",
+          "suggestion": "Trasformare le parole chiave in frasi complete con valore didattico.",
+          "repaired_text": null
+        }
+      ]
+    },
+    {
+      "case_id": "case_062",
+      "motor_id": "qm_062_accordo_grammaticale_accordo_grammaticale_e_pronomi",
+      "passed": true,
+      "blocking_hits": 2,
+      "repair_hits": 0,
+      "target_status": "FAIL",
+      "issues": [
+        {
+          "motor_id": "qm_062_accordo_grammaticale_accordo_grammaticale_e_pronomi",
+          "severity": "blocking",
+          "message": "Accordo genere errato: soggetto femminile con participio maschile.",
+          "excerpt": "regola operativa viene presentato",
+          "suggestion": "Usare 'presentata' se il soggetto è femminile.",
+          "repaired_text": null
+        },
+        {
+          "motor_id": "qm_062_accordo_grammaticale_accordo_grammaticale_e_pronomi",
+          "severity": "blocking",
+          "message": "Pronome non coerente con un referente plurale.",
+          "excerpt": "obiettivi principali vengono spiegati senza copiarlo",
+          "suggestion": "Usare 'copiarli' se il referente è plurale.",
+          "repaired_text": null
+        }
+      ]
+    },
+    {
+      "case_id": "case_063",
+      "motor_id": "qm_063_repair_contestuale_correzione_frasi_non_finite_usando_contesto_tema_sottotema_categorie_e_",
+      "passed": true,
+      "blocking_hits": 2,
+      "repair_hits": 2,
+      "target_status": "FAIL",
+      "issues": [
+        {
+          "motor_id": "qm_063_repair_contestuale_correzione_frasi_non_finite_usando_contesto_tema_sottotema_categorie_e_",
+          "severity": "blocking",
+          "message": "Frase non finita rilevata.",
+          "excerpt": "Il backup periodico consente di.",
+          "suggestion": "Completare la frase usando tema, sottotema, categoria e sottocategoria.",
+          "repaired_text": "Il backup periodico consente di Backup periodico, collegandolo al tema Sicurezza dei dati aziendali."
+        },
+        {
+          "motor_id": "qm_063_repair_contestuale_correzione_frasi_non_finite_usando_contesto_tema_sottotema_categorie_e_",
+          "severity": "blocking",
+          "message": "Frase non finita rilevata.",
+          "excerpt": "La procedura viene spiegata usando.",
+          "suggestion": "Completare la frase usando tema, sottotema, categoria e sottocategoria.",
+          "repaired_text": "La procedura viene spiegata usando il tema Sicurezza dei dati aziendali, il sottotema Backup periodico e le categorie disponibili."
+        }
+      ]
+    },
+    {
+      "case_id": "case_064",
+      "motor_id": "qm_064_repair_ortografico_correzione_parole_con_lettere_invertite",
+      "passed": true,
+      "blocking_hits": 1,
+      "repair_hits": 1,
+      "target_status": "FAIL",
+      "issues": [
+        {
+          "motor_id": "qm_064_repair_ortografico_correzione_parole_con_lettere_invertite",
+          "severity": "blocking",
+          "message": "Parole scritte male o con lettere invertite rilevate.",
+          "excerpt": "{'sotttotema': 'sottotema', 'conrollare': 'controllare', 'selezioa': 'seleziona', 'oricostruire': 'o ricostruire'}",
+          "suggestion": "Applicare le correzioni ortografiche suggerite.",
+          "repaired_text": "Il sottotema serve per controllare meglio la seleziona dei motori e decidere se o ricostruire il controllo."
+        }
+      ]
+    }
+  ],
+  "good_case": {
+    "passed": true,
+    "blocking_issues": 0,
+    "warning_issues": 0,
+    "status": "PASS",
+    "approved": true,
+    "full_report": {
+      "phase": "5.12F",
+      "ready_label": "ADVANCED_LANGUAGE_REPAIR_MOTORS_V512F_READY",
+      "approved": true,
+      "status": "PASS",
+      "total_motors": 4,
+      "passed_motors": 4,
+      "failed_motors": 0,
+      "total_issues": 0,
+      "blocking_issues": 0,
+      "warning_issues": 0,
+      "results": [
+        {
+          "motor_id": "qm_061_naturalezza_linguistica_naturalezza_linguistica_anti_keyword",
+          "title": "Naturalezza linguistica anti-keyword",
+          "status": "PASS",
+          "issues": []
+        },
+        {
+          "motor_id": "qm_062_accordo_grammaticale_accordo_grammaticale_e_pronomi",
+          "title": "Accordo grammaticale e pronomi",
+          "status": "PASS",
+          "issues": []
+        },
+        {
+          "motor_id": "qm_063_repair_contestuale_correzione_frasi_non_finite_usando_contesto_tema_sottotema_categorie_e_",
+          "title": "Repair contestuale frasi non finite con tema/sottotema/categorie",
+          "status": "PASS",
+          "issues": []
+        },
+        {
+          "motor_id": "qm_064_repair_ortografico_correzione_parole_con_lettere_invertite",
+          "title": "Repair ortografico parole con lettere invertite",
+          "status": "PASS",
+          "issues": []
+        }
+      ]
+    }
+  },
+  "scope_guard": {
+    "created_advanced_language_repair_motors": true,
+    "connected_to_55_registry": false,
+    "changed_existing_55_motors": false,
+    "changed_pipeline_5_11": false,
+    "changed_ui_pdf_css_app": false,
+    "deleted_existing_files": false,
+    "repair_suggestions_only": true
+  },
+  "report_files": {
+    "json": "reports/phase5_12f_advanced_language_repair_motors_v1.json",
+    "markdown": "reports/phase5_12f_advanced_language_repair_motors_v1.md"
+  }
+}
