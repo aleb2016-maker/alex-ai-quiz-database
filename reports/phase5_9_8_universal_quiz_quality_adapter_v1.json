@@ -1,0 +1,98 @@
+{
+  "report_name": "phase5_9_8_universal_quiz_quality_adapter_v1",
+  "status": "PASS",
+  "before_metrics": {
+    "questions_count": 1,
+    "true_fact_distractors": 3,
+    "mechanical_questions": 1,
+    "duplicate_questions": 0,
+    "rough_explanations": 1,
+    "empty_explanations": 0,
+    "correct_options_errors": 0,
+    "option_count_errors": 0
+  },
+  "after_metrics": {
+    "questions_count": 1,
+    "true_fact_distractors": 0,
+    "mechanical_questions": 0,
+    "duplicate_questions": 0,
+    "rough_explanations": 0,
+    "empty_explanations": 0,
+    "correct_options_errors": 0,
+    "option_count_errors": 0
+  },
+  "bad_total_before": 5,
+  "bad_total_after": 0,
+  "correct_option_texts_preserved": true,
+  "correct_counts_before": [
+    1
+  ],
+  "correct_counts_after": [
+    1
+  ],
+  "changed_questions": [
+    {
+      "index": 0,
+      "question_before": "Quale affermazione è supportata dal documento?",
+      "question_after": "Quale regola riguarda la condivisione delle credenziali?",
+      "explanation_before": "Le credenziali non non devono essere condivise tra più operatori.",
+      "explanation_after": "La risposta corretta è “Le credenziali non devono essere condivise tra più operatori” perché riprende direttamente l'informazione indicata dal documento."
+    }
+  ],
+  "adapter_meta": {
+    "changed": true,
+    "keys_seen": [
+      "test_quiz"
+    ],
+    "per_key": {
+      "test_quiz": {
+        "changed": true,
+        "questions_seen": 1,
+        "true_distractor_repair_applied": true,
+        "true_distractor_repair_meta": {
+          "changed": true,
+          "questions_seen": 1,
+          "replaced_distractors_count": 3,
+          "before_true_fact_distractors": 3,
+          "after_true_fact_distractors": 0,
+          "replacements": [
+            {
+              "question_index": 0,
+              "option_index": 1,
+              "option_id": "B",
+              "old_text": "Il controllo degli accessi limita l'utilizzo dei sistemi interni.",
+              "new_text": "Le credenziali possono essere condivise liberamente tra più operatori se il sistema è interno."
+            },
+            {
+              "question_index": 0,
+              "option_index": 2,
+              "option_id": "C",
+              "old_text": "Ogni account deve essere associato a una persona identificabile.",
+              "new_text": "La revisione periodica degli accessi può essere evitata quando gli account sono già attivi."
+            },
+            {
+              "question_index": 0,
+              "option_index": 3,
+              "option_id": "D",
+              "old_text": "La revisione periodica degli accessi riduce il rischio che utenti non più autorizzati mantengano permessi attivi.",
+              "new_text": "Ogni account può restare anonimo se viene usato solo da personale autorizzato."
+            }
+          ],
+          "warnings": []
+        },
+        "questions_rewritten": 1,
+        "explanations_rewritten": 1,
+        "text_cleaned_questions": 1,
+        "warnings": []
+      }
+    },
+    "warnings": []
+  },
+  "errors": [],
+  "notes": [
+    "Test separato: il motore non è ancora collegato al registry.",
+    "Obiettivo: trasformare pezzi parziali in un motore quiz completo.",
+    "Migliora domande meccaniche, spiegazioni grezze e distrattori veri.",
+    "Deve preservare risposta corretta, numero opzioni e struttura quiz."
+  ]
+}
