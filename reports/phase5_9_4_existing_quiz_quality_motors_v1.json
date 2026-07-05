@@ -1,0 +1,3090 @@
+{
+  "report_name": "phase5_9_4_existing_quiz_quality_motors_v1",
+  "status": "PASS_DIAGNOSTIC",
+  "registry_motors_count": 9,
+  "registry_quiz_motors_count": 3,
+  "python_candidates_count": 1417,
+  "frontend_candidates_count": 57,
+  "capability_summary": {
+    "quiz_question_naturalness": {
+      "candidates": 927,
+      "registered": 4,
+      "unregistered": 923
+    },
+    "strong_distractors": {
+      "candidates": 567,
+      "registered": 3,
+      "unregistered": 564
+    },
+    "grammar_accents_text_quality": {
+      "candidates": 204,
+      "registered": 3,
+      "unregistered": 201
+    },
+    "quiz_explanation_quality": {
+      "candidates": 797,
+      "registered": 5,
+      "unregistered": 792
+    },
+    "interactive_quiz_frontend": {
+      "candidates": 324,
+      "registered": 1,
+      "unregistered": 323
+    }
+  },
+  "registry_quiz_motors": [
+    {
+      "motor_id": "backend.phase5_quiz_true_distractor_repair_v1.repair_quiz_target_v1",
+      "module_name": "backend.phase5_quiz_true_distractor_repair_v1",
+      "function_name": "repair_quiz_target_v1",
+      "adapter_name": "quiz_list",
+      "target_kind": "quiz"
+    },
+    {
+      "motor_id": "backend.main.pulisci_qualita_linguistica_quiz",
+      "module_name": "backend.main",
+      "function_name": "pulisci_qualita_linguistica_quiz",
+      "adapter_name": "dict_test_quiz",
+      "target_kind": "quiz"
+    },
+    {
+      "motor_id": "scripts.rag_motore_didattico_riutilizzabile_v35c.refine_tests",
+      "module_name": "scripts.rag_motore_didattico_riutilizzabile_v35c",
+      "function_name": "refine_tests",
+      "adapter_name": "legacy_answers_dict",
+      "target_kind": "quiz"
+    }
+  ],
+  "quiz_related_registered_candidates": [
+    {
+      "kind": "python_function",
+      "path": "scripts/rag_cleaner_finale_universale_v35k.py",
+      "module_name": "scripts.rag_cleaner_finale_universale_v35k",
+      "function_name": "clean_output",
+      "motor_id": "scripts.rag_cleaner_finale_universale_v35k.clean_output",
+      "lineno": 215,
+      "score": 41,
+      "capabilities": {
+        "quiz_question_naturalness": 8,
+        "strong_distractors": 19,
+        "grammar_accents_text_quality": 1,
+        "quiz_explanation_quality": 12,
+        "interactive_quiz_frontend": 1
+      },
+      "top_capabilities": [
+        "strong_distractors",
+        "quiz_explanation_quality",
+        "quiz_question_naturalness",
+        "grammar_accents_text_quality",
+        "interactive_quiz_frontend"
+      ],
+      "registered_in_registry": true,
+      "registry_spec": {
+        "motor_id": "scripts.rag_cleaner_finale_universale_v35k.clean_output",
+        "module_name": "scripts.rag_cleaner_finale_universale_v35k",
+        "function_name": "clean_output",
+        "adapter_name": "summary_dict",
+        "target_kind": "summary"
+      }
+    },
+    {
+      "kind": "python_function",
+      "path": "scripts/rag_motore_didattico_riutilizzabile_v35c.py",
+      "module_name": "scripts.rag_motore_didattico_riutilizzabile_v35c",
+      "function_name": "refine_tests",
+      "motor_id": "scripts.rag_motore_didattico_riutilizzabile_v35c.refine_tests",
+      "lineno": 150,
+      "score": 22,
+      "capabilities": {
+        "quiz_question_naturalness": 0,
+        "strong_distractors": 15,
+        "grammar_accents_text_quality": 0,
+        "quiz_explanation_quality": 7,
+        "interactive_quiz_frontend": 0
+      },
+      "top_capabilities": [
+        "strong_distractors",
+        "quiz_explanation_quality"
+      ],
+      "registered_in_registry": true,
+      "registry_spec": {
+        "motor_id": "scripts.rag_motore_didattico_riutilizzabile_v35c.refine_tests",
+        "module_name": "scripts.rag_motore_didattico_riutilizzabile_v35c",
+        "function_name": "refine_tests",
+        "adapter_name": "legacy_answers_dict",
+        "target_kind": "quiz"
+      }
+    },
+    {
+      "kind": "python_function",
+      "path": "backend/main.py",
+      "module_name": "backend.main",
+      "function_name": "pulisci_qualita_linguistica_quiz",
+      "motor_id": "backend.main.pulisci_qualita_linguistica_quiz",
+      "lineno": 1526,
+      "score": 16,
+      "capabilities": {
+        "quiz_question_naturalness": 9,
+        "strong_distractors": 4,
+        "grammar_accents_text_quality": 0,
+        "quiz_explanation_quality": 3,
+        "interactive_quiz_frontend": 0
+      },
+      "top_capabilities": [
+        "quiz_question_naturalness",
+        "strong_distractors",
+        "quiz_explanation_quality"
+      ],
+      "registered_in_registry": true,
+      "registry_spec": {
+        "motor_id": "backend.main.pulisci_qualita_linguistica_quiz",
+        "module_name": "backend.main",
+        "function_name": "pulisci_qualita_linguistica_quiz",
+        "adapter_name": "dict_test_quiz",
+        "target_kind": "quiz"
+      }
+    }
+  ],
+  "top_unregistered_python_candidates": [
+    {
+      "kind": "python_function",
+      "path": "scripts/create_quiz_package.py",
+      "module_name": "scripts.create_quiz_package",
+      "function_name": "crea_demo_web",
+      "motor_id": "scripts.create_quiz_package.crea_demo_web",
+      "lineno": 727,
+      "score": 161,
+      "capabilities": {
+        "quiz_question_naturalness": 66,
+        "strong_distractors": 26,
+        "grammar_accents_text_quality": 0,
+        "quiz_explanation_quality": 31,
+        "interactive_quiz_frontend": 38
+      },
+      "top_capabilities": [
+        "quiz_question_naturalness",
+        "interactive_quiz_frontend",
+        "quiz_explanation_quality",
+        "strong_distractors"
+      ],
+      "registered_in_registry": false,
+      "registry_spec": null
+    },
+    {
+      "kind": "python_function",
+      "path": "scripts/review_logica_visiva_strict.py",
+      "module_name": "scripts.review_logica_visiva_strict",
+      "function_name": "controlla_domanda",
+      "motor_id": "scripts.review_logica_visiva_strict.controlla_domanda",
+      "lineno": 104,
+      "score": 95,
+      "capabilities": {
+        "quiz_question_naturalness": 32,
+        "strong_distractors": 40,
+        "grammar_accents_text_quality": 0,
+        "quiz_explanation_quality": 20,
+        "interactive_quiz_frontend": 3
+      },
+      "top_capabilities": [
+        "strong_distractors",
+        "quiz_question_naturalness",
+        "quiz_explanation_quality",
+        "interactive_quiz_frontend"
+      ],
+      "registered_in_registry": false,
+      "registry_spec": null
+    },
+    {
+      "kind": "python_function",
+      "path": "scripts/rag_prepara_review_quiz.py",
+      "module_name": "scripts.rag_prepara_review_quiz",
+      "function_name": "valida_domanda",
+      "motor_id": "scripts.rag_prepara_review_quiz.valida_domanda",
+      "lineno": 77,
+      "score": 80,
+      "capabilities": {
+        "quiz_question_naturalness": 33,
+        "strong_distractors": 29,
+        "grammar_accents_text_quality": 0,
+        "quiz_explanation_quality": 16,
+        "interactive_quiz_frontend": 2
+      },
+      "top_capabilities": [
+        "quiz_question_naturalness",
+        "strong_distractors",
+        "quiz_explanation_quality",
+        "interactive_quiz_frontend"
+      ],
+      "registered_in_registry": false,
+      "registry_spec": null
+    },
+    {
+      "kind": "python_function",
+      "path": "backend/motori_scrittura.py",
+      "module_name": "backend.motori_scrittura",
+      "function_name": "qg_validate_quiz",
+      "motor_id": "backend.motori_scrittura.qg_validate_quiz",
+      "lineno": 3296,
+      "score": 77,
+      "capabilities": {
+        "quiz_question_naturalness": 20,
+        "strong_distractors": 33,
+        "grammar_accents_text_quality": 0,
+        "quiz_explanation_quality": 1,
+        "interactive_quiz_frontend": 23
+      },
+      "top_capabilities": [
+        "strong_distractors",
+        "interactive_quiz_frontend",
+        "quiz_question_naturalness",
+        "quiz_explanation_quality"
+      ],
+      "registered_in_registry": false,
+      "registry_spec": null
+    },
+    {
+      "kind": "python_function",
+      "path": "scripts/rag_genera_quiz_json.py",
+      "module_name": "scripts.rag_genera_quiz_json",
+      "function_name": "crea_prompt_quiz_json",
+      "motor_id": "scripts.rag_genera_quiz_json.crea_prompt_quiz_json",
+      "lineno": 19,
+      "score": 75,
+      "capabilities": {
+        "quiz_question_naturalness": 9,
+        "strong_distractors": 34,
+        "grammar_accents_text_quality": 7,
+        "quiz_explanation_quality": 16,
+        "interactive_quiz_frontend": 9
+      },
+      "top_capabilities": [
+        "strong_distractors",
+        "quiz_explanation_quality",
+        "quiz_question_naturalness",
+        "interactive_quiz_frontend",
+        "grammar_accents_text_quality"
+      ],
+      "registered_in_registry": false,
+      "registry_spec": null
+    },
+    {
+      "kind": "python_function",
+      "path": "scripts/motore_qualita_generale.py",
+      "module_name": "scripts.motore_qualita_generale",
+      "function_name": "analizza_domanda",
+      "motor_id": "scripts.motore_qualita_generale.analizza_domanda",
+      "lineno": 276,
+      "score": 74,
+      "capabilities": {
+        "quiz_question_naturalness": 26,
+        "strong_distractors": 29,
+        "grammar_accents_text_quality": 0,
+        "quiz_explanation_quality": 17,
+        "interactive_quiz_frontend": 2
+      },
+      "top_capabilities": [
+        "strong_distractors",
+        "quiz_question_naturalness",
+        "quiz_explanation_quality",
+        "interactive_quiz_frontend"
+      ],
+      "registered_in_registry": false,
+      "registry_spec": null
+    },
+    {
+      "kind": "python_function",
+      "path": "backend/test_phase5_study_quiz_v1.py",
+      "module_name": "backend.test_phase5_study_quiz_v1",
+      "function_name": "run_test",
+      "motor_id": "backend.test_phase5_study_quiz_v1.run_test",
+      "lineno": 13,
+      "score": 73,
+      "capabilities": {
+        "quiz_question_naturalness": 47,
+        "strong_distractors": 18,
+        "grammar_accents_text_quality": 0,
+        "quiz_explanation_quality": 4,
+        "interactive_quiz_frontend": 4
+      },
+      "top_capabilities": [
+        "quiz_question_naturalness",
+        "strong_distractors",
+        "quiz_explanation_quality",
+        "interactive_quiz_frontend"
+      ],
+      "registered_in_registry": false,
+      "registry_spec": null
+    },
+    {
+      "kind": "python_function",
+      "path": "scripts/rag_adapter_quiz_ufficiale_v43.py",
+      "module_name": "scripts.rag_adapter_quiz_ufficiale_v43",
+      "function_name": "adatta_domande_esistenti",
+      "motor_id": "scripts.rag_adapter_quiz_ufficiale_v43.adatta_domande_esistenti",
+      "lineno": 308,
+      "score": 73,
+      "capabilities": {
+        "quiz_question_naturalness": 27,
+        "strong_distractors": 26,
+        "grammar_accents_text_quality": 4,
+        "quiz_explanation_quality": 16,
+        "interactive_quiz_frontend": 0
+      },
+      "top_capabilities": [
+        "quiz_question_naturalness",
+        "strong_distractors",
+        "quiz_explanation_quality",
+        "grammar_accents_text_quality"
+      ],
+      "registered_in_registry": false,
+      "registry_spec": null
+    },
+    {
+      "kind": "python_function",
+      "path": "backend/motori_scrittura.py",
+      "module_name": "backend.motori_scrittura",
+      "function_name": "q52_validate_quiz",
+      "motor_id": "backend.motori_scrittura.q52_validate_quiz",
+      "lineno": 5644,
+      "score": 71,
+      "capabilities": {
+        "quiz_question_naturalness": 48,
+        "strong_distractors": 15,
+        "grammar_accents_text_quality": 0,
+        "quiz_explanation_quality": 0,
+        "interactive_quiz_frontend": 8
+      },
+      "top_capabilities": [
+        "quiz_question_naturalness",
+        "strong_distractors",
+        "interactive_quiz_frontend"
+      ],
+      "registered_in_registry": false,
+      "registry_spec": null
+    },
+    {
+      "kind": "python_function",
+      "path": "scripts/rag_valida_distrattori_forti.py",
+      "module_name": "scripts.rag_valida_distrattori_forti",
+      "function_name": "valuta_domanda_distrattori_forti",
+      "motor_id": "scripts.rag_valida_distrattori_forti.valuta_domanda_distrattori_forti",
+      "lineno": 100,
+      "score": 70,
+      "capabilities": {
+        "quiz_question_naturalness": 16,
+        "strong_distractors": 33,
+        "grammar_accents_text_quality": 0,
+        "quiz_explanation_quality": 20,
+        "interactive_quiz_frontend": 1
+      },
+      "top_capabilities": [
+        "strong_distractors",
+        "quiz_explanation_quality",
+        "quiz_question_naturalness",
+        "interactive_quiz_frontend"
+      ],
+      "registered_in_registry": false,
+      "registry_spec": null
+    },
+    {
+      "kind": "python_function",
+      "path": "scripts/review_matematica_quick.py",
+      "module_name": "scripts.review_matematica_quick",
+      "function_name": "controlla_domanda",
+      "motor_id": "scripts.review_matematica_quick.controlla_domanda",
+      "lineno": 127,
+      "score": 63,
+      "capabilities": {
+        "quiz_question_naturalness": 21,
+        "strong_distractors": 12,
+        "grammar_accents_text_quality": 4,
+        "quiz_explanation_quality": 23,
+        "interactive_quiz_frontend": 3
+      },
+      "top_capabilities": [
+        "quiz_explanation_quality",
+        "quiz_question_naturalness",
+        "strong_distractors",
+        "grammar_accents_text_quality",
+        "interactive_quiz_frontend"
+      ],
+      "registered_in_registry": false,
+      "registry_spec": null
+    },
+    {
+      "kind": "python_function",
+      "path": "scripts/motore_distrattori_ai.py",
+      "module_name": "scripts.motore_distrattori_ai",
+      "function_name": "analizza_domanda",
+      "motor_id": "scripts.motore_distrattori_ai.analizza_domanda",
+      "lineno": 141,
+      "score": 63,
+      "capabilities": {
+        "quiz_question_naturalness": 23,
+        "strong_distractors": 34,
+        "grammar_accents_text_quality": 0,
+        "quiz_explanation_quality": 3,
+        "interactive_quiz_frontend": 3
+      },
+      "top_capabilities": [
+        "strong_distractors",
+        "quiz_question_naturalness",
+        "quiz_explanation_quality",
+        "interactive_quiz_frontend"
+      ],
+      "registered_in_registry": false,
+      "registry_spec": null
+    },
+    {
+      "kind": "python_function",
+      "path": "scripts/motore_traduzione_inglese.py",
+      "module_name": "scripts.motore_traduzione_inglese",
+      "function_name": "main",
+      "motor_id": "scripts.motore_traduzione_inglese.main",
+      "lineno": 69,
+      "score": 61,
+      "capabilities": {
+        "quiz_question_naturalness": 43,
+        "strong_distractors": 0,
+        "grammar_accents_text_quality": 0,
+        "quiz_explanation_quality": 17,
+        "interactive_quiz_frontend": 1
+      },
+      "top_capabilities": [
+        "quiz_question_naturalness",
+        "quiz_explanation_quality",
+        "interactive_quiz_frontend"
+      ],
+      "registered_in_registry": false,
+      "registry_spec": null
+    },
+    {
+      "kind": "python_function",
+      "path": "scripts/motore_qualita_logica_visiva_base.py",
+      "module_name": "scripts.motore_qualita_logica_visiva_base",
+      "function_name": "analizza_domanda_visiva",
+      "motor_id": "scripts.motore_qualita_logica_visiva_base.analizza_domanda_visiva",
+      "lineno": 256,
+      "score": 61,
+      "capabilities": {
+        "quiz_question_naturalness": 29,
+        "strong_distractors": 9,
+        "grammar_accents_text_quality": 0,
+        "quiz_explanation_quality": 21,
+        "interactive_quiz_frontend": 2
+      },
+      "top_capabilities": [
+        "quiz_question_naturalness",
+        "quiz_explanation_quality",
+        "strong_distractors",
+        "interactive_quiz_frontend"
+      ],
+      "registered_in_registry": false,
+      "registry_spec": null
+    },
+    {
+      "kind": "python_function",
+      "path": "scripts/verifica_adapter_refine_tests_fase5_v1.py",
+      "module_name": "scripts.verifica_adapter_refine_tests_fase5_v1",
+      "function_name": "_normalize_back_to_phase5",
+      "motor_id": "scripts.verifica_adapter_refine_tests_fase5_v1._normalize_back_to_phase5",
+      "lineno": 326,
+      "score": 58,
+      "capabilities": {
+        "quiz_question_naturalness": 9,
+        "strong_distractors": 24,
+        "grammar_accents_text_quality": 0,
+        "quiz_explanation_quality": 7,
+        "interactive_quiz_frontend": 18
+      },
+      "top_capabilities": [
+        "strong_distractors",
+        "interactive_quiz_frontend",
+        "quiz_question_naturalness",
+        "quiz_explanation_quality"
+      ],
+      "registered_in_registry": false,
+      "registry_spec": null
+    },
+    {
+      "kind": "python_function",
+      "path": "scripts/audit_motori_scientifici.py",
+      "module_name": "scripts.audit_motori_scientifici",
+      "function_name": "valuta_domanda",
+      "motor_id": "scripts.audit_motori_scientifici.valuta_domanda",
+      "lineno": 240,
+      "score": 56,
+      "capabilities": {
+        "quiz_question_naturalness": 14,
+        "strong_distractors": 23,
+        "grammar_accents_text_quality": 0,
+        "quiz_explanation_quality": 17,
+        "interactive_quiz_frontend": 2
+      },
+      "top_capabilities": [
+        "strong_distractors",
+        "quiz_explanation_quality",
+        "quiz_question_naturalness",
+        "interactive_quiz_frontend"
+      ],
+      "registered_in_registry": false,
+      "registry_spec": null
+    },
+    {
+      "kind": "python_function",
+      "path": "scripts/validatore_rag_distrattori_forti_v2.py",
+      "module_name": "scripts.validatore_rag_distrattori_forti_v2",
+      "function_name": "valuta_domanda",
+      "motor_id": "scripts.validatore_rag_distrattori_forti_v2.valuta_domanda",
+      "lineno": 52,
+      "score": 56,
+      "capabilities": {
+        "quiz_question_naturalness": 24,
+        "strong_distractors": 24,
+        "grammar_accents_text_quality": 0,
+        "quiz_explanation_quality": 5,
+        "interactive_quiz_frontend": 3
+      },
+      "top_capabilities": [
+        "quiz_question_naturalness",
+        "strong_distractors",
+        "quiz_explanation_quality",
+        "interactive_quiz_frontend"
+      ],
+      "registered_in_registry": false,
+      "registry_spec": null
+    },
+    {
+      "kind": "python_function",
+      "path": "scripts/rag_prepara_import_approvati.py",
+      "module_name": "scripts.rag_prepara_import_approvati",
+      "function_name": "valida_domanda_approvata",
+      "motor_id": "scripts.rag_prepara_import_approvati.valida_domanda_approvata",
+      "lineno": 70,
+      "score": 55,
+      "capabilities": {
+        "quiz_question_naturalness": 22,
+        "strong_distractors": 17,
+        "grammar_accents_text_quality": 0,
+        "quiz_explanation_quality": 14,
+        "interactive_quiz_frontend": 2
+      },
+      "top_capabilities": [
+        "quiz_question_naturalness",
+        "strong_distractors",
+        "quiz_explanation_quality",
+        "interactive_quiz_frontend"
+      ],
+      "registered_in_registry": false,
+      "registry_spec": null
+    },
+    {
+      "kind": "python_function",
+      "path": "scripts/validatore_core_database.py",
+      "module_name": "scripts.validatore_core_database",
+      "function_name": "validate_question",
+      "motor_id": "scripts.validatore_core_database.validate_question",
+      "lineno": 210,
+      "score": 55,
+      "capabilities": {
+        "quiz_question_naturalness": 12,
+        "strong_distractors": 24,
+        "grammar_accents_text_quality": 0,
+        "quiz_explanation_quality": 18,
+        "interactive_quiz_frontend": 1
+      },
+      "top_capabilities": [
+        "strong_distractors",
+        "quiz_explanation_quality",
+        "quiz_question_naturalness",
+        "interactive_quiz_frontend"
+      ],
+      "registered_in_registry": false,
+      "registry_spec": null
+    },
+    {
+      "kind": "python_function",
+      "path": "backend/legacy_quality_motor_registry_v1.py",
+      "module_name": "backend.legacy_quality_motor_registry_v1",
+      "function_name": "_legacy_output_to_phase5",
+      "motor_id": "backend.legacy_quality_motor_registry_v1._legacy_output_to_phase5",
+      "lineno": 515,
+      "score": 54,
+      "capabilities": {
+        "quiz_question_naturalness": 6,
+        "strong_distractors": 23,
+        "grammar_accents_text_quality": 0,
+        "quiz_explanation_quality": 7,
+        "interactive_quiz_frontend": 18
+      },
+      "top_capabilities": [
+        "strong_distractors",
+        "interactive_quiz_frontend",
+        "quiz_explanation_quality",
+        "quiz_question_naturalness"
+      ],
+      "registered_in_registry": false,
+      "registry_spec": null
+    },
+    {
+      "kind": "python_function",
+      "path": "backend/phase5_live_quality_bridge_v1.py",
+      "module_name": "backend.phase5_live_quality_bridge_v1",
+      "function_name": "_legacy_refine_output_to_phase5",
+      "motor_id": "backend.phase5_live_quality_bridge_v1._legacy_refine_output_to_phase5",
+      "lineno": 273,
+      "score": 54,
+      "capabilities": {
+        "quiz_question_naturalness": 6,
+        "strong_distractors": 23,
+        "grammar_accents_text_quality": 0,
+        "quiz_explanation_quality": 7,
+        "interactive_quiz_frontend": 18
+      },
+      "top_capabilities": [
+        "strong_distractors",
+        "interactive_quiz_frontend",
+        "quiz_explanation_quality",
+        "quiz_question_naturalness"
+      ],
+      "registered_in_registry": false,
+      "registry_spec": null
+    },
+    {
+      "kind": "python_function",
+      "path": "scripts/review_inglese_quick.py",
+      "module_name": "scripts.review_inglese_quick",
+      "function_name": "controlla_domanda",
+      "motor_id": "scripts.review_inglese_quick.controlla_domanda",
+      "lineno": 91,
+      "score": 54,
+      "capabilities": {
+        "quiz_question_naturalness": 21,
+        "strong_distractors": 12,
+        "grammar_accents_text_quality": 0,
+        "quiz_explanation_quality": 18,
+        "interactive_quiz_frontend": 3
+      },
+      "top_capabilities": [
+        "quiz_question_naturalness",
+        "quiz_explanation_quality",
+        "strong_distractors",
+        "interactive_quiz_frontend"
+      ],
+      "registered_in_registry": false,
+      "registry_spec": null
+    },
+    {
+      "kind": "python_function",
+      "path": "scripts/estrai_motore_scientifico_da_migliorare.py",
+      "module_name": "scripts.estrai_motore_scientifico_da_migliorare",
+      "function_name": "crea_file_lavoro",
+      "motor_id": "scripts.estrai_motore_scientifico_da_migliorare.crea_file_lavoro",
+      "lineno": 211,
+      "score": 53,
+      "capabilities": {
+        "quiz_question_naturalness": 12,
+        "strong_distractors": 19,
+        "grammar_accents_text_quality": 0,
+        "quiz_explanation_quality": 17,
+        "interactive_quiz_frontend": 5
+      },
+      "top_capabilities": [
+        "strong_distractors",
+        "quiz_explanation_quality",
+        "quiz_question_naturalness",
+        "interactive_quiz_frontend"
+      ],
+      "registered_in_registry": false,
+      "registry_spec": null
+    },
+    {
+      "kind": "python_function",
+      "path": "scripts/diagnosi_logica_visiva_dettagliata.py",
+      "module_name": "scripts.diagnosi_logica_visiva_dettagliata",
+      "function_name": "main",
+      "motor_id": "scripts.diagnosi_logica_visiva_dettagliata.main",
+      "lineno": 47,
+      "score": 52,
+      "capabilities": {
+        "quiz_question_naturalness": 32,
+        "strong_distractors": 6,
+        "grammar_accents_text_quality": 0,
+        "quiz_explanation_quality": 13,
+        "interactive_quiz_frontend": 1
+      },
+      "top_capabilities": [
+        "quiz_question_naturalness",
+        "quiz_explanation_quality",
+        "strong_distractors",
+        "interactive_quiz_frontend"
+      ],
+      "registered_in_registry": false,
+      "registry_spec": null
+    },
+    {
+      "kind": "python_function",
+      "path": "scripts/review_engine_quality.py",
+      "module_name": "scripts.review_engine_quality",
+      "function_name": "analizza_domanda",
+      "motor_id": "scripts.review_engine_quality.analizza_domanda",
+      "lineno": 67,
+      "score": 52,
+      "capabilities": {
+        "quiz_question_naturalness": 13,
+        "strong_distractors": 24,
+        "grammar_accents_text_quality": 1,
+        "quiz_explanation_quality": 10,
+        "interactive_quiz_frontend": 4
+      },
+      "top_capabilities": [
+        "strong_distractors",
+        "quiz_question_naturalness",
+        "quiz_explanation_quality",
+        "interactive_quiz_frontend",
+        "grammar_accents_text_quality"
+      ],
+      "registered_in_registry": false,
+      "registry_spec": null
+    },
+    {
+      "kind": "python_function",
+      "path": "scripts/estrai_biologia_da_migliorare.py",
+      "module_name": "scripts.estrai_biologia_da_migliorare",
+      "function_name": "main",
+      "motor_id": "scripts.estrai_biologia_da_migliorare.main",
+      "lineno": 186,
+      "score": 52,
+      "capabilities": {
+        "quiz_question_naturalness": 12,
+        "strong_distractors": 18,
+        "grammar_accents_text_quality": 0,
+        "quiz_explanation_quality": 17,
+        "interactive_quiz_frontend": 5
+      },
+      "top_capabilities": [
+        "strong_distractors",
+        "quiz_explanation_quality",
+        "quiz_question_naturalness",
+        "interactive_quiz_frontend"
+      ],
+      "registered_in_registry": false,
+      "registry_spec": null
+    },
+    {
+      "kind": "python_function",
+      "path": "scripts/audit_motori_scientifici_sorgenti.py",
+      "module_name": "scripts.audit_motori_scientifici_sorgenti",
+      "function_name": "valuta_domanda",
+      "motor_id": "scripts.audit_motori_scientifici_sorgenti.valuta_domanda",
+      "lineno": 129,
+      "score": 52,
+      "capabilities": {
+        "quiz_question_naturalness": 14,
+        "strong_distractors": 22,
+        "grammar_accents_text_quality": 0,
+        "quiz_explanation_quality": 14,
+        "interactive_quiz_frontend": 2
+      },
+      "top_capabilities": [
+        "strong_distractors",
+        "quiz_question_naturalness",
+        "quiz_explanation_quality",
+        "interactive_quiz_frontend"
+      ],
+      "registered_in_registry": false,
+      "registry_spec": null
+    },
+    {
+      "kind": "python_function",
+      "path": "backend/main_backup_fix_informatica_finale_sicura.py",
+      "module_name": "backend.main_backup_fix_informatica_finale_sicura",
+      "function_name": "controlla_errori_tecnici_informatica",
+      "motor_id": "backend.main_backup_fix_informatica_finale_sicura.controlla_errori_tecnici_informatica",
+      "lineno": 1135,
+      "score": 48,
+      "capabilities": {
+        "quiz_question_naturalness": 28,
+        "strong_distractors": 3,
+        "grammar_accents_text_quality": 0,
+        "quiz_explanation_quality": 17,
+        "interactive_quiz_frontend": 0
+      },
+      "top_capabilities": [
+        "quiz_question_naturalness",
+        "quiz_explanation_quality",
+        "strong_distractors"
+      ],
+      "registered_in_registry": false,
+      "registry_spec": null
+    },
+    {
+      "kind": "python_function",
+      "path": "backend/main_backup_fix_timeout_finale_informatica.py",
+      "module_name": "backend.main_backup_fix_timeout_finale_informatica",
+      "function_name": "controlla_errori_tecnici_informatica",
+      "motor_id": "backend.main_backup_fix_timeout_finale_informatica.controlla_errori_tecnici_informatica",
+      "lineno": 1135,
+      "score": 48,
+      "capabilities": {
+        "quiz_question_naturalness": 28,
+        "strong_distractors": 3,
+        "grammar_accents_text_quality": 0,
+        "quiz_explanation_quality": 17,
+        "interactive_quiz_frontend": 0
+      },
+      "top_capabilities": [
+        "quiz_question_naturalness",
+        "quiz_explanation_quality",
+        "strong_distractors"
+      ],
+      "registered_in_registry": false,
+      "registry_spec": null
+    },
+    {
+      "kind": "python_function",
+      "path": "backend/main_backup_informatica_safe_topics.py",
+      "module_name": "backend.main_backup_informatica_safe_topics",
+      "function_name": "controlla_errori_tecnici_informatica",
+      "motor_id": "backend.main_backup_informatica_safe_topics.controlla_errori_tecnici_informatica",
+      "lineno": 1103,
+      "score": 48,
+      "capabilities": {
+        "quiz_question_naturalness": 28,
+        "strong_distractors": 3,
+        "grammar_accents_text_quality": 0,
+        "quiz_explanation_quality": 17,
+        "interactive_quiz_frontend": 0
+      },
+      "top_capabilities": [
+        "quiz_question_naturalness",
+        "quiz_explanation_quality",
+        "strong_distractors"
+      ],
+      "registered_in_registry": false,
+      "registry_spec": null
+    },
+    {
+      "kind": "python_function",
+      "path": "backend/main_backup_endpoint_finale_informatica.py",
+      "module_name": "backend.main_backup_endpoint_finale_informatica",
+      "function_name": "controlla_errori_tecnici_informatica",
+      "motor_id": "backend.main_backup_endpoint_finale_informatica.controlla_errori_tecnici_informatica",
+      "lineno": 1135,
+      "score": 48,
+      "capabilities": {
+        "quiz_question_naturalness": 28,
+        "strong_distractors": 3,
+        "grammar_accents_text_quality": 0,
+        "quiz_explanation_quality": 17,
+        "interactive_quiz_frontend": 0
+      },
+      "top_capabilities": [
+        "quiz_question_naturalness",
+        "quiz_explanation_quality",
+        "strong_distractors"
+      ],
+      "registered_in_registry": false,
+      "registry_spec": null
+    },
+    {
+      "kind": "python_function",
+      "path": "backend/main.py",
+      "module_name": "backend.main",
+      "function_name": "controlla_errori_tecnici_informatica",
+      "motor_id": "backend.main.controlla_errori_tecnici_informatica",
+      "lineno": 1135,
+      "score": 48,
+      "capabilities": {
+        "quiz_question_naturalness": 28,
+        "strong_distractors": 3,
+        "grammar_accents_text_quality": 0,
+        "quiz_explanation_quality": 17,
+        "interactive_quiz_frontend": 0
+      },
+      "top_capabilities": [
+        "quiz_question_naturalness",
+        "quiz_explanation_quality",
+        "strong_distractors"
+      ],
+      "registered_in_registry": false,
+      "registry_spec": null
+    },
+    {
+      "kind": "python_function",
+      "path": "scripts/valida_mini_llm_study_pack_cli_v2.py",
+      "module_name": "scripts.valida_mini_llm_study_pack_cli_v2",
+      "function_name": "main",
+      "motor_id": "scripts.valida_mini_llm_study_pack_cli_v2.main",
+      "lineno": 143,
+      "score": 47,
+      "capabilities": {
+        "quiz_question_naturalness": 3,
+        "strong_distractors": 1,
+        "grammar_accents_text_quality": 0,
+        "quiz_explanation_quality": 40,
+        "interactive_quiz_frontend": 3
+      },
+      "top_capabilities": [
+        "quiz_explanation_quality",
+        "quiz_question_naturalness",
+        "interactive_quiz_frontend",
+        "strong_distractors"
+      ],
+      "registered_in_registry": false,
+      "registry_spec": null
+    },
+    {
+      "kind": "python_function",
+      "path": "scripts/migliora_logica_quarto_blocco_distrattori_forti.py",
+      "module_name": "scripts.migliora_logica_quarto_blocco_distrattori_forti",
+      "function_name": "main",
+      "motor_id": "scripts.migliora_logica_quarto_blocco_distrattori_forti.main",
+      "lineno": 371,
+      "score": 46,
+      "capabilities": {
+        "quiz_question_naturalness": 22,
+        "strong_distractors": 18,
+        "grammar_accents_text_quality": 0,
+        "quiz_explanation_quality": 5,
+        "interactive_quiz_frontend": 1
+      },
+      "top_capabilities": [
+        "quiz_question_naturalness",
+        "strong_distractors",
+        "quiz_explanation_quality",
+        "interactive_quiz_frontend"
+      ],
+      "registered_in_registry": false,
+      "registry_spec": null
+    },
+    {
+      "kind": "python_function",
+      "path": "scripts/migliora_inglese_terzo_blocco_distrattori_forti.py",
+      "module_name": "scripts.migliora_inglese_terzo_blocco_distrattori_forti",
+      "function_name": "main",
+      "motor_id": "scripts.migliora_inglese_terzo_blocco_distrattori_forti.main",
+      "lineno": 374,
+      "score": 46,
+      "capabilities": {
+        "quiz_question_naturalness": 23,
+        "strong_distractors": 16,
+        "grammar_accents_text_quality": 0,
+        "quiz_explanation_quality": 6,
+        "interactive_quiz_frontend": 1
+      },
+      "top_capabilities": [
+        "quiz_question_naturalness",
+        "strong_distractors",
+        "quiz_explanation_quality",
+        "interactive_quiz_frontend"
+      ],
+      "registered_in_registry": false,
+      "registry_spec": null
+    },
+    {
+      "kind": "python_function",
+      "path": "scripts/migliora_inglese_quarto_blocco_distrattori_forti.py",
+      "module_name": "scripts.migliora_inglese_quarto_blocco_distrattori_forti",
+      "function_name": "main",
+      "motor_id": "scripts.migliora_inglese_quarto_blocco_distrattori_forti.main",
+      "lineno": 375,
+      "score": 46,
+      "capabilities": {
+        "quiz_question_naturalness": 23,
+        "strong_distractors": 16,
+        "grammar_accents_text_quality": 0,
+        "quiz_explanation_quality": 6,
+        "interactive_quiz_frontend": 1
+      },
+      "top_capabilities": [
+        "quiz_question_naturalness",
+        "strong_distractors",
+        "quiz_explanation_quality",
+        "interactive_quiz_frontend"
+      ],
+      "registered_in_registry": false,
+      "registry_spec": null
+    },
+    {
+      "kind": "python_function",
+      "path": "scripts/migliora_logica_secondo_blocco_distrattori_forti.py",
+      "module_name": "scripts.migliora_logica_secondo_blocco_distrattori_forti",
+      "function_name": "main",
+      "motor_id": "scripts.migliora_logica_secondo_blocco_distrattori_forti.main",
+      "lineno": 347,
+      "score": 46,
+      "capabilities": {
+        "quiz_question_naturalness": 22,
+        "strong_distractors": 18,
+        "grammar_accents_text_quality": 0,
+        "quiz_explanation_quality": 5,
+        "interactive_quiz_frontend": 1
+      },
+      "top_capabilities": [
+        "quiz_question_naturalness",
+        "strong_distractors",
+        "quiz_explanation_quality",
+        "interactive_quiz_frontend"
+      ],
+      "registered_in_registry": false,
+      "registry_spec": null
+    },
+    {
+      "kind": "python_function",
+      "path": "scripts/migliora_inglese_secondo_blocco_distrattori_forti.py",
+      "module_name": "scripts.migliora_inglese_secondo_blocco_distrattori_forti",
+      "function_name": "main",
+      "motor_id": "scripts.migliora_inglese_secondo_blocco_distrattori_forti.main",
+      "lineno": 376,
+      "score": 46,
+      "capabilities": {
+        "quiz_question_naturalness": 23,
+        "strong_distractors": 16,
+        "grammar_accents_text_quality": 0,
+        "quiz_explanation_quality": 6,
+        "interactive_quiz_frontend": 1
+      },
+      "top_capabilities": [
+        "quiz_question_naturalness",
+        "strong_distractors",
+        "quiz_explanation_quality",
+        "interactive_quiz_frontend"
+      ],
+      "registered_in_registry": false,
+      "registry_spec": null
+    },
+    {
+      "kind": "python_function",
+      "path": "scripts/migliora_logica_terzo_blocco_distrattori_forti.py",
+      "module_name": "scripts.migliora_logica_terzo_blocco_distrattori_forti",
+      "function_name": "main",
+      "motor_id": "scripts.migliora_logica_terzo_blocco_distrattori_forti.main",
+      "lineno": 396,
+      "score": 46,
+      "capabilities": {
+        "quiz_question_naturalness": 22,
+        "strong_distractors": 18,
+        "grammar_accents_text_quality": 0,
+        "quiz_explanation_quality": 5,
+        "interactive_quiz_frontend": 1
+      },
+      "top_capabilities": [
+        "quiz_question_naturalness",
+        "strong_distractors",
+        "quiz_explanation_quality",
+        "interactive_quiz_frontend"
+      ],
+      "registered_in_registry": false,
+      "registry_spec": null
+    },
+    {
+      "kind": "python_function",
+      "path": "scripts/migliora_inglese_primo_blocco_distrattori_forti.py",
+      "module_name": "scripts.migliora_inglese_primo_blocco_distrattori_forti",
+      "function_name": "main",
+      "motor_id": "scripts.migliora_inglese_primo_blocco_distrattori_forti.main",
+      "lineno": 385,
+      "score": 46,
+      "capabilities": {
+        "quiz_question_naturalness": 23,
+        "strong_distractors": 16,
+        "grammar_accents_text_quality": 0,
+        "quiz_explanation_quality": 6,
+        "interactive_quiz_frontend": 1
+      },
+      "top_capabilities": [
+        "quiz_question_naturalness",
+        "strong_distractors",
+        "quiz_explanation_quality",
+        "interactive_quiz_frontend"
+      ],
+      "registered_in_registry": false,
+      "registry_spec": null
+    },
+    {
+      "kind": "python_function",
+      "path": "scripts/migliora_matematica_terzo_blocco_distrattori_forti.py",
+      "module_name": "scripts.migliora_matematica_terzo_blocco_distrattori_forti",
+      "function_name": "main",
+      "motor_id": "scripts.migliora_matematica_terzo_blocco_distrattori_forti.main",
+      "lineno": 335,
+      "score": 45,
+      "capabilities": {
+        "quiz_question_naturalness": 22,
+        "strong_distractors": 17,
+        "grammar_accents_text_quality": 0,
+        "quiz_explanation_quality": 5,
+        "interactive_quiz_frontend": 1
+      },
+      "top_capabilities": [
+        "quiz_question_naturalness",
+        "strong_distractors",
+        "quiz_explanation_quality",
+        "interactive_quiz_frontend"
+      ],
+      "registered_in_registry": false,
+      "registry_spec": null
+    },
+    {
+      "kind": "python_function",
+      "path": "scripts/migliora_matematica_quarto_blocco_distrattori_forti.py",
+      "module_name": "scripts.migliora_matematica_quarto_blocco_distrattori_forti",
+      "function_name": "main",
+      "motor_id": "scripts.migliora_matematica_quarto_blocco_distrattori_forti.main",
+      "lineno": 336,
+      "score": 45,
+      "capabilities": {
+        "quiz_question_naturalness": 22,
+        "strong_distractors": 17,
+        "grammar_accents_text_quality": 0,
+        "quiz_explanation_quality": 5,
+        "interactive_quiz_frontend": 1
+      },
+      "top_capabilities": [
+        "quiz_question_naturalness",
+        "strong_distractors",
+        "quiz_explanation_quality",
+        "interactive_quiz_frontend"
+      ],
+      "registered_in_registry": false,
+      "registry_spec": null
+    },
+    {
+      "kind": "python_function",
+      "path": "scripts/migliora_matematica_secondo_blocco_distrattori_forti.py",
+      "module_name": "scripts.migliora_matematica_secondo_blocco_distrattori_forti",
+      "function_name": "main",
+      "motor_id": "scripts.migliora_matematica_secondo_blocco_distrattori_forti.main",
+      "lineno": 337,
+      "score": 45,
+      "capabilities": {
+        "quiz_question_naturalness": 22,
+        "strong_distractors": 17,
+        "grammar_accents_text_quality": 0,
+        "quiz_explanation_quality": 5,
+        "interactive_quiz_frontend": 1
+      },
+      "top_capabilities": [
+        "quiz_question_naturalness",
+        "strong_distractors",
+        "quiz_explanation_quality",
+        "interactive_quiz_frontend"
+      ],
+      "registered_in_registry": false,
+      "registry_spec": null
+    },
+    {
+      "kind": "python_function",
+      "path": "scripts/migliora_logica_primo_blocco_distrattori_forti.py",
+      "module_name": "scripts.migliora_logica_primo_blocco_distrattori_forti",
+      "function_name": "main",
+      "motor_id": "scripts.migliora_logica_primo_blocco_distrattori_forti.main",
+      "lineno": 356,
+      "score": 45,
+      "capabilities": {
+        "quiz_question_naturalness": 22,
+        "strong_distractors": 17,
+        "grammar_accents_text_quality": 0,
+        "quiz_explanation_quality": 5,
+        "interactive_quiz_frontend": 1
+      },
+      "top_capabilities": [
+        "quiz_question_naturalness",
+        "strong_distractors",
+        "quiz_explanation_quality",
+        "interactive_quiz_frontend"
+      ],
+      "registered_in_registry": false,
+      "registry_spec": null
+    },
+    {
+      "kind": "python_function",
+      "path": "scripts/migliora_ai_secondo_blocco_distrattori_forti.py",
+      "module_name": "scripts.migliora_ai_secondo_blocco_distrattori_forti",
+      "function_name": "main",
+      "motor_id": "scripts.migliora_ai_secondo_blocco_distrattori_forti.main",
+      "lineno": 213,
+      "score": 45,
+      "capabilities": {
+        "quiz_question_naturalness": 22,
+        "strong_distractors": 15,
+        "grammar_accents_text_quality": 0,
+        "quiz_explanation_quality": 6,
+        "interactive_quiz_frontend": 2
+      },
+      "top_capabilities": [
+        "quiz_question_naturalness",
+        "strong_distractors",
+        "quiz_explanation_quality",
+        "interactive_quiz_frontend"
+      ],
+      "registered_in_registry": false,
+      "registry_spec": null
+    },
+    {
+      "kind": "python_function",
+      "path": "scripts/migliora_matematica_primo_blocco_distrattori_forti.py",
+      "module_name": "scripts.migliora_matematica_primo_blocco_distrattori_forti",
+      "function_name": "main",
+      "motor_id": "scripts.migliora_matematica_primo_blocco_distrattori_forti.main",
+      "lineno": 334,
+      "score": 45,
+      "capabilities": {
+        "quiz_question_naturalness": 22,
+        "strong_distractors": 17,
+        "grammar_accents_text_quality": 0,
+        "quiz_explanation_quality": 5,
+        "interactive_quiz_frontend": 1
+      },
+      "top_capabilities": [
+        "quiz_question_naturalness",
+        "strong_distractors",
+        "quiz_explanation_quality",
+        "interactive_quiz_frontend"
+      ],
+      "registered_in_registry": false,
+      "registry_spec": null
+    },
+    {
+      "kind": "python_function",
+      "path": "scripts/review_option_structure.py",
+      "module_name": "scripts.review_option_structure",
+      "function_name": "analizza_domanda",
+      "motor_id": "scripts.review_option_structure.analizza_domanda",
+      "lineno": 131,
+      "score": 44,
+      "capabilities": {
+        "quiz_question_naturalness": 12,
+        "strong_distractors": 20,
+        "grammar_accents_text_quality": 0,
+        "quiz_explanation_quality": 8,
+        "interactive_quiz_frontend": 4
+      },
+      "top_capabilities": [
+        "strong_distractors",
+        "quiz_question_naturalness",
+        "quiz_explanation_quality",
+        "interactive_quiz_frontend"
+      ],
+      "registered_in_registry": false,
+      "registry_spec": null
+    },
+    {
+      "kind": "python_function",
+      "path": "scripts/migliora_ai_primo_blocco_distrattori_forti.py",
+      "module_name": "scripts.migliora_ai_primo_blocco_distrattori_forti",
+      "function_name": "main",
+      "motor_id": "scripts.migliora_ai_primo_blocco_distrattori_forti.main",
+      "lineno": 220,
+      "score": 44,
+      "capabilities": {
+        "quiz_question_naturalness": 22,
+        "strong_distractors": 16,
+        "grammar_accents_text_quality": 0,
+        "quiz_explanation_quality": 5,
+        "interactive_quiz_frontend": 1
+      },
+      "top_capabilities": [
+        "quiz_question_naturalness",
+        "strong_distractors",
+        "quiz_explanation_quality",
+        "interactive_quiz_frontend"
+      ],
+      "registered_in_registry": false,
+      "registry_spec": null
+    },
+    {
+      "kind": "python_function",
+      "path": "backend/main_backup_prima_distrattori_omogenei.py",
+      "module_name": "backend.main_backup_prima_distrattori_omogenei",
+      "function_name": "genera_quiz_con_ollama",
+      "motor_id": "backend.main_backup_prima_distrattori_omogenei.genera_quiz_con_ollama",
+      "lineno": 357,
+      "score": 43,
+      "capabilities": {
+        "quiz_question_naturalness": 4,
+        "strong_distractors": 12,
+        "grammar_accents_text_quality": 4,
+        "quiz_explanation_quality": 19,
+        "interactive_quiz_frontend": 4
+      },
+      "top_capabilities": [
+        "quiz_explanation_quality",
+        "strong_distractors",
+        "quiz_question_naturalness",
+        "grammar_accents_text_quality",
+        "interactive_quiz_frontend"
+      ],
+      "registered_in_registry": false,
+      "registry_spec": null
+    },
+    {
+      "kind": "python_function",
+      "path": "scripts/migliora_ai_quarto_blocco_distrattori_forti.py",
+      "module_name": "scripts.migliora_ai_quarto_blocco_distrattori_forti",
+      "function_name": "main",
+      "motor_id": "scripts.migliora_ai_quarto_blocco_distrattori_forti.main",
+      "lineno": 254,
+      "score": 43,
+      "capabilities": {
+        "quiz_question_naturalness": 22,
+        "strong_distractors": 15,
+        "grammar_accents_text_quality": 0,
+        "quiz_explanation_quality": 5,
+        "interactive_quiz_frontend": 1
+      },
+      "top_capabilities": [
+        "quiz_question_naturalness",
+        "strong_distractors",
+        "quiz_explanation_quality",
+        "interactive_quiz_frontend"
+      ],
+      "registered_in_registry": false,
+      "registry_spec": null
+    },
+    {
+      "kind": "python_function",
+      "path": "scripts/migliora_informatica_primo_blocco_distrattori_forti.py",
+      "module_name": "scripts.migliora_informatica_primo_blocco_distrattori_forti",
+      "function_name": "main",
+      "motor_id": "scripts.migliora_informatica_primo_blocco_distrattori_forti.main",
+      "lineno": 314,
+      "score": 43,
+      "capabilities": {
+        "quiz_question_naturalness": 22,
+        "strong_distractors": 15,
+        "grammar_accents_text_quality": 0,
+        "quiz_explanation_quality": 5,
+        "interactive_quiz_frontend": 1
+      },
+      "top_capabilities": [
+        "quiz_question_naturalness",
+        "strong_distractors",
+        "quiz_explanation_quality",
+        "interactive_quiz_frontend"
+      ],
+      "registered_in_registry": false,
+      "registry_spec": null
+    },
+    {
+      "kind": "python_function",
+      "path": "scripts/migliora_informatica_quarto_blocco_distrattori_forti.py",
+      "module_name": "scripts.migliora_informatica_quarto_blocco_distrattori_forti",
+      "function_name": "main",
+      "motor_id": "scripts.migliora_informatica_quarto_blocco_distrattori_forti.main",
+      "lineno": 314,
+      "score": 43,
+      "capabilities": {
+        "quiz_question_naturalness": 22,
+        "strong_distractors": 15,
+        "grammar_accents_text_quality": 0,
+        "quiz_explanation_quality": 5,
+        "interactive_quiz_frontend": 1
+      },
+      "top_capabilities": [
+        "quiz_question_naturalness",
+        "strong_distractors",
+        "quiz_explanation_quality",
+        "interactive_quiz_frontend"
+      ],
+      "registered_in_registry": false,
+      "registry_spec": null
+    },
+    {
+      "kind": "python_function",
+      "path": "scripts/migliora_informatica_terzo_blocco_distrattori_forti.py",
+      "module_name": "scripts.migliora_informatica_terzo_blocco_distrattori_forti",
+      "function_name": "main",
+      "motor_id": "scripts.migliora_informatica_terzo_blocco_distrattori_forti.main",
+      "lineno": 314,
+      "score": 43,
+      "capabilities": {
+        "quiz_question_naturalness": 22,
+        "strong_distractors": 15,
+        "grammar_accents_text_quality": 0,
+        "quiz_explanation_quality": 5,
+        "interactive_quiz_frontend": 1
+      },
+      "top_capabilities": [
+        "quiz_question_naturalness",
+        "strong_distractors",
+        "quiz_explanation_quality",
+        "interactive_quiz_frontend"
+      ],
+      "registered_in_registry": false,
+      "registry_spec": null
+    },
+    {
+      "kind": "python_function",
+      "path": "scripts/migliora_ai_quinto_blocco_distrattori_forti.py",
+      "module_name": "scripts.migliora_ai_quinto_blocco_distrattori_forti",
+      "function_name": "main",
+      "motor_id": "scripts.migliora_ai_quinto_blocco_distrattori_forti.main",
+      "lineno": 262,
+      "score": 43,
+      "capabilities": {
+        "quiz_question_naturalness": 22,
+        "strong_distractors": 15,
+        "grammar_accents_text_quality": 0,
+        "quiz_explanation_quality": 5,
+        "interactive_quiz_frontend": 1
+      },
+      "top_capabilities": [
+        "quiz_question_naturalness",
+        "strong_distractors",
+        "quiz_explanation_quality",
+        "interactive_quiz_frontend"
+      ],
+      "registered_in_registry": false,
+      "registry_spec": null
+    },
+    {
+      "kind": "python_function",
+      "path": "scripts/migliora_ai_terzo_blocco_distrattori_forti.py",
+      "module_name": "scripts.migliora_ai_terzo_blocco_distrattori_forti",
+      "function_name": "main",
+      "motor_id": "scripts.migliora_ai_terzo_blocco_distrattori_forti.main",
+      "lineno": 317,
+      "score": 43,
+      "capabilities": {
+        "quiz_question_naturalness": 22,
+        "strong_distractors": 15,
+        "grammar_accents_text_quality": 0,
+        "quiz_explanation_quality": 5,
+        "interactive_quiz_frontend": 1
+      },
+      "top_capabilities": [
+        "quiz_question_naturalness",
+        "strong_distractors",
+        "quiz_explanation_quality",
+        "interactive_quiz_frontend"
+      ],
+      "registered_in_registry": false,
+      "registry_spec": null
+    },
+    {
+      "kind": "python_function",
+      "path": "scripts/migliora_informatica_secondo_blocco_distrattori_forti.py",
+      "module_name": "scripts.migliora_informatica_secondo_blocco_distrattori_forti",
+      "function_name": "main",
+      "motor_id": "scripts.migliora_informatica_secondo_blocco_distrattori_forti.main",
+      "lineno": 314,
+      "score": 43,
+      "capabilities": {
+        "quiz_question_naturalness": 22,
+        "strong_distractors": 15,
+        "grammar_accents_text_quality": 0,
+        "quiz_explanation_quality": 5,
+        "interactive_quiz_frontend": 1
+      },
+      "top_capabilities": [
+        "quiz_question_naturalness",
+        "strong_distractors",
+        "quiz_explanation_quality",
+        "interactive_quiz_frontend"
+      ],
+      "registered_in_registry": false,
+      "registry_spec": null
+    },
+    {
+      "kind": "python_function",
+      "path": "backend/motori_scrittura.py",
+      "module_name": "backend.motori_scrittura",
+      "function_name": "qg_clean_output_bundle",
+      "motor_id": "backend.motori_scrittura.qg_clean_output_bundle",
+      "lineno": 3510,
+      "score": 41,
+      "capabilities": {
+        "quiz_question_naturalness": 24,
+        "strong_distractors": 8,
+        "grammar_accents_text_quality": 1,
+        "quiz_explanation_quality": 4,
+        "interactive_quiz_frontend": 4
+      },
+      "top_capabilities": [
+        "quiz_question_naturalness",
+        "strong_distractors",
+        "quiz_explanation_quality",
+        "interactive_quiz_frontend",
+        "grammar_accents_text_quality"
+      ],
+      "registered_in_registry": false,
+      "registry_spec": null
+    },
+    {
+      "kind": "python_function",
+      "path": "scripts/motore_distrattori_ai_tre_forti.py",
+      "module_name": "scripts.motore_distrattori_ai_tre_forti",
+      "function_name": "analizza_domanda",
+      "motor_id": "scripts.motore_distrattori_ai_tre_forti.analizza_domanda",
+      "lineno": 138,
+      "score": 41,
+      "capabilities": {
+        "quiz_question_naturalness": 21,
+        "strong_distractors": 18,
+        "grammar_accents_text_quality": 0,
+        "quiz_explanation_quality": 1,
+        "interactive_quiz_frontend": 1
+      },
+      "top_capabilities": [
+        "quiz_question_naturalness",
+        "strong_distractors",
+        "quiz_explanation_quality",
+        "interactive_quiz_frontend"
+      ],
+      "registered_in_registry": false,
+      "registry_spec": null
+    },
+    {
+      "kind": "python_function",
+      "path": "scripts/validatore_duplicati_database.py",
+      "module_name": "scripts.validatore_duplicati_database",
+      "function_name": "main",
+      "motor_id": "scripts.validatore_duplicati_database.main",
+      "lineno": 114,
+      "score": 39,
+      "capabilities": {
+        "quiz_question_naturalness": 28,
+        "strong_distractors": 8,
+        "grammar_accents_text_quality": 0,
+        "quiz_explanation_quality": 0,
+        "interactive_quiz_frontend": 3
+      },
+      "top_capabilities": [
+        "quiz_question_naturalness",
+        "strong_distractors",
+        "interactive_quiz_frontend"
+      ],
+      "registered_in_registry": false,
+      "registry_spec": null
+    },
+    {
+      "kind": "python_function",
+      "path": "backend/main_backup_fix_tcp_flow_control.py",
+      "module_name": "backend.main_backup_fix_tcp_flow_control",
+      "function_name": "controlla_errori_tecnici_informatica",
+      "motor_id": "backend.main_backup_fix_tcp_flow_control.controlla_errori_tecnici_informatica",
+      "lineno": 1103,
+      "score": 37,
+      "capabilities": {
+        "quiz_question_naturalness": 20,
+        "strong_distractors": 3,
+        "grammar_accents_text_quality": 0,
+        "quiz_explanation_quality": 14,
+        "interactive_quiz_frontend": 0
+      },
+      "top_capabilities": [
+        "quiz_question_naturalness",
+        "quiz_explanation_quality",
+        "strong_distractors"
+      ],
+      "registered_in_registry": false,
+      "registry_spec": null
+    },
+    {
+      "kind": "python_function",
+      "path": "scripts/rag_valida_quiz_json.py",
+      "module_name": "scripts.rag_valida_quiz_json",
+      "function_name": "valida_domanda",
+      "motor_id": "scripts.rag_valida_quiz_json.valida_domanda",
+      "lineno": 23,
+      "score": 37,
+      "capabilities": {
+        "quiz_question_naturalness": 15,
+        "strong_distractors": 15,
+        "grammar_accents_text_quality": 0,
+        "quiz_explanation_quality": 7,
+        "interactive_quiz_frontend": 0
+      },
+      "top_capabilities": [
+        "quiz_question_naturalness",
+        "strong_distractors",
+        "quiz_explanation_quality"
+      ],
+      "registered_in_registry": false,
+      "registry_spec": null
+    },
+    {
+      "kind": "python_function",
+      "path": "backend/phase5_quiz_true_distractor_repair_v1.py",
+      "module_name": "backend.phase5_quiz_true_distractor_repair_v1",
+      "function_name": "repair_quiz_true_distractors_v1",
+      "motor_id": "backend.phase5_quiz_true_distractor_repair_v1.repair_quiz_true_distractors_v1",
+      "lineno": 212,
+      "score": 36,
+      "capabilities": {
+        "quiz_question_naturalness": 13,
+        "strong_distractors": 22,
+        "grammar_accents_text_quality": 0,
+        "quiz_explanation_quality": 0,
+        "interactive_quiz_frontend": 1
+      },
+      "top_capabilities": [
+        "strong_distractors",
+        "quiz_question_naturalness",
+        "interactive_quiz_frontend"
+      ],
+      "registered_in_registry": false,
+      "registry_spec": null
+    },
+    {
+      "kind": "python_function",
+      "path": "backend/motori_scrittura.py",
+      "module_name": "backend.motori_scrittura",
+      "function_name": "qg_validate_study_questions",
+      "motor_id": "backend.motori_scrittura.qg_validate_study_questions",
+      "lineno": 3224,
+      "score": 35,
+      "capabilities": {
+        "quiz_question_naturalness": 31,
+        "strong_distractors": 0,
+        "grammar_accents_text_quality": 0,
+        "quiz_explanation_quality": 4,
+        "interactive_quiz_frontend": 0
+      },
+      "top_capabilities": [
+        "quiz_question_naturalness",
+        "quiz_explanation_quality"
+      ],
+      "registered_in_registry": false,
+      "registry_spec": null
+    },
+    {
+      "kind": "python_function",
+      "path": "scripts/corregge_avvisi_ai_terzo_blocco.py",
+      "module_name": "scripts.corregge_avvisi_ai_terzo_blocco",
+      "function_name": "main",
+      "motor_id": "scripts.corregge_avvisi_ai_terzo_blocco.main",
+      "lineno": 122,
+      "score": 35,
+      "capabilities": {
+        "quiz_question_naturalness": 22,
+        "strong_distractors": 9,
+        "grammar_accents_text_quality": 0,
+        "quiz_explanation_quality": 4,
+        "interactive_quiz_frontend": 0
+      },
+      "top_capabilities": [
+        "quiz_question_naturalness",
+        "strong_distractors",
+        "quiz_explanation_quality"
+      ],
+      "registered_in_registry": false,
+      "registry_spec": null
+    },
+    {
+      "kind": "python_function",
+      "path": "scripts/check_text_quality_ai.py",
+      "module_name": "scripts.check_text_quality_ai",
+      "function_name": "crea_testo_da_revisionare",
+      "motor_id": "scripts.check_text_quality_ai.crea_testo_da_revisionare",
+      "lineno": 39,
+      "score": 35,
+      "capabilities": {
+        "quiz_question_naturalness": 17,
+        "strong_distractors": 9,
+        "grammar_accents_text_quality": 0,
+        "quiz_explanation_quality": 8,
+        "interactive_quiz_frontend": 1
+      },
+      "top_capabilities": [
+        "quiz_question_naturalness",
+        "strong_distractors",
+        "quiz_explanation_quality",
+        "interactive_quiz_frontend"
+      ],
+      "registered_in_registry": false,
+      "registry_spec": null
+    },
+    {
+      "kind": "python_function",
+      "path": "scripts/visual_logic_validator.py",
+      "module_name": "scripts.visual_logic_validator",
+      "function_name": "validate_visual_logic_question",
+      "motor_id": "scripts.visual_logic_validator.validate_visual_logic_question",
+      "lineno": 379,
+      "score": 35,
+      "capabilities": {
+        "quiz_question_naturalness": 12,
+        "strong_distractors": 1,
+        "grammar_accents_text_quality": 0,
+        "quiz_explanation_quality": 18,
+        "interactive_quiz_frontend": 4
+      },
+      "top_capabilities": [
+        "quiz_explanation_quality",
+        "quiz_question_naturalness",
+        "interactive_quiz_frontend",
+        "strong_distractors"
+      ],
+      "registered_in_registry": false,
+      "registry_spec": null
+    },
+    {
+      "kind": "python_function",
+      "path": "scripts/applica_revisione_biologia_fix_finale.py",
+      "module_name": "scripts.applica_revisione_biologia_fix_finale",
+      "function_name": "main",
+      "motor_id": "scripts.applica_revisione_biologia_fix_finale.main",
+      "lineno": 42,
+      "score": 35,
+      "capabilities": {
+        "quiz_question_naturalness": 23,
+        "strong_distractors": 8,
+        "grammar_accents_text_quality": 0,
+        "quiz_explanation_quality": 4,
+        "interactive_quiz_frontend": 0
+      },
+      "top_capabilities": [
+        "quiz_question_naturalness",
+        "strong_distractors",
+        "quiz_explanation_quality"
+      ],
+      "registered_in_registry": false,
+      "registry_spec": null
+    },
+    {
+      "kind": "python_function",
+      "path": "scripts/verifica_compatibilita_batch_motori_legacy_v1.py",
+      "module_name": "scripts.verifica_compatibilita_batch_motori_legacy_v1",
+      "function_name": "_base_phase5_output",
+      "motor_id": "scripts.verifica_compatibilita_batch_motori_legacy_v1._base_phase5_output",
+      "lineno": 146,
+      "score": 35,
+      "capabilities": {
+        "quiz_question_naturalness": 10,
+        "strong_distractors": 5,
+        "grammar_accents_text_quality": 9,
+        "quiz_explanation_quality": 5,
+        "interactive_quiz_frontend": 6
+      },
+      "top_capabilities": [
+        "quiz_question_naturalness",
+        "grammar_accents_text_quality",
+        "interactive_quiz_frontend",
+        "strong_distractors",
+        "quiz_explanation_quality"
+      ],
+      "registered_in_registry": false,
+      "registry_spec": null
+    },
+    {
+      "kind": "python_function",
+      "path": "scripts/rag_adapter_quiz_ufficiale_v43.py",
+      "module_name": "scripts.rag_adapter_quiz_ufficiale_v43",
+      "function_name": "valida_struttura_ufficiale",
+      "motor_id": "scripts.rag_adapter_quiz_ufficiale_v43.valida_struttura_ufficiale",
+      "lineno": 344,
+      "score": 35,
+      "capabilities": {
+        "quiz_question_naturalness": 21,
+        "strong_distractors": 9,
+        "grammar_accents_text_quality": 0,
+        "quiz_explanation_quality": 5,
+        "interactive_quiz_frontend": 0
+      },
+      "top_capabilities": [
+        "quiz_question_naturalness",
+        "strong_distractors",
+        "quiz_explanation_quality"
+      ],
+      "registered_in_registry": false,
+      "registry_spec": null
+    },
+    {
+      "kind": "python_function",
+      "path": "scripts/verifica_phase5_7_ready_safe_motors_execution_v1.py",
+      "module_name": "scripts.verifica_phase5_7_ready_safe_motors_execution_v1",
+      "function_name": "build_payload",
+      "motor_id": "scripts.verifica_phase5_7_ready_safe_motors_execution_v1.build_payload",
+      "lineno": 31,
+      "score": 35,
+      "capabilities": {
+        "quiz_question_naturalness": 10,
+        "strong_distractors": 5,
+        "grammar_accents_text_quality": 9,
+        "quiz_explanation_quality": 5,
+        "interactive_quiz_frontend": 6
+      },
+      "top_capabilities": [
+        "quiz_question_naturalness",
+        "grammar_accents_text_quality",
+        "interactive_quiz_frontend",
+        "strong_distractors",
+        "quiz_explanation_quality"
+      ],
+      "registered_in_registry": false,
+      "registry_spec": null
+    },
+    {
+      "kind": "python_function",
+      "path": "scripts/validatore_coerenza_logica_visiva.py",
+      "module_name": "scripts.validatore_coerenza_logica_visiva",
+      "function_name": "main",
+      "motor_id": "scripts.validatore_coerenza_logica_visiva.main",
+      "lineno": 108,
+      "score": 34,
+      "capabilities": {
+        "quiz_question_naturalness": 5,
+        "strong_distractors": 0,
+        "grammar_accents_text_quality": 0,
+        "quiz_explanation_quality": 29,
+        "interactive_quiz_frontend": 0
+      },
+      "top_capabilities": [
+        "quiz_explanation_quality",
+        "quiz_question_naturalness"
+      ],
+      "registered_in_registry": false,
+      "registry_spec": null
+    },
+    {
+      "kind": "python_function",
+      "path": "backend/motori_scrittura.py",
+      "module_name": "backend.motori_scrittura",
+      "function_name": "build_quiz_draft",
+      "motor_id": "backend.motori_scrittura.build_quiz_draft",
+      "lineno": 2530,
+      "score": 33,
+      "capabilities": {
+        "quiz_question_naturalness": 14,
+        "strong_distractors": 14,
+        "grammar_accents_text_quality": 0,
+        "quiz_explanation_quality": 1,
+        "interactive_quiz_frontend": 4
+      },
+      "top_capabilities": [
+        "quiz_question_naturalness",
+        "strong_distractors",
+        "interactive_quiz_frontend",
+        "quiz_explanation_quality"
+      ],
+      "registered_in_registry": false,
+      "registry_spec": null
+    },
+    {
+      "kind": "python_function",
+      "path": "scripts/rag_motore_test_riutilizzabile_v35d.py",
+      "module_name": "scripts.rag_motore_test_riutilizzabile_v35d",
+      "function_name": "refine_single_test",
+      "motor_id": "scripts.rag_motore_test_riutilizzabile_v35d.refine_single_test",
+      "lineno": 98,
+      "score": 33,
+      "capabilities": {
+        "quiz_question_naturalness": 11,
+        "strong_distractors": 15,
+        "grammar_accents_text_quality": 1,
+        "quiz_explanation_quality": 3,
+        "interactive_quiz_frontend": 3
+      },
+      "top_capabilities": [
+        "strong_distractors",
+        "quiz_question_naturalness",
+        "quiz_explanation_quality",
+        "interactive_quiz_frontend",
+        "grammar_accents_text_quality"
+      ],
+      "registered_in_registry": false,
+      "registry_spec": null
+    },
+    {
+      "kind": "python_function",
+      "path": "scripts/verifica_phase5_8_quality_delta_ready_safe_motors_v1.py",
+      "module_name": "scripts.verifica_phase5_8_quality_delta_ready_safe_motors_v1",
+      "function_name": "build_dirty_payload",
+      "motor_id": "scripts.verifica_phase5_8_quality_delta_ready_safe_motors_v1.build_dirty_payload",
+      "lineno": 231,
+      "score": 33,
+      "capabilities": {
+        "quiz_question_naturalness": 11,
+        "strong_distractors": 6,
+        "grammar_accents_text_quality": 8,
+        "quiz_explanation_quality": 3,
+        "interactive_quiz_frontend": 5
+      },
+      "top_capabilities": [
+        "quiz_question_naturalness",
+        "grammar_accents_text_quality",
+        "strong_distractors",
+        "interactive_quiz_frontend",
+        "quiz_explanation_quality"
+      ],
+      "registered_in_registry": false,
+      "registry_spec": null
+    },
+    {
+      "kind": "python_function",
+      "path": "scripts/review_option_structure.py",
+      "module_name": "scripts.review_option_structure",
+      "function_name": "crea_report",
+      "motor_id": "scripts.review_option_structure.crea_report",
+      "lineno": 234,
+      "score": 33,
+      "capabilities": {
+        "quiz_question_naturalness": 19,
+        "strong_distractors": 8,
+        "grammar_accents_text_quality": 0,
+        "quiz_explanation_quality": 5,
+        "interactive_quiz_frontend": 1
+      },
+      "top_capabilities": [
+        "quiz_question_naturalness",
+        "strong_distractors",
+        "quiz_explanation_quality",
+        "interactive_quiz_frontend"
+      ],
+      "registered_in_registry": false,
+      "registry_spec": null
+    },
+    {
+      "kind": "python_function",
+      "path": "scripts/benchmark_mini_llm_study_pack_v3_quality_gate.py",
+      "module_name": "scripts.benchmark_mini_llm_study_pack_v3_quality_gate",
+      "function_name": "validate_pack",
+      "motor_id": "scripts.benchmark_mini_llm_study_pack_v3_quality_gate.validate_pack",
+      "lineno": 71,
+      "score": 32,
+      "capabilities": {
+        "quiz_question_naturalness": 11,
+        "strong_distractors": 10,
+        "grammar_accents_text_quality": 0,
+        "quiz_explanation_quality": 11,
+        "interactive_quiz_frontend": 0
+      },
+      "top_capabilities": [
+        "quiz_question_naturalness",
+        "quiz_explanation_quality",
+        "strong_distractors"
+      ],
+      "registered_in_registry": false,
+      "registry_spec": null
+    },
+    {
+      "kind": "python_function",
+      "path": "backend/main_backup_prima_regole_tcp_finali.py",
+      "module_name": "backend.main_backup_prima_regole_tcp_finali",
+      "function_name": "crea_prompt_quiz_avanzato",
+      "motor_id": "backend.main_backup_prima_regole_tcp_finali.crea_prompt_quiz_avanzato",
+      "lineno": 723,
+      "score": 31,
+      "capabilities": {
+        "quiz_question_naturalness": 8,
+        "strong_distractors": 3,
+        "grammar_accents_text_quality": 3,
+        "quiz_explanation_quality": 13,
+        "interactive_quiz_frontend": 4
+      },
+      "top_capabilities": [
+        "quiz_explanation_quality",
+        "quiz_question_naturalness",
+        "interactive_quiz_frontend",
+        "strong_distractors",
+        "grammar_accents_text_quality"
+      ],
+      "registered_in_registry": false,
+      "registry_spec": null
+    },
+    {
+      "kind": "python_function",
+      "path": "backend/main_backup_fix_informatica_finale_sicura.py",
+      "module_name": "backend.main_backup_fix_informatica_finale_sicura",
+      "function_name": "crea_prompt_quiz_avanzato",
+      "motor_id": "backend.main_backup_fix_informatica_finale_sicura.crea_prompt_quiz_avanzato",
+      "lineno": 849,
+      "score": 31,
+      "capabilities": {
+        "quiz_question_naturalness": 8,
+        "strong_distractors": 3,
+        "grammar_accents_text_quality": 3,
+        "quiz_explanation_quality": 13,
+        "interactive_quiz_frontend": 4
+      },
+      "top_capabilities": [
+        "quiz_explanation_quality",
+        "quiz_question_naturalness",
+        "interactive_quiz_frontend",
+        "strong_distractors",
+        "grammar_accents_text_quality"
+      ],
+      "registered_in_registry": false,
+      "registry_spec": null
+    },
+    {
+      "kind": "python_function",
+      "path": "backend/main_backup_prima_pulizia_linguistica.py",
+      "module_name": "backend.main_backup_prima_pulizia_linguistica",
+      "function_name": "crea_prompt_quiz_avanzato",
+      "motor_id": "backend.main_backup_prima_pulizia_linguistica.crea_prompt_quiz_avanzato",
+      "lineno": 599,
+      "score": 31,
+      "capabilities": {
+        "quiz_question_naturalness": 8,
+        "strong_distractors": 3,
+        "grammar_accents_text_quality": 3,
+        "quiz_explanation_quality": 13,
+        "interactive_quiz_frontend": 4
+      },
+      "top_capabilities": [
+        "quiz_explanation_quality",
+        "quiz_question_naturalness",
+        "interactive_quiz_frontend",
+        "strong_distractors",
+        "grammar_accents_text_quality"
+      ],
+      "registered_in_registry": false,
+      "registry_spec": null
+    },
+    {
+      "kind": "python_function",
+      "path": "backend/main_backup_fix_tecnico_informatica.py",
+      "module_name": "backend.main_backup_fix_tecnico_informatica",
+      "function_name": "crea_prompt_quiz_avanzato",
+      "motor_id": "backend.main_backup_fix_tecnico_informatica.crea_prompt_quiz_avanzato",
+      "lineno": 846,
+      "score": 31,
+      "capabilities": {
+        "quiz_question_naturalness": 8,
+        "strong_distractors": 3,
+        "grammar_accents_text_quality": 3,
+        "quiz_explanation_quality": 13,
+        "interactive_quiz_frontend": 4
+      },
+      "top_capabilities": [
+        "quiz_explanation_quality",
+        "quiz_question_naturalness",
+        "interactive_quiz_frontend",
+        "strong_distractors",
+        "grammar_accents_text_quality"
+      ],
+      "registered_in_registry": false,
+      "registry_spec": null
+    }
+  ],
+  "top_frontend_candidates": [
+    {
+      "kind": "frontend_file",
+      "path": "demo/app.js",
+      "score": 1130,
+      "capabilities": {
+        "quiz_question_naturalness": 434,
+        "strong_distractors": 190,
+        "grammar_accents_text_quality": 1,
+        "quiz_explanation_quality": 344,
+        "interactive_quiz_frontend": 161
+      },
+      "top_capabilities": [
+        "quiz_question_naturalness",
+        "quiz_explanation_quality",
+        "strong_distractors",
+        "interactive_quiz_frontend",
+        "grammar_accents_text_quality"
+      ]
+    },
+    {
+      "kind": "frontend_file",
+      "path": "runtime/web/quiz-engine.js",
+      "score": 243,
+      "capabilities": {
+        "quiz_question_naturalness": 133,
+        "strong_distractors": 34,
+        "grammar_accents_text_quality": 0,
+        "quiz_explanation_quality": 47,
+        "interactive_quiz_frontend": 29
+      },
+      "top_capabilities": [
+        "quiz_question_naturalness",
+        "quiz_explanation_quality",
+        "strong_distractors",
+        "interactive_quiz_frontend"
+      ]
+    },
+    {
+      "kind": "frontend_file",
+      "path": "demo-rag/curriculum-card-engine.js",
+      "score": 231,
+      "capabilities": {
+        "quiz_question_naturalness": 88,
+        "strong_distractors": 4,
+        "grammar_accents_text_quality": 4,
+        "quiz_explanation_quality": 81,
+        "interactive_quiz_frontend": 54
+      },
+      "top_capabilities": [
+        "quiz_question_naturalness",
+        "quiz_explanation_quality",
+        "interactive_quiz_frontend",
+        "strong_distractors",
+        "grammar_accents_text_quality"
+      ]
+    },
+    {
+      "kind": "frontend_file",
+      "path": "demo-rag/universal-document-learning-engine.js",
+      "score": 214,
+      "capabilities": {
+        "quiz_question_naturalness": 92,
+        "strong_distractors": 11,
+        "grammar_accents_text_quality": 14,
+        "quiz_explanation_quality": 23,
+        "interactive_quiz_frontend": 74
+      },
+      "top_capabilities": [
+        "quiz_question_naturalness",
+        "interactive_quiz_frontend",
+        "quiz_explanation_quality",
+        "grammar_accents_text_quality",
+        "strong_distractors"
+      ]
+    },
+    {
+      "kind": "frontend_file",
+      "path": "demo-rag/rag-knowledge-linked-generator-v1.js",
+      "score": 127,
+      "capabilities": {
+        "quiz_question_naturalness": 82,
+        "strong_distractors": 19,
+        "grammar_accents_text_quality": 2,
+        "quiz_explanation_quality": 21,
+        "interactive_quiz_frontend": 3
+      },
+      "top_capabilities": [
+        "quiz_question_naturalness",
+        "quiz_explanation_quality",
+        "strong_distractors",
+        "interactive_quiz_frontend",
+        "grammar_accents_text_quality"
+      ]
+    },
+    {
+      "kind": "frontend_file",
+      "path": "demo-rag/sport-training-document-engine.js",
+      "score": 120,
+      "capabilities": {
+        "quiz_question_naturalness": 29,
+        "strong_distractors": 13,
+        "grammar_accents_text_quality": 4,
+        "quiz_explanation_quality": 30,
+        "interactive_quiz_frontend": 44
+      },
+      "top_capabilities": [
+        "interactive_quiz_frontend",
+        "quiz_explanation_quality",
+        "quiz_question_naturalness",
+        "strong_distractors",
+        "grammar_accents_text_quality"
+      ]
+    },
+    {
+      "kind": "frontend_file",
+      "path": "demo-rag/long-document-rag-v42-final-fix.js",
+      "score": 106,
+      "capabilities": {
+        "quiz_question_naturalness": 41,
+        "strong_distractors": 1,
+        "grammar_accents_text_quality": 14,
+        "quiz_explanation_quality": 25,
+        "interactive_quiz_frontend": 25
+      },
+      "top_capabilities": [
+        "quiz_question_naturalness",
+        "quiz_explanation_quality",
+        "interactive_quiz_frontend",
+        "grammar_accents_text_quality",
+        "strong_distractors"
+      ]
+    },
+    {
+      "kind": "frontend_file",
+      "path": "demo-rag/rag-general-validator-v1.js",
+      "score": 94,
+      "capabilities": {
+        "quiz_question_naturalness": 63,
+        "strong_distractors": 11,
+        "grammar_accents_text_quality": 0,
+        "quiz_explanation_quality": 7,
+        "interactive_quiz_frontend": 13
+      },
+      "top_capabilities": [
+        "quiz_question_naturalness",
+        "interactive_quiz_frontend",
+        "strong_distractors",
+        "quiz_explanation_quality"
+      ]
+    },
+    {
+      "kind": "frontend_file",
+      "path": "demo-rag/browser-rag-engine.js",
+      "score": 70,
+      "capabilities": {
+        "quiz_question_naturalness": 5,
+        "strong_distractors": 9,
+        "grammar_accents_text_quality": 17,
+        "quiz_explanation_quality": 22,
+        "interactive_quiz_frontend": 17
+      },
+      "top_capabilities": [
+        "quiz_explanation_quality",
+        "grammar_accents_text_quality",
+        "interactive_quiz_frontend",
+        "strong_distractors",
+        "quiz_question_naturalness"
+      ]
+    },
+    {
+      "kind": "frontend_file",
+      "path": "runtime/web/ai-effects.js",
+      "score": 63,
+      "capabilities": {
+        "quiz_question_naturalness": 1,
+        "strong_distractors": 11,
+        "grammar_accents_text_quality": 1,
+        "quiz_explanation_quality": 1,
+        "interactive_quiz_frontend": 49
+      },
+      "top_capabilities": [
+        "interactive_quiz_frontend",
+        "strong_distractors",
+        "quiz_question_naturalness",
+        "grammar_accents_text_quality",
+        "quiz_explanation_quality"
+      ]
+    },
+    {
+      "kind": "frontend_file",
+      "path": "demo-rag/rag-knowledge-extractors-v1.js",
+      "score": 62,
+      "capabilities": {
+        "quiz_question_naturalness": 13,
+        "strong_distractors": 16,
+        "grammar_accents_text_quality": 0,
+        "quiz_explanation_quality": 15,
+        "interactive_quiz_frontend": 18
+      },
+      "top_capabilities": [
+        "interactive_quiz_frontend",
+        "strong_distractors",
+        "quiz_explanation_quality",
+        "quiz_question_naturalness"
+      ]
+    },
+    {
+      "kind": "frontend_file",
+      "path": "demo-rag/card-graphic-engine.js",
+      "score": 54,
+      "capabilities": {
+        "quiz_question_naturalness": 0,
+        "strong_distractors": 0,
+        "grammar_accents_text_quality": 34,
+        "quiz_explanation_quality": 3,
+        "interactive_quiz_frontend": 17
+      },
+      "top_capabilities": [
+        "grammar_accents_text_quality",
+        "interactive_quiz_frontend",
+        "quiz_explanation_quality"
+      ]
+    },
+    {
+      "kind": "frontend_file",
+      "path": "runtime/web/card-graphic-engine.js",
+      "score": 54,
+      "capabilities": {
+        "quiz_question_naturalness": 0,
+        "strong_distractors": 0,
+        "grammar_accents_text_quality": 34,
+        "quiz_explanation_quality": 3,
+        "interactive_quiz_frontend": 17
+      },
+      "top_capabilities": [
+        "grammar_accents_text_quality",
+        "interactive_quiz_frontend",
+        "quiz_explanation_quality"
+      ]
+    },
+    {
+      "kind": "frontend_file",
+      "path": "runtime/web/rag-large-document-progressive-summary-v2.js",
+      "score": 53,
+      "capabilities": {
+        "quiz_question_naturalness": 1,
+        "strong_distractors": 8,
+        "grammar_accents_text_quality": 1,
+        "quiz_explanation_quality": 6,
+        "interactive_quiz_frontend": 37
+      },
+      "top_capabilities": [
+        "interactive_quiz_frontend",
+        "strong_distractors",
+        "quiz_explanation_quality",
+        "quiz_question_naturalness",
+        "grammar_accents_text_quality"
+      ]
+    },
+    {
+      "kind": "frontend_file",
+      "path": "demo-rag/test-selezionatore-output-v35h.html",
+      "score": 52,
+      "capabilities": {
+        "quiz_question_naturalness": 11,
+        "strong_distractors": 7,
+        "grammar_accents_text_quality": 7,
+        "quiz_explanation_quality": 15,
+        "interactive_quiz_frontend": 12
+      },
+      "top_capabilities": [
+        "quiz_explanation_quality",
+        "interactive_quiz_frontend",
+        "quiz_question_naturalness",
+        "strong_distractors",
+        "grammar_accents_text_quality"
+      ]
+    },
+    {
+      "kind": "frontend_file",
+      "path": "demo-rag/rag-smart-pipeline-v1.js",
+      "score": 50,
+      "capabilities": {
+        "quiz_question_naturalness": 21,
+        "strong_distractors": 8,
+        "grammar_accents_text_quality": 0,
+        "quiz_explanation_quality": 13,
+        "interactive_quiz_frontend": 8
+      },
+      "top_capabilities": [
+        "quiz_question_naturalness",
+        "quiz_explanation_quality",
+        "strong_distractors",
+        "interactive_quiz_frontend"
+      ]
+    },
+    {
+      "kind": "frontend_file",
+      "path": "demo-rag/document-type-theme-engine.js",
+      "score": 50,
+      "capabilities": {
+        "quiz_question_naturalness": 12,
+        "strong_distractors": 2,
+        "grammar_accents_text_quality": 9,
+        "quiz_explanation_quality": 22,
+        "interactive_quiz_frontend": 5
+      },
+      "top_capabilities": [
+        "quiz_explanation_quality",
+        "quiz_question_naturalness",
+        "grammar_accents_text_quality",
+        "interactive_quiz_frontend",
+        "strong_distractors"
+      ]
+    },
+    {
+      "kind": "frontend_file",
+      "path": "demo-rag/rag-concept-document-engine-v46.js",
+      "score": 44,
+      "capabilities": {
+        "quiz_question_naturalness": 10,
+        "strong_distractors": 5,
+        "grammar_accents_text_quality": 4,
+        "quiz_explanation_quality": 13,
+        "interactive_quiz_frontend": 12
+      },
+      "top_capabilities": [
+        "quiz_explanation_quality",
+        "interactive_quiz_frontend",
+        "quiz_question_naturalness",
+        "strong_distractors",
+        "grammar_accents_text_quality"
+      ]
+    },
+    {
+      "kind": "frontend_file",
+      "path": "demo-rag/test-output-kb-clean-v34f.html",
+      "score": 41,
+      "capabilities": {
+        "quiz_question_naturalness": 5,
+        "strong_distractors": 6,
+        "grammar_accents_text_quality": 0,
+        "quiz_explanation_quality": 15,
+        "interactive_quiz_frontend": 15
+      },
+      "top_capabilities": [
+        "quiz_explanation_quality",
+        "interactive_quiz_frontend",
+        "strong_distractors",
+        "quiz_question_naturalness"
+      ]
+    },
+    {
+      "kind": "frontend_file",
+      "path": "demo-rag/ocr-document-reader-engine.js",
+      "score": 33,
+      "capabilities": {
+        "quiz_question_naturalness": 0,
+        "strong_distractors": 5,
+        "grammar_accents_text_quality": 5,
+        "quiz_explanation_quality": 0,
+        "interactive_quiz_frontend": 23
+      },
+      "top_capabilities": [
+        "interactive_quiz_frontend",
+        "strong_distractors",
+        "grammar_accents_text_quality"
+      ]
+    },
+    {
+      "kind": "frontend_file",
+      "path": "demo-rag/style.css",
+      "score": 31,
+      "capabilities": {
+        "quiz_question_naturalness": 5,
+        "strong_distractors": 2,
+        "grammar_accents_text_quality": 6,
+        "quiz_explanation_quality": 18,
+        "interactive_quiz_frontend": 0
+      },
+      "top_capabilities": [
+        "quiz_explanation_quality",
+        "grammar_accents_text_quality",
+        "quiz_question_naturalness",
+        "strong_distractors"
+      ]
+    },
+    {
+      "kind": "frontend_file",
+      "path": "demo-rag/rag-quality-summary-cards-v34a.js",
+      "score": 25,
+      "capabilities": {
+        "quiz_question_naturalness": 0,
+        "strong_distractors": 1,
+        "grammar_accents_text_quality": 2,
+        "quiz_explanation_quality": 8,
+        "interactive_quiz_frontend": 14
+      },
+      "top_capabilities": [
+        "interactive_quiz_frontend",
+        "quiz_explanation_quality",
+        "grammar_accents_text_quality",
+        "strong_distractors"
+      ]
+    },
+    {
+      "kind": "frontend_file",
+      "path": "demo/style.css",
+      "score": 23,
+      "capabilities": {
+        "quiz_question_naturalness": 7,
+        "strong_distractors": 3,
+        "grammar_accents_text_quality": 0,
+        "quiz_explanation_quality": 7,
+        "interactive_quiz_frontend": 6
+      },
+      "top_capabilities": [
+        "quiz_question_naturalness",
+        "quiz_explanation_quality",
+        "interactive_quiz_frontend",
+        "strong_distractors"
+      ]
+    },
+    {
+      "kind": "frontend_file",
+      "path": "runtime/web/rag-large-document-manager-v1.js",
+      "score": 19,
+      "capabilities": {
+        "quiz_question_naturalness": 0,
+        "strong_distractors": 19,
+        "grammar_accents_text_quality": 0,
+        "quiz_explanation_quality": 0,
+        "interactive_quiz_frontend": 0
+      },
+      "top_capabilities": [
+        "strong_distractors"
+      ]
+    },
+    {
+      "kind": "frontend_file",
+      "path": "demo-rag/long-document-rag-v42-final-fix.css",
+      "score": 16,
+      "capabilities": {
+        "quiz_question_naturalness": 7,
+        "strong_distractors": 0,
+        "grammar_accents_text_quality": 6,
+        "quiz_explanation_quality": 3,
+        "interactive_quiz_frontend": 0
+      },
+      "top_capabilities": [
+        "quiz_question_naturalness",
+        "grammar_accents_text_quality",
+        "quiz_explanation_quality"
+      ]
+    },
+    {
+      "kind": "frontend_file",
+      "path": "runtime/web/final-reward-engine.js",
+      "score": 16,
+      "capabilities": {
+        "quiz_question_naturalness": 2,
+        "strong_distractors": 7,
+        "grammar_accents_text_quality": 0,
+        "quiz_explanation_quality": 2,
+        "interactive_quiz_frontend": 5
+      },
+      "top_capabilities": [
+        "strong_distractors",
+        "interactive_quiz_frontend",
+        "quiz_question_naturalness",
+        "quiz_explanation_quality"
+      ]
+    },
+    {
+      "kind": "frontend_file",
+      "path": "demo-rag/layout-rigido-generazione-subito.js",
+      "score": 13,
+      "capabilities": {
+        "quiz_question_naturalness": 0,
+        "strong_distractors": 0,
+        "grammar_accents_text_quality": 0,
+        "quiz_explanation_quality": 10,
+        "interactive_quiz_frontend": 3
+      },
+      "top_capabilities": [
+        "quiz_explanation_quality",
+        "interactive_quiz_frontend"
+      ]
+    },
+    {
+      "kind": "frontend_file",
+      "path": "demo-rag/test-rag-pipeline-intelligente-v1.html",
+      "score": 12,
+      "capabilities": {
+        "quiz_question_naturalness": 4,
+        "strong_distractors": 2,
+        "grammar_accents_text_quality": 1,
+        "quiz_explanation_quality": 0,
+        "interactive_quiz_frontend": 5
+      },
+      "top_capabilities": [
+        "interactive_quiz_frontend",
+        "quiz_question_naturalness",
+        "strong_distractors",
+        "grammar_accents_text_quality"
+      ]
+    },
+    {
+      "kind": "frontend_file",
+      "path": "demo-rag/test-documenti-universale.html",
+      "score": 11,
+      "capabilities": {
+        "quiz_question_naturalness": 0,
+        "strong_distractors": 2,
+        "grammar_accents_text_quality": 0,
+        "quiz_explanation_quality": 4,
+        "interactive_quiz_frontend": 5
+      },
+      "top_capabilities": [
+        "interactive_quiz_frontend",
+        "quiz_explanation_quality",
+        "strong_distractors"
+      ]
+    },
+    {
+      "kind": "frontend_file",
+      "path": "demo-rag/pdf-export-browser-v6.js",
+      "score": 11,
+      "capabilities": {
+        "quiz_question_naturalness": 5,
+        "strong_distractors": 2,
+        "grammar_accents_text_quality": 1,
+        "quiz_explanation_quality": 0,
+        "interactive_quiz_frontend": 3
+      },
+      "top_capabilities": [
+        "quiz_question_naturalness",
+        "interactive_quiz_frontend",
+        "strong_distractors",
+        "grammar_accents_text_quality"
+      ]
+    },
+    {
+      "kind": "frontend_file",
+      "path": "demo-rag/rag-didactic-planner-v1.js",
+      "score": 8,
+      "capabilities": {
+        "quiz_question_naturalness": 5,
+        "strong_distractors": 2,
+        "grammar_accents_text_quality": 0,
+        "quiz_explanation_quality": 1,
+        "interactive_quiz_frontend": 0
+      },
+      "top_capabilities": [
+        "quiz_question_naturalness",
+        "strong_distractors",
+        "quiz_explanation_quality"
+      ]
+    },
+    {
+      "kind": "frontend_file",
+      "path": "demo-rag/rag-app-aziendale-v2a11-ux-finale.html",
+      "score": 7,
+      "capabilities": {
+        "quiz_question_naturalness": 0,
+        "strong_distractors": 1,
+        "grammar_accents_text_quality": 0,
+        "quiz_explanation_quality": 4,
+        "interactive_quiz_frontend": 2
+      },
+      "top_capabilities": [
+        "quiz_explanation_quality",
+        "interactive_quiz_frontend",
+        "strong_distractors"
+      ]
+    },
+    {
+      "kind": "frontend_file",
+      "path": "demo-rag/rag-app-aziendale-v2a12-dashboard.html",
+      "score": 6,
+      "capabilities": {
+        "quiz_question_naturalness": 0,
+        "strong_distractors": 1,
+        "grammar_accents_text_quality": 0,
+        "quiz_explanation_quality": 3,
+        "interactive_quiz_frontend": 2
+      },
+      "top_capabilities": [
+        "quiz_explanation_quality",
+        "interactive_quiz_frontend",
+        "strong_distractors"
+      ]
+    },
+    {
+      "kind": "frontend_file",
+      "path": "demo-rag/pdf-export-cards.js",
+      "score": 6,
+      "capabilities": {
+        "quiz_question_naturalness": 0,
+        "strong_distractors": 3,
+        "grammar_accents_text_quality": 0,
+        "quiz_explanation_quality": 0,
+        "interactive_quiz_frontend": 3
+      },
+      "top_capabilities": [
+        "strong_distractors",
+        "interactive_quiz_frontend"
+      ]
+    },
+    {
+      "kind": "frontend_file",
+      "path": "demo-rag/test-ocr-locale.html",
+      "score": 5,
+      "capabilities": {
+        "quiz_question_naturalness": 0,
+        "strong_distractors": 0,
+        "grammar_accents_text_quality": 0,
+        "quiz_explanation_quality": 0,
+        "interactive_quiz_frontend": 5
+      },
+      "top_capabilities": [
+        "interactive_quiz_frontend"
+      ]
+    },
+    {
+      "kind": "frontend_file",
+      "path": "demo-rag/rag-app-aziendale.html",
+      "score": 5,
+      "capabilities": {
+        "quiz_question_naturalness": 0,
+        "strong_distractors": 1,
+        "grammar_accents_text_quality": 0,
+        "quiz_explanation_quality": 3,
+        "interactive_quiz_frontend": 1
+      },
+      "top_capabilities": [
+        "quiz_explanation_quality",
+        "strong_distractors",
+        "interactive_quiz_frontend"
+      ]
+    },
+    {
+      "kind": "frontend_file",
+      "path": "demo-rag/layout-rigido-rag.js",
+      "score": 5,
+      "capabilities": {
+        "quiz_question_naturalness": 0,
+        "strong_distractors": 0,
+        "grammar_accents_text_quality": 0,
+        "quiz_explanation_quality": 0,
+        "interactive_quiz_frontend": 5
+      },
+      "top_capabilities": [
+        "interactive_quiz_frontend"
+      ]
+    },
+    {
+      "kind": "frontend_file",
+      "path": "demo-rag/rag-app-aziendale-v2a10-output-dinamici.html",
+      "score": 5,
+      "capabilities": {
+        "quiz_question_naturalness": 0,
+        "strong_distractors": 1,
+        "grammar_accents_text_quality": 0,
+        "quiz_explanation_quality": 3,
+        "interactive_quiz_frontend": 1
+      },
+      "top_capabilities": [
+        "quiz_explanation_quality",
+        "strong_distractors",
+        "interactive_quiz_frontend"
+      ]
+    },
+    {
+      "kind": "frontend_file",
+      "path": "demo-rag/rag-app-aziendale-v2a8-ux.html",
+      "score": 4,
+      "capabilities": {
+        "quiz_question_naturalness": 0,
+        "strong_distractors": 1,
+        "grammar_accents_text_quality": 0,
+        "quiz_explanation_quality": 1,
+        "interactive_quiz_frontend": 2
+      },
+      "top_capabilities": [
+        "interactive_quiz_frontend",
+        "strong_distractors",
+        "quiz_explanation_quality"
+      ]
+    },
+    {
+      "kind": "frontend_file",
+      "path": "demo-rag/test-rag-documenti-lunghi-v42-final-fix.html",
+      "score": 4,
+      "capabilities": {
+        "quiz_question_naturalness": 3,
+        "strong_distractors": 0,
+        "grammar_accents_text_quality": 0,
+        "quiz_explanation_quality": 1,
+        "interactive_quiz_frontend": 0
+      },
+      "top_capabilities": [
+        "quiz_question_naturalness",
+        "quiz_explanation_quality"
+      ]
+    },
+    {
+      "kind": "frontend_file",
+      "path": "demo-rag/test-scarica-pdf-browser-v6.html",
+      "score": 4,
+      "capabilities": {
+        "quiz_question_naturalness": 0,
+        "strong_distractors": 0,
+        "grammar_accents_text_quality": 3,
+        "quiz_explanation_quality": 0,
+        "interactive_quiz_frontend": 1
+      },
+      "top_capabilities": [
+        "grammar_accents_text_quality",
+        "interactive_quiz_frontend"
+      ]
+    },
+    {
+      "kind": "frontend_file",
+      "path": "demo-rag/auto-scroll-generazione.js",
+      "score": 4,
+      "capabilities": {
+        "quiz_question_naturalness": 1,
+        "strong_distractors": 0,
+        "grammar_accents_text_quality": 0,
+        "quiz_explanation_quality": 0,
+        "interactive_quiz_frontend": 3
+      },
+      "top_capabilities": [
+        "interactive_quiz_frontend",
+        "quiz_question_naturalness"
+      ]
+    },
+    {
+      "kind": "frontend_file",
+      "path": "runtime/web/theme-engine.css",
+      "score": 4,
+      "capabilities": {
+        "quiz_question_naturalness": 0,
+        "strong_distractors": 0,
+        "grammar_accents_text_quality": 4,
+        "quiz_explanation_quality": 0,
+        "interactive_quiz_frontend": 0
+      },
+      "top_capabilities": [
+        "grammar_accents_text_quality"
+      ]
+    },
+    {
+      "kind": "frontend_file",
+      "path": "demo-rag/rag-document-input-unico-v1.js",
+      "score": 3,
+      "capabilities": {
+        "quiz_question_naturalness": 0,
+        "strong_distractors": 2,
+        "grammar_accents_text_quality": 0,
+        "quiz_explanation_quality": 0,
+        "interactive_quiz_frontend": 1
+      },
+      "top_capabilities": [
+        "strong_distractors",
+        "interactive_quiz_frontend"
+      ]
+    },
+    {
+      "kind": "frontend_file",
+      "path": "demo-rag/rag-input-reale-guard.js",
+      "score": 3,
+      "capabilities": {
+        "quiz_question_naturalness": 0,
+        "strong_distractors": 0,
+        "grammar_accents_text_quality": 0,
+        "quiz_explanation_quality": 0,
+        "interactive_quiz_frontend": 3
+      },
+      "top_capabilities": [
+        "interactive_quiz_frontend"
+      ]
+    },
+    {
+      "kind": "frontend_file",
+      "path": "demo-rag/test-curriculum-card.html",
+      "score": 3,
+      "capabilities": {
+        "quiz_question_naturalness": 1,
+        "strong_distractors": 1,
+        "grammar_accents_text_quality": 0,
+        "quiz_explanation_quality": 1,
+        "interactive_quiz_frontend": 0
+      },
+      "top_capabilities": [
+        "quiz_question_naturalness",
+        "strong_distractors",
+        "quiz_explanation_quality"
+      ]
+    },
+    {
+      "kind": "frontend_file",
+      "path": "demo-rag/rag-app-aziendale-v2a9-output.html",
+      "score": 3,
+      "capabilities": {
+        "quiz_question_naturalness": 0,
+        "strong_distractors": 1,
+        "grammar_accents_text_quality": 0,
+        "quiz_explanation_quality": 1,
+        "interactive_quiz_frontend": 1
+      },
+      "top_capabilities": [
+        "strong_distractors",
+        "quiz_explanation_quality",
+        "interactive_quiz_frontend"
+      ]
+    },
+    {
+      "kind": "frontend_file",
+      "path": "demo-rag/rag-action-icons-v46.js",
+      "score": 3,
+      "capabilities": {
+        "quiz_question_naturalness": 0,
+        "strong_distractors": 0,
+        "grammar_accents_text_quality": 2,
+        "quiz_explanation_quality": 0,
+        "interactive_quiz_frontend": 1
+      },
+      "top_capabilities": [
+        "grammar_accents_text_quality",
+        "interactive_quiz_frontend"
+      ]
+    },
+    {
+      "kind": "frontend_file",
+      "path": "demo-rag/app.js",
+      "score": 3,
+      "capabilities": {
+        "quiz_question_naturalness": 0,
+        "strong_distractors": 0,
+        "grammar_accents_text_quality": 0,
+        "quiz_explanation_quality": 1,
+        "interactive_quiz_frontend": 2
+      },
+      "top_capabilities": [
+        "interactive_quiz_frontend",
+        "quiz_explanation_quality"
+      ]
+    },
+    {
+      "kind": "frontend_file",
+      "path": "demo-rag/rag-app-aziendale-v2a7.html",
+      "score": 2,
+      "capabilities": {
+        "quiz_question_naturalness": 0,
+        "strong_distractors": 1,
+        "grammar_accents_text_quality": 0,
+        "quiz_explanation_quality": 0,
+        "interactive_quiz_frontend": 1
+      },
+      "top_capabilities": [
+        "strong_distractors",
+        "interactive_quiz_frontend"
+      ]
+    },
+    {
+      "kind": "frontend_file",
+      "path": "demo-rag/rag-text-cleaner-ocr-v1.js",
+      "score": 2,
+      "capabilities": {
+        "quiz_question_naturalness": 0,
+        "strong_distractors": 2,
+        "grammar_accents_text_quality": 0,
+        "quiz_explanation_quality": 0,
+        "interactive_quiz_frontend": 0
+      },
+      "top_capabilities": [
+        "strong_distractors"
+      ]
+    },
+    {
+      "kind": "frontend_file",
+      "path": "demo-rag/buttons-full-row.js",
+      "score": 2,
+      "capabilities": {
+        "quiz_question_naturalness": 0,
+        "strong_distractors": 0,
+        "grammar_accents_text_quality": 0,
+        "quiz_explanation_quality": 0,
+        "interactive_quiz_frontend": 2
+      },
+      "top_capabilities": [
+        "interactive_quiz_frontend"
+      ]
+    },
+    {
+      "kind": "frontend_file",
+      "path": "demo-rag/test-rag-documenti-lunghi-v1.html",
+      "score": 2,
+      "capabilities": {
+        "quiz_question_naturalness": 0,
+        "strong_distractors": 1,
+        "grammar_accents_text_quality": 0,
+        "quiz_explanation_quality": 0,
+        "interactive_quiz_frontend": 1
+      },
+      "top_capabilities": [
+        "strong_distractors",
+        "interactive_quiz_frontend"
+      ]
+    },
+    {
+      "kind": "frontend_file",
+      "path": "demo-rag/test-rag-documenti-lunghi-v2.html",
+      "score": 2,
+      "capabilities": {
+        "quiz_question_naturalness": 0,
+        "strong_distractors": 1,
+        "grammar_accents_text_quality": 0,
+        "quiz_explanation_quality": 0,
+        "interactive_quiz_frontend": 1
+      },
+      "top_capabilities": [
+        "strong_distractors",
+        "interactive_quiz_frontend"
+      ]
+    },
+    {
+      "kind": "frontend_file",
+      "path": "demo-rag/test-scarica-pdf-card-images.html",
+      "score": 1,
+      "capabilities": {
+        "quiz_question_naturalness": 0,
+        "strong_distractors": 0,
+        "grammar_accents_text_quality": 0,
+        "quiz_explanation_quality": 0,
+        "interactive_quiz_frontend": 1
+      },
+      "top_capabilities": [
+        "interactive_quiz_frontend"
+      ]
+    },
+    {
+      "kind": "frontend_file",
+      "path": "demo-rag/test-ocr-documenti.html",
+      "score": 1,
+      "capabilities": {
+        "quiz_question_naturalness": 0,
+        "strong_distractors": 1,
+        "grammar_accents_text_quality": 0,
+        "quiz_explanation_quality": 0,
+        "interactive_quiz_frontend": 0
+      },
+      "top_capabilities": [
+        "strong_distractors"
+      ]
+    },
+    {
+      "kind": "frontend_file",
+      "path": "runtime/web/ai-effects.css",
+      "score": 1,
+      "capabilities": {
+        "quiz_question_naturalness": 0,
+        "strong_distractors": 0,
+        "grammar_accents_text_quality": 0,
+        "quiz_explanation_quality": 0,
+        "interactive_quiz_frontend": 1
+      },
+      "top_capabilities": [
+        "interactive_quiz_frontend"
+      ]
+    }
+  ],
+  "recommendations": [
+    {
+      "priority": 1,
+      "area": "quiz_backend_mapping",
+      "action": "Verificare quali motori quiz già esistenti sono candidati ma non ancora nel registry.",
+      "why": "Il registry ora corregge i distrattori veri, ma restano naturalezza domanda, ripetitività e spiegazioni.",
+      "registered_quiz_motors_count": 3
+    },
+    {
+      "priority": 2,
+      "area": "quiz_question_naturalness",
+      "action": "Creare shortlist e test compatibilità per candidati non registrati.",
+      "why": "Trovati 923 candidati non registrati per capability quiz_question_naturalness."
+    },
+    {
+      "priority": 2,
+      "area": "strong_distractors",
+      "action": "Creare shortlist e test compatibilità per candidati non registrati.",
+      "why": "Trovati 564 candidati non registrati per capability strong_distractors."
+    },
+    {
+      "priority": 2,
+      "area": "grammar_accents_text_quality",
+      "action": "Creare shortlist e test compatibilità per candidati non registrati.",
+      "why": "Trovati 201 candidati non registrati per capability grammar_accents_text_quality."
+    },
+    {
+      "priority": 2,
+      "area": "quiz_explanation_quality",
+      "action": "Creare shortlist e test compatibilità per candidati non registrati.",
+      "why": "Trovati 792 candidati non registrati per capability quiz_explanation_quality."
+    },
+    {
+      "priority": 2,
+      "area": "interactive_quiz_frontend",
+      "action": "Creare shortlist e test compatibilità per candidati non registrati.",
+      "why": "Trovati 323 candidati non registrati per capability interactive_quiz_frontend."
+    },
+    {
+      "priority": 3,
+      "area": "interactive_quiz_frontend",
+      "action": "Trattare visibilità risposta corretta, click, feedback e punteggio come test frontend separato.",
+      "why": "La comparsa della risposta corretta dopo il click non è un motore backend: è comportamento UI/JS da validare nella pagina.",
+      "frontend_candidates_count": 57
+    }
+  ],
+  "notes": [
+    "Diagnostico: non modifica registry, motori o frontend.",
+    "Serve a capire quali motori già esistenti possono migliorare domanda quiz, spiegazioni, grammatica, naturalezza e distrattori.",
+    "La visibilità della risposta corretta dopo il click è comportamento frontend, non motore backend."
+  ]
+}
