@@ -1,0 +1,239 @@
+{
+  "phase": "5.12H.1",
+  "label": "FASE 5.12H.1 — REGISTRY CONNECTOR 65_TO_73 QM_051_QM_058",
+  "status": "PASS - Fase 5.12H.1: REGISTRY_CONNECTOR_65_TO_73_QM_051_QM_058_READY",
+  "registry_before": 65,
+  "linked_controls_count": 8,
+  "registry_after": 73,
+  "expected_registry_after": 73,
+  "base_registry_source": {
+    "path": "reports/phase5_12g2_section_quality_selection_matrix_with_contextual_duplicates_v1.json",
+    "detected_count": 65,
+    "detection_method": "numeric_field:registry_total_motors",
+    "unique_qm_ids_seen": 1,
+    "selected": true
+  },
+  "standalone_report_path": "reports/phase5_12h_selector_orchestrator_standalone_qm_051_qm_058_v1.json",
+  "standalone_report_status": "PASS - Fase 5.12H: SELECTOR_ORCHESTRATOR_STANDALONE_QM_051_QM_058_READY",
+  "linked_control_ids": [
+    "qm_051",
+    "qm_052",
+    "qm_053",
+    "qm_054",
+    "qm_055",
+    "qm_056",
+    "qm_057",
+    "qm_058"
+  ],
+  "linked_controls": [
+    {
+      "registry_slot": 66,
+      "control_id": "qm_051",
+      "source_phase": "5.12H",
+      "linked_phase": "5.12H.1",
+      "name": "section_intent_selector",
+      "role": "selector",
+      "section_scope": [
+        "card",
+        "summary",
+        "study_questions",
+        "test_quiz"
+      ],
+      "input_contract": [
+        "requested_section",
+        "document_profile",
+        "available_quality_matrix"
+      ],
+      "output_contract": [
+        "normalized_section",
+        "section_generation_intent"
+      ],
+      "blocking": true,
+      "backend_source": "backend/phase5_selector_orchestrator_standalone_v512h.py",
+      "report_source": "reports/phase5_12h_selector_orchestrator_standalone_qm_051_qm_058_v1.json"
+    },
+    {
+      "registry_slot": 67,
+      "control_id": "qm_052",
+      "source_phase": "5.12H",
+      "linked_phase": "5.12H.1",
+      "name": "section_capability_selector",
+      "role": "selector",
+      "section_scope": [
+        "card",
+        "summary",
+        "study_questions",
+        "test_quiz"
+      ],
+      "input_contract": [
+        "normalized_section",
+        "available_quality_matrix"
+      ],
+      "output_contract": [
+        "eligible_quality_controls",
+        "excluded_quality_controls"
+      ],
+      "blocking": true,
+      "backend_source": "backend/phase5_selector_orchestrator_standalone_v512h.py",
+      "report_source": "reports/phase5_12h_selector_orchestrator_standalone_qm_051_qm_058_v1.json"
+    },
+    {
+      "registry_slot": 68,
+      "control_id": "qm_053",
+      "source_phase": "5.12H",
+      "linked_phase": "5.12H.1",
+      "name": "contextual_duplicate_selector",
+      "role": "selector",
+      "section_scope": [
+        "card",
+        "summary",
+        "study_questions",
+        "test_quiz"
+      ],
+      "input_contract": [
+        "eligible_quality_controls",
+        "contextual_duplicate_policy"
+      ],
+      "output_contract": [
+        "duplicate_policy_decision",
+        "duplicate_safe_controls"
+      ],
+      "blocking": true,
+      "backend_source": "backend/phase5_selector_orchestrator_standalone_v512h.py",
+      "report_source": "reports/phase5_12h_selector_orchestrator_standalone_qm_051_qm_058_v1.json"
+    },
+    {
+      "registry_slot": 69,
+      "control_id": "qm_054",
+      "source_phase": "5.12H",
+      "linked_phase": "5.12H.1",
+      "name": "quality_route_selector",
+      "role": "selector",
+      "section_scope": [
+        "card",
+        "summary",
+        "study_questions",
+        "test_quiz"
+      ],
+      "input_contract": [
+        "duplicate_safe_controls",
+        "section_generation_intent"
+      ],
+      "output_contract": [
+        "quality_route",
+        "route_reason"
+      ],
+      "blocking": true,
+      "backend_source": "backend/phase5_selector_orchestrator_standalone_v512h.py",
+      "report_source": "reports/phase5_12h_selector_orchestrator_standalone_qm_051_qm_058_v1.json"
+    },
+    {
+      "registry_slot": 70,
+      "control_id": "qm_055",
+      "source_phase": "5.12H",
+      "linked_phase": "5.12H.1",
+      "name": "section_execution_orchestrator",
+      "role": "orchestrator",
+      "section_scope": [
+        "card",
+        "summary",
+        "study_questions",
+        "test_quiz"
+      ],
+      "input_contract": [
+        "quality_route",
+        "document_profile",
+        "cleaned_input"
+      ],
+      "output_contract": [
+        "ordered_execution_steps",
+        "section_runtime_contract"
+      ],
+      "blocking": true,
+      "backend_source": "backend/phase5_selector_orchestrator_standalone_v512h.py",
+      "report_source": "reports/phase5_12h_selector_orchestrator_standalone_qm_051_qm_058_v1.json"
+    },
+    {
+      "registry_slot": 71,
+      "control_id": "qm_056",
+      "source_phase": "5.12H",
+      "linked_phase": "5.12H.1",
+      "name": "quality_conflict_orchestrator",
+      "role": "orchestrator",
+      "section_scope": [
+        "card",
+        "summary",
+        "study_questions",
+        "test_quiz"
+      ],
+      "input_contract": [
+        "ordered_execution_steps",
+        "excluded_quality_controls"
+      ],
+      "output_contract": [
+        "resolved_quality_conflicts",
+        "blocking_conflicts"
+      ],
+      "blocking": true,
+      "backend_source": "backend/phase5_selector_orchestrator_standalone_v512h.py",
+      "report_source": "reports/phase5_12h_selector_orchestrator_standalone_qm_051_qm_058_v1.json"
+    },
+    {
+      "registry_slot": 72,
+      "control_id": "qm_057",
+      "source_phase": "5.12H",
+      "linked_phase": "5.12H.1",
+      "name": "section_readiness_orchestrator",
+      "role": "orchestrator",
+      "section_scope": [
+        "card",
+        "summary",
+        "study_questions",
+        "test_quiz"
+      ],
+      "input_contract": [
+        "resolved_quality_conflicts",
+        "section_runtime_contract"
+      ],
+      "output_contract": [
+        "section_ready",
+        "readiness_reasons"
+      ],
+      "blocking": true,
+      "backend_source": "backend/phase5_selector_orchestrator_standalone_v512h.py",
+      "report_source": "reports/phase5_12h_selector_orchestrator_standalone_qm_051_qm_058_v1.json"
+    },
+    {
+      "registry_slot": 73,
+      "control_id": "qm_058",
+      "source_phase": "5.12H",
+      "linked_phase": "5.12H.1",
+      "name": "orchestration_audit_orchestrator",
+      "role": "orchestrator",
+      "section_scope": [
+        "card",
+        "summary",
+        "study_questions",
+        "test_quiz"
+      ],
+      "input_contract": [
+        "section_ready",
+        "readiness_reasons",
+        "quality_route"
+      ],
+      "output_contract": [
+        "auditable_orchestration_trace",
+        "human_readable_route_summary"
+      ],
+      "blocking": false,
+      "backend_source": "backend/phase5_selector_orchestrator_standalone_v512h.py",
+      "report_source": "reports/phase5_12h_selector_orchestrator_standalone_qm_051_qm_058_v1.json"
+    }
+  ],
+  "registry_linked": true,
+  "matrix_updated": false,
+  "orchestration_updated": false,
+  "defects": [],
+  "warnings": [],
+  "next_phase": "5.12H.2 - aggiornamento matrice/orchestrazione"
+}
