@@ -1,0 +1,628 @@
+{
+  "phase": "5.12H",
+  "label": "FASE 5.12H — SELECTOR/ORCHESTRATOR STANDALONE QM_051_QM_058",
+  "status": "PASS - Fase 5.12H: SELECTOR_ORCHESTRATOR_STANDALONE_QM_051_QM_058_READY",
+  "registry_linked": false,
+  "registry_expected_before": 65,
+  "registry_expected_after_next_phase": 73,
+  "standalone_controls_created": 8,
+  "control_ids": [
+    "qm_051",
+    "qm_052",
+    "qm_053",
+    "qm_054",
+    "qm_055",
+    "qm_056",
+    "qm_057",
+    "qm_058"
+  ],
+  "sections_validated": [
+    "card",
+    "summary",
+    "study_questions",
+    "test_quiz"
+  ],
+  "g2_matrix_loaded": true,
+  "g2_matrix_path": "reports/phase5_12g2_section_quality_selection_matrix_with_contextual_duplicates_v1.json",
+  "plans": [
+    {
+      "section_type": "card",
+      "ready": true,
+      "selected_controls": [
+        "qm_051",
+        "qm_052",
+        "qm_053",
+        "qm_054",
+        "qm_055",
+        "qm_056",
+        "qm_057",
+        "qm_058"
+      ],
+      "steps": [
+        {
+          "order": 10,
+          "control_id": "qm_051",
+          "section_type": "card",
+          "role": "selector",
+          "action": "normalizza richiesta sezione card",
+          "input_contract": [
+            "requested_section",
+            "document_profile",
+            "available_quality_matrix"
+          ],
+          "output_contract": [
+            "normalized_section",
+            "section_generation_intent"
+          ],
+          "blocking": true
+        },
+        {
+          "order": 20,
+          "control_id": "qm_052",
+          "section_type": "card",
+          "role": "selector",
+          "action": "seleziona controlli qualità compatibili con card",
+          "input_contract": [
+            "normalized_section",
+            "available_quality_matrix"
+          ],
+          "output_contract": [
+            "eligible_quality_controls",
+            "excluded_quality_controls"
+          ],
+          "blocking": true
+        },
+        {
+          "order": 30,
+          "control_id": "qm_053",
+          "section_type": "card",
+          "role": "selector",
+          "action": "applica politica duplicati contestuali per card",
+          "input_contract": [
+            "eligible_quality_controls",
+            "contextual_duplicate_policy"
+          ],
+          "output_contract": [
+            "duplicate_policy_decision",
+            "duplicate_safe_controls"
+          ],
+          "blocking": true
+        },
+        {
+          "order": 40,
+          "control_id": "qm_054",
+          "section_type": "card",
+          "role": "selector",
+          "action": "costruisce route qualità per card",
+          "input_contract": [
+            "duplicate_safe_controls",
+            "section_generation_intent"
+          ],
+          "output_contract": [
+            "quality_route",
+            "route_reason"
+          ],
+          "blocking": true
+        },
+        {
+          "order": 50,
+          "control_id": "qm_055",
+          "section_type": "card",
+          "role": "orchestrator",
+          "action": "ordina esecuzione motori per card",
+          "input_contract": [
+            "quality_route",
+            "document_profile",
+            "cleaned_input"
+          ],
+          "output_contract": [
+            "ordered_execution_steps",
+            "section_runtime_contract"
+          ],
+          "blocking": true
+        },
+        {
+          "order": 60,
+          "control_id": "qm_056",
+          "section_type": "card",
+          "role": "orchestrator",
+          "action": "risolve conflitti qualità per card",
+          "input_contract": [
+            "ordered_execution_steps",
+            "excluded_quality_controls"
+          ],
+          "output_contract": [
+            "resolved_quality_conflicts",
+            "blocking_conflicts"
+          ],
+          "blocking": true
+        },
+        {
+          "order": 70,
+          "control_id": "qm_057",
+          "section_type": "card",
+          "role": "orchestrator",
+          "action": "verifica readiness sezione card",
+          "input_contract": [
+            "resolved_quality_conflicts",
+            "section_runtime_contract"
+          ],
+          "output_contract": [
+            "section_ready",
+            "readiness_reasons"
+          ],
+          "blocking": true
+        },
+        {
+          "order": 80,
+          "control_id": "qm_058",
+          "section_type": "card",
+          "role": "orchestrator",
+          "action": "produce audit leggibile orchestrazione card",
+          "input_contract": [
+            "section_ready",
+            "readiness_reasons",
+            "quality_route"
+          ],
+          "output_contract": [
+            "auditable_orchestration_trace",
+            "human_readable_route_summary"
+          ],
+          "blocking": false
+        }
+      ],
+      "defects": [],
+      "warnings": []
+    },
+    {
+      "section_type": "summary",
+      "ready": true,
+      "selected_controls": [
+        "qm_051",
+        "qm_052",
+        "qm_053",
+        "qm_054",
+        "qm_055",
+        "qm_056",
+        "qm_057",
+        "qm_058"
+      ],
+      "steps": [
+        {
+          "order": 10,
+          "control_id": "qm_051",
+          "section_type": "summary",
+          "role": "selector",
+          "action": "normalizza richiesta sezione summary",
+          "input_contract": [
+            "requested_section",
+            "document_profile",
+            "available_quality_matrix"
+          ],
+          "output_contract": [
+            "normalized_section",
+            "section_generation_intent"
+          ],
+          "blocking": true
+        },
+        {
+          "order": 20,
+          "control_id": "qm_052",
+          "section_type": "summary",
+          "role": "selector",
+          "action": "seleziona controlli qualità compatibili con summary",
+          "input_contract": [
+            "normalized_section",
+            "available_quality_matrix"
+          ],
+          "output_contract": [
+            "eligible_quality_controls",
+            "excluded_quality_controls"
+          ],
+          "blocking": true
+        },
+        {
+          "order": 30,
+          "control_id": "qm_053",
+          "section_type": "summary",
+          "role": "selector",
+          "action": "applica politica duplicati contestuali per summary",
+          "input_contract": [
+            "eligible_quality_controls",
+            "contextual_duplicate_policy"
+          ],
+          "output_contract": [
+            "duplicate_policy_decision",
+            "duplicate_safe_controls"
+          ],
+          "blocking": true
+        },
+        {
+          "order": 40,
+          "control_id": "qm_054",
+          "section_type": "summary",
+          "role": "selector",
+          "action": "costruisce route qualità per summary",
+          "input_contract": [
+            "duplicate_safe_controls",
+            "section_generation_intent"
+          ],
+          "output_contract": [
+            "quality_route",
+            "route_reason"
+          ],
+          "blocking": true
+        },
+        {
+          "order": 50,
+          "control_id": "qm_055",
+          "section_type": "summary",
+          "role": "orchestrator",
+          "action": "ordina esecuzione motori per summary",
+          "input_contract": [
+            "quality_route",
+            "document_profile",
+            "cleaned_input"
+          ],
+          "output_contract": [
+            "ordered_execution_steps",
+            "section_runtime_contract"
+          ],
+          "blocking": true
+        },
+        {
+          "order": 60,
+          "control_id": "qm_056",
+          "section_type": "summary",
+          "role": "orchestrator",
+          "action": "risolve conflitti qualità per summary",
+          "input_contract": [
+            "ordered_execution_steps",
+            "excluded_quality_controls"
+          ],
+          "output_contract": [
+            "resolved_quality_conflicts",
+            "blocking_conflicts"
+          ],
+          "blocking": true
+        },
+        {
+          "order": 70,
+          "control_id": "qm_057",
+          "section_type": "summary",
+          "role": "orchestrator",
+          "action": "verifica readiness sezione summary",
+          "input_contract": [
+            "resolved_quality_conflicts",
+            "section_runtime_contract"
+          ],
+          "output_contract": [
+            "section_ready",
+            "readiness_reasons"
+          ],
+          "blocking": true
+        },
+        {
+          "order": 80,
+          "control_id": "qm_058",
+          "section_type": "summary",
+          "role": "orchestrator",
+          "action": "produce audit leggibile orchestrazione summary",
+          "input_contract": [
+            "section_ready",
+            "readiness_reasons",
+            "quality_route"
+          ],
+          "output_contract": [
+            "auditable_orchestration_trace",
+            "human_readable_route_summary"
+          ],
+          "blocking": false
+        }
+      ],
+      "defects": [],
+      "warnings": []
+    },
+    {
+      "section_type": "study_questions",
+      "ready": true,
+      "selected_controls": [
+        "qm_051",
+        "qm_052",
+        "qm_053",
+        "qm_054",
+        "qm_055",
+        "qm_056",
+        "qm_057",
+        "qm_058"
+      ],
+      "steps": [
+        {
+          "order": 10,
+          "control_id": "qm_051",
+          "section_type": "study_questions",
+          "role": "selector",
+          "action": "normalizza richiesta sezione study_questions",
+          "input_contract": [
+            "requested_section",
+            "document_profile",
+            "available_quality_matrix"
+          ],
+          "output_contract": [
+            "normalized_section",
+            "section_generation_intent"
+          ],
+          "blocking": true
+        },
+        {
+          "order": 20,
+          "control_id": "qm_052",
+          "section_type": "study_questions",
+          "role": "selector",
+          "action": "seleziona controlli qualità compatibili con study_questions",
+          "input_contract": [
+            "normalized_section",
+            "available_quality_matrix"
+          ],
+          "output_contract": [
+            "eligible_quality_controls",
+            "excluded_quality_controls"
+          ],
+          "blocking": true
+        },
+        {
+          "order": 30,
+          "control_id": "qm_053",
+          "section_type": "study_questions",
+          "role": "selector",
+          "action": "applica politica duplicati contestuali per study_questions",
+          "input_contract": [
+            "eligible_quality_controls",
+            "contextual_duplicate_policy"
+          ],
+          "output_contract": [
+            "duplicate_policy_decision",
+            "duplicate_safe_controls"
+          ],
+          "blocking": true
+        },
+        {
+          "order": 40,
+          "control_id": "qm_054",
+          "section_type": "study_questions",
+          "role": "selector",
+          "action": "costruisce route qualità per study_questions",
+          "input_contract": [
+            "duplicate_safe_controls",
+            "section_generation_intent"
+          ],
+          "output_contract": [
+            "quality_route",
+            "route_reason"
+          ],
+          "blocking": true
+        },
+        {
+          "order": 50,
+          "control_id": "qm_055",
+          "section_type": "study_questions",
+          "role": "orchestrator",
+          "action": "ordina esecuzione motori per study_questions",
+          "input_contract": [
+            "quality_route",
+            "document_profile",
+            "cleaned_input"
+          ],
+          "output_contract": [
+            "ordered_execution_steps",
+            "section_runtime_contract"
+          ],
+          "blocking": true
+        },
+        {
+          "order": 60,
+          "control_id": "qm_056",
+          "section_type": "study_questions",
+          "role": "orchestrator",
+          "action": "risolve conflitti qualità per study_questions",
+          "input_contract": [
+            "ordered_execution_steps",
+            "excluded_quality_controls"
+          ],
+          "output_contract": [
+            "resolved_quality_conflicts",
+            "blocking_conflicts"
+          ],
+          "blocking": true
+        },
+        {
+          "order": 70,
+          "control_id": "qm_057",
+          "section_type": "study_questions",
+          "role": "orchestrator",
+          "action": "verifica readiness sezione study_questions",
+          "input_contract": [
+            "resolved_quality_conflicts",
+            "section_runtime_contract"
+          ],
+          "output_contract": [
+            "section_ready",
+            "readiness_reasons"
+          ],
+          "blocking": true
+        },
+        {
+          "order": 80,
+          "control_id": "qm_058",
+          "section_type": "study_questions",
+          "role": "orchestrator",
+          "action": "produce audit leggibile orchestrazione study_questions",
+          "input_contract": [
+            "section_ready",
+            "readiness_reasons",
+            "quality_route"
+          ],
+          "output_contract": [
+            "auditable_orchestration_trace",
+            "human_readable_route_summary"
+          ],
+          "blocking": false
+        }
+      ],
+      "defects": [],
+      "warnings": []
+    },
+    {
+      "section_type": "test_quiz",
+      "ready": true,
+      "selected_controls": [
+        "qm_051",
+        "qm_052",
+        "qm_053",
+        "qm_054",
+        "qm_055",
+        "qm_056",
+        "qm_057",
+        "qm_058"
+      ],
+      "steps": [
+        {
+          "order": 10,
+          "control_id": "qm_051",
+          "section_type": "test_quiz",
+          "role": "selector",
+          "action": "normalizza richiesta sezione test_quiz",
+          "input_contract": [
+            "requested_section",
+            "document_profile",
+            "available_quality_matrix"
+          ],
+          "output_contract": [
+            "normalized_section",
+            "section_generation_intent"
+          ],
+          "blocking": true
+        },
+        {
+          "order": 20,
+          "control_id": "qm_052",
+          "section_type": "test_quiz",
+          "role": "selector",
+          "action": "seleziona controlli qualità compatibili con test_quiz",
+          "input_contract": [
+            "normalized_section",
+            "available_quality_matrix"
+          ],
+          "output_contract": [
+            "eligible_quality_controls",
+            "excluded_quality_controls"
+          ],
+          "blocking": true
+        },
+        {
+          "order": 30,
+          "control_id": "qm_053",
+          "section_type": "test_quiz",
+          "role": "selector",
+          "action": "applica politica duplicati contestuali per test_quiz",
+          "input_contract": [
+            "eligible_quality_controls",
+            "contextual_duplicate_policy"
+          ],
+          "output_contract": [
+            "duplicate_policy_decision",
+            "duplicate_safe_controls"
+          ],
+          "blocking": true
+        },
+        {
+          "order": 40,
+          "control_id": "qm_054",
+          "section_type": "test_quiz",
+          "role": "selector",
+          "action": "costruisce route qualità per test_quiz",
+          "input_contract": [
+            "duplicate_safe_controls",
+            "section_generation_intent"
+          ],
+          "output_contract": [
+            "quality_route",
+            "route_reason"
+          ],
+          "blocking": true
+        },
+        {
+          "order": 50,
+          "control_id": "qm_055",
+          "section_type": "test_quiz",
+          "role": "orchestrator",
+          "action": "ordina esecuzione motori per test_quiz",
+          "input_contract": [
+            "quality_route",
+            "document_profile",
+            "cleaned_input"
+          ],
+          "output_contract": [
+            "ordered_execution_steps",
+            "section_runtime_contract"
+          ],
+          "blocking": true
+        },
+        {
+          "order": 60,
+          "control_id": "qm_056",
+          "section_type": "test_quiz",
+          "role": "orchestrator",
+          "action": "risolve conflitti qualità per test_quiz",
+          "input_contract": [
+            "ordered_execution_steps",
+            "excluded_quality_controls"
+          ],
+          "output_contract": [
+            "resolved_quality_conflicts",
+            "blocking_conflicts"
+          ],
+          "blocking": true
+        },
+        {
+          "order": 70,
+          "control_id": "qm_057",
+          "section_type": "test_quiz",
+          "role": "orchestrator",
+          "action": "verifica readiness sezione test_quiz",
+          "input_contract": [
+            "resolved_quality_conflicts",
+            "section_runtime_contract"
+          ],
+          "output_contract": [
+            "section_ready",
+            "readiness_reasons"
+          ],
+          "blocking": true
+        },
+        {
+          "order": 80,
+          "control_id": "qm_058",
+          "section_type": "test_quiz",
+          "role": "orchestrator",
+          "action": "produce audit leggibile orchestrazione test_quiz",
+          "input_contract": [
+            "section_ready",
+            "readiness_reasons",
+            "quality_route"
+          ],
+          "output_contract": [
+            "auditable_orchestration_trace",
+            "human_readable_route_summary"
+          ],
+          "blocking": false
+        }
+      ],
+      "defects": [],
+      "warnings": []
+    }
+  ],
+  "defects": [],
+  "warnings": [],
+  "next_phase": "5.12H.1 - collegamento registry 65 -> 73"
+}
