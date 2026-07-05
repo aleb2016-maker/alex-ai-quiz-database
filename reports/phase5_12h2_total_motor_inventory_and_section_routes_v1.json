@@ -1,0 +1,330 @@
+{
+  "phase": "5.12H.2",
+  "label": "INVENTARIO MOTORI TOTALI E ROUTE SEZIONI DOPO 5.12H.2",
+  "registry_total_motors": 73,
+  "detailed_motors_detected": 8,
+  "selector_orchestrator_motors": [
+    {
+      "control_id": "qm_051",
+      "name": "section_intent_selector",
+      "role": "selector",
+      "description": "Motore selector/orchestrator collegato in H.1: normalizza richiesta, seleziona route qualità, orchestra readiness o produce audit leggibile in base al ruolo specifico.",
+      "universal": "sì",
+      "used_by_sections": [
+        "card",
+        "summary",
+        "study_questions",
+        "test_quiz"
+      ],
+      "source": "reports/phase5_12h1_registry_connector_65_to_73_qm_051_qm_058_v1.json"
+    },
+    {
+      "control_id": "qm_052",
+      "name": "section_capability_selector",
+      "role": "selector",
+      "description": "Motore selector/orchestrator collegato in H.1: normalizza richiesta, seleziona route qualità, orchestra readiness o produce audit leggibile in base al ruolo specifico.",
+      "universal": "sì",
+      "used_by_sections": [
+        "card",
+        "summary",
+        "study_questions",
+        "test_quiz"
+      ],
+      "source": "reports/phase5_12h1_registry_connector_65_to_73_qm_051_qm_058_v1.json"
+    },
+    {
+      "control_id": "qm_053",
+      "name": "contextual_duplicate_selector",
+      "role": "selector",
+      "description": "Motore selector/orchestrator collegato in H.1: normalizza richiesta, seleziona route qualità, orchestra readiness o produce audit leggibile in base al ruolo specifico.",
+      "universal": "sì",
+      "used_by_sections": [
+        "card",
+        "summary",
+        "study_questions",
+        "test_quiz"
+      ],
+      "source": "reports/phase5_12h1_registry_connector_65_to_73_qm_051_qm_058_v1.json"
+    },
+    {
+      "control_id": "qm_054",
+      "name": "quality_route_selector",
+      "role": "selector",
+      "description": "Motore selector/orchestrator collegato in H.1: normalizza richiesta, seleziona route qualità, orchestra readiness o produce audit leggibile in base al ruolo specifico.",
+      "universal": "sì",
+      "used_by_sections": [
+        "card",
+        "summary",
+        "study_questions",
+        "test_quiz"
+      ],
+      "source": "reports/phase5_12h1_registry_connector_65_to_73_qm_051_qm_058_v1.json"
+    },
+    {
+      "control_id": "qm_055",
+      "name": "section_execution_orchestrator",
+      "role": "orchestrator",
+      "description": "Motore selector/orchestrator collegato in H.1: normalizza richiesta, seleziona route qualità, orchestra readiness o produce audit leggibile in base al ruolo specifico.",
+      "universal": "sì",
+      "used_by_sections": [
+        "card",
+        "summary",
+        "study_questions",
+        "test_quiz"
+      ],
+      "source": "reports/phase5_12h1_registry_connector_65_to_73_qm_051_qm_058_v1.json"
+    },
+    {
+      "control_id": "qm_056",
+      "name": "quality_conflict_orchestrator",
+      "role": "orchestrator",
+      "description": "Motore selector/orchestrator collegato in H.1: normalizza richiesta, seleziona route qualità, orchestra readiness o produce audit leggibile in base al ruolo specifico.",
+      "universal": "sì",
+      "used_by_sections": [
+        "card",
+        "summary",
+        "study_questions",
+        "test_quiz"
+      ],
+      "source": "reports/phase5_12h1_registry_connector_65_to_73_qm_051_qm_058_v1.json"
+    },
+    {
+      "control_id": "qm_057",
+      "name": "section_readiness_orchestrator",
+      "role": "orchestrator",
+      "description": "Motore selector/orchestrator collegato in H.1: normalizza richiesta, seleziona route qualità, orchestra readiness o produce audit leggibile in base al ruolo specifico.",
+      "universal": "sì",
+      "used_by_sections": [
+        "card",
+        "summary",
+        "study_questions",
+        "test_quiz"
+      ],
+      "source": "reports/phase5_12h1_registry_connector_65_to_73_qm_051_qm_058_v1.json"
+    },
+    {
+      "control_id": "qm_058",
+      "name": "orchestration_audit_orchestrator",
+      "role": "orchestrator",
+      "description": "Motore selector/orchestrator collegato in H.1: normalizza richiesta, seleziona route qualità, orchestra readiness o produce audit leggibile in base al ruolo specifico.",
+      "universal": "sì",
+      "used_by_sections": [
+        "card",
+        "summary",
+        "study_questions",
+        "test_quiz"
+      ],
+      "source": "reports/phase5_12h1_registry_connector_65_to_73_qm_051_qm_058_v1.json"
+    }
+  ],
+  "discovered_motor_inventory": [
+    {
+      "control_id": "qm_051",
+      "name": "section_intent_selector",
+      "role": "selector",
+      "description": "Motore selector/orchestrator collegato in H.1: normalizza richiesta, seleziona route qualità, orchestra readiness o produce audit leggibile in base al ruolo specifico.",
+      "universal": "sì",
+      "used_by_sections": [
+        "card",
+        "summary",
+        "study_questions",
+        "test_quiz"
+      ],
+      "source": "reports/phase5_12h1_registry_connector_65_to_73_qm_051_qm_058_v1.json"
+    },
+    {
+      "control_id": "qm_052",
+      "name": "section_capability_selector",
+      "role": "selector",
+      "description": "Motore selector/orchestrator collegato in H.1: normalizza richiesta, seleziona route qualità, orchestra readiness o produce audit leggibile in base al ruolo specifico.",
+      "universal": "sì",
+      "used_by_sections": [
+        "card",
+        "summary",
+        "study_questions",
+        "test_quiz"
+      ],
+      "source": "reports/phase5_12h1_registry_connector_65_to_73_qm_051_qm_058_v1.json"
+    },
+    {
+      "control_id": "qm_053",
+      "name": "contextual_duplicate_selector",
+      "role": "selector",
+      "description": "Motore selector/orchestrator collegato in H.1: normalizza richiesta, seleziona route qualità, orchestra readiness o produce audit leggibile in base al ruolo specifico.",
+      "universal": "sì",
+      "used_by_sections": [
+        "card",
+        "summary",
+        "study_questions",
+        "test_quiz"
+      ],
+      "source": "reports/phase5_12h1_registry_connector_65_to_73_qm_051_qm_058_v1.json"
+    },
+    {
+      "control_id": "qm_054",
+      "name": "quality_route_selector",
+      "role": "selector",
+      "description": "Motore selector/orchestrator collegato in H.1: normalizza richiesta, seleziona route qualità, orchestra readiness o produce audit leggibile in base al ruolo specifico.",
+      "universal": "sì",
+      "used_by_sections": [
+        "card",
+        "summary",
+        "study_questions",
+        "test_quiz"
+      ],
+      "source": "reports/phase5_12h1_registry_connector_65_to_73_qm_051_qm_058_v1.json"
+    },
+    {
+      "control_id": "qm_055",
+      "name": "section_execution_orchestrator",
+      "role": "orchestrator",
+      "description": "Motore selector/orchestrator collegato in H.1: normalizza richiesta, seleziona route qualità, orchestra readiness o produce audit leggibile in base al ruolo specifico.",
+      "universal": "sì",
+      "used_by_sections": [
+        "card",
+        "summary",
+        "study_questions",
+        "test_quiz"
+      ],
+      "source": "reports/phase5_12h1_registry_connector_65_to_73_qm_051_qm_058_v1.json"
+    },
+    {
+      "control_id": "qm_056",
+      "name": "quality_conflict_orchestrator",
+      "role": "orchestrator",
+      "description": "Motore selector/orchestrator collegato in H.1: normalizza richiesta, seleziona route qualità, orchestra readiness o produce audit leggibile in base al ruolo specifico.",
+      "universal": "sì",
+      "used_by_sections": [
+        "card",
+        "summary",
+        "study_questions",
+        "test_quiz"
+      ],
+      "source": "reports/phase5_12h1_registry_connector_65_to_73_qm_051_qm_058_v1.json"
+    },
+    {
+      "control_id": "qm_057",
+      "name": "section_readiness_orchestrator",
+      "role": "orchestrator",
+      "description": "Motore selector/orchestrator collegato in H.1: normalizza richiesta, seleziona route qualità, orchestra readiness o produce audit leggibile in base al ruolo specifico.",
+      "universal": "sì",
+      "used_by_sections": [
+        "card",
+        "summary",
+        "study_questions",
+        "test_quiz"
+      ],
+      "source": "reports/phase5_12h1_registry_connector_65_to_73_qm_051_qm_058_v1.json"
+    },
+    {
+      "control_id": "qm_058",
+      "name": "orchestration_audit_orchestrator",
+      "role": "orchestrator",
+      "description": "Motore selector/orchestrator collegato in H.1: normalizza richiesta, seleziona route qualità, orchestra readiness o produce audit leggibile in base al ruolo specifico.",
+      "universal": "sì",
+      "used_by_sections": [
+        "card",
+        "summary",
+        "study_questions",
+        "test_quiz"
+      ],
+      "source": "reports/phase5_12h1_registry_connector_65_to_73_qm_051_qm_058_v1.json"
+    }
+  ],
+  "section_routes": [
+    {
+      "section_type": "card",
+      "section_label": "Card",
+      "g2_quality_controls_count": 52,
+      "selector_orchestrator_controls_count": 8,
+      "total_controls_after_h2": 60,
+      "selector_orchestrator_control_ids": [
+        "qm_051",
+        "qm_052",
+        "qm_053",
+        "qm_054",
+        "qm_055",
+        "qm_056",
+        "qm_057",
+        "qm_058"
+      ],
+      "explicit_g2_control_ids_found": [],
+      "g2_count_source": "g2.sections.card.expected_active_count",
+      "matrix_updated": true,
+      "orchestration_updated": true
+    },
+    {
+      "section_type": "summary",
+      "section_label": "Riassunto",
+      "g2_quality_controls_count": 47,
+      "selector_orchestrator_controls_count": 8,
+      "total_controls_after_h2": 55,
+      "selector_orchestrator_control_ids": [
+        "qm_051",
+        "qm_052",
+        "qm_053",
+        "qm_054",
+        "qm_055",
+        "qm_056",
+        "qm_057",
+        "qm_058"
+      ],
+      "explicit_g2_control_ids_found": [],
+      "g2_count_source": "g2.sections.summary.expected_active_count",
+      "matrix_updated": true,
+      "orchestration_updated": true
+    },
+    {
+      "section_type": "study_questions",
+      "section_label": "Domande studio",
+      "g2_quality_controls_count": 43,
+      "selector_orchestrator_controls_count": 8,
+      "total_controls_after_h2": 51,
+      "selector_orchestrator_control_ids": [
+        "qm_051",
+        "qm_052",
+        "qm_053",
+        "qm_054",
+        "qm_055",
+        "qm_056",
+        "qm_057",
+        "qm_058"
+      ],
+      "explicit_g2_control_ids_found": [
+        "qm_048"
+      ],
+      "g2_count_source": "g2.sections.study_questions.expected_active_count",
+      "matrix_updated": true,
+      "orchestration_updated": true
+    },
+    {
+      "section_type": "test_quiz",
+      "section_label": "Test/Quiz",
+      "g2_quality_controls_count": 55,
+      "selector_orchestrator_controls_count": 8,
+      "total_controls_after_h2": 63,
+      "selector_orchestrator_control_ids": [
+        "qm_051",
+        "qm_052",
+        "qm_053",
+        "qm_054",
+        "qm_055",
+        "qm_056",
+        "qm_057",
+        "qm_058"
+      ],
+      "explicit_g2_control_ids_found": [
+        "qm_048"
+      ],
+      "g2_count_source": "g2.sections.test_quiz.expected_active_count",
+      "matrix_updated": true,
+      "orchestration_updated": true
+    }
+  ],
+  "transparency_notes": [
+    "Il totale registry ufficiale dopo H.1/H.2 è 73.",
+    "I motori qm_051–qm_058 sono dettagliati perché ricostruiti e collegati nelle fasi 5.12H e 5.12H.1.",
+    "Per i motori storici precedenti, il report mostra tutti i metadati realmente trovati nei JSON disponibili; non inventa nomi o descrizioni mancanti.",
+    "Le route sezione usano i conteggi ufficiali della matrice 5.12G.2 più gli 8 selector/orchestrator universali aggiunti."
+  ]
+}

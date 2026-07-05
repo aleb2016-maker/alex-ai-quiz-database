@@ -1,0 +1,118 @@
+{
+  "phase": "5.12H.2",
+  "label": "FASE 5.12H.2 — UPDATED MATRIX/ORCHESTRATION REGISTRY_73",
+  "status": "PASS - Fase 5.12H.2: UPDATED_MATRIX_ORCHESTRATION_REGISTRY_73_READY",
+  "registry_total_motors": 73,
+  "registry_source": "h1.registry_after",
+  "g2_matrix_path": "reports/phase5_12g2_section_quality_selection_matrix_with_contextual_duplicates_v1.json",
+  "h1_registry_report_path": "reports/phase5_12h1_registry_connector_65_to_73_qm_051_qm_058_v1.json",
+  "matrix_updated": true,
+  "orchestration_updated": true,
+  "selector_orchestrator_ids": [
+    "qm_051",
+    "qm_052",
+    "qm_053",
+    "qm_054",
+    "qm_055",
+    "qm_056",
+    "qm_057",
+    "qm_058"
+  ],
+  "section_routes": [
+    {
+      "section_type": "card",
+      "section_label": "Card",
+      "g2_quality_controls_count": 52,
+      "selector_orchestrator_controls_count": 8,
+      "total_controls_after_h2": 60,
+      "selector_orchestrator_control_ids": [
+        "qm_051",
+        "qm_052",
+        "qm_053",
+        "qm_054",
+        "qm_055",
+        "qm_056",
+        "qm_057",
+        "qm_058"
+      ],
+      "explicit_g2_control_ids_found": [],
+      "g2_count_source": "g2.sections.card.expected_active_count",
+      "matrix_updated": true,
+      "orchestration_updated": true
+    },
+    {
+      "section_type": "summary",
+      "section_label": "Riassunto",
+      "g2_quality_controls_count": 47,
+      "selector_orchestrator_controls_count": 8,
+      "total_controls_after_h2": 55,
+      "selector_orchestrator_control_ids": [
+        "qm_051",
+        "qm_052",
+        "qm_053",
+        "qm_054",
+        "qm_055",
+        "qm_056",
+        "qm_057",
+        "qm_058"
+      ],
+      "explicit_g2_control_ids_found": [],
+      "g2_count_source": "g2.sections.summary.expected_active_count",
+      "matrix_updated": true,
+      "orchestration_updated": true
+    },
+    {
+      "section_type": "study_questions",
+      "section_label": "Domande studio",
+      "g2_quality_controls_count": 43,
+      "selector_orchestrator_controls_count": 8,
+      "total_controls_after_h2": 51,
+      "selector_orchestrator_control_ids": [
+        "qm_051",
+        "qm_052",
+        "qm_053",
+        "qm_054",
+        "qm_055",
+        "qm_056",
+        "qm_057",
+        "qm_058"
+      ],
+      "explicit_g2_control_ids_found": [
+        "qm_048"
+      ],
+      "g2_count_source": "g2.sections.study_questions.expected_active_count",
+      "matrix_updated": true,
+      "orchestration_updated": true
+    },
+    {
+      "section_type": "test_quiz",
+      "section_label": "Test/Quiz",
+      "g2_quality_controls_count": 55,
+      "selector_orchestrator_controls_count": 8,
+      "total_controls_after_h2": 63,
+      "selector_orchestrator_control_ids": [
+        "qm_051",
+        "qm_052",
+        "qm_053",
+        "qm_054",
+        "qm_055",
+        "qm_056",
+        "qm_057",
+        "qm_058"
+      ],
+      "explicit_g2_control_ids_found": [
+        "qm_048"
+      ],
+      "g2_count_source": "g2.sections.test_quiz.expected_active_count",
+      "matrix_updated": true,
+      "orchestration_updated": true
+    }
+  ],
+  "defects": [],
+  "warnings": [],
+  "notes": [
+    "H.2 aggiorna matrice/orchestrazione logica, non UI/PDF/app.",
+    "qm_060 e qm_059 restano fuori da questa fase."
+  ],
+  "next_phase": "qm_060 report qualità sempre leggibile; qm_059 verifica output finale UI/PDF/app"
+}
