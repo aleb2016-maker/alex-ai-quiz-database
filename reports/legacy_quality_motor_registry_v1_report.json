@@ -15,7 +15,7 @@
         },
         {
           "option_id": "B",
-          "testo": "Le credenziali non non devono essere necessariamente condivise tra più operatori.",
+          "testo": "Le credenziali non devono essere necessariamente condivise tra più operatori.",
           "is_correct": false
         },
         {
@@ -54,6 +54,24 @@
             "structural_reject_reason": "",
             "known_text_defects_before": 1,
             "known_text_defects_after": 1
+          }
+        ]
+      },
+      "backend.phase5_universal_quiz_quality_adapter_v1.universal_quiz_quality_target_v1": {
+        "status": "ok",
+        "adapter_name": "quiz_list",
+        "target_kind": "quiz",
+        "applied": 1,
+        "changed": 1,
+        "targets": [
+          {
+            "target": "test_quiz",
+            "changed": true,
+            "guarded_rejected": false,
+            "structural_rejected": false,
+            "structural_reject_reason": "",
+            "known_text_defects_before": 1,
+            "known_text_defects_after": 0
           }
         ]
       },
@@ -128,8 +146,8 @@
             "guarded_rejected": false,
             "structural_rejected": false,
             "structural_reject_reason": "",
-            "known_text_defects_before": 1,
-            "known_text_defects_after": 1
+            "known_text_defects_before": 0,
+            "known_text_defects_after": 0
           }
         ]
       },
@@ -146,8 +164,8 @@
             "guarded_rejected": false,
             "structural_rejected": false,
             "structural_reject_reason": "",
-            "known_text_defects_before": 1,
-            "known_text_defects_after": 1
+            "known_text_defects_before": 0,
+            "known_text_defects_after": 0
           }
         ]
       }

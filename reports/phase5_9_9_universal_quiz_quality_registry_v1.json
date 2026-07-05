@@ -1,0 +1,73 @@
+{
+  "report_name": "phase5_9_9_universal_quiz_quality_registry_v1",
+  "status": "PASS",
+  "motor_id": "backend.phase5_universal_quiz_quality_adapter_v1.universal_quiz_quality_target_v1",
+  "before_metrics": {
+    "questions_count": 1,
+    "true_fact_distractors": 3,
+    "mechanical_questions": 1,
+    "duplicate_questions": 0,
+    "rough_explanations": 1,
+    "empty_explanations": 0,
+    "correct_options_errors": 0,
+    "option_count_errors": 0
+  },
+  "after_metrics": {
+    "questions_count": 1,
+    "true_fact_distractors": 0,
+    "mechanical_questions": 0,
+    "duplicate_questions": 0,
+    "rough_explanations": 0,
+    "empty_explanations": 0,
+    "correct_options_errors": 0,
+    "option_count_errors": 0
+  },
+  "bad_total_before": 5,
+  "bad_total_after": 0,
+  "correct_option_texts_preserved": true,
+  "correct_counts_before": [
+    1
+  ],
+  "correct_counts_after": [
+    1
+  ],
+  "changed_rows": [
+    {
+      "index": 0,
+      "question_before": "Quale affermazione è supportata dal documento?",
+      "question_after": "Quale regola riguarda la condivisione delle credenziali?",
+      "explanation_before": "Le credenziali non non devono essere condivise tra più operatori.",
+      "explanation_after": "La risposta corretta è “Le credenziali non devono essere condivise tra più operatori” perché riprende direttamente l'informazione indicata dal documento."
+    }
+  ],
+  "motor_meta": {
+    "status": "ok",
+    "adapter_name": "quiz_list",
+    "target_kind": "quiz",
+    "applied": 1,
+    "changed": 1,
+    "targets": [
+      {
+        "target": "test_quiz",
+        "changed": true,
+        "guarded_rejected": false,
+        "structural_rejected": false,
+        "structural_reject_reason": "",
+        "known_text_defects_before": 1,
+        "known_text_defects_after": 0
+      }
+    ]
+  },
+  "registry_meta_summary": {
+    "known_text_defects_before": 12,
+    "known_text_defects_after": 12,
+    "motors_count": 10
+  },
+  "errors": [],
+  "notes": [
+    "Verifica integrazione: controlla che il motore universale lavori dentro il registry.",
+    "Obiettivo: bad total quiz 5 -> 0 anche attraverso apply_legacy_quality_motors_v1.",
+    "La risposta corretta deve restare invariata.",
+    "La struttura quiz deve restare compatibile."
+  ]
+}

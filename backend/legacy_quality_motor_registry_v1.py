@@ -56,6 +56,17 @@ LEGACY_QUALITY_MOTORS: list[LegacyMotorSpec] = [
     # FASE 5.6 — READY SAFE LEGACY MOTORS V1
     # Motori emersi dalla diagnostica Fase 5.5 come READY_SAFE.
     # Sono collegati tramite adapter e restano protetti dalla guardia anti-peggioramento.
+    # FASE 5.9.9 — UNIVERSAL QUIZ QUALITY ADAPTER REGISTRY V1
+    # Motore universale quiz validato separatamente in Fase 5.9.8.
+    # Obiettivo: migliorare distrattori veri, domande meccaniche,
+    # ripetitività e spiegazioni grezze preservando la risposta corretta.
+    LegacyMotorSpec(
+        motor_id="backend.phase5_universal_quiz_quality_adapter_v1.universal_quiz_quality_target_v1",
+        module_name="backend.phase5_universal_quiz_quality_adapter_v1",
+        function_name="universal_quiz_quality_target_v1",
+        adapter_name="quiz_list",
+        target_kind="quiz",
+    ),
     LegacyMotorSpec(
         motor_id="scripts.rag_cleaner_finale_universale_v35k.clean_output",
         module_name="scripts.rag_cleaner_finale_universale_v35k",
