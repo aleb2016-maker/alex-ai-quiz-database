@@ -1,0 +1,328 @@
+{
+  "phase": "5.12G",
+  "generated_at": "2026-07-05T16:39:12.443256+00:00",
+  "status": "PASS",
+  "approved": true,
+  "ready_label": "CONTEXTUAL_DUPLICATE_MOTORS_V512G_READY",
+  "registry": {
+    "phase": "5.12G",
+    "version": "v1",
+    "ready_label": "CONTEXTUAL_DUPLICATE_MOTORS_V512G_READY",
+    "total_motors": 6,
+    "motors": [
+      {
+        "id": "qm_045_duplicati_contestuali_duplicati_esatti",
+        "title": "Duplicati contestuali: duplicati esatti",
+        "type": "validator",
+        "severity": "blocking",
+        "areas": [
+          "card",
+          "summary",
+          "study_questions",
+          "test_quiz",
+          "general_text"
+        ]
+      },
+      {
+        "id": "qm_046_duplicati_contestuali_quasi_duplicati",
+        "title": "Duplicati contestuali: quasi duplicati",
+        "type": "validator",
+        "severity": "blocking",
+        "areas": [
+          "card",
+          "summary",
+          "study_questions",
+          "test_quiz",
+          "general_text"
+        ]
+      },
+      {
+        "id": "qm_047_duplicati_contestuali_ripetizioni_inutili",
+        "title": "Duplicati contestuali: ripetizioni inutili",
+        "type": "validator",
+        "severity": "blocking",
+        "areas": [
+          "card",
+          "summary",
+          "study_questions",
+          "test_quiz",
+          "general_text"
+        ]
+      },
+      {
+        "id": "qm_048_duplicati_contestuali_ripetizioni_meccaniche_tra_domande",
+        "title": "Duplicati contestuali: ripetizioni meccaniche tra domande",
+        "type": "validator",
+        "severity": "blocking",
+        "areas": [
+          "test_quiz",
+          "study_questions"
+        ]
+      },
+      {
+        "id": "qm_049_duplicati_contestuali_frasi_troppo_simili",
+        "title": "Duplicati contestuali: frasi troppo simili",
+        "type": "validator",
+        "severity": "blocking",
+        "areas": [
+          "card",
+          "summary",
+          "study_questions",
+          "test_quiz",
+          "general_text"
+        ]
+      },
+      {
+        "id": "qm_050_duplicati_contestuali_stesso_contenuto_ripetuto_senza_motivo",
+        "title": "Duplicati contestuali: stesso contenuto ripetuto senza motivo",
+        "type": "validator",
+        "severity": "blocking",
+        "areas": [
+          "card",
+          "summary",
+          "study_questions",
+          "test_quiz",
+          "general_text"
+        ]
+      }
+    ],
+    "scope_guard": {
+      "ui_pdf_css_app_touched": false,
+      "pipeline_5_11_changed": false,
+      "existing_59_motors_changed": false,
+      "standalone_first": true,
+      "contextual_not_global": true,
+      "allows_same_concept_with_different_function": true,
+      "no_fallback": true,
+      "no_demo_output": true
+    }
+  },
+  "targeted_tests_total": 6,
+  "targeted_tests_passed": 6,
+  "targeted_tests": [
+    {
+      "case_id": "case_045",
+      "motor_id": "qm_045_duplicati_contestuali_duplicati_esatti",
+      "passed": true,
+      "blocking_hits": 1,
+      "target_status": "FAIL",
+      "issues": [
+        {
+          "motor_id": "qm_045_duplicati_contestuali_duplicati_esatti",
+          "severity": "blocking",
+          "message": "Duplicato esatto nello stesso contesto.",
+          "excerpt": "Il backup periodico protegge i dati aziendali da errori e guasti.",
+          "first_path": "items[0]",
+          "second_path": "items[1]",
+          "similarity": 1.0,
+          "suggestion": "Rimuovere il duplicato o trasformarlo in contenuto con funzione diversa."
+        }
+      ]
+    },
+    {
+      "case_id": "case_046",
+      "motor_id": "qm_046_duplicati_contestuali_quasi_duplicati",
+      "passed": true,
+      "blocking_hits": 1,
+      "target_status": "FAIL",
+      "issues": [
+        {
+          "motor_id": "qm_046_duplicati_contestuali_quasi_duplicati",
+          "severity": "blocking",
+          "message": "Quasi duplicato nello stesso contesto.",
+          "excerpt": "Il backup periodico protegge i dati aziendali in caso di errore. || Il backup periodico protegge i dati aziendali in caso di guasto.",
+          "first_path": "items[0]",
+          "second_path": "items[1]",
+          "similarity": 0.904,
+          "suggestion": "Unire le due frasi o differenziare davvero il contenuto."
+        }
+      ]
+    },
+    {
+      "case_id": "case_047",
+      "motor_id": "qm_047_duplicati_contestuali_ripetizioni_inutili",
+      "passed": true,
+      "blocking_hits": 1,
+      "target_status": "FAIL",
+      "issues": [
+        {
+          "motor_id": "qm_047_duplicati_contestuali_ripetizioni_inutili",
+          "severity": "blocking",
+          "message": "La stessa frase viene ripetuta troppe volte nello stesso testo.",
+          "excerpt": "Il backup protegge i dati aziendali. Il backup protegge i dati aziendali. Il backup protegge i dati aziendali.",
+          "first_path": "items[0]",
+          "second_path": "",
+          "similarity": 1.0,
+          "suggestion": "Tenere una sola occorrenza e sostituire le altre con informazioni nuove."
+        }
+      ]
+    },
+    {
+      "case_id": "case_048",
+      "motor_id": "qm_048_duplicati_contestuali_ripetizioni_meccaniche_tra_domande",
+      "passed": true,
+      "blocking_hits": 3,
+      "target_status": "FAIL",
+      "issues": [
+        {
+          "motor_id": "qm_048_duplicati_contestuali_ripetizioni_meccaniche_tra_domande",
+          "severity": "blocking",
+          "message": "Domande troppo meccaniche o ripetute tra loro.",
+          "excerpt": "Che cosa protegge il backup aziendale? || Che cosa protegge il backup periodico?",
+          "first_path": "items[0]",
+          "second_path": "items[1]",
+          "similarity": 0.72,
+          "suggestion": "Variare davvero il focus della domanda, non solo una parola finale."
+        },
+        {
+          "motor_id": "qm_048_duplicati_contestuali_ripetizioni_meccaniche_tra_domande",
+          "severity": "blocking",
+          "message": "Domande troppo meccaniche o ripetute tra loro.",
+          "excerpt": "Che cosa protegge il backup aziendale? || Che cosa protegge il backup dei dati?",
+          "first_path": "items[0]",
+          "second_path": "items[2]",
+          "similarity": 0.8,
+          "suggestion": "Variare davvero il focus della domanda, non solo una parola finale."
+        },
+        {
+          "motor_id": "qm_048_duplicati_contestuali_ripetizioni_meccaniche_tra_domande",
+          "severity": "blocking",
+          "message": "Domande troppo meccaniche o ripetute tra loro.",
+          "excerpt": "Che cosa protegge il backup periodico? || Che cosa protegge il backup dei dati?",
+          "first_path": "items[1]",
+          "second_path": "items[2]",
+          "similarity": 0.756,
+          "suggestion": "Variare davvero il focus della domanda, non solo una parola finale."
+        }
+      ]
+    },
+    {
+      "case_id": "case_049",
+      "motor_id": "qm_049_duplicati_contestuali_frasi_troppo_simili",
+      "passed": true,
+      "blocking_hits": 1,
+      "target_status": "FAIL",
+      "issues": [
+        {
+          "motor_id": "qm_049_duplicati_contestuali_frasi_troppo_simili",
+          "severity": "blocking",
+          "message": "Frasi troppo simili nello stesso contesto.",
+          "excerpt": "Il backup protegge i dati aziendali dagli errori. || Il backup protegge i dati aziendali dagli errori gravi.",
+          "first_path": "items[0].sentence[0]",
+          "second_path": "items[0].sentence[1]",
+          "similarity": 0.935,
+          "suggestion": "Riscrivere una delle frasi aggiungendo informazione nuova o rimuoverla."
+        }
+      ]
+    },
+    {
+      "case_id": "case_050",
+      "motor_id": "qm_050_duplicati_contestuali_stesso_contenuto_ripetuto_senza_motivo",
+      "passed": true,
+      "blocking_hits": 3,
+      "target_status": "FAIL",
+      "issues": [
+        {
+          "motor_id": "qm_050_duplicati_contestuali_stesso_contenuto_ripetuto_senza_motivo",
+          "severity": "blocking",
+          "message": "Stesso contenuto ripetuto in sezioni diverse senza funzione diversa.",
+          "excerpt": "Il backup protegge i dati aziendali da errori e guasti. || Il backup protegge i dati aziendali da errori e guasti.",
+          "first_path": "items[0]",
+          "second_path": "items[1]",
+          "similarity": 1.0,
+          "suggestion": "Dichiarare funzioni diverse oppure differenziare il contenuto tra le sezioni."
+        },
+        {
+          "motor_id": "qm_050_duplicati_contestuali_stesso_contenuto_ripetuto_senza_motivo",
+          "severity": "blocking",
+          "message": "Stesso contenuto ripetuto in sezioni diverse senza funzione diversa.",
+          "excerpt": "Il backup protegge i dati aziendali da errori e guasti. || Il backup protegge i dati aziendali da errori e guasti.",
+          "first_path": "items[0]",
+          "second_path": "items[2]",
+          "similarity": 1.0,
+          "suggestion": "Dichiarare funzioni diverse oppure differenziare il contenuto tra le sezioni."
+        },
+        {
+          "motor_id": "qm_050_duplicati_contestuali_stesso_contenuto_ripetuto_senza_motivo",
+          "severity": "blocking",
+          "message": "Stesso contenuto ripetuto in sezioni diverse senza funzione diversa.",
+          "excerpt": "Il backup protegge i dati aziendali da errori e guasti. || Il backup protegge i dati aziendali da errori e guasti.",
+          "first_path": "items[1]",
+          "second_path": "items[2]",
+          "similarity": 1.0,
+          "suggestion": "Dichiarare funzioni diverse oppure differenziare il contenuto tra le sezioni."
+        }
+      ]
+    }
+  ],
+  "good_case": {
+    "passed": true,
+    "blocking_issues": 0,
+    "warning_issues": 0,
+    "status": "PASS",
+    "approved": true,
+    "full_report": {
+      "phase": "5.12G",
+      "ready_label": "CONTEXTUAL_DUPLICATE_MOTORS_V512G_READY",
+      "approved": true,
+      "status": "PASS",
+      "total_motors": 6,
+      "passed_motors": 6,
+      "failed_motors": 0,
+      "total_issues": 0,
+      "blocking_issues": 0,
+      "warning_issues": 0,
+      "results": [
+        {
+          "motor_id": "qm_045_duplicati_contestuali_duplicati_esatti",
+          "title": "Duplicati contestuali: duplicati esatti",
+          "status": "PASS",
+          "issues": []
+        },
+        {
+          "motor_id": "qm_046_duplicati_contestuali_quasi_duplicati",
+          "title": "Duplicati contestuali: quasi duplicati",
+          "status": "PASS",
+          "issues": []
+        },
+        {
+          "motor_id": "qm_047_duplicati_contestuali_ripetizioni_inutili",
+          "title": "Duplicati contestuali: ripetizioni inutili",
+          "status": "PASS",
+          "issues": []
+        },
+        {
+          "motor_id": "qm_048_duplicati_contestuali_ripetizioni_meccaniche_tra_domande",
+          "title": "Duplicati contestuali: ripetizioni meccaniche tra domande",
+          "status": "PASS",
+          "issues": []
+        },
+        {
+          "motor_id": "qm_049_duplicati_contestuali_frasi_troppo_simili",
+          "title": "Duplicati contestuali: frasi troppo simili",
+          "status": "PASS",
+          "issues": []
+        },
+        {
+          "motor_id": "qm_050_duplicati_contestuali_stesso_contenuto_ripetuto_senza_motivo",
+          "title": "Duplicati contestuali: stesso contenuto ripetuto senza motivo",
+          "status": "PASS",
+          "issues": []
+        }
+      ]
+    }
+  },
+  "scope_guard": {
+    "created_contextual_duplicate_motors": true,
+    "connected_to_59_registry": false,
+    "changed_existing_59_motors": false,
+    "changed_pipeline_5_11": false,
+    "changed_ui_pdf_css_app": false,
+    "deleted_existing_files": false,
+    "contextual_not_global": true
+  },
+  "report_files": {
+    "json": "reports/phase5_12g_contextual_duplicate_motors_v1.json",
+    "markdown": "reports/phase5_12g_contextual_duplicate_motors_v1.md"
+  }
+}
