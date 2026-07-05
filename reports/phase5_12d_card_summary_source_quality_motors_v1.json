@@ -1,0 +1,407 @@
+{
+  "phase": "5.12D",
+  "generated_at": "2026-07-05T15:52:43.787733+00:00",
+  "status": "PASS",
+  "approved": true,
+  "ready_label": "CARD_SUMMARY_SOURCE_QUALITY_MOTORS_V512D_READY",
+  "registry": {
+    "phase": "5.12D",
+    "version": "v1",
+    "ready_label": "CARD_SUMMARY_SOURCE_QUALITY_MOTORS_V512D_READY",
+    "total_motors": 10,
+    "motors": [
+      {
+        "id": "qm_023_card_riassunto_fonti_card_scritte_bene",
+        "title": "Card scritte bene",
+        "type": "validator",
+        "severity": "blocking"
+      },
+      {
+        "id": "qm_024_card_riassunto_fonti_card_non_troppo_corte",
+        "title": "Card non troppo corte",
+        "type": "validator",
+        "severity": "blocking"
+      },
+      {
+        "id": "qm_025_card_riassunto_fonti_card_non_troppo_compresse",
+        "title": "Card non troppo compresse",
+        "type": "validator",
+        "severity": "blocking"
+      },
+      {
+        "id": "qm_026_card_riassunto_fonti_messaggio_chiave_completo",
+        "title": "Messaggio chiave completo",
+        "type": "validator",
+        "severity": "blocking"
+      },
+      {
+        "id": "qm_027_card_riassunto_fonti_riassunto_chiaro",
+        "title": "Riassunto chiaro",
+        "type": "validator",
+        "severity": "blocking"
+      },
+      {
+        "id": "qm_028_card_riassunto_fonti_punti_chiave_leggibili",
+        "title": "Punti chiave leggibili",
+        "type": "validator",
+        "severity": "blocking"
+      },
+      {
+        "id": "qm_029_card_riassunto_fonti_fonti_visibili_belle",
+        "title": "Fonti visibili belle",
+        "type": "validator",
+        "severity": "blocking"
+      },
+      {
+        "id": "qm_030_card_riassunto_fonti_fonti_coerenti",
+        "title": "Fonti coerenti",
+        "type": "validator",
+        "severity": "blocking"
+      },
+      {
+        "id": "qm_031_card_riassunto_fonti_niente_fonti_brutte",
+        "title": "Niente fonti brutte",
+        "type": "validator",
+        "severity": "blocking"
+      },
+      {
+        "id": "qm_032_card_riassunto_fonti_layout_grafico_controllato",
+        "title": "Layout grafico controllato",
+        "type": "validator",
+        "severity": "blocking"
+      }
+    ],
+    "scope_guard": {
+      "ui_pdf_css_app_touched": false,
+      "pipeline_5_11_changed": false,
+      "existing_33_motors_changed": false,
+      "standalone_first": true,
+      "no_fallback": true,
+      "no_demo_output": true,
+      "layout_check_is_data_structure_only": true
+    }
+  },
+  "targeted_tests_total": 10,
+  "targeted_tests_passed": 10,
+  "targeted_tests": [
+    {
+      "case_id": "case_023",
+      "motor_id": "qm_023_card_riassunto_fonti_card_scritte_bene",
+      "passed": true,
+      "blocking_hits": 2,
+      "expected_blocking": true,
+      "target_status": "FAIL",
+      "issues": [
+        {
+          "motor_id": "qm_023_card_riassunto_fonti_card_scritte_bene",
+          "severity": "blocking",
+          "message": "Titolo card troppo povero o mancante.",
+          "excerpt": "Card",
+          "suggestion": "Usare un titolo specifico e leggibile."
+        },
+        {
+          "motor_id": "qm_023_card_riassunto_fonti_card_scritte_bene",
+          "severity": "blocking",
+          "message": "Card generica o poco specifica.",
+          "excerpt": "Card Documento analizzato. Punto centrale. Protegge i dati da perdite improvvise. Permette il recupero dopo guasti o errori. Richiede copie aggiorn...",
+          "suggestion": "Sostituire formule generiche con contenuto reale."
+        }
+      ]
+    },
+    {
+      "case_id": "case_024",
+      "motor_id": "qm_024_card_riassunto_fonti_card_non_troppo_corte",
+      "passed": true,
+      "blocking_hits": 1,
+      "expected_blocking": true,
+      "target_status": "FAIL",
+      "issues": [
+        {
+          "motor_id": "qm_024_card_riassunto_fonti_card_non_troppo_corte",
+          "severity": "blocking",
+          "message": "Card troppo corta: 15 parole.",
+          "excerpt": "Backup periodico dei dati Il backup è utile. Protegge i dati. Fonte: sezione Backup periodico",
+          "suggestion": "Espandere la card con messaggio chiave, spiegazione breve, punti e fonte."
+        }
+      ]
+    },
+    {
+      "case_id": "case_025",
+      "motor_id": "qm_025_card_riassunto_fonti_card_non_troppo_compresse",
+      "passed": true,
+      "blocking_hits": 2,
+      "expected_blocking": true,
+      "target_status": "FAIL",
+      "issues": [
+        {
+          "motor_id": "qm_025_card_riassunto_fonti_card_non_troppo_compresse",
+          "severity": "blocking",
+          "message": "Card troppo compressa: corpo da 54 parole senza punti leggibili.",
+          "excerpt": "Il backup periodico protegge i dati aziendali perché consente il recupero dopo errori guasti cancellazioni accidentali problemi tecnici perdita di ...",
+          "suggestion": "Dividere il contenuto in punti chiave o sezioni brevi."
+        },
+        {
+          "motor_id": "qm_025_card_riassunto_fonti_card_non_troppo_compresse",
+          "severity": "blocking",
+          "message": "Card lunga ma poco strutturata: 74 parole e meno di 2 punti.",
+          "excerpt": "Backup periodico dei dati Il backup periodico riduce il rischio di perdita definitiva dei dati aziendali. Il backup periodico protegge i dati azien...",
+          "suggestion": "Aggiungere almeno due punti chiave leggibili."
+        }
+      ]
+    },
+    {
+      "case_id": "case_026",
+      "motor_id": "qm_026_card_riassunto_fonti_messaggio_chiave_completo",
+      "passed": true,
+      "blocking_hits": 1,
+      "expected_blocking": true,
+      "target_status": "FAIL",
+      "issues": [
+        {
+          "motor_id": "qm_026_card_riassunto_fonti_messaggio_chiave_completo",
+          "severity": "blocking",
+          "message": "Messaggio chiave troppo corto.",
+          "excerpt": "Dati.",
+          "suggestion": "Espandere il messaggio con soggetto, funzione e valore."
+        }
+      ]
+    },
+    {
+      "case_id": "case_027",
+      "motor_id": "qm_027_card_riassunto_fonti_riassunto_chiaro",
+      "passed": true,
+      "blocking_hits": 3,
+      "expected_blocking": true,
+      "target_status": "FAIL",
+      "issues": [
+        {
+          "motor_id": "qm_027_card_riassunto_fonti_riassunto_chiaro",
+          "severity": "blocking",
+          "message": "Riassunto troppo corto per essere chiaro.",
+          "excerpt": "Informazioni principali.",
+          "suggestion": "Aggiungere contesto, concetti principali e relazione tra i punti."
+        },
+        {
+          "motor_id": "qm_027_card_riassunto_fonti_riassunto_chiaro",
+          "severity": "blocking",
+          "message": "Riassunto generico.",
+          "excerpt": "Informazioni principali.",
+          "suggestion": "Usare contenuto specifico invece di formule generiche."
+        },
+        {
+          "motor_id": "qm_027_card_riassunto_fonti_riassunto_chiaro",
+          "severity": "blocking",
+          "message": "Riassunto poco articolato.",
+          "excerpt": "Informazioni principali.",
+          "suggestion": "Scrivere almeno due frasi chiare e collegate."
+        }
+      ]
+    },
+    {
+      "case_id": "case_028",
+      "motor_id": "qm_028_card_riassunto_fonti_punti_chiave_leggibili",
+      "passed": true,
+      "blocking_hits": 4,
+      "expected_blocking": true,
+      "target_status": "FAIL",
+      "issues": [
+        {
+          "motor_id": "qm_028_card_riassunto_fonti_punti_chiave_leggibili",
+          "severity": "blocking",
+          "message": "Punto chiave troppo corto.",
+          "excerpt": "Punto centrale.",
+          "suggestion": "Espandere il punto con un concetto comprensibile."
+        },
+        {
+          "motor_id": "qm_028_card_riassunto_fonti_punti_chiave_leggibili",
+          "severity": "blocking",
+          "message": "Punto chiave generico.",
+          "excerpt": "Punto centrale.",
+          "suggestion": "Sostituire con un punto specifico del contenuto."
+        },
+        {
+          "motor_id": "qm_028_card_riassunto_fonti_punti_chiave_leggibili",
+          "severity": "blocking",
+          "message": "Punto chiave troppo corto.",
+          "excerpt": "Varie cose.",
+          "suggestion": "Espandere il punto con un concetto comprensibile."
+        },
+        {
+          "motor_id": "qm_028_card_riassunto_fonti_punti_chiave_leggibili",
+          "severity": "blocking",
+          "message": "Punto chiave generico.",
+          "excerpt": "Varie cose.",
+          "suggestion": "Sostituire con un punto specifico del contenuto."
+        }
+      ]
+    },
+    {
+      "case_id": "case_029",
+      "motor_id": "qm_029_card_riassunto_fonti_fonti_visibili_belle",
+      "passed": true,
+      "blocking_hits": 2,
+      "expected_blocking": true,
+      "target_status": "FAIL",
+      "issues": [
+        {
+          "motor_id": "qm_029_card_riassunto_fonti_fonti_visibili_belle",
+          "severity": "blocking",
+          "message": "Fonte non formattata in modo visibile.",
+          "excerpt": "Backup",
+          "suggestion": "Usare formato leggibile, ad esempio: Fonte: sezione Backup periodico."
+        },
+        {
+          "motor_id": "qm_029_card_riassunto_fonti_fonti_visibili_belle",
+          "severity": "blocking",
+          "message": "Fonte troppo corta o poco descrittiva.",
+          "excerpt": "Backup",
+          "suggestion": "Indicare sezione, tema o sottotema della fonte."
+        }
+      ]
+    },
+    {
+      "case_id": "case_030",
+      "motor_id": "qm_030_card_riassunto_fonti_fonti_coerenti",
+      "passed": true,
+      "blocking_hits": 1,
+      "expected_blocking": true,
+      "target_status": "FAIL",
+      "issues": [
+        {
+          "motor_id": "qm_030_card_riassunto_fonti_fonti_coerenti",
+          "severity": "blocking",
+          "message": "Fonte non coerente con contenuto, card o riassunto.",
+          "excerpt": "Fonte: sezione Ricetta cucina",
+          "suggestion": "Usare una fonte collegata a sezione, tema o sottotema reali."
+        }
+      ]
+    },
+    {
+      "case_id": "case_031",
+      "motor_id": "qm_031_card_riassunto_fonti_niente_fonti_brutte",
+      "passed": true,
+      "blocking_hits": 1,
+      "expected_blocking": true,
+      "target_status": "FAIL",
+      "issues": [
+        {
+          "motor_id": "qm_031_card_riassunto_fonti_niente_fonti_brutte",
+          "severity": "blocking",
+          "message": "Fonte brutta, tecnica, demo o grezza rilevata.",
+          "excerpt": "knowledge_base_json/documento_analizzato.json",
+          "suggestion": "Mostrare una fonte pulita, ad esempio: Fonte: sezione Sicurezza dei dati."
+        }
+      ]
+    },
+    {
+      "case_id": "case_032",
+      "motor_id": "qm_032_card_riassunto_fonti_layout_grafico_controllato",
+      "passed": true,
+      "blocking_hits": 1,
+      "expected_blocking": true,
+      "target_status": "FAIL",
+      "issues": [
+        {
+          "motor_id": "qm_032_card_riassunto_fonti_layout_grafico_controllato",
+          "severity": "blocking",
+          "message": "Metadati layout card mancanti.",
+          "excerpt": "{'source_text': \"Il backup periodico protegge i dati aziendali perché consente di recuperarli dopo errori, guasti o cancellazioni accidentali. L'au...",
+          "suggestion": "Aggiungere metadati di layout controllati. Non è CSS: è controllo struttura dati."
+        }
+      ]
+    }
+  ],
+  "good_case": {
+    "passed": true,
+    "blocking_issues": 0,
+    "warning_issues": 0,
+    "status": "PASS",
+    "approved": true,
+    "full_report": {
+      "phase": "5.12D",
+      "ready_label": "CARD_SUMMARY_SOURCE_QUALITY_MOTORS_V512D_READY",
+      "approved": true,
+      "status": "PASS",
+      "total_motors": 10,
+      "passed_motors": 10,
+      "failed_motors": 0,
+      "total_issues": 0,
+      "blocking_issues": 0,
+      "warning_issues": 0,
+      "results": [
+        {
+          "motor_id": "qm_023_card_riassunto_fonti_card_scritte_bene",
+          "title": "Card scritte bene",
+          "status": "PASS",
+          "issues": []
+        },
+        {
+          "motor_id": "qm_024_card_riassunto_fonti_card_non_troppo_corte",
+          "title": "Card non troppo corte",
+          "status": "PASS",
+          "issues": []
+        },
+        {
+          "motor_id": "qm_025_card_riassunto_fonti_card_non_troppo_compresse",
+          "title": "Card non troppo compresse",
+          "status": "PASS",
+          "issues": []
+        },
+        {
+          "motor_id": "qm_026_card_riassunto_fonti_messaggio_chiave_completo",
+          "title": "Messaggio chiave completo",
+          "status": "PASS",
+          "issues": []
+        },
+        {
+          "motor_id": "qm_027_card_riassunto_fonti_riassunto_chiaro",
+          "title": "Riassunto chiaro",
+          "status": "PASS",
+          "issues": []
+        },
+        {
+          "motor_id": "qm_028_card_riassunto_fonti_punti_chiave_leggibili",
+          "title": "Punti chiave leggibili",
+          "status": "PASS",
+          "issues": []
+        },
+        {
+          "motor_id": "qm_029_card_riassunto_fonti_fonti_visibili_belle",
+          "title": "Fonti visibili belle",
+          "status": "PASS",
+          "issues": []
+        },
+        {
+          "motor_id": "qm_030_card_riassunto_fonti_fonti_coerenti",
+          "title": "Fonti coerenti",
+          "status": "PASS",
+          "issues": []
+        },
+        {
+          "motor_id": "qm_031_card_riassunto_fonti_niente_fonti_brutte",
+          "title": "Niente fonti brutte",
+          "status": "PASS",
+          "issues": []
+        },
+        {
+          "motor_id": "qm_032_card_riassunto_fonti_layout_grafico_controllato",
+          "title": "Layout grafico controllato",
+          "status": "PASS",
+          "issues": []
+        }
+      ]
+    }
+  },
+  "scope_guard": {
+    "created_card_summary_source_quality_motors": true,
+    "connected_to_33_registry": false,
+    "changed_existing_33_motors": false,
+    "changed_pipeline_5_11": false,
+    "changed_ui_pdf_css_app": false,
+    "deleted_existing_files": false
+  },
+  "report_files": {
+    "json": "reports/phase5_12d_card_summary_source_quality_motors_v1.json",
+    "markdown": "reports/phase5_12d_card_summary_source_quality_motors_v1.md"
+  }
+}
