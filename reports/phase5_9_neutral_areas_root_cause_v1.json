@@ -1,0 +1,833 @@
+{
+  "report_name": "phase5_9_neutral_areas_root_cause_v1",
+  "status": "PASS_DIAGNOSTIC",
+  "neutral_areas": [
+    "summary",
+    "quiz"
+  ],
+  "area_deltas": {
+    "summary": {
+      "area": "summary",
+      "bad_patterns_before": 10,
+      "bad_patterns_after": 10,
+      "bad_patterns_delta": 0,
+      "positive_patterns_before": 10,
+      "positive_patterns_after": 10,
+      "positive_patterns_delta": 0,
+      "distinct_text_ratio_before": 1.0,
+      "distinct_text_ratio_after": 0.974,
+      "text_length_before": 498,
+      "text_length_after": 1217,
+      "improved": false,
+      "worsened": false,
+      "neutral": true,
+      "notes": [
+        "Nessun miglioramento misurabile su queste metriche."
+      ]
+    },
+    "cards": {
+      "area": "cards",
+      "bad_patterns_before": 3,
+      "bad_patterns_after": 3,
+      "bad_patterns_delta": 0,
+      "positive_patterns_before": 8,
+      "positive_patterns_after": 9,
+      "positive_patterns_delta": 1,
+      "distinct_text_ratio_before": 0.9,
+      "distinct_text_ratio_after": 0.938,
+      "text_length_before": 261,
+      "text_length_after": 586,
+      "improved": true,
+      "worsened": false,
+      "neutral": false,
+      "notes": [
+        "Aumenta segnali testuali positivi/naturali."
+      ]
+    },
+    "study": {
+      "area": "study",
+      "bad_patterns_before": 4,
+      "bad_patterns_after": 0,
+      "bad_patterns_delta": -4,
+      "positive_patterns_before": 5,
+      "positive_patterns_after": 3,
+      "positive_patterns_delta": -2,
+      "distinct_text_ratio_before": 1.0,
+      "distinct_text_ratio_after": 0.917,
+      "text_length_before": 308,
+      "text_length_after": 462,
+      "improved": true,
+      "worsened": false,
+      "neutral": false,
+      "notes": [
+        "Riduce pattern testuali problematici."
+      ]
+    },
+    "quiz": {
+      "area": "quiz",
+      "bad_patterns_before": 3,
+      "bad_patterns_after": 3,
+      "bad_patterns_delta": 0,
+      "positive_patterns_before": 13,
+      "positive_patterns_after": 13,
+      "positive_patterns_delta": 0,
+      "distinct_text_ratio_before": 0.688,
+      "distinct_text_ratio_after": 0.688,
+      "text_length_before": 761,
+      "text_length_after": 761,
+      "improved": false,
+      "worsened": false,
+      "neutral": true,
+      "notes": [
+        "Nessun miglioramento misurabile su queste metriche."
+      ],
+      "quiz_distractor_true_fact_risk_before": 3,
+      "quiz_distractor_true_fact_risk_after": 3,
+      "quiz_distractor_true_fact_risk_delta": 0
+    }
+  },
+  "neutral_root_causes": [
+    {
+      "area": "summary",
+      "area_delta": {
+        "area": "summary",
+        "bad_patterns_before": 10,
+        "bad_patterns_after": 10,
+        "bad_patterns_delta": 0,
+        "positive_patterns_before": 10,
+        "positive_patterns_after": 10,
+        "positive_patterns_delta": 0,
+        "distinct_text_ratio_before": 1.0,
+        "distinct_text_ratio_after": 0.974,
+        "text_length_before": 498,
+        "text_length_after": 1217,
+        "improved": false,
+        "worsened": false,
+        "neutral": true,
+        "notes": [
+          "Nessun miglioramento misurabile su queste metriche."
+        ]
+      },
+      "motors_specific_count": 4,
+      "motors_relevant_count": 5,
+      "applied_count": 5,
+      "changed_count": 4,
+      "noop_count": 1,
+      "structural_rejected_count": 1,
+      "guarded_rejected_count": 0,
+      "root_cause_notes": [
+        "Almeno un motore dell'area viene applicato ma non cambia nulla.",
+        "Almeno un motore cambia contenuto, ma non riduce le metriche problematiche dell'area.",
+        "Almeno un motore viene limitato dalla guardia struttura.",
+        "Il riassunto non riduce bad patterns: l'adapter summary non sta normalizzando difetti testuali misurati."
+      ],
+      "relevant_motors": [
+        {
+          "motor_id": "scripts.rag_cleaner_finale_universale_v35k.clean_output",
+          "module_name": "scripts.rag_cleaner_finale_universale_v35k",
+          "function_name": "clean_output",
+          "adapter_name": "summary_dict",
+          "target_kind": "summary",
+          "area": "summary",
+          "status": "ok",
+          "applied": 1,
+          "changed": 0,
+          "target_labels": [
+            "riassunto_qualita"
+          ],
+          "targets_count": 1,
+          "structural_rejections_count": 1,
+          "guarded_rejections_count": 0,
+          "structural_reject_reasons": [
+            "summary_dict_structure_not_preserved"
+          ],
+          "root_cause_notes": [
+            "Il motore viene applicato ma non modifica il contenuto.",
+            "Almeno un output è rifiutato perché non preserva la struttura del target."
+          ],
+          "raw_meta": {
+            "status": "ok",
+            "adapter_name": "summary_dict",
+            "target_kind": "summary",
+            "applied": 1,
+            "changed": 0,
+            "targets": [
+              {
+                "target": "riassunto_qualita",
+                "changed": false,
+                "guarded_rejected": false,
+                "structural_rejected": true,
+                "structural_reject_reason": "summary_dict_structure_not_preserved",
+                "known_text_defects_before": 6,
+                "known_text_defects_after": 6
+              }
+            ]
+          }
+        },
+        {
+          "motor_id": "scripts.rag_motore_test_riutilizzabile_v35d.refine_output",
+          "module_name": "scripts.rag_motore_test_riutilizzabile_v35d",
+          "function_name": "refine_output",
+          "adapter_name": "summary_dict",
+          "target_kind": "summary",
+          "area": "summary",
+          "status": "ok",
+          "applied": 1,
+          "changed": 1,
+          "target_labels": [
+            "riassunto_qualita"
+          ],
+          "targets_count": 1,
+          "structural_rejections_count": 0,
+          "guarded_rejections_count": 0,
+          "structural_reject_reasons": [],
+          "root_cause_notes": [
+            "Il motore modifica contenuto senza rifiuti; va verificato se modifica i difetti giusti."
+          ],
+          "raw_meta": {
+            "status": "ok",
+            "adapter_name": "summary_dict",
+            "target_kind": "summary",
+            "applied": 1,
+            "changed": 1,
+            "targets": [
+              {
+                "target": "riassunto_qualita",
+                "changed": true,
+                "guarded_rejected": false,
+                "structural_rejected": false,
+                "structural_reject_reason": "",
+                "known_text_defects_before": 6,
+                "known_text_defects_after": 6
+              }
+            ]
+          }
+        },
+        {
+          "motor_id": "scripts.rag_revisore_accordo_pronomi_v35j.improve_output",
+          "module_name": "scripts.rag_revisore_accordo_pronomi_v35j",
+          "function_name": "improve_output",
+          "adapter_name": "summary_dict",
+          "target_kind": "summary",
+          "area": "summary",
+          "status": "ok",
+          "applied": 1,
+          "changed": 1,
+          "target_labels": [
+            "riassunto_qualita"
+          ],
+          "targets_count": 1,
+          "structural_rejections_count": 0,
+          "guarded_rejections_count": 0,
+          "structural_reject_reasons": [],
+          "root_cause_notes": [
+            "Il motore modifica contenuto senza rifiuti; va verificato se modifica i difetti giusti."
+          ],
+          "raw_meta": {
+            "status": "ok",
+            "adapter_name": "summary_dict",
+            "target_kind": "summary",
+            "applied": 1,
+            "changed": 1,
+            "targets": [
+              {
+                "target": "riassunto_qualita",
+                "changed": true,
+                "guarded_rejected": false,
+                "structural_rejected": false,
+                "structural_reject_reason": "",
+                "known_text_defects_before": 6,
+                "known_text_defects_after": 6
+              }
+            ]
+          }
+        },
+        {
+          "motor_id": "scripts.rag_revisore_qualita_testuale_v35g.refine_output",
+          "module_name": "scripts.rag_revisore_qualita_testuale_v35g",
+          "function_name": "refine_output",
+          "adapter_name": "summary_dict",
+          "target_kind": "summary",
+          "area": "summary",
+          "status": "ok",
+          "applied": 1,
+          "changed": 1,
+          "target_labels": [
+            "riassunto_qualita"
+          ],
+          "targets_count": 1,
+          "structural_rejections_count": 0,
+          "guarded_rejections_count": 0,
+          "structural_reject_reasons": [],
+          "root_cause_notes": [
+            "Il motore modifica contenuto senza rifiuti; va verificato se modifica i difetti giusti."
+          ],
+          "raw_meta": {
+            "status": "ok",
+            "adapter_name": "summary_dict",
+            "target_kind": "summary",
+            "applied": 1,
+            "changed": 1,
+            "targets": [
+              {
+                "target": "riassunto_qualita",
+                "changed": true,
+                "guarded_rejected": false,
+                "structural_rejected": false,
+                "structural_reject_reason": "",
+                "known_text_defects_before": 6,
+                "known_text_defects_after": 6
+              }
+            ]
+          }
+        },
+        {
+          "motor_id": "scripts.rag_revisore_qualita_testuale_v35g.refine_study",
+          "module_name": "scripts.rag_revisore_qualita_testuale_v35g",
+          "function_name": "refine_study",
+          "adapter_name": "phase5_full_output",
+          "target_kind": "full_output",
+          "area": "global",
+          "status": "ok",
+          "applied": 1,
+          "changed": 1,
+          "target_labels": [
+            "phase5_full_output"
+          ],
+          "targets_count": 1,
+          "structural_rejections_count": 0,
+          "guarded_rejections_count": 0,
+          "structural_reject_reasons": [],
+          "root_cause_notes": [
+            "Il motore modifica contenuto senza rifiuti; va verificato se modifica i difetti giusti."
+          ],
+          "raw_meta": {
+            "status": "ok",
+            "adapter_name": "phase5_full_output",
+            "target_kind": "full_output",
+            "applied": 1,
+            "changed": 1,
+            "targets": [
+              {
+                "target": "phase5_full_output",
+                "changed": true,
+                "guarded_rejected": false,
+                "structural_rejected": false,
+                "structural_reject_reason": "",
+                "known_text_defects_before": 16,
+                "known_text_defects_after": 15
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "area": "quiz",
+      "area_delta": {
+        "area": "quiz",
+        "bad_patterns_before": 3,
+        "bad_patterns_after": 3,
+        "bad_patterns_delta": 0,
+        "positive_patterns_before": 13,
+        "positive_patterns_after": 13,
+        "positive_patterns_delta": 0,
+        "distinct_text_ratio_before": 0.688,
+        "distinct_text_ratio_after": 0.688,
+        "text_length_before": 761,
+        "text_length_after": 761,
+        "improved": false,
+        "worsened": false,
+        "neutral": true,
+        "notes": [
+          "Nessun miglioramento misurabile su queste metriche."
+        ],
+        "quiz_distractor_true_fact_risk_before": 3,
+        "quiz_distractor_true_fact_risk_after": 3,
+        "quiz_distractor_true_fact_risk_delta": 0
+      },
+      "motors_specific_count": 2,
+      "motors_relevant_count": 3,
+      "applied_count": 3,
+      "changed_count": 1,
+      "noop_count": 2,
+      "structural_rejected_count": 0,
+      "guarded_rejected_count": 0,
+      "root_cause_notes": [
+        "Almeno un motore dell'area viene applicato ma non cambia nulla.",
+        "Almeno un motore cambia contenuto, ma non riduce le metriche problematiche dell'area.",
+        "Il quiz non riduce il rischio distrattori veri: serve motore/adattatore quiz specifico."
+      ],
+      "relevant_motors": [
+        {
+          "motor_id": "backend.main.pulisci_qualita_linguistica_quiz",
+          "module_name": "backend.main",
+          "function_name": "pulisci_qualita_linguistica_quiz",
+          "adapter_name": "dict_test_quiz",
+          "target_kind": "quiz",
+          "area": "quiz",
+          "status": "ok",
+          "applied": 1,
+          "changed": 0,
+          "target_labels": [
+            "test_quiz"
+          ],
+          "targets_count": 1,
+          "structural_rejections_count": 0,
+          "guarded_rejections_count": 0,
+          "structural_reject_reasons": [],
+          "root_cause_notes": [
+            "Il motore viene applicato ma non modifica il contenuto."
+          ],
+          "raw_meta": {
+            "status": "ok",
+            "adapter_name": "dict_test_quiz",
+            "target_kind": "quiz",
+            "applied": 1,
+            "changed": 0,
+            "targets": [
+              {
+                "target": "test_quiz",
+                "changed": false,
+                "guarded_rejected": false,
+                "structural_rejected": false,
+                "structural_reject_reason": "",
+                "known_text_defects_before": 1,
+                "known_text_defects_after": 1
+              }
+            ]
+          }
+        },
+        {
+          "motor_id": "scripts.rag_motore_didattico_riutilizzabile_v35c.refine_tests",
+          "module_name": "scripts.rag_motore_didattico_riutilizzabile_v35c",
+          "function_name": "refine_tests",
+          "adapter_name": "legacy_answers_dict",
+          "target_kind": "quiz",
+          "area": "quiz",
+          "status": "ok",
+          "applied": 1,
+          "changed": 0,
+          "target_labels": [
+            "test_quiz"
+          ],
+          "targets_count": 1,
+          "structural_rejections_count": 0,
+          "guarded_rejections_count": 0,
+          "structural_reject_reasons": [],
+          "root_cause_notes": [
+            "Il motore viene applicato ma non modifica il contenuto."
+          ],
+          "raw_meta": {
+            "status": "ok",
+            "adapter_name": "legacy_answers_dict",
+            "target_kind": "quiz",
+            "applied": 1,
+            "changed": 0,
+            "targets": [
+              {
+                "target": "test_quiz",
+                "changed": false,
+                "guarded_rejected": false,
+                "structural_rejected": false,
+                "structural_reject_reason": "",
+                "known_text_defects_before": 1,
+                "known_text_defects_after": 1
+              }
+            ]
+          }
+        },
+        {
+          "motor_id": "scripts.rag_revisore_qualita_testuale_v35g.refine_study",
+          "module_name": "scripts.rag_revisore_qualita_testuale_v35g",
+          "function_name": "refine_study",
+          "adapter_name": "phase5_full_output",
+          "target_kind": "full_output",
+          "area": "global",
+          "status": "ok",
+          "applied": 1,
+          "changed": 1,
+          "target_labels": [
+            "phase5_full_output"
+          ],
+          "targets_count": 1,
+          "structural_rejections_count": 0,
+          "guarded_rejections_count": 0,
+          "structural_reject_reasons": [],
+          "root_cause_notes": [
+            "Il motore modifica contenuto senza rifiuti; va verificato se modifica i difetti giusti."
+          ],
+          "raw_meta": {
+            "status": "ok",
+            "adapter_name": "phase5_full_output",
+            "target_kind": "full_output",
+            "applied": 1,
+            "changed": 1,
+            "targets": [
+              {
+                "target": "phase5_full_output",
+                "changed": true,
+                "guarded_rejected": false,
+                "structural_rejected": false,
+                "structural_reject_reason": "",
+                "known_text_defects_before": 16,
+                "known_text_defects_after": 15
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "motor_summaries": [
+    {
+      "motor_id": "scripts.rag_cleaner_finale_universale_v35k.clean_output",
+      "module_name": "scripts.rag_cleaner_finale_universale_v35k",
+      "function_name": "clean_output",
+      "adapter_name": "summary_dict",
+      "target_kind": "summary",
+      "area": "summary",
+      "status": "ok",
+      "applied": 1,
+      "changed": 0,
+      "target_labels": [
+        "riassunto_qualita"
+      ],
+      "targets_count": 1,
+      "structural_rejections_count": 1,
+      "guarded_rejections_count": 0,
+      "structural_reject_reasons": [
+        "summary_dict_structure_not_preserved"
+      ],
+      "root_cause_notes": [
+        "Il motore viene applicato ma non modifica il contenuto.",
+        "Almeno un output è rifiutato perché non preserva la struttura del target."
+      ],
+      "raw_meta": {
+        "status": "ok",
+        "adapter_name": "summary_dict",
+        "target_kind": "summary",
+        "applied": 1,
+        "changed": 0,
+        "targets": [
+          {
+            "target": "riassunto_qualita",
+            "changed": false,
+            "guarded_rejected": false,
+            "structural_rejected": true,
+            "structural_reject_reason": "summary_dict_structure_not_preserved",
+            "known_text_defects_before": 6,
+            "known_text_defects_after": 6
+          }
+        ]
+      }
+    },
+    {
+      "motor_id": "scripts.rag_motore_didattico_riutilizzabile_v35c.refine_study_questions",
+      "module_name": "scripts.rag_motore_didattico_riutilizzabile_v35c",
+      "function_name": "refine_study_questions",
+      "adapter_name": "cards_list",
+      "target_kind": "study",
+      "area": "study",
+      "status": "ok",
+      "applied": 2,
+      "changed": 2,
+      "target_labels": [
+        "card_concettuali",
+        "domande_studio"
+      ],
+      "targets_count": 2,
+      "structural_rejections_count": 0,
+      "guarded_rejections_count": 0,
+      "structural_reject_reasons": [],
+      "root_cause_notes": [
+        "Il motore modifica contenuto senza rifiuti; va verificato se modifica i difetti giusti."
+      ],
+      "raw_meta": {
+        "status": "ok",
+        "adapter_name": "cards_list",
+        "target_kind": "study",
+        "applied": 2,
+        "changed": 2,
+        "targets": [
+          {
+            "target": "card_concettuali",
+            "changed": true,
+            "guarded_rejected": false,
+            "structural_rejected": false,
+            "structural_reject_reason": "",
+            "known_text_defects_before": 3,
+            "known_text_defects_after": 3
+          },
+          {
+            "target": "domande_studio",
+            "changed": true,
+            "guarded_rejected": false,
+            "structural_rejected": false,
+            "structural_reject_reason": "",
+            "known_text_defects_before": 2,
+            "known_text_defects_after": 1
+          }
+        ]
+      }
+    },
+    {
+      "motor_id": "scripts.rag_motore_test_riutilizzabile_v35d.refine_output",
+      "module_name": "scripts.rag_motore_test_riutilizzabile_v35d",
+      "function_name": "refine_output",
+      "adapter_name": "summary_dict",
+      "target_kind": "summary",
+      "area": "summary",
+      "status": "ok",
+      "applied": 1,
+      "changed": 1,
+      "target_labels": [
+        "riassunto_qualita"
+      ],
+      "targets_count": 1,
+      "structural_rejections_count": 0,
+      "guarded_rejections_count": 0,
+      "structural_reject_reasons": [],
+      "root_cause_notes": [
+        "Il motore modifica contenuto senza rifiuti; va verificato se modifica i difetti giusti."
+      ],
+      "raw_meta": {
+        "status": "ok",
+        "adapter_name": "summary_dict",
+        "target_kind": "summary",
+        "applied": 1,
+        "changed": 1,
+        "targets": [
+          {
+            "target": "riassunto_qualita",
+            "changed": true,
+            "guarded_rejected": false,
+            "structural_rejected": false,
+            "structural_reject_reason": "",
+            "known_text_defects_before": 6,
+            "known_text_defects_after": 6
+          }
+        ]
+      }
+    },
+    {
+      "motor_id": "scripts.rag_revisore_accordo_pronomi_v35j.improve_output",
+      "module_name": "scripts.rag_revisore_accordo_pronomi_v35j",
+      "function_name": "improve_output",
+      "adapter_name": "summary_dict",
+      "target_kind": "summary",
+      "area": "summary",
+      "status": "ok",
+      "applied": 1,
+      "changed": 1,
+      "target_labels": [
+        "riassunto_qualita"
+      ],
+      "targets_count": 1,
+      "structural_rejections_count": 0,
+      "guarded_rejections_count": 0,
+      "structural_reject_reasons": [],
+      "root_cause_notes": [
+        "Il motore modifica contenuto senza rifiuti; va verificato se modifica i difetti giusti."
+      ],
+      "raw_meta": {
+        "status": "ok",
+        "adapter_name": "summary_dict",
+        "target_kind": "summary",
+        "applied": 1,
+        "changed": 1,
+        "targets": [
+          {
+            "target": "riassunto_qualita",
+            "changed": true,
+            "guarded_rejected": false,
+            "structural_rejected": false,
+            "structural_reject_reason": "",
+            "known_text_defects_before": 6,
+            "known_text_defects_after": 6
+          }
+        ]
+      }
+    },
+    {
+      "motor_id": "scripts.rag_revisore_qualita_testuale_v35g.refine_output",
+      "module_name": "scripts.rag_revisore_qualita_testuale_v35g",
+      "function_name": "refine_output",
+      "adapter_name": "summary_dict",
+      "target_kind": "summary",
+      "area": "summary",
+      "status": "ok",
+      "applied": 1,
+      "changed": 1,
+      "target_labels": [
+        "riassunto_qualita"
+      ],
+      "targets_count": 1,
+      "structural_rejections_count": 0,
+      "guarded_rejections_count": 0,
+      "structural_reject_reasons": [],
+      "root_cause_notes": [
+        "Il motore modifica contenuto senza rifiuti; va verificato se modifica i difetti giusti."
+      ],
+      "raw_meta": {
+        "status": "ok",
+        "adapter_name": "summary_dict",
+        "target_kind": "summary",
+        "applied": 1,
+        "changed": 1,
+        "targets": [
+          {
+            "target": "riassunto_qualita",
+            "changed": true,
+            "guarded_rejected": false,
+            "structural_rejected": false,
+            "structural_reject_reason": "",
+            "known_text_defects_before": 6,
+            "known_text_defects_after": 6
+          }
+        ]
+      }
+    },
+    {
+      "motor_id": "scripts.rag_revisore_qualita_testuale_v35g.refine_study",
+      "module_name": "scripts.rag_revisore_qualita_testuale_v35g",
+      "function_name": "refine_study",
+      "adapter_name": "phase5_full_output",
+      "target_kind": "full_output",
+      "area": "global",
+      "status": "ok",
+      "applied": 1,
+      "changed": 1,
+      "target_labels": [
+        "phase5_full_output"
+      ],
+      "targets_count": 1,
+      "structural_rejections_count": 0,
+      "guarded_rejections_count": 0,
+      "structural_reject_reasons": [],
+      "root_cause_notes": [
+        "Il motore modifica contenuto senza rifiuti; va verificato se modifica i difetti giusti."
+      ],
+      "raw_meta": {
+        "status": "ok",
+        "adapter_name": "phase5_full_output",
+        "target_kind": "full_output",
+        "applied": 1,
+        "changed": 1,
+        "targets": [
+          {
+            "target": "phase5_full_output",
+            "changed": true,
+            "guarded_rejected": false,
+            "structural_rejected": false,
+            "structural_reject_reason": "",
+            "known_text_defects_before": 16,
+            "known_text_defects_after": 15
+          }
+        ]
+      }
+    },
+    {
+      "motor_id": "backend.main.pulisci_qualita_linguistica_quiz",
+      "module_name": "backend.main",
+      "function_name": "pulisci_qualita_linguistica_quiz",
+      "adapter_name": "dict_test_quiz",
+      "target_kind": "quiz",
+      "area": "quiz",
+      "status": "ok",
+      "applied": 1,
+      "changed": 0,
+      "target_labels": [
+        "test_quiz"
+      ],
+      "targets_count": 1,
+      "structural_rejections_count": 0,
+      "guarded_rejections_count": 0,
+      "structural_reject_reasons": [],
+      "root_cause_notes": [
+        "Il motore viene applicato ma non modifica il contenuto."
+      ],
+      "raw_meta": {
+        "status": "ok",
+        "adapter_name": "dict_test_quiz",
+        "target_kind": "quiz",
+        "applied": 1,
+        "changed": 0,
+        "targets": [
+          {
+            "target": "test_quiz",
+            "changed": false,
+            "guarded_rejected": false,
+            "structural_rejected": false,
+            "structural_reject_reason": "",
+            "known_text_defects_before": 1,
+            "known_text_defects_after": 1
+          }
+        ]
+      }
+    },
+    {
+      "motor_id": "scripts.rag_motore_didattico_riutilizzabile_v35c.refine_tests",
+      "module_name": "scripts.rag_motore_didattico_riutilizzabile_v35c",
+      "function_name": "refine_tests",
+      "adapter_name": "legacy_answers_dict",
+      "target_kind": "quiz",
+      "area": "quiz",
+      "status": "ok",
+      "applied": 1,
+      "changed": 0,
+      "target_labels": [
+        "test_quiz"
+      ],
+      "targets_count": 1,
+      "structural_rejections_count": 0,
+      "guarded_rejections_count": 0,
+      "structural_reject_reasons": [],
+      "root_cause_notes": [
+        "Il motore viene applicato ma non modifica il contenuto."
+      ],
+      "raw_meta": {
+        "status": "ok",
+        "adapter_name": "legacy_answers_dict",
+        "target_kind": "quiz",
+        "applied": 1,
+        "changed": 0,
+        "targets": [
+          {
+            "target": "test_quiz",
+            "changed": false,
+            "guarded_rejected": false,
+            "structural_rejected": false,
+            "structural_reject_reason": "",
+            "known_text_defects_before": 1,
+            "known_text_defects_after": 1
+          }
+        ]
+      }
+    }
+  ],
+  "recommendations": [
+    {
+      "area": "quiz",
+      "priority": 1,
+      "action": "Creare motore/adattatore quiz-specifico per sostituire distrattori che sono fatti veri.",
+      "why": "Il rischio distrattori veri resta invariato."
+    },
+    {
+      "area": "summary",
+      "priority": 2,
+      "action": "Creare adapter summary più mirato o cleaner summary-specifico.",
+      "why": "I motori summary vengono eseguiti, ma non riducono i bad patterns misurati."
+    }
+  ],
+  "registry_meta_summary": {
+    "known_text_defects_before": 12,
+    "known_text_defects_after": 12,
+    "motors_count": 8
+  },
+  "notes": [
+    "Diagnostico: non modifica il registry.",
+    "Serve a capire perché summary e quiz restano neutri nella Fase 5.8.",
+    "Distingue motori non applicati, no-op, cambi non utili, guardia struttura e guardia anti-peggioramento."
+  ]
+}
