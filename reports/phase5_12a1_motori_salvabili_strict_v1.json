@@ -1,0 +1,884 @@
+{
+  "phase": "5.12A.1",
+  "generated_at": "2026-07-05T10:08:02.590790+00:00",
+  "status": "PASS",
+  "ready_label": "MOTORI_SALVABILI_STRICT_MAP_READY",
+  "authoritative_reports_used": [
+    "reports/compatibilita_motori_qualita_fase5_v1.json",
+    "reports/legacy_quality_motor_registry_v1_report.json",
+    "reports/legacy_quality_motors_registry_ready_v1.json",
+    "reports/mini_llm_v400_registry/mini_llm_engine_registry_v400.json",
+    "reports/motori_qualita_esistenti_v1.json",
+    "reports/phase5_10_1_summary_card_cleaner_registry_v1.json",
+    "reports/phase5_10_2_final_registry_quality_snapshot_v1.json",
+    "reports/phase5_11_pipeline_output_ready_report.json",
+    "reports/phase5_9_3_quiz_repair_registry_integration_v1.json",
+    "reports/phase5_9_9_universal_quiz_quality_registry_v1.json"
+  ],
+  "salvable_motors_count": 11,
+  "salvable_motors": [
+    {
+      "id": "salvable_phase5_pipeline_5_fasi",
+      "title": "Regressione pipeline 5 fasi",
+      "source_report": "reports/phase5_11_pipeline_output_ready_report.json, reports/phase5_10_2_final_registry_quality_snapshot_v1.json, reports/phase5_10_1_summary_card_cleaner_registry_v1.json",
+      "confidence": "HIGH",
+      "evidence": [
+        "reports/phase5_11_pipeline_output_ready_report.json",
+        "reports/phase5_10_2_final_registry_quality_snapshot_v1.json",
+        "reports/phase5_10_1_summary_card_cleaner_registry_v1.json",
+        "reports/phase5_9_9_universal_quiz_quality_registry_v1.json",
+        "reports/phase5_9_3_quiz_repair_registry_integration_v1.json",
+        "reports/legacy_quality_motors_registry_ready_v1.json",
+        "reports/legacy_quality_motor_registry_v1_report.json",
+        "reports/compatibilita_motori_qualita_fase5_v1.json"
+      ],
+      "covered_areas": [
+        "pipeline",
+        "orchestrator"
+      ]
+    },
+    {
+      "id": "salvable_pipeline_output_ready_gate_v511",
+      "title": "Gate finale Pipeline Output Ready Fase 5.11",
+      "source_report": "reports/phase5_11_pipeline_output_ready_report.json, reports/phase5_10_2_final_registry_quality_snapshot_v1.json, reports/phase5_10_1_summary_card_cleaner_registry_v1.json",
+      "confidence": "HIGH",
+      "evidence": [
+        "reports/phase5_11_pipeline_output_ready_report.json",
+        "reports/phase5_10_2_final_registry_quality_snapshot_v1.json",
+        "reports/phase5_10_1_summary_card_cleaner_registry_v1.json",
+        "reports/phase5_9_9_universal_quiz_quality_registry_v1.json",
+        "reports/phase5_9_3_quiz_repair_registry_integration_v1.json",
+        "reports/legacy_quality_motors_registry_ready_v1.json",
+        "reports/legacy_quality_motor_registry_v1_report.json",
+        "reports/motori_qualita_esistenti_v1.json"
+      ],
+      "covered_areas": [
+        "summary",
+        "card",
+        "quiz",
+        "study",
+        "registry"
+      ]
+    },
+    {
+      "id": "salvable_final_registry_quality_snapshot_v5102",
+      "title": "Snapshot qualità registry finale Fase 5.10.2",
+      "source_report": "reports/phase5_11_pipeline_output_ready_report.json, reports/phase5_10_2_final_registry_quality_snapshot_v1.json, reports/phase5_10_1_summary_card_cleaner_registry_v1.json",
+      "confidence": "HIGH",
+      "evidence": [
+        "reports/phase5_11_pipeline_output_ready_report.json",
+        "reports/phase5_10_2_final_registry_quality_snapshot_v1.json",
+        "reports/phase5_10_1_summary_card_cleaner_registry_v1.json",
+        "reports/phase5_9_9_universal_quiz_quality_registry_v1.json",
+        "reports/phase5_9_3_quiz_repair_registry_integration_v1.json",
+        "reports/legacy_quality_motors_registry_ready_v1.json",
+        "reports/legacy_quality_motor_registry_v1_report.json",
+        "reports/compatibilita_motori_qualita_fase5_v1.json"
+      ],
+      "covered_areas": [
+        "registry",
+        "quality_snapshot"
+      ]
+    },
+    {
+      "id": "salvable_summary_card_cleaner_registry_v5101",
+      "title": "Cleaner summary/card collegato al registry Fase 5.10.1",
+      "source_report": "reports/phase5_11_pipeline_output_ready_report.json, reports/phase5_10_2_final_registry_quality_snapshot_v1.json, reports/phase5_10_1_summary_card_cleaner_registry_v1.json",
+      "confidence": "HIGH",
+      "evidence": [
+        "reports/phase5_11_pipeline_output_ready_report.json",
+        "reports/phase5_10_2_final_registry_quality_snapshot_v1.json",
+        "reports/phase5_10_1_summary_card_cleaner_registry_v1.json",
+        "reports/phase5_9_9_universal_quiz_quality_registry_v1.json",
+        "reports/phase5_9_3_quiz_repair_registry_integration_v1.json",
+        "reports/legacy_quality_motors_registry_ready_v1.json",
+        "reports/legacy_quality_motor_registry_v1_report.json",
+        "reports/motori_qualita_esistenti_v1.json"
+      ],
+      "covered_areas": [
+        "summary",
+        "card",
+        "cleaner"
+      ]
+    },
+    {
+      "id": "salvable_universal_quiz_quality_registry_v599",
+      "title": "Registry qualità quiz universale Fase 5.9.9",
+      "source_report": "reports/phase5_11_pipeline_output_ready_report.json, reports/phase5_10_2_final_registry_quality_snapshot_v1.json, reports/phase5_10_1_summary_card_cleaner_registry_v1.json",
+      "confidence": "HIGH",
+      "evidence": [
+        "reports/phase5_11_pipeline_output_ready_report.json",
+        "reports/phase5_10_2_final_registry_quality_snapshot_v1.json",
+        "reports/phase5_10_1_summary_card_cleaner_registry_v1.json",
+        "reports/phase5_9_9_universal_quiz_quality_registry_v1.json",
+        "reports/phase5_9_3_quiz_repair_registry_integration_v1.json",
+        "reports/legacy_quality_motors_registry_ready_v1.json",
+        "reports/legacy_quality_motor_registry_v1_report.json",
+        "reports/compatibilita_motori_qualita_fase5_v1.json"
+      ],
+      "covered_areas": [
+        "quiz",
+        "test"
+      ]
+    },
+    {
+      "id": "salvable_quiz_repair_registry_integration_v593",
+      "title": "Integrazione registry riparatore quiz Fase 5.9.3",
+      "source_report": "reports/phase5_11_pipeline_output_ready_report.json, reports/phase5_10_2_final_registry_quality_snapshot_v1.json, reports/phase5_10_1_summary_card_cleaner_registry_v1.json",
+      "confidence": "HIGH",
+      "evidence": [
+        "reports/phase5_11_pipeline_output_ready_report.json",
+        "reports/phase5_10_2_final_registry_quality_snapshot_v1.json",
+        "reports/phase5_10_1_summary_card_cleaner_registry_v1.json",
+        "reports/phase5_9_9_universal_quiz_quality_registry_v1.json",
+        "reports/phase5_9_3_quiz_repair_registry_integration_v1.json",
+        "reports/legacy_quality_motors_registry_ready_v1.json",
+        "reports/legacy_quality_motor_registry_v1_report.json",
+        "reports/compatibilita_motori_qualita_fase5_v1.json"
+      ],
+      "covered_areas": [
+        "quiz",
+        "repair"
+      ]
+    },
+    {
+      "id": "salvable_legacy_quality_motors_registry_ready",
+      "title": "Registry motori qualità legacy ready",
+      "source_report": "reports/phase5_11_pipeline_output_ready_report.json, reports/phase5_10_2_final_registry_quality_snapshot_v1.json, reports/phase5_10_1_summary_card_cleaner_registry_v1.json",
+      "confidence": "HIGH",
+      "evidence": [
+        "reports/phase5_11_pipeline_output_ready_report.json",
+        "reports/phase5_10_2_final_registry_quality_snapshot_v1.json",
+        "reports/phase5_10_1_summary_card_cleaner_registry_v1.json",
+        "reports/phase5_9_9_universal_quiz_quality_registry_v1.json",
+        "reports/phase5_9_3_quiz_repair_registry_integration_v1.json",
+        "reports/legacy_quality_motors_registry_ready_v1.json",
+        "reports/legacy_quality_motor_registry_v1_report.json",
+        "reports/compatibilita_motori_qualita_fase5_v1.json"
+      ],
+      "covered_areas": [
+        "registry",
+        "legacy_quality"
+      ]
+    },
+    {
+      "id": "salvable_phase5_live_quality_bridge",
+      "title": "Bridge qualità live Fase 5",
+      "source_report": "reports/phase5_11_pipeline_output_ready_report.json, reports/phase5_10_2_final_registry_quality_snapshot_v1.json, reports/phase5_9_9_universal_quiz_quality_registry_v1.json",
+      "confidence": "HIGH",
+      "evidence": [
+        "reports/phase5_11_pipeline_output_ready_report.json",
+        "reports/phase5_10_2_final_registry_quality_snapshot_v1.json",
+        "reports/phase5_9_9_universal_quiz_quality_registry_v1.json",
+        "reports/phase5_9_3_quiz_repair_registry_integration_v1.json",
+        "reports/legacy_quality_motors_registry_ready_v1.json",
+        "reports/legacy_quality_motor_registry_v1_report.json",
+        "reports/compatibilita_motori_qualita_fase5_v1.json",
+        "reports/motori_qualita_esistenti_v1.json"
+      ],
+      "covered_areas": [
+        "bridge",
+        "orchestrator"
+      ]
+    },
+    {
+      "id": "salvable_mini_llm_engine_registry_v400",
+      "title": "Mini LLM engine registry V400",
+      "source_report": "reports/phase5_11_pipeline_output_ready_report.json, reports/phase5_10_2_final_registry_quality_snapshot_v1.json, reports/phase5_10_1_summary_card_cleaner_registry_v1.json",
+      "confidence": "HIGH",
+      "evidence": [
+        "reports/phase5_11_pipeline_output_ready_report.json",
+        "reports/phase5_10_2_final_registry_quality_snapshot_v1.json",
+        "reports/phase5_10_1_summary_card_cleaner_registry_v1.json",
+        "reports/phase5_9_9_universal_quiz_quality_registry_v1.json",
+        "reports/phase5_9_3_quiz_repair_registry_integration_v1.json",
+        "reports/legacy_quality_motors_registry_ready_v1.json",
+        "reports/legacy_quality_motor_registry_v1_report.json",
+        "reports/motori_qualita_esistenti_v1.json"
+      ],
+      "covered_areas": [
+        "engine_registry"
+      ]
+    },
+    {
+      "id": "salvable_general_quality_motor",
+      "title": "Motore qualità generale",
+      "source_report": "reports/phase5_11_pipeline_output_ready_report.json, reports/phase5_10_2_final_registry_quality_snapshot_v1.json, reports/phase5_10_1_summary_card_cleaner_registry_v1.json",
+      "confidence": "HIGH",
+      "evidence": [
+        "reports/phase5_11_pipeline_output_ready_report.json",
+        "reports/phase5_10_2_final_registry_quality_snapshot_v1.json",
+        "reports/phase5_10_1_summary_card_cleaner_registry_v1.json",
+        "reports/phase5_9_9_universal_quiz_quality_registry_v1.json",
+        "reports/legacy_quality_motors_registry_ready_v1.json",
+        "reports/legacy_quality_motor_registry_v1_report.json",
+        "reports/compatibilita_motori_qualita_fase5_v1.json",
+        "reports/motori_qualita_esistenti_v1.json"
+      ],
+      "covered_areas": [
+        "general_quality"
+      ]
+    },
+    {
+      "id": "salvable_visual_logic_quality_motor",
+      "title": "Motore qualità logica visiva",
+      "source_report": "reports/phase5_11_pipeline_output_ready_report.json, reports/phase5_10_2_final_registry_quality_snapshot_v1.json, reports/legacy_quality_motors_registry_ready_v1.json",
+      "confidence": "HIGH",
+      "evidence": [
+        "reports/phase5_11_pipeline_output_ready_report.json",
+        "reports/phase5_10_2_final_registry_quality_snapshot_v1.json",
+        "reports/legacy_quality_motors_registry_ready_v1.json",
+        "reports/legacy_quality_motor_registry_v1_report.json",
+        "reports/compatibilita_motori_qualita_fase5_v1.json",
+        "reports/motori_qualita_esistenti_v1.json",
+        "reports/mini_llm_v400_registry/mini_llm_engine_registry_v400.json"
+      ],
+      "covered_areas": [
+        "visual_logic"
+      ]
+    }
+  ],
+  "atomic_controls_count": 64,
+  "atomic_summary_by_status": {
+    "DA_VERIFICARE": 1,
+    "DA_RICREARE": 63
+  },
+  "atomic_summary_by_area": {
+    "qualita_testuale": {
+      "DA_VERIFICARE": 0,
+      "DA_RICREARE": 12
+    },
+    "qualita_didattica": {
+      "DA_VERIFICARE": 0,
+      "DA_RICREARE": 10
+    },
+    "card_riassunto_fonti": {
+      "DA_VERIFICARE": 0,
+      "DA_RICREARE": 10
+    },
+    "test_quiz": {
+      "DA_VERIFICARE": 0,
+      "DA_RICREARE": 12
+    },
+    "duplicati_contestuali": {
+      "DA_VERIFICARE": 0,
+      "DA_RICREARE": 6
+    },
+    "selettore_orchestratore": {
+      "DA_VERIFICARE": 1,
+      "DA_RICREARE": 9
+    },
+    "naturalezza_linguistica": {
+      "DA_VERIFICARE": 0,
+      "DA_RICREARE": 1
+    },
+    "accordo_grammaticale": {
+      "DA_VERIFICARE": 0,
+      "DA_RICREARE": 1
+    },
+    "repair_contestuale": {
+      "DA_VERIFICARE": 0,
+      "DA_RICREARE": 1
+    },
+    "repair_ortografico": {
+      "DA_VERIFICARE": 0,
+      "DA_RICREARE": 1
+    }
+  },
+  "atomic_classifications": [
+    {
+      "id": "qm_001_qualita_testuale_grammatica_italiana_corretta",
+      "area": "qualita_testuale",
+      "title": "Grammatica italiana corretta",
+      "status": "DA_RICREARE",
+      "reason": "Non esiste ancora evidenza stretta di un motore atomico autonomo, universale, registrato, testato e collegato per questo controllo.",
+      "severity": "blocking",
+      "possible_covering_motors": []
+    },
+    {
+      "id": "qm_002_qualita_testuale_accenti_corretti",
+      "area": "qualita_testuale",
+      "title": "Accenti corretti",
+      "status": "DA_RICREARE",
+      "reason": "Non esiste ancora evidenza stretta di un motore atomico autonomo, universale, registrato, testato e collegato per questo controllo.",
+      "severity": "blocking",
+      "possible_covering_motors": []
+    },
+    {
+      "id": "qm_003_qualita_testuale_apostrofi_corretti",
+      "area": "qualita_testuale",
+      "title": "Apostrofi corretti",
+      "status": "DA_RICREARE",
+      "reason": "Non esiste ancora evidenza stretta di un motore atomico autonomo, universale, registrato, testato e collegato per questo controllo.",
+      "severity": "blocking",
+      "possible_covering_motors": []
+    },
+    {
+      "id": "qm_004_qualita_testuale_punteggiatura_corretta",
+      "area": "qualita_testuale",
+      "title": "Punteggiatura corretta",
+      "status": "DA_RICREARE",
+      "reason": "Non esiste ancora evidenza stretta di un motore atomico autonomo, universale, registrato, testato e collegato per questo controllo.",
+      "severity": "blocking",
+      "possible_covering_motors": []
+    },
+    {
+      "id": "qm_005_qualita_testuale_spazi_corretti_prima_e_dopo_punteggiatura",
+      "area": "qualita_testuale",
+      "title": "Spazi corretti prima e dopo punteggiatura",
+      "status": "DA_RICREARE",
+      "reason": "Non esiste ancora evidenza stretta di un motore atomico autonomo, universale, registrato, testato e collegato per questo controllo.",
+      "severity": "blocking",
+      "possible_covering_motors": []
+    },
+    {
+      "id": "qm_006_qualita_testuale_frasi_complete",
+      "area": "qualita_testuale",
+      "title": "Frasi complete",
+      "status": "DA_RICREARE",
+      "reason": "Non esiste ancora evidenza stretta di un motore atomico autonomo, universale, registrato, testato e collegato per questo controllo.",
+      "severity": "blocking",
+      "possible_covering_motors": []
+    },
+    {
+      "id": "qm_007_qualita_testuale_assenza_di_frasi_spezzate",
+      "area": "qualita_testuale",
+      "title": "Assenza di frasi spezzate",
+      "status": "DA_RICREARE",
+      "reason": "Non esiste ancora evidenza stretta di un motore atomico autonomo, universale, registrato, testato e collegato per questo controllo.",
+      "severity": "blocking",
+      "possible_covering_motors": []
+    },
+    {
+      "id": "qm_008_qualita_testuale_assenza_di_frasi_non_terminate",
+      "area": "qualita_testuale",
+      "title": "Assenza di frasi non terminate",
+      "status": "DA_RICREARE",
+      "reason": "Non esiste ancora evidenza stretta di un motore atomico autonomo, universale, registrato, testato e collegato per questo controllo.",
+      "severity": "blocking",
+      "possible_covering_motors": []
+    },
+    {
+      "id": "qm_009_qualita_testuale_assenza_di_finali_sospetti",
+      "area": "qualita_testuale",
+      "title": "Assenza di finali sospetti",
+      "status": "DA_RICREARE",
+      "reason": "Non esiste ancora evidenza stretta di un motore atomico autonomo, universale, registrato, testato e collegato per questo controllo.",
+      "severity": "blocking",
+      "possible_covering_motors": []
+    },
+    {
+      "id": "qm_010_qualita_testuale_assenza_di_frasi_riempitive",
+      "area": "qualita_testuale",
+      "title": "Assenza di frasi riempitive",
+      "status": "DA_RICREARE",
+      "reason": "Non esiste ancora evidenza stretta di un motore atomico autonomo, universale, registrato, testato e collegato per questo controllo.",
+      "severity": "blocking",
+      "possible_covering_motors": []
+    },
+    {
+      "id": "qm_011_qualita_testuale_assenza_di_testo_generico",
+      "area": "qualita_testuale",
+      "title": "Assenza di testo generico",
+      "status": "DA_RICREARE",
+      "reason": "Non esiste ancora evidenza stretta di un motore atomico autonomo, universale, registrato, testato e collegato per questo controllo.",
+      "severity": "blocking",
+      "possible_covering_motors": []
+    },
+    {
+      "id": "qm_012_qualita_testuale_assenza_di_vecchi_fallback_demo_test",
+      "area": "qualita_testuale",
+      "title": "Assenza di vecchi fallback demo test",
+      "status": "DA_RICREARE",
+      "reason": "Non esiste ancora evidenza stretta di un motore atomico autonomo, universale, registrato, testato e collegato per questo controllo.",
+      "severity": "blocking",
+      "possible_covering_motors": []
+    },
+    {
+      "id": "qm_013_qualita_didattica_domande_studio_naturali",
+      "area": "qualita_didattica",
+      "title": "Domande studio naturali",
+      "status": "DA_RICREARE",
+      "reason": "Non esiste ancora evidenza stretta di un motore atomico autonomo, universale, registrato, testato e collegato per questo controllo.",
+      "severity": "blocking",
+      "possible_covering_motors": []
+    },
+    {
+      "id": "qm_014_qualita_didattica_domande_studio_utili_per_ripassare",
+      "area": "qualita_didattica",
+      "title": "Domande studio utili per ripassare",
+      "status": "DA_RICREARE",
+      "reason": "Non esiste ancora evidenza stretta di un motore atomico autonomo, universale, registrato, testato e collegato per questo controllo.",
+      "severity": "blocking",
+      "possible_covering_motors": []
+    },
+    {
+      "id": "qm_015_qualita_didattica_risposte_guida_specifiche",
+      "area": "qualita_didattica",
+      "title": "Risposte guida specifiche",
+      "status": "DA_RICREARE",
+      "reason": "Non esiste ancora evidenza stretta di un motore atomico autonomo, universale, registrato, testato e collegato per questo controllo.",
+      "severity": "blocking",
+      "possible_covering_motors": []
+    },
+    {
+      "id": "qm_016_qualita_didattica_spiegazioni_test_chiare",
+      "area": "qualita_didattica",
+      "title": "Spiegazioni test chiare",
+      "status": "DA_RICREARE",
+      "reason": "Non esiste ancora evidenza stretta di un motore atomico autonomo, universale, registrato, testato e collegato per questo controllo.",
+      "severity": "blocking",
+      "possible_covering_motors": []
+    },
+    {
+      "id": "qm_017_qualita_didattica_spiegazioni_non_troppo_corte",
+      "area": "qualita_didattica",
+      "title": "Spiegazioni non troppo corte",
+      "status": "DA_RICREARE",
+      "reason": "Non esiste ancora evidenza stretta di un motore atomico autonomo, universale, registrato, testato e collegato per questo controllo.",
+      "severity": "blocking",
+      "possible_covering_motors": []
+    },
+    {
+      "id": "qm_018_qualita_didattica_tono_didattico_finale",
+      "area": "qualita_didattica",
+      "title": "Tono didattico finale",
+      "status": "DA_RICREARE",
+      "reason": "Non esiste ancora evidenza stretta di un motore atomico autonomo, universale, registrato, testato e collegato per questo controllo.",
+      "severity": "blocking",
+      "possible_covering_motors": []
+    },
+    {
+      "id": "qm_019_qualita_didattica_categorie_presenti",
+      "area": "qualita_didattica",
+      "title": "Categorie presenti",
+      "status": "DA_RICREARE",
+      "reason": "Non esiste ancora evidenza stretta di un motore atomico autonomo, universale, registrato, testato e collegato per questo controllo.",
+      "severity": "blocking",
+      "possible_covering_motors": []
+    },
+    {
+      "id": "qm_020_qualita_didattica_sottocategorie_presenti",
+      "area": "qualita_didattica",
+      "title": "Sottocategorie presenti",
+      "status": "DA_RICREARE",
+      "reason": "Non esiste ancora evidenza stretta di un motore atomico autonomo, universale, registrato, testato e collegato per questo controllo.",
+      "severity": "blocking",
+      "possible_covering_motors": []
+    },
+    {
+      "id": "qm_021_qualita_didattica_coerenza_tra_domanda_risposta_e_contenuto",
+      "area": "qualita_didattica",
+      "title": "Coerenza tra domanda risposta e contenuto",
+      "status": "DA_RICREARE",
+      "reason": "Non esiste ancora evidenza stretta di un motore atomico autonomo, universale, registrato, testato e collegato per questo controllo.",
+      "severity": "blocking",
+      "possible_covering_motors": []
+    },
+    {
+      "id": "qm_022_qualita_didattica_niente_risposte_vaghe",
+      "area": "qualita_didattica",
+      "title": "Niente risposte vaghe",
+      "status": "DA_RICREARE",
+      "reason": "Non esiste ancora evidenza stretta di un motore atomico autonomo, universale, registrato, testato e collegato per questo controllo.",
+      "severity": "blocking",
+      "possible_covering_motors": []
+    },
+    {
+      "id": "qm_023_card_riassunto_fonti_card_scritte_bene",
+      "area": "card_riassunto_fonti",
+      "title": "Card scritte bene",
+      "status": "DA_RICREARE",
+      "reason": "Non esiste ancora evidenza stretta di un motore atomico autonomo, universale, registrato, testato e collegato per questo controllo.",
+      "severity": "blocking",
+      "possible_covering_motors": []
+    },
+    {
+      "id": "qm_024_card_riassunto_fonti_card_non_troppo_corte",
+      "area": "card_riassunto_fonti",
+      "title": "Card non troppo corte",
+      "status": "DA_RICREARE",
+      "reason": "Non esiste ancora evidenza stretta di un motore atomico autonomo, universale, registrato, testato e collegato per questo controllo.",
+      "severity": "blocking",
+      "possible_covering_motors": []
+    },
+    {
+      "id": "qm_025_card_riassunto_fonti_card_non_troppo_compresse",
+      "area": "card_riassunto_fonti",
+      "title": "Card non troppo compresse",
+      "status": "DA_RICREARE",
+      "reason": "Non esiste ancora evidenza stretta di un motore atomico autonomo, universale, registrato, testato e collegato per questo controllo.",
+      "severity": "blocking",
+      "possible_covering_motors": []
+    },
+    {
+      "id": "qm_026_card_riassunto_fonti_messaggio_chiave_completo",
+      "area": "card_riassunto_fonti",
+      "title": "Messaggio chiave completo",
+      "status": "DA_RICREARE",
+      "reason": "Non esiste ancora evidenza stretta di un motore atomico autonomo, universale, registrato, testato e collegato per questo controllo.",
+      "severity": "blocking",
+      "possible_covering_motors": []
+    },
+    {
+      "id": "qm_027_card_riassunto_fonti_riassunto_chiaro",
+      "area": "card_riassunto_fonti",
+      "title": "Riassunto chiaro",
+      "status": "DA_RICREARE",
+      "reason": "Non esiste ancora evidenza stretta di un motore atomico autonomo, universale, registrato, testato e collegato per questo controllo.",
+      "severity": "blocking",
+      "possible_covering_motors": []
+    },
+    {
+      "id": "qm_028_card_riassunto_fonti_punti_chiave_leggibili",
+      "area": "card_riassunto_fonti",
+      "title": "Punti chiave leggibili",
+      "status": "DA_RICREARE",
+      "reason": "Non esiste ancora evidenza stretta di un motore atomico autonomo, universale, registrato, testato e collegato per questo controllo.",
+      "severity": "blocking",
+      "possible_covering_motors": []
+    },
+    {
+      "id": "qm_029_card_riassunto_fonti_fonti_visibili_belle",
+      "area": "card_riassunto_fonti",
+      "title": "Fonti visibili belle",
+      "status": "DA_RICREARE",
+      "reason": "Non esiste ancora evidenza stretta di un motore atomico autonomo, universale, registrato, testato e collegato per questo controllo.",
+      "severity": "blocking",
+      "possible_covering_motors": []
+    },
+    {
+      "id": "qm_030_card_riassunto_fonti_fonti_coerenti",
+      "area": "card_riassunto_fonti",
+      "title": "Fonti coerenti",
+      "status": "DA_RICREARE",
+      "reason": "Non esiste ancora evidenza stretta di un motore atomico autonomo, universale, registrato, testato e collegato per questo controllo.",
+      "severity": "blocking",
+      "possible_covering_motors": []
+    },
+    {
+      "id": "qm_031_card_riassunto_fonti_niente_fonti_brutte",
+      "area": "card_riassunto_fonti",
+      "title": "Niente fonti brutte",
+      "status": "DA_RICREARE",
+      "reason": "Non esiste ancora evidenza stretta di un motore atomico autonomo, universale, registrato, testato e collegato per questo controllo.",
+      "severity": "blocking",
+      "possible_covering_motors": []
+    },
+    {
+      "id": "qm_032_card_riassunto_fonti_layout_grafico_controllato",
+      "area": "card_riassunto_fonti",
+      "title": "Layout grafico controllato",
+      "status": "DA_RICREARE",
+      "reason": "Non esiste ancora evidenza stretta di un motore atomico autonomo, universale, registrato, testato e collegato per questo controllo.",
+      "severity": "warning",
+      "possible_covering_motors": []
+    },
+    {
+      "id": "qm_033_test_quiz_test_separato_da_card_riassunto_domande_studio",
+      "area": "test_quiz",
+      "title": "Test separato da card riassunto domande studio",
+      "status": "DA_RICREARE",
+      "reason": "Non esiste ancora evidenza stretta di un motore atomico autonomo, universale, registrato, testato e collegato per questo controllo.",
+      "severity": "blocking",
+      "possible_covering_motors": []
+    },
+    {
+      "id": "qm_034_test_quiz_opzioni_interne_validate",
+      "area": "test_quiz",
+      "title": "Opzioni interne validate",
+      "status": "DA_RICREARE",
+      "reason": "Non esiste ancora evidenza stretta di un motore atomico autonomo, universale, registrato, testato e collegato per questo controllo.",
+      "severity": "blocking",
+      "possible_covering_motors": []
+    },
+    {
+      "id": "qm_035_test_quiz_opzioni_visibili_pulite",
+      "area": "test_quiz",
+      "title": "Opzioni visibili pulite",
+      "status": "DA_RICREARE",
+      "reason": "Non esiste ancora evidenza stretta di un motore atomico autonomo, universale, registrato, testato e collegato per questo controllo.",
+      "severity": "blocking",
+      "possible_covering_motors": []
+    },
+    {
+      "id": "qm_036_test_quiz_risposta_corretta_interna",
+      "area": "test_quiz",
+      "title": "Risposta corretta interna",
+      "status": "DA_RICREARE",
+      "reason": "Non esiste ancora evidenza stretta di un motore atomico autonomo, universale, registrato, testato e collegato per questo controllo.",
+      "severity": "blocking",
+      "possible_covering_motors": []
+    },
+    {
+      "id": "qm_037_test_quiz_risposta_corretta_visibile",
+      "area": "test_quiz",
+      "title": "Risposta corretta visibile",
+      "status": "DA_RICREARE",
+      "reason": "Non esiste ancora evidenza stretta di un motore atomico autonomo, universale, registrato, testato e collegato per questo controllo.",
+      "severity": "blocking",
+      "possible_covering_motors": []
+    },
+    {
+      "id": "qm_038_test_quiz_mappa_sicura_tra_risposta_interna_e_visibile",
+      "area": "test_quiz",
+      "title": "Mappa sicura tra risposta interna e visibile",
+      "status": "DA_RICREARE",
+      "reason": "Non esiste ancora evidenza stretta di un motore atomico autonomo, universale, registrato, testato e collegato per questo controllo.",
+      "severity": "blocking",
+      "possible_covering_motors": []
+    },
+    {
+      "id": "qm_039_test_quiz_quattro_opzioni_per_domanda",
+      "area": "test_quiz",
+      "title": "Quattro opzioni per domanda",
+      "status": "DA_RICREARE",
+      "reason": "Non esiste ancora evidenza stretta di un motore atomico autonomo, universale, registrato, testato e collegato per questo controllo.",
+      "severity": "blocking",
+      "possible_covering_motors": []
+    },
+    {
+      "id": "qm_040_test_quiz_risposta_corretta_presente_tra_le_opzioni",
+      "area": "test_quiz",
+      "title": "Risposta corretta presente tra le opzioni",
+      "status": "DA_RICREARE",
+      "reason": "Non esiste ancora evidenza stretta di un motore atomico autonomo, universale, registrato, testato e collegato per questo controllo.",
+      "severity": "blocking",
+      "possible_covering_motors": []
+    },
+    {
+      "id": "qm_041_test_quiz_distrattori_forti",
+      "area": "test_quiz",
+      "title": "Distrattori forti",
+      "status": "DA_RICREARE",
+      "reason": "Non esiste ancora evidenza stretta di un motore atomico autonomo, universale, registrato, testato e collegato per questo controllo.",
+      "severity": "blocking",
+      "possible_covering_motors": []
+    },
+    {
+      "id": "qm_042_test_quiz_niente_opzioni_duplicate_nella_stessa_domanda",
+      "area": "test_quiz",
+      "title": "Niente opzioni duplicate nella stessa domanda",
+      "status": "DA_RICREARE",
+      "reason": "Non esiste ancora evidenza stretta di un motore atomico autonomo, universale, registrato, testato e collegato per questo controllo.",
+      "severity": "blocking",
+      "possible_covering_motors": []
+    },
+    {
+      "id": "qm_043_test_quiz_niente_ripetizioni_globali_eccessive",
+      "area": "test_quiz",
+      "title": "Niente ripetizioni globali eccessive",
+      "status": "DA_RICREARE",
+      "reason": "Non esiste ancora evidenza stretta di un motore atomico autonomo, universale, registrato, testato e collegato per questo controllo.",
+      "severity": "blocking",
+      "possible_covering_motors": []
+    },
+    {
+      "id": "qm_044_test_quiz_compatibilita_bridge_quiz_v3_5b",
+      "area": "test_quiz",
+      "title": "Compatibilità bridge quiz V3.5B",
+      "status": "DA_RICREARE",
+      "reason": "Non esiste ancora evidenza stretta di un motore atomico autonomo, universale, registrato, testato e collegato per questo controllo.",
+      "severity": "blocking",
+      "possible_covering_motors": []
+    },
+    {
+      "id": "qm_045_duplicati_contestuali_duplicati_esatti",
+      "area": "duplicati_contestuali",
+      "title": "Duplicati esatti",
+      "status": "DA_RICREARE",
+      "reason": "Non esiste ancora evidenza stretta di un motore atomico autonomo, universale, registrato, testato e collegato per questo controllo.",
+      "severity": "blocking",
+      "possible_covering_motors": []
+    },
+    {
+      "id": "qm_046_duplicati_contestuali_quasi_duplicati",
+      "area": "duplicati_contestuali",
+      "title": "Quasi duplicati",
+      "status": "DA_RICREARE",
+      "reason": "Non esiste ancora evidenza stretta di un motore atomico autonomo, universale, registrato, testato e collegato per questo controllo.",
+      "severity": "blocking",
+      "possible_covering_motors": []
+    },
+    {
+      "id": "qm_047_duplicati_contestuali_ripetizioni_inutili",
+      "area": "duplicati_contestuali",
+      "title": "Ripetizioni inutili",
+      "status": "DA_RICREARE",
+      "reason": "Non esiste ancora evidenza stretta di un motore atomico autonomo, universale, registrato, testato e collegato per questo controllo.",
+      "severity": "blocking",
+      "possible_covering_motors": []
+    },
+    {
+      "id": "qm_048_duplicati_contestuali_ripetizioni_meccaniche_tra_domande",
+      "area": "duplicati_contestuali",
+      "title": "Ripetizioni meccaniche tra domande",
+      "status": "DA_RICREARE",
+      "reason": "Non esiste ancora evidenza stretta di un motore atomico autonomo, universale, registrato, testato e collegato per questo controllo.",
+      "severity": "blocking",
+      "possible_covering_motors": []
+    },
+    {
+      "id": "qm_049_duplicati_contestuali_frasi_troppo_simili",
+      "area": "duplicati_contestuali",
+      "title": "Frasi troppo simili",
+      "status": "DA_RICREARE",
+      "reason": "Non esiste ancora evidenza stretta di un motore atomico autonomo, universale, registrato, testato e collegato per questo controllo.",
+      "severity": "blocking",
+      "possible_covering_motors": []
+    },
+    {
+      "id": "qm_050_duplicati_contestuali_stesso_contenuto_ripetuto_senza_motivo",
+      "area": "duplicati_contestuali",
+      "title": "Stesso contenuto ripetuto senza motivo",
+      "status": "DA_RICREARE",
+      "reason": "Non esiste ancora evidenza stretta di un motore atomico autonomo, universale, registrato, testato e collegato per questo controllo.",
+      "severity": "blocking",
+      "possible_covering_motors": []
+    },
+    {
+      "id": "qm_051_selettore_orchestratore_il_compito_richiesto_deve_selezionare_i_motori_giusti",
+      "area": "selettore_orchestratore",
+      "title": "Il compito richiesto deve selezionare i motori giusti",
+      "status": "DA_RICREARE",
+      "reason": "Non esiste ancora evidenza stretta di un motore atomico autonomo, universale, registrato, testato e collegato per questo controllo.",
+      "severity": "blocking",
+      "possible_covering_motors": []
+    },
+    {
+      "id": "qm_052_selettore_orchestratore_riassunto_seleziona_motore_didattico",
+      "area": "selettore_orchestratore",
+      "title": "Riassunto seleziona motore didattico",
+      "status": "DA_RICREARE",
+      "reason": "Non esiste ancora evidenza stretta di un motore atomico autonomo, universale, registrato, testato e collegato per questo controllo.",
+      "severity": "blocking",
+      "possible_covering_motors": []
+    },
+    {
+      "id": "qm_053_selettore_orchestratore_card_seleziona_motore_didattico_e_layout",
+      "area": "selettore_orchestratore",
+      "title": "Card seleziona motore didattico e layout",
+      "status": "DA_RICREARE",
+      "reason": "Non esiste ancora evidenza stretta di un motore atomico autonomo, universale, registrato, testato e collegato per questo controllo.",
+      "severity": "blocking",
+      "possible_covering_motors": []
+    },
+    {
+      "id": "qm_054_selettore_orchestratore_domande_studio_selezionano_motore_didattico",
+      "area": "selettore_orchestratore",
+      "title": "Domande studio selezionano motore didattico",
+      "status": "DA_RICREARE",
+      "reason": "Non esiste ancora evidenza stretta di un motore atomico autonomo, universale, registrato, testato e collegato per questo controllo.",
+      "severity": "blocking",
+      "possible_covering_motors": []
+    },
+    {
+      "id": "qm_055_selettore_orchestratore_test_seleziona_bridge_quiz_e_motore_test",
+      "area": "selettore_orchestratore",
+      "title": "Test seleziona bridge quiz e motore test",
+      "status": "DA_RICREARE",
+      "reason": "Non esiste ancora evidenza stretta di un motore atomico autonomo, universale, registrato, testato e collegato per questo controllo.",
+      "severity": "blocking",
+      "possible_covering_motors": []
+    },
+    {
+      "id": "qm_056_selettore_orchestratore_completo_pdf_app_web_seleziona_orchestratore",
+      "area": "selettore_orchestratore",
+      "title": "Completo PDF app web seleziona orchestratore",
+      "status": "DA_RICREARE",
+      "reason": "Non esiste ancora evidenza stretta di un motore atomico autonomo, universale, registrato, testato e collegato per questo controllo.",
+      "severity": "blocking",
+      "possible_covering_motors": []
+    },
+    {
+      "id": "qm_057_selettore_orchestratore_niente_motori_inutili",
+      "area": "selettore_orchestratore",
+      "title": "Niente motori inutili",
+      "status": "DA_RICREARE",
+      "reason": "Non esiste ancora evidenza stretta di un motore atomico autonomo, universale, registrato, testato e collegato per questo controllo.",
+      "severity": "blocking",
+      "possible_covering_motors": []
+    },
+    {
+      "id": "qm_058_selettore_orchestratore_niente_output_non_richiesto",
+      "area": "selettore_orchestratore",
+      "title": "Niente output non richiesto",
+      "status": "DA_RICREARE",
+      "reason": "Non esiste ancora evidenza stretta di un motore atomico autonomo, universale, registrato, testato e collegato per questo controllo.",
+      "severity": "blocking",
+      "possible_covering_motors": []
+    },
+    {
+      "id": "qm_059_selettore_orchestratore_output_finale_pronto_per_ui_pdf_app",
+      "area": "selettore_orchestratore",
+      "title": "Output finale pronto per UI PDF app",
+      "status": "DA_VERIFICARE",
+      "reason": "Possibile copertura indiretta nei motori salvabili, ma non ancora dimostrata come controllo atomico autonomo con test dedicato.",
+      "severity": "blocking",
+      "possible_covering_motors": [
+        "pipeline output ready"
+      ]
+    },
+    {
+      "id": "qm_060_selettore_orchestratore_report_qualita_sempre_leggibile",
+      "area": "selettore_orchestratore",
+      "title": "Report qualità sempre leggibile",
+      "status": "DA_RICREARE",
+      "reason": "Non esiste ancora evidenza stretta di un motore atomico autonomo, universale, registrato, testato e collegato per questo controllo.",
+      "severity": "blocking",
+      "possible_covering_motors": []
+    },
+    {
+      "id": "qm_061_naturalezza_linguistica_naturalezza_linguistica_anti_keyword",
+      "area": "naturalezza_linguistica",
+      "title": "Naturalezza linguistica anti-keyword",
+      "status": "DA_RICREARE",
+      "reason": "Non esiste ancora evidenza stretta di un motore atomico autonomo, universale, registrato, testato e collegato per questo controllo.",
+      "severity": "blocking",
+      "possible_covering_motors": []
+    },
+    {
+      "id": "qm_062_accordo_grammaticale_accordo_grammaticale_e_pronomi",
+      "area": "accordo_grammaticale",
+      "title": "Accordo grammaticale e pronomi",
+      "status": "DA_RICREARE",
+      "reason": "Non esiste ancora evidenza stretta di un motore atomico autonomo, universale, registrato, testato e collegato per questo controllo.",
+      "severity": "blocking",
+      "possible_covering_motors": []
+    },
+    {
+      "id": "qm_063_repair_contestuale_correzione_frasi_non_finite_usando_contesto_tema_sottotema_categorie_e_",
+      "area": "repair_contestuale",
+      "title": "Correzione frasi non finite usando contesto tema sottotema categorie e sottocategorie",
+      "status": "DA_RICREARE",
+      "reason": "Non esiste ancora evidenza stretta di un motore atomico autonomo, universale, registrato, testato e collegato per questo controllo.",
+      "severity": "blocking",
+      "possible_covering_motors": []
+    },
+    {
+      "id": "qm_064_repair_ortografico_correzione_parole_con_lettere_invertite",
+      "area": "repair_ortografico",
+      "title": "Correzione parole con lettere invertite",
+      "status": "DA_RICREARE",
+      "reason": "Non esiste ancora evidenza stretta di un motore atomico autonomo, universale, registrato, testato e collegato per questo controllo.",
+      "severity": "blocking",
+      "possible_covering_motors": []
+    }
+  ],
+  "important_interpretation": {
+    "salvable_motors": "Motori reali già presenti nei registry/report finali PASS.",
+    "atomic_controls": "Controlli richiesti dall'utente: se non hanno motore autonomo testato e collegato, sono da ricreare.",
+    "no_global_duplicate_rule": "Le ripetizioni vanno controllate per area e contesto, non su tutto il documento in modo cieco."
+  },
+  "scope_guard": {
+    "created_new_motors": false,
+    "deleted_existing_project_files": false,
+    "changed_pipeline_5_11": false,
+    "touched_ui_pdf_css_app": false,
+    "classification_only": true
+  },
+  "report_files": {
+    "json": "reports/phase5_12a1_motori_salvabili_strict_v1.json",
+    "markdown": "reports/phase5_12a1_motori_salvabili_strict_v1.md"
+  }
+}
