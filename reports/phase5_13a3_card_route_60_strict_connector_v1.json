@@ -1,0 +1,1043 @@
+{
+  "phase": "5.13A.3",
+  "label": "FASE 5.13A.3 — CARD ROUTE 60 STRICT CONNECTOR",
+  "status": "PASS - Fase 5.13A.3: CARD_ROUTE_60_STRICT_CONNECTOR_READY",
+  "expected_controls": 60,
+  "connected_controls": 60,
+  "executed_controls": 60,
+  "passed_controls": 60,
+  "failed_controls": 0,
+  "cards_checked": 4,
+  "route_controls": [
+    {
+      "route_slot": 1,
+      "control_id": "qm_001",
+      "control_name": "Grammatica italiana corretta",
+      "group": "Controlli qualità testuale",
+      "universal": "sì",
+      "executor_name": "exec_grammar"
+    },
+    {
+      "route_slot": 2,
+      "control_id": "qm_002",
+      "control_name": "Accenti corretti",
+      "group": "Controlli qualità testuale",
+      "universal": "sì",
+      "executor_name": "exec_accents"
+    },
+    {
+      "route_slot": 3,
+      "control_id": "qm_003",
+      "control_name": "Apostrofi corretti",
+      "group": "Controlli qualità testuale",
+      "universal": "sì",
+      "executor_name": "exec_apostrophes"
+    },
+    {
+      "route_slot": 4,
+      "control_id": "qm_004",
+      "control_name": "Punteggiatura corretta",
+      "group": "Controlli qualità testuale",
+      "universal": "sì",
+      "executor_name": "exec_punctuation"
+    },
+    {
+      "route_slot": 5,
+      "control_id": "qm_005",
+      "control_name": "Spazi corretti prima/dopo punteggiatura",
+      "group": "Controlli qualità testuale",
+      "universal": "sì",
+      "executor_name": "exec_spacing"
+    },
+    {
+      "route_slot": 6,
+      "control_id": "qm_006",
+      "control_name": "Frasi complete",
+      "group": "Controlli qualità testuale",
+      "universal": "sì",
+      "executor_name": "exec_complete_sentences"
+    },
+    {
+      "route_slot": 7,
+      "control_id": "qm_007",
+      "control_name": "Assenza di frasi spezzate",
+      "group": "Controlli qualità testuale",
+      "universal": "sì",
+      "executor_name": "exec_broken_sentences"
+    },
+    {
+      "route_slot": 8,
+      "control_id": "qm_008",
+      "control_name": "Assenza di frasi non terminate",
+      "group": "Controlli qualità testuale",
+      "universal": "sì",
+      "executor_name": "exec_unfinished_sentences"
+    },
+    {
+      "route_slot": 9,
+      "control_id": "qm_009",
+      "control_name": "Assenza di finali sospetti",
+      "group": "Controlli qualità testuale",
+      "universal": "sì",
+      "executor_name": "exec_suspicious_endings"
+    },
+    {
+      "route_slot": 10,
+      "control_id": "qm_010",
+      "control_name": "Assenza di frasi riempitive",
+      "group": "Controlli qualità testuale",
+      "universal": "sì",
+      "executor_name": "exec_no_filler"
+    },
+    {
+      "route_slot": 11,
+      "control_id": "qm_011",
+      "control_name": "Assenza di testo generico",
+      "group": "Controlli qualità testuale",
+      "universal": "sì",
+      "executor_name": "exec_no_generic"
+    },
+    {
+      "route_slot": 12,
+      "control_id": "qm_012",
+      "control_name": "Assenza di vecchi fallback/demo/test",
+      "group": "Controlli qualità testuale",
+      "universal": "sì",
+      "executor_name": "exec_no_fallback"
+    },
+    {
+      "route_slot": 13,
+      "control_id": "qm_013",
+      "control_name": "Domande studio naturali",
+      "group": "Controlli qualità didattica",
+      "universal": "no",
+      "executor_name": "exec_didactic_natural"
+    },
+    {
+      "route_slot": 14,
+      "control_id": "qm_014",
+      "control_name": "Domande studio utili per ripassare",
+      "group": "Controlli qualità didattica",
+      "universal": "no",
+      "executor_name": "exec_useful_for_review"
+    },
+    {
+      "route_slot": 15,
+      "control_id": "qm_015",
+      "control_name": "Risposte guida specifiche",
+      "group": "Controlli qualità didattica",
+      "universal": "no",
+      "executor_name": "exec_specific_guidance"
+    },
+    {
+      "route_slot": 16,
+      "control_id": "qm_017",
+      "control_name": "Spiegazioni non troppo corte",
+      "group": "Controlli qualità didattica",
+      "universal": "no",
+      "executor_name": "exec_not_too_short_explanations"
+    },
+    {
+      "route_slot": 17,
+      "control_id": "qm_018",
+      "control_name": "Tono didattico finale",
+      "group": "Controlli qualità didattica",
+      "universal": "no",
+      "executor_name": "exec_final_didactic_tone"
+    },
+    {
+      "route_slot": 18,
+      "control_id": "qm_019",
+      "control_name": "Categorie presenti",
+      "group": "Controlli qualità didattica",
+      "universal": "no",
+      "executor_name": "exec_categories_present"
+    },
+    {
+      "route_slot": 19,
+      "control_id": "qm_020",
+      "control_name": "Sottocategorie presenti",
+      "group": "Controlli qualità didattica",
+      "universal": "no",
+      "executor_name": "exec_subcategories_present"
+    },
+    {
+      "route_slot": 20,
+      "control_id": "qm_021",
+      "control_name": "Coerenza tra domanda, risposta e contenuto",
+      "group": "Controlli qualità didattica",
+      "universal": "no",
+      "executor_name": "exec_question_answer_content_coherence"
+    },
+    {
+      "route_slot": 21,
+      "control_id": "qm_022",
+      "control_name": "Niente risposte vaghe",
+      "group": "Controlli qualità didattica",
+      "universal": "no",
+      "executor_name": "exec_no_vague_answers"
+    },
+    {
+      "route_slot": 22,
+      "control_id": "qm_023",
+      "control_name": "Card scritte bene",
+      "group": "Controlli card / riassunto / fonti",
+      "universal": "no",
+      "executor_name": "exec_cards_well_written"
+    },
+    {
+      "route_slot": 23,
+      "control_id": "qm_024",
+      "control_name": "Card non troppo corte",
+      "group": "Controlli card / riassunto / fonti",
+      "universal": "no",
+      "executor_name": "exec_cards_not_short"
+    },
+    {
+      "route_slot": 24,
+      "control_id": "qm_025",
+      "control_name": "Card non troppo compresse",
+      "group": "Controlli card / riassunto / fonti",
+      "universal": "no",
+      "executor_name": "exec_cards_not_compressed"
+    },
+    {
+      "route_slot": 25,
+      "control_id": "qm_026",
+      "control_name": "Messaggio chiave completo",
+      "group": "Controlli card / riassunto / fonti",
+      "universal": "no",
+      "executor_name": "exec_key_message_complete"
+    },
+    {
+      "route_slot": 26,
+      "control_id": "qm_027",
+      "control_name": "Riassunto chiaro",
+      "group": "Controlli card / riassunto / fonti",
+      "universal": "no",
+      "executor_name": "exec_summary_clear_for_card"
+    },
+    {
+      "route_slot": 27,
+      "control_id": "qm_028",
+      "control_name": "Punti chiave leggibili",
+      "group": "Controlli card / riassunto / fonti",
+      "universal": "no",
+      "executor_name": "exec_key_points_legible"
+    },
+    {
+      "route_slot": 28,
+      "control_id": "qm_029",
+      "control_name": "Fonti visibili belle",
+      "group": "Controlli card / riassunto / fonti",
+      "universal": "no",
+      "executor_name": "exec_sources_visible_beautiful"
+    },
+    {
+      "route_slot": 29,
+      "control_id": "qm_030",
+      "control_name": "Fonti coerenti",
+      "group": "Controlli card / riassunto / fonti",
+      "universal": "no",
+      "executor_name": "exec_sources_coherent"
+    },
+    {
+      "route_slot": 30,
+      "control_id": "qm_031",
+      "control_name": "Niente fonti brutte",
+      "group": "Controlli card / riassunto / fonti",
+      "universal": "no",
+      "executor_name": "exec_no_ugly_sources"
+    },
+    {
+      "route_slot": 31,
+      "control_id": "qm_032",
+      "control_name": "Layout grafico controllato",
+      "group": "Controlli card / riassunto / fonti",
+      "universal": "no",
+      "executor_name": "exec_layout_controlled"
+    },
+    {
+      "route_slot": 32,
+      "control_id": "qm_033",
+      "control_name": "Test separato da card/riassunto/domande studio",
+      "group": "Controlli test separati",
+      "universal": "no",
+      "executor_name": "exec_test_separated"
+    },
+    {
+      "route_slot": 33,
+      "control_id": "qm_034",
+      "control_name": "Opzioni interne validate",
+      "group": "Controlli test separati",
+      "universal": "no",
+      "executor_name": "exec_options_internal_validated"
+    },
+    {
+      "route_slot": 34,
+      "control_id": "qm_035",
+      "control_name": "Opzioni visibili pulite",
+      "group": "Controlli test separati",
+      "universal": "no",
+      "executor_name": "exec_visible_options_clean"
+    },
+    {
+      "route_slot": 35,
+      "control_id": "qm_038",
+      "control_name": "Mappa sicura tra risposta interna e visibile",
+      "group": "Controlli test separati",
+      "universal": "no",
+      "executor_name": "exec_safe_answer_map"
+    },
+    {
+      "route_slot": 36,
+      "control_id": "qm_039",
+      "control_name": "4 opzioni per domanda",
+      "group": "Controlli test separati",
+      "universal": "no",
+      "executor_name": "exec_four_options"
+    },
+    {
+      "route_slot": 37,
+      "control_id": "qm_040",
+      "control_name": "Risposta corretta presente tra le opzioni",
+      "group": "Controlli test separati",
+      "universal": "no",
+      "executor_name": "exec_correct_in_options"
+    },
+    {
+      "route_slot": 38,
+      "control_id": "qm_042",
+      "control_name": "Niente opzioni duplicate nella stessa domanda",
+      "group": "Controlli test separati",
+      "universal": "no",
+      "executor_name": "exec_no_duplicate_options"
+    },
+    {
+      "route_slot": 39,
+      "control_id": "qm_043",
+      "control_name": "Niente ripetizioni globali eccessive",
+      "group": "Controlli test separati",
+      "universal": "no",
+      "executor_name": "exec_no_global_repetitions"
+    },
+    {
+      "route_slot": 40,
+      "control_id": "qm_044",
+      "control_name": "Compatibilità obbligatoria col bridge motori quiz V3.5B",
+      "group": "Controlli test separati",
+      "universal": "no",
+      "executor_name": "exec_bridge_compatibility"
+    },
+    {
+      "route_slot": 41,
+      "control_id": "qm_045",
+      "control_name": "Duplicati esatti",
+      "group": "Controlli duplicati e ripetizioni",
+      "universal": "sì",
+      "executor_name": "exec_exact_duplicates"
+    },
+    {
+      "route_slot": 42,
+      "control_id": "qm_046",
+      "control_name": "Quasi duplicati",
+      "group": "Controlli duplicati e ripetizioni",
+      "universal": "sì",
+      "executor_name": "exec_near_duplicates"
+    },
+    {
+      "route_slot": 43,
+      "control_id": "qm_047",
+      "control_name": "Ripetizioni inutili",
+      "group": "Controlli duplicati e ripetizioni",
+      "universal": "sì",
+      "executor_name": "exec_useless_repetitions"
+    },
+    {
+      "route_slot": 44,
+      "control_id": "qm_048",
+      "control_name": "Ripetizioni meccaniche tra domande",
+      "group": "Controlli duplicati e ripetizioni",
+      "universal": "no",
+      "executor_name": "exec_mechanical_repetitions_between_questions"
+    },
+    {
+      "route_slot": 45,
+      "control_id": "qm_049",
+      "control_name": "Frasi troppo simili",
+      "group": "Controlli duplicati e ripetizioni",
+      "universal": "sì",
+      "executor_name": "exec_too_similar_sentences"
+    },
+    {
+      "route_slot": 46,
+      "control_id": "qm_050",
+      "control_name": "Stesso contenuto ripetuto senza motivo",
+      "group": "Controlli duplicati e ripetizioni",
+      "universal": "sì",
+      "executor_name": "exec_same_content_without_reason"
+    },
+    {
+      "route_slot": 47,
+      "control_id": "qm_051",
+      "control_name": "Il compito richiesto deve selezionare i motori giusti",
+      "group": "Controlli selezionatore / orchestratore",
+      "universal": "sì",
+      "executor_name": "exec_select_right_motors"
+    },
+    {
+      "route_slot": 48,
+      "control_id": "qm_052",
+      "control_name": "Riassunto → motore didattico",
+      "group": "Controlli selezionatore / orchestratore",
+      "universal": "no",
+      "executor_name": "exec_summary_route_not_required"
+    },
+    {
+      "route_slot": 49,
+      "control_id": "qm_053",
+      "control_name": "Card → motore didattico + layout",
+      "group": "Controlli selezionatore / orchestratore",
+      "universal": "no",
+      "executor_name": "exec_card_didactic_layout_route"
+    },
+    {
+      "route_slot": 50,
+      "control_id": "qm_054",
+      "control_name": "Domande studio → motore didattico",
+      "group": "Controlli selezionatore / orchestratore",
+      "universal": "no",
+      "executor_name": "exec_study_route_not_required"
+    },
+    {
+      "route_slot": 51,
+      "control_id": "qm_055",
+      "control_name": "Test → bridge quiz + motore test + bridge quiz",
+      "group": "Controlli selezionatore / orchestratore",
+      "universal": "no",
+      "executor_name": "exec_test_route_not_required"
+    },
+    {
+      "route_slot": 52,
+      "control_id": "qm_056",
+      "control_name": "Completo/PDF/app/web → orchestratore",
+      "group": "Controlli selezionatore / orchestratore",
+      "universal": "sì",
+      "executor_name": "exec_full_output_orchestrator"
+    },
+    {
+      "route_slot": 53,
+      "control_id": "qm_057",
+      "control_name": "Niente motori inutili",
+      "group": "Controlli selezionatore / orchestratore",
+      "universal": "sì",
+      "executor_name": "exec_no_useless_motors"
+    },
+    {
+      "route_slot": 54,
+      "control_id": "qm_058",
+      "control_name": "Niente output non richiesto",
+      "group": "Controlli selezionatore / orchestratore",
+      "universal": "sì",
+      "executor_name": "exec_no_unrequested_output"
+    },
+    {
+      "route_slot": 55,
+      "control_id": "qm_059",
+      "control_name": "Output finale pronto per UI/PDF/app",
+      "group": "Controlli selezionatore / orchestratore",
+      "universal": "sì",
+      "executor_name": "exec_final_output_ready"
+    },
+    {
+      "route_slot": 56,
+      "control_id": "qm_060",
+      "control_name": "Report qualità sempre leggibile",
+      "group": "Controlli selezionatore / orchestratore",
+      "universal": "sì",
+      "executor_name": "exec_quality_report_readable"
+    },
+    {
+      "route_slot": 57,
+      "control_id": "qm_061",
+      "control_name": "Naturalezza linguistica anti-keyword",
+      "group": "Controlli linguistici avanzati / repair",
+      "universal": "sì",
+      "executor_name": "exec_natural_language_antikeyword"
+    },
+    {
+      "route_slot": 58,
+      "control_id": "qm_062",
+      "control_name": "Accordo grammaticale e pronomi",
+      "group": "Controlli linguistici avanzati / repair",
+      "universal": "sì",
+      "executor_name": "exec_agreement_pronouns"
+    },
+    {
+      "route_slot": 59,
+      "control_id": "qm_063",
+      "control_name": "Correzione frasi non finite con contesto",
+      "group": "Controlli linguistici avanzati / repair",
+      "universal": "sì",
+      "executor_name": "exec_repair_unfinished_context"
+    },
+    {
+      "route_slot": 60,
+      "control_id": "qm_064",
+      "control_name": "Correzione parole scritte male con lettere invertite",
+      "group": "Controlli linguistici avanzati / repair",
+      "universal": "sì",
+      "executor_name": "exec_repair_inverted_letters"
+    }
+  ],
+  "execution_results": [
+    {
+      "route_slot": 1,
+      "control_id": "qm_001",
+      "control_name": "Grammatica italiana corretta",
+      "executed": true,
+      "passed": true,
+      "defects": [],
+      "warnings": []
+    },
+    {
+      "route_slot": 2,
+      "control_id": "qm_002",
+      "control_name": "Accenti corretti",
+      "executed": true,
+      "passed": true,
+      "defects": [],
+      "warnings": []
+    },
+    {
+      "route_slot": 3,
+      "control_id": "qm_003",
+      "control_name": "Apostrofi corretti",
+      "executed": true,
+      "passed": true,
+      "defects": [],
+      "warnings": []
+    },
+    {
+      "route_slot": 4,
+      "control_id": "qm_004",
+      "control_name": "Punteggiatura corretta",
+      "executed": true,
+      "passed": true,
+      "defects": [],
+      "warnings": []
+    },
+    {
+      "route_slot": 5,
+      "control_id": "qm_005",
+      "control_name": "Spazi corretti prima/dopo punteggiatura",
+      "executed": true,
+      "passed": true,
+      "defects": [],
+      "warnings": []
+    },
+    {
+      "route_slot": 6,
+      "control_id": "qm_006",
+      "control_name": "Frasi complete",
+      "executed": true,
+      "passed": true,
+      "defects": [],
+      "warnings": []
+    },
+    {
+      "route_slot": 7,
+      "control_id": "qm_007",
+      "control_name": "Assenza di frasi spezzate",
+      "executed": true,
+      "passed": true,
+      "defects": [],
+      "warnings": []
+    },
+    {
+      "route_slot": 8,
+      "control_id": "qm_008",
+      "control_name": "Assenza di frasi non terminate",
+      "executed": true,
+      "passed": true,
+      "defects": [],
+      "warnings": []
+    },
+    {
+      "route_slot": 9,
+      "control_id": "qm_009",
+      "control_name": "Assenza di finali sospetti",
+      "executed": true,
+      "passed": true,
+      "defects": [],
+      "warnings": []
+    },
+    {
+      "route_slot": 10,
+      "control_id": "qm_010",
+      "control_name": "Assenza di frasi riempitive",
+      "executed": true,
+      "passed": true,
+      "defects": [],
+      "warnings": []
+    },
+    {
+      "route_slot": 11,
+      "control_id": "qm_011",
+      "control_name": "Assenza di testo generico",
+      "executed": true,
+      "passed": true,
+      "defects": [],
+      "warnings": []
+    },
+    {
+      "route_slot": 12,
+      "control_id": "qm_012",
+      "control_name": "Assenza di vecchi fallback/demo/test",
+      "executed": true,
+      "passed": true,
+      "defects": [],
+      "warnings": []
+    },
+    {
+      "route_slot": 13,
+      "control_id": "qm_013",
+      "control_name": "Domande studio naturali",
+      "executed": true,
+      "passed": true,
+      "defects": [],
+      "warnings": []
+    },
+    {
+      "route_slot": 14,
+      "control_id": "qm_014",
+      "control_name": "Domande studio utili per ripassare",
+      "executed": true,
+      "passed": true,
+      "defects": [],
+      "warnings": []
+    },
+    {
+      "route_slot": 15,
+      "control_id": "qm_015",
+      "control_name": "Risposte guida specifiche",
+      "executed": true,
+      "passed": true,
+      "defects": [],
+      "warnings": []
+    },
+    {
+      "route_slot": 16,
+      "control_id": "qm_017",
+      "control_name": "Spiegazioni non troppo corte",
+      "executed": true,
+      "passed": true,
+      "defects": [],
+      "warnings": []
+    },
+    {
+      "route_slot": 17,
+      "control_id": "qm_018",
+      "control_name": "Tono didattico finale",
+      "executed": true,
+      "passed": true,
+      "defects": [],
+      "warnings": []
+    },
+    {
+      "route_slot": 18,
+      "control_id": "qm_019",
+      "control_name": "Categorie presenti",
+      "executed": true,
+      "passed": true,
+      "defects": [],
+      "warnings": []
+    },
+    {
+      "route_slot": 19,
+      "control_id": "qm_020",
+      "control_name": "Sottocategorie presenti",
+      "executed": true,
+      "passed": true,
+      "defects": [],
+      "warnings": []
+    },
+    {
+      "route_slot": 20,
+      "control_id": "qm_021",
+      "control_name": "Coerenza tra domanda, risposta e contenuto",
+      "executed": true,
+      "passed": true,
+      "defects": [],
+      "warnings": []
+    },
+    {
+      "route_slot": 21,
+      "control_id": "qm_022",
+      "control_name": "Niente risposte vaghe",
+      "executed": true,
+      "passed": true,
+      "defects": [],
+      "warnings": []
+    },
+    {
+      "route_slot": 22,
+      "control_id": "qm_023",
+      "control_name": "Card scritte bene",
+      "executed": true,
+      "passed": true,
+      "defects": [],
+      "warnings": []
+    },
+    {
+      "route_slot": 23,
+      "control_id": "qm_024",
+      "control_name": "Card non troppo corte",
+      "executed": true,
+      "passed": true,
+      "defects": [],
+      "warnings": []
+    },
+    {
+      "route_slot": 24,
+      "control_id": "qm_025",
+      "control_name": "Card non troppo compresse",
+      "executed": true,
+      "passed": true,
+      "defects": [],
+      "warnings": []
+    },
+    {
+      "route_slot": 25,
+      "control_id": "qm_026",
+      "control_name": "Messaggio chiave completo",
+      "executed": true,
+      "passed": true,
+      "defects": [],
+      "warnings": []
+    },
+    {
+      "route_slot": 26,
+      "control_id": "qm_027",
+      "control_name": "Riassunto chiaro",
+      "executed": true,
+      "passed": true,
+      "defects": [],
+      "warnings": []
+    },
+    {
+      "route_slot": 27,
+      "control_id": "qm_028",
+      "control_name": "Punti chiave leggibili",
+      "executed": true,
+      "passed": true,
+      "defects": [],
+      "warnings": []
+    },
+    {
+      "route_slot": 28,
+      "control_id": "qm_029",
+      "control_name": "Fonti visibili belle",
+      "executed": true,
+      "passed": true,
+      "defects": [],
+      "warnings": []
+    },
+    {
+      "route_slot": 29,
+      "control_id": "qm_030",
+      "control_name": "Fonti coerenti",
+      "executed": true,
+      "passed": true,
+      "defects": [],
+      "warnings": []
+    },
+    {
+      "route_slot": 30,
+      "control_id": "qm_031",
+      "control_name": "Niente fonti brutte",
+      "executed": true,
+      "passed": true,
+      "defects": [],
+      "warnings": []
+    },
+    {
+      "route_slot": 31,
+      "control_id": "qm_032",
+      "control_name": "Layout grafico controllato",
+      "executed": true,
+      "passed": true,
+      "defects": [],
+      "warnings": []
+    },
+    {
+      "route_slot": 32,
+      "control_id": "qm_033",
+      "control_name": "Test separato da card/riassunto/domande studio",
+      "executed": true,
+      "passed": true,
+      "defects": [],
+      "warnings": []
+    },
+    {
+      "route_slot": 33,
+      "control_id": "qm_034",
+      "control_name": "Opzioni interne validate",
+      "executed": true,
+      "passed": true,
+      "defects": [],
+      "warnings": []
+    },
+    {
+      "route_slot": 34,
+      "control_id": "qm_035",
+      "control_name": "Opzioni visibili pulite",
+      "executed": true,
+      "passed": true,
+      "defects": [],
+      "warnings": []
+    },
+    {
+      "route_slot": 35,
+      "control_id": "qm_038",
+      "control_name": "Mappa sicura tra risposta interna e visibile",
+      "executed": true,
+      "passed": true,
+      "defects": [],
+      "warnings": []
+    },
+    {
+      "route_slot": 36,
+      "control_id": "qm_039",
+      "control_name": "4 opzioni per domanda",
+      "executed": true,
+      "passed": true,
+      "defects": [],
+      "warnings": []
+    },
+    {
+      "route_slot": 37,
+      "control_id": "qm_040",
+      "control_name": "Risposta corretta presente tra le opzioni",
+      "executed": true,
+      "passed": true,
+      "defects": [],
+      "warnings": []
+    },
+    {
+      "route_slot": 38,
+      "control_id": "qm_042",
+      "control_name": "Niente opzioni duplicate nella stessa domanda",
+      "executed": true,
+      "passed": true,
+      "defects": [],
+      "warnings": []
+    },
+    {
+      "route_slot": 39,
+      "control_id": "qm_043",
+      "control_name": "Niente ripetizioni globali eccessive",
+      "executed": true,
+      "passed": true,
+      "defects": [],
+      "warnings": []
+    },
+    {
+      "route_slot": 40,
+      "control_id": "qm_044",
+      "control_name": "Compatibilità obbligatoria col bridge motori quiz V3.5B",
+      "executed": true,
+      "passed": true,
+      "defects": [],
+      "warnings": []
+    },
+    {
+      "route_slot": 41,
+      "control_id": "qm_045",
+      "control_name": "Duplicati esatti",
+      "executed": true,
+      "passed": true,
+      "defects": [],
+      "warnings": []
+    },
+    {
+      "route_slot": 42,
+      "control_id": "qm_046",
+      "control_name": "Quasi duplicati",
+      "executed": true,
+      "passed": true,
+      "defects": [],
+      "warnings": []
+    },
+    {
+      "route_slot": 43,
+      "control_id": "qm_047",
+      "control_name": "Ripetizioni inutili",
+      "executed": true,
+      "passed": true,
+      "defects": [],
+      "warnings": []
+    },
+    {
+      "route_slot": 44,
+      "control_id": "qm_048",
+      "control_name": "Ripetizioni meccaniche tra domande",
+      "executed": true,
+      "passed": true,
+      "defects": [],
+      "warnings": []
+    },
+    {
+      "route_slot": 45,
+      "control_id": "qm_049",
+      "control_name": "Frasi troppo simili",
+      "executed": true,
+      "passed": true,
+      "defects": [],
+      "warnings": []
+    },
+    {
+      "route_slot": 46,
+      "control_id": "qm_050",
+      "control_name": "Stesso contenuto ripetuto senza motivo",
+      "executed": true,
+      "passed": true,
+      "defects": [],
+      "warnings": []
+    },
+    {
+      "route_slot": 47,
+      "control_id": "qm_051",
+      "control_name": "Il compito richiesto deve selezionare i motori giusti",
+      "executed": true,
+      "passed": true,
+      "defects": [],
+      "warnings": []
+    },
+    {
+      "route_slot": 48,
+      "control_id": "qm_052",
+      "control_name": "Riassunto → motore didattico",
+      "executed": true,
+      "passed": true,
+      "defects": [],
+      "warnings": []
+    },
+    {
+      "route_slot": 49,
+      "control_id": "qm_053",
+      "control_name": "Card → motore didattico + layout",
+      "executed": true,
+      "passed": true,
+      "defects": [],
+      "warnings": []
+    },
+    {
+      "route_slot": 50,
+      "control_id": "qm_054",
+      "control_name": "Domande studio → motore didattico",
+      "executed": true,
+      "passed": true,
+      "defects": [],
+      "warnings": []
+    },
+    {
+      "route_slot": 51,
+      "control_id": "qm_055",
+      "control_name": "Test → bridge quiz + motore test + bridge quiz",
+      "executed": true,
+      "passed": true,
+      "defects": [],
+      "warnings": []
+    },
+    {
+      "route_slot": 52,
+      "control_id": "qm_056",
+      "control_name": "Completo/PDF/app/web → orchestratore",
+      "executed": true,
+      "passed": true,
+      "defects": [],
+      "warnings": []
+    },
+    {
+      "route_slot": 53,
+      "control_id": "qm_057",
+      "control_name": "Niente motori inutili",
+      "executed": true,
+      "passed": true,
+      "defects": [],
+      "warnings": []
+    },
+    {
+      "route_slot": 54,
+      "control_id": "qm_058",
+      "control_name": "Niente output non richiesto",
+      "executed": true,
+      "passed": true,
+      "defects": [],
+      "warnings": []
+    },
+    {
+      "route_slot": 55,
+      "control_id": "qm_059",
+      "control_name": "Output finale pronto per UI/PDF/app",
+      "executed": true,
+      "passed": true,
+      "defects": [],
+      "warnings": []
+    },
+    {
+      "route_slot": 56,
+      "control_id": "qm_060",
+      "control_name": "Report qualità sempre leggibile",
+      "executed": true,
+      "passed": true,
+      "defects": [],
+      "warnings": []
+    },
+    {
+      "route_slot": 57,
+      "control_id": "qm_061",
+      "control_name": "Naturalezza linguistica anti-keyword",
+      "executed": true,
+      "passed": true,
+      "defects": [],
+      "warnings": []
+    },
+    {
+      "route_slot": 58,
+      "control_id": "qm_062",
+      "control_name": "Accordo grammaticale e pronomi",
+      "executed": true,
+      "passed": true,
+      "defects": [],
+      "warnings": []
+    },
+    {
+      "route_slot": 59,
+      "control_id": "qm_063",
+      "control_name": "Correzione frasi non finite con contesto",
+      "executed": true,
+      "passed": true,
+      "defects": [],
+      "warnings": []
+    },
+    {
+      "route_slot": 60,
+      "control_id": "qm_064",
+      "control_name": "Correzione parole scritte male con lettere invertite",
+      "executed": true,
+      "passed": true,
+      "defects": [],
+      "warnings": []
+    }
+  ],
+  "defects": [],
+  "warnings": [],
+  "notes": [
+    "Questo report non accetta PASS se i 60 controlli Card non sono tutti collegati.",
+    "Ogni controllo della route Card deve avere executor reale.",
+    "Ogni executor viene eseguito sulle card finali generate.",
+    "Se un titolo resta keyword-based, qm_013/qm_023/qm_061 falliscono."
+  ]
+}

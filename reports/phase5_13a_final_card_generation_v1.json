@@ -1,0 +1,157 @@
+{
+  "phase": "5.13A",
+  "label": "FASE 5.13A — FINAL CARD GENERATION",
+  "status": "PASS - Fase 5.13A: FINAL_CARD_GENERATION_READY",
+  "generated_cards_count": 4,
+  "official_qm_motors": 64,
+  "registry_total": 73,
+  "card_route_total": 60,
+  "card_quality_controls": 52,
+  "selector_orchestrator_controls": 8,
+  "qm_060_report": "REPORT QUALITÀ CARD FINALE\n\nStato generale: PASS\nCard generate: 4\nMotori qualità ufficiali spiegati: 64\nRegistry/orchestrazione totale: 73\n\nRoute Card:\n- 52 controlli qualità + 8 selector/orchestrator = 60 controlli totali\n\nControlli principali applicati:\n- Card scritte bene\n- Card non troppo corte\n- Card non troppo compresse\n- Messaggio chiave completo\n- Punti chiave leggibili\n- Fonti coerenti\n- Layout grafico controllato\n- Niente fallback/demo/test\n\nDefects:\n- nessuno\n\nWarnings:\n- nessuno\n\nEsito:\n- Le card finali sono pronte per il prossimo collegamento UI/PDF/app.",
+  "qm_059_output_ready": true,
+  "cards": [
+    {
+      "card_id": "card_001",
+      "title": "Gestire la sicurezza informatica aziendale con regole operative chiare",
+      "category": "Sicurezza informatica",
+      "source_label": "Fonte: sezione “Sicurezza informatica”.",
+      "key_message": "La sicurezza informatica aziendale richiede regole operative chiare, controlli costanti e comportamenti coerenti da parte degli utenti.",
+      "short_explanation": "La sicurezza informatica aziendale richiede regole operative chiare, controlli costanti e comportamenti coerenti da parte degli utenti. Password robuste, autenticazione a più fattori e gestione corretta degli accessi riducono il rischio di intrusioni e proteggono gli account più sensibili.",
+      "bullets": [
+        "La sicurezza informatica aziendale richiede regole operative chiare, controlli costanti e comportamenti coerenti da parte degli utenti.",
+        "Password robuste, autenticazione a più fattori e gestione corretta degli accessi riducono il rischio di intrusioni e proteggono gli account più sensibili.",
+        "Collega il concetto di autenticazione al contenuto principale della sezione."
+      ],
+      "study_hint": "Ripassa questa card chiedendoti perché il concetto “Gestire la sicurezza informatica aziendale con regole operative chiare” è importante nel contesto del documento.",
+      "visual_role": "final_card_clean_layout_ready",
+      "quality_marks": [
+        "qm_023_card_scritte_bene",
+        "qm_024_card_non_troppo_corte",
+        "qm_025_card_non_troppo_compresse",
+        "qm_026_messaggio_chiave_completo",
+        "qm_028_punti_chiave_leggibili",
+        "qm_030_fonti_coerenti",
+        "qm_032_layout_grafico_controllato"
+      ]
+    },
+    {
+      "card_id": "card_002",
+      "title": "Riconoscere i rischi legati al phishing",
+      "category": "Sicurezza informatica",
+      "source_label": "Fonte: sezione “Sicurezza informatica”.",
+      "key_message": "Il phishing resta una delle minacce più frequenti perché sfrutta distrazione, urgenza e fiducia.",
+      "short_explanation": "Il phishing resta una delle minacce più frequenti perché sfrutta distrazione, urgenza e fiducia. Un messaggio sospetto va controllato osservando mittente, link, allegati, tono della richiesta e coerenza con le procedure interne dell’organizzazione.",
+      "bullets": [
+        "Il phishing resta una delle minacce più frequenti perché sfrutta distrazione, urgenza e fiducia.",
+        "Un messaggio sospetto va controllato osservando mittente, link, allegati, tono della richiesta e coerenza con le procedure interne dell’organizzazione.",
+        "Collega il concetto di controllato al contenuto principale della sezione."
+      ],
+      "study_hint": "Ripassa questa card chiedendoti perché il concetto “Riconoscere i rischi legati al phishing” è importante nel contesto del documento.",
+      "visual_role": "final_card_clean_layout_ready",
+      "quality_marks": [
+        "qm_023_card_scritte_bene",
+        "qm_024_card_non_troppo_corte",
+        "qm_025_card_non_troppo_compresse",
+        "qm_026_messaggio_chiave_completo",
+        "qm_028_punti_chiave_leggibili",
+        "qm_030_fonti_coerenti",
+        "qm_032_layout_grafico_controllato"
+      ]
+    },
+    {
+      "card_id": "card_003",
+      "title": "Proteggere la continuità operativa con il backup",
+      "category": "Sicurezza informatica",
+      "source_label": "Fonte: sezione “Sicurezza informatica”.",
+      "key_message": "Il backup protegge la continuità operativa quando un file viene cancellato, un dispositivo si rompe o un sistema viene colpito da malware.",
+      "short_explanation": "Il backup protegge la continuità operativa quando un file viene cancellato, un dispositivo si rompe o un sistema viene colpito da malware. Una strategia efficace prevede copie aggiornate, test periodici di ripristino e separazione tra dati originali e copie di sicurezza.",
+      "bullets": [
+        "Il backup protegge la continuità operativa quando un file viene cancellato, un dispositivo si rompe o un sistema viene colpito da malware.",
+        "Una strategia efficace prevede copie aggiornate, test periodici di ripristino e separazione tra dati originali e copie di sicurezza.",
+        "Collega il concetto di backup al contenuto principale della sezione."
+      ],
+      "study_hint": "Ripassa questa card chiedendoti perché il concetto “Proteggere la continuità operativa con il backup” è importante nel contesto del documento.",
+      "visual_role": "final_card_clean_layout_ready",
+      "quality_marks": [
+        "qm_023_card_scritte_bene",
+        "qm_024_card_non_troppo_corte",
+        "qm_025_card_non_troppo_compresse",
+        "qm_026_messaggio_chiave_completo",
+        "qm_028_punti_chiave_leggibili",
+        "qm_030_fonti_coerenti",
+        "qm_032_layout_grafico_controllato"
+      ]
+    },
+    {
+      "card_id": "card_004",
+      "title": "Trasformare le regole tecniche in comportamenti quotidiani",
+      "category": "Studio e apprendimento",
+      "source_label": "Fonte: sezione “Studio e apprendimento”.",
+      "key_message": "La formazione degli utenti trasforma le regole tecniche in comportamenti quotidiani.",
+      "short_explanation": "La formazione degli utenti trasforma le regole tecniche in comportamenti quotidiani. Card, riassunti, domande studio e test aiutano a ripassare i concetti principali e a verificare se le procedure sono state capite davvero.",
+      "bullets": [
+        "La formazione degli utenti trasforma le regole tecniche in comportamenti quotidiani.",
+        "Card, riassunti, domande studio e test aiutano a ripassare i concetti principali e a verificare se le procedure sono state capite davvero.",
+        "Collega il concetto di comportamenti al contenuto principale della sezione."
+      ],
+      "study_hint": "Ripassa questa card chiedendoti perché il concetto “Trasformare le regole tecniche in comportamenti quotidiani” è importante nel contesto del documento.",
+      "visual_role": "final_card_clean_layout_ready",
+      "quality_marks": [
+        "qm_023_card_scritte_bene",
+        "qm_024_card_non_troppo_corte",
+        "qm_025_card_non_troppo_compresse",
+        "qm_026_messaggio_chiave_completo",
+        "qm_028_punti_chiave_leggibili",
+        "qm_030_fonti_coerenti",
+        "qm_032_layout_grafico_controllato"
+      ]
+    }
+  ],
+  "validation": {
+    "passed": true,
+    "defects": [],
+    "warnings": [],
+    "checks": [
+      "card_001: titolo valido",
+      "card_001: messaggio chiave completo",
+      "card_001: fonte coerente",
+      "card_001: punti chiave leggibili",
+      "card_001: layout pronto",
+      "card_002: titolo valido",
+      "card_002: messaggio chiave completo",
+      "card_002: fonte coerente",
+      "card_002: punti chiave leggibili",
+      "card_002: layout pronto",
+      "card_003: titolo valido",
+      "card_003: messaggio chiave completo",
+      "card_003: fonte coerente",
+      "card_003: punti chiave leggibili",
+      "card_003: layout pronto",
+      "card_004: titolo valido",
+      "card_004: messaggio chiave completo",
+      "card_004: fonte coerente",
+      "card_004: punti chiave leggibili",
+      "card_004: layout pronto",
+      "Card Route 60 strict connector: connected=60",
+      "Card Route 60 strict connector: executed=60",
+      "Card Route 60 strict connector: passed=60",
+      "Card Route 60 strict connector: failed=0",
+      "Contratto I.2 valido: 64 motori qualità ufficiali.",
+      "Contratto J valido: qm_060 e qm_059 ready.",
+      "Route Card valida: 60 controlli collegati, eseguiti e passati.",
+      "Universal Card Title Engine 5.13A.4 attivo.",
+      "Card finali generate con fonti presentabili.",
+      "Card finali pronte per successivo collegamento UI/PDF/app."
+    ]
+  },
+  "defects": [],
+  "warnings": [],
+  "notes": [
+    "Backend/report only.",
+    "Questa fase genera card finali strutturate e validate.",
+    "Non modifica UI/PDF/app.",
+    "Il PDF finale verrà collegato in una fase successiva.",
+    "Le card usano la route Card: 52 controlli qualità + 8 selector/orchestrator = 60."
+  ]
+}
