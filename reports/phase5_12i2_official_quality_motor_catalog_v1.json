@@ -1,0 +1,954 @@
+{
+  "phase": "5.12I.2",
+  "label": "FASE 5.12I.2 — CATALOGO UFFICIALE MOTORI QUALITÀ DA LISTA SALVATA",
+  "status": "PASS - Fase 5.12I.2: OFFICIAL_QUALITY_MOTOR_CATALOG_READY",
+  "official_qm_motors_count": 64,
+  "registry_total_after_h2": 73,
+  "registry_total_note": "Il registry H.2 conta 73 elementi di orchestrazione/route; la lista ufficiale salvata dei motori qualità contiene 64 motori QM spiegati.",
+  "motors": [
+    {
+      "qm_id": "qm_001",
+      "number": 1,
+      "group": "Controlli qualità testuale",
+      "name": "Grammatica italiana corretta",
+      "what_it_does": "Controlla che l’output non contenga errori grammaticali italiani.",
+      "universal": "sì",
+      "used_by_sections": [
+        "card",
+        "summary",
+        "study_questions",
+        "test_quiz"
+      ],
+      "state": "attivo"
+    },
+    {
+      "qm_id": "qm_002",
+      "number": 2,
+      "group": "Controlli qualità testuale",
+      "name": "Accenti corretti",
+      "what_it_does": "Controlla accenti su parole come perché, può, più, già, cioè, così, però, qual è.",
+      "universal": "sì",
+      "used_by_sections": [
+        "card",
+        "summary",
+        "study_questions",
+        "test_quiz"
+      ],
+      "state": "attivo"
+    },
+    {
+      "qm_id": "qm_003",
+      "number": 3,
+      "group": "Controlli qualità testuale",
+      "name": "Apostrofi corretti",
+      "what_it_does": "Controlla apostrofi in forme come un’informazione, un’idea, un’azione, l’utente, d’accordo.",
+      "universal": "sì",
+      "used_by_sections": [
+        "card",
+        "summary",
+        "study_questions",
+        "test_quiz"
+      ],
+      "state": "attivo"
+    },
+    {
+      "qm_id": "qm_004",
+      "number": 4,
+      "group": "Controlli qualità testuale",
+      "name": "Punteggiatura corretta",
+      "what_it_does": "Controlla uso corretto di punti, virgole, due punti, punti interrogativi ed esclamativi.",
+      "universal": "sì",
+      "used_by_sections": [
+        "card",
+        "summary",
+        "study_questions",
+        "test_quiz"
+      ],
+      "state": "attivo"
+    },
+    {
+      "qm_id": "qm_005",
+      "number": 5,
+      "group": "Controlli qualità testuale",
+      "name": "Spazi corretti prima/dopo punteggiatura",
+      "what_it_does": "Controlla spazi doppi, spazi mancanti e spazi errati prima o dopo la punteggiatura.",
+      "universal": "sì",
+      "used_by_sections": [
+        "card",
+        "summary",
+        "study_questions",
+        "test_quiz"
+      ],
+      "state": "attivo"
+    },
+    {
+      "qm_id": "qm_006",
+      "number": 6,
+      "group": "Controlli qualità testuale",
+      "name": "Frasi complete",
+      "what_it_does": "Verifica che le frasi abbiano senso compiuto e struttura completa.",
+      "universal": "sì",
+      "used_by_sections": [
+        "card",
+        "summary",
+        "study_questions",
+        "test_quiz"
+      ],
+      "state": "attivo"
+    },
+    {
+      "qm_id": "qm_007",
+      "number": 7,
+      "group": "Controlli qualità testuale",
+      "name": "Assenza di frasi spezzate",
+      "what_it_does": "Blocca frasi spezzate, tagliate o montate male.",
+      "universal": "sì",
+      "used_by_sections": [
+        "card",
+        "summary",
+        "study_questions",
+        "test_quiz"
+      ],
+      "state": "attivo"
+    },
+    {
+      "qm_id": "qm_008",
+      "number": 8,
+      "group": "Controlli qualità testuale",
+      "name": "Assenza di frasi non terminate",
+      "what_it_does": "Blocca frasi che iniziano ma non arrivano a una chiusura logica.",
+      "universal": "sì",
+      "used_by_sections": [
+        "card",
+        "summary",
+        "study_questions",
+        "test_quiz"
+      ],
+      "state": "attivo"
+    },
+    {
+      "qm_id": "qm_009",
+      "number": 9,
+      "group": "Controlli qualità testuale",
+      "name": "Assenza di finali sospetti",
+      "what_it_does": "Blocca finali sospetti come frasi che finiscono con e, di, con, per, che, del, della.",
+      "universal": "sì",
+      "used_by_sections": [
+        "card",
+        "summary",
+        "study_questions",
+        "test_quiz"
+      ],
+      "state": "attivo"
+    },
+    {
+      "qm_id": "qm_010",
+      "number": 10,
+      "group": "Controlli qualità testuale",
+      "name": "Assenza di frasi riempitive",
+      "what_it_does": "Blocca frasi inutili, decorative, vuote o che allungano senza aggiungere contenuto.",
+      "universal": "sì",
+      "used_by_sections": [
+        "card",
+        "summary",
+        "study_questions",
+        "test_quiz"
+      ],
+      "state": "attivo"
+    },
+    {
+      "qm_id": "qm_011",
+      "number": 11,
+      "group": "Controlli qualità testuale",
+      "name": "Assenza di testo generico",
+      "what_it_does": "Blocca frasi generiche come documento analizzato, contenuti generati, punto centrale quando non sono specifiche.",
+      "universal": "sì",
+      "used_by_sections": [
+        "card",
+        "summary",
+        "study_questions",
+        "test_quiz"
+      ],
+      "state": "attivo"
+    },
+    {
+      "qm_id": "qm_012",
+      "number": 12,
+      "group": "Controlli qualità testuale",
+      "name": "Assenza di vecchi fallback/demo/test",
+      "what_it_does": "Blocca residui di fallback, demo, esempi di test e testi vecchi non derivati dal documento reale.",
+      "universal": "sì",
+      "used_by_sections": [
+        "card",
+        "summary",
+        "study_questions",
+        "test_quiz"
+      ],
+      "state": "attivo"
+    },
+    {
+      "qm_id": "qm_013",
+      "number": 13,
+      "group": "Controlli qualità didattica",
+      "name": "Domande studio naturali",
+      "what_it_does": "Verifica che le domande studio siano naturali e non robotiche.",
+      "universal": "no",
+      "used_by_sections": [
+        "study_questions"
+      ],
+      "state": "attivo"
+    },
+    {
+      "qm_id": "qm_014",
+      "number": 14,
+      "group": "Controlli qualità didattica",
+      "name": "Domande studio utili per ripassare",
+      "what_it_does": "Verifica che le domande aiutino davvero a ripassare il contenuto.",
+      "universal": "no",
+      "used_by_sections": [
+        "study_questions"
+      ],
+      "state": "attivo"
+    },
+    {
+      "qm_id": "qm_015",
+      "number": 15,
+      "group": "Controlli qualità didattica",
+      "name": "Risposte guida specifiche",
+      "what_it_does": "Verifica che le risposte guida siano specifiche, concrete e aderenti al contenuto.",
+      "universal": "no",
+      "used_by_sections": [
+        "study_questions"
+      ],
+      "state": "attivo"
+    },
+    {
+      "qm_id": "qm_016",
+      "number": 16,
+      "group": "Controlli qualità didattica",
+      "name": "Spiegazioni test chiare",
+      "what_it_does": "Verifica che le spiegazioni dei quiz siano chiare e comprensibili.",
+      "universal": "no",
+      "used_by_sections": [
+        "test_quiz"
+      ],
+      "state": "attivo"
+    },
+    {
+      "qm_id": "qm_017",
+      "number": 17,
+      "group": "Controlli qualità didattica",
+      "name": "Spiegazioni non troppo corte",
+      "what_it_does": "Blocca spiegazioni troppo brevi, vuote o insufficienti.",
+      "universal": "no",
+      "used_by_sections": [
+        "test_quiz",
+        "study_questions"
+      ],
+      "state": "attivo"
+    },
+    {
+      "qm_id": "qm_018",
+      "number": 18,
+      "group": "Controlli qualità didattica",
+      "name": "Tono didattico finale",
+      "what_it_does": "Controlla che il tono sia didattico, utile e adatto allo studio.",
+      "universal": "no",
+      "used_by_sections": [
+        "summary",
+        "study_questions",
+        "test_quiz"
+      ],
+      "state": "attivo"
+    },
+    {
+      "qm_id": "qm_019",
+      "number": 19,
+      "group": "Controlli qualità didattica",
+      "name": "Categorie presenti",
+      "what_it_does": "Verifica che siano presenti categorie quando servono a organizzare il contenuto.",
+      "universal": "no",
+      "used_by_sections": [
+        "card",
+        "summary",
+        "study_questions",
+        "test_quiz"
+      ],
+      "state": "attivo"
+    },
+    {
+      "qm_id": "qm_020",
+      "number": 20,
+      "group": "Controlli qualità didattica",
+      "name": "Sottocategorie presenti",
+      "what_it_does": "Verifica che siano presenti sottocategorie quando servono a rendere l’output più preciso.",
+      "universal": "no",
+      "used_by_sections": [
+        "card",
+        "summary",
+        "study_questions",
+        "test_quiz"
+      ],
+      "state": "attivo"
+    },
+    {
+      "qm_id": "qm_021",
+      "number": 21,
+      "group": "Controlli qualità didattica",
+      "name": "Coerenza tra domanda, risposta e contenuto",
+      "what_it_does": "Controlla che domanda, risposta e contenuto originale siano coerenti.",
+      "universal": "no",
+      "used_by_sections": [
+        "study_questions",
+        "test_quiz"
+      ],
+      "state": "attivo"
+    },
+    {
+      "qm_id": "qm_022",
+      "number": 22,
+      "group": "Controlli qualità didattica",
+      "name": "Niente risposte vaghe",
+      "what_it_does": "Blocca risposte vaghe, generiche o scollegate dal documento.",
+      "universal": "no",
+      "used_by_sections": [
+        "study_questions",
+        "test_quiz"
+      ],
+      "state": "attivo"
+    },
+    {
+      "qm_id": "qm_023",
+      "number": 23,
+      "group": "Controlli card / riassunto / fonti",
+      "name": "Card scritte bene",
+      "what_it_does": "Verifica che le card siano scritte bene, leggibili e utili.",
+      "universal": "no",
+      "used_by_sections": [
+        "card"
+      ],
+      "state": "attivo"
+    },
+    {
+      "qm_id": "qm_024",
+      "number": 24,
+      "group": "Controlli card / riassunto / fonti",
+      "name": "Card non troppo corte",
+      "what_it_does": "Blocca card troppo povere o con contenuto insufficiente.",
+      "universal": "no",
+      "used_by_sections": [
+        "card"
+      ],
+      "state": "attivo"
+    },
+    {
+      "qm_id": "qm_025",
+      "number": 25,
+      "group": "Controlli card / riassunto / fonti",
+      "name": "Card non troppo compresse",
+      "what_it_does": "Blocca card troppo dense, schiacciate o difficili da leggere.",
+      "universal": "no",
+      "used_by_sections": [
+        "card"
+      ],
+      "state": "attivo"
+    },
+    {
+      "qm_id": "qm_026",
+      "number": 26,
+      "group": "Controlli card / riassunto / fonti",
+      "name": "Messaggio chiave completo",
+      "what_it_does": "Verifica che il messaggio chiave sia completo e non monco.",
+      "universal": "no",
+      "used_by_sections": [
+        "card",
+        "summary"
+      ],
+      "state": "attivo"
+    },
+    {
+      "qm_id": "qm_027",
+      "number": 27,
+      "group": "Controlli card / riassunto / fonti",
+      "name": "Riassunto chiaro",
+      "what_it_does": "Verifica che il riassunto sia chiaro, ordinato e comprensibile.",
+      "universal": "no",
+      "used_by_sections": [
+        "summary"
+      ],
+      "state": "attivo"
+    },
+    {
+      "qm_id": "qm_028",
+      "number": 28,
+      "group": "Controlli card / riassunto / fonti",
+      "name": "Punti chiave leggibili",
+      "what_it_does": "Verifica che i punti chiave siano leggibili, utili e non confusi.",
+      "universal": "no",
+      "used_by_sections": [
+        "card",
+        "summary"
+      ],
+      "state": "attivo"
+    },
+    {
+      "qm_id": "qm_029",
+      "number": 29,
+      "group": "Controlli card / riassunto / fonti",
+      "name": "Fonti visibili belle",
+      "what_it_does": "Verifica che le fonti siano visibili, pulite e presentate bene.",
+      "universal": "no",
+      "used_by_sections": [
+        "card",
+        "summary"
+      ],
+      "state": "attivo"
+    },
+    {
+      "qm_id": "qm_030",
+      "number": 30,
+      "group": "Controlli card / riassunto / fonti",
+      "name": "Fonti coerenti",
+      "what_it_does": "Verifica fonti coerenti, ad esempio Fonte: sezione “Sicurezza informatica”.",
+      "universal": "no",
+      "used_by_sections": [
+        "card",
+        "summary"
+      ],
+      "state": "attivo"
+    },
+    {
+      "qm_id": "qm_031",
+      "number": 31,
+      "group": "Controlli card / riassunto / fonti",
+      "name": "Niente fonti brutte",
+      "what_it_does": "Blocca fonti brutte o tecniche come knowledge_base_json o Documento analizzato.",
+      "universal": "no",
+      "used_by_sections": [
+        "card",
+        "summary"
+      ],
+      "state": "attivo"
+    },
+    {
+      "qm_id": "qm_032",
+      "number": 32,
+      "group": "Controlli card / riassunto / fonti",
+      "name": "Layout grafico controllato",
+      "what_it_does": "Controlla struttura, layout grafico, leggibilità e ordine visuale.",
+      "universal": "no",
+      "used_by_sections": [
+        "card"
+      ],
+      "state": "attivo"
+    },
+    {
+      "qm_id": "qm_033",
+      "number": 33,
+      "group": "Controlli test separati",
+      "name": "Test separato da card/riassunto/domande studio",
+      "what_it_does": "Garantisce che il test non venga mischiato con card, riassunto o domande studio.",
+      "universal": "no",
+      "used_by_sections": [
+        "test_quiz"
+      ],
+      "state": "attivo"
+    },
+    {
+      "qm_id": "qm_034",
+      "number": 34,
+      "group": "Controlli test separati",
+      "name": "Opzioni interne validate",
+      "what_it_does": "Valida le opzioni interne del quiz prima della visualizzazione.",
+      "universal": "no",
+      "used_by_sections": [
+        "test_quiz"
+      ],
+      "state": "attivo"
+    },
+    {
+      "qm_id": "qm_035",
+      "number": 35,
+      "group": "Controlli test separati",
+      "name": "Opzioni visibili pulite",
+      "what_it_does": "Controlla che le opzioni mostrate all’utente siano pulite e leggibili.",
+      "universal": "no",
+      "used_by_sections": [
+        "test_quiz"
+      ],
+      "state": "attivo"
+    },
+    {
+      "qm_id": "qm_036",
+      "number": 36,
+      "group": "Controlli test separati",
+      "name": "Risposta corretta interna",
+      "what_it_does": "Verifica che la risposta corretta interna sia presente e valida.",
+      "universal": "no",
+      "used_by_sections": [
+        "test_quiz"
+      ],
+      "state": "attivo"
+    },
+    {
+      "qm_id": "qm_037",
+      "number": 37,
+      "group": "Controlli test separati",
+      "name": "Risposta corretta visibile",
+      "what_it_does": "Verifica che la risposta corretta visibile sia coerente con quella interna.",
+      "universal": "no",
+      "used_by_sections": [
+        "test_quiz"
+      ],
+      "state": "attivo"
+    },
+    {
+      "qm_id": "qm_038",
+      "number": 38,
+      "group": "Controlli test separati",
+      "name": "Mappa sicura tra risposta interna e visibile",
+      "what_it_does": "Controlla la mappa tra risposta interna, risposta visibile e opzioni.",
+      "universal": "no",
+      "used_by_sections": [
+        "test_quiz"
+      ],
+      "state": "attivo"
+    },
+    {
+      "qm_id": "qm_039",
+      "number": 39,
+      "group": "Controlli test separati",
+      "name": "4 opzioni per domanda",
+      "what_it_does": "Verifica che ogni domanda abbia esattamente quattro opzioni.",
+      "universal": "no",
+      "used_by_sections": [
+        "test_quiz"
+      ],
+      "state": "attivo"
+    },
+    {
+      "qm_id": "qm_040",
+      "number": 40,
+      "group": "Controlli test separati",
+      "name": "Risposta corretta presente tra le opzioni",
+      "what_it_does": "Verifica che la risposta corretta sia presente tra le opzioni disponibili.",
+      "universal": "no",
+      "used_by_sections": [
+        "test_quiz"
+      ],
+      "state": "attivo"
+    },
+    {
+      "qm_id": "qm_041",
+      "number": 41,
+      "group": "Controlli test separati",
+      "name": "Distrattori forti",
+      "what_it_does": "Verifica che i distrattori siano plausibili, forti e non banali.",
+      "universal": "no",
+      "used_by_sections": [
+        "test_quiz"
+      ],
+      "state": "attivo"
+    },
+    {
+      "qm_id": "qm_042",
+      "number": 42,
+      "group": "Controlli test separati",
+      "name": "Niente opzioni duplicate nella stessa domanda",
+      "what_it_does": "Blocca duplicati tra le opzioni della stessa domanda.",
+      "universal": "no",
+      "used_by_sections": [
+        "test_quiz"
+      ],
+      "state": "attivo"
+    },
+    {
+      "qm_id": "qm_043",
+      "number": 43,
+      "group": "Controlli test separati",
+      "name": "Niente ripetizioni globali eccessive",
+      "what_it_does": "Blocca ripetizioni eccessive tra domande, risposte e opzioni.",
+      "universal": "no",
+      "used_by_sections": [
+        "test_quiz"
+      ],
+      "state": "attivo"
+    },
+    {
+      "qm_id": "qm_044",
+      "number": 44,
+      "group": "Controlli test separati",
+      "name": "Compatibilità obbligatoria col bridge motori quiz V3.5B",
+      "what_it_does": "Verifica che il quiz sia compatibile con il bridge motori quiz V3.5B.",
+      "universal": "no",
+      "used_by_sections": [
+        "test_quiz"
+      ],
+      "state": "attivo"
+    },
+    {
+      "qm_id": "qm_045",
+      "number": 45,
+      "group": "Controlli duplicati e ripetizioni",
+      "name": "Duplicati esatti",
+      "what_it_does": "Rileva contenuti esattamente duplicati.",
+      "universal": "sì",
+      "used_by_sections": [
+        "card",
+        "summary",
+        "study_questions",
+        "test_quiz"
+      ],
+      "state": "attivo"
+    },
+    {
+      "qm_id": "qm_046",
+      "number": 46,
+      "group": "Controlli duplicati e ripetizioni",
+      "name": "Quasi duplicati",
+      "what_it_does": "Rileva contenuti quasi identici o troppo sovrapponibili.",
+      "universal": "sì",
+      "used_by_sections": [
+        "card",
+        "summary",
+        "study_questions",
+        "test_quiz"
+      ],
+      "state": "attivo"
+    },
+    {
+      "qm_id": "qm_047",
+      "number": 47,
+      "group": "Controlli duplicati e ripetizioni",
+      "name": "Ripetizioni inutili",
+      "what_it_does": "Blocca ripetizioni che non aggiungono valore.",
+      "universal": "sì",
+      "used_by_sections": [
+        "card",
+        "summary",
+        "study_questions",
+        "test_quiz"
+      ],
+      "state": "attivo"
+    },
+    {
+      "qm_id": "qm_048",
+      "number": 48,
+      "group": "Controlli duplicati e ripetizioni",
+      "name": "Ripetizioni meccaniche tra domande",
+      "what_it_does": "Blocca ripetizioni meccaniche tra domande, soprattutto in domande studio e quiz.",
+      "universal": "no",
+      "used_by_sections": [
+        "study_questions",
+        "test_quiz"
+      ],
+      "state": "attivo"
+    },
+    {
+      "qm_id": "qm_049",
+      "number": 49,
+      "group": "Controlli duplicati e ripetizioni",
+      "name": "Frasi troppo simili",
+      "what_it_does": "Rileva frasi troppo simili tra loro.",
+      "universal": "sì",
+      "used_by_sections": [
+        "card",
+        "summary",
+        "study_questions",
+        "test_quiz"
+      ],
+      "state": "attivo"
+    },
+    {
+      "qm_id": "qm_050",
+      "number": 50,
+      "group": "Controlli duplicati e ripetizioni",
+      "name": "Stesso contenuto ripetuto senza motivo",
+      "what_it_does": "Blocca lo stesso contenuto ripetuto senza motivo; distingue però ripetizioni legittime tra sezioni diverse.",
+      "universal": "sì",
+      "used_by_sections": [
+        "card",
+        "summary",
+        "study_questions",
+        "test_quiz"
+      ],
+      "state": "attivo"
+    },
+    {
+      "qm_id": "qm_051",
+      "number": 51,
+      "group": "Controlli selezionatore / orchestratore",
+      "name": "Il compito richiesto deve selezionare i motori giusti",
+      "what_it_does": "Seleziona i motori corretti in base alla richiesta dell’utente.",
+      "universal": "sì",
+      "used_by_sections": [
+        "card",
+        "summary",
+        "study_questions",
+        "test_quiz"
+      ],
+      "state": "attivo"
+    },
+    {
+      "qm_id": "qm_052",
+      "number": 52,
+      "group": "Controlli selezionatore / orchestratore",
+      "name": "Riassunto → motore didattico",
+      "what_it_does": "Quando l’utente chiede un riassunto, instrada verso i motori didattici e di sintesi corretti.",
+      "universal": "no",
+      "used_by_sections": [
+        "summary"
+      ],
+      "state": "attivo"
+    },
+    {
+      "qm_id": "qm_053",
+      "number": 53,
+      "group": "Controlli selezionatore / orchestratore",
+      "name": "Card → motore didattico + layout",
+      "what_it_does": "Quando l’utente chiede card, instrada verso motori didattici e layout.",
+      "universal": "no",
+      "used_by_sections": [
+        "card"
+      ],
+      "state": "attivo"
+    },
+    {
+      "qm_id": "qm_054",
+      "number": 54,
+      "group": "Controlli selezionatore / orchestratore",
+      "name": "Domande studio → motore didattico",
+      "what_it_does": "Quando l’utente chiede domande studio, instrada verso motori didattici.",
+      "universal": "no",
+      "used_by_sections": [
+        "study_questions"
+      ],
+      "state": "attivo"
+    },
+    {
+      "qm_id": "qm_055",
+      "number": 55,
+      "group": "Controlli selezionatore / orchestratore",
+      "name": "Test → bridge quiz + motore test + bridge quiz",
+      "what_it_does": "Quando l’utente chiede test, instrada verso bridge quiz, motore test e compatibilità quiz.",
+      "universal": "no",
+      "used_by_sections": [
+        "test_quiz"
+      ],
+      "state": "attivo"
+    },
+    {
+      "qm_id": "qm_056",
+      "number": 56,
+      "group": "Controlli selezionatore / orchestratore",
+      "name": "Completo/PDF/app/web → orchestratore",
+      "what_it_does": "Quando l’utente chiede output completo, PDF, app o web, passa dal livello orchestratore.",
+      "universal": "sì",
+      "used_by_sections": [
+        "card",
+        "summary",
+        "study_questions",
+        "test_quiz"
+      ],
+      "state": "attivo"
+    },
+    {
+      "qm_id": "qm_057",
+      "number": 57,
+      "group": "Controlli selezionatore / orchestratore",
+      "name": "Niente motori inutili",
+      "what_it_does": "Evita di attivare motori non necessari per il compito richiesto.",
+      "universal": "sì",
+      "used_by_sections": [
+        "card",
+        "summary",
+        "study_questions",
+        "test_quiz"
+      ],
+      "state": "attivo"
+    },
+    {
+      "qm_id": "qm_058",
+      "number": 58,
+      "group": "Controlli selezionatore / orchestratore",
+      "name": "Niente output non richiesto",
+      "what_it_does": "Evita output extra non richiesti dall’utente.",
+      "universal": "sì",
+      "used_by_sections": [
+        "card",
+        "summary",
+        "study_questions",
+        "test_quiz"
+      ],
+      "state": "attivo"
+    },
+    {
+      "qm_id": "qm_059",
+      "number": 59,
+      "group": "Controlli selezionatore / orchestratore",
+      "name": "Output finale pronto per UI/PDF/app",
+      "what_it_does": "Verifica che l’output finale sia pronto per essere usato in UI, PDF o app.",
+      "universal": "sì",
+      "used_by_sections": [
+        "card",
+        "summary",
+        "study_questions",
+        "test_quiz"
+      ],
+      "state": "da verificare alla fine"
+    },
+    {
+      "qm_id": "qm_060",
+      "number": 60,
+      "group": "Controlli selezionatore / orchestratore",
+      "name": "Report qualità sempre leggibile",
+      "what_it_does": "Garantisce che il report qualità sia sempre chiaro, leggibile e utile.",
+      "universal": "sì",
+      "used_by_sections": [
+        "card",
+        "summary",
+        "study_questions",
+        "test_quiz"
+      ],
+      "state": "da ricreare/collegare"
+    },
+    {
+      "qm_id": "qm_061",
+      "number": 61,
+      "group": "Controlli linguistici avanzati / repair",
+      "name": "Naturalezza linguistica anti-keyword",
+      "what_it_does": "Blocca frasi robotiche, liste grezze di parole chiave e testi meccanici; l’output deve sembrare scritto da una persona.",
+      "universal": "sì",
+      "used_by_sections": [
+        "card",
+        "summary",
+        "study_questions",
+        "test_quiz"
+      ],
+      "state": "attivo"
+    },
+    {
+      "qm_id": "qm_062",
+      "number": 62,
+      "group": "Controlli linguistici avanzati / repair",
+      "name": "Accordo grammaticale e pronomi",
+      "what_it_does": "Verifica genere, numero, articoli, participi e pronomi collegati a titoli e contenuti.",
+      "universal": "sì",
+      "used_by_sections": [
+        "card",
+        "summary",
+        "study_questions",
+        "test_quiz"
+      ],
+      "state": "attivo"
+    },
+    {
+      "qm_id": "qm_063",
+      "number": 63,
+      "group": "Controlli linguistici avanzati / repair",
+      "name": "Correzione frasi non finite con contesto",
+      "what_it_does": "Corregge frasi non finite usando contesto, tema, sottotema e sottocategorie.",
+      "universal": "sì",
+      "used_by_sections": [
+        "card",
+        "summary",
+        "study_questions",
+        "test_quiz"
+      ],
+      "state": "attivo"
+    },
+    {
+      "qm_id": "qm_064",
+      "number": 64,
+      "group": "Controlli linguistici avanzati / repair",
+      "name": "Correzione parole scritte male con lettere invertite",
+      "what_it_does": "Corregge parole scritte male, lettere invertite e micro-errori ortografici.",
+      "universal": "sì",
+      "used_by_sections": [
+        "card",
+        "summary",
+        "study_questions",
+        "test_quiz"
+      ],
+      "state": "attivo"
+    }
+  ],
+  "section_routes": [
+    {
+      "section_type": "card",
+      "section_label": "Card",
+      "total_controls_after_h2": 60,
+      "quality_matrix_controls": 52,
+      "selector_orchestrator_controls": 8,
+      "selector_orchestrator_ids": [
+        "qm_051",
+        "qm_052",
+        "qm_053",
+        "qm_054",
+        "qm_055",
+        "qm_056",
+        "qm_057",
+        "qm_058"
+      ]
+    },
+    {
+      "section_type": "summary",
+      "section_label": "Riassunto",
+      "total_controls_after_h2": 55,
+      "quality_matrix_controls": 47,
+      "selector_orchestrator_controls": 8,
+      "selector_orchestrator_ids": [
+        "qm_051",
+        "qm_052",
+        "qm_053",
+        "qm_054",
+        "qm_055",
+        "qm_056",
+        "qm_057",
+        "qm_058"
+      ]
+    },
+    {
+      "section_type": "study_questions",
+      "section_label": "Domande studio",
+      "total_controls_after_h2": 51,
+      "quality_matrix_controls": 43,
+      "selector_orchestrator_controls": 8,
+      "selector_orchestrator_ids": [
+        "qm_051",
+        "qm_052",
+        "qm_053",
+        "qm_054",
+        "qm_055",
+        "qm_056",
+        "qm_057",
+        "qm_058"
+      ]
+    },
+    {
+      "section_type": "test_quiz",
+      "section_label": "Test/Quiz",
+      "total_controls_after_h2": 63,
+      "quality_matrix_controls": 55,
+      "selector_orchestrator_controls": 8,
+      "selector_orchestrator_ids": [
+        "qm_051",
+        "qm_052",
+        "qm_053",
+        "qm_054",
+        "qm_055",
+        "qm_056",
+        "qm_057",
+        "qm_058"
+      ]
+    }
+  ],
+  "defects": [],
+  "warnings": [],
+  "notes": [
+    "Catalogo corretto usando la lista ufficiale salvata dall’utente.",
+    "Nessun qm_065–qm_073 viene inventato.",
+    "qm_059 e qm_060 sono inclusi come controlli finali selector/orchestrator.",
+    "La distinzione corretta è: 64 motori qualità QM spiegati; 73 elementi totali nel registry/orchestrazione H.2."
+  ]
+}
