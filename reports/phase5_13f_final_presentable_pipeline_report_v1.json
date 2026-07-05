@@ -1,0 +1,116 @@
+{
+  "phase": "5.13F",
+  "status": "PASS - Fase 5.13F: FINAL_PRESENTABLE_PIPELINE_REPORT_READY",
+  "title": "Report finale presentabile pipeline 4 generatori",
+  "git": {
+    "branch": "rag-concept-app-presentabile-v3",
+    "commit": "3b329b8",
+    "tags_at_head": [
+      "checkpoint-mini-llm-final-4-generators-regression-v513e"
+    ],
+    "status_short": "?? reports/phase5_13f_final_presentable_pipeline_report_v1.json\n?? reports/phase5_13f_final_presentable_pipeline_report_v1.md\n?? scripts/fix_phase5_13f_ignore_self_generated_warning.py\n?? scripts/run_phase5_13f_final_presentable_pipeline_report.py"
+  },
+  "generators": [
+    {
+      "name": "Card",
+      "status": "PASS",
+      "route_total": 52,
+      "quality_controls": 52,
+      "selector_orchestrator": null,
+      "real_connection": "Validato nella regressione aggregata 5.13E tramite matrice qualità Card.",
+      "evidence": [
+        "reports/phase5_12g2_section_quality_selection_matrix_with_contextual_duplicates_v1.json",
+        "reports/phase5_12g2_section_quality_selection_matrix_with_contextual_duplicates_v1.md"
+      ],
+      "defects": [],
+      "warnings": []
+    },
+    {
+      "name": "Riassunto",
+      "status": "PASS",
+      "route_total": 55,
+      "quality_controls": 55,
+      "selector_orchestrator": null,
+      "real_connection": "Validato nella regressione aggregata 5.13E; route finale Riassunto 55 già collegata nei checkpoint precedenti.",
+      "evidence": [
+        "reports/audit_effetti_premi_ai_its.md",
+        "reports/legacy_quality_motor_candidates_v1.json",
+        "reports/legacy_quality_motor_candidates_v1.md",
+        "reports/legacy_quality_motor_shortlist_v1.json",
+        "reports/legacy_quality_motor_shortlist_v1.md",
+        "reports/legacy_quality_motor_version_families_v1.json",
+        "reports/motori_qualita_esistenti_v1.json",
+        "reports/phase5_12a1_motori_salvabili_strict_v1.json",
+        "reports/motore_distrattori_ai.json",
+        "reports/motore_distrattori_ai_tre_forti.json"
+      ],
+      "defects": [],
+      "warnings": []
+    },
+    {
+      "name": "Domande studio",
+      "status": "PASS",
+      "route_total": 51,
+      "quality_controls": 43,
+      "selector_orchestrator": 8,
+      "real_connection": "quality_report.study_questions_real_connection_v513c1",
+      "evidence": [
+        "reports/phase5_13c2_study_questions_final_quality_gate_v1.json",
+        "reports/phase5_13c2_study_questions_final_quality_gate_v1.json"
+      ],
+      "defects": [],
+      "warnings": []
+    },
+    {
+      "name": "Test/Quiz",
+      "status": "PASS",
+      "route_total": 63,
+      "quality_controls": 55,
+      "selector_orchestrator": 8,
+      "real_connection": "quality_report.test_quiz_real_connection_v513d1",
+      "evidence": [
+        "reports/phase5_13d2_test_quiz_final_quality_gate_v1.json",
+        "reports/phase5_13d2_test_quiz_final_quality_gate_v1.json",
+        "reports/phase5_13d1_test_quiz_63_real_connector_v1.json"
+      ],
+      "defects": [],
+      "warnings": []
+    }
+  ],
+  "backend_readiness": {
+    "py_compile": {
+      "status": "PASS",
+      "returncode": 0,
+      "files_checked": [
+        "backend/motori_scrittura.py",
+        "backend/phase5_study_questions_real_connector_v513c1.py",
+        "backend/phase5_study_questions_final_quality_gate_v513c2.py",
+        "backend/phase5_quiz_options_repair_v513d3.py",
+        "backend/phase5_test_quiz_route_materializer_v513d01.py",
+        "backend/phase5_test_quiz_real_connector_v513d1.py",
+        "backend/phase5_test_quiz_final_quality_gate_v513d2.py",
+        "scripts/run_phase5_13e_final_4_generators_regression.py",
+        "scripts/run_phase5_13f_final_presentable_pipeline_report.py"
+      ],
+      "output_tail": ""
+    },
+    "final_4_generators_regression_status": "PASS - Fase 5.13E: FINAL_4_GENERATORS_REGRESSION_READY",
+    "aggregate_defects": 0,
+    "aggregate_warnings": 0
+  },
+  "ui_readiness": {
+    "status": "NOT_CONNECTED_YET",
+    "note": "Il backend dei quattro generatori è validato. La pagina/interfaccia grafica deve essere collegata nella fase successiva senza modificare i motori già validati."
+  },
+  "real_text_testing_plan": [
+    "Testare documento breve pulito TXT/MD con i 4 generatori dalla pagina.",
+    "Testare PDF reale con testo estratto, verificando Card/Riassunto/Domande/Test.",
+    "Testare documento lungo con più sezioni e controllare stabilità output.",
+    "Testare testo sporco/OCR-like per verificare robustezza linguistica.",
+    "Verificare che la UI non usi fallback/demo quando l'utente carica un testo reale.",
+    "Verificare download/output separati senza rompere i generatori."
+  ],
+  "next_phase": "FASE 5.14 — Collegamento pagina/interfaccia grafica + test veri su testi reali",
+  "defects": [],
+  "warnings": []
+}
