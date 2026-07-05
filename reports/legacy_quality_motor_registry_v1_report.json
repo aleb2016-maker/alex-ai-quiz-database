@@ -37,8 +37,66 @@
   "errors": [],
   "_legacy_quality_motor_registry_v1": {
     "version": "legacy_quality_motor_registry_v1",
-    "status": "ok",
+    "status": "partial",
     "motors": {
+      "scripts.rag_cleaner_finale_universale_v35k.clean_output": {
+        "status": "skipped_no_target",
+        "adapter_name": "summary_dict",
+        "target_kind": "summary",
+        "applied": 0,
+        "changed": 0,
+        "targets": []
+      },
+      "scripts.rag_motore_didattico_riutilizzabile_v35c.refine_study_questions": {
+        "status": "skipped_no_target",
+        "adapter_name": "cards_list",
+        "target_kind": "study",
+        "applied": 0,
+        "changed": 0,
+        "targets": []
+      },
+      "scripts.rag_motore_test_riutilizzabile_v35d.refine_output": {
+        "status": "skipped_no_target",
+        "adapter_name": "summary_dict",
+        "target_kind": "summary",
+        "applied": 0,
+        "changed": 0,
+        "targets": []
+      },
+      "scripts.rag_revisore_accordo_pronomi_v35j.improve_output": {
+        "status": "skipped_no_target",
+        "adapter_name": "summary_dict",
+        "target_kind": "summary",
+        "applied": 0,
+        "changed": 0,
+        "targets": []
+      },
+      "scripts.rag_revisore_qualita_testuale_v35g.refine_output": {
+        "status": "skipped_no_target",
+        "adapter_name": "summary_dict",
+        "target_kind": "summary",
+        "applied": 0,
+        "changed": 0,
+        "targets": []
+      },
+      "scripts.rag_revisore_qualita_testuale_v35g.refine_study": {
+        "status": "ok",
+        "adapter_name": "phase5_full_output",
+        "target_kind": "full_output",
+        "applied": 1,
+        "changed": 0,
+        "targets": [
+          {
+            "target": "phase5_full_output",
+            "changed": false,
+            "guarded_rejected": false,
+            "structural_rejected": false,
+            "structural_reject_reason": "",
+            "known_text_defects_before": 1,
+            "known_text_defects_after": 1
+          }
+        ]
+      },
       "backend.main.pulisci_qualita_linguistica_quiz": {
         "status": "ok",
         "adapter_name": "dict_test_quiz",
@@ -50,6 +108,8 @@
             "target": "test_quiz",
             "changed": false,
             "guarded_rejected": false,
+            "structural_rejected": false,
+            "structural_reject_reason": "",
             "known_text_defects_before": 1,
             "known_text_defects_after": 1
           }
@@ -66,6 +126,8 @@
             "target": "test_quiz",
             "changed": false,
             "guarded_rejected": false,
+            "structural_rejected": false,
+            "structural_reject_reason": "",
             "known_text_defects_before": 1,
             "known_text_defects_after": 1
           }

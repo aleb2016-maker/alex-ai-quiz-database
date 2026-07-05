@@ -1,0 +1,186 @@
+{
+  "report_name": "phase5_7_ready_safe_motors_execution_v1",
+  "status": "PASS",
+  "expected_ready_safe": [
+    "scripts.rag_cleaner_finale_universale_v35k.clean_output",
+    "scripts.rag_motore_didattico_riutilizzabile_v35c.refine_study_questions",
+    "scripts.rag_motore_test_riutilizzabile_v35d.refine_output",
+    "scripts.rag_revisore_accordo_pronomi_v35j.improve_output",
+    "scripts.rag_revisore_qualita_testuale_v35g.refine_output",
+    "scripts.rag_revisore_qualita_testuale_v35g.refine_study"
+  ],
+  "missing": [],
+  "not_applied": [],
+  "failed": [],
+  "worsened": [],
+  "registry_meta": {
+    "version": "legacy_quality_motor_registry_v1",
+    "status": "ok",
+    "motors": {
+      "scripts.rag_cleaner_finale_universale_v35k.clean_output": {
+        "status": "ok",
+        "adapter_name": "summary_dict",
+        "target_kind": "summary",
+        "applied": 1,
+        "changed": 0,
+        "targets": [
+          {
+            "target": "riassunto_qualita",
+            "changed": false,
+            "guarded_rejected": false,
+            "structural_rejected": true,
+            "structural_reject_reason": "summary_dict_structure_not_preserved",
+            "known_text_defects_before": 6,
+            "known_text_defects_after": 6
+          }
+        ]
+      },
+      "scripts.rag_motore_didattico_riutilizzabile_v35c.refine_study_questions": {
+        "status": "ok",
+        "adapter_name": "cards_list",
+        "target_kind": "study",
+        "applied": 2,
+        "changed": 2,
+        "targets": [
+          {
+            "target": "card_concettuali",
+            "changed": true,
+            "guarded_rejected": false,
+            "structural_rejected": false,
+            "structural_reject_reason": "",
+            "known_text_defects_before": 3,
+            "known_text_defects_after": 3
+          },
+          {
+            "target": "domande_studio",
+            "changed": true,
+            "guarded_rejected": false,
+            "structural_rejected": false,
+            "structural_reject_reason": "",
+            "known_text_defects_before": 3,
+            "known_text_defects_after": 1
+          }
+        ]
+      },
+      "scripts.rag_motore_test_riutilizzabile_v35d.refine_output": {
+        "status": "ok",
+        "adapter_name": "summary_dict",
+        "target_kind": "summary",
+        "applied": 1,
+        "changed": 1,
+        "targets": [
+          {
+            "target": "riassunto_qualita",
+            "changed": true,
+            "guarded_rejected": false,
+            "structural_rejected": false,
+            "structural_reject_reason": "",
+            "known_text_defects_before": 6,
+            "known_text_defects_after": 6
+          }
+        ]
+      },
+      "scripts.rag_revisore_accordo_pronomi_v35j.improve_output": {
+        "status": "ok",
+        "adapter_name": "summary_dict",
+        "target_kind": "summary",
+        "applied": 1,
+        "changed": 1,
+        "targets": [
+          {
+            "target": "riassunto_qualita",
+            "changed": true,
+            "guarded_rejected": false,
+            "structural_rejected": false,
+            "structural_reject_reason": "",
+            "known_text_defects_before": 6,
+            "known_text_defects_after": 6
+          }
+        ]
+      },
+      "scripts.rag_revisore_qualita_testuale_v35g.refine_output": {
+        "status": "ok",
+        "adapter_name": "summary_dict",
+        "target_kind": "summary",
+        "applied": 1,
+        "changed": 1,
+        "targets": [
+          {
+            "target": "riassunto_qualita",
+            "changed": true,
+            "guarded_rejected": false,
+            "structural_rejected": false,
+            "structural_reject_reason": "",
+            "known_text_defects_before": 6,
+            "known_text_defects_after": 6
+          }
+        ]
+      },
+      "scripts.rag_revisore_qualita_testuale_v35g.refine_study": {
+        "status": "ok",
+        "adapter_name": "phase5_full_output",
+        "target_kind": "full_output",
+        "applied": 1,
+        "changed": 1,
+        "targets": [
+          {
+            "target": "phase5_full_output",
+            "changed": true,
+            "guarded_rejected": false,
+            "structural_rejected": false,
+            "structural_reject_reason": "",
+            "known_text_defects_before": 16,
+            "known_text_defects_after": 15
+          }
+        ]
+      },
+      "backend.main.pulisci_qualita_linguistica_quiz": {
+        "status": "ok",
+        "adapter_name": "dict_test_quiz",
+        "target_kind": "quiz",
+        "applied": 1,
+        "changed": 0,
+        "targets": [
+          {
+            "target": "test_quiz",
+            "changed": false,
+            "guarded_rejected": false,
+            "structural_rejected": false,
+            "structural_reject_reason": "",
+            "known_text_defects_before": 1,
+            "known_text_defects_after": 1
+          }
+        ]
+      },
+      "scripts.rag_motore_didattico_riutilizzabile_v35c.refine_tests": {
+        "status": "ok",
+        "adapter_name": "legacy_answers_dict",
+        "target_kind": "quiz",
+        "applied": 1,
+        "changed": 0,
+        "targets": [
+          {
+            "target": "test_quiz",
+            "changed": false,
+            "guarded_rejected": false,
+            "structural_rejected": false,
+            "structural_reject_reason": "",
+            "known_text_defects_before": 1,
+            "known_text_defects_after": 1
+          }
+        ]
+      }
+    },
+    "targets_count": 1,
+    "notes": [],
+    "context": "phase5_7_ready_safe_execution",
+    "known_text_defects_before": 13,
+    "known_text_defects_after": 13
+  },
+  "notes": [
+    "Verifica diagnostica: controlla che i 6 motori READY_SAFE siano presenti ed eseguiti.",
+    "Non aggiunge nuovi motori.",
+    "Non modifica il registry.",
+    "Se un motore non è applied>0, è registrato ma non realmente eseguito sul payload."
+  ]
+}

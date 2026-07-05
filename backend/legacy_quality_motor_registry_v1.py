@@ -207,6 +207,110 @@ def count_known_text_defects_v1(value: Any) -> int:
     )
 
 
+
+
+# FASE 5.7.1 — REGISTRY TARGET STRUCTURE GUARD V1
+# Evita che un motore legacy cambi la struttura del target in modo da impedire
+# ai motori successivi di trovare summary/cards/study/full_output.
+# Inoltre preserva i metadata del registry quando un motore lavora sul full output.
+def _looks_like_summary_dict(value: Any) -> bool:
+    if not isinstance(value, dict):
+        return False
+
+    keys = {str(k).lower() for k in value.keys()}
+
+    return bool(keys & {"titolo", "title", "paragrafi", "paragraphs", "testo_completo", "text", "summary"})
+
+
+def _extract_nested_target_value(value: Any, label: str, target_kind: str) -> Any:
+    if not isinstance(value, dict):
+        return value
+
+    preferred = [label]
+
+    if target_kind == "summary":
+        preferred.extend(["riassunto_qualita", "summary", "riassunto", "summary_dict"])
+
+    elif target_kind == "cards":
+        preferred.extend(["card_concettuali", "cards", "cards_list"])
+
+    elif target_kind == "study":
+        preferred.extend(["domande_studio", "study_questions", "study", "study_list", "card_concettuali", "cards"])
+
+    elif target_kind == "quiz":
+        preferred.extend(["test_quiz", "quiz", "tests", "domande_quiz"])
+
+    for key in preferred:
+        child = value.get(key)
+
+        if isinstance(child, (dict, list, str)):
+            return child
+
+    return value
+
+
+def _normalize_output_for_target_structure_v1(
+    *,
+    before_value: Any,
+    candidate_value: Any,
+    target_kind: str,
+    label: str,
+) -> tuple[Any, bool, str]:
+    if candidate_value is None:
+        return before_value, True, "none_output"
+
+    candidate_value = _extract_nested_target_value(candidate_value, label, target_kind)
+
+    if target_kind == "summary":
+        if isinstance(before_value, dict):
+            if isinstance(candidate_value, dict) and _looks_like_summary_dict(candidate_value):
+                return candidate_value, False, ""
+
+            return before_value, True, "summary_dict_structure_not_preserved"
+
+        if isinstance(before_value, str):
+            if isinstance(candidate_value, str):
+                return candidate_value, False, ""
+
+            return before_value, True, "summary_text_structure_not_preserved"
+
+    if target_kind in {"cards", "study", "quiz"}:
+        if isinstance(before_value, list):
+            if isinstance(candidate_value, list):
+                return candidate_value, False, ""
+
+            return before_value, True, f"{target_kind}_list_structure_not_preserved"
+
+        if isinstance(before_value, dict):
+            if isinstance(candidate_value, dict):
+                return candidate_value, False, ""
+
+            return before_value, True, f"{target_kind}_dict_structure_not_preserved"
+
+    if target_kind == "full_output":
+        if isinstance(before_value, dict) and isinstance(candidate_value, dict):
+            return candidate_value, False, ""
+
+        return before_value, True, "full_output_structure_not_preserved"
+
+    if type(candidate_value) is type(before_value):
+        return candidate_value, False, ""
+
+    return before_value, True, "generic_structure_not_preserved"
+
+
+def _preserve_registry_meta_after_root_replace_v1(new_result: Any, previous_result: Any) -> Any:
+    if not isinstance(new_result, dict) or not isinstance(previous_result, dict):
+        return new_result
+
+    previous_meta = previous_result.get("_legacy_quality_motor_registry_v1")
+
+    if isinstance(previous_meta, dict):
+        new_result["_legacy_quality_motor_registry_v1"] = previous_meta
+
+    return new_result
+
+
 def _looks_like_option_dict(value: Any) -> bool:
     if not isinstance(value, dict):
         return False
@@ -641,8 +745,18 @@ def apply_legacy_quality_motors_v1(payload: Any, *, context: str = "generic") ->
                 errors.append(f"{label}: {_safe_error(exc)}")
                 continue
 
+            structural_rejected = False
+            structural_reject_reason = ""
+
             if new_value is None:
                 new_value = value
+
+            new_value, structural_rejected, structural_reject_reason = _normalize_output_for_target_structure_v1(
+                before_value=value,
+                candidate_value=new_value,
+                target_kind=spec.target_kind,
+                label=label,
+            )
 
             after_json = _safe_json(new_value)
             defects_after = count_known_text_defects_v1(new_value)
@@ -658,7 +772,7 @@ def apply_legacy_quality_motors_v1(payload: Any, *, context: str = "generic") ->
             if parent is not None and key is not None:
                 parent[key] = new_value
             else:
-                result = new_value
+                result = _preserve_registry_meta_after_root_replace_v1(new_value, result)
 
             motor_meta["applied"] += 1
 
@@ -672,6 +786,8 @@ def apply_legacy_quality_motors_v1(payload: Any, *, context: str = "generic") ->
                     "target": label,
                     "changed": did_change,
                     "guarded_rejected": guarded_rejected,
+                    "structural_rejected": structural_rejected,
+                    "structural_reject_reason": structural_reject_reason,
                     "known_text_defects_before": defects_before,
                     "known_text_defects_after": defects_after,
                 }
@@ -685,6 +801,11 @@ def apply_legacy_quality_motors_v1(payload: Any, *, context: str = "generic") ->
             motor_meta["errors"] = errors
         else:
             motor_meta["status"] = "ok"
+
+        meta = _ensure_registry_meta(result)
+
+        if meta is not None:
+            meta["motors"][spec.motor_id] = motor_meta
 
     registry_defects_after = count_known_text_defects_v1(result)
 
