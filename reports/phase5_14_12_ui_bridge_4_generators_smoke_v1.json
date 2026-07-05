@@ -1,0 +1,395 @@
+{
+  "phase": "5.14.12",
+  "status": "PASS - Fase 5.14.12: UI_BRIDGE_4_GENERATORS_READY",
+  "strict_no_fallback": true,
+  "endpoint": "http://127.0.0.1:8765/api/generate",
+  "results": {
+    "summary": {
+      "ok": true,
+      "phase": "5.14.3",
+      "strict_no_fallback": true,
+      "result": {
+        "kind": "summary",
+        "motor_name": "direct_summary_ui_bridge_v51412",
+        "approved": true,
+        "status": "APPROVED",
+        "content": "Il documento descrive questi punti principali:\n\n1. Questo documento descrive una procedura aziendale per la gestione degli accessi.\n2. Ogni account deve essere associato a una persona identificabile.\n3. Le credenziali non devono essere condivise tra operatori.\n4. La revisione periodica degli accessi riduce il rischio di permessi non autorizzati.\n\nConcetti chiave: accessi, account, persona identificabile, credenziali, revisione periodica, permessi, procedura aziendale, associato persona.",
+        "items": [
+          "1. Questo documento descrive una procedura aziendale per la gestione degli accessi.",
+          "2. Ogni account deve essere associato a una persona identificabile.",
+          "3. Le credenziali non devono essere condivise tra operatori.",
+          "4. La revisione periodica degli accessi riduce il rischio di permessi non autorizzati."
+        ],
+        "quality_report": {
+          "phase": "5.14.12",
+          "bridge": "direct_summary_ui_bridge",
+          "facts_count": 4,
+          "concepts_count": 10,
+          "strict_no_fallback": true
+        }
+      }
+    },
+    "cards": {
+      "ok": true,
+      "phase": "5.14.3",
+      "strict_no_fallback": true,
+      "result": {
+        "kind": "cards",
+        "motor_name": "direct_cards_ui_bridge_v51412",
+        "approved": true,
+        "status": "APPROVED",
+        "items": [
+          {
+            "card_id": "phase5_14_card_001",
+            "titolo": "Accessi",
+            "messaggio_chiave": "Questo documento descrive una procedura aziendale per la gestione degli accessi.",
+            "spiegazione": "Questo punto deriva direttamente dal documento caricato: Questo documento descrive una procedura aziendale per la gestione degli accessi.",
+            "micro_concetti": [
+              "accessi",
+              "procedura aziendale"
+            ],
+            "fonte_pagine": [
+              1
+            ],
+            "warnings": []
+          },
+          {
+            "card_id": "phase5_14_card_002",
+            "titolo": "Account",
+            "messaggio_chiave": "Ogni account deve essere associato a una persona identificabile.",
+            "spiegazione": "Questo punto deriva direttamente dal documento caricato: Ogni account deve essere associato a una persona identificabile.",
+            "micro_concetti": [
+              "account",
+              "persona identificabile",
+              "associato persona"
+            ],
+            "fonte_pagine": [
+              1
+            ],
+            "warnings": []
+          },
+          {
+            "card_id": "phase5_14_card_003",
+            "titolo": "Credenziali",
+            "messaggio_chiave": "Le credenziali non devono essere condivise tra operatori.",
+            "spiegazione": "Questo punto deriva direttamente dal documento caricato: Le credenziali non devono essere condivise tra operatori.",
+            "micro_concetti": [
+              "credenziali"
+            ],
+            "fonte_pagine": [
+              1
+            ],
+            "warnings": []
+          },
+          {
+            "card_id": "phase5_14_card_004",
+            "titolo": "Accessi",
+            "messaggio_chiave": "La revisione periodica degli accessi riduce il rischio di permessi non autorizzati.",
+            "spiegazione": "Questo punto deriva direttamente dal documento caricato: La revisione periodica degli accessi riduce il rischio di permessi non autorizzati.",
+            "micro_concetti": [
+              "accessi",
+              "revisione periodica",
+              "permessi",
+              "permessi autorizzati"
+            ],
+            "fonte_pagine": [
+              1
+            ],
+            "warnings": []
+          }
+        ],
+        "quality_report": {
+          "phase": "5.14.12",
+          "bridge": "direct_cards_ui_bridge",
+          "facts_count": 4,
+          "concepts_count": 10,
+          "cards_count": 4,
+          "strict_no_fallback": true
+        }
+      }
+    },
+    "study": {
+      "ok": true,
+      "phase": "5.14.3",
+      "strict_no_fallback": true,
+      "result": {
+        "kind": "study",
+        "motor_name": "direct_q52_ui_bridge_v51411",
+        "approved": true,
+        "status": "APPROVED",
+        "items": [
+          {
+            "question_id": "phase5_study_question_001",
+            "domanda": "Che cosa bisogna ricordare riguardo a persona identificabile?",
+            "risposta_guida": "La risposta deve richiamare il punto informativo indicato dal documento: questo documento descrive una procedura aziendale per la gestione degli accessi.",
+            "tipo_domanda": "informazione_chiave",
+            "livello_cognitivo": "ricordo_comprensione",
+            "fatto_origine": "Questo documento descrive una procedura aziendale per la gestione degli accessi.",
+            "micro_concetti": [
+              "persona identificabile",
+              "revisione periodica",
+              "procedura aziendale",
+              "identificabile credenziali",
+              "permessi autorizzati"
+            ],
+            "fonte_pagine": [
+              1
+            ],
+            "warnings": []
+          },
+          {
+            "question_id": "phase5_study_question_002",
+            "domanda": "Quale obbligo operativo viene indicato riguardo a account utente?",
+            "risposta_guida": "La risposta deve indicare l'obbligo operativo espresso nel documento: ogni account deve essere associato a una persona identificabile.",
+            "tipo_domanda": "obbligo",
+            "livello_cognitivo": "applicazione",
+            "fatto_origine": "Ogni account deve essere associato a una persona identificabile.",
+            "micro_concetti": [
+              "account utente",
+              "persona identificabile",
+              "revisione periodica",
+              "procedura aziendale",
+              "identificabile credenziali"
+            ],
+            "fonte_pagine": [
+              1
+            ],
+            "warnings": []
+          },
+          {
+            "question_id": "phase5_study_question_003",
+            "domanda": "Quale comportamento deve essere evitato riguardo a protezione credenziali?",
+            "risposta_guida": "La risposta deve evidenziare il divieto operativo indicato dal documento: le credenziali non devono essere condivise tra operatori.",
+            "tipo_domanda": "divieto",
+            "livello_cognitivo": "applicazione",
+            "fatto_origine": "Le credenziali non devono essere condivise tra operatori.",
+            "micro_concetti": [
+              "protezione credenziali",
+              "condivisione credenziali",
+              "persona identificabile",
+              "revisione periodica",
+              "procedura aziendale"
+            ],
+            "fonte_pagine": [
+              1
+            ],
+            "warnings": []
+          },
+          {
+            "question_id": "phase5_study_question_004",
+            "domanda": "Perché revisione periodica è collegato alla riduzione del rischio?",
+            "risposta_guida": "La risposta deve spiegare il rapporto causa-effetto indicato dal documento: la revisione periodica degli accessi riduce il rischio di permessi non autorizzati.",
+            "tipo_domanda": "causa_effetto_rischio",
+            "livello_cognitivo": "comprensione",
+            "fatto_origine": "La revisione periodica degli accessi riduce il rischio di permessi non autorizzati.",
+            "micro_concetti": [
+              "revisione periodica",
+              "riduzione rischio",
+              "persona identificabile",
+              "procedura aziendale",
+              "identificabile credenziali"
+            ],
+            "fonte_pagine": [
+              1
+            ],
+            "warnings": []
+          }
+        ],
+        "quality_report": {
+          "phase": "5.14.11",
+          "bridge": "direct_q52_ui_bridge",
+          "motor_path": "q52_build_quality_study_questions + q52_build_quality_quiz",
+          "facts_count": 4,
+          "concepts_count": 10,
+          "study_questions_count": 4,
+          "quiz_questions_count": 4,
+          "strict_no_fallback": true
+        }
+      }
+    },
+    "quiz": {
+      "ok": true,
+      "phase": "5.14.3",
+      "strict_no_fallback": true,
+      "result": {
+        "kind": "quiz",
+        "motor_name": "direct_q52_ui_bridge_v51411",
+        "approved": true,
+        "status": "APPROVED",
+        "items": [
+          {
+            "question_id": "phase5_quiz_question_001",
+            "domanda": "Quale affermazione descrive correttamente persona identificabile?",
+            "opzioni": [
+              {
+                "option_id": "A",
+                "testo": "Questo documento descrive una procedura aziendale per la gestione degli accessi.",
+                "is_correct": true
+              },
+              {
+                "option_id": "B",
+                "testo": "Questo documento descrive una procedura aziendale per la gestione degli accessi non controllati.",
+                "is_correct": false
+              },
+              {
+                "option_id": "C",
+                "testo": "Il documento dice che persona identificabile può essere ignorato.",
+                "is_correct": false
+              },
+              {
+                "option_id": "D",
+                "testo": "Il documento dice che persona identificabile non ha valore operativo.",
+                "is_correct": false
+              }
+            ],
+            "correct_option_id": "A",
+            "spiegazione": "La risposta corretta è quella che riprende il fatto verificato dal documento: questo documento descrive una procedura aziendale per la gestione degli accessi.",
+            "fatto_origine": "Questo documento descrive una procedura aziendale per la gestione degli accessi.",
+            "micro_concetti": [
+              "persona identificabile",
+              "revisione periodica",
+              "procedura aziendale",
+              "identificabile credenziali",
+              "permessi autorizzati"
+            ],
+            "fonte_pagine": [
+              1
+            ],
+            "warnings": []
+          },
+          {
+            "question_id": "phase5_quiz_question_002",
+            "domanda": "Quale affermazione descrive correttamente l'obbligo su account utente?",
+            "opzioni": [
+              {
+                "option_id": "A",
+                "testo": "Ogni account può rimanere non associato a una persona identificabile.",
+                "is_correct": false
+              },
+              {
+                "option_id": "B",
+                "testo": "Ogni account deve essere associato a una persona identificabile.",
+                "is_correct": true
+              },
+              {
+                "option_id": "C",
+                "testo": "Ogni account non deve essere necessariamente associato a una persona identificabile.",
+                "is_correct": false
+              },
+              {
+                "option_id": "D",
+                "testo": "Ogni account può essere condiviso da un gruppo senza collegamento a un responsabile individuale.",
+                "is_correct": false
+              }
+            ],
+            "correct_option_id": "B",
+            "spiegazione": "La risposta corretta è quella che riprende il fatto verificato dal documento: ogni account deve essere associato a una persona identificabile.",
+            "fatto_origine": "Ogni account deve essere associato a una persona identificabile.",
+            "micro_concetti": [
+              "account utente",
+              "persona identificabile",
+              "revisione periodica",
+              "procedura aziendale",
+              "identificabile credenziali"
+            ],
+            "fonte_pagine": [
+              1
+            ],
+            "warnings": []
+          },
+          {
+            "question_id": "phase5_quiz_question_003",
+            "domanda": "Quale affermazione descrive correttamente il divieto su protezione credenziali?",
+            "opzioni": [
+              {
+                "option_id": "A",
+                "testo": "Le credenziali possono essere condivise liberamente tra operatori.",
+                "is_correct": false
+              },
+              {
+                "option_id": "B",
+                "testo": "Le credenziali possono essere riutilizzate da più operatori se appartengono allo stesso reparto.",
+                "is_correct": false
+              },
+              {
+                "option_id": "C",
+                "testo": "Le credenziali non devono essere condivise tra operatori.",
+                "is_correct": true
+              },
+              {
+                "option_id": "D",
+                "testo": "Le credenziali non devono essere condivise tra utenti anonimi.",
+                "is_correct": false
+              }
+            ],
+            "correct_option_id": "C",
+            "spiegazione": "La risposta corretta è quella che riprende il fatto verificato dal documento: le credenziali non devono essere condivise tra operatori.",
+            "fatto_origine": "Le credenziali non devono essere condivise tra operatori.",
+            "micro_concetti": [
+              "protezione credenziali",
+              "condivisione credenziali",
+              "persona identificabile",
+              "revisione periodica",
+              "procedura aziendale"
+            ],
+            "fonte_pagine": [
+              1
+            ],
+            "warnings": []
+          },
+          {
+            "question_id": "phase5_quiz_question_004",
+            "domanda": "Quale affermazione descrive correttamente l'effetto di revisione periodica?",
+            "opzioni": [
+              {
+                "option_id": "A",
+                "testo": "La revisione periodica serve solo ad archiviare documenti e non incide sui permessi degli utenti.",
+                "is_correct": false
+              },
+              {
+                "option_id": "B",
+                "testo": "La revisione periodica degli accessi non controllati riduce il rischio di permessi non autorizzati.",
+                "is_correct": false
+              },
+              {
+                "option_id": "C",
+                "testo": "Il documento dice che revisione periodica può essere ignorato.",
+                "is_correct": false
+              },
+              {
+                "option_id": "D",
+                "testo": "La revisione periodica degli accessi riduce il rischio di permessi non autorizzati.",
+                "is_correct": true
+              }
+            ],
+            "correct_option_id": "D",
+            "spiegazione": "La risposta corretta è quella che riprende il fatto verificato dal documento: la revisione periodica degli accessi riduce il rischio di permessi non autorizzati.",
+            "fatto_origine": "La revisione periodica degli accessi riduce il rischio di permessi non autorizzati.",
+            "micro_concetti": [
+              "revisione periodica",
+              "riduzione rischio",
+              "persona identificabile",
+              "procedura aziendale",
+              "identificabile credenziali"
+            ],
+            "fonte_pagine": [
+              1
+            ],
+            "warnings": []
+          }
+        ],
+        "quality_report": {
+          "phase": "5.14.11",
+          "bridge": "direct_q52_ui_bridge",
+          "motor_path": "q52_build_quality_study_questions + q52_build_quality_quiz",
+          "facts_count": 4,
+          "concepts_count": 10,
+          "study_questions_count": 4,
+          "quiz_questions_count": 4,
+          "strict_no_fallback": true
+        }
+      }
+    }
+  },
+  "defects": []
+}

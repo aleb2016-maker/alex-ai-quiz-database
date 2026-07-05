@@ -1,0 +1,290 @@
+{
+  "phase": "5.14.0",
+  "status": "PASS - Fase 5.14.0: UI_BUTTONS_PROBE_READY",
+  "page": "demo-rag/test-documenti-universale.html",
+  "page_exists": true,
+  "buttons": [
+    {
+      "key": "summary",
+      "expected_labels": [
+        "genera riassunto",
+        "riassunto"
+      ],
+      "found": true,
+      "matched_fragments": [
+        "genera riassunto",
+        "riassunto"
+      ]
+    },
+    {
+      "key": "cards",
+      "expected_labels": [
+        "genera card",
+        "card"
+      ],
+      "found": true,
+      "matched_fragments": [
+        "genera card",
+        "card"
+      ]
+    },
+    {
+      "key": "quiz",
+      "expected_labels": [
+        "genera test",
+        "test",
+        "quiz"
+      ],
+      "found": true,
+      "matched_fragments": [
+        "genera test",
+        "test",
+        "quiz"
+      ]
+    },
+    {
+      "key": "study",
+      "expected_labels": [
+        "genera domande studio",
+        "domande studio"
+      ],
+      "found": true,
+      "matched_fragments": [
+        "genera domande studio",
+        "domande studio"
+      ]
+    }
+  ],
+  "scripts": [
+    {
+      "path": "demo-rag/phase5-14-2-dom-safety-guard.js",
+      "exists": true,
+      "size": 1189,
+      "matched_keywords": [
+        "genera"
+      ],
+      "forbidden_fragments": []
+    },
+    {
+      "path": "demo-rag/rag-input-reale-guard.js",
+      "exists": true,
+      "size": 4239,
+      "matched_keywords": [
+        "test",
+        "genera",
+        "addeventlistener"
+      ],
+      "forbidden_fragments": []
+    },
+    {
+      "path": "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js",
+      "exists": false,
+      "size": 0,
+      "matched_keywords": [],
+      "forbidden_fragments": []
+    },
+    {
+      "path": "https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js",
+      "exists": false,
+      "size": 0,
+      "matched_keywords": [],
+      "forbidden_fragments": []
+    },
+    {
+      "path": "https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js",
+      "exists": false,
+      "size": 0,
+      "matched_keywords": [],
+      "forbidden_fragments": []
+    },
+    {
+      "path": "demo-rag/layout-rigido-rag.js",
+      "exists": true,
+      "size": 14305,
+      "matched_keywords": [
+        "riassunto",
+        "card",
+        "test",
+        "domande",
+        "studio",
+        "generate",
+        "genera",
+        "addeventlistener"
+      ],
+      "forbidden_fragments": []
+    },
+    {
+      "path": "demo-rag/layout-rigido-generazione-subito.js",
+      "exists": true,
+      "size": 7825,
+      "matched_keywords": [
+        "riassunto",
+        "summary",
+        "card",
+        "test",
+        "domande",
+        "studio",
+        "generate",
+        "genera",
+        "addeventlistener"
+      ],
+      "forbidden_fragments": []
+    },
+    {
+      "path": "demo-rag/buttons-full-row.js",
+      "exists": true,
+      "size": 5912,
+      "matched_keywords": [
+        "riassunto",
+        "summary",
+        "card",
+        "test",
+        "domande",
+        "studio",
+        "genera",
+        "addeventlistener"
+      ],
+      "forbidden_fragments": []
+    },
+    {
+      "path": "demo-rag/rag-action-icons-v46.js",
+      "exists": true,
+      "size": 11201,
+      "matched_keywords": [
+        "riassunto",
+        "card",
+        "test",
+        "domande",
+        "studio",
+        "genera",
+        "addeventlistener"
+      ],
+      "forbidden_fragments": []
+    },
+    {
+      "path": "demo-rag/rag-concept-document-engine-v46.js",
+      "exists": true,
+      "size": 19383,
+      "matched_keywords": [
+        "riassunto",
+        "summary",
+        "card",
+        "quiz",
+        "test",
+        "domande",
+        "studio",
+        "genera",
+        "addeventlistener"
+      ],
+      "forbidden_fragments": [
+        "sicurezza informatica aziendale"
+      ]
+    },
+    {
+      "path": "demo-rag/pdf-export-browser-v6.js",
+      "exists": true,
+      "size": 10505,
+      "matched_keywords": [
+        "riassunto",
+        "summary",
+        "card",
+        "quiz",
+        "test",
+        "domande",
+        "studio",
+        "generate",
+        "genera",
+        "addeventlistener"
+      ],
+      "forbidden_fragments": []
+    },
+    {
+      "path": "demo-rag/rag-quality-summary-cards-v34a.js",
+      "exists": true,
+      "size": 28602,
+      "matched_keywords": [
+        "riassunto",
+        "summary",
+        "card",
+        "test",
+        "domande",
+        "studio",
+        "generate",
+        "genera",
+        "addeventlistener"
+      ],
+      "forbidden_fragments": [
+        "fallback",
+        "sicurezza informatica aziendale"
+      ]
+    },
+    {
+      "path": "demo-rag/universal-document-learning-engine.js",
+      "exists": true,
+      "size": 82074,
+      "matched_keywords": [
+        "riassunto",
+        "summary",
+        "card",
+        "quiz",
+        "test",
+        "domande",
+        "studio",
+        "generate",
+        "genera",
+        "addeventlistener"
+      ],
+      "forbidden_fragments": [
+        "fallback"
+      ]
+    },
+    {
+      "path": "demo-rag/phase5-14-ui-buttons-real-connector.js",
+      "exists": true,
+      "size": 8156,
+      "matched_keywords": [
+        "riassunto",
+        "summary",
+        "card",
+        "quiz",
+        "test",
+        "domande",
+        "studio",
+        "generate",
+        "genera",
+        "addeventlistener"
+      ],
+      "forbidden_fragments": [
+        "fallback"
+      ]
+    },
+    {
+      "path": "demo-rag/phase5-14-2-runtime-visible-panel.js",
+      "exists": true,
+      "size": 4864,
+      "matched_keywords": [
+        "riassunto",
+        "summary",
+        "card",
+        "quiz",
+        "test",
+        "domande",
+        "studio",
+        "generate",
+        "genera",
+        "addeventlistener"
+      ],
+      "forbidden_fragments": [
+        "fallback"
+      ]
+    }
+  ],
+  "defects": [],
+  "warnings": [
+    "Possibili frammenti demo/fallback in demo-rag/rag-concept-document-engine-v46.js: ['sicurezza informatica aziendale']",
+    "Possibili frammenti demo/fallback in demo-rag/rag-quality-summary-cards-v34a.js: ['fallback', 'sicurezza informatica aziendale']",
+    "Possibili frammenti demo/fallback in demo-rag/universal-document-learning-engine.js: ['fallback']",
+    "Possibili frammenti demo/fallback in demo-rag/phase5-14-ui-buttons-real-connector.js: ['fallback']",
+    "Possibili frammenti demo/fallback in demo-rag/phase5-14-2-runtime-visible-panel.js: ['fallback']"
+  ]
+}
