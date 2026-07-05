@@ -1,0 +1,58 @@
+{
+  "phase": "5.13D.2",
+  "status": "PASS - Fase 5.13D.2: TEST_QUIZ_FINAL_QUALITY_GATE_READY",
+  "approved": true,
+  "source_status": "APPROVED",
+  "quiz_questions_count": 4,
+  "route_total": 63,
+  "test_quality_controls": 55,
+  "selector_orchestrator": 8,
+  "missing_motor_ids": [],
+  "duplicate_pairs": [],
+  "near_duplicate_pairs": [],
+  "items": [
+    {
+      "index": 1,
+      "question_id": "phase5_quiz_question_001",
+      "domanda_chars": 75,
+      "options_count": 4,
+      "explanation_chars": 143,
+      "correct_option_id": "A",
+      "defects": [],
+      "warnings": []
+    },
+    {
+      "index": 2,
+      "question_id": "phase5_quiz_question_002",
+      "domanda_chars": 70,
+      "options_count": 4,
+      "explanation_chars": 142,
+      "correct_option_id": "B",
+      "defects": [],
+      "warnings": []
+    },
+    {
+      "index": 3,
+      "question_id": "phase5_quiz_question_003",
+      "domanda_chars": 79,
+      "options_count": 4,
+      "explanation_chars": 139,
+      "correct_option_id": "C",
+      "defects": [],
+      "warnings": []
+    },
+    {
+      "index": 4,
+      "question_id": "phase5_quiz_question_004",
+      "domanda_chars": 75,
+      "options_count": 4,
+      "explanation_chars": 191,
+      "correct_option_id": "D",
+      "defects": [],
+      "warnings": []
+    }
+  ],
+  "defects": [],
+  "warnings": [],
+  "source_test_returncode": 0
+}

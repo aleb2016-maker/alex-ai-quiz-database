@@ -5775,6 +5775,18 @@ def build_phase5_quality_study_quiz(
         )
 
         result.errors.extend(q52_validate_study_questions(result.domande_studio))
+        # FASE 5.13D.3 — TEST QUIZ DISTRACTOR REPAIR BEFORE VALIDATION
+        try:
+            from backend.phase5_quiz_options_repair_v513d3 import (
+                repair_test_quiz_options_v513d3,
+            )
+        except ModuleNotFoundError:
+            from phase5_quiz_options_repair_v513d3 import (
+                repair_test_quiz_options_v513d3,
+            )
+
+        result.test_quiz = repair_test_quiz_options_v513d3(result.test_quiz)
+
         result.errors.extend(q52_validate_quiz(result.test_quiz, facts, cfg.quiz_options_count))
 
         if not result.domande_studio:
@@ -5798,12 +5810,28 @@ def build_phase5_quality_study_quiz(
             result.errors,
         )
 
+        # FASE 5.13D.1 — TEST/QUIZ 63 REAL CONNECTOR LOCAL SCOPE FIXED
+        try:
+            from backend.phase5_test_quiz_real_connector_v513d1 import (
+                build_test_quiz_real_connection_report,
+            )
+        except ModuleNotFoundError:
+            from phase5_test_quiz_real_connector_v513d1 import (
+                build_test_quiz_real_connection_report,
+            )
+
+        test_quiz_real_connection_v513d1 = build_test_quiz_real_connection_report(
+            result.test_quiz,
+            result.errors,
+        )
+
         result.quality_report = {
             "facts_used": len(facts),
             "concepts_used": len(concepts),
             "study_questions_count": len(result.domande_studio),
             "study_questions_real_connection_v513c1": study_questions_real_connection_v513c1,
             "quiz_questions_count": len(result.test_quiz),
+            "test_quiz_real_connection_v513d1": test_quiz_real_connection_v513d1,
             "source_pages": pages,
             "errors_count": len(result.errors),
             "warnings_count": len(result.warnings),
