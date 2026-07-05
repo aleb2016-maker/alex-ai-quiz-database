@@ -1,0 +1,78 @@
+{
+  "phase": "5.12J",
+  "label": "LISTA OPERATIVA AGGIORNATA DOPO QM_060_QM_059",
+  "official_qm_motors": 64,
+  "registry_total": 73,
+  "universal_quality_motors": [
+    "qm_001",
+    "qm_002",
+    "qm_003",
+    "qm_004",
+    "qm_005",
+    "qm_006",
+    "qm_007",
+    "qm_008",
+    "qm_009",
+    "qm_010",
+    "qm_011",
+    "qm_012",
+    "qm_045",
+    "qm_046",
+    "qm_047",
+    "qm_049",
+    "qm_050",
+    "qm_061",
+    "qm_062",
+    "qm_063",
+    "qm_064"
+  ],
+  "selector_orchestrator_added": [
+    "qm_051",
+    "qm_052",
+    "qm_053",
+    "qm_054",
+    "qm_055",
+    "qm_056",
+    "qm_057",
+    "qm_058"
+  ],
+  "final_motors_completed": [
+    "qm_059",
+    "qm_060"
+  ],
+  "section_routes": [
+    {
+      "section_type": "card",
+      "section_label": "Card",
+      "quality_matrix_controls": 52,
+      "selector_orchestrator_controls": 8,
+      "total_controls": 60
+    },
+    {
+      "section_type": "summary",
+      "section_label": "Riassunto",
+      "quality_matrix_controls": 47,
+      "selector_orchestrator_controls": 8,
+      "total_controls": 55
+    },
+    {
+      "section_type": "study_questions",
+      "section_label": "Domande studio",
+      "quality_matrix_controls": 43,
+      "selector_orchestrator_controls": 8,
+      "total_controls": 51
+    },
+    {
+      "section_type": "test_quiz",
+      "section_label": "Test/Quiz",
+      "quality_matrix_controls": 55,
+      "selector_orchestrator_controls": 8,
+      "total_controls": 63
+    }
+  ],
+  "notes": [
+    "qm_060 ora è attivo, collegato e verificato come report qualità sempre leggibile.",
+    "qm_059 ora è verificato come output finale pronto per UI/PDF/app.",
+    "I totali di route restano: Card 60, Riassunto 55, Domande studio 51, Test/Quiz 63."
+  ]
+}

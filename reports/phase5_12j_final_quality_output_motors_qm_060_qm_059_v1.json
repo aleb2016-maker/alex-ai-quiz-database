@@ -1,0 +1,124 @@
+{
+  "phase": "5.12J",
+  "label": "FASE 5.12J — FINAL QUALITY REPORT AND OUTPUT READINESS QM_060_QM_059",
+  "status": "PASS - Fase 5.12J: FINAL_QM_060_QM_059_READY",
+  "official_qm_motors": 64,
+  "registry_total": 73,
+  "final_motors": [
+    {
+      "qm_id": "qm_060",
+      "name": "Report qualità sempre leggibile",
+      "role": "quality_report",
+      "what_it_does": "Genera un report qualità chiaro, leggibile, non grezzo, con stato, conteggi, route, defects, warnings e prossime azioni.",
+      "universal": "sì",
+      "used_by_sections": [
+        "card",
+        "summary",
+        "study_questions",
+        "test_quiz"
+      ],
+      "final_state": "attivo_collegato_verificato"
+    },
+    {
+      "qm_id": "qm_059",
+      "name": "Output finale pronto per UI/PDF/app",
+      "role": "final_output_readiness",
+      "what_it_does": "Verifica che l’output finale sia completo, pulito, leggibile e pronto per essere usato da UI, PDF, app o web.",
+      "universal": "sì",
+      "used_by_sections": [
+        "card",
+        "summary",
+        "study_questions",
+        "test_quiz"
+      ],
+      "final_state": "verificato_finale"
+    }
+  ],
+  "section_routes": [
+    {
+      "section_type": "card",
+      "section_label": "Card",
+      "quality_matrix_controls": 52,
+      "selector_orchestrator_controls": 8,
+      "total_controls": 60
+    },
+    {
+      "section_type": "summary",
+      "section_label": "Riassunto",
+      "quality_matrix_controls": 47,
+      "selector_orchestrator_controls": 8,
+      "total_controls": 55
+    },
+    {
+      "section_type": "study_questions",
+      "section_label": "Domande studio",
+      "quality_matrix_controls": 43,
+      "selector_orchestrator_controls": 8,
+      "total_controls": 51
+    },
+    {
+      "section_type": "test_quiz",
+      "section_label": "Test/Quiz",
+      "quality_matrix_controls": 55,
+      "selector_orchestrator_controls": 8,
+      "total_controls": 63
+    }
+  ],
+  "qm_060": {
+    "qm_id": "qm_060",
+    "name": "Report qualità sempre leggibile",
+    "ready": true,
+    "readability_score": 100,
+    "generated_report": "REPORT QUALITÀ FINALE\n\nStato generale: PASS\nMotori qualità ufficiali spiegati: 64\nElementi totali registry/orchestrazione: 73\n\nRoute operative:\n- Card: 52 controlli qualità + 8 selector/orchestrator = 60 controlli totali\n- Riassunto: 47 controlli qualità + 8 selector/orchestrator = 55 controlli totali\n- Domande studio: 43 controlli qualità + 8 selector/orchestrator = 51 controlli totali\n- Test/Quiz: 55 controlli qualità + 8 selector/orchestrator = 63 controlli totali\n\nMotori finali:\n- qm_060: report qualità sempre leggibile — attivo e verificato\n- qm_059: output finale pronto per UI/PDF/app — verificato\n\nDefects: nessuno\nWarnings: nessuno\n\nEsito: output qualità pronto per il prossimo livello di integrazione.",
+    "checks": [
+      "Presente: REPORT QUALITÀ FINALE",
+      "Presente: Stato generale: PASS",
+      "Presente: Motori qualità ufficiali spiegati",
+      "Presente: Elementi totali registry/orchestrazione",
+      "Presente: Route operative",
+      "Presente: qm_060",
+      "Presente: qm_059",
+      "Presente: Defects: nessuno",
+      "Presente: Warnings: nessuno"
+    ],
+    "defects": [],
+    "warnings": []
+  },
+  "qm_059": {
+    "qm_id": "qm_059",
+    "name": "Output finale pronto per UI/PDF/app",
+    "ready": true,
+    "target_surfaces": [
+      "UI",
+      "PDF",
+      "app",
+      "web"
+    ],
+    "required_blocks": [
+      "catalogo_motori_qualita",
+      "route_sezioni",
+      "report_qualita_leggibile",
+      "defects_warnings",
+      "stato_finale"
+    ],
+    "checks": [
+      "Nessun defect a monte.",
+      "qm_060 pronto: report qualità leggibile.",
+      "Route sezioni complete: card, riassunto, domande studio, test/quiz.",
+      "Route Card pronta con totale 60.",
+      "Route Riassunto pronta con totale 55.",
+      "Route Domande studio pronta con totale 51.",
+      "Route Test/Quiz pronta con totale 63."
+    ],
+    "defects": [],
+    "warnings": []
+  },
+  "defects": [],
+  "warnings": [],
+  "notes": [
+    "Backend/report only.",
+    "qm_060 chiude il report qualità sempre leggibile.",
+    "qm_059 chiude la verifica finale output pronto UI/PDF/app.",
+    "UI/PDF/app non vengono modificati in questa fase: viene verificato il contratto di prontezza."
+  ]
+}
