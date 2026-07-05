@@ -1,0 +1,39 @@
+{
+  "phase": "5.13B.1",
+  "label": "FASE 5.13B.1 — FINAL SUMMARY GENERATION",
+  "status": "PASS - Fase 5.13B.1: FINAL_SUMMARY_GENERATION_READY",
+  "summary_generated": true,
+  "summary_route_total": 55,
+  "route_connected_controls": 55,
+  "route_executed_controls": 55,
+  "route_passed_controls": 55,
+  "route_failed_controls": 0,
+  "qm_059_output_ready": true,
+  "payload": {
+    "summary_id": "summary_001",
+    "section_type": "summary",
+    "title": "Sintesi operativa della sicurezza informatica aziendale",
+    "category": "Sicurezza informatica",
+    "subcategory": "Prevenzione operativa con continuità",
+    "source_label": "Fonte: sezione “Sicurezza informatica”.",
+    "summary_text": "La sicurezza informatica aziendale richiede regole operative chiare, controlli costanti e comportamenti coerenti da parte degli utenti. Le password devono essere robuste, aggiornate quando necessario e protette con sistemi di autenticazione adeguati. Il phishing resta una delle minacce più frequenti perché sfrutta distrazione, urgenza e fiducia. Un messaggio sospetto va controllato osservando mittente, link, allegati e coerenza della richiesta. Il backup protegge la continuità operativa quando un file viene cancellato, un dispositivo si rompe o un sistema viene colpito da malware. Le copie di sicurezza devono essere aggiornate, verificabili e disponibili per il ripristino. La formazione degli utenti trasforma le regole tecniche in comportamenti quotidiani. Quando le persone capiscono rischi, procedure e responsabilità, la sicurezza diventa più stabile e meno dipendente da interventi di emergenza.",
+    "key_points": [
+      "La sicurezza informatica aziendale richiede regole operative chiare, controlli costanti e comportamenti coerenti da parte degli utenti.",
+      "Le password devono essere robuste, aggiornate quando necessario e protette con sistemi di autenticazione adeguati.",
+      "Il phishing resta una delle minacce più frequenti perché sfrutta distrazione, urgenza e fiducia.",
+      "Un messaggio sospetto va controllato osservando mittente, link, allegati e coerenza della richiesta.",
+      "Il backup protegge la continuità operativa quando un file viene cancellato, un dispositivo si rompe o un sistema viene colpito da malware."
+    ]
+  },
+  "defects": [],
+  "warnings": [],
+  "checks": [
+    "Summary Route 55 strict connector: connected=55",
+    "Summary Route 55 strict connector: executed=55",
+    "Summary Route 55 strict connector: passed=55",
+    "Summary Route 55 strict connector: failed=0",
+    "Generazione finale Riassunto pronta.",
+    "Route Riassunto 55 collegata, eseguita e superata.",
+    "Riassunto finale pronto per successivo collegamento UI/PDF/app."
+  ]
+}
