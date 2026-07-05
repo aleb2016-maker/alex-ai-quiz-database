@@ -1,0 +1,571 @@
+{
+  "phase": "5.12B",
+  "generated_at": "2026-07-05T15:21:33.372542+00:00",
+  "status": "PASS",
+  "approved": true,
+  "ready_label": "TEXT_QUALITY_MOTORS_V512B_READY",
+  "registry": {
+    "phase": "5.12B",
+    "version": "v1",
+    "ready_label": "TEXT_QUALITY_MOTORS_V512B_READY",
+    "total_motors": 12,
+    "motors": [
+      {
+        "id": "qm_001_qualita_testuale_grammatica_italiana_corretta",
+        "title": "Grammatica italiana corretta",
+        "type": "validator",
+        "severity": "blocking"
+      },
+      {
+        "id": "qm_002_qualita_testuale_accenti_corretti",
+        "title": "Accenti corretti",
+        "type": "validator_repair",
+        "severity": "blocking"
+      },
+      {
+        "id": "qm_003_qualita_testuale_apostrofi_corretti",
+        "title": "Apostrofi corretti",
+        "type": "validator_repair",
+        "severity": "blocking"
+      },
+      {
+        "id": "qm_004_qualita_testuale_punteggiatura_corretta",
+        "title": "Punteggiatura corretta",
+        "type": "validator",
+        "severity": "blocking"
+      },
+      {
+        "id": "qm_005_qualita_testuale_spazi_corretti_prima_e_dopo_punteggiatura",
+        "title": "Spazi corretti prima e dopo punteggiatura",
+        "type": "validator_repair",
+        "severity": "blocking"
+      },
+      {
+        "id": "qm_006_qualita_testuale_frasi_complete",
+        "title": "Frasi complete",
+        "type": "validator",
+        "severity": "blocking_warning"
+      },
+      {
+        "id": "qm_007_qualita_testuale_assenza_di_frasi_spezzate",
+        "title": "Assenza di frasi spezzate",
+        "type": "validator",
+        "severity": "blocking"
+      },
+      {
+        "id": "qm_008_qualita_testuale_assenza_di_frasi_non_terminate",
+        "title": "Assenza di frasi non terminate",
+        "type": "validator",
+        "severity": "blocking"
+      },
+      {
+        "id": "qm_009_qualita_testuale_assenza_di_finali_sospetti",
+        "title": "Assenza di finali sospetti",
+        "type": "validator",
+        "severity": "blocking"
+      },
+      {
+        "id": "qm_010_qualita_testuale_assenza_di_frasi_riempitive",
+        "title": "Assenza di frasi riempitive",
+        "type": "validator",
+        "severity": "blocking"
+      },
+      {
+        "id": "qm_011_qualita_testuale_assenza_di_testo_generico",
+        "title": "Assenza di testo generico",
+        "type": "validator",
+        "severity": "blocking"
+      },
+      {
+        "id": "qm_012_qualita_testuale_assenza_di_vecchi_fallback_demo_test",
+        "title": "Assenza di vecchi fallback demo test",
+        "type": "validator",
+        "severity": "blocking"
+      }
+    ],
+    "safe_repairs": [
+      "accenti",
+      "apostrofi",
+      "spazi_punteggiatura"
+    ],
+    "scope_guard": {
+      "ui_pdf_css_app_touched": false,
+      "pipeline_5_11_changed": false,
+      "standalone_first": true,
+      "no_fallback": true,
+      "no_demo_output": true
+    }
+  },
+  "targeted_tests_total": 12,
+  "targeted_tests_passed": 12,
+  "targeted_tests": [
+    {
+      "case_id": "case_001_grammar",
+      "motor_id": "qm_001_qualita_testuale_grammatica_italiana_corretta",
+      "passed": true,
+      "blocking_hits": 1,
+      "expected_blocking": true,
+      "target_status": "FAIL",
+      "issues": [
+        {
+          "motor_id": "qm_001_qualita_testuale_grammatica_italiana_corretta",
+          "severity": "blocking",
+          "message": "Accordo errato: “regola” è femminile.",
+          "excerpt": "Regola operativa viene presentato",
+          "suggestion": "Regola operativa viene presentata"
+        }
+      ]
+    },
+    {
+      "case_id": "case_002_accents",
+      "motor_id": "qm_002_qualita_testuale_accenti_corretti",
+      "passed": true,
+      "blocking_hits": 8,
+      "expected_blocking": true,
+      "target_status": "FAIL",
+      "issues": [
+        {
+          "motor_id": "qm_002_qualita_testuale_accenti_corretti",
+          "severity": "blocking",
+          "message": "Accento o forma grafica italiana non corretta.",
+          "excerpt": "Perche",
+          "suggestion": "perché"
+        },
+        {
+          "motor_id": "qm_002_qualita_testuale_accenti_corretti",
+          "severity": "blocking",
+          "message": "Accento o forma grafica italiana non corretta.",
+          "excerpt": "puo",
+          "suggestion": "può"
+        },
+        {
+          "motor_id": "qm_002_qualita_testuale_accenti_corretti",
+          "severity": "blocking",
+          "message": "Accento o forma grafica italiana non corretta.",
+          "excerpt": "piu",
+          "suggestion": "più"
+        },
+        {
+          "motor_id": "qm_002_qualita_testuale_accenti_corretti",
+          "severity": "blocking",
+          "message": "Accento o forma grafica italiana non corretta.",
+          "excerpt": "gia",
+          "suggestion": "già"
+        },
+        {
+          "motor_id": "qm_002_qualita_testuale_accenti_corretti",
+          "severity": "blocking",
+          "message": "Accento o forma grafica italiana non corretta.",
+          "excerpt": "cioe",
+          "suggestion": "cioè"
+        },
+        {
+          "motor_id": "qm_002_qualita_testuale_accenti_corretti",
+          "severity": "blocking",
+          "message": "Accento o forma grafica italiana non corretta.",
+          "excerpt": "cosi",
+          "suggestion": "così"
+        },
+        {
+          "motor_id": "qm_002_qualita_testuale_accenti_corretti",
+          "severity": "blocking",
+          "message": "Accento o forma grafica italiana non corretta.",
+          "excerpt": "pero",
+          "suggestion": "però"
+        },
+        {
+          "motor_id": "qm_002_qualita_testuale_accenti_corretti",
+          "severity": "blocking",
+          "message": "Accento o forma grafica italiana non corretta.",
+          "excerpt": "qual'e",
+          "suggestion": "qual è"
+        }
+      ]
+    },
+    {
+      "case_id": "case_003_apostrophes",
+      "motor_id": "qm_003_qualita_testuale_apostrofi_corretti",
+      "passed": true,
+      "blocking_hits": 4,
+      "expected_blocking": true,
+      "target_status": "FAIL",
+      "issues": [
+        {
+          "motor_id": "qm_003_qualita_testuale_apostrofi_corretti",
+          "severity": "blocking",
+          "message": "Apostrofo mancante o forma elisa non corretta.",
+          "excerpt": "un informazione",
+          "suggestion": "un’informazione"
+        },
+        {
+          "motor_id": "qm_003_qualita_testuale_apostrofi_corretti",
+          "severity": "blocking",
+          "message": "Apostrofo mancante o forma elisa non corretta.",
+          "excerpt": "un idea",
+          "suggestion": "un’idea"
+        },
+        {
+          "motor_id": "qm_003_qualita_testuale_apostrofi_corretti",
+          "severity": "blocking",
+          "message": "Apostrofo mancante o forma elisa non corretta.",
+          "excerpt": "L utente",
+          "suggestion": "l’utente"
+        },
+        {
+          "motor_id": "qm_003_qualita_testuale_apostrofi_corretti",
+          "severity": "blocking",
+          "message": "Apostrofo mancante o forma elisa non corretta.",
+          "excerpt": "d accordo",
+          "suggestion": "d’accordo"
+        }
+      ]
+    },
+    {
+      "case_id": "case_004_punctuation",
+      "motor_id": "qm_004_qualita_testuale_punteggiatura_corretta",
+      "passed": true,
+      "blocking_hits": 2,
+      "expected_blocking": true,
+      "target_status": "FAIL",
+      "issues": [
+        {
+          "motor_id": "qm_004_qualita_testuale_punteggiatura_corretta",
+          "severity": "blocking",
+          "message": "Virgole ripetute.",
+          "excerpt": ",,,",
+          "suggestion": ","
+        },
+        {
+          "motor_id": "qm_004_qualita_testuale_punteggiatura_corretta",
+          "severity": "blocking",
+          "message": "Il testo non termina con punteggiatura conclusiva.",
+          "excerpt": "Il riassunto contiene concetti utili,,, e termina male",
+          "suggestion": "Chiudere con punto, punto interrogativo o punto esclamativo se appropriato."
+        }
+      ]
+    },
+    {
+      "case_id": "case_005_spacing",
+      "motor_id": "qm_005_qualita_testuale_spazi_corretti_prima_e_dopo_punteggiatura",
+      "passed": true,
+      "blocking_hits": 3,
+      "expected_blocking": true,
+      "target_status": "FAIL",
+      "issues": [
+        {
+          "motor_id": "qm_005_qualita_testuale_spazi_corretti_prima_e_dopo_punteggiatura",
+          "severity": "blocking",
+          "message": "Spazio errato prima della punteggiatura.",
+          "excerpt": ",",
+          "suggestion": ","
+        },
+        {
+          "motor_id": "qm_005_qualita_testuale_spazi_corretti_prima_e_dopo_punteggiatura",
+          "severity": "blocking",
+          "message": "Spazio mancante dopo la punteggiatura.",
+          "excerpt": ",ma deve essere corr",
+          "suggestion": ", "
+        },
+        {
+          "motor_id": "qm_005_qualita_testuale_spazi_corretti_prima_e_dopo_punteggiatura",
+          "severity": "blocking",
+          "message": "Spazio mancante dopo la punteggiatura.",
+          "excerpt": ".Bene.",
+          "suggestion": ". "
+        }
+      ]
+    },
+    {
+      "case_id": "case_006_complete_sentences",
+      "motor_id": "qm_006_qualita_testuale_frasi_complete",
+      "passed": true,
+      "blocking_hits": 1,
+      "expected_blocking": true,
+      "target_status": "FAIL",
+      "issues": [
+        {
+          "motor_id": "qm_006_qualita_testuale_frasi_complete",
+          "severity": "blocking",
+          "message": "Possibile frase non completa: manca un verbo o una struttura frasale chiara.",
+          "excerpt": "Obiettivi principali senza contesto operativo chiaro.",
+          "suggestion": "Trasformare il frammento in una frase completa con soggetto e verbo."
+        }
+      ]
+    },
+    {
+      "case_id": "case_007_broken_sentences",
+      "motor_id": "qm_007_qualita_testuale_assenza_di_frasi_spezzate",
+      "passed": true,
+      "blocking_hits": 1,
+      "expected_blocking": true,
+      "target_status": "FAIL",
+      "issues": [
+        {
+          "motor_id": "qm_007_qualita_testuale_assenza_di_frasi_spezzate",
+          "severity": "blocking",
+          "message": "Possibile frase spezzata da un ritorno a capo non necessario.",
+          "excerpt": "Il sistema organizza i contenuti / in sezioni utili per il ripasso.",
+          "suggestion": "Unire le due righe o chiudere correttamente la frase."
+        }
+      ]
+    },
+    {
+      "case_id": "case_008_unfinished",
+      "motor_id": "qm_008_qualita_testuale_assenza_di_frasi_non_terminate",
+      "passed": true,
+      "blocking_hits": 2,
+      "expected_blocking": true,
+      "target_status": "FAIL",
+      "issues": [
+        {
+          "motor_id": "qm_008_qualita_testuale_assenza_di_frasi_non_terminate",
+          "severity": "blocking",
+          "message": "Frase probabilmente non terminata.",
+          "excerpt": "Il riassunto descrive le regole operative con",
+          "suggestion": "Completare la frase usando il contesto, il tema e il sottotema."
+        },
+        {
+          "motor_id": "qm_008_qualita_testuale_assenza_di_frasi_non_terminate",
+          "severity": "blocking",
+          "message": "Output finale non chiuso da punteggiatura conclusiva.",
+          "excerpt": "Il riassunto descrive le regole operative con",
+          "suggestion": "Completare o chiudere la frase finale."
+        }
+      ]
+    },
+    {
+      "case_id": "case_009_suspicious_endings",
+      "motor_id": "qm_009_qualita_testuale_assenza_di_finali_sospetti",
+      "passed": true,
+      "blocking_hits": 1,
+      "expected_blocking": true,
+      "target_status": "FAIL",
+      "issues": [
+        {
+          "motor_id": "qm_009_qualita_testuale_assenza_di_finali_sospetti",
+          "severity": "blocking",
+          "message": "Finale sospetto: la frase finisce con connettivo, preposizione o articolo.",
+          "excerpt": "La card spiega il concetto principale di.",
+          "suggestion": "Completare la frase con il contenuto mancante."
+        }
+      ]
+    },
+    {
+      "case_id": "case_010_fillers",
+      "motor_id": "qm_010_qualita_testuale_assenza_di_frasi_riempitive",
+      "passed": true,
+      "blocking_hits": 3,
+      "expected_blocking": true,
+      "target_status": "FAIL",
+      "issues": [
+        {
+          "motor_id": "qm_010_qualita_testuale_assenza_di_frasi_riempitive",
+          "severity": "blocking",
+          "message": "Frase riempitiva o poco informativa.",
+          "excerpt": "In questo documento viene analizzato",
+          "suggestion": "Sostituire con un'informazione specifica tratta dal contenuto."
+        },
+        {
+          "motor_id": "qm_010_qualita_testuale_assenza_di_frasi_riempitive",
+          "severity": "blocking",
+          "message": "Frase riempitiva o poco informativa.",
+          "excerpt": "È importante sottolineare",
+          "suggestion": "Sostituire con un'informazione specifica tratta dal contenuto."
+        },
+        {
+          "motor_id": "qm_010_qualita_testuale_assenza_di_frasi_riempitive",
+          "severity": "blocking",
+          "message": "Frase riempitiva o poco informativa.",
+          "excerpt": "diversi elementi importanti",
+          "suggestion": "Sostituire con un'informazione specifica tratta dal contenuto."
+        }
+      ]
+    },
+    {
+      "case_id": "case_011_generic",
+      "motor_id": "qm_011_qualita_testuale_assenza_di_testo_generico",
+      "passed": true,
+      "blocking_hits": 3,
+      "expected_blocking": true,
+      "target_status": "FAIL",
+      "issues": [
+        {
+          "motor_id": "qm_011_qualita_testuale_assenza_di_testo_generico",
+          "severity": "blocking",
+          "message": "Testo generico non accettabile nell'output finale.",
+          "excerpt": "documento analizzato",
+          "suggestion": "Usare una formulazione specifica collegata al contenuto reale."
+        },
+        {
+          "motor_id": "qm_011_qualita_testuale_assenza_di_testo_generico",
+          "severity": "blocking",
+          "message": "Testo generico non accettabile nell'output finale.",
+          "excerpt": "contenuti generati",
+          "suggestion": "Usare una formulazione specifica collegata al contenuto reale."
+        },
+        {
+          "motor_id": "qm_011_qualita_testuale_assenza_di_testo_generico",
+          "severity": "blocking",
+          "message": "Testo generico non accettabile nell'output finale.",
+          "excerpt": "punto centrale",
+          "suggestion": "Usare una formulazione specifica collegata al contenuto reale."
+        }
+      ]
+    },
+    {
+      "case_id": "case_012_fallback_demo",
+      "motor_id": "qm_012_qualita_testuale_assenza_di_vecchi_fallback_demo_test",
+      "passed": true,
+      "blocking_hits": 4,
+      "expected_blocking": true,
+      "target_status": "FAIL",
+      "issues": [
+        {
+          "motor_id": "qm_012_qualita_testuale_assenza_di_vecchi_fallback_demo_test",
+          "severity": "blocking",
+          "message": "Contaminazione vecchia/demo/fallback rilevata.",
+          "excerpt": "Fallback",
+          "suggestion": "Rimuovere la contaminazione e usare solo contenuto reale dell'input."
+        },
+        {
+          "motor_id": "qm_012_qualita_testuale_assenza_di_vecchi_fallback_demo_test",
+          "severity": "blocking",
+          "message": "Contaminazione vecchia/demo/fallback rilevata.",
+          "excerpt": "demo",
+          "suggestion": "Rimuovere la contaminazione e usare solo contenuto reale dell'input."
+        },
+        {
+          "motor_id": "qm_012_qualita_testuale_assenza_di_vecchi_fallback_demo_test",
+          "severity": "blocking",
+          "message": "Contaminazione vecchia/demo/fallback rilevata.",
+          "excerpt": "sicurezza informatica aziendale",
+          "suggestion": "Rimuovere la contaminazione e usare solo contenuto reale dell'input."
+        },
+        {
+          "motor_id": "qm_012_qualita_testuale_assenza_di_vecchi_fallback_demo_test",
+          "severity": "blocking",
+          "message": "Contaminazione vecchia/demo/fallback rilevata.",
+          "excerpt": "knowledge_base_json",
+          "suggestion": "Rimuovere la contaminazione e usare solo contenuto reale dell'input."
+        }
+      ]
+    }
+  ],
+  "good_case": {
+    "passed": true,
+    "blocking_issues": 0,
+    "warning_issues": 0,
+    "status": "PASS",
+    "approved": true,
+    "repaired_text": "Il sistema organizza le informazioni in sezioni chiare. Le domande guidano il ripasso e le fonti indicano il contesto usato. Ogni card presenta un messaggio specifico, leggibile e collegato al contenuto reale.",
+    "full_report": {
+      "phase": "5.12B",
+      "ready_label": "TEXT_QUALITY_MOTORS_V512B_READY",
+      "approved": true,
+      "status": "PASS",
+      "total_motors": 12,
+      "passed_motors": 12,
+      "failed_motors": 0,
+      "total_issues": 0,
+      "blocking_issues": 0,
+      "warning_issues": 0,
+      "results": [
+        {
+          "motor_id": "qm_001_qualita_testuale_grammatica_italiana_corretta",
+          "title": "Grammatica italiana corretta",
+          "status": "PASS",
+          "issues": [],
+          "repaired_text": null
+        },
+        {
+          "motor_id": "qm_002_qualita_testuale_accenti_corretti",
+          "title": "Accenti corretti",
+          "status": "PASS",
+          "issues": [],
+          "repaired_text": "Il sistema organizza le informazioni in sezioni chiare. Le domande guidano il ripasso e le fonti indicano il contesto usato. Ogni card presenta un messaggio specifico, leggibile e collegato al contenuto reale."
+        },
+        {
+          "motor_id": "qm_003_qualita_testuale_apostrofi_corretti",
+          "title": "Apostrofi corretti",
+          "status": "PASS",
+          "issues": [],
+          "repaired_text": "Il sistema organizza le informazioni in sezioni chiare. Le domande guidano il ripasso e le fonti indicano il contesto usato. Ogni card presenta un messaggio specifico, leggibile e collegato al contenuto reale."
+        },
+        {
+          "motor_id": "qm_004_qualita_testuale_punteggiatura_corretta",
+          "title": "Punteggiatura corretta",
+          "status": "PASS",
+          "issues": [],
+          "repaired_text": null
+        },
+        {
+          "motor_id": "qm_005_qualita_testuale_spazi_corretti_prima_e_dopo_punteggiatura",
+          "title": "Spazi corretti prima e dopo punteggiatura",
+          "status": "PASS",
+          "issues": [],
+          "repaired_text": "Il sistema organizza le informazioni in sezioni chiare. Le domande guidano il ripasso e le fonti indicano il contesto usato. Ogni card presenta un messaggio specifico, leggibile e collegato al contenuto reale."
+        },
+        {
+          "motor_id": "qm_006_qualita_testuale_frasi_complete",
+          "title": "Frasi complete",
+          "status": "PASS",
+          "issues": [],
+          "repaired_text": null
+        },
+        {
+          "motor_id": "qm_007_qualita_testuale_assenza_di_frasi_spezzate",
+          "title": "Assenza di frasi spezzate",
+          "status": "PASS",
+          "issues": [],
+          "repaired_text": null
+        },
+        {
+          "motor_id": "qm_008_qualita_testuale_assenza_di_frasi_non_terminate",
+          "title": "Assenza di frasi non terminate",
+          "status": "PASS",
+          "issues": [],
+          "repaired_text": null
+        },
+        {
+          "motor_id": "qm_009_qualita_testuale_assenza_di_finali_sospetti",
+          "title": "Assenza di finali sospetti",
+          "status": "PASS",
+          "issues": [],
+          "repaired_text": null
+        },
+        {
+          "motor_id": "qm_010_qualita_testuale_assenza_di_frasi_riempitive",
+          "title": "Assenza di frasi riempitive",
+          "status": "PASS",
+          "issues": [],
+          "repaired_text": null
+        },
+        {
+          "motor_id": "qm_011_qualita_testuale_assenza_di_testo_generico",
+          "title": "Assenza di testo generico",
+          "status": "PASS",
+          "issues": [],
+          "repaired_text": null
+        },
+        {
+          "motor_id": "qm_012_qualita_testuale_assenza_di_vecchi_fallback_demo_test",
+          "title": "Assenza di vecchi fallback demo test",
+          "status": "PASS",
+          "issues": [],
+          "repaired_text": null
+        }
+      ],
+      "repaired_text": "Il sistema organizza le informazioni in sezioni chiare. Le domande guidano il ripasso e le fonti indicano il contesto usato. Ogni card presenta un messaggio specifico, leggibile e collegato al contenuto reale."
+    }
+  },
+  "scope_guard": {
+    "created_text_quality_motors": true,
+    "connected_to_pipeline_5_11": false,
+    "changed_ui_pdf_css_app": false,
+    "deleted_existing_files": false
+  },
+  "report_files": {
+    "json": "reports/phase5_12b_text_quality_motors_v1.json",
+    "markdown": "reports/phase5_12b_text_quality_motors_v1.md"
+  }
+}
