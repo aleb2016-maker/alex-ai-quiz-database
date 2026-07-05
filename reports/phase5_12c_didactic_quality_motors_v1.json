@@ -1,0 +1,400 @@
+{
+  "phase": "5.12C",
+  "generated_at": "2026-07-05T15:36:08.522743+00:00",
+  "status": "PASS",
+  "approved": true,
+  "ready_label": "DIDACTIC_QUALITY_MOTORS_V512C_READY",
+  "registry": {
+    "phase": "5.12C",
+    "version": "v1",
+    "ready_label": "DIDACTIC_QUALITY_MOTORS_V512C_READY",
+    "total_motors": 10,
+    "motors": [
+      {
+        "id": "qm_013_qualita_didattica_domande_studio_naturali",
+        "title": "Domande studio naturali",
+        "type": "validator",
+        "severity": "blocking"
+      },
+      {
+        "id": "qm_014_qualita_didattica_domande_studio_utili_per_ripassare",
+        "title": "Domande studio utili per ripassare",
+        "type": "validator",
+        "severity": "blocking"
+      },
+      {
+        "id": "qm_015_qualita_didattica_risposte_guida_specifiche",
+        "title": "Risposte guida specifiche",
+        "type": "validator",
+        "severity": "blocking"
+      },
+      {
+        "id": "qm_016_qualita_didattica_spiegazioni_test_chiare",
+        "title": "Spiegazioni test chiare",
+        "type": "validator",
+        "severity": "blocking"
+      },
+      {
+        "id": "qm_017_qualita_didattica_spiegazioni_non_troppo_corte",
+        "title": "Spiegazioni non troppo corte",
+        "type": "validator",
+        "severity": "blocking"
+      },
+      {
+        "id": "qm_018_qualita_didattica_tono_didattico_finale",
+        "title": "Tono didattico finale",
+        "type": "validator",
+        "severity": "blocking"
+      },
+      {
+        "id": "qm_019_qualita_didattica_categorie_presenti",
+        "title": "Categorie presenti",
+        "type": "validator",
+        "severity": "blocking"
+      },
+      {
+        "id": "qm_020_qualita_didattica_sottocategorie_presenti",
+        "title": "Sottocategorie presenti",
+        "type": "validator",
+        "severity": "blocking"
+      },
+      {
+        "id": "qm_021_qualita_didattica_coerenza_tra_domanda_risposta_e_contenuto",
+        "title": "Coerenza tra domanda risposta e contenuto",
+        "type": "validator",
+        "severity": "blocking_warning"
+      },
+      {
+        "id": "qm_022_qualita_didattica_niente_risposte_vaghe",
+        "title": "Niente risposte vaghe",
+        "type": "validator",
+        "severity": "blocking"
+      }
+    ],
+    "scope_guard": {
+      "ui_pdf_css_app_touched": false,
+      "pipeline_5_11_changed": false,
+      "existing_23_motors_changed": false,
+      "standalone_first": true,
+      "no_fallback": true,
+      "no_demo_output": true
+    }
+  },
+  "targeted_tests_total": 10,
+  "targeted_tests_passed": 10,
+  "targeted_tests": [
+    {
+      "case_id": "case_013",
+      "motor_id": "qm_013_qualita_didattica_domande_studio_naturali",
+      "passed": true,
+      "blocking_hits": 1,
+      "expected_blocking": true,
+      "target_status": "FAIL",
+      "issues": [
+        {
+          "motor_id": "qm_013_qualita_didattica_domande_studio_naturali",
+          "severity": "blocking",
+          "message": "Domanda studio poco naturale o formulata in modo meccanico.",
+          "excerpt": "Documento analizzato?",
+          "suggestion": "Usare una domanda naturale, completa e utile per lo studio."
+        }
+      ]
+    },
+    {
+      "case_id": "case_014",
+      "motor_id": "qm_014_qualita_didattica_domande_studio_utili_per_ripassare",
+      "passed": true,
+      "blocking_hits": 2,
+      "expected_blocking": true,
+      "target_status": "FAIL",
+      "issues": [
+        {
+          "motor_id": "qm_014_qualita_didattica_domande_studio_utili_per_ripassare",
+          "severity": "blocking",
+          "message": "Domanda poco utile al ripasso: non chiede relazione, funzione, causa o spiegazione.",
+          "excerpt": "È vero che il documento parla?",
+          "suggestion": "Riformulare chiedendo perché, come, funzione, confronto o conseguenza."
+        },
+        {
+          "motor_id": "qm_014_qualita_didattica_domande_studio_utili_per_ripassare",
+          "severity": "blocking",
+          "message": "Domanda troppo chiusa o povera per il ripasso.",
+          "excerpt": "È vero che il documento parla?",
+          "suggestion": "Preferire domande aperte e ragionate."
+        }
+      ]
+    },
+    {
+      "case_id": "case_015",
+      "motor_id": "qm_015_qualita_didattica_risposte_guida_specifiche",
+      "passed": true,
+      "blocking_hits": 2,
+      "expected_blocking": true,
+      "target_status": "FAIL",
+      "issues": [
+        {
+          "motor_id": "qm_015_qualita_didattica_risposte_guida_specifiche",
+          "severity": "blocking",
+          "message": "Risposta guida troppo corta per essere specifica.",
+          "excerpt": "È importante e utile.",
+          "suggestion": "Espandere con concetti, funzione e contesto."
+        },
+        {
+          "motor_id": "qm_015_qualita_didattica_risposte_guida_specifiche",
+          "severity": "blocking",
+          "message": "Risposta guida poco collegata al contenuto.",
+          "excerpt": "È importante e utile.",
+          "suggestion": "Usare termini e relazioni presenti nel contenuto reale."
+        }
+      ]
+    },
+    {
+      "case_id": "case_016",
+      "motor_id": "qm_016_qualita_didattica_spiegazioni_test_chiare",
+      "passed": true,
+      "blocking_hits": 2,
+      "expected_blocking": true,
+      "target_status": "FAIL",
+      "issues": [
+        {
+          "motor_id": "qm_016_qualita_didattica_spiegazioni_test_chiare",
+          "severity": "blocking",
+          "message": "Spiegazione poco chiara: manca una motivazione esplicita.",
+          "excerpt": "È quella giusta.",
+          "suggestion": "Spiegare perché la risposta è corretta."
+        },
+        {
+          "motor_id": "qm_016_qualita_didattica_spiegazioni_test_chiare",
+          "severity": "blocking",
+          "message": "Spiegazione non collegata alla risposta corretta.",
+          "excerpt": "È quella giusta.",
+          "suggestion": "Collegare la spiegazione alla risposta corretta."
+        }
+      ]
+    },
+    {
+      "case_id": "case_017",
+      "motor_id": "qm_017_qualita_didattica_spiegazioni_non_troppo_corte",
+      "passed": true,
+      "blocking_hits": 1,
+      "expected_blocking": true,
+      "target_status": "FAIL",
+      "issues": [
+        {
+          "motor_id": "qm_017_qualita_didattica_spiegazioni_non_troppo_corte",
+          "severity": "blocking",
+          "message": "Spiegazione troppo corta.",
+          "excerpt": "Perché sì.",
+          "suggestion": "Scrivere almeno una spiegazione completa con motivazione."
+        }
+      ]
+    },
+    {
+      "case_id": "case_018",
+      "motor_id": "qm_018_qualita_didattica_tono_didattico_finale",
+      "passed": true,
+      "blocking_hits": 3,
+      "expected_blocking": true,
+      "target_status": "FAIL",
+      "issues": [
+        {
+          "motor_id": "qm_018_qualita_didattica_tono_didattico_finale",
+          "severity": "blocking",
+          "message": "Tono non didattico o troppo colloquiale.",
+          "excerpt": "boh",
+          "suggestion": "Usare un tono chiaro, neutro e formativo."
+        },
+        {
+          "motor_id": "qm_018_qualita_didattica_tono_didattico_finale",
+          "severity": "blocking",
+          "message": "Tono non didattico o troppo colloquiale.",
+          "excerpt": "facile",
+          "suggestion": "Usare un tono chiaro, neutro e formativo."
+        },
+        {
+          "motor_id": "qm_018_qualita_didattica_tono_didattico_finale",
+          "severity": "blocking",
+          "message": "Tono non didattico o troppo colloquiale.",
+          "excerpt": "basta leggere",
+          "suggestion": "Usare un tono chiaro, neutro e formativo."
+        }
+      ]
+    },
+    {
+      "case_id": "case_019",
+      "motor_id": "qm_019_qualita_didattica_categorie_presenti",
+      "passed": true,
+      "blocking_hits": 1,
+      "expected_blocking": true,
+      "target_status": "FAIL",
+      "issues": [
+        {
+          "motor_id": "qm_019_qualita_didattica_categorie_presenti",
+          "severity": "blocking",
+          "message": "Categorie mancanti.",
+          "excerpt": "{'source_text': \"Il backup periodico protegge i dati perché permette di recuperarli dopo errori, guasti o cancellazioni accidentali. L'au...",
+          "suggestion": "Aggiungere una categoria didattica per organizzare l'output."
+        }
+      ]
+    },
+    {
+      "case_id": "case_020",
+      "motor_id": "qm_020_qualita_didattica_sottocategorie_presenti",
+      "passed": true,
+      "blocking_hits": 1,
+      "expected_blocking": true,
+      "target_status": "FAIL",
+      "issues": [
+        {
+          "motor_id": "qm_020_qualita_didattica_sottocategorie_presenti",
+          "severity": "blocking",
+          "message": "Sottocategorie mancanti.",
+          "excerpt": "{'source_text': \"Il backup periodico protegge i dati perché permette di recuperarli dopo errori, guasti o cancellazioni accidentali. L'au...",
+          "suggestion": "Aggiungere sottocategorie utili per tema, sottotema o funzione."
+        }
+      ]
+    },
+    {
+      "case_id": "case_021",
+      "motor_id": "qm_021_qualita_didattica_coerenza_tra_domanda_risposta_e_contenuto",
+      "passed": true,
+      "blocking_hits": 1,
+      "expected_blocking": true,
+      "target_status": "FAIL",
+      "issues": [
+        {
+          "motor_id": "qm_021_qualita_didattica_coerenza_tra_domanda_risposta_e_contenuto",
+          "severity": "blocking",
+          "message": "Domanda e risposta guida sembrano non coerenti.",
+          "excerpt": "Perché il backup periodico aiuta a proteggere i dati aziendali? / La fotosintesi permette alle piante di trasformare la luce in energia c...",
+          "suggestion": "Allineare risposta e domanda sullo stesso concetto."
+        },
+        {
+          "motor_id": "qm_021_qualita_didattica_coerenza_tra_domanda_risposta_e_contenuto",
+          "severity": "warning",
+          "message": "Domanda e risposta corretta hanno pochi termini in comune.",
+          "excerpt": "Quale pratica aiuta a recuperare dati dopo un errore o un guasto? / Backup periodico",
+          "suggestion": "Verificare manualmente la coerenza semantica."
+        }
+      ]
+    },
+    {
+      "case_id": "case_022",
+      "motor_id": "qm_022_qualita_didattica_niente_risposte_vaghe",
+      "passed": true,
+      "blocking_hits": 1,
+      "expected_blocking": true,
+      "target_status": "FAIL",
+      "issues": [
+        {
+          "motor_id": "qm_022_qualita_didattica_niente_risposte_vaghe",
+          "severity": "blocking",
+          "message": "Risposta vaga o poco informativa.",
+          "excerpt": "Dipende, ci sono varie cose e diversi aspetti importanti.",
+          "suggestion": "Sostituire formule vaghe con dettagli specifici."
+        }
+      ]
+    }
+  ],
+  "good_case": {
+    "passed": true,
+    "blocking_issues": 0,
+    "warning_issues": 1,
+    "status": "PASS",
+    "approved": true,
+    "full_report": {
+      "phase": "5.12C",
+      "ready_label": "DIDACTIC_QUALITY_MOTORS_V512C_READY",
+      "approved": true,
+      "status": "PASS",
+      "total_motors": 10,
+      "passed_motors": 10,
+      "failed_motors": 0,
+      "total_issues": 1,
+      "blocking_issues": 0,
+      "warning_issues": 1,
+      "results": [
+        {
+          "motor_id": "qm_013_qualita_didattica_domande_studio_naturali",
+          "title": "Domande studio naturali",
+          "status": "PASS",
+          "issues": []
+        },
+        {
+          "motor_id": "qm_014_qualita_didattica_domande_studio_utili_per_ripassare",
+          "title": "Domande studio utili per ripassare",
+          "status": "PASS",
+          "issues": []
+        },
+        {
+          "motor_id": "qm_015_qualita_didattica_risposte_guida_specifiche",
+          "title": "Risposte guida specifiche",
+          "status": "PASS",
+          "issues": []
+        },
+        {
+          "motor_id": "qm_016_qualita_didattica_spiegazioni_test_chiare",
+          "title": "Spiegazioni test chiare",
+          "status": "PASS",
+          "issues": []
+        },
+        {
+          "motor_id": "qm_017_qualita_didattica_spiegazioni_non_troppo_corte",
+          "title": "Spiegazioni non troppo corte",
+          "status": "PASS",
+          "issues": []
+        },
+        {
+          "motor_id": "qm_018_qualita_didattica_tono_didattico_finale",
+          "title": "Tono didattico finale",
+          "status": "PASS",
+          "issues": []
+        },
+        {
+          "motor_id": "qm_019_qualita_didattica_categorie_presenti",
+          "title": "Categorie presenti",
+          "status": "PASS",
+          "issues": []
+        },
+        {
+          "motor_id": "qm_020_qualita_didattica_sottocategorie_presenti",
+          "title": "Sottocategorie presenti",
+          "status": "PASS",
+          "issues": []
+        },
+        {
+          "motor_id": "qm_021_qualita_didattica_coerenza_tra_domanda_risposta_e_contenuto",
+          "title": "Coerenza tra domanda risposta e contenuto",
+          "status": "PASS",
+          "issues": [
+            {
+              "motor_id": "qm_021_qualita_didattica_coerenza_tra_domanda_risposta_e_contenuto",
+              "severity": "warning",
+              "message": "Domanda e risposta corretta hanno pochi termini in comune.",
+              "excerpt": "Quale pratica aiuta a recuperare dati dopo un errore o un guasto? / Backup periodico",
+              "suggestion": "Verificare manualmente la coerenza semantica."
+            }
+          ]
+        },
+        {
+          "motor_id": "qm_022_qualita_didattica_niente_risposte_vaghe",
+          "title": "Niente risposte vaghe",
+          "status": "PASS",
+          "issues": []
+        }
+      ]
+    }
+  },
+  "scope_guard": {
+    "created_didactic_quality_motors": true,
+    "connected_to_23_registry": false,
+    "changed_existing_23_motors": false,
+    "changed_pipeline_5_11": false,
+    "changed_ui_pdf_css_app": false,
+    "deleted_existing_files": false
+  },
+  "report_files": {
+    "json": "reports/phase5_12c_didactic_quality_motors_v1.json",
+    "markdown": "reports/phase5_12c_didactic_quality_motors_v1.md"
+  }
+}
