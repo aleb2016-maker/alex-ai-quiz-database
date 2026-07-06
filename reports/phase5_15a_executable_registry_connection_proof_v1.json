@@ -1,0 +1,4497 @@
+{
+  "phase": "5.15A",
+  "label": "REGISTRY ESEGUIBILE E PROVA REALE COLLEGAMENTO 4 GENERATORI",
+  "audit_files_read": [
+    "reports/audit_completo_73_motori_rag_qualita_v1.md",
+    "reports/audit_completo_73_motori_rag_qualita_v1.json",
+    "scripts/audit_73_motori_rag_qualita_v1.py"
+  ],
+  "audit_summary": {
+    "motori_mappati": 73,
+    "motori_qm_spiegati": 64,
+    "registry_total_dichiarato": 73,
+    "collegati_dedotti": 64,
+    "non_collegati_o_da_verificare": 9,
+    "smoke_ok": 23,
+    "smoke_fail": 13,
+    "verdetto": "PARZIALE: architettura promettente ma registry non dimostra esecuzione reale dei 73 motori."
+  },
+  "summary": {
+    "phase": "5.15A",
+    "status": "PARTIAL",
+    "concrete_motors_identified": 64,
+    "executable_motors": 64,
+    "route_only_motors": 0,
+    "report_only_motors": 0,
+    "declared_only_motors": 0,
+    "slot_to_materialize": 9,
+    "legacy_motors": 0,
+    "duplicate_motors": 0,
+    "missing_motors": 0,
+    "generators_traced": [
+      "Card",
+      "Domande studio",
+      "Riassunto",
+      "Test / Quiz"
+    ],
+    "generators_with_bypass": [
+      "Card",
+      "Domande studio",
+      "Riassunto",
+      "Test / Quiz"
+    ],
+    "generators_with_real_qm_connection_proved": []
+  },
+  "motors": [
+    {
+      "id": "qm_001",
+      "number": 1,
+      "name": "Grammatica italiana corretta",
+      "type": "validazione quiz",
+      "status": "EXECUTABLE",
+      "file": "reports/phase5_12i2_official_quality_motor_catalog_v1.json",
+      "function_or_class": "exec_grammar",
+      "generators_linked": [
+        "Riassunto",
+        "Card"
+      ],
+      "real_connection_proof": "Callable executor importato e chiamato dal probe in isolamento.",
+      "proof_mode": "chiamato realmente",
+      "executor_evidence": [
+        {
+          "map": "card_route_60",
+          "callable": "exec_grammar",
+          "signature": "(cards: 'Sequence[Dict[str, Any]]') -> 'List[str]'",
+          "isolated_call": {
+            "ok": true,
+            "result_type": "list",
+            "result_preview": "[]"
+          }
+        }
+      ],
+      "notes": "Executable in probe does not mean invoked by final UI generator; generator trace below remains the source for runtime connection."
+    },
+    {
+      "id": "qm_002",
+      "number": 2,
+      "name": "Accenti corretti",
+      "type": "validazione quiz",
+      "status": "EXECUTABLE",
+      "file": "reports/phase5_12i2_official_quality_motor_catalog_v1.json",
+      "function_or_class": "exec_accents",
+      "generators_linked": [
+        "Riassunto",
+        "Card"
+      ],
+      "real_connection_proof": "Callable executor importato e chiamato dal probe in isolamento.",
+      "proof_mode": "chiamato realmente",
+      "executor_evidence": [
+        {
+          "map": "card_route_60",
+          "callable": "exec_accents",
+          "signature": "(cards: 'Sequence[Dict[str, Any]]') -> 'List[str]'",
+          "isolated_call": {
+            "ok": true,
+            "result_type": "list",
+            "result_preview": "[]"
+          }
+        }
+      ],
+      "notes": "Executable in probe does not mean invoked by final UI generator; generator trace below remains the source for runtime connection."
+    },
+    {
+      "id": "qm_003",
+      "number": 3,
+      "name": "Apostrofi corretti",
+      "type": "validazione quiz",
+      "status": "EXECUTABLE",
+      "file": "reports/phase5_12i2_official_quality_motor_catalog_v1.json",
+      "function_or_class": "exec_apostrophes",
+      "generators_linked": [
+        "Riassunto",
+        "Card"
+      ],
+      "real_connection_proof": "Callable executor importato e chiamato dal probe in isolamento.",
+      "proof_mode": "chiamato realmente",
+      "executor_evidence": [
+        {
+          "map": "card_route_60",
+          "callable": "exec_apostrophes",
+          "signature": "(cards: 'Sequence[Dict[str, Any]]') -> 'List[str]'",
+          "isolated_call": {
+            "ok": true,
+            "result_type": "list",
+            "result_preview": "[]"
+          }
+        }
+      ],
+      "notes": "Executable in probe does not mean invoked by final UI generator; generator trace below remains the source for runtime connection."
+    },
+    {
+      "id": "qm_004",
+      "number": 4,
+      "name": "Punteggiatura corretta",
+      "type": "validazione quiz",
+      "status": "EXECUTABLE",
+      "file": "reports/phase5_12i2_official_quality_motor_catalog_v1.json",
+      "function_or_class": "exec_punctuation",
+      "generators_linked": [
+        "Riassunto",
+        "Card"
+      ],
+      "real_connection_proof": "Callable executor importato e chiamato dal probe in isolamento.",
+      "proof_mode": "chiamato realmente",
+      "executor_evidence": [
+        {
+          "map": "card_route_60",
+          "callable": "exec_punctuation",
+          "signature": "(cards: 'Sequence[Dict[str, Any]]') -> 'List[str]'",
+          "isolated_call": {
+            "ok": true,
+            "result_type": "list",
+            "result_preview": "[]"
+          }
+        }
+      ],
+      "notes": "Executable in probe does not mean invoked by final UI generator; generator trace below remains the source for runtime connection."
+    },
+    {
+      "id": "qm_005",
+      "number": 5,
+      "name": "Spazi corretti prima/dopo punteggiatura",
+      "type": "validazione quiz",
+      "status": "EXECUTABLE",
+      "file": "reports/phase5_12i2_official_quality_motor_catalog_v1.json",
+      "function_or_class": "exec_spacing",
+      "generators_linked": [
+        "Riassunto",
+        "Card"
+      ],
+      "real_connection_proof": "Callable executor importato e chiamato dal probe in isolamento.",
+      "proof_mode": "chiamato realmente",
+      "executor_evidence": [
+        {
+          "map": "card_route_60",
+          "callable": "exec_spacing",
+          "signature": "(cards: 'Sequence[Dict[str, Any]]') -> 'List[str]'",
+          "isolated_call": {
+            "ok": true,
+            "result_type": "list",
+            "result_preview": "[]"
+          }
+        }
+      ],
+      "notes": "Executable in probe does not mean invoked by final UI generator; generator trace below remains the source for runtime connection."
+    },
+    {
+      "id": "qm_006",
+      "number": 6,
+      "name": "Frasi complete",
+      "type": "validazione quiz",
+      "status": "EXECUTABLE",
+      "file": "reports/phase5_12i2_official_quality_motor_catalog_v1.json",
+      "function_or_class": "exec_complete_sentences",
+      "generators_linked": [
+        "Riassunto",
+        "Card"
+      ],
+      "real_connection_proof": "Callable executor importato e chiamato dal probe in isolamento.",
+      "proof_mode": "chiamato realmente",
+      "executor_evidence": [
+        {
+          "map": "card_route_60",
+          "callable": "exec_complete_sentences",
+          "signature": "(cards: 'Sequence[Dict[str, Any]]') -> 'List[str]'",
+          "isolated_call": {
+            "ok": true,
+            "result_type": "list",
+            "result_preview": "[]"
+          }
+        }
+      ],
+      "notes": "Executable in probe does not mean invoked by final UI generator; generator trace below remains the source for runtime connection."
+    },
+    {
+      "id": "qm_007",
+      "number": 7,
+      "name": "Assenza di frasi spezzate",
+      "type": "anti-frasi spezzate",
+      "status": "EXECUTABLE",
+      "file": "reports/phase5_12i2_official_quality_motor_catalog_v1.json",
+      "function_or_class": "exec_broken_sentences",
+      "generators_linked": [
+        "Riassunto",
+        "Card"
+      ],
+      "real_connection_proof": "Callable executor importato e chiamato dal probe in isolamento.",
+      "proof_mode": "chiamato realmente",
+      "executor_evidence": [
+        {
+          "map": "card_route_60",
+          "callable": "exec_broken_sentences",
+          "signature": "(cards: 'Sequence[Dict[str, Any]]') -> 'List[str]'",
+          "isolated_call": {
+            "ok": true,
+            "result_type": "list",
+            "result_preview": "[]"
+          }
+        }
+      ],
+      "notes": "Executable in probe does not mean invoked by final UI generator; generator trace below remains the source for runtime connection."
+    },
+    {
+      "id": "qm_008",
+      "number": 8,
+      "name": "Assenza di frasi non terminate",
+      "type": "validazione quiz",
+      "status": "EXECUTABLE",
+      "file": "reports/phase5_12i2_official_quality_motor_catalog_v1.json",
+      "function_or_class": "exec_unfinished_sentences",
+      "generators_linked": [
+        "Riassunto",
+        "Card"
+      ],
+      "real_connection_proof": "Callable executor importato e chiamato dal probe in isolamento.",
+      "proof_mode": "chiamato realmente",
+      "executor_evidence": [
+        {
+          "map": "card_route_60",
+          "callable": "exec_unfinished_sentences",
+          "signature": "(cards: 'Sequence[Dict[str, Any]]') -> 'List[str]'",
+          "isolated_call": {
+            "ok": true,
+            "result_type": "list",
+            "result_preview": "[]"
+          }
+        }
+      ],
+      "notes": "Executable in probe does not mean invoked by final UI generator; generator trace below remains the source for runtime connection."
+    },
+    {
+      "id": "qm_009",
+      "number": 9,
+      "name": "Assenza di finali sospetti",
+      "type": "validazione quiz",
+      "status": "EXECUTABLE",
+      "file": "reports/phase5_12i2_official_quality_motor_catalog_v1.json",
+      "function_or_class": "exec_suspicious_endings",
+      "generators_linked": [
+        "Riassunto",
+        "Card"
+      ],
+      "real_connection_proof": "Callable executor importato e chiamato dal probe in isolamento.",
+      "proof_mode": "chiamato realmente",
+      "executor_evidence": [
+        {
+          "map": "card_route_60",
+          "callable": "exec_suspicious_endings",
+          "signature": "(cards: 'Sequence[Dict[str, Any]]') -> 'List[str]'",
+          "isolated_call": {
+            "ok": true,
+            "result_type": "list",
+            "result_preview": "[]"
+          }
+        }
+      ],
+      "notes": "Executable in probe does not mean invoked by final UI generator; generator trace below remains the source for runtime connection."
+    },
+    {
+      "id": "qm_010",
+      "number": 10,
+      "name": "Assenza di frasi riempitive",
+      "type": "validazione quiz",
+      "status": "EXECUTABLE",
+      "file": "reports/phase5_12i2_official_quality_motor_catalog_v1.json",
+      "function_or_class": "exec_no_filler",
+      "generators_linked": [
+        "Riassunto",
+        "Card"
+      ],
+      "real_connection_proof": "Callable executor importato e chiamato dal probe in isolamento.",
+      "proof_mode": "chiamato realmente",
+      "executor_evidence": [
+        {
+          "map": "card_route_60",
+          "callable": "exec_no_filler",
+          "signature": "(cards: 'Sequence[Dict[str, Any]]') -> 'List[str]'",
+          "isolated_call": {
+            "ok": true,
+            "result_type": "list",
+            "result_preview": "[]"
+          }
+        }
+      ],
+      "notes": "Executable in probe does not mean invoked by final UI generator; generator trace below remains the source for runtime connection."
+    },
+    {
+      "id": "qm_011",
+      "number": 11,
+      "name": "Assenza di testo generico",
+      "type": "anti-generico",
+      "status": "EXECUTABLE",
+      "file": "reports/phase5_12i2_official_quality_motor_catalog_v1.json",
+      "function_or_class": "exec_no_generic",
+      "generators_linked": [
+        "Riassunto",
+        "Card"
+      ],
+      "real_connection_proof": "Callable executor importato e chiamato dal probe in isolamento.",
+      "proof_mode": "chiamato realmente",
+      "executor_evidence": [
+        {
+          "map": "card_route_60",
+          "callable": "exec_no_generic",
+          "signature": "(cards: 'Sequence[Dict[str, Any]]') -> 'List[str]'",
+          "isolated_call": {
+            "ok": true,
+            "result_type": "list",
+            "result_preview": "[]"
+          }
+        }
+      ],
+      "notes": "Executable in probe does not mean invoked by final UI generator; generator trace below remains the source for runtime connection."
+    },
+    {
+      "id": "qm_012",
+      "number": 12,
+      "name": "Assenza di vecchi fallback/demo/test",
+      "type": "anti-fallback",
+      "status": "EXECUTABLE",
+      "file": "reports/phase5_12i2_official_quality_motor_catalog_v1.json",
+      "function_or_class": "exec_no_fallback",
+      "generators_linked": [
+        "Riassunto",
+        "Card"
+      ],
+      "real_connection_proof": "Callable executor importato e chiamato dal probe in isolamento.",
+      "proof_mode": "chiamato realmente",
+      "executor_evidence": [
+        {
+          "map": "card_route_60",
+          "callable": "exec_no_fallback",
+          "signature": "(cards: 'Sequence[Dict[str, Any]]') -> 'List[str]'",
+          "isolated_call": {
+            "ok": true,
+            "result_type": "list",
+            "result_preview": "[]"
+          }
+        }
+      ],
+      "notes": "Executable in probe does not mean invoked by final UI generator; generator trace below remains the source for runtime connection."
+    },
+    {
+      "id": "qm_013",
+      "number": 13,
+      "name": "Domande studio naturali",
+      "type": "validazione domande studio",
+      "status": "EXECUTABLE",
+      "file": "reports/phase5_12i2_official_quality_motor_catalog_v1.json",
+      "function_or_class": "exec_didactic_natural",
+      "generators_linked": [
+        "Card",
+        "Domande studio"
+      ],
+      "real_connection_proof": "Callable executor importato e chiamato dal probe in isolamento.",
+      "proof_mode": "chiamato realmente",
+      "executor_evidence": [
+        {
+          "map": "card_route_60",
+          "callable": "exec_didactic_natural",
+          "signature": "(cards: 'Sequence[Dict[str, Any]]') -> 'List[str]'",
+          "isolated_call": {
+            "ok": true,
+            "result_type": "list",
+            "result_preview": "[]"
+          }
+        }
+      ],
+      "notes": "Executable in probe does not mean invoked by final UI generator; generator trace below remains the source for runtime connection."
+    },
+    {
+      "id": "qm_014",
+      "number": 14,
+      "name": "Domande studio utili per ripassare",
+      "type": "validazione domande studio",
+      "status": "EXECUTABLE",
+      "file": "reports/phase5_12i2_official_quality_motor_catalog_v1.json",
+      "function_or_class": "exec_useful_for_review",
+      "generators_linked": [
+        "Card",
+        "Domande studio"
+      ],
+      "real_connection_proof": "Callable executor importato e chiamato dal probe in isolamento.",
+      "proof_mode": "chiamato realmente",
+      "executor_evidence": [
+        {
+          "map": "card_route_60",
+          "callable": "exec_useful_for_review",
+          "signature": "(cards: 'Sequence[Dict[str, Any]]') -> 'List[str]'",
+          "isolated_call": {
+            "ok": true,
+            "result_type": "list",
+            "result_preview": "['probe_card_001: suggerimento studio troppo povero']"
+          }
+        }
+      ],
+      "notes": "Executable in probe does not mean invoked by final UI generator; generator trace below remains the source for runtime connection."
+    },
+    {
+      "id": "qm_015",
+      "number": 15,
+      "name": "Risposte guida specifiche",
+      "type": "qualita didattica",
+      "status": "EXECUTABLE",
+      "file": "reports/phase5_12i2_official_quality_motor_catalog_v1.json",
+      "function_or_class": "exec_specific_guidance",
+      "generators_linked": [
+        "Card",
+        "Domande studio"
+      ],
+      "real_connection_proof": "Callable executor importato e chiamato dal probe in isolamento.",
+      "proof_mode": "chiamato realmente",
+      "executor_evidence": [
+        {
+          "map": "card_route_60",
+          "callable": "exec_specific_guidance",
+          "signature": "(cards: 'Sequence[Dict[str, Any]]') -> 'List[str]'",
+          "isolated_call": {
+            "ok": true,
+            "result_type": "list",
+            "result_preview": "[]"
+          }
+        }
+      ],
+      "notes": "Executable in probe does not mean invoked by final UI generator; generator trace below remains the source for runtime connection."
+    },
+    {
+      "id": "qm_016",
+      "number": 16,
+      "name": "Spiegazioni test chiare",
+      "type": "validazione quiz",
+      "status": "EXECUTABLE",
+      "file": "reports/phase5_12i2_official_quality_motor_catalog_v1.json",
+      "function_or_class": "exec_clear_explanations",
+      "generators_linked": [
+        "Test / Quiz"
+      ],
+      "real_connection_proof": "Callable executor importato e chiamato dal probe in isolamento.",
+      "proof_mode": "chiamato realmente",
+      "executor_evidence": [
+        {
+          "map": "card_route_60",
+          "callable": "exec_clear_explanations",
+          "signature": "(cards: 'Sequence[Dict[str, Any]]') -> 'List[str]'",
+          "isolated_call": {
+            "ok": true,
+            "result_type": "list",
+            "result_preview": "['probe_card_001: spiegazione non chiara/troppo corta']"
+          }
+        }
+      ],
+      "notes": "Executable in probe does not mean invoked by final UI generator; generator trace below remains the source for runtime connection."
+    },
+    {
+      "id": "qm_017",
+      "number": 17,
+      "name": "Spiegazioni non troppo corte",
+      "type": "qualita didattica",
+      "status": "EXECUTABLE",
+      "file": "reports/phase5_12i2_official_quality_motor_catalog_v1.json",
+      "function_or_class": "exec_not_too_short_explanations",
+      "generators_linked": [
+        "Riassunto",
+        "Card",
+        "Domande studio",
+        "Test / Quiz"
+      ],
+      "real_connection_proof": "Callable executor importato e chiamato dal probe in isolamento.",
+      "proof_mode": "chiamato realmente",
+      "executor_evidence": [
+        {
+          "map": "card_route_60",
+          "callable": "exec_not_too_short_explanations",
+          "signature": "(cards: 'Sequence[Dict[str, Any]]') -> 'List[str]'",
+          "isolated_call": {
+            "ok": true,
+            "result_type": "list",
+            "result_preview": "['probe_card_001: spiegazione non chiara/troppo corta']"
+          }
+        }
+      ],
+      "notes": "Executable in probe does not mean invoked by final UI generator; generator trace below remains the source for runtime connection."
+    },
+    {
+      "id": "qm_018",
+      "number": 18,
+      "name": "Tono didattico finale",
+      "type": "qualita didattica",
+      "status": "EXECUTABLE",
+      "file": "reports/phase5_12i2_official_quality_motor_catalog_v1.json",
+      "function_or_class": "exec_final_didactic_tone",
+      "generators_linked": [
+        "Riassunto",
+        "Card",
+        "Domande studio"
+      ],
+      "real_connection_proof": "Callable executor importato e chiamato dal probe in isolamento.",
+      "proof_mode": "chiamato realmente",
+      "executor_evidence": [
+        {
+          "map": "card_route_60",
+          "callable": "exec_final_didactic_tone",
+          "signature": "(cards: 'Sequence[Dict[str, Any]]') -> 'List[str]'",
+          "isolated_call": {
+            "ok": true,
+            "result_type": "list",
+            "result_preview": "['probe_card_001: tono didattico insufficiente']"
+          }
+        }
+      ],
+      "notes": "Executable in probe does not mean invoked by final UI generator; generator trace below remains the source for runtime connection."
+    },
+    {
+      "id": "qm_019",
+      "number": 19,
+      "name": "Categorie presenti",
+      "type": "qualita didattica",
+      "status": "EXECUTABLE",
+      "file": "reports/phase5_12i2_official_quality_motor_catalog_v1.json",
+      "function_or_class": "exec_categories_present",
+      "generators_linked": [
+        "Riassunto",
+        "Card"
+      ],
+      "real_connection_proof": "Callable executor importato e chiamato dal probe in isolamento.",
+      "proof_mode": "chiamato realmente",
+      "executor_evidence": [
+        {
+          "map": "card_route_60",
+          "callable": "exec_categories_present",
+          "signature": "(cards: 'Sequence[Dict[str, Any]]') -> 'List[str]'",
+          "isolated_call": {
+            "ok": true,
+            "result_type": "list",
+            "result_preview": "[]"
+          }
+        }
+      ],
+      "notes": "Executable in probe does not mean invoked by final UI generator; generator trace below remains the source for runtime connection."
+    },
+    {
+      "id": "qm_020",
+      "number": 20,
+      "name": "Sottocategorie presenti",
+      "type": "qualita didattica",
+      "status": "EXECUTABLE",
+      "file": "reports/phase5_12i2_official_quality_motor_catalog_v1.json",
+      "function_or_class": "exec_subcategories_present",
+      "generators_linked": [
+        "Riassunto",
+        "Card"
+      ],
+      "real_connection_proof": "Callable executor importato e chiamato dal probe in isolamento.",
+      "proof_mode": "chiamato realmente",
+      "executor_evidence": [
+        {
+          "map": "card_route_60",
+          "callable": "exec_subcategories_present",
+          "signature": "(cards: 'Sequence[Dict[str, Any]]') -> 'List[str]'",
+          "isolated_call": {
+            "ok": true,
+            "result_type": "list",
+            "result_preview": "['probe_card_001: sottocontesto/fonte mancante']"
+          }
+        }
+      ],
+      "notes": "Executable in probe does not mean invoked by final UI generator; generator trace below remains the source for runtime connection."
+    },
+    {
+      "id": "qm_021",
+      "number": 21,
+      "name": "Coerenza tra domanda, risposta e contenuto",
+      "type": "qualita didattica",
+      "status": "EXECUTABLE",
+      "file": "reports/phase5_12i2_official_quality_motor_catalog_v1.json",
+      "function_or_class": "exec_question_answer_content_coherence",
+      "generators_linked": [
+        "Card",
+        "Domande studio",
+        "Test / Quiz"
+      ],
+      "real_connection_proof": "Callable executor importato e chiamato dal probe in isolamento.",
+      "proof_mode": "chiamato realmente",
+      "executor_evidence": [
+        {
+          "map": "card_route_60",
+          "callable": "exec_question_answer_content_coherence",
+          "signature": "(cards: 'Sequence[Dict[str, Any]]') -> 'List[str]'",
+          "isolated_call": {
+            "ok": true,
+            "result_type": "list",
+            "result_preview": "[]"
+          }
+        }
+      ],
+      "notes": "Executable in probe does not mean invoked by final UI generator; generator trace below remains the source for runtime connection."
+    },
+    {
+      "id": "qm_022",
+      "number": 22,
+      "name": "Niente risposte vaghe",
+      "type": "qualita didattica",
+      "status": "EXECUTABLE",
+      "file": "reports/phase5_12i2_official_quality_motor_catalog_v1.json",
+      "function_or_class": "exec_no_vague_answers",
+      "generators_linked": [
+        "Card",
+        "Domande studio",
+        "Test / Quiz"
+      ],
+      "real_connection_proof": "Callable executor importato e chiamato dal probe in isolamento.",
+      "proof_mode": "chiamato realmente",
+      "executor_evidence": [
+        {
+          "map": "card_route_60",
+          "callable": "exec_no_vague_answers",
+          "signature": "(cards: 'Sequence[Dict[str, Any]]') -> 'List[str]'",
+          "isolated_call": {
+            "ok": true,
+            "result_type": "list",
+            "result_preview": "[]"
+          }
+        }
+      ],
+      "notes": "Executable in probe does not mean invoked by final UI generator; generator trace below remains the source for runtime connection."
+    },
+    {
+      "id": "qm_023",
+      "number": 23,
+      "name": "Card scritte bene",
+      "type": "validazione card",
+      "status": "EXECUTABLE",
+      "file": "reports/phase5_12i2_official_quality_motor_catalog_v1.json",
+      "function_or_class": "exec_cards_well_written",
+      "generators_linked": [
+        "Riassunto",
+        "Card"
+      ],
+      "real_connection_proof": "Callable executor importato e chiamato dal probe in isolamento.",
+      "proof_mode": "chiamato realmente",
+      "executor_evidence": [
+        {
+          "map": "card_route_60",
+          "callable": "exec_cards_well_written",
+          "signature": "(cards: 'Sequence[Dict[str, Any]]') -> 'List[str]'",
+          "isolated_call": {
+            "ok": true,
+            "result_type": "list",
+            "result_preview": "['probe_card_001: spiegazione non chiara/troppo corta']"
+          }
+        }
+      ],
+      "notes": "Executable in probe does not mean invoked by final UI generator; generator trace below remains the source for runtime connection."
+    },
+    {
+      "id": "qm_024",
+      "number": 24,
+      "name": "Card non troppo corte",
+      "type": "validazione card",
+      "status": "EXECUTABLE",
+      "file": "reports/phase5_12i2_official_quality_motor_catalog_v1.json",
+      "function_or_class": "exec_cards_not_short",
+      "generators_linked": [
+        "Riassunto",
+        "Card"
+      ],
+      "real_connection_proof": "Callable executor importato e chiamato dal probe in isolamento.",
+      "proof_mode": "chiamato realmente",
+      "executor_evidence": [
+        {
+          "map": "card_route_60",
+          "callable": "exec_cards_not_short",
+          "signature": "(cards: 'Sequence[Dict[str, Any]]') -> 'List[str]'",
+          "isolated_call": {
+            "ok": true,
+            "result_type": "list",
+            "result_preview": "['probe_card_001: card troppo corta']"
+          }
+        }
+      ],
+      "notes": "Executable in probe does not mean invoked by final UI generator; generator trace below remains the source for runtime connection."
+    },
+    {
+      "id": "qm_025",
+      "number": 25,
+      "name": "Card non troppo compresse",
+      "type": "validazione card",
+      "status": "EXECUTABLE",
+      "file": "reports/phase5_12i2_official_quality_motor_catalog_v1.json",
+      "function_or_class": "exec_cards_not_compressed",
+      "generators_linked": [
+        "Riassunto",
+        "Card"
+      ],
+      "real_connection_proof": "Callable executor importato e chiamato dal probe in isolamento.",
+      "proof_mode": "chiamato realmente",
+      "executor_evidence": [
+        {
+          "map": "card_route_60",
+          "callable": "exec_cards_not_compressed",
+          "signature": "(cards: 'Sequence[Dict[str, Any]]') -> 'List[str]'",
+          "isolated_call": {
+            "ok": true,
+            "result_type": "list",
+            "result_preview": "[]"
+          }
+        }
+      ],
+      "notes": "Executable in probe does not mean invoked by final UI generator; generator trace below remains the source for runtime connection."
+    },
+    {
+      "id": "qm_026",
+      "number": 26,
+      "name": "Messaggio chiave completo",
+      "type": "validazione card",
+      "status": "EXECUTABLE",
+      "file": "reports/phase5_12i2_official_quality_motor_catalog_v1.json",
+      "function_or_class": "exec_key_message_complete",
+      "generators_linked": [
+        "Riassunto",
+        "Card"
+      ],
+      "real_connection_proof": "Callable executor importato e chiamato dal probe in isolamento.",
+      "proof_mode": "chiamato realmente",
+      "executor_evidence": [
+        {
+          "map": "card_route_60",
+          "callable": "exec_key_message_complete",
+          "signature": "(cards: 'Sequence[Dict[str, Any]]') -> 'List[str]'",
+          "isolated_call": {
+            "ok": true,
+            "result_type": "list",
+            "result_preview": "[]"
+          }
+        }
+      ],
+      "notes": "Executable in probe does not mean invoked by final UI generator; generator trace below remains the source for runtime connection."
+    },
+    {
+      "id": "qm_027",
+      "number": 27,
+      "name": "Riassunto chiaro",
+      "type": "validazione card",
+      "status": "EXECUTABLE",
+      "file": "reports/phase5_12i2_official_quality_motor_catalog_v1.json",
+      "function_or_class": "exec_summary_clear_for_card",
+      "generators_linked": [
+        "Riassunto",
+        "Card"
+      ],
+      "real_connection_proof": "Callable executor importato e chiamato dal probe in isolamento.",
+      "proof_mode": "chiamato realmente",
+      "executor_evidence": [
+        {
+          "map": "card_route_60",
+          "callable": "exec_summary_clear_for_card",
+          "signature": "(cards: 'Sequence[Dict[str, Any]]') -> 'List[str]'",
+          "isolated_call": {
+            "ok": true,
+            "result_type": "list",
+            "result_preview": "['probe_card_001: spiegazione non chiara/troppo corta']"
+          }
+        }
+      ],
+      "notes": "Executable in probe does not mean invoked by final UI generator; generator trace below remains the source for runtime connection."
+    },
+    {
+      "id": "qm_028",
+      "number": 28,
+      "name": "Punti chiave leggibili",
+      "type": "validazione card",
+      "status": "EXECUTABLE",
+      "file": "reports/phase5_12i2_official_quality_motor_catalog_v1.json",
+      "function_or_class": "exec_key_points_legible",
+      "generators_linked": [
+        "Riassunto",
+        "Card"
+      ],
+      "real_connection_proof": "Callable executor importato e chiamato dal probe in isolamento.",
+      "proof_mode": "chiamato realmente",
+      "executor_evidence": [
+        {
+          "map": "card_route_60",
+          "callable": "exec_key_points_legible",
+          "signature": "(cards: 'Sequence[Dict[str, Any]]') -> 'List[str]'",
+          "isolated_call": {
+            "ok": true,
+            "result_type": "list",
+            "result_preview": "['probe_card_001: bullet 1 troppo corto', 'probe_card_001: bullet 2 troppo corto', 'probe_card_001: bullet 3 troppo corto']"
+          }
+        }
+      ],
+      "notes": "Executable in probe does not mean invoked by final UI generator; generator trace below remains the source for runtime connection."
+    },
+    {
+      "id": "qm_029",
+      "number": 29,
+      "name": "Fonti visibili belle",
+      "type": "validazione card",
+      "status": "EXECUTABLE",
+      "file": "reports/phase5_12i2_official_quality_motor_catalog_v1.json",
+      "function_or_class": "exec_sources_visible_beautiful",
+      "generators_linked": [
+        "Riassunto",
+        "Card"
+      ],
+      "real_connection_proof": "Callable executor importato e chiamato dal probe in isolamento.",
+      "proof_mode": "chiamato realmente",
+      "executor_evidence": [
+        {
+          "map": "card_route_60",
+          "callable": "exec_sources_visible_beautiful",
+          "signature": "(cards: 'Sequence[Dict[str, Any]]') -> 'List[str]'",
+          "isolated_call": {
+            "ok": true,
+            "result_type": "list",
+            "result_preview": "['probe_card_001: fonte non bella/visibile']"
+          }
+        }
+      ],
+      "notes": "Executable in probe does not mean invoked by final UI generator; generator trace below remains the source for runtime connection."
+    },
+    {
+      "id": "qm_030",
+      "number": 30,
+      "name": "Fonti coerenti",
+      "type": "validazione card",
+      "status": "EXECUTABLE",
+      "file": "reports/phase5_12i2_official_quality_motor_catalog_v1.json",
+      "function_or_class": "exec_sources_coherent",
+      "generators_linked": [
+        "Riassunto",
+        "Card"
+      ],
+      "real_connection_proof": "Callable executor importato e chiamato dal probe in isolamento.",
+      "proof_mode": "chiamato realmente",
+      "executor_evidence": [
+        {
+          "map": "card_route_60",
+          "callable": "exec_sources_coherent",
+          "signature": "(cards: 'Sequence[Dict[str, Any]]') -> 'List[str]'",
+          "isolated_call": {
+            "ok": true,
+            "result_type": "list",
+            "result_preview": "['probe_card_001: fonte non coerente con categoria']"
+          }
+        }
+      ],
+      "notes": "Executable in probe does not mean invoked by final UI generator; generator trace below remains the source for runtime connection."
+    },
+    {
+      "id": "qm_031",
+      "number": 31,
+      "name": "Niente fonti brutte",
+      "type": "validazione card",
+      "status": "EXECUTABLE",
+      "file": "reports/phase5_12i2_official_quality_motor_catalog_v1.json",
+      "function_or_class": "exec_no_ugly_sources",
+      "generators_linked": [
+        "Riassunto",
+        "Card"
+      ],
+      "real_connection_proof": "Callable executor importato e chiamato dal probe in isolamento.",
+      "proof_mode": "chiamato realmente",
+      "executor_evidence": [
+        {
+          "map": "card_route_60",
+          "callable": "exec_no_ugly_sources",
+          "signature": "(cards: 'Sequence[Dict[str, Any]]') -> 'List[str]'",
+          "isolated_call": {
+            "ok": true,
+            "result_type": "list",
+            "result_preview": "[]"
+          }
+        }
+      ],
+      "notes": "Executable in probe does not mean invoked by final UI generator; generator trace below remains the source for runtime connection."
+    },
+    {
+      "id": "qm_032",
+      "number": 32,
+      "name": "Layout grafico controllato",
+      "type": "validazione card",
+      "status": "EXECUTABLE",
+      "file": "reports/phase5_12i2_official_quality_motor_catalog_v1.json",
+      "function_or_class": "exec_layout_controlled",
+      "generators_linked": [
+        "Riassunto",
+        "Card"
+      ],
+      "real_connection_proof": "Callable executor importato e chiamato dal probe in isolamento.",
+      "proof_mode": "chiamato realmente",
+      "executor_evidence": [
+        {
+          "map": "card_route_60",
+          "callable": "exec_layout_controlled",
+          "signature": "(cards: 'Sequence[Dict[str, Any]]') -> 'List[str]'",
+          "isolated_call": {
+            "ok": true,
+            "result_type": "list",
+            "result_preview": "['probe_card_001: layout non controllato']"
+          }
+        }
+      ],
+      "notes": "Executable in probe does not mean invoked by final UI generator; generator trace below remains the source for runtime connection."
+    },
+    {
+      "id": "qm_033",
+      "number": 33,
+      "name": "Test separato da card/riassunto/domande studio",
+      "type": "validazione quiz",
+      "status": "EXECUTABLE",
+      "file": "reports/phase5_12i2_official_quality_motor_catalog_v1.json",
+      "function_or_class": "exec_test_separated",
+      "generators_linked": [
+        "Riassunto",
+        "Card",
+        "Test / Quiz"
+      ],
+      "real_connection_proof": "Callable executor importato e chiamato dal probe in isolamento.",
+      "proof_mode": "chiamato realmente",
+      "executor_evidence": [
+        {
+          "map": "card_route_60",
+          "callable": "exec_test_separated",
+          "signature": "(cards: 'Sequence[Dict[str, Any]]') -> 'List[str]'",
+          "isolated_call": {
+            "ok": true,
+            "result_type": "list",
+            "result_preview": "[]"
+          }
+        }
+      ],
+      "notes": "Executable in probe does not mean invoked by final UI generator; generator trace below remains the source for runtime connection."
+    },
+    {
+      "id": "qm_034",
+      "number": 34,
+      "name": "Opzioni interne validate",
+      "type": "validazione quiz",
+      "status": "EXECUTABLE",
+      "file": "reports/phase5_12i2_official_quality_motor_catalog_v1.json",
+      "function_or_class": "exec_options_internal_validated",
+      "generators_linked": [
+        "Riassunto",
+        "Card",
+        "Test / Quiz"
+      ],
+      "real_connection_proof": "Callable executor importato e chiamato dal probe in isolamento.",
+      "proof_mode": "chiamato realmente",
+      "executor_evidence": [
+        {
+          "map": "card_route_60",
+          "callable": "exec_options_internal_validated",
+          "signature": "(cards: 'Sequence[Dict[str, Any]]') -> 'List[str]'",
+          "isolated_call": {
+            "ok": true,
+            "result_type": "list",
+            "result_preview": "[]"
+          }
+        }
+      ],
+      "notes": "Executable in probe does not mean invoked by final UI generator; generator trace below remains the source for runtime connection."
+    },
+    {
+      "id": "qm_035",
+      "number": 35,
+      "name": "Opzioni visibili pulite",
+      "type": "validazione quiz",
+      "status": "EXECUTABLE",
+      "file": "reports/phase5_12i2_official_quality_motor_catalog_v1.json",
+      "function_or_class": "exec_visible_options_clean",
+      "generators_linked": [
+        "Riassunto",
+        "Card",
+        "Test / Quiz"
+      ],
+      "real_connection_proof": "Callable executor importato e chiamato dal probe in isolamento.",
+      "proof_mode": "chiamato realmente",
+      "executor_evidence": [
+        {
+          "map": "card_route_60",
+          "callable": "exec_visible_options_clean",
+          "signature": "(cards: 'Sequence[Dict[str, Any]]') -> 'List[str]'",
+          "isolated_call": {
+            "ok": true,
+            "result_type": "list",
+            "result_preview": "[]"
+          }
+        }
+      ],
+      "notes": "Executable in probe does not mean invoked by final UI generator; generator trace below remains the source for runtime connection."
+    },
+    {
+      "id": "qm_036",
+      "number": 36,
+      "name": "Risposta corretta interna",
+      "type": "validazione quiz",
+      "status": "EXECUTABLE",
+      "file": "reports/phase5_12i2_official_quality_motor_catalog_v1.json",
+      "function_or_class": "exec_correct_answer_internal",
+      "generators_linked": [
+        "Test / Quiz"
+      ],
+      "real_connection_proof": "Callable executor importato e chiamato dal probe in isolamento.",
+      "proof_mode": "chiamato realmente",
+      "executor_evidence": [
+        {
+          "map": "card_route_60",
+          "callable": "exec_correct_answer_internal",
+          "signature": "(cards: 'Sequence[Dict[str, Any]]') -> 'List[str]'",
+          "isolated_call": {
+            "ok": true,
+            "result_type": "list",
+            "result_preview": "[]"
+          }
+        }
+      ],
+      "notes": "Executable in probe does not mean invoked by final UI generator; generator trace below remains the source for runtime connection."
+    },
+    {
+      "id": "qm_037",
+      "number": 37,
+      "name": "Risposta corretta visibile",
+      "type": "validazione quiz",
+      "status": "EXECUTABLE",
+      "file": "reports/phase5_12i2_official_quality_motor_catalog_v1.json",
+      "function_or_class": "exec_correct_answer_visible",
+      "generators_linked": [
+        "Test / Quiz"
+      ],
+      "real_connection_proof": "Callable executor importato e chiamato dal probe in isolamento.",
+      "proof_mode": "chiamato realmente",
+      "executor_evidence": [
+        {
+          "map": "card_route_60",
+          "callable": "exec_correct_answer_visible",
+          "signature": "(cards: 'Sequence[Dict[str, Any]]') -> 'List[str]'",
+          "isolated_call": {
+            "ok": true,
+            "result_type": "list",
+            "result_preview": "[]"
+          }
+        }
+      ],
+      "notes": "Executable in probe does not mean invoked by final UI generator; generator trace below remains the source for runtime connection."
+    },
+    {
+      "id": "qm_038",
+      "number": 38,
+      "name": "Mappa sicura tra risposta interna e visibile",
+      "type": "validazione quiz",
+      "status": "EXECUTABLE",
+      "file": "reports/phase5_12i2_official_quality_motor_catalog_v1.json",
+      "function_or_class": "exec_safe_answer_map",
+      "generators_linked": [
+        "Riassunto",
+        "Card",
+        "Test / Quiz"
+      ],
+      "real_connection_proof": "Callable executor importato e chiamato dal probe in isolamento.",
+      "proof_mode": "chiamato realmente",
+      "executor_evidence": [
+        {
+          "map": "card_route_60",
+          "callable": "exec_safe_answer_map",
+          "signature": "(cards: 'Sequence[Dict[str, Any]]') -> 'List[str]'",
+          "isolated_call": {
+            "ok": true,
+            "result_type": "list",
+            "result_preview": "[]"
+          }
+        }
+      ],
+      "notes": "Executable in probe does not mean invoked by final UI generator; generator trace below remains the source for runtime connection."
+    },
+    {
+      "id": "qm_039",
+      "number": 39,
+      "name": "4 opzioni per domanda",
+      "type": "validazione quiz",
+      "status": "EXECUTABLE",
+      "file": "reports/phase5_12i2_official_quality_motor_catalog_v1.json",
+      "function_or_class": "exec_four_options",
+      "generators_linked": [
+        "Riassunto",
+        "Card",
+        "Test / Quiz"
+      ],
+      "real_connection_proof": "Callable executor importato e chiamato dal probe in isolamento.",
+      "proof_mode": "chiamato realmente",
+      "executor_evidence": [
+        {
+          "map": "card_route_60",
+          "callable": "exec_four_options",
+          "signature": "(cards: 'Sequence[Dict[str, Any]]') -> 'List[str]'",
+          "isolated_call": {
+            "ok": true,
+            "result_type": "list",
+            "result_preview": "[]"
+          }
+        }
+      ],
+      "notes": "Executable in probe does not mean invoked by final UI generator; generator trace below remains the source for runtime connection."
+    },
+    {
+      "id": "qm_040",
+      "number": 40,
+      "name": "Risposta corretta presente tra le opzioni",
+      "type": "validazione quiz",
+      "status": "EXECUTABLE",
+      "file": "reports/phase5_12i2_official_quality_motor_catalog_v1.json",
+      "function_or_class": "exec_correct_in_options",
+      "generators_linked": [
+        "Riassunto",
+        "Card",
+        "Test / Quiz"
+      ],
+      "real_connection_proof": "Callable executor importato e chiamato dal probe in isolamento.",
+      "proof_mode": "chiamato realmente",
+      "executor_evidence": [
+        {
+          "map": "card_route_60",
+          "callable": "exec_correct_in_options",
+          "signature": "(cards: 'Sequence[Dict[str, Any]]') -> 'List[str]'",
+          "isolated_call": {
+            "ok": true,
+            "result_type": "list",
+            "result_preview": "[]"
+          }
+        }
+      ],
+      "notes": "Executable in probe does not mean invoked by final UI generator; generator trace below remains the source for runtime connection."
+    },
+    {
+      "id": "qm_041",
+      "number": 41,
+      "name": "Distrattori forti",
+      "type": "validazione quiz",
+      "status": "EXECUTABLE",
+      "file": "reports/phase5_12i2_official_quality_motor_catalog_v1.json",
+      "function_or_class": "exec_strong_distractors",
+      "generators_linked": [
+        "Test / Quiz"
+      ],
+      "real_connection_proof": "Callable executor importato e chiamato dal probe in isolamento.",
+      "proof_mode": "chiamato realmente",
+      "executor_evidence": [
+        {
+          "map": "card_route_60",
+          "callable": "exec_strong_distractors",
+          "signature": "(cards: 'Sequence[Dict[str, Any]]') -> 'List[str]'",
+          "isolated_call": {
+            "ok": true,
+            "result_type": "list",
+            "result_preview": "[]"
+          }
+        }
+      ],
+      "notes": "Executable in probe does not mean invoked by final UI generator; generator trace below remains the source for runtime connection."
+    },
+    {
+      "id": "qm_042",
+      "number": 42,
+      "name": "Niente opzioni duplicate nella stessa domanda",
+      "type": "validazione quiz",
+      "status": "EXECUTABLE",
+      "file": "reports/phase5_12i2_official_quality_motor_catalog_v1.json",
+      "function_or_class": "exec_no_duplicate_options",
+      "generators_linked": [
+        "Riassunto",
+        "Card",
+        "Test / Quiz"
+      ],
+      "real_connection_proof": "Callable executor importato e chiamato dal probe in isolamento.",
+      "proof_mode": "chiamato realmente",
+      "executor_evidence": [
+        {
+          "map": "card_route_60",
+          "callable": "exec_no_duplicate_options",
+          "signature": "(cards: 'Sequence[Dict[str, Any]]') -> 'List[str]'",
+          "isolated_call": {
+            "ok": true,
+            "result_type": "list",
+            "result_preview": "[]"
+          }
+        }
+      ],
+      "notes": "Executable in probe does not mean invoked by final UI generator; generator trace below remains the source for runtime connection."
+    },
+    {
+      "id": "qm_043",
+      "number": 43,
+      "name": "Niente ripetizioni globali eccessive",
+      "type": "validazione quiz",
+      "status": "EXECUTABLE",
+      "file": "reports/phase5_12i2_official_quality_motor_catalog_v1.json",
+      "function_or_class": "exec_no_global_repetitions",
+      "generators_linked": [
+        "Riassunto",
+        "Card",
+        "Test / Quiz"
+      ],
+      "real_connection_proof": "Callable executor importato e chiamato dal probe in isolamento.",
+      "proof_mode": "chiamato realmente",
+      "executor_evidence": [
+        {
+          "map": "card_route_60",
+          "callable": "exec_no_global_repetitions",
+          "signature": "(cards: 'Sequence[Dict[str, Any]]') -> 'List[str]'",
+          "isolated_call": {
+            "ok": true,
+            "result_type": "list",
+            "result_preview": "[]"
+          }
+        }
+      ],
+      "notes": "Executable in probe does not mean invoked by final UI generator; generator trace below remains the source for runtime connection."
+    },
+    {
+      "id": "qm_044",
+      "number": 44,
+      "name": "Compatibilità obbligatoria col bridge motori quiz V3.5B",
+      "type": "validazione quiz",
+      "status": "EXECUTABLE",
+      "file": "reports/phase5_12i2_official_quality_motor_catalog_v1.json",
+      "function_or_class": "exec_bridge_compatibility",
+      "generators_linked": [
+        "Riassunto",
+        "Card",
+        "Test / Quiz"
+      ],
+      "real_connection_proof": "Callable executor importato e chiamato dal probe in isolamento.",
+      "proof_mode": "chiamato realmente",
+      "executor_evidence": [
+        {
+          "map": "card_route_60",
+          "callable": "exec_bridge_compatibility",
+          "signature": "(cards: 'Sequence[Dict[str, Any]]') -> 'List[str]'",
+          "isolated_call": {
+            "ok": true,
+            "result_type": "list",
+            "result_preview": "[]"
+          }
+        }
+      ],
+      "notes": "Executable in probe does not mean invoked by final UI generator; generator trace below remains the source for runtime connection."
+    },
+    {
+      "id": "qm_045",
+      "number": 45,
+      "name": "Duplicati esatti",
+      "type": "qualita semantica",
+      "status": "EXECUTABLE",
+      "file": "reports/phase5_12i2_official_quality_motor_catalog_v1.json",
+      "function_or_class": "exec_exact_duplicates",
+      "generators_linked": [
+        "Riassunto",
+        "Card"
+      ],
+      "real_connection_proof": "Callable executor importato e chiamato dal probe in isolamento.",
+      "proof_mode": "chiamato realmente",
+      "executor_evidence": [
+        {
+          "map": "card_route_60",
+          "callable": "exec_exact_duplicates",
+          "signature": "(cards: 'Sequence[Dict[str, Any]]') -> 'List[str]'",
+          "isolated_call": {
+            "ok": true,
+            "result_type": "list",
+            "result_preview": "[]"
+          }
+        }
+      ],
+      "notes": "Executable in probe does not mean invoked by final UI generator; generator trace below remains the source for runtime connection."
+    },
+    {
+      "id": "qm_046",
+      "number": 46,
+      "name": "Quasi duplicati",
+      "type": "qualita semantica",
+      "status": "EXECUTABLE",
+      "file": "reports/phase5_12i2_official_quality_motor_catalog_v1.json",
+      "function_or_class": "exec_near_duplicates",
+      "generators_linked": [
+        "Riassunto",
+        "Card"
+      ],
+      "real_connection_proof": "Callable executor importato e chiamato dal probe in isolamento.",
+      "proof_mode": "chiamato realmente",
+      "executor_evidence": [
+        {
+          "map": "card_route_60",
+          "callable": "exec_near_duplicates",
+          "signature": "(cards: 'Sequence[Dict[str, Any]]') -> 'List[str]'",
+          "isolated_call": {
+            "ok": true,
+            "result_type": "list",
+            "result_preview": "[]"
+          }
+        }
+      ],
+      "notes": "Executable in probe does not mean invoked by final UI generator; generator trace below remains the source for runtime connection."
+    },
+    {
+      "id": "qm_047",
+      "number": 47,
+      "name": "Ripetizioni inutili",
+      "type": "qualita semantica",
+      "status": "EXECUTABLE",
+      "file": "reports/phase5_12i2_official_quality_motor_catalog_v1.json",
+      "function_or_class": "exec_useless_repetitions",
+      "generators_linked": [
+        "Riassunto",
+        "Card"
+      ],
+      "real_connection_proof": "Callable executor importato e chiamato dal probe in isolamento.",
+      "proof_mode": "chiamato realmente",
+      "executor_evidence": [
+        {
+          "map": "card_route_60",
+          "callable": "exec_useless_repetitions",
+          "signature": "(cards: 'Sequence[Dict[str, Any]]') -> 'List[str]'",
+          "isolated_call": {
+            "ok": true,
+            "result_type": "list",
+            "result_preview": "[]"
+          }
+        }
+      ],
+      "notes": "Executable in probe does not mean invoked by final UI generator; generator trace below remains the source for runtime connection."
+    },
+    {
+      "id": "qm_048",
+      "number": 48,
+      "name": "Ripetizioni meccaniche tra domande",
+      "type": "qualita semantica",
+      "status": "EXECUTABLE",
+      "file": "reports/phase5_12i2_official_quality_motor_catalog_v1.json",
+      "function_or_class": "exec_mechanical_repetitions_between_questions",
+      "generators_linked": [
+        "Riassunto",
+        "Card",
+        "Domande studio",
+        "Test / Quiz"
+      ],
+      "real_connection_proof": "Callable executor importato e chiamato dal probe in isolamento.",
+      "proof_mode": "chiamato realmente",
+      "executor_evidence": [
+        {
+          "map": "card_route_60",
+          "callable": "exec_mechanical_repetitions_between_questions",
+          "signature": "(cards: 'Sequence[Dict[str, Any]]') -> 'List[str]'",
+          "isolated_call": {
+            "ok": true,
+            "result_type": "list",
+            "result_preview": "[]"
+          }
+        }
+      ],
+      "notes": "Executable in probe does not mean invoked by final UI generator; generator trace below remains the source for runtime connection."
+    },
+    {
+      "id": "qm_049",
+      "number": 49,
+      "name": "Frasi troppo simili",
+      "type": "qualita semantica",
+      "status": "EXECUTABLE",
+      "file": "reports/phase5_12i2_official_quality_motor_catalog_v1.json",
+      "function_or_class": "exec_too_similar_sentences",
+      "generators_linked": [
+        "Riassunto",
+        "Card"
+      ],
+      "real_connection_proof": "Callable executor importato e chiamato dal probe in isolamento.",
+      "proof_mode": "chiamato realmente",
+      "executor_evidence": [
+        {
+          "map": "card_route_60",
+          "callable": "exec_too_similar_sentences",
+          "signature": "(cards: 'Sequence[Dict[str, Any]]') -> 'List[str]'",
+          "isolated_call": {
+            "ok": true,
+            "result_type": "list",
+            "result_preview": "[]"
+          }
+        }
+      ],
+      "notes": "Executable in probe does not mean invoked by final UI generator; generator trace below remains the source for runtime connection."
+    },
+    {
+      "id": "qm_050",
+      "number": 50,
+      "name": "Stesso contenuto ripetuto senza motivo",
+      "type": "qualita semantica",
+      "status": "EXECUTABLE",
+      "file": "reports/phase5_12i2_official_quality_motor_catalog_v1.json",
+      "function_or_class": "exec_same_content_without_reason",
+      "generators_linked": [
+        "Riassunto",
+        "Card"
+      ],
+      "real_connection_proof": "Callable executor importato e chiamato dal probe in isolamento.",
+      "proof_mode": "chiamato realmente",
+      "executor_evidence": [
+        {
+          "map": "card_route_60",
+          "callable": "exec_same_content_without_reason",
+          "signature": "(cards: 'Sequence[Dict[str, Any]]') -> 'List[str]'",
+          "isolated_call": {
+            "ok": true,
+            "result_type": "list",
+            "result_preview": "[]"
+          }
+        }
+      ],
+      "notes": "Executable in probe does not mean invoked by final UI generator; generator trace below remains the source for runtime connection."
+    },
+    {
+      "id": "qm_051",
+      "number": 51,
+      "name": "Il compito richiesto deve selezionare i motori giusti",
+      "type": "orchestratore",
+      "status": "EXECUTABLE",
+      "file": "reports/phase5_12i2_official_quality_motor_catalog_v1.json",
+      "function_or_class": "exec_select_right_motors",
+      "generators_linked": [
+        "Riassunto",
+        "Card",
+        "Domande studio",
+        "Test / Quiz"
+      ],
+      "real_connection_proof": "Callable executor importato e chiamato dal probe in isolamento.",
+      "proof_mode": "chiamato realmente",
+      "executor_evidence": [
+        {
+          "map": "card_route_60",
+          "callable": "exec_select_right_motors",
+          "signature": "(cards: 'Sequence[Dict[str, Any]]') -> 'List[str]'",
+          "isolated_call": {
+            "ok": true,
+            "result_type": "list",
+            "result_preview": "[]"
+          }
+        }
+      ],
+      "notes": "Executable in probe does not mean invoked by final UI generator; generator trace below remains the source for runtime connection."
+    },
+    {
+      "id": "qm_052",
+      "number": 52,
+      "name": "Riassunto → motore didattico",
+      "type": "validazione riassunto",
+      "status": "EXECUTABLE",
+      "file": "reports/phase5_12i2_official_quality_motor_catalog_v1.json",
+      "function_or_class": "exec_summary_route_not_required",
+      "generators_linked": [
+        "Riassunto",
+        "Card"
+      ],
+      "real_connection_proof": "Callable executor importato e chiamato dal probe in isolamento.",
+      "proof_mode": "chiamato realmente",
+      "executor_evidence": [
+        {
+          "map": "card_route_60",
+          "callable": "exec_summary_route_not_required",
+          "signature": "(cards: 'Sequence[Dict[str, Any]]') -> 'List[str]'",
+          "isolated_call": {
+            "ok": true,
+            "result_type": "list",
+            "result_preview": "[]"
+          }
+        }
+      ],
+      "notes": "Executable in probe does not mean invoked by final UI generator; generator trace below remains the source for runtime connection."
+    },
+    {
+      "id": "qm_053",
+      "number": 53,
+      "name": "Card → motore didattico + layout",
+      "type": "validazione card",
+      "status": "EXECUTABLE",
+      "file": "reports/phase5_12i2_official_quality_motor_catalog_v1.json",
+      "function_or_class": "exec_card_didactic_layout_route",
+      "generators_linked": [
+        "Riassunto",
+        "Card"
+      ],
+      "real_connection_proof": "Callable executor importato e chiamato dal probe in isolamento.",
+      "proof_mode": "chiamato realmente",
+      "executor_evidence": [
+        {
+          "map": "card_route_60",
+          "callable": "exec_card_didactic_layout_route",
+          "signature": "(cards: 'Sequence[Dict[str, Any]]') -> 'List[str]'",
+          "isolated_call": {
+            "ok": true,
+            "result_type": "list",
+            "result_preview": "['probe_card_001: spiegazione non chiara/troppo corta', 'probe_card_001: layout non controllato']"
+          }
+        }
+      ],
+      "notes": "Executable in probe does not mean invoked by final UI generator; generator trace below remains the source for runtime connection."
+    },
+    {
+      "id": "qm_054",
+      "number": 54,
+      "name": "Domande studio → motore didattico",
+      "type": "validazione domande studio",
+      "status": "EXECUTABLE",
+      "file": "reports/phase5_12i2_official_quality_motor_catalog_v1.json",
+      "function_or_class": "exec_study_route_not_required",
+      "generators_linked": [
+        "Riassunto",
+        "Card",
+        "Domande studio"
+      ],
+      "real_connection_proof": "Callable executor importato e chiamato dal probe in isolamento.",
+      "proof_mode": "chiamato realmente",
+      "executor_evidence": [
+        {
+          "map": "card_route_60",
+          "callable": "exec_study_route_not_required",
+          "signature": "(cards: 'Sequence[Dict[str, Any]]') -> 'List[str]'",
+          "isolated_call": {
+            "ok": true,
+            "result_type": "list",
+            "result_preview": "[]"
+          }
+        }
+      ],
+      "notes": "Executable in probe does not mean invoked by final UI generator; generator trace below remains the source for runtime connection."
+    },
+    {
+      "id": "qm_055",
+      "number": 55,
+      "name": "Test → bridge quiz + motore test + bridge quiz",
+      "type": "validazione quiz",
+      "status": "EXECUTABLE",
+      "file": "reports/phase5_12i2_official_quality_motor_catalog_v1.json",
+      "function_or_class": "exec_test_route_not_required",
+      "generators_linked": [
+        "Riassunto",
+        "Card",
+        "Test / Quiz"
+      ],
+      "real_connection_proof": "Callable executor importato e chiamato dal probe in isolamento.",
+      "proof_mode": "chiamato realmente",
+      "executor_evidence": [
+        {
+          "map": "card_route_60",
+          "callable": "exec_test_route_not_required",
+          "signature": "(cards: 'Sequence[Dict[str, Any]]') -> 'List[str]'",
+          "isolated_call": {
+            "ok": true,
+            "result_type": "list",
+            "result_preview": "[]"
+          }
+        }
+      ],
+      "notes": "Executable in probe does not mean invoked by final UI generator; generator trace below remains the source for runtime connection."
+    },
+    {
+      "id": "qm_056",
+      "number": 56,
+      "name": "Completo/PDF/app/web → orchestratore",
+      "type": "orchestratore",
+      "status": "EXECUTABLE",
+      "file": "reports/phase5_12i2_official_quality_motor_catalog_v1.json",
+      "function_or_class": "exec_full_output_orchestrator",
+      "generators_linked": [
+        "Riassunto",
+        "Card",
+        "Domande studio",
+        "Test / Quiz"
+      ],
+      "real_connection_proof": "Callable executor importato e chiamato dal probe in isolamento.",
+      "proof_mode": "chiamato realmente",
+      "executor_evidence": [
+        {
+          "map": "card_route_60",
+          "callable": "exec_full_output_orchestrator",
+          "signature": "(cards: 'Sequence[Dict[str, Any]]') -> 'List[str]'",
+          "isolated_call": {
+            "ok": true,
+            "result_type": "list",
+            "result_preview": "['orchestratore completo: card insufficienti']"
+          }
+        }
+      ],
+      "notes": "Executable in probe does not mean invoked by final UI generator; generator trace below remains the source for runtime connection."
+    },
+    {
+      "id": "qm_057",
+      "number": 57,
+      "name": "Niente motori inutili",
+      "type": "orchestratore",
+      "status": "EXECUTABLE",
+      "file": "reports/phase5_12i2_official_quality_motor_catalog_v1.json",
+      "function_or_class": "exec_no_useless_motors",
+      "generators_linked": [
+        "Riassunto",
+        "Card",
+        "Domande studio",
+        "Test / Quiz"
+      ],
+      "real_connection_proof": "Callable executor importato e chiamato dal probe in isolamento.",
+      "proof_mode": "chiamato realmente",
+      "executor_evidence": [
+        {
+          "map": "card_route_60",
+          "callable": "exec_no_useless_motors",
+          "signature": "(cards: 'Sequence[Dict[str, Any]]') -> 'List[str]'",
+          "isolated_call": {
+            "ok": true,
+            "result_type": "list",
+            "result_preview": "[]"
+          }
+        }
+      ],
+      "notes": "Executable in probe does not mean invoked by final UI generator; generator trace below remains the source for runtime connection."
+    },
+    {
+      "id": "qm_058",
+      "number": 58,
+      "name": "Niente output non richiesto",
+      "type": "orchestratore",
+      "status": "EXECUTABLE",
+      "file": "reports/phase5_12i2_official_quality_motor_catalog_v1.json",
+      "function_or_class": "exec_no_unrequested_output",
+      "generators_linked": [
+        "Riassunto",
+        "Card",
+        "Domande studio",
+        "Test / Quiz"
+      ],
+      "real_connection_proof": "Callable executor importato e chiamato dal probe in isolamento.",
+      "proof_mode": "chiamato realmente",
+      "executor_evidence": [
+        {
+          "map": "card_route_60",
+          "callable": "exec_no_unrequested_output",
+          "signature": "(cards: 'Sequence[Dict[str, Any]]') -> 'List[str]'",
+          "isolated_call": {
+            "ok": true,
+            "result_type": "list",
+            "result_preview": "[]"
+          }
+        }
+      ],
+      "notes": "Executable in probe does not mean invoked by final UI generator; generator trace below remains the source for runtime connection."
+    },
+    {
+      "id": "qm_059",
+      "number": 59,
+      "name": "Output finale pronto per UI/PDF/app",
+      "type": "orchestratore",
+      "status": "EXECUTABLE",
+      "file": "reports/phase5_12i2_official_quality_motor_catalog_v1.json",
+      "function_or_class": "exec_final_output_ready",
+      "generators_linked": [
+        "Riassunto",
+        "Card",
+        "Domande studio",
+        "Test / Quiz"
+      ],
+      "real_connection_proof": "Callable executor importato e chiamato dal probe in isolamento.",
+      "proof_mode": "chiamato realmente",
+      "executor_evidence": [
+        {
+          "map": "card_route_60",
+          "callable": "exec_final_output_ready",
+          "signature": "(cards: 'Sequence[Dict[str, Any]]') -> 'List[str]'",
+          "isolated_call": {
+            "ok": true,
+            "result_type": "list",
+            "result_preview": "['probe_card_001: spiegazione non chiara/troppo corta', 'probe_card_001: fonte non coerente con categoria', 'probe_card_001: layout non controllato']"
+          }
+        }
+      ],
+      "notes": "Executable in probe does not mean invoked by final UI generator; generator trace below remains the source for runtime connection."
+    },
+    {
+      "id": "qm_060",
+      "number": 60,
+      "name": "Report qualità sempre leggibile",
+      "type": "orchestratore",
+      "status": "EXECUTABLE",
+      "file": "reports/phase5_12i2_official_quality_motor_catalog_v1.json",
+      "function_or_class": "exec_quality_report_readable",
+      "generators_linked": [
+        "Riassunto",
+        "Card",
+        "Domande studio",
+        "Test / Quiz"
+      ],
+      "real_connection_proof": "Callable executor importato e chiamato dal probe in isolamento.",
+      "proof_mode": "chiamato realmente",
+      "executor_evidence": [
+        {
+          "map": "card_route_60",
+          "callable": "exec_quality_report_readable",
+          "signature": "(cards: 'Sequence[Dict[str, Any]]') -> 'List[str]'",
+          "isolated_call": {
+            "ok": true,
+            "result_type": "list",
+            "result_preview": "[]"
+          }
+        }
+      ],
+      "notes": "Executable in probe does not mean invoked by final UI generator; generator trace below remains the source for runtime connection."
+    },
+    {
+      "id": "qm_061",
+      "number": 61,
+      "name": "Naturalezza linguistica anti-keyword",
+      "type": "qualita semantica",
+      "status": "EXECUTABLE",
+      "file": "reports/phase5_12i2_official_quality_motor_catalog_v1.json",
+      "function_or_class": "exec_natural_language_antikeyword",
+      "generators_linked": [
+        "Riassunto",
+        "Card"
+      ],
+      "real_connection_proof": "Callable executor importato e chiamato dal probe in isolamento.",
+      "proof_mode": "chiamato realmente",
+      "executor_evidence": [
+        {
+          "map": "card_route_60",
+          "callable": "exec_natural_language_antikeyword",
+          "signature": "(cards: 'Sequence[Dict[str, Any]]') -> 'List[str]'",
+          "isolated_call": {
+            "ok": true,
+            "result_type": "list",
+            "result_preview": "[]"
+          }
+        }
+      ],
+      "notes": "Executable in probe does not mean invoked by final UI generator; generator trace below remains the source for runtime connection."
+    },
+    {
+      "id": "qm_062",
+      "number": 62,
+      "name": "Accordo grammaticale e pronomi",
+      "type": "qualita grammaticale",
+      "status": "EXECUTABLE",
+      "file": "reports/phase5_12i2_official_quality_motor_catalog_v1.json",
+      "function_or_class": "exec_agreement_pronouns",
+      "generators_linked": [
+        "Riassunto",
+        "Card"
+      ],
+      "real_connection_proof": "Callable executor importato e chiamato dal probe in isolamento.",
+      "proof_mode": "chiamato realmente",
+      "executor_evidence": [
+        {
+          "map": "card_route_60",
+          "callable": "exec_agreement_pronouns",
+          "signature": "(cards: 'Sequence[Dict[str, Any]]') -> 'List[str]'",
+          "isolated_call": {
+            "ok": true,
+            "result_type": "list",
+            "result_preview": "[]"
+          }
+        }
+      ],
+      "notes": "Executable in probe does not mean invoked by final UI generator; generator trace below remains the source for runtime connection."
+    },
+    {
+      "id": "qm_063",
+      "number": 63,
+      "name": "Correzione frasi non finite con contesto",
+      "type": "validazione quiz",
+      "status": "EXECUTABLE",
+      "file": "reports/phase5_12i2_official_quality_motor_catalog_v1.json",
+      "function_or_class": "exec_repair_unfinished_context",
+      "generators_linked": [
+        "Riassunto",
+        "Card"
+      ],
+      "real_connection_proof": "Callable executor importato e chiamato dal probe in isolamento.",
+      "proof_mode": "chiamato realmente",
+      "executor_evidence": [
+        {
+          "map": "card_route_60",
+          "callable": "exec_repair_unfinished_context",
+          "signature": "(cards: 'Sequence[Dict[str, Any]]') -> 'List[str]'",
+          "isolated_call": {
+            "ok": true,
+            "result_type": "list",
+            "result_preview": "[]"
+          }
+        }
+      ],
+      "notes": "Executable in probe does not mean invoked by final UI generator; generator trace below remains the source for runtime connection."
+    },
+    {
+      "id": "qm_064",
+      "number": 64,
+      "name": "Correzione parole scritte male con lettere invertite",
+      "type": "qualita semantica",
+      "status": "EXECUTABLE",
+      "file": "reports/phase5_12i2_official_quality_motor_catalog_v1.json",
+      "function_or_class": "exec_repair_inverted_letters",
+      "generators_linked": [
+        "Riassunto",
+        "Card"
+      ],
+      "real_connection_proof": "Callable executor importato e chiamato dal probe in isolamento.",
+      "proof_mode": "chiamato realmente",
+      "executor_evidence": [
+        {
+          "map": "card_route_60",
+          "callable": "exec_repair_inverted_letters",
+          "signature": "(cards: 'Sequence[Dict[str, Any]]') -> 'List[str]'",
+          "isolated_call": {
+            "ok": true,
+            "result_type": "list",
+            "result_preview": "[]"
+          }
+        }
+      ],
+      "notes": "Executable in probe does not mean invoked by final UI generator; generator trace below remains the source for runtime connection."
+    },
+    {
+      "id": "registry_orchestration_slot_065",
+      "number": 65,
+      "name": "Registry/orchestration slot 65",
+      "type": "registry",
+      "status": "SLOT_TO_MATERIALIZE",
+      "file": "reports/phase5_12h2_updated_matrix_orchestration_registry_73_v1.json",
+      "function_or_class": "",
+      "generators_linked": [
+        "Registry/orchestrazione H.2"
+      ],
+      "real_connection_proof": "Conteggiato nel totale 73, ma non materializzato come QM concreto nel catalogo.",
+      "proof_mode": "non provato",
+      "executor_evidence": [],
+      "notes": "Non inventato come motore; resta slot da chiarire o materializzare."
+    },
+    {
+      "id": "registry_orchestration_slot_066",
+      "number": 66,
+      "name": "Registry/orchestration slot 66",
+      "type": "registry",
+      "status": "SLOT_TO_MATERIALIZE",
+      "file": "reports/phase5_12h2_updated_matrix_orchestration_registry_73_v1.json",
+      "function_or_class": "",
+      "generators_linked": [
+        "Registry/orchestrazione H.2"
+      ],
+      "real_connection_proof": "Conteggiato nel totale 73, ma non materializzato come QM concreto nel catalogo.",
+      "proof_mode": "non provato",
+      "executor_evidence": [],
+      "notes": "Non inventato come motore; resta slot da chiarire o materializzare."
+    },
+    {
+      "id": "registry_orchestration_slot_067",
+      "number": 67,
+      "name": "Registry/orchestration slot 67",
+      "type": "registry",
+      "status": "SLOT_TO_MATERIALIZE",
+      "file": "reports/phase5_12h2_updated_matrix_orchestration_registry_73_v1.json",
+      "function_or_class": "",
+      "generators_linked": [
+        "Registry/orchestrazione H.2"
+      ],
+      "real_connection_proof": "Conteggiato nel totale 73, ma non materializzato come QM concreto nel catalogo.",
+      "proof_mode": "non provato",
+      "executor_evidence": [],
+      "notes": "Non inventato come motore; resta slot da chiarire o materializzare."
+    },
+    {
+      "id": "registry_orchestration_slot_068",
+      "number": 68,
+      "name": "Registry/orchestration slot 68",
+      "type": "registry",
+      "status": "SLOT_TO_MATERIALIZE",
+      "file": "reports/phase5_12h2_updated_matrix_orchestration_registry_73_v1.json",
+      "function_or_class": "",
+      "generators_linked": [
+        "Registry/orchestrazione H.2"
+      ],
+      "real_connection_proof": "Conteggiato nel totale 73, ma non materializzato come QM concreto nel catalogo.",
+      "proof_mode": "non provato",
+      "executor_evidence": [],
+      "notes": "Non inventato come motore; resta slot da chiarire o materializzare."
+    },
+    {
+      "id": "registry_orchestration_slot_069",
+      "number": 69,
+      "name": "Registry/orchestration slot 69",
+      "type": "registry",
+      "status": "SLOT_TO_MATERIALIZE",
+      "file": "reports/phase5_12h2_updated_matrix_orchestration_registry_73_v1.json",
+      "function_or_class": "",
+      "generators_linked": [
+        "Registry/orchestrazione H.2"
+      ],
+      "real_connection_proof": "Conteggiato nel totale 73, ma non materializzato come QM concreto nel catalogo.",
+      "proof_mode": "non provato",
+      "executor_evidence": [],
+      "notes": "Non inventato come motore; resta slot da chiarire o materializzare."
+    },
+    {
+      "id": "registry_orchestration_slot_070",
+      "number": 70,
+      "name": "Registry/orchestration slot 70",
+      "type": "registry",
+      "status": "SLOT_TO_MATERIALIZE",
+      "file": "reports/phase5_12h2_updated_matrix_orchestration_registry_73_v1.json",
+      "function_or_class": "",
+      "generators_linked": [
+        "Registry/orchestrazione H.2"
+      ],
+      "real_connection_proof": "Conteggiato nel totale 73, ma non materializzato come QM concreto nel catalogo.",
+      "proof_mode": "non provato",
+      "executor_evidence": [],
+      "notes": "Non inventato come motore; resta slot da chiarire o materializzare."
+    },
+    {
+      "id": "registry_orchestration_slot_071",
+      "number": 71,
+      "name": "Registry/orchestration slot 71",
+      "type": "registry",
+      "status": "SLOT_TO_MATERIALIZE",
+      "file": "reports/phase5_12h2_updated_matrix_orchestration_registry_73_v1.json",
+      "function_or_class": "",
+      "generators_linked": [
+        "Registry/orchestrazione H.2"
+      ],
+      "real_connection_proof": "Conteggiato nel totale 73, ma non materializzato come QM concreto nel catalogo.",
+      "proof_mode": "non provato",
+      "executor_evidence": [],
+      "notes": "Non inventato come motore; resta slot da chiarire o materializzare."
+    },
+    {
+      "id": "registry_orchestration_slot_072",
+      "number": 72,
+      "name": "Registry/orchestration slot 72",
+      "type": "registry",
+      "status": "SLOT_TO_MATERIALIZE",
+      "file": "reports/phase5_12h2_updated_matrix_orchestration_registry_73_v1.json",
+      "function_or_class": "",
+      "generators_linked": [
+        "Registry/orchestrazione H.2"
+      ],
+      "real_connection_proof": "Conteggiato nel totale 73, ma non materializzato come QM concreto nel catalogo.",
+      "proof_mode": "non provato",
+      "executor_evidence": [],
+      "notes": "Non inventato come motore; resta slot da chiarire o materializzare."
+    },
+    {
+      "id": "registry_orchestration_slot_073",
+      "number": 73,
+      "name": "Registry/orchestration slot 73",
+      "type": "registry",
+      "status": "SLOT_TO_MATERIALIZE",
+      "file": "reports/phase5_12h2_updated_matrix_orchestration_registry_73_v1.json",
+      "function_or_class": "",
+      "generators_linked": [
+        "Registry/orchestrazione H.2"
+      ],
+      "real_connection_proof": "Conteggiato nel totale 73, ma non materializzato come QM concreto nel catalogo.",
+      "proof_mode": "non provato",
+      "executor_evidence": [],
+      "notes": "Non inventato come motore; resta slot da chiarire o materializzare."
+    }
+  ],
+  "generator_traces": [
+    {
+      "input_label": "probe_documento_medio",
+      "input_chars": 361,
+      "generator": "Riassunto",
+      "kind": "summary",
+      "route": "full_pipeline_summary_route55_all_motors_v51416",
+      "output_produced": true,
+      "output_preview": "Il documento descrive la procedura di gestione accessi stabilisce che ogni account sia assegnato a una persona identificabile Inoltre chiarisce che le credenziali condivise aumentano il rischio operativo e devono essere eliminate Questo imposta il contesto operativo su cui si sviluppano le sezioni successive.\n\nLa parte centrale approfondisce gli aspetti più operativi: il controllo mensile confronta utenti attivi, ruoli assegnati e anomalie rilevate Nel complesso, queste informazioni definiscono ",
+      "status": "APPROVED",
+      "approved": true,
+      "defects": [],
+      "warnings": [],
+      "error": null,
+      "declared_all_motors_connected": true,
+      "declared_motors": [
+        "qm_001",
+        "qm_002",
+        "qm_003",
+        "qm_004",
+        "qm_005",
+        "qm_006",
+        "qm_007",
+        "qm_008",
+        "qm_009",
+        "qm_010",
+        "qm_011",
+        "qm_012",
+        "qm_017",
+        "qm_018",
+        "qm_019",
+        "qm_020",
+        "qm_023",
+        "qm_024",
+        "qm_025",
+        "qm_026",
+        "qm_027",
+        "qm_028",
+        "qm_029",
+        "qm_030",
+        "qm_031",
+        "qm_032",
+        "qm_033",
+        "qm_034",
+        "qm_035",
+        "qm_038",
+        "qm_039",
+        "qm_040",
+        "qm_042",
+        "qm_043",
+        "qm_044",
+        "qm_045",
+        "qm_046",
+        "qm_047",
+        "qm_048",
+        "qm_049",
+        "qm_050",
+        "qm_051",
+        "qm_052",
+        "qm_053",
+        "qm_054",
+        "qm_055",
+        "qm_056",
+        "qm_057",
+        "qm_058",
+        "qm_059",
+        "qm_060",
+        "qm_061",
+        "qm_062",
+        "qm_063",
+        "qm_064"
+      ],
+      "real_invoked_quality_motor_ids": [],
+      "real_invoked_runtime_functions": [],
+      "deduced_motor_ids": [
+        "qm_001",
+        "qm_002",
+        "qm_003",
+        "qm_004",
+        "qm_005",
+        "qm_006",
+        "qm_007",
+        "qm_008",
+        "qm_009",
+        "qm_010",
+        "qm_011",
+        "qm_012",
+        "qm_017",
+        "qm_018",
+        "qm_019",
+        "qm_020",
+        "qm_023",
+        "qm_024",
+        "qm_025",
+        "qm_026",
+        "qm_027",
+        "qm_028",
+        "qm_029",
+        "qm_030",
+        "qm_031",
+        "qm_032",
+        "qm_033",
+        "qm_034",
+        "qm_035",
+        "qm_038",
+        "qm_039",
+        "qm_040",
+        "qm_042",
+        "qm_043",
+        "qm_044",
+        "qm_045",
+        "qm_046",
+        "qm_047",
+        "qm_048",
+        "qm_049",
+        "qm_050",
+        "qm_051",
+        "qm_052",
+        "qm_053",
+        "qm_054",
+        "qm_055",
+        "qm_056",
+        "qm_057",
+        "qm_058",
+        "qm_059",
+        "qm_060",
+        "qm_061",
+        "qm_062",
+        "qm_063",
+        "qm_064"
+      ],
+      "declared_only_motor_ids": [
+        "qm_001",
+        "qm_002",
+        "qm_003",
+        "qm_004",
+        "qm_005",
+        "qm_006",
+        "qm_007",
+        "qm_008",
+        "qm_009",
+        "qm_010",
+        "qm_011",
+        "qm_012",
+        "qm_017",
+        "qm_018",
+        "qm_019",
+        "qm_020",
+        "qm_023",
+        "qm_024",
+        "qm_025",
+        "qm_026",
+        "qm_027",
+        "qm_028",
+        "qm_029",
+        "qm_030",
+        "qm_031",
+        "qm_032",
+        "qm_033",
+        "qm_034",
+        "qm_035",
+        "qm_038",
+        "qm_039",
+        "qm_040",
+        "qm_042",
+        "qm_043",
+        "qm_044",
+        "qm_045",
+        "qm_046",
+        "qm_047",
+        "qm_048",
+        "qm_049",
+        "qm_050",
+        "qm_051",
+        "qm_052",
+        "qm_053",
+        "qm_054",
+        "qm_055",
+        "qm_056",
+        "qm_057",
+        "qm_058",
+        "qm_059",
+        "qm_060",
+        "qm_061",
+        "qm_062",
+        "qm_063",
+        "qm_064"
+      ],
+      "bypasses": [
+        "all_motors_connected dichiarato nel quality_report",
+        "nessun ID QM realmente tracciato durante la chiamata del generatore",
+        "runtime summary/cards non passa da q52 o registry QM tracciabile"
+      ],
+      "notes": [
+        "Trace runtime ottenuta chiamando scripts.run_phase5_14_3_local_backend_bridge.generate.",
+        "Gli ID QM sono considerati realmente invocati solo se appaiono in trace runtime esplicita; quality_report route_total non basta."
+      ]
+    },
+    {
+      "input_label": "probe_documento_medio",
+      "input_chars": 361,
+      "generator": "Card",
+      "kind": "cards",
+      "route": "full_pipeline_cards_60_motors_graphic_v51416",
+      "output_produced": true,
+      "output_preview": "[{'card_id': 'full_card_v51416_001', 'titolo': 'Procedura gestione accessi stabilisce', 'messaggio_chiave': 'Il punto centrale è rendere questa informazione chiara, applicabile e verificabile.', 'spiegazione': \"La card evidenzia che la procedura di gestione accessi stabilisce che ogni account sia assegnato a una persona identificabile Questo passaggio è importante perché collega il contenuto del documento a un'azione o a un controllo concreto.\", 'micro_concetti': ['procedura', 'gestione', 'acces",
+      "status": "APPROVED",
+      "approved": true,
+      "defects": [],
+      "warnings": [],
+      "error": null,
+      "declared_all_motors_connected": true,
+      "declared_motors": [
+        "qm_001",
+        "qm_002",
+        "qm_003",
+        "qm_004",
+        "qm_005",
+        "qm_006",
+        "qm_007",
+        "qm_008",
+        "qm_009",
+        "qm_010",
+        "qm_011",
+        "qm_012",
+        "qm_013",
+        "qm_014",
+        "qm_015",
+        "qm_017",
+        "qm_018",
+        "qm_019",
+        "qm_020",
+        "qm_021",
+        "qm_022",
+        "qm_023",
+        "qm_024",
+        "qm_025",
+        "qm_026",
+        "qm_027",
+        "qm_028",
+        "qm_029",
+        "qm_030",
+        "qm_031",
+        "qm_032",
+        "qm_033",
+        "qm_034",
+        "qm_035",
+        "qm_038",
+        "qm_039",
+        "qm_040",
+        "qm_042",
+        "qm_043",
+        "qm_044",
+        "qm_045",
+        "qm_046",
+        "qm_047",
+        "qm_048",
+        "qm_049",
+        "qm_050",
+        "qm_051",
+        "qm_052",
+        "qm_053",
+        "qm_054",
+        "qm_055",
+        "qm_056",
+        "qm_057",
+        "qm_058",
+        "qm_059",
+        "qm_060",
+        "qm_061",
+        "qm_062",
+        "qm_063",
+        "qm_064"
+      ],
+      "real_invoked_quality_motor_ids": [],
+      "real_invoked_runtime_functions": [],
+      "deduced_motor_ids": [
+        "qm_001",
+        "qm_002",
+        "qm_003",
+        "qm_004",
+        "qm_005",
+        "qm_006",
+        "qm_007",
+        "qm_008",
+        "qm_009",
+        "qm_010",
+        "qm_011",
+        "qm_012",
+        "qm_013",
+        "qm_014",
+        "qm_015",
+        "qm_017",
+        "qm_018",
+        "qm_019",
+        "qm_020",
+        "qm_021",
+        "qm_022",
+        "qm_023",
+        "qm_024",
+        "qm_025",
+        "qm_026",
+        "qm_027",
+        "qm_028",
+        "qm_029",
+        "qm_030",
+        "qm_031",
+        "qm_032",
+        "qm_033",
+        "qm_034",
+        "qm_035",
+        "qm_038",
+        "qm_039",
+        "qm_040",
+        "qm_042",
+        "qm_043",
+        "qm_044",
+        "qm_045",
+        "qm_046",
+        "qm_047",
+        "qm_048",
+        "qm_049",
+        "qm_050",
+        "qm_051",
+        "qm_052",
+        "qm_053",
+        "qm_054",
+        "qm_055",
+        "qm_056",
+        "qm_057",
+        "qm_058",
+        "qm_059",
+        "qm_060",
+        "qm_061",
+        "qm_062",
+        "qm_063",
+        "qm_064"
+      ],
+      "declared_only_motor_ids": [
+        "qm_001",
+        "qm_002",
+        "qm_003",
+        "qm_004",
+        "qm_005",
+        "qm_006",
+        "qm_007",
+        "qm_008",
+        "qm_009",
+        "qm_010",
+        "qm_011",
+        "qm_012",
+        "qm_013",
+        "qm_014",
+        "qm_015",
+        "qm_017",
+        "qm_018",
+        "qm_019",
+        "qm_020",
+        "qm_021",
+        "qm_022",
+        "qm_023",
+        "qm_024",
+        "qm_025",
+        "qm_026",
+        "qm_027",
+        "qm_028",
+        "qm_029",
+        "qm_030",
+        "qm_031",
+        "qm_032",
+        "qm_033",
+        "qm_034",
+        "qm_035",
+        "qm_038",
+        "qm_039",
+        "qm_040",
+        "qm_042",
+        "qm_043",
+        "qm_044",
+        "qm_045",
+        "qm_046",
+        "qm_047",
+        "qm_048",
+        "qm_049",
+        "qm_050",
+        "qm_051",
+        "qm_052",
+        "qm_053",
+        "qm_054",
+        "qm_055",
+        "qm_056",
+        "qm_057",
+        "qm_058",
+        "qm_059",
+        "qm_060",
+        "qm_061",
+        "qm_062",
+        "qm_063",
+        "qm_064"
+      ],
+      "bypasses": [
+        "all_motors_connected dichiarato nel quality_report",
+        "nessun ID QM realmente tracciato durante la chiamata del generatore",
+        "runtime summary/cards non passa da q52 o registry QM tracciabile"
+      ],
+      "notes": [
+        "Trace runtime ottenuta chiamando scripts.run_phase5_14_3_local_backend_bridge.generate.",
+        "Gli ID QM sono considerati realmente invocati solo se appaiono in trace runtime esplicita; quality_report route_total non basta."
+      ]
+    },
+    {
+      "input_label": "probe_documento_medio",
+      "input_chars": 361,
+      "generator": "Domande studio",
+      "kind": "study",
+      "route": "full_pipeline_study_route51_language_quality_v51418",
+      "output_produced": true,
+      "output_preview": "[{'id': 'study_quality_v51418_001', 'domanda': 'Qual è il punto operativo principale relativo a gestione accessi ogni?', 'risposta_guida': 'Il documento indica che la procedura di gestione accessi stabilisce che ogni account sia assegnato a una persona identificabile. Lo studente deve collegare questo punto a una procedura concreta, a una responsabilità chiara e a una verifica controllabile.', 'tipo_domanda': 'comprensione_operativa', 'livello_cognitivo': 'applicazione', 'fatto_origine': 'La pro",
+      "status": "APPROVED",
+      "approved": true,
+      "defects": [],
+      "warnings": [],
+      "error": null,
+      "declared_all_motors_connected": true,
+      "declared_motors": [
+        "qm_013",
+        "qm_014",
+        "qm_015",
+        "qm_017",
+        "qm_018",
+        "qm_021",
+        "qm_022",
+        "qm_048",
+        "qm_051",
+        "qm_054",
+        "qm_056",
+        "qm_057",
+        "qm_058",
+        "qm_059",
+        "qm_060"
+      ],
+      "real_invoked_quality_motor_ids": [],
+      "real_invoked_runtime_functions": [
+        "q52_build_quality_study_questions",
+        "q52_build_quality_quiz",
+        "q52_validate_study_questions",
+        "q52_validate_quiz"
+      ],
+      "deduced_motor_ids": [
+        "qm_013",
+        "qm_014",
+        "qm_015",
+        "qm_017",
+        "qm_018",
+        "qm_021",
+        "qm_022",
+        "qm_048",
+        "qm_051",
+        "qm_054",
+        "qm_056",
+        "qm_057",
+        "qm_058",
+        "qm_059",
+        "qm_060"
+      ],
+      "declared_only_motor_ids": [
+        "qm_013",
+        "qm_014",
+        "qm_015",
+        "qm_017",
+        "qm_018",
+        "qm_021",
+        "qm_022",
+        "qm_048",
+        "qm_051",
+        "qm_054",
+        "qm_056",
+        "qm_057",
+        "qm_058",
+        "qm_059",
+        "qm_060"
+      ],
+      "bypasses": [
+        "all_motors_connected dichiarato nel quality_report",
+        "nessun ID QM realmente tracciato durante la chiamata del generatore",
+        "usa funzioni q52 reali, ma non ID QM del registry"
+      ],
+      "notes": [
+        "Trace runtime ottenuta chiamando scripts.run_phase5_14_3_local_backend_bridge.generate.",
+        "Gli ID QM sono considerati realmente invocati solo se appaiono in trace runtime esplicita; quality_report route_total non basta."
+      ]
+    },
+    {
+      "input_label": "probe_documento_medio",
+      "input_chars": 361,
+      "generator": "Test / Quiz",
+      "kind": "quiz",
+      "route": "full_pipeline_quiz_route63_language_quality_v51418",
+      "output_produced": true,
+      "output_preview": "[{'id': 'quiz_quality_v51418_001', 'domanda': 'Quale affermazione descrive correttamente il punto relativo a gestione accessi ogni?', 'opzioni': [{'option_id': 'A', 'testo': 'La procedura di gestione accessi stabilisce che ogni account sia assegnato a una persona identificabile', 'is_correct': True}, {'option_id': 'B', 'testo': 'La procedura può essere gestita senza registrazioni, controlli o responsabili.', 'is_correct': False}, {'option_id': 'C', 'testo': 'Il controllo è facoltativo e non rich",
+      "status": "APPROVED",
+      "approved": true,
+      "defects": [],
+      "warnings": [],
+      "error": null,
+      "declared_all_motors_connected": true,
+      "declared_motors": [
+        "qm_016",
+        "qm_017",
+        "qm_021",
+        "qm_022",
+        "qm_033",
+        "qm_034",
+        "qm_035",
+        "qm_036",
+        "qm_037",
+        "qm_038",
+        "qm_039",
+        "qm_040",
+        "qm_041",
+        "qm_042",
+        "qm_043",
+        "qm_044",
+        "qm_048",
+        "qm_051",
+        "qm_055",
+        "qm_056",
+        "qm_057",
+        "qm_058",
+        "qm_059",
+        "qm_060"
+      ],
+      "real_invoked_quality_motor_ids": [],
+      "real_invoked_runtime_functions": [
+        "q52_build_quality_study_questions",
+        "q52_build_quality_quiz",
+        "q52_validate_study_questions",
+        "q52_validate_quiz"
+      ],
+      "deduced_motor_ids": [
+        "qm_016",
+        "qm_017",
+        "qm_021",
+        "qm_022",
+        "qm_033",
+        "qm_034",
+        "qm_035",
+        "qm_036",
+        "qm_037",
+        "qm_038",
+        "qm_039",
+        "qm_040",
+        "qm_041",
+        "qm_042",
+        "qm_043",
+        "qm_044",
+        "qm_048",
+        "qm_051",
+        "qm_055",
+        "qm_056",
+        "qm_057",
+        "qm_058",
+        "qm_059",
+        "qm_060"
+      ],
+      "declared_only_motor_ids": [
+        "qm_016",
+        "qm_017",
+        "qm_021",
+        "qm_022",
+        "qm_033",
+        "qm_034",
+        "qm_035",
+        "qm_036",
+        "qm_037",
+        "qm_038",
+        "qm_039",
+        "qm_040",
+        "qm_041",
+        "qm_042",
+        "qm_043",
+        "qm_044",
+        "qm_048",
+        "qm_051",
+        "qm_055",
+        "qm_056",
+        "qm_057",
+        "qm_058",
+        "qm_059",
+        "qm_060"
+      ],
+      "bypasses": [
+        "all_motors_connected dichiarato nel quality_report",
+        "nessun ID QM realmente tracciato durante la chiamata del generatore",
+        "usa funzioni q52 reali, ma non ID QM del registry"
+      ],
+      "notes": [
+        "Trace runtime ottenuta chiamando scripts.run_phase5_14_3_local_backend_bridge.generate.",
+        "Gli ID QM sono considerati realmente invocati solo se appaiono in trace runtime esplicita; quality_report route_total non basta."
+      ]
+    },
+    {
+      "input_label": "breve_valido",
+      "input_chars": 238,
+      "generator": "Riassunto",
+      "kind": "summary",
+      "route": "ERROR",
+      "output_produced": false,
+      "output_preview": "",
+      "status": "ERROR",
+      "approved": false,
+      "defects": [],
+      "warnings": [],
+      "error": "RuntimeError: FULL_SUMMARY_QUALITY_BLOCKED: SUMMARY_TOO_SHORT",
+      "declared_all_motors_connected": false,
+      "declared_motors": [
+        "qm_001",
+        "qm_002",
+        "qm_003",
+        "qm_004",
+        "qm_005",
+        "qm_006",
+        "qm_007",
+        "qm_008",
+        "qm_009",
+        "qm_010",
+        "qm_011",
+        "qm_012",
+        "qm_017",
+        "qm_018",
+        "qm_019",
+        "qm_020",
+        "qm_023",
+        "qm_024",
+        "qm_025",
+        "qm_026",
+        "qm_027",
+        "qm_028",
+        "qm_029",
+        "qm_030",
+        "qm_031",
+        "qm_032",
+        "qm_033",
+        "qm_034",
+        "qm_035",
+        "qm_038",
+        "qm_039",
+        "qm_040",
+        "qm_042",
+        "qm_043",
+        "qm_044",
+        "qm_045",
+        "qm_046",
+        "qm_047",
+        "qm_048",
+        "qm_049",
+        "qm_050",
+        "qm_051",
+        "qm_052",
+        "qm_053",
+        "qm_054",
+        "qm_055",
+        "qm_056",
+        "qm_057",
+        "qm_058",
+        "qm_059",
+        "qm_060",
+        "qm_061",
+        "qm_062",
+        "qm_063",
+        "qm_064"
+      ],
+      "real_invoked_quality_motor_ids": [],
+      "real_invoked_runtime_functions": [],
+      "deduced_motor_ids": [
+        "qm_001",
+        "qm_002",
+        "qm_003",
+        "qm_004",
+        "qm_005",
+        "qm_006",
+        "qm_007",
+        "qm_008",
+        "qm_009",
+        "qm_010",
+        "qm_011",
+        "qm_012",
+        "qm_017",
+        "qm_018",
+        "qm_019",
+        "qm_020",
+        "qm_023",
+        "qm_024",
+        "qm_025",
+        "qm_026",
+        "qm_027",
+        "qm_028",
+        "qm_029",
+        "qm_030",
+        "qm_031",
+        "qm_032",
+        "qm_033",
+        "qm_034",
+        "qm_035",
+        "qm_038",
+        "qm_039",
+        "qm_040",
+        "qm_042",
+        "qm_043",
+        "qm_044",
+        "qm_045",
+        "qm_046",
+        "qm_047",
+        "qm_048",
+        "qm_049",
+        "qm_050",
+        "qm_051",
+        "qm_052",
+        "qm_053",
+        "qm_054",
+        "qm_055",
+        "qm_056",
+        "qm_057",
+        "qm_058",
+        "qm_059",
+        "qm_060",
+        "qm_061",
+        "qm_062",
+        "qm_063",
+        "qm_064"
+      ],
+      "declared_only_motor_ids": [
+        "qm_001",
+        "qm_002",
+        "qm_003",
+        "qm_004",
+        "qm_005",
+        "qm_006",
+        "qm_007",
+        "qm_008",
+        "qm_009",
+        "qm_010",
+        "qm_011",
+        "qm_012",
+        "qm_017",
+        "qm_018",
+        "qm_019",
+        "qm_020",
+        "qm_023",
+        "qm_024",
+        "qm_025",
+        "qm_026",
+        "qm_027",
+        "qm_028",
+        "qm_029",
+        "qm_030",
+        "qm_031",
+        "qm_032",
+        "qm_033",
+        "qm_034",
+        "qm_035",
+        "qm_038",
+        "qm_039",
+        "qm_040",
+        "qm_042",
+        "qm_043",
+        "qm_044",
+        "qm_045",
+        "qm_046",
+        "qm_047",
+        "qm_048",
+        "qm_049",
+        "qm_050",
+        "qm_051",
+        "qm_052",
+        "qm_053",
+        "qm_054",
+        "qm_055",
+        "qm_056",
+        "qm_057",
+        "qm_058",
+        "qm_059",
+        "qm_060",
+        "qm_061",
+        "qm_062",
+        "qm_063",
+        "qm_064"
+      ],
+      "bypasses": [
+        "nessun ID QM realmente tracciato durante la chiamata del generatore",
+        "runtime summary/cards non passa da q52 o registry QM tracciabile"
+      ],
+      "notes": [
+        "Trace runtime ottenuta chiamando scripts.run_phase5_14_3_local_backend_bridge.generate.",
+        "Gli ID QM sono considerati realmente invocati solo se appaiono in trace runtime esplicita; quality_report route_total non basta."
+      ]
+    },
+    {
+      "input_label": "breve_valido",
+      "input_chars": 238,
+      "generator": "Card",
+      "kind": "cards",
+      "route": "full_pipeline_cards_60_motors_graphic_v51416",
+      "output_produced": true,
+      "output_preview": "[{'card_id': 'full_card_v51416_001', 'titolo': 'Procedura onboarding assegna tutor', 'messaggio_chiave': 'Il punto centrale è rendere questa informazione chiara, applicabile e verificabile.', 'spiegazione': \"La card evidenzia che la procedura di onboarding assegna un tutor al nuovo dipendente Questo passaggio è importante perché collega il contenuto del documento a un'azione o a un controllo concreto.\", 'micro_concetti': ['procedura', 'onboarding', 'assegna', 'tutor'], 'visual': {'icon': '🏢', 't",
+      "status": "APPROVED",
+      "approved": true,
+      "defects": [],
+      "warnings": [],
+      "error": null,
+      "declared_all_motors_connected": true,
+      "declared_motors": [
+        "qm_001",
+        "qm_002",
+        "qm_003",
+        "qm_004",
+        "qm_005",
+        "qm_006",
+        "qm_007",
+        "qm_008",
+        "qm_009",
+        "qm_010",
+        "qm_011",
+        "qm_012",
+        "qm_013",
+        "qm_014",
+        "qm_015",
+        "qm_017",
+        "qm_018",
+        "qm_019",
+        "qm_020",
+        "qm_021",
+        "qm_022",
+        "qm_023",
+        "qm_024",
+        "qm_025",
+        "qm_026",
+        "qm_027",
+        "qm_028",
+        "qm_029",
+        "qm_030",
+        "qm_031",
+        "qm_032",
+        "qm_033",
+        "qm_034",
+        "qm_035",
+        "qm_038",
+        "qm_039",
+        "qm_040",
+        "qm_042",
+        "qm_043",
+        "qm_044",
+        "qm_045",
+        "qm_046",
+        "qm_047",
+        "qm_048",
+        "qm_049",
+        "qm_050",
+        "qm_051",
+        "qm_052",
+        "qm_053",
+        "qm_054",
+        "qm_055",
+        "qm_056",
+        "qm_057",
+        "qm_058",
+        "qm_059",
+        "qm_060",
+        "qm_061",
+        "qm_062",
+        "qm_063",
+        "qm_064"
+      ],
+      "real_invoked_quality_motor_ids": [],
+      "real_invoked_runtime_functions": [],
+      "deduced_motor_ids": [
+        "qm_001",
+        "qm_002",
+        "qm_003",
+        "qm_004",
+        "qm_005",
+        "qm_006",
+        "qm_007",
+        "qm_008",
+        "qm_009",
+        "qm_010",
+        "qm_011",
+        "qm_012",
+        "qm_013",
+        "qm_014",
+        "qm_015",
+        "qm_017",
+        "qm_018",
+        "qm_019",
+        "qm_020",
+        "qm_021",
+        "qm_022",
+        "qm_023",
+        "qm_024",
+        "qm_025",
+        "qm_026",
+        "qm_027",
+        "qm_028",
+        "qm_029",
+        "qm_030",
+        "qm_031",
+        "qm_032",
+        "qm_033",
+        "qm_034",
+        "qm_035",
+        "qm_038",
+        "qm_039",
+        "qm_040",
+        "qm_042",
+        "qm_043",
+        "qm_044",
+        "qm_045",
+        "qm_046",
+        "qm_047",
+        "qm_048",
+        "qm_049",
+        "qm_050",
+        "qm_051",
+        "qm_052",
+        "qm_053",
+        "qm_054",
+        "qm_055",
+        "qm_056",
+        "qm_057",
+        "qm_058",
+        "qm_059",
+        "qm_060",
+        "qm_061",
+        "qm_062",
+        "qm_063",
+        "qm_064"
+      ],
+      "declared_only_motor_ids": [
+        "qm_001",
+        "qm_002",
+        "qm_003",
+        "qm_004",
+        "qm_005",
+        "qm_006",
+        "qm_007",
+        "qm_008",
+        "qm_009",
+        "qm_010",
+        "qm_011",
+        "qm_012",
+        "qm_013",
+        "qm_014",
+        "qm_015",
+        "qm_017",
+        "qm_018",
+        "qm_019",
+        "qm_020",
+        "qm_021",
+        "qm_022",
+        "qm_023",
+        "qm_024",
+        "qm_025",
+        "qm_026",
+        "qm_027",
+        "qm_028",
+        "qm_029",
+        "qm_030",
+        "qm_031",
+        "qm_032",
+        "qm_033",
+        "qm_034",
+        "qm_035",
+        "qm_038",
+        "qm_039",
+        "qm_040",
+        "qm_042",
+        "qm_043",
+        "qm_044",
+        "qm_045",
+        "qm_046",
+        "qm_047",
+        "qm_048",
+        "qm_049",
+        "qm_050",
+        "qm_051",
+        "qm_052",
+        "qm_053",
+        "qm_054",
+        "qm_055",
+        "qm_056",
+        "qm_057",
+        "qm_058",
+        "qm_059",
+        "qm_060",
+        "qm_061",
+        "qm_062",
+        "qm_063",
+        "qm_064"
+      ],
+      "bypasses": [
+        "all_motors_connected dichiarato nel quality_report",
+        "nessun ID QM realmente tracciato durante la chiamata del generatore",
+        "runtime summary/cards non passa da q52 o registry QM tracciabile"
+      ],
+      "notes": [
+        "Trace runtime ottenuta chiamando scripts.run_phase5_14_3_local_backend_bridge.generate.",
+        "Gli ID QM sono considerati realmente invocati solo se appaiono in trace runtime esplicita; quality_report route_total non basta."
+      ]
+    },
+    {
+      "input_label": "breve_valido",
+      "input_chars": 238,
+      "generator": "Domande studio",
+      "kind": "study",
+      "route": "ERROR",
+      "output_produced": false,
+      "output_preview": "",
+      "status": "ERROR",
+      "approved": false,
+      "defects": [],
+      "warnings": [],
+      "error": "RuntimeError: V51418_TOO_FEW_REAL_FACTS_FOR_LANGUAGE_LAYER: 3",
+      "declared_all_motors_connected": false,
+      "declared_motors": [
+        "qm_013",
+        "qm_014",
+        "qm_015",
+        "qm_017",
+        "qm_018",
+        "qm_021",
+        "qm_022",
+        "qm_048",
+        "qm_051",
+        "qm_054",
+        "qm_056",
+        "qm_057",
+        "qm_058",
+        "qm_059",
+        "qm_060"
+      ],
+      "real_invoked_quality_motor_ids": [],
+      "real_invoked_runtime_functions": [
+        "q52_build_quality_study_questions",
+        "q52_build_quality_quiz",
+        "q52_validate_study_questions",
+        "q52_validate_quiz"
+      ],
+      "deduced_motor_ids": [
+        "qm_013",
+        "qm_014",
+        "qm_015",
+        "qm_017",
+        "qm_018",
+        "qm_021",
+        "qm_022",
+        "qm_048",
+        "qm_051",
+        "qm_054",
+        "qm_056",
+        "qm_057",
+        "qm_058",
+        "qm_059",
+        "qm_060"
+      ],
+      "declared_only_motor_ids": [
+        "qm_013",
+        "qm_014",
+        "qm_015",
+        "qm_017",
+        "qm_018",
+        "qm_021",
+        "qm_022",
+        "qm_048",
+        "qm_051",
+        "qm_054",
+        "qm_056",
+        "qm_057",
+        "qm_058",
+        "qm_059",
+        "qm_060"
+      ],
+      "bypasses": [
+        "nessun ID QM realmente tracciato durante la chiamata del generatore",
+        "usa funzioni q52 reali, ma non ID QM del registry"
+      ],
+      "notes": [
+        "Trace runtime ottenuta chiamando scripts.run_phase5_14_3_local_backend_bridge.generate.",
+        "Gli ID QM sono considerati realmente invocati solo se appaiono in trace runtime esplicita; quality_report route_total non basta."
+      ]
+    },
+    {
+      "input_label": "breve_valido",
+      "input_chars": 238,
+      "generator": "Test / Quiz",
+      "kind": "quiz",
+      "route": "ERROR",
+      "output_produced": false,
+      "output_preview": "",
+      "status": "ERROR",
+      "approved": false,
+      "defects": [],
+      "warnings": [],
+      "error": "RuntimeError: V51418_TOO_FEW_REAL_FACTS_FOR_LANGUAGE_LAYER: 3",
+      "declared_all_motors_connected": false,
+      "declared_motors": [
+        "qm_016",
+        "qm_017",
+        "qm_021",
+        "qm_022",
+        "qm_033",
+        "qm_034",
+        "qm_035",
+        "qm_036",
+        "qm_037",
+        "qm_038",
+        "qm_039",
+        "qm_040",
+        "qm_041",
+        "qm_042",
+        "qm_043",
+        "qm_044",
+        "qm_048",
+        "qm_051",
+        "qm_055",
+        "qm_056",
+        "qm_057",
+        "qm_058",
+        "qm_059",
+        "qm_060"
+      ],
+      "real_invoked_quality_motor_ids": [],
+      "real_invoked_runtime_functions": [
+        "q52_build_quality_study_questions",
+        "q52_build_quality_quiz",
+        "q52_validate_study_questions",
+        "q52_validate_quiz"
+      ],
+      "deduced_motor_ids": [
+        "qm_016",
+        "qm_017",
+        "qm_021",
+        "qm_022",
+        "qm_033",
+        "qm_034",
+        "qm_035",
+        "qm_036",
+        "qm_037",
+        "qm_038",
+        "qm_039",
+        "qm_040",
+        "qm_041",
+        "qm_042",
+        "qm_043",
+        "qm_044",
+        "qm_048",
+        "qm_051",
+        "qm_055",
+        "qm_056",
+        "qm_057",
+        "qm_058",
+        "qm_059",
+        "qm_060"
+      ],
+      "declared_only_motor_ids": [
+        "qm_016",
+        "qm_017",
+        "qm_021",
+        "qm_022",
+        "qm_033",
+        "qm_034",
+        "qm_035",
+        "qm_036",
+        "qm_037",
+        "qm_038",
+        "qm_039",
+        "qm_040",
+        "qm_041",
+        "qm_042",
+        "qm_043",
+        "qm_044",
+        "qm_048",
+        "qm_051",
+        "qm_055",
+        "qm_056",
+        "qm_057",
+        "qm_058",
+        "qm_059",
+        "qm_060"
+      ],
+      "bypasses": [
+        "nessun ID QM realmente tracciato durante la chiamata del generatore",
+        "usa funzioni q52 reali, ma non ID QM del registry"
+      ],
+      "notes": [
+        "Trace runtime ottenuta chiamando scripts.run_phase5_14_3_local_backend_bridge.generate.",
+        "Gli ID QM sono considerati realmente invocati solo se appaiono in trace runtime esplicita; quality_report route_total non basta."
+      ]
+    },
+    {
+      "input_label": "tecnico",
+      "input_chars": 264,
+      "generator": "Riassunto",
+      "kind": "summary",
+      "route": "ERROR",
+      "output_produced": false,
+      "output_preview": "",
+      "status": "ERROR",
+      "approved": false,
+      "defects": [],
+      "warnings": [],
+      "error": "RuntimeError: FULL_SUMMARY_QUALITY_BLOCKED: SUMMARY_TOO_SHORT",
+      "declared_all_motors_connected": false,
+      "declared_motors": [
+        "qm_001",
+        "qm_002",
+        "qm_003",
+        "qm_004",
+        "qm_005",
+        "qm_006",
+        "qm_007",
+        "qm_008",
+        "qm_009",
+        "qm_010",
+        "qm_011",
+        "qm_012",
+        "qm_017",
+        "qm_018",
+        "qm_019",
+        "qm_020",
+        "qm_023",
+        "qm_024",
+        "qm_025",
+        "qm_026",
+        "qm_027",
+        "qm_028",
+        "qm_029",
+        "qm_030",
+        "qm_031",
+        "qm_032",
+        "qm_033",
+        "qm_034",
+        "qm_035",
+        "qm_038",
+        "qm_039",
+        "qm_040",
+        "qm_042",
+        "qm_043",
+        "qm_044",
+        "qm_045",
+        "qm_046",
+        "qm_047",
+        "qm_048",
+        "qm_049",
+        "qm_050",
+        "qm_051",
+        "qm_052",
+        "qm_053",
+        "qm_054",
+        "qm_055",
+        "qm_056",
+        "qm_057",
+        "qm_058",
+        "qm_059",
+        "qm_060",
+        "qm_061",
+        "qm_062",
+        "qm_063",
+        "qm_064"
+      ],
+      "real_invoked_quality_motor_ids": [],
+      "real_invoked_runtime_functions": [],
+      "deduced_motor_ids": [
+        "qm_001",
+        "qm_002",
+        "qm_003",
+        "qm_004",
+        "qm_005",
+        "qm_006",
+        "qm_007",
+        "qm_008",
+        "qm_009",
+        "qm_010",
+        "qm_011",
+        "qm_012",
+        "qm_017",
+        "qm_018",
+        "qm_019",
+        "qm_020",
+        "qm_023",
+        "qm_024",
+        "qm_025",
+        "qm_026",
+        "qm_027",
+        "qm_028",
+        "qm_029",
+        "qm_030",
+        "qm_031",
+        "qm_032",
+        "qm_033",
+        "qm_034",
+        "qm_035",
+        "qm_038",
+        "qm_039",
+        "qm_040",
+        "qm_042",
+        "qm_043",
+        "qm_044",
+        "qm_045",
+        "qm_046",
+        "qm_047",
+        "qm_048",
+        "qm_049",
+        "qm_050",
+        "qm_051",
+        "qm_052",
+        "qm_053",
+        "qm_054",
+        "qm_055",
+        "qm_056",
+        "qm_057",
+        "qm_058",
+        "qm_059",
+        "qm_060",
+        "qm_061",
+        "qm_062",
+        "qm_063",
+        "qm_064"
+      ],
+      "declared_only_motor_ids": [
+        "qm_001",
+        "qm_002",
+        "qm_003",
+        "qm_004",
+        "qm_005",
+        "qm_006",
+        "qm_007",
+        "qm_008",
+        "qm_009",
+        "qm_010",
+        "qm_011",
+        "qm_012",
+        "qm_017",
+        "qm_018",
+        "qm_019",
+        "qm_020",
+        "qm_023",
+        "qm_024",
+        "qm_025",
+        "qm_026",
+        "qm_027",
+        "qm_028",
+        "qm_029",
+        "qm_030",
+        "qm_031",
+        "qm_032",
+        "qm_033",
+        "qm_034",
+        "qm_035",
+        "qm_038",
+        "qm_039",
+        "qm_040",
+        "qm_042",
+        "qm_043",
+        "qm_044",
+        "qm_045",
+        "qm_046",
+        "qm_047",
+        "qm_048",
+        "qm_049",
+        "qm_050",
+        "qm_051",
+        "qm_052",
+        "qm_053",
+        "qm_054",
+        "qm_055",
+        "qm_056",
+        "qm_057",
+        "qm_058",
+        "qm_059",
+        "qm_060",
+        "qm_061",
+        "qm_062",
+        "qm_063",
+        "qm_064"
+      ],
+      "bypasses": [
+        "nessun ID QM realmente tracciato durante la chiamata del generatore",
+        "runtime summary/cards non passa da q52 o registry QM tracciabile"
+      ],
+      "notes": [
+        "Trace runtime ottenuta chiamando scripts.run_phase5_14_3_local_backend_bridge.generate.",
+        "Gli ID QM sono considerati realmente invocati solo se appaiono in trace runtime esplicita; quality_report route_total non basta."
+      ]
+    },
+    {
+      "input_label": "tecnico",
+      "input_chars": 264,
+      "generator": "Card",
+      "kind": "cards",
+      "route": "full_pipeline_cards_60_motors_graphic_v51416",
+      "output_produced": true,
+      "output_preview": "[{'card_id': 'full_card_v51416_001', 'titolo': 'Sistema backup snapshot incrementali', 'messaggio_chiave': 'Il punto centrale è rendere questa informazione chiara, applicabile e verificabile.', 'spiegazione': \"La card evidenzia che il sistema di backup usa snapshot incrementali ogni quattro ore e una replica giornaliera su storage separato Questo passaggio è importante perché collega il contenuto del documento a un'azione o a un controllo concreto.\", 'micro_concetti': ['sistema', 'backup', 'snap",
+      "status": "APPROVED",
+      "approved": true,
+      "defects": [],
+      "warnings": [],
+      "error": null,
+      "declared_all_motors_connected": true,
+      "declared_motors": [
+        "qm_001",
+        "qm_002",
+        "qm_003",
+        "qm_004",
+        "qm_005",
+        "qm_006",
+        "qm_007",
+        "qm_008",
+        "qm_009",
+        "qm_010",
+        "qm_011",
+        "qm_012",
+        "qm_013",
+        "qm_014",
+        "qm_015",
+        "qm_017",
+        "qm_018",
+        "qm_019",
+        "qm_020",
+        "qm_021",
+        "qm_022",
+        "qm_023",
+        "qm_024",
+        "qm_025",
+        "qm_026",
+        "qm_027",
+        "qm_028",
+        "qm_029",
+        "qm_030",
+        "qm_031",
+        "qm_032",
+        "qm_033",
+        "qm_034",
+        "qm_035",
+        "qm_038",
+        "qm_039",
+        "qm_040",
+        "qm_042",
+        "qm_043",
+        "qm_044",
+        "qm_045",
+        "qm_046",
+        "qm_047",
+        "qm_048",
+        "qm_049",
+        "qm_050",
+        "qm_051",
+        "qm_052",
+        "qm_053",
+        "qm_054",
+        "qm_055",
+        "qm_056",
+        "qm_057",
+        "qm_058",
+        "qm_059",
+        "qm_060",
+        "qm_061",
+        "qm_062",
+        "qm_063",
+        "qm_064"
+      ],
+      "real_invoked_quality_motor_ids": [],
+      "real_invoked_runtime_functions": [],
+      "deduced_motor_ids": [
+        "qm_001",
+        "qm_002",
+        "qm_003",
+        "qm_004",
+        "qm_005",
+        "qm_006",
+        "qm_007",
+        "qm_008",
+        "qm_009",
+        "qm_010",
+        "qm_011",
+        "qm_012",
+        "qm_013",
+        "qm_014",
+        "qm_015",
+        "qm_017",
+        "qm_018",
+        "qm_019",
+        "qm_020",
+        "qm_021",
+        "qm_022",
+        "qm_023",
+        "qm_024",
+        "qm_025",
+        "qm_026",
+        "qm_027",
+        "qm_028",
+        "qm_029",
+        "qm_030",
+        "qm_031",
+        "qm_032",
+        "qm_033",
+        "qm_034",
+        "qm_035",
+        "qm_038",
+        "qm_039",
+        "qm_040",
+        "qm_042",
+        "qm_043",
+        "qm_044",
+        "qm_045",
+        "qm_046",
+        "qm_047",
+        "qm_048",
+        "qm_049",
+        "qm_050",
+        "qm_051",
+        "qm_052",
+        "qm_053",
+        "qm_054",
+        "qm_055",
+        "qm_056",
+        "qm_057",
+        "qm_058",
+        "qm_059",
+        "qm_060",
+        "qm_061",
+        "qm_062",
+        "qm_063",
+        "qm_064"
+      ],
+      "declared_only_motor_ids": [
+        "qm_001",
+        "qm_002",
+        "qm_003",
+        "qm_004",
+        "qm_005",
+        "qm_006",
+        "qm_007",
+        "qm_008",
+        "qm_009",
+        "qm_010",
+        "qm_011",
+        "qm_012",
+        "qm_013",
+        "qm_014",
+        "qm_015",
+        "qm_017",
+        "qm_018",
+        "qm_019",
+        "qm_020",
+        "qm_021",
+        "qm_022",
+        "qm_023",
+        "qm_024",
+        "qm_025",
+        "qm_026",
+        "qm_027",
+        "qm_028",
+        "qm_029",
+        "qm_030",
+        "qm_031",
+        "qm_032",
+        "qm_033",
+        "qm_034",
+        "qm_035",
+        "qm_038",
+        "qm_039",
+        "qm_040",
+        "qm_042",
+        "qm_043",
+        "qm_044",
+        "qm_045",
+        "qm_046",
+        "qm_047",
+        "qm_048",
+        "qm_049",
+        "qm_050",
+        "qm_051",
+        "qm_052",
+        "qm_053",
+        "qm_054",
+        "qm_055",
+        "qm_056",
+        "qm_057",
+        "qm_058",
+        "qm_059",
+        "qm_060",
+        "qm_061",
+        "qm_062",
+        "qm_063",
+        "qm_064"
+      ],
+      "bypasses": [
+        "all_motors_connected dichiarato nel quality_report",
+        "nessun ID QM realmente tracciato durante la chiamata del generatore",
+        "runtime summary/cards non passa da q52 o registry QM tracciabile"
+      ],
+      "notes": [
+        "Trace runtime ottenuta chiamando scripts.run_phase5_14_3_local_backend_bridge.generate.",
+        "Gli ID QM sono considerati realmente invocati solo se appaiono in trace runtime esplicita; quality_report route_total non basta."
+      ]
+    },
+    {
+      "input_label": "tecnico",
+      "input_chars": 264,
+      "generator": "Domande studio",
+      "kind": "study",
+      "route": "ERROR",
+      "output_produced": false,
+      "output_preview": "",
+      "status": "ERROR",
+      "approved": false,
+      "defects": [],
+      "warnings": [],
+      "error": "RuntimeError: V51418_TOO_FEW_REAL_FACTS_FOR_LANGUAGE_LAYER: 3",
+      "declared_all_motors_connected": false,
+      "declared_motors": [
+        "qm_013",
+        "qm_014",
+        "qm_015",
+        "qm_017",
+        "qm_018",
+        "qm_021",
+        "qm_022",
+        "qm_048",
+        "qm_051",
+        "qm_054",
+        "qm_056",
+        "qm_057",
+        "qm_058",
+        "qm_059",
+        "qm_060"
+      ],
+      "real_invoked_quality_motor_ids": [],
+      "real_invoked_runtime_functions": [
+        "q52_build_quality_study_questions",
+        "q52_build_quality_quiz",
+        "q52_validate_study_questions",
+        "q52_validate_quiz"
+      ],
+      "deduced_motor_ids": [
+        "qm_013",
+        "qm_014",
+        "qm_015",
+        "qm_017",
+        "qm_018",
+        "qm_021",
+        "qm_022",
+        "qm_048",
+        "qm_051",
+        "qm_054",
+        "qm_056",
+        "qm_057",
+        "qm_058",
+        "qm_059",
+        "qm_060"
+      ],
+      "declared_only_motor_ids": [
+        "qm_013",
+        "qm_014",
+        "qm_015",
+        "qm_017",
+        "qm_018",
+        "qm_021",
+        "qm_022",
+        "qm_048",
+        "qm_051",
+        "qm_054",
+        "qm_056",
+        "qm_057",
+        "qm_058",
+        "qm_059",
+        "qm_060"
+      ],
+      "bypasses": [
+        "nessun ID QM realmente tracciato durante la chiamata del generatore",
+        "usa funzioni q52 reali, ma non ID QM del registry"
+      ],
+      "notes": [
+        "Trace runtime ottenuta chiamando scripts.run_phase5_14_3_local_backend_bridge.generate.",
+        "Gli ID QM sono considerati realmente invocati solo se appaiono in trace runtime esplicita; quality_report route_total non basta."
+      ]
+    },
+    {
+      "input_label": "tecnico",
+      "input_chars": 264,
+      "generator": "Test / Quiz",
+      "kind": "quiz",
+      "route": "ERROR",
+      "output_produced": false,
+      "output_preview": "",
+      "status": "ERROR",
+      "approved": false,
+      "defects": [],
+      "warnings": [],
+      "error": "RuntimeError: V51418_TOO_FEW_REAL_FACTS_FOR_LANGUAGE_LAYER: 3",
+      "declared_all_motors_connected": false,
+      "declared_motors": [
+        "qm_016",
+        "qm_017",
+        "qm_021",
+        "qm_022",
+        "qm_033",
+        "qm_034",
+        "qm_035",
+        "qm_036",
+        "qm_037",
+        "qm_038",
+        "qm_039",
+        "qm_040",
+        "qm_041",
+        "qm_042",
+        "qm_043",
+        "qm_044",
+        "qm_048",
+        "qm_051",
+        "qm_055",
+        "qm_056",
+        "qm_057",
+        "qm_058",
+        "qm_059",
+        "qm_060"
+      ],
+      "real_invoked_quality_motor_ids": [],
+      "real_invoked_runtime_functions": [
+        "q52_build_quality_study_questions",
+        "q52_build_quality_quiz",
+        "q52_validate_study_questions",
+        "q52_validate_quiz"
+      ],
+      "deduced_motor_ids": [
+        "qm_016",
+        "qm_017",
+        "qm_021",
+        "qm_022",
+        "qm_033",
+        "qm_034",
+        "qm_035",
+        "qm_036",
+        "qm_037",
+        "qm_038",
+        "qm_039",
+        "qm_040",
+        "qm_041",
+        "qm_042",
+        "qm_043",
+        "qm_044",
+        "qm_048",
+        "qm_051",
+        "qm_055",
+        "qm_056",
+        "qm_057",
+        "qm_058",
+        "qm_059",
+        "qm_060"
+      ],
+      "declared_only_motor_ids": [
+        "qm_016",
+        "qm_017",
+        "qm_021",
+        "qm_022",
+        "qm_033",
+        "qm_034",
+        "qm_035",
+        "qm_036",
+        "qm_037",
+        "qm_038",
+        "qm_039",
+        "qm_040",
+        "qm_041",
+        "qm_042",
+        "qm_043",
+        "qm_044",
+        "qm_048",
+        "qm_051",
+        "qm_055",
+        "qm_056",
+        "qm_057",
+        "qm_058",
+        "qm_059",
+        "qm_060"
+      ],
+      "bypasses": [
+        "nessun ID QM realmente tracciato durante la chiamata del generatore",
+        "usa funzioni q52 reali, ma non ID QM del registry"
+      ],
+      "notes": [
+        "Trace runtime ottenuta chiamando scripts.run_phase5_14_3_local_backend_bridge.generate.",
+        "Gli ID QM sono considerati realmente invocati solo se appaiono in trace runtime esplicita; quality_report route_total non basta."
+      ]
+    },
+    {
+      "input_label": "narrativo_discorsivo",
+      "input_chars": 269,
+      "generator": "Riassunto",
+      "kind": "summary",
+      "route": "ERROR",
+      "output_produced": false,
+      "output_preview": "",
+      "status": "ERROR",
+      "approved": false,
+      "defects": [],
+      "warnings": [],
+      "error": "RuntimeError: FULL_SUMMARY_QUALITY_BLOCKED: SUMMARY_TOO_SHORT",
+      "declared_all_motors_connected": false,
+      "declared_motors": [
+        "qm_001",
+        "qm_002",
+        "qm_003",
+        "qm_004",
+        "qm_005",
+        "qm_006",
+        "qm_007",
+        "qm_008",
+        "qm_009",
+        "qm_010",
+        "qm_011",
+        "qm_012",
+        "qm_017",
+        "qm_018",
+        "qm_019",
+        "qm_020",
+        "qm_023",
+        "qm_024",
+        "qm_025",
+        "qm_026",
+        "qm_027",
+        "qm_028",
+        "qm_029",
+        "qm_030",
+        "qm_031",
+        "qm_032",
+        "qm_033",
+        "qm_034",
+        "qm_035",
+        "qm_038",
+        "qm_039",
+        "qm_040",
+        "qm_042",
+        "qm_043",
+        "qm_044",
+        "qm_045",
+        "qm_046",
+        "qm_047",
+        "qm_048",
+        "qm_049",
+        "qm_050",
+        "qm_051",
+        "qm_052",
+        "qm_053",
+        "qm_054",
+        "qm_055",
+        "qm_056",
+        "qm_057",
+        "qm_058",
+        "qm_059",
+        "qm_060",
+        "qm_061",
+        "qm_062",
+        "qm_063",
+        "qm_064"
+      ],
+      "real_invoked_quality_motor_ids": [],
+      "real_invoked_runtime_functions": [],
+      "deduced_motor_ids": [
+        "qm_001",
+        "qm_002",
+        "qm_003",
+        "qm_004",
+        "qm_005",
+        "qm_006",
+        "qm_007",
+        "qm_008",
+        "qm_009",
+        "qm_010",
+        "qm_011",
+        "qm_012",
+        "qm_017",
+        "qm_018",
+        "qm_019",
+        "qm_020",
+        "qm_023",
+        "qm_024",
+        "qm_025",
+        "qm_026",
+        "qm_027",
+        "qm_028",
+        "qm_029",
+        "qm_030",
+        "qm_031",
+        "qm_032",
+        "qm_033",
+        "qm_034",
+        "qm_035",
+        "qm_038",
+        "qm_039",
+        "qm_040",
+        "qm_042",
+        "qm_043",
+        "qm_044",
+        "qm_045",
+        "qm_046",
+        "qm_047",
+        "qm_048",
+        "qm_049",
+        "qm_050",
+        "qm_051",
+        "qm_052",
+        "qm_053",
+        "qm_054",
+        "qm_055",
+        "qm_056",
+        "qm_057",
+        "qm_058",
+        "qm_059",
+        "qm_060",
+        "qm_061",
+        "qm_062",
+        "qm_063",
+        "qm_064"
+      ],
+      "declared_only_motor_ids": [
+        "qm_001",
+        "qm_002",
+        "qm_003",
+        "qm_004",
+        "qm_005",
+        "qm_006",
+        "qm_007",
+        "qm_008",
+        "qm_009",
+        "qm_010",
+        "qm_011",
+        "qm_012",
+        "qm_017",
+        "qm_018",
+        "qm_019",
+        "qm_020",
+        "qm_023",
+        "qm_024",
+        "qm_025",
+        "qm_026",
+        "qm_027",
+        "qm_028",
+        "qm_029",
+        "qm_030",
+        "qm_031",
+        "qm_032",
+        "qm_033",
+        "qm_034",
+        "qm_035",
+        "qm_038",
+        "qm_039",
+        "qm_040",
+        "qm_042",
+        "qm_043",
+        "qm_044",
+        "qm_045",
+        "qm_046",
+        "qm_047",
+        "qm_048",
+        "qm_049",
+        "qm_050",
+        "qm_051",
+        "qm_052",
+        "qm_053",
+        "qm_054",
+        "qm_055",
+        "qm_056",
+        "qm_057",
+        "qm_058",
+        "qm_059",
+        "qm_060",
+        "qm_061",
+        "qm_062",
+        "qm_063",
+        "qm_064"
+      ],
+      "bypasses": [
+        "nessun ID QM realmente tracciato durante la chiamata del generatore",
+        "runtime summary/cards non passa da q52 o registry QM tracciabile"
+      ],
+      "notes": [
+        "Trace runtime ottenuta chiamando scripts.run_phase5_14_3_local_backend_bridge.generate.",
+        "Gli ID QM sono considerati realmente invocati solo se appaiono in trace runtime esplicita; quality_report route_total non basta."
+      ]
+    },
+    {
+      "input_label": "narrativo_discorsivo",
+      "input_chars": 269,
+      "generator": "Card",
+      "kind": "cards",
+      "route": "full_pipeline_cards_60_motors_graphic_v51416",
+      "output_produced": true,
+      "output_preview": "[{'card_id': 'full_card_v51416_001', 'titolo': 'Marta arrivo stazione treno', 'messaggio_chiave': 'Il punto centrale è rendere questa informazione chiara, applicabile e verificabile.', 'spiegazione': \"La card evidenzia che marta arrivo alla stazione quando il treno era gia partito Questo passaggio è importante perché collega il contenuto del documento a un'azione o a un controllo concreto.\", 'micro_concetti': ['marta', 'arrivo', 'stazione', 'treno'], 'visual': {'icon': '🏢', 'theme': 'business_pr",
+      "status": "APPROVED",
+      "approved": true,
+      "defects": [],
+      "warnings": [],
+      "error": null,
+      "declared_all_motors_connected": true,
+      "declared_motors": [
+        "qm_001",
+        "qm_002",
+        "qm_003",
+        "qm_004",
+        "qm_005",
+        "qm_006",
+        "qm_007",
+        "qm_008",
+        "qm_009",
+        "qm_010",
+        "qm_011",
+        "qm_012",
+        "qm_013",
+        "qm_014",
+        "qm_015",
+        "qm_017",
+        "qm_018",
+        "qm_019",
+        "qm_020",
+        "qm_021",
+        "qm_022",
+        "qm_023",
+        "qm_024",
+        "qm_025",
+        "qm_026",
+        "qm_027",
+        "qm_028",
+        "qm_029",
+        "qm_030",
+        "qm_031",
+        "qm_032",
+        "qm_033",
+        "qm_034",
+        "qm_035",
+        "qm_038",
+        "qm_039",
+        "qm_040",
+        "qm_042",
+        "qm_043",
+        "qm_044",
+        "qm_045",
+        "qm_046",
+        "qm_047",
+        "qm_048",
+        "qm_049",
+        "qm_050",
+        "qm_051",
+        "qm_052",
+        "qm_053",
+        "qm_054",
+        "qm_055",
+        "qm_056",
+        "qm_057",
+        "qm_058",
+        "qm_059",
+        "qm_060",
+        "qm_061",
+        "qm_062",
+        "qm_063",
+        "qm_064"
+      ],
+      "real_invoked_quality_motor_ids": [],
+      "real_invoked_runtime_functions": [],
+      "deduced_motor_ids": [
+        "qm_001",
+        "qm_002",
+        "qm_003",
+        "qm_004",
+        "qm_005",
+        "qm_006",
+        "qm_007",
+        "qm_008",
+        "qm_009",
+        "qm_010",
+        "qm_011",
+        "qm_012",
+        "qm_013",
+        "qm_014",
+        "qm_015",
+        "qm_017",
+        "qm_018",
+        "qm_019",
+        "qm_020",
+        "qm_021",
+        "qm_022",
+        "qm_023",
+        "qm_024",
+        "qm_025",
+        "qm_026",
+        "qm_027",
+        "qm_028",
+        "qm_029",
+        "qm_030",
+        "qm_031",
+        "qm_032",
+        "qm_033",
+        "qm_034",
+        "qm_035",
+        "qm_038",
+        "qm_039",
+        "qm_040",
+        "qm_042",
+        "qm_043",
+        "qm_044",
+        "qm_045",
+        "qm_046",
+        "qm_047",
+        "qm_048",
+        "qm_049",
+        "qm_050",
+        "qm_051",
+        "qm_052",
+        "qm_053",
+        "qm_054",
+        "qm_055",
+        "qm_056",
+        "qm_057",
+        "qm_058",
+        "qm_059",
+        "qm_060",
+        "qm_061",
+        "qm_062",
+        "qm_063",
+        "qm_064"
+      ],
+      "declared_only_motor_ids": [
+        "qm_001",
+        "qm_002",
+        "qm_003",
+        "qm_004",
+        "qm_005",
+        "qm_006",
+        "qm_007",
+        "qm_008",
+        "qm_009",
+        "qm_010",
+        "qm_011",
+        "qm_012",
+        "qm_013",
+        "qm_014",
+        "qm_015",
+        "qm_017",
+        "qm_018",
+        "qm_019",
+        "qm_020",
+        "qm_021",
+        "qm_022",
+        "qm_023",
+        "qm_024",
+        "qm_025",
+        "qm_026",
+        "qm_027",
+        "qm_028",
+        "qm_029",
+        "qm_030",
+        "qm_031",
+        "qm_032",
+        "qm_033",
+        "qm_034",
+        "qm_035",
+        "qm_038",
+        "qm_039",
+        "qm_040",
+        "qm_042",
+        "qm_043",
+        "qm_044",
+        "qm_045",
+        "qm_046",
+        "qm_047",
+        "qm_048",
+        "qm_049",
+        "qm_050",
+        "qm_051",
+        "qm_052",
+        "qm_053",
+        "qm_054",
+        "qm_055",
+        "qm_056",
+        "qm_057",
+        "qm_058",
+        "qm_059",
+        "qm_060",
+        "qm_061",
+        "qm_062",
+        "qm_063",
+        "qm_064"
+      ],
+      "bypasses": [
+        "all_motors_connected dichiarato nel quality_report",
+        "nessun ID QM realmente tracciato durante la chiamata del generatore",
+        "runtime summary/cards non passa da q52 o registry QM tracciabile"
+      ],
+      "notes": [
+        "Trace runtime ottenuta chiamando scripts.run_phase5_14_3_local_backend_bridge.generate.",
+        "Gli ID QM sono considerati realmente invocati solo se appaiono in trace runtime esplicita; quality_report route_total non basta."
+      ]
+    },
+    {
+      "input_label": "narrativo_discorsivo",
+      "input_chars": 269,
+      "generator": "Domande studio",
+      "kind": "study",
+      "route": "ERROR",
+      "output_produced": false,
+      "output_preview": "",
+      "status": "ERROR",
+      "approved": false,
+      "defects": [],
+      "warnings": [],
+      "error": "RuntimeError: Direct Q52 bridge ha prodotto errori non riparabili: ['phase5_quiz_question_001: fatto_origine non tracciabile nei facts', 'phase5_quiz_question_004: fatto_origine non tracciabile nei facts']",
+      "declared_all_motors_connected": false,
+      "declared_motors": [
+        "qm_013",
+        "qm_014",
+        "qm_015",
+        "qm_017",
+        "qm_018",
+        "qm_021",
+        "qm_022",
+        "qm_048",
+        "qm_051",
+        "qm_054",
+        "qm_056",
+        "qm_057",
+        "qm_058",
+        "qm_059",
+        "qm_060"
+      ],
+      "real_invoked_quality_motor_ids": [],
+      "real_invoked_runtime_functions": [
+        "q52_build_quality_study_questions",
+        "q52_build_quality_quiz",
+        "q52_validate_study_questions",
+        "q52_validate_quiz"
+      ],
+      "deduced_motor_ids": [
+        "qm_013",
+        "qm_014",
+        "qm_015",
+        "qm_017",
+        "qm_018",
+        "qm_021",
+        "qm_022",
+        "qm_048",
+        "qm_051",
+        "qm_054",
+        "qm_056",
+        "qm_057",
+        "qm_058",
+        "qm_059",
+        "qm_060"
+      ],
+      "declared_only_motor_ids": [
+        "qm_013",
+        "qm_014",
+        "qm_015",
+        "qm_017",
+        "qm_018",
+        "qm_021",
+        "qm_022",
+        "qm_048",
+        "qm_051",
+        "qm_054",
+        "qm_056",
+        "qm_057",
+        "qm_058",
+        "qm_059",
+        "qm_060"
+      ],
+      "bypasses": [
+        "nessun ID QM realmente tracciato durante la chiamata del generatore",
+        "usa funzioni q52 reali, ma non ID QM del registry"
+      ],
+      "notes": [
+        "Trace runtime ottenuta chiamando scripts.run_phase5_14_3_local_backend_bridge.generate.",
+        "Gli ID QM sono considerati realmente invocati solo se appaiono in trace runtime esplicita; quality_report route_total non basta."
+      ]
+    },
+    {
+      "input_label": "narrativo_discorsivo",
+      "input_chars": 269,
+      "generator": "Test / Quiz",
+      "kind": "quiz",
+      "route": "ERROR",
+      "output_produced": false,
+      "output_preview": "",
+      "status": "ERROR",
+      "approved": false,
+      "defects": [],
+      "warnings": [],
+      "error": "RuntimeError: Direct Q52 bridge ha prodotto errori non riparabili: ['phase5_quiz_question_001: fatto_origine non tracciabile nei facts', 'phase5_quiz_question_004: fatto_origine non tracciabile nei facts']",
+      "declared_all_motors_connected": false,
+      "declared_motors": [
+        "qm_016",
+        "qm_017",
+        "qm_021",
+        "qm_022",
+        "qm_033",
+        "qm_034",
+        "qm_035",
+        "qm_036",
+        "qm_037",
+        "qm_038",
+        "qm_039",
+        "qm_040",
+        "qm_041",
+        "qm_042",
+        "qm_043",
+        "qm_044",
+        "qm_048",
+        "qm_051",
+        "qm_055",
+        "qm_056",
+        "qm_057",
+        "qm_058",
+        "qm_059",
+        "qm_060"
+      ],
+      "real_invoked_quality_motor_ids": [],
+      "real_invoked_runtime_functions": [
+        "q52_build_quality_study_questions",
+        "q52_build_quality_quiz",
+        "q52_validate_study_questions",
+        "q52_validate_quiz"
+      ],
+      "deduced_motor_ids": [
+        "qm_016",
+        "qm_017",
+        "qm_021",
+        "qm_022",
+        "qm_033",
+        "qm_034",
+        "qm_035",
+        "qm_036",
+        "qm_037",
+        "qm_038",
+        "qm_039",
+        "qm_040",
+        "qm_041",
+        "qm_042",
+        "qm_043",
+        "qm_044",
+        "qm_048",
+        "qm_051",
+        "qm_055",
+        "qm_056",
+        "qm_057",
+        "qm_058",
+        "qm_059",
+        "qm_060"
+      ],
+      "declared_only_motor_ids": [
+        "qm_016",
+        "qm_017",
+        "qm_021",
+        "qm_022",
+        "qm_033",
+        "qm_034",
+        "qm_035",
+        "qm_036",
+        "qm_037",
+        "qm_038",
+        "qm_039",
+        "qm_040",
+        "qm_041",
+        "qm_042",
+        "qm_043",
+        "qm_044",
+        "qm_048",
+        "qm_051",
+        "qm_055",
+        "qm_056",
+        "qm_057",
+        "qm_058",
+        "qm_059",
+        "qm_060"
+      ],
+      "bypasses": [
+        "nessun ID QM realmente tracciato durante la chiamata del generatore",
+        "usa funzioni q52 reali, ma non ID QM del registry"
+      ],
+      "notes": [
+        "Trace runtime ottenuta chiamando scripts.run_phase5_14_3_local_backend_bridge.generate.",
+        "Gli ID QM sono considerati realmente invocati solo se appaiono in trace runtime esplicita; quality_report route_total non basta."
+      ]
+    }
+  ],
+  "confirmed_audit_problems": [
+    {
+      "problem": "claim 73 ambiguo",
+      "confirmed": true,
+      "proof": "Catalogo ufficiale 64 QM; slot 65-73 classificati SLOT_TO_MATERIALIZE.",
+      "impact": "Claim non dimostrabile come 73 motori concreti.",
+      "fix_phase": "5.15D"
+    },
+    {
+      "problem": "registry unico non eseguibile",
+      "confirmed": true,
+      "proof": "Il probe trova executor sparsi in connettori, non un registry unico usato dai generatori.",
+      "impact": "Trace runtime non prova esecuzione QM end-to-end.",
+      "fix_phase": "5.15D"
+    },
+    {
+      "problem": "all_motors_connected=True dichiarativo",
+      "confirmed": true,
+      "proof": "Trace generatori con all_motors_connected=True e real_invoked_quality_motor_ids vuoto.",
+      "impact": "Report PASS possono essere decorativi.",
+      "fix_phase": "5.15D"
+    },
+    {
+      "problem": "bridge/UI clean bypass",
+      "confirmed": true,
+      "proof": "La pagina clean chiama /api/generate e non carica universal-document-learning-engine.js.",
+      "impact": "Pipeline browser storica non e la prova della pagina reale.",
+      "fix_phase": "5.15B"
+    },
+    {
+      "problem": "quiz answer leak",
+      "confirmed": true,
+      "proof": "Rendering quiz usa opt.is_correct/classe correct.",
+      "impact": "Risposta corretta visibile o deducibile in UI.",
+      "fix_phase": "5.15B"
+    },
+    {
+      "problem": "summary lungo troppo corto",
+      "confirmed": true,
+      "proof": "Runtime summary non usa motore progressivo documenti lunghi nella 5.14.16.",
+      "impact": "Riassunti non proporzionati ai documenti lunghi.",
+      "fix_phase": "5.15C"
+    },
+    {
+      "problem": "smoke V51418 fallito",
+      "confirmed": true,
+      "proof": "Audit precedente e smoke dedicati segnalano V51418_LANGUAGE_QUALITY_BLOCKED.",
+      "impact": "Pipeline full non stabile su fixture esistente.",
+      "fix_phase": "5.15B"
+    },
+    {
+      "problem": "fixture demo sicurezza ancora presente",
+      "confirmed": true,
+      "proof": "rag/indice_rag.json contiene riferimenti alla fixture sicurezza informatica aziendale.",
+      "impact": "Rischio se un indice globale viene usato come sorgente default.",
+      "fix_phase": "5.15D"
+    }
+  ],
+  "roadmap_after_515a": [
+    {
+      "phase": "5.15B",
+      "title": "Fix quiz UI + bridge",
+      "goals": [
+        "nascondere is_correct dalla UI",
+        "aggiungere trace runtime QM nel bridge"
+      ]
+    },
+    {
+      "phase": "5.15C",
+      "title": "Riassunto narrativo vero",
+      "goals": [
+        "gerarchia concetti",
+        "compressione proporzionale",
+        "anti-lista"
+      ]
+    },
+    {
+      "phase": "5.15D",
+      "title": "Materializzazione/chiarimento slot 65-73",
+      "goals": [
+        "registry unico",
+        "slot nominati o rimossi dal claim",
+        "trace per singolo QM"
+      ]
+    },
+    {
+      "phase": "5.15E",
+      "title": "Dataset e mini LLM training leggero",
+      "goals": [
+        "dataset buono/cattivo",
+        "classificatori qualita",
+        "ranking semantico"
+      ]
+    }
+  ]
+}

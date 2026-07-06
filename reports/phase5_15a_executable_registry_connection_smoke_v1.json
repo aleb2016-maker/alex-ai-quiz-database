@@ -1,0 +1,15 @@
+{
+  "phase": "5.15A",
+  "status": "FAIL",
+  "defects": [
+    "ALL_MOTORS_CONNECTED_WITHOUT_REAL_QM_TRACE: probe_documento_medio:summary",
+    "ALL_MOTORS_CONNECTED_WITHOUT_REAL_QM_TRACE: probe_documento_medio:cards",
+    "ALL_MOTORS_CONNECTED_WITHOUT_REAL_QM_TRACE: probe_documento_medio:study",
+    "ALL_MOTORS_CONNECTED_WITHOUT_REAL_QM_TRACE: probe_documento_medio:quiz",
+    "ALL_MOTORS_CONNECTED_WITHOUT_REAL_QM_TRACE: breve_valido:cards",
+    "ALL_MOTORS_CONNECTED_WITHOUT_REAL_QM_TRACE: tecnico:cards",
+    "ALL_MOTORS_CONNECTED_WITHOUT_REAL_QM_TRACE: narrativo_discorsivo:cards"
+  ],
+  "proof_json": "reports/phase5_15a_executable_registry_connection_proof_v1.json",
+  "trace_json": "reports/phase5_15a_generator_motor_trace_v1.json"
+}
