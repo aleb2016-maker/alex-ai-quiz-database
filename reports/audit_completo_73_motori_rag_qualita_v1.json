@@ -1,0 +1,1854 @@
+{
+  "audit": "audit_completo_73_motori_rag_qualita_v1",
+  "project_root": "/Users/alessandrobarbarossa/alex-ai-workspace",
+  "summary": {
+    "motori_mappati": 73,
+    "motori_qm_spiegati": 64,
+    "registry_total_dichiarato": 73,
+    "collegati_dedotti": 64,
+    "non_collegati_o_da_verificare": 9,
+    "smoke_ok": 23,
+    "smoke_fail": 13,
+    "verdetto": "PARZIALE: architettura promettente ma registry non dimostra esecuzione reale dei 73 motori."
+  },
+  "motori": [
+    {
+      "numero": 1,
+      "nome_motore": "qm_001 - Grammatica italiana corretta",
+      "file": "reports/phase5_12i2_official_quality_motor_catalog_v1.json",
+      "funzione_classe_principale": "catalog entry / executor se presente",
+      "tipo_motore": "validazione quiz",
+      "collegato": true,
+      "a_cosa_collegato": [
+        "Riassunto",
+        "Card"
+      ],
+      "stato": "PARZIALE",
+      "note": "Nel catalogo ufficiale; ha executor in connettori/report backend; collegamento finale dedotto da route/quality_report, non da invocazione registry unica."
+    },
+    {
+      "numero": 2,
+      "nome_motore": "qm_002 - Accenti corretti",
+      "file": "reports/phase5_12i2_official_quality_motor_catalog_v1.json",
+      "funzione_classe_principale": "catalog entry / executor se presente",
+      "tipo_motore": "validazione quiz",
+      "collegato": true,
+      "a_cosa_collegato": [
+        "Riassunto",
+        "Card"
+      ],
+      "stato": "PARZIALE",
+      "note": "Nel catalogo ufficiale; ha executor in connettori/report backend; collegamento finale dedotto da route/quality_report, non da invocazione registry unica."
+    },
+    {
+      "numero": 3,
+      "nome_motore": "qm_003 - Apostrofi corretti",
+      "file": "reports/phase5_12i2_official_quality_motor_catalog_v1.json",
+      "funzione_classe_principale": "catalog entry / executor se presente",
+      "tipo_motore": "validazione quiz",
+      "collegato": true,
+      "a_cosa_collegato": [
+        "Riassunto",
+        "Card"
+      ],
+      "stato": "PARZIALE",
+      "note": "Nel catalogo ufficiale; ha executor in connettori/report backend; collegamento finale dedotto da route/quality_report, non da invocazione registry unica."
+    },
+    {
+      "numero": 4,
+      "nome_motore": "qm_004 - Punteggiatura corretta",
+      "file": "reports/phase5_12i2_official_quality_motor_catalog_v1.json",
+      "funzione_classe_principale": "catalog entry / executor se presente",
+      "tipo_motore": "validazione quiz",
+      "collegato": true,
+      "a_cosa_collegato": [
+        "Riassunto",
+        "Card"
+      ],
+      "stato": "PARZIALE",
+      "note": "Nel catalogo ufficiale; ha executor in connettori/report backend; collegamento finale dedotto da route/quality_report, non da invocazione registry unica."
+    },
+    {
+      "numero": 5,
+      "nome_motore": "qm_005 - Spazi corretti prima/dopo punteggiatura",
+      "file": "reports/phase5_12i2_official_quality_motor_catalog_v1.json",
+      "funzione_classe_principale": "catalog entry / executor se presente",
+      "tipo_motore": "validazione quiz",
+      "collegato": true,
+      "a_cosa_collegato": [
+        "Riassunto",
+        "Card"
+      ],
+      "stato": "PARZIALE",
+      "note": "Nel catalogo ufficiale; ha executor in connettori/report backend; collegamento finale dedotto da route/quality_report, non da invocazione registry unica."
+    },
+    {
+      "numero": 6,
+      "nome_motore": "qm_006 - Frasi complete",
+      "file": "reports/phase5_12i2_official_quality_motor_catalog_v1.json",
+      "funzione_classe_principale": "catalog entry / executor se presente",
+      "tipo_motore": "validazione quiz",
+      "collegato": true,
+      "a_cosa_collegato": [
+        "Riassunto",
+        "Card"
+      ],
+      "stato": "PARZIALE",
+      "note": "Nel catalogo ufficiale; ha executor in connettori/report backend; collegamento finale dedotto da route/quality_report, non da invocazione registry unica."
+    },
+    {
+      "numero": 7,
+      "nome_motore": "qm_007 - Assenza di frasi spezzate",
+      "file": "reports/phase5_12i2_official_quality_motor_catalog_v1.json",
+      "funzione_classe_principale": "catalog entry / executor se presente",
+      "tipo_motore": "anti-frasi spezzate",
+      "collegato": true,
+      "a_cosa_collegato": [
+        "Riassunto",
+        "Card"
+      ],
+      "stato": "PARZIALE",
+      "note": "Nel catalogo ufficiale; ha executor in connettori/report backend; collegamento finale dedotto da route/quality_report, non da invocazione registry unica."
+    },
+    {
+      "numero": 8,
+      "nome_motore": "qm_008 - Assenza di frasi non terminate",
+      "file": "reports/phase5_12i2_official_quality_motor_catalog_v1.json",
+      "funzione_classe_principale": "catalog entry / executor se presente",
+      "tipo_motore": "validazione quiz",
+      "collegato": true,
+      "a_cosa_collegato": [
+        "Riassunto",
+        "Card"
+      ],
+      "stato": "PARZIALE",
+      "note": "Nel catalogo ufficiale; ha executor in connettori/report backend; collegamento finale dedotto da route/quality_report, non da invocazione registry unica."
+    },
+    {
+      "numero": 9,
+      "nome_motore": "qm_009 - Assenza di finali sospetti",
+      "file": "reports/phase5_12i2_official_quality_motor_catalog_v1.json",
+      "funzione_classe_principale": "catalog entry / executor se presente",
+      "tipo_motore": "validazione quiz",
+      "collegato": true,
+      "a_cosa_collegato": [
+        "Riassunto",
+        "Card"
+      ],
+      "stato": "PARZIALE",
+      "note": "Nel catalogo ufficiale; ha executor in connettori/report backend; collegamento finale dedotto da route/quality_report, non da invocazione registry unica."
+    },
+    {
+      "numero": 10,
+      "nome_motore": "qm_010 - Assenza di frasi riempitive",
+      "file": "reports/phase5_12i2_official_quality_motor_catalog_v1.json",
+      "funzione_classe_principale": "catalog entry / executor se presente",
+      "tipo_motore": "validazione quiz",
+      "collegato": true,
+      "a_cosa_collegato": [
+        "Riassunto",
+        "Card"
+      ],
+      "stato": "PARZIALE",
+      "note": "Nel catalogo ufficiale; ha executor in connettori/report backend; collegamento finale dedotto da route/quality_report, non da invocazione registry unica."
+    },
+    {
+      "numero": 11,
+      "nome_motore": "qm_011 - Assenza di testo generico",
+      "file": "reports/phase5_12i2_official_quality_motor_catalog_v1.json",
+      "funzione_classe_principale": "catalog entry / executor se presente",
+      "tipo_motore": "anti-generico",
+      "collegato": true,
+      "a_cosa_collegato": [
+        "Riassunto",
+        "Card"
+      ],
+      "stato": "PARZIALE",
+      "note": "Nel catalogo ufficiale; ha executor in connettori/report backend; collegamento finale dedotto da route/quality_report, non da invocazione registry unica."
+    },
+    {
+      "numero": 12,
+      "nome_motore": "qm_012 - Assenza di vecchi fallback/demo/test",
+      "file": "reports/phase5_12i2_official_quality_motor_catalog_v1.json",
+      "funzione_classe_principale": "catalog entry / executor se presente",
+      "tipo_motore": "anti-fallback",
+      "collegato": true,
+      "a_cosa_collegato": [
+        "Riassunto",
+        "Card"
+      ],
+      "stato": "PARZIALE",
+      "note": "Nel catalogo ufficiale; ha executor in connettori/report backend; collegamento finale dedotto da route/quality_report, non da invocazione registry unica."
+    },
+    {
+      "numero": 13,
+      "nome_motore": "qm_013 - Domande studio naturali",
+      "file": "reports/phase5_12i2_official_quality_motor_catalog_v1.json",
+      "funzione_classe_principale": "catalog entry / executor se presente",
+      "tipo_motore": "validazione domande studio",
+      "collegato": true,
+      "a_cosa_collegato": [
+        "Card",
+        "Domande studio"
+      ],
+      "stato": "PARZIALE",
+      "note": "Nel catalogo ufficiale; ha executor in connettori/report backend; collegamento finale dedotto da route/quality_report, non da invocazione registry unica."
+    },
+    {
+      "numero": 14,
+      "nome_motore": "qm_014 - Domande studio utili per ripassare",
+      "file": "reports/phase5_12i2_official_quality_motor_catalog_v1.json",
+      "funzione_classe_principale": "catalog entry / executor se presente",
+      "tipo_motore": "validazione domande studio",
+      "collegato": true,
+      "a_cosa_collegato": [
+        "Card",
+        "Domande studio"
+      ],
+      "stato": "PARZIALE",
+      "note": "Nel catalogo ufficiale; ha executor in connettori/report backend; collegamento finale dedotto da route/quality_report, non da invocazione registry unica."
+    },
+    {
+      "numero": 15,
+      "nome_motore": "qm_015 - Risposte guida specifiche",
+      "file": "reports/phase5_12i2_official_quality_motor_catalog_v1.json",
+      "funzione_classe_principale": "catalog entry / executor se presente",
+      "tipo_motore": "qualità didattica",
+      "collegato": true,
+      "a_cosa_collegato": [
+        "Card",
+        "Domande studio"
+      ],
+      "stato": "PARZIALE",
+      "note": "Nel catalogo ufficiale; ha executor in connettori/report backend; collegamento finale dedotto da route/quality_report, non da invocazione registry unica."
+    },
+    {
+      "numero": 16,
+      "nome_motore": "qm_016 - Spiegazioni test chiare",
+      "file": "reports/phase5_12i2_official_quality_motor_catalog_v1.json",
+      "funzione_classe_principale": "catalog entry / executor se presente",
+      "tipo_motore": "validazione quiz",
+      "collegato": true,
+      "a_cosa_collegato": [
+        "Test/Quiz"
+      ],
+      "stato": "PARZIALE",
+      "note": "Nel catalogo ufficiale; ha executor in connettori/report backend; collegamento finale dedotto da route/quality_report, non da invocazione registry unica."
+    },
+    {
+      "numero": 17,
+      "nome_motore": "qm_017 - Spiegazioni non troppo corte",
+      "file": "reports/phase5_12i2_official_quality_motor_catalog_v1.json",
+      "funzione_classe_principale": "catalog entry / executor se presente",
+      "tipo_motore": "qualità didattica",
+      "collegato": true,
+      "a_cosa_collegato": [
+        "Riassunto",
+        "Card",
+        "Domande studio",
+        "Test/Quiz"
+      ],
+      "stato": "PARZIALE",
+      "note": "Nel catalogo ufficiale; ha executor in connettori/report backend; collegamento finale dedotto da route/quality_report, non da invocazione registry unica."
+    },
+    {
+      "numero": 18,
+      "nome_motore": "qm_018 - Tono didattico finale",
+      "file": "reports/phase5_12i2_official_quality_motor_catalog_v1.json",
+      "funzione_classe_principale": "catalog entry / executor se presente",
+      "tipo_motore": "qualità didattica",
+      "collegato": true,
+      "a_cosa_collegato": [
+        "Riassunto",
+        "Card",
+        "Domande studio"
+      ],
+      "stato": "PARZIALE",
+      "note": "Nel catalogo ufficiale; ha executor in connettori/report backend; collegamento finale dedotto da route/quality_report, non da invocazione registry unica."
+    },
+    {
+      "numero": 19,
+      "nome_motore": "qm_019 - Categorie presenti",
+      "file": "reports/phase5_12i2_official_quality_motor_catalog_v1.json",
+      "funzione_classe_principale": "catalog entry / executor se presente",
+      "tipo_motore": "qualità didattica",
+      "collegato": true,
+      "a_cosa_collegato": [
+        "Riassunto",
+        "Card"
+      ],
+      "stato": "PARZIALE",
+      "note": "Nel catalogo ufficiale; ha executor in connettori/report backend; collegamento finale dedotto da route/quality_report, non da invocazione registry unica."
+    },
+    {
+      "numero": 20,
+      "nome_motore": "qm_020 - Sottocategorie presenti",
+      "file": "reports/phase5_12i2_official_quality_motor_catalog_v1.json",
+      "funzione_classe_principale": "catalog entry / executor se presente",
+      "tipo_motore": "qualità didattica",
+      "collegato": true,
+      "a_cosa_collegato": [
+        "Riassunto",
+        "Card"
+      ],
+      "stato": "PARZIALE",
+      "note": "Nel catalogo ufficiale; ha executor in connettori/report backend; collegamento finale dedotto da route/quality_report, non da invocazione registry unica."
+    },
+    {
+      "numero": 21,
+      "nome_motore": "qm_021 - Coerenza tra domanda, risposta e contenuto",
+      "file": "reports/phase5_12i2_official_quality_motor_catalog_v1.json",
+      "funzione_classe_principale": "catalog entry / executor se presente",
+      "tipo_motore": "qualità didattica",
+      "collegato": true,
+      "a_cosa_collegato": [
+        "Card",
+        "Domande studio",
+        "Test/Quiz"
+      ],
+      "stato": "PARZIALE",
+      "note": "Nel catalogo ufficiale; ha executor in connettori/report backend; collegamento finale dedotto da route/quality_report, non da invocazione registry unica."
+    },
+    {
+      "numero": 22,
+      "nome_motore": "qm_022 - Niente risposte vaghe",
+      "file": "reports/phase5_12i2_official_quality_motor_catalog_v1.json",
+      "funzione_classe_principale": "catalog entry / executor se presente",
+      "tipo_motore": "qualità didattica",
+      "collegato": true,
+      "a_cosa_collegato": [
+        "Card",
+        "Domande studio",
+        "Test/Quiz"
+      ],
+      "stato": "PARZIALE",
+      "note": "Nel catalogo ufficiale; ha executor in connettori/report backend; collegamento finale dedotto da route/quality_report, non da invocazione registry unica."
+    },
+    {
+      "numero": 23,
+      "nome_motore": "qm_023 - Card scritte bene",
+      "file": "reports/phase5_12i2_official_quality_motor_catalog_v1.json",
+      "funzione_classe_principale": "catalog entry / executor se presente",
+      "tipo_motore": "validazione card",
+      "collegato": true,
+      "a_cosa_collegato": [
+        "Riassunto",
+        "Card"
+      ],
+      "stato": "PARZIALE",
+      "note": "Nel catalogo ufficiale; ha executor in connettori/report backend; collegamento finale dedotto da route/quality_report, non da invocazione registry unica."
+    },
+    {
+      "numero": 24,
+      "nome_motore": "qm_024 - Card non troppo corte",
+      "file": "reports/phase5_12i2_official_quality_motor_catalog_v1.json",
+      "funzione_classe_principale": "catalog entry / executor se presente",
+      "tipo_motore": "validazione card",
+      "collegato": true,
+      "a_cosa_collegato": [
+        "Riassunto",
+        "Card"
+      ],
+      "stato": "PARZIALE",
+      "note": "Nel catalogo ufficiale; ha executor in connettori/report backend; collegamento finale dedotto da route/quality_report, non da invocazione registry unica."
+    },
+    {
+      "numero": 25,
+      "nome_motore": "qm_025 - Card non troppo compresse",
+      "file": "reports/phase5_12i2_official_quality_motor_catalog_v1.json",
+      "funzione_classe_principale": "catalog entry / executor se presente",
+      "tipo_motore": "validazione card",
+      "collegato": true,
+      "a_cosa_collegato": [
+        "Riassunto",
+        "Card"
+      ],
+      "stato": "PARZIALE",
+      "note": "Nel catalogo ufficiale; ha executor in connettori/report backend; collegamento finale dedotto da route/quality_report, non da invocazione registry unica."
+    },
+    {
+      "numero": 26,
+      "nome_motore": "qm_026 - Messaggio chiave completo",
+      "file": "reports/phase5_12i2_official_quality_motor_catalog_v1.json",
+      "funzione_classe_principale": "catalog entry / executor se presente",
+      "tipo_motore": "validazione card",
+      "collegato": true,
+      "a_cosa_collegato": [
+        "Riassunto",
+        "Card"
+      ],
+      "stato": "PARZIALE",
+      "note": "Nel catalogo ufficiale; ha executor in connettori/report backend; collegamento finale dedotto da route/quality_report, non da invocazione registry unica."
+    },
+    {
+      "numero": 27,
+      "nome_motore": "qm_027 - Riassunto chiaro",
+      "file": "reports/phase5_12i2_official_quality_motor_catalog_v1.json",
+      "funzione_classe_principale": "catalog entry / executor se presente",
+      "tipo_motore": "validazione card",
+      "collegato": true,
+      "a_cosa_collegato": [
+        "Riassunto",
+        "Card"
+      ],
+      "stato": "PARZIALE",
+      "note": "Nel catalogo ufficiale; ha executor in connettori/report backend; collegamento finale dedotto da route/quality_report, non da invocazione registry unica."
+    },
+    {
+      "numero": 28,
+      "nome_motore": "qm_028 - Punti chiave leggibili",
+      "file": "reports/phase5_12i2_official_quality_motor_catalog_v1.json",
+      "funzione_classe_principale": "catalog entry / executor se presente",
+      "tipo_motore": "validazione card",
+      "collegato": true,
+      "a_cosa_collegato": [
+        "Riassunto",
+        "Card"
+      ],
+      "stato": "PARZIALE",
+      "note": "Nel catalogo ufficiale; ha executor in connettori/report backend; collegamento finale dedotto da route/quality_report, non da invocazione registry unica."
+    },
+    {
+      "numero": 29,
+      "nome_motore": "qm_029 - Fonti visibili belle",
+      "file": "reports/phase5_12i2_official_quality_motor_catalog_v1.json",
+      "funzione_classe_principale": "catalog entry / executor se presente",
+      "tipo_motore": "validazione card",
+      "collegato": true,
+      "a_cosa_collegato": [
+        "Riassunto",
+        "Card"
+      ],
+      "stato": "PARZIALE",
+      "note": "Nel catalogo ufficiale; ha executor in connettori/report backend; collegamento finale dedotto da route/quality_report, non da invocazione registry unica."
+    },
+    {
+      "numero": 30,
+      "nome_motore": "qm_030 - Fonti coerenti",
+      "file": "reports/phase5_12i2_official_quality_motor_catalog_v1.json",
+      "funzione_classe_principale": "catalog entry / executor se presente",
+      "tipo_motore": "validazione card",
+      "collegato": true,
+      "a_cosa_collegato": [
+        "Riassunto",
+        "Card"
+      ],
+      "stato": "PARZIALE",
+      "note": "Nel catalogo ufficiale; ha executor in connettori/report backend; collegamento finale dedotto da route/quality_report, non da invocazione registry unica."
+    },
+    {
+      "numero": 31,
+      "nome_motore": "qm_031 - Niente fonti brutte",
+      "file": "reports/phase5_12i2_official_quality_motor_catalog_v1.json",
+      "funzione_classe_principale": "catalog entry / executor se presente",
+      "tipo_motore": "validazione card",
+      "collegato": true,
+      "a_cosa_collegato": [
+        "Riassunto",
+        "Card"
+      ],
+      "stato": "PARZIALE",
+      "note": "Nel catalogo ufficiale; ha executor in connettori/report backend; collegamento finale dedotto da route/quality_report, non da invocazione registry unica."
+    },
+    {
+      "numero": 32,
+      "nome_motore": "qm_032 - Layout grafico controllato",
+      "file": "reports/phase5_12i2_official_quality_motor_catalog_v1.json",
+      "funzione_classe_principale": "catalog entry / executor se presente",
+      "tipo_motore": "validazione card",
+      "collegato": true,
+      "a_cosa_collegato": [
+        "Riassunto",
+        "Card"
+      ],
+      "stato": "PARZIALE",
+      "note": "Nel catalogo ufficiale; ha executor in connettori/report backend; collegamento finale dedotto da route/quality_report, non da invocazione registry unica."
+    },
+    {
+      "numero": 33,
+      "nome_motore": "qm_033 - Test separato da card/riassunto/domande studio",
+      "file": "reports/phase5_12i2_official_quality_motor_catalog_v1.json",
+      "funzione_classe_principale": "catalog entry / executor se presente",
+      "tipo_motore": "validazione quiz",
+      "collegato": true,
+      "a_cosa_collegato": [
+        "Riassunto",
+        "Card",
+        "Test/Quiz"
+      ],
+      "stato": "PARZIALE",
+      "note": "Nel catalogo ufficiale; ha executor in connettori/report backend; collegamento finale dedotto da route/quality_report, non da invocazione registry unica."
+    },
+    {
+      "numero": 34,
+      "nome_motore": "qm_034 - Opzioni interne validate",
+      "file": "reports/phase5_12i2_official_quality_motor_catalog_v1.json",
+      "funzione_classe_principale": "catalog entry / executor se presente",
+      "tipo_motore": "validazione quiz",
+      "collegato": true,
+      "a_cosa_collegato": [
+        "Riassunto",
+        "Card",
+        "Test/Quiz"
+      ],
+      "stato": "PARZIALE",
+      "note": "Nel catalogo ufficiale; ha executor in connettori/report backend; collegamento finale dedotto da route/quality_report, non da invocazione registry unica."
+    },
+    {
+      "numero": 35,
+      "nome_motore": "qm_035 - Opzioni visibili pulite",
+      "file": "reports/phase5_12i2_official_quality_motor_catalog_v1.json",
+      "funzione_classe_principale": "catalog entry / executor se presente",
+      "tipo_motore": "validazione quiz",
+      "collegato": true,
+      "a_cosa_collegato": [
+        "Riassunto",
+        "Card",
+        "Test/Quiz"
+      ],
+      "stato": "PARZIALE",
+      "note": "Nel catalogo ufficiale; ha executor in connettori/report backend; collegamento finale dedotto da route/quality_report, non da invocazione registry unica."
+    },
+    {
+      "numero": 36,
+      "nome_motore": "qm_036 - Risposta corretta interna",
+      "file": "reports/phase5_12i2_official_quality_motor_catalog_v1.json",
+      "funzione_classe_principale": "catalog entry / executor se presente",
+      "tipo_motore": "validazione quiz",
+      "collegato": true,
+      "a_cosa_collegato": [
+        "Test/Quiz"
+      ],
+      "stato": "PARZIALE",
+      "note": "Nel catalogo ufficiale; ha executor in connettori/report backend; collegamento finale dedotto da route/quality_report, non da invocazione registry unica."
+    },
+    {
+      "numero": 37,
+      "nome_motore": "qm_037 - Risposta corretta visibile",
+      "file": "reports/phase5_12i2_official_quality_motor_catalog_v1.json",
+      "funzione_classe_principale": "catalog entry / executor se presente",
+      "tipo_motore": "validazione quiz",
+      "collegato": true,
+      "a_cosa_collegato": [
+        "Test/Quiz"
+      ],
+      "stato": "PARZIALE",
+      "note": "Nel catalogo ufficiale; ha executor in connettori/report backend; collegamento finale dedotto da route/quality_report, non da invocazione registry unica."
+    },
+    {
+      "numero": 38,
+      "nome_motore": "qm_038 - Mappa sicura tra risposta interna e visibile",
+      "file": "reports/phase5_12i2_official_quality_motor_catalog_v1.json",
+      "funzione_classe_principale": "catalog entry / executor se presente",
+      "tipo_motore": "validazione quiz",
+      "collegato": true,
+      "a_cosa_collegato": [
+        "Riassunto",
+        "Card",
+        "Test/Quiz"
+      ],
+      "stato": "PARZIALE",
+      "note": "Nel catalogo ufficiale; ha executor in connettori/report backend; collegamento finale dedotto da route/quality_report, non da invocazione registry unica."
+    },
+    {
+      "numero": 39,
+      "nome_motore": "qm_039 - 4 opzioni per domanda",
+      "file": "reports/phase5_12i2_official_quality_motor_catalog_v1.json",
+      "funzione_classe_principale": "catalog entry / executor se presente",
+      "tipo_motore": "validazione quiz",
+      "collegato": true,
+      "a_cosa_collegato": [
+        "Riassunto",
+        "Card",
+        "Test/Quiz"
+      ],
+      "stato": "PARZIALE",
+      "note": "Nel catalogo ufficiale; ha executor in connettori/report backend; collegamento finale dedotto da route/quality_report, non da invocazione registry unica."
+    },
+    {
+      "numero": 40,
+      "nome_motore": "qm_040 - Risposta corretta presente tra le opzioni",
+      "file": "reports/phase5_12i2_official_quality_motor_catalog_v1.json",
+      "funzione_classe_principale": "catalog entry / executor se presente",
+      "tipo_motore": "validazione quiz",
+      "collegato": true,
+      "a_cosa_collegato": [
+        "Riassunto",
+        "Card",
+        "Test/Quiz"
+      ],
+      "stato": "PARZIALE",
+      "note": "Nel catalogo ufficiale; ha executor in connettori/report backend; collegamento finale dedotto da route/quality_report, non da invocazione registry unica."
+    },
+    {
+      "numero": 41,
+      "nome_motore": "qm_041 - Distrattori forti",
+      "file": "reports/phase5_12i2_official_quality_motor_catalog_v1.json",
+      "funzione_classe_principale": "catalog entry / executor se presente",
+      "tipo_motore": "validazione quiz",
+      "collegato": true,
+      "a_cosa_collegato": [
+        "Test/Quiz"
+      ],
+      "stato": "PARZIALE",
+      "note": "Nel catalogo ufficiale; ha executor in connettori/report backend; collegamento finale dedotto da route/quality_report, non da invocazione registry unica."
+    },
+    {
+      "numero": 42,
+      "nome_motore": "qm_042 - Niente opzioni duplicate nella stessa domanda",
+      "file": "reports/phase5_12i2_official_quality_motor_catalog_v1.json",
+      "funzione_classe_principale": "catalog entry / executor se presente",
+      "tipo_motore": "validazione quiz",
+      "collegato": true,
+      "a_cosa_collegato": [
+        "Riassunto",
+        "Card",
+        "Test/Quiz"
+      ],
+      "stato": "PARZIALE",
+      "note": "Nel catalogo ufficiale; ha executor in connettori/report backend; collegamento finale dedotto da route/quality_report, non da invocazione registry unica."
+    },
+    {
+      "numero": 43,
+      "nome_motore": "qm_043 - Niente ripetizioni globali eccessive",
+      "file": "reports/phase5_12i2_official_quality_motor_catalog_v1.json",
+      "funzione_classe_principale": "catalog entry / executor se presente",
+      "tipo_motore": "validazione quiz",
+      "collegato": true,
+      "a_cosa_collegato": [
+        "Riassunto",
+        "Card",
+        "Test/Quiz"
+      ],
+      "stato": "PARZIALE",
+      "note": "Nel catalogo ufficiale; ha executor in connettori/report backend; collegamento finale dedotto da route/quality_report, non da invocazione registry unica."
+    },
+    {
+      "numero": 44,
+      "nome_motore": "qm_044 - Compatibilità obbligatoria col bridge motori quiz V3.5B",
+      "file": "reports/phase5_12i2_official_quality_motor_catalog_v1.json",
+      "funzione_classe_principale": "catalog entry / executor se presente",
+      "tipo_motore": "validazione quiz",
+      "collegato": true,
+      "a_cosa_collegato": [
+        "Riassunto",
+        "Card",
+        "Test/Quiz"
+      ],
+      "stato": "PARZIALE",
+      "note": "Nel catalogo ufficiale; ha executor in connettori/report backend; collegamento finale dedotto da route/quality_report, non da invocazione registry unica."
+    },
+    {
+      "numero": 45,
+      "nome_motore": "qm_045 - Duplicati esatti",
+      "file": "reports/phase5_12i2_official_quality_motor_catalog_v1.json",
+      "funzione_classe_principale": "catalog entry / executor se presente",
+      "tipo_motore": "qualità semantica",
+      "collegato": true,
+      "a_cosa_collegato": [
+        "Riassunto",
+        "Card"
+      ],
+      "stato": "PARZIALE",
+      "note": "Nel catalogo ufficiale; ha executor in connettori/report backend; collegamento finale dedotto da route/quality_report, non da invocazione registry unica."
+    },
+    {
+      "numero": 46,
+      "nome_motore": "qm_046 - Quasi duplicati",
+      "file": "reports/phase5_12i2_official_quality_motor_catalog_v1.json",
+      "funzione_classe_principale": "catalog entry / executor se presente",
+      "tipo_motore": "qualità semantica",
+      "collegato": true,
+      "a_cosa_collegato": [
+        "Riassunto",
+        "Card"
+      ],
+      "stato": "PARZIALE",
+      "note": "Nel catalogo ufficiale; ha executor in connettori/report backend; collegamento finale dedotto da route/quality_report, non da invocazione registry unica."
+    },
+    {
+      "numero": 47,
+      "nome_motore": "qm_047 - Ripetizioni inutili",
+      "file": "reports/phase5_12i2_official_quality_motor_catalog_v1.json",
+      "funzione_classe_principale": "catalog entry / executor se presente",
+      "tipo_motore": "qualità semantica",
+      "collegato": true,
+      "a_cosa_collegato": [
+        "Riassunto",
+        "Card"
+      ],
+      "stato": "PARZIALE",
+      "note": "Nel catalogo ufficiale; ha executor in connettori/report backend; collegamento finale dedotto da route/quality_report, non da invocazione registry unica."
+    },
+    {
+      "numero": 48,
+      "nome_motore": "qm_048 - Ripetizioni meccaniche tra domande",
+      "file": "reports/phase5_12i2_official_quality_motor_catalog_v1.json",
+      "funzione_classe_principale": "catalog entry / executor se presente",
+      "tipo_motore": "qualità semantica",
+      "collegato": true,
+      "a_cosa_collegato": [
+        "Riassunto",
+        "Card",
+        "Domande studio",
+        "Test/Quiz"
+      ],
+      "stato": "PARZIALE",
+      "note": "Nel catalogo ufficiale; ha executor in connettori/report backend; collegamento finale dedotto da route/quality_report, non da invocazione registry unica."
+    },
+    {
+      "numero": 49,
+      "nome_motore": "qm_049 - Frasi troppo simili",
+      "file": "reports/phase5_12i2_official_quality_motor_catalog_v1.json",
+      "funzione_classe_principale": "catalog entry / executor se presente",
+      "tipo_motore": "qualità semantica",
+      "collegato": true,
+      "a_cosa_collegato": [
+        "Riassunto",
+        "Card"
+      ],
+      "stato": "PARZIALE",
+      "note": "Nel catalogo ufficiale; ha executor in connettori/report backend; collegamento finale dedotto da route/quality_report, non da invocazione registry unica."
+    },
+    {
+      "numero": 50,
+      "nome_motore": "qm_050 - Stesso contenuto ripetuto senza motivo",
+      "file": "reports/phase5_12i2_official_quality_motor_catalog_v1.json",
+      "funzione_classe_principale": "catalog entry / executor se presente",
+      "tipo_motore": "qualità semantica",
+      "collegato": true,
+      "a_cosa_collegato": [
+        "Riassunto",
+        "Card"
+      ],
+      "stato": "PARZIALE",
+      "note": "Nel catalogo ufficiale; ha executor in connettori/report backend; collegamento finale dedotto da route/quality_report, non da invocazione registry unica."
+    },
+    {
+      "numero": 51,
+      "nome_motore": "qm_051 - Il compito richiesto deve selezionare i motori giusti",
+      "file": "reports/phase5_12i2_official_quality_motor_catalog_v1.json",
+      "funzione_classe_principale": "catalog entry / executor se presente",
+      "tipo_motore": "orchestratore",
+      "collegato": true,
+      "a_cosa_collegato": [
+        "Riassunto",
+        "Card",
+        "Domande studio",
+        "Test/Quiz"
+      ],
+      "stato": "PARZIALE",
+      "note": "Nel catalogo ufficiale; ha executor in connettori/report backend; collegamento finale dedotto da route/quality_report, non da invocazione registry unica."
+    },
+    {
+      "numero": 52,
+      "nome_motore": "qm_052 - Riassunto → motore didattico",
+      "file": "reports/phase5_12i2_official_quality_motor_catalog_v1.json",
+      "funzione_classe_principale": "catalog entry / executor se presente",
+      "tipo_motore": "validazione riassunto",
+      "collegato": true,
+      "a_cosa_collegato": [
+        "Riassunto",
+        "Card"
+      ],
+      "stato": "PARZIALE",
+      "note": "Nel catalogo ufficiale; ha executor in connettori/report backend; collegamento finale dedotto da route/quality_report, non da invocazione registry unica."
+    },
+    {
+      "numero": 53,
+      "nome_motore": "qm_053 - Card → motore didattico + layout",
+      "file": "reports/phase5_12i2_official_quality_motor_catalog_v1.json",
+      "funzione_classe_principale": "catalog entry / executor se presente",
+      "tipo_motore": "validazione card",
+      "collegato": true,
+      "a_cosa_collegato": [
+        "Riassunto",
+        "Card"
+      ],
+      "stato": "PARZIALE",
+      "note": "Nel catalogo ufficiale; ha executor in connettori/report backend; collegamento finale dedotto da route/quality_report, non da invocazione registry unica."
+    },
+    {
+      "numero": 54,
+      "nome_motore": "qm_054 - Domande studio → motore didattico",
+      "file": "reports/phase5_12i2_official_quality_motor_catalog_v1.json",
+      "funzione_classe_principale": "catalog entry / executor se presente",
+      "tipo_motore": "validazione domande studio",
+      "collegato": true,
+      "a_cosa_collegato": [
+        "Riassunto",
+        "Card",
+        "Domande studio"
+      ],
+      "stato": "PARZIALE",
+      "note": "Nel catalogo ufficiale; ha executor in connettori/report backend; collegamento finale dedotto da route/quality_report, non da invocazione registry unica."
+    },
+    {
+      "numero": 55,
+      "nome_motore": "qm_055 - Test → bridge quiz + motore test + bridge quiz",
+      "file": "reports/phase5_12i2_official_quality_motor_catalog_v1.json",
+      "funzione_classe_principale": "catalog entry / executor se presente",
+      "tipo_motore": "validazione quiz",
+      "collegato": true,
+      "a_cosa_collegato": [
+        "Riassunto",
+        "Card",
+        "Test/Quiz"
+      ],
+      "stato": "PARZIALE",
+      "note": "Nel catalogo ufficiale; ha executor in connettori/report backend; collegamento finale dedotto da route/quality_report, non da invocazione registry unica."
+    },
+    {
+      "numero": 56,
+      "nome_motore": "qm_056 - Completo/PDF/app/web → orchestratore",
+      "file": "reports/phase5_12i2_official_quality_motor_catalog_v1.json",
+      "funzione_classe_principale": "catalog entry / executor se presente",
+      "tipo_motore": "orchestratore",
+      "collegato": true,
+      "a_cosa_collegato": [
+        "Riassunto",
+        "Card",
+        "Domande studio",
+        "Test/Quiz"
+      ],
+      "stato": "PARZIALE",
+      "note": "Nel catalogo ufficiale; ha executor in connettori/report backend; collegamento finale dedotto da route/quality_report, non da invocazione registry unica."
+    },
+    {
+      "numero": 57,
+      "nome_motore": "qm_057 - Niente motori inutili",
+      "file": "reports/phase5_12i2_official_quality_motor_catalog_v1.json",
+      "funzione_classe_principale": "catalog entry / executor se presente",
+      "tipo_motore": "orchestratore",
+      "collegato": true,
+      "a_cosa_collegato": [
+        "Riassunto",
+        "Card",
+        "Domande studio",
+        "Test/Quiz"
+      ],
+      "stato": "PARZIALE",
+      "note": "Nel catalogo ufficiale; ha executor in connettori/report backend; collegamento finale dedotto da route/quality_report, non da invocazione registry unica."
+    },
+    {
+      "numero": 58,
+      "nome_motore": "qm_058 - Niente output non richiesto",
+      "file": "reports/phase5_12i2_official_quality_motor_catalog_v1.json",
+      "funzione_classe_principale": "catalog entry / executor se presente",
+      "tipo_motore": "orchestratore",
+      "collegato": true,
+      "a_cosa_collegato": [
+        "Riassunto",
+        "Card",
+        "Domande studio",
+        "Test/Quiz"
+      ],
+      "stato": "PARZIALE",
+      "note": "Nel catalogo ufficiale; ha executor in connettori/report backend; collegamento finale dedotto da route/quality_report, non da invocazione registry unica."
+    },
+    {
+      "numero": 59,
+      "nome_motore": "qm_059 - Output finale pronto per UI/PDF/app",
+      "file": "reports/phase5_12i2_official_quality_motor_catalog_v1.json",
+      "funzione_classe_principale": "catalog entry / executor se presente",
+      "tipo_motore": "orchestratore",
+      "collegato": true,
+      "a_cosa_collegato": [
+        "Riassunto",
+        "Card",
+        "Domande studio",
+        "Test/Quiz"
+      ],
+      "stato": "PARZIALE",
+      "note": "Nel catalogo ufficiale; ha executor in connettori/report backend; collegamento finale dedotto da route/quality_report, non da invocazione registry unica."
+    },
+    {
+      "numero": 60,
+      "nome_motore": "qm_060 - Report qualità sempre leggibile",
+      "file": "reports/phase5_12i2_official_quality_motor_catalog_v1.json",
+      "funzione_classe_principale": "catalog entry / executor se presente",
+      "tipo_motore": "orchestratore",
+      "collegato": true,
+      "a_cosa_collegato": [
+        "Riassunto",
+        "Card",
+        "Domande studio",
+        "Test/Quiz"
+      ],
+      "stato": "PARZIALE",
+      "note": "Nel catalogo ufficiale; ha executor in connettori/report backend; collegamento finale dedotto da route/quality_report, non da invocazione registry unica."
+    },
+    {
+      "numero": 61,
+      "nome_motore": "qm_061 - Naturalezza linguistica anti-keyword",
+      "file": "reports/phase5_12i2_official_quality_motor_catalog_v1.json",
+      "funzione_classe_principale": "catalog entry / executor se presente",
+      "tipo_motore": "qualità semantica",
+      "collegato": true,
+      "a_cosa_collegato": [
+        "Riassunto",
+        "Card"
+      ],
+      "stato": "PARZIALE",
+      "note": "Nel catalogo ufficiale; ha executor in connettori/report backend; collegamento finale dedotto da route/quality_report, non da invocazione registry unica."
+    },
+    {
+      "numero": 62,
+      "nome_motore": "qm_062 - Accordo grammaticale e pronomi",
+      "file": "reports/phase5_12i2_official_quality_motor_catalog_v1.json",
+      "funzione_classe_principale": "catalog entry / executor se presente",
+      "tipo_motore": "qualità grammaticale",
+      "collegato": true,
+      "a_cosa_collegato": [
+        "Riassunto",
+        "Card"
+      ],
+      "stato": "PARZIALE",
+      "note": "Nel catalogo ufficiale; ha executor in connettori/report backend; collegamento finale dedotto da route/quality_report, non da invocazione registry unica."
+    },
+    {
+      "numero": 63,
+      "nome_motore": "qm_063 - Correzione frasi non finite con contesto",
+      "file": "reports/phase5_12i2_official_quality_motor_catalog_v1.json",
+      "funzione_classe_principale": "catalog entry / executor se presente",
+      "tipo_motore": "validazione quiz",
+      "collegato": true,
+      "a_cosa_collegato": [
+        "Riassunto",
+        "Card"
+      ],
+      "stato": "PARZIALE",
+      "note": "Nel catalogo ufficiale; ha executor in connettori/report backend; collegamento finale dedotto da route/quality_report, non da invocazione registry unica."
+    },
+    {
+      "numero": 64,
+      "nome_motore": "qm_064 - Correzione parole scritte male con lettere invertite",
+      "file": "reports/phase5_12i2_official_quality_motor_catalog_v1.json",
+      "funzione_classe_principale": "catalog entry / executor se presente",
+      "tipo_motore": "qualità semantica",
+      "collegato": true,
+      "a_cosa_collegato": [
+        "Riassunto",
+        "Card"
+      ],
+      "stato": "PARZIALE",
+      "note": "Nel catalogo ufficiale; ha executor in connettori/report backend; collegamento finale dedotto da route/quality_report, non da invocazione registry unica."
+    },
+    {
+      "numero": 65,
+      "nome_motore": "registry_orchestration_slot_065",
+      "file": "reports/phase5_12h2_updated_matrix_orchestration_registry_73_v1.json",
+      "funzione_classe_principale": "conteggio registry/orchestrazione",
+      "tipo_motore": "registry",
+      "collegato": true,
+      "a_cosa_collegato": [
+        "Registry/orchestrazione H.2"
+      ],
+      "stato": "DA VERIFICARE",
+      "note": "Slot contato nel totale 73, ma non esiste come motore QM nominato nel catalogo ufficiale; va materializzato o escluso dal claim '73 motori'."
+    },
+    {
+      "numero": 66,
+      "nome_motore": "registry_orchestration_slot_066",
+      "file": "reports/phase5_12h2_updated_matrix_orchestration_registry_73_v1.json",
+      "funzione_classe_principale": "conteggio registry/orchestrazione",
+      "tipo_motore": "registry",
+      "collegato": true,
+      "a_cosa_collegato": [
+        "Registry/orchestrazione H.2"
+      ],
+      "stato": "DA VERIFICARE",
+      "note": "Slot contato nel totale 73, ma non esiste come motore QM nominato nel catalogo ufficiale; va materializzato o escluso dal claim '73 motori'."
+    },
+    {
+      "numero": 67,
+      "nome_motore": "registry_orchestration_slot_067",
+      "file": "reports/phase5_12h2_updated_matrix_orchestration_registry_73_v1.json",
+      "funzione_classe_principale": "conteggio registry/orchestrazione",
+      "tipo_motore": "registry",
+      "collegato": true,
+      "a_cosa_collegato": [
+        "Registry/orchestrazione H.2"
+      ],
+      "stato": "DA VERIFICARE",
+      "note": "Slot contato nel totale 73, ma non esiste come motore QM nominato nel catalogo ufficiale; va materializzato o escluso dal claim '73 motori'."
+    },
+    {
+      "numero": 68,
+      "nome_motore": "registry_orchestration_slot_068",
+      "file": "reports/phase5_12h2_updated_matrix_orchestration_registry_73_v1.json",
+      "funzione_classe_principale": "conteggio registry/orchestrazione",
+      "tipo_motore": "registry",
+      "collegato": true,
+      "a_cosa_collegato": [
+        "Registry/orchestrazione H.2"
+      ],
+      "stato": "DA VERIFICARE",
+      "note": "Slot contato nel totale 73, ma non esiste come motore QM nominato nel catalogo ufficiale; va materializzato o escluso dal claim '73 motori'."
+    },
+    {
+      "numero": 69,
+      "nome_motore": "registry_orchestration_slot_069",
+      "file": "reports/phase5_12h2_updated_matrix_orchestration_registry_73_v1.json",
+      "funzione_classe_principale": "conteggio registry/orchestrazione",
+      "tipo_motore": "registry",
+      "collegato": true,
+      "a_cosa_collegato": [
+        "Registry/orchestrazione H.2"
+      ],
+      "stato": "DA VERIFICARE",
+      "note": "Slot contato nel totale 73, ma non esiste come motore QM nominato nel catalogo ufficiale; va materializzato o escluso dal claim '73 motori'."
+    },
+    {
+      "numero": 70,
+      "nome_motore": "registry_orchestration_slot_070",
+      "file": "reports/phase5_12h2_updated_matrix_orchestration_registry_73_v1.json",
+      "funzione_classe_principale": "conteggio registry/orchestrazione",
+      "tipo_motore": "registry",
+      "collegato": true,
+      "a_cosa_collegato": [
+        "Registry/orchestrazione H.2"
+      ],
+      "stato": "DA VERIFICARE",
+      "note": "Slot contato nel totale 73, ma non esiste come motore QM nominato nel catalogo ufficiale; va materializzato o escluso dal claim '73 motori'."
+    },
+    {
+      "numero": 71,
+      "nome_motore": "registry_orchestration_slot_071",
+      "file": "reports/phase5_12h2_updated_matrix_orchestration_registry_73_v1.json",
+      "funzione_classe_principale": "conteggio registry/orchestrazione",
+      "tipo_motore": "registry",
+      "collegato": true,
+      "a_cosa_collegato": [
+        "Registry/orchestrazione H.2"
+      ],
+      "stato": "DA VERIFICARE",
+      "note": "Slot contato nel totale 73, ma non esiste come motore QM nominato nel catalogo ufficiale; va materializzato o escluso dal claim '73 motori'."
+    },
+    {
+      "numero": 72,
+      "nome_motore": "registry_orchestration_slot_072",
+      "file": "reports/phase5_12h2_updated_matrix_orchestration_registry_73_v1.json",
+      "funzione_classe_principale": "conteggio registry/orchestrazione",
+      "tipo_motore": "registry",
+      "collegato": true,
+      "a_cosa_collegato": [
+        "Registry/orchestrazione H.2"
+      ],
+      "stato": "DA VERIFICARE",
+      "note": "Slot contato nel totale 73, ma non esiste come motore QM nominato nel catalogo ufficiale; va materializzato o escluso dal claim '73 motori'."
+    },
+    {
+      "numero": 73,
+      "nome_motore": "registry_orchestration_slot_073",
+      "file": "reports/phase5_12h2_updated_matrix_orchestration_registry_73_v1.json",
+      "funzione_classe_principale": "conteggio registry/orchestrazione",
+      "tipo_motore": "registry",
+      "collegato": true,
+      "a_cosa_collegato": [
+        "Registry/orchestrazione H.2"
+      ],
+      "stato": "DA VERIFICARE",
+      "note": "Slot contato nel totale 73, ma non esiste come motore QM nominato nel catalogo ufficiale; va materializzato o escluso dal claim '73 motori'."
+    }
+  ],
+  "static_findings": {
+    "ui_bridge": {
+      "page": "demo-rag/test-documenti-universale.html",
+      "uses_local_backend": true,
+      "loads_universal_engine": false,
+      "reveals_quiz_correct_option": true,
+      "input_control": true
+    },
+    "backend_bridge": {
+      "file": "scripts/run_phase5_14_3_local_backend_bridge.py",
+      "summary_runtime": true,
+      "cards_runtime": true,
+      "study_q52": true,
+      "quiz_q52": true,
+      "manual_repair_layers": true,
+      "strict_demo_block": true
+    },
+    "summary_cards_runtime": {
+      "file": "backend/phase5_full_pipeline_runtime_v51416.py",
+      "declares_all_motors_connected": true,
+      "generic_motor_groups": true,
+      "summary_has_no_long_doc_progressive_engine": true,
+      "card_message_generic": true
+    },
+    "legacy_browser_engine": {
+      "file": "demo-rag/universal-document-learning-engine.js",
+      "contains_four_generators": true,
+      "uses_profiles_and_cards": true,
+      "not_loaded_by_clean_page": true
+    }
+  },
+  "test_eseguiti": {
+    "comandi": [
+      "python3 scripts/run_phase5_14_3_local_backend_bridge.py",
+      "python3 - <<'PY' ... urllib.request POST /api/generate per 9 scenari x 4 generatori",
+      "python3 scripts/run_phase5_14_16_full_pipeline_smoke.py"
+    ],
+    "risultati": [
+      {
+        "scenario": "breve",
+        "kind": "summary",
+        "ok": false,
+        "error": "HTTP 500"
+      },
+      {
+        "scenario": "breve",
+        "kind": "cards",
+        "ok": true,
+        "status": "APPROVED",
+        "motor": "full_pipeline_cards_60_motors_graphic_v51416",
+        "items": 3,
+        "content_len": 0
+      },
+      {
+        "scenario": "breve",
+        "kind": "study",
+        "ok": false,
+        "error": "HTTP 500"
+      },
+      {
+        "scenario": "breve",
+        "kind": "quiz",
+        "ok": false,
+        "error": "HTTP 500"
+      },
+      {
+        "scenario": "medio",
+        "kind": "summary",
+        "ok": true,
+        "status": "APPROVED",
+        "motor": "full_pipeline_summary_route55_all_motors_v51416",
+        "items": 0,
+        "content_len": 597
+      },
+      {
+        "scenario": "medio",
+        "kind": "cards",
+        "ok": true,
+        "status": "APPROVED",
+        "motor": "full_pipeline_cards_60_motors_graphic_v51416",
+        "items": 5,
+        "content_len": 0
+      },
+      {
+        "scenario": "medio",
+        "kind": "study",
+        "ok": true,
+        "status": "APPROVED",
+        "motor": "full_pipeline_study_route51_language_quality_v51418",
+        "items": 4,
+        "content_len": 0
+      },
+      {
+        "scenario": "medio",
+        "kind": "quiz",
+        "ok": true,
+        "status": "APPROVED",
+        "motor": "full_pipeline_quiz_route63_language_quality_v51418",
+        "items": 4,
+        "content_len": 0
+      },
+      {
+        "scenario": "lungo",
+        "kind": "summary",
+        "ok": true,
+        "status": "APPROVED",
+        "motor": "full_pipeline_summary_route55_all_motors_v51416",
+        "items": 0,
+        "content_len": 589
+      },
+      {
+        "scenario": "lungo",
+        "kind": "cards",
+        "ok": true,
+        "status": "APPROVED",
+        "motor": "full_pipeline_cards_60_motors_graphic_v51416",
+        "items": 4,
+        "content_len": 0
+      },
+      {
+        "scenario": "lungo",
+        "kind": "study",
+        "ok": true,
+        "status": "APPROVED",
+        "motor": "full_pipeline_study_route51_language_quality_v51418",
+        "items": 4,
+        "content_len": 0
+      },
+      {
+        "scenario": "lungo",
+        "kind": "quiz",
+        "ok": true,
+        "status": "APPROVED",
+        "motor": "full_pipeline_quiz_route63_language_quality_v51418",
+        "items": 4,
+        "content_len": 0
+      },
+      {
+        "scenario": "tecnico",
+        "kind": "summary",
+        "ok": false,
+        "error": "HTTP 500"
+      },
+      {
+        "scenario": "tecnico",
+        "kind": "cards",
+        "ok": true,
+        "status": "APPROVED",
+        "motor": "full_pipeline_cards_60_motors_graphic_v51416",
+        "items": 3,
+        "content_len": 0
+      },
+      {
+        "scenario": "tecnico",
+        "kind": "study",
+        "ok": false,
+        "error": "HTTP 500"
+      },
+      {
+        "scenario": "tecnico",
+        "kind": "quiz",
+        "ok": false,
+        "error": "HTTP 500"
+      },
+      {
+        "scenario": "narrativo",
+        "kind": "summary",
+        "ok": false,
+        "error": "HTTP 500"
+      },
+      {
+        "scenario": "narrativo",
+        "kind": "cards",
+        "ok": true,
+        "status": "APPROVED",
+        "motor": "full_pipeline_cards_60_motors_graphic_v51416",
+        "items": 3,
+        "content_len": 0
+      },
+      {
+        "scenario": "narrativo",
+        "kind": "study",
+        "ok": false,
+        "error": "HTTP 500"
+      },
+      {
+        "scenario": "narrativo",
+        "kind": "quiz",
+        "ok": false,
+        "error": "HTTP 500"
+      },
+      {
+        "scenario": "concetti_simili",
+        "kind": "summary",
+        "ok": true,
+        "status": "APPROVED",
+        "motor": "full_pipeline_summary_route55_all_motors_v51416",
+        "items": 0,
+        "content_len": 504
+      },
+      {
+        "scenario": "concetti_simili",
+        "kind": "cards",
+        "ok": true,
+        "status": "APPROVED",
+        "motor": "full_pipeline_cards_60_motors_graphic_v51416",
+        "items": 4,
+        "content_len": 0
+      },
+      {
+        "scenario": "concetti_simili",
+        "kind": "study",
+        "ok": true,
+        "status": "APPROVED",
+        "motor": "full_pipeline_study_route51_language_quality_v51418",
+        "items": 4,
+        "content_len": 0
+      },
+      {
+        "scenario": "concetti_simili",
+        "kind": "quiz",
+        "ok": true,
+        "status": "APPROVED",
+        "motor": "full_pipeline_quiz_route63_language_quality_v51418",
+        "items": 4,
+        "content_len": 0
+      },
+      {
+        "scenario": "ripetitivo",
+        "kind": "summary",
+        "ok": true,
+        "status": "APPROVED",
+        "motor": "full_pipeline_summary_route55_all_motors_v51416",
+        "items": 0,
+        "content_len": 512
+      },
+      {
+        "scenario": "ripetitivo",
+        "kind": "cards",
+        "ok": true,
+        "status": "APPROVED",
+        "motor": "full_pipeline_cards_60_motors_graphic_v51416",
+        "items": 5,
+        "content_len": 0
+      },
+      {
+        "scenario": "ripetitivo",
+        "kind": "study",
+        "ok": true,
+        "status": "APPROVED",
+        "motor": "full_pipeline_study_route51_language_quality_v51418",
+        "items": 4,
+        "content_len": 0
+      },
+      {
+        "scenario": "ripetitivo",
+        "kind": "quiz",
+        "ok": true,
+        "status": "APPROVED",
+        "motor": "full_pipeline_quiz_route63_language_quality_v51418",
+        "items": 4,
+        "content_len": 0
+      },
+      {
+        "scenario": "generico",
+        "kind": "summary",
+        "ok": true,
+        "status": "APPROVED",
+        "motor": "full_pipeline_summary_route55_all_motors_v51416",
+        "items": 0,
+        "content_len": 378
+      },
+      {
+        "scenario": "generico",
+        "kind": "cards",
+        "ok": true,
+        "status": "APPROVED",
+        "motor": "full_pipeline_cards_60_motors_graphic_v51416",
+        "items": 2,
+        "content_len": 0
+      },
+      {
+        "scenario": "generico",
+        "kind": "study",
+        "ok": false,
+        "error": "HTTP 500"
+      },
+      {
+        "scenario": "generico",
+        "kind": "quiz",
+        "ok": false,
+        "error": "HTTP 500"
+      },
+      {
+        "scenario": "lista",
+        "kind": "summary",
+        "ok": true,
+        "status": "APPROVED",
+        "motor": "full_pipeline_summary_route55_all_motors_v51416",
+        "items": 0,
+        "content_len": 450
+      },
+      {
+        "scenario": "lista",
+        "kind": "cards",
+        "ok": true,
+        "status": "APPROVED",
+        "motor": "full_pipeline_cards_60_motors_graphic_v51416",
+        "items": 4,
+        "content_len": 0
+      },
+      {
+        "scenario": "lista",
+        "kind": "study",
+        "ok": false,
+        "error": "HTTP 500"
+      },
+      {
+        "scenario": "lista",
+        "kind": "quiz",
+        "ok": false,
+        "error": "HTTP 500"
+      }
+    ],
+    "smoke_test_esistente": {
+      "comando": "python3 scripts/run_phase5_14_16_full_pipeline_smoke.py",
+      "risultato": "FAIL",
+      "errore": "RuntimeError: V51418_LANGUAGE_QUALITY_BLOCKED: study: frase vietata nel testo finale: magazzino stabilisce",
+      "file": "scripts/run_phase5_14_16_full_pipeline_smoke.py"
+    }
+  },
+  "problemi": [
+    {
+      "gravità": "CRITICO",
+      "problema": "Il claim '73 motori' è ambiguo: il catalogo ufficiale spiega 64 QM, mentre 73 è un totale di registry/orchestrazione.",
+      "file": "reports/phase5_12i2_official_quality_motor_catalog_v1.json",
+      "impatto": "Si rischia di dichiarare collegati motori che sono solo conteggi o route.",
+      "come_correggere": "Creare un registry eseguibile unico con 73 entry concrete oppure rinominare il totale come 64 motori + 9 slot di orchestrazione.",
+      "priorità": "P0"
+    },
+    {
+      "gravità": "CRITICO",
+      "problema": "La pagina reale V5.14.14 bypassa l'engine browser storico e chiama direttamente il bridge backend.",
+      "file": "demo-rag/test-documenti-universale.html",
+      "impatto": "Esistono pipeline parallele; report su universal-document-learning-engine non provano la pagina reale.",
+      "come_correggere": "Definire un solo entrypoint produttivo e far passare UI, backend, quality registry e renderer dalla stessa contract API.",
+      "priorità": "P0"
+    },
+    {
+      "gravità": "CRITICO",
+      "problema": "Il quiz mostra la risposta corretta nella UI con classe correct e simbolo di conferma.",
+      "file": "demo-rag/test-documenti-universale.html",
+      "impatto": "Viola il requisito: nessuna risposta corretta rivelata all'utente.",
+      "come_correggere": "Non renderizzare is_correct; mantenere la risposta solo in stato interno o dopo invio risposta.",
+      "priorità": "P0"
+    },
+    {
+      "gravità": "ALTO",
+      "problema": "summary/cards dichiarano all_motors_connected=True ma non invocano il registry 55/60 con executor QM; usano gruppi generici hardcoded.",
+      "file": "backend/phase5_full_pipeline_runtime_v51416.py",
+      "impatto": "I PASS possono essere decorativi; non dimostrano che i motori qualità abbiano bloccato output scadenti.",
+      "come_correggere": "Sostituire il marker con esecuzione reale di route registry e report per singolo QM.",
+      "priorità": "P0"
+    },
+    {
+      "gravità": "ALTO",
+      "problema": "Smoke test: 14/36 chiamate falliscono con HTTP 500, soprattutto documenti brevi, tecnici, narrativi, generici e lista.",
+      "file": "scripts/run_phase5_14_3_local_backend_bridge.py",
+      "impatto": "Pipeline non robusta su input comuni.",
+      "come_correggere": "Catturare error body, aggiungere casi fallback vietato ma errore guidato, e validare requisiti minimi per ogni generatore.",
+      "priorità": "P1"
+    },
+    {
+      "gravità": "ALTO",
+      "problema": "Riassunto lungo non è proporzionato: input da 6947 caratteri produce 589 caratteri.",
+      "file": "backend/phase5_full_pipeline_runtime_v51416.py",
+      "impatto": "Il riassunto passa, ma non soddisfa compressione controllata/proporzionata.",
+      "come_correggere": "Collegare il motore progressivo documenti lunghi e un Summary Compression Controller.",
+      "priorità": "P1"
+    },
+    {
+      "gravità": "MEDIO",
+      "problema": "Card contengono messaggio chiave generico fisso.",
+      "file": "backend/phase5_full_pipeline_runtime_v51416.py",
+      "impatto": "Le card possono sembrare pulite ma poco specifiche.",
+      "come_correggere": "Derivare messaggio chiave da concetto/fatto e applicare Card Message Completeness Checker reale.",
+      "priorità": "P1"
+    },
+    {
+      "gravità": "MEDIO",
+      "problema": "Study/quiz passano da Q52 ma poi vengono riscritti da layer manuali con pattern specifici.",
+      "file": "scripts/run_phase5_14_3_local_backend_bridge.py",
+      "impatto": "Qualità migliorata ma non ancora mini LLM: prevalgono euristiche/template.",
+      "come_correggere": "Separare builder, repair e validator, con dataset e metriche per ridurre riscritture rigide.",
+      "priorità": "P2"
+    },
+    {
+      "gravità": "MEDIO",
+      "problema": "Il vecchio documento demo sicurezza resta in rag/indice_rag.json e documenti test.",
+      "file": "rag/indice_rag.json",
+      "impatto": "Innocuo se non caricato dalla pagina clean, pericoloso se un RAG server usa indice globale come fonte default.",
+      "come_correggere": "Marcarlo come test fixture esclusa o spostarlo fuori dagli indici produttivi.",
+      "priorità": "P2"
+    },
+    {
+      "gravità": "ALTO",
+      "problema": "Lo smoke test esistente V5.14.16 fallisce sul generatore study per blocco qualità linguistica.",
+      "file": "scripts/run_phase5_14_16_full_pipeline_smoke.py / scripts/run_phase5_14_3_local_backend_bridge.py",
+      "impatto": "Un test di regressione locale dimostra che la pipeline full non è stabile anche fuori dagli smoke sintetici dell’audit.",
+      "come_correggere": "Correggere il rewrite V5.14.18 o il testo fixture, poi far fallire/riuscire il test con asserzioni esplicite per study e quiz.",
+      "priorità": "P1"
+    }
+  ],
+  "suggerimenti": [
+    {
+      "priorità": "P0",
+      "nome_motore": "Real Input Verification Engine",
+      "scopo": "Bloccare input demo/fallback e confermare testo reale",
+      "dove_collegarlo": "prima del cleaner",
+      "output_controllato": "tutti",
+      "test_consigliato": "smoke scenario + fixture negativa che deve fallire"
+    },
+    {
+      "priorità": "P0",
+      "nome_motore": "No Silent Fallback Guard",
+      "scopo": "Trasformare fallback in errore esplicito",
+      "dove_collegarlo": "UI bridge e backend",
+      "output_controllato": "tutti",
+      "test_consigliato": "smoke scenario + fixture negativa che deve fallire"
+    },
+    {
+      "priorità": "P0",
+      "nome_motore": "Document Grounding Checker",
+      "scopo": "Verificare che ogni output derivi dal documento",
+      "dove_collegarlo": "post-generatore",
+      "output_controllato": "tutti",
+      "test_consigliato": "smoke scenario + fixture negativa che deve fallire"
+    },
+    {
+      "priorità": "P1",
+      "nome_motore": "Summary Narrative Coherence Engine",
+      "scopo": "Valutare coesione narrativa e transizioni",
+      "dove_collegarlo": "route summary",
+      "output_controllato": "Riassunto",
+      "test_consigliato": "smoke scenario + fixture negativa che deve fallire"
+    },
+    {
+      "priorità": "P1",
+      "nome_motore": "Anti Bullet List Summary Engine",
+      "scopo": "Bloccare riassunti-lista",
+      "dove_collegarlo": "route summary",
+      "output_controllato": "Riassunto",
+      "test_consigliato": "smoke scenario + fixture negativa che deve fallire"
+    },
+    {
+      "priorità": "P1",
+      "nome_motore": "Concept Hierarchy Builder",
+      "scopo": "Costruire tema/sottotemi/gerarchie",
+      "dove_collegarlo": "prima generator router",
+      "output_controllato": "tutti",
+      "test_consigliato": "smoke scenario + fixture negativa che deve fallire"
+    },
+    {
+      "priorità": "P1",
+      "nome_motore": "Concept Fusion Engine",
+      "scopo": "Fondere concetti simili e ridurre ridondanze",
+      "dove_collegarlo": "summary/card",
+      "output_controllato": "Riassunto, Card",
+      "test_consigliato": "smoke scenario + fixture negativa che deve fallire"
+    },
+    {
+      "priorità": "P1",
+      "nome_motore": "Summary Compression Controller",
+      "scopo": "Rendere lunghezza proporzionata al documento",
+      "dove_collegarlo": "route summary",
+      "output_controllato": "Riassunto",
+      "test_consigliato": "smoke scenario + fixture negativa che deve fallire"
+    },
+    {
+      "priorità": "P1",
+      "nome_motore": "Quiz Distractor Strength Scorer",
+      "scopo": "Valutare plausibilità distrattori",
+      "dove_collegarlo": "route quiz",
+      "output_controllato": "Test/Quiz",
+      "test_consigliato": "smoke scenario + fixture negativa che deve fallire"
+    },
+    {
+      "priorità": "P1",
+      "nome_motore": "UI Bridge Output Integrity Checker",
+      "scopo": "Impedire risposta corretta visibile e bypass",
+      "dove_collegarlo": "UI bridge",
+      "output_controllato": "Test/Quiz",
+      "test_consigliato": "smoke scenario + fixture negativa che deve fallire"
+    },
+    {
+      "priorità": "P2",
+      "nome_motore": "Output Diversity Engine",
+      "scopo": "Differenziare summary/card/study/quiz",
+      "dove_collegarlo": "cross-generator",
+      "output_controllato": "tutti",
+      "test_consigliato": "smoke scenario + fixture negativa che deve fallire"
+    },
+    {
+      "priorità": "P2",
+      "nome_motore": "Domain Adaptation Engine",
+      "scopo": "Adattare stile e criteri al dominio",
+      "dove_collegarlo": "router",
+      "output_controllato": "tutti",
+      "test_consigliato": "smoke scenario + fixture negativa che deve fallire"
+    }
+  ],
+  "roadmap": [
+    {
+      "fase": "A - Audit e pulizia",
+      "azioni": [
+        "materializzare registry reale",
+        "marcare legacy",
+        "separare test fixture da indici produttivi",
+        "bloccare fallback/demo"
+      ]
+    },
+    {
+      "fase": "B - Collegamento reale",
+      "azioni": [
+        "entrypoint unico",
+        "route registry eseguibile",
+        "quality_report per singolo QM",
+        "niente pipeline parallele"
+      ]
+    },
+    {
+      "fase": "C - Riassunti veri",
+      "azioni": [
+        "gerarchia concetti",
+        "fusione concetti",
+        "revisione narrativa",
+        "anti-lista",
+        "compressione proporzionale"
+      ]
+    },
+    {
+      "fase": "D - Mini LLM reale",
+      "azioni": [
+        "dataset",
+        "BM25/embedding",
+        "classificatori qualità",
+        "distillazione opzionale"
+      ]
+    },
+    {
+      "fase": "E - Versione aziende",
+      "azioni": [
+        "API professionale",
+        "export",
+        "report qualità",
+        "demo pulite",
+        "documentazione"
+      ]
+    }
+  ],
+  "architettura_attuale_rilevata": {
+    "ui": "demo-rag/test-documenti-universale.html chiama bridge locale 127.0.0.1:8765",
+    "backend": "scripts/run_phase5_14_3_local_backend_bridge.py instrada summary/cards a backend/phase5_full_pipeline_runtime_v51416.py e study/quiz a q52 + repair layer",
+    "registry": "reports dichiarano 73, catalogo QM contiene 64 motori spiegati; non esiste evidenza di registry unico invocato dalla pagina per tutti i 73",
+    "legacy_browser": "demo-rag/universal-document-learning-engine.js contiene generatori storici ma non è caricato dalla pagina clean",
+    "mini_llm": "mini_llm contiene motori euristici/semantici e registry separato, non integrato come LLM generativo addestrato nella pagina RAG corrente",
+    "static_findings": {
+      "ui_bridge": {
+        "page": "demo-rag/test-documenti-universale.html",
+        "uses_local_backend": true,
+        "loads_universal_engine": false,
+        "reveals_quiz_correct_option": true,
+        "input_control": true
+      },
+      "backend_bridge": {
+        "file": "scripts/run_phase5_14_3_local_backend_bridge.py",
+        "summary_runtime": true,
+        "cards_runtime": true,
+        "study_q52": true,
+        "quiz_q52": true,
+        "manual_repair_layers": true,
+        "strict_demo_block": true
+      },
+      "summary_cards_runtime": {
+        "file": "backend/phase5_full_pipeline_runtime_v51416.py",
+        "declares_all_motors_connected": true,
+        "generic_motor_groups": true,
+        "summary_has_no_long_doc_progressive_engine": true,
+        "card_message_generic": true
+      },
+      "legacy_browser_engine": {
+        "file": "demo-rag/universal-document-learning-engine.js",
+        "contains_four_generators": true,
+        "uses_profiles_and_cards": true,
+        "not_loaded_by_clean_page": true
+      }
+    }
+  },
+  "architettura_futura_suggerita": [
+    "Documento reale",
+    "Real Input Verification Engine",
+    "Cleaner conservativo",
+    "Segmentazione sezioni",
+    "Theme Detector",
+    "Subtheme Detector",
+    "Concept Extractor",
+    "Concept Hierarchy Builder",
+    "Concept Ranking Engine",
+    "Section Quality Matrix",
+    "Generator Router",
+    "Generatore specifico",
+    "Output Quality Registry eseguibile",
+    "Validatori specifici",
+    "Cross Generator Consistency Checker",
+    "UI Bridge Integrity Checker",
+    "Output finale approvato"
+  ],
+  "progetti_futuri_suggeriti": [
+    {
+      "progetto": "RAG per mini-corsi aziendali",
+      "riusa": "input reale, cleaner, estrazione fatti, generatori summary/card/study/quiz, quality_report",
+      "motori_qualità_servono": [
+        "Document Grounding Checker",
+        "No Silent Fallback Guard",
+        "Cross Generator Consistency Checker"
+      ],
+      "generatori_servono": [
+        "riassunto",
+        "card",
+        "domande studio",
+        "quiz"
+      ],
+      "modifiche": "registry eseguibile unico, export, tracciamento fonti e test browser/API",
+      "difficoltà": "media",
+      "valore_demo_aziendale": "alto"
+    },
+    {
+      "progetto": "RAG per formazione interna con quiz e certificati",
+      "riusa": "input reale, cleaner, estrazione fatti, generatori summary/card/study/quiz, quality_report",
+      "motori_qualità_servono": [
+        "Document Grounding Checker",
+        "No Silent Fallback Guard",
+        "Cross Generator Consistency Checker"
+      ],
+      "generatori_servono": [
+        "riassunto",
+        "card",
+        "domande studio",
+        "quiz"
+      ],
+      "modifiche": "registry eseguibile unico, export, tracciamento fonti e test browser/API",
+      "difficoltà": "media",
+      "valore_demo_aziendale": "alto"
+    },
+    {
+      "progetto": "RAG per generare slide e lezioni",
+      "riusa": "input reale, cleaner, estrazione fatti, generatori summary/card/study/quiz, quality_report",
+      "motori_qualità_servono": [
+        "Document Grounding Checker",
+        "No Silent Fallback Guard",
+        "Cross Generator Consistency Checker"
+      ],
+      "generatori_servono": [
+        "riassunto",
+        "card",
+        "domande studio",
+        "quiz"
+      ],
+      "modifiche": "registry eseguibile unico, export, tracciamento fonti e test browser/API",
+      "difficoltà": "media",
+      "valore_demo_aziendale": "alto"
+    },
+    {
+      "progetto": "RAG per creare study pack completi",
+      "riusa": "input reale, cleaner, estrazione fatti, generatori summary/card/study/quiz, quality_report",
+      "motori_qualità_servono": [
+        "Document Grounding Checker",
+        "No Silent Fallback Guard",
+        "Cross Generator Consistency Checker"
+      ],
+      "generatori_servono": [
+        "riassunto",
+        "card",
+        "domande studio",
+        "quiz"
+      ],
+      "modifiche": "registry eseguibile unico, export, tracciamento fonti e test browser/API",
+      "difficoltà": "media",
+      "valore_demo_aziendale": "alto"
+    },
+    {
+      "progetto": "RAG per analisi documenti aziendali",
+      "riusa": "input reale, cleaner, estrazione fatti, generatori summary/card/study/quiz, quality_report",
+      "motori_qualità_servono": [
+        "Document Grounding Checker",
+        "No Silent Fallback Guard",
+        "Cross Generator Consistency Checker"
+      ],
+      "generatori_servono": [
+        "riassunto",
+        "card",
+        "domande studio",
+        "quiz"
+      ],
+      "modifiche": "registry eseguibile unico, export, tracciamento fonti e test browser/API",
+      "difficoltà": "media",
+      "valore_demo_aziendale": "alto"
+    },
+    {
+      "progetto": "RAG per manuali tecnici e procedure",
+      "riusa": "input reale, cleaner, estrazione fatti, generatori summary/card/study/quiz, quality_report",
+      "motori_qualità_servono": [
+        "Document Grounding Checker",
+        "No Silent Fallback Guard",
+        "Cross Generator Consistency Checker"
+      ],
+      "generatori_servono": [
+        "riassunto",
+        "card",
+        "domande studio",
+        "quiz"
+      ],
+      "modifiche": "registry eseguibile unico, export, tracciamento fonti e test browser/API",
+      "difficoltà": "media",
+      "valore_demo_aziendale": "alto"
+    },
+    {
+      "progetto": "RAG per onboarding dipendenti",
+      "riusa": "input reale, cleaner, estrazione fatti, generatori summary/card/study/quiz, quality_report",
+      "motori_qualità_servono": [
+        "Document Grounding Checker",
+        "No Silent Fallback Guard",
+        "Cross Generator Consistency Checker"
+      ],
+      "generatori_servono": [
+        "riassunto",
+        "card",
+        "domande studio",
+        "quiz"
+      ],
+      "modifiche": "registry eseguibile unico, export, tracciamento fonti e test browser/API",
+      "difficoltà": "media",
+      "valore_demo_aziendale": "alto"
+    },
+    {
+      "progetto": "RAG per scuola/ITS/università",
+      "riusa": "input reale, cleaner, estrazione fatti, generatori summary/card/study/quiz, quality_report",
+      "motori_qualità_servono": [
+        "Document Grounding Checker",
+        "No Silent Fallback Guard",
+        "Cross Generator Consistency Checker"
+      ],
+      "generatori_servono": [
+        "riassunto",
+        "card",
+        "domande studio",
+        "quiz"
+      ],
+      "modifiche": "registry eseguibile unico, export, tracciamento fonti e test browser/API",
+      "difficoltà": "alta",
+      "valore_demo_aziendale": "alto"
+    },
+    {
+      "progetto": "RAG per app mobile offline/prototipo",
+      "riusa": "input reale, cleaner, estrazione fatti, generatori summary/card/study/quiz, quality_report",
+      "motori_qualità_servono": [
+        "Document Grounding Checker",
+        "No Silent Fallback Guard",
+        "Cross Generator Consistency Checker"
+      ],
+      "generatori_servono": [
+        "riassunto",
+        "card",
+        "domande studio",
+        "quiz"
+      ],
+      "modifiche": "registry eseguibile unico, export, tracciamento fonti e test browser/API",
+      "difficoltà": "alta",
+      "valore_demo_aziendale": "alto"
+    },
+    {
+      "progetto": "RAG server/API professionale per aziende",
+      "riusa": "input reale, cleaner, estrazione fatti, generatori summary/card/study/quiz, quality_report",
+      "motori_qualità_servono": [
+        "Document Grounding Checker",
+        "No Silent Fallback Guard",
+        "Cross Generator Consistency Checker"
+      ],
+      "generatori_servono": [
+        "riassunto",
+        "card",
+        "domande studio",
+        "quiz"
+      ],
+      "modifiche": "registry eseguibile unico, export, tracciamento fonti e test browser/API",
+      "difficoltà": "alta",
+      "valore_demo_aziendale": "alto"
+    }
+  ]
+}
