@@ -552,8 +552,9 @@
       const finalOutput = result.final_output || result.raw_output || result;
       const items = finalOutput.items || result.items || [];
       quizAnswerState = items.map(q => ({
-        answerId: String((q.opzioni || []).find(opt => opt.is_correct)?.option_id || ""),
-        explanation: String(q.spiegazione || "")
+        salt: String((q.answer_check || {}).salt || ""),
+        answerOkHash: String((q.answer_check || {}).answer_ok_hash || ""),
+        explanation: String((q.answer_check || {}).explanation || q.spiegazione || "")
       }));
       outputEl.innerHTML = `
         <h3>Test reale</h3>
@@ -572,21 +573,30 @@
       `;
     }
 
-    outputEl.addEventListener("click", (event) => {
+    async function hashQuizChoice(salt, optionId) {
+      const bytes = new TextEncoder().encode(`${salt}:${optionId}`);
+      const digest = await crypto.subtle.digest("SHA-256", bytes);
+      return Array.from(new Uint8Array(digest))
+        .map(byte => byte.toString(16).padStart(2, "0"))
+        .join("");
+    }
+
+    outputEl.addEventListener("click", async (event) => {
       const option = event.target.closest(".quiz-option");
       if (!option) return;
 
       const questionIndex = Number(option.dataset.questionIndex);
       const selectedId = String(option.dataset.optionId || "");
       const state = quizAnswerState[questionIndex] || {};
-      const isOk = selectedId === state.answerId;
+      const selectedHash = await hashQuizChoice(state.salt || "", selectedId);
+      const isOk = selectedHash === state.answerOkHash;
       const questionEl = option.closest(".question");
 
       questionEl.querySelectorAll(".quiz-option").forEach(btn => {
         btn.disabled = true;
-        if (String(btn.dataset.optionId || "") === state.answerId) {
+        if (btn === option && isOk) {
           btn.classList.add("answer-ok");
-        } else if (btn === option && !isOk) {
+        } else if (btn === option) {
           btn.classList.add("answer-bad");
         }
       });

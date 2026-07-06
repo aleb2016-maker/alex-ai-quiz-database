@@ -28,6 +28,7 @@ Non modifica UI/PDF/app.
 from __future__ import annotations
 
 import json
+import hashlib
 import sys
 import traceback
 from dataclasses import asdict, is_dataclass
@@ -1593,25 +1594,40 @@ def _v51418_make_quiz_item(fact: str, index: int) -> Dict[str, Any]:
         domanda = f"Quale affermazione descrive correttamente il punto relativo a {topic}?"
         correct = fact
         wrong = [
-            "La procedura può essere gestita senza registrazioni, controlli o responsabili.",
-            "Il controllo è facoltativo e non richiede alcuna verifica successiva.",
-            "Il passaggio operativo può restare informale e non documentato."
+            f"Il punto su {topic} può essere trattato senza controlli anche quando ci sono differenze operative.",
+            f"La fase relativa a {topic} non richiede registrazioni o controlli successivi.",
+            f"Il passaggio su {topic} può restare informale e senza responsabilità assegnate."
         ]
         spiegazione = "La risposta corretta riprende il punto operativo espresso dal documento."
 
-    options = [
-        {"option_id": "A", "testo": correct, "is_correct": True},
-        {"option_id": "B", "testo": wrong[0], "is_correct": False},
-        {"option_id": "C", "testo": wrong[1], "is_correct": False},
-        {"option_id": "D", "testo": wrong[2], "is_correct": False},
+    base_options = [
+        {"testo": correct, "is_correct": True},
+        {"testo": wrong[(index - 1) % 3], "is_correct": False},
+        {"testo": wrong[index % 3], "is_correct": False},
+        {"testo": wrong[(index + 1) % 3], "is_correct": False},
     ]
+    rotation = (index - 1) % 4
+    ordered = base_options[rotation:] + base_options[:rotation]
+    option_ids = ["A", "B", "C", "D"]
+    options = []
+    correct_option_id = "A"
+
+    for option_id, option in zip(option_ids, ordered):
+        item = {
+            "option_id": option_id,
+            "testo": option["testo"],
+            "is_correct": bool(option["is_correct"]),
+        }
+        if item["is_correct"]:
+            correct_option_id = option_id
+        options.append(item)
 
     return {
         "id": f"quiz_quality_v51418_{index:03d}",
         "domanda": domanda,
         "opzioni": options,
-        "correct_option_id": "A",
-        "risposta_corretta": "A",
+        "correct_option_id": correct_option_id,
+        "risposta_corretta": correct_option_id,
         "spiegazione": spiegazione,
         "fatto_origine": fact,
         "quality_rewrite": "v51418_language_quality",
@@ -1934,6 +1950,50 @@ EXPECTED_QM_COUNT_BY_KIND = {
 }
 
 
+def _quiz_answer_hash(salt: str, option_id: str) -> str:
+    return hashlib.sha256(f"{salt}:{option_id}".encode("utf-8")).hexdigest()
+
+
+def _sanitize_quiz_output_for_frontend(output: Dict[str, Any]) -> Dict[str, Any]:
+    sanitized = json.loads(json.dumps(output, ensure_ascii=False))
+    items = sanitized.get("items")
+
+    if not isinstance(items, list):
+        return sanitized
+
+    for index, item in enumerate(items, start=1):
+        if not isinstance(item, dict):
+            continue
+
+        options = item.get("opzioni") or item.get("options") or []
+        correct_id = str(item.get("correct_option_id") or item.get("risposta_corretta") or "")
+
+        clean_options = []
+        for option in options:
+            if not isinstance(option, dict):
+                continue
+            option_id = str(option.get("option_id") or "")
+            if option.get("is_correct") is True:
+                correct_id = option_id
+            clean_options.append({
+                "option_id": option_id,
+                "testo": option.get("testo") or option.get("text") or "",
+            })
+
+        salt = f"phase5_15d_{item.get('id') or index}"
+        item["opzioni"] = clean_options
+        item.pop("options", None)
+        item.pop("correct_option_id", None)
+        item.pop("risposta_corretta", None)
+        item["answer_check"] = {
+            "salt": salt,
+            "answer_ok_hash": _quiz_answer_hash(salt, correct_id),
+            "explanation": item.get("spiegazione") or "",
+        }
+
+    return sanitized
+
+
 def generate(kind: str, text: str) -> Dict[str, Any]:
     """
     FASE 5.15C - practical bridge route.
@@ -1965,6 +2025,12 @@ def generate(kind: str, text: str) -> Dict[str, Any]:
     checked["bridge_route"] = "/api/generate"
 
     final_output = checked.get("final_output") or checked.get("raw_output") or {}
+    if quality_kind == "quiz" and isinstance(final_output, dict):
+        final_output = _sanitize_quiz_output_for_frontend(final_output)
+        checked["final_output"] = final_output
+        checked["raw_output"] = final_output
+        checked.pop("quality_payload", None)
+
     if isinstance(final_output, dict):
         for key in [
             "kind", "motor_name", "content", "items", "quality_report",
