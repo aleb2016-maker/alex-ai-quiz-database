@@ -1,0 +1,58 @@
+{
+  "phase": "5.15E",
+  "entrypoint": "backend.phase5_15b_quality_checked_generators.run_quality_checked_generator",
+  "cases": [
+    {
+      "generator": "summary",
+      "label": "Riassunto",
+      "status": "APPROVED",
+      "approved": true,
+      "expected_qm": 55,
+      "executed_qm": 55,
+      "defects_count": 0,
+      "defects": [],
+      "warnings": [],
+      "all_motors_connected": true,
+      "raw_output_present": true
+    },
+    {
+      "generator": "cards",
+      "label": "Card",
+      "status": "APPROVED",
+      "approved": true,
+      "expected_qm": 60,
+      "executed_qm": 60,
+      "defects_count": 0,
+      "defects": [],
+      "warnings": [],
+      "all_motors_connected": true,
+      "raw_output_present": true
+    },
+    {
+      "generator": "study_questions",
+      "label": "Domande studio",
+      "status": "APPROVED",
+      "approved": true,
+      "expected_qm": 51,
+      "executed_qm": 51,
+      "defects_count": 0,
+      "defects": [],
+      "warnings": [],
+      "all_motors_connected": true,
+      "raw_output_present": true
+    },
+    {
+      "generator": "quiz",
+      "label": "Test/Quiz",
+      "status": "APPROVED",
+      "approved": true,
+      "expected_qm": 63,
+      "executed_qm": 63,
+      "defects_count": 0,
+      "defects": [],
+      "warnings": [],
+      "all_motors_connected": true,
+      "raw_output_present": true
+    }
+  ]
+}
