@@ -1,0 +1,173 @@
+{
+  "phase": "5.15C",
+  "status": "PASS",
+  "bridge_connected_to_entrypoint_515b": true,
+  "ui_connected_to_updated_bridge": true,
+  "quiz_answer_leak_fixed": true,
+  "slots_65_73_clarified": true,
+  "practical_four_generator_test": "PASS",
+  "bridge_started_by_smoke": true,
+  "expected_qm_counts": {
+    "summary": 55,
+    "cards": 60,
+    "study_questions": 51,
+    "quiz": 63
+  },
+  "practical_qm_counts": {
+    "summary": 55,
+    "cards": 60,
+    "study_questions": 51,
+    "quiz": 63
+  },
+  "practical_qm_table": [
+    {
+      "generator": "summary",
+      "label": "Riassunto",
+      "expected_qm_count": 55,
+      "practical_qm_count_via_bridge": 55,
+      "outcome": "PASS"
+    },
+    {
+      "generator": "cards",
+      "label": "Card",
+      "expected_qm_count": 60,
+      "practical_qm_count_via_bridge": 60,
+      "outcome": "PASS"
+    },
+    {
+      "generator": "study_questions",
+      "label": "Domande studio",
+      "expected_qm_count": 51,
+      "practical_qm_count_via_bridge": 51,
+      "outcome": "PASS"
+    },
+    {
+      "generator": "quiz",
+      "label": "Test/Quiz",
+      "expected_qm_count": 63,
+      "practical_qm_count_via_bridge": 63,
+      "outcome": "PASS"
+    }
+  ],
+  "practical_test_rows": [
+    {
+      "document": "breve_valido",
+      "generator": "Riassunto",
+      "output_non_empty": true,
+      "qm_trace": true,
+      "qm_count_correct": true,
+      "fallback_absent": true,
+      "outcome": "PASS"
+    },
+    {
+      "document": "breve_valido",
+      "generator": "Card",
+      "output_non_empty": true,
+      "qm_trace": true,
+      "qm_count_correct": true,
+      "fallback_absent": true,
+      "outcome": "PASS"
+    },
+    {
+      "document": "breve_valido",
+      "generator": "Domande studio",
+      "output_non_empty": true,
+      "qm_trace": true,
+      "qm_count_correct": true,
+      "fallback_absent": true,
+      "outcome": "PASS"
+    },
+    {
+      "document": "breve_valido",
+      "generator": "Test/Quiz",
+      "output_non_empty": true,
+      "qm_trace": true,
+      "qm_count_correct": true,
+      "fallback_absent": true,
+      "outcome": "PASS"
+    },
+    {
+      "document": "tecnico",
+      "generator": "Riassunto",
+      "output_non_empty": true,
+      "qm_trace": true,
+      "qm_count_correct": true,
+      "fallback_absent": true,
+      "outcome": "PASS"
+    },
+    {
+      "document": "tecnico",
+      "generator": "Card",
+      "output_non_empty": true,
+      "qm_trace": true,
+      "qm_count_correct": true,
+      "fallback_absent": true,
+      "outcome": "PASS"
+    },
+    {
+      "document": "tecnico",
+      "generator": "Domande studio",
+      "output_non_empty": true,
+      "qm_trace": true,
+      "qm_count_correct": true,
+      "fallback_absent": true,
+      "outcome": "PASS"
+    },
+    {
+      "document": "tecnico",
+      "generator": "Test/Quiz",
+      "output_non_empty": true,
+      "qm_trace": true,
+      "qm_count_correct": true,
+      "fallback_absent": true,
+      "outcome": "PASS"
+    },
+    {
+      "document": "narrativo_discorsivo",
+      "generator": "Riassunto",
+      "output_non_empty": true,
+      "qm_trace": true,
+      "qm_count_correct": true,
+      "fallback_absent": true,
+      "outcome": "PASS"
+    },
+    {
+      "document": "narrativo_discorsivo",
+      "generator": "Card",
+      "output_non_empty": true,
+      "qm_trace": true,
+      "qm_count_correct": true,
+      "fallback_absent": true,
+      "outcome": "PASS"
+    },
+    {
+      "document": "narrativo_discorsivo",
+      "generator": "Domande studio",
+      "output_non_empty": true,
+      "qm_trace": true,
+      "qm_count_correct": true,
+      "fallback_absent": true,
+      "outcome": "PASS"
+    },
+    {
+      "document": "narrativo_discorsivo",
+      "generator": "Test/Quiz",
+      "output_non_empty": true,
+      "qm_trace": true,
+      "qm_count_correct": true,
+      "fallback_absent": true,
+      "outcome": "PASS"
+    }
+  ],
+  "quiz_ui_check": {
+    "checked_file": "demo-rag/test-documenti-universale.html",
+    "quiz_answer_leak_fixed": true,
+    "defects": []
+  },
+  "slot_report_file": "reports/phase5_15c_slot_65_73_status_v1.json",
+  "remaining_issues": [
+    "Output quality can still be QUALITY_BLOCKED by real QM failures; this phase validates routing and trace, not content perfection.",
+    "Slots 65-73 remain orchestration-only until distinct runtime behaviors are defined."
+  ],
+  "smoke_defects": []
+}

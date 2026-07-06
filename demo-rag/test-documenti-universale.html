@@ -2,715 +2,659 @@
 <html lang="it">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Motore Universale Documenti</title>
-
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Motore Universale Documenti — Clean V5.14.14</title>
   <style>
+    :root {
+      --bg: #050816;
+      --panel: #101827;
+      --panel2: #0b1222;
+      --text: #f8fafc;
+      --muted: #b9c2d3;
+      --line: rgba(255,255,255,.14);
+      --green: #17c983;
+      --blue: #2ea7ff;
+      --purple: #7c4dff;
+      --pink: #d61f72;
+      --warn: #ffd166;
+      --bad: #ff7b7b;
+    }
+
     * { box-sizing: border-box; }
 
     body {
       margin: 0;
       min-height: 100vh;
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      color: #f8fafc;
+      color: var(--text);
       background:
-        radial-gradient(circle at top left, rgba(59, 130, 246, 0.25), transparent 34%),
-        radial-gradient(circle at top right, rgba(147, 51, 234, 0.25), transparent 34%),
-        linear-gradient(135deg, #020617, #0f172a 45%, #111827);
+        radial-gradient(circle at top left, rgba(46,167,255,.22), transparent 28%),
+        radial-gradient(circle at top right, rgba(214,31,114,.22), transparent 30%),
+        linear-gradient(180deg, #050816, #070b18 55%, #03050d);
     }
 
     main {
-      width: min(1180px, calc(100% - 32px));
+      width: min(1380px, calc(100% - 48px));
       margin: 0 auto;
-      padding: 42px 0 70px;
+      padding: 42px 0 80px;
     }
 
-    .hero,
-    .panel,
-    .output-card {
-      padding: 30px;
-      border-radius: 30px;
-      background: rgba(15, 23, 42, 0.84);
-      border: 1px solid rgba(148, 163, 184, 0.35);
-      box-shadow: 0 24px 70px rgba(0, 0, 0, 0.35);
+    .hero {
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      padding: 34px;
+      background: rgba(16,24,39,.82);
+      box-shadow: 0 26px 80px rgba(0,0,0,.38);
     }
 
-    .hero { margin-bottom: 28px; }
-
-    .hero h1 {
+    h1 {
       margin: 0 0 12px;
-      font-size: clamp(34px, 5vw, 60px);
-      line-height: 1.02;
-      font-weight: 950;
+      font-size: clamp(2.2rem, 4vw, 4.3rem);
+      line-height: 1;
     }
 
-    .hero p {
+    .subtitle {
       margin: 0;
-      color: #cbd5e1;
-      font-weight: 800;
-      font-size: 18px;
-      line-height: 1.5;
+      color: var(--muted);
+      font-size: 1.2rem;
+      font-weight: 700;
     }
 
-    label {
-      display: block;
-      font-size: 28px;
-      font-weight: 950;
-      margin-bottom: 16px;
+    .status {
+      margin-top: 20px;
+      display: inline-flex;
+      gap: 10px;
+      align-items: center;
+      padding: 12px 16px;
+      border-radius: 999px;
+      background: rgba(23,201,131,.13);
+      border: 1px solid rgba(23,201,131,.35);
+      color: #dcfff1;
+      font-weight: 800;
+    }
+
+    .grid {
+      margin-top: 28px;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 22px;
+    }
+
+    .box {
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      padding: 26px;
+      background: rgba(16,24,39,.72);
+      box-shadow: 0 16px 50px rgba(0,0,0,.25);
+    }
+
+    .box h2 {
+      margin: 0 0 16px;
+      font-size: 1.6rem;
     }
 
     textarea {
       width: 100%;
-      min-height: 320px;
+      min-height: 280px;
       resize: vertical;
+      border: 1px solid rgba(255,255,255,.25);
+      border-radius: 20px;
+      padding: 20px;
+      color: var(--text);
+      background: rgba(0,0,0,.28);
+      font: 700 1rem/1.55 ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      outline: none;
+    }
+
+    textarea:focus {
+      border-color: rgba(46,167,255,.75);
+      box-shadow: 0 0 0 4px rgba(46,167,255,.14);
+    }
+
+    .upload-row {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 16px;
+    }
+
+    input[type="file"] {
+      width: 100%;
       padding: 18px;
       border-radius: 18px;
-      border: 1px solid rgba(255, 255, 255, 0.35);
-      background: #343434;
-      color: #f8fafc;
-      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-      font-size: 19px;
+      border: 1px dashed rgba(255,255,255,.26);
+      background: rgba(255,255,255,.05);
+      color: var(--text);
       font-weight: 800;
-      line-height: 1.45;
-      outline: none;
     }
 
     .buttons {
       display: grid;
-      grid-template-columns: repeat(2, minmax(220px, 1fr));
+      grid-template-columns: repeat(4, 1fr);
       gap: 18px;
-      margin-top: 24px;
     }
 
     button {
+      min-height: 150px;
       border: 0;
-      min-height: 72px;
-      border-radius: 999px;
-      color: #ffffff;
-      font-size: 20px;
+      border-radius: 26px;
+      color: white;
+      font-size: 1.18rem;
       font-weight: 950;
       cursor: pointer;
-      background: linear-gradient(135deg, #be123c, #9333ea);
-      box-shadow: 0 16px 34px rgba(124, 58, 237, 0.34);
+      box-shadow: 0 18px 48px rgba(0,0,0,.36);
+      transition: transform .15s ease, filter .15s ease;
     }
 
-    button.blue {
-      background: linear-gradient(135deg, #0ea5e9, #8b5cf6);
+    button:hover {
+      transform: translateY(-3px);
+      filter: brightness(1.12);
     }
 
-    .status,
-    .pill,
-    .badge {
-      display: inline-block;
-      padding: 8px 13px;
-      border-radius: 999px;
-      background: rgba(255, 255, 255, 0.17);
-      font-weight: 950;
-      color: #f8fafc;
+    button:disabled {
+      opacity: .55;
+      cursor: not-allowed;
+      transform: none;
     }
 
-    .status {
-      margin-top: 22px;
-      color: #dbeafe;
-      background: rgba(15, 23, 42, 0.78);
-      border: 1px solid rgba(148, 163, 184, 0.35);
-    }
-
-    #output { margin-top: 30px; }
-
-    .output-card h2 {
-      margin: 14px 0 18px;
-      font-size: 34px;
-      font-weight: 950;
-    }
-
-    .output-card h3 {
-      margin-top: 22px;
-      font-size: 22px;
-      font-weight: 950;
-    }
-
-    .output-card p,
-    .output-card li {
-      font-weight: 800;
-      line-height: 1.55;
-      font-size: 18px;
-    }
-
-    .cards-grid,
-    .study-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(245px, 1fr));
-      gap: 18px;
-      margin-top: 24px;
-    }
-
-    .universal-card,
-    .study-card,
-    .quiz-panel {
-      padding: 22px;
-      border-radius: 24px;
-      background:
-        radial-gradient(circle at top left, rgba(34,211,238,0.22), transparent 35%),
-        linear-gradient(135deg, rgba(30,41,59,0.98), rgba(88,28,135,0.92));
-      border: 1px solid rgba(255, 255, 255, 0.16);
-      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.30);
-    }
+    .summary { background: linear-gradient(135deg, var(--blue), var(--purple)); }
+    .cards { background: linear-gradient(135deg, var(--green), #19a7d8); }
+    .quiz { background: linear-gradient(135deg, var(--pink), var(--purple)); }
+    .study { background: linear-gradient(135deg, #113b7a, var(--green)); }
 
     .icon {
-      font-size: 58px;
-      margin-bottom: 14px;
-    }
-
-
-    .card-hero {
-      width: 100%;
-      min-height: 150px;
-      margin-bottom: 16px;
-      padding: 8px;
-      border-radius: 22px;
-      background:
-        radial-gradient(circle at top left, rgba(255,255,255,0.14), transparent 42%),
-        rgba(255,255,255,0.06);
-      border: 1px solid rgba(255,255,255,0.12);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-    }
-
-    .card-svg {
-      width: 100%;
-      height: 150px;
       display: block;
+      font-size: 2.5rem;
+      margin-bottom: 10px;
     }
 
-    .study-card .card-hero {
-      display: none;
+    #output {
+      min-height: 220px;
     }
 
-
-    .originale,
-    .study-extra {
-      margin-top: 14px;
-      padding: 12px;
-      border-radius: 16px;
-      background: rgba(255,255,255,0.10);
-      color: #dbeafe;
-      font-weight: 800;
-    }
-
-    .quiz-start-button,
-    .quiz-next-button {
-      margin-top: 18px;
-      padding: 15px 24px;
-      min-height: auto;
-      font-size: 18px;
-    }
-
-    .quiz-progress {
-      display: inline-block;
-      margin-bottom: 16px;
-      padding: 8px 13px;
-      border-radius: 999px;
-      background: rgba(255, 255, 255, 0.13);
-      font-weight: 950;
-      color: #dbeafe;
-    }
-
-    .quiz-options {
-      display: grid;
+    .output-head {
+      display: flex;
+      justify-content: space-between;
       gap: 14px;
-      margin-top: 18px;
-    }
-
-    .quiz-option {
-      width: 100%;
-      min-height: 64px;
-      border: 1px solid rgba(255, 255, 255, 0.18);
-      border-radius: 18px;
-      padding: 16px;
-      text-align: left;
-      color: #f8fafc;
-      font-size: 17px;
-      font-weight: 850;
-      background: rgba(15, 23, 42, 0.72);
-    }
-
-    .quiz-option.correct { background: rgba(22, 163, 74, 0.85); }
-    .quiz-option.wrong { background: rgba(220, 38, 38, 0.85); }
-
-    .feedback-ok,
-    .feedback-ko {
-      margin-top: 18px;
-      padding: 16px;
-      border-radius: 18px;
-      font-weight: 850;
-    }
-
-    .feedback-ok {
-      background: rgba(22, 163, 74, 0.22);
-      border: 1px solid rgba(34, 197, 94, 0.55);
-    }
-
-    .feedback-ko {
-      background: rgba(220, 38, 38, 0.22);
-      border: 1px solid rgba(248, 113, 113, 0.55);
-    }
-
-    .quiz-final-score {
-      font-size: 28px;
-      font-weight: 950;
-      color: #bae6fd;
-    }
-
-    .theme-cv .universal-card,
-    .theme-cv.universal-card { background: linear-gradient(135deg, rgba(15,23,42,0.98), rgba(30,64,175,0.92)); }
-
-    .theme-personal .universal-card,
-    .theme-personal.universal-card { background: linear-gradient(135deg, rgba(15,23,42,0.98), rgba(13,148,136,0.82)); }
-
-    .theme-business .universal-card,
-    .theme-business.universal-card { background: linear-gradient(135deg, rgba(15,23,42,0.98), rgba(100,116,139,0.92)); }
-
-    .theme-story .universal-card,
-    .theme-story.universal-card { background: linear-gradient(135deg, rgba(30,41,59,0.98), rgba(124,58,237,0.92)); }
-
-    .theme-poetry .universal-card,
-    .theme-poetry.universal-card { background: linear-gradient(135deg, rgba(88,28,135,0.98), rgba(190,24,93,0.86)); }
-
-    .theme-hobby .universal-card,
-    .theme-hobby.universal-card { background: linear-gradient(135deg, rgba(15,23,42,0.98), rgba(234,88,12,0.82)); }
-
-
-    /* BLOCCO 3: ESEMPI RAPIDI */
-    .example-panel {
-      margin-top: 18px;
-      padding: 18px;
-      border-radius: 22px;
-      background: rgba(255, 255, 255, 0.06);
-      border: 1px solid rgba(255, 255, 255, 0.12);
-    }
-
-    .example-panel strong {
-      display: block;
-      margin-bottom: 12px;
-      font-size: 16px;
-      color: #dbeafe;
-    }
-
-    .example-buttons {
-      display: flex;
+      align-items: flex-start;
       flex-wrap: wrap;
-      gap: 10px;
+      margin-bottom: 18px;
     }
 
-    .example-buttons button {
-      min-height: 46px;
-      padding: 10px 15px;
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
       border-radius: 999px;
-      font-size: 14px;
-      font-weight: 950;
-      background: linear-gradient(135deg, rgba(14,165,233,0.95), rgba(124,58,237,0.95));
-      box-shadow: none;
+      background: rgba(23,201,131,.12);
+      border: 1px solid rgba(23,201,131,.34);
+      color: #dffff1;
+      font-weight: 900;
+      font-size: .92rem;
     }
 
-
-
-    /* BLOCCO FINALE: integrazione OCR locale e mappa 7 temi */
-    .final-workflow {
-      margin-top: 22px;
-      padding: 22px;
-      border-radius: 24px;
-      background: rgba(255, 255, 255, 0.07);
-      border: 1px solid rgba(255, 255, 255, 0.14);
+    pre {
+      white-space: pre-wrap;
+      word-break: break-word;
+      padding: 18px;
+      border-radius: 16px;
+      background: rgba(0,0,0,.26);
+      border: 1px solid rgba(255,255,255,.1);
+      overflow: auto;
     }
 
-    .final-workflow h3 {
-      margin: 0 0 14px;
-      font-size: 24px;
-      font-weight: 950;
-      color: #f8fafc;
-    }
-
-    .workflow-grid {
+    .cards-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 16px;
-      margin-top: 16px;
     }
 
-    .workflow-card {
+    .card {
       padding: 18px;
       border-radius: 20px;
-      background: rgba(15, 23, 42, 0.72);
-      border: 1px solid rgba(148, 163, 184, 0.24);
+      background: linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.035));
+      border: 1px solid rgba(255,255,255,.14);
     }
 
-    .workflow-card strong {
-      display: block;
-      margin-bottom: 8px;
-      font-size: 18px;
-      color: #bae6fd;
-    }
-
-    .workflow-card p {
-      margin: 0;
-      font-size: 15px;
-      line-height: 1.45;
-      color: #dbeafe;
-      font-weight: 800;
-    }
-
-    .themes-map {
-      margin-top: 22px;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-      gap: 14px;
-    }
-
-    .theme-map-card {
-      padding: 16px;
-      border-radius: 18px;
-      background: rgba(255, 255, 255, 0.06);
-      border: 1px solid rgba(255, 255, 255, 0.12);
-    }
-
-    .theme-map-card h4 {
+    .card h3 {
       margin: 0 0 10px;
-      font-size: 18px;
-      font-weight: 950;
-      color: #f8fafc;
+      font-size: 1.25rem;
     }
 
-    .theme-map-card ul {
-      margin: 0;
-      padding-left: 18px;
-      color: #dbeafe;
-      font-weight: 800;
-      line-height: 1.45;
-      font-size: 14px;
+    .card p {
+      margin: 8px 0;
+      color: #eaf0ff;
     }
 
-    .ocr-local-button {
-      background: linear-gradient(135deg, #be123c, #7c3aed) !important;
+    .question {
+      margin: 16px 0;
+      padding: 18px;
+      border-radius: 18px;
+      background: rgba(255,255,255,.055);
+      border: 1px solid rgba(255,255,255,.12);
     }
 
-
-    /* UI FINALE: pulsanti evidenti e movimento hover */
-    button,
-    .link-button,
-    .ocr-local-button,
-    .quiz-start-button,
-    .quiz-next-button,
-    .quiz-option {
-      transition:
-        transform 0.18s ease,
-        box-shadow 0.18s ease,
-        filter 0.18s ease,
-        border-color 0.18s ease;
-      will-change: transform;
+    .question strong {
+      font-size: 1.06rem;
     }
 
-    button:hover,
-    .link-button:hover,
-    .ocr-local-button:hover,
-    .quiz-start-button:hover,
-    .quiz-next-button:hover,
-    .quiz-option:hover {
-      transform: translateY(-4px) scale(1.025);
-      filter: brightness(1.08);
-      box-shadow: 0 18px 38px rgba(14, 165, 233, 0.28);
-    }
-
-    button:active,
-    .link-button:active,
-    .ocr-local-button:active,
-    .quiz-start-button:active,
-    .quiz-next-button:active,
-    .quiz-option:active {
-      transform: translateY(0) scale(0.98);
-    }
-
-    .link-button {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 68px;
-      padding: 14px 24px;
-      border-radius: 999px;
-      text-decoration: none;
-      color: #ffffff;
-      font-size: 19px;
-      font-weight: 950;
-      text-align: center;
-      background: linear-gradient(135deg, #0ea5e9, #7c3aed);
-      box-shadow: 0 16px 34px rgba(14, 165, 233, 0.24);
-    }
-
-    .ocr-local-button {
+    .option {
+      display: block;
       width: 100%;
-      min-height: 76px;
-      font-size: 21px;
-      background: linear-gradient(135deg, #be123c, #9333ea) !important;
-      border: 1px solid rgba(255,255,255,0.22);
-      box-shadow: 0 18px 42px rgba(190, 18, 60, 0.30);
-    }
-
-    .ocr-local-button:hover {
-      box-shadow: 0 22px 50px rgba(190, 18, 60, 0.40);
-    }
-
-
-    /* DOWNLOAD MATERIALI GENERATI */
-    .download-panel {
-      margin-top: 22px;
-      padding: 22px;
-      border-radius: 24px;
-      background:
-        radial-gradient(circle at top left, rgba(34, 211, 238, 0.13), transparent 38%),
-        rgba(255, 255, 255, 0.07);
-      border: 1px solid rgba(255, 255, 255, 0.14);
-    }
-
-    .download-panel h3 {
-      margin: 0 0 12px;
-      font-size: 24px;
-      font-weight: 950;
-      color: #f8fafc;
-    }
-
-    .download-panel p {
-      margin: 0 0 16px;
-      color: #dbeafe;
-      font-size: 16px;
+      margin: 8px 0;
+      padding: 10px 12px;
+      border-radius: 12px;
+      background: rgba(255,255,255,.06);
+      color: var(--text);
+      text-align: left;
+      font-size: 1rem;
       font-weight: 800;
-      line-height: 1.45;
+      min-height: auto;
+      box-shadow: none;
     }
 
-    .download-buttons {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    .answer-ok {
+      border: 1px solid rgba(23,201,131,.6);
+      background: rgba(23,201,131,.12);
+    }
+
+    .answer-bad {
+      border: 1px solid rgba(255,123,123,.55);
+      background: rgba(255,123,123,.1);
+    }
+
+    .error {
+      color: #ffe1e1;
+      border-color: rgba(255,123,123,.42);
+      background: rgba(255,123,123,.12);
+    }
+
+    .downloads {
+      display: flex;
+      flex-wrap: wrap;
       gap: 14px;
+      margin-top: 18px;
     }
 
-    .download-buttons button {
-      min-height: 64px;
-      border-radius: 999px;
-      font-size: 17px;
-      font-weight: 950;
-      background: linear-gradient(135deg, #0ea5e9, #7c3aed);
-      box-shadow: 0 16px 34px rgba(14, 165, 233, 0.22);
+    .download {
+      min-height: auto;
+      padding: 14px 18px;
+      border-radius: 18px;
+      font-size: 1rem;
+      background: linear-gradient(135deg, #1a89ff, #694cff);
     }
 
-    .download-buttons button:nth-child(2) {
-      background: linear-gradient(135deg, #16a34a, #0ea5e9);
+    .small {
+      color: var(--muted);
+      font-size: .96rem;
+      font-weight: 700;
     }
 
-    .download-buttons button:nth-child(3) {
-      background: linear-gradient(135deg, #be123c, #9333ea);
+    @media (max-width: 900px) {
+      main { width: min(100% - 24px, 1380px); }
+      .buttons { grid-template-columns: 1fr 1fr; }
+      button { min-height: 120px; }
     }
 
-    @media (max-width: 760px) {
+    @media (max-width: 560px) {
       .buttons { grid-template-columns: 1fr; }
-      textarea { font-size: 17px; }
     }
+
+    .graphic-card {
+      overflow: hidden;
+      padding: 0;
+      background: rgba(255,255,255,.075);
+    }
+
+    .graphic-card-visual {
+      width: 100%;
+      min-height: 160px;
+      background: rgba(255,255,255,.05);
+    }
+
+    .graphic-card-visual svg {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .graphic-card-body {
+      padding: 18px;
+    }
+
+    .quality-line {
+      margin-top: 12px;
+      display: inline-flex;
+      padding: 8px 11px;
+      border-radius: 999px;
+      background: rgba(23,201,131,.14);
+      border: 1px solid rgba(23,201,131,.38);
+      color: #dcfff1;
+      font-size: .82rem;
+      font-weight: 900;
+    }
+
   </style>
-  <link rel="stylesheet" href="layout-rigido-generazione-subito.css?v=20260622-1802">
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="buttons-full-row.css">
-  <script src="phase5-14-2-dom-safety-guard.js"></script>
-<script src="./rag-input-reale-guard.js"></script>
 </head>
 
 <body>
   <main>
     <section class="hero">
       <h1>Motore universale documenti</h1>
-      <p>
-        Incolla un documento o carica un TXT. Il motore riconosce il tema e genera
-        riassunto, card visive, test interattivo e domande studio.
+      <p class="subtitle">
+        Pagina pulita V5.14.14: nessuno script legacy, nessun fallback, solo bridge locale 8765.
       </p>
+      <div class="status" id="bridgeStatus">🔌 Controllo bridge locale...</div>
     </section>
 
-    <section class="panel">
-      <label for="documentoInput">Incolla testo documento</label>
-
-      <textarea id="documentoInput" spellcheck="false"></textarea>
-
-      <input id="fileInput" type="file" hidden>
-<div class="buttons">
-        <button id="btnFile" class="blue" type="button">Carica file PDF / TXT</button>
-        <button id="btnRipulisciOcrTabella" type="button">Ripulisci testo OCR tabella</button>
-        <button id="btnRiassunto" type="button">Genera riassunto</button>
-        <button id="btnCard" type="button">Genera card</button>
-        <button id="btnTest" type="button">Genera test</button>
-        <button id="btnStudio" type="button">Genera domande studio</button>
-      </div>
-
-      <div class="status">
-        Motore universale base collegato ai 4 bottoni - Blocco 1
-      </div>
-<div class="final-workflow">
-        <h3>Flusso finale del motore documenti</h3>
-
-        <div class="workflow-grid">
-          <div class="workflow-card">
-            <strong>Testo incollato</strong>
-            <p>Incolla il testo nella textarea e genera subito riassunto, card, test e domande studio.</p>
-          </div>
-
-          <div class="workflow-card">
-            <strong>TXT e PDF con testo</strong>
-            <p>Carica file TXT o PDF con testo selezionabile direttamente da questa pagina.</p>
-          </div>
-
-          <div class="workflow-card">
-            <strong>Immagini, tabelle e fumetti</strong>
-            <p>Usa il motore OCR locale per immagini, PDF immagine, tabelle, schede o pagine di fumetti con balloon.</p>
-          </div>
-
-          <div class="workflow-card">
-            <strong>Output finale</strong>
-            <p>Il testo estratto o corretto viene copiato e incollato qui per generare materiale didattico.</p>
-          </div>
+    <section class="grid">
+      <div class="box">
+        <h2>1. Incolla o carica testo reale</h2>
+        <div class="upload-row">
+          <input id="fileInput" type="file" accept=".txt,.md,.text">
         </div>
-
-        <div class="buttons" style="margin-top: 18px;">
-          <a class="link-button ocr-local-button" href="http://localhost:8010/demo-rag/test-ocr-locale.html?v=5" target="_blank">
-            Apri motore OCR immagini / PDF / fumetti
-          </a>
-        </div>
-
-        <h3 style="margin-top: 24px;">7 temi riconosciuti e sotto-rami</h3>
-
-        <div class="themes-map">
-          <div class="theme-map-card">
-            <h4>🏃 Sport e allenamento</h4>
-            <ul>
-              <li>riscaldamento</li>
-              <li>cardio</li>
-              <li>forza</li>
-              <li>mobilità</li>
-              <li>equilibrio</li>
-              <li>recupero / defaticamento</li>
-            </ul>
-          </div>
-
-          <div class="theme-map-card">
-            <h4>👤 Curriculum vitae</h4>
-            <ul>
-              <li>profilo</li>
-              <li>esperienze</li>
-              <li>competenze tecniche</li>
-              <li>competenze trasversali</li>
-              <li>formazione</li>
-              <li>obiettivo</li>
-            </ul>
-          </div>
-
-          <div class="theme-map-card">
-            <h4>📄 Documenti personali</h4>
-            <ul>
-              <li>identità</li>
-              <li>residenza e contatti</li>
-              <li>numero documento</li>
-              <li>scadenze</li>
-              <li>azioni da fare</li>
-            </ul>
-          </div>
-
-          <div class="theme-map-card">
-            <h4>🏢 Documenti aziendali</h4>
-            <ul>
-              <li>obiettivo</li>
-              <li>contesto</li>
-              <li>processo</li>
-              <li>responsabilità</li>
-              <li>rischi</li>
-              <li>metriche</li>
-              <li>prossimi passi</li>
-            </ul>
-          </div>
-
-          <div class="theme-map-card">
-            <h4>📚 Storie e racconti</h4>
-            <ul>
-              <li>personaggi</li>
-              <li>ambientazione</li>
-              <li>evento iniziale</li>
-              <li>problema narrativo</li>
-              <li>svolta</li>
-              <li>finale</li>
-            </ul>
-          </div>
-
-          <div class="theme-map-card">
-            <h4>🪶 Poesie</h4>
-            <ul>
-              <li>tema centrale</li>
-              <li>immagini poetiche</li>
-              <li>emozione</li>
-              <li>metafora</li>
-              <li>ritmo e suono</li>
-            </ul>
-          </div>
-
-          <div class="theme-map-card">
-            <h4>🎨 Hobby e progetti</h4>
-            <ul>
-              <li>attività</li>
-              <li>materiali</li>
-              <li>passaggi</li>
-              <li>tecnica</li>
-              <li>obiettivo</li>
-              <li>risultato finale</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-
-
-      <div class="download-panel">
-        <h3>Scarica materiale generato</h3>
-        <p>
-          Dopo aver generato riassunto, card, test o domande studio,
-          puoi salvare il risultato sul computer o sullo smartphone.
+        <textarea id="documentText" placeholder="Incolla qui il testo del documento reale..."></textarea>
+        <p class="small">
+          Questa pagina pulita usa TXT/MD/testo incollato. PDF/OCR si collega dopo, senza rimettere script vecchi.
         </p>
+      </div>
 
-        <div class="download-buttons">
-          <button id="btnScaricaTxt" type="button">Scarica TXT</button>
-          <button id="btnScaricaHtml" type="button">Scarica HTML</button>
-          <button id="btnScaricaPdf" type="button">Scarica PDF</button>
-          <button id="btnScaricaJson" type="button">Scarica JSON</button>
+      <div class="box">
+        <h2>2. Genera materiale</h2>
+        <div class="buttons">
+          <button class="summary" data-kind="summary"><span class="icon">📝</span>Genera riassunto</button>
+          <button class="cards" data-kind="cards"><span class="icon">🎴</span>Genera card</button>
+          <button class="quiz" data-kind="quiz"><span class="icon">✅</span>Genera test</button>
+          <button class="study" data-kind="study"><span class="icon">💡</span>Genera domande studio</button>
         </div>
       </div>
 
+      <div class="box">
+        <div class="output-head">
+          <h2>3. Output reale</h2>
+          <span class="badge" id="lastEngine">Nessun output ancora</span>
+        </div>
+        <div id="output">
+          <p class="small">Carica o incolla un testo, poi scegli uno dei quattro generatori.</p>
+        </div>
 
-      <div id="output"></div>
+        <div class="downloads">
+          <button class="download" data-download="txt">Scarica TXT</button>
+          <button class="download" data-download="html">Scarica HTML</button>
+          <button class="download" data-download="json">Scarica JSON</button>
+        </div>
+      </div>
     </section>
   </main>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
   <script>
-    if (window.pdfjsLib) {
-      window.pdfjsLib.GlobalWorkerOptions.workerSrc =
-        "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js";
-    }
-  </script>
+    const API = "http://127.0.0.1:8765";
+    let lastPayload = null;
+    let lastKind = null;
+    let quizAnswerState = [];
 
-  <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-  <script src="layout-rigido-rag.js?v=layout-rigido-generazione-subito-20260622"></script>
-  <script src="layout-rigido-generazione-subito.js?v=20260622-1802"></script>
-  <script src="buttons-full-row.js"></script>
-  <script src="./rag-action-icons-v46.js?v=icone-solo-nuove-v46"></script>
-  <script src="./rag-concept-document-engine-v46.js?v=concept-v46-vero"></script>
-  <script src="./pdf-export-browser-v6.js?v=6"></script>
-  <script src="rag-quality-summary-cards-v34a.js"></script>
-  <script src="./universal-document-learning-engine.js?v=export-fix-280626"></script>
-  <script src="phase5-14-ui-buttons-real-connector.js"></script>
-  <script src="phase5-14-2-runtime-visible-panel.js"></script>
+    const statusEl = document.getElementById("bridgeStatus");
+    const textEl = document.getElementById("documentText");
+    const outputEl = document.getElementById("output");
+    const engineEl = document.getElementById("lastEngine");
+    const buttons = Array.from(document.querySelectorAll("button[data-kind]"));
+
+    function escapeHtml(text) {
+      return String(text || "")
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        .replaceAll('"', "&quot;")
+        .replaceAll("'", "&#039;");
+    }
+
+    async function checkBridge() {
+      try {
+        const response = await fetch(API + "/health", { cache: "no-store" });
+        const data = await response.json();
+
+        if (data.ok) {
+          statusEl.textContent = "✅ Bridge locale attivo — 127.0.0.1:8765";
+          statusEl.style.background = "rgba(23,201,131,.13)";
+          statusEl.style.borderColor = "rgba(23,201,131,.35)";
+          buttons.forEach(btn => btn.disabled = false);
+          return true;
+        }
+
+        throw new Error("Bridge non OK");
+      } catch (error) {
+        statusEl.textContent = "❌ Bridge spento — avvia scripts/run_phase5_14_3_local_backend_bridge.py";
+        statusEl.style.background = "rgba(255,123,123,.13)";
+        statusEl.style.borderColor = "rgba(255,123,123,.42)";
+        buttons.forEach(btn => btn.disabled = true);
+        return false;
+      }
+    }
+
+    function getText() {
+      return String(textEl.value || "").trim();
+    }
+
+    async function generate(kind) {
+      const text = getText();
+
+      if (text.length < 20) {
+        renderError("Testo troppo corto. Incolla o carica un documento reale.");
+        return;
+      }
+
+      outputEl.innerHTML = `
+        <p><strong>Generazione in corso...</strong></p>
+        <p class="small">Chiamata reale al bridge locale 8765. Nessun fallback/demo.</p>
+      `;
+
+      try {
+        const response = await fetch(API + "/api/generate", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            kind,
+            text,
+            strictNoFallback: true,
+            source: "clean_page_v51414"
+          })
+        });
+
+        const payload = await response.json();
+
+        if (!response.ok || !payload.ok) {
+          throw new Error(payload.error || "Errore bridge");
+        }
+
+        lastPayload = payload;
+        lastKind = kind;
+        renderPayload(kind, payload);
+      } catch (error) {
+        renderError(error && error.stack ? error.stack : String(error));
+      }
+    }
+
+    function renderPayload(kind, payload) {
+      const result = payload.result || {};
+      const finalOutput = result.final_output || result.raw_output || result;
+      const qmCount = result.executed_qm_count ? ` — QM ${result.executed_qm_count}/${result.expected_qm_count || "?"}` : "";
+      engineEl.textContent = `${kind} — ${finalOutput.motor_name || "bridge"} — ${result.status || ""}${qmCount}`;
+
+      if (kind === "summary") return renderSummary(result);
+      if (kind === "cards") return renderCards(result);
+      if (kind === "study") return renderStudy(result);
+      if (kind === "quiz") return renderQuiz(result);
+
+      outputEl.innerHTML = `<pre>${escapeHtml(JSON.stringify(payload, null, 2))}</pre>`;
+    }
+
+    function renderSummary(result) {
+      const finalOutput = result.final_output || result.raw_output || result;
+      outputEl.innerHTML = `
+        <h3>Riassunto reale</h3>
+        <p class="small">QM runtime: ${escapeHtml(String(result.executed_qm_count || ""))}/${escapeHtml(String(result.expected_qm_count || ""))}</p>
+        <pre>${escapeHtml(finalOutput.content || result.content || "")}</pre>
+      `;
+    }
+
+    function renderCards(result) {
+      const finalOutput = result.final_output || result.raw_output || result;
+      const items = finalOutput.items || result.items || [];
+      const qr = finalOutput.quality_report || result.quality_report || {};
+
+      outputEl.innerHTML = `
+        <h3>Card grafiche reali</h3>
+        <p class="small">
+          Pipeline: ${escapeHtml(finalOutput.motor_name || result.motor_name || "")} —
+          QM runtime: ${escapeHtml(String(result.executed_qm_count || ""))}/${escapeHtml(String(result.expected_qm_count || ""))}
+        </p>
+        <div class="cards-grid">
+          ${items.map(card => {
+            const visual = card.visual || {};
+            const svg = visual.svg || "";
+            return `
+              <article class="card graphic-card">
+                <div class="graphic-card-visual">
+                  ${svg}
+                </div>
+                <div class="graphic-card-body">
+                  <h3>${escapeHtml(card.titolo || card.card_id || "Card")}</h3>
+                  <p><strong>Messaggio:</strong> ${escapeHtml(card.messaggio_chiave || "")}</p>
+                  <p>${escapeHtml(card.spiegazione || "")}</p>
+                  <p class="small">${escapeHtml((card.micro_concetti || []).join(", "))}</p>
+                  <span class="quality-line">full pipeline · no fallback · card grafica</span>
+                </div>
+              </article>
+            `;
+          }).join("")}
+        </div>
+      `;
+    }
+
+    function renderStudy(result) {
+      const finalOutput = result.final_output || result.raw_output || result;
+      const items = finalOutput.items || result.items || [];
+      outputEl.innerHTML = `
+        <h3>Domande studio reali</h3>
+        <p class="small">QM runtime: ${escapeHtml(String(result.executed_qm_count || ""))}/${escapeHtml(String(result.expected_qm_count || ""))}</p>
+        ${items.map(item => `
+          <div class="question">
+            <strong>${escapeHtml(item.domanda || "")}</strong>
+            <p>${escapeHtml(item.risposta_guida || "")}</p>
+            <p class="small">Fonte: ${escapeHtml(item.fatto_origine || "")}</p>
+          </div>
+        `).join("")}
+      `;
+    }
+
+    function renderQuiz(result) {
+      const finalOutput = result.final_output || result.raw_output || result;
+      const items = finalOutput.items || result.items || [];
+      quizAnswerState = items.map(q => ({
+        answerId: String((q.opzioni || []).find(opt => opt.is_correct)?.option_id || ""),
+        explanation: String(q.spiegazione || "")
+      }));
+      outputEl.innerHTML = `
+        <h3>Test reale</h3>
+        <p class="small">QM runtime: ${escapeHtml(String(result.executed_qm_count || ""))}/${escapeHtml(String(result.expected_qm_count || ""))}</p>
+        ${items.map((q, questionIndex) => `
+          <div class="question">
+            <strong>${escapeHtml(q.domanda || "")}</strong>
+            ${(q.opzioni || []).map(opt => `
+              <button type="button" class="option quiz-option" data-question-index="${questionIndex}" data-option-id="${escapeHtml(opt.option_id || "")}">
+                ${escapeHtml(opt.option_id || "")}. ${escapeHtml(opt.testo || "")}
+              </button>
+            `).join("")}
+            <p class="small quiz-feedback" data-question-index="${questionIndex}"></p>
+          </div>
+        `).join("")}
+      `;
+    }
+
+    outputEl.addEventListener("click", (event) => {
+      const option = event.target.closest(".quiz-option");
+      if (!option) return;
+
+      const questionIndex = Number(option.dataset.questionIndex);
+      const selectedId = String(option.dataset.optionId || "");
+      const state = quizAnswerState[questionIndex] || {};
+      const isOk = selectedId === state.answerId;
+      const questionEl = option.closest(".question");
+
+      questionEl.querySelectorAll(".quiz-option").forEach(btn => {
+        btn.disabled = true;
+        if (String(btn.dataset.optionId || "") === state.answerId) {
+          btn.classList.add("answer-ok");
+        } else if (btn === option && !isOk) {
+          btn.classList.add("answer-bad");
+        }
+      });
+
+      const feedback = questionEl.querySelector(".quiz-feedback");
+      feedback.textContent = `${isOk ? "Risposta esatta." : "Risposta non esatta."} ${state.explanation || ""}`;
+    });
+
+    function renderError(message) {
+      engineEl.textContent = "Errore";
+      outputEl.innerHTML = `
+        <div class="box error">
+          <h3>Errore</h3>
+          <pre>${escapeHtml(message)}</pre>
+        </div>
+      `;
+    }
+
+    function download(ext) {
+      if (!lastPayload) {
+        renderError("Nessun output da scaricare.");
+        return;
+      }
+
+      let content = "";
+      let mime = "text/plain";
+
+      if (ext === "json") {
+        content = JSON.stringify(lastPayload, null, 2);
+        mime = "application/json";
+      } else if (ext === "html") {
+        content = "<!doctype html><meta charset='utf-8'><body>" + outputEl.innerHTML + "</body>";
+        mime = "text/html";
+      } else {
+        const result = lastPayload.result || {};
+        if (lastKind === "summary") {
+          content = result.content || "";
+        } else {
+          content = JSON.stringify(result.items || result, null, 2);
+        }
+      }
+
+      const blob = new Blob([content], { type: mime + ";charset=utf-8" });
+      const a = document.createElement("a");
+      a.href = URL.createObjectURL(blob);
+      a.download = `motore-documenti-${lastKind || "output"}.${ext}`;
+      a.click();
+      URL.revokeObjectURL(a.href);
+    }
+
+    document.getElementById("fileInput").addEventListener("change", async (event) => {
+      const file = event.target.files && event.target.files[0];
+      if (!file) return;
+
+      const text = await file.text();
+      textEl.value = text;
+    });
+
+    buttons.forEach(btn => {
+      btn.addEventListener("click", () => generate(btn.dataset.kind));
+    });
+
+    document.querySelectorAll("button[data-download]").forEach(btn => {
+      btn.addEventListener("click", () => download(btn.dataset.download));
+    });
+
+    checkBridge();
+    setInterval(checkBridge, 5000);
+  </script>
 </body>
 </html>

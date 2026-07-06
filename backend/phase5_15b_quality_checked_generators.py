@@ -105,6 +105,13 @@ APPLICABLE_QM_BY_GENERATOR = {
     "quiz": QUIZ_ROUTE_IDS,
 }
 
+EXPECTED_QM_COUNT_BY_GENERATOR = {
+    "summary": 55,
+    "cards": 60,
+    "study_questions": 51,
+    "quiz": 63,
+}
+
 
 def _ensure_import_path() -> None:
     for path in [ROOT, ROOT / "backend", ROOT / "scripts"]:
@@ -295,9 +302,9 @@ def _card_payloads(raw_output: Dict[str, Any], input_text: str, generator: str) 
 
 def _call_generator(generator: str, input_text: str) -> Dict[str, Any]:
     _ensure_import_path()
-    from scripts.run_phase5_14_3_local_backend_bridge import generate
+    from scripts.run_phase5_14_3_local_backend_bridge import generate_raw
 
-    return _plain(generate(BRIDGE_KIND[generator], input_text))
+    return _plain(generate_raw(BRIDGE_KIND[generator], input_text))
 
 
 def _summary_executor_trace(payload: Dict[str, Any], names: Dict[str, str]) -> List[Dict[str, Any]]:
@@ -494,6 +501,7 @@ def run_quality_checked_generator(generator_name: str, input_text: str) -> dict:
 
     qm_runtime_trace = registry["qm_runtime_trace"]
     executed_qm_count = int(registry["executed_qm_count"])
+    expected_qm_count = EXPECTED_QM_COUNT_BY_GENERATOR[generator]
     declared_only_qm_count = int(registry["declared_only_qm_count"])
     trace_supports_connection = bool(qm_runtime_trace) and executed_qm_count > 0
     all_motors_connected = trace_supports_connection and declared_only_qm_count == 0
@@ -524,6 +532,7 @@ def run_quality_checked_generator(generator_name: str, input_text: str) -> dict:
         "quality_payload": registry["quality_payload"],
         "qm_runtime_trace": qm_runtime_trace,
         "executed_qm_count": executed_qm_count,
+        "expected_qm_count": expected_qm_count,
         "declared_only_qm_count": declared_only_qm_count,
         "not_applicable_qm_count": sum(1 for item in qm_runtime_trace if item.get("executed") is False),
         "all_motors_connected": all_motors_connected,
