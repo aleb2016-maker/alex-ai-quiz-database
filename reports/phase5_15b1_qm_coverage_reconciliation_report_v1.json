@@ -1,0 +1,703 @@
+{
+  "phase": "5.15B.1",
+  "status": "PASS",
+  "regression_confirmed": true,
+  "root_cause": "study_questions and quiz used reduced 5.15A declared/deduced sets instead of the certified route_total coverage from the generators.",
+  "mandatory_files_read": [
+    "backend/phase5_15b_quality_checked_generators.py",
+    "reports/phase5_15b_quality_checked_generators_report_v1.json",
+    "reports/phase5_15b_quality_checked_generators_trace_v1.json",
+    "reports/phase5_15a_executable_registry_connection_proof_v1.json",
+    "reports/phase5_15a_generator_motor_trace_v1.json",
+    "reports/audit_completo_73_motori_rag_qualita_v1.json"
+  ],
+  "source_of_certified_counts": {
+    "summary": "full_pipeline_summary_route55_all_motors_v51416 / route_total=55",
+    "cards": "full_pipeline_cards_60_motors_graphic_v51416 / total_motors_connected=60",
+    "study_questions": "full_pipeline_study_route51_language_quality_v51418 / route_total=51",
+    "quiz": "full_pipeline_quiz_route63_language_quality_v51418 / route_total=63"
+  },
+  "comparison_table": [
+    {
+      "generator": "summary",
+      "label": "Riassunto",
+      "certified_previous_count": 55,
+      "phase5_15b_count": 55,
+      "phase5_15b1_count": 55,
+      "outcome": "PASS"
+    },
+    {
+      "generator": "cards",
+      "label": "Card",
+      "certified_previous_count": 60,
+      "phase5_15b_count": 60,
+      "phase5_15b1_count": 60,
+      "outcome": "PASS"
+    },
+    {
+      "generator": "study_questions",
+      "label": "Domande studio",
+      "certified_previous_count": 51,
+      "phase5_15b_count": 15,
+      "phase5_15b1_count": 51,
+      "outcome": "PASS"
+    },
+    {
+      "generator": "quiz",
+      "label": "Test / Quiz",
+      "certified_previous_count": 63,
+      "phase5_15b_count": 24,
+      "phase5_15b1_count": 63,
+      "outcome": "PASS"
+    }
+  ],
+  "executed_qm_count_by_generator": {
+    "summary": 55,
+    "cards": 60,
+    "study_questions": 51,
+    "quiz": 63
+  },
+  "qm_statuses_by_generator": {
+    "summary": {
+      "PASS": 145,
+      "FAIL": 20
+    },
+    "cards": {
+      "PASS": 132,
+      "FAIL": 48
+    },
+    "study_questions": {
+      "PASS": 120,
+      "FAIL": 33
+    },
+    "quiz": {
+      "PASS": 107,
+      "FAIL": 82
+    }
+  },
+  "missing_from_study_in_515b": [
+    {
+      "qm": "qm_001",
+      "name": "qm_001",
+      "where_declared": "5.14.18 generator quality_report route_total; 5.15A reports show the reduced declared subset; backend.phase5_card_route_60_strict_connector_v513a3.EXECUTORS exposes the callable",
+      "why_missing_in_515b": "5.15B reused a reduced generator applicability set from 5.15A instead of the certified route_total coverage",
+      "correction": "restored as executed=true in 5.15B.1"
+    },
+    {
+      "qm": "qm_002",
+      "name": "qm_002",
+      "where_declared": "5.14.18 generator quality_report route_total; 5.15A reports show the reduced declared subset; backend.phase5_card_route_60_strict_connector_v513a3.EXECUTORS exposes the callable",
+      "why_missing_in_515b": "5.15B reused a reduced generator applicability set from 5.15A instead of the certified route_total coverage",
+      "correction": "restored as executed=true in 5.15B.1"
+    },
+    {
+      "qm": "qm_003",
+      "name": "qm_003",
+      "where_declared": "5.14.18 generator quality_report route_total; 5.15A reports show the reduced declared subset; backend.phase5_card_route_60_strict_connector_v513a3.EXECUTORS exposes the callable",
+      "why_missing_in_515b": "5.15B reused a reduced generator applicability set from 5.15A instead of the certified route_total coverage",
+      "correction": "restored as executed=true in 5.15B.1"
+    },
+    {
+      "qm": "qm_004",
+      "name": "qm_004",
+      "where_declared": "5.14.18 generator quality_report route_total; 5.15A reports show the reduced declared subset; backend.phase5_card_route_60_strict_connector_v513a3.EXECUTORS exposes the callable",
+      "why_missing_in_515b": "5.15B reused a reduced generator applicability set from 5.15A instead of the certified route_total coverage",
+      "correction": "restored as executed=true in 5.15B.1"
+    },
+    {
+      "qm": "qm_005",
+      "name": "qm_005",
+      "where_declared": "5.14.18 generator quality_report route_total; 5.15A reports show the reduced declared subset; backend.phase5_card_route_60_strict_connector_v513a3.EXECUTORS exposes the callable",
+      "why_missing_in_515b": "5.15B reused a reduced generator applicability set from 5.15A instead of the certified route_total coverage",
+      "correction": "restored as executed=true in 5.15B.1"
+    },
+    {
+      "qm": "qm_006",
+      "name": "qm_006",
+      "where_declared": "5.14.18 generator quality_report route_total; 5.15A reports show the reduced declared subset; backend.phase5_card_route_60_strict_connector_v513a3.EXECUTORS exposes the callable",
+      "why_missing_in_515b": "5.15B reused a reduced generator applicability set from 5.15A instead of the certified route_total coverage",
+      "correction": "restored as executed=true in 5.15B.1"
+    },
+    {
+      "qm": "qm_007",
+      "name": "qm_007",
+      "where_declared": "5.14.18 generator quality_report route_total; 5.15A reports show the reduced declared subset; backend.phase5_card_route_60_strict_connector_v513a3.EXECUTORS exposes the callable",
+      "why_missing_in_515b": "5.15B reused a reduced generator applicability set from 5.15A instead of the certified route_total coverage",
+      "correction": "restored as executed=true in 5.15B.1"
+    },
+    {
+      "qm": "qm_008",
+      "name": "qm_008",
+      "where_declared": "5.14.18 generator quality_report route_total; 5.15A reports show the reduced declared subset; backend.phase5_card_route_60_strict_connector_v513a3.EXECUTORS exposes the callable",
+      "why_missing_in_515b": "5.15B reused a reduced generator applicability set from 5.15A instead of the certified route_total coverage",
+      "correction": "restored as executed=true in 5.15B.1"
+    },
+    {
+      "qm": "qm_009",
+      "name": "qm_009",
+      "where_declared": "5.14.18 generator quality_report route_total; 5.15A reports show the reduced declared subset; backend.phase5_card_route_60_strict_connector_v513a3.EXECUTORS exposes the callable",
+      "why_missing_in_515b": "5.15B reused a reduced generator applicability set from 5.15A instead of the certified route_total coverage",
+      "correction": "restored as executed=true in 5.15B.1"
+    },
+    {
+      "qm": "qm_010",
+      "name": "qm_010",
+      "where_declared": "5.14.18 generator quality_report route_total; 5.15A reports show the reduced declared subset; backend.phase5_card_route_60_strict_connector_v513a3.EXECUTORS exposes the callable",
+      "why_missing_in_515b": "5.15B reused a reduced generator applicability set from 5.15A instead of the certified route_total coverage",
+      "correction": "restored as executed=true in 5.15B.1"
+    },
+    {
+      "qm": "qm_011",
+      "name": "qm_011",
+      "where_declared": "5.14.18 generator quality_report route_total; 5.15A reports show the reduced declared subset; backend.phase5_card_route_60_strict_connector_v513a3.EXECUTORS exposes the callable",
+      "why_missing_in_515b": "5.15B reused a reduced generator applicability set from 5.15A instead of the certified route_total coverage",
+      "correction": "restored as executed=true in 5.15B.1"
+    },
+    {
+      "qm": "qm_012",
+      "name": "qm_012",
+      "where_declared": "5.14.18 generator quality_report route_total; 5.15A reports show the reduced declared subset; backend.phase5_card_route_60_strict_connector_v513a3.EXECUTORS exposes the callable",
+      "why_missing_in_515b": "5.15B reused a reduced generator applicability set from 5.15A instead of the certified route_total coverage",
+      "correction": "restored as executed=true in 5.15B.1"
+    },
+    {
+      "qm": "qm_016",
+      "name": "qm_016",
+      "where_declared": "5.14.18 generator quality_report route_total; 5.15A reports show the reduced declared subset; backend.phase5_card_route_60_strict_connector_v513a3.EXECUTORS exposes the callable",
+      "why_missing_in_515b": "5.15B reused a reduced generator applicability set from 5.15A instead of the certified route_total coverage",
+      "correction": "restored as executed=true in 5.15B.1"
+    },
+    {
+      "qm": "qm_019",
+      "name": "qm_019",
+      "where_declared": "5.14.18 generator quality_report route_total; 5.15A reports show the reduced declared subset; backend.phase5_card_route_60_strict_connector_v513a3.EXECUTORS exposes the callable",
+      "why_missing_in_515b": "5.15B reused a reduced generator applicability set from 5.15A instead of the certified route_total coverage",
+      "correction": "restored as executed=true in 5.15B.1"
+    },
+    {
+      "qm": "qm_020",
+      "name": "qm_020",
+      "where_declared": "5.14.18 generator quality_report route_total; 5.15A reports show the reduced declared subset; backend.phase5_card_route_60_strict_connector_v513a3.EXECUTORS exposes the callable",
+      "why_missing_in_515b": "5.15B reused a reduced generator applicability set from 5.15A instead of the certified route_total coverage",
+      "correction": "restored as executed=true in 5.15B.1"
+    },
+    {
+      "qm": "qm_023",
+      "name": "qm_023",
+      "where_declared": "5.14.18 generator quality_report route_total; 5.15A reports show the reduced declared subset; backend.phase5_card_route_60_strict_connector_v513a3.EXECUTORS exposes the callable",
+      "why_missing_in_515b": "5.15B reused a reduced generator applicability set from 5.15A instead of the certified route_total coverage",
+      "correction": "restored as executed=true in 5.15B.1"
+    },
+    {
+      "qm": "qm_024",
+      "name": "qm_024",
+      "where_declared": "5.14.18 generator quality_report route_total; 5.15A reports show the reduced declared subset; backend.phase5_card_route_60_strict_connector_v513a3.EXECUTORS exposes the callable",
+      "why_missing_in_515b": "5.15B reused a reduced generator applicability set from 5.15A instead of the certified route_total coverage",
+      "correction": "restored as executed=true in 5.15B.1"
+    },
+    {
+      "qm": "qm_025",
+      "name": "qm_025",
+      "where_declared": "5.14.18 generator quality_report route_total; 5.15A reports show the reduced declared subset; backend.phase5_card_route_60_strict_connector_v513a3.EXECUTORS exposes the callable",
+      "why_missing_in_515b": "5.15B reused a reduced generator applicability set from 5.15A instead of the certified route_total coverage",
+      "correction": "restored as executed=true in 5.15B.1"
+    },
+    {
+      "qm": "qm_026",
+      "name": "qm_026",
+      "where_declared": "5.14.18 generator quality_report route_total; 5.15A reports show the reduced declared subset; backend.phase5_card_route_60_strict_connector_v513a3.EXECUTORS exposes the callable",
+      "why_missing_in_515b": "5.15B reused a reduced generator applicability set from 5.15A instead of the certified route_total coverage",
+      "correction": "restored as executed=true in 5.15B.1"
+    },
+    {
+      "qm": "qm_027",
+      "name": "qm_027",
+      "where_declared": "5.14.18 generator quality_report route_total; 5.15A reports show the reduced declared subset; backend.phase5_card_route_60_strict_connector_v513a3.EXECUTORS exposes the callable",
+      "why_missing_in_515b": "5.15B reused a reduced generator applicability set from 5.15A instead of the certified route_total coverage",
+      "correction": "restored as executed=true in 5.15B.1"
+    },
+    {
+      "qm": "qm_028",
+      "name": "qm_028",
+      "where_declared": "5.14.18 generator quality_report route_total; 5.15A reports show the reduced declared subset; backend.phase5_card_route_60_strict_connector_v513a3.EXECUTORS exposes the callable",
+      "why_missing_in_515b": "5.15B reused a reduced generator applicability set from 5.15A instead of the certified route_total coverage",
+      "correction": "restored as executed=true in 5.15B.1"
+    },
+    {
+      "qm": "qm_029",
+      "name": "qm_029",
+      "where_declared": "5.14.18 generator quality_report route_total; 5.15A reports show the reduced declared subset; backend.phase5_card_route_60_strict_connector_v513a3.EXECUTORS exposes the callable",
+      "why_missing_in_515b": "5.15B reused a reduced generator applicability set from 5.15A instead of the certified route_total coverage",
+      "correction": "restored as executed=true in 5.15B.1"
+    },
+    {
+      "qm": "qm_030",
+      "name": "qm_030",
+      "where_declared": "5.14.18 generator quality_report route_total; 5.15A reports show the reduced declared subset; backend.phase5_card_route_60_strict_connector_v513a3.EXECUTORS exposes the callable",
+      "why_missing_in_515b": "5.15B reused a reduced generator applicability set from 5.15A instead of the certified route_total coverage",
+      "correction": "restored as executed=true in 5.15B.1"
+    },
+    {
+      "qm": "qm_031",
+      "name": "qm_031",
+      "where_declared": "5.14.18 generator quality_report route_total; 5.15A reports show the reduced declared subset; backend.phase5_card_route_60_strict_connector_v513a3.EXECUTORS exposes the callable",
+      "why_missing_in_515b": "5.15B reused a reduced generator applicability set from 5.15A instead of the certified route_total coverage",
+      "correction": "restored as executed=true in 5.15B.1"
+    },
+    {
+      "qm": "qm_032",
+      "name": "qm_032",
+      "where_declared": "5.14.18 generator quality_report route_total; 5.15A reports show the reduced declared subset; backend.phase5_card_route_60_strict_connector_v513a3.EXECUTORS exposes the callable",
+      "why_missing_in_515b": "5.15B reused a reduced generator applicability set from 5.15A instead of the certified route_total coverage",
+      "correction": "restored as executed=true in 5.15B.1"
+    },
+    {
+      "qm": "qm_045",
+      "name": "qm_045",
+      "where_declared": "5.14.18 generator quality_report route_total; 5.15A reports show the reduced declared subset; backend.phase5_card_route_60_strict_connector_v513a3.EXECUTORS exposes the callable",
+      "why_missing_in_515b": "5.15B reused a reduced generator applicability set from 5.15A instead of the certified route_total coverage",
+      "correction": "restored as executed=true in 5.15B.1"
+    },
+    {
+      "qm": "qm_046",
+      "name": "qm_046",
+      "where_declared": "5.14.18 generator quality_report route_total; 5.15A reports show the reduced declared subset; backend.phase5_card_route_60_strict_connector_v513a3.EXECUTORS exposes the callable",
+      "why_missing_in_515b": "5.15B reused a reduced generator applicability set from 5.15A instead of the certified route_total coverage",
+      "correction": "restored as executed=true in 5.15B.1"
+    },
+    {
+      "qm": "qm_047",
+      "name": "qm_047",
+      "where_declared": "5.14.18 generator quality_report route_total; 5.15A reports show the reduced declared subset; backend.phase5_card_route_60_strict_connector_v513a3.EXECUTORS exposes the callable",
+      "why_missing_in_515b": "5.15B reused a reduced generator applicability set from 5.15A instead of the certified route_total coverage",
+      "correction": "restored as executed=true in 5.15B.1"
+    },
+    {
+      "qm": "qm_049",
+      "name": "qm_049",
+      "where_declared": "5.14.18 generator quality_report route_total; 5.15A reports show the reduced declared subset; backend.phase5_card_route_60_strict_connector_v513a3.EXECUTORS exposes the callable",
+      "why_missing_in_515b": "5.15B reused a reduced generator applicability set from 5.15A instead of the certified route_total coverage",
+      "correction": "restored as executed=true in 5.15B.1"
+    },
+    {
+      "qm": "qm_050",
+      "name": "qm_050",
+      "where_declared": "5.14.18 generator quality_report route_total; 5.15A reports show the reduced declared subset; backend.phase5_card_route_60_strict_connector_v513a3.EXECUTORS exposes the callable",
+      "why_missing_in_515b": "5.15B reused a reduced generator applicability set from 5.15A instead of the certified route_total coverage",
+      "correction": "restored as executed=true in 5.15B.1"
+    },
+    {
+      "qm": "qm_052",
+      "name": "qm_052",
+      "where_declared": "5.14.18 generator quality_report route_total; 5.15A reports show the reduced declared subset; backend.phase5_card_route_60_strict_connector_v513a3.EXECUTORS exposes the callable",
+      "why_missing_in_515b": "5.15B reused a reduced generator applicability set from 5.15A instead of the certified route_total coverage",
+      "correction": "restored as executed=true in 5.15B.1"
+    },
+    {
+      "qm": "qm_053",
+      "name": "qm_053",
+      "where_declared": "5.14.18 generator quality_report route_total; 5.15A reports show the reduced declared subset; backend.phase5_card_route_60_strict_connector_v513a3.EXECUTORS exposes the callable",
+      "why_missing_in_515b": "5.15B reused a reduced generator applicability set from 5.15A instead of the certified route_total coverage",
+      "correction": "restored as executed=true in 5.15B.1"
+    },
+    {
+      "qm": "qm_061",
+      "name": "qm_061",
+      "where_declared": "5.14.18 generator quality_report route_total; 5.15A reports show the reduced declared subset; backend.phase5_card_route_60_strict_connector_v513a3.EXECUTORS exposes the callable",
+      "why_missing_in_515b": "5.15B reused a reduced generator applicability set from 5.15A instead of the certified route_total coverage",
+      "correction": "restored as executed=true in 5.15B.1"
+    },
+    {
+      "qm": "qm_062",
+      "name": "qm_062",
+      "where_declared": "5.14.18 generator quality_report route_total; 5.15A reports show the reduced declared subset; backend.phase5_card_route_60_strict_connector_v513a3.EXECUTORS exposes the callable",
+      "why_missing_in_515b": "5.15B reused a reduced generator applicability set from 5.15A instead of the certified route_total coverage",
+      "correction": "restored as executed=true in 5.15B.1"
+    },
+    {
+      "qm": "qm_063",
+      "name": "qm_063",
+      "where_declared": "5.14.18 generator quality_report route_total; 5.15A reports show the reduced declared subset; backend.phase5_card_route_60_strict_connector_v513a3.EXECUTORS exposes the callable",
+      "why_missing_in_515b": "5.15B reused a reduced generator applicability set from 5.15A instead of the certified route_total coverage",
+      "correction": "restored as executed=true in 5.15B.1"
+    },
+    {
+      "qm": "qm_064",
+      "name": "qm_064",
+      "where_declared": "5.14.18 generator quality_report route_total; 5.15A reports show the reduced declared subset; backend.phase5_card_route_60_strict_connector_v513a3.EXECUTORS exposes the callable",
+      "why_missing_in_515b": "5.15B reused a reduced generator applicability set from 5.15A instead of the certified route_total coverage",
+      "correction": "restored as executed=true in 5.15B.1"
+    }
+  ],
+  "missing_from_quiz_in_515b": [
+    {
+      "qm": "qm_001",
+      "name": "qm_001",
+      "where_declared": "5.14.18 generator quality_report route_total; 5.15A reports show the reduced declared subset; backend.phase5_card_route_60_strict_connector_v513a3.EXECUTORS exposes the callable",
+      "why_missing_in_515b": "5.15B reused a reduced generator applicability set from 5.15A instead of the certified route_total coverage",
+      "correction": "restored as executed=true in 5.15B.1"
+    },
+    {
+      "qm": "qm_002",
+      "name": "qm_002",
+      "where_declared": "5.14.18 generator quality_report route_total; 5.15A reports show the reduced declared subset; backend.phase5_card_route_60_strict_connector_v513a3.EXECUTORS exposes the callable",
+      "why_missing_in_515b": "5.15B reused a reduced generator applicability set from 5.15A instead of the certified route_total coverage",
+      "correction": "restored as executed=true in 5.15B.1"
+    },
+    {
+      "qm": "qm_003",
+      "name": "qm_003",
+      "where_declared": "5.14.18 generator quality_report route_total; 5.15A reports show the reduced declared subset; backend.phase5_card_route_60_strict_connector_v513a3.EXECUTORS exposes the callable",
+      "why_missing_in_515b": "5.15B reused a reduced generator applicability set from 5.15A instead of the certified route_total coverage",
+      "correction": "restored as executed=true in 5.15B.1"
+    },
+    {
+      "qm": "qm_004",
+      "name": "qm_004",
+      "where_declared": "5.14.18 generator quality_report route_total; 5.15A reports show the reduced declared subset; backend.phase5_card_route_60_strict_connector_v513a3.EXECUTORS exposes the callable",
+      "why_missing_in_515b": "5.15B reused a reduced generator applicability set from 5.15A instead of the certified route_total coverage",
+      "correction": "restored as executed=true in 5.15B.1"
+    },
+    {
+      "qm": "qm_005",
+      "name": "qm_005",
+      "where_declared": "5.14.18 generator quality_report route_total; 5.15A reports show the reduced declared subset; backend.phase5_card_route_60_strict_connector_v513a3.EXECUTORS exposes the callable",
+      "why_missing_in_515b": "5.15B reused a reduced generator applicability set from 5.15A instead of the certified route_total coverage",
+      "correction": "restored as executed=true in 5.15B.1"
+    },
+    {
+      "qm": "qm_006",
+      "name": "qm_006",
+      "where_declared": "5.14.18 generator quality_report route_total; 5.15A reports show the reduced declared subset; backend.phase5_card_route_60_strict_connector_v513a3.EXECUTORS exposes the callable",
+      "why_missing_in_515b": "5.15B reused a reduced generator applicability set from 5.15A instead of the certified route_total coverage",
+      "correction": "restored as executed=true in 5.15B.1"
+    },
+    {
+      "qm": "qm_007",
+      "name": "qm_007",
+      "where_declared": "5.14.18 generator quality_report route_total; 5.15A reports show the reduced declared subset; backend.phase5_card_route_60_strict_connector_v513a3.EXECUTORS exposes the callable",
+      "why_missing_in_515b": "5.15B reused a reduced generator applicability set from 5.15A instead of the certified route_total coverage",
+      "correction": "restored as executed=true in 5.15B.1"
+    },
+    {
+      "qm": "qm_008",
+      "name": "qm_008",
+      "where_declared": "5.14.18 generator quality_report route_total; 5.15A reports show the reduced declared subset; backend.phase5_card_route_60_strict_connector_v513a3.EXECUTORS exposes the callable",
+      "why_missing_in_515b": "5.15B reused a reduced generator applicability set from 5.15A instead of the certified route_total coverage",
+      "correction": "restored as executed=true in 5.15B.1"
+    },
+    {
+      "qm": "qm_009",
+      "name": "qm_009",
+      "where_declared": "5.14.18 generator quality_report route_total; 5.15A reports show the reduced declared subset; backend.phase5_card_route_60_strict_connector_v513a3.EXECUTORS exposes the callable",
+      "why_missing_in_515b": "5.15B reused a reduced generator applicability set from 5.15A instead of the certified route_total coverage",
+      "correction": "restored as executed=true in 5.15B.1"
+    },
+    {
+      "qm": "qm_010",
+      "name": "qm_010",
+      "where_declared": "5.14.18 generator quality_report route_total; 5.15A reports show the reduced declared subset; backend.phase5_card_route_60_strict_connector_v513a3.EXECUTORS exposes the callable",
+      "why_missing_in_515b": "5.15B reused a reduced generator applicability set from 5.15A instead of the certified route_total coverage",
+      "correction": "restored as executed=true in 5.15B.1"
+    },
+    {
+      "qm": "qm_011",
+      "name": "qm_011",
+      "where_declared": "5.14.18 generator quality_report route_total; 5.15A reports show the reduced declared subset; backend.phase5_card_route_60_strict_connector_v513a3.EXECUTORS exposes the callable",
+      "why_missing_in_515b": "5.15B reused a reduced generator applicability set from 5.15A instead of the certified route_total coverage",
+      "correction": "restored as executed=true in 5.15B.1"
+    },
+    {
+      "qm": "qm_012",
+      "name": "qm_012",
+      "where_declared": "5.14.18 generator quality_report route_total; 5.15A reports show the reduced declared subset; backend.phase5_card_route_60_strict_connector_v513a3.EXECUTORS exposes the callable",
+      "why_missing_in_515b": "5.15B reused a reduced generator applicability set from 5.15A instead of the certified route_total coverage",
+      "correction": "restored as executed=true in 5.15B.1"
+    },
+    {
+      "qm": "qm_013",
+      "name": "qm_013",
+      "where_declared": "5.14.18 generator quality_report route_total; 5.15A reports show the reduced declared subset; backend.phase5_card_route_60_strict_connector_v513a3.EXECUTORS exposes the callable",
+      "why_missing_in_515b": "5.15B reused a reduced generator applicability set from 5.15A instead of the certified route_total coverage",
+      "correction": "restored as executed=true in 5.15B.1"
+    },
+    {
+      "qm": "qm_014",
+      "name": "qm_014",
+      "where_declared": "5.14.18 generator quality_report route_total; 5.15A reports show the reduced declared subset; backend.phase5_card_route_60_strict_connector_v513a3.EXECUTORS exposes the callable",
+      "why_missing_in_515b": "5.15B reused a reduced generator applicability set from 5.15A instead of the certified route_total coverage",
+      "correction": "restored as executed=true in 5.15B.1"
+    },
+    {
+      "qm": "qm_015",
+      "name": "qm_015",
+      "where_declared": "5.14.18 generator quality_report route_total; 5.15A reports show the reduced declared subset; backend.phase5_card_route_60_strict_connector_v513a3.EXECUTORS exposes the callable",
+      "why_missing_in_515b": "5.15B reused a reduced generator applicability set from 5.15A instead of the certified route_total coverage",
+      "correction": "restored as executed=true in 5.15B.1"
+    },
+    {
+      "qm": "qm_018",
+      "name": "qm_018",
+      "where_declared": "5.14.18 generator quality_report route_total; 5.15A reports show the reduced declared subset; backend.phase5_card_route_60_strict_connector_v513a3.EXECUTORS exposes the callable",
+      "why_missing_in_515b": "5.15B reused a reduced generator applicability set from 5.15A instead of the certified route_total coverage",
+      "correction": "restored as executed=true in 5.15B.1"
+    },
+    {
+      "qm": "qm_019",
+      "name": "qm_019",
+      "where_declared": "5.14.18 generator quality_report route_total; 5.15A reports show the reduced declared subset; backend.phase5_card_route_60_strict_connector_v513a3.EXECUTORS exposes the callable",
+      "why_missing_in_515b": "5.15B reused a reduced generator applicability set from 5.15A instead of the certified route_total coverage",
+      "correction": "restored as executed=true in 5.15B.1"
+    },
+    {
+      "qm": "qm_020",
+      "name": "qm_020",
+      "where_declared": "5.14.18 generator quality_report route_total; 5.15A reports show the reduced declared subset; backend.phase5_card_route_60_strict_connector_v513a3.EXECUTORS exposes the callable",
+      "why_missing_in_515b": "5.15B reused a reduced generator applicability set from 5.15A instead of the certified route_total coverage",
+      "correction": "restored as executed=true in 5.15B.1"
+    },
+    {
+      "qm": "qm_023",
+      "name": "qm_023",
+      "where_declared": "5.14.18 generator quality_report route_total; 5.15A reports show the reduced declared subset; backend.phase5_card_route_60_strict_connector_v513a3.EXECUTORS exposes the callable",
+      "why_missing_in_515b": "5.15B reused a reduced generator applicability set from 5.15A instead of the certified route_total coverage",
+      "correction": "restored as executed=true in 5.15B.1"
+    },
+    {
+      "qm": "qm_024",
+      "name": "qm_024",
+      "where_declared": "5.14.18 generator quality_report route_total; 5.15A reports show the reduced declared subset; backend.phase5_card_route_60_strict_connector_v513a3.EXECUTORS exposes the callable",
+      "why_missing_in_515b": "5.15B reused a reduced generator applicability set from 5.15A instead of the certified route_total coverage",
+      "correction": "restored as executed=true in 5.15B.1"
+    },
+    {
+      "qm": "qm_025",
+      "name": "qm_025",
+      "where_declared": "5.14.18 generator quality_report route_total; 5.15A reports show the reduced declared subset; backend.phase5_card_route_60_strict_connector_v513a3.EXECUTORS exposes the callable",
+      "why_missing_in_515b": "5.15B reused a reduced generator applicability set from 5.15A instead of the certified route_total coverage",
+      "correction": "restored as executed=true in 5.15B.1"
+    },
+    {
+      "qm": "qm_026",
+      "name": "qm_026",
+      "where_declared": "5.14.18 generator quality_report route_total; 5.15A reports show the reduced declared subset; backend.phase5_card_route_60_strict_connector_v513a3.EXECUTORS exposes the callable",
+      "why_missing_in_515b": "5.15B reused a reduced generator applicability set from 5.15A instead of the certified route_total coverage",
+      "correction": "restored as executed=true in 5.15B.1"
+    },
+    {
+      "qm": "qm_027",
+      "name": "qm_027",
+      "where_declared": "5.14.18 generator quality_report route_total; 5.15A reports show the reduced declared subset; backend.phase5_card_route_60_strict_connector_v513a3.EXECUTORS exposes the callable",
+      "why_missing_in_515b": "5.15B reused a reduced generator applicability set from 5.15A instead of the certified route_total coverage",
+      "correction": "restored as executed=true in 5.15B.1"
+    },
+    {
+      "qm": "qm_028",
+      "name": "qm_028",
+      "where_declared": "5.14.18 generator quality_report route_total; 5.15A reports show the reduced declared subset; backend.phase5_card_route_60_strict_connector_v513a3.EXECUTORS exposes the callable",
+      "why_missing_in_515b": "5.15B reused a reduced generator applicability set from 5.15A instead of the certified route_total coverage",
+      "correction": "restored as executed=true in 5.15B.1"
+    },
+    {
+      "qm": "qm_029",
+      "name": "qm_029",
+      "where_declared": "5.14.18 generator quality_report route_total; 5.15A reports show the reduced declared subset; backend.phase5_card_route_60_strict_connector_v513a3.EXECUTORS exposes the callable",
+      "why_missing_in_515b": "5.15B reused a reduced generator applicability set from 5.15A instead of the certified route_total coverage",
+      "correction": "restored as executed=true in 5.15B.1"
+    },
+    {
+      "qm": "qm_030",
+      "name": "qm_030",
+      "where_declared": "5.14.18 generator quality_report route_total; 5.15A reports show the reduced declared subset; backend.phase5_card_route_60_strict_connector_v513a3.EXECUTORS exposes the callable",
+      "why_missing_in_515b": "5.15B reused a reduced generator applicability set from 5.15A instead of the certified route_total coverage",
+      "correction": "restored as executed=true in 5.15B.1"
+    },
+    {
+      "qm": "qm_031",
+      "name": "qm_031",
+      "where_declared": "5.14.18 generator quality_report route_total; 5.15A reports show the reduced declared subset; backend.phase5_card_route_60_strict_connector_v513a3.EXECUTORS exposes the callable",
+      "why_missing_in_515b": "5.15B reused a reduced generator applicability set from 5.15A instead of the certified route_total coverage",
+      "correction": "restored as executed=true in 5.15B.1"
+    },
+    {
+      "qm": "qm_032",
+      "name": "qm_032",
+      "where_declared": "5.14.18 generator quality_report route_total; 5.15A reports show the reduced declared subset; backend.phase5_card_route_60_strict_connector_v513a3.EXECUTORS exposes the callable",
+      "why_missing_in_515b": "5.15B reused a reduced generator applicability set from 5.15A instead of the certified route_total coverage",
+      "correction": "restored as executed=true in 5.15B.1"
+    },
+    {
+      "qm": "qm_045",
+      "name": "qm_045",
+      "where_declared": "5.14.18 generator quality_report route_total; 5.15A reports show the reduced declared subset; backend.phase5_card_route_60_strict_connector_v513a3.EXECUTORS exposes the callable",
+      "why_missing_in_515b": "5.15B reused a reduced generator applicability set from 5.15A instead of the certified route_total coverage",
+      "correction": "restored as executed=true in 5.15B.1"
+    },
+    {
+      "qm": "qm_046",
+      "name": "qm_046",
+      "where_declared": "5.14.18 generator quality_report route_total; 5.15A reports show the reduced declared subset; backend.phase5_card_route_60_strict_connector_v513a3.EXECUTORS exposes the callable",
+      "why_missing_in_515b": "5.15B reused a reduced generator applicability set from 5.15A instead of the certified route_total coverage",
+      "correction": "restored as executed=true in 5.15B.1"
+    },
+    {
+      "qm": "qm_047",
+      "name": "qm_047",
+      "where_declared": "5.14.18 generator quality_report route_total; 5.15A reports show the reduced declared subset; backend.phase5_card_route_60_strict_connector_v513a3.EXECUTORS exposes the callable",
+      "why_missing_in_515b": "5.15B reused a reduced generator applicability set from 5.15A instead of the certified route_total coverage",
+      "correction": "restored as executed=true in 5.15B.1"
+    },
+    {
+      "qm": "qm_049",
+      "name": "qm_049",
+      "where_declared": "5.14.18 generator quality_report route_total; 5.15A reports show the reduced declared subset; backend.phase5_card_route_60_strict_connector_v513a3.EXECUTORS exposes the callable",
+      "why_missing_in_515b": "5.15B reused a reduced generator applicability set from 5.15A instead of the certified route_total coverage",
+      "correction": "restored as executed=true in 5.15B.1"
+    },
+    {
+      "qm": "qm_050",
+      "name": "qm_050",
+      "where_declared": "5.14.18 generator quality_report route_total; 5.15A reports show the reduced declared subset; backend.phase5_card_route_60_strict_connector_v513a3.EXECUTORS exposes the callable",
+      "why_missing_in_515b": "5.15B reused a reduced generator applicability set from 5.15A instead of the certified route_total coverage",
+      "correction": "restored as executed=true in 5.15B.1"
+    },
+    {
+      "qm": "qm_052",
+      "name": "qm_052",
+      "where_declared": "5.14.18 generator quality_report route_total; 5.15A reports show the reduced declared subset; backend.phase5_card_route_60_strict_connector_v513a3.EXECUTORS exposes the callable",
+      "why_missing_in_515b": "5.15B reused a reduced generator applicability set from 5.15A instead of the certified route_total coverage",
+      "correction": "restored as executed=true in 5.15B.1"
+    },
+    {
+      "qm": "qm_053",
+      "name": "qm_053",
+      "where_declared": "5.14.18 generator quality_report route_total; 5.15A reports show the reduced declared subset; backend.phase5_card_route_60_strict_connector_v513a3.EXECUTORS exposes the callable",
+      "why_missing_in_515b": "5.15B reused a reduced generator applicability set from 5.15A instead of the certified route_total coverage",
+      "correction": "restored as executed=true in 5.15B.1"
+    },
+    {
+      "qm": "qm_061",
+      "name": "qm_061",
+      "where_declared": "5.14.18 generator quality_report route_total; 5.15A reports show the reduced declared subset; backend.phase5_card_route_60_strict_connector_v513a3.EXECUTORS exposes the callable",
+      "why_missing_in_515b": "5.15B reused a reduced generator applicability set from 5.15A instead of the certified route_total coverage",
+      "correction": "restored as executed=true in 5.15B.1"
+    },
+    {
+      "qm": "qm_062",
+      "name": "qm_062",
+      "where_declared": "5.14.18 generator quality_report route_total; 5.15A reports show the reduced declared subset; backend.phase5_card_route_60_strict_connector_v513a3.EXECUTORS exposes the callable",
+      "why_missing_in_515b": "5.15B reused a reduced generator applicability set from 5.15A instead of the certified route_total coverage",
+      "correction": "restored as executed=true in 5.15B.1"
+    },
+    {
+      "qm": "qm_063",
+      "name": "qm_063",
+      "where_declared": "5.14.18 generator quality_report route_total; 5.15A reports show the reduced declared subset; backend.phase5_card_route_60_strict_connector_v513a3.EXECUTORS exposes the callable",
+      "why_missing_in_515b": "5.15B reused a reduced generator applicability set from 5.15A instead of the certified route_total coverage",
+      "correction": "restored as executed=true in 5.15B.1"
+    },
+    {
+      "qm": "qm_064",
+      "name": "qm_064",
+      "where_declared": "5.14.18 generator quality_report route_total; 5.15A reports show the reduced declared subset; backend.phase5_card_route_60_strict_connector_v513a3.EXECUTORS exposes the callable",
+      "why_missing_in_515b": "5.15B reused a reduced generator applicability set from 5.15A instead of the certified route_total coverage",
+      "correction": "restored as executed=true in 5.15B.1"
+    }
+  ],
+  "restored_qm_by_generator": {
+    "study_questions": [
+      "qm_001",
+      "qm_002",
+      "qm_003",
+      "qm_004",
+      "qm_005",
+      "qm_006",
+      "qm_007",
+      "qm_008",
+      "qm_009",
+      "qm_010",
+      "qm_011",
+      "qm_012",
+      "qm_016",
+      "qm_019",
+      "qm_020",
+      "qm_023",
+      "qm_024",
+      "qm_025",
+      "qm_026",
+      "qm_027",
+      "qm_028",
+      "qm_029",
+      "qm_030",
+      "qm_031",
+      "qm_032",
+      "qm_045",
+      "qm_046",
+      "qm_047",
+      "qm_049",
+      "qm_050",
+      "qm_052",
+      "qm_053",
+      "qm_061",
+      "qm_062",
+      "qm_063",
+      "qm_064"
+    ],
+    "quiz": [
+      "qm_001",
+      "qm_002",
+      "qm_003",
+      "qm_004",
+      "qm_005",
+      "qm_006",
+      "qm_007",
+      "qm_008",
+      "qm_009",
+      "qm_010",
+      "qm_011",
+      "qm_012",
+      "qm_013",
+      "qm_014",
+      "qm_015",
+      "qm_018",
+      "qm_019",
+      "qm_020",
+      "qm_023",
+      "qm_024",
+      "qm_025",
+      "qm_026",
+      "qm_027",
+      "qm_028",
+      "qm_029",
+      "qm_030",
+      "qm_031",
+      "qm_032",
+      "qm_045",
+      "qm_046",
+      "qm_047",
+      "qm_049",
+      "qm_050",
+      "qm_052",
+      "qm_053",
+      "qm_061",
+      "qm_062",
+      "qm_063",
+      "qm_064"
+    ]
+  },
+  "remaining_non_executable_qm_by_generator": {
+    "summary": [],
+    "cards": [],
+    "study_questions": [],
+    "quiz": []
+  },
+  "smoke_defects": [],
+  "evidence_files": {
+    "trace": "reports/phase5_15b1_qm_coverage_reconciliation_trace_v1.json",
+    "report_json": "reports/phase5_15b1_qm_coverage_reconciliation_report_v1.json",
+    "report_md": "reports/phase5_15b1_qm_coverage_reconciliation_report_v1.md",
+    "phase5_15a_trace": "reports/phase5_15a_generator_motor_trace_v1.json",
+    "phase5_15a_proof": "reports/phase5_15a_executable_registry_connection_proof_v1.json",
+    "audit": "reports/audit_completo_73_motori_rag_qualita_v1.json"
+  }
+}
