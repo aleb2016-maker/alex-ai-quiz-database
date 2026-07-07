@@ -179,6 +179,157 @@ def _join_fact_clauses(facts: List[str], limit: int) -> str:
     return " ".join(_finish_sentence(item) for item in clauses)
 
 
+def _v515f4_word_count(text: str) -> int:
+    return len(re.findall(r"[A-Za-zÀ-ÖØ-öø-ÿ0-9]+", str(text or "")))
+
+
+def _v515f4_document_blocks(text: str) -> List[Dict[str, Any]]:
+    clean = _clean_text(text)
+    blocks: List[Dict[str, Any]] = []
+    pattern = re.compile(
+        r"^\s*(\[Documento[^\]]+\])\s*(.*?)(?=^\s*\[Documento[^\]]+\]|\Z)",
+        flags=re.M | re.S,
+    )
+
+    for match in pattern.finditer(clean):
+        header = match.group(1).strip()
+        body = match.group(2).strip()
+        facts = _split_sentences(body)
+        if not facts:
+            continue
+        title = header.strip("[] ")
+        label = re.sub(r"^Documento\s+[A-Z0-9]+\s*-\s*", "", title, flags=re.I).strip()
+        blocks.append(
+            {
+                "title": title,
+                "label": label or title,
+                "facts": facts,
+                "body": body,
+            }
+        )
+
+    if len(blocks) < 2:
+        return []
+
+    return blocks
+
+
+def _v515f4_select_document_facts(facts: List[str], limit: int) -> List[str]:
+    selected = _spread([fact for fact in facts if str(fact or "").strip()], limit)
+    return selected[:limit]
+
+
+def _v515f4_fact_chain(facts: List[str]) -> str:
+    clauses = []
+    connectors = ["", " Inoltre, ", " Di conseguenza, "]
+
+    for index, fact in enumerate(facts[:3]):
+        clause = _lower_initial(fact)
+        prefix = connectors[index] if index < len(connectors) else " Inoltre, "
+        clauses.append(prefix + _finish_sentence(clause))
+
+    return " ".join(part.strip() for part in clauses if part.strip())
+
+
+def _v515f4_summary_depth_metrics(input_text: str, clean_text: str, summary: str, blocks: List[Dict[str, Any]]) -> Dict[str, Any]:
+    source = clean_text or input_text or ""
+    input_words = _v515f4_word_count(source)
+    summary_words = _v515f4_word_count(summary)
+    input_chars = len(source)
+    summary_chars = len(summary or "")
+    target_ratio = 0.10
+    target_min_words = max(1, int(input_words * target_ratio))
+    summary_low = str(summary or "").lower()
+    covered_documents = [
+        block["title"]
+        for block in blocks
+        if str(block.get("label") or "").lower() in summary_low
+        or str(block.get("title") or "").lower() in summary_low
+    ]
+
+    return {
+        "input_words": input_words,
+        "input_chars": input_chars,
+        "summary_words": summary_words,
+        "summary_chars": summary_chars,
+        "summary_to_input_word_ratio": round(summary_words / max(1, input_words), 3),
+        "summary_to_input_char_ratio": round(summary_chars / max(1, input_chars), 3),
+        "target_min_word_ratio": target_ratio,
+        "target_min_words": target_min_words,
+        "target_10_percent_reached": summary_words >= target_min_words,
+        "documents_detected": len(blocks),
+        "documents_covered": covered_documents,
+        "document_coverage_ratio": round(len(covered_documents) / max(1, len(blocks)), 3),
+    }
+
+
+def _v515f4_build_multidocument_summary(text: str, clean: str, facts: List[str]) -> Dict[str, Any]:
+    blocks = _v515f4_document_blocks(clean or text)
+    if not blocks:
+        return {}
+
+    labels = [str(block.get("label") or block.get("title") or "").strip() for block in blocks]
+    labels = [label for label in labels if label]
+    selected_blocks = blocks[:4]
+    per_document_limit = 3 if len(selected_blocks) <= 3 else 2
+    paragraphs: List[str] = []
+
+    if labels:
+        if len(labels) == 2:
+            overview = f"Il materiale collega {labels[0]} e {labels[1]} in un percorso operativo unico."
+        else:
+            overview = (
+                "Il materiale collega "
+                + ", ".join(labels[:-1])
+                + f" e {labels[-1]} in un percorso operativo unico."
+            )
+        paragraphs.append(
+            _finish_sentence(
+                overview
+                + " Il riassunto distingue i documenti per conservare contesto, responsabilità e passaggi verificabili."
+            )
+        )
+
+    templates = [
+        "Nel {title}, {chain}",
+        "Sul versante di {title}, {chain}",
+        "Per {title}, {chain}",
+        "La sezione {title} aggiunge che {chain}",
+    ]
+
+    for index, block in enumerate(selected_blocks):
+        doc_facts = _v515f4_select_document_facts(block["facts"], per_document_limit)
+        if not doc_facts:
+            continue
+        title = str(block.get("label") or block.get("title") or f"documento {index + 1}")
+        chain = _v515f4_fact_chain(doc_facts)
+        paragraph = templates[index % len(templates)].format(title=title, chain=chain)
+        paragraphs.append(_finish_sentence(paragraph))
+
+    if labels:
+        closing_terms = ", ".join(labels[:3])
+        paragraphs.append(
+            _finish_sentence(
+                "Nel complesso, la sintesi mantiene separati i nuclei informativi e mostra come "
+                + closing_terms
+                + " contribuiscano a una procedura applicabile, tracciabile e controllabile."
+            )
+        )
+
+    content = "\n\n".join(_finish_sentence(paragraph) for paragraph in paragraphs if paragraph.strip())
+    _validate_summary(content)
+    metrics = _v515f4_summary_depth_metrics(text, clean, content, blocks)
+
+    return {
+        "content": content,
+        "blocks": blocks,
+        "metrics": metrics,
+        "selected_documents": [block["title"] for block in selected_blocks],
+        "selected_fact_count": sum(min(len(block["facts"]), per_document_limit) for block in selected_blocks),
+        "source_facts_count": len(facts),
+    }
+
+
 def _keywords(text: str, limit: int = 5) -> List[str]:
     words = re.findall(r"[A-Za-zÀ-ÖØ-öø-ÿ]{4,}", text.lower())
     words = [w for w in words if w not in STOPWORDS]
@@ -249,6 +400,36 @@ def _validate_summary(content: str) -> None:
 def run_summary_pipeline(text: str) -> Dict[str, Any]:
     clean = _clean_text(text)
     facts = _extract_facts(clean, 16)
+    multidoc_summary = _v515f4_build_multidocument_summary(text, clean, facts)
+
+    if multidoc_summary:
+        content = str(multidoc_summary["content"])
+        return {
+            "kind": "summary",
+            "motor_name": "full_pipeline_summary_route55_all_motors_v51416",
+            "approved": True,
+            "status": "APPROVED",
+            "content": content,
+            "items": [],
+            "quality_report": _quality_report(
+                "summary",
+                text,
+                clean,
+                facts,
+                {
+                    "route_total": 55,
+                    "quality_controls": 55,
+                    "summary_style": "natural_paragraphs",
+                    "forbidden_output_style": "bullet_list",
+                    "phase5_15f4_summary_depth_patch": True,
+                    "phase5_15f4_scope": "multi_document_summary_only",
+                    "summary_depth_metrics": multidoc_summary["metrics"],
+                    "multi_document_sections": multidoc_summary["selected_documents"],
+                    "multi_document_selected_fact_count": multidoc_summary["selected_fact_count"],
+                    "multi_document_source_fact_count": multidoc_summary["source_facts_count"],
+                },
+            ),
+        }
 
     first = facts[:3]
     middle = facts[3:8]

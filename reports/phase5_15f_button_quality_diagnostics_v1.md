@@ -10,19 +10,19 @@ Status diagnostica: **PASS**
 ## Stato Git
 
 - Branch: `rag-concept-app-presentabile-v3`
-- Commit: `7e7d52b`
-- Tag su HEAD: `checkpoint-mini-llm-study-multidoc-quality-v515f2`
-- Stato git short: `M backend/phase5_15b_quality_checked_generators.py
+- Commit: `2ee8cc4`
+- Tag su HEAD: `checkpoint-mini-llm-cards-multidoc-quality-v515f3`
+- Stato git short: `M backend/phase5_full_pipeline_runtime_v51416.py
  M reports/phase5_15e_approved_outputs_report_v1.json
  M reports/phase5_15f_button_quality_diagnostics_v1.json
  M reports/phase5_15f_button_quality_diagnostics_v1.md
-?? reports/phase5_15f3_cards_patch_safety_review_v1.md`
+?? reports/phase5_15f4_summary_depth_patch_safety_review_v1.md`
 
 ## Tabella 4 pulsanti
 
 | Pulsante | Generatore | Motore effettivo | QM | Output reali | Approved | Problemi principali |
 | --- | --- | --- | ---: | --- | --- | --- |
-| Genera Riassunto | `summary` | `full_pipeline_summary_route55_all_motors_v51416` | 55/55 | [1, 1] | True | riassunto non abbastanza profondo |
+| Genera Riassunto | `summary` | `full_pipeline_summary_route55_all_motors_v51416` | 55/55 | [1, 1] | True | nessuno bloccante |
 | Genera Card | `cards` | `full_pipeline_cards_60_motors_graphic_v51416` | 60/60 | [8, 8] | True | ripetizioni |
 | Genera Test/Quiz | `quiz` | `full_pipeline_quiz_route63_language_quality_v51418` | 63/63 | [4, 4] | True | nessuno bloccante |
 | Genera Domande studio | `study_questions` | `full_pipeline_study_route51_language_quality_v51418` | 51/51 | [4, 4] | True | nessuno bloccante |
@@ -31,10 +31,10 @@ Status diagnostica: **PASS**
 
 ### Genera Riassunto - `full_pipeline_summary_route55_all_motors_v51416`
 
-- Classi problema: problema qualità linguistica
+- Classi problema: nessuna
 - Difetti tecnici: nessuno
-- Warning: riassunto_non_copre_abbastanza_sezioni
-- Problemi RAG: riassunto non abbastanza profondo
+- Warning: nessuno
+- Problemi RAG: nessuno
 - Problemi didattici: nessuno
 - Sample: Il documento spiega che la gestione degli ordini in un magazzino moderno richiede una procedura chiara per ricevere, controllare, registrare e spedire i prodotti. In apertura chiarisce anche che quando arriva una nuova merce, l'operatore verifica il documento di trasporto, controlla quantità e integrità degli articoli e segnala eventuali differenze. Questi elementi introducono il flusso operativo su cui si sviluppano ricezione, controllo e registrazione. La parte centrale approfondisce gli aspetti più operativi: Durante la preparazione degli ordini, il sistema genera una lista di prelievo con codice articolo, quantità richiesta e posizione. L'operatore raccoglie i prodotti, controlla che cor
 
@@ -69,22 +69,22 @@ Status diagnostica: **PASS**
 
 | Priorità | Pulsante | Generatore | Motore | Score | Motivo |
 | ---: | --- | --- | --- | ---: | --- |
-| 1 | Genera Riassunto | `summary` | `full_pipeline_summary_route55_all_motors_v51416` | 4 | riassunto non abbastanza profondo |
-| 2 | Genera Card | `cards` | `full_pipeline_cards_60_motors_graphic_v51416` | 4 | ripetizioni |
+| 1 | Genera Card | `cards` | `full_pipeline_cards_60_motors_graphic_v51416` | 4 | ripetizioni |
+| 2 | Genera Riassunto | `summary` | `full_pipeline_summary_route55_all_motors_v51416` | 0 | nessun problema bloccante |
 | 3 | Genera Test/Quiz | `quiz` | `full_pipeline_quiz_route63_language_quality_v51418` | 0 | nessun problema bloccante |
 | 4 | Genera Domande studio | `study_questions` | `full_pipeline_study_route51_language_quality_v51418` | 0 | nessun problema bloccante |
 
 ## Primo motore da migliorare
 
-- Motore/file: `full_pipeline_summary_route55_all_motors_v51416`
-- Generatore: `summary`
+- Motore/file: `full_pipeline_cards_60_motors_graphic_v51416`
+- Generatore: `cards`
 - File candidato: `backend/phase5_full_pipeline_runtime_v51416.py`
 - Raccomandazione: **patch mirata sui motori linguistici/didattici, nessuna patch a bridge/UI/QM**
 
 ## Distinzione problemi
 
 - bug tecnico: nessuno
-- problema qualità linguistica: summary:riassunto non abbastanza profondo, summary:riassunto_non_copre_abbastanza_sezioni
+- problema qualità linguistica: nessuno
 - problema qualità RAG: cards:radici_ripetute:analizzat,azione,collega,concreto,contenuto,degli,evidenzia,magazzino, cards:ripetizioni
 - problema didattico: nessuno
 - problema UI/bridge: nessuno

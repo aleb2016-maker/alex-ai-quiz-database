@@ -1,14 +1,14 @@
 {
   "phase": "5.15F.0",
   "status": "PASS",
-  "created_at": "2026-07-07T21:05:01",
+  "created_at": "2026-07-07T21:19:30",
   "scope": "diagnostica reale pulsanti generatori RAG/LLM senza modifiche funzionali",
   "git": {
     "branch": "rag-concept-app-presentabile-v3",
-    "commit": "7e7d52b",
-    "commit_full": "7e7d52beaa8819b6bf580674ae195bb021a60bcb",
+    "commit": "2ee8cc4",
+    "commit_full": "2ee8cc45e40763304671940f733b43701d7de056",
     "tags_at_head": [
-      "checkpoint-mini-llm-study-multidoc-quality-v515f2"
+      "checkpoint-mini-llm-cards-multidoc-quality-v515f3"
     ],
     "relevant_tags": [
       "checkpoint-mini-llm-advanced-language-repair-v512f",
@@ -16,6 +16,7 @@
       "checkpoint-mini-llm-audit-motori-qualita-v515",
       "checkpoint-mini-llm-card-route-60-universal-title-v513a",
       "checkpoint-mini-llm-card-summary-source-quality-v512d",
+      "checkpoint-mini-llm-cards-multidoc-quality-v515f3",
       "checkpoint-mini-llm-contextual-duplicates-v512g",
       "checkpoint-mini-llm-current-speed-benchmark",
       "checkpoint-mini-llm-current-v315-stable",
@@ -108,7 +109,7 @@
       "checkpoint-mini-llm-v314-rewrite-only-safe",
       "checkpoint-mini-llm-v315-extended-safe"
     ],
-    "status_short": "M backend/phase5_15b_quality_checked_generators.py\n M reports/phase5_15e_approved_outputs_report_v1.json\n M reports/phase5_15f_button_quality_diagnostics_v1.json\n M reports/phase5_15f_button_quality_diagnostics_v1.md\n?? reports/phase5_15f3_cards_patch_safety_review_v1.md",
+    "status_short": "M backend/phase5_full_pipeline_runtime_v51416.py\n M reports/phase5_15e_approved_outputs_report_v1.json\n M reports/phase5_15f_button_quality_diagnostics_v1.json\n M reports/phase5_15f_button_quality_diagnostics_v1.md\n?? reports/phase5_15f4_summary_depth_patch_safety_review_v1.md",
     "checkpoint_expected": {
       "commit": "0444d0d",
       "tag": "checkpoint-mini-llm-approved-generators-v515e",
@@ -224,16 +225,10 @@
         1
       ],
       "defects": [],
-      "warnings": [
-        "riassunto_non_copre_abbastanza_sezioni"
-      ],
-      "problemi_rag_osservati": [
-        "riassunto non abbastanza profondo"
-      ],
+      "warnings": [],
+      "problemi_rag_osservati": [],
       "problemi_didattici_osservati": [],
-      "issue_classes": [
-        "problema qualità linguistica"
-      ],
+      "issue_classes": [],
       "sample_output_breve": "Il documento spiega che la gestione degli ordini in un magazzino moderno richiede una procedura chiara per ricevere, controllare, registrare e spedire i prodotti. In apertura chiarisce anche che quando arriva una nuova merce, l'operatore verifica il documento di trasporto, controlla quantità e integrità degli articoli e segnala eventuali differenze. Questi elementi introducono il flusso operativo su cui si sviluppano ricezione, controllo e registrazione. La parte centrale approfondisce gli aspetti più operativi: Durante la preparazione degli ordini, il sistema genera una lista di prelievo con codice articolo, quantità richiesta e posizione. L'operatore raccoglie i prodotti, controlla che cor"
     },
     {
@@ -568,19 +563,13 @@
       "approved": true,
       "status": "APPROVED",
       "defects": [],
-      "warnings": [
-        "riassunto_non_copre_abbastanza_sezioni"
-      ],
-      "sample_output_breve": "Il documento spiega che [Documento A - Protocollo triage ambulatoriale]. In apertura chiarisce anche che il centro medico organizza il triage iniziale con una scheda di priorità, un controllo dei parametri vitali e una verifica dei sintomi riferiti dal paziente. Questi elementi introducono il flusso operativo su cui si sviluppano ricezione, controllo e registrazione. La parte centrale approfondisce gli aspetti più operativi: I casi con dolore toracico, dispnea o peggioramento neurologico devono essere rivalutati rapidamente anche se la sala d'attesa è piena. [Documento B - Continuità assistenziale]. Dopo la visita, il medico consegna un piano di follow-up con terapia, segnali di allarme e ca",
+      "warnings": [],
+      "sample_output_breve": "Il materiale collega Protocollo triage ambulatoriale, Continuità assistenziale e Audit qualità in un percorso operativo unico. Il riassunto distingue i documenti per conservare contesto, responsabilità e passaggi verificabili. Nel Protocollo triage ambulatoriale, il centro medico organizza il triage iniziale con una scheda di priorità, un controllo dei parametri vitali e una verifica dei sintomi riferiti dal paziente. Inoltre, l'infermiere registra ora di arrivo, livello di urgenza e motivo della visita. Di conseguenza, i casi con dolore toracico, dispnea o peggioramento neurologico devono essere rivalutati rapidamente anche se la sala d'attesa è piena. Sul versante di Continuità assistenzia",
       "qualita_linguistica_osservata": "buona: paragrafi leggibili",
       "qualita_didattica_osservata": "media: utile per orientarsi, ma da verificare profondita su documenti multipli",
-      "problemi_rag_osservati": [
-        "riassunto non abbastanza profondo"
-      ],
+      "problemi_rag_osservati": [],
       "problemi_didattici_osservati": [],
-      "issue_classes": [
-        "problema qualità linguistica"
-      ],
+      "issue_classes": [],
       "quality_report": {
         "phase": "5.14.16",
         "kind": "summary",
@@ -607,6 +596,33 @@
         "quality_controls": 55,
         "summary_style": "natural_paragraphs",
         "forbidden_output_style": "bullet_list",
+        "phase5_15f4_summary_depth_patch": true,
+        "phase5_15f4_scope": "multi_document_summary_only",
+        "summary_depth_metrics": {
+          "input_words": 172,
+          "input_chars": 1193,
+          "summary_words": 235,
+          "summary_chars": 1703,
+          "summary_to_input_word_ratio": 1.366,
+          "summary_to_input_char_ratio": 1.427,
+          "target_min_word_ratio": 0.1,
+          "target_min_words": 17,
+          "target_10_percent_reached": true,
+          "documents_detected": 3,
+          "documents_covered": [
+            "Documento A - Protocollo triage ambulatoriale",
+            "Documento B - Continuità assistenziale",
+            "Documento C - Audit qualità"
+          ],
+          "document_coverage_ratio": 1.0
+        },
+        "multi_document_sections": [
+          "Documento A - Protocollo triage ambulatoriale",
+          "Documento B - Continuità assistenziale",
+          "Documento C - Audit qualità"
+        ],
+        "multi_document_selected_fact_count": 9,
+        "multi_document_source_fact_count": 11,
         "connection_status": "RUNTIME_TRACE_PROVED_BY_PHASE5_15B",
         "qm_runtime_trace_reference": "top_level.qm_runtime_trace"
       }
@@ -803,21 +819,19 @@
   "intervention_priorities": [
     {
       "priority_score": 4,
-      "button_label": "Genera Riassunto",
-      "generator_name": "summary",
-      "engine_id": "full_pipeline_summary_route55_all_motors_v51416",
-      "main_issues": [
-        "riassunto non abbastanza profondo"
-      ]
-    },
-    {
-      "priority_score": 4,
       "button_label": "Genera Card",
       "generator_name": "cards",
       "engine_id": "full_pipeline_cards_60_motors_graphic_v51416",
       "main_issues": [
         "ripetizioni"
       ]
+    },
+    {
+      "priority_score": 0,
+      "button_label": "Genera Riassunto",
+      "generator_name": "summary",
+      "engine_id": "full_pipeline_summary_route55_all_motors_v51416",
+      "main_issues": []
     },
     {
       "priority_score": 0,
@@ -836,20 +850,17 @@
   ],
   "first_engine_to_improve": {
     "priority_score": 4,
-    "button_label": "Genera Riassunto",
-    "generator_name": "summary",
-    "engine_id": "full_pipeline_summary_route55_all_motors_v51416",
+    "button_label": "Genera Card",
+    "generator_name": "cards",
+    "engine_id": "full_pipeline_cards_60_motors_graphic_v51416",
     "main_issues": [
-      "riassunto non abbastanza profondo"
+      "ripetizioni"
     ],
     "recommended_file": "backend/phase5_full_pipeline_runtime_v51416.py"
   },
   "issue_taxonomy": {
     "bug tecnico": [],
-    "problema qualità linguistica": [
-      "summary:riassunto non abbastanza profondo",
-      "summary:riassunto_non_copre_abbastanza_sezioni"
-    ],
+    "problema qualità linguistica": [],
     "problema qualità RAG": [
       "cards:radici_ripetute:analizzat,azione,collega,concreto,contenuto,degli,evidenzia,magazzino",
       "cards:ripetizioni"
