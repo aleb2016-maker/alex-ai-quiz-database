@@ -304,6 +304,14 @@ def _card_payloads(raw_output: Dict[str, Any], input_text: str, generator: str) 
 
 def _call_generator(generator: str, input_text: str) -> Dict[str, Any]:
     _ensure_import_path()
+    from backend.phase5_15g1_long_document_orchestrator import (
+        build_long_generator_output,
+        is_long_document,
+    )
+
+    if is_long_document(input_text):
+        return _plain(build_long_generator_output(generator, input_text))
+
     from scripts.run_phase5_14_3_local_backend_bridge import generate_raw
 
     return _plain(generate_raw(BRIDGE_KIND[generator], input_text))
@@ -461,6 +469,242 @@ def _final_output_with_trace_reference(raw_output: Dict[str, Any], trace_support
     return final_output
 
 
+
+def _v515g1_cards_qm_compat_raw_output(raw_output):
+    if not isinstance(raw_output, dict):
+        return raw_output
+    quality_report = raw_output.get("quality_report")
+    if not isinstance(quality_report, dict):
+        return raw_output
+    if quality_report.get("phase5_15g1_long_document_orchestrator") is not True:
+        return raw_output
+    if raw_output.get("kind") != "cards":
+        return raw_output
+
+    items = raw_output.get("items") or raw_output.get("cards") or []
+    if not isinstance(items, list):
+        return raw_output
+
+    for idx, item in enumerate(items, start=1):
+        if not isinstance(item, dict):
+            continue
+
+        title = str(item.get("title") or item.get("titolo") or f"Macro-area operativa {idx}").strip()
+        macro_index = item.get("macro_area_index") or item.get("macro_block") or item.get("block_index") or idx
+        macro_area = str(item.get("macro_area") or item.get("source_macro_area") or "Manuale aziendale").strip()
+
+        source = f"Documento operativo - Manuale aziendale - Macro-area {macro_index}"
+        context = f"Macro-area {macro_index} - {macro_area}"
+
+        key_message = str(
+            item.get("key_message")
+            or item.get("messaggio_chiave")
+            or item.get("fatto_origine")
+            or title
+        ).strip()
+        while key_message.lower().startswith((title + ": " + title + ":").lower()):
+            key_message = key_message[len(title) + 2:].strip()
+        if title.lower() not in key_message.lower():
+            key_message = f"{title}: {key_message}"
+
+        explanation = str(
+            item.get("explanation")
+            or item.get("spiegazione")
+            or key_message
+        ).strip()
+        if title.lower() not in explanation.lower():
+            explanation = f"{title}. {explanation}"
+
+        short_explanation = str(
+            item.get("short_explanation")
+            or item.get("spiegazione_breve")
+            or explanation
+        ).strip()
+
+        raw_points = item.get("bullet_points") or item.get("bullets") or item.get("points") or []
+        points = [str(point).strip() for point in raw_points if str(point).strip()]
+        if not points:
+            points = [key_message, explanation]
+        if not any(title.lower() in point.lower() for point in points):
+            points.insert(0, key_message)
+
+        item.update({
+            "title": title,
+            "titolo": title,
+            "key_message": key_message,
+            "messaggio_chiave": key_message,
+            "short_explanation": short_explanation,
+            "spiegazione_breve": short_explanation,
+            "explanation": explanation,
+            "spiegazione": explanation,
+            "points": points[:5],
+            "bullets": points[:5],
+            "bullet_points": points[:5],
+            "source_label": source,
+            "source": source,
+            "fonte": source,
+            "context": context,
+            "sottocontesto": context,
+            "categoria": "Documento operativo",
+            "category": "Documento operativo",
+            "domain": "Documento operativo",
+            "topic": title,
+            "subcategory": title,
+            "sottocategoria": title,
+            "quality_rewrite": "v515g1_cards_qm_compat_raw_output",
+            "card_payload": True,
+            "quiz_payload": False,
+        })
+
+    raw_output.update({
+        "source_label": "Documento operativo - Manuale aziendale",
+        "source": "Documento operativo - Manuale aziendale",
+        "fonte": "Documento operativo - Manuale aziendale",
+        "context": "Documento lungo multi-sezione",
+        "sottocontesto": "Documento lungo multi-sezione",
+        "categoria": "Documento operativo",
+        "category": "Documento operativo",
+        "domain": "Documento operativo",
+        "topic": "Mappa globale documento lungo",
+    })
+    return raw_output
+
+
+
+def _v515g1_cards_qm_compat_payload(payload, raw_output):
+    if not isinstance(raw_output, dict):
+        return payload
+    quality_report = raw_output.get("quality_report")
+    if not isinstance(quality_report, dict):
+        return payload
+    if quality_report.get("phase5_15g1_long_document_orchestrator") is not True:
+        return payload
+    if raw_output.get("kind") != "cards":
+        return payload
+    if not isinstance(payload, list):
+        return payload
+
+    raw_items = raw_output.get("items") or raw_output.get("cards") or []
+    if not isinstance(raw_items, list):
+        raw_items = []
+
+    for index, item in enumerate(payload):
+        if not isinstance(item, dict):
+            continue
+        raw_item = raw_items[index] if index < len(raw_items) and isinstance(raw_items[index], dict) else {}
+
+        title = str(
+            raw_item.get("title")
+            or raw_item.get("titolo")
+            or item.get("title")
+            or item.get("titolo")
+            or f"Macro-area operativa {index + 1}"
+        ).strip()
+
+        macro_index = (
+            raw_item.get("macro_area_index")
+            or item.get("macro_area_index")
+            or raw_item.get("macro_block")
+            or item.get("macro_block")
+            or index + 1
+        )
+        macro_area = str(
+            raw_item.get("macro_area")
+            or item.get("macro_area")
+            or raw_item.get("source_macro_area")
+            or "Manuale aziendale"
+        ).strip()
+
+        source = f"Documento operativo - Manuale aziendale - Macro-area {macro_index}"
+        context = f"Macro-area {macro_index} - {macro_area}"
+
+        key_message = str(
+            raw_item.get("key_message")
+            or raw_item.get("messaggio_chiave")
+            or raw_item.get("fatto_origine")
+            or item.get("key_message")
+            or item.get("messaggio_chiave")
+            or title
+        ).strip()
+        if title.lower() not in key_message.lower():
+            key_message = f"{title}: {key_message}"
+
+        explanation = str(
+            raw_item.get("explanation")
+            or raw_item.get("spiegazione")
+            or item.get("explanation")
+            or item.get("spiegazione")
+            or key_message
+        ).strip()
+        if title.lower() not in explanation.lower():
+            explanation = f"{title}. {explanation}"
+
+        short_explanation = str(
+            raw_item.get("short_explanation")
+            or raw_item.get("spiegazione_breve")
+            or item.get("short_explanation")
+            or item.get("spiegazione_breve")
+            or explanation
+        ).strip()
+
+        points = (
+            raw_item.get("bullet_points")
+            or raw_item.get("bullets")
+            or raw_item.get("points")
+            or item.get("bullet_points")
+            or item.get("bullets")
+            or item.get("points")
+            or []
+        )
+        points = [str(point).strip() for point in points if str(point).strip()]
+        if not points:
+            points = [key_message, explanation]
+        if not any(title.lower() in point.lower() for point in points):
+            points.insert(0, key_message)
+
+        item.update({
+            "title": title,
+            "titolo": title,
+            "key_message": key_message,
+            "messaggio_chiave": key_message,
+            "short_explanation": short_explanation,
+            "spiegazione_breve": short_explanation,
+            "explanation": explanation,
+            "spiegazione": explanation,
+            "points": points[:5],
+            "bullets": points[:5],
+            "bullet_points": points[:5],
+            "source_label": source,
+            "source": source,
+            "fonte": source,
+            "visible_source": source,
+            "pretty_source": source,
+            "fonte_visibile": source,
+            "source_text": source,
+            "source_title": source,
+            "source_category": "Documento operativo",
+            "source_type": "documento_caricato",
+            "document_source": source,
+            "context": context,
+            "sottocontesto": context,
+            "contesto": context,
+            "subcontext": context,
+            "sub_context": context,
+            "sotto_contesto": context,
+            "categoria": "Documento operativo",
+            "category": "Documento operativo",
+            "domain": "Documento operativo",
+            "topic": title,
+            "subcategory": title,
+            "sottocategoria": title,
+            "quality_rewrite": "v515g1_cards_qm_compat_payload",
+            "card_payload": True,
+            "quiz_payload": False,
+        })
+
+    return payload
+
+
 def run_quality_checked_generator(generator_name: str, input_text: str) -> dict:
     generator = _normalize_generator_name(generator_name)
     text = str(input_text or "").strip()
@@ -508,7 +752,10 @@ def run_quality_checked_generator(generator_name: str, input_text: str) -> dict:
     }
 
     if input_verified and raw_present:
-        registry = _run_qm_registry(generator, raw_output, text)
+        if generator == "cards":
+            raw_output = _v515g1_cards_qm_compat_raw_output(raw_output)
+
+    registry = _run_qm_registry(generator, raw_output, text)
 
     defects = list(input_defects)
     if generator_error:
@@ -527,9 +774,20 @@ def run_quality_checked_generator(generator_name: str, input_text: str) -> dict:
     if generator == "cards":
         final_output = _v515f3_cards_public_output(final_output)
     if generator == "quiz":
-        final_output = _v515f1_quiz_public_output(final_output)
+        from backend.phase5_15g1_long_document_orchestrator import (
+            is_long_orchestrator_output,
+            sanitize_long_document_quiz_public_output,
+        )
+
+        if is_long_orchestrator_output(final_output):
+            final_output = sanitize_long_document_quiz_public_output(final_output)
+        else:
+            final_output = _v515f1_quiz_public_output(final_output)
     if generator == "study_questions":
-        final_output = _v515f2_study_public_output(final_output)
+        from backend.phase5_15g1_long_document_orchestrator import is_long_orchestrator_output
+
+        if not is_long_orchestrator_output(final_output):
+            final_output = _v515f2_study_public_output(final_output)
 
     approved = input_verified and raw_present and executed_qm_count > 0 and not defects
     if approved:
@@ -1364,6 +1622,14 @@ def _card_payloads(raw_output, input_text, generator):
         and raw_output["quality_report"].get("phase5_15f3_multi_document_cards_reanchor") is True
     )
 
+    cards_g1_enabled = (
+        generator == "cards"
+        and isinstance(raw_output, dict)
+        and isinstance(raw_output.get("quality_report"), dict)
+        and raw_output["quality_report"].get("phase5_15g1_long_document_orchestrator") is True
+    )
+
+
     out = []
     for idx, item in enumerate(raw_items[:8]):
         if not isinstance(item, dict):
@@ -1479,6 +1745,104 @@ def _card_payloads(raw_output, input_text, generator):
             "micro_concetti": concepts,
         }
         enriched.update(_v515e5_layout_fields(fact, title))
+        if generator == "cards" and cards_g1_enabled:
+            title = str(item.get("title") or item.get("titolo") or title).strip()
+            macro_index = item.get("macro_area_index") or item.get("macro_block") or item.get("block_index") or idx + 1
+            macro_area = str(item.get("macro_area") or item.get("source_macro_area") or "Manuale aziendale").strip()
+            source = f"Fonte: sezione “Documento operativo — Manuale aziendale, macro-area {macro_index}”"
+            context = f"Macro-area {macro_index} - {macro_area}"
+            key_message = _v515e5_sentence(
+                item.get("key_message")
+                or item.get("messaggio_chiave")
+                or item.get("fatto_origine")
+                or f"{title}: {fact}"
+            )
+            if title.lower() not in key_message.lower():
+                key_message = _v515e5_sentence(f"{title}: {key_message}")
+            explanation = _v515e5_sentence(
+                item.get("explanation")
+                or item.get("spiegazione")
+                or _v515e5_long_explanation(fact)
+            )
+            if title.lower() not in explanation.lower():
+                explanation = _v515e5_sentence(f"{title}. {explanation}")
+            short_explanation = _v515e5_sentence(
+                item.get("short_explanation")
+                or item.get("spiegazione_breve")
+                or explanation
+            )
+            study_tip = _v515e5_sentence(
+                item.get("study_tip")
+                or item.get("study_hint")
+                or f"Ripassa {title.lower()} collegando fonte, controllo, responsabilita e rischio evitato."
+            )
+            raw_points = item.get("bullet_points") or item.get("bullets") or item.get("points") or points
+            points = [str(point).strip() for point in raw_points if str(point).strip()][:5] or [key_message, explanation]
+            expanded_points = []
+            for point in points:
+                if len(point.split()) < 6:
+                    expanded_points.append(
+                        f"{title}: il riferimento {point} va verificato nel flusso operativo della macro-area {macro_index}."
+                    )
+                else:
+                    expanded_points.append(point)
+            points = expanded_points
+            if not any(title.lower() in point.lower() for point in points):
+                points.insert(0, key_message)
+            points = points[:5]
+            concepts = item.get("micro_concetti") or item.get("keywords") or _v515f3_card_words(f"{title} {key_message}", 5)
+
+            enriched.update({
+                "title": title,
+                "titolo": title,
+                "key_message": key_message,
+                "messaggio_chiave": key_message,
+                "short_explanation": short_explanation,
+                "spiegazione_breve": short_explanation,
+                "explanation": explanation,
+                "spiegazione": explanation,
+                "study_tip": study_tip,
+                "study_hint": study_tip,
+                "study_suggestion": study_tip,
+                "suggerimento_studio": study_tip,
+                "consiglio_studio": study_tip,
+                "points": points,
+                "bullets": points,
+                "bullet_points": points,
+                "key_points": points,
+                "punti_chiave": points,
+                "micro_concetti": concepts,
+                "keywords": concepts,
+                "source_label": source,
+                "source": source,
+                "sources": [source],
+                "fonte": source,
+                "fonti": [source],
+                "visible_source": source,
+                "pretty_source": source,
+                "fonte_visibile": source,
+                "source_text": source,
+                "source_title": source,
+                "source_category": "Documento operativo",
+                "source_type": "documento_caricato",
+                "document_source": source,
+                "context": context,
+                "sottocontesto": context,
+                "contesto": context,
+                "subcontext": context,
+                "sub_context": context,
+                "sotto_contesto": context,
+                "categoria": "Documento operativo",
+                "category": "Documento operativo",
+                "subcategory": title,
+                "sottocategoria": title,
+                "sub_category": title,
+                "domain": "Documento operativo",
+                "topic": title,
+                "quality_rewrite": "v515g1_long_document_cards_payload",
+            })
+            enriched["card_payload"] = True
+            enriched["quiz_payload"] = False
 
         if generator == "quiz":
             enriched.update({

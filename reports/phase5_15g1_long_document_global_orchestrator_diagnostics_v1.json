@@ -1,0 +1,432 @@
+{
+  "phase": "5.15G.1",
+  "status": "PASS",
+  "created_at": "2026-07-07T23:24:58",
+  "fixture": {
+    "path": "/Users/alessandrobarbarossa/alex-ai-workspace/reports/fixtures/phase5_15g1_long_manual_fixture.txt",
+    "source": "synthetic_long_fixture_created_for_diagnostics",
+    "input_words": 8395,
+    "input_chars": 61050
+  },
+  "cases": [
+    {
+      "generator": "summary",
+      "approved": true,
+      "status": "APPROVED",
+      "executed_qm_count": 55,
+      "expected_qm_count": 55,
+      "motor_name": "phase5_15g1_long_document_global_summary_orchestrator",
+      "long_orchestrator_active": true,
+      "metrics": {
+        "input_words": 8395,
+        "target_words_10_percent": 839,
+        "summary_words": 1158,
+        "coverage_ratio_words": 0.138,
+        "target_10_percent_reached": true,
+        "macro_blocks_count": 6,
+        "covered_blocks": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "missing_blocks": [],
+        "structure_sections_present": [
+          "Executive summary",
+          "Mappa del documento",
+          "Macro-aree principali",
+          "Processi e procedure",
+          "Controlli, responsabilita e rischi",
+          "Punti operativi da ricordare",
+          "Conclusione"
+        ],
+        "formulaic_sentences": 0,
+        "genericity_flags": [],
+        "summary_long_quality_pass": true,
+        "sample": "Executive summary\nIl documento e' stato letto come un insieme sequenziale di macro-aree, con 6 blocchi principali e temi ricorrenti come ctrl, criteri, priorita, controllo, documentata, referente, processo, direzione. La sintesi conserva l'ordine originale e usa i blocchi meno coperti per evitare che il riassunto si fermi ai primi frammenti disponibili.\n\nMappa del documento\nMacro-area 1 - Manuale aziendale completo RAG V1: La macro-area Governance accessi stabilisce come il responsabile sicurezza deve governare account nominali con evidenze tracciabili, criteri di priorita e controlli periodici. Macro-area 2 - 8. Audit interno - CTRL-AUD-630: La macro-area Audit interno stabilisce come il auditor interno deve governare piano audit con evidenze tracciabili, criteri di priorita e controlli periodici. Macro-area 3 - 15. Gestione modifiche - CTRL-CHG-509: La macro-area Gestione modifiche stabilisce come il change manager deve governare approvazione cambi con evidenze tracciabili, criteri di priorita e controlli periodici. Macro-area 4 - 22. Formazione operatori - CTRL-FRM-221: La macro-area Formazione operatori stabilisce come il responsabile formazione deve governare verifica competen"
+      },
+      "pass": true,
+      "defects": []
+    },
+    {
+      "generator": "cards",
+      "approved": true,
+      "status": "APPROVED",
+      "executed_qm_count": 60,
+      "expected_qm_count": 60,
+      "motor_name": "phase5_15g1_long_document_global_cards_orchestrator",
+      "long_orchestrator_active": true,
+      "metrics": {
+        "cards_count": 12,
+        "generic_titles_count": 0,
+        "duplicate_titles_count": 0,
+        "near_duplicate_titles_count": 0,
+        "forbidden_phrases_count": 0,
+        "bad_keywords_count": 0,
+        "covered_macro_areas": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "card_quality_pass": true,
+        "sample": [
+          {
+            "id": "long_card_v515g1_001",
+            "card_id": "long_card_v515g1_001",
+            "title": "Governare account nominali e revoche",
+            "titolo": "Governare account nominali e revoche",
+            "key_message": "Governare account nominali e revoche: macro-area 1 Manuale aziendale completo RAG V1 - La macro-area Governance accessi stabilisce come il responsabile sicurezza deve governare account no...",
+            "messaggio_chiave": "Governare account nominali e revoche: macro-area 1 Manuale aziendale completo RAG V1 - La macro-area Governance accessi stabilisce come il responsabile sicurezza deve governare account no...",
+            "explanation": "Codici da verificare: CTRL-ACC-101, CTRL-FOR-204, CTRL-INC-310. Responsabilita e processo restano collegati alla macro-area 1. Il titolo richiama governare account nominali e revoche e resta ancorato alla fonte indicata.",
+            "spiegazione": "Codici da verificare: CTRL-ACC-101, CTRL-FOR-204, CTRL-INC-310. Responsabilita e processo restano collegati alla macro-area 1. Il titolo richiama governare account nominali e revoche e resta ancorato alla fonte indicata.",
+            "points": [
+              "Governare account nominali e revoche: macro-area 1 Manuale aziendale completo RAG V1 - La macro-area Governance accessi stabilisce come il responsabile sicurezza deve governare account nominali con evidenze tracciabili, criteri di priorita e controlli periodici.",
+              "Il codice CTRL-ACC-101 richiede che ogni attivita sia registrata con data, owner, decisione presa e verifica dell'esito.",
+              "La procedura operativa prevede apertura della richiesta, valutazione iniziale, approvazione, controllo indipendente e chiusura documentata.",
+              "La macro-area Governance accessi stabilisce come il responsabile sicurezza deve governare account nominali con evidenze tracciabili, criteri di priorita e controlli periodici."
+            ],
+            "bullets": [
+              "Governare account nominali e revoche: macro-area 1 Manuale aziendale completo RAG V1 - La macro-area Governance accessi stabilisce come il responsabile sicurezza deve governare account nominali con evidenze tracciabili, criteri di priorita e controlli periodici.",
+              "Il codice CTRL-ACC-101 richiede che ogni attivita sia registrata con data, owner, decisione presa e verifica dell'esito.",
+              "La procedura operativa prevede apertura della richiesta, valutazione iniziale, approvazione, controllo indipendente e chiusura documentata.",
+              "La macro-area Governance accessi stabilisce come il responsabile sicurezza deve governare account nominali con evidenze tracciabili, criteri di priorita e controlli periodici."
+            ],
+            "bullet_points": [
+              "Governare account nominali e revoche: macro-area 1 Manuale aziendale completo RAG V1 - La macro-area Governance accessi stabilisce come il responsabile sicurezza deve governare account nominali con evidenze tracciabili, criteri di priorita e controlli periodici.",
+              "Il codice CTRL-ACC-101 richiede che ogni attivita sia registrata con data, owner, decisione presa e verifica dell'esito.",
+              "La procedura operativa prevede apertura della richiesta, valutazione iniziale, approvazione, controllo indipendente e chiusura documentata.",
+              "La macro-area Governance accessi stabilisce come il responsabile sicurezza deve governare account nominali con evidenze tracciabili, criteri di priorita e controlli periodici."
+            ],
+            "fatto_origine": "Governare account nominali e revoche: macro-area 1 Manuale aziendale completo RAG V1 - La macro-area Governance accessi stabilisce come il responsabile sicurezza deve governare account nominali con evidenze tracciabili, criteri di priorita e controlli periodici.",
+            "study_tip": "Ripassa governare account nominali e revoche collegando owner, codice di controllo e rischio evitato.",
+            "source_label": "Documento operativo - Manuale aziendale - Macro-area 1",
+            "fonte": "Documento operativo - Manuale aziendale - Macro-area 1",
+            "source": "Documento operativo - Manuale aziendale - Macro-area 1",
+            "macro_area": "Manuale aziendale completo RAG V1",
+            "macro_area_index": 1,
+            "keywords": [
+              "ctrl",
+              "criteri",
+              "priorita",
+              "controllo",
+              "documentata",
+              "referente"
+            ],
+            "micro_concetti": [
+              "ctrl",
+              "criteri",
+              "priorita",
+              "controllo",
+              "documentata",
+              "referente"
+            ],
+            "visual": {
+              "icon": "🧭",
+              "theme": "long_document_global_map",
+              "svg": "<svg viewBox=\"0 0 420 210\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Governare account nominali e rev\">\n  <defs><linearGradient id=\"g15g11\" x1=\"0\" y1=\"0\" x2=\"1\" y2=\"1\">\n    <stop offset=\"0%\" stop-color=\"#7c2d12\"/><stop offset=\"100%\" stop-color=\"#047857\"/>\n  </linearGradient></defs>\n  <rect width=\"420\" height=\"210\" rx=\"22\" fill=\"url(#g15g11)\"/>\n  <text x=\"32\" y=\"78\" font-size=\"48\">🧭</text>\n  <text x=\"32\" y=\"142\" fill=\"white\" font-size=\"26\" font-weight=\"800\" font-family=\"Arial, sans-serif\">Governare account nominali e rev</text>\n</svg>"
+            },
+            "sottocontesto": "Macro-area 1 - Manuale aziendale completo RAG V1",
+            "categoria": "Documento operativo",
+            "layout": "controlled",
+            "layout_status": "controlled",
+            "visual_layout": "controlled",
+            "short_explanation": "Codici da verificare: CTRL-ACC-101, CTRL-FOR-204, CTRL-INC-310. Responsabilita e processo restano collegati alla macro-area 1. Il titolo richiama governare account nominali e revoche e resta ancorato alla fonte indicata.",
+            "spiegazione_breve": "Codici da verificare: CTRL-ACC-101, CTRL-FOR-204, CTRL-INC-310. Responsabilita e processo restano collegati alla macro-area 1. Il titolo richiama governare account nominali e revoche e resta ancorato alla fonte indicata.",
+            "context": "Macro-area 1 - Manuale aziendale completo RAG V1",
+            "category": "Documento operativo",
+            "domain": "Documento operativo",
+            "topic": "Governare account nominali e revoche",
+            "subcategory": "Governare account nominali e revoche",
+            "sottocategoria": "Governare account nominali e revoche",
+            "quality_rewrite": "v515g1_cards_qm_compat_raw_output",
+            "card_payload": true,
+            "quiz_payload": false
+          },
+          {
+            "id": "long_card_v515g1_002",
+            "card_id": "long_card_v515g1_002",
+            "title": "Controlli verificabili per governare account nominali e revoche",
+            "titolo": "Controlli verificabili per governare account nominali e revoche",
+            "key_message": "Controlli verificabili per governare account nominali e revoche: Il codice CTRL-ACC-101 richiede che ogni attivita sia registrata con data, owner, decisione presa e verifica dell'esito.",
+            "messaggio_chiave": "Controlli verificabili per governare account nominali e revoche: Il codice CTRL-ACC-101 richiede che ogni attivita sia registrata con data, owner, decisione presa e verifica dell'esito.",
+            "explanation": "Codici da verificare: CTRL-ACC-101, CTRL-FOR-204, CTRL-INC-310. Rischio guida: Il codice CTRL-ACC-101 richiede che ogni attivita sia registrata con data, owner, decisione presa e verifica dell'esito. Il titolo richiama controlli verificabili per governare account nominali e revoche e resta ancorato alla fonte indicata.",
+            "spiegazione": "Codici da verificare: CTRL-ACC-101, CTRL-FOR-204, CTRL-INC-310. Rischio guida: Il codice CTRL-ACC-101 richiede che ogni attivita sia registrata con data, owner, decisione presa e verifica dell'esito. Il titolo richiama controlli verificabili per governare account nominali e revoche e resta ancorato alla fonte indicata.",
+            "points": [
+              "Controlli verificabili per governare account nominali e revoche: Il codice CTRL-ACC-101 richiede che ogni attivita sia registrata con data, owner, decisione presa e verifica dell'esito.",
+              "CTRL-ACC-101",
+              "CTRL-FOR-204",
+              "Il codice CTRL-ACC-101 richiede che ogni attivita sia registrata con data, owner, decisione presa e verifica dell'esito."
+            ],
+            "bullets": [
+              "Controlli verificabili per governare account nominali e revoche: Il codice CTRL-ACC-101 richiede che ogni attivita sia registrata con data, owner, decisione presa e verifica dell'esito.",
+              "CTRL-ACC-101",
+              "CTRL-FOR-204",
+              "Il codice CTRL-ACC-101 richiede che ogni attivita sia registrata con data, owner, decisione presa e verifica dell'esito."
+            ],
+            "bullet_points": [
+              "Controlli verificabili per governare account nominali e revoche: Il codice CTRL-ACC-101 richiede che ogni attivita sia registrata con data, owner, decisione presa e verifica dell'esito.",
+              "CTRL-ACC-101",
+              "CTRL-FOR-204",
+              "Il codice CTRL-ACC-101 richiede che ogni attivita sia registrata con data, owner, decisione presa e verifica dell'esito."
+            ],
+            "fatto_origine": "Controlli verificabili per governare account nominali e revoche: Il codice CTRL-ACC-101 richiede che ogni attivita sia registrata con data, owner, decisione presa e verifica dell'esito.",
+            "study_tip": "Ripassa controlli verificabili per governare account nominali e revoche collegando owner, codice di controllo e rischio evitato.",
+            "source_label": "Documento operativo - Manuale aziendale - Macro-area 1",
+            "fonte": "Documento operativo - Manuale aziendale - Macro-area 1",
+            "source": "Documento operativo - Manuale aziendale - Macro-area 1",
+            "macro_area": "Manuale aziendale completo RAG V1",
+            "macro_area_index": 1,
+            "keywords": [
+              "ctrl",
+              "criteri",
+              "priorita",
+              "controllo",
+              "documentata",
+              "referente"
+            ],
+            "micro_concetti": [
+              "ctrl",
+              "criteri",
+              "priorita",
+              "controllo",
+              "documentata",
+              "referente"
+            ],
+            "visual": {
+              "icon": "🔎",
+              "theme": "long_document_global_map",
+              "svg": "<svg viewBox=\"0 0 420 210\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Controlli verificabili per gover\">\n  <defs><linearGradient id=\"g15g12\" x1=\"0\" y1=\"0\" x2=\"1\" y2=\"1\">\n    <stop offset=\"0%\" stop-color=\"#4338ca\"/><stop offset=\"100%\" stop-color=\"#be123c\"/>\n  </linearGradient></defs>\n  <rect width=\"420\" height=\"210\" rx=\"22\" fill=\"url(#g15g12)\"/>\n  <text x=\"32\" y=\"78\" font-size=\"48\">🔎</text>\n  <text x=\"32\" y=\"142\" fill=\"white\" font-size=\"26\" font-weight=\"800\" font-family=\"Arial, sans-serif\">Controlli verificabili per gover</text>\n</svg>"
+            },
+            "sottocontesto": "Macro-area 1 - Manuale aziendale completo RAG V1",
+            "categoria": "Documento operativo",
+            "layout": "controlled",
+            "layout_status": "controlled",
+            "visual_layout": "controlled",
+            "short_explanation": "Codici da verificare: CTRL-ACC-101, CTRL-FOR-204, CTRL-INC-310. Rischio guida: Il codice CTRL-ACC-101 richiede che ogni attivita sia registrata con data, owner, decisione presa e verifica dell'esito. Il titolo richiama controlli verificabili per governare account nominali e revoche e resta ancorato alla fonte indicata.",
+            "spiegazione_breve": "Codici da verificare: CTRL-ACC-101, CTRL-FOR-204, CTRL-INC-310. Rischio guida: Il codice CTRL-ACC-101 richiede che ogni attivita sia registrata con data, owner, decisione presa e verifica dell'esito. Il titolo richiama controlli verificabili per governare account nominali e revoche e resta ancorato alla fonte indicata.",
+            "context": "Macro-area 1 - Manuale aziendale completo RAG V1",
+            "category": "Documento operativo",
+            "domain": "Documento operativo",
+            "topic": "Controlli verificabili per governare account nominali e revoche",
+            "subcategory": "Controlli verificabili per governare account nominali e revoche",
+            "sottocategoria": "Controlli verificabili per governare account nominali e revoche",
+            "quality_rewrite": "v515g1_cards_qm_compat_raw_output",
+            "card_payload": true,
+            "quiz_payload": false
+          }
+        ]
+      },
+      "pass": true,
+      "defects": []
+    },
+    {
+      "generator": "quiz",
+      "approved": true,
+      "status": "APPROVED",
+      "executed_qm_count": 63,
+      "expected_qm_count": 63,
+      "motor_name": "phase5_15g1_long_document_global_quiz_plan_orchestrator",
+      "long_orchestrator_active": true,
+      "metrics": {
+        "quiz_count": 6,
+        "covered_macro_areas": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "duplicate_questions_count": 0,
+        "weak_distractors_count": 0,
+        "leaked_answer_fields_count": 0,
+        "quiz_long_quality_pass": true,
+        "sample": [
+          {
+            "id": "long_quiz_v515g1_001",
+            "domanda": "Come verificare governare account nominali e revoche nella macro-area 1?",
+            "question": "Come verificare governare account nominali e revoche nella macro-area 1?",
+            "opzioni": [
+              {
+                "option_id": "A",
+                "testo": "Governare account nominali e revoche: Il codice CTRL-ACC-101 richiede che ogni attivita sia registrata con data, owner, decisione presa e verifica dell'esito."
+              },
+              {
+                "option_id": "B",
+                "testo": "Trattare il rischio di Manuale aziendale completo RAG V1 come evento marginale senza misura preventiva."
+              },
+              {
+                "option_id": "C",
+                "testo": "Rinviare la gestione del rischio finche compare una non conformita gia conclusa."
+              },
+              {
+                "option_id": "D",
+                "testo": "Confondere il rischio con una semplice comunicazione informale tra reparti."
+              }
+            ],
+            "spiegazione": "La risposta corretta conserva il riferimento concreto della macro-area; i distrattori cambiano categoria, responsabilita o controllo.",
+            "fatto_origine": "Governare account nominali e revoche: Il codice CTRL-ACC-101 richiede che ogni attivita sia registrata con data, owner, decisione presa e verifica dell'esito.",
+            "source_macro_area": "Manuale aziendale completo RAG V1",
+            "source_macro_area_index": 1,
+            "question_focus": "Come verificare governare account nominali e revoche nella macro-area 1?",
+            "quality_rewrite": "v515g1_long_document_quiz_plan",
+            "fonte": "Documento analizzato — Governare account nominali e revoche: Il codice CTRL-ACC-101 richiede che ogni attivita sia registrata con data, owne...",
+            "source": "Documento analizzato — Governare account nominali e revoche: Il codice CTRL-ACC-101 richiede che ogni attivita sia registrata con data, owne...",
+            "sottocontesto": "Documento analizzato — Governare account nominali e revoche: Il codice CTRL-ACC-101 richiede che ogni attivita sia registrata con data, owne...",
+            "categoria": "Documento operativo",
+            "layout": "controlled",
+            "layout_status": "controlled",
+            "visual_layout": "controlled",
+            "bullet_points": [
+              "La risposta corretta conserva il riferimento concreto della macro-area; i distrattori cambiano categoria, responsabilita o controllo."
+            ],
+            "bullets": [
+              "La risposta corretta conserva il riferimento concreto della macro-area; i distrattori cambiano categoria, responsabilita o controllo."
+            ],
+            "answer_check": {
+              "salt": "phase5_15g1_long_quiz_v515g1_001",
+              "answer_ok_hash": "879184a6363e76c7b9317f201c35ae61da1c6990e0e38a9f62a633a5621d5c3a",
+              "explanation": "La risposta corretta conserva il riferimento concreto della macro-area; i distrattori cambiano categoria, responsabilita o controllo."
+            }
+          },
+          {
+            "id": "long_quiz_v515g1_002",
+            "domanda": "Come verificare pianificare audit e azioni correttive nella macro-area 2?",
+            "question": "Come verificare pianificare audit e azioni correttive nella macro-area 2?",
+            "opzioni": [
+              {
+                "option_id": "A",
+                "testo": "Lasciare 8. Audit interno - CTRL-AUD-630 senza owner, rendendo incerta la decisione finale."
+              },
+              {
+                "option_id": "B",
+                "testo": "Pianificare audit e azioni correttive: Il codice CTRL-AUD-630 richiede che ogni attivita sia registrata con data, owner, decisione presa e verifica dell'esito."
+              },
+              {
+                "option_id": "C",
+                "testo": "Attribuire la responsabilita a un gruppo generico senza compito verificabile."
+              },
+              {
+                "option_id": "D",
+                "testo": "Separare la responsabilita dal controllo che deve dimostrarne l'esito."
+              }
+            ],
+            "spiegazione": "La risposta corretta conserva il riferimento concreto della macro-area; i distrattori cambiano categoria, responsabilita o controllo.",
+            "fatto_origine": "Pianificare audit e azioni correttive: Il codice CTRL-AUD-630 richiede che ogni attivita sia registrata con data, owner, decisione presa e verifica dell'esito.",
+            "source_macro_area": "8. Audit interno - CTRL-AUD-630",
+            "source_macro_area_index": 2,
+            "question_focus": "Come verificare pianificare audit e azioni correttive nella macro-area 2?",
+            "quality_rewrite": "v515g1_long_document_quiz_plan",
+            "fonte": "Documento analizzato — Pianificare audit e azioni correttive: Il codice CTRL-AUD-630 richiede che ogni attivita sia registrata con data, own...",
+            "source": "Documento analizzato — Pianificare audit e azioni correttive: Il codice CTRL-AUD-630 richiede che ogni attivita sia registrata con data, own...",
+            "sottocontesto": "Documento analizzato — Pianificare audit e azioni correttive: Il codice CTRL-AUD-630 richiede che ogni attivita sia registrata con data, own...",
+            "categoria": "Documento operativo",
+            "layout": "controlled",
+            "layout_status": "controlled",
+            "visual_layout": "controlled",
+            "bullet_points": [
+              "La risposta corretta conserva il riferimento concreto della macro-area; i distrattori cambiano categoria, responsabilita o controllo."
+            ],
+            "bullets": [
+              "La risposta corretta conserva il riferimento concreto della macro-area; i distrattori cambiano categoria, responsabilita o controllo."
+            ],
+            "answer_check": {
+              "salt": "phase5_15g1_long_quiz_v515g1_002",
+              "answer_ok_hash": "26d7e045153dc5f83f39363958199aa6fbf6a362917c4e51e9c6a627a2487601",
+              "explanation": "La risposta corretta conserva il riferimento concreto della macro-area; i distrattori cambiano categoria, responsabilita o controllo."
+            }
+          }
+        ]
+      },
+      "pass": true,
+      "defects": []
+    },
+    {
+      "generator": "study_questions",
+      "approved": true,
+      "status": "APPROVED",
+      "executed_qm_count": 51,
+      "expected_qm_count": 51,
+      "motor_name": "phase5_15g1_long_document_global_study_plan_orchestrator",
+      "long_orchestrator_active": true,
+      "metrics": {
+        "study_count": 6,
+        "covered_macro_areas": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "formulaic_questions_count": 0,
+        "generic_questions_count": 0,
+        "weak_answer_guidance_count": 0,
+        "study_long_quality_pass": true,
+        "sample": [
+          {
+            "id": "long_study_v515g1_001",
+            "domanda": "Che cosa bisogna comprendere in governare account nominali e revoche nella macro-area 1?",
+            "question": "Che cosa bisogna comprendere in governare account nominali e revoche nella macro-area 1?",
+            "risposta_guida": "Usa il riferimento concreto: La macro-area Governance accessi stabilisce come il responsabile sicurezza deve governare account nominali con evidenze tracciabili, criteri di priorita e controlli periodici. Poi collega azione, controllo, responsabile, rischio evitato e risultato atteso.",
+            "answer": "Usa il riferimento concreto: La macro-area Governance accessi stabilisce come il responsabile sicurezza deve governare account nominali con evidenze tracciabili, criteri di priorita e controlli periodici. Poi collega azione, controllo, responsabile, rischio evitato e risultato atteso.",
+            "answer_guide": "Usa il riferimento concreto: La macro-area Governance accessi stabilisce come il responsabile sicurezza deve governare account nominali con evidenze tracciabili, criteri di priorita e controlli periodici. Poi collega azione, controllo, responsabile, rischio evitato e risultato atteso.",
+            "tipo_domanda": "comprensione",
+            "livello_cognitivo": "comprensione",
+            "fatto_origine": "Governare account nominali e revoche: termini guida Governare account nominali e revoche, CTRL-ACC-101, CTRL-FOR-204, ctrl, criteri.",
+            "source_macro_area": "Manuale aziendale completo RAG V1",
+            "source_macro_area_index": 1,
+            "quality_rewrite": "v515g1_long_document_study_plan",
+            "fonte": "Documento analizzato — Governare account nominali e revoche: termini guida Governare account nominali e revoche, CTRL-ACC-101, CTRL-FOR-204,...",
+            "source": "Documento analizzato — Governare account nominali e revoche: termini guida Governare account nominali e revoche, CTRL-ACC-101, CTRL-FOR-204,...",
+            "sottocontesto": "Documento analizzato — Governare account nominali e revoche: termini guida Governare account nominali e revoche, CTRL-ACC-101, CTRL-FOR-204,...",
+            "categoria": "Documento operativo",
+            "layout": "controlled",
+            "layout_status": "controlled",
+            "visual_layout": "controlled",
+            "bullet_points": [
+              "Usa il riferimento concreto: La macro-area Governance accessi stabilisce come il responsabile sicurezza deve governare account nominali con evidenze tracciabili, criteri di priorita e controlli periodici. Poi collega azione, controllo, responsabile, rischio evitato e risultato atteso."
+            ],
+            "bullets": [
+              "Usa il riferimento concreto: La macro-area Governance accessi stabilisce come il responsabile sicurezza deve governare account nominali con evidenze tracciabili, criteri di priorita e controlli periodici. Poi collega azione, controllo, responsabile, rischio evitato e risultato atteso."
+            ]
+          },
+          {
+            "id": "long_study_v515g1_002",
+            "domanda": "Quale differenza va riconosciuta in pianificare audit e azioni correttive nella macro-area 2?",
+            "question": "Quale differenza va riconosciuta in pianificare audit e azioni correttive nella macro-area 2?",
+            "risposta_guida": "Usa il riferimento concreto: La macro-area Audit interno stabilisce come il auditor interno deve governare piano audit con evidenze tracciabili, criteri di priorita e controlli periodici. Poi collega azione, controllo, responsabile, rischio evitato e risultato atteso.",
+            "answer": "Usa il riferimento concreto: La macro-area Audit interno stabilisce come il auditor interno deve governare piano audit con evidenze tracciabili, criteri di priorita e controlli periodici. Poi collega azione, controllo, responsabile, rischio evitato e risultato atteso.",
+            "answer_guide": "Usa il riferimento concreto: La macro-area Audit interno stabilisce come il auditor interno deve governare piano audit con evidenze tracciabili, criteri di priorita e controlli periodici. Poi collega azione, controllo, responsabile, rischio evitato e risultato atteso.",
+            "tipo_domanda": "confronto",
+            "livello_cognitivo": "applicazione",
+            "fatto_origine": "Pianificare audit e azioni correttive: termini guida Pianificare audit e azioni correttive, CTRL-AUD-630, CTRL-ACC-101, ctrl, criteri.",
+            "source_macro_area": "8. Audit interno - CTRL-AUD-630",
+            "source_macro_area_index": 2,
+            "quality_rewrite": "v515g1_long_document_study_plan",
+            "fonte": "Documento analizzato — Pianificare audit e azioni correttive: termini guida Pianificare audit e azioni correttive, CTRL-AUD-630, CTRL-ACC-10...",
+            "source": "Documento analizzato — Pianificare audit e azioni correttive: termini guida Pianificare audit e azioni correttive, CTRL-AUD-630, CTRL-ACC-10...",
+            "sottocontesto": "Documento analizzato — Pianificare audit e azioni correttive: termini guida Pianificare audit e azioni correttive, CTRL-AUD-630, CTRL-ACC-10...",
+            "categoria": "Documento operativo",
+            "layout": "controlled",
+            "layout_status": "controlled",
+            "visual_layout": "controlled",
+            "bullet_points": [
+              "Usa il riferimento concreto: La macro-area Audit interno stabilisce come il auditor interno deve governare piano audit con evidenze tracciabili, criteri di priorita e controlli periodici. Poi collega azione, controllo, responsabile, rischio evitato e risultato atteso."
+            ],
+            "bullets": [
+              "Usa il riferimento concreto: La macro-area Audit interno stabilisce come il auditor interno deve governare piano audit con evidenze tracciabili, criteri di priorita e controlli periodici. Poi collega azione, controllo, responsabile, rischio evitato e risultato atteso."
+            ]
+          }
+        ]
+      },
+      "pass": true,
+      "defects": []
+    }
+  ]
+}
