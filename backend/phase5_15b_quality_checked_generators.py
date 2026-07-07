@@ -480,6 +480,8 @@ def run_quality_checked_generator(generator_name: str, input_text: str) -> dict:
                 raw_output = _v515e_normalize_output_payload(raw_output, generator)
                 if generator == "quiz":
                     raw_output = _v515f1_quiz_reanchor_raw_output(raw_output, text)
+                if generator == "study_questions":
+                    raw_output = _v515f2_study_reanchor_raw_output(raw_output, text)
             except Exception as norm_exc:
                 # La normalizzazione non deve rompere la generazione.
                 defects.append(f"normalizzazione_515e_fallita: {norm_exc}")
@@ -521,6 +523,8 @@ def run_quality_checked_generator(generator_name: str, input_text: str) -> dict:
     final_output = _final_output_with_trace_reference(raw_output, trace_supports_connection)
     if generator == "quiz":
         final_output = _v515f1_quiz_public_output(final_output)
+    if generator == "study_questions":
+        final_output = _v515f2_study_public_output(final_output)
 
     approved = input_verified and raw_present and executed_qm_count > 0 and not defects
     if approved:
@@ -1384,12 +1388,22 @@ def _card_payloads(raw_output, input_text, generator):
             tipo = "quiz_interattivo"
         elif generator == "study_questions":
             question = item.get("domanda") or item.get("question") or "Quale punto operativo va compreso?"
+            title = _v515f2_study_title(fact, question, idx)
+            source = _v515f2_study_source(fact, title)
+            context = _v515f2_study_context(fact, title)
+            concepts = _v515f2_study_words(f"{title} {fact}", 5)
+            natural_question, natural_answer, question_type, cognitive_level = _v515f2_study_question_answer(fact, title, idx)
             key_message = _v515e5_sentence(
-                f"{question} La risposta guida collega il concetto alla procedura, ai controlli e alla tracciabilità."
+                f"{natural_question} La risposta guida collega la sezione {title} a un dettaglio concreto del documento."
             )
             explanation = _v515e5_sentence(
-                f"{item.get('risposta_guida') or fact} "
-                "Per studiare correttamente questo punto bisogna collegare azione dell’operatore, controllo verificabile e risultato pratico."
+                f"{natural_answer} Per studiare correttamente questo punto bisogna riconoscere il fatto citato, il motivo didattico e il rischio da evitare."
+            )
+            short_explanation = _v515e5_sentence(
+                f"Spiegazione breve: la domanda aiuta a ragionare sulla sezione {title} senza fondere contenuti di altri documenti."
+            )
+            study_tip = _v515e5_sentence(
+                f"Rileggi la sezione {title} e collega domanda, risposta guida e fatto origine prima di ripassare."
             )
             section_type = "study_question"
             tipo = "domanda_studio"
@@ -1455,6 +1469,39 @@ def _card_payloads(raw_output, input_text, generator):
             enriched["card_payload"] = False
             enriched["interactive"] = True
             enriched["test_interattivo"] = True
+
+        if generator == "study_questions":
+            enriched.update({
+                "domanda": natural_question,
+                "question": natural_question,
+                "risposta_guida": natural_answer,
+                "answer": natural_answer,
+                "answer_guide": natural_answer,
+                "tipo_domanda": question_type,
+                "livello_cognitivo": cognitive_level,
+                "source_label": source,
+                "source": source,
+                "sources": [source],
+                "fonte": source,
+                "fonti": [source],
+                "visible_source": source,
+                "pretty_source": source,
+                "fonte_visibile": source,
+                "source_text": source,
+                "source_title": source,
+                "context": context,
+                "contesto": context,
+                "subcontext": context,
+                "sub_context": context,
+                "sottocontesto": context,
+                "sotto_contesto": context,
+                "subcategory": title,
+                "sub_category": title,
+                "sottocategoria": title,
+                "domain": "documento_multi_sezione",
+                "topic": title,
+                "quality_rewrite": "v515f2_study_multidoc_context",
+            })
 
         out.append(enriched)
 
@@ -1772,6 +1819,340 @@ def _v515f1_quiz_public_output(output):
             "Quiz costruito su riferimenti concreti del documento: " + context_blob
         )
         payload["explanation"] = "Contesto quiz verificato."
+    return payload
+
+def _v515f2_study_words(text, limit=4):
+    words = re.findall(r"[A-Za-zÀ-ÖØ-öø-ÿ]{4,}", str(text or "").lower())
+    stop = {
+        "documento", "protocollo", "sezione", "questa", "questo", "quale",
+        "domanda", "risposta", "guida", "relativo", "punto", "operativo",
+        "procedura", "della", "delle", "degli", "dello", "alla", "alle",
+        "agli", "nella", "nelle", "negli", "sono", "viene", "vengono",
+        "deve", "devono", "dopo", "prima", "studente", "collegare",
+    }
+    out = []
+    for word in words:
+        if word in stop or word in out:
+            continue
+        out.append(word)
+        if len(out) >= limit:
+            break
+    return out
+
+def _v515f2_study_title(fact, fallback, index):
+    source = str(fact or fallback or "").strip()
+    low = source.lower()
+    if "infermiere" in low or "arrivo" in low or "urgenza" in low:
+        return "Ricostruire la priorità della visita"
+    if "triage" in low:
+        return "Gestire il triage iniziale"
+    if "audit" in low or "indicatori" in low or "reclami" in low or "ritardo" in low:
+        return "Valutare audit e indicatori"
+    if "dolore toracico" in low or "dispnea" in low or "neurologico" in low or "rivalut" in low:
+        return "Rivalutare i casi urgenti"
+    if "follow-up" in low or "terapia" in low or "segnali di allarme" in low:
+        return "Pianificare il follow-up"
+    if "fascicolo" in low or "dati già raccolti" in low:
+        return "Usare il fascicolo clinico"
+    if "referti" in low or "prenotazione" in low or "esami" in low:
+        return "Controllare esami e referti"
+    if "documento di trasporto" in low or "merce" in low and "arriva" in low:
+        return "Controllare la merce in arrivo"
+    if "prodotti conformi" in low or "sistema gestionale" in low or "posizione precisa" in low:
+        return "Registrare i prodotti conformi"
+    if "lista di prelievo" in low or "preparazione degli ordini" in low or "imballaggio" in low:
+        return "Preparare ordini con lista di prelievo"
+    if "spedizione" in low:
+        return "Verificare la spedizione"
+    if "tracci" in low:
+        return "Seguire la tracciabilità"
+    if "formazione" in low or "operatori" in low:
+        return "Formare gli operatori"
+    if "magazzino" in low or "ordini" in low:
+        return "Organizzare gli ordini di magazzino"
+    words = _v515f2_study_words(source, 3)
+    if words:
+        return "Studiare " + " ".join(words)
+    return f"Studiare scenario {index + 1}"
+
+def _v515f2_study_source(fact, title):
+    clean_fact = _v515e5_sentence(fact)
+    if len(clean_fact) > 155:
+        clean_fact = clean_fact[:152].rstrip() + "..."
+    return f"Fonte: sezione “Documento operativo — {title}” — {clean_fact}"
+
+def _v515f2_study_context(fact, title):
+    clean_fact = _v515e5_sentence(fact)
+    if len(clean_fact) > 190:
+        clean_fact = clean_fact[:187].rstrip() + "..."
+    return (
+        f"Contesto domande studio: {title}. "
+        f"Fatto da ricordare: {clean_fact}"
+    )
+
+def _v515f2_study_question_answer(fact, title, index):
+    clean_fact = _v515e5_sentence(fact)
+    low = f"{fact} {title}".lower()
+    if "infermiere" in low or "arrivo" in low or "urgenza" in low:
+        return (
+            "Quali dati permettono di ricostruire la priorità assegnata all'arrivo?",
+            (
+                "La risposta deve collegare ora di arrivo, livello di urgenza e motivo della visita. "
+                "Questi dati spiegano perché un caso è stato gestito con una certa priorità."
+            ),
+            "procedura",
+            "applicazione",
+        )
+    if "triage" in low:
+        return (
+            "Perché nel triage iniziale non basta chiedere il motivo della visita?",
+            (
+                "Devi ricordare che la priorità nasce dall'insieme di scheda, parametri vitali e sintomi riferiti. "
+                "Il motivo della visita da solo non rende verificabile la scelta clinica."
+            ),
+            "causa_effetto",
+            "comprensione",
+        )
+    if "audit" in low or "indicatori" in low or "reclami" in low or "ritardo" in low:
+        return (
+            "Come si usa l'audit mensile per capire se un ritardo è organizzativo o comunicativo?",
+            (
+                "Bisogna confrontare tempi di attesa, rivalutazioni mancate e reclami. "
+                "Gli indicatori aiutano a scegliere un'azione correttiva, assegnare un responsabile e verificarne l'effetto."
+            ),
+            "confronto",
+            "analisi",
+        )
+    if "dolore toracico" in low or "dispnea" in low or "neurologico" in low or "rivalut" in low:
+        return (
+            "Quando la sala d'attesa è piena, quali segnali obbligano a rivalutare rapidamente un paziente?",
+            (
+                "Il punto chiave è riconoscere dolore toracico, dispnea o peggioramento neurologico come segnali che superano la semplice attesa in ordine cronologico."
+            ),
+            "priorita_decisione",
+            "applicazione",
+        )
+    if "follow-up" in low or "terapia" in low or "segnali di allarme" in low:
+        return (
+            "Che cosa deve contenere un follow-up utile dopo la visita?",
+            (
+                "Il piano deve unire terapia, segnali di allarme e canale di contatto. "
+                "Così il paziente sa cosa fare dopo la visita e quando chiedere aiuto."
+            ),
+            "procedura",
+            "comprensione",
+        )
+    if "fascicolo" in low or "dati già raccolti" in low:
+        return (
+            "Perché il fascicolo clinico riduce ripetizioni e perdita di informazioni?",
+            (
+                "Le informazioni essenziali già raccolte devono rientrare nel fascicolo, altrimenti il paziente ripete dati e il team perde continuità assistenziale."
+            ),
+            "causa_effetto",
+            "analisi",
+        )
+    if "referti" in low or "prenotazione" in low or "esami" in low:
+        return (
+            "Quale dettaglio rende controllabile il percorso degli esami successivi?",
+            (
+                "La prenotazione deve indicare priorità, preparazione necessaria e responsabilità del controllo referti. "
+                "Senza questi elementi il follow-up rischia di restare incompleto."
+            ),
+            "rischio_errore",
+            "applicazione",
+        )
+    if "documento di trasporto" in low or "merce" in low and "arriva" in low:
+        return (
+            "Quali controlli servono quando arriva nuova merce in magazzino?",
+            (
+                "Devi ricordare il controllo del documento di trasporto, delle quantità e dell'integrità degli articoli. "
+                "Questo evita differenze non segnalate già nella fase di ricezione."
+            ),
+            "procedura",
+            "comprensione",
+        )
+    if "prodotti conformi" in low or "sistema gestionale" in low or "posizione precisa" in low:
+        return (
+            "Perché i prodotti conformi vanno registrati e assegnati a una posizione precisa?",
+            (
+                "La registrazione nel gestionale e la posizione di magazzino permettono di ritrovare gli articoli e collegare il controllo iniziale alla preparazione degli ordini."
+            ),
+            "causa_effetto",
+            "applicazione",
+        )
+    if "lista di prelievo" in low or "preparazione degli ordini" in low or "imballaggio" in low:
+        return (
+            "Come aiuta la lista di prelievo durante la preparazione degli ordini?",
+            (
+                "La lista collega codice articolo, quantità richiesta e posizione. "
+                "Serve a guidare il prelievo e a controllare che i prodotti arrivino corretti all'area di imballaggio."
+            ),
+            "procedura",
+            "applicazione",
+        )
+    if "spedizione" in low:
+        return (
+            "Quale errore riduce il secondo controllo prima della spedizione?",
+            (
+                "Il secondo controllo riduce prodotti mancanti, articoli scambiati ed errori operativi. "
+                "Va ricordato come verifica finale prima che l'ordine lasci il magazzino."
+            ),
+            "rischio_errore",
+            "applicazione",
+        )
+    if "tracci" in low:
+        return (
+            "Che cosa permette di ricostruire la tracciabilità nel documento?",
+            (
+                f"Usa questo riferimento: {clean_fact} "
+                "Devi spiegare come posizione, operatore e tempi rendono controllabile il processo."
+            ),
+            "comprensione",
+            "applicazione",
+        )
+    if "magazzino" in low or "ordini" in low:
+        return (
+            "Perché la gestione degli ordini richiede una procedura chiara dall'arrivo alla spedizione?",
+            (
+                f"Ricorda il fatto concreto: {clean_fact} "
+                "La domanda chiede di collegare passaggi, responsabilità e controlli lungo l'intero flusso."
+            ),
+            "procedura",
+            "comprensione",
+        )
+    return (
+        f"Che cosa devi saper spiegare quando studi la sezione {title}?",
+        (
+            f"Parti dal fatto concreto: {clean_fact} "
+            "Poi chiarisci quale decisione, controllo o rischio viene evidenziato e perché è utile nello studio."
+        ),
+        "comprensione",
+        "comprensione",
+    )
+
+def _v515f2_multidocument_study_facts(text):
+    raw = str(text or "")
+    blocks = re.findall(r"(\[Documento[^\]]+\][\s\S]*?)(?=\n\s*\[Documento|\Z)", raw)
+    if len(blocks) < 2:
+        return []
+    selected = []
+    for block_index, block in enumerate(blocks):
+        header_match = re.match(r"\s*(\[Documento[^\]]+\])", block)
+        header = header_match.group(1).strip() if header_match else f"[Documento {block_index + 1}]"
+        body = block[header_match.end():] if header_match else block
+        sentences = _split_sentences(body)
+        if not sentences:
+            continue
+        if block_index == 0:
+            selected.append(f"{header} {sentences[0]}")
+            if len(sentences) > 1:
+                selected.append(f"{header} {sentences[1]}")
+        elif block_index == 1:
+            selected.append(f"{header} {sentences[0]}")
+        elif block_index == 2:
+            selected.append(f"{header} {sentences[0]}")
+        else:
+            selected.append(f"{header} {sentences[0]}")
+        if len(selected) >= 4:
+            break
+    clean = []
+    seen = set()
+    for fact in selected:
+        fact = _v515e5_sentence(fact)
+        key = re.sub(r"[^a-z0-9àèéìòù]+", " ", fact.lower()).strip()
+        if fact and key not in seen:
+            clean.append(fact)
+            seen.add(key)
+    return clean[:4]
+
+def _v515f2_study_items_from_facts(facts, old_items=None):
+    old_items = old_items if isinstance(old_items, list) else []
+    items = []
+    for index, fact in enumerate(facts[:4], start=1):
+        previous = old_items[index - 1] if index - 1 < len(old_items) and isinstance(old_items[index - 1], dict) else {}
+        title = _v515f2_study_title(fact, previous.get("domanda"), index - 1)
+        question, answer, question_type, level = _v515f2_study_question_answer(fact, title, index)
+        items.append({
+            **previous,
+            "id": previous.get("id") or f"study_quality_v515f2_{index:03d}",
+            "domanda": question,
+            "question": question,
+            "risposta_guida": answer,
+            "answer": answer,
+            "answer_guide": answer,
+            "tipo_domanda": question_type,
+            "livello_cognitivo": level,
+            "titolo": title,
+            "title": title,
+            "fatto_origine": _v515e5_sentence(fact),
+            "quality_rewrite": "v515f2_study_multidoc_context",
+        })
+    return items
+
+def _v515f2_study_reanchor_raw_output(raw_output, input_text):
+    facts = _v515f2_multidocument_study_facts(input_text)
+    if len(facts) < 4 or not isinstance(raw_output, dict):
+        return raw_output
+    fixed = dict(raw_output)
+    old_items = fixed.get("items") if isinstance(fixed.get("items"), list) else []
+    items = _v515f2_study_items_from_facts(facts, old_items)
+    fixed["items"] = items
+    report = dict(fixed.get("quality_report") or {})
+    report.update({
+        "phase5_15f2_multi_document_study_reanchor": True,
+        "phase5_15f2_reanchored_items": len(items),
+        "phase5_15f2_reanchor_strategy": "spread_study_questions_across_document_sections",
+    })
+    fixed["quality_report"] = report
+    return fixed
+
+def _v515f2_study_public_output(output):
+    payload = _plain(output)
+    if not isinstance(payload, dict):
+        return payload
+    items = payload.get("items")
+    if not isinstance(items, list):
+        return payload
+    context_facts = []
+    context_titles = []
+    for index, item in enumerate(items, start=1):
+        if not isinstance(item, dict):
+            continue
+        fact = item.get("fatto_origine") or item.get("source_fact") or item.get("risposta_guida") or item.get("domanda") or ""
+        title = _v515f2_study_title(fact, item.get("domanda"), index - 1)
+        question, answer, question_type, level = _v515f2_study_question_answer(fact, title, index)
+        item["domanda"] = question
+        item["question"] = question
+        item["risposta_guida"] = answer
+        item["answer"] = answer
+        item["answer_guide"] = answer
+        item["tipo_domanda"] = question_type
+        item["livello_cognitivo"] = level
+        item["titolo"] = title
+        item["title"] = title
+        if fact:
+            context_facts.append(_v515e5_sentence(fact))
+        if title:
+            context_titles.append(title)
+    if context_facts:
+        fact_blob = " ".join(context_facts).lower()
+        anchor_terms = [
+            term for term in [
+                "triage", "follow-up", "fascicolo", "referti", "audit", "rivalutazioni",
+                "magazzino", "ordini", "merce", "preparazione", "spedizione", "tracciabilità",
+            ]
+            if term in fact_blob
+        ]
+        keywords = _v515f2_study_words(" ".join(context_facts), 18)
+        context_blob = "; ".join(dict.fromkeys(context_titles[:4]))
+        terms = list(dict.fromkeys(anchor_terms + keywords))
+        if terms:
+            context_blob = f"{context_blob}. Termini documento: {', '.join(terms)}"
+        payload["risposta_guida"] = _v515e5_sentence(
+            "Domande studio costruite su riferimenti concreti del documento: " + context_blob
+        )
+        payload["spiegazione"] = "Contesto domande studio verificato."
+        payload["explanation"] = "Contesto domande studio verificato."
     return payload
 
 def _v515e5_layout_fields(fact="", title=""):

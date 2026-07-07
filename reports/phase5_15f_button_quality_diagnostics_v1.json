@@ -1,14 +1,14 @@
 {
   "phase": "5.15F.0",
   "status": "PASS",
-  "created_at": "2026-07-07T20:01:02",
+  "created_at": "2026-07-07T20:15:02",
   "scope": "diagnostica reale pulsanti generatori RAG/LLM senza modifiche funzionali",
   "git": {
     "branch": "rag-concept-app-presentabile-v3",
-    "commit": "0444d0d",
-    "commit_full": "0444d0d227d76555247a8d0da61cb0b857a30daa",
+    "commit": "1fa512c",
+    "commit_full": "1fa512cf1d4f3b0e59ef618de1d143da8f33c0af",
     "tags_at_head": [
-      "checkpoint-mini-llm-approved-generators-v515e"
+      "checkpoint-mini-llm-quiz-multidoc-quality-v515f1"
     ],
     "relevant_tags": [
       "checkpoint-mini-llm-advanced-language-repair-v512f",
@@ -64,6 +64,7 @@
       "checkpoint-mini-llm-query-context-expander-v394",
       "checkpoint-mini-llm-quiz-motor-compatibility-inspection-v596",
       "checkpoint-mini-llm-quiz-motor-runtime-test-v597",
+      "checkpoint-mini-llm-quiz-multidoc-quality-v515f1",
       "checkpoint-mini-llm-quiz-quality-motors-shortlist-v595",
       "checkpoint-mini-llm-quiz-repair-registry-v593",
       "checkpoint-mini-llm-quiz-true-distractor-repair-v592",
@@ -106,12 +107,12 @@
       "checkpoint-mini-llm-v314-rewrite-only-safe",
       "checkpoint-mini-llm-v315-extended-safe"
     ],
-    "status_short": "M backend/phase5_15b_quality_checked_generators.py\n M reports/phase5_15d_real_page_generators_trace_v1.json\n M reports/phase5_15e_approved_outputs_report_v1.json\n?? reports/phase5_15f1_quiz_patch_safety_review_v1.md\n?? reports/phase5_15f_button_quality_diagnostics_v1.json\n?? reports/phase5_15f_button_quality_diagnostics_v1.md\n?? scripts/run_phase5_15f_button_quality_diagnostics.py",
+    "status_short": "M backend/phase5_15b_quality_checked_generators.py\n M reports/phase5_15d_real_page_generators_trace_v1.json\n M reports/phase5_15e_approved_outputs_report_v1.json\n M reports/phase5_15f_button_quality_diagnostics_v1.json\n M reports/phase5_15f_button_quality_diagnostics_v1.md\n?? reports/phase5_15f2_study_questions_patch_safety_review_v1.md",
     "checkpoint_expected": {
       "commit": "0444d0d",
       "tag": "checkpoint-mini-llm-approved-generators-v515e",
-      "commit_matches": true,
-      "tag_at_head": true
+      "commit_matches": false,
+      "tag_at_head": false
     }
   },
   "baselines": {
@@ -294,8 +295,8 @@
       "generator_name": "study_questions",
       "engine_id": "full_pipeline_study_route51_language_quality_v51418",
       "documents_tested": 2,
-      "approved_all": false,
-      "status": "FAIL",
+      "approved_all": true,
+      "status": "PASS",
       "expected_qm_count": 51,
       "executed_qm_counts": [
         51
@@ -304,28 +305,12 @@
         4,
         4
       ],
-      "defects": [
-        "approved_non_true:False",
-        "status_non_approved:QUALITY_BLOCKED"
-      ],
-      "warnings": [
-        "copertura_termini_documento_bassa:0/6",
-        "copertura_termini_documento_bassa:1/6"
-      ],
-      "problemi_rag_osservati": [
-        "domande innaturali",
-        "genericità",
-        "perdita contesto"
-      ],
-      "problemi_didattici_osservati": [
-        "domande_formulaiche:4"
-      ],
-      "issue_classes": [
-        "problema didattico",
-        "problema qualità RAG",
-        "problema qualità linguistica"
-      ],
-      "sample_output_breve": "[{\"id\": \"study_quality_v51418_001\", \"domanda\": \"Qual è il punto operativo principale relativo a gestione ordini magazzino?\", \"risposta_guida\": \"Il documento indica che la gestione degli ordini in un magazzino moderno richiede una procedura chiara per ricevere, controllare, registrare e spedire i prodotti. Lo studente deve collegare questo punto a una procedura concreta, a una responsabilità chiara e a una verifica controllabile.\", \"tipo_domanda\": \"comprensione_operativa\", \"livello_cognitivo\": \"applicazione\", \"fatto_origine\": \"La gestione degli ordini in un magazzino moderno richiede una procedura chiara per ricevere, controllare, registrare e spedire i prodotti\", \"quality_rewrite\": \"v51418_l"
+      "defects": [],
+      "warnings": [],
+      "problemi_rag_osservati": [],
+      "problemi_didattici_osservati": [],
+      "issue_classes": [],
+      "sample_output_breve": "[{\"id\": \"study_quality_v51418_001\", \"domanda\": \"Perché la gestione degli ordini richiede una procedura chiara dall'arrivo alla spedizione?\", \"risposta_guida\": \"Ricorda il fatto concreto: La gestione degli ordini in un magazzino moderno richiede una procedura chiara per ricevere, controllare, registrare e spedire i prodotti. La domanda chiede di collegare passaggi, responsabilità e controlli lungo l'intero flusso.\", \"tipo_domanda\": \"procedura\", \"livello_cognitivo\": \"comprensione\", \"fatto_origine\": \"La gestione degli ordini in un magazzino moderno richiede una procedura chiara per ricevere, controllare, registrare e spedire i prodotti\", \"quality_rewrite\": \"v51418_language_quality\", \"fonte\": \"D"
     }
   ],
   "cases": [
@@ -526,24 +511,13 @@
       "approved": true,
       "status": "APPROVED",
       "defects": [],
-      "warnings": [
-        "copertura_termini_documento_bassa:1/6"
-      ],
-      "sample_output_breve": "[{\"id\": \"study_quality_v51418_001\", \"domanda\": \"Qual è il punto operativo principale relativo a gestione ordini magazzino?\", \"risposta_guida\": \"Il documento indica che la gestione degli ordini in un magazzino moderno richiede una procedura chiara per ricevere, controllare, registrare e spedire i prodotti. Lo studente deve collegare questo punto a una procedura concreta, a una responsabilità chiara e a una verifica controllabile.\", \"tipo_domanda\": \"comprensione_operativa\", \"livello_cognitivo\": \"applicazione\", \"fatto_origine\": \"La gestione degli ordini in un magazzino moderno richiede una procedura chiara per ricevere, controllare, registrare e spedire i prodotti\", \"quality_rewrite\": \"v51418_l",
+      "warnings": [],
+      "sample_output_breve": "[{\"id\": \"study_quality_v51418_001\", \"domanda\": \"Perché la gestione degli ordini richiede una procedura chiara dall'arrivo alla spedizione?\", \"risposta_guida\": \"Ricorda il fatto concreto: La gestione degli ordini in un magazzino moderno richiede una procedura chiara per ricevere, controllare, registrare e spedire i prodotti. La domanda chiede di collegare passaggi, responsabilità e controlli lungo l'intero flusso.\", \"tipo_domanda\": \"procedura\", \"livello_cognitivo\": \"comprensione\", \"fatto_origine\": \"La gestione degli ordini in un magazzino moderno richiede una procedura chiara per ricevere, controllare, registrare e spedire i prodotti\", \"quality_rewrite\": \"v51418_language_quality\", \"fonte\": \"D",
       "qualita_linguistica_osservata": "media-bassa: corretto ma con template evidente",
       "qualita_didattica_osservata": "media: risposte guida presenti, domande da rendere piu naturali",
-      "problemi_rag_osservati": [
-        "domande innaturali",
-        "genericità",
-        "perdita contesto"
-      ],
-      "problemi_didattici_osservati": [
-        "domande_formulaiche:4"
-      ],
-      "issue_classes": [
-        "problema didattico",
-        "problema qualità RAG"
-      ],
+      "problemi_rag_osservati": [],
+      "problemi_didattici_osservati": [],
+      "issue_classes": [],
       "quality_report": {
         "phase": "5.14.18",
         "bridge": "direct_q52_ui_bridge",
@@ -787,31 +761,16 @@
       "executed_qm_count": 51,
       "output_count_atteso": 4,
       "output_count_reale": 4,
-      "approved": false,
-      "status": "QUALITY_BLOCKED",
-      "defects": [
-        "status_non_approved:QUALITY_BLOCKED",
-        "approved_non_true:False"
-      ],
-      "warnings": [
-        "copertura_termini_documento_bassa:0/6"
-      ],
-      "sample_output_breve": "[{\"id\": \"study_quality_v51418_001\", \"domanda\": \"Qual è il punto operativo principale relativo a protocollo triage ambulatoriale?\", \"risposta_guida\": \"Il documento indica che [Documento A - Protocollo triage ambulatoriale] Il centro medico organizza il triage iniziale con una scheda di priorità, un controllo dei parametri vitali e una verifica dei sintomi riferiti dal paziente. Lo studente deve collegare questo punto a una procedura concreta, a una responsabilità chiara e a una verifica controllabile.\", \"tipo_domanda\": \"comprensione_operativa\", \"livello_cognitivo\": \"applicazione\", \"fatto_origine\": \"[Documento A - Protocollo triage ambulatoriale] Il centro medico organizza il triage iniziale c",
+      "approved": true,
+      "status": "APPROVED",
+      "defects": [],
+      "warnings": [],
+      "sample_output_breve": "[{\"id\": \"study_quality_v51418_001\", \"domanda\": \"Perché nel triage iniziale non basta chiedere il motivo della visita?\", \"risposta_guida\": \"Devi ricordare che la priorità nasce dall'insieme di scheda, parametri vitali e sintomi riferiti. Il motivo della visita da solo non rende verificabile la scelta clinica.\", \"tipo_domanda\": \"causa_effetto\", \"livello_cognitivo\": \"comprensione\", \"fatto_origine\": \"[Documento A - Protocollo triage ambulatoriale] Il centro medico organizza il triage iniziale con una scheda di priorità, un controllo dei parametri vitali e una verifica dei sintomi riferiti dal paziente.\", \"quality_rewrite\": \"v515f2_study_multidoc_context\", \"fonte\": \"Documento analizzato — [Docume",
       "qualita_linguistica_osservata": "media-bassa: corretto ma con template evidente",
       "qualita_didattica_osservata": "media: risposte guida presenti, domande da rendere piu naturali",
-      "problemi_rag_osservati": [
-        "domande innaturali",
-        "genericità",
-        "perdita contesto"
-      ],
-      "problemi_didattici_osservati": [
-        "domande_formulaiche:4"
-      ],
-      "issue_classes": [
-        "problema didattico",
-        "problema qualità RAG",
-        "problema qualità linguistica"
-      ],
+      "problemi_rag_osservati": [],
+      "problemi_didattici_osservati": [],
+      "issue_classes": [],
       "quality_report": {
         "phase": "5.14.18",
         "bridge": "direct_q52_ui_bridge",
@@ -844,26 +803,15 @@
           "anti_demo_guard",
           "ui_output_contract"
         ],
+        "phase5_15f2_multi_document_study_reanchor": true,
+        "phase5_15f2_reanchored_items": 4,
+        "phase5_15f2_reanchor_strategy": "spread_study_questions_across_document_sections",
         "connection_status": "RUNTIME_TRACE_PROVED_BY_PHASE5_15B",
         "qm_runtime_trace_reference": "top_level.qm_runtime_trace"
       }
     }
   ],
   "intervention_priorities": [
-    {
-      "priority_score": 27,
-      "button_label": "Genera Domande studio",
-      "generator_name": "study_questions",
-      "engine_id": "full_pipeline_study_route51_language_quality_v51418",
-      "main_issues": [
-        "approved_non_true:False",
-        "status_non_approved:QUALITY_BLOCKED",
-        "domande innaturali",
-        "genericità",
-        "perdita contesto",
-        "domande_formulaiche:4"
-      ]
-    },
     {
       "priority_score": 15,
       "button_label": "Genera Card",
@@ -890,46 +838,41 @@
       "generator_name": "quiz",
       "engine_id": "full_pipeline_quiz_route63_language_quality_v51418",
       "main_issues": []
+    },
+    {
+      "priority_score": 0,
+      "button_label": "Genera Domande studio",
+      "generator_name": "study_questions",
+      "engine_id": "full_pipeline_study_route51_language_quality_v51418",
+      "main_issues": []
     }
   ],
   "first_engine_to_improve": {
-    "priority_score": 27,
-    "button_label": "Genera Domande studio",
-    "generator_name": "study_questions",
-    "engine_id": "full_pipeline_study_route51_language_quality_v51418",
+    "priority_score": 15,
+    "button_label": "Genera Card",
+    "generator_name": "cards",
+    "engine_id": "full_pipeline_cards_60_motors_graphic_v51416",
     "main_issues": [
       "approved_non_true:False",
       "status_non_approved:QUALITY_BLOCKED",
-      "domande innaturali",
-      "genericità",
-      "perdita contesto",
-      "domande_formulaiche:4"
+      "ripetizioni"
     ],
-    "recommended_file": "motore linguistico/didattico v51418 da localizzare senza patch a bridge/UI/QM; candidato principale backend/phase5_full_pipeline_runtime_v51416.py"
+    "recommended_file": "backend/phase5_full_pipeline_runtime_v51416.py"
   },
   "issue_taxonomy": {
     "bug tecnico": [],
     "problema qualità linguistica": [
       "cards:approved_non_true:False",
       "cards:status_non_approved:QUALITY_BLOCKED",
-      "study_questions:approved_non_true:False",
-      "study_questions:status_non_approved:QUALITY_BLOCKED",
       "summary:riassunto non abbastanza profondo",
       "summary:riassunto_non_copre_abbastanza_sezioni"
     ],
     "problema qualità RAG": [
       "cards:radici_ripetute:analizzat,aspetto,azione,collega,concreto,contenuto,evidenzia,operativa",
       "cards:radici_ripetute:analizzat,azione,collega,concreto,contenuto,degli,evidenzia,magazzino",
-      "cards:ripetizioni",
-      "study_questions:copertura_termini_documento_bassa:0/6",
-      "study_questions:copertura_termini_documento_bassa:1/6",
-      "study_questions:genericità",
-      "study_questions:perdita contesto"
+      "cards:ripetizioni"
     ],
-    "problema didattico": [
-      "study_questions:domande innaturali",
-      "study_questions:domande_formulaiche:4"
-    ],
+    "problema didattico": [],
     "problema UI/bridge": []
   },
   "recommendation": "patch mirata sui motori linguistici/didattici, nessuna patch a bridge/UI/QM"
