@@ -10,21 +10,20 @@ Status diagnostica: **PASS**
 ## Stato Git
 
 - Branch: `rag-concept-app-presentabile-v3`
-- Commit: `1fa512c`
-- Tag su HEAD: `checkpoint-mini-llm-quiz-multidoc-quality-v515f1`
+- Commit: `7e7d52b`
+- Tag su HEAD: `checkpoint-mini-llm-study-multidoc-quality-v515f2`
 - Stato git short: `M backend/phase5_15b_quality_checked_generators.py
- M reports/phase5_15d_real_page_generators_trace_v1.json
  M reports/phase5_15e_approved_outputs_report_v1.json
  M reports/phase5_15f_button_quality_diagnostics_v1.json
  M reports/phase5_15f_button_quality_diagnostics_v1.md
-?? reports/phase5_15f2_study_questions_patch_safety_review_v1.md`
+?? reports/phase5_15f3_cards_patch_safety_review_v1.md`
 
 ## Tabella 4 pulsanti
 
 | Pulsante | Generatore | Motore effettivo | QM | Output reali | Approved | Problemi principali |
 | --- | --- | --- | ---: | --- | --- | --- |
 | Genera Riassunto | `summary` | `full_pipeline_summary_route55_all_motors_v51416` | 55/55 | [1, 1] | True | riassunto non abbastanza profondo |
-| Genera Card | `cards` | `full_pipeline_cards_60_motors_graphic_v51416` | 60/60 | [8, 8] | False | approved_non_true:False; status_non_approved:QUALITY_BLOCKED; ripetizioni |
+| Genera Card | `cards` | `full_pipeline_cards_60_motors_graphic_v51416` | 60/60 | [8, 8] | True | ripetizioni |
 | Genera Test/Quiz | `quiz` | `full_pipeline_quiz_route63_language_quality_v51418` | 63/63 | [4, 4] | True | nessuno bloccante |
 | Genera Domande studio | `study_questions` | `full_pipeline_study_route51_language_quality_v51418` | 51/51 | [4, 4] | True | nessuno bloccante |
 
@@ -41,9 +40,9 @@ Status diagnostica: **PASS**
 
 ### Genera Card - `full_pipeline_cards_60_motors_graphic_v51416`
 
-- Classi problema: problema qualità RAG, problema qualità linguistica
-- Difetti tecnici: approved_non_true:False, status_non_approved:QUALITY_BLOCKED
-- Warning: radici_ripetute:analizzat,aspetto,azione,collega,concreto,contenuto,evidenzia,operativa, radici_ripetute:analizzat,azione,collega,concreto,contenuto,degli,evidenzia,magazzino
+- Classi problema: problema qualità RAG
+- Difetti tecnici: nessuno
+- Warning: radici_ripetute:analizzat,azione,collega,concreto,contenuto,degli,evidenzia,magazzino
 - Problemi RAG: ripetizioni
 - Problemi didattici: nessuno
 - Sample: [{"card_id": "full_card_v51416_001", "titolo": "Gestione ordinata del magazzino", "messaggio_chiave": "Gestione ordini magazzino moderno: La gestione degli ordini in un magazzino moderno richiede una procedura chiara per ricevere, controllare, registrare e spedire i prodotti.", "spiegazione": "La card evidenzia che la gestione degli ordini in un magazzino moderno richiede una procedura chiara per ricevere, controllare, registrare e spedire i prodotti Questo passaggio collega il contenuto del documento a un'azione operativa o a un controllo concreto.", "micro_concetti": ["gestione", "ordini", "magazzino", "moderno"], "visual": {"icon": "🏢", "theme": "business_presentable", "svg": "<svg viewBo
@@ -70,22 +69,22 @@ Status diagnostica: **PASS**
 
 | Priorità | Pulsante | Generatore | Motore | Score | Motivo |
 | ---: | --- | --- | --- | ---: | --- |
-| 1 | Genera Card | `cards` | `full_pipeline_cards_60_motors_graphic_v51416` | 15 | approved_non_true:False; status_non_approved:QUALITY_BLOCKED; ripetizioni |
-| 2 | Genera Riassunto | `summary` | `full_pipeline_summary_route55_all_motors_v51416` | 4 | riassunto non abbastanza profondo |
+| 1 | Genera Riassunto | `summary` | `full_pipeline_summary_route55_all_motors_v51416` | 4 | riassunto non abbastanza profondo |
+| 2 | Genera Card | `cards` | `full_pipeline_cards_60_motors_graphic_v51416` | 4 | ripetizioni |
 | 3 | Genera Test/Quiz | `quiz` | `full_pipeline_quiz_route63_language_quality_v51418` | 0 | nessun problema bloccante |
 | 4 | Genera Domande studio | `study_questions` | `full_pipeline_study_route51_language_quality_v51418` | 0 | nessun problema bloccante |
 
 ## Primo motore da migliorare
 
-- Motore/file: `full_pipeline_cards_60_motors_graphic_v51416`
-- Generatore: `cards`
+- Motore/file: `full_pipeline_summary_route55_all_motors_v51416`
+- Generatore: `summary`
 - File candidato: `backend/phase5_full_pipeline_runtime_v51416.py`
 - Raccomandazione: **patch mirata sui motori linguistici/didattici, nessuna patch a bridge/UI/QM**
 
 ## Distinzione problemi
 
 - bug tecnico: nessuno
-- problema qualità linguistica: cards:approved_non_true:False, cards:status_non_approved:QUALITY_BLOCKED, summary:riassunto non abbastanza profondo, summary:riassunto_non_copre_abbastanza_sezioni
-- problema qualità RAG: cards:radici_ripetute:analizzat,aspetto,azione,collega,concreto,contenuto,evidenzia,operativa, cards:radici_ripetute:analizzat,azione,collega,concreto,contenuto,degli,evidenzia,magazzino, cards:ripetizioni
+- problema qualità linguistica: summary:riassunto non abbastanza profondo, summary:riassunto_non_copre_abbastanza_sezioni
+- problema qualità RAG: cards:radici_ripetute:analizzat,azione,collega,concreto,contenuto,degli,evidenzia,magazzino, cards:ripetizioni
 - problema didattico: nessuno
 - problema UI/bridge: nessuno

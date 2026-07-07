@@ -1,14 +1,14 @@
 {
   "phase": "5.15F.0",
   "status": "PASS",
-  "created_at": "2026-07-07T20:15:02",
+  "created_at": "2026-07-07T21:05:01",
   "scope": "diagnostica reale pulsanti generatori RAG/LLM senza modifiche funzionali",
   "git": {
     "branch": "rag-concept-app-presentabile-v3",
-    "commit": "1fa512c",
-    "commit_full": "1fa512cf1d4f3b0e59ef618de1d143da8f33c0af",
+    "commit": "7e7d52b",
+    "commit_full": "7e7d52beaa8819b6bf580674ae195bb021a60bcb",
     "tags_at_head": [
-      "checkpoint-mini-llm-quiz-multidoc-quality-v515f1"
+      "checkpoint-mini-llm-study-multidoc-quality-v515f2"
     ],
     "relevant_tags": [
       "checkpoint-mini-llm-advanced-language-repair-v512f",
@@ -79,6 +79,7 @@
       "checkpoint-mini-llm-section-quality-matrix-test-quiz-v512e2",
       "checkpoint-mini-llm-section-quality-matrix-v512d2",
       "checkpoint-mini-llm-selector-orchestrator-standalone-v512h",
+      "checkpoint-mini-llm-study-multidoc-quality-v515f2",
       "checkpoint-mini-llm-study-pack-cli-v1",
       "checkpoint-mini-llm-study-pack-cli-v2",
       "checkpoint-mini-llm-study-pack-current-v3-clean",
@@ -107,7 +108,7 @@
       "checkpoint-mini-llm-v314-rewrite-only-safe",
       "checkpoint-mini-llm-v315-extended-safe"
     ],
-    "status_short": "M backend/phase5_15b_quality_checked_generators.py\n M reports/phase5_15d_real_page_generators_trace_v1.json\n M reports/phase5_15e_approved_outputs_report_v1.json\n M reports/phase5_15f_button_quality_diagnostics_v1.json\n M reports/phase5_15f_button_quality_diagnostics_v1.md\n?? reports/phase5_15f2_study_questions_patch_safety_review_v1.md",
+    "status_short": "M backend/phase5_15b_quality_checked_generators.py\n M reports/phase5_15e_approved_outputs_report_v1.json\n M reports/phase5_15f_button_quality_diagnostics_v1.json\n M reports/phase5_15f_button_quality_diagnostics_v1.md\n?? reports/phase5_15f3_cards_patch_safety_review_v1.md",
     "checkpoint_expected": {
       "commit": "0444d0d",
       "tag": "checkpoint-mini-llm-approved-generators-v515e",
@@ -240,8 +241,8 @@
       "generator_name": "cards",
       "engine_id": "full_pipeline_cards_60_motors_graphic_v51416",
       "documents_tested": 2,
-      "approved_all": false,
-      "status": "FAIL",
+      "approved_all": true,
+      "status": "PASS",
       "expected_qm_count": 60,
       "executed_qm_counts": [
         60
@@ -250,12 +251,8 @@
         8,
         8
       ],
-      "defects": [
-        "approved_non_true:False",
-        "status_non_approved:QUALITY_BLOCKED"
-      ],
+      "defects": [],
       "warnings": [
-        "radici_ripetute:analizzat,aspetto,azione,collega,concreto,contenuto,evidenzia,operativa",
         "radici_ripetute:analizzat,azione,collega,concreto,contenuto,degli,evidenzia,magazzino"
       ],
       "problemi_rag_osservati": [
@@ -263,8 +260,7 @@
       ],
       "problemi_didattici_osservati": [],
       "issue_classes": [
-        "problema qualità RAG",
-        "problema qualità linguistica"
+        "problema qualità RAG"
       ],
       "sample_output_breve": "[{\"card_id\": \"full_card_v51416_001\", \"titolo\": \"Gestione ordinata del magazzino\", \"messaggio_chiave\": \"Gestione ordini magazzino moderno: La gestione degli ordini in un magazzino moderno richiede una procedura chiara per ricevere, controllare, registrare e spedire i prodotti.\", \"spiegazione\": \"La card evidenzia che la gestione degli ordini in un magazzino moderno richiede una procedura chiara per ricevere, controllare, registrare e spedire i prodotti Questo passaggio collega il contenuto del documento a un'azione operativa o a un controllo concreto.\", \"micro_concetti\": [\"gestione\", \"ordini\", \"magazzino\", \"moderno\"], \"visual\": {\"icon\": \"🏢\", \"theme\": \"business_presentable\", \"svg\": \"<svg viewBo"
     },
@@ -630,26 +626,16 @@
       "executed_qm_count": 60,
       "output_count_atteso": 4,
       "output_count_reale": 8,
-      "approved": false,
-      "status": "QUALITY_BLOCKED",
-      "defects": [
-        "status_non_approved:QUALITY_BLOCKED",
-        "approved_non_true:False"
-      ],
-      "warnings": [
-        "radici_ripetute:analizzat,aspetto,azione,collega,concreto,contenuto,evidenzia,operativa"
-      ],
-      "sample_output_breve": "[{\"card_id\": \"full_card_v51416_001\", \"titolo\": \"Aspetto operativo del documento\", \"messaggio_chiave\": \"Documento protocollo triage ambulatoriale: [Documento A - Protocollo triage ambulatoriale].\", \"spiegazione\": \"La card evidenzia che [Documento A - Protocollo triage ambulatoriale] Questo passaggio collega il contenuto del documento a un'azione operativa o a un controllo concreto.\", \"micro_concetti\": [\"documento\", \"protocollo\", \"triage\", \"ambulatoriale\"], \"visual\": {\"icon\": \"🏢\", \"theme\": \"business_presentable\", \"svg\": \"<svg viewBox=\\\"0 0 420 210\\\" xmlns=\\\"http://www.w3.org/2000/svg\\\" role=\\\"img\\\" aria-label=\\\"Documento protocollo triage \\\">\\n <defs>\\n <linearGradient id=\\\"g1\\\" x1=\\\"0\\\" y1=\\\"",
+      "approved": true,
+      "status": "APPROVED",
+      "defects": [],
+      "warnings": [],
+      "sample_output_breve": "[{\"card_id\": \"full_card_v51416_001\", \"titolo\": \"Gestire il triage iniziale\", \"messaggio_chiave\": \"La priorità nasce da scheda, parametri vitali e sintomi riferiti, non dal solo ordine di arrivo.\", \"spiegazione\": \"Nel protocollo A il controllo iniziale motiva la scelta clinica e lascia una traccia leggibile al team.\", \"micro_concetti\": [\"gestire\", \"triage\", \"iniziale\", \"centro\", \"medico\"], \"visual\": {\"icon\": \"🧭\", \"theme\": \"triage\", \"svg\": \"<svg viewBox=\\\"0 0 420 210\\\" xmlns=\\\"http://www.w3.org/2000/svg\\\" role=\\\"img\\\" aria-label=\\\"Gestire il triage iniziale\\\">\\n <defs>\\n <linearGradient id=\\\"f3g1\\\" x1=\\\"0\\\" y1=\\\"0\\\" x2=\\\"1\\\" y2=\\\"1\\\">\\n <stop offset=\\\"0%\\\" stop-color=\\\"#0f766e\\\"/>\\n <stop offs",
       "qualita_linguistica_osservata": "media: frasi comprensibili, talvolta formulaiche",
       "qualita_didattica_osservata": "media: aiuta a segmentare i concetti, ma alcune card restano descrittive",
-      "problemi_rag_osservati": [
-        "ripetizioni"
-      ],
+      "problemi_rag_osservati": [],
       "problemi_didattici_osservati": [],
-      "issue_classes": [
-        "problema qualità RAG",
-        "problema qualità linguistica"
-      ],
+      "issue_classes": [],
       "quality_report": {
         "phase": "5.14.16",
         "kind": "cards",
@@ -677,6 +663,9 @@
         "graphic_renderer_controls": 8,
         "total_motors_connected": 60,
         "card_style": "graphic_cards_with_svg_visual",
+        "phase5_15f3_multi_document_cards_reanchor": true,
+        "phase5_15f3_reanchored_items": 8,
+        "phase5_15f3_reanchor_strategy": "spread_cards_across_document_sections_without_repetitive_templates",
         "connection_status": "RUNTIME_TRACE_PROVED_BY_PHASE5_15B",
         "qm_runtime_trace_reference": "top_level.qm_runtime_trace"
       }
@@ -813,23 +802,21 @@
   ],
   "intervention_priorities": [
     {
-      "priority_score": 15,
-      "button_label": "Genera Card",
-      "generator_name": "cards",
-      "engine_id": "full_pipeline_cards_60_motors_graphic_v51416",
-      "main_issues": [
-        "approved_non_true:False",
-        "status_non_approved:QUALITY_BLOCKED",
-        "ripetizioni"
-      ]
-    },
-    {
       "priority_score": 4,
       "button_label": "Genera Riassunto",
       "generator_name": "summary",
       "engine_id": "full_pipeline_summary_route55_all_motors_v51416",
       "main_issues": [
         "riassunto non abbastanza profondo"
+      ]
+    },
+    {
+      "priority_score": 4,
+      "button_label": "Genera Card",
+      "generator_name": "cards",
+      "engine_id": "full_pipeline_cards_60_motors_graphic_v51416",
+      "main_issues": [
+        "ripetizioni"
       ]
     },
     {
@@ -848,27 +835,22 @@
     }
   ],
   "first_engine_to_improve": {
-    "priority_score": 15,
-    "button_label": "Genera Card",
-    "generator_name": "cards",
-    "engine_id": "full_pipeline_cards_60_motors_graphic_v51416",
+    "priority_score": 4,
+    "button_label": "Genera Riassunto",
+    "generator_name": "summary",
+    "engine_id": "full_pipeline_summary_route55_all_motors_v51416",
     "main_issues": [
-      "approved_non_true:False",
-      "status_non_approved:QUALITY_BLOCKED",
-      "ripetizioni"
+      "riassunto non abbastanza profondo"
     ],
     "recommended_file": "backend/phase5_full_pipeline_runtime_v51416.py"
   },
   "issue_taxonomy": {
     "bug tecnico": [],
     "problema qualità linguistica": [
-      "cards:approved_non_true:False",
-      "cards:status_non_approved:QUALITY_BLOCKED",
       "summary:riassunto non abbastanza profondo",
       "summary:riassunto_non_copre_abbastanza_sezioni"
     ],
     "problema qualità RAG": [
-      "cards:radici_ripetute:analizzat,aspetto,azione,collega,concreto,contenuto,evidenzia,operativa",
       "cards:radici_ripetute:analizzat,azione,collega,concreto,contenuto,degli,evidenzia,magazzino",
       "cards:ripetizioni"
     ],

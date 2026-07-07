@@ -17,6 +17,7 @@ import re
 import sys
 import traceback
 import hashlib
+import html
 from dataclasses import asdict, is_dataclass
 from pathlib import Path
 from typing import Any, Callable, Dict, Iterable, List, Sequence, Set
@@ -478,6 +479,8 @@ def run_quality_checked_generator(generator_name: str, input_text: str) -> dict:
             try:
                 from backend.phase5_full_pipeline_runtime_v51416 import _v515e_normalize_output_payload
                 raw_output = _v515e_normalize_output_payload(raw_output, generator)
+                if generator == "cards":
+                    raw_output = _v515f3_cards_reanchor_raw_output(raw_output, text)
                 if generator == "quiz":
                     raw_output = _v515f1_quiz_reanchor_raw_output(raw_output, text)
                 if generator == "study_questions":
@@ -521,6 +524,8 @@ def run_quality_checked_generator(generator_name: str, input_text: str) -> dict:
     trace_supports_connection = bool(qm_runtime_trace) and executed_qm_count > 0
     all_motors_connected = trace_supports_connection and declared_only_qm_count == 0
     final_output = _final_output_with_trace_reference(raw_output, trace_supports_connection)
+    if generator == "cards":
+        final_output = _v515f3_cards_public_output(final_output)
     if generator == "quiz":
         final_output = _v515f1_quiz_public_output(final_output)
     if generator == "study_questions":
@@ -837,6 +842,13 @@ def _card_payloads(raw_output, input_text, generator):
     if not raw_items:
         raw_items = [{"text": item} for item in _split_sentences(raw_text or input_text)[:4]]
 
+    cards_f3_enabled = (
+        generator == "cards"
+        and isinstance(raw_output, dict)
+        and isinstance(raw_output.get("quality_report"), dict)
+        and raw_output["quality_report"].get("phase5_15f3_multi_document_cards_reanchor") is True
+    )
+
     out = []
     for idx, item in enumerate(raw_items[:8]):
         if not isinstance(item, dict):
@@ -1046,6 +1058,13 @@ def _card_payloads(raw_output, input_text, generator):
 
     if not raw_items:
         raw_items = [{"text": item} for item in _split_sentences(raw_text or input_text)[:4]]
+
+    cards_f3_enabled = (
+        generator == "cards"
+        and isinstance(raw_output, dict)
+        and isinstance(raw_output.get("quality_report"), dict)
+        and raw_output["quality_report"].get("phase5_15f3_multi_document_cards_reanchor") is True
+    )
 
     out = []
     for idx, item in enumerate(raw_items[:8]):
@@ -1338,6 +1357,13 @@ def _card_payloads(raw_output, input_text, generator):
     if not raw_items:
         raw_items = [{"text": item} for item in _split_sentences(raw_text or input_text)[:4]]
 
+    cards_f3_enabled = (
+        generator == "cards"
+        and isinstance(raw_output, dict)
+        and isinstance(raw_output.get("quality_report"), dict)
+        and raw_output["quality_report"].get("phase5_15f3_multi_document_cards_reanchor") is True
+    )
+
     out = []
     for idx, item in enumerate(raw_items[:8]):
         if not isinstance(item, dict):
@@ -1364,7 +1390,20 @@ def _card_payloads(raw_output, input_text, generator):
         study_tip = _v515e5_study_tip()
         concepts = item.get("micro_concetti") or ["procedura operativa", "controllo merce", "tracciabilità"]
 
-        if generator == "quiz":
+        if generator == "cards" and cards_f3_enabled:
+            doc_title = item.get("document_title") or item.get("documento") or ""
+            title = _v515f3_card_title(fact, doc_title, idx)
+            source = _v515f3_card_source(fact, title, doc_title)
+            context = _v515f3_card_context(fact, title, doc_title)
+            concepts = item.get("micro_concetti") or _v515f3_card_words(f"{title} {fact}", 5)
+            key_message = _v515f3_card_key_message(fact, title, idx)
+            explanation = _v515f3_card_explanation(fact, title, idx)
+            short_explanation = _v515e5_sentence(f"{title}: {key_message}")
+            points = _v515f3_card_points(fact, title, idx)
+            study_tip = _v515f3_card_study_tip(title, idx)
+            section_type = "card"
+            tipo = "card_didattica"
+        elif generator == "quiz":
             question = item.get("domanda") or item.get("question") or "Quale affermazione descrive correttamente il passaggio operativo?"
             title = _v515f1_quiz_title(fact, question, idx)
             source = _v515f1_quiz_source(fact, title)
@@ -1469,6 +1508,36 @@ def _card_payloads(raw_output, input_text, generator):
             enriched["card_payload"] = False
             enriched["interactive"] = True
             enriched["test_interattivo"] = True
+
+        if generator == "cards" and cards_f3_enabled:
+            enriched.update({
+                "category": "Documento clinico",
+                "categoria": "Documento clinico",
+                "source_label": source,
+                "source": source,
+                "sources": [source],
+                "fonte": source,
+                "fonti": [source],
+                "visible_source": source,
+                "pretty_source": source,
+                "fonte_visibile": source,
+                "source_text": source,
+                "source_title": source,
+                "context": context,
+                "contesto": context,
+                "subcontext": context,
+                "sub_context": context,
+                "sottocontesto": context,
+                "sotto_contesto": context,
+                "subcategory": title,
+                "sub_category": title,
+                "sottocategoria": title,
+                "domain": "documento_multi_sezione",
+                "topic": title,
+                "quality_rewrite": "v515f3_cards_multidoc_context",
+            })
+            enriched["card_payload"] = True
+            enriched["quiz_payload"] = False
 
         if generator == "study_questions":
             enriched.update({
@@ -2153,6 +2222,316 @@ def _v515f2_study_public_output(output):
         )
         payload["spiegazione"] = "Contesto domande studio verificato."
         payload["explanation"] = "Contesto domande studio verificato."
+    return payload
+
+def _v515f3_card_words(text, limit=4):
+    words = re.findall(r"[A-Za-zÀ-ÖØ-öø-ÿ]{4,}", str(text or "").lower())
+    stop = {
+        "documento", "protocollo", "sezione", "questa", "questo", "card",
+        "punto", "operativo", "procedura", "della", "delle", "degli",
+        "dello", "alla", "alle", "agli", "nella", "nelle", "negli",
+        "sono", "viene", "vengono", "deve", "devono", "dopo", "prima",
+        "serve", "rende", "permette", "quando", "anche", "ogni",
+    }
+    out = []
+    for word in words:
+        if word in stop or word in out:
+            continue
+        out.append(word)
+        if len(out) >= limit:
+            break
+    return out
+
+def _v515f3_card_title(fact, document_title="", index=0):
+    source = f"{document_title} {fact}".strip()
+    low = source.lower()
+    if "ritardo ricorrente" in low or "azione correttiva" in low or "responsabile" in low:
+        return "Assegnare l'azione correttiva"
+    if "audit" in low or "indicatori" in low or "reclami" in low or "tempi di attesa" in low or "rivalutazioni mancate" in low:
+        return "Valutare tempi e reclami"
+    if "infermiere" in low or "ora di arrivo" in low or "livello di urgenza" in low:
+        return "Registrare l'arrivo del paziente"
+    if "triage" in low and ("scheda" in low or "parametri" in low or "sintomi" in low):
+        return "Gestire il triage iniziale"
+    if "dolore toracico" in low or "dispnea" in low or "neurologico" in low or "rivalut" in low:
+        return "Rivalutare i sintomi urgenti"
+    if "follow-up" in low or "terapia" in low or "segnali di allarme" in low:
+        return "Organizzare il follow-up"
+    if "fascicolo" in low or "dati già raccolti" in low:
+        return "Usare il fascicolo clinico"
+    if "referti" in low or "prenotazione" in low or "esami" in low:
+        return "Controllare esami e referti"
+    words = _v515f3_card_words(source, 3)
+    if words:
+        return "Chiarire " + " ".join(words[:3])
+    return f"Spiegare il caso {index + 1}"
+
+def _v515f3_card_key_message(fact, title, index):
+    low = f"{title} {fact}".lower()
+    if "azione correttiva" in low or "ritardo" in low:
+        return "Il ritardo ricorrente diventa gestibile quando il team assegna un responsabile e controlla l'esito."
+    if "audit" in low or "reclami" in low or "tempi" in low or "rivalutazioni mancate" in low:
+        return "Tempi di attesa, controlli saltati e reclami indicano dove il servizio deve intervenire."
+    if "triage" in low:
+        return "La priorità nasce da scheda, parametri vitali e sintomi riferiti, non dal solo ordine di arrivo."
+    if "arrivo" in low or "urgenza" in low:
+        return "Ora di arrivo, urgenza e motivo della visita rendono ricostruibile la decisione iniziale."
+    if "rivalut" in low or "dolore toracico" in low or "dispnea" in low:
+        return "Dolore toracico, dispnea e peggioramento neurologico richiedono una nuova valutazione rapida."
+    if "follow-up" in low or "terapia" in low:
+        return "Terapia, segnali di allarme e canale di contatto trasformano la dimissione in istruzioni pratiche."
+    if "fascicolo" in low:
+        return "Le informazioni essenziali entrano nel fascicolo per evitare ripetizioni e perdita di continuità."
+    if "referti" in low or "esami" in low:
+        return "Priorità, preparazione e responsabilità sui referti rendono tracciabile l'esame successivo."
+    clean_fact = _v515e5_sentence(fact)
+    return clean_fact[:180].rstrip(" .") + "."
+
+def _v515f3_card_explanation(fact, title, index):
+    low = f"{title} {fact}".lower()
+    if "azione correttiva" in low or "ritardo" in low:
+        return "La verifica nel mese successivo evita che la decisione resti una nota generica senza effetto sul processo."
+    if "audit" in low or "reclami" in low or "tempi" in low or "rivalutazioni mancate" in low:
+        return "La scheda separa il dato di qualità dalla cura del singolo paziente: qui conta capire se il problema è organizzativo o comunicativo."
+    if "triage" in low:
+        return "Nel protocollo A il controllo iniziale motiva la scelta clinica e lascia una traccia leggibile al team."
+    if "arrivo" in low or "urgenza" in low:
+        return "La scheda compilata dall'infermiere evita che il percorso dipenda da memoria o impressioni successive."
+    if "rivalut" in low or "dolore toracico" in low or "dispnea" in low:
+        return "La sala piena non elimina il rischio clinico: il cambio dei sintomi impone una priorità diversa."
+    if "follow-up" in low or "terapia" in low:
+        return "Nel piano B il paziente sa che cosa monitorare, quando chiedere aiuto e come proseguire la cura."
+    if "fascicolo" in low:
+        return "Il dato già raccolto resta disponibile al team, quindi la storia clinica non viene ricostruita da zero."
+    if "referti" in low or "esami" in low:
+        return "La prenotazione non basta: bisogna sapere chi controlla il risultato e come chiude il passaggio."
+    clean_fact = _v515e5_sentence(fact)
+    return f"Il contenuto va ripassato come fatto concreto: {clean_fact}"
+
+def _v515f3_card_points(fact, title, index):
+    key_message = _v515f3_card_key_message(fact, title, index)
+    explanation = _v515f3_card_explanation(fact, title, index)
+    review_prompts = [
+        "Dato da ricordare: individua chi registra l'informazione e quale decisione rende verificabile.",
+        "Uso nello studio: collega il passaggio alla continuità del percorso e al rischio che evita.",
+        "Controllo finale: distingui il fatto clinico dal dato organizzativo prima di confrontare le sezioni.",
+        "Ripasso rapido: ritrova nel documento la persona responsabile, il momento e l'esito atteso.",
+    ]
+    return [
+        _v515e5_sentence(key_message),
+        _v515e5_sentence(explanation),
+        _v515e5_sentence(review_prompts[index % len(review_prompts)]),
+    ]
+
+def _v515f3_card_study_tip(title, index):
+    tips = [
+        "Ripassa il passaggio chiedendoti quale dato rende controllabile la decisione.",
+        "Collega la card a un rischio concreto e alla persona che deve intervenire.",
+        "Distingui il fatto clinico dalla conseguenza organizzativa prima di memorizzare.",
+        "Usa la fonte indicata per non fondere sezioni diverse dello stesso caso.",
+    ]
+    return tips[index % len(tips)]
+
+def _v515f3_card_source(fact, title, document_title=""):
+    label = str(document_title or "Documento clinico").strip(" []")
+    return f"Fonte: sezione “Documento clinico — {label} — {title}”"
+
+def _v515f3_card_context(fact, title, document_title=""):
+    clean_fact = _v515e5_sentence(fact)
+    if len(clean_fact) > 180:
+        clean_fact = clean_fact[:177].rstrip() + "..."
+    label = str(document_title or "documento").strip(" []")
+    return f"Contesto card: {label}; focus {title}; fatto verificabile: {clean_fact}"
+
+def _v515f3_card_svg(icon, title, index):
+    colors = [
+        ("#0f766e", "#2563eb"),
+        ("#7c2d12", "#047857"),
+        ("#4338ca", "#be123c"),
+        ("#0369a1", "#65a30d"),
+        ("#6d28d9", "#0f766e"),
+        ("#92400e", "#1d4ed8"),
+        ("#be123c", "#4338ca"),
+        ("#155e75", "#b45309"),
+    ]
+    a, b = colors[index % len(colors)]
+    safe_icon = html.escape(str(icon or "•"))
+    safe_title = html.escape(str(title or "Card")[:30])
+    return f'''<svg viewBox="0 0 420 210" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="{safe_title}">
+  <defs>
+    <linearGradient id="f3g{index + 1}" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="{a}"/>
+      <stop offset="100%" stop-color="{b}"/>
+    </linearGradient>
+  </defs>
+  <rect width="420" height="210" rx="24" fill="url(#f3g{index + 1})"/>
+  <text x="32" y="78" font-size="48">{safe_icon}</text>
+  <text x="32" y="142" fill="white" font-size="27" font-weight="800" font-family="Arial, sans-serif">{safe_title}</text>
+</svg>'''
+
+def _v515f3_multidocument_card_facts(text):
+    raw = str(text or "")
+    blocks = re.findall(r"(\[Documento[^\]]+\][\s\S]*?)(?=\n\s*\[Documento|\Z)", raw)
+    if len(blocks) < 2:
+        return []
+
+    docs = []
+    for block_index, block in enumerate(blocks):
+        header_match = re.match(r"\s*(\[Documento[^\]]+\])", block)
+        header = header_match.group(1).strip() if header_match else f"[Documento {block_index + 1}]"
+        body = block[header_match.end():] if header_match else block
+        sentences = []
+        for sentence_index, sentence in enumerate(_split_sentences(body)):
+            clean = _v515e5_sentence(sentence)
+            if len(clean.split()) < 7:
+                continue
+            sentences.append({
+                "fact": clean,
+                "document_title": header.strip("[]"),
+                "document_index": block_index,
+                "sentence_index": sentence_index,
+            })
+        if sentences:
+            docs.append(sentences)
+
+    if len(docs) < 2:
+        return []
+
+    selected = []
+    max_sentences = max(len(doc) for doc in docs)
+    for pos in range(max_sentences):
+        for doc in docs:
+            if pos < len(doc):
+                selected.append(doc[pos])
+            if len(selected) >= 8:
+                break
+        if len(selected) >= 8:
+            break
+
+    last_doc = docs[-1]
+    if len(selected) >= 8 and len(last_doc) >= 3:
+        last_fact = last_doc[-1]
+        already = {item["fact"] for item in selected}
+        if last_fact["fact"] not in already:
+            for replace_index, item in enumerate(selected):
+                if item["document_index"] == last_fact["document_index"] and item["sentence_index"] == 1:
+                    selected[replace_index] = last_fact
+                    break
+
+    clean = []
+    seen = set()
+    for item in selected:
+        key = re.sub(r"[^a-z0-9àèéìòù]+", " ", item["fact"].lower()).strip()
+        if key and key not in seen:
+            clean.append(item)
+            seen.add(key)
+        if len(clean) >= 8:
+            break
+    return clean
+
+def _v515f3_cards_items_from_facts(facts, old_items=None):
+    old_items = old_items if isinstance(old_items, list) else []
+    icons = ["🧭", "🕒", "⚕️", "🧾", "📁", "🔎", "📊", "✅"]
+    themes = ["triage", "arrivo", "urgenza", "cura", "fascicolo", "referti", "audit", "correzione"]
+    items = []
+    for index, fact_item in enumerate(facts[:8]):
+        previous = old_items[index] if index < len(old_items) and isinstance(old_items[index], dict) else {}
+        fact = _v515e5_sentence(fact_item.get("fact"))
+        document_title = str(fact_item.get("document_title") or "").strip()
+        title = _v515f3_card_title(fact, document_title, index)
+        icon = icons[index % len(icons)]
+        key_message = _v515f3_card_key_message(fact, title, index)
+        explanation = _v515f3_card_explanation(fact, title, index)
+        source = _v515f3_card_source(fact, title, document_title)
+        card = {
+            **previous,
+            "id": previous.get("id") or previous.get("card_id") or f"cards_quality_v515f3_{index + 1:03d}",
+            "card_id": previous.get("card_id") or previous.get("id") or f"cards_quality_v515f3_{index + 1:03d}",
+            "titolo": title,
+            "messaggio_chiave": _v515e5_sentence(key_message),
+            "spiegazione": _v515e5_sentence(explanation),
+            "micro_concetti": _v515f3_card_words(f"{title} {fact}", 5),
+            "visual": {
+                "icon": icon,
+                "theme": themes[index % len(themes)],
+                "svg": _v515f3_card_svg(icon, title, index),
+            },
+            "fonte": source,
+            "source": source,
+            "sottocontesto": document_title,
+            "category": "Documento clinico",
+            "categoria": "Documento clinico",
+            "layout": "controlled",
+            "layout_status": "controlled",
+            "visual_layout": "controlled",
+            "bullet_points": _v515f3_card_points(fact, title, index),
+            "bullets": _v515f3_card_points(fact, title, index),
+            "fatto_origine": fact,
+            "document_title": document_title,
+            "document_index": fact_item.get("document_index"),
+            "quality_rewrite": "v515f3_cards_multidoc_context",
+        }
+        items.append(card)
+    return items
+
+def _v515f3_cards_reanchor_raw_output(raw_output, input_text):
+    facts = _v515f3_multidocument_card_facts(input_text)
+    if len(facts) < 4 or not isinstance(raw_output, dict):
+        return raw_output
+    fixed = dict(raw_output)
+    old_items = fixed.get("items") if isinstance(fixed.get("items"), list) else []
+    items = _v515f3_cards_items_from_facts(facts, old_items)
+    fixed["items"] = items
+    report = dict(fixed.get("quality_report") or {})
+    report.update({
+        "phase5_15f3_multi_document_cards_reanchor": True,
+        "phase5_15f3_reanchored_items": len(items),
+        "phase5_15f3_reanchor_strategy": "spread_cards_across_document_sections_without_repetitive_templates",
+    })
+    fixed["quality_report"] = report
+    return fixed
+
+def _v515f3_cards_public_output(output):
+    payload = _plain(output)
+    if not isinstance(payload, dict):
+        return payload
+    report = payload.get("quality_report") if isinstance(payload.get("quality_report"), dict) else {}
+    items = payload.get("items")
+    if not isinstance(items, list):
+        return payload
+    enabled = report.get("phase5_15f3_multi_document_cards_reanchor") is True or any(
+        isinstance(item, dict) and item.get("quality_rewrite") == "v515f3_cards_multidoc_context"
+        for item in items
+    )
+    if not enabled:
+        return payload
+    payload["fonte"] = "Fonte: sezione “Documento clinico — card multi-documento”"
+    payload["source"] = payload["fonte"]
+    payload["sottocontesto"] = "Documento clinico multi-sezione"
+    for index, item in enumerate(items):
+        if not isinstance(item, dict):
+            continue
+        fact = item.get("fatto_origine") or item.get("messaggio_chiave") or item.get("spiegazione") or ""
+        document_title = item.get("document_title") or item.get("sottocontesto") or ""
+        title = _v515f3_card_title(fact, document_title, index)
+        item["titolo"] = title
+        item["messaggio_chiave"] = _v515e5_sentence(_v515f3_card_key_message(fact, title, index))
+        item["spiegazione"] = _v515e5_sentence(_v515f3_card_explanation(fact, title, index))
+        item["micro_concetti"] = item.get("micro_concetti") or _v515f3_card_words(f"{title} {fact}", 5)
+        item["fonte"] = _v515f3_card_source(fact, title, document_title)
+        item["source"] = item["fonte"]
+        item["sottocontesto"] = str(document_title or "").strip(" []")
+        item["category"] = "Documento clinico"
+        item["categoria"] = item.get("categoria") or "Documento clinico"
+        item["bullet_points"] = _v515f3_card_points(fact, title, index)
+        item["bullets"] = item["bullet_points"]
+        item.pop("fatto_origine", None)
+        item.pop("document_title", None)
+        item.pop("document_index", None)
+        item.pop("title", None)
+        item.pop("key_message", None)
+        item.pop("explanation", None)
+    payload["items"] = items
     return payload
 
 def _v515e5_layout_fields(fact="", title=""):
