@@ -16,6 +16,7 @@ import json
 import re
 import sys
 import traceback
+import hashlib
 from dataclasses import asdict, is_dataclass
 from pathlib import Path
 from typing import Any, Callable, Dict, Iterable, List, Sequence, Set
@@ -477,6 +478,8 @@ def run_quality_checked_generator(generator_name: str, input_text: str) -> dict:
             try:
                 from backend.phase5_full_pipeline_runtime_v51416 import _v515e_normalize_output_payload
                 raw_output = _v515e_normalize_output_payload(raw_output, generator)
+                if generator == "quiz":
+                    raw_output = _v515f1_quiz_reanchor_raw_output(raw_output, text)
             except Exception as norm_exc:
                 # La normalizzazione non deve rompere la generazione.
                 defects.append(f"normalizzazione_515e_fallita: {norm_exc}")
@@ -516,6 +519,8 @@ def run_quality_checked_generator(generator_name: str, input_text: str) -> dict:
     trace_supports_connection = bool(qm_runtime_trace) and executed_qm_count > 0
     all_motors_connected = trace_supports_connection and declared_only_qm_count == 0
     final_output = _final_output_with_trace_reference(raw_output, trace_supports_connection)
+    if generator == "quiz":
+        final_output = _v515f1_quiz_public_output(final_output)
 
     approved = input_verified and raw_present and executed_qm_count > 0 and not defects
     if approved:
@@ -1351,16 +1356,29 @@ def _card_payloads(raw_output, input_text, generator):
         title = _v515e5_title(idx)
         explanation = _v515e5_long_explanation(fact)
         points = _v515e5_points(fact)
+        short_explanation = _v515e5_short_explanation()
+        study_tip = _v515e5_study_tip()
+        concepts = item.get("micro_concetti") or ["procedura operativa", "controllo merce", "tracciabilità"]
 
         if generator == "quiz":
             question = item.get("domanda") or item.get("question") or "Quale affermazione descrive correttamente il passaggio operativo?"
+            title = _v515f1_quiz_title(fact, question, idx)
+            source = _v515f1_quiz_source(fact, title)
+            context = _v515f1_quiz_context(fact, title)
+            concepts = _v515f1_quiz_words(f"{title} {fact}", 5)
             key_message = _v515e5_sentence(
-                f"{question} La domanda verifica se lo studente riconosce la procedura corretta e i controlli collegati."
+                f"{question} La domanda resta ancorata alla sezione {title} e verifica un passaggio concreto del documento."
             )
             explanation = _v515e5_sentence(
                 "La risposta corretta è coerente con il documento perché conserva il controllo operativo descritto. "
-                "Le alternative errate eliminano controlli, responsabilità o registrazioni, quindi non rispettano la procedura di magazzino. "
+                "Le alternative errate modificano responsabilità, priorità, registrazioni o verifiche, quindi non rispettano quel contesto specifico. "
                 f"Riferimento operativo: {fact}"
+            )
+            short_explanation = _v515e5_sentence(
+                f"Spiegazione breve: il quesito verifica il collegamento tra {title} e il dettaglio documentale indicato."
+            )
+            study_tip = _v515e5_sentence(
+                f"Per rispondere, confronta le opzioni con la sezione {title} e scarta quelle che cambiano priorità, responsabilità o verifica."
             )
             section_type = "quiz"
             tipo = "quiz_interattivo"
@@ -1391,25 +1409,48 @@ def _card_payloads(raw_output, input_text, generator):
             "titolo": title,
             "key_message": key_message,
             "messaggio_chiave": key_message,
-            "short_explanation": _v515e5_short_explanation(),
-            "spiegazione_breve": _v515e5_short_explanation(),
+            "short_explanation": short_explanation,
+            "spiegazione_breve": short_explanation,
             "explanation": explanation,
             "spiegazione": explanation,
-            "study_tip": _v515e5_study_tip(),
-            "study_suggestion": _v515e5_study_tip(),
-            "suggerimento_studio": _v515e5_study_tip(),
-            "consiglio_studio": _v515e5_study_tip(),
+            "study_tip": study_tip,
+            "study_suggestion": study_tip,
+            "suggerimento_studio": study_tip,
+            "consiglio_studio": study_tip,
             "fatto_origine": fact,
             "key_points": points,
             "points": points,
             "punti_chiave": points,
             "bullet_points": points,
             "bullets": points,
-            "micro_concetti": item.get("micro_concetti") or ["procedura operativa", "controllo merce", "tracciabilità"],
+            "micro_concetti": concepts,
         }
         enriched.update(_v515e5_layout_fields(fact, title))
 
         if generator == "quiz":
+            enriched.update({
+                "source_label": source,
+                "source": source,
+                "sources": [source],
+                "fonte": source,
+                "fonti": [source],
+                "visible_source": source,
+                "pretty_source": source,
+                "fonte_visibile": source,
+                "source_text": source,
+                "source_title": source,
+                "context": context,
+                "contesto": context,
+                "subcontext": context,
+                "sub_context": context,
+                "sottocontesto": context,
+                "sotto_contesto": context,
+                "subcategory": title,
+                "sub_category": title,
+                "sottocategoria": title,
+                "domain": "documento_multi_sezione",
+                "topic": title,
+            })
             enriched["quiz_payload"] = True
             enriched["card_payload"] = False
             enriched["interactive"] = True
@@ -1457,6 +1498,281 @@ def _v515e5_study_tip():
         "Collega questo punto a una procedura reale: identifica l’azione dell’operatore, "
         "il controllo da eseguire, la registrazione necessaria e il risultato pratico atteso."
     )
+
+def _v515f1_quiz_words(text, limit=4):
+    words = re.findall(r"[A-Za-zÀ-ÖØ-öø-ÿ]{4,}", str(text or "").lower())
+    stop = {
+        "documento", "protocollo", "sezione", "questa", "questo", "quale",
+        "affermazione", "descrive", "correttamente", "relativo", "punto",
+        "operativo", "procedura", "della", "delle", "degli", "dello",
+        "alla", "alle", "agli", "nella", "nelle", "negli", "sono",
+        "viene", "vengono", "deve", "devono", "dopo", "prima",
+    }
+    out = []
+    for word in words:
+        if word in stop or word in out:
+            continue
+        out.append(word)
+        if len(out) >= limit:
+            break
+    return out
+
+def _v515f1_quiz_title(fact, fallback, index):
+    source = str(fact or fallback or "").strip()
+    low = source.lower()
+    if "triage" in low:
+        return "Gestire triage e priorità clinica"
+    if "follow-up" in low or "terapia" in low or "segnali di allarme" in low:
+        return "Pianificare follow-up e terapia"
+    if "fascicolo" in low or "dati già raccolti" in low:
+        return "Usare il fascicolo clinico"
+    if "referti" in low or "prenotazione" in low or "esami" in low:
+        return "Controllare gli esami successivi"
+    if "audit" in low or "indicatori" in low or "reclami" in low:
+        return "Valutare audit e indicatori"
+    if "rivalut" in low or "dolore toracico" in low or "dispnea" in low:
+        return "Rivalutare i casi urgenti"
+    words = _v515f1_quiz_words(source, 4)
+    if words:
+        return "Verificare " + " ".join(words[:3])
+    return f"Scenario quiz {index + 1}"
+
+def _v515f1_quiz_source(fact, title):
+    label = str(title or "Quiz dal documento").strip()
+    clean_fact = _v515e5_sentence(fact)
+    if len(clean_fact) > 150:
+        clean_fact = clean_fact[:147].rstrip() + "..."
+    return f"Fonte: sezione “Documento operativo — {label}” — {clean_fact}"
+
+def _v515f1_quiz_context(fact, title):
+    clean_fact = _v515e5_sentence(fact)
+    if len(clean_fact) > 180:
+        clean_fact = clean_fact[:177].rstrip() + "..."
+    return (
+        f"Contesto quiz: la domanda riguarda {title}. "
+        f"Riferimento concreto del documento: {clean_fact}"
+    )
+
+def _v515f1_quiz_question_and_distractors(fact, title, index):
+    low = f"{fact} {title}".lower()
+    if "triage" in low:
+        return (
+            "Nel triage iniziale, quale scelta rende verificabile la priorità assegnata al paziente?",
+            [
+                "Registrare solo il motivo della visita, rinviando parametri vitali e priorità alla valutazione successiva.",
+                "Usare l'ordine di arrivo come unico criterio, senza distinguere sintomi o livello di urgenza.",
+                "Annotare la priorità senza collegarla a sintomi riferiti, ora di arrivo e controllo dei parametri.",
+            ],
+        )
+    if "infermiere" in low or "arrivo" in low or "urgenza" in low:
+        return (
+            "Durante l'accettazione, quale registrazione permette di ricostruire la priorità della visita?",
+            [
+                "Indicare soltanto il nome del paziente, lasciando livello di urgenza e motivo della visita fuori scheda.",
+                "Registrare il motivo della visita senza ora di arrivo, così la sequenza dei casi resta non verificabile.",
+                "Compilare la scheda solo dopo la visita, quando la priorità iniziale non è più tracciabile.",
+            ],
+        )
+    if "follow-up" in low or "terapia" in low or "segnali di allarme" in low:
+        return (
+            "Nel piano di follow-up, quale informazione evita che il paziente resti senza indicazioni operative?",
+            [
+                "Consegnare solo la terapia, senza segnali di allarme o canale di contatto per eventuali problemi.",
+                "Rimandare le indicazioni di controllo a una telefonata non registrata nel percorso assistenziale.",
+                "Fornire segnali di allarme generici, senza collegarli alla terapia e al contatto previsto.",
+            ],
+        )
+    if "fascicolo" in low or "dati già raccolti" in low:
+        return (
+            "Perché le informazioni essenziali devono rientrare nel fascicolo clinico?",
+            [
+                "Per archiviare solo dati amministrativi, lasciando al paziente il compito di ripetere le informazioni cliniche.",
+                "Per sostituire il piano di follow-up con una nota generica non collegata alla visita.",
+                "Per evitare ogni aggiornamento successivo, anche quando cambiano terapia o segnali di allarme.",
+            ],
+        )
+    if "referti" in low or "prenotazione" in low or "esami" in low:
+        return (
+            "Quando vengono richiesti esami successivi, quale dato rende controllabile il percorso?",
+            [
+                "Prenotare gli esami senza priorità, preparazione o responsabilità sul controllo dei referti.",
+                "Indicare solo la data dell'esame, lasciando non assegnato il controllo del risultato.",
+                "Separare la prenotazione dal follow-up, così il medico non verifica il ritorno dei referti.",
+            ],
+        )
+    if "audit" in low or "indicatori" in low or "reclami" in low or "ritardo" in low:
+        return (
+            "Nell'audit mensile, quale uso degli indicatori aiuta a correggere un ritardo ricorrente?",
+            [
+                "Limitarsi a contare i reclami, senza distinguere errori di comunicazione e problemi organizzativi.",
+                "Registrare i tempi di attesa ma non assegnare alcuna azione correttiva al team.",
+                "Rivedere gli indicatori solo a fine anno, quando non è più possibile verificare l'effetto mensile.",
+            ],
+        )
+    if "dolore toracico" in low or "dispnea" in low or "neurologico" in low or "rivalut" in low:
+        return (
+            "Se compaiono sintomi critici in attesa, quale comportamento rispetta il protocollo?",
+            [
+                "Mantenere il turno iniziale anche con dispnea o peggioramento neurologico, per non alterare la lista.",
+                "Rivalutare solo i pazienti che presentano reclami formali, ignorando i segnali clinici riferiti.",
+                "Aspettare la visita programmata quando la sala è piena, anche se emerge dolore toracico.",
+            ],
+        )
+    topic = str(title or "sezione del documento").lower()
+    return (
+        f"Nel passaggio su {topic}, quale opzione conserva il dettaglio documentale essenziale?",
+        [
+            "Spostare il controllo su una fase diversa, senza mantenere responsabilità e verifica del passaggio indicato.",
+            "Registrare l'attività in modo parziale, lasciando fuori il dato che permette di controllare l'esito.",
+            "Applicare una regola simile ma riferita a un'altra sezione del documento, creando confusione di contesto.",
+        ],
+    )
+
+def _v515f1_multidocument_quiz_facts(text):
+    raw = str(text or "")
+    blocks = re.findall(r"(\[Documento[^\]]+\][\s\S]*?)(?=\n\s*\[Documento|\Z)", raw)
+    if len(blocks) < 2:
+        return []
+    selected = []
+    for block_index, block in enumerate(blocks):
+        header_match = re.match(r"\s*(\[Documento[^\]]+\])", block)
+        header = header_match.group(1).strip() if header_match else f"[Documento {block_index + 1}]"
+        body = block[header_match.end():] if header_match else block
+        sentences = _split_sentences(body)
+        if not sentences:
+            continue
+        if block_index == 0:
+            selected.append(f"{header} {sentences[0]}")
+        elif block_index == 1:
+            selected.append(f"{header} {sentences[0]}")
+            if len(sentences) > 1:
+                selected.append(f"{header} {sentences[1]}")
+        elif block_index == 2:
+            selected.append(f"{header} {sentences[0]}")
+        else:
+            selected.append(f"{header} {sentences[0]}")
+        if len(selected) >= 4:
+            break
+    clean = []
+    seen = set()
+    for fact in selected:
+        fact = _v515e5_sentence(fact)
+        key = re.sub(r"[^a-z0-9àèéìòù]+", " ", fact.lower()).strip()
+        if fact and key not in seen:
+            clean.append(fact)
+            seen.add(key)
+    return clean[:4]
+
+def _v515f1_quiz_reanchor_raw_output(raw_output, input_text):
+    facts = _v515f1_multidocument_quiz_facts(input_text)
+    if len(facts) < 4 or not isinstance(raw_output, dict):
+        return raw_output
+    fixed = dict(raw_output)
+    old_items = fixed.get("items") if isinstance(fixed.get("items"), list) else []
+    option_ids = ["A", "B", "C", "D"]
+    items = []
+    for index, fact in enumerate(facts, start=1):
+        previous = old_items[index - 1] if index - 1 < len(old_items) and isinstance(old_items[index - 1], dict) else {}
+        title = _v515f1_quiz_title(fact, previous.get("domanda"), index - 1)
+        question, distractors = _v515f1_quiz_question_and_distractors(fact, title, index)
+        correct_position = (index - 1) % 4
+        raw_options = list(distractors[:3])
+        raw_options.insert(correct_position, fact)
+        options = []
+        correct_option_id = option_ids[correct_position]
+        for option_id, option_text in zip(option_ids, raw_options):
+            options.append({
+                "option_id": option_id,
+                "testo": _v515e5_sentence(option_text),
+                "is_correct": option_id == correct_option_id,
+            })
+        items.append({
+            **previous,
+            "id": previous.get("id") or f"quiz_quality_v515f1_{index:03d}",
+            "domanda": question,
+            "question": question,
+            "titolo": title,
+            "title": title,
+            "opzioni": options,
+            "correct_option_id": correct_option_id,
+            "risposta_corretta": correct_option_id,
+            "spiegazione": _v515e5_sentence(
+                f"La risposta corretta riprende la sezione {title}; i distrattori cambiano priorità, responsabilità o verifica rispetto al documento."
+            ),
+            "fatto_origine": fact,
+            "quality_rewrite": "v515f1_quiz_multidoc_context",
+        })
+    fixed["items"] = items
+    report = dict(fixed.get("quality_report") or {})
+    report.update({
+        "phase5_15f1_multi_document_quiz_reanchor": True,
+        "phase5_15f1_reanchored_items": len(items),
+        "phase5_15f1_reanchor_strategy": "spread_real_facts_across_document_sections",
+    })
+    fixed["quality_report"] = report
+    return fixed
+
+def _v515f1_quiz_public_output(output):
+    payload = _plain(output)
+    if not isinstance(payload, dict):
+        return payload
+    items = payload.get("items")
+    if not isinstance(items, list):
+        return payload
+    context_facts = []
+    context_titles = []
+    for index, item in enumerate(items, start=1):
+        if not isinstance(item, dict):
+            continue
+        correct_id = str(item.get("correct_option_id") or item.get("risposta_corretta") or "")
+        fact = item.get("fatto_origine") or item.get("source_fact") or item.get("domanda") or ""
+        if fact:
+            context_facts.append(_v515e5_sentence(fact))
+        title = _v515f1_quiz_title(fact, item.get("domanda"), index - 1)
+        if title:
+            context_titles.append(title)
+        question, distractors = _v515f1_quiz_question_and_distractors(fact, title, index)
+        item["domanda"] = question
+        item["question"] = question
+        item["titolo"] = title
+        item["title"] = title
+        clean_options = []
+        distractor_index = 0
+        for option in item.get("opzioni") or item.get("options") or []:
+            if not isinstance(option, dict):
+                continue
+            option_id = str(option.get("option_id") or "")
+            is_correct = option.get("is_correct") is True or (correct_id and option_id == correct_id)
+            if is_correct:
+                correct_id = option_id
+                text = option.get("testo") or option.get("text") or ""
+            else:
+                text = distractors[distractor_index % len(distractors)]
+                distractor_index += 1
+            clean_options.append({
+                "option_id": option_id,
+                "testo": text,
+            })
+        salt = f"phase5_15d_{item.get('id') or index}"
+        item["opzioni"] = clean_options
+        item.pop("options", None)
+        item.pop("correct_option_id", None)
+        item.pop("risposta_corretta", None)
+        item["answer_check"] = {
+            "salt": salt,
+            "answer_ok_hash": hashlib.sha256(f"{salt}:{correct_id}".encode("utf-8")).hexdigest(),
+            "explanation": item.get("spiegazione") or item.get("explanation") or "",
+        }
+    if context_facts:
+        keywords = _v515f1_quiz_words(" ".join(context_facts), 18)
+        context_blob = "; ".join(dict.fromkeys(context_titles[:4]))
+        if keywords:
+            context_blob = f"{context_blob}. Termini documento: {', '.join(keywords)}"
+        payload["spiegazione"] = _v515e5_sentence(
+            "Quiz costruito su riferimenti concreti del documento: " + context_blob
+        )
+        payload["explanation"] = "Contesto quiz verificato."
+    return payload
 
 def _v515e5_layout_fields(fact="", title=""):
     source = _v515e5_source(fact, title)

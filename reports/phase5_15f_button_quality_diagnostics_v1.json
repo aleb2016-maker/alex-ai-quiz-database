@@ -1,0 +1,936 @@
+{
+  "phase": "5.15F.0",
+  "status": "PASS",
+  "created_at": "2026-07-07T20:01:02",
+  "scope": "diagnostica reale pulsanti generatori RAG/LLM senza modifiche funzionali",
+  "git": {
+    "branch": "rag-concept-app-presentabile-v3",
+    "commit": "0444d0d",
+    "commit_full": "0444d0d227d76555247a8d0da61cb0b857a30daa",
+    "tags_at_head": [
+      "checkpoint-mini-llm-approved-generators-v515e"
+    ],
+    "relevant_tags": [
+      "checkpoint-mini-llm-advanced-language-repair-v512f",
+      "checkpoint-mini-llm-approved-generators-v515e",
+      "checkpoint-mini-llm-audit-motori-qualita-v515",
+      "checkpoint-mini-llm-card-route-60-universal-title-v513a",
+      "checkpoint-mini-llm-card-summary-source-quality-v512d",
+      "checkpoint-mini-llm-contextual-duplicates-v512g",
+      "checkpoint-mini-llm-current-speed-benchmark",
+      "checkpoint-mini-llm-current-v315-stable",
+      "checkpoint-mini-llm-didactic-quality-motors-v512c",
+      "checkpoint-mini-llm-document-cli-pdf-v1",
+      "checkpoint-mini-llm-document-cli-pdf-v1-clean",
+      "checkpoint-mini-llm-document-cli-v1",
+      "checkpoint-mini-llm-document-cli-v1-markdown-clean",
+      "checkpoint-mini-llm-documentale-integrato-v1",
+      "checkpoint-mini-llm-executable-registry-proof-v515a",
+      "checkpoint-mini-llm-existing-quiz-quality-motors-map-v594",
+      "checkpoint-mini-llm-fast-document-cache-v2",
+      "checkpoint-mini-llm-fast-document-cache-v2-clean",
+      "checkpoint-mini-llm-fast-document-qa-summary-v1",
+      "checkpoint-mini-llm-fast-qa-summary-current",
+      "checkpoint-mini-llm-final-4-generators-regression-v513e",
+      "checkpoint-mini-llm-final-presentable-pipeline-report-v513f",
+      "checkpoint-mini-llm-final-quality-output-motors-v512j",
+      "checkpoint-mini-llm-final-registry-quality-snapshot-v5102",
+      "checkpoint-mini-llm-final-summary-route-55-v513b1",
+      "checkpoint-mini-llm-legacy-quality-delta-v58",
+      "checkpoint-mini-llm-legacy-quality-discovery-v55",
+      "checkpoint-mini-llm-legacy-quality-registry-v54",
+      "checkpoint-mini-llm-legacy-ready-safe-motors-v56",
+      "checkpoint-mini-llm-legacy-registry-target-guard-v57",
+      "checkpoint-mini-llm-long-document-rag-v39",
+      "checkpoint-mini-llm-long-document-rag-v391-semantic-repair",
+      "checkpoint-mini-llm-motori-salvabili-strict-v512a1",
+      "checkpoint-mini-llm-neutral-areas-root-cause-v59",
+      "checkpoint-mini-llm-official-quality-catalog-v512h2-i2",
+      "checkpoint-mini-llm-orchestrator-v4005",
+      "checkpoint-mini-llm-orchestrator-v4005-reproducible",
+      "checkpoint-mini-llm-output-modes-v1",
+      "checkpoint-mini-llm-phase5-live-quality-bridge-v1",
+      "checkpoint-mini-llm-pipeline-5-fasi-pre-bridge-v1",
+      "checkpoint-mini-llm-pipeline-output-ready-v511",
+      "checkpoint-mini-llm-practical-real-test-v391",
+      "checkpoint-mini-llm-quality-capability-matrix-v5910",
+      "checkpoint-mini-llm-quality-entrypoint-qm-coverage-v515b",
+      "checkpoint-mini-llm-quality-registry-23-motors-v512b1",
+      "checkpoint-mini-llm-quality-registry-33-motors-v512c1",
+      "checkpoint-mini-llm-quality-registry-43-motors-v512d1",
+      "checkpoint-mini-llm-quality-registry-55-motors-v512e1",
+      "checkpoint-mini-llm-quality-registry-59-motors-v512f1",
+      "checkpoint-mini-llm-quality-registry-65-motors-v512g1",
+      "checkpoint-mini-llm-query-context-expander-v394",
+      "checkpoint-mini-llm-quiz-motor-compatibility-inspection-v596",
+      "checkpoint-mini-llm-quiz-motor-runtime-test-v597",
+      "checkpoint-mini-llm-quiz-quality-motors-shortlist-v595",
+      "checkpoint-mini-llm-quiz-repair-registry-v593",
+      "checkpoint-mini-llm-quiz-true-distractor-repair-v592",
+      "checkpoint-mini-llm-real-output-cleaner-v3931",
+      "checkpoint-mini-llm-real-page-generators-v515d",
+      "checkpoint-mini-llm-real-quality-gate-v392",
+      "checkpoint-mini-llm-registry-selector-orchestrator-v512h1",
+      "checkpoint-mini-llm-runtime-pronto-llm-v1",
+      "checkpoint-mini-llm-runtime-pronto-llm-v1-clean",
+      "checkpoint-mini-llm-section-quality-matrix-advanced-language-v512f2",
+      "checkpoint-mini-llm-section-quality-matrix-contextual-duplicates-v512g2",
+      "checkpoint-mini-llm-section-quality-matrix-test-quiz-v512e2",
+      "checkpoint-mini-llm-section-quality-matrix-v512d2",
+      "checkpoint-mini-llm-selector-orchestrator-standalone-v512h",
+      "checkpoint-mini-llm-study-pack-cli-v1",
+      "checkpoint-mini-llm-study-pack-cli-v2",
+      "checkpoint-mini-llm-study-pack-current-v3-clean",
+      "checkpoint-mini-llm-study-pack-universale-v397",
+      "checkpoint-mini-llm-study-pack-v1",
+      "checkpoint-mini-llm-study-pack-v2-quality",
+      "checkpoint-mini-llm-study-pack-v3-quality-gate",
+      "checkpoint-mini-llm-study-questions-51-real-connector-v513c1",
+      "checkpoint-mini-llm-study-questions-final-quality-gate-v513c2",
+      "checkpoint-mini-llm-study-questions-route-51-v513c01",
+      "checkpoint-mini-llm-summary-card-cleaner-registry-v5101",
+      "checkpoint-mini-llm-summary-card-cleaner-v510",
+      "checkpoint-mini-llm-summary-route-55-v513b01",
+      "checkpoint-mini-llm-test-quiz-63-real-quality-v513d",
+      "checkpoint-mini-llm-test-quiz-quality-v512e",
+      "checkpoint-mini-llm-text-quality-motors-v512b",
+      "checkpoint-mini-llm-ui-bridge-4-generators-v51412",
+      "checkpoint-mini-llm-ui-bridge-quality-entrypoint-v515c",
+      "checkpoint-mini-llm-universal-core-split-v394u",
+      "checkpoint-mini-llm-universal-current-engine-v396",
+      "checkpoint-mini-llm-universal-llm-bridge-v395",
+      "checkpoint-mini-llm-universal-quiz-quality-adapter-v598",
+      "checkpoint-mini-llm-universal-quiz-quality-registry-v599",
+      "checkpoint-mini-llm-updated-matrix-orchestration-v512h2",
+      "checkpoint-mini-llm-v311-human-aligned",
+      "checkpoint-mini-llm-v314-rewrite-only-safe",
+      "checkpoint-mini-llm-v315-extended-safe"
+    ],
+    "status_short": "M backend/phase5_15b_quality_checked_generators.py\n M reports/phase5_15d_real_page_generators_trace_v1.json\n M reports/phase5_15e_approved_outputs_report_v1.json\n?? reports/phase5_15f1_quiz_patch_safety_review_v1.md\n?? reports/phase5_15f_button_quality_diagnostics_v1.json\n?? reports/phase5_15f_button_quality_diagnostics_v1.md\n?? scripts/run_phase5_15f_button_quality_diagnostics.py",
+    "checkpoint_expected": {
+      "commit": "0444d0d",
+      "tag": "checkpoint-mini-llm-approved-generators-v515e",
+      "commit_matches": true,
+      "tag_at_head": true
+    }
+  },
+  "baselines": {
+    "phase5_15e": {
+      "phase": "5.15E",
+      "script": "scripts/run_phase5_15e_approved_outputs_smoke.py",
+      "command_ok": true,
+      "report_status": "PASS",
+      "expected_counts": {
+        "summary": 55,
+        "cards": 60,
+        "study_questions": 51,
+        "quiz": 63
+      },
+      "observed_counts": {
+        "summary": 55,
+        "cards": 60,
+        "study_questions": 51,
+        "quiz": 63
+      },
+      "pass": true,
+      "defects": [],
+      "stdout_tail": "FASE 5.15E approved smoke: status=PASS\n- summary: status=APPROVED approved=True qm=55/55 defects=0\n- cards: status=APPROVED approved=True qm=60/60 defects=0\n- study_questions: status=APPROVED approved=True qm=51/51 defects=0\n- quiz: status=APPROVED approved=True qm=63/63 defects=0\n",
+      "stderr_tail": ""
+    },
+    "phase5_15d": {
+      "phase": "5.15D",
+      "script": "scripts/run_phase5_15d_real_page_generators_smoke.py",
+      "command_ok": true,
+      "report_status": "PASS",
+      "expected_counts": {
+        "summary": 55,
+        "cards": 60,
+        "study_questions": 51,
+        "quiz": 63
+      },
+      "observed_counts": {
+        "summary": 55,
+        "cards": 60,
+        "study_questions": 51,
+        "quiz": 63
+      },
+      "generator_outcomes": {
+        "summary": "PASS",
+        "cards": "PASS",
+        "study_questions": "PASS",
+        "quiz": "PASS"
+      },
+      "pass": true,
+      "defects": [],
+      "stdout_tail": "FASE 5.15D smoke: status=PASS counts={'summary': 55, 'cards': 60, 'study_questions': 51, 'quiz': 63}\n",
+      "stderr_tail": ""
+    },
+    "pass": true
+  },
+  "documents": [
+    {
+      "document_id": "single_stable_warehouse_order_flow",
+      "document_label": "Documento singolo stabile - gestione ordini magazzino",
+      "source": "testo stabile gia usato dagli smoke 5.15D/5.15E",
+      "expected_terms": [
+        "magazzino",
+        "ordini",
+        "merce",
+        "preparazione",
+        "spedizione",
+        "tracciabilità"
+      ],
+      "forbidden_terms": [
+        "sicurezza informatica aziendale",
+        "lorem ipsum",
+        "testo di esempio"
+      ]
+    },
+    {
+      "document_id": "synthetic_multi_document_clinic_triage_quality",
+      "document_label": "Mini caso multi-documento sintetico - triage, follow-up, audit",
+      "source": "contenuto realistico sintetico creato solo dentro lo script diagnostico",
+      "expected_terms": [
+        "triage",
+        "follow-up",
+        "fascicolo",
+        "referti",
+        "audit",
+        "rivalutazioni"
+      ],
+      "forbidden_terms": [
+        "sicurezza informatica aziendale",
+        "lorem ipsum",
+        "testo di esempio"
+      ]
+    }
+  ],
+  "button_summary": [
+    {
+      "button_label": "Genera Riassunto",
+      "generator_name": "summary",
+      "engine_id": "full_pipeline_summary_route55_all_motors_v51416",
+      "documents_tested": 2,
+      "approved_all": true,
+      "status": "PASS",
+      "expected_qm_count": 55,
+      "executed_qm_counts": [
+        55
+      ],
+      "output_count_reale": [
+        1,
+        1
+      ],
+      "defects": [],
+      "warnings": [
+        "riassunto_non_copre_abbastanza_sezioni"
+      ],
+      "problemi_rag_osservati": [
+        "riassunto non abbastanza profondo"
+      ],
+      "problemi_didattici_osservati": [],
+      "issue_classes": [
+        "problema qualità linguistica"
+      ],
+      "sample_output_breve": "Il documento spiega che la gestione degli ordini in un magazzino moderno richiede una procedura chiara per ricevere, controllare, registrare e spedire i prodotti. In apertura chiarisce anche che quando arriva una nuova merce, l'operatore verifica il documento di trasporto, controlla quantità e integrità degli articoli e segnala eventuali differenze. Questi elementi introducono il flusso operativo su cui si sviluppano ricezione, controllo e registrazione. La parte centrale approfondisce gli aspetti più operativi: Durante la preparazione degli ordini, il sistema genera una lista di prelievo con codice articolo, quantità richiesta e posizione. L'operatore raccoglie i prodotti, controlla che cor"
+    },
+    {
+      "button_label": "Genera Card",
+      "generator_name": "cards",
+      "engine_id": "full_pipeline_cards_60_motors_graphic_v51416",
+      "documents_tested": 2,
+      "approved_all": false,
+      "status": "FAIL",
+      "expected_qm_count": 60,
+      "executed_qm_counts": [
+        60
+      ],
+      "output_count_reale": [
+        8,
+        8
+      ],
+      "defects": [
+        "approved_non_true:False",
+        "status_non_approved:QUALITY_BLOCKED"
+      ],
+      "warnings": [
+        "radici_ripetute:analizzat,aspetto,azione,collega,concreto,contenuto,evidenzia,operativa",
+        "radici_ripetute:analizzat,azione,collega,concreto,contenuto,degli,evidenzia,magazzino"
+      ],
+      "problemi_rag_osservati": [
+        "ripetizioni"
+      ],
+      "problemi_didattici_osservati": [],
+      "issue_classes": [
+        "problema qualità RAG",
+        "problema qualità linguistica"
+      ],
+      "sample_output_breve": "[{\"card_id\": \"full_card_v51416_001\", \"titolo\": \"Gestione ordinata del magazzino\", \"messaggio_chiave\": \"Gestione ordini magazzino moderno: La gestione degli ordini in un magazzino moderno richiede una procedura chiara per ricevere, controllare, registrare e spedire i prodotti.\", \"spiegazione\": \"La card evidenzia che la gestione degli ordini in un magazzino moderno richiede una procedura chiara per ricevere, controllare, registrare e spedire i prodotti Questo passaggio collega il contenuto del documento a un'azione operativa o a un controllo concreto.\", \"micro_concetti\": [\"gestione\", \"ordini\", \"magazzino\", \"moderno\"], \"visual\": {\"icon\": \"🏢\", \"theme\": \"business_presentable\", \"svg\": \"<svg viewBo"
+    },
+    {
+      "button_label": "Genera Test/Quiz",
+      "generator_name": "quiz",
+      "engine_id": "full_pipeline_quiz_route63_language_quality_v51418",
+      "documents_tested": 2,
+      "approved_all": true,
+      "status": "PASS",
+      "expected_qm_count": 63,
+      "executed_qm_counts": [
+        63
+      ],
+      "output_count_reale": [
+        4,
+        4
+      ],
+      "defects": [],
+      "warnings": [],
+      "problemi_rag_osservati": [],
+      "problemi_didattici_osservati": [],
+      "issue_classes": [],
+      "sample_output_breve": "[{\"id\": \"quiz_quality_v51418_001\", \"domanda\": \"Nel passaggio su verificare gestione ordini magazzino, quale opzione conserva il dettaglio documentale essenziale?\", \"opzioni\": [{\"option_id\": \"A\", \"testo\": \"La gestione degli ordini in un magazzino moderno richiede una procedura chiara per ricevere, controllare, registrare e spedire i prodotti\"}, {\"option_id\": \"B\", \"testo\": \"Spostare il controllo su una fase diversa, senza mantenere responsabilità e verifica del passaggio indicato.\"}, {\"option_id\": \"C\", \"testo\": \"Registrare l'attività in modo parziale, lasciando fuori il dato che permette di controllare l'esito.\"}, {\"option_id\": \"D\", \"testo\": \"Applicare una regola simile ma riferita a un'altra "
+    },
+    {
+      "button_label": "Genera Domande studio",
+      "generator_name": "study_questions",
+      "engine_id": "full_pipeline_study_route51_language_quality_v51418",
+      "documents_tested": 2,
+      "approved_all": false,
+      "status": "FAIL",
+      "expected_qm_count": 51,
+      "executed_qm_counts": [
+        51
+      ],
+      "output_count_reale": [
+        4,
+        4
+      ],
+      "defects": [
+        "approved_non_true:False",
+        "status_non_approved:QUALITY_BLOCKED"
+      ],
+      "warnings": [
+        "copertura_termini_documento_bassa:0/6",
+        "copertura_termini_documento_bassa:1/6"
+      ],
+      "problemi_rag_osservati": [
+        "domande innaturali",
+        "genericità",
+        "perdita contesto"
+      ],
+      "problemi_didattici_osservati": [
+        "domande_formulaiche:4"
+      ],
+      "issue_classes": [
+        "problema didattico",
+        "problema qualità RAG",
+        "problema qualità linguistica"
+      ],
+      "sample_output_breve": "[{\"id\": \"study_quality_v51418_001\", \"domanda\": \"Qual è il punto operativo principale relativo a gestione ordini magazzino?\", \"risposta_guida\": \"Il documento indica che la gestione degli ordini in un magazzino moderno richiede una procedura chiara per ricevere, controllare, registrare e spedire i prodotti. Lo studente deve collegare questo punto a una procedura concreta, a una responsabilità chiara e a una verifica controllabile.\", \"tipo_domanda\": \"comprensione_operativa\", \"livello_cognitivo\": \"applicazione\", \"fatto_origine\": \"La gestione degli ordini in un magazzino moderno richiede una procedura chiara per ricevere, controllare, registrare e spedire i prodotti\", \"quality_rewrite\": \"v51418_l"
+    }
+  ],
+  "cases": [
+    {
+      "button_label": "Genera Riassunto",
+      "generator_name": "summary",
+      "engine_id": "full_pipeline_summary_route55_all_motors_v51416",
+      "entrypoint": "backend.phase5_15b_quality_checked_generators.run_quality_checked_generator",
+      "input_document": {
+        "document_id": "single_stable_warehouse_order_flow",
+        "document_label": "Documento singolo stabile - gestione ordini magazzino",
+        "source": "testo stabile gia usato dagli smoke 5.15D/5.15E",
+        "chars": 1151
+      },
+      "expected_qm_count": 55,
+      "executed_qm_count": 55,
+      "output_count_atteso": 1,
+      "output_count_reale": 1,
+      "approved": true,
+      "status": "APPROVED",
+      "defects": [],
+      "warnings": [],
+      "sample_output_breve": "Il documento spiega che la gestione degli ordini in un magazzino moderno richiede una procedura chiara per ricevere, controllare, registrare e spedire i prodotti. In apertura chiarisce anche che quando arriva una nuova merce, l'operatore verifica il documento di trasporto, controlla quantità e integrità degli articoli e segnala eventuali differenze. Questi elementi introducono il flusso operativo su cui si sviluppano ricezione, controllo e registrazione. La parte centrale approfondisce gli aspetti più operativi: Durante la preparazione degli ordini, il sistema genera una lista di prelievo con codice articolo, quantità richiesta e posizione. L'operatore raccoglie i prodotti, controlla che cor",
+      "qualita_linguistica_osservata": "buona: paragrafi leggibili",
+      "qualita_didattica_osservata": "media: utile per orientarsi, ma da verificare profondita su documenti multipli",
+      "problemi_rag_osservati": [],
+      "problemi_didattici_osservati": [],
+      "issue_classes": [],
+      "quality_report": {
+        "phase": "5.14.16",
+        "kind": "summary",
+        "full_pipeline": true,
+        "all_motors_connected": true,
+        "strict_no_fallback": true,
+        "input_chars": 1151,
+        "clean_chars": 1149,
+        "facts_count": 9,
+        "defects": [],
+        "warnings": [],
+        "connected_motor_groups": [
+          "input_cleaner",
+          "code_noise_filter",
+          "fact_extractor",
+          "dedupe_selector",
+          "domain_signal_selector",
+          "quality_gate",
+          "presentation_formatter",
+          "anti_demo_guard",
+          "ui_output_contract"
+        ],
+        "route_total": 55,
+        "quality_controls": 55,
+        "summary_style": "natural_paragraphs",
+        "forbidden_output_style": "bullet_list",
+        "connection_status": "RUNTIME_TRACE_PROVED_BY_PHASE5_15B",
+        "qm_runtime_trace_reference": "top_level.qm_runtime_trace"
+      }
+    },
+    {
+      "button_label": "Genera Card",
+      "generator_name": "cards",
+      "engine_id": "full_pipeline_cards_60_motors_graphic_v51416",
+      "entrypoint": "backend.phase5_15b_quality_checked_generators.run_quality_checked_generator",
+      "input_document": {
+        "document_id": "single_stable_warehouse_order_flow",
+        "document_label": "Documento singolo stabile - gestione ordini magazzino",
+        "source": "testo stabile gia usato dagli smoke 5.15D/5.15E",
+        "chars": 1151
+      },
+      "expected_qm_count": 60,
+      "executed_qm_count": 60,
+      "output_count_atteso": 4,
+      "output_count_reale": 8,
+      "approved": true,
+      "status": "APPROVED",
+      "defects": [],
+      "warnings": [
+        "radici_ripetute:analizzat,azione,collega,concreto,contenuto,degli,evidenzia,magazzino"
+      ],
+      "sample_output_breve": "[{\"card_id\": \"full_card_v51416_001\", \"titolo\": \"Gestione ordinata del magazzino\", \"messaggio_chiave\": \"Gestione ordini magazzino moderno: La gestione degli ordini in un magazzino moderno richiede una procedura chiara per ricevere, controllare, registrare e spedire i prodotti.\", \"spiegazione\": \"La card evidenzia che la gestione degli ordini in un magazzino moderno richiede una procedura chiara per ricevere, controllare, registrare e spedire i prodotti Questo passaggio collega il contenuto del documento a un'azione operativa o a un controllo concreto.\", \"micro_concetti\": [\"gestione\", \"ordini\", \"magazzino\", \"moderno\"], \"visual\": {\"icon\": \"🏢\", \"theme\": \"business_presentable\", \"svg\": \"<svg viewBo",
+      "qualita_linguistica_osservata": "media: frasi comprensibili, talvolta formulaiche",
+      "qualita_didattica_osservata": "media: aiuta a segmentare i concetti, ma alcune card restano descrittive",
+      "problemi_rag_osservati": [
+        "ripetizioni"
+      ],
+      "problemi_didattici_osservati": [],
+      "issue_classes": [
+        "problema qualità RAG"
+      ],
+      "quality_report": {
+        "phase": "5.14.16",
+        "kind": "cards",
+        "full_pipeline": true,
+        "all_motors_connected": true,
+        "strict_no_fallback": true,
+        "input_chars": 1151,
+        "clean_chars": 1149,
+        "facts_count": 8,
+        "defects": [],
+        "warnings": [],
+        "connected_motor_groups": [
+          "input_cleaner",
+          "code_noise_filter",
+          "fact_extractor",
+          "dedupe_selector",
+          "domain_signal_selector",
+          "quality_gate",
+          "presentation_formatter",
+          "anti_demo_guard",
+          "ui_output_contract"
+        ],
+        "route_total": 52,
+        "quality_controls": 52,
+        "graphic_renderer_controls": 8,
+        "total_motors_connected": 60,
+        "card_style": "graphic_cards_with_svg_visual",
+        "connection_status": "RUNTIME_TRACE_PROVED_BY_PHASE5_15B",
+        "qm_runtime_trace_reference": "top_level.qm_runtime_trace"
+      }
+    },
+    {
+      "button_label": "Genera Test/Quiz",
+      "generator_name": "quiz",
+      "engine_id": "full_pipeline_quiz_route63_language_quality_v51418",
+      "entrypoint": "backend.phase5_15b_quality_checked_generators.run_quality_checked_generator",
+      "input_document": {
+        "document_id": "single_stable_warehouse_order_flow",
+        "document_label": "Documento singolo stabile - gestione ordini magazzino",
+        "source": "testo stabile gia usato dagli smoke 5.15D/5.15E",
+        "chars": 1151
+      },
+      "expected_qm_count": 63,
+      "executed_qm_count": 63,
+      "output_count_atteso": 4,
+      "output_count_reale": 4,
+      "approved": true,
+      "status": "APPROVED",
+      "defects": [],
+      "warnings": [],
+      "sample_output_breve": "[{\"id\": \"quiz_quality_v51418_001\", \"domanda\": \"Nel passaggio su verificare gestione ordini magazzino, quale opzione conserva il dettaglio documentale essenziale?\", \"opzioni\": [{\"option_id\": \"A\", \"testo\": \"La gestione degli ordini in un magazzino moderno richiede una procedura chiara per ricevere, controllare, registrare e spedire i prodotti\"}, {\"option_id\": \"B\", \"testo\": \"Spostare il controllo su una fase diversa, senza mantenere responsabilità e verifica del passaggio indicato.\"}, {\"option_id\": \"C\", \"testo\": \"Registrare l'attività in modo parziale, lasciando fuori il dato che permette di controllare l'esito.\"}, {\"option_id\": \"D\", \"testo\": \"Applicare una regola simile ma riferita a un'altra ",
+      "qualita_linguistica_osservata": "media: comprensibile, ma pattern ripetuto nelle domande",
+      "qualita_didattica_osservata": "medio-bassa: risposta corretta chiara, distrattori spesso troppo facili",
+      "problemi_rag_osservati": [],
+      "problemi_didattici_osservati": [],
+      "issue_classes": [],
+      "quality_report": {
+        "phase": "5.14.18",
+        "bridge": "direct_q52_ui_bridge",
+        "motor_path": "q52_build_quality_study_questions + q52_build_quality_quiz",
+        "facts_count": 8,
+        "concepts_count": 10,
+        "study_questions_count": 4,
+        "quiz_questions_count": 4,
+        "strict_no_fallback": true,
+        "duplicate_repair": true,
+        "duplicate_repair_strategy": "dedupe_then_extend_from_real_document_facts",
+        "study_questions_after_repair": 4,
+        "quiz_questions_after_repair": 4,
+        "blocked_duplicate_errors_removed": 6,
+        "full_pipeline": true,
+        "all_motors_connected": true,
+        "route_total": 63,
+        "quality_controls": 55,
+        "selector_orchestrator": 8,
+        "language_quality_rewrite": true,
+        "user_facing_language_clean": true,
+        "connected_motor_groups": [
+          "q52_fact_extraction",
+          "quiz_builder",
+          "quiz_duplicate_repair",
+          "quiz_options_repair_v513d3",
+          "quiz_language_rewrite_v51418",
+          "quiz_validator",
+          "quality_gate",
+          "selector_orchestrator",
+          "anti_demo_guard",
+          "ui_output_contract"
+        ],
+        "connection_status": "RUNTIME_TRACE_PROVED_BY_PHASE5_15B",
+        "qm_runtime_trace_reference": "top_level.qm_runtime_trace"
+      }
+    },
+    {
+      "button_label": "Genera Domande studio",
+      "generator_name": "study_questions",
+      "engine_id": "full_pipeline_study_route51_language_quality_v51418",
+      "entrypoint": "backend.phase5_15b_quality_checked_generators.run_quality_checked_generator",
+      "input_document": {
+        "document_id": "single_stable_warehouse_order_flow",
+        "document_label": "Documento singolo stabile - gestione ordini magazzino",
+        "source": "testo stabile gia usato dagli smoke 5.15D/5.15E",
+        "chars": 1151
+      },
+      "expected_qm_count": 51,
+      "executed_qm_count": 51,
+      "output_count_atteso": 4,
+      "output_count_reale": 4,
+      "approved": true,
+      "status": "APPROVED",
+      "defects": [],
+      "warnings": [
+        "copertura_termini_documento_bassa:1/6"
+      ],
+      "sample_output_breve": "[{\"id\": \"study_quality_v51418_001\", \"domanda\": \"Qual è il punto operativo principale relativo a gestione ordini magazzino?\", \"risposta_guida\": \"Il documento indica che la gestione degli ordini in un magazzino moderno richiede una procedura chiara per ricevere, controllare, registrare e spedire i prodotti. Lo studente deve collegare questo punto a una procedura concreta, a una responsabilità chiara e a una verifica controllabile.\", \"tipo_domanda\": \"comprensione_operativa\", \"livello_cognitivo\": \"applicazione\", \"fatto_origine\": \"La gestione degli ordini in un magazzino moderno richiede una procedura chiara per ricevere, controllare, registrare e spedire i prodotti\", \"quality_rewrite\": \"v51418_l",
+      "qualita_linguistica_osservata": "media-bassa: corretto ma con template evidente",
+      "qualita_didattica_osservata": "media: risposte guida presenti, domande da rendere piu naturali",
+      "problemi_rag_osservati": [
+        "domande innaturali",
+        "genericità",
+        "perdita contesto"
+      ],
+      "problemi_didattici_osservati": [
+        "domande_formulaiche:4"
+      ],
+      "issue_classes": [
+        "problema didattico",
+        "problema qualità RAG"
+      ],
+      "quality_report": {
+        "phase": "5.14.18",
+        "bridge": "direct_q52_ui_bridge",
+        "motor_path": "q52_build_quality_study_questions + q52_build_quality_quiz",
+        "facts_count": 8,
+        "concepts_count": 10,
+        "study_questions_count": 4,
+        "quiz_questions_count": 4,
+        "strict_no_fallback": true,
+        "duplicate_repair": true,
+        "duplicate_repair_strategy": "dedupe_then_extend_from_real_document_facts",
+        "study_questions_after_repair": 4,
+        "quiz_questions_after_repair": 4,
+        "blocked_duplicate_errors_removed": 6,
+        "full_pipeline": true,
+        "all_motors_connected": true,
+        "route_total": 51,
+        "quality_controls": 43,
+        "selector_orchestrator": 8,
+        "language_quality_rewrite": true,
+        "user_facing_language_clean": true,
+        "connected_motor_groups": [
+          "q52_fact_extraction",
+          "study_question_builder",
+          "study_duplicate_repair",
+          "study_language_rewrite_v51418",
+          "study_question_validator",
+          "quality_gate",
+          "selector_orchestrator",
+          "anti_demo_guard",
+          "ui_output_contract"
+        ],
+        "connection_status": "RUNTIME_TRACE_PROVED_BY_PHASE5_15B",
+        "qm_runtime_trace_reference": "top_level.qm_runtime_trace"
+      }
+    },
+    {
+      "button_label": "Genera Riassunto",
+      "generator_name": "summary",
+      "engine_id": "full_pipeline_summary_route55_all_motors_v51416",
+      "entrypoint": "backend.phase5_15b_quality_checked_generators.run_quality_checked_generator",
+      "input_document": {
+        "document_id": "synthetic_multi_document_clinic_triage_quality",
+        "document_label": "Mini caso multi-documento sintetico - triage, follow-up, audit",
+        "source": "contenuto realistico sintetico creato solo dentro lo script diagnostico",
+        "chars": 1195
+      },
+      "expected_qm_count": 55,
+      "executed_qm_count": 55,
+      "output_count_atteso": 1,
+      "output_count_reale": 1,
+      "approved": true,
+      "status": "APPROVED",
+      "defects": [],
+      "warnings": [
+        "riassunto_non_copre_abbastanza_sezioni"
+      ],
+      "sample_output_breve": "Il documento spiega che [Documento A - Protocollo triage ambulatoriale]. In apertura chiarisce anche che il centro medico organizza il triage iniziale con una scheda di priorità, un controllo dei parametri vitali e una verifica dei sintomi riferiti dal paziente. Questi elementi introducono il flusso operativo su cui si sviluppano ricezione, controllo e registrazione. La parte centrale approfondisce gli aspetti più operativi: I casi con dolore toracico, dispnea o peggioramento neurologico devono essere rivalutati rapidamente anche se la sala d'attesa è piena. [Documento B - Continuità assistenziale]. Dopo la visita, il medico consegna un piano di follow-up con terapia, segnali di allarme e ca",
+      "qualita_linguistica_osservata": "buona: paragrafi leggibili",
+      "qualita_didattica_osservata": "media: utile per orientarsi, ma da verificare profondita su documenti multipli",
+      "problemi_rag_osservati": [
+        "riassunto non abbastanza profondo"
+      ],
+      "problemi_didattici_osservati": [],
+      "issue_classes": [
+        "problema qualità linguistica"
+      ],
+      "quality_report": {
+        "phase": "5.14.16",
+        "kind": "summary",
+        "full_pipeline": true,
+        "all_motors_connected": true,
+        "strict_no_fallback": true,
+        "input_chars": 1195,
+        "clean_chars": 1193,
+        "facts_count": 11,
+        "defects": [],
+        "warnings": [],
+        "connected_motor_groups": [
+          "input_cleaner",
+          "code_noise_filter",
+          "fact_extractor",
+          "dedupe_selector",
+          "domain_signal_selector",
+          "quality_gate",
+          "presentation_formatter",
+          "anti_demo_guard",
+          "ui_output_contract"
+        ],
+        "route_total": 55,
+        "quality_controls": 55,
+        "summary_style": "natural_paragraphs",
+        "forbidden_output_style": "bullet_list",
+        "connection_status": "RUNTIME_TRACE_PROVED_BY_PHASE5_15B",
+        "qm_runtime_trace_reference": "top_level.qm_runtime_trace"
+      }
+    },
+    {
+      "button_label": "Genera Card",
+      "generator_name": "cards",
+      "engine_id": "full_pipeline_cards_60_motors_graphic_v51416",
+      "entrypoint": "backend.phase5_15b_quality_checked_generators.run_quality_checked_generator",
+      "input_document": {
+        "document_id": "synthetic_multi_document_clinic_triage_quality",
+        "document_label": "Mini caso multi-documento sintetico - triage, follow-up, audit",
+        "source": "contenuto realistico sintetico creato solo dentro lo script diagnostico",
+        "chars": 1195
+      },
+      "expected_qm_count": 60,
+      "executed_qm_count": 60,
+      "output_count_atteso": 4,
+      "output_count_reale": 8,
+      "approved": false,
+      "status": "QUALITY_BLOCKED",
+      "defects": [
+        "status_non_approved:QUALITY_BLOCKED",
+        "approved_non_true:False"
+      ],
+      "warnings": [
+        "radici_ripetute:analizzat,aspetto,azione,collega,concreto,contenuto,evidenzia,operativa"
+      ],
+      "sample_output_breve": "[{\"card_id\": \"full_card_v51416_001\", \"titolo\": \"Aspetto operativo del documento\", \"messaggio_chiave\": \"Documento protocollo triage ambulatoriale: [Documento A - Protocollo triage ambulatoriale].\", \"spiegazione\": \"La card evidenzia che [Documento A - Protocollo triage ambulatoriale] Questo passaggio collega il contenuto del documento a un'azione operativa o a un controllo concreto.\", \"micro_concetti\": [\"documento\", \"protocollo\", \"triage\", \"ambulatoriale\"], \"visual\": {\"icon\": \"🏢\", \"theme\": \"business_presentable\", \"svg\": \"<svg viewBox=\\\"0 0 420 210\\\" xmlns=\\\"http://www.w3.org/2000/svg\\\" role=\\\"img\\\" aria-label=\\\"Documento protocollo triage \\\">\\n <defs>\\n <linearGradient id=\\\"g1\\\" x1=\\\"0\\\" y1=\\\"",
+      "qualita_linguistica_osservata": "media: frasi comprensibili, talvolta formulaiche",
+      "qualita_didattica_osservata": "media: aiuta a segmentare i concetti, ma alcune card restano descrittive",
+      "problemi_rag_osservati": [
+        "ripetizioni"
+      ],
+      "problemi_didattici_osservati": [],
+      "issue_classes": [
+        "problema qualità RAG",
+        "problema qualità linguistica"
+      ],
+      "quality_report": {
+        "phase": "5.14.16",
+        "kind": "cards",
+        "full_pipeline": true,
+        "all_motors_connected": true,
+        "strict_no_fallback": true,
+        "input_chars": 1195,
+        "clean_chars": 1193,
+        "facts_count": 8,
+        "defects": [],
+        "warnings": [],
+        "connected_motor_groups": [
+          "input_cleaner",
+          "code_noise_filter",
+          "fact_extractor",
+          "dedupe_selector",
+          "domain_signal_selector",
+          "quality_gate",
+          "presentation_formatter",
+          "anti_demo_guard",
+          "ui_output_contract"
+        ],
+        "route_total": 52,
+        "quality_controls": 52,
+        "graphic_renderer_controls": 8,
+        "total_motors_connected": 60,
+        "card_style": "graphic_cards_with_svg_visual",
+        "connection_status": "RUNTIME_TRACE_PROVED_BY_PHASE5_15B",
+        "qm_runtime_trace_reference": "top_level.qm_runtime_trace"
+      }
+    },
+    {
+      "button_label": "Genera Test/Quiz",
+      "generator_name": "quiz",
+      "engine_id": "full_pipeline_quiz_route63_language_quality_v51418",
+      "entrypoint": "backend.phase5_15b_quality_checked_generators.run_quality_checked_generator",
+      "input_document": {
+        "document_id": "synthetic_multi_document_clinic_triage_quality",
+        "document_label": "Mini caso multi-documento sintetico - triage, follow-up, audit",
+        "source": "contenuto realistico sintetico creato solo dentro lo script diagnostico",
+        "chars": 1195
+      },
+      "expected_qm_count": 63,
+      "executed_qm_count": 63,
+      "output_count_atteso": 4,
+      "output_count_reale": 4,
+      "approved": true,
+      "status": "APPROVED",
+      "defects": [],
+      "warnings": [],
+      "sample_output_breve": "[{\"id\": \"quiz_quality_v51418_001\", \"domanda\": \"Nel triage iniziale, quale scelta rende verificabile la priorità assegnata al paziente?\", \"opzioni\": [{\"option_id\": \"A\", \"testo\": \"[Documento A - Protocollo triage ambulatoriale] Il centro medico organizza il triage iniziale con una scheda di priorità, un controllo dei parametri vitali e una verifica dei sintomi riferiti dal paziente.\"}, {\"option_id\": \"B\", \"testo\": \"Registrare solo il motivo della visita, rinviando parametri vitali e priorità alla valutazione successiva.\"}, {\"option_id\": \"C\", \"testo\": \"Usare l'ordine di arrivo come unico criterio, senza distinguere sintomi o livello di urgenza.\"}, {\"option_id\": \"D\", \"testo\": \"Annotare la priorit",
+      "qualita_linguistica_osservata": "media: comprensibile, ma pattern ripetuto nelle domande",
+      "qualita_didattica_osservata": "medio-bassa: risposta corretta chiara, distrattori spesso troppo facili",
+      "problemi_rag_osservati": [],
+      "problemi_didattici_osservati": [],
+      "issue_classes": [],
+      "quality_report": {
+        "phase": "5.14.18",
+        "bridge": "direct_q52_ui_bridge",
+        "motor_path": "q52_build_quality_study_questions + q52_build_quality_quiz",
+        "facts_count": 8,
+        "concepts_count": 10,
+        "study_questions_count": 4,
+        "quiz_questions_count": 4,
+        "strict_no_fallback": true,
+        "duplicate_repair": true,
+        "duplicate_repair_strategy": "dedupe_then_extend_from_real_document_facts",
+        "study_questions_after_repair": 4,
+        "quiz_questions_after_repair": 4,
+        "blocked_duplicate_errors_removed": 2,
+        "full_pipeline": true,
+        "all_motors_connected": true,
+        "route_total": 63,
+        "quality_controls": 55,
+        "selector_orchestrator": 8,
+        "language_quality_rewrite": true,
+        "user_facing_language_clean": true,
+        "connected_motor_groups": [
+          "q52_fact_extraction",
+          "quiz_builder",
+          "quiz_duplicate_repair",
+          "quiz_options_repair_v513d3",
+          "quiz_language_rewrite_v51418",
+          "quiz_validator",
+          "quality_gate",
+          "selector_orchestrator",
+          "anti_demo_guard",
+          "ui_output_contract"
+        ],
+        "phase5_15f1_multi_document_quiz_reanchor": true,
+        "phase5_15f1_reanchored_items": 4,
+        "phase5_15f1_reanchor_strategy": "spread_real_facts_across_document_sections",
+        "connection_status": "RUNTIME_TRACE_PROVED_BY_PHASE5_15B",
+        "qm_runtime_trace_reference": "top_level.qm_runtime_trace"
+      }
+    },
+    {
+      "button_label": "Genera Domande studio",
+      "generator_name": "study_questions",
+      "engine_id": "full_pipeline_study_route51_language_quality_v51418",
+      "entrypoint": "backend.phase5_15b_quality_checked_generators.run_quality_checked_generator",
+      "input_document": {
+        "document_id": "synthetic_multi_document_clinic_triage_quality",
+        "document_label": "Mini caso multi-documento sintetico - triage, follow-up, audit",
+        "source": "contenuto realistico sintetico creato solo dentro lo script diagnostico",
+        "chars": 1195
+      },
+      "expected_qm_count": 51,
+      "executed_qm_count": 51,
+      "output_count_atteso": 4,
+      "output_count_reale": 4,
+      "approved": false,
+      "status": "QUALITY_BLOCKED",
+      "defects": [
+        "status_non_approved:QUALITY_BLOCKED",
+        "approved_non_true:False"
+      ],
+      "warnings": [
+        "copertura_termini_documento_bassa:0/6"
+      ],
+      "sample_output_breve": "[{\"id\": \"study_quality_v51418_001\", \"domanda\": \"Qual è il punto operativo principale relativo a protocollo triage ambulatoriale?\", \"risposta_guida\": \"Il documento indica che [Documento A - Protocollo triage ambulatoriale] Il centro medico organizza il triage iniziale con una scheda di priorità, un controllo dei parametri vitali e una verifica dei sintomi riferiti dal paziente. Lo studente deve collegare questo punto a una procedura concreta, a una responsabilità chiara e a una verifica controllabile.\", \"tipo_domanda\": \"comprensione_operativa\", \"livello_cognitivo\": \"applicazione\", \"fatto_origine\": \"[Documento A - Protocollo triage ambulatoriale] Il centro medico organizza il triage iniziale c",
+      "qualita_linguistica_osservata": "media-bassa: corretto ma con template evidente",
+      "qualita_didattica_osservata": "media: risposte guida presenti, domande da rendere piu naturali",
+      "problemi_rag_osservati": [
+        "domande innaturali",
+        "genericità",
+        "perdita contesto"
+      ],
+      "problemi_didattici_osservati": [
+        "domande_formulaiche:4"
+      ],
+      "issue_classes": [
+        "problema didattico",
+        "problema qualità RAG",
+        "problema qualità linguistica"
+      ],
+      "quality_report": {
+        "phase": "5.14.18",
+        "bridge": "direct_q52_ui_bridge",
+        "motor_path": "q52_build_quality_study_questions + q52_build_quality_quiz",
+        "facts_count": 8,
+        "concepts_count": 10,
+        "study_questions_count": 4,
+        "quiz_questions_count": 4,
+        "strict_no_fallback": true,
+        "duplicate_repair": true,
+        "duplicate_repair_strategy": "dedupe_then_extend_from_real_document_facts",
+        "study_questions_after_repair": 4,
+        "quiz_questions_after_repair": 4,
+        "blocked_duplicate_errors_removed": 2,
+        "full_pipeline": true,
+        "all_motors_connected": true,
+        "route_total": 51,
+        "quality_controls": 43,
+        "selector_orchestrator": 8,
+        "language_quality_rewrite": true,
+        "user_facing_language_clean": true,
+        "connected_motor_groups": [
+          "q52_fact_extraction",
+          "study_question_builder",
+          "study_duplicate_repair",
+          "study_language_rewrite_v51418",
+          "study_question_validator",
+          "quality_gate",
+          "selector_orchestrator",
+          "anti_demo_guard",
+          "ui_output_contract"
+        ],
+        "connection_status": "RUNTIME_TRACE_PROVED_BY_PHASE5_15B",
+        "qm_runtime_trace_reference": "top_level.qm_runtime_trace"
+      }
+    }
+  ],
+  "intervention_priorities": [
+    {
+      "priority_score": 27,
+      "button_label": "Genera Domande studio",
+      "generator_name": "study_questions",
+      "engine_id": "full_pipeline_study_route51_language_quality_v51418",
+      "main_issues": [
+        "approved_non_true:False",
+        "status_non_approved:QUALITY_BLOCKED",
+        "domande innaturali",
+        "genericità",
+        "perdita contesto",
+        "domande_formulaiche:4"
+      ]
+    },
+    {
+      "priority_score": 15,
+      "button_label": "Genera Card",
+      "generator_name": "cards",
+      "engine_id": "full_pipeline_cards_60_motors_graphic_v51416",
+      "main_issues": [
+        "approved_non_true:False",
+        "status_non_approved:QUALITY_BLOCKED",
+        "ripetizioni"
+      ]
+    },
+    {
+      "priority_score": 4,
+      "button_label": "Genera Riassunto",
+      "generator_name": "summary",
+      "engine_id": "full_pipeline_summary_route55_all_motors_v51416",
+      "main_issues": [
+        "riassunto non abbastanza profondo"
+      ]
+    },
+    {
+      "priority_score": 0,
+      "button_label": "Genera Test/Quiz",
+      "generator_name": "quiz",
+      "engine_id": "full_pipeline_quiz_route63_language_quality_v51418",
+      "main_issues": []
+    }
+  ],
+  "first_engine_to_improve": {
+    "priority_score": 27,
+    "button_label": "Genera Domande studio",
+    "generator_name": "study_questions",
+    "engine_id": "full_pipeline_study_route51_language_quality_v51418",
+    "main_issues": [
+      "approved_non_true:False",
+      "status_non_approved:QUALITY_BLOCKED",
+      "domande innaturali",
+      "genericità",
+      "perdita contesto",
+      "domande_formulaiche:4"
+    ],
+    "recommended_file": "motore linguistico/didattico v51418 da localizzare senza patch a bridge/UI/QM; candidato principale backend/phase5_full_pipeline_runtime_v51416.py"
+  },
+  "issue_taxonomy": {
+    "bug tecnico": [],
+    "problema qualità linguistica": [
+      "cards:approved_non_true:False",
+      "cards:status_non_approved:QUALITY_BLOCKED",
+      "study_questions:approved_non_true:False",
+      "study_questions:status_non_approved:QUALITY_BLOCKED",
+      "summary:riassunto non abbastanza profondo",
+      "summary:riassunto_non_copre_abbastanza_sezioni"
+    ],
+    "problema qualità RAG": [
+      "cards:radici_ripetute:analizzat,aspetto,azione,collega,concreto,contenuto,evidenzia,operativa",
+      "cards:radici_ripetute:analizzat,azione,collega,concreto,contenuto,degli,evidenzia,magazzino",
+      "cards:ripetizioni",
+      "study_questions:copertura_termini_documento_bassa:0/6",
+      "study_questions:copertura_termini_documento_bassa:1/6",
+      "study_questions:genericità",
+      "study_questions:perdita contesto"
+    ],
+    "problema didattico": [
+      "study_questions:domande innaturali",
+      "study_questions:domande_formulaiche:4"
+    ],
+    "problema UI/bridge": []
+  },
+  "recommendation": "patch mirata sui motori linguistici/didattici, nessuna patch a bridge/UI/QM"
+}
