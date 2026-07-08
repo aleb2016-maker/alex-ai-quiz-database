@@ -727,6 +727,11 @@ def run_quality_checked_generator(generator_name: str, input_text: str) -> dict:
                     raw_output = _v515f3_cards_reanchor_raw_output(raw_output, text)
                 if generator == "quiz":
                     raw_output = _v515f1_quiz_reanchor_raw_output(raw_output, text)
+                    try:
+                        from backend.phase5_15g41_quiz_real_quality_fix import apply_quiz_real_quality_fix
+                        raw_output = apply_quiz_real_quality_fix(raw_output, text)
+                    except Exception as quiz_fix_exc:
+                        defects.append(f"quiz_real_quality_fix_515g41_fallita: {quiz_fix_exc}")
                 if generator == "study_questions":
                     raw_output = _v515f2_study_reanchor_raw_output(raw_output, text)
             except Exception as norm_exc:
@@ -783,6 +788,11 @@ def run_quality_checked_generator(generator_name: str, input_text: str) -> dict:
             final_output = sanitize_long_document_quiz_public_output(final_output)
         else:
             final_output = _v515f1_quiz_public_output(final_output)
+        try:
+            from backend.phase5_15g41_quiz_real_quality_fix import apply_quiz_real_quality_fix
+            final_output = apply_quiz_real_quality_fix(final_output, text)
+        except Exception:
+            pass
     if generator == "study_questions":
         from backend.phase5_15g1_long_document_orchestrator import is_long_orchestrator_output
 

@@ -1,20 +1,21 @@
 {
   "phase": "5.15F.0",
   "status": "PASS",
-  "created_at": "2026-07-08T21:30:50",
+  "created_at": "2026-07-08T22:25:59",
   "scope": "diagnostica reale pulsanti generatori RAG/LLM senza modifiche funzionali",
   "git": {
     "branch": "rag-concept-app-presentabile-v3",
-    "commit": "91cf663",
-    "commit_full": "91cf663eaf1f57e434d2ec361216625d64b62fd5",
+    "commit": "290628f",
+    "commit_full": "290628fd5faca73962fe015d39fb42cb12f5e014",
     "tags_at_head": [
-      "checkpoint-mini-llm-summary-g2-multidoc-review-v515g2"
+      "checkpoint-mini-llm-card-source-phrase-variety-v515g31"
     ],
     "relevant_tags": [
       "checkpoint-mini-llm-advanced-language-repair-v512f",
       "checkpoint-mini-llm-approved-generators-v515e",
       "checkpoint-mini-llm-audit-motori-qualita-v515",
       "checkpoint-mini-llm-card-route-60-universal-title-v513a",
+      "checkpoint-mini-llm-card-source-phrase-variety-v515g31",
       "checkpoint-mini-llm-card-summary-source-quality-v512d",
       "checkpoint-mini-llm-cards-multidoc-quality-v515f3",
       "checkpoint-mini-llm-contextual-duplicates-v512g",
@@ -42,6 +43,7 @@
       "checkpoint-mini-llm-legacy-quality-registry-v54",
       "checkpoint-mini-llm-legacy-ready-safe-motors-v56",
       "checkpoint-mini-llm-legacy-registry-target-guard-v57",
+      "checkpoint-mini-llm-long-card-quality-v515g3",
       "checkpoint-mini-llm-long-document-global-orchestrator-v515g1",
       "checkpoint-mini-llm-long-document-rag-v39",
       "checkpoint-mini-llm-long-document-rag-v391-semantic-repair",
@@ -113,7 +115,7 @@
       "checkpoint-mini-llm-v314-rewrite-only-safe",
       "checkpoint-mini-llm-v315-extended-safe"
     ],
-    "status_short": "M backend/phase5_15g1_long_document_orchestrator.py\n M reports/phase5_15e_approved_outputs_report_v1.json\n M reports/phase5_15g1_long_document_global_orchestrator_diagnostics_v1.json\n?? backend/phase5_15g3_universal_long_card_quality.py\n?? reports/phase5_15g3_multi_document_real_card_review_v1.json\n?? reports/phase5_15g3_multi_document_real_card_review_v1.md\n?? reports/phase5_15g3_universal_long_card_quality_diagnostics_v1.json\n?? reports/phase5_15g3_universal_long_card_quality_diagnostics_v1.md\n?? reports/phase5_15g3_universal_long_card_quality_safety_review_v1.md\n?? scripts/run_phase5_15g3_multi_document_real_card_review.py\n?? scripts/run_phase5_15g3_universal_long_card_quality_diagnostics.py",
+    "status_short": "M backend/phase5_15b_quality_checked_generators.py\n M reports/phase5_15d_real_page_generators_trace_v1.json\n M reports/phase5_15e_approved_outputs_report_v1.json\n M reports/phase5_15f_button_quality_diagnostics_v1.json\n M reports/phase5_15f_button_quality_diagnostics_v1.md\n M reports/phase5_15g1_long_document_global_orchestrator_diagnostics_v1.json\n M reports/phase5_15g2_multi_document_real_summary_review_v1.json\n M reports/phase5_15g3_multi_document_real_card_review_v1.json\n M reports/phase5_15g3_universal_long_card_quality_diagnostics_v1.json\n?? backend/phase5_15g41_quiz_real_quality_fix.py\n?? reports/phase5_15g4_quiz_real_quality_review_v1.json\n?? reports/phase5_15g4_quiz_real_quality_review_v1.md\n?? scripts/run_phase5_15g4_quiz_real_quality_review.py",
     "checkpoint_expected": {
       "commit": "0444d0d",
       "tag": "checkpoint-mini-llm-approved-generators-v515e",
@@ -283,7 +285,7 @@
       "problemi_rag_osservati": [],
       "problemi_didattici_osservati": [],
       "issue_classes": [],
-      "sample_output_breve": "[{\"id\": \"quiz_quality_v51418_001\", \"domanda\": \"Nel passaggio su verificare gestione ordini magazzino, quale opzione conserva il dettaglio documentale essenziale?\", \"opzioni\": [{\"option_id\": \"A\", \"testo\": \"La gestione degli ordini in un magazzino moderno richiede una procedura chiara per ricevere, controllare, registrare e spedire i prodotti\"}, {\"option_id\": \"B\", \"testo\": \"Spostare il controllo su una fase diversa, senza mantenere responsabilità e verifica del passaggio indicato.\"}, {\"option_id\": \"C\", \"testo\": \"Registrare l'attività in modo parziale, lasciando fuori il dato che permette di controllare l'esito.\"}, {\"option_id\": \"D\", \"testo\": \"Applicare una regola simile ma riferita a un'altra "
+      "sample_output_breve": "[{\"id\": \"quiz_quality_v51418_001\", \"domanda\": \"Quale scelta mantiene verificabile gestione ordini magazzino moderno secondo il documento?\", \"opzioni\": [{\"option_id\": \"A\", \"testo\": \"La gestione degli ordini in un magazzino moderno richiede una procedura chiara per ricevere, controllare, registrare e spedire i prodotti.\"}, {\"option_id\": \"B\", \"testo\": \"Scegliere una fase operativa diversa e registrare il controllo senza collegarlo a evidenza, responsabilità e verifica.\"}, {\"option_id\": \"C\", \"testo\": \"Conservare una registrazione parziale dell'attività, lasciando non controllabile l'esito richiesto dal documento.\"}, {\"option_id\": \"D\", \"testo\": \"Usare una nota generica sul rischio senza indicare "
     },
     {
       "button_label": "Genera Domande studio",
@@ -445,7 +447,7 @@
       "status": "APPROVED",
       "defects": [],
       "warnings": [],
-      "sample_output_breve": "[{\"id\": \"quiz_quality_v51418_001\", \"domanda\": \"Nel passaggio su verificare gestione ordini magazzino, quale opzione conserva il dettaglio documentale essenziale?\", \"opzioni\": [{\"option_id\": \"A\", \"testo\": \"La gestione degli ordini in un magazzino moderno richiede una procedura chiara per ricevere, controllare, registrare e spedire i prodotti\"}, {\"option_id\": \"B\", \"testo\": \"Spostare il controllo su una fase diversa, senza mantenere responsabilità e verifica del passaggio indicato.\"}, {\"option_id\": \"C\", \"testo\": \"Registrare l'attività in modo parziale, lasciando fuori il dato che permette di controllare l'esito.\"}, {\"option_id\": \"D\", \"testo\": \"Applicare una regola simile ma riferita a un'altra ",
+      "sample_output_breve": "[{\"id\": \"quiz_quality_v51418_001\", \"domanda\": \"Quale scelta mantiene verificabile gestione ordini magazzino moderno secondo il documento?\", \"opzioni\": [{\"option_id\": \"A\", \"testo\": \"La gestione degli ordini in un magazzino moderno richiede una procedura chiara per ricevere, controllare, registrare e spedire i prodotti.\"}, {\"option_id\": \"B\", \"testo\": \"Scegliere una fase operativa diversa e registrare il controllo senza collegarlo a evidenza, responsabilità e verifica.\"}, {\"option_id\": \"C\", \"testo\": \"Conservare una registrazione parziale dell'attività, lasciando non controllabile l'esito richiesto dal documento.\"}, {\"option_id\": \"D\", \"testo\": \"Usare una nota generica sul rischio senza indicare ",
       "qualita_linguistica_osservata": "media: comprensibile, ma pattern ripetuto nelle domande",
       "qualita_didattica_osservata": "medio-bassa: risposta corretta chiara, distrattori spesso troppo facili",
       "problemi_rag_osservati": [],
@@ -484,6 +486,42 @@
           "anti_demo_guard",
           "ui_output_contract"
         ],
+        "phase5_15g41_quiz_real_quality_fix": true,
+        "g41_quiz_real_quality_validation": {
+          "pass": true,
+          "defects": [],
+          "warnings": [],
+          "metrics": {
+            "contamination_count": 0,
+            "visible_correct_answer_leak_count": 0,
+            "template_explanation_count": 0,
+            "accent_warning_count": 0,
+            "short_explanation_count": 0,
+            "duplicate_option_count": 0,
+            "weak_distractor_count": 0,
+            "questions_count": 4,
+            "questions_with_4_options": 4,
+            "questions_with_1_correct": 4,
+            "questions_with_3_distractors": 4,
+            "quiz_real_quality_pass": true
+          }
+        },
+        "g41_quiz_real_quality_metrics": {
+          "contamination_count": 0,
+          "visible_correct_answer_leak_count": 0,
+          "template_explanation_count": 0,
+          "accent_warning_count": 0,
+          "short_explanation_count": 0,
+          "duplicate_option_count": 0,
+          "weak_distractor_count": 0,
+          "questions_count": 4,
+          "questions_with_4_options": 4,
+          "questions_with_1_correct": 4,
+          "questions_with_3_distractors": 4,
+          "quiz_real_quality_pass": true
+        },
+        "g41_quiz_real_quality_defects": [],
+        "g41_quiz_real_quality_warnings": [],
         "connection_status": "RUNTIME_TRACE_PROVED_BY_PHASE5_15B",
         "qm_runtime_trace_reference": "top_level.qm_runtime_trace"
       }
@@ -709,7 +747,7 @@
       "status": "APPROVED",
       "defects": [],
       "warnings": [],
-      "sample_output_breve": "[{\"id\": \"quiz_quality_v51418_001\", \"domanda\": \"Nel triage iniziale, quale scelta rende verificabile la priorità assegnata al paziente?\", \"opzioni\": [{\"option_id\": \"A\", \"testo\": \"[Documento A - Protocollo triage ambulatoriale] Il centro medico organizza il triage iniziale con una scheda di priorità, un controllo dei parametri vitali e una verifica dei sintomi riferiti dal paziente.\"}, {\"option_id\": \"B\", \"testo\": \"Registrare solo il motivo della visita, rinviando parametri vitali e priorità alla valutazione successiva.\"}, {\"option_id\": \"C\", \"testo\": \"Usare l'ordine di arrivo come unico criterio, senza distinguere sintomi o livello di urgenza.\"}, {\"option_id\": \"D\", \"testo\": \"Annotare la priorit",
+      "sample_output_breve": "[{\"id\": \"quiz_quality_v51418_001\", \"domanda\": \"Nel triage iniziale, quale scelta rende verificabile la priorità assegnata al paziente?\", \"opzioni\": [{\"option_id\": \"A\", \"testo\": \"Il centro medico organizza il triage iniziale con una scheda di priorità, un controllo dei parametri vitali e una verifica dei sintomi riferiti dal paziente.\"}, {\"option_id\": \"B\", \"testo\": \"Registrare solo il motivo della visita, rinviando parametri vitali e priorità alla valutazione successiva.\"}, {\"option_id\": \"C\", \"testo\": \"Usare l'ordine di arrivo come unico criterio, senza distinguere sintomi o livello di urgenza.\"}, {\"option_id\": \"D\", \"testo\": \"Annotare la priorità senza collegarla a sintomi riferiti, ora di ar",
       "qualita_linguistica_osservata": "media: comprensibile, ma pattern ripetuto nelle domande",
       "qualita_didattica_osservata": "medio-bassa: risposta corretta chiara, distrattori spesso troppo facili",
       "problemi_rag_osservati": [],
@@ -751,6 +789,42 @@
         "phase5_15f1_multi_document_quiz_reanchor": true,
         "phase5_15f1_reanchored_items": 4,
         "phase5_15f1_reanchor_strategy": "spread_real_facts_across_document_sections",
+        "phase5_15g41_quiz_real_quality_fix": true,
+        "g41_quiz_real_quality_validation": {
+          "pass": true,
+          "defects": [],
+          "warnings": [],
+          "metrics": {
+            "contamination_count": 0,
+            "visible_correct_answer_leak_count": 0,
+            "template_explanation_count": 0,
+            "accent_warning_count": 0,
+            "short_explanation_count": 0,
+            "duplicate_option_count": 0,
+            "weak_distractor_count": 0,
+            "questions_count": 4,
+            "questions_with_4_options": 4,
+            "questions_with_1_correct": 4,
+            "questions_with_3_distractors": 4,
+            "quiz_real_quality_pass": true
+          }
+        },
+        "g41_quiz_real_quality_metrics": {
+          "contamination_count": 0,
+          "visible_correct_answer_leak_count": 0,
+          "template_explanation_count": 0,
+          "accent_warning_count": 0,
+          "short_explanation_count": 0,
+          "duplicate_option_count": 0,
+          "weak_distractor_count": 0,
+          "questions_count": 4,
+          "questions_with_4_options": 4,
+          "questions_with_1_correct": 4,
+          "questions_with_3_distractors": 4,
+          "quiz_real_quality_pass": true
+        },
+        "g41_quiz_real_quality_defects": [],
+        "g41_quiz_real_quality_warnings": [],
         "connection_status": "RUNTIME_TRACE_PROVED_BY_PHASE5_15B",
         "qm_runtime_trace_reference": "top_level.qm_runtime_trace"
       }

@@ -1,0 +1,718 @@
+{
+  "phase": "5.15G.4",
+  "generated_at": "2026-07-08T20:25:23Z",
+  "status": "PASS",
+  "quiz_63_63_pass": true,
+  "documents": [
+    {
+      "name": "real_long_audit_doc",
+      "filepath": "reports/audit_effetti_premi_ai_its.md",
+      "type": "real_long",
+      "input_words": 106264,
+      "long_doc": true,
+      "quiz_active": true,
+      "questions_generated": 8,
+      "qm_quiz_count": 63,
+      "expected_qm_quiz_count": 63,
+      "approved": true,
+      "status": "APPROVED",
+      "motor": "phase5_15g1_long_document_global_quiz_plan_orchestrator",
+      "question_count": 8,
+      "options_per_question": [
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "questions_with_4_options": 8,
+      "questions_with_1_correct": 8,
+      "questions_with_3_distractors": 8,
+      "strong_distractors_count": 24,
+      "weak_distractors_count": 0,
+      "duplicate_options_count": 0,
+      "near_duplicate_options_count": 0,
+      "visible_correct_answers_count": 0,
+      "explanations_present_count": 8,
+      "short_explanations_count": 0,
+      "generic_explanations_count": 0,
+      "generic_questions_count": 8,
+      "duplicate_questions_count": 0,
+      "near_duplicate_questions_count": 0,
+      "fallback_demo_count": 0,
+      "template_phrase_count": 0,
+      "grammar_warning_count": 0,
+      "broken_sentence_count": 0,
+      "source_coherence_score": 0.966,
+      "concept_coverage_score": 1.0,
+      "didactic_quality_score": 0.992,
+      "linguistic_quality_score": 1.0,
+      "overall_quiz_real_quality_score": 0.993,
+      "severity": "NON_BLOCKING",
+      "judgment": "PASS",
+      "human_usefulness_estimate": "utile",
+      "defects": [],
+      "warnings": [],
+      "qm_defects_sample": [],
+      "examples": [
+        {
+          "index": 1,
+          "question": "Come verificare motivazione ripeti test nella macro-area 1?",
+          "options": [
+            "motivazione ripeti test: Nella pagina GitHub che si apre, premi **Run workflow** in alto a destra.",
+            "Eseguire il controllo solo a campione anche quando Apertura del documento richiede verifica puntuale.",
+            "Registrare l'esito senza collegarlo al codice o alla responsabilità indicata.",
+            "Sostituire il controllo con una nota generica non verificabile nel tempo."
+          ],
+          "correct_option_index": 0,
+          "correct_answer": "motivazione ripeti test: Nella pagina GitHub che si apre, premi **Run workflow** in alto a destra.",
+          "explanation": "La scelta più adatta mantiene motivazione ripeti pagina github collegato a evidenza, responsabilità e verifica. L'alternativa più debole sposta il controllo o lo rende generico, quindi non permette di ricostruire il passaggio documentale.",
+          "strong_distractors": 3,
+          "weak_distractors": 0,
+          "source_coherence_score": 0.975,
+          "quality": "WARNING",
+          "defects": [],
+          "warnings": [
+            "domanda_generica_o_template"
+          ]
+        },
+        {
+          "index": 2,
+          "question": "Come verificare validare competenze pratiche degli operatori nella macro-area 2?",
+          "options": [
+            "Eseguire il controllo solo a campione anche quando Keyword: giudizio, giudizi, finale, risultato, risultati, stelle, corretta,, success richiede verifica puntuale.",
+            "Validare competenze pratiche degli operatori: L’energia cinetica si conserva solo in urti elastici.",
+            "Registrare l'esito senza collegarlo al codice o alla responsabilità indicata.",
+            "Sostituire il controllo con una nota generica non verificabile nel tempo."
+          ],
+          "correct_option_index": 1,
+          "correct_answer": "Validare competenze pratiche degli operatori: L’energia cinetica si conserva solo in urti elastici.",
+          "explanation": "Il punto da riconoscere è validare competenze pratiche operatori: la soluzione selezionata conserva il legame con il contenuto fonte. Un distrattore modifica fase, responsabilità o tracciabilità e per questo perde coerenza con il documento.",
+          "strong_distractors": 3,
+          "weak_distractors": 0,
+          "source_coherence_score": 1.0,
+          "quality": "WARNING",
+          "defects": [],
+          "warnings": [
+            "domanda_generica_o_template"
+          ]
+        },
+        {
+          "index": 3,
+          "question": "Come verificare contenere controllare molte nella macro-area 3?",
+          "options": [
+            "Eseguire il controllo solo a campione anche quando Keyword: corretta, richiede verifica puntuale.",
+            "Registrare l'esito senza collegarlo al codice o alla responsabilità indicata.",
+            "contenere controllare molte: frase: Hai risposto a tutto correttamente: controllo, memoria e ragionamento hanno lavorato insieme.",
+            "Sostituire il controllo con una nota generica non verificabile nel tempo."
+          ],
+          "correct_option_index": 2,
+          "correct_answer": "contenere controllare molte: frase: Hai risposto a tutto correttamente: controllo, memoria e ragionamento hanno lavorato insieme.",
+          "explanation": "Per rispondere bisogna tenere insieme concetto, prova e conseguenza operativa. L'opzione più adatta riprende contenere controllare molte frase, mentre una scelta generica non chiarisce chi verifica il passaggio e con quale evidenza. In pratica, contenere controllare molte: frase: Hai risposto a tutto correttamente: controllo, memoria resta più specifico di Eseguire il controllo solo a campione anche quando Keyword: corretta.",
+          "strong_distractors": 3,
+          "weak_distractors": 0,
+          "source_coherence_score": 1.0,
+          "quality": "WARNING",
+          "defects": [],
+          "warnings": [
+            "domanda_generica_o_template"
+          ]
+        },
+        {
+          "index": 4,
+          "question": "Come verificare frase finale risultato nella macro-area 4?",
+          "options": [
+            "Trattare il rischio di Keyword: frase, finale, risultato, risultati, corretta, come evento marginale senza misura preventiva.",
+            "Rinviare la gestione del rischio finché compare una non conformità gia conclusa.",
+            "Confondere il rischio con una semplice comunicazione informale tra reparti.",
+            "frase finale risultato: Per saltare completamente il controllo del risultato finale."
+          ],
+          "correct_option_index": 3,
+          "correct_answer": "frase finale risultato: Per saltare completamente il controllo del risultato finale.",
+          "explanation": "La domanda verifica frase finale risultato saltare come passaggio concreto, non come formula astratta. La scelta migliore resta ancorata al contenuto; un distrattore confonde contesto o controllo e riduce il valore didattico. In pratica, frase finale risultato: Per saltare completamente il controllo del risultato finale resta più specifico di Trattare il rischio di Keyword: frase, finale, risultato, risultati, c.",
+          "strong_distractors": 3,
+          "weak_distractors": 0,
+          "source_coherence_score": 1.0,
+          "quality": "WARNING",
+          "defects": [],
+          "warnings": [
+            "domanda_generica_o_template"
+          ]
+        },
+        {
+          "index": 5,
+          "question": "Come verificare sommiamo spiegazione unità scriviamo riportiamo nella macro-area 5?",
+          "options": [
+            "Sommiamo spiegazione unità scriviamo riportiamo: spiegazione: Sommiamo prima le unità: 5 + 8 = 13, scriviamo 3 e riportiamo 1.",
+            "Applicare la procedura di Keyword: risultato, corretta senza registrare il passaggio verificabile.",
+            "Spostare Keyword: risultato, corretta a una fase non prevista, perdendo ordine e responsabilità.",
+            "Usare una procedura simile ma priva del controllo richiesto dalla macro-area."
+          ],
+          "correct_option_index": 0,
+          "correct_answer": "Sommiamo spiegazione unità scriviamo riportiamo: spiegazione: Sommiamo prima le unità: 5 + 8 = 13, scriviamo 3 e riportiamo 1.",
+          "explanation": "La scelta più adatta mantiene sommiamo spiegazione unità scriviamo collegato a evidenza, responsabilità e verifica. L'alternativa più debole sposta il controllo o lo rende generico, quindi non permette di ricostruire il passaggio documentale.",
+          "strong_distractors": 3,
+          "weak_distractors": 0,
+          "source_coherence_score": 1.0,
+          "quality": "WARNING",
+          "defects": [],
+          "warnings": [
+            "domanda_generica_o_template"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "synthetic_long_business_doc",
+      "filepath": "rag/documenti/test_documento_lungo_aziendale_120_pagine.txt",
+      "type": "synthetic_long_stress",
+      "input_words": 93418,
+      "long_doc": true,
+      "quiz_active": true,
+      "questions_generated": 7,
+      "qm_quiz_count": 63,
+      "expected_qm_quiz_count": 63,
+      "approved": true,
+      "status": "APPROVED",
+      "motor": "phase5_15g1_long_document_global_quiz_plan_orchestrator",
+      "question_count": 7,
+      "options_per_question": [
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "questions_with_4_options": 7,
+      "questions_with_1_correct": 7,
+      "questions_with_3_distractors": 7,
+      "strong_distractors_count": 21,
+      "weak_distractors_count": 0,
+      "duplicate_options_count": 0,
+      "near_duplicate_options_count": 0,
+      "visible_correct_answers_count": 0,
+      "explanations_present_count": 7,
+      "short_explanations_count": 0,
+      "generic_explanations_count": 0,
+      "generic_questions_count": 7,
+      "duplicate_questions_count": 0,
+      "near_duplicate_questions_count": 0,
+      "fallback_demo_count": 0,
+      "template_phrase_count": 0,
+      "grammar_warning_count": 0,
+      "broken_sentence_count": 0,
+      "source_coherence_score": 0.9,
+      "concept_coverage_score": 1.0,
+      "didactic_quality_score": 0.975,
+      "linguistic_quality_score": 1.0,
+      "overall_quiz_real_quality_score": 0.977,
+      "severity": "NON_BLOCKING",
+      "judgment": "PASS",
+      "human_usefulness_estimate": "utile",
+      "defects": [],
+      "warnings": [],
+      "qm_defects_sample": [],
+      "examples": [
+        {
+          "index": 1,
+          "question": "Come verificare riconciliare qualità dati e registrazioni nella macro-area 1?",
+          "options": [
+            "Riconciliare qualità dati e registrazioni: La procedura richiede una verifica settimanale, una traccia scritta nel registro operativo e una conferma del responsabile di processo.",
+            "Lasciare Apertura del documento senza owner, rendendo incerta la decisione finale.",
+            "Attribuire la responsabilità a un gruppo generico senza compito verificabile.",
+            "Separare la responsabilità dal controllo che deve dimostrarne l'esito."
+          ],
+          "correct_option_index": 0,
+          "correct_answer": "Riconciliare qualità dati e registrazioni: La procedura richiede una verifica settimanale, una traccia scritta nel registro operativo e una conferma del responsabile di processo.",
+          "explanation": "La scelta più adatta mantiene riconciliare qualità registrazioni procedura collegato a evidenza, responsabilità e verifica. L'alternativa più debole sposta il controllo o lo rende generico, quindi non permette di ricostruire il passaggio documentale.",
+          "strong_distractors": 3,
+          "weak_distractors": 0,
+          "source_coherence_score": 0.85,
+          "quality": "WARNING",
+          "defects": [],
+          "warnings": [
+            "domanda_generica_o_template"
+          ]
+        },
+        {
+          "index": 2,
+          "question": "Come verificare classificare incidenti ed escalation operativa nella macro-area 2?",
+          "options": [
+            "Trattare il rischio di Riferimento sezione: MAN-AZI-01.03 come evento marginale senza misura preventiva.",
+            "Classificare incidenti ed escalation operativa: La procedura richiede una verifica trimestrale, una traccia scritta nel registro operativo e una conferma del responsabile di processo.",
+            "Rinviare la gestione del rischio finché compare una non conformità gia conclusa.",
+            "Confondere il rischio con una semplice comunicazione informale tra reparti."
+          ],
+          "correct_option_index": 1,
+          "correct_answer": "Classificare incidenti ed escalation operativa: La procedura richiede una verifica trimestrale, una traccia scritta nel registro operativo e una conferma del responsabile di processo.",
+          "explanation": "Il punto da riconoscere è classificare incidenti escalation operativa: la soluzione selezionata conserva il legame con il contenuto fonte. Un distrattore modifica fase, responsabilità o tracciabilità e per questo perde coerenza con il documento.",
+          "strong_distractors": 3,
+          "weak_distractors": 0,
+          "source_coherence_score": 0.75,
+          "quality": "WARNING",
+          "defects": [],
+          "warnings": [
+            "domanda_generica_o_template"
+          ]
+        },
+        {
+          "index": 3,
+          "question": "Come verificare registro richiede verifica settimanale traccia nella macro-area 3?",
+          "options": [
+            "Lasciare Riferimento sezione: MAN-AZI-01.05 senza owner, rendendo incerta la decisione finale.",
+            "Attribuire la responsabilità a un gruppo generico senza compito verificabile.",
+            "Registro richiede verifica settimanale traccia: La procedura richiede una verifica settimanale, una traccia scritta nel registro operativo e una conferma del responsabile di processo.",
+            "Separare la responsabilità dal controllo che deve dimostrarne l'esito."
+          ],
+          "correct_option_index": 2,
+          "correct_answer": "Registro richiede verifica settimanale traccia: La procedura richiede una verifica settimanale, una traccia scritta nel registro operativo e una conferma del responsabile di processo.",
+          "explanation": "Per rispondere bisogna tenere insieme concetto, prova e conseguenza operativa. L'opzione più adatta riprende registro richiede settimanale traccia, mentre una scelta generica non chiarisce chi verifica il passaggio e con quale evidenza. In pratica, Registro richiede verifica settimanale traccia: La procedura richiede una verifica settima resta più specifico di Lasciare Riferimento sezione: MAN-AZI-01.05 senza owner, rendendo ince.",
+          "strong_distractors": 3,
+          "weak_distractors": 0,
+          "source_coherence_score": 0.95,
+          "quality": "WARNING",
+          "defects": [],
+          "warnings": [
+            "domanda_generica_o_template"
+          ]
+        },
+        {
+          "index": 4,
+          "question": "Come verificare pianificare audit e azioni correttive nella macro-area 4?",
+          "options": [
+            "Lasciare Riferimento sezione: MAN-AZI-01.07 senza owner, rendendo incerta la decisione finale.",
+            "Attribuire la responsabilità a un gruppo generico senza compito verificabile.",
+            "Separare la responsabilità dal controllo che deve dimostrarne l'esito.",
+            "Pianificare audit e azioni correttive: La procedura richiede una verifica trimestrale, una traccia scritta nel registro operativo e una conferma del responsabile di processo."
+          ],
+          "correct_option_index": 3,
+          "correct_answer": "Pianificare audit e azioni correttive: La procedura richiede una verifica trimestrale, una traccia scritta nel registro operativo e una conferma del responsabile di processo.",
+          "explanation": "La domanda verifica pianificare audit azioni correttive come passaggio concreto, non come formula astratta. La scelta migliore resta ancorata al contenuto; un distrattore confonde contesto o controllo e riduce il valore didattico. In pratica, Pianificare audit e azioni correttive: La procedura richiede una verifica trimestrale, una resta più specifico di Lasciare Riferimento sezione: MAN-AZI-01.07 senza owner, rendendo ince.",
+          "strong_distractors": 3,
+          "weak_distractors": 0,
+          "source_coherence_score": 1.0,
+          "quality": "WARNING",
+          "defects": [],
+          "warnings": [
+            "domanda_generica_o_template"
+          ]
+        },
+        {
+          "index": 5,
+          "question": "Come verificare verificare continuità operativa e ripristino nella macro-area 5?",
+          "options": [
+            "Verificare continuità operativa e ripristino: La procedura richiede una verifica settimanale, una traccia scritta nel registro operativo e una conferma del responsabile di processo.",
+            "Lasciare Riferimento sezione: MAN-AZI-01.09 senza owner, rendendo incerta la decisione finale.",
+            "Attribuire la responsabilità a un gruppo generico senza compito verificabile.",
+            "Separare la responsabilità dal controllo che deve dimostrarne l'esito."
+          ],
+          "correct_option_index": 0,
+          "correct_answer": "Verificare continuità operativa e ripristino: La procedura richiede una verifica settimanale, una traccia scritta nel registro operativo e una conferma del responsabile di processo.",
+          "explanation": "La scelta più adatta mantiene continuità operativa ripristino procedura collegato a evidenza, responsabilità e verifica. L'alternativa più debole sposta il controllo o lo rende generico, quindi non permette di ricostruire il passaggio documentale.",
+          "strong_distractors": 3,
+          "weak_distractors": 0,
+          "source_coherence_score": 0.95,
+          "quality": "WARNING",
+          "defects": [],
+          "warnings": [
+            "domanda_generica_o_template"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "security_training_doc",
+      "filepath": "rag/documenti/documento_rag_sicurezza_informatica_aziendale.md",
+      "type": "medium_security",
+      "input_words": 1673,
+      "long_doc": false,
+      "quiz_active": true,
+      "questions_generated": 4,
+      "qm_quiz_count": 63,
+      "expected_qm_quiz_count": 63,
+      "approved": true,
+      "status": "APPROVED",
+      "motor": "full_pipeline_quiz_route63_language_quality_v51418",
+      "question_count": 4,
+      "options_per_question": [
+        4,
+        4,
+        4,
+        4
+      ],
+      "questions_with_4_options": 4,
+      "questions_with_1_correct": 4,
+      "questions_with_3_distractors": 4,
+      "strong_distractors_count": 12,
+      "weak_distractors_count": 0,
+      "duplicate_options_count": 0,
+      "near_duplicate_options_count": 0,
+      "visible_correct_answers_count": 0,
+      "explanations_present_count": 4,
+      "short_explanations_count": 0,
+      "generic_explanations_count": 0,
+      "generic_questions_count": 0,
+      "duplicate_questions_count": 0,
+      "near_duplicate_questions_count": 0,
+      "fallback_demo_count": 0,
+      "template_phrase_count": 0,
+      "grammar_warning_count": 0,
+      "broken_sentence_count": 0,
+      "source_coherence_score": 0.925,
+      "concept_coverage_score": 1.0,
+      "didactic_quality_score": 0.981,
+      "linguistic_quality_score": 1.0,
+      "overall_quiz_real_quality_score": 0.983,
+      "severity": "NON_BLOCKING",
+      "judgment": "PASS",
+      "human_usefulness_estimate": "utile",
+      "defects": [],
+      "warnings": [],
+      "qm_defects_sample": [],
+      "examples": [
+        {
+          "index": 1,
+          "question": "Quale scelta mantiene verificabile sicurezza informatica aziendale scopo secondo il documento?",
+          "options": [
+            "Sicurezza informatica aziendale Scopo del documento Questo documento è stato creato come fonte documentale per il percorso di studio.",
+            "Scegliere una fase operativa diversa e registrare il controllo senza collegarlo a evidenza, responsabilità e verifica.",
+            "Conservare una registrazione parziale dell'attività, lasciando non controllabile l'esito richiesto dal documento.",
+            "Usare una nota generica sul rischio senza indicare decisione, fonte documentale e responsabilità verificabile."
+          ],
+          "correct_option_index": 0,
+          "correct_answer": "Sicurezza informatica aziendale Scopo del documento Questo documento è stato creato come fonte documentale per il percorso di studio.",
+          "explanation": "La scelta più adatta mantiene sicurezza informatica aziendale scopo collegato a evidenza, responsabilità e verifica. L'alternativa più debole sposta il controllo o lo rende generico, quindi non permette di ricostruire il passaggio documentale.",
+          "strong_distractors": 3,
+          "weak_distractors": 0,
+          "source_coherence_score": 0.95,
+          "quality": "PASS",
+          "defects": [],
+          "warnings": []
+        },
+        {
+          "index": 2,
+          "question": "Quale scelta mantiene verificabile essere inserito cartella documenti secondo il documento?",
+          "options": [
+            "Scegliere una fase operativa diversa e registrare il controllo senza collegarlo a evidenza, responsabilità e verifica.",
+            "Conservare una registrazione parziale dell'attività, lasciando non controllabile l'esito richiesto dal documento.",
+            "Usare una nota generica sul rischio senza indicare decisione, fonte documentale e responsabilità verificabile.",
+            "Può essere inserito nella cartella rag/documenti/ per costruire esercizi e percorsi di studio sulla sicurezza informatica aziendale."
+          ],
+          "correct_option_index": 3,
+          "correct_answer": "Può essere inserito nella cartella rag/documenti/ per costruire esercizi e percorsi di studio sulla sicurezza informatica aziendale.",
+          "explanation": "Il punto da riconoscere è essere inserito cartella documenti: la soluzione selezionata conserva il legame con il contenuto fonte. Un distrattore modifica fase, responsabilità o tracciabilità e per questo perde coerenza con il documento.",
+          "strong_distractors": 3,
+          "weak_distractors": 0,
+          "source_coherence_score": 0.75,
+          "quality": "PASS",
+          "defects": [],
+          "warnings": []
+        },
+        {
+          "index": 3,
+          "question": "Quale scelta mantiene verificabile obiettivo spiegare semplice concetti secondo il documento?",
+          "options": [
+            "Scegliere una fase operativa diversa e registrare il controllo senza collegarlo a evidenza, responsabilità e verifica.",
+            "Conservare una registrazione parziale dell'attività, lasciando non controllabile l'esito richiesto dal documento.",
+            "L'obiettivo è spiegare in modo semplice i concetti fondamentali di cybersecurity utili a dipendenti, studenti e nuovi utenti aziendali.",
+            "Usare una nota generica sul rischio senza indicare decisione, fonte documentale e responsabilità verificabile."
+          ],
+          "correct_option_index": 2,
+          "correct_answer": "L'obiettivo è spiegare in modo semplice i concetti fondamentali di cybersecurity utili a dipendenti, studenti e nuovi utenti aziendali.",
+          "explanation": "Per rispondere bisogna tenere insieme concetto, prova e conseguenza operativa. L'opzione più adatta riprende obiettivo spiegare semplice concetti, mentre una scelta generica non chiarisce chi verifica il passaggio e con quale evidenza. In pratica, L'obiettivo è spiegare in modo semplice i concetti fondamentali di cybersecurity utili a d resta più specifico di Il punto su onboarding dei dipendenti può essere trattato senza contro.",
+          "strong_distractors": 3,
+          "weak_distractors": 0,
+          "source_coherence_score": 1.0,
+          "quality": "PASS",
+          "defects": [],
+          "warnings": []
+        },
+        {
+          "index": 4,
+          "question": "Quale scelta mantiene verificabile pensato manuale tecnico avanzato secondo il documento?",
+          "options": [
+            "Scegliere una fase operativa diversa e registrare il controllo senza collegarlo a evidenza, responsabilità e verifica.",
+            "Il documento non è pensato come manuale tecnico avanzato, ma come materiale formativo chiaro da cui un sistema RAG può recuperare contenuti e trasformarli in domande controllate.",
+            "Conservare una registrazione parziale dell'attività, lasciando non controllabile l'esito richiesto dal documento.",
+            "Usare una nota generica sul rischio senza indicare decisione, fonte documentale e responsabilità verificabile."
+          ],
+          "correct_option_index": 1,
+          "correct_answer": "Il documento non è pensato come manuale tecnico avanzato, ma come materiale formativo chiaro da cui un sistema RAG può recuperare contenuti e trasformarli in domande controllate.",
+          "explanation": "La domanda verifica pensato manuale tecnico avanzato come passaggio concreto, non come formula astratta. La scelta migliore resta ancorata al contenuto; un distrattore confonde contesto o controllo e riduce il valore didattico. In pratica, Il documento non è pensato come manuale tecnico avanzato, ma come materiale formativo chia resta più specifico di Il passaggio su pensato tecnico avanzato può restare informale e senza.",
+          "strong_distractors": 3,
+          "weak_distractors": 0,
+          "source_coherence_score": 1.0,
+          "quality": "PASS",
+          "defects": [],
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "name": "ai_generative_rag_doc",
+      "filepath": "rag/documenti/documento_ai_generativa_test_rag.md",
+      "type": "different_domain_ai",
+      "input_words": 617,
+      "long_doc": false,
+      "quiz_active": true,
+      "questions_generated": 4,
+      "qm_quiz_count": 63,
+      "expected_qm_quiz_count": 63,
+      "approved": true,
+      "status": "APPROVED",
+      "motor": "full_pipeline_quiz_route63_language_quality_v51418",
+      "question_count": 4,
+      "options_per_question": [
+        4,
+        4,
+        4,
+        4
+      ],
+      "questions_with_4_options": 4,
+      "questions_with_1_correct": 4,
+      "questions_with_3_distractors": 4,
+      "strong_distractors_count": 12,
+      "weak_distractors_count": 0,
+      "duplicate_options_count": 0,
+      "near_duplicate_options_count": 0,
+      "visible_correct_answers_count": 0,
+      "explanations_present_count": 4,
+      "short_explanations_count": 0,
+      "generic_explanations_count": 0,
+      "generic_questions_count": 0,
+      "duplicate_questions_count": 0,
+      "near_duplicate_questions_count": 0,
+      "fallback_demo_count": 0,
+      "template_phrase_count": 0,
+      "grammar_warning_count": 0,
+      "broken_sentence_count": 0,
+      "source_coherence_score": 0.925,
+      "concept_coverage_score": 1.0,
+      "didactic_quality_score": 0.981,
+      "linguistic_quality_score": 1.0,
+      "overall_quiz_real_quality_score": 0.983,
+      "severity": "NON_BLOCKING",
+      "judgment": "PASS",
+      "human_usefulness_estimate": "utile",
+      "defects": [],
+      "warnings": [],
+      "qm_defects_sample": [],
+      "examples": [
+        {
+          "index": 1,
+          "question": "Quale scelta mantiene verificabile prova intelligenza artificiale generativa secondo il documento?",
+          "options": [
+            "Documento di prova RAG - Intelligenza Artificiale Generativa Introduzione L'intelligenza artificiale generativa è una tecnologia che permette a un sistema informatico di produrre contenuti nuovi partendo da dati, istruzioni e contesto.",
+            "Scegliere una fase operativa diversa e registrare il controllo senza collegarlo a evidenza, responsabilità e verifica.",
+            "Conservare una registrazione parziale dell'attività, lasciando non controllabile l'esito richiesto dal documento.",
+            "Usare una nota generica sul rischio senza indicare decisione, fonte documentale e responsabilità verificabile."
+          ],
+          "correct_option_index": 0,
+          "correct_answer": "Documento di prova RAG - Intelligenza Artificiale Generativa Introduzione L'intelligenza artificiale generativa è una tecnologia che permette a un sistema informatico di produrre contenuti nuovi partendo da dati, istruzioni e contesto.",
+          "explanation": "La scelta più adatta mantiene prova intelligenza artificiale generativa collegato a evidenza, responsabilità e verifica. L'alternativa più debole sposta il controllo o lo rende generico, quindi non permette di ricostruire il passaggio documentale.",
+          "strong_distractors": 3,
+          "weak_distractors": 0,
+          "source_coherence_score": 0.95,
+          "quality": "PASS",
+          "defects": [],
+          "warnings": []
+        },
+        {
+          "index": 2,
+          "question": "Quale scelta mantiene verificabile tuttavia essere considerata infallibile secondo il documento?",
+          "options": [
+            "Scegliere una fase operativa diversa e registrare il controllo senza collegarlo a evidenza, responsabilità e verifica.",
+            "Conservare una registrazione parziale dell'attività, lasciando non controllabile l'esito richiesto dal documento.",
+            "Usare una nota generica sul rischio senza indicare decisione, fonte documentale e responsabilità verificabile.",
+            "Tuttavia non deve essere considerata infallibile, perché può produrre errori, semplificazioni e risposte non presenti nelle fonti."
+          ],
+          "correct_option_index": 3,
+          "correct_answer": "Tuttavia non deve essere considerata infallibile, perché può produrre errori, semplificazioni e risposte non presenti nelle fonti.",
+          "explanation": "Il punto da riconoscere è tuttavia essere considerata infallibile: la soluzione selezionata conserva il legame con il contenuto fonte. Un distrattore modifica fase, responsabilità o tracciabilità e per questo perde coerenza con il documento.",
+          "strong_distractors": 3,
+          "weak_distractors": 0,
+          "source_coherence_score": 0.75,
+          "quality": "PASS",
+          "defects": [],
+          "warnings": []
+        },
+        {
+          "index": 3,
+          "question": "Quale scelta mantiene verificabile generare testi riassunti domande secondo il documento?",
+          "options": [
+            "Scegliere una fase operativa diversa e registrare il controllo senza collegarlo a evidenza, responsabilità e verifica.",
+            "Conservare una registrazione parziale dell'attività, lasciando non controllabile l'esito richiesto dal documento.",
+            "Può generare testi, riassunti, domande, risposte, codice, tabelle, spiegazioni e materiali di studio.",
+            "Usare una nota generica sul rischio senza indicare decisione, fonte documentale e responsabilità verificabile."
+          ],
+          "correct_option_index": 2,
+          "correct_answer": "Può generare testi, riassunti, domande, risposte, codice, tabelle, spiegazioni e materiali di studio.",
+          "explanation": "Per rispondere bisogna tenere insieme concetto, prova e conseguenza operativa. L'opzione più adatta riprende generare testi riassunti domande, mentre una scelta generica non chiarisce chi verifica il passaggio e con quale evidenza. In pratica, Può generare testi, riassunti, domande, risposte, codice, tabelle, spiegazioni e materiali resta più specifico di Il punto su generare testi riassunti può essere trattato senza control.",
+          "strong_distractors": 3,
+          "weak_distractors": 0,
+          "source_coherence_score": 1.0,
+          "quality": "PASS",
+          "defects": [],
+          "warnings": []
+        },
+        {
+          "index": 4,
+          "question": "Quale scelta mantiene verificabile aziende essere usata nelle secondo il documento?",
+          "options": [
+            "Scegliere una fase operativa diversa e registrare il controllo senza collegarlo a evidenza, responsabilità e verifica.",
+            "Nelle aziende può essere usata per organizzare documenti, velocizzare attività ripetitive, aiutare nella formazione e supportare la scrittura di procedure.",
+            "Conservare una registrazione parziale dell'attività, lasciando non controllabile l'esito richiesto dal documento.",
+            "Usare una nota generica sul rischio senza indicare decisione, fonte documentale e responsabilità verificabile."
+          ],
+          "correct_option_index": 1,
+          "correct_answer": "Nelle aziende può essere usata per organizzare documenti, velocizzare attività ripetitive, aiutare nella formazione e supportare la scrittura di procedure.",
+          "explanation": "La domanda verifica nelle aziende essere usata come passaggio concreto, non come formula astratta. La scelta migliore resta ancorata al contenuto; un distrattore confonde contesto o controllo e riduce il valore didattico. In pratica, Nelle aziende può essere usata per organizzare documenti, velocizzare attività ripetitive, resta più specifico di Il passaggio su aziende usata organizzare può restare informale e senz.",
+          "strong_distractors": 3,
+          "weak_distractors": 0,
+          "source_coherence_score": 1.0,
+          "quality": "PASS",
+          "defects": [],
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "name": "business_training_short_doc",
+      "filepath": "rag/documenti/esempio_documento_aziendale_formazione.md",
+      "type": "short_business",
+      "input_words": 137,
+      "long_doc": false,
+      "quiz_active": true,
+      "questions_generated": 4,
+      "qm_quiz_count": 63,
+      "expected_qm_quiz_count": 63,
+      "approved": true,
+      "status": "APPROVED",
+      "motor": "full_pipeline_quiz_route63_language_quality_v51418",
+      "question_count": 4,
+      "options_per_question": [
+        4,
+        4,
+        4,
+        4
+      ],
+      "questions_with_4_options": 4,
+      "questions_with_1_correct": 4,
+      "questions_with_3_distractors": 4,
+      "strong_distractors_count": 12,
+      "weak_distractors_count": 0,
+      "duplicate_options_count": 0,
+      "near_duplicate_options_count": 0,
+      "visible_correct_answers_count": 0,
+      "explanations_present_count": 4,
+      "short_explanations_count": 0,
+      "generic_explanations_count": 0,
+      "generic_questions_count": 0,
+      "duplicate_questions_count": 0,
+      "near_duplicate_questions_count": 0,
+      "fallback_demo_count": 0,
+      "template_phrase_count": 0,
+      "grammar_warning_count": 0,
+      "broken_sentence_count": 0,
+      "source_coherence_score": 0.925,
+      "concept_coverage_score": 1.0,
+      "didactic_quality_score": 0.981,
+      "linguistic_quality_score": 1.0,
+      "overall_quiz_real_quality_score": 0.983,
+      "severity": "NON_BLOCKING",
+      "judgment": "PASS",
+      "human_usefulness_estimate": "utile",
+      "defects": [],
+      "warnings": [],
+      "qm_defects_sample": [],
+      "examples": [
+        {
+          "index": 1,
+          "question": "Quale scelta mantiene verificabile esempio aziendale formazione dipendente secondo il documento?",
+          "options": [
+            "Esempio documento aziendale per formazione Ogni dipendente deve proteggere le credenziali personali e non deve condividere password o codici di accesso.",
+            "Scegliere una fase operativa diversa e registrare il controllo senza collegarlo a evidenza, responsabilità e verifica.",
+            "Conservare una registrazione parziale dell'attività, lasciando non controllabile l'esito richiesto dal documento.",
+            "Usare una nota generica sul rischio senza indicare decisione, fonte documentale e responsabilità verificabile."
+          ],
+          "correct_option_index": 0,
+          "correct_answer": "Esempio documento aziendale per formazione Ogni dipendente deve proteggere le credenziali personali e non deve condividere password o codici di accesso.",
+          "explanation": "La scelta più adatta mantiene esempio aziendale formazione dipendente collegato a evidenza, responsabilità e verifica. L'alternativa più debole sposta il controllo o lo rende generico, quindi non permette di ricostruire il passaggio documentale.",
+          "strong_distractors": 3,
+          "weak_distractors": 0,
+          "source_coherence_score": 0.85,
+          "quality": "PASS",
+          "defects": [],
+          "warnings": []
+        },
+        {
+          "index": 2,
+          "question": "Quale scelta mantiene verificabile cliccare ricevuto prima email secondo il documento?",
+          "options": [
+            "Scegliere una fase operativa diversa e registrare il controllo senza collegarlo a evidenza, responsabilità e verifica.",
+            "Conservare una registrazione parziale dell'attività, lasciando non controllabile l'esito richiesto dal documento.",
+            "Usare una nota generica sul rischio senza indicare decisione, fonte documentale e responsabilità verificabile.",
+            "Prima di cliccare su un link ricevuto via email, è necessario verificare mittente, dominio e contenuto del messaggio."
+          ],
+          "correct_option_index": 3,
+          "correct_answer": "Prima di cliccare su un link ricevuto via email, è necessario verificare mittente, dominio e contenuto del messaggio.",
+          "explanation": "Il punto da riconoscere è prima cliccare ricevuto email: la soluzione selezionata conserva il legame con il contenuto fonte. Un distrattore modifica fase, responsabilità o tracciabilità e per questo perde coerenza con il documento.",
+          "strong_distractors": 3,
+          "weak_distractors": 0,
+          "source_coherence_score": 0.85,
+          "quality": "PASS",
+          "defects": [],
+          "warnings": []
+        },
+        {
+          "index": 3,
+          "question": "Quale scelta mantiene verificabile aziendali essere devono trattati secondo il documento?",
+          "options": [
+            "Scegliere una fase operativa diversa e registrare il controllo senza collegarlo a evidenza, responsabilità e verifica.",
+            "Conservare una registrazione parziale dell'attività, lasciando non controllabile l'esito richiesto dal documento.",
+            "I dati aziendali devono essere trattati solo per finalità autorizzate e conservati in strumenti approvati dall'organizzazione.",
+            "Usare una nota generica sul rischio senza indicare decisione, fonte documentale e responsabilità verificabile."
+          ],
+          "correct_option_index": 2,
+          "correct_answer": "I dati aziendali devono essere trattati solo per finalità autorizzate e conservati in strumenti approvati dall'organizzazione.",
+          "explanation": "Per rispondere bisogna tenere insieme concetto, prova e conseguenza operativa. L'opzione più adatta riprende aziendali devono essere trattati, mentre una scelta generica non chiarisce chi verifica il passaggio e con quale evidenza. In pratica, I dati aziendali devono essere trattati solo per finalità autorizzate e conservati in stru resta più specifico di Il punto su dati aziendali trattati può essere trattato senza controll.",
+          "strong_distractors": 3,
+          "weak_distractors": 0,
+          "source_coherence_score": 1.0,
+          "quality": "PASS",
+          "defects": [],
+          "warnings": []
+        },
+        {
+          "index": 4,
+          "question": "Quale scelta mantiene verificabile allegati provenienti fonti verificate secondo il documento?",
+          "options": [
+            "Scegliere una fase operativa diversa e registrare il controllo senza collegarlo a evidenza, responsabilità e verifica.",
+            "Gli allegati provenienti da fonti non verificate possono contenere malware o tentativi di phishing.",
+            "Conservare una registrazione parziale dell'attività, lasciando non controllabile l'esito richiesto dal documento.",
+            "Usare una nota generica sul rischio senza indicare decisione, fonte documentale e responsabilità verificabile."
+          ],
+          "correct_option_index": 1,
+          "correct_answer": "Gli allegati provenienti da fonti non verificate possono contenere malware o tentativi di phishing.",
+          "explanation": "La domanda verifica allegati provenienti fonti verificate come passaggio concreto, non come formula astratta. La scelta migliore resta ancorata al contenuto; un distrattore confonde contesto o controllo e riduce il valore didattico. In pratica, Gli allegati provenienti da fonti non verificate possono contenere malware o tentativi di resta più specifico di Il passaggio su gestione delle email sospette può restare informale e.",
+          "strong_distractors": 3,
+          "weak_distractors": 0,
+          "source_coherence_score": 1.0,
+          "quality": "PASS",
+          "defects": [],
+          "warnings": []
+        }
+      ]
+    }
+  ],
+  "rules": {
+    "runtime_modified": false,
+    "target_10_percent_applied": false,
+    "scope": "quiz/test only; diagnostics/report only"
+  }
+}

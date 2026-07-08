@@ -10,19 +10,21 @@ Status diagnostica: **PASS**
 ## Stato Git
 
 - Branch: `rag-concept-app-presentabile-v3`
-- Commit: `91cf663`
-- Tag su HEAD: `checkpoint-mini-llm-summary-g2-multidoc-review-v515g2`
-- Stato git short: `M backend/phase5_15g1_long_document_orchestrator.py
+- Commit: `290628f`
+- Tag su HEAD: `checkpoint-mini-llm-card-source-phrase-variety-v515g31`
+- Stato git short: `M backend/phase5_15b_quality_checked_generators.py
+ M reports/phase5_15d_real_page_generators_trace_v1.json
  M reports/phase5_15e_approved_outputs_report_v1.json
+ M reports/phase5_15f_button_quality_diagnostics_v1.json
+ M reports/phase5_15f_button_quality_diagnostics_v1.md
  M reports/phase5_15g1_long_document_global_orchestrator_diagnostics_v1.json
-?? backend/phase5_15g3_universal_long_card_quality.py
-?? reports/phase5_15g3_multi_document_real_card_review_v1.json
-?? reports/phase5_15g3_multi_document_real_card_review_v1.md
-?? reports/phase5_15g3_universal_long_card_quality_diagnostics_v1.json
-?? reports/phase5_15g3_universal_long_card_quality_diagnostics_v1.md
-?? reports/phase5_15g3_universal_long_card_quality_safety_review_v1.md
-?? scripts/run_phase5_15g3_multi_document_real_card_review.py
-?? scripts/run_phase5_15g3_universal_long_card_quality_diagnostics.py`
+ M reports/phase5_15g2_multi_document_real_summary_review_v1.json
+ M reports/phase5_15g3_multi_document_real_card_review_v1.json
+ M reports/phase5_15g3_universal_long_card_quality_diagnostics_v1.json
+?? backend/phase5_15g41_quiz_real_quality_fix.py
+?? reports/phase5_15g4_quiz_real_quality_review_v1.json
+?? reports/phase5_15g4_quiz_real_quality_review_v1.md
+?? scripts/run_phase5_15g4_quiz_real_quality_review.py`
 
 ## Tabella 4 pulsanti
 
@@ -60,7 +62,7 @@ Status diagnostica: **PASS**
 - Warning: nessuno
 - Problemi RAG: nessuno
 - Problemi didattici: nessuno
-- Sample: [{"id": "quiz_quality_v51418_001", "domanda": "Nel passaggio su verificare gestione ordini magazzino, quale opzione conserva il dettaglio documentale essenziale?", "opzioni": [{"option_id": "A", "testo": "La gestione degli ordini in un magazzino moderno richiede una procedura chiara per ricevere, controllare, registrare e spedire i prodotti"}, {"option_id": "B", "testo": "Spostare il controllo su una fase diversa, senza mantenere responsabilità e verifica del passaggio indicato."}, {"option_id": "C", "testo": "Registrare l'attività in modo parziale, lasciando fuori il dato che permette di controllare l'esito."}, {"option_id": "D", "testo": "Applicare una regola simile ma riferita a un'altra 
+- Sample: [{"id": "quiz_quality_v51418_001", "domanda": "Quale scelta mantiene verificabile gestione ordini magazzino moderno secondo il documento?", "opzioni": [{"option_id": "A", "testo": "La gestione degli ordini in un magazzino moderno richiede una procedura chiara per ricevere, controllare, registrare e spedire i prodotti."}, {"option_id": "B", "testo": "Scegliere una fase operativa diversa e registrare il controllo senza collegarlo a evidenza, responsabilità e verifica."}, {"option_id": "C", "testo": "Conservare una registrazione parziale dell'attività, lasciando non controllabile l'esito richiesto dal documento."}, {"option_id": "D", "testo": "Usare una nota generica sul rischio senza indicare 
 
 ### Genera Domande studio - `full_pipeline_study_route51_language_quality_v51418`
 
