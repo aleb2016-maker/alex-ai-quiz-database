@@ -50,14 +50,14 @@ Se non trova un motore reale, mostra errore tecnico.
     summary: ["genera riassunto", "riassunto"],
     cards: ["genera card", "card"],
     quiz: ["genera test", "test", "quiz"],
-    study: ["genera domande studio", "domande studio"]
+    study: ["interroga documento", "interroga il documento", "genera domande studio", "domande studio"]
   };
 
   const TITLES = {
     summary: "Riassunto",
     cards: "Card",
     quiz: "Test/Quiz",
-    study: "Domande studio"
+    study: "Interroga Documento"
   };
 
   function norm(text) {
@@ -237,6 +237,84 @@ Se non trova un motore reale, mostra errore tecnico.
       .replaceAll("'", "&#039;");
   }
 
+
+  // ============================================================
+  // FASE 5.15G.5.2 — REAL UI INTERROGA DOCUMENTO CONNECTION
+  // UI reale: il vecchio pulsante Domande studio diventa Interroga Documento.
+  // Collegamento reale: /api/generate con kind="interroga_documento"
+  // e text JSON { document_text, user_question }.
+  // Nessun fallback/demo, nessuna risposta hardcoded.
+  // ============================================================
+
+  function ensureDocumentQuestionBox() {
+    let box = document.getElementById("phase5-15g52-document-question-box");
+    if (box) return box;
+
+    box = document.createElement("section");
+    box.id = "phase5-15g52-document-question-box";
+    box.style.margin = "18px 0";
+    box.style.padding = "18px";
+    box.style.borderRadius = "16px";
+    box.style.border = "1px solid rgba(80,255,170,0.35)";
+    box.style.background = "rgba(4,120,87,0.16)";
+    box.style.color = "#eafff5";
+
+    box.innerHTML =
+      "<label for='phase5-15g52-document-question' style='display:block;font-weight:800;margin-bottom:8px;'>Interroga Documento</label>" +
+      "<textarea id='phase5-15g52-document-question' rows='3' " +
+      "placeholder='Scrivi una domanda sul documento caricato. Esempio: quali responsabilità vengono citate?' " +
+      "style='width:100%;box-sizing:border-box;border-radius:12px;padding:12px;background:rgba(15,23,42,.92);color:#fff;border:1px solid rgba(255,255,255,.24);'></textarea>" +
+      "<p style='margin:8px 0 0;font-size:.92rem;opacity:.86;'>La risposta viene presa solo dal documento. Se l’informazione non è presente, il motore lo dichiara.</p>";
+
+    const studyButton = findButton("study");
+    if (studyButton && studyButton.parentNode) {
+      studyButton.parentNode.insertBefore(box, studyButton.nextSibling);
+    } else {
+      const main = document.querySelector("main") || document.body;
+      main.insertBefore(box, main.firstChild);
+    }
+
+    return box;
+  }
+
+  function getDocumentQuestion() {
+    const box = ensureDocumentQuestionBox();
+    const textarea = box.querySelector("#phase5-15g52-document-question");
+    return textarea && typeof textarea.value === "string" ? textarea.value.trim() : "";
+  }
+
+  function renderDocumentQAOutput(result, motorName) {
+    const out = findOutputBox();
+    const raw = result && (result.final_output || result.raw_output || result.output || result.result || result);
+    const answer = raw && raw.answer ? String(raw.answer) : JSON.stringify(raw, null, 2);
+    const status = raw && raw.status ? String(raw.status) : "";
+    const confidence = raw && raw.confidence ? String(raw.confidence) : "";
+    const evidence = raw && Array.isArray(raw.evidence) ? raw.evidence : [];
+
+    let evidenceHtml = "";
+    if (evidence.length) {
+      evidenceHtml =
+        "<h3>Passaggi usati dal documento</h3><ol>" +
+        evidence.slice(0, 5).map((item) => {
+          const txt = item && item.text ? item.text : String(item || "");
+          return "<li>" + escapeHtml(txt) + "</li>";
+        }).join("") +
+        "</ol>";
+    }
+
+    out.innerHTML =
+      "<h2>Interroga Documento — risposta dal documento</h2>" +
+      "<p><strong>Fase:</strong> 5.15G.5.2</p>" +
+      "<p><strong>Motore backend chiamato:</strong> " + escapeHtml(motorName) + "</p>" +
+      (status ? "<p><strong>Status:</strong> " + escapeHtml(status) + "</p>" : "") +
+      (confidence ? "<p><strong>Confidence:</strong> " + escapeHtml(confidence) + "</p>" : "") +
+      "<div style='white-space:pre-wrap;font-size:1rem;line-height:1.55;'>" + escapeHtml(answer) + "</div>" +
+      evidenceHtml;
+
+    out.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+
+
   async function runKind(kind) {
     const inputText = getInputText();
     const motor = findRealMotor(kind);
@@ -247,6 +325,25 @@ Se non trova un motore reale, mostra errore tecnico.
     }
 
     try {
+      if (kind === "study") {
+        ensureDocumentQuestionBox();
+        const question = getDocumentQuestion();
+
+        if (!question || question.length < 4) {
+          renderError(kind, "Scrivi una domanda sul documento prima di usare Interroga Documento.");
+          return;
+        }
+
+        const bridgeInput = JSON.stringify({
+          document_text: inputText,
+          user_question: question
+        });
+
+        const bridgePayload = await phase5LocalBackendBridgeGenerate("interroga_documento", bridgeInput);
+        renderDocumentQAOutput(bridgePayload.result || bridgePayload, "local_backend_bridge_8765_interroga_documento");
+        return;
+      }
+
       if (motor) {
         const result = await motor.fn(inputText, {
           phase: PHASE,
@@ -272,6 +369,14 @@ Se non trova un motore reale, mostra errore tecnico.
     if (!btn) return false;
 
     btn.setAttribute("data-phase5-14-connected", kind);
+
+    if (kind === "study") {
+      btn.textContent = "Interroga Documento";
+      btn.setAttribute("aria-label", "Interroga Documento");
+      btn.setAttribute("title", "Fai una domanda libera sul documento caricato");
+      ensureDocumentQuestionBox();
+    }
+
     btn.addEventListener("click", function (event) {
       event.preventDefault();
       event.stopPropagation();

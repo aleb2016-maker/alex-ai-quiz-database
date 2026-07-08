@@ -10,16 +10,19 @@ Status diagnostica: **PASS**
 ## Stato Git
 
 - Branch: `rag-concept-app-presentabile-v3`
-- Commit: `af55088`
-- Tag su HEAD: `checkpoint-mini-llm-document-qa-engine-v515g5`
-- Stato git short: `M backend/phase5_15b_quality_checked_generators.py
+- Commit: `78e2007`
+- Tag su HEAD: `checkpoint-mini-llm-document-qa-backend-integration-v515g51`
+- Stato git short: `M demo-rag/phase5-14-ui-buttons-real-connector.js
+ M demo-rag/test-documenti-universale.html
  M reports/phase5_15e_approved_outputs_report_v1.json
- M reports/phase5_15g1_long_document_global_orchestrator_diagnostics_v1.json
  M reports/phase5_15g5_document_qa_diagnostics_v1.json
-?? backend/phase5_15b_quality_checked_generators.py.bak_g51_interroga_documento_v2
-?? reports/phase5_15g51_interroga_documento_backend_integration_smoke_v1.json
-?? reports/phase5_15g51_interroga_documento_backend_integration_smoke_v1.md
-?? scripts/run_phase5_15g51_interroga_documento_backend_integration_smoke.py`
+?? demo-rag/phase5-14-ui-buttons-real-connector.js.bak_g52_interroga_ui
+?? demo-rag/test-documenti-universale.html.bak_g52_interroga_ui
+?? reports/phase5_15g52_ui_backend_real_connection_inspection_v1.md
+?? reports/phase5_15g52_ui_backend_real_connection_smoke_v1.json
+?? reports/phase5_15g52_ui_backend_real_connection_smoke_v1.md
+?? reports/phase5_15g52_ui_real_connector_target_context_v1.md
+?? scripts/run_phase5_15g52_ui_backend_real_connection_smoke.py`
 
 ## Tabella 4 pulsanti
 

@@ -366,7 +366,7 @@
           <button class="summary" data-kind="summary"><span class="icon">📝</span>Genera riassunto</button>
           <button class="cards" data-kind="cards"><span class="icon">🎴</span>Genera card</button>
           <button class="quiz" data-kind="quiz"><span class="icon">✅</span>Genera test</button>
-          <button class="study" data-kind="study"><span class="icon">💡</span>Genera domande studio</button>
+          <button class="study" data-kind="study"><span class="icon">💡</span>Interroga Documento</button>
         </div>
       </div>
 
@@ -436,12 +436,107 @@
       return String(textEl.value || "").trim();
     }
 
+
+    // ============================================================
+    // FASE 5.15G.5.2 — REAL UI INTERROGA DOCUMENTO CONNECTION
+    // La pagina invia al backend reale:
+    // kind = "interroga_documento"
+    // text = JSON.stringify({ document_text, user_question })
+    // ============================================================
+
+    function ensureInterrogaDocumentoQuestionBox() {
+      let box = document.getElementById("phase5-15g52-page-question-box");
+      if (box) return box;
+
+      box = document.createElement("section");
+      box.id = "phase5-15g52-page-question-box";
+      box.style.margin = "18px 0";
+      box.style.padding = "18px";
+      box.style.borderRadius = "16px";
+      box.style.border = "1px solid rgba(80,255,170,0.35)";
+      box.style.background = "rgba(4,120,87,0.16)";
+      box.innerHTML = `
+        <label for="phase5-15g52-page-document-question" style="display:block;font-weight:800;margin-bottom:8px;">
+          Interroga Documento
+        </label>
+        <textarea id="phase5-15g52-page-document-question" rows="3"
+          placeholder="Scrivi una domanda sul documento caricato. Esempio: quali responsabilità vengono citate?"
+          style="width:100%;box-sizing:border-box;border-radius:12px;padding:12px;background:rgba(15,23,42,.92);color:#fff;border:1px solid rgba(255,255,255,.24);"></textarea>
+        <p class="small">La risposta viene presa solo dal documento. Se l’informazione non è presente, il motore lo dichiara.</p>
+      `;
+
+      const studyButton = document.querySelector("button[data-kind='study']");
+      if (studyButton && studyButton.parentNode) {
+        studyButton.parentNode.insertBefore(box, studyButton.nextSibling);
+      } else {
+        const main = document.querySelector("main") || document.body;
+        main.insertBefore(box, main.firstChild);
+      }
+
+      return box;
+    }
+
+    function getInterrogaDocumentoQuestion() {
+      const box = ensureInterrogaDocumentoQuestionBox();
+      const el = box.querySelector("#phase5-15g52-page-document-question");
+      return el && typeof el.value === "string" ? el.value.trim() : "";
+    }
+
+    function renderInterrogaDocumentoPayload(payload) {
+      const raw = payload && (payload.result || payload.final_output || payload.raw_output || payload.output || payload);
+      const inner = raw && (raw.final_output || raw.raw_output || raw.output || raw);
+      const answer = inner && inner.answer ? String(inner.answer) : JSON.stringify(inner, null, 2);
+      const status = inner && inner.status ? String(inner.status) : "";
+      const confidence = inner && inner.confidence ? String(inner.confidence) : "";
+      const evidence = inner && Array.isArray(inner.evidence) ? inner.evidence : [];
+
+      let evidenceHtml = "";
+      if (evidence.length) {
+        evidenceHtml = `
+          <h3>Passaggi usati dal documento</h3>
+          <ol>
+            ${evidence.slice(0, 5).map(item => `<li>${escapeHtml(item && item.text ? item.text : String(item || ""))}</li>`).join("")}
+          </ol>
+        `;
+      }
+
+      outputEl.innerHTML = `
+        <h2>Interroga Documento — risposta dal documento</h2>
+        <p><strong>Status:</strong> ${escapeHtml(status)}</p>
+        ${confidence ? `<p><strong>Confidence:</strong> ${escapeHtml(confidence)}</p>` : ""}
+        <div style="white-space:pre-wrap;font-size:1rem;line-height:1.55;">${escapeHtml(answer)}</div>
+        ${evidenceHtml}
+      `;
+      outputEl.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+
+    ensureInterrogaDocumentoQuestionBox();
+
+
     async function generate(kind) {
       const text = getText();
 
       if (text.length < 20) {
         renderError("Testo troppo corto. Incolla o carica un documento reale.");
         return;
+      }
+
+      let backendKind = kind;
+      let backendText = text;
+
+      if (kind === "study") {
+        const userQuestion = getInterrogaDocumentoQuestion();
+
+        if (!userQuestion || userQuestion.length < 4) {
+          renderError("Scrivi una domanda sul documento prima di usare Interroga Documento.");
+          return;
+        }
+
+        backendKind = "interroga_documento";
+        backendText = JSON.stringify({
+          document_text: text,
+          user_question: userQuestion
+        });
       }
 
       outputEl.innerHTML = `
@@ -454,8 +549,8 @@
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
-            kind,
-            text,
+            kind: backendKind,
+            text: backendText,
             strictNoFallback: true,
             source: "clean_page_v51414"
           })
@@ -468,6 +563,11 @@
         }
 
         lastPayload = payload;
+
+        if (kind === "study") {
+          renderInterrogaDocumentoPayload(payload);
+          return;
+        }
         lastKind = kind;
         renderPayload(kind, payload);
       } catch (error) {
@@ -536,7 +636,7 @@
       const finalOutput = result.final_output || result.raw_output || result;
       const items = finalOutput.items || result.items || [];
       outputEl.innerHTML = `
-        <h3>Domande studio reali</h3>
+        <h3>Interroga Documento</h3>
         <p class="small">QM runtime: ${escapeHtml(String(result.executed_qm_count || ""))}/${escapeHtml(String(result.expected_qm_count || ""))}</p>
         ${items.map(item => `
           <div class="question">
