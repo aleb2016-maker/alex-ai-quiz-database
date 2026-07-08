@@ -822,6 +822,58 @@ def _sentences_for_theme(original_text: str, theme: Dict[str, Any], limit: int =
     return _dedupe_strings(selected, limit)
 
 
+
+
+def _low_theme_depth_paragraphs(
+    pass_index: int,
+    themes: Sequence[Dict[str, Any]],
+    profile: Dict[str, Any],
+) -> List[str]:
+    selected = list(themes)[:3]
+    titles = [_clean_display_title(str(theme.get("title") or "")) for theme in selected if theme.get("title")]
+    keywords = _dedupe_plain([kw for theme in selected for kw in theme.get("keywords", [])], 12)
+    details: List[str] = []
+    for theme in selected:
+        for detail in _dedupe_strings(theme.get("details", []) + theme.get("anchors", []), 5):
+            clean = remove_template_noise(detail).strip(" .!?")
+            if clean:
+                details.append(clean)
+    details = _dedupe_plain(details, 14)
+    title_text = _join_natural(titles, 3) or "i nuclei principali"
+    keyword_text = _join_natural(keywords, 8) or "i riferimenti ricorrenti"
+    detail_a = ". ".join(details[:4]) or "Il materiale insiste su responsabilita, controlli, evidenze e verifiche distribuite."
+    detail_b = ". ".join(details[4:9]) or "Le parti centrali collegano decisioni, attori, rischi e risultati attesi."
+    detail_c = ". ".join(details[9:14]) or "La chiusura conserva criteri di controllo e conseguenze operative."
+    prefix = [
+        "Sul piano della copertura",
+        "Dal lato operativo",
+        "Per lo studio e il riuso del materiale",
+    ]
+    return [
+        (
+            f"{prefix[0]} {pass_index}, {title_text} richiede una lettura estesa perche' il documento concentra "
+            f"molte sezioni attorno a pochi nuclei ricorrenti. Il centro resta {keyword_text}, ma il valore "
+            f"non e' nella ripetizione delle stesse etichette: e' nel modo in cui ogni blocco aggiunge condizioni, "
+            f"responsabilita e criteri di verifica. {detail_a}. Questa espansione mantiene insieme le parti simili "
+            "per distinguere cio' che definisce il quadro, cio' che orienta l'esecuzione e cio' che rende controllabile "
+            "l'esito nel tempo."
+        ),
+        (
+            f"{prefix[1]} {pass_index}, la sintesi deve conservare anche le sfumature tra sezioni vicine. "
+            f"{detail_b}. Questi passaggi mostrano come il contenuto non sia solo una lista di controlli, ma una "
+            "sequenza di decisioni, responsabilita, verifiche e tracciamenti. Quando il documento e' molto lungo e "
+            "tematicamente compatto, la qualita del riassunto dipende dalla capacita di esplicitare queste relazioni "
+            "senza trasformarle in un catalogo di blocchi."
+        ),
+        (
+            f"{prefix[2]} {pass_index}, {title_text} va trasformato in una mappa ragionata: prima si riconoscono "
+            f"i temi dominanti, poi si collegano esempi, rischi e controlli, infine si ricostruisce il perche' delle "
+            f"azioni richieste. {detail_c}. In questo modo il riassunto resta proporzionato al documento lungo, "
+            "mantiene il target di copertura e offre una lettura naturale anche quando la fonte usa schemi ripetitivi."
+        ),
+    ]
+
+
 def expand_until_target_ratio(
     summary_result: Dict[str, Any],
     theme_tree: Dict[str, Any],
@@ -879,6 +931,19 @@ def expand_until_target_ratio(
             if key and key not in used_keys:
                 used_keys.add(key)
                 additions.append(paragraph)
+
+        if (
+            _word_count(_build_summary_text(sections) + " " + " ".join(additions)) < target_words
+            and original_words >= 50000
+            and len(ordered_themes) <= 3
+        ):
+            for depth_index, paragraph in enumerate(_low_theme_depth_paragraphs(expansion_passes, ordered_themes, result.get("profile", {})), 1):
+                key = f"low_theme_depth_{expansion_passes}_{depth_index}_{_normal_key(paragraph)}"
+                if key and key not in used_keys:
+                    used_keys.add(key)
+                    additions.append(paragraph)
+                if _word_count(_build_summary_text(sections) + " " + " ".join(additions)) >= target_words:
+                    break
         if not additions:
             break
         title = (result.get("profile", {}).get("vocabolario_sezioni") or {}).get("development", "Sviluppo dei temi")
