@@ -11,9 +11,9 @@ Status: **PASS**
 - Metrics: traceability `1.0`, generic `0`, template `0`, duplicate `0`, teaching `1.0`, specificity `1.0`, diversity `1.0`
 - Defects: `[]`
 - Examples:
-  - `Riferimento attivita: Verifica trimestrale nel flusso operativo` — Occorre una verifica trimestrale, una traccia scritta nel registro operativo e una conferma del responsabile di processo.
-  - `Riferimento attivita nel flusso operativo` — CTRL-011-1 rende verificabile il flusso e rende confrontabili i risultati tra reparti, sedi e fornitori.
-  - `Continuità operativa: Verifica settimanale nel flusso operativo` — Occorre una verifica settimanale, una traccia scritta nel registro operativo e una conferma del responsabile di processo.
+  - `Riferimento attivita: Verifica trimestrale nella sequenza prevista` — Occorre una verifica trimestrale, una traccia scritta nel registro operativo e una conferma del responsabile di processo.
+  - `Riferimento attivita nella sequenza prevista` — CTRL-011-1 rende verificabile il flusso e rende confrontabili i risultati tra reparti, sedi e fornitori.
+  - `Continuità operativa: Verifica settimanale nella sequenza prevista` — Occorre una verifica settimanale, una traccia scritta nel registro operativo e una conferma del responsabile di processo.
 
 ## real_long_audit_doc - PASS
 
@@ -24,9 +24,9 @@ Status: **PASS**
 - Metrics: traceability `1.0`, generic `0`, template `0`, duplicate `0`, teaching `1.0`, specificity `1.0`, diversity `1.0`
 - Defects: `[]`
 - Examples:
-  - `Risultati revisione nel flusso operativo` — L18: `"risposta_corretta": "Perché interagisce con il campo magnetico terrestre e si orienta lungo le sue linee",`.
-  - `Revisione domanda nel flusso operativo` — L27: `"spiegazione": "Sommiamo prima le unità: 5 + 8 = 13, scriviamo 3 e riportiamo 1.
-  - `Testo risultati nel flusso operativo` — L13: `"Perché chiarisce obiettivo e formato, ma rende inutile il controllo finale sulla qualità della risposta",`.
+  - `Risultati revisione nella sequenza prevista` — L18: `"risposta_corretta": "Perché interagisce con il campo magnetico terrestre e si orienta lungo le sue linee",`.
+  - `Revisione domanda nella sequenza prevista` — L27: `"spiegazione": "Sommiamo prima le unità: 5 + 8 = 13, scriviamo 3 e riportiamo 1.
+  - `Testo risultati nella sequenza prevista` — L13: `"Perché chiarisce obiettivo e formato, ma rende inutile il controllo finale sulla qualità della risposta",`.
 
 ## real_security_doc_if_long - WARNING
 

@@ -1,6 +1,6 @@
 {
   "phase": "5.15G.3",
-  "generated_at": "2026-07-08T19:46:48Z",
+  "generated_at": "2026-07-08T19:56:47Z",
   "status": "PASS",
   "long_real_pass_count": 1,
   "documents": [
@@ -84,22 +84,22 @@
       "final_duplicate_titles": {},
       "examples": [
         {
-          "title": "Risultati revisione nel flusso operativo",
+          "title": "Risultati revisione nella sequenza prevista",
           "source_sentence": "L18: `\"risposta_corretta\": \"Perché interagisce con il campo magnetico terrestre e si orienta lungo le sue linee\",`.",
           "example": "Applicazione: usare risultati revisione per collegare corretta, risposta, risultati a una verifica concreta."
         },
         {
-          "title": "Revisione domanda nel flusso operativo",
+          "title": "Revisione domanda nella sequenza prevista",
           "source_sentence": "L27: `\"spiegazione\": \"Sommiamo prima le unità: 5 + 8 = 13, scriviamo 3 e riportiamo 1.",
           "example": "Applicazione: usare revisione domanda per collegare corretta, risposta, revisione a una verifica concreta."
         },
         {
-          "title": "Testo risultati nel flusso operativo",
+          "title": "Testo risultati nella sequenza prevista",
           "source_sentence": "L13: `\"Perché chiarisce obiettivo e formato, ma rende inutile il controllo finale sulla qualità della risposta\",`.",
           "example": "Applicazione: usare testo risultati per collegare corretta, risposta, finale a una verifica concreta."
         },
         {
-          "title": "Risultati domanda nel flusso operativo",
+          "title": "Risultati domanda nella sequenza prevista",
           "source_sentence": "L196: `\"Perché possono sovrapporsi sullo stesso dato, ma il risultato resta coerente anche senza controllo\"`.",
           "example": "Applicazione: usare risultati domanda per collegare corretta, risposta, risultati a una verifica concreta."
         }

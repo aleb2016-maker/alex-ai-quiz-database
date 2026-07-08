@@ -11,10 +11,10 @@ Long real PASS count: `1`
 - Metrics: traceability `1.0`, generic `0`, template `0`, duplicate `0`, teaching `1.0`, specificity `1.0`, diversity `1.0`
 - Defects: `[]`
 - Examples:
-  - `Risultati revisione nel flusso operativo` — L18: `"risposta_corretta": "Perché interagisce con il campo magnetico terrestre e si orienta lungo le sue linee",`.
-  - `Revisione domanda nel flusso operativo` — L27: `"spiegazione": "Sommiamo prima le unità: 5 + 8 = 13, scriviamo 3 e riportiamo 1.
-  - `Testo risultati nel flusso operativo` — L13: `"Perché chiarisce obiettivo e formato, ma rende inutile il controllo finale sulla qualità della risposta",`.
-  - `Risultati domanda nel flusso operativo` — L196: `"Perché possono sovrapporsi sullo stesso dato, ma il risultato resta coerente anche senza controllo"`.
+  - `Risultati revisione nella sequenza prevista` — L18: `"risposta_corretta": "Perché interagisce con il campo magnetico terrestre e si orienta lungo le sue linee",`.
+  - `Revisione domanda nella sequenza prevista` — L27: `"spiegazione": "Sommiamo prima le unità: 5 + 8 = 13, scriviamo 3 e riportiamo 1.
+  - `Testo risultati nella sequenza prevista` — L13: `"Perché chiarisce obiettivo e formato, ma rende inutile il controllo finale sulla qualità della risposta",`.
+  - `Risultati domanda nella sequenza prevista` — L196: `"Perché possono sovrapporsi sullo stesso dato, ma il risultato resta coerente anche senza controllo"`.
 
 ## sicurezza_informatica_aziendale - WARNING
 

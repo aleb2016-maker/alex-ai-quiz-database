@@ -285,7 +285,7 @@ def _public_safe_title(title: str, terms: Sequence[str] = ()) -> str:
         if qualifier:
             clean = f"{clean} nel contesto {qualifier}"
         else:
-            clean = f"{clean} nel flusso operativo"
+            clean = f"{clean} nella sequenza prevista"
     return clean[:1].upper() + clean[1:96]
 
 
@@ -807,3 +807,9 @@ def build_long_doc_cards_g3(global_map: Dict[str, Any], original_text: str, g2_p
         "defects": validation.get("defects", []),
         "metrics": metrics,
     }
+
+# ============================================================
+# FASE 5.15G.3.1 — SOURCE PHRASE VARIATION PATCH
+# Patch locale: sostituisce formule sorgente ripetitive nei titoli card.
+# Non usa wrapper, non ridefinisce funzioni, non modifica validazione/QM.
+# ============================================================
