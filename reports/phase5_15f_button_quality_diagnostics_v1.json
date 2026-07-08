@@ -1,14 +1,14 @@
 {
   "phase": "5.15F.0",
   "status": "PASS",
-  "created_at": "2026-07-08T22:55:37",
+  "created_at": "2026-07-08T23:08:39",
   "scope": "diagnostica reale pulsanti generatori RAG/LLM senza modifiche funzionali",
   "git": {
     "branch": "rag-concept-app-presentabile-v3",
-    "commit": "d5a4bbe",
-    "commit_full": "d5a4bbe02d23d30c7908311f202ebc9392f0cd4d",
+    "commit": "af55088",
+    "commit_full": "af550882b3f981cf623ea10862bc57a791bcbcaa",
     "tags_at_head": [
-      "checkpoint-mini-llm-quiz-real-quality-fix-v515g41"
+      "checkpoint-mini-llm-document-qa-engine-v515g5"
     ],
     "relevant_tags": [
       "checkpoint-mini-llm-advanced-language-repair-v512f",
@@ -26,6 +26,7 @@
       "checkpoint-mini-llm-document-cli-pdf-v1-clean",
       "checkpoint-mini-llm-document-cli-v1",
       "checkpoint-mini-llm-document-cli-v1-markdown-clean",
+      "checkpoint-mini-llm-document-qa-engine-v515g5",
       "checkpoint-mini-llm-documentale-integrato-v1",
       "checkpoint-mini-llm-executable-registry-proof-v515a",
       "checkpoint-mini-llm-existing-quiz-quality-motors-map-v594",
@@ -116,7 +117,7 @@
       "checkpoint-mini-llm-v314-rewrite-only-safe",
       "checkpoint-mini-llm-v315-extended-safe"
     ],
-    "status_short": "M reports/phase5_15e_approved_outputs_report_v1.json\n M reports/phase5_15f_button_quality_diagnostics_v1.json\n M reports/phase5_15f_button_quality_diagnostics_v1.md\n M reports/phase5_15g1_long_document_global_orchestrator_diagnostics_v1.json\n?? backend/phase5_15g5_document_qa_engine.py\n?? reports/phase5_15g5_document_qa_diagnostics_v1.json\n?? reports/phase5_15g5_document_qa_diagnostics_v1.md\n?? reports/phase5_15g5_document_qa_safety_review_v1.md\n?? scripts/run_phase5_15g5_document_qa_diagnostics.py",
+    "status_short": "M backend/phase5_15b_quality_checked_generators.py\n M reports/phase5_15e_approved_outputs_report_v1.json\n M reports/phase5_15g1_long_document_global_orchestrator_diagnostics_v1.json\n M reports/phase5_15g5_document_qa_diagnostics_v1.json\n?? backend/phase5_15b_quality_checked_generators.py.bak_g51_interroga_documento_v2\n?? reports/phase5_15g51_interroga_documento_backend_integration_smoke_v1.json\n?? reports/phase5_15g51_interroga_documento_backend_integration_smoke_v1.md\n?? scripts/run_phase5_15g51_interroga_documento_backend_integration_smoke.py",
     "checkpoint_expected": {
       "commit": "0444d0d",
       "tag": "checkpoint-mini-llm-approved-generators-v515e",

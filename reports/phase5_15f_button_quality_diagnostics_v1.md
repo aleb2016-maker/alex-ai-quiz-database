@@ -10,17 +10,16 @@ Status diagnostica: **PASS**
 ## Stato Git
 
 - Branch: `rag-concept-app-presentabile-v3`
-- Commit: `d5a4bbe`
-- Tag su HEAD: `checkpoint-mini-llm-quiz-real-quality-fix-v515g41`
-- Stato git short: `M reports/phase5_15e_approved_outputs_report_v1.json
- M reports/phase5_15f_button_quality_diagnostics_v1.json
- M reports/phase5_15f_button_quality_diagnostics_v1.md
+- Commit: `af55088`
+- Tag su HEAD: `checkpoint-mini-llm-document-qa-engine-v515g5`
+- Stato git short: `M backend/phase5_15b_quality_checked_generators.py
+ M reports/phase5_15e_approved_outputs_report_v1.json
  M reports/phase5_15g1_long_document_global_orchestrator_diagnostics_v1.json
-?? backend/phase5_15g5_document_qa_engine.py
-?? reports/phase5_15g5_document_qa_diagnostics_v1.json
-?? reports/phase5_15g5_document_qa_diagnostics_v1.md
-?? reports/phase5_15g5_document_qa_safety_review_v1.md
-?? scripts/run_phase5_15g5_document_qa_diagnostics.py`
+ M reports/phase5_15g5_document_qa_diagnostics_v1.json
+?? backend/phase5_15b_quality_checked_generators.py.bak_g51_interroga_documento_v2
+?? reports/phase5_15g51_interroga_documento_backend_integration_smoke_v1.json
+?? reports/phase5_15g51_interroga_documento_backend_integration_smoke_v1.md
+?? scripts/run_phase5_15g51_interroga_documento_backend_integration_smoke.py`
 
 ## Tabella 4 pulsanti
 

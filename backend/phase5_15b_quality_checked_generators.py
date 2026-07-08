@@ -39,6 +39,12 @@ GENERATOR_ALIASES = {
     "study_questions": "study_questions",
     "domande": "study_questions",
     "domande_studio": "study_questions",
+    "ask_document": "ask_document",
+    "interroga_documento": "ask_document",
+    "interroga": "ask_document",
+    "document_qa": "ask_document",
+    "qa_documento": "ask_document",
+    "domanda_documento": "ask_document",
     "quiz": "quiz",
     "test": "quiz",
     "test_quiz": "quiz",
@@ -55,6 +61,7 @@ GENERATOR_LABELS = {
     "summary": "Riassunto",
     "cards": "Card",
     "study_questions": "Domande studio",
+    "ask_document": "Interroga Documento",
     "quiz": "Test / Quiz",
 }
 
@@ -705,8 +712,111 @@ def _v515g1_cards_qm_compat_payload(payload, raw_output):
     return payload
 
 
+
+# ============================================================
+# FASE 5.15G.5.1 — BACKEND INTERROGA DOCUMENTO INTEGRATION
+# Integrazione minima backend: abilita generator ask_document/interroga_documento
+# senza eliminare study_questions e senza cambiare firma pubblica:
+# run_quality_checked_generator(generator_name, input_text).
+# input_text può essere JSON con document_text/user_question o testo con marker.
+# ============================================================
+
+def _v515g51_extract_document_qa_input(input_text: str):
+    """Estrae documento e domanda da input_text per Interroga Documento."""
+    import json
+    import re
+
+    raw = str(input_text or "")
+    stripped = raw.strip()
+    if not stripped:
+        return "", ""
+
+    if stripped.startswith("{") and stripped.endswith("}"):
+        try:
+            payload = json.loads(stripped)
+            document_text = (
+                payload.get("document_text")
+                or payload.get("document")
+                or payload.get("testo_documento")
+                or payload.get("text")
+                or payload.get("input_text")
+                or ""
+            )
+            user_question = (
+                payload.get("user_question")
+                or payload.get("question")
+                or payload.get("domanda")
+                or payload.get("query")
+                or ""
+            )
+            return str(document_text or ""), str(user_question or "")
+        except Exception:
+            pass
+
+    patterns = [
+        r"(?is)(?:^|\n)\s*(?:DOMANDA|QUESTION|USER_QUESTION)\s*:\s*(?P<q>.+?)\n\s*(?:DOCUMENTO|DOCUMENT|TESTO|DOCUMENT_TEXT)\s*:\s*(?P<d>.+)\s*$",
+        r"(?is)(?:^|\n)\s*(?:DOCUMENTO|DOCUMENT|TESTO|DOCUMENT_TEXT)\s*:\s*(?P<d>.+?)\n\s*(?:DOMANDA|QUESTION|USER_QUESTION)\s*:\s*(?P<q>.+)\s*$",
+    ]
+    for pattern in patterns:
+        match = re.search(pattern, stripped)
+        if match:
+            return (match.group("d") or "").strip(), (match.group("q") or "").strip()
+
+    separators = [
+        "\n---DOMANDA---\n",
+        "\n---QUESTION---\n",
+        "\n### DOMANDA\n",
+        "\n### QUESTION\n",
+    ]
+    for sep in separators:
+        if sep in raw:
+            document_text, user_question = raw.split(sep, 1)
+            return document_text.strip(), user_question.strip()
+
+    return raw, ""
+
+
 def run_quality_checked_generator(generator_name: str, input_text: str) -> dict:
     generator = _normalize_generator_name(generator_name)
+    if generator == "ask_document":
+        document_text, user_question = _v515g51_extract_document_qa_input(input_text)
+        try:
+            from backend.phase5_15g5_document_qa_engine import run_interroga_documento
+        except Exception:
+            from phase5_15g5_document_qa_engine import run_interroga_documento
+
+        qa_result = run_interroga_documento(document_text, user_question)
+        qa_metrics = dict(qa_result.get("metrics") or {})
+        qa_warnings = list(qa_result.get("warnings") or [])
+
+        qa_status = qa_result.get("status") or "UNKNOWN"
+        qa_ok = bool(qa_result.get("ok")) and qa_status in {"ANSWERED", "NOT_FOUND_IN_DOCUMENT"}
+
+        return {
+            "ok": qa_ok,
+            "approved": qa_ok,
+            "status": qa_status,
+            "generator": "ask_document",
+            "generator_label": "Interroga Documento",
+            "raw_output": qa_result,
+            "final_output": qa_result,
+            "output": qa_result,
+            "quality_report": {
+                "phase5_15g51_backend_interroga_documento_integration": True,
+                "generator": "ask_document",
+                "generator_label": "Interroga Documento",
+                "qm_expected": 0,
+                "qm_executed": 0,
+                "document_qa_status": qa_status,
+                "document_qa_confidence": qa_result.get("confidence"),
+                "document_qa_not_found": bool(qa_result.get("not_found")),
+                "document_qa_metrics": qa_metrics,
+                "note": "Interroga Documento usa il motore G.5 isolato e non sostituisce ancora Study Questions/UI.",
+            },
+            "defects": [] if qa_ok else qa_warnings,
+            "warnings": qa_warnings,
+        }
+
     text = str(input_text or "").strip()
     input_defects = _input_defects(text)
     input_verified = not input_defects

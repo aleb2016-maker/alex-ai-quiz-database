@@ -1,0 +1,43 @@
+{
+  "phase": "5.15G.5.1",
+  "name": "Interroga Documento backend integration smoke",
+  "status": "PASS",
+  "defects": [],
+  "cases": [
+    {
+      "name": "json_answered",
+      "generator": "interroga_documento",
+      "expected_status": "ANSWERED",
+      "status": "ANSWERED",
+      "approved": true,
+      "defects": []
+    },
+    {
+      "name": "json_not_found",
+      "generator": "ask_document",
+      "expected_status": "NOT_FOUND_IN_DOCUMENT",
+      "status": "NOT_FOUND_IN_DOCUMENT",
+      "approved": true,
+      "defects": []
+    },
+    {
+      "name": "marker_answered",
+      "generator": "domanda_documento",
+      "expected_status": "ANSWERED",
+      "status": "ANSWERED",
+      "approved": true,
+      "defects": []
+    }
+  ],
+  "checks": {
+    "visible_text_only_scan": true,
+    "backend_aliases": [
+      "ask_document",
+      "interroga_documento",
+      "domanda_documento"
+    ],
+    "study_questions_removed": false,
+    "ui_connected": false,
+    "quality_manager_common_modified": false
+  }
+}
