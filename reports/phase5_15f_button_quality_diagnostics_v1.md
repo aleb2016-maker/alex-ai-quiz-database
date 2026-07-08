@@ -10,18 +10,19 @@ Status diagnostica: **PASS**
 ## Stato Git
 
 - Branch: `rag-concept-app-presentabile-v3`
-- Commit: `e46df4a`
-- Tag su HEAD: `checkpoint-mini-llm-summary-multidoc-depth-v515f4`
-- Stato git short: `M backend/phase5_15b_quality_checked_generators.py
+- Commit: `91cf663`
+- Tag su HEAD: `checkpoint-mini-llm-summary-g2-multidoc-review-v515g2`
+- Stato git short: `M backend/phase5_15g1_long_document_orchestrator.py
  M reports/phase5_15e_approved_outputs_report_v1.json
- M reports/phase5_15f_button_quality_diagnostics_v1.json
- M reports/phase5_15f_button_quality_diagnostics_v1.md
-?? backend/phase5_15g1_long_document_orchestrator.py
-?? reports/fixtures/
-?? reports/phase5_15g0_real_page_buttons_wiring_report_v1.md
-?? reports/phase5_15g1_long_document_global_orchestrator_diagnostics_v1.json
-?? reports/phase5_15g1_long_document_global_orchestrator_diagnostics_v1.md
-?? scripts/run_phase5_15g1_long_document_global_orchestrator_diagnostics.py`
+ M reports/phase5_15g1_long_document_global_orchestrator_diagnostics_v1.json
+?? backend/phase5_15g3_universal_long_card_quality.py
+?? reports/phase5_15g3_multi_document_real_card_review_v1.json
+?? reports/phase5_15g3_multi_document_real_card_review_v1.md
+?? reports/phase5_15g3_universal_long_card_quality_diagnostics_v1.json
+?? reports/phase5_15g3_universal_long_card_quality_diagnostics_v1.md
+?? reports/phase5_15g3_universal_long_card_quality_safety_review_v1.md
+?? scripts/run_phase5_15g3_multi_document_real_card_review.py
+?? scripts/run_phase5_15g3_universal_long_card_quality_diagnostics.py`
 
 ## Tabella 4 pulsanti
 

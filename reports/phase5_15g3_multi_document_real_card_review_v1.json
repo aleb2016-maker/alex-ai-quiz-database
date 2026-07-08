@@ -1,0 +1,259 @@
+{
+  "phase": "5.15G.3",
+  "generated_at": "2026-07-08T19:46:48Z",
+  "status": "PASS",
+  "long_real_pass_count": 1,
+  "documents": [
+    {
+      "name": "audit_effetti_premi_ai_its",
+      "filepath": "reports/audit_effetti_premi_ai_its.md",
+      "type": "report reale lungo",
+      "words": 106264,
+      "long_doc": true,
+      "g3_active": true,
+      "cards_before": 12,
+      "cards_after": 12,
+      "before_metrics": {
+        "cards_count": 12,
+        "covered_macro_areas": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "duplicate_titles": [],
+        "duplicate_explanations": [
+          {
+            "first_index": 0,
+            "duplicate_index": 4,
+            "field": "explanation",
+            "value": "Responsabilita e processo restano collegati alla macro-area 3. Il titolo richiama corretta risposta contenere controllare molte e resta ancorato alla fonte indicata."
+          },
+          {
+            "first_index": 0,
+            "duplicate_index": 10,
+            "field": "explanation",
+            "value": "Responsabilita e processo restano collegati alla macro-area 6. Il titolo richiama corretta risposta perché interagisce campo e resta ancorato alla fonte indicata."
+          }
+        ]
+      },
+      "g3_card_metrics": {
+        "cards_count": 12,
+        "traceability_rate": 1.0,
+        "generic_title_count": 0,
+        "template_phrase_count": 0,
+        "duplicate_card_count": 0,
+        "average_teaching_value_score": 1.0,
+        "average_specificity_score": 1.0,
+        "diversity_score": 1.0,
+        "cards_with_examples": 12,
+        "cards_with_source_sentence": 12,
+        "cards_without_concept_id": 0,
+        "too_short_cards": 0,
+        "noise_count": 0,
+        "concepts_extracted": 160,
+        "concepts_ranked": 33,
+        "covered_macro_areas": [
+          1,
+          3,
+          4,
+          5,
+          6,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          17
+        ],
+        "validation_pass": true
+      },
+      "traceability_rate": 1.0,
+      "generic_title_count": 0,
+      "template_phrase_count": 0,
+      "duplicate_card_count": 0,
+      "average_teaching_value_score": 1.0,
+      "average_specificity_score": 1.0,
+      "diversity_score": 1.0,
+      "qm_cards_count": 60,
+      "approved": true,
+      "status": "APPROVED",
+      "final_duplicate_titles": {},
+      "examples": [
+        {
+          "title": "Risultati revisione nel flusso operativo",
+          "source_sentence": "L18: `\"risposta_corretta\": \"Perché interagisce con il campo magnetico terrestre e si orienta lungo le sue linee\",`.",
+          "example": "Applicazione: usare risultati revisione per collegare corretta, risposta, risultati a una verifica concreta."
+        },
+        {
+          "title": "Revisione domanda nel flusso operativo",
+          "source_sentence": "L27: `\"spiegazione\": \"Sommiamo prima le unità: 5 + 8 = 13, scriviamo 3 e riportiamo 1.",
+          "example": "Applicazione: usare revisione domanda per collegare corretta, risposta, revisione a una verifica concreta."
+        },
+        {
+          "title": "Testo risultati nel flusso operativo",
+          "source_sentence": "L13: `\"Perché chiarisce obiettivo e formato, ma rende inutile il controllo finale sulla qualità della risposta\",`.",
+          "example": "Applicazione: usare testo risultati per collegare corretta, risposta, finale a una verifica concreta."
+        },
+        {
+          "title": "Risultati domanda nel flusso operativo",
+          "source_sentence": "L196: `\"Perché possono sovrapporsi sullo stesso dato, ma il risultato resta coerente anche senza controllo\"`.",
+          "example": "Applicazione: usare risultati domanda per collegare corretta, risposta, risultati a una verifica concreta."
+        }
+      ],
+      "defects": [],
+      "judgment": "PASS"
+    },
+    {
+      "name": "sicurezza_informatica_aziendale",
+      "filepath": "rag/documenti/documento_rag_sicurezza_informatica_aziendale.md",
+      "type": "documento cyber-security",
+      "words": 1673,
+      "long_doc": false,
+      "g3_active": false,
+      "cards_before": 0,
+      "cards_after": 8,
+      "before_metrics": {},
+      "g3_card_metrics": {},
+      "traceability_rate": null,
+      "generic_title_count": null,
+      "template_phrase_count": null,
+      "duplicate_card_count": null,
+      "average_teaching_value_score": null,
+      "average_specificity_score": null,
+      "diversity_score": null,
+      "qm_cards_count": 60,
+      "approved": false,
+      "status": "QUALITY_BLOCKED",
+      "final_duplicate_titles": {
+        "Aspetto operativo del documento": 8
+      },
+      "examples": [
+        {
+          "title": null,
+          "source_sentence": "",
+          "example": ""
+        },
+        {
+          "title": null,
+          "source_sentence": "",
+          "example": ""
+        },
+        {
+          "title": null,
+          "source_sentence": "",
+          "example": ""
+        },
+        {
+          "title": null,
+          "source_sentence": "",
+          "example": ""
+        }
+      ],
+      "defects": [],
+      "judgment": "WARNING"
+    },
+    {
+      "name": "ai_generativa_rag",
+      "filepath": "rag/documenti/documento_ai_generativa_test_rag.md",
+      "type": "documento AI/RAG",
+      "words": 617,
+      "long_doc": false,
+      "g3_active": false,
+      "cards_before": 0,
+      "cards_after": 8,
+      "before_metrics": {},
+      "g3_card_metrics": {},
+      "traceability_rate": null,
+      "generic_title_count": null,
+      "template_phrase_count": null,
+      "duplicate_card_count": null,
+      "average_teaching_value_score": null,
+      "average_specificity_score": null,
+      "diversity_score": null,
+      "qm_cards_count": 60,
+      "approved": false,
+      "status": "QUALITY_BLOCKED",
+      "final_duplicate_titles": {
+        "Aspetto operativo del documento": 8
+      },
+      "examples": [
+        {
+          "title": null,
+          "source_sentence": "",
+          "example": ""
+        },
+        {
+          "title": null,
+          "source_sentence": "",
+          "example": ""
+        },
+        {
+          "title": null,
+          "source_sentence": "",
+          "example": ""
+        },
+        {
+          "title": null,
+          "source_sentence": "",
+          "example": ""
+        }
+      ],
+      "defects": [],
+      "judgment": "WARNING"
+    },
+    {
+      "name": "formazione_aziendale",
+      "filepath": "rag/documenti/esempio_documento_aziendale_formazione.md",
+      "type": "documento formazione",
+      "words": 137,
+      "long_doc": false,
+      "g3_active": false,
+      "cards_before": 0,
+      "cards_after": 8,
+      "before_metrics": {},
+      "g3_card_metrics": {},
+      "traceability_rate": null,
+      "generic_title_count": null,
+      "template_phrase_count": null,
+      "duplicate_card_count": null,
+      "average_teaching_value_score": null,
+      "average_specificity_score": null,
+      "diversity_score": null,
+      "qm_cards_count": 60,
+      "approved": false,
+      "status": "QUALITY_BLOCKED",
+      "final_duplicate_titles": {
+        "Formazione degli operatori": 2,
+        "Aspetto operativo del documento": 6
+      },
+      "examples": [
+        {
+          "title": null,
+          "source_sentence": "",
+          "example": ""
+        },
+        {
+          "title": null,
+          "source_sentence": "",
+          "example": ""
+        },
+        {
+          "title": null,
+          "source_sentence": "",
+          "example": ""
+        },
+        {
+          "title": null,
+          "source_sentence": "",
+          "example": ""
+        }
+      ],
+      "defects": [],
+      "judgment": "WARNING"
+    }
+  ]
+}

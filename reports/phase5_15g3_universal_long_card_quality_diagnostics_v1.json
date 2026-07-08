@@ -1,0 +1,403 @@
+{
+  "phase": "5.15G.3",
+  "generated_at": "2026-07-08T19:46:48Z",
+  "status": "PASS",
+  "cases": [
+    {
+      "name": "synthetic_long_business_doc",
+      "filepath": "rag/documenti/test_documento_lungo_aziendale_120_pagine.txt",
+      "profile_hint": "manuale_aziendale",
+      "words": 93418,
+      "long_doc": true,
+      "g3_active": true,
+      "cards_before": 12,
+      "cards_after": 12,
+      "before_metrics": {
+        "cards_count": 12,
+        "covered_macro_areas": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "duplicate_titles": [],
+        "duplicate_explanations": [
+          {
+            "first_index": 0,
+            "duplicate_index": 2,
+            "field": "explanation",
+            "value": "Codici da verificare: CTRL-003-1, CTRL-003-2, CTRL-003-3. Responsabilita e processo restano collegati alla macro-area 2. Il titolo richiama classificare incidenti ed escalation operativa e resta ancorato alla fonte indicata."
+          },
+          {
+            "first_index": 0,
+            "duplicate_index": 4,
+            "field": "explanation",
+            "value": "Codici da verificare: CTRL-005-1, CTRL-005-2, CTRL-005-3. Responsabilita e processo restano collegati alla macro-area 3. Il titolo richiama registro richiede verifica settimanale traccia e resta ancorato alla fonte indicata."
+          },
+          {
+            "first_index": 0,
+            "duplicate_index": 6,
+            "field": "explanation",
+            "value": "Codici da verificare: CTRL-007-1, CTRL-007-2, CTRL-007-3. Responsabilita e processo restano collegati alla macro-area 4. Il titolo richiama pianificare audit e azioni correttive e resta ancorato alla fonte indicata."
+          },
+          {
+            "first_index": 3,
+            "duplicate_index": 7,
+            "field": "explanation",
+            "value": "Codici da verificare: CTRL-007-1, CTRL-007-2, CTRL-007-3. Rischio guida: Il controllo CTRL-007-1 evita passaggi informali e rende confrontabili i risultati tra reparti, sedi e fornitori. Il titolo richiama controlli verificabili per pianificare audit e azioni correttive e resta ancorato alla fonte indicata."
+          },
+          {
+            "first_index": 0,
+            "duplicate_index": 8,
+            "field": "explanation",
+            "value": "Codici da verificare: CTRL-009-1, CTRL-009-2, CTRL-009-3. Responsabilita e processo restano collegati alla macro-area 5. Il titolo richiama verificare continuita operativa e ripristino e resta ancorato alla fonte indicata."
+          },
+          {
+            "first_index": 0,
+            "duplicate_index": 10,
+            "field": "explanation",
+            "value": "Codici da verificare: CTRL-011-1, CTRL-011-2, CTRL-011-3. Responsabilita e processo restano collegati alla macro-area 6. Il titolo richiama ruoli legal compliance gestire responsabilita e resta ancorato alla fonte indicata."
+          },
+          {
+            "first_index": 3,
+            "duplicate_index": 11,
+            "field": "explanation",
+            "value": "Codici da verificare: CTRL-011-1, CTRL-011-2, CTRL-011-3. Rischio guida: Il controllo CTRL-011-1 evita passaggi informali e rende confrontabili i risultati tra reparti, sedi e fornitori. Il titolo richiama controlli verificabili per ruoli legal compliance gestire responsabilita e resta ancorato alla fonte indicata."
+          }
+        ]
+      },
+      "g3_card_metrics": {
+        "cards_count": 12,
+        "traceability_rate": 1.0,
+        "generic_title_count": 0,
+        "template_phrase_count": 0,
+        "duplicate_card_count": 0,
+        "average_teaching_value_score": 1.0,
+        "average_specificity_score": 1.0,
+        "diversity_score": 1.0,
+        "cards_with_examples": 12,
+        "cards_with_source_sentence": 12,
+        "cards_without_concept_id": 0,
+        "too_short_cards": 0,
+        "noise_count": 0,
+        "concepts_extracted": 719,
+        "concepts_ranked": 14,
+        "covered_macro_areas": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "validation_pass": true
+      },
+      "traceability_rate": 1.0,
+      "generic_title_count": 0,
+      "template_phrase_count": 0,
+      "duplicate_card_count": 0,
+      "average_teaching_value_score": 1.0,
+      "average_specificity_score": 1.0,
+      "diversity_score": 1.0,
+      "final_duplicate_titles": {},
+      "examples": [
+        {
+          "title": "Riferimento attivita: Verifica trimestrale nel flusso operativo",
+          "source_sentence": "Occorre una verifica trimestrale, una traccia scritta nel registro operativo e una conferma del responsabile di processo.",
+          "example": "Applicazione: usare riferimento attivita: verifica trimestrale per collegare controllo, passaggi, workflow a una verifica concreta."
+        },
+        {
+          "title": "Riferimento attivita nel flusso operativo",
+          "source_sentence": "CTRL-011-1 rende verificabile il flusso e rende confrontabili i risultati tra reparti, sedi e fornitori.",
+          "example": "Applicazione: usare riferimento attivita per collegare controllo, passaggi, workflow a una verifica concreta."
+        },
+        {
+          "title": "Continuità operativa: Verifica settimanale nel flusso operativo",
+          "source_sentence": "Occorre una verifica settimanale, una traccia scritta nel registro operativo e una conferma del responsabile di processo.",
+          "example": "Applicazione: usare continuità operativa: verifica settimanale per collegare controllo, continuità, operativa a una verifica concreta."
+        }
+      ],
+      "qm_cards_count": 60,
+      "approved": true,
+      "status": "APPROVED",
+      "defects": [],
+      "judgment": "PASS"
+    },
+    {
+      "name": "real_long_audit_doc",
+      "filepath": "reports/audit_effetti_premi_ai_its.md",
+      "profile_hint": "documento_reale",
+      "words": 106264,
+      "long_doc": true,
+      "g3_active": true,
+      "cards_before": 12,
+      "cards_after": 12,
+      "before_metrics": {
+        "cards_count": 12,
+        "covered_macro_areas": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "duplicate_titles": [],
+        "duplicate_explanations": [
+          {
+            "first_index": 0,
+            "duplicate_index": 4,
+            "field": "explanation",
+            "value": "Responsabilita e processo restano collegati alla macro-area 3. Il titolo richiama corretta risposta contenere controllare molte e resta ancorato alla fonte indicata."
+          },
+          {
+            "first_index": 0,
+            "duplicate_index": 10,
+            "field": "explanation",
+            "value": "Responsabilita e processo restano collegati alla macro-area 6. Il titolo richiama corretta risposta perché interagisce campo e resta ancorato alla fonte indicata."
+          }
+        ]
+      },
+      "g3_card_metrics": {
+        "cards_count": 12,
+        "traceability_rate": 1.0,
+        "generic_title_count": 0,
+        "template_phrase_count": 0,
+        "duplicate_card_count": 0,
+        "average_teaching_value_score": 1.0,
+        "average_specificity_score": 1.0,
+        "diversity_score": 1.0,
+        "cards_with_examples": 12,
+        "cards_with_source_sentence": 12,
+        "cards_without_concept_id": 0,
+        "too_short_cards": 0,
+        "noise_count": 0,
+        "concepts_extracted": 160,
+        "concepts_ranked": 33,
+        "covered_macro_areas": [
+          1,
+          3,
+          4,
+          5,
+          6,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          17
+        ],
+        "validation_pass": true
+      },
+      "traceability_rate": 1.0,
+      "generic_title_count": 0,
+      "template_phrase_count": 0,
+      "duplicate_card_count": 0,
+      "average_teaching_value_score": 1.0,
+      "average_specificity_score": 1.0,
+      "diversity_score": 1.0,
+      "final_duplicate_titles": {},
+      "examples": [
+        {
+          "title": "Risultati revisione nel flusso operativo",
+          "source_sentence": "L18: `\"risposta_corretta\": \"Perché interagisce con il campo magnetico terrestre e si orienta lungo le sue linee\",`.",
+          "example": "Applicazione: usare risultati revisione per collegare corretta, risposta, risultati a una verifica concreta."
+        },
+        {
+          "title": "Revisione domanda nel flusso operativo",
+          "source_sentence": "L27: `\"spiegazione\": \"Sommiamo prima le unità: 5 + 8 = 13, scriviamo 3 e riportiamo 1.",
+          "example": "Applicazione: usare revisione domanda per collegare corretta, risposta, revisione a una verifica concreta."
+        },
+        {
+          "title": "Testo risultati nel flusso operativo",
+          "source_sentence": "L13: `\"Perché chiarisce obiettivo e formato, ma rende inutile il controllo finale sulla qualità della risposta\",`.",
+          "example": "Applicazione: usare testo risultati per collegare corretta, risposta, finale a una verifica concreta."
+        }
+      ],
+      "qm_cards_count": 60,
+      "approved": true,
+      "status": "APPROVED",
+      "defects": [],
+      "judgment": "PASS"
+    },
+    {
+      "name": "real_security_doc_if_long",
+      "filepath": "rag/documenti/documento_rag_sicurezza_informatica_aziendale.md",
+      "profile_hint": "documento_tecnico",
+      "words": 1673,
+      "long_doc": false,
+      "g3_active": false,
+      "cards_before": 0,
+      "cards_after": 8,
+      "before_metrics": {},
+      "g3_card_metrics": {},
+      "traceability_rate": null,
+      "generic_title_count": null,
+      "template_phrase_count": null,
+      "duplicate_card_count": null,
+      "average_teaching_value_score": null,
+      "average_specificity_score": null,
+      "diversity_score": null,
+      "final_duplicate_titles": {
+        "Aspetto operativo del documento": 8
+      },
+      "examples": [
+        {
+          "title": null,
+          "source_sentence": "",
+          "example": ""
+        },
+        {
+          "title": null,
+          "source_sentence": "",
+          "example": ""
+        },
+        {
+          "title": null,
+          "source_sentence": "",
+          "example": ""
+        }
+      ],
+      "qm_cards_count": 60,
+      "approved": false,
+      "status": "QUALITY_BLOCKED",
+      "defects": [],
+      "judgment": "WARNING"
+    },
+    {
+      "name": "inline_school_university_handout",
+      "filepath": "inline://dispensa_scolastica_universitaria",
+      "profile_hint": "dispensa_scolastica_universitaria",
+      "words": 602,
+      "long_doc": false,
+      "g3_active": false,
+      "cards_before": 0,
+      "cards_after": 8,
+      "before_metrics": {},
+      "g3_card_metrics": {},
+      "traceability_rate": null,
+      "generic_title_count": null,
+      "template_phrase_count": null,
+      "duplicate_card_count": null,
+      "average_teaching_value_score": null,
+      "average_specificity_score": null,
+      "diversity_score": null,
+      "final_duplicate_titles": {
+        "Aspetto operativo del documento": 8
+      },
+      "examples": [
+        {
+          "title": null,
+          "source_sentence": "",
+          "example": ""
+        },
+        {
+          "title": null,
+          "source_sentence": "",
+          "example": ""
+        },
+        {
+          "title": null,
+          "source_sentence": "",
+          "example": ""
+        }
+      ],
+      "qm_cards_count": 60,
+      "approved": false,
+      "status": "QUALITY_BLOCKED",
+      "defects": [],
+      "judgment": "WARNING"
+    },
+    {
+      "name": "inline_story_long_doc",
+      "filepath": "inline://storia_racconto",
+      "profile_hint": "storia_racconto",
+      "words": 586,
+      "long_doc": false,
+      "g3_active": false,
+      "cards_before": 0,
+      "cards_after": 8,
+      "before_metrics": {},
+      "g3_card_metrics": {},
+      "traceability_rate": null,
+      "generic_title_count": null,
+      "template_phrase_count": null,
+      "duplicate_card_count": null,
+      "average_teaching_value_score": null,
+      "average_specificity_score": null,
+      "diversity_score": null,
+      "final_duplicate_titles": {
+        "Aspetto operativo del documento": 8
+      },
+      "examples": [
+        {
+          "title": null,
+          "source_sentence": "",
+          "example": ""
+        },
+        {
+          "title": null,
+          "source_sentence": "",
+          "example": ""
+        },
+        {
+          "title": null,
+          "source_sentence": "",
+          "example": ""
+        }
+      ],
+      "qm_cards_count": 60,
+      "approved": false,
+      "status": "QUALITY_BLOCKED",
+      "defects": [],
+      "judgment": "WARNING"
+    },
+    {
+      "name": "inline_technical_long_doc",
+      "filepath": "inline://documento_tecnico",
+      "profile_hint": "documento_tecnico",
+      "words": 587,
+      "long_doc": false,
+      "g3_active": false,
+      "cards_before": 0,
+      "cards_after": 8,
+      "before_metrics": {},
+      "g3_card_metrics": {},
+      "traceability_rate": null,
+      "generic_title_count": null,
+      "template_phrase_count": null,
+      "duplicate_card_count": null,
+      "average_teaching_value_score": null,
+      "average_specificity_score": null,
+      "diversity_score": null,
+      "final_duplicate_titles": {
+        "Aspetto operativo del documento": 8
+      },
+      "examples": [
+        {
+          "title": null,
+          "source_sentence": "",
+          "example": ""
+        },
+        {
+          "title": null,
+          "source_sentence": "",
+          "example": ""
+        },
+        {
+          "title": null,
+          "source_sentence": "",
+          "example": ""
+        }
+      ],
+      "qm_cards_count": 60,
+      "approved": false,
+      "status": "QUALITY_BLOCKED",
+      "defects": [],
+      "judgment": "WARNING"
+    }
+  ]
+}

@@ -1011,7 +1011,38 @@ def build_long_generator_output(generator: str, text: str) -> Dict[str, Any]:
         }
 
     if generator == "cards":
-        cards = build_long_document_cards(global_map, text)
+        legacy_cards = build_long_document_cards(global_map, text)
+        cards = legacy_cards
+        g3_report: Dict[str, Any] = {
+            "phase5_15g3_universal_long_card_quality": False,
+            "g3_before_cards_metrics": legacy_cards["metrics"],
+        }
+        try:
+            from backend.phase5_15g3_universal_long_card_quality import build_long_doc_cards_g3
+
+            g3_cards = build_long_doc_cards_g3(global_map, text, max_cards=12)
+            if g3_cards.get("items"):
+                cards = g3_cards
+            g3_metrics = g3_cards.get("metrics", {})
+            g3_report.update(
+                {
+                    "phase5_15g3_universal_long_card_quality": True,
+                    "document_profile": g3_cards.get("profile", {}),
+                    "g3_card_metrics": g3_metrics,
+                    "g3_card_validation": g3_cards.get("validation", {}),
+                    "g3_warnings": g3_cards.get("warnings", []),
+                    "g3_defects": g3_cards.get("defects", []),
+                    "traceability_rate": g3_metrics.get("traceability_rate"),
+                    "generic_title_count": g3_metrics.get("generic_title_count"),
+                    "template_phrase_count": g3_metrics.get("template_phrase_count"),
+                    "duplicate_card_count": g3_metrics.get("duplicate_card_count"),
+                    "average_teaching_value_score": g3_metrics.get("average_teaching_value_score"),
+                    "average_specificity_score": g3_metrics.get("average_specificity_score"),
+                    "diversity_score": g3_metrics.get("diversity_score"),
+                }
+            )
+        except Exception as exc:
+            g3_report["g3_warnings"] = [f"g3_card_quality_error: {type(exc).__name__}: {exc}"]
         return {
             "kind": "cards",
             "motor_name": "phase5_15g1_long_document_global_cards_orchestrator",
@@ -1026,6 +1057,7 @@ def build_long_generator_output(generator: str, text: str) -> Dict[str, Any]:
                     "route_total": 60,
                     "quality_controls": 60,
                     "long_cards_metrics": cards["metrics"],
+                    **g3_report,
                 },
             ),
         }
