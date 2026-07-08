@@ -207,6 +207,12 @@ def summary_metrics(result: Dict[str, Any], text: str) -> Dict[str, Any]:
         "Punti operativi da ricordare",
         "Conclusione",
     ]
+    required_structure_count = 7
+    if report.get("phase5_15g2_universal_summary_smoothing") is True:
+        profile = report.get("document_profile") if isinstance(report.get("document_profile"), dict) else {}
+        vocab = profile.get("vocabolario_sezioni") if isinstance(profile.get("vocabolario_sezioni"), dict) else {}
+        structure = ["Sintesi tematica"] + [str(value) for value in vocab.values() if str(value).strip()]
+        required_structure_count = min(7, len(structure))
     formulaic = sum(
         content.count(phrase)
         for phrase in ["Il documento spiega che", "La parte centrale approfondisce", "La parte conclusiva"]
@@ -233,7 +239,7 @@ def summary_metrics(result: Dict[str, Any], text: str) -> Dict[str, Any]:
         "summary_long_quality_pass": bool(
             result.get("approved") is True
             and summary_words >= target_words
-            and len([item for item in structure if item in content]) >= 7
+            and len([item for item in structure if item in content]) >= required_structure_count
             and not genericity
         ),
         "sample": content[:1200],

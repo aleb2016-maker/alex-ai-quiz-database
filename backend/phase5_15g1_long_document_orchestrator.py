@@ -960,6 +960,36 @@ def build_long_generator_output(generator: str, text: str) -> Dict[str, Any]:
 
     if generator == "summary":
         summary = build_long_quality_summary(global_map, text)
+        g2_report: Dict[str, Any] = {
+            "phase5_15g2_universal_summary_smoothing": False,
+            "g2_warnings": [],
+        }
+        try:
+            from backend.phase5_15g2_universal_long_summary_smoothing import smooth_long_summary
+
+            smoothed = smooth_long_summary(global_map, text, summary["summary_text"])
+            summary = {
+                "content": smoothed["content"],
+                "summary_text": smoothed["summary_text"],
+                "metrics": {
+                    **summary["metrics"],
+                    **smoothed["metrics"],
+                },
+            }
+            g2_report = {
+                "phase5_15g2_universal_summary_smoothing": True,
+                "document_profile": smoothed["profile"],
+                "g2_metrics": smoothed["metrics"],
+                "g2_quality_validation": smoothed["validation"],
+                "g2_themes_covered": smoothed["themes_covered"],
+                "g2_warnings": smoothed["warnings"],
+                "target_10_percent_reached": smoothed["metrics"].get("target_10_percent_reached"),
+            }
+        except Exception as exc:
+            g2_report = {
+                "phase5_15g2_universal_summary_smoothing": False,
+                "g2_warnings": [f"g2_smoothing_error: {type(exc).__name__}: {exc}"],
+            }
         return {
             "kind": "summary",
             "motor_name": "phase5_15g1_long_document_global_summary_orchestrator",
@@ -975,6 +1005,7 @@ def build_long_generator_output(generator: str, text: str) -> Dict[str, Any]:
                     "route_total": 55,
                     "quality_controls": 55,
                     "long_summary_metrics": summary["metrics"],
+                    **g2_report,
                 },
             ),
         }

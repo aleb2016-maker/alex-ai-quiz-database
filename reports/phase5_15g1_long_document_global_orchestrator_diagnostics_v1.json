@@ -1,7 +1,7 @@
 {
   "phase": "5.15G.1",
   "status": "PASS",
-  "created_at": "2026-07-07T23:24:58",
+  "created_at": "2026-07-08T20:40:11",
   "fixture": {
     "path": "/Users/alessandrobarbarossa/alex-ai-workspace/reports/fixtures/phase5_15g1_long_manual_fixture.txt",
     "source": "synthetic_long_fixture_created_for_diagnostics",
@@ -20,8 +20,8 @@
       "metrics": {
         "input_words": 8395,
         "target_words_10_percent": 839,
-        "summary_words": 1158,
-        "coverage_ratio_words": 0.138,
+        "summary_words": 869,
+        "coverage_ratio_words": 0.104,
         "target_10_percent_reached": true,
         "macro_blocks_count": 6,
         "covered_blocks": [
@@ -34,18 +34,19 @@
         ],
         "missing_blocks": [],
         "structure_sections_present": [
+          "Sintesi tematica",
           "Executive summary",
-          "Mappa del documento",
-          "Macro-aree principali",
-          "Processi e procedure",
-          "Controlli, responsabilita e rischi",
-          "Punti operativi da ricordare",
-          "Conclusione"
+          "Mappa dei processi",
+          "Controlli",
+          "Responsabilita",
+          "Rischi e audit",
+          "Collegamenti operativi",
+          "Sintesi conclusiva"
         ],
         "formulaic_sentences": 0,
         "genericity_flags": [],
         "summary_long_quality_pass": true,
-        "sample": "Executive summary\nIl documento e' stato letto come un insieme sequenziale di macro-aree, con 6 blocchi principali e temi ricorrenti come ctrl, criteri, priorita, controllo, documentata, referente, processo, direzione. La sintesi conserva l'ordine originale e usa i blocchi meno coperti per evitare che il riassunto si fermi ai primi frammenti disponibili.\n\nMappa del documento\nMacro-area 1 - Manuale aziendale completo RAG V1: La macro-area Governance accessi stabilisce come il responsabile sicurezza deve governare account nominali con evidenze tracciabili, criteri di priorita e controlli periodici. Macro-area 2 - 8. Audit interno - CTRL-AUD-630: La macro-area Audit interno stabilisce come il auditor interno deve governare piano audit con evidenze tracciabili, criteri di priorita e controlli periodici. Macro-area 3 - 15. Gestione modifiche - CTRL-CHG-509: La macro-area Gestione modifiche stabilisce come il change manager deve governare approvazione cambi con evidenze tracciabili, criteri di priorita e controlli periodici. Macro-area 4 - 22. Formazione operatori - CTRL-FRM-221: La macro-area Formazione operatori stabilisce come il responsabile formazione deve governare verifica competen"
+        "sample": "Sintesi tematica\nIl testo viene letto come manuale_aziendale e richiede uno stile di sintesi sintesi operativa, fluida e orientata a responsabilita, controlli e rischi. Il baricentro riguarda ctrl, criteri, priorita, controllo, documentata, referente e processo, con una copertura distribuita lungo 6 blocchi di contenuto.\n\nExecutive summary\nLa sintesi mette in relazione le parti invece di accumulare voci isolate. I temi iniziali aprono il quadro su Manuale aziendale completo RAG V1, Audit interno - CTRL-AUD-630, Gestione modifiche - CTRL-CHG-509 e Formazione operatori - CTRL-FRM-221; le parti successive lo ampliano con Continuita operativa - CTRL-BCP-402 e Qualita dati - CTRL-DAT-118.\n\nMappa dei processi\nLa progressione segue l'ordine del documento: prima introduce il lessico e gli elementi di base, poi chiarisce come i nuclei centrali si trasformano in scelte, vincoli, esempi o passaggi applicativi. Questa mappa conserva la distribuzione originale senza ridurre il testo a un indice di blocchi.\n\nControlli\nManuale aziendale completo RAG V1 raccoglie ctrl, criteri, priorita e controllo; nel percorso del testo questo nucleo viene sviluppato attraverso elementi concreti: Per CTRL-ACC-10"
       },
       "pass": true,
       "defects": []

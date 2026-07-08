@@ -10,8 +10,8 @@ Status: **PASS**
 
 - PASS: `True`
 - Target 10%: `839` parole
-- Summary words: `1158`
-- Coverage ratio: `0.138`
+- Summary words: `869`
+- Coverage ratio: `0.104`
 - 10% raggiunto: `True`
 - Covered blocks: `[1, 2, 3, 4, 5, 6]`
 - Missing blocks: `[]`
