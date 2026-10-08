@@ -249,14 +249,22 @@ function qCloze(s,all){
  const candidates=[...freq.keys()].filter(v=>
    v!==term&&!tokens.includes(v)&&v.length>=5&&v.length<=19&&
    Math.abs(v.length-term.length)<=4&&!bad.has(v)&&
-   !/mente$/.test(v)&&!norm(s.sourceBody||s.body).includes(v));
+   !/mente$/.test(v));
  if(candidates.length<3)return null;
  // Distrattori dello stesso formato lessicale; scarta quelli sostenuti
  // dalla frase originale o dall'intero paragrafo.
  const suffix=term.slice(-3);
  candidates.sort((a,b)=>(b.endsWith(suffix)?1:0)-(a.endsWith(suffix)?1:0)||
     Math.abs(a.length-term.length)-Math.abs(b.length-term.length));
- const alternatives=spread(candidates.slice(0,16),3);
+ const alternatives=[];
+ for(const word of candidates){
+  const alternative=value.replace(regex,word);
+  // Non usare come distrattore un'altra affermazione realmente presente.
+  const supported=all.some(unit=>unit.facts.some(f=>norm(f)===norm(alternative)));
+  if(!supported)alternatives.push(word);
+  if(alternatives.length===3)break;
+ }
+ if(alternatives.length!==3)return null;
  const opts=[correct,...alternatives];
  if(new Set(opts.map(norm)).size!==4)return null;
  const masked=compact(value.replace(regex,"_____"),205);
