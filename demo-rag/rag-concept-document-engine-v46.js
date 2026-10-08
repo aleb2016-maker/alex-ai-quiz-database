@@ -231,7 +231,7 @@
   function concepts(text) {
     const out = [];
 
-    if (has(text, ["sicurezza informatica", "dati", "dispositivi", "account", "sistemi digitali", "aggiornamenti", "procedura controllata", "rischi", "controlli"])) {
+    if (has(text, ["sicurezza informatica", "sicurezza digitale", "sicurezza dei dati", "cybersecurity", "cyber security"])) {
       out.push(concept(
         "Sicurezza informatica aziendale",
         "protezione dati e sistemi",
