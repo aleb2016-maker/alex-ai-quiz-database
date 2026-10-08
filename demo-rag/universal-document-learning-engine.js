@@ -1674,6 +1674,11 @@
       .trim();
   }
 
+  function analizzaQualitaTesto(testo) {
+    const contenuto = String(testo || "").replace(/\s+/g, " ").trim();
+    return { valido: contenuto.length >= 25 && contenuto.split(/\s+/).length >= 5 };
+  }
+
   async function estraiTestoDaPdf(file) {
     if (!window.pdfjsLib) {
       throw new Error("Libreria PDF non caricata.");
@@ -2241,15 +2246,10 @@ body {
   function avvia() {
     collegaPulsanteRipulisciOcrTabella();
     collegaPulsantiDownload();
-    document.getElementById("btnFile").addEventListener("click", function () {
-      document.getElementById("fileInput").click();
-    });
-
-    document.getElementById("fileInput").addEventListener("change", caricaFile);
-    document.getElementById("btnRiassunto").addEventListener("click", generaRiassunto);
-    document.getElementById("btnCard").addEventListener("click", generaCardVisive);
-    document.getElementById("btnTest").addEventListener("click", generaTest);
-    document.getElementById("btnStudio").addEventListener("click", generaDomandeStudio);
+    // La UI V5 gestisce in modo esclusivo import PDF/TXT e i quattro motori.
+    // Evita una seconda lettura asincrona che sovrascrive successo con errore,
+    // o una seconda generazione che ricrea risultati obsoleti.
+    // Restano attivi il ripulitore OCR e i pulsanti di download legacy.
   }
 
   document.addEventListener("DOMContentLoaded", avvia);
