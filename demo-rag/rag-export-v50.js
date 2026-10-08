@@ -144,6 +144,19 @@
     }
   }
   function install(){
+    // Anche il PDF aggiuntivo creato dal layout deve esportare il file vero,
+    // senza aprire la finestra di stampa o duplicare il download.
+    if(!document.__ragPdfToolbarV50){
+      document.__ragPdfToolbarV50=true;
+      document.addEventListener("click",event=>{
+        const toolbar=event.target&&event.target.closest&&event.target.closest(".rag-pdf-rigido-btn");
+        if(!toolbar)return;
+        event.preventDefault();
+        event.stopPropagation();
+        if(event.stopImmediatePropagation)event.stopImmediatePropagation();
+        run("pdf");
+      },true);
+    }
     Object.entries(actions).forEach(([id,format])=>{
       const button=document.getElementById(id);
       if(!button||button.dataset.ragExportV50==="1")return;
