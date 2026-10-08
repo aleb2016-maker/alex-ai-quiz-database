@@ -91,14 +91,15 @@
     const ocrZone = ensureZone('rag-ocr-zone-rigido', 'rag-zone-rigida');
     const helpZone = ensureZone('rag-help-zone-rigido', 'rag-zone-rigida');
 
-    if (anchor && anchor !== document.body) {
-      anchor.insertAdjacentElement('afterend', genZone);
+    if (anchor && anchor !== document.body &&
+        anchor !== genZone && !genZone.contains(anchor) && !anchor.contains(genZone)) {
+      if (genZone.previousElementSibling !== anchor) anchor.insertAdjacentElement('afterend', genZone);
     } else if (!genZone.parentElement) {
       document.body.prepend(genZone);
     }
 
-    genZone.insertAdjacentElement('afterend', outputZone);
-    outputZone.insertAdjacentElement('afterend', ocrZone);
+    if (outputZone.previousElementSibling !== genZone && !outputZone.contains(genZone)) genZone.insertAdjacentElement('afterend', outputZone);
+    if (ocrZone.previousElementSibling !== outputZone && !ocrZone.contains(outputZone)) outputZone.insertAdjacentElement('afterend', ocrZone);
 
     if (!helpZone.parentElement) {
       document.body.appendChild(helpZone);
@@ -130,7 +131,14 @@
       .filter(el => !grid.contains(el));
 
     genButtons.forEach(btn => {
-      const card = climbSmallBlock(btn, 500);
+      if (grid.contains(btn)) return;
+      let card = climbSmallBlock(btn, 500);
+      // Mai inserire un antenato dentro un suo discendente:
+      // impedisce HierarchyRequestError e i rilanci infiniti dell'observer.
+      if (card === grid || card.contains(grid) || card.contains(genZone) ||
+          card === document.body || card === document.documentElement) card = btn;
+      if (card === grid || card.contains(grid) || !card.parentNode ||
+          card.contains(genZone) || grid.contains(card)) return;
       grid.appendChild(card);
     });
   }
@@ -236,7 +244,8 @@
 
     output.classList.add('rag-output-attuale-rigido');
 
-    if (!outputZone.contains(output)) {
+    if (!outputZone.contains(output) && output !== outputZone &&
+        !output.contains(outputZone)) {
       outputZone.innerHTML = '';
       outputZone.appendChild(output);
     }
@@ -271,7 +280,7 @@
       .filter(el => !el.closest('#rag-output-zone-rigido'))
       .filter(el => !el.closest('#rag-ocr-zone-rigido'))
       .forEach(el => {
-        helpZone.appendChild(el);
+        if (el !== helpZone && !el.contains(helpZone)) helpZone.appendChild(el);
       });
   }
 
@@ -479,8 +488,12 @@
     document.head.appendChild(style);
   }
 
+  let fixing = false;
   function fix(scroll) {
-    addStyle();
+    if (fixing) return;
+    fixing = true;
+    try {
+      addStyle();
     placeBaseZones();
     removeBadBadge();
     moveGeneratorButtons();
@@ -496,6 +509,11 @@
         behavior: 'smooth',
         block: 'start'
       });
+    }
+    } catch (error) {
+      console.error('RAG layout: spostamento non riuscito', error);
+    } finally {
+      fixing = false;
     }
   }
 
