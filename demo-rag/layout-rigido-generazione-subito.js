@@ -84,6 +84,13 @@
     );
   }
 
+  function safeMove(parent, element) {
+    if (!parent || !element || element === parent ||
+        parent.contains(element) || element.contains(parent)) return false;
+    parent.appendChild(element);
+    return true;
+  }
+
   function createBlock(id) {
     let block = document.getElementById(id);
 
@@ -188,7 +195,7 @@
       }
 
       if (containsAny(candidate, DOWNLOAD_TEXTS)) {
-        downloadBlock.appendChild(candidate);
+        safeMove(downloadBlock, candidate);
       }
     }
   }
@@ -209,7 +216,7 @@
     const actions = findInteractiveByTexts(ACTION_TEXTS);
 
     for (const action of actions) {
-      actionBlock.appendChild(action);
+      safeMove(actionBlock, action);
     }
   }
 
@@ -233,7 +240,7 @@
           return;
         }
 
-        outputBlock.appendChild(element);
+        safeMove(outputBlock, element);
       });
     }
   }
@@ -242,7 +249,7 @@
     const explanationBlock = createBlock("spiegazioni-finali-compatte");
 
     if (!explanationBlock.parentNode) {
-      root.appendChild(explanationBlock);
+      safeMove(root, explanationBlock);
     }
 
     const candidates = Array.from(
@@ -261,11 +268,11 @@
       }
 
       if (containsAny(candidate, EXPLANATION_TEXTS)) {
-        explanationBlock.appendChild(candidate);
+        safeMove(explanationBlock, candidate);
       }
     }
 
-    root.appendChild(explanationBlock);
+    safeMove(root, explanationBlock);
   }
 
   function hideUselessLabels() {
@@ -299,8 +306,9 @@
     locked = true;
 
     requestAnimationFrame(() => {
-      applyLayout();
-      locked = false;
+      try { applyLayout(); }
+      catch (error) { console.error("RAG layout dinamico:", error); }
+      finally { locked = false; }
     });
   }
 
