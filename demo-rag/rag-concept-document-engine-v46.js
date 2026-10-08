@@ -3,6 +3,7 @@
   "use strict";
 
   let ragV46DownloadPanel = null;
+  let exportSnapshot = null;
   let activeRequestId = 0;
   let activeButton = null;
 
@@ -401,6 +402,7 @@
   function renderSummary() {
     const m = needMap();
     if (!m) return;
+    exportSnapshot = { kind:'summary', title:m.profile.materia, source:getText(), items:m.summary.map(p=>({heading:p.title,body:p.text})) };
     outputBox().innerHTML = `
       <section class="rag-v46-panel" data-export-section="summary">
         <span class="rag-v46-pill">📄 Riassunto dal documento</span>
@@ -420,6 +422,7 @@
   function renderCards() {
     const m = needMap();
     if (!m) return;
+    exportSnapshot = { kind:'cards', title:m.profile.materia, source:getText(), items:m.concepts.map(p=>({heading:p.title,topic:p.ramo,body:p.fatto})) };
 
     outputBox().innerHTML = `
       <section class="rag-v46-panel" data-export-section="cards">
@@ -445,6 +448,7 @@
   function renderStudy() {
     const m = needMap();
     if (!m) return;
+    exportSnapshot = { kind:'study', title:m.profile.materia, source:getText(), items:m.concepts.map(p=>({heading:p.ramo,question:p.domanda,answer:p.risposta})) };
     outputBox().innerHTML = `
       <section class="rag-v46-panel" data-export-section="study">
         <span class="rag-v46-pill">🎓 Flashcard interattive</span>
@@ -555,6 +559,7 @@
     if (!m) return;
 
     quiz = { domande: makeQuiz(m), indice: 0, punti: 0, risposto: false };
+    exportSnapshot = quiz.domande.length ? { kind:'test', title:m.profile.materia, source:getText(), items:quiz.domande.map(q=>({question:q.q, options:q.options.slice(), correct:q.correct, explanation:q.explanation})) } : null;
     if (!quiz.domande.length) {
       outputBox().innerHTML = '<section class="rag-v46-panel" role="alert"><h2>Test non generabile</h2><p>Il documento non contiene abbastanza fatti distinti per costruire quattro risposte verificabili. Aggiungi altre informazioni e riprova.</p></section>';
       finalizeOutputScroll();
@@ -705,6 +710,7 @@
 
   async function readFile(file) {
     if (!file)return;
+    exportSnapshot = null;
     const token=++activeRequestId;
     if(activeButton){activeButton.classList.remove("rag-v50-active");activeButton=null;}
     loadingMessage("Caricamento documento","Sto leggendo "+(file.name||"il file")+"...");
@@ -740,6 +746,7 @@
       event.preventDefault();event.stopPropagation();
       if(event.stopImmediatePropagation)event.stopImmediatePropagation();
       const request=++activeRequestId;
+      exportSnapshot = null;
       if(activeButton&&activeButton!==button){
         activeButton.classList.remove("rag-v50-active");
         activeButton.removeAttribute("aria-current");
@@ -801,7 +808,8 @@
       renderSummary,
       renderCards,
       renderStudy,
-      renderQuiz
+      renderQuiz,
+      getExportSnapshot: () => exportSnapshot ? JSON.parse(JSON.stringify(exportSnapshot)) : null
     };
 
     console.log("OK RAG Concept Engine V4.6 attivo");
