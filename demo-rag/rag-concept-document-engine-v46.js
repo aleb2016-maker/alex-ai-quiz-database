@@ -598,7 +598,19 @@
       ev.preventDefault();
       ev.stopPropagation();
       if (ev.stopImmediatePropagation) ev.stopImmediatePropagation();
-      fn();
+      const area = outputBox();
+      area.innerHTML = '<section class="rag-v46-panel" role="status" aria-live="polite"><h2>Generazione in corso...</h2><p>Sto preparando il materiale dal testo inserito.</p></section>';
+      area.scrollIntoView({ behavior: "smooth", block: "start" });
+      requestAnimationFrame(() => {
+        try {
+          fn();
+          if (area.textContent.includes("Generazione in corso...")) throw new Error("Nessun risultato prodotto.");
+        } catch (error) {
+          console.error("RAG: generazione non riuscita", error);
+          area.innerHTML = '<section class="rag-v46-panel" role="alert"><h2>Errore durante la generazione</h2><p>' + esc(error.message || String(error)) + '</p></section>';
+          area.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      });
       return false;
     }, true);
   }
