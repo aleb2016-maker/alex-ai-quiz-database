@@ -335,8 +335,8 @@
   }
 
   function buildMap() {
-    const quality = window.RAGContentQualityV49;
-    if (!quality) throw new Error("Motore di analisi V4.9 non caricato. Ricarica la pagina.");
+    const quality = window.RAGContentQualityV50;
+    if (!quality) throw new Error("Motore di analisi V5.0 non caricato. Ricarica la pagina.");
     return quality.analyze(getText());
   }
 
@@ -547,7 +547,7 @@
   let quiz = { domande: [], indice: 0, punti: 0, risposto: false };
 
   function makeQuiz(m) {
-    return window.RAGContentQualityV49.makeQuiz(m);
+    return window.RAGContentQualityV50.makeQuiz(m);
   }
 
   function renderQuiz() {
