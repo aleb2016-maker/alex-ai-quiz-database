@@ -199,6 +199,26 @@ function qMatch(s,all){
  return {q:"Quale affermazione appartiene alla parte «"+s.title+"»?",
  correct:clipped,options:shuffle([clipped,...choices]),explanation:correct,kind:"abbinamento"};
 }
+function qCloze(s,all){
+ const candidate=s.facts.find(x=>words(x).length>=5);
+ if(!candidate)return null;
+ const counts=new Map();
+ all.flatMap(x=>x.facts).forEach(sentence=>words(sentence).forEach(w=>counts.set(w,(counts.get(w)||0)+1)));
+ const source=words(candidate);
+ const options=source.filter(w=>w.length>=5&&w.length<=17&&/^[a-z]+$/.test(w)&&
+     (counts.get(w)||0)<=2&&!words(s.title).includes(w));
+ const chosen=options.length?options[Math.floor(options.length*.6)]:null;
+ if(!chosen)return null;
+ const regex=new RegExp("\\b"+chosen+"\\b","i");
+ const m=candidate.match(regex);if(!m)return null;
+ const correct=m[0],other=[...counts.keys()].filter(w=>w!==chosen&&
+   !source.includes(w)&&Math.abs(w.length-chosen.length)<=5&&w.length>=5);
+ if(other.length<3)return null;
+ other.sort((a,b)=>Math.abs(a.length-chosen.length)-Math.abs(b.length-chosen.length));
+ const wrong=spread(other.slice(0,15),3);
+ return {q:"Quale termine completa il passaggio su «"+s.title+"»? «"+compact(candidate.replace(regex,"_____"),190)+"»",
+  correct,options:shuffle([correct,...wrong]),explanation:candidate,kind:"termine"};
+}
 function makeQuiz(data){
  if(!data||!data.sections)return[];
  const list=spread(data.sections,12);
@@ -206,8 +226,8 @@ function makeQuiz(data){
  for(const section of list){
   // Non trasformare ogni frase con una data nello stesso quiz di date.
   const canNumeric=numericCount<Math.ceil(list.length*.4);
-  const q=(canNumeric?(qDate(section)||qNumeric(section)):null)||qMatch(section,data.sections)
-    ||qDate(section)||qNumeric(section);
+  const q=(canNumeric?(qDate(section)||qNumeric(section)):null)||
+    qMatch(section,data.sections)||qCloze(section,data.sections)||qDate(section)||qNumeric(section);
   if(!q||new Set(q.options.map(norm)).size!==4||used.has(norm(q.q)))continue;
   if(q.kind==="data"||q.kind==="numero")numericCount++;
   used.add(norm(q.q));out.push(q);
