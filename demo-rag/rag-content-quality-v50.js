@@ -229,6 +229,13 @@ function qMatch(s,all){
  return {q:"Quale delle seguenti informazioni è sostenuta dal passaggio «"+s.title+"»?",
   correct:choices[0],options:shuffle(choices),explanation:correct,kind:"abbinamento"};
 }
+function wordClass(v){
+ if(/(?:are|ere|ire|arono|erono|irono|avano|evano|ivano|ando|endo|ato|uto|ito|ati|uti|iti)$/.test(v))return "verbo";
+ if(/mente$/.test(v))return "avverbio";
+ if(/(?:zione|sione|mento|ismo|istà|ità|ezza|enza|anza|trice|tore|tori|tura|ture)$/.test(v))return "nome";
+ if(/(?:abile|ibile|osa|oso|osi|ose|ale|ali|ivo|iva|ivi|ive)$/.test(v))return "aggettivo";
+ return "altro";
+}
 function qCloze(s,all){
  const value=s.facts[0];if(!value||words(value).length<4)return null;
  const freq=new Map();
@@ -253,9 +260,12 @@ function qCloze(s,all){
  if(candidates.length<3)return null;
  // Distrattori dello stesso formato lessicale; scarta quelli sostenuti
  // dalla frase originale o dall'intero paragrafo.
- const suffix=term.slice(-3);
- candidates.sort((a,b)=>(b.endsWith(suffix)?1:0)-(a.endsWith(suffix)?1:0)||
-    Math.abs(a.length-term.length)-Math.abs(b.length-term.length));
+ const suffix=term.slice(-3),kind=wordClass(term);
+ candidates.sort((a,b)=>{
+   const score=v=>(wordClass(v)===kind?3:0)+(v.endsWith(suffix)?2:0)-
+      Math.abs(v.length-term.length)/6;
+   return score(b)-score(a);
+ });
  const alternatives=[];
  for(const word of candidates){
   const alternative=value.replace(regex,word);
