@@ -35,7 +35,7 @@ function splitFacts(body){
   const fragments=numericSafe.match(/[^.!?]+(?:[.!?]+|$)/g)||[numericSafe];
   for(const fragment of fragments){
    const value=flat(fragment.replace(/\uE000/g,".")).replace(/^[-•*]\s*/,"");
-   if((value.length>=23 && value.split(/\s+/).length>=4) ||
+   if((value.length>=12 && value.split(/\s+/).length>=3) ||
        (value.length>=9 && /\d|[:=]/.test(value)))out.push(value);
   }
  }
@@ -54,6 +54,12 @@ function splitBlocks(source){
  for(let i=0;i<lines.length;i++){
   const line=lines[i].trim();
   if(!line){if(!label&&block.length)flush();continue;}
+  const next=(lines.slice(i+1).find(x=>x.trim())||"").trim();
+  if(/^\d{1,2}[.)]\s+/.test(line) &&
+      (/^\d{1,2}[.)]\s+/.test(next)||/[.!?;]$/.test(line))){
+    block.push(line.replace(/^\d{1,2}[.)]\s+/,""));
+    continue;
+  }
   if(likelyHeading(line)){
    // Un titolo isolato iniziale non deve diventare un fatto o una scheda.
    if(!sections.length&&!block.length&&!intro.length&&i<3&&(/^#\s+[^#]/.test(line)||(!/^#{2,6}\s/.test(line)&&headingText(line)===headingText(line).toLocaleUpperCase("it"))))intro.push(headingText(line));
