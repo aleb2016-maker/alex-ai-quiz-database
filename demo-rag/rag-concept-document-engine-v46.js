@@ -198,6 +198,11 @@
         border-radius: 18px;
         background: rgba(255,255,255,.10);
       }
+      .rag-v47-summary-part {margin:20px 0;padding:16px 18px;border:1px solid rgba(148,163,184,.22);border-radius:18px;background:rgba(255,255,255,.04)}
+      .rag-v47-summary-part h3 {margin:0 0 10px;font-size:1.4rem}
+      .rag-v47-summary-part p {margin:0;line-height:1.65}
+      .rag-v46-panel { scroll-margin-top: 18px }
+      .rag-v46-quiz { scroll-margin-top: 20px }
       @media (max-width: 980px) {
         .rag-v46-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       }
@@ -304,14 +309,9 @@
   }
 
   function buildMap() {
-    const text = getText();
-    if (text.length < 40) return null;
-
-    const p = profile(text);
-    const c = concepts(text);
-
-    if (!c.length) return null;
-    return { profile: p, concepts: c };
+    const quality = window.RAGContentQualityV47;
+    if (!quality) throw new Error("Motore di analisi V4.7 non caricato. Ricarica la pagina.");
+    return quality.analyze(getText());
   }
 
   function noContent() {
@@ -373,14 +373,17 @@
   function renderSummary() {
     const m = needMap();
     if (!m) return;
-
     outputBox().innerHTML = `
       <section class="rag-v46-panel" data-export-section="summary">
-        
-        <span class="rag-v46-pill">📄 ${esc(m.profile.contesto)}</span>
-        <h2>Riassunto: ${esc(m.profile.materia)}</h2>\n        <div id="ragV46DownloadSlot" class="rag-v46-download-slot"></div>
-        <p>Il documento riguarda <strong>${esc(m.profile.materia)}</strong> e contiene indicazioni pratiche su ${esc(m.profile.categoria)}.</p>
-        <ol>${m.concepts.map(c => `<li><strong>${esc(c.title)}:</strong> ${esc(c.fatto)}</li>`).join("")}</ol>
+        <span class="rag-v46-pill">📄 Riassunto dal documento</span>
+        <h2>Riassunto: ${esc(m.profile.materia)}</h2>
+        <div id="ragV46DownloadSlot" class="rag-v46-download-slot"></div>
+        <p>Argomenti analizzati: ${m.summary.length}. Le informazioni seguenti provengono dal testo incollato o caricato.</p>
+        ${m.summary.map((part,i)=>`
+          <article class="rag-v47-summary-part">
+            <h3>${i+1}. ${esc(part.title)}</h3>
+            <p>${esc(part.text)}</p>
+          </article>`).join("")}
       </section>
     `;
     finalizeOutputScroll();
@@ -414,20 +417,18 @@
   function renderStudy() {
     const m = needMap();
     if (!m) return;
-
     outputBox().innerHTML = `
       <section class="rag-v46-panel" data-export-section="study">
-        
-        <span class="rag-v46-pill">🎓 Domande studio</span>
-        <h2>Domande studio: ${esc(m.profile.materia)}</h2>\n        <div id="ragV46DownloadSlot" class="rag-v46-download-slot"></div>
+        <span class="rag-v46-pill">🎓 Domande basate sul documento</span>
+        <h2>Domande studio</h2>
+        <div id="ragV46DownloadSlot" class="rag-v46-download-slot"></div>
         <div class="rag-v46-grid">
-          ${m.concepts.map((c, i) => `
+          ${m.concepts.map((c,i)=>`
             <article class="rag-v46-card">
               <span class="rag-v46-pill">${esc(c.ramo)}</span>
-              <h3>${i + 1}. ${esc(c.domanda)}</h3>
-              <div class="rag-v46-answer">${esc(c.fatto)}</div>
-            </article>
-          `).join("")}
+              <h3>${i+1}. ${esc(c.domanda)}</h3>
+              <div class="rag-v46-answer">${esc(c.risposta)}</div>
+            </article>`).join("")}
         </div>
       </section>
     `;
@@ -489,12 +490,7 @@
   let quiz = { domande: [], indice: 0, punti: 0, risposto: false };
 
   function makeQuiz(m) {
-    return m.concepts.map(c => ({
-      q: c.domanda,
-      correct: c.fatto,
-      options: shuffle([c.fatto].concat(distractors(c))),
-      explanation: c.fatto
-    }));
+    return window.RAGContentQualityV47.makeQuiz(m);
   }
 
   function renderQuiz() {
@@ -502,6 +498,11 @@
     if (!m) return;
 
     quiz = { domande: makeQuiz(m), indice: 0, punti: 0, risposto: false };
+    if (!quiz.domande.length) {
+      outputBox().innerHTML = '<section class="rag-v46-panel" role="alert"><h2>Test non generabile</h2><p>Il documento non contiene abbastanza fatti distinti per costruire quattro risposte verificabili. Aggiungi altre informazioni e riprova.</p></section>';
+      finalizeOutputScroll();
+      return;
+    }
 
     outputBox().innerHTML = `
       <section class="rag-v46-panel" data-export-section="test">
@@ -538,6 +539,8 @@
     document.querySelectorAll(".rag-v46-option").forEach(b => {
       b.addEventListener("click", () => answer(b));
     });
+    const current = id("ragV46QuizBox");
+    if (current) current.scrollIntoView({ behavior: "smooth", block: "start" });
   }
 
   function answer(button) {
@@ -549,6 +552,8 @@
     const ok = selected === q.correct;
 
     if (ok) quiz.punti += 1;
+    const score = id("ragV46QuizBox") && id("ragV46QuizBox").querySelector(".rag-v46-progress");
+    if (score) score.textContent = "Domanda " + (quiz.indice + 1) + " di " + quiz.domande.length + " · Punteggio: " + quiz.punti + "/" + quiz.domande.length;
 
     document.querySelectorAll(".rag-v46-option").forEach(b => {
       const ans = b.getAttribute("data-answer") || "";
