@@ -52,7 +52,7 @@ function splitBlocks(source){
   if(!line){if(!label&&block.length)flush();continue;}
   if(likelyHeading(line)){
    // Un titolo isolato iniziale non deve diventare un fatto o una scheda.
-   if(!sections.length&&!block.length&&!intro.length&&i<3)intro.push(headingText(line));
+   if(!sections.length&&!block.length&&!intro.length&&i<3&&(/^#\s+[^#]/.test(line)||(!/^#{2,6}\s/.test(line)&&headingText(line)===headingText(line).toLocaleUpperCase("it"))))intro.push(headingText(line));
    else {flush();label=headingText(line);}
    continue;
   }
