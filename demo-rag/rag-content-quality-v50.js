@@ -21,7 +21,9 @@ function likelyHeading(s){
  if(!t||t.length>110)return false;
  if(/^#{1,6}\s+\S/.test(line)||/^\d{1,2}[.)]\s+[A-ZÀ-Ü]/.test(line))return true;
  if(/[.!?;:]$/.test(t)||t.length<5)return false;
- return (t===t.toLocaleUpperCase("it")&&/[a-zA-ZÀ-ÿ]/.test(t)) || (t.length<65&&t.split(/\s+/).length<=7&&!/,/.test(t));
+ // Per le righe senza markup richiedi almeno un titolo tipografico chiaro.
+ // Non scambiare frasi brevi e istruzioni imperative per intestazioni.
+ return t===t.toLocaleUpperCase("it")&&/[a-zA-ZÀ-ÿ]/.test(t);
 }
 function splitFacts(body){
  const lines=tidy(body).split("\n").map(x=>x.trim()).filter(Boolean);
@@ -29,10 +31,12 @@ function splitFacts(body){
  for(const line of lines){
   // Un elenco può contenere un fatto per voce.
   const raw=line.replace(/^[-•*]\s*/,"").replace(/^\d+[.)]\s+/,"");
-  const fragments=raw.match(/[^.!?]+(?:[.!?]+|$)/g)||[raw];
+  const numericSafe=raw.replace(/(\d)\.(?=\d)/g,"$1\uE000");
+  const fragments=numericSafe.match(/[^.!?]+(?:[.!?]+|$)/g)||[numericSafe];
   for(const fragment of fragments){
-   const value=flat(fragment).replace(/^[-•*]\s*/,"");
-   if(value.length>=23 && value.split(/\s+/).length>=4)out.push(value);
+   const value=flat(fragment.replace(/\uE000/g,".")).replace(/^[-•*]\s*/,"");
+   if((value.length>=23 && value.split(/\s+/).length>=4) ||
+       (value.length>=9 && /\d|[:=]/.test(value)))out.push(value);
   }
  }
  return out;
