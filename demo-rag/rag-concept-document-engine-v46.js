@@ -3,6 +3,8 @@
   "use strict";
 
   let ragV46DownloadPanel = null;
+  let activeRequestId = 0;
+  let activeButton = null;
 
   function id(x) { return document.getElementById(x); }
 
@@ -46,7 +48,9 @@
 
   function getText() {
     const box = inputBox();
-    return clean(box ? (box.value || box.textContent || "") : "");
+    // Conserva gli heading Markdown: il motore universale ne usa la gerarchia.
+    return String(box ? (box.value || box.textContent || "") : "")
+      .replace(/\r\n?/g, "\n").replace(/[ \t]+/g, " ").trim();
   }
 
   function setText(text) {
@@ -210,6 +214,7 @@
       .rag-v48-flashcard .rag-v48-topic {display:inline-block;max-width:100%;padding:8px 13px;border-radius:16px;background:rgba(255,255,255,.14);font-size:.92rem;line-height:1.3;font-weight:800;overflow-wrap:anywhere}
       .rag-v48-flashcard .rag-v48-side {margin-top:18px;color:#b5f3ff;font-size:.78rem;font-weight:950;letter-spacing:.1em}
       .rag-v48-flashcard .rag-v48-content {display:block;margin:12px 0 18px;font-size:clamp(1.12rem,1.75vw,1.55rem);line-height:1.37;font-weight:850;overflow-wrap:anywhere}
+      .rag-v50-active {outline:2px solid #5eead4!important;box-shadow:0 0 0 5px rgba(45,212,191,.15)!important}
       .rag-v48-flashcard.is-flipped .rag-v48-face-back {border:2px solid #6ee7b7;box-shadow:0 18px 45px rgba(4,120,87,.38)}
       .rag-v48-flashcard .rag-v48-face-back .rag-v48-side {color:#d1fae5}
       .rag-v48-flashcard .rag-v48-face-back .rag-v48-topic {background:rgba(5,46,22,.4)}
@@ -384,9 +389,11 @@
 
     const target = outputBox().querySelector(".rag-v46-panel") || outputBox();
 
+    const requestAtRender = activeRequestId;
     window.requestAnimationFrame(function () {
       window.setTimeout(function () {
-        target.scrollIntoView({ behavior: "smooth", block: "start" });
+        if (requestAtRender === activeRequestId && target.isConnected !== false)
+          target.scrollIntoView({ behavior: "smooth", block: "start" });
       }, 80);
     });
   }
@@ -646,56 +653,117 @@
     });
   }
 
-  async function readFile(file) {
-    if (!file) return;
-
-    let text = "";
-
-    if (/\.pdf$/i.test(file.name) && window.pdfjsLib) {
-      const data = await file.arrayBuffer();
-      const pdf = await window.pdfjsLib.getDocument({ data }).promise;
-      const parts = [];
-
-      for (let n = 1; n <= pdf.numPages; n++) {
-        const page = await pdf.getPage(n);
-        const content = await page.getTextContent();
-        parts.push(content.items.map(x => x.str || "").join(" "));
-      }
-
-      text = parts.join("\n\n");
-    } else {
-      text = await file.text();
-    }
-
-    setText(clean(text));
+  function loadingMessage(heading,detail,kind) {
+    outputBox().innerHTML = '<section class="rag-v46-panel" role="'+
+      (kind==="error"?"alert":"status")+'" aria-live="polite"><h2>'+esc(heading)+
+      '</h2><p>'+esc(detail)+'</p></section>';
   }
 
-  function replaceButton(buttonId, fn) {
-    const old = id(buttonId);
-    if (!old) return;
+  async function extractPdf(file) {
+    if (!window.pdfjsLib) throw new Error("Libreria PDF non disponibile.");
+    const data = await file.arrayBuffer();
+    const pdf = await window.pdfjsLib.getDocument({ data }).promise;
+    const parts = [];
+    for (let index=1;index<=pdf.numPages;index++) {
+      const page=await pdf.getPage(index);
+      const content=await page.getTextContent();
+      const lines=[];
+      let current=[],lastY=null;
+      for(const item of content.items || []){
+        const value=String(item.str || "").trim();
+        if(!value)continue;
+        const y=item.transform && item.transform.length>5 ? Math.round(item.transform[5]) : null;
+        if(lastY!==null&&y!==null&&Math.abs(y-lastY)>4&&current.length){
+          lines.push(current.join(" "));current=[];
+        }
+        current.push(value);
+        if(y!==null)lastY=y;
+        if(item.hasEOL && current.length){lines.push(current.join(" "));current=[];lastY=null;}
+      }
+      if(current.length)lines.push(current.join(" "));
+      if(lines.length)parts.push(lines.join("\n"));
+      if(parts.join(" ").length>60)continue;
+    }
+    let text=parts.join("\n\n").trim();
+    if(text.length>=25)return text;
+    if(!window.Tesseract)throw new Error("PDF senza testo selezionabile: OCR non disponibile.");
+    const scanned=[];
+    for(let i=1;i<=Math.min(pdf.numPages,6);i++){
+      loadingMessage("OCR PDF in corso","Pagina "+i+" di "+Math.min(pdf.numPages,6));
+      const p=await pdf.getPage(i),viewport=p.getViewport({scale:1.8});
+      const canvas=document.createElement("canvas");
+      canvas.width=Math.ceil(viewport.width);canvas.height=Math.ceil(viewport.height);
+      await p.render({canvasContext:canvas.getContext("2d"),viewport}).promise;
+      const result=await window.Tesseract.recognize(canvas,"ita+eng");
+      const segment=result?.data?.text?.trim();
+      if(segment)scanned.push(segment);
+    }
+    text=scanned.join("\n\n").trim();
+    if(text.length<25)throw new Error("Non è stato possibile leggere testo sufficiente dal PDF.");
+    return text;
+  }
 
-    const b = old.cloneNode(true);
-    old.replaceWith(b);
+  async function readFile(file) {
+    if (!file)return;
+    const token=++activeRequestId;
+    if(activeButton){activeButton.classList.remove("rag-v50-active");activeButton=null;}
+    loadingMessage("Caricamento documento","Sto leggendo "+(file.name||"il file")+"...");
+    try {
+      const isPdf=/\.pdf$/i.test(file.name||"")||file.type==="application/pdf";
+      const isImage=/\.(png|jpe?g|webp)$/i.test(file.name||"")||/^image\//i.test(file.type||"");
+      let text="";
+      if(isPdf)text=await extractPdf(file);
+      else if(isImage) {
+        if(!window.Tesseract)throw new Error("La libreria OCR non è disponibile.");
+        const result=await window.Tesseract.recognize(file,"ita+eng");
+        text=result?.data?.text||"";
+      } else text=await file.text();
+      if(token!==activeRequestId)return;
+      const formatted=String(text).replace(/\r\n?/g,"\n").replace(/[ \t]+/g," ").replace(/\n{3,}/g,"\n\n").trim();
+      if(!formatted)throw new Error("Il file non contiene testo leggibile.");
+      setText(formatted);
+      loadingMessage("Documento caricato","Testo importato correttamente ("+
+        formatted.length+" caratteri). Ora scegli uno dei quattro risultati.");
+    } catch(error){
+      if(token!==activeRequestId)return;
+      console.error("RAG: errore importazione",error);
+      loadingMessage("Errore lettura file",error?.message||"Impossibile leggere il file.","error");
+    }
+  }
 
-    b.addEventListener("click", ev => {
-      ev.preventDefault();
-      ev.stopPropagation();
-      if (ev.stopImmediatePropagation) ev.stopImmediatePropagation();
-      const area = outputBox();
-      area.innerHTML = '<section class="rag-v46-panel" role="status" aria-live="polite"><h2>Generazione in corso...</h2><p>Sto preparando il materiale dal testo inserito.</p></section>';
-      area.scrollIntoView({ behavior: "smooth", block: "start" });
-      requestAnimationFrame(() => {
-        try {
+  function replaceButton(buttonId,fn) {
+    const old=id(buttonId);
+    if(!old)return;
+    const button=old.cloneNode(true);
+    old.replaceWith(button);
+    button.addEventListener("click",event=>{
+      event.preventDefault();event.stopPropagation();
+      if(event.stopImmediatePropagation)event.stopImmediatePropagation();
+      const request=++activeRequestId;
+      if(activeButton&&activeButton!==button){
+        activeButton.classList.remove("rag-v50-active");
+        activeButton.removeAttribute("aria-current");
+      }
+      activeButton=button;
+      button.classList.add("rag-v50-active");
+      button.setAttribute("aria-current","true");
+      const area=outputBox();
+      loadingMessage("Generazione in corso...","Sto analizzando il documento per "+button.textContent.trim()+".");
+      area.scrollIntoView({behavior:"smooth",block:"start"});
+      requestAnimationFrame(()=>{
+        if(request!==activeRequestId)return;
+        try{
           fn();
-          if (area.textContent.includes("Generazione in corso...")) throw new Error("Nessun risultato prodotto.");
-        } catch (error) {
-          console.error("RAG: generazione non riuscita", error);
-          area.innerHTML = '<section class="rag-v46-panel" role="alert"><h2>Errore durante la generazione</h2><p>' + esc(error.message || String(error)) + '</p></section>';
-          area.scrollIntoView({ behavior: "smooth", block: "start" });
+          if(request!==activeRequestId)return;
+          if(area.textContent.includes("Generazione in corso..."))
+            throw new Error("Il motore non ha prodotto un risultato.");
+        }catch(error){
+          if(request!==activeRequestId)return;
+          console.error("RAG: errore generazione",error);
+          loadingMessage("Impossibile generare il risultato",error?.message||String(error),"error");
         }
       });
-      return false;
-    }, true);
+    },true);
   }
 
   function init() {
@@ -706,7 +774,9 @@
 
     if (fileInput) {
       fileInput.addEventListener("change", async () => {
-        await readFile(fileInput.files && fileInput.files[0]);
+        const selected=fileInput.files && fileInput.files[0];
+        fileInput.value="";
+        await readFile(selected);
       });
     }
 
