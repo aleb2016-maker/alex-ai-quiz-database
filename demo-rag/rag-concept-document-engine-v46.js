@@ -281,7 +281,26 @@
       ));
     }
 
-    return out.slice(0, 6);
+    // Per ogni altro argomento, usa soltanto frasi effettivamente presenti
+    // nel documento invece di inventare concetti sulla sicurezza informatica.
+    if (!out.length) {
+      const segments = clean(text)
+        .split(/(?:\n+|(?<=[.!?])\s+)/)
+        .map(s => s.trim())
+        .filter(s => s.length >= 28 && /[a-zà-ÿ]/i.test(s));
+      const seen = new Set();
+      for (const segment of segments) {
+        const normalized = segment.toLocaleLowerCase("it").replace(/[^a-zà-ÿ0-9]/gi, "").slice(0, 100);
+        if (seen.has(normalized)) continue;
+        seen.add(normalized);
+        const fact = segment.slice(0, 420);
+        const words = fact.replace(/^[\d\s.)-]+/, "").split(/\s+/).filter(Boolean);
+        const title = words.slice(0, 6).join(" ").replace(/[.,;:!?]+$/, "") || "Concetto del documento";
+        out.push(concept(title, "dal documento", fact, "Quale informazione fornisce il documento su «" + title + "»?", "📚"));
+        if (out.length >= 8) break;
+      }
+    }
+    return out.slice(0, 8);
   }
 
   function buildMap() {
@@ -451,11 +470,20 @@
       ];
     }
 
-    return [
-      "Ignorare questo punto perché non produce effetti pratici.",
-      "Gestirlo senza controlli, responsabilità o verifica.",
-      "Rimandare ogni azione anche quando il testo indica una procedura."
-    ];
+    // Risposte alternative tratte da altri passaggi dello stesso documento:
+    // pertinenti al contenuto ma non alla domanda in corso.
+    const map = buildMap();
+    const other = (map ? map.concepts : [])
+      .filter(item => item.fatto !== c.fatto)
+      .map(item => item.fatto)
+      .filter(Boolean)
+      .slice(0, 3);
+    if (other.length >= 3) return other;
+    return other.concat([
+      "Il documento non fornisce alcuna informazione su questo argomento.",
+      "Il passaggio riguarda esclusivamente un argomento diverso.",
+      "Nessuna delle informazioni elencate è presente nel documento."
+    ]).slice(0, 3);
   }
 
   let quiz = { domande: [], indice: 0, punti: 0, risposto: false };
@@ -627,7 +655,17 @@
       });
     }
 
-    replaceButton("btnFile", () => fileInput && fileInput.click());
+    // Il caricamento file non e' una generazione: non mostrare lo spinner.
+    const loadButton = id("btnFile");
+    if (loadButton && fileInput) {
+      const clone = loadButton.cloneNode(true);
+      loadButton.replaceWith(clone);
+      clone.addEventListener("click", ev => {
+        ev.preventDefault();
+        ev.stopPropagation();
+        fileInput.click();
+      }, true);
+    }
     replaceButton("btnRiassunto", renderSummary);
     replaceButton("btnCard", renderCards);
     replaceButton("btnStudio", renderStudy);
