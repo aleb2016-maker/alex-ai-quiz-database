@@ -56,7 +56,10 @@ function analyze(input){
  }
  const selected=spread(sections,14);
  const mainHeading=source.match(/^\s*#\s+([^\n]+)/m);
- const documentTitle=mainHeading ? title(mainHeading[1]) : (sections.length>1 ? sections[0].title : "testo caricato");
+ const firstLine=(source.split("\n").find(x=>x.trim())||"").trim();
+ const firstTitle=title(firstLine);
+ const looksLikeDocumentTitle=firstTitle.length>8&&firstTitle.length<110&&firstTitle===firstTitle.toUpperCase()&&!/[.!?]$/.test(firstTitle);
+ const documentTitle=mainHeading ? title(mainHeading[1]) : (looksLikeDocumentTitle ? firstTitle : (sections.length>1 ? sections[0].title : "testo caricato"));
  return {profile:{materia:documentTitle,contesto:"documento analizzato",categoria:"contenuti del documento"},
  sections:sections,
  concepts:selected.map(s=>({title:s.title,ramo:s.title,icon:icon(s.title),fatto:s.facts[0],risposta:s.facts.slice(0,2).join(" "),domanda:question(s.title)})),
