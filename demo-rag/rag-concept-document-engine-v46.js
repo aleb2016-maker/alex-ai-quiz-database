@@ -206,10 +206,13 @@
       .rag-v48-flashcard-inner {position:relative;display:block;width:100%;height:100%;transform-style:preserve-3d;-webkit-transform-style:preserve-3d;transition:transform .7s cubic-bezier(.2,.75,.22,1)}
       .rag-v48-flashcard.is-flipped .rag-v48-flashcard-inner {transform:rotateY(180deg)}
       .rag-v48-face {position:absolute;inset:0;display:flex;flex-direction:column;align-items:flex-start;width:100%;height:100%;padding:24px;box-sizing:border-box;border:1px solid rgba(148,163,184,.33);border-radius:28px;background:radial-gradient(circle at top left,rgba(49,196,255,.15),transparent 55%),linear-gradient(158deg,#344d72,#392469);box-shadow:0 16px 32px rgba(0,0,0,.28);backface-visibility:hidden;-webkit-backface-visibility:hidden;overflow:auto;overscroll-behavior:contain}
-      .rag-v48-face-back {transform:rotateY(180deg);background:radial-gradient(circle at top right,rgba(20,184,166,.22),transparent 55%),linear-gradient(158deg,#173e54,#3b276d)}
+      .rag-v48-face-back {transform:rotateY(180deg);background:radial-gradient(circle at top right,rgba(167,243,208,.22),transparent 56%),linear-gradient(145deg,#047857,#0f766e 52%,#115e59)}
       .rag-v48-flashcard .rag-v48-topic {display:inline-block;max-width:100%;padding:8px 13px;border-radius:16px;background:rgba(255,255,255,.14);font-size:.92rem;line-height:1.3;font-weight:800;overflow-wrap:anywhere}
       .rag-v48-flashcard .rag-v48-side {margin-top:18px;color:#b5f3ff;font-size:.78rem;font-weight:950;letter-spacing:.1em}
       .rag-v48-flashcard .rag-v48-content {display:block;margin:12px 0 18px;font-size:clamp(1.12rem,1.75vw,1.55rem);line-height:1.37;font-weight:850;overflow-wrap:anywhere}
+      .rag-v48-flashcard.is-flipped .rag-v48-face-back {border:2px solid #6ee7b7;box-shadow:0 18px 45px rgba(4,120,87,.38)}
+      .rag-v48-flashcard .rag-v48-face-back .rag-v48-side {color:#d1fae5}
+      .rag-v48-flashcard .rag-v48-face-back .rag-v48-topic {background:rgba(5,46,22,.4)}
       .rag-v48-flashcard .rag-v48-face-back .rag-v48-content {font-size:clamp(1.02rem,1.32vw,1.18rem);font-weight:700;line-height:1.5}
       .rag-v48-flashcard .rag-v48-hint {display:block;margin-top:auto;padding-top:14px;color:#d8eaff;font-size:.9rem;font-weight:750}
       .rag-v48-flashcard:hover .rag-v48-face {border-color:rgba(103,232,249,.65)}
@@ -327,8 +330,8 @@
   }
 
   function buildMap() {
-    const quality = window.RAGContentQualityV47;
-    if (!quality) throw new Error("Motore di analisi V4.7 non caricato. Ricarica la pagina.");
+    const quality = window.RAGContentQualityV49;
+    if (!quality) throw new Error("Motore di analisi V4.9 non caricato. Ricarica la pagina.");
     return quality.analyze(getText());
   }
 
@@ -537,7 +540,7 @@
   let quiz = { domande: [], indice: 0, punti: 0, risposto: false };
 
   function makeQuiz(m) {
-    return window.RAGContentQualityV47.makeQuiz(m);
+    return window.RAGContentQualityV49.makeQuiz(m);
   }
 
   function renderQuiz() {
@@ -556,7 +559,7 @@
         
         <span class="rag-v46-pill">🧪 Test concetti</span>
         <h2>Test: ${esc(m.profile.materia)}</h2>\n        <div id="ragV46DownloadSlot" class="rag-v46-download-slot"></div>
-        <p>Il test usa concetti reali del documento e distrattori vicini ma sbagliati.</p>
+        <p>Il test usa soltanto il contenuto del documento. Le alternative aiutano a distinguere fatti, dati e termini.</p>
         <button id="ragV46Start" class="rag-v46-start" type="button">Inizia test</button>
         <div id="ragV46QuizBox"></div>
       </section>
