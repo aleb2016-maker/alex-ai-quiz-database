@@ -10,7 +10,7 @@ const stop=new Set(("della delle dello degli dalla dalle dalla nella nelle nello
 const month="gennaio febbraio marzo aprile maggio giugno luglio agosto settembre ottobre novembre dicembre".split(" ");
 const dateRE=new RegExp("\\b([0-3]?\\d)\\s+("+month.join("|")+")\\s+(1[89]\\d{2}|20\\d{2})\\b","i");
 const yearRE=/\b(1[89]\d{2}|20\d{2})\b/;
-const amountRE=/\b\d+(?:[.,]\d+)?\s*(?:%|€|euro|km|kg|g|mg|ml|litri|metri|ore|minuti|giorni|anni|persone|utenti|gradi|°c)\b/i;
+const amountRE=/\b\d+(?:[.,]\d+)?\s*(?:%|€|euro|km|kg|g|mg|ml|litri|metri|ore|minuti|giorni|anni|persone|utenti|gradi|°c)(?=$|[\s,.;:!?])/i;
 function tidy(x){return String(x??"").replace(/\r\n?/g,"\n").replace(/\u00a0/g," ").replace(/[ \t]+/g," ").trim();}
 function flat(x){return tidy(x).replace(/\s+/g," ").trim();}
 function norm(x){return flat(x).normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLocaleLowerCase("it").replace(/[^a-z0-9 ]/g," ").replace(/\s+/g," ").trim();}
