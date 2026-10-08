@@ -198,6 +198,24 @@
         border-radius: 18px;
         background: rgba(255,255,255,.10);
       }
+      /* V4.8 - flip flashcards solo nella sezione Domande studio */
+      .rag-v48-study-grid {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin-top:24px;align-items:stretch}
+      .rag-v48-flashcard {position:relative;display:block;width:100%;height:380px;min-height:380px;border:0;padding:0;border-radius:28px;background:transparent;box-shadow:none;color:#f8fafc;cursor:pointer;text-align:left;perspective:1200px;-webkit-perspective:1200px;touch-action:manipulation}
+      .rag-v48-flashcard:hover,.rag-v48-flashcard:active {transform:none;filter:none;box-shadow:none}
+      .rag-v48-flashcard:focus-visible {outline:3px solid #67e8f9;outline-offset:5px}
+      .rag-v48-flashcard-inner {position:relative;display:block;width:100%;height:100%;transform-style:preserve-3d;-webkit-transform-style:preserve-3d;transition:transform .7s cubic-bezier(.2,.75,.22,1)}
+      .rag-v48-flashcard.is-flipped .rag-v48-flashcard-inner {transform:rotateY(180deg)}
+      .rag-v48-face {position:absolute;inset:0;display:flex;flex-direction:column;align-items:flex-start;width:100%;height:100%;padding:24px;box-sizing:border-box;border:1px solid rgba(148,163,184,.33);border-radius:28px;background:radial-gradient(circle at top left,rgba(49,196,255,.15),transparent 55%),linear-gradient(158deg,#344d72,#392469);box-shadow:0 16px 32px rgba(0,0,0,.28);backface-visibility:hidden;-webkit-backface-visibility:hidden;overflow:auto;overscroll-behavior:contain}
+      .rag-v48-face-back {transform:rotateY(180deg);background:radial-gradient(circle at top right,rgba(20,184,166,.22),transparent 55%),linear-gradient(158deg,#173e54,#3b276d)}
+      .rag-v48-flashcard .rag-v48-topic {display:inline-block;max-width:100%;padding:8px 13px;border-radius:16px;background:rgba(255,255,255,.14);font-size:.92rem;line-height:1.3;font-weight:800;overflow-wrap:anywhere}
+      .rag-v48-flashcard .rag-v48-side {margin-top:18px;color:#b5f3ff;font-size:.78rem;font-weight:950;letter-spacing:.1em}
+      .rag-v48-flashcard .rag-v48-content {display:block;margin:12px 0 18px;font-size:clamp(1.12rem,1.75vw,1.55rem);line-height:1.37;font-weight:850;overflow-wrap:anywhere}
+      .rag-v48-flashcard .rag-v48-face-back .rag-v48-content {font-size:clamp(1.02rem,1.32vw,1.18rem);font-weight:700;line-height:1.5}
+      .rag-v48-flashcard .rag-v48-hint {display:block;margin-top:auto;padding-top:14px;color:#d8eaff;font-size:.9rem;font-weight:750}
+      .rag-v48-flashcard:hover .rag-v48-face {border-color:rgba(103,232,249,.65)}
+      @media(max-width:980px) {.rag-v48-study-grid {grid-template-columns:repeat(2,minmax(0,1fr))}}
+      @media(max-width:680px) {.rag-v48-study-grid {grid-template-columns:1fr}.rag-v48-flashcard {height:365px;min-height:365px}.rag-v48-flashcard .rag-v48-content {font-size:1.24rem}}
+      @media(prefers-reduced-motion:reduce) {.rag-v48-flashcard-inner {transition:none}}
       .rag-v47-summary-part {margin:20px 0;padding:16px 18px;border:1px solid rgba(148,163,184,.22);border-radius:18px;background:rgba(255,255,255,.04)}
       .rag-v47-summary-part h3 {margin:0 0 10px;font-size:1.4rem}
       .rag-v47-summary-part p {margin:0;line-height:1.65}
@@ -419,19 +437,48 @@
     if (!m) return;
     outputBox().innerHTML = `
       <section class="rag-v46-panel" data-export-section="study">
-        <span class="rag-v46-pill">🎓 Domande basate sul documento</span>
+        <span class="rag-v46-pill">🎓 Flashcard interattive</span>
         <h2>Domande studio</h2>
+        <p>Leggi la domanda, prova a rispondere e gira la carta per controllare. Clicca di nuovo per tornare alla domanda.</p>
         <div id="ragV46DownloadSlot" class="rag-v46-download-slot"></div>
-        <div class="rag-v46-grid">
+        <div class="rag-v48-study-grid">
           ${m.concepts.map((c,i)=>`
-            <article class="rag-v46-card">
-              <span class="rag-v46-pill">${esc(c.ramo)}</span>
-              <h3>${i+1}. ${esc(c.domanda)}</h3>
-              <div class="rag-v46-answer">${esc(c.risposta)}</div>
-            </article>`).join("")}
+            <button class="rag-v48-flashcard" type="button" data-study-flashcard data-flipped="false"
+              aria-pressed="false" aria-label="Domanda ${i+1}: ${esc(c.domanda)}. Premi per vedere la risposta">
+              <span class="rag-v48-flashcard-inner">
+                <span class="rag-v48-face rag-v48-face-front">
+                  <span class="rag-v48-topic">${esc(c.ramo)}</span>
+                  <span class="rag-v48-side">DOMANDA ${i+1}</span>
+                  <span class="rag-v48-content">${esc(c.domanda)}</span>
+                  <span class="rag-v48-hint" aria-hidden="true">↻ Clicca per vedere la risposta</span>
+                </span>
+                <span class="rag-v48-face rag-v48-face-back" aria-hidden="true">
+                  <span class="rag-v48-topic">${esc(c.ramo)}</span>
+                  <span class="rag-v48-side">RISPOSTA ${i+1}</span>
+                  <span class="rag-v48-content">${esc(c.risposta)}</span>
+                  <span class="rag-v48-hint" aria-hidden="true">↶ Clicca per tornare alla domanda</span>
+                </span>
+              </span>
+            </button>`).join("")}
         </div>
       </section>
     `;
+    outputBox().querySelectorAll("[data-study-flashcard]").forEach(card => {
+      card.addEventListener("click", () => {
+        const flipped = card.classList.toggle("is-flipped");
+        card.dataset.flipped = String(flipped);
+        card.setAttribute("aria-pressed", String(flipped));
+        const front = card.querySelector(".rag-v48-face-front");
+        const back = card.querySelector(".rag-v48-face-back");
+        if (front) front.setAttribute("aria-hidden", String(flipped));
+        if (back) back.setAttribute("aria-hidden", String(!flipped));
+        const active = flipped ? back : front;
+        const content = active && active.querySelector(".rag-v48-content");
+        const value = content ? content.textContent.trim() : "";
+        card.setAttribute("aria-label", (flipped ? "Risposta: " : "Domanda: ") + value +
+          (flipped ? ". Premi per tornare alla domanda" : ". Premi per vedere la risposta"));
+      });
+    });
     finalizeOutputScroll();
   }
 
