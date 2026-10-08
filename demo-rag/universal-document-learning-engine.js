@@ -2245,7 +2245,8 @@ body {
 
   function avvia() {
     collegaPulsanteRipulisciOcrTabella();
-    collegaPulsantiDownload();
+    // Download TXT/PDF/HTML/JSON: un solo gestore RAGExportV50.
+    // Non agganciare i vecchi listener, che produrrebbero file duplicati.
     // La UI V5 gestisce in modo esclusivo import PDF/TXT e i quattro motori.
     // Evita una seconda lettura asincrona che sovrascrive successo con errore,
     // o una seconda generazione che ricrea risultati obsoleti.
