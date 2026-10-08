@@ -58,8 +58,8 @@
 
   function outputBox() {
     let out =
-      id("risultati-generati-subito") ||
       id("output") ||
+      id("risultati-generati-subito") ||
       id("risultati") ||
       document.querySelector(".output") ||
       document.querySelector(".results");
