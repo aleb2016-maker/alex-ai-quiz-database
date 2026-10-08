@@ -47,8 +47,17 @@ function analyze(input){
  const source=clean(input);if(source.length<40)return null;
  const sections=parse(source).map(s=>({title:s.title,body:s.body,facts:facts(s)})).filter(s=>s.facts.length);
  if(!sections.length)return null;
+ // Se il testo non ha intestazioni, assegna etichette ai paragrafi.
+ for (let i=0;i<sections.length;i++) {
+  if (sections[i].title==="Contenuti principali" && sections.length>1) {
+   const words=sections[i].facts[0].split(/\s+/).slice(0,6).join(" ").replace(/[.,;:!?]+$/,"");
+   sections[i].title="Paragrafo "+(i+1)+": "+words;
+  }
+ }
  const selected=spread(sections,14);
- return {profile:{materia:sections.length>1?sections[0].title:"testo caricato",contesto:"documento analizzato",categoria:"contenuti del documento"},
+ const mainHeading=source.match(/^\s*#\s+([^\n]+)/m);
+ const documentTitle=mainHeading ? title(mainHeading[1]) : (sections.length>1 ? sections[0].title : "testo caricato");
+ return {profile:{materia:documentTitle,contesto:"documento analizzato",categoria:"contenuti del documento"},
  sections:sections,
  concepts:selected.map(s=>({title:s.title,ramo:s.title,icon:icon(s.title),fatto:s.facts[0],risposta:s.facts.slice(0,2).join(" "),domanda:question(s.title)})),
  summary:selected.map(s=>({title:s.title,text:s.facts.slice(0,2).join(" ")}))};
